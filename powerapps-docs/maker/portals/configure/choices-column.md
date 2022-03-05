@@ -1,39 +1,23 @@
-﻿---
+---
 title: Configure a choices column for portals
 description: Learn how to add and configure a Dataverse choices column on portal lists, forms, and templates.
 author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/09/2021
+ms.date: 3/01/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nageshbhat-msft
     - nickdoelman
+    - professorkendrick
 ---
 
-# Configure a choices column on portals (preview)
-
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+# Configure a choices column on portals
 
 Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
-
-## Prerequisites
-
-- Your portal must be version [9.3.11.x](/power-platform/released-versions/portals/portalupdate9311x) or later to use this feature.
-
-## Enable choices control
-
-To enable choices controls on forms in your portal, you need to create a new [site setting](configure-site-settings.md) with the name **Control/EnableChoices** and set the value to **true**.
-
-:::image type="content" source="media/choices-column/site-setting.png" alt-text="Control/EnableChoices site setting.":::
-
-> [!IMPORTANT]
-> This site setting is only required during the preview period.
 
 ## Basic forms and advanced forms
 
@@ -167,7 +151,7 @@ Body –
 
 ## Known issues
 
-The choices control on basic and advanced forms currently only supports the default theme. If you're using any of the [preset themes](../theme-overview.md) defined in Power Apps portals Studio, the choices control won't be available.
+Choices control will not be available in [basic and advanced form metadata](configure-basic-form-metadata.md) to apply extra behavior modification logic or override the functionality of form fields.
 
  
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
