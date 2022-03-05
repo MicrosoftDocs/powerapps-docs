@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/04/2022
+ms.date: 03/07/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -86,26 +86,39 @@ Now that you've demonstrated how to use scrollable screen, customize the app fur
 
 Since Power Apps uses data cards to create sections, [Display form and Edit form](controls/control-form-detail.md) controls can't be inserted on them. Nesting of such a combination of controls together may degrade the performance of the app. Hence, when using form controls, use layout containers such as a [vertical container](controls/control-vertical-container.md) control.
 
-#### Examples
+> [!TIP]
+> To learn about working with forms, see [Understand canvas app forms](working-with-forms.md).
 
-For Makers who want a basic "Scrollable Form", follow these steps:
+There are multiple different methods to configure scrolling with forms:
 
-1. In the insert pane under "Layout", select a "Vertical container".
-1. Set the "Vertical Overflow" property of the container to "Scroll".
-1. Add a View or Edit Form to the container.
+### Use the layout properties
 
-For makers who wish to use X/Y positioning instead of the Layout Properties, they can get this effect by nesting a container inside of a layout container.
+This is the basic method of using a scrolling screen that has a form. To use a basic scrolling form:
 
-1. In the insert pane under "Layout", select a "Vertical container".
-1. Set the "Vertical Overflow" property of the container to "Scroll".
-1. In the insert pane under "Layout", select "Container".
-1. In the properties of the inner container, uncheck the "Flexible Height" property.
+1. Ensure you're using a blank screen, and not a scrollable screen.
+1. Select **Insert** > **Layout**, and then select **Vertical container**.
+1. From the right-side of the screen in the properties pane, select **Vertical Overflow** property drop-down, and choose **Scroll**.
+    :::image type="content" source="media/add-scrolling-screen/vertical-overflow.png" alt-text="Vertical overflow property of the container set to Scroll.":::
+1. Add the edit or display form with the required fields. When the list of fields exceeds the size of the container inside the screen, you'll be able to scroll inside the container using the scroll bar.
+    :::image type="content" source="media/add-scrolling-screen/scrollable-vertical-container.png" alt-text="Scrollable vertical container using the Vertical Overflow property set to scroll having a display form.":::
 
-You can then set the height of the inner container to a custom value, and the outer container will create a scrollbar for the overflow.
+### Use the X and Y positioning
 
-For more information on the Layout Containers and their capabilities, refer to the following documentation:
-* [Building responsive canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/build-responsive-apps)
-* References for the [Horizontal](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-horizontal-container) and [Vertical](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-vertical-container) container controls
-* [Broader information on responsive layouts](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-responsive-layout)
+1. Ensure you're using a blank screen, and not a scrollable screen.
+1. Select **Insert** > **Layout**, and then select **Vertical container**.
+1. From the right-side of the screen in the properties pane, select **Vertical Overflow** property drop-down, and choose **Scroll**.
+1. Select **Insert** > **Layout**, and then select **Container**.
+1. From the right-side of the screen in the properties pane, turn **Flexible height** property to **Off**.
+    :::image type="content" source="media/add-scrolling-screen/flexible-height.png" alt-text="Flexible height property turned off for the container..":::
+1. Add the edit or display form with the required fields.
+1. To enable scrolling within the screen for the form, update the height of the container added in step 4, and the form.
+    :::image type="content" source="media/add-scrolling-screen/x-y-positions.png" alt-text="Scrollable form that uses container and form height for scroll capability.":::
+
+For more information about working with responsiveness of an app, see [Building responsive canvas apps](build-responsive-apps.md) and ]Responsive layouts](create-responsive-layout.md)
+
+### See also
+
+- [Horizontal container](controls/control-horizontal-container.md)
+- [Vertical container](controls/control-vertical-container.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
