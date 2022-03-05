@@ -711,7 +711,7 @@ The rich text editor toolbar provides features and functionality that allows you
 The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
 
 > [!Tip]
-> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br>
+> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
 > An alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with our rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
 
 
