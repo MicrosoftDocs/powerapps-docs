@@ -769,7 +769,7 @@ The following table outlines a list of accessibility shortcuts available when us
 | Base commands | Ctrl+U | Underline command. |
 | Base commands | Alt+0 | Accessibility help. |
 | Base commands | Esc | Cancel operation. |
-
+| | | |
 
 ## Frequently asked questions
 
