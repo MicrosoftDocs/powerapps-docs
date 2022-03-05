@@ -91,27 +91,42 @@ Since Power Apps uses data cards to create sections, [Display form and Edit form
 
 There are multiple different methods to configure scrolling with forms:
 
-### Use the layout properties
+### Use Vertical Overflow property
 
 This is the basic method of using a scrolling screen that has a form. To use a basic scrolling form:
 
 1. Ensure you're using a blank screen, and not a scrollable screen.
+
 1. Select **Insert** > **Layout**, and then select **Vertical container**.
+
 1. From the right-side of the screen in the properties pane, select **Vertical Overflow** property drop-down, and choose **Scroll**.
+
     :::image type="content" source="media/add-scrolling-screen/vertical-overflow.png" alt-text="Vertical overflow property of the container set to Scroll.":::
+
 1. Add the edit or display form with the required fields. When the list of fields exceeds the size of the container inside the screen, you'll be able to scroll inside the container using the scroll bar.
+
     :::image type="content" source="media/add-scrolling-screen/scrollable-vertical-container.png" alt-text="Scrollable vertical container using the Vertical Overflow property set to scroll having a display form.":::
 
-### Use the X and Y positioning
+### Use containers within Vertical container
+
+For complex apps, you may consider adding containers within a vertical container control. And then, adjust the height of the form and the inner container as shown below.
 
 1. Ensure you're using a blank screen, and not a scrollable screen.
+
 1. Select **Insert** > **Layout**, and then select **Vertical container**.
+
 1. From the right-side of the screen in the properties pane, select **Vertical Overflow** property drop-down, and choose **Scroll**.
+
 1. Select **Insert** > **Layout**, and then select **Container**.
+
 1. From the right-side of the screen in the properties pane, turn **Flexible height** property to **Off**.
+
     :::image type="content" source="media/add-scrolling-screen/flexible-height.png" alt-text="Flexible height property turned off for the container..":::
+
 1. Add the edit or display form with the required fields.
+
 1. To enable scrolling within the screen for the form, update the height of the container added in step 4, and the form.
+
     :::image type="content" source="media/add-scrolling-screen/x-y-positions.png" alt-text="Scrollable form that uses container and form height for scroll capability.":::
 
 For more information about working with responsiveness of an app, see [Building responsive canvas apps](build-responsive-apps.md) and ]Responsive layouts](create-responsive-layout.md)
