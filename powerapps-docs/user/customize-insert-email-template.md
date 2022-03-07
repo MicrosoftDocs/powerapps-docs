@@ -16,16 +16,8 @@ search.app:
   - D365CE
 ---
 # Configure the new insert email template
-
-The new email template selection window enables users to:
-
- - filter templates based on standard and customized attributes
- - switch between list, tile, and grid views
- - search for out-of-the-box and custom templates by title, subject, description, or content of the template
- - zoom in to view templates in a new window. You can also navigate between templates.
- - modify the content for a selected template
  
-You can configure and enable the new email template for apps across the organization.  For a specific app, you can disable this option to display the default email template selection window. 
+You can configure and enable the enhanced email template for apps across the organization.  For a specific app, you can disable this option to display the default email template selection window. 
 
 ## Enable the new email template across all apps
 
