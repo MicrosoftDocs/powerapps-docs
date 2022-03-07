@@ -48,13 +48,12 @@ Once you select **Insert Template**, the following window appears displaying a l
 
 #### Enhanced email template selection window
 
-The application displays the enhanced email template selection window only if your administrator has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions on the new email template selection window:
+The application displays the enhanced email template selection window only if your administrator has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions on the ehanced email template selection window:
 
  - Switch between list, tile, and grid views
  - Search for templates by title, subject, description, or content of the template  
- - Filter templates based on standard and customized attributes
+ - Filter templates based on standard and custom attributes
  - Zoom in to view templates in a new window. You can also navigate between templates.
- - Add custom attributes to the Template Gallery Filter Form to extend Filters, Email Template Sorted View to extend the grids and Template Gallery Properties Form to extend the template details section
 
    ![Email template selection window.](media\email-templates.png "New Email template selection window")
 
