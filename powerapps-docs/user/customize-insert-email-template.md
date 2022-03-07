@@ -15,13 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Configure the new insert email template
+# Configure the enhanced insert email template
  
 You can configure and enable the enhanced email template for apps across the organization.  For a specific app, you can disable this option to display the default email template selection window. 
 
-## Enable the new email template across all apps
+## Enable the enhanced email template across all apps
 
-To configure the new email template for apps across the organization, perform the following steps:
+To configure the enhanced email template for apps across the organization, perform the following steps:
 
 1. Navigate to **Power Apps** > **Solutions**.
 1. Create a new solution. See [Understand the email experience](../maker/data-platform/create-solution.md)
@@ -32,9 +32,9 @@ To configure the new email template for apps across the organization, perform th
 1. Set the **Setting environment value** option to **Yes** on the The Edit Enable the New Insert Template Dialog page.
 1. Select **Publish All Customizations**.
 
-## Disable the new email template for an app
+## Disable the enhanced email template for an app
 
-To disable the new email template selection window and display the default window for an app, perform the following steps:
+To disable the enhanced email template selection window and display the default window for an app, perform the following steps:
 
 1. Navigate to **Power Apps** > **Solutions**.
 1. Select the solution created for the email template selection option.
