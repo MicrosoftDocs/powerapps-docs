@@ -46,25 +46,25 @@ Once you select **Insert Template**, the following window appears displaying a l
 > - Recipient (TO): user (global) and contact templates are displayed.
 > - Regarding: user (global) and templates for the regarding entity are shown.
 
-#### New email template selection window
+#### Enhanced email template selection window
 
-The application displays the new email template selection window only if your administrator has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions on the new email template selection window:
+The application displays the enhanced email template selection window only if your administrator has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions on the new email template selection window:
 
- - filter templates based on standard and customized attributes
- - switch between list, tile, and grid views
- - search for out-of-the-box and custom templates by title, subject, description, or content of the template
- - zoom in to view templates in a new window. You can also navigate between templates.
- - modify the content for a selected template
+ - Switch between list, tile, and grid views
+ - Search for templates by title, subject, description, or content of the template  
+ - Filter templates based on standard and customized attributes
+ - Zoom in to view templates in a new window. You can also navigate between templates.
+ - Add custom attributes to the Template Gallery Filter Form to extend Filters, Email Template Sorted View to extend the grids and Template Gallery Properties Form to extend the template details section
 
    ![Email template selection window.](media\email-templates.png "New Email template selection window")
 
    Legend
   
    1. **Search**. You can use search to find a template. You can search for templates based on name, subject, description, or content. Search does not support regular expressions.
-   2. **All templates**. All existing templates that have been created are displayed in this window  which you can browse and choose from. You can customize the view to display the templates in a grid, list, or tile view. Hover over the template icon to see the zoom option. Select the icon to open the template in a new window.
-   3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed.
+   2. **All templates**. All the templates based on TO or Regarding are displayed in this window  which you can browse and choose from. You can customize the view to display the templates in a grid, list, or tile view. Hover over the template icon to see the zoom option. Select the icon to open the template on a full screen.
+   3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed in the e-mail editor.
    4. **Filter**. You can filter templates based on the attributes set up by your organization.
-   5. **View**. Use the dropdown to switch between grid, tile, or list views.
+   5. **View**. Use the dropdown to switch between grid, tile, or list views. Based on your administrator's settings, the application displays a specific view. More information:  [Customize the email]customer-service-hub-user-guide-email-font-admin.md#configure-the-default-email-template-selection-view]
  
       > [!Note] 
       > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
