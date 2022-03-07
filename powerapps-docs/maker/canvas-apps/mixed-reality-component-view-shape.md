@@ -4,7 +4,7 @@ description: View a predefined 3D shape in the real world with augmented reality
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 3/3/2022
+ms.date: 3/7/2022
 ms.reviewer: mduelae
 ms.subservice: canvas-maker
 ms.author: anuitz
