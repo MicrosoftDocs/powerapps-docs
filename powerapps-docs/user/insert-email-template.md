@@ -51,18 +51,18 @@ Once you select **Insert Template**, the following window appears displaying a l
 The application displays the enhanced email template selection window only if your administrator has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions on the ehanced email template selection window:
 
  - Switch between list, tile, and grid views
- - Search for templates by title, subject, description, or content of the template  
+ - Search for templates based on their title, subject, description, or content of the template  
  - Filter templates based on standard and custom attributes
- - Zoom in to view templates in a new window. You can also navigate between templates.
+ - Zoom in to view templates in a new window. The application provide an option to navigate between templates.
 
    ![Email template selection window.](media\email-templates.png "New Email template selection window")
 
    Legend
   
    1. **Search**. You can use search to find a template. You can search for templates based on name, subject, description, or content. Search does not support regular expressions.
-   2. **All templates**. All the templates based on TO or Regarding are displayed in this window  which you can browse and choose from. You can customize the view to display the templates in a grid, list, or tile view. Hover over the template icon to see the zoom option. Select the icon to open the template on a full screen.
+   2. **All templates**. You can choose and browse from the templates based on TO or Regarding that are displayed on this window. You can change the view to display the templates in a grid, list, or tile view. Hover over the template icon to see the zoom option. Select the tile to open the template on a full screen.
    3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed in the e-mail editor.
-   4. **Filter**. You can filter templates based on the attributes set up by your organization.
+   4. **Filter**. You can filter templates based on standard or custom attributes.
    5. **View**. Use the dropdown to switch between grid, tile, or list views. Based on your administrator's settings, the application displays a specific view. More information:  [Customize the email](customer-service-hub-user-guide-email-font-admin.md#configure-the-default-email-template-selection-view).
  
       > [!Note] 
