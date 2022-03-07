@@ -1,8 +1,7 @@
----
+--
 title: Display information about map pins
-description: Add cards that display information about pinned locations in your canvas apps.
+description: Insert info cards that display information about each pin in your map.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
@@ -14,42 +13,49 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
+# Add informational cards to pins
 
-# Add informational cards to pins on a map
+You can add informational cards to each pin on the map. 
 
+When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the control, as described in the topic [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
 
-Easily add cards to maps in your canvas apps to show details about pinned locations. When a user selects a pin, a card pops up with information from the [data source you bound to the map control](./geospatial-map-excel.md). Any column in the data source (for example, an Excel table) can be shown as a field on the card.
+Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
 
 ## Prerequisites
+1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
+2. In your app, [insert a map](geospatial-component-map.md). 
 
-1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
-1. [Insert a map](./geospatial-component-map.md).
+
+**To add informational cards to pins:**
+
+1. First, bind the map to a dataset as described in [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
+
+2. In the **Properties** pane, select **Show info cards** and choose whether they should appear when a user hovers over the pin, or if the user has to select the pin.
+
+    :::image type="content" source="media/geospatial/map-info-card-type.png" alt-text="Screenshot of the properties pane showing the drop-down selection menu to show the cards on hover or on click.":::
+
+3. In the **Properties** pane, next to **Fields**, select **Edit**.
+
+4. Select **Add field**, and then select each of the fields you want to show in the card. Select **Add**.
+
+    :::image type="content" source="media/geospatial/map-choose-fields.png" alt-text="Screenshot showing the field selection options.":::
+
+5. Each pin will now show the fields associated with that pin in an informational card.
+
+    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map control with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
 
 
-## Add info cards to pins
-
-1. [Bind the map to a data source](./geospatial-map-excel.md).
-1. In the map control's **Properties** pane, select **Show info cards**. Select **On click** to show the info card when the user selects a pin, or **On hover** if it should appear when the user hovers over the pin.
-
-    :::image type="content" source="./media/geospatial/map-info-card-type.png" alt-text="A screenshot of a map control's Properties pane with the Show info cards property open to show the On click and On hover options.":::
-
-1. In the **Properties** pane, next to **Fields**, select **Edit**.
-1. Select **Add field**, and then select the fields from the data source that you want to show in the card. Select **Add**.
-
-    :::image type="content" source="./media/geospatial/map-choose-fields.png" alt-text="A screenshot of a map control's Properties pane, showing the data source fields.":::
-
-When the user selects a pin, an info card shows the fields you selected.
-
-  :::image type="content" source="./media/geospatial/map-info-card-example.png" alt-text="A screenshot of a map pin selected in a canvas app, with an info card that shows the location Name, Occupancy, and Phone data.":::
 
 ## Other interactive map features
 
-- [Use data from Excel to insert pins](./geospatial-map-excel.md)
-- [Draw and insert shapes onto maps](./geospatial-map-draw-shapes.md)
+
+- [Use data from Excel to insert pins](geospatial-map-excel.md)
+- [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
+
 
 ## Other geospatial controls
 
