@@ -44,7 +44,7 @@ If a record is in a hierarchy relationship, select the hierarchy icon to open th
 
 :::image type="content" source="./media/grid-page-hierarchy-view.png" alt-text="A screenshot of a record hierarchy view.":::
 
- If you navigate away from the grid page, the view retains your filters, sort order, and the state the page was in when you come back.
+ If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in.
 
 <!-- Animated gifs have accessibility problems. We're replacing them with either videos or static images. -->
 
@@ -80,11 +80,11 @@ Use the [filter editor](./grid-filters-advanced.md#filter-editor) to see or modi
 
 The search box can offer two different experiences, depending on how your administrator has configured search.
 
-### Option 1: Search this view
+### Search this view
 
 **Search this view** is the default experience. When you enter text in the **Search this view** box, the system searches the current view. It displays the results in the same columns that are used in the current view.
 
-### Option 2: Quick find
+### Quick find
 
 If your administrator has turned on quick find, then the search box shows **Quick find** instead of **Search this view**. When you enter text in the **Quick find** box, the system searches the table's quick find view. It displays the results in the columns of the quick find view rather than the current view.
 
