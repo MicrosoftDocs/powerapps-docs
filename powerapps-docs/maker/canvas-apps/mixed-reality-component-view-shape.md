@@ -21,12 +21,12 @@ contributors:
 
 Use the **View shape in MR** control in a canvas app to see whether a digital cube of a given size fits in a real-world space. (To compare a 3D model of an object instead, use the [**View in MR**](mixed-reality-component-view-mr.md) control.)
 
-The **View shape in MR** control adds a button to your app. When a user selects the button, the app overlays a cube on the device camera feed. The cube's dimensions are set in Microsoft Power Apps Studio. Users may not change the size of the cube while they use the app.
+The **View shape in MR** control adds a button to your app. When a user selects the button, the app overlays a cube on the device camera feed. The cube's dimensions are set as a property on the control when you author the app in Microsoft Power Apps Studio. Users may not change the size of the cube while they use the app.
 
 :::image type="content" source="./media/augmented-overview/view-shape-in-mixed-reality.png" alt-text="A photo of a tablet screen that shows a digital cube overlaid on the user's view of an office.":::
 
 > [!TIP]
-> The mixed-reality (MR) controls work best on LIDAR-enabled devices in well-lit environments with flat-textured surfaces.
+> The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
 > [!TIP]
 > The MR controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
@@ -78,8 +78,8 @@ Change the **View shape in MR** button's behavior and appearance using propertie
 | Disabled color | Sets the colors of the button label text, the button background, and the button border if **[DisplayMode](./controls/properties-core.md)** is **Disabled**. | Not applicable | Properties; Advanced: **DisabledContentColor**, **DisabledFillColor**, **DisabledBorderColor** |
 | Pressed color | Sets the colors of the button label text, the button background, and the button border when the user selects the button. | Not applicable | Properties; Advanced: **PressedContentColor**, **PressedFillColor**, **PressedBorderColor** |
 | Hover color | Sets the colors of the button label text, the button background, and the button border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverContentColor**, **HoverFillColor**, **HoverBorderColor** |
-| OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | Advanced |
-| OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | Advanced |
+| OnMixedRealitySelect | Behavior that is triggered when user selects the button to launch into the mixed reality experience. | Defined action | Advanced |
+| OnChange | Behavior that is triggered when any property on the button is changed. This is a common property across multiple controls. | Defined action | Advanced |
 | **[Tooltip](./controls/properties-core.md)** | Determines the text to display when the user hovers over the button. | String | Advanced |
 | ContentLanguage | Determines the display language of the button label, if it's different from the language used in the app. | String | Advanced |
 | **[DisplayMode](./controls/properties-core.md)** | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
