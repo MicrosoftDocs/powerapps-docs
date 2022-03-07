@@ -15,16 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use settings to provide customized app experiences (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use settings to provide customized app experiences
 
 Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment.
-
-  > [!IMPORTANT]
-  > - This is a preview feature and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-  > - This feature is currently available for model-driven apps only.
 
 Settings are made up of three subcomponents: Setting definition, setting environment value, and setting app value.
 
@@ -212,7 +205,7 @@ Setting app value is used to override the setting's default value and any settin
 
 ## Getting or updating a setting value via code
 
-For the methods available, go to [Get or update a setting value using client API (preview)](../../developer/model-driven-apps/clientapi/get-update-setting-value-using-code.md).
+For the methods available, go to [Get or update a setting value using client API](../../developer/model-driven-apps/clientapi/get-update-setting-value-using-code.md).
 
 ## See also
 
