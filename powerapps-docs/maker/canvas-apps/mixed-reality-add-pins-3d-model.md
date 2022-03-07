@@ -1,8 +1,7 @@
 ---
-title: Add pins to your 3D objects
-description: Use your app to add pins to 3D objects.
+title: Add pins to 3D objects in your canvas apps
+description: Add pins to 3D objects in canvas apps using Power Apps Studio.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mduelae
@@ -14,163 +13,121 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
 # Add pins to 3D models in Power Apps
 
+Add pins (shown as circular markers) to 3D models in your canvas apps. Users can add their own pins and view information about pins they select.
 
-You can add pins (shown as circular markers) to specific points on 3D models that you display with the [View in 3D](mixed-reality-component-view-3d.md) control. 
+:::image type="content" source="./media/augmented/pins-example.png" alt-text="A screenshot of a mobile app showing a 3D model of a chair, with four blue circles marking the locations of pins.":::
 
+## Add predefined pins to a 3D model from an Excel workbook
 
-This topic will guide you through creating a test app with a 3D model that you can insert pins onto. It will show you how to:
+The easiest way to add pins to a 3D model is to load them from an Excel workbook.
 
-
-- Use a predefined list of pins from an Excel workbook to put pins on a 3D model.
-- Display information about each of the pins in your app.
-- Create a collection to allow users of the app to create their own pins.
-
-
-## Insert and connect pins to a 3D model
-
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert a 3D model and connect a list of pins.
-
-First, insert a 3D model:
-
-1. Open the **Insert** tab.
-2. Expand **Media**.
-3. Select the control **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
-
-    :::image type="content" source="./media/augmented-3d/augmented-3d-insert.png" alt-text="Insert the View in 3D control into the app.":::
-
-    A default shape is included in the control. You can change this shape to another by altering the **Source** property. For more information, see how to [define where the 3D content is stored](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
-
-> [!NOTE]
-> This control will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this control, you'll need to adjust your references.  
->
-> For example, if you insert a second copy of the control, by default it will be called `ViewIn3D1_1` and any code references will need to be changed to refer to it.
-
-
-Now you'll need to connect a set of predefined pins to your model.
-
-You can connect predefined pins in a few ways, but the easiest is to use a table in an Excel workbook.
-
-
-Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the control's **Advanced** pane.
-
-Column description | Maps to property
--- | -- 
-Label for the pin | ItemsLabels
-X dimension of the pin | PinsX
-Y dimension of the pin | PinsY
-Z dimension (depth) of the pin | PinsZ
-
+The data source for the pins must be a named table in Excel. The table must have four columns. Each column corresponds to a property of the **View in 3D** control. Each row is plotted as a pin on the model. The rows determine the placement of the pins in a three-dimensional coordinate system.
 
 > [!IMPORTANT]
-> The mixed-reality (MR) controls use a [left-handed coordinate system](/windows/uwp/graphics-concepts/coordinate-systems).
+> The mixed-reality (MR) controls in Power Apps use a [left-handed coordinate system](/windows/uwp/graphics-concepts/coordinate-systems).
 
+| Column | Corresponds to |
+| - | - |
+| Label | ItemsLabels |
+| X | PinsX |
+| Y | PinsY |
+| Z | PinsZ |
 
-The following is an example of an Excel table with the required columns:
+Here's an example of a table named "TestPins" that contains coordinates to place four pins on a 3D model:
 
-![Sample Excel file with a table named Table1 and containing Label, X Pins, Y Pins, and Z Pins columns.](./media/augmented/pins-table-sample.png "Sample Excel file with a table named Table1 and containing Label, X Pins, Y Pins, and Z Pins columns")
+:::image type="content" source="./media/augmented/pins-table-sample.png" alt-text="An example Microsoft Excel worksheet with a table named TestPins that contains Label, X, Y, and Z columns.":::
 
-You can copy the following sample data to test this functionality:
+To try this example, start by creating a table in Excel.
 
-Label | X Pins | Y Pins | Z Pins
--- | -- | -- | --
-Front Left | -0.20 | 0.01 | 0.20
-Front Right | 0.20 | 0.01 | 0.20
-Zero | 0.00 | 0.00 | 0.00
-X Point | 0.00 | 0.72 | -0.20
+1. Copy the following sample data and paste it in cell A1 of a new Excel worksheet.
 
+    | Label | X Pins | Y Pins | Z Pins |
+    | - | - | - | - |
+    | Front Left | -0.2 | 0.01 | 0.2 |
+    | Front Right | 0.2 | 0.01 | 0.2 |
+    | Zero | 0 | 0 | 0 |
+    | X Point | 0 | 0.72 | -0.2 |
 
+2. Select one of the pasted cells. On the **Home** tab, select **Format as Table**, choose a style, and then select **OK**.
+3. On the **Table Design** tab under **Table Name**, enter a name such as *TestPins*.
+4. Save the workbook and close it.
 
+Next, add the table as a data source to display pins on a 3D model.
 
+1. In Power Apps Studio, [insert a 3D model](mixed-reality-component-view-3d.md) or select an existing model.
+2. [Set the **View in 3D** control's **Source** property](mixed-reality-component-view-3d-store.md) to *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb* (or any other model file of your choosing).
 
-1. Copy and paste the table into a new Excel workbook.
+> [!NOTE]
+> The first instance of the **View in 3D** control is named *ViewIn3D1* by default and that's the name we'll use in the following examples. Additional instances of the control would be referred to as *ViewIn3D2*, *ViewIn3D3*, and so on.
 
-1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
+1. On the model's **Properties** tab, select the **Pins(Items)** dropdown list.
+2. Type *excel* in the search box, and then select **Import from Excel**.
+3. Locate the Excel workbook you saved earlier and open it.
+4. Select the name you gave the table in Excel and then select **Connect**.
+5. On the **Advanced** tab, find **PinsX**, **PinsY**, and **PinsZ** and enter the name of the corresponding column in the table. (In this example, enter *Label* in **ItemsLabels**, *X* in **PinsX**, and so on.) Enclose the column name in quotation marks.
 
-    ![Screenshot highlighting the Format as Table option in Excel.](./media/geospatial/convert-table.png "Screenshot highlighting the Format as Table option in Excel")
+Pins appear on the model at the locations described by the coordinates.
 
-1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**—for example, *TestData*.
+## Show the label and coordinates of pins on a 3D model
 
+Use a data table to display the label and coordinates of selected pins in a canvas app.
 
-1. Save the workbook.
+:::image type="content" source="./media/augmented/pins-all.png" alt-text="A screenshot of a 3D model under construction in Microsoft Power Apps Studio. Four pins have been placed on the model, and information about the pins is shown in a table below the model.":::
 
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
+1. Open the **Insert** tab and expand **Layout**.
+2. Select **Data table** to place a table in the app screen, or drag the control to the screen to position it more precisely.
+3. Choose to show information about all pins or only the selected pin. With the data table selected:
 
+   - **Show all pins:** In the **Properties** pane, select the **Pins(Items)** dropdown list and select the Excel table you connected to earlier.
 
+   - **Show the selected pin only:** In the Power Apps Studio expression editor, enter *ViewIn3D1.SelectedItems*.
 
+       :::image type="content" source="./media/augmented/pins-label-selected.png" alt-text="A screenshot of the Power Apps Studio expression editor showing the expression used to display information about a selected pin.":::
 
-1. In your open app, go to the **Properties** pane, select the **Pins(Items)** field, and then search for *excel* and select **Import from Excel**.
+4. On the **Properties** pane, select **Edit fields**, and then select **Add field**.
+5. Select the columns to show, and then select **Add**.
 
-    ![In the Pins(Items) field, typing Excel shows the Import from Excel option.](./media/augmented/pins-excel-source.png "In the Pins(Items) field, typing Excel shows the Import from Excel option")
+    :::image type="content" source="./media/augmented/pins-add-fields.png" alt-text="A screenshot of a 3D model under construction in Power Apps Studio, shown alongside a list of fields to add to a data table.":::
 
-1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
+## Show the label of a selected pin on a 3D model
 
+Use a text box to display just the label of the selected pin in a canvas app.
 
-1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
-
-1. Set the following properties:
-
-    - **PinsX** as "X Pins"
-    - **PinsY** as "Y Pins"
-    - **PinsZ** as "Z Pins"
-
-1. The 3D control will now show each row in the table as a pin.
-
-
-
-## Display the label and other information about each pin
-
-You can show the label associated with the currently selected pin by inserting a data table control and setting it to display all the pins, or the currently selected pin.
-
-![An example showing the chair model with three pins, one of which is selected and the information about it (the label, X, Y, and Z coordinates) is shown in a table below.](./media/augmented/pins-selected.png "An example showing the chair model with three pins, one of which is selected and the information about it (the label, X, Y, and Z coordinates) is shown in a table below")
-
-1. Open the **Insert** tab.
-2. Expand **Layout**.
-3. Select the **Data table** control and place it on the app screen.
-4. Choose to show all pins, or only the selected pin:
-
-   1. Show all pins: On the **Properties** pane, set the **Data source** property to the Excel table you added.
-
-        ![Under Data source, select the Excel table option.](./media/augmented/pins-label-table.png "Under Data source, select the Excel table option")
-
-   1. Selected pin only: In the expression editor at the top, set the **Items** property to `ViewIn3D1.SelectedItems`.
-
-
-        ![The code is shown in the expression editor.](./media/augmented/pins-label-selected.png "The code is shown in the expression editor")
-
-5. On the **Properties** pane, select **Edit fields** and then **Add field**. Select each of the fields and then **Add**.
-
-    ![On the Fields pane, all options (Label, X Pins, Y Pins, and Z Pins) are selected.](./media/augmented/pins-add-fields.png "On the Fields pane, all options (Label, X Pins, Y Pins, and Z Pins) are selected")
-
-
-You can also add a single text box label to show the selected pin:
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
-2. Select the **Text label** control and place it on the app screen.
-3. Change the **Text** property to `ViewIn3D1.Selected.Label`.
+2. Select **Text label** to place a text box in the app screen, or drag the control to the screen to position it more precisely.
+3. In the expression editor, enter *ViewIn3D1.Selected.Label*.
 
-## Create a collection to let users define their own pins in the app
+## Create a collection to let users add their own pins to a 3D model
 
-You can [create a collection](create-update-collection.md) within the app so users can create their own pins that will show on the 3D model:
+If you want to allow users to place pins on a 3D model, [use a collection](create-update-collection.md).
+
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
-2. Select the **Text input** control and place it on the app screen. Copy and paste it so you have four text input controls.
-3. Change the **Default** property for each control to `X`, `Y`, `Z`, and `Label`. 
-4. On the **Tree view**, rename each control to:
-   1. **XCoordinate**
-   2. **YCoordinate**
-   3. **ZCoordinate**
-   4. **LabelInput**
+2. Select **Text input** to place a text entry box in the app screen.
+3. Copy the text box and paste it three times to create four text input controls.
+4. Set the **Default** property for each control to *X*, *Y*, *Z*, and *Label*, respectively.
+5. Open the **Tree view** tab.
+6. Rename each control, as appropriate, to *XCoordinate*, *YCoordinate*, *ZCoordinate*, and *LabelInput*.
 
-    ![In the tree view, some controls are shown, with each of the text input controls named.](./media/augmented/pins-coords.png "In the tree view, some controls are shown, with each of the text input controls named")
+    :::image type="content" source="./media/augmented/pins-coords.png" alt-text="A screenshot of the Power Apps Studio tree view that shows four renamed text input controls.":::
 
-4. Open the **Insert** tab and select the **Button** control. Place it in a free area on your app screen. Set the **Text** property to `Add pin`. 
-5. Set the **OnSelect** property to:
+Next, add a button to append the user's data to the pin collection.
+
+1. Open the **Insert** tab.
+2. Select **Button** to place a button in the app screen.
+3. Set the button's **Text** property to *Add pin*.
+4. Enter the following code in the button's **OnSelect** property, exactly as shown:
 
     ```json
     Collect( 
@@ -183,37 +140,34 @@ You can [create a collection](create-update-collection.md) within the app so use
       }
     )
     ```
-6. Select the view in 3D control and change the **Pins(Items)** property to `PinsCollection`.
 
-    ![In the Pins(Items) field, select the PinsCollection option.](./media/augmented/pins-collect-connect.png "In the Pins(Items) field, select the PinsCollection option")
+Now you'll change the data source of the pins from the Excel table to the new collection.
 
-1. On the **Properties** pane, go to the **Advanced** tab and select **More options**.
+1. Select the 3D model.
+2. On the **Properties** tab, select the **Pins(Items)** dropdown list, and then select **PinsCollection**.
 
-1. Set the following properties:
+    :::image type="content" source="./media/augmented/pins-collect-connect.png" alt-text="A screenshot of the Pins(Items) property of a 3D model in Power Apps Studio, with the data source PinsCollection selected.":::
 
-    - **PinsX** as "X"
-    - **PinsY** as "Y"
-    - **PinsZ** as "Z"
+3. On the **Advanced** tab, find **PinsX**, **PinsY**, and **PinsZ** and set them to *X*, *Y*, and *Z*, respectively.
 
-Now when a user enters coordinates into each of the fields and a label, and selects the **Add pin** button, the coordinates will be converted into a pin and placed on the model.
+When the user enters coordinates and a label and selects **Add pin**, a labeled pin is placed on the model at the entered coordinates.
 
-You can display each of the pins as they are added:
+## Show information about pins as they're added to a 3D model
 
-1. Open the **Insert** tab.
-2. Expand **Layout**.
-3. Select the **Data table** control and place it on the app screen.
-4. On the **Properties** pane, set the **Data source** property to the collection you created, **PinsCollection**.
-5. On the **Properties** pane, select **Edit fields** and then **Add field**. Select each of the fields and then **Add**.
+Finally, combine the previous examples by displaying information about the pins as the user adds them.
 
-    ![On the Fields pane, all options (Label, X Pins, Y Pins, and Z Pins) are selected.](./media/augmented/pins-add-fields.png "On the Fields pane, all options (Label, X Pins, Y Pins, and Z Pins) are selected")
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
-As users add pins with the **Add pin** button, they will display in the table below the button.
+1. Add a data table to the screen.
+2. On the **Properties** tab, select the **Pins(Items)** dropdown list and select **PinsCollection**.
+3. Select **Edit fields**, and then select **Add field**.
+4. Select the columns to show in the table, and then select **Add**.
 
-## Other MR controls
+## Other mixed reality controls
 
 - View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** control.
 - Measure distance, area, and volume with the **[Measure in MR](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** control
 
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
