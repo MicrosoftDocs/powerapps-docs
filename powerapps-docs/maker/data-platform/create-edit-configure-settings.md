@@ -210,5 +210,5 @@ For the methods available, go to [Get or update a setting value using client API
 ## See also
 
 For developers:
-- [RetrieveSetting Function](/dynamics365/customer-engagement/web-api/retrievesetting?view=dynamics-ce-odata-9)
-- [SaveSettingValue Action](/dynamics365/customer-engagement/web-api/savesettingvalue?view=dynamics-ce-odata-9)
+- [RetrieveSetting Function](/dynamics365/customer-engagement/web-api/retrievesetting?view=dynamics-ce-odata-9&preserve-view=true)
+- [SaveSettingValue Action](/dynamics365/customer-engagement/web-api/savesettingvalue?view=dynamics-ce-odata-9&preserve-view=true)
