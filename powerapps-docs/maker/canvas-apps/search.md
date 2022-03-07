@@ -25,7 +25,7 @@ You can now use the search pane to locate objects across your app like media fil
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
 
 ## Prerequisites
