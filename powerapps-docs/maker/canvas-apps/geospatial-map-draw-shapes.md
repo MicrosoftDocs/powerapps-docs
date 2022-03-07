@@ -116,7 +116,7 @@ You can copy the following sample data into an Excel workbook to test this featu
 
 The map will now highlight four counties in Washington state in the US, with different colors. The following screenshot shows how this appears with all counties filled in:
 
-:::image type="content" source="media/geospatial/cusotm-geojson-counties.png" alt-text="Screenshot of an app with a map that highlights the various counties of Washington state in the US.":::
+:::image type="content" source="media/geospatial/custom-geojson-counties.png" alt-text="Screenshot of an app with a map that highlights the various counties of Washington state in the US.":::
 
 
 ## Measurement outputs from shapes drawn (preview)
