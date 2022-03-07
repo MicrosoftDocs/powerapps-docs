@@ -53,7 +53,7 @@ The application displays the enhanced email template selection window only if yo
  - Switch between list, tile, and grid views
  - Search for templates based on their title, subject, description, or content of the template  
  - Filter templates based on standard and custom attributes
- - Zoom in to view templates in on a full screen. The application provide an option to navigate between templates.
+ - Zoom in to view templates on a full screen. The application provides an option to navigate between templates.
  - Administrators can add custom attributes to the Template Gallery Filter Form to extend Filters, Email Template Sorted View to extend the grids, and Template Gallery Properties Form to extend the template details section.
 
    ![Email template selection window.](media\email-templates.png "New Email template selection window")
