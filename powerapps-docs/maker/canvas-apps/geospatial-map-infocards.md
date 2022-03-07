@@ -1,4 +1,4 @@
---
+---
 title: Display information about map pins
 description: Insert info cards that display information about each pin in your map.
 author: anuitz
