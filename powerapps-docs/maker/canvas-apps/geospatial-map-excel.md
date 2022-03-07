@@ -1,11 +1,12 @@
 ---
-title: Insert pins from data source
-description: Add customized pins to your map control in Power Apps by using a dataset.
+title: Add pins to a map from a data source
+description: Import an Excel table to place customized pins on a map in Power Apps.
 author: anuitz
+ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: mduelae
-ms.date: 3/2/2021
+ms.reviewer: mkaur
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,116 +14,83 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - mduelae
+  - tapanm-msft
   - anuitz
 ---
 
+# Use a data source to place pins on a map
 
-# Use a data source to insert pins
+The map control in a canvas app can import location data from a named table in an Excel workbook. Each row is plotted as a pin on the map. Each column corresponds to an advanced property of the map control. Together, the columns determine the placement and appearance of the pins.
 
-You can load a table that contains existing data into the map control. The control will then plot each row in your table as a map pin.
+| Column name | Corresponds to | Required |
+| - | - | - |
+| Name (or Label) | ItemsLabels | Required |
+| Longitude | ItemsLongitudes | Required |
+| Latitude | ItemsLatitudes | Required |
+| Address | ItemsAddresses | Required if Longitude and Latitude aren't given |
+| Color | ItemsColors | Optional |
+| Icon | ItemsIcons | Optional |
 
-## Prerequisites
-1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md). 
+>[!Tip]
+> Specify the color using a [name, CSS color definition, or RGBA value](/functions/>function-colors). Specify the icon using an [image template](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates). If an icon or color isn't provided, then the pins will use the app's defaults.
 
+## Import pins from an Excel table
 
-## Add pin data from an Excel workbook
+In this example, we'll import pins from an Excel table named *TestData*. The table contains location information for a company's top customers.
 
-Your data source needs to contain a named table with the following columns that should then be mapped to the associated property in the control's **Advanced** pane.
+:::image type="content" source="media/geospatial/sample-excel.png" alt-text="An example Excel worksheet with a table named TestData that contains information needed to place pins on a map.":::
 
-Column description | Maps to property | Required
--- | -- | --
-Label for the pin | ItemsLabels | Required
-Longitude of the pin | ItemsLongitudes | Required
-Latitude of the pin | ItemsLatitudes | Required
-Color of the pin | ItemsColors | Optional
-Icon for the pin | ItemsIcons | Optional
+### Create a data source
 
+1. [Create a table](https://go.microsoft.com/fwlink/?linkid=2186917) in Excel with the following data. Name the table **TestData**.
 
+    | Name | Longitude | Latitude | Address | Color | Icon |
+    | - | - | - | - | - | - |
+    | Fourth Coffee | -98.29277 | 26.2774 | 706 South Orange Street, Alton, TX 78573 | Blue | marker-flat |
+    | Bellows College | -96.85572 | 32.55253 | | #ffefcd | hexagon-thick |
+    | Adventure Works | -96.99952 | 32.72058 | | | car |
+    | Fabrikam, Inc. | -118.30746 | 34.86543 | 7989 Edwards Avenue, Rosamond, CA 93560 | | |
+    | Margie's Travel | -118.66184 | 34.17553 | 6074 John Muir Road, Hidden Hills, CA 91302 | | |
+    | Relecloud | -113.46184 | 37.15363 | 1704 North Ranch View Drive, Washington, UT 84780 | Red | car |
+    | Contoso Pharmaceuticals | -115.17241  | 36.11947 | 3475 Las Vegas Blvd S, Las Vegas, NV 89109 | | |
+    | Alpine Ski House | -102.63908 | 35.20919 | | | |
+    | Adatum Corporation | -89.39433 | 40.71025 | | | |
+    | Tailwind Traders | -116.97751 | 32.87466 | | | |
 
-The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
+2. Save the workbook to your OneDrive for Business and close the file.
 
-You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
+### Bind the data source to a map control
 
+1. [Create a canvas app](./create-blank-app.md). Make sure it meets the [geospatial prerequisites](geospatial-overview.md#prerequisites).
+2. [Insert a map control](geospatial-component-map.md).
+3. On the control's **Properties** tab, select the **Locations(Items)** dropdown list and type **excel**.
+4. Select **Excel Online (Business)**. Add a connection if needed, or select your Excel Online (Business) connection.
+5. Navigate to your OneDrive for Business and select the Excel workbook you saved earlier.
+6. Select the table **TestData**, and then select **Connect**.
+7. Select **Connect** again to accept the default identifier (auto-generated ID).
+8. On the **Advanced** tab, find **ItemsLabels**, **ItemsLatitudes**, **ItemsLongitudes**, **ItemsAddresses**, **ItemsColors**, and **ItemsIcons** and enter the name of the corresponding column in the table. (In this example, enter *Name* in **ItemsLabels**, *Latitude* in **ItemsLatitude**, and so on.) Enclose the column name in quotation marks.
 
-The following Excel table shows the required columns:
+    :::image type="content" source="media/geospatial/advanced-properties.png" alt-text="A screenshot of a map control under construction in Microsoft Power Apps Studio, shown alongside its ItemsLabels, ItemsLatitudes, and ItemsLongitudes properties.":::
 
+Pins appear on the map at the locations described by the coordinates or addresses in the table.
 
-:::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
+Depending on the pins' locations and the map's zoom level, you may see numbered clusters instead of individual pins. The number indicates how many pins are represented in a cluster. Preview the app and zoom in to see the individual pins. If the table included colors and icons, the pins are customized from the default.
 
-You can copy the following sample data to test this functionality:
+:::image type="content" source="media/geospatial/pins-map.png" alt-text="A screenshot of a map with two default pins, one customized pin, and one cluster of two pins.":::
 
-Name | Longitude | Latitude | Color | Icon
--- | -- | -- | -- | --
-Fourth Coffee (sample) | -98.29277 | 26.2774 | Blue | marker-flat
-Litware, Inc. (sample) | -96.85572 | 32.55253 | #ffefcd| hexagon-thick
-Adventure Works (sample) | -96.99952 | 32.72058 | | car
-Fabrikam, Inc. (sample) | -118.30746 | 34.86543 | |
-Blue Yonder Airlines (sample) | -118.66184 | 34.17553 | |
-City Power & Light (sample) | -113.46184 | 37.15363 | |
-Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
-Alpine Ski House (sample) | -102.63908 | 35.20919 | |
-A Datum Corporation (sample) | -89.39433 | 40.71025 | |
-Coho Winery (sample) | -116.97751 | 32.87466 | |
+## Save geocoded addresses back to the data source
 
+You can place up to 5,000 pins on a map using latitude/longitude pairs, but only up to 50 pins using a physical address. That's because the map control must geocode physical addresses, converting them to latitude/longitude pairs, before they can be pinned. When both an address and coordinates are provided in the data source, the map control prioritizes latitude and longitude to avoid needlessly geocoding the address.
 
+After a map runs the first time, you can save the coordinates of geocoded addresses back to the original data source. Then the map control will use the latitude and longitude to place the pins, instead of geocoding the addresses again.
 
+To save geocoded addresses back to the data source, use the [**Patch**](./functions/function-patch.md) function bound to a button control.
 
-1. Copy and paste the table into a new data source. In this example, we are using an Excel workbook.  
-
-1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
-
-    ![Screenshot highlighting the format as table option in Excel.](./media/geospatial/convert-table.png)
-
-1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
-
-    ![Screenshot highlighting the table name in Excel.](./media/geospatial/table-name.png)
-
-1. Save the workbook.
-
-1. Open or create a new app in Power Apps, and insert the map control.
-
-1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
-
-    :::image type="content" source="media/geospatial/select-excel.png" alt-text="Screenshot of the Import from Excel option.":::
-
-
-1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
-
-    ![Screenshot of the table selection panel.](./media/geospatial/select-table.png)
-
-1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
-
-1. Set the following properties:
-
-    - **ItemsLabels** as *"Name"*
-    - **ItemsLatitudes** as *"Latitude"*
-    - **ItemsLongitudes** as *"Longitude"*
-    - (Optional) **ItemsColors** as *"Colors"*
-    - (Optional) **ItemsIcons** as *"Icons"*
-
-1. The map control will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the control will use the default icon and color.
-
-    ![A screenshot of the map control with custom icons and different colors.](./media/geospatial/pins-map.png)
-
- >[!NOTE]
- > Each map control has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map control. Therefore, for pins with both latitude/longtude and an address bound, the map control will prioritize using the latitude/longitude to avoid geocoding the address. 
-
-
-
-## Save geocoded addresses from map control to data source
-
-To avoid geocoding the same set of addresses every time the map control is launched, you can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude and longitude instead of geocoding the addresses again. 
-
-To do so, add a button to save the geocoded address back to the original data source with the following formula: 
+Continuing with the *TestData* table from our earlier example, enter the following formula in the button control's **OnSelect** property:
 
 ```text
- ForAll(Map1.GeocodedItems, Patch(Accounts1, LookUp(Accounts1, ThisRecord.Address = Address && ThisRecord.Name = Label), {Latitude: Latitude, Longitude: Longitude }))
+ ForAll(Map1.GeocodedItems, Patch(TestData, LookUp(TestData, ThisRecord.Address = Address), {Latitude: Latitude, Longitude: Longitude }))
 ```
-
-
-![Screenshot of the app showing the formula in the formula bar.](https://user-images.githubusercontent.com/66707906/118740084-d3081d80-b7ff-11eb-9295-2855bd7e9a96.png)
 
 
 
@@ -131,10 +99,8 @@ To do so, add a button to save the geocoded address back to the original data so
 - [Add info cards to pins](geospatial-map-infocards.md)
 - [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
 
-
 ## Other geospatial controls
 
 To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
