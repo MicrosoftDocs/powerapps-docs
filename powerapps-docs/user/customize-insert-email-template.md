@@ -24,7 +24,7 @@ You can configure and enable the enhanced email template for apps across the org
 To configure the enhanced email template for apps across the organization, perform the following steps:
 
 1. Navigate to **Power Apps** > **Solutions**.
-1. Create a new solution. See [Understand the email experience](../maker/data-platform/create-solution.md)
+1. Create a new solution. More information: [Understand the email experience](../maker/data-platform/create-solution.md)
 1. On the **Solutions** page, go to the solution you created.
 1. Select **Add Existing > More > Setting**.
 1. On the Add existing Setting Definition page, select the **Enable the New Insert Template Dialog** option and select **Next**.
