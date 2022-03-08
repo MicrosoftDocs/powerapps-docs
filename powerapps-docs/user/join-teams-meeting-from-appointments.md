@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/03/2022
+ms.date: 3/08/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -20,11 +20,17 @@ search.app:
 ---
 # Create and join a Teams meeting from an appointment (preview)
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](./includes/cc-beta-prerelease-disclaimer.md)]
+
 Now you can create and join a Teams meeting from an appointment in your model-driven app.
 
 
 > [!div class="mx-imgBorder"] 
 > ![The diagram shows how to add a Teams meeting to an appointment and then join the meeting.](media/teams-meeting-in-appt.gif)
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](includes/cc-preview-features-definition.md)]
 
 
 
