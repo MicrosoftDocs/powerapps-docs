@@ -1,5 +1,5 @@
 ---
-title: ControlAttributes in Microsoft Dataverse| Microsoft Docs
+title: ControlAttributes| Microsoft Docs
 description: Attributes of control that necessary for formatting.
 keywords:
 author: adrianorth
@@ -28,7 +28,7 @@ Model-driven and canvas apps
 
 The column type.
 
-**Type**: [ControlAttributesType](../controlattributestype.md)
+**Type**: [ControlAttributesType](ControlAttributesType.md)
 
 ### Precision
 
