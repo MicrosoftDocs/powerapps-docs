@@ -62,7 +62,7 @@ This article contains information on supported device platforms, web browser req
 
 <sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
 
-<sup>2</sup>Using the web browser on a phone to run a model-driven apps isn't supported; use the [Power Apps mobile app](../../mobile/run-powerapps-on-mobile.md).
+<sup>2</sup>Using the web browser on a phone to run a model-driven app isn't supported; use the [Power Apps mobile app](../../mobile/run-powerapps-on-mobile.md).
 
 For classic web application system requirements, go to [Web application requirements](/power-platform/admin/web-application-requirements).
 
