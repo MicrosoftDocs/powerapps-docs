@@ -87,6 +87,8 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
+      - name: Create and join a Teams meeting from an appointment (preview)
+        href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
@@ -2296,7 +2298,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use settings (preview)
+        - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  

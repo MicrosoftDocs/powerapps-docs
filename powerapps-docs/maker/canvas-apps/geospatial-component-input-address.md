@@ -25,7 +25,7 @@ The address input control lets you see dynamic address suggestions as you type. 
 
 The control returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md).
 
 Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
