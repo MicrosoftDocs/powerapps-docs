@@ -8,7 +8,7 @@ author: JimDaly
 manager: ryjones
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na

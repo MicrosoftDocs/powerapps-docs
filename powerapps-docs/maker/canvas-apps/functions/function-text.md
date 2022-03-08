@@ -2,7 +2,7 @@
 title: Text function in Power Apps
 description: Reference information including syntax and examples for the Text function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Text function in Power Apps
 Converts any value and formats a number or date/time value to a string of text.

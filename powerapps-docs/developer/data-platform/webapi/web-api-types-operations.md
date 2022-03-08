@@ -2,8 +2,8 @@
 title: "Web API types and operations (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes how you can find information you need from the Web API service and metadata documents, including documentation of the Web API system entity types, functions, and actions"
 ms.custom: ""
-ms.date: 11/24/2021
-ms.service: powerapps
+ms.date: 04/20/2021
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -2,7 +2,7 @@
 title: "addOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Adds a function to be called when the OnSave event is triggered.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1a66f93d-a47c-4316-91f1-dcf5d09f9d19

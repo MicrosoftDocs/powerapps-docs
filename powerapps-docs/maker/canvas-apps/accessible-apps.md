@@ -2,9 +2,8 @@
 title: Create accessible canvas apps
 description: How to make canvas apps accessible for people with disabilities
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: conceptual
-ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/18/2021
 ms.subservice: canvas-maker
@@ -17,6 +16,9 @@ contributors:
   - chmoncay
   - tahoon-ms
   - tapanm-msft
+ms.custom:
+  - intro-internal
+  - canvas
 ---
 # Create accessible canvas apps
 

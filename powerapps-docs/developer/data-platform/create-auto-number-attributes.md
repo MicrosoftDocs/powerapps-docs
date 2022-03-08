@@ -5,7 +5,7 @@ keywords: "Autonumber columns" # 115-145 characters including spaces. This abstr
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "nhelgren" # GitHub ID
 ms.subservice: dataverse-developer

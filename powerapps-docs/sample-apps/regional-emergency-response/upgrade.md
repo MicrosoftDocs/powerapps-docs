@@ -3,7 +3,7 @@ title: Upgrade the Regional Government Emergency Response and Monitoring solut
 description: Provides provides detailed instructions for regional IT admins to upgrade the Regional Government Emergency Response and Monitoring solution for their organization.
 author: pankajarora-msft
 manager: annbe
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/05/2020

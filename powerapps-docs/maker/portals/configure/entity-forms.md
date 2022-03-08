@@ -2,16 +2,17 @@
 title: About basic forms
 description: Learn how to create basic forms in a portal."
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/04/2021
+ms.date: 03/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # About basic forms
@@ -68,7 +69,7 @@ To enable permissions for a basic form, select the checkbox to **Enable Table Pe
 
 |Name|Description|
 |----|---------|
-|Add Captcha|    Displays captcha. <br> **NOTE:** Captcha control is currently limited to only English language for audio, and Latin characters for image.|
+|Add Captcha|    Displays captcha. |
 |Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
 |Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
@@ -178,7 +179,7 @@ Clicking on one of these options displays a configuration area for that action. 
 
 ## Geolocation configuration for basic forms
 
-A managed form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
+A form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
 
 The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The basic form record has a configuration section that defines these field mappings that you must specify. The field names will vary depending on the schema you have created.
 
@@ -186,6 +187,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 > [!Note]
 > - The address field in a read-only basic form is replaced with the map when geolocation is enabled.
+> - The map will only be rendered when displaying the form in a modal window.
 > - The Geolocation section is not visible in the German Sovereign Cloud environment. If a user has enabled geolocation by using a different form, it will not be displayed during rendering on portal.
 
 ## Request validation
@@ -219,7 +221,7 @@ To disable request validation, follow these steps:
 
 - A **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
-- Duplicate fields, multi-select option set, Party List fields and business rules aren't supported in basic forms.
+- Duplicate fields, Party List fields, and business rules aren't supported in basic forms.
 - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app) 
 - [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 - Business rules and client API can enable locked fields on a read-only form.

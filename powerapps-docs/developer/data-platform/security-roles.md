@@ -4,7 +4,7 @@ description: "Microsoft Dataverse provides security roles that can be assigned t
 ms.custom: intro-internal
 ms.date: 11/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

@@ -2,7 +2,7 @@
 title: "getDataXml (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Returns a string representing the XML that will be sent to the server when the record is saved.
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1a66f93d-a47c-4316-91f1-dcf5d09f9d19

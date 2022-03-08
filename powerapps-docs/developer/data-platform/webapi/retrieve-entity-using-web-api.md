@@ -3,7 +3,7 @@ title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft 
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
 ms.custom: ""
 ms.date: 05/03/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

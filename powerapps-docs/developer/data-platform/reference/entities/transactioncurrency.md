@@ -2,7 +2,7 @@
 title: "Currency (TransactionCurrency) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Currency (TransactionCurrency) table/entity."
 ms.date: 10/05/2021
-ms.service: "powerapps"
+
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"

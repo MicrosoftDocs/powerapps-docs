@@ -2,7 +2,7 @@
 title: License requirements for tables| Microsoft Docs
 description: An explanation of license requirements for tables with complex business logic and restricted tables in Microsoft Dataverse.
 author: MicroSri
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.date: 08/28/2020
 ms.subservice: dataverse-maker
@@ -17,7 +17,7 @@ search.app:
 
 # License requirements for tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 App makers can use most of the tables available within Microsoft Dataverse (including custom tables and tables that are part of the Common Data Model) to create apps and flows for users who have a Power Apps or Power Automate license. 
 

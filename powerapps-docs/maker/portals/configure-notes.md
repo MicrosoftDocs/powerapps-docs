@@ -2,10 +2,10 @@
 title: Set up notes as attachments for basic and advanced forms
 description: Adding notes to forms on your Power Apps portal is easy. This page explains how to add and configure notes as attachments on both basic and advanced forms.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/12/2021
+ms.date: 12/15/2021
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -75,7 +75,7 @@ After adding the configuration, the note control will be rendered by using the a
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
 |Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
 |Restrict MIME Types | Select whether to allow or restrict MIME types.|
-|Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. |
+|Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. The maximum size of files that can be uploaded is determined by the *Maximum file size* setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box. |
 | **Advanced settings** |                                                                                                                                                              |
 | List Title            | Overrides the title over the Notes area.                                                                                                                     |
 | Add Note Button Label | Overrides the label on the Add Notes button.                                                                                                                 |
@@ -199,7 +199,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 

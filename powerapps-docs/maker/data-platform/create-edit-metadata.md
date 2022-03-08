@@ -4,7 +4,7 @@ description: "Learn about tables and metadata in Microsoft Dataverse"
 ms.custom: ""
 ms.date: 11/16/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "overview"
 author: "Mattp123"
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
@@ -21,7 +21,7 @@ search.app:
 
 # Tables and metadata in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you are evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 
@@ -63,7 +63,7 @@ You can’t delete standard tables, columns, or table relationships. They are co
 
 ## Limitations on creating metadata items  
 
-There is a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Resources In Use** page. If you need more custom tables, contact technical support. This upper limit can be adjusted.  
+There is a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Administration** > **Resources In Use** page. If you need more custom tables, contact technical support. This upper limit can be adjusted.  
   
 Within each table there is an upper limit on the number of columns you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a database table. It is difficult to provide a specific number because each type of column can use a different amount of space. The upper limit depends on the total space used by all the columns for the table.  
   

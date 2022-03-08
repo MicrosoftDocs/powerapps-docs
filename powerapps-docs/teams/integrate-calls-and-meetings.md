@@ -1,16 +1,16 @@
 ---
-title: Integrate your Teams app with calls and meetings
+title: Integrate your Teams app with calls and meetings (contains video)
 description: Learn how to use Teams calls and meetings with your Power Apps in Teams.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
-    - josephshum
+    - msftsamperl
     - joel-lindstrom
 ---
 # Integrate with calls and meetings
@@ -149,7 +149,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
     | Text     | "Chat"              |
     | Width    | 150                 |
     | Height   | 45                  |
-    | X        | Button1.X + 200     |
+    | X        | Button2.X + 200     |
     | Y        | Button1.Y           |
 
 1. Copy the following formula in the **OnSelect** property of the new button:

@@ -2,7 +2,7 @@
 title: Place child nodes by using shortcuts for portals
 description: Learn how to place child nodes by using shortcuts for portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

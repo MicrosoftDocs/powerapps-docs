@@ -2,7 +2,7 @@
 title: "updateRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the updateRecord method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: f5d4c8a9-4188-472a-83bf-b986dd135754

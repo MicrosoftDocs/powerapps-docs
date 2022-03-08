@@ -2,7 +2,7 @@
 title: Available Liquid objects
 description: Learn about the available liquid objects in a portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/27/2021

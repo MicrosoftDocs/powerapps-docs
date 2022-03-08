@@ -3,13 +3,14 @@ title: Import components into model-driven apps in Microsoft Dataverse | Microso
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 04/01/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.topic: "article"
-author: Nkrb
 ---
 
 # Package a code component

@@ -2,7 +2,7 @@
 title: Choices function in Power Apps
 description: Reference information including syntax and examples for the Choices function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Choices function in Power Apps
 Returns a table of the possible values for a lookup column.

@@ -1,17 +1,17 @@
 ---
-title: Add hierarchy to inspection location
+title: Add hierarchy to inspection location (contains video)
 description: Learn about how to add hierarchy to inspection locations in Inspections sample app.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/23/2021
+ms.date: 12/01/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---
@@ -313,7 +313,7 @@ Update the formula for the following controls to allow the Items screen to show 
 
 1. Go to **Checklist Steps** screen.
 
-1. Select the **OnSelect** property of the screen, and update the patch function for updating the **Area Inspections** app to add the store value in the formula.
+1. Select the **OnVisible** property of the screen, and update the patch function for updating the **Area Inspections** app to add the store value in the formula.
 
     ```powerapps-dot
     , Store: gblSelectedStore
@@ -386,7 +386,7 @@ All the changes to the Inspections app are completed. The app can now be publish
                 ),
             Today(),
             Hours
-                ) \> 0,
+                ) > 0,
         galInspections.Selected.Store.Name & " | Submitted by " &
         galInspections.Selected.createdby.'Full Name' & ", " & DateDiff(
         Date(

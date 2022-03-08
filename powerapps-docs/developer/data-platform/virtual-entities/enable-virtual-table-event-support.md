@@ -2,7 +2,7 @@
 title: "Enable Virtual Tables to support Dataverse events (Microsoft Dataverse) | Microsoft Docs"
 description: "You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector When a row is added, modified or deleted trigger."
 ms.date: 10/31/2021
-ms.service: powerapps
+
 ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"

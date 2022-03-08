@@ -2,11 +2,12 @@
 title: ControlAttributesType in Microsoft Dataverse| Microsoft Docs
 description: Enumeration of control attribute type.
 keywords:
-ms.author: nabuthuk
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-author: nkrb
-ms.date: 11/04/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
