@@ -168,7 +168,7 @@ Selecting a result under the **Screen** header selects the appropriate control o
 
 If you make changes within the app, you'll need to refresh the results pane to see the change reflected in your search results.
 
-:::image type="content" source="media/search/screens.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
+:::image type="content" source="media/search/refresh.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
 
 ## Clear the search term
 
