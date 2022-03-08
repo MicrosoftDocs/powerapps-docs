@@ -128,60 +128,61 @@ Context variable selected:
 
 :::image type="content" source="media/search/local-variable.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
 
-## Collections
+### Collections
 
 Selecting a collection under the **Collections** header will take you to the information screen backstage for that collection.
 
 :::image type="content" source="media/search/collections.png" alt-text="Collections selected from search results showing the relevant collection details.":::
 
-## Data
+### Data
 
 Selecting a result under the **Data** header opens the **Data** pane, and pre-populates the search input for that pane with the selected result text.
 
 :::image type="content" source="media/search/data.png" alt-text="Data selected from search results showing the relevant data connection details.":::
 
-## Media
+### Media
 
 Selecting a result under the **Media** header opens the **Media** and pre-populates the search input for that pane with the selected result text.
 
 :::image type="content" source="media/search/media.png" alt-text="Media selected from search results showing the relevant media details.":::
 
-## Flows
+### Flows
 
 **Flows** header only appears if you've enabled the [Power Automate pane (preview)](working-with-flows.md). Selecting a result here opens the Power Automate pane, and pre-populates the search input with the selected result text.
 
 :::image type="content" source="media/search/flows.png" alt-text="Flow selected from search results showing the relevant flow details.":::
 
-## Components
+### Components
 
-![A screenshot of the Search pane highlighting results under the Components category header  The searched term is highlighted within the results ](media/search/image21.png)
+Selecting a result under the **Components** header takes you to the components section in the **Tree view** pane, and pre-populates the search input for that pane with the selected result text.
 
-Selecting a result under the Components header will navigate you to the Components pivot in the Tree View Pane and pre-populate the search input for that pane with the selected result text to help further refine the pane results.
+:::image type="content" source="media/search/components.png" alt-text="Component selected from search results showing the relevant component details.":::
 
-![A screenshot of the Tree view pane on the components pivot with the selected search result copied to the search input text area  A filtered result list returning a single component result matching the input text  ](media/search/image22.png)
+### Screens
 
-## Screens
+Selecting a result under the **Screen** header selects the appropriate control or screen on the canvas, and opens the property for the result in the formula bar. The selected result also gets highlighted in the formula bar.
 
-![A screenshot of the Search pane highlighting results under the Screens category header  There is a hierarchy of results shown for App  screens  their associated controls  and the matching entries in associated properties in formulas  The searched term is highlighted within the results ](media/search/image23.png)
+:::image type="content" source="media/search/screens.png" alt-text="Screens selected from search results showing the relevant screen details.":::
 
-Selecting a result under the Screen header will select the appropriate control or screen on the canvas for the result and open the property for the result in the formula bar. The selected result will also be highlighted in the formula bar.
-
-![A screenshot of the OnStart property of the app showing an associated formula in the formula bar which has the search text highlighted](media/search/image24.png)
-
-# Refreshing the Search results
+## Refreshing the search results
 
 If you make changes within the app, you'll need to refresh the results pane to see the change reflected in your search results.
 
-![A screenshot of the top of the search pane highlighting the refresh button underneath the search text input area ](media/search/image25.png)
+:::image type="content" source="media/search/screens.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
 
-# Clearing the Search term
+## Clear the search term
 
-Search terms and results are kept until you no longer need them. To clear the search term and results, select the 'X' on the right hand side of the input area.
+Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign on the right hand side of the input area.
 
-![A screenshot of the top of the search pane highlighting the   39](media/search/X&#39.png " button to the right of the search text input area.")
+:::image type="content" source="media/search/clear.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
 
-# Limitations
+## Limitations
 
-The Search pane is limited to returning up to 2000 results. You'll receive a notification if you've exceeded that amount of results with a prompt to refine your search.
+The Search pane is limited to returning a maximum of 2000 results. You'll see a notification if you've exceeded that amount of results with a prompt to refine your search.
 
-![A screenshot of the top of the search pane highlighting a message under the search term input area which says  quot](media/search/2000+ results found. Try narrowing your search&quot.png)
+:::image type="content" source="media/search/max-results.png" alt-text="Maximum number of results reached.":::
+
+### See also
+
+[Use Find and Replace in the formula bar](formula-bar-find-replace.md)
+
