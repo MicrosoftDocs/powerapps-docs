@@ -87,6 +87,22 @@ To install standalone Power Platform CLI:
 > - Currently, Microsoft Power Platform CLI is supported only on Windows 10 and Windows 11.
 > - Power Platform Tools for Visual Studio Code, and works on Windows 10, Windows 11, Linux, and MacOS.
 
+## Successful installation
+Once the installation is successful, you will need to restart Visual Studio Code, upon which you will see the following notification
+
+   > [!div class="mx-imgBorder"]
+   > ![Install notification ](media/installation-success-1.png "Install notification")
+
+Then on the activity bar you will notice the icon for the Power Platform Tools
+   > [!div class="mx-imgBorder"]
+   > ![Power Platform Tools icon ](media/installation-success-3.png "icon")
+
+The final check would be to launch the Terminal window and type pac
+   > [!div class="mx-imgBorder"]
+   > ![Power Platform Command line in the Terminal window](media/installation-success-2.png "PAC CLI in the terminal window")
+
+
+
 ## Common commands
 
 This table lists some of the common commands used in the CLI.
