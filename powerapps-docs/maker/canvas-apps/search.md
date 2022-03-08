@@ -1,6 +1,6 @@
 ﻿---
-title: Use search pane (preview)
-description: Learn how to use the Search pane inside Power Apps Studio to find text.
+title: Use the search pane (preview)
+description: Learn how to use the search pane inside Power Apps Studio to find text.
 author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
@@ -17,7 +17,7 @@ contributors:
   - TashasEv
 ---
 
-# Use search pane (preview)
+# Use the search pane (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -35,11 +35,11 @@ You can now use the search pane to locate objects across your app like media fil
 - Learn how to [configure a control](add-configure-controls.md).
 - Create a [new app](data-platform-create-app.md), or open an [existing app](edit-app.md) in Power Apps.
 
-## Enable the search pane
+## Enable search pane
 
 The search pane is enabled on the new apps by default. However, you need to manually enable it on existing apps.
 
-To enable search pane on existing apps:
+To enable the search pane on existing apps:
 
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
@@ -51,77 +51,78 @@ To enable search pane on existing apps:
 
     :::image type="content" source="media/search/enable-search.png" alt-text="Search feature listed under the preview section of upcoming features in settings.":::
 
-    Search pane is enabled:
+    The search pane is enabled:
 
     :::image type="content" source="media/search/search-pane.png" alt-text="Search pane visible inside Power Apps Studio.":::
 
-## Open search pane
+## Open the search pane
 
-You can open the search pane using the Search icon, or shortcut keys. To use the shortcut keys, press **Ctrl+F** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+F* to open search pane.
+You can open the search pane using the Search icon, or shortcut keys. To use the shortcut keys, press **Ctrl+F** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+F** to open the search pane.
 
 > [!NOTE]
 > Pressing **Ctrl+F** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
 
-## Using the Search pane
+## Filter search results
 
-When working with search, you have options to help you filter and refine your search. We'll look at these options.
+You can filter search results through the selection of one or more categories. These categories help you focus the search by narrowing down the areas within the app such as screens, media, collections, and so on.
 
-## Filter
+To use filter option and select the required categories, use the filter option next to the search box. The default selection is **All** that searches across all categories within the open app.
 
-1.  Add text or characters to search for into the provided input area.
+The following example shows the search results filtered for the search term "Snow" with the selected categories of **Variables** and **Collections**:
 
-2.  Select the filter icon on the righthand side of the provided input area.
-
-![A screenshot of the top of the Search pane highlighting the filter results dropdown to the far right of the text input area ](media/search/image4.png)
-
-3.  Select one or more categories on the right to filter your search results. By default, "All" is selected and results from all categories will be shown.
-
-![A screenshot of the expanded category filter dropdown  highlighting that you can select multiple categories and include refiners such as Match case  Match whole word  and regular expressions](media/search/image5.png)
+:::image type="content" source="media/search/filter.png" alt-text="Filter option selected on the search pane.":::
 
 ## Refine your search
 
-Below the filter categories, you can also refine your search results using the options under **More search options**:
+You can use more search options to further refine search. These options are available inside the filter option named **More search options** (below the **Categories** section).
 
-![A screenshot of the expanded category filter dropdown highlighting the section labeled  quot](media/search/More search options&quot.png " and includes refiners such as Match case, Match whole word, and regular expressions")
+:::image type="content" source="media/search/more-search-options.png" alt-text="More search options under categories in the filter option.":::
 
-- **Match case** returns only matches with the specified case.  
-    In the example below, instances of Snow will appear as a match, but snow would not.
+- **Match case** - returns search results that only match with the specified case.
 
-![A screenshot of the expanded category filter dropdown  highlighting the Match case search option below the filter categories](media/search/image7.png)
+    In the below example, instances of "Snow" (upper case) will appear as a match, but "snow" (lower case) wouldn't.
 
-- **Match Whole Word** returns only exact matches of the entire sequence of characters.  
-    In the example below, "Snow" returns only 2 results although "Snow" appears within names many times across app objects.
+    :::image type="content" source="media/search/match-case.png" alt-text="An example of matching the case for search results with results for upper case keyword.":::
 
-![A screenshot of the expanded category filter dropdown  highlighting the Match whole word search option in the second position below the filter categories](media/search/image8.png)
+- **Match Whole Word** - returns search results for exact matches of the entire sequence of characters.
 
-- **Use regular expression (RegEx)** returns only matches conforming to the regular expression specified within the input area. See [regular-expression syntax](https://docs.microsoft.com/en-us/previous-versions/1400241x(v=vs.100)) for an introduction to the syntax.   
-    In the example below, using the Regular Expression search capability with *Snowboarding( Mountain\| Dashboard)* returns matches for*Snowboarding* when it appears together with either*Mountain* or*Dashboard* as shown below.
+    In the below example, "Snow" returns only 2 results although "Snow" appears within names many times across all app objects.
 
-![A screenshot of the expanded category filter dropdown  highlighting the Use regular expression search option in the final position below the filter categories ](media/search/image9.png)
+    :::image type="content" source="media/search/match-whole-words.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
 
-# Working with Search results
+- **Use regular expression (RegEx)** - returns search results for matches conforming to the [regular expression](/deployedge/edge-learnmore-regex) specified within the input area.
 
-Selecting search results in different areas of the Search pane will behave differently depending on the context of the result. In broad terms, there are two major types of search results in the pane: **definitions** and **instances**. Definitions describe the object being referred to in your app, usually in a formula. Instances are the individual formula references where you refer to the object.
+    In the below example, using the Regular Expression search capability with *Snowboarding( Mountain\| Dashboard)* returns matches for*Snowboarding* when it appears together with either *Mountain* or*Dashboard*.
 
-In the Search pane there are several category headers which you can use to navigate through the results in addition to filtering as shown above. The Variables, Collections, Data, Media, Flows, and Components categories all refer to **definitions.** When you select results under these category headers, you'll be taken either to the appropriate definition screen backstage (such as for Variables and Collections) or to the appropriate pane where that object was added to your app (such as for Data, Media, Flows, and Components).
+    :::image type="content" source="media/search/regex.png" alt-text="An example of matching regular expression syntax while searching for text.":::
 
-The Screens category is based on the structure of the screens pivot under the Tree View. Here you will find **instances**: search results which are directly tied to an individual App, Screen, or Control property in the formula bar. When you select a result under the Screens category, you'll be taken to that specific formula bar reference and the related control will be selected if applicable.
+## Work with search results
 
-Here we'll explore each search result type.
+Selecting search results in different areas of the search pane will behave differently depending on the context of the result. The search results can be classified under two broad categories&mdash;**Definitions** and **Instances**.
 
-## Variables
+- **Definitions** describe the object being referred to in your app, usually in a formula. Instances are the individual formula references where you refer to the object.
 
-![A screenshot of the Search pane highlighting results under the Variables category header with both global and context variable results  The searched term is highlighted within the results ](media/search/image10.png)
+    There are several category headers inside the search pane that you can use to navigate through the results. Categories such as **Variables**, **Collections**, **Data**, **Media**, **Flows**, and **Components** are referred as **definitions**.
 
-Selecting either a Global or Context Variable under the Variables header will navigate to the information screen backstage for that variable.
+    When you select results under such definition category headers, you'll be taken either to the appropriate definition screen backstage (such as for Variables and Collections) or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, and Components).
 
-**Global Variable:**
+- **Instances** describe the search results that are tied to an individual app, screen, or control property in the formula bar. All these results are tied to the **Screens** category based on the structure found inside the **Tree View**. When you select a result under this **Screens** category, you'll be taken to that specific formula bar reference or the related control as applicable.
 
-![A screenshot of the backstage area showing details for the selected Global Variable Search result  the Global tab is highlighted and the search term is highlighted in multiple places on the screen ](media/search/image11.png)
+### Variables
 
-**Context Variable:**
+Selecting a global or a context variable under the **Variables** header in the search results will take you to the information screen backstage for the selection.
 
-![A screenshot of the backstage area showing details for the selected context variable search result  The relevant screen tab for the context variable is highlighted and the search term is highlighted on the screen ](media/search/image12.png)
+As shown below, you're taken to the definition of the global or context variable depending on your selection from the search results available.
+
+Search result:
+
+:::image type="content" source="media/search/variables.png" alt-text="Global and context variables available in search result.":::
+
+Depending on the selected global or context variable, you're taken to the backstage for the selected type of variable.
+
+| Global variable selected | Context variable selected |
+| - | - |
+| :::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the backstage of the selected global variables."::: | :::image type="content" source="media/search/local-variable.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables."::: |
 
 ## Collections
 
