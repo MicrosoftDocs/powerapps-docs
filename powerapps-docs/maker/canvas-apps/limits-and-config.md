@@ -49,7 +49,7 @@ This article contains information on supported device platforms, web browser req
 
 <sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
 
-### Supported operating systems for browsers running Power Apps
+## Supported operating systems for browsers running Power Apps
 
 <!-- Applies to model-driven apps, canvas apps, and Power Apps portals. -->
 
@@ -58,7 +58,7 @@ This article contains information on supported device platforms, web browser req
 | Windows |Windows 10 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
 | macOS|10.13 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
 | iOS |iOS 13 or later| Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
-| Android |10 or later | Model-driven apps<sup>2</sup>, canvas apps<sup>2</sup>, Power Apps portals.  |
+| Android |10 or later | Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
 
 <sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
 
