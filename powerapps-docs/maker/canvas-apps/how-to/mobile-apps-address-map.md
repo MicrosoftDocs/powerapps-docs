@@ -77,7 +77,7 @@ Your trial environment will now be created, including a Dataverse database and s
 
 Before we can use the Geospatial Services in canvas apps, an admin must enable access to the features for the environment where we want to create the app.
 
-To learn about how to enable **Geospatial services** in your environment, see [Enable the geospatial features for the environment](../geospatial-overview.md#enable-geospatial-features-for-the-environment).
+To learn about how to enable **Geospatial services** in your environment, see [Enable the geospatial features for the environment](../geospatial-overview.md).
 
 ## Build a canvas app
 
