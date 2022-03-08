@@ -2,10 +2,11 @@
 title: ControlAttributes in Microsoft Dataverse| Microsoft Docs
 description: Attributes of control that necessary for formatting.
 keywords:
-ms.author: nabuthuk
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-author: nkrb
-ms.date: 11/23/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
