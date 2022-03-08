@@ -25,6 +25,12 @@ searchScope:
 
 Install Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](/powerapps/powerapps-overview).
 
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](includes/cc-preview-features-definition.md)]
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+
 1. Go to the Microsoft Store and install [Power Apps for Windows](https://www.microsoft.com/store/apps/9MVC8P1Q3B29).
 2. Verify that you have **WebView2 Runtime** installed on your Windows device; go to **Settings** > **Apps** > **Apps & features**.
 3. Search for **WebView** and verify that you have version **99.0 or later** installed. If you have an earlier version, then follow the steps in the [WebView2 Runtime](windows-app-install.md#webview2-runtime) section below.
