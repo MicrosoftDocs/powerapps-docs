@@ -57,10 +57,12 @@ This article contains information on supported device platforms, web browser req
 | --- | --- | ---|
 | Windows |Windows 10 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
 | macOS|10.13 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
-| iOS |iOS 13 or later| Model-driven apps, canvas apps, Power Apps portals.  |
-| Android |10 or later | Model-driven apps, canvas apps, Power Apps portals.  |
+| iOS |iOS 13 or later| Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
+| Android |10 or later | Model-driven apps<sup>2</sup>, canvas apps<sup>2</sup>, Power Apps portals.  |
 
 <sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
+
+<sup>2</sup>Using the web browser on a phone to run a model-driven apps isn't supported; use the [Power Apps mobile app](../../mobile/run-powerapps-on-mobile.md).
 
 For classic web application system requirements, go to [Web application requirements](/power-platform/admin/web-application-requirements).
 
