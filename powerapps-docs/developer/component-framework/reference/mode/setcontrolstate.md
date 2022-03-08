@@ -37,7 +37,7 @@ Model-driven and canvas apps
 
 ## Example
 
-Sample control: [Implementing control state API component](../../sample-controls/control-state-api).
+Sample control: [Implementing control state API component](../../sample-controls/control-state-api.md).
 
 ## Return Value
 

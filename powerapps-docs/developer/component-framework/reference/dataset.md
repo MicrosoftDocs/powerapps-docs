@@ -36,7 +36,7 @@ Whether an error occurred in data retrieval. This is supported in both model-dri
 
 **Type**: `boolean`
 
-## errorCode
+### errorCode
 
 The error code associated with the last encountered error, if applicable.
 
@@ -169,7 +169,7 @@ The sorting status for the current query. This is supported in both model-driven
 
 ## Lookup columns
 
-Dataverse table's lookup columns can now be retrieved.For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
+Dataverse table's lookup columns can now be retrieved. For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
 
 ## Example
 

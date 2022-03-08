@@ -24,7 +24,7 @@ Model-driven and canvas apps
 
 ## Properties
 
-## firstPageNumber
+### firstPageNumber
 
 First page number.
 

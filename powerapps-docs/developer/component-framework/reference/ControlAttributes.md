@@ -28,7 +28,7 @@ Model-driven and canvas apps
 
 The column type.
 
-**Type**: `[ControlAttributesType](../controlattributestype.md) | string`
+**Type**: [ControlAttributesType](../controlattributestype.md)
 
 ### Precision
 
@@ -40,7 +40,7 @@ The precision of the column.
 
 The precision source of the column.
 
-**Type**: `[MoneyPrecisionSource](./moneyprecisionsource.md)`
+**Type**: [MoneyPrecisionSource](./moneyprecisionsource.md)
 
 ### Format
 
@@ -50,12 +50,12 @@ The format of the string column.
 ### Behavior
 
 The behavior of the datetime column.
-**Type**: `[DateTimeFieldBehavior](./DateTimeFieldBehavior.md)`
+**Type**: [DateTimeFieldBehavior](./DateTimeFieldBehavior.md)
 
 ### OptionSet
 
 The optionset/choice object of this column.
-**Type**: `[OptionDescriptor](./optiondescriptor.md)`
+**Type**: [OptionDescriptor](./optiondescriptor.md)
 
 ### Related topics
 

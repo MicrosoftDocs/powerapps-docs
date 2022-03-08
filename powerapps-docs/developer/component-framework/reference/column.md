@@ -34,7 +34,7 @@ The alias of the column.
 
 This is available only for canvas apps. 
 
-**Type**: `[AttributeMetadata](./attributemetadata.md)`
+**Type**: [AttributeMetadata](attributemetadata.md)
 
 ### cellType
 

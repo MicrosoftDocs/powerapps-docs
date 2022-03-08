@@ -54,11 +54,11 @@ The name of popup which should be opened.
 
 **Type**: `string`
 
-### Remarks
+#### Remarks
 
 Should be defined only in a root popup. To open nested popups, should be provided string like `rootName.nestedName.[allOtherNestedNames]`. To close popups, should be provided empty string. This property will be automatically propagated to children.
 
-## type
+### type
 
 The type of popup, which is described in the enum PopupType. There should be only one `root` popup for each set of popups.
 
@@ -71,7 +71,7 @@ The `type` value is an enum with the following possible values
 |1|Root|
 |2|Nested|
 
-### Remarks
+#### Remarks
 
 Should be only one `Root` Popup for each set of Popups.
 
