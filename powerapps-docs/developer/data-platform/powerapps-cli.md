@@ -27,21 +27,43 @@ Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers d
 
 You can use either of the following ways to install Microsoft Power Platform CLI.
 
-### Using Power Platform VS Code Extension
+### Using Power Platform Tools for Visual Studio Code
 
 Follow these steps to install Microsoft Power Platform CLI using Visual Studio Code:
 
 1. Open [Visual Studio Code](https://code.visualstudio.com/).
-1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform**.
+1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform Tools**.
 1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
 
    > [!div class="mx-imgBorder"]
    > ![VS code extension install.](media/power-platform-vs-code-extension-install.png "VS code extension install")
    
 > [!NOTE]
-> Power Platform extension for Visual Studio Code updates automatically. 
+> Power Platform Tools for Visual Studio Code updates automatically. 
 
 1. You can also initiate the install into Visual Studio Code directly from [Marketplace]( https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Launch install from Marketplace.](media/marketplace-install.png "Launch install from Marketplace")
+
+2. You can also do a side load install into Visual Studio Code by downloading the extension from the [Marketplace] ( https://aka.ms/ppcvscode)
+
+## Side Load install for the Power Platform Tools for Visual Studio Code
+In some organizations, downloading or initiating an install over the web is prohibited. Most cases, the organization download the installation media and stores it in a secure location and verify that it is working according to their standards, before it is distributed within the organization. To support this paradigm of installation, you can go to the [Marketplace] ( https://aka.ms/ppcvscode) and instead of pressing the install button, press the download extension.
+
+   > [!div class="mx-imgBorder"]
+   > ![Download the extension.](media/side-load-install-1.png "Download the extension")
+
+This is will download a file with a .vsix extension on to your workstation
+   > [!div class="mx-imgBorder"]
+   > ![Extension file downloaded.](media/side-load-install-2.png "Downloaded extension")
+
+Launch Visual Studio Code and select the extensions icon, then click on the ellipsis on the extensions side bar on Visual Studio Code, and select install from VSIX...
+
+   > [!div class="mx-imgBorder"]
+   > ![Initiate install with the downloaded file.](media/side-load-install-3.png "Install from VSIX")
+
 
 ### Standalone Power Platform CLI
 
@@ -63,7 +85,7 @@ To install standalone Power Platform CLI:
     ```
 > [!NOTE]
 > - Currently, Microsoft Power Platform CLI is supported only on Windows 10 and Windows 11.
-> - Power Platform Extension for VS Code is in public preview, and works on Windows 10, Windows 11, Linux, and MacOS.
+> - Power Platform Tools for Visual Studio Code, and works on Windows 10, Windows 11, Linux, and MacOS.
 
 ## Common commands
 
@@ -73,7 +95,7 @@ This table lists some of the common commands used in the CLI.
 |-------|-----------|
 |[Admin](cli/reference/admin-command.md)|Commands for environment lifecycle features.|
 |[Auth](cli/reference/auth-command.md)|Commands to [authenticate to Dataverse](../component-framework/import-custom-controls.md#connecting-to-your-environment).|
-|[Canvas](cli/reference/canvas-command.md)|Commands for working with canvas app source files.|
+|[Canvas](cli/reference/canvas-command.md)|Commands for working with canvas app source files (Preview).|
 |[Org](cli/reference/org-command.md)|Commands for working with Dataverse environments.|
 |[Package](cli/reference/package-command.md)|Commands for working with [solution packages](/power-platform/alm/package-deployer-tool).|
 |[Paportal](cli/reference/paportal-command.md)|Commands for working with [Power Apps portals (Preview)](../../maker/portals/power-apps-cli.md).|
@@ -104,6 +126,10 @@ If you're a Private Preview participant and have an older version of CLI, follow
 1. Select the row containing the PowerAppsCLI path, and then select **Delete** on the right side.
 
 1. Select **OK** twice.
+
+
+
+
 
 
 ### See also
