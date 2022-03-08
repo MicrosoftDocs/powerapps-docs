@@ -47,7 +47,7 @@ To enable the Search pane on existing apps:
 
 1. Select **Upcoming features**.
 
-1. Under the **Preview** tab, select **Search** to turn this feature on.
+1. Under the **Preview** tab, select **Search** to turn on this feature.
 
     :::image type="content" source="media/search/enable-search.png" alt-text="Search feature listed under the preview section of upcoming features in settings.":::
 
@@ -64,9 +64,9 @@ You can open the Search pane using the Search icon, or shortcut keys. To use 
 
 ## Filter search results
 
-You can filter search results through the selection of one or more categories. These categories help you focus the search by narrowing down the areas within the app such as screens, media, collections, and so on.
+You can filter search results through the selection of one or more categories. These categories help you focus the search by narrowing down the areas within the app&mdash;such as screens, media, collections, and so on.
 
-To use filter option and select the required categories, use the filter option next to the search box. The default selection is **All** that searches across all categories within the open app.
+To use filter option and select the required categories, use the filter option next to the search box. The default selection is **All**,  searching across all categories within the open app.
 
 The following example shows the search results filtered for the search term "Snow" with the selected categories of **Variables** and **Collections**:
 
@@ -86,7 +86,7 @@ You can use more search options to further refine search. These options are avai
 
 - **Match Whole Word** - returns search results for exact matches of the entire sequence of characters.
 
-    In the below example, "Snow" returns only 2 results although "Snow" appears within names many times across all app objects.
+    In the below example, "Snow" returns only two results although "Snow" appears within names many times across all app objects.
 
     :::image type="content" source="media/search/match-whole-words.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
 
@@ -104,7 +104,7 @@ Selecting search results in different areas of the Search pane will behave diffe
 
     There are several category headers inside the Search pane that you can use to navigate through the results. Categories such as **Variables**, **Collections**, **Data**, **Media**, **Flows**, and **Components** are referred as **definitions**.
 
-    When you select results under such definition category headers, you'll be taken either to the appropriate definition screen backstage (such as for Variables and Collections) or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, and Components).
+    Selecting the results under such definition category headers takes you to the appropriate definition screen backstage (such as for Variables and Collections), or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, and Components).
 
 - **Instances** describe the search results that are tied to an individual app, screen, or control property in the formula bar. All these results are tied to the **Screens** category based on the structure found inside the **Tree View**. When you select a result under this **Screens** category, you'll be taken to that specific formula bar reference or the related control as applicable.
 
@@ -178,11 +178,10 @@ Search terms and results are kept until you no longer need them. To clear the se
 
 ## Limitations
 
-The Search pane is limited to returning a maximum of 2000 results. You'll see a notification if you've exceeded that amount of results with a prompt to refine your search.
+The Search pane is limited to returning a maximum of 2000 results. A notification appears if you exceed this limit.
 
 :::image type="content" source="media/search/max-results.png" alt-text="Maximum number of results reached.":::
 
 ### See also
 
 [Use Find and Replace in the formula bar](formula-bar-find-replace.md)
-
