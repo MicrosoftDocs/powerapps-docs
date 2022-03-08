@@ -1,11 +1,11 @@
-----
+---
 title: Add Geospatial controls to apps made with Microsoft Power Apps
 description: Geospatial controls let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: anuitz
 ms.topic: overview
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
-ms.date: 03/7/2022
+ms.date: 02/15/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
