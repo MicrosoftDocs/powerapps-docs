@@ -29,7 +29,7 @@ For more information about CSP, see [Content Security Policy Reference](https://
 
 1. Ensure that you're in the appropriate environment where your portal exists.
 
-1. On the left pane, select **Apps** and locate the **Portal Management** app.
+1. On the left pane, select **Apps** and locate the [**Portal Management** app](https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-portal).
 
     :::image type="content" source="media/manage-content-security-policy/portal-management-app.png" alt-text="The Apps menu option for Power Apps with the the Portals Management App selected":::
 
