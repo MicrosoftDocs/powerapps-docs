@@ -1,13 +1,13 @@
 ﻿---
 title: Manage content security policy
 description: Learn how to manage content security policy
-author: nageshbhat-msft
+author: Nagesh.Bhat
 
 ms.topic: conceptual
 ms.custom: 
 ms.date: 03/08/2022
 ms.subservice: portals
-ms.author: nageshbhat-msft
+ms.author: Nagesh.Bhat
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
