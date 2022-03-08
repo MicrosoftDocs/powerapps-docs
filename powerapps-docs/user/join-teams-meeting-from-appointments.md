@@ -48,7 +48,8 @@ This is a preview feature. Your system administrator will need to enable the fol
    > [!div class="mx-imgBorder"] 
    > ![Add a Teams meeting to an appointment.](media/teams-meeting-appt-1.png)  
 6. When you're done, select **Save**.
-
+> [!NOTE]
+> It may take a couple of minutes for the meeting to be synced with Outlook and for the meeting link to appear in the appoitnment.
 
 ## Join a Teams meeting from an appointment
 
