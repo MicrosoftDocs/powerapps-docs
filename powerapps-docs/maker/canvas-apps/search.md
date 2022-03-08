@@ -1,6 +1,6 @@
 ﻿---
-title: Use the search pane (preview)
-description: Learn how to use the search pane inside Power Apps Studio to find text.
+title: Use the Search pane (preview)
+description: Learn how to use the Search pane inside Power Apps Studio to find text.
 author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
@@ -17,11 +17,11 @@ contributors:
   - TashasEv
 ---
 
-# Use the search pane (preview)
+# Use the Search pane (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
-You can now use the search pane to locate objects across your app like media files, variables, collections, data sources and more. You can also use the search pane to find repeated instances of strings in formulas. For example, using the search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the search pane to learn more about what is being used by your app where, along with being able to go right to results to make necessary updates.
+You can now use the Search pane to locate objects across your app like media files, variables, collections, data sources and more. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what is being used by your app where, along with being able to go right to results to make necessary updates.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -35,11 +35,11 @@ You can now use the search pane to locate objects across your app like media fil
 - Learn how to [configure a control](add-configure-controls.md).
 - Create a [new app](data-platform-create-app.md), or open an [existing app](edit-app.md) in Power Apps.
 
-## Enable search pane
+## Enable Search pane
 
-The search pane is enabled on the new apps by default. However, you need to manually enable it on existing apps.
+The Search pane is enabled on the new apps by default. However, you need to manually enable it on existing apps.
 
-To enable the search pane on existing apps:
+To enable the Search pane on existing apps:
 
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
@@ -51,13 +51,13 @@ To enable the search pane on existing apps:
 
     :::image type="content" source="media/search/enable-search.png" alt-text="Search feature listed under the preview section of upcoming features in settings.":::
 
-    The search pane is enabled:
+    The Search pane is enabled:
 
     :::image type="content" source="media/search/search-pane.png" alt-text="Search pane visible inside Power Apps Studio.":::
 
-## Open the search pane
+## Open the Search pane
 
-You can open the search pane using the Search icon, or shortcut keys. To use the shortcut keys, press **Ctrl+F** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+F** to open the search pane.
+You can open the Search pane using the Search icon, or shortcut keys. To use the shortcut keys, press **Ctrl+F** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+F** to open the Search pane.
 
 > [!NOTE]
 > Pressing **Ctrl+F** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
@@ -70,7 +70,7 @@ To use filter option and select the required categories, use the filter option n
 
 The following example shows the search results filtered for the search term "Snow" with the selected categories of **Variables** and **Collections**:
 
-:::image type="content" source="media/search/filter.png" alt-text="Filter option selected on the search pane.":::
+:::image type="content" source="media/search/filter.png" alt-text="Filter option selected on the Search pane.":::
 
 ## Refine your search
 
@@ -98,11 +98,11 @@ You can use more search options to further refine search. These options are avai
 
 ## Work with search results
 
-Selecting search results in different areas of the search pane will behave differently depending on the context of the result. The search results can be classified under two broad categories&mdash;**Definitions** and **Instances**.
+Selecting search results in different areas of the Search pane will behave differently depending on the context of the result. The search results can be classified under two broad categories&mdash;**Definitions** and **Instances**.
 
 - **Definitions** describe the object being referred to in your app, usually in a formula. Instances are the individual formula references where you refer to the object.
 
-    There are several category headers inside the search pane that you can use to navigate through the results. Categories such as **Variables**, **Collections**, **Data**, **Media**, **Flows**, and **Components** are referred as **definitions**.
+    There are several category headers inside the Search pane that you can use to navigate through the results. Categories such as **Variables**, **Collections**, **Data**, **Media**, **Flows**, and **Components** are referred as **definitions**.
 
     When you select results under such definition category headers, you'll be taken either to the appropriate definition screen backstage (such as for Variables and Collections) or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, and Components).
 
