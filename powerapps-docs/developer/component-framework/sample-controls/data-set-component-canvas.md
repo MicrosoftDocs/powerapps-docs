@@ -2,10 +2,11 @@
 title: DataSet Grid component for canvas apps | Microsoft Docs
 description: This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 6/08/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
