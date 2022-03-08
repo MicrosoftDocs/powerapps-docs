@@ -1889,6 +1889,10 @@
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
               href: ./portals/configure/website-access-permission.md
+        - name: Website security
+          items:
+            - name: Manage content security policy 
+              href: ./portals/configure/manage-content-security-policy.md
     - name: Configure search in portals
       items:
         - name: Portal search overview
