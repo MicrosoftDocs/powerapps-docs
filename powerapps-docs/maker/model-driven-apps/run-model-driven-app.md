@@ -44,7 +44,7 @@ To play the app, enter the URL in a web browser.
 
 ## Run an app on a tablet or phone
 
-It is possible to use the app URL to run a model-driven app on a mobile device's web browser. However, users can also download the Power Apps mobile app from the relevant app store. Then, sign into the app, and then select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
+Use the app URL described in the earlier section to run a model-driven app on a tablet's web browser. For phones, users download the Power Apps mobile app from the relevant app store. Then, sign into the app, and select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
 
 ### See also
 
