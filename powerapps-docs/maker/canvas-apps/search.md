@@ -174,7 +174,7 @@ If you make changes within the app, you'll need to refresh the results pane to s
 
 Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign on the right hand side of the input area.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
 
 ## Limitations
 
