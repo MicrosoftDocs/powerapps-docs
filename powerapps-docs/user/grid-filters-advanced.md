@@ -5,7 +5,7 @@ author: mduelae
 manager: kvivek
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/04/2022
+ms.date: 03/07/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -29,122 +29,127 @@ searchScope:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In model-driven apps, views define the data that's displayed in tabular form on a grid page. System views are views that are created by your administrator and shared with you. You typically can't modify them. However, you can create and manage personal views.
+In model-driven apps, views define the data that's displayed in tabular form on a grid page. System views are views that are created by your administrator and shared with you. You typically can't modify them. However, you can create and manage personal views. Personal views are only available to you unless you share them.
 
 A view consists of the following elements:
 
-- The columns to display, including the order they appear in and their width
-- The default sort order
-- Filter conditions to show rows that match specific criteria, if needed
+- The columns to display
+- Default sorting options
+- Filters to show rows that match specific criteria, if needed
 
 For more information, see [Understand model-driven app views](../maker/model-driven-apps/create-edit-views.md).
 
-## Column editor
+## Select columns in the column editor
 
 1. Select **Edit columns** to remove, reorder, or add columns to get a clearer view of your data.
+1. Select **Apply** to see your changes on the grid page.
 
   :::image type="content" source="./media/column-editor.png" alt-text="A screenshot of the view column editor on a grid page.":::
 
-    - To remove a column, hover over the column name, select **…**, and then select **Remove**.
-    - To change the order of the columns, select **…**, and then select **Move up** or **Move down**. Or, drag the column to the desired position in the list.
-    - To add columns to the view:
-        1. Select **Add columns**, and then do one or more of the following:
+  The following actions are available in the column editor:
 
-          - Select a column from the default set of system columns in the table.
-          - Select **Default**, then select **All** or **Custom**, and then select from the set of additional columns in the table.
-          - Type a column name in the **Search** box to find a specific column, and then select it.
-      
-              :::image type="content" source="./media/column-editor-add-column.png" alt-text="A screenshot of the list of default columns that are available to add to a view.":::
-  
-          - To add columns from other tables, select the **Related** tab. Expand the table that contains the column you want to add, and then select the column. When you're done adding columns, select **Close** .
-  
-              :::image type="content" source="./media/column-editor-add-column-related.png" alt-text="A screenshot of the list of columns in related tables that are available to add to a view.":::
+- To remove a column, hover over the column name, select **…**, and then select **Remove**.
+- To change the order of the columns, select **…**, and then select **Move up** or **Move down**. Or, drag the column to the desired position in the list.
+- To add columns to the view, select **Add columns**, and then do one or more of the following:
 
-1. Select **Apply** to see your changes to the view on the grid page.
+  - Select a column from the default set of system columns in the table.
+  - Select **Default**, then select **All** or **Custom**, and then select from the set of additional columns in the table.
+  - Type a column name in the **Search** box to find a specific column, and then select it.
 
-To undo changes to the view's columns at any time, select **Reset to default**. 
+    :::image type="content" source="./media/column-editor-add-column.png" alt-text="A screenshot of the list of default columns that are available to add to a view.":::
 
-## Filter editor
+  - To add columns from other tables, select the **Related** tab. Expand the table that contains the column you want to add, and then select the column. When you're done adding columns, select **Close** .
 
-Use the filter editor on the grid page to view the set of conditions in the current view. You can also add more or remove conditions from the filtered data.
+    :::image type="content" source="./media/column-editor-add-column-related.png" alt-text="A screenshot of the list of columns in related tables that are available to add to a view.":::
 
-> [!div class="mx-imgBorder"]
->![Select to edit the filters.](media/edit-filters.gif "Edit filters")
+To undo changes to the view's columns at any time, select **Reset to default**.
 
-1. To remove a condition, select the More commands button (**…**) next to a row and then select, **Delete**.
+## Select filter conditions in the filter editor
 
-2. Follow these steps to add a conditions:
+Use the filter editor to view or change the query that underlies the data in the current view.
 
-   - To add a single condition, select **Add row**. Select a column, an operator, and a value to create a condition.
-     
-     > [!div class="mx-imgBorder"]
-     > ![Add a row.](media/add-condition.gif "Edit condition")
+:::image type="content" source="./media/filter-editor.png" alt-text="A screenshot of the view filter editor icon on a grid page.":::
 
-   - To add a group of conditions, select **Add group**. You can create multiple sub-conditions and group them using AND or OR operators to create an expression.
+- To change a condition, select the column, operator, or value and edit as needed.
 
-     ![Add a group condition.](media/add-group-condition.gif "Add group condition")
+- To remove a condition, select More commands (**…**) next to the row, and then select **Delete**.
 
-   - To add condition on a column from a related table select, **Add related entity**. Then choose the related table you want to filter on and add conditions to it.
+    :::image type="content" source="./media/filter-editor-delete-condition.png" alt-text="A screenshot of the view filter editor, showing the row delete icon.":::
 
-     > [!div class="mx-imgBorder"]
-     > ![Add a related entity.](media/add-related-table.png "Add related entity")
-    
-     > [!NOTE]
-     > **Contains data** is the only conditional operator that can be used with a related table in a view filter.
+1. To add one or more conditions, select **Add**.
 
-   - You can group conditions by first selecting a condition using the check box and then selecting the More commands button (**…**) next to a row, and then select **Make group**. </br></br>At any point, you can reset the conditional expression back to original state by choosing the **Reset to default** option.
+    :::image type="content" source="./media/filter-editor-add-condition.png" alt-text="A screenshot of the view filter editor, showing the row addition options.":::
 
+    - To add a condition, select **Add row**, and then select a column, an operator, and a value.
 
-     > [!div class="mx-imgBorder"]
-     > ![Group conditions.](media/group-conditions.png "Group conditions")
-   
-3. When you have reviewed the changes you made, select **Apply** to see changes to the view data on the grid page.
+        :::image type="content" source="./media/filter-editor-add-condition-row.png" alt-text="A screenshot of the view filter editor, showing an added row.":::
 
-## Create personal views
+    - To add a group of conditions, select **Add group**. You can create multiple sub-conditions and group them using AND or OR operators to create an expression.
 
-When you edit a view definition and haven't save it yet, you'll see asterisk next to the view name indicating the view isn't saved.
+        :::image type="content" source="./media/filter-editor-add-condition-group.png" alt-text="A screenshot of the view filter editor, showing an added group of conditions.":::
 
-> [!div class="mx-imgBorder"]
-> ![Unsaved view.](media/unsaved-view.png "Unsaved view")
+        To add a single condition to a group, select the condition checkbox, then select **…**, and then select **Make group**.
 
-To save a view, follow these steps:
+        To separate a group of conditions, select the group's checkbox, then select **…*, and then select **Ungroup**.
 
-- If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can only save the view as a personal view. On the command bar select, the More commands button > **Create view** >, **Save as new view**.
+        :::image type="content" source="./media/filter-editor-add-condition-group-ungroup.png" alt-text="A screenshot of the view filter editor, showing a condition group's Ungroup option.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Save system view.](media/save-system-view.png "Save system view")
+    - To add a condition based on a column in a related table, select **Add related entity**, and then select a table. **Contains data** is the only conditional operator that can be used with a related table in a view filter. Then, select a column in the related table, an operator, and a value.
 
-- To save changes to one of your personal views that you have *write* permission to, on the command bar select, the More commands button > **Create view** > **Save changes to current view**. 
+        :::image type="content" source="./media/filter-editor-add-condition-related.png" alt-text="A screenshot of the view filter editor, showing a condition added from a related table.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Save personal view.](media/save-personal-view.png "Save personal view")
+1. When you're finished editing the view filters, select **Apply** to see your changes on the grid page.
 
-### Modern advanced find
+To undo changes to the view filter at any time, select **Reset to default**.
 
-When your administrator has enabled the [modern advanced find experience](/power-platform/admin/settings-features), then you can create a personal view directly from the view selector.
+## Sort the data
 
-- If you made changes to a system view or a personal view that you don't have *Write* permission to, then you can only save the view as a personal view. To save the view, select the view selector and then choose, **Save as a new view**.
+Select a column heading, and then select how the view should sort data in the column. You can sort on one column at a time.
 
-  > [!div class="mx-imgBorder"]
-  > ![Save as new view.](media/save-as-new-view.gif "Save as new view")
+Sorting options depend on the type of data. Alphanumeric columns can be sorted in A to Z (ascending) or Z to A (descending) order. Date columns can be sorted in older to newer (ascending) or newer to older (descending) order. An arrow to the right of the column name indicates the view is sorted on that column and what order has been applied, ascending or descending.
 
-- To save changes to a personal view that you have *Write* permission to, select the view selector, and then choose **Save changes to current view**. 
+## Save your view
 
-  > [!div class="mx-imgBorder"]
-  > ![Save changes to current view.](media/save-current-view.gif "Save changes to current view")
+An asterisk beside the view name indicates you edited the view and haven't saved it. If you switch to another view, or leave the page and come back, the view will revert to its original definition. To keep your changes and add the new view to the list of views available to you, be sure to save it.
 
+### Save your edits as a new view
 
-## Set default view
+If you want to keep the original view, save your edited version as a new view with a different name. If you made changes to a view you don't have *Write* permission to, whether it's a system view or a personal view, then you can only save it as a new view.
 
-Each table in your app has a default view that's set by your administrator. The default view for a table is indicated by the **Default** label in the view selector.
+1. On the command bar, select **More commands** (**⁝**) > **Create view** > **Save as new view**.
 
-> [!div class="mx-imgBorder"]
-> ![Default view.](media/default-system-view.png "Default view")
+    :::image type="content" source="./media/save-as-new-view.png" alt-text="A screenshot of a grid page, showing the Create view option on the More commands menu.":::
 
-To make another view your default view, select the view and then select, **Set current view as my default**. You will only see the **Set current view as my default** option when the view is saved when the selected view isn't already set as the default view.
+1. Enter a new name for the view, and a description if you like, and then select **Save**.
 
-> [!div class="mx-imgBorder"]
-> ![Set as default view.](media/set-default-view.png "Set as default view")
+:::image type="content" source="./media/save-as-new-view-name.png" alt-text="A screenshot of the Save as new view options.":::
+
+> [!NOTE]
+> If you want to keep the original view, be sure to give your edited view a different name. If you don't, your changes will overwrite the existing view without confirmation, even though you selected to save it as a new view.
+
+### Change the definition of an existing view
+
+If you don't want to keep the original view, you can replace it with your edited version. You'll need *Write* permission to the view to overwrite the original definition with your changes.
+
+On the command bar, select **More commands** (**⁝**) > **Create view** > **Save changes to current view**.
+
+:::image type="content" source="./media/save-as-new-view-options.png" alt-text="A screenshot of a grid page, showing the option to overwrite an existing view with the current changes.":::
+
+### Manage views in modern advanced find
+
+If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can create and manage views directly from the view selector.
+
+:::image type="content" source="./media/save-as-new-view-modern.png" alt-text="A screenshot of a grid page, showing the view management options in modern advanced find.":::
+
+## Change the default view
+
+The default view for a table is indicated by the **Default** label in the view selector. Your administrator sets a default view for each table in your app. However, you can set a different view as the default.
+
+<!-- I stopped after creating screenshots for set-default and reset-default in the classic experience. I need to turn on modern advanced find and get the same screenshots, then fix the text below. -->
+
+Select the view and then select, **Set current view as my default**. You will only see the **Set current view as my default** option when the view is saved when the selected view isn't already set as the default view.
+
+:::image type="content" source="./media/set-default-view.png" alt-text="A screenshot of the view selector on a grid page, showing the option to set a new default view.":::
 
 To reset the default view to the original view set by your administrator, select **Reset default view**.
 
