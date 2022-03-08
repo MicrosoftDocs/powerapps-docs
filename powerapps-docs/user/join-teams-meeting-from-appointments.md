@@ -20,7 +20,7 @@ search.app:
 ---
 # Create and join a Teams meeting from an appointment (preview)
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](./includes/cc-beta-prerelease-disclaimer.md)]
+[This topic is pre-release documentation and is subject to change.]
 
 Now you can create and join a Teams meeting from an appointment in your model-driven app.
 
@@ -30,7 +30,7 @@ Now you can create and join a Teams meeting from an appointment in your model-dr
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](includes/cc-preview-features-definition.md)]
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 
 ## Prerequisites
