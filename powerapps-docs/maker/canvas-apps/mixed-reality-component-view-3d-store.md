@@ -19,13 +19,13 @@ contributors:
 
 # Load 3D models in canvas apps
 
-Load a 3D model in your canvas apps from a variety of sources. You can get models from attached files or media content, a direct URL, or a Base64-encoded URI (uniform resource identifier).
+Load a 3D model in your canvas apps from a variety of sources. You can get models from attachments or media content, a direct URL, or a Base64-encoded URI (uniform resource identifier).
 
 Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) to minimize load times.
 
 ## Loading 3D models from common connectors
 
-Loading 3D models from attachments or media content depends on how a data connector support. To check if a data connector will work the mixed reality controls, add a label control to the canvas app and set the text property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
+Loading 3D models from attachments or media content depends on how a data connector is supported. To check if a data connector will work the mixed reality controls, add a label control to the canvas app and set the **Text** property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
 
 > [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
