@@ -38,26 +38,33 @@ This article contains information on supported device platforms, web browser req
 
 ## Supported browsers for running Power Apps
 
-Applies to model-driven apps, canvas apps, and Power Apps portals.
+<!-- Applies to model-driven apps, canvas apps, and Power Apps portals. -->
 
-| **Browser** | **Supported Versions** |
-| --- | --- |
-| Google Chrome|Latest three major releases|
-| Microsoft Edge|Latest three major releases|
-| Mozilla Firefox (latest version)|Latest three major releases|
-| Apple Safari|13 and later|
+| **Browser** | **Supported versions** |  **App type** |
+| --- | --- | --- |
+| Google Chrome|Latest three major releases| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.  |
+| Microsoft Edge|Latest three major releases| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.  |
+| Mozilla Firefox |Latest three major releases| Model-driven apps, canvas apps, Power Apps portals.  |
+| Apple Safari|13 and later| Model-driven apps, canvas apps, Power Apps portals.  |
 
-### Supported platforms for browsers running Power Apps
+<sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
 
-Applies to model-driven apps, canvas apps, and Power Apps portals.
+### Supported operating systems for browsers running Power Apps
 
-| **Operating System** | **Supported Versions** |
-| --- | --- |
-| Windows |Windows 10 or later|
-| macOS|10.13 or later|
-| iOS |iOS 13 or later|
-| Android |10 or later |
+<!-- Applies to model-driven apps, canvas apps, and Power Apps portals. -->
 
+| **Operating system** | **Supported versions** |  **App type**  |
+| --- | --- | ---|
+| Windows |Windows 10 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
+| macOS|10.13 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
+| iOS |iOS 13 or later| Model-driven apps, canvas apps, Power Apps portals.  |
+| Android |10 or later | Model-driven apps, canvas apps, Power Apps portals.  |
+
+<sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
+
+For classic web application system requirements, go to [Web application requirements](/power-platform/admin/web-application-requirements).
+
+<!--
 ## Supported browsers for Power Apps Studio
 
 | **Browser** | **Supported Versions** |
@@ -85,8 +92,9 @@ Applies to model-driven apps, canvas apps, and Power Apps portals.
 |---------------------------------|--------------------------------|
 | Google Chrome (latest version)<br>(recommended)                    | <ul><li>Windows 7 SP1, 8.1, and 10</li><li>macOS</li></ul>      |
 | Microsoft Edge (latest version)<br> (recommended)                    | Windows 10                     |
-
+-->
 ## Request limits
+
 These limits apply to each single outgoing request:
 
 | Name | Limit |
@@ -104,6 +112,7 @@ Requests from Power Apps use IP addresses that depend on the region of the [envi
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from these [IP addresses](/power-platform/admin/online-requirements#ip-addresses-required).
 
 ## Required services
+
 This list identifies all services to which Power Apps communicates and their usages. Your network must **not** block these services.
 
 | Domain(s) | Protocols | Uses |
