@@ -5,7 +5,7 @@ author: KumarVivek
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/07/2022
+ms.date: 03/08/2022
 ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
@@ -35,9 +35,9 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 ## Known Issues
 
-1. **Unable to copy paste Forms into DataCards** (March 2022)
+1. **Unable to copy paste forms into data cards** (March 2022)
 
-    Forms can no longer be copy and pasted into data cards. This change is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](add-scrolling-screen.md#scrolling-screen-for-forms)
+    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](add-scrolling-screen.md#scrolling-screen-for-forms)
 
 1. **Canvas apps using SharePoint connector** (February 23, 2022)
 
