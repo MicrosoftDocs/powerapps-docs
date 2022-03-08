@@ -92,7 +92,7 @@ You can use more search options to further refine search. These options are avai
 
 - **Use regular expression (RegEx)** - returns search results for matches conforming to the [regular expression](/deployedge/edge-learnmore-regex) specified within the input area.
 
-    In the below example, using the Regular Expression search capability with *Snowboarding( Mountain\| Dashboard)* returns matches for*Snowboarding* when it appears together with either *Mountain* or*Dashboard*.
+    In the below example, using the Regular Expression search capability with `Snowboarding( Mountain | Dashboard)` formula returns matches for "Snowboarding" when it appears together with either "Mountain" or "Dashboard".
 
     :::image type="content" source="media/search/regex.png" alt-text="An example of matching regular expression syntax while searching for text.":::
 
@@ -120,41 +120,37 @@ Search result:
 
 Depending on the selected global or context variable, you're taken to the backstage for the selected type of variable.
 
-| Global variable selected | Context variable selected |
-| - | - |
-| :::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the backstage of the selected global variables."::: | :::image type="content" source="media/search/local-variable.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables."::: |
+Global variable selected:
+
+:::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the backstage of the selected global variables.":::
+
+Context variable selected:
+
+:::image type="content" source="media/search/local-variable.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
 
 ## Collections
 
-![A screenshot of the Search pane highlighting results under the Collections category header  The searched term is highlighted within the results ](media/search/image13.png)
+Selecting a collection under the **Collections** header will take you to the information screen backstage for that collection.
 
-Selecting a collection under the Collections header will navigate you to the information screen backstage for that collection.
-
-![A screenshot of the backstage area showing details for the selected collection search result  The relevant collection tab is highlighted ](media/search/image14.png)
+:::image type="content" source="media/search/collections.png" alt-text="Collections selected from search results showing the relevant collection details.":::
 
 ## Data
 
-![A screenshot of the Search pane highlighting results under the Data category header  The searched term is highlighted within the results ](media/search/image15.png)
+Selecting a result under the **Data** header opens the **Data** pane, and pre-populates the search input for that pane with the selected result text.
 
-Selecting a result under the Data header will open the Data Pane and pre-populate the search input for that pane with the selected result text to help further refine the pane results.
-
-![A screenshot of the Data pane with the selected search result copied to the search input text area and showing the filtered list of data sources returning a single result matching the input text  ](media/search/image16.png)
+:::image type="content" source="media/search/data.png" alt-text="Data selected from search results showing the relevant data connection details.":::
 
 ## Media
 
-![A screenshot of the Search pane highlighting results under the Media category header  The searched term is highlighted within the results ](media/search/image17.png)
+Selecting a result under the **Media** header opens the **Media** and pre-populates the search input for that pane with the selected result text.
 
-Selecting a result under the Media header will open the Media Pane and pre-populate the search input for that pane with the selected result text to help further refine the pane results.
-
-![A screenshot of the Media pane with the selected search result copied to the search input text area and showing the filtered list of Images with a single result with a name matching the input text  ](media/search/image18.png)
+:::image type="content" source="media/search/media.png" alt-text="Media selected from search results showing the relevant media details.":::
 
 ## Flows
 
-![A screenshot of the Search pane highlighting results under the Flows category header  The searched term is highlighted within the results ](media/search/image19.png)
+**Flows** header only appears if you've enabled the [Power Automate pane (preview)](working-with-flows.md). Selecting a result here opens the Power Automate pane, and pre-populates the search input with the selected result text.
 
-This header will only appear if you have enabled the Power Automate Pane (Preview) feature under Settings. Selecting a result here will open the Power Automate Pane and pre-populate the search input for that pane with the selected result text to help further refine the pane results. [Learn more about the Power Automate Pane here.](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-flows)
-
-![A screenshot of the Power Automate pane with the selected search result copied to the search input text area and showing the filtered list of flows returning a single result matching the input text  ](media/search/image20.png)
+:::image type="content" source="media/search/flows.png" alt-text="Flow selected from search results showing the relevant flow details.":::
 
 ## Components
 
