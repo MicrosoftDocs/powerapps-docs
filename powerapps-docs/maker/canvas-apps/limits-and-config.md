@@ -25,17 +25,15 @@ This article contains information on supported device platforms, web browser req
 
 ## Supported platforms for running apps using the Power Apps mobile app
 
-| **Minimum required** | **Recommended** |
+| **Platform** | **Version** |
 | --- | --- |
-| iOS 13 or later |iOS 13 or later|
-| Android 7 or later |Android 7 or later |
+| iOS |The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.|
+| Android |The latest version of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile. |
 
 > [!NOTE]
-> - Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
+> New major versions of iOS and Android are released each year. When a new version is released, if you're using the oldest previously supported version, you'll have 60 days to update your device to at least the new minimum supported version to continue to run Power Apps mobile.
 
 ## Supported browsers for running Power Apps
-
-<!-- Applies to model-driven apps, canvas apps, and Power Apps portals. -->
 
 | **Browser** | **Supported versions** |  **App type** |
 | --- | --- | --- |
@@ -62,6 +60,9 @@ This article contains information on supported device platforms, web browser req
 <sup>2</sup>Using the web browser on a phone to run a model-driven app isn't supported; use the [Power Apps mobile app](../../mobile/run-powerapps-on-mobile.md).
 
 For classic web application system requirements, go to [Web application requirements](/power-platform/admin/web-application-requirements).
+
+> [!NOTE]
+> Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
 <!--
 ## Supported browsers for Power Apps Studio
