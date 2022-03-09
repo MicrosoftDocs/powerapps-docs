@@ -154,7 +154,7 @@ The following table shows some of the examples where embedding a canvas app isn'
 
 ## Size limits
 
-You can find information about size limits on text, hyperlinks, images, and media in [Data types](maker/canvas-apps/functions/data-types.md#text-hyperlink-image-and-media).
+You can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](maker/canvas-apps/functions/data-types.md#text-hyperlink-image-and-media).
 
 ## Power Apps per app plan
 
