@@ -126,8 +126,8 @@ Custom help panes support the following video sources:
 Links can be to websites and open in the same window (the default) or open in a separate window. The ability to link to an existing help page is not yet enabled.   
 
 ### Balloons and coach marks
-> [!TIP]
-> Balloons and coach marks don't work well with custom components. This feature only applies to default unified interface UI components.
+> [!NOTE]
+> Balloons and coach marks don't work well with custom components. This feature only applies to default Unified Interface UI components.
  
 Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it.
 
