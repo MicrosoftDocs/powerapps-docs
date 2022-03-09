@@ -30,7 +30,7 @@ Model-driven and canvas apps
 
 | Parameter Name  | Type                                       | Required | description                    |
 | --------------- | ------------------------------------------ | -------- | ------------------------------ |
-| entityReference | `[Entityreference](../entityreference.md)` | Yes      | Reference that will be opened. |
+| entityReference | [Entityreference](../entityreference.md) | Yes      | Reference that will be opened. |
 
 ### Related topics
 
