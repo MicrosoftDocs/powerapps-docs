@@ -127,7 +127,7 @@ Links can be to websites and open in the same window (the default) or open in a 
 
 ### Balloons and coach marks
 > [!TIP]
-> Balloons and coach marks don't work well with custom components. This feature only applies to default unified interface UI and may work with some custom components using XML definition of Custom Help pane.
+> Balloons and coach marks don't work well with custom components. This feature only applies to default unified interface UI components.
  
 Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it.
 
