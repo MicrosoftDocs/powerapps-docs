@@ -4,7 +4,7 @@ description: "Learn about creating a table that contains an email address column
 ms.custom: ""
 ms.date: 06/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

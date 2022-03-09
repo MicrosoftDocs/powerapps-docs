@@ -4,7 +4,7 @@ description: "Learn about how to submit an app on Partner Center to be listed on
 ms.custom: ""
 ms.date: 07/25/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer

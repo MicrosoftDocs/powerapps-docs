@@ -3,7 +3,7 @@ title: Administer the Regional Government Emergency Response and Monitoring po
 description: Learn how to configure the Regional Hospital Emergency Response portal.
 author: pankajarora-msft
 manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/05/2020

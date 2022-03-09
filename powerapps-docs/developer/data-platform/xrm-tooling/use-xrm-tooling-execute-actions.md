@@ -4,7 +4,7 @@ description: "Object of CrmServiceClient class can be used to perform create, re
 ms.custom: ""
 ms.date: 03/27/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

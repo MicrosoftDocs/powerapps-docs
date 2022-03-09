@@ -2,11 +2,12 @@
 title: CaptureImageOptions | Microsoft Docs
 description: Returns the current location using the device geo location capability.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 09/08/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

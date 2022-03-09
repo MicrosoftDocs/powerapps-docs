@@ -2,7 +2,7 @@
 title: "getGridType (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getGridType method.
 ms.date: 09/22/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a441c08c-df32-433e-b666-4253f2cf878c

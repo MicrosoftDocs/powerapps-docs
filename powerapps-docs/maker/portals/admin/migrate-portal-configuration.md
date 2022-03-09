@@ -2,7 +2,7 @@
 title: Migrate portal configuration
 description: Learn how to migrate portal configuration.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/03/2022

@@ -3,7 +3,7 @@ title: "Microsoft Dataverse app building practices | MicrosoftDocs"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -2,7 +2,7 @@
 title: "getControl (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getControl method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 34715e1f-35c0-4b7f-971e-e0a6518f0722

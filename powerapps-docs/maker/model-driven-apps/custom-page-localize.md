@@ -4,7 +4,7 @@ description: "This article outlines how to load resx files with localized conten
 ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "mspilde"

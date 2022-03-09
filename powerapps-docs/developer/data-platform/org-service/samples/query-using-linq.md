@@ -4,7 +4,7 @@ description: "This sample showcases how to assign records to a team." # 115-145 
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only

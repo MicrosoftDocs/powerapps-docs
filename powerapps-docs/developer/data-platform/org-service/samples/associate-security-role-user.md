@@ -4,7 +4,7 @@ description: "This sample showcases how to assign a security role to a user " # 
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

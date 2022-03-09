@@ -4,7 +4,7 @@ description: "Learn how to define alternate keys using Power Apps portal"
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

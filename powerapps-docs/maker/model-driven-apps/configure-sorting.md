@@ -4,7 +4,7 @@ description: Learn how to sort rows in a model-driven app
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

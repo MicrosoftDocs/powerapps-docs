@@ -2,7 +2,7 @@
 title: Enable multiple-language portal support
 description: Learn how to enable multiple languages for a portal and create content in multiple languages.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/17/2021

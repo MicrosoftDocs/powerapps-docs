@@ -3,7 +3,7 @@ title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: overview
 ms.date: 06/22/2021
@@ -122,7 +122,7 @@ Legend
 1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides additional functionality options.
 2. The **Refresh timeline** command updates row details in the timeline.
 3. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
-4. The **Always show email as conversations** or **Always show email as individual messages** command is used to enable or disables threaded email views.
+4. The **Always show email as conversations** or **Always show email as individual messages** command is used to enable or disable threaded email views.
 
 ## Threaded email views in timeline
 

@@ -4,7 +4,7 @@ description: "Programmatically retrieve the audit change history or delete audit
 ms.custom: ""
 ms.date: 02/05/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Bluebear73" # GitHub ID
 ms.subservice: dataverse-developer

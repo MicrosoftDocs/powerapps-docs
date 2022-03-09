@@ -2,7 +2,7 @@
 title: "htmlEncode| MicrosoftDocs"
 description: "The Client API method converts a string to an HTML-encoded string."
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4ef7160b-ac01-4d08-8a98-f8e3012ef20b

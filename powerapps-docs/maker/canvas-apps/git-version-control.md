@@ -2,7 +2,7 @@
 title: Co-authoring in canvas apps (experimental)
 description: Learn how to enable co-authoring in Power Apps Studio for canvas apps (experimental).
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

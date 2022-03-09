@@ -3,7 +3,7 @@ title: "Tutorial: Register an app with Azure Active Directory (Microsoft Dataver
 description: "Describes how to register an application with Azure Active Directory for authentication with Microsoft Dataverse web services."
 keywords: ""
 ms.date: 07/22/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID

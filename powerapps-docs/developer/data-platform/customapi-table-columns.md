@@ -4,7 +4,7 @@ description: "Describes the table columns (entity attributes) to set when creati
 ms.custom: ""
 ms.date: 10/31/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

@@ -2,11 +2,12 @@
 title: loadExactPage | Microsoft Docs
 description: Request the exact page of results to be loaded.
 keywords:
-ms.author: nabuthuk
 author: lesyk
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 06/12/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

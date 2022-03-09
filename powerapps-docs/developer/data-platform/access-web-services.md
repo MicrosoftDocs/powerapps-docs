@@ -4,7 +4,7 @@ description: "Learn how to access a web service from a custom plug-in or workflo
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly"
 ms.subservice: dataverse-developer

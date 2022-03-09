@@ -4,7 +4,7 @@ description: "Learn how to export table data to an Azure Synapse Analytics and A
 ms.custom: intro-internal
 ms.date: 05/26/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

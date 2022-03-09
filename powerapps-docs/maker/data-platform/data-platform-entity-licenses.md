@@ -2,7 +2,7 @@
 title: License requirements for tables| Microsoft Docs
 description: An explanation of license requirements for tables with complex business logic and restricted tables in Microsoft Dataverse.
 author: MicroSri
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.date: 08/28/2020
 ms.subservice: dataverse-maker

@@ -7,7 +7,7 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 07/26/2021
-ms.service: powerapps
+
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -82,7 +82,7 @@ CountRows(Self.Selected.AllItems) > 0
 
 ```powerapps-dot
 //Button will be visible for accounts with Account Rating > 20
-Self.ThisContext.SelectedItem.'Account Rating'>20
+Self.Selected.Item.'Account Rating'>20
 ```
 
 ## Navigate

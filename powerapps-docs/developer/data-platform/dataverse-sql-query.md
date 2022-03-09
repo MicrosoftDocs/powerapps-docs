@@ -4,7 +4,7 @@ description: "Learn how to query Microsoft Dataverse table data using SQL." # 11
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -75,7 +75,7 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
-The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`.
+The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`. In addition, tables types 'virtual' and 'audit' are not supported at this time. 
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.

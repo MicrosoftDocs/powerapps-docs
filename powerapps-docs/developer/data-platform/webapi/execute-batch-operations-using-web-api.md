@@ -2,8 +2,8 @@
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 09/25/2021
-ms.service: powerapps
+ms.date: 02/17/2022
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,7 +14,7 @@ caps.latest.revision: 11
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "annbe"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -41,7 +41,7 @@ Also, the responses returned are essentially text documents rather than objects 
 >[!NOTE]
 >  Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.
 >
->  URLs for `GET` requests sent with a batch are limited to 32768 characters.
+>  URLs for `GET` requests sent with a batch are limited to 64 KB (65,536 characters).
 
   
 <a name="bkmk_BatchRequests"></a> 

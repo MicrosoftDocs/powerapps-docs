@@ -3,7 +3,7 @@ title: Create a choice| Microsoft Docs
 description: Step-by-step instructions for how to create a choice.
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018

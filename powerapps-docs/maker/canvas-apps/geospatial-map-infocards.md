@@ -2,11 +2,10 @@
 title: Display information about map pins
 description: Insert info cards that display information about each pin in your map.
 author: anuitz
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -28,7 +27,7 @@ Any column you add to the table in the data source (for example, the Excel table
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
+2. In your app, [insert a map](geospatial-component-map.md). 
 
 
 **To add informational cards to pins:**

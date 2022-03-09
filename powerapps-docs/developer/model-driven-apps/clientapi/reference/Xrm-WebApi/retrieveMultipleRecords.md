@@ -2,7 +2,7 @@
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
 ms.date: 04/21/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
 author: "Nkrb"
@@ -86,6 +86,27 @@ search.app:
 For a successful OData query retrieveMultipleRecords operation, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next page of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
 
 For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
+
+## Supported Attribute Types for OData query options in Mobile Offline
+Only the following attribute types are supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (`$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is not in this list of supported attribute types.
+
+- BigInt
+- Boolean
+- Customer
+- DateTime
+- Decimal
+- Double
+- EntityName
+- Guid
+- Integer
+- Lookup
+- Memo
+- Money
+- Owner
+- PickList
+- State
+- Status
+- String
 
 ## Examples
 

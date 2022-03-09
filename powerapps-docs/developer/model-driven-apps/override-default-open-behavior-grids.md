@@ -4,7 +4,7 @@ description: "Provides information on how to override the default open behavior 
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "nkrb" # GitHub ID
 ms.subservice: mda-developer

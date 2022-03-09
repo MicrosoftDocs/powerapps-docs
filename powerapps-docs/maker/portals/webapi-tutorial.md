@@ -2,7 +2,7 @@
 title: "Tutorial: How to use the portal Web API"
 description: This page walks you through example steps for performing read, write, update, and delete portal Web API requests.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/31/2022

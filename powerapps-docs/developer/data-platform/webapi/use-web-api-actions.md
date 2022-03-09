@@ -3,7 +3,7 @@ title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
 ms.custom: ""
 ms.date: 11/14/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
