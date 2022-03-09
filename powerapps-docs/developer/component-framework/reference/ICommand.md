@@ -2,10 +2,11 @@
 title: ICommand | Microsoft Docs
 description: A command button control types.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 12/06/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""

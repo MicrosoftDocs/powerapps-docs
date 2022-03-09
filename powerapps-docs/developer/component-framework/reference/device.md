@@ -2,10 +2,11 @@
 title: Device | Microsoft Docs
 description: Provides methods to use native device capabilities.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 02/04/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""

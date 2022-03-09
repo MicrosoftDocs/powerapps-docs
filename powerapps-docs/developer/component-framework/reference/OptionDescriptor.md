@@ -2,10 +2,11 @@
 title: OptionDescriptor in Microsoft Dataverse| Microsoft Docs
 description: Optionset object of the attribute.
 keywords:
-ms.author: nabuthuk
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-author: nkrb
-ms.date: 11/23/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -26,41 +27,49 @@ Model-driven and canvas apps
 ### Color
 
 Indicates the color of the picklist/choice column.
+
 **Type**: `string`
 
 ### Label
 
 Indicates the label of the picklist/choice column.
+
 **Type**: `string`
 
 ### Value
 
 Indicates the value of the picklist/choice column.
+
 **Type**: `number`
 
 ### DefaultStatus
 
 Indicates the default status of the picklist/choice column.
+
 **Type**: `number`
 
 ### State
 
 Indicates the state of the picklist/choice column.
+
 **Type**: `number`
 
 ### TransitionData
 
 Indicates the transition data of the picklist/choice column.
+
 **Type**: `number[]`
 
 ### InvariantName
 
 Indicates the language invariant name of the picklist/choice column.
+
 **Type**: `string`
 
 ### ParentValues
 
 Indicates the values of the parent choice (if child) of the picklist/choice column.
+
 **Type**: `number[]`
 
 ### Related topics

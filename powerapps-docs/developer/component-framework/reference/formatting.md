@@ -2,10 +2,11 @@
 title: Formatting | Microsoft Docs
 description: Provides properties and methods to work with formatting.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 11/04/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
