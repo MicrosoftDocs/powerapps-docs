@@ -40,7 +40,6 @@ Key changes include:
 
 - The ability to share apps with team members for development and testing purposes
 - Increased capacity allocations
-- The ability to create more environments to support ALM (application lifecycle management) scenarios (coming soon)
 
 > [!NOTE]
 > Existing Power Apps Community Plan users will also get all of these updates.
@@ -145,8 +144,6 @@ You can continue using your Power Apps Developer Plan for free as long as there'
 ### Can I get or create multiple developer environments?
 
 Currently, no. You can only have one developer environment, which is created for you by Power Apps when you sign up for the Developer Plan.
-
-The ability to create more environments to support ALM scenarios is coming soon. Stay tuned for more details.
 
 ### What's the difference between the Power Apps Plan Trial and Power Apps Developer Plan? Which one should I sign up for?
 
