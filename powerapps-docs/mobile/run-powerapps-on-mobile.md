@@ -53,22 +53,7 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 ## Supported devices 
 
-New major versions of iOS and Android are released each year. When a new version is released, if you're using the oldest previously supported version, you'll have 60 days to update your device to at least the new minimum supported version to continue to run Power Apps mobile.
-
-- **iOS**: The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.
-
-- **Android**: The latest version of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile.
-
-
-| **Minimum required** | **Recommended** |
-| --- | --- |
-| iOS 14 or later |iOS 15 or later|
-| Android 9 or later |Android 12 or later |
-| Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
-
-
-> [!NOTE]
-> We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/mobile/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to Power Apps mobile for Windows platform will be announced in future.
+For more information, see [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app).
 
 ## Install Power Apps mobile app
 
