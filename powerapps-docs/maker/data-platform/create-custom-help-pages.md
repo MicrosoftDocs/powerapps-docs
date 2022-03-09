@@ -4,7 +4,7 @@ description: "Create custom help pages on UCI"
 ms.custom: ""
 ms.date: 06/22/2021
 ms.reviewer: ""
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -27,7 +27,7 @@ search.app:
 
 # Create guided help for your Unified Interface app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 
 Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
@@ -97,8 +97,7 @@ By default, a help pane stays open and on the help content you first opened it w
     The help pane is now in edit mode and the cursor is positioned on the help pane title.
 3.	From the edit pane you can perform  the following tasks: 
     - Enter text by typing directly in the help pane area. 
-    - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
-    - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
+    - Format text through rich text capabilities and add bullet/numbered lists, sections, videos, images, links, coach marks, and balloon help. 
 4.	To save your changes, select **Save**.  
 
 ### Free-form text
@@ -127,13 +126,22 @@ Custom help panes support the following video sources:
 Links can be to websites and open in the same window (the default) or open in a separate window. The ability to link to an existing help page is not yet enabled.   
 
 ### Balloons and coach marks
-Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it. A coach mark simply highlights an element with a coach pointer. A way to illustrate several UI elements sequentially is to simply collect links in a list that the user can select. For instance:
+ 
+Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it.
 
-1. Link to first UI element with instructions or comments.
-2. Link to second UI element with instructions or comments.
-3. Link to third UI element with instructions or comments.
+![Insert Balloon](media/balloon.png)
 
-A user can either select an element in order or go back to a specific one and highlight it.
+A coach mark simply highlights an element with a coach pointer bring the user attention to element in UI.
+
+![Insert Coach Marks](media/coach-marks.png)
+
+Author needs to define the target through drag and drop capability in the properties of balloons and coach marks. Author can input the text for title and description for coach marks. 
+
+![Drag and drop](media/drag-drop.png)
+
+> [!NOTE]
+> - Balloons and coach marks don't work well with custom components. This feature only applies to default Unified Interface UI components.
+> - Sequential help balloons and coachmarks are not supported yet. 
 
 ## Solutions and custom help pane content
 All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.

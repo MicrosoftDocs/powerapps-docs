@@ -6,6 +6,8 @@
     href: signup-for-powerapps.md
   - name: Sign up for Developer Plan
     href: developer-plan.md
+  - name: Power Apps preview program
+    href: powerapps-preview-program.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning catalog"
@@ -85,6 +87,8 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
+      - name: Create and join a Teams meeting from an appointment (preview)
+        href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
@@ -113,12 +117,14 @@
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md
-    - name: Work with grid filters
+    - name: Work with grid and views
       items:
-      - name: Use grid filters
+      - name: Explore data in a view on a grid page (preview)
         href: ../user/grid-filters.md
-      - name: Create personal views with advanced grid filters
-        href: ../user/grid-filters-advanced.md      
+      - name: Create and manage personal views on a grid page (preview)
+        href: ../user/grid-filters-advanced.md     
+      - name: Faq for grids and views
+        href: ../user/faq-for-grids-views.md
     - name: Charts and dashboards
       items:
       - name: Visualize data in a view with Power BI service (preview)
@@ -247,6 +253,8 @@
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
+    - name: With a blank app
+      href: ./canvas-apps/create-blank-app.md
     - name: From Dataverse
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: From Excel
@@ -359,6 +367,8 @@
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
               href: ./canvas-apps/working-with-cards.md
+            - name: Work with full-sized image on a form
+              href: ./canvas-apps/display-full-image-on-form.md
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
@@ -567,8 +577,12 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
-        - name: Add a flow
-          href: ./canvas-apps/using-logic-flows.md
+        - name: Working with flows
+          items:
+          - name: Add a flow
+            href: ./canvas-apps/using-logic-flows.md
+          - name: Use Power Automate pane (preview)
+            href: ./canvas-apps/working-with-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
@@ -751,6 +765,8 @@
             href: ./canvas-apps/functions/function-now-today-istoday.md
           - name: IsType
             href: ./canvas-apps/functions/function-astype-istype.md
+          - name: IsUTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: JSON
             href: ./canvas-apps/functions/function-json.md
           - name: Language
@@ -943,6 +959,10 @@
             href: ./canvas-apps/functions/function-lower-upper-proper.md
           - name: User
             href: ./canvas-apps/functions/function-user.md
+          - name: UTCNow
+            href: ./canvas-apps/functions/function-now-today-istoday.md
+          - name: UTCToday
+            href: ./canvas-apps/functions/function-now-today-istoday.md            
           - name: Validate
             href: ./canvas-apps/functions/function-validate.md
           - name: Value
@@ -1289,7 +1309,7 @@
             href: ./model-driven-apps/using-tree-view-on-form.md
           - name: Create or edit forms
             href: ./model-driven-apps/create-and-edit-forms.md
-          - name: Add, move or delete columns
+          - name: Manage columns
             href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
           - name: Add, move or delete components
             href: ./model-driven-apps/add-move-configure-or-delete-components-on-form.md
@@ -1343,6 +1363,8 @@
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
+          - name: Use custom connectors with the timeline control
+            href: ./model-driven-apps/custom-connectors-timeline-control.md
           - name: FAQs for the timeline control
             href: ./model-driven-apps/faqs-timeline-control.md
           - name: Quick view control properties
@@ -1541,14 +1563,20 @@
     href: ../mobile/display-mode.md
   - name: In-app notifications in Power Apps mobile (preview)
     href: ../mobile/mobile-notifications.md
-  - name: Configure mobile offline synchronization 
-    href: ../mobile/setup-mobile-offline.md 
-  - name: Work offline on your mobile device 
-    href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
+  - name: 'Mobile offline'
+    items:
+    - name: Mobile offline overview (preview)
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (preview)
+      href: ../mobile/setup-mobile-offline.md 
+    - name: Configure mobile offline profiles for images and files
+      href: ../mobile/offline-file-images.md
+    - name: Enable and use offline-first (preview)
+      href: ../mobile/work-in-offline-mode.md   
 - name: Portals
   items:
     - name: Portals
@@ -1629,7 +1657,7 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
-        - name: Portals as Progressive Web Apps (preview)
+        - name: Portals as Progressive Web Apps
           items:
             - name: Overview
               href: ./portals/progressive-web-apps.md
@@ -1695,7 +1723,7 @@
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
-        - name: Configure choices column (preview)
+        - name: Configure choices column 
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
@@ -1857,6 +1885,8 @@
               href: ./portals/configure/entity-permissions-studio.md
             - name: "Tutorial: Configure table permissions using portals Studio"
               href: ./portals/configure/entity-permissions-studio-walkthrough.md
+            - name: Configure column permissions
+              href: ./portals/configure/column-permissions.md              
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
@@ -1949,7 +1979,7 @@
           items:
           - name: Portals Web API overview
             href: ./portals/web-api-overview.md
-          - name: Perform Read operations (preview)
+          - name: Perform Read operations
             displayName: Portals Web API read operations
             href: ./portals/read-operations.md                    
           - name: Perform Write, Update, Delete operations
@@ -1961,7 +1991,7 @@
           - name: "Tutorial: Use the portals Web API"
             displayName: Tutorial on how to use the portal Web API
             href: ./portals/webapi-tutorial.md            
-        - name: Code components (preview)
+        - name: Code components
           items:
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
@@ -2073,6 +2103,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2201.x
+                href: ./portals/versions/package-version-9.3.2201.md           
               - name: Package 9.3.2109.x
                 href: ./portals/versions/package-version-9.3.2109.md
               - name: Package 9.2.2108.x
@@ -2109,6 +2141,8 @@
       href: ./data-platform/create-custom-entity.md
     - name: Edit a table
       href: ./data-platform/edit-entities.md
+    - name: Import or export data
+      href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
@@ -2123,8 +2157,6 @@
         href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
-      - name: How to import or export data
-        href: ./data-platform/data-platform-import-export.md
       - name: How to open table data in Excel
         href: ./data-platform/data-platform-excel-addin.md
       - name: How to define alternate keys
@@ -2266,7 +2298,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use settings (preview)
+        - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  
@@ -2336,8 +2368,12 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Create a view on your Dataverse data
+        href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
-        href: ./data-platform/azure-synapse-link-spark.md 
+        href: ./data-platform/azure-synapse-link-spark.md
+      - name: Run Azure Synapse pipelines
+        href: ./data-platform/azure-synapse-link-pipelines.md
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
       - name: Copy data to Dedicated SQL
@@ -2352,6 +2388,10 @@
         href: ./data-platform/export-to-data-lake-data-adf.md
       - name: Copy data to Azure SQL with Azure Data Factory
         href: ./data-platform/azure-synapse-link-copy-sql.md
+      - name: Copy data from multiple data lakes to single data lake
+        href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
+      - name: Transform data from CSV to Parquet
+        href: ./data-platform/azure-synapse-link-parquet.md
       - name: Analyze exported data with Power BI
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory

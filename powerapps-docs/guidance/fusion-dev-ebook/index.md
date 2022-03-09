@@ -2,7 +2,7 @@
 title: "Ebook: Fusion development approach to building apps using Power Apps | Microsoft Docs"
 description: "An ebook for citizen and pro developers to use Power Apps to build apps fast."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021

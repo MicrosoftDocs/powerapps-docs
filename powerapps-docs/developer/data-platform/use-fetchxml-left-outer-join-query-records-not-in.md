@@ -4,7 +4,7 @@ description: "Read how to use a left outer join in FetchXML to perform a query t
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

@@ -4,7 +4,7 @@ description: "This sample shows how to disable and enable a system user." # 115-
 ms.custom: ""
 ms.date: 1/27/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Sample: Disable or enable a user
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to disable and enable a system user account in an online or on-premise/IFD environment.
 

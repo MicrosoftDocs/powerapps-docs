@@ -4,7 +4,7 @@ description: "Optimistic concurrency provides the ability for your applications 
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

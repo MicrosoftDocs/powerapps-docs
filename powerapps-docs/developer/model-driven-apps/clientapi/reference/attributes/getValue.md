@@ -2,7 +2,7 @@
 title: "getValue (Client API reference)| MicrosoftDocs"
 description: Retrieves the data value for a column.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: acc78a1e-212a-4eef-88c5-8272f9ba3009

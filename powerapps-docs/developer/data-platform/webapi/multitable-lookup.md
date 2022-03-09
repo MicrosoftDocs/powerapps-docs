@@ -4,7 +4,7 @@ description: "Learn how to use a single lookup type column to refer to data in m
 ms.custom: ""
 ms.date: 07/07/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only

@@ -4,7 +4,7 @@ description: "Learn about File columns that store file data within the applicati
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer

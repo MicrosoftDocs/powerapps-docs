@@ -2,7 +2,7 @@
 title: "addOnLookupTagClick (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addOnLookupTagClick method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 author: "Nkrb"
 ms.author: "nabuthuk"

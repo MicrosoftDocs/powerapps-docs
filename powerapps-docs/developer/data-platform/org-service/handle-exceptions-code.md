@@ -4,7 +4,7 @@ description: "This article discusses the exceptions that are returned from a Mic
 ms.custom: intro-internal
 ms.date: 06/02/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

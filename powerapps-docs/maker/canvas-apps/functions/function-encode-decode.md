@@ -2,7 +2,7 @@
 title: EncodeUrl and PlainText functions in Power Apps
 description: Reference information including syntax and examples for the EncodeUrl and PlainText functions in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

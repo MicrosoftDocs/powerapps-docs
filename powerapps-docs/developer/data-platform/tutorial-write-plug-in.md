@@ -4,7 +4,7 @@ description: "The first of three tutorials that will show you how to work with p
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

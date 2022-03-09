@@ -4,7 +4,7 @@ description: "Learn how to use custom connectors to bring your own data, such as
 ms.custom: ""
 ms.date: 11/2/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

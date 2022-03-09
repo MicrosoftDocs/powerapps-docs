@@ -4,7 +4,7 @@ description: Learn what's required and best practices when you use the OData v4 
 ms.custom: ""
 ms.date: 08/11/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ search.app:
 
 # OData v4 Data Provider configuration, requirements, and best practices
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This topic describes how to configure the OData v4 Data Provider as well as the requirements and recommended best practices for using the OData v4 data provider to connect with an OData v4 web service. 
 

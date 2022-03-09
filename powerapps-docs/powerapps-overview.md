@@ -3,7 +3,7 @@ title: What is Power Apps? | Microsoft Docs
 description: Learn how end users, app makers, admins, and developers can use Power Apps to meet business needs by transforming manual operations into digital processes.
 author: KumarVivek
 manager: annbe
-ms.service: powerapps
+
 ms.topic: overview
 
 ms.date: 10/19/2021

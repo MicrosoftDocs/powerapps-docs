@@ -2,11 +2,12 @@
 title: openDatasetItem | Microsoft Docs
 description: Open dataset item for a given EntityReference. It checks if there is a command with command button id Mscrm.OpenRecordItem.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,11 +24,13 @@ Model-driven and canvas apps
 
 ## Syntax
 
-`context.parameters.dataset.openDatasetItem(entityreference)`
+`context.parameters.dataset.openDatasetItem(entityReference)`
 
-## Return Value
+## Parameters
 
-**Type**: [Entityreference](../entityreference.md)
+| Parameter Name  | Type                                       | Required | description                    |
+| --------------- | ------------------------------------------ | -------- | ------------------------------ |
+| entityReference | `[Entityreference](../entityreference.md)` | Yes      | Reference that will be opened. |
 
 ### Related topics
 

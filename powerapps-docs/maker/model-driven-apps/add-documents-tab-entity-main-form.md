@@ -4,7 +4,7 @@ description: "Learn how to add the Documents tab to the main form for a table"
 s.custom: 
 ms.date: 01/06/2020
 ms.reviewer: 
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: how-to
@@ -23,7 +23,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Adding a tab on a table main form to display SharePoint documents helps users discover and use the SharePoint integration features that are available in a model-driven app.
 

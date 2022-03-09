@@ -4,7 +4,7 @@ description: "Link the custom columns of the RecurringAppointmentMaster table wi
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Link custom columns of the recurring appointment master and appointment tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can link the custom columns created for the `RecurringAppointmentMaster` table with the custom columns created for the `Appointment` table to automatically copy the data from the recurring appointment master custom column to the linked recurring appointment instances custom column, every time it is expanded.  
 

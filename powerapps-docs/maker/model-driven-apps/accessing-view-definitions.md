@@ -4,7 +4,7 @@ description: Learn how to open the view designer
 ms.custom: ""
 ms.date: 03/23/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: how-to
@@ -26,7 +26,7 @@ search.app:
 ---
 # Opening the view designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In this article, a view definition will be opened to display properties and options to configure the view.
 

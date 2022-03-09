@@ -4,7 +4,7 @@ description: "Learn how to write custom code to be executed on specific events o
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

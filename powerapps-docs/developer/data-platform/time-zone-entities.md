@@ -4,7 +4,7 @@ description: "The time zone tables contain time zone information, such as suppor
 ms.custom: ""
 ms.date: 08/27/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

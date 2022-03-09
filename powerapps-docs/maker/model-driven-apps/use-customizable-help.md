@@ -3,7 +3,7 @@ title: "Enable and use customizable help (model-driven apps) | MicrosoftDocs"
 description: "Learn how to enable and use customizable help in model-driven apps"
 keywords: 
 ms.date: 10/22/2019
-ms.service: powerapps
+
 ms.topic: how-to
 author: Mattp123
 ms.subservice: mda-maker
@@ -18,7 +18,7 @@ search.app:
 
 # Enable and use customizable help
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Customizable help lets you provide your own contextual information to model-driven app users filling in forms.
 

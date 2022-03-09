@@ -2,11 +2,11 @@
 title: How to link SharePoint lists using a lookup column in Power Apps
 description: Learn about how to link SharePoint lists using lookup columns in Power Apps.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/12/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -103,19 +103,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 ## Create an app from the Assets list
 
-You use this app to add data to the **Assets** list.
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Under **Start from data**, select **SharePoint**.
-
-    ![Create app.](./media/sharepoint-lookup-fields/create-app.png)
-
-1. Select your SharePoint site. If you don't have a SharePoint connection, select **Create** instead, connect to SharePoint online, and then choose your site.
-
-1. Choose the main list from your SharePoint site, in this example, **Assets**. Select the **Connect** button in the lower-right corner.
-
-    ![Choose main list.](./media/sharepoint-lookup-fields/choose-main-list.png)
+Create a [canvas app](app-from-sharepoint.md) from the [Assets list](#define-the-assets-list) created earlier.
 
 ## Add data to the Assets list
 

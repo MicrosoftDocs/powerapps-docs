@@ -4,7 +4,7 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "jamesol-msft" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Online Management API
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <!-- 
 

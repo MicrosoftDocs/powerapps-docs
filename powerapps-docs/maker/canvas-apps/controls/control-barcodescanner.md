@@ -2,7 +2,7 @@
 title: Web barcode scanner control (experimental) in Power Apps
 description: Learn about the details, properties and examples of the web barcode scanner control in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 06/15/2021
