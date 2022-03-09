@@ -126,8 +126,6 @@ Custom help panes support the following video sources:
 Links can be to websites and open in the same window (the default) or open in a separate window. The ability to link to an existing help page is not yet enabled.   
 
 ### Balloons and coach marks
-> [!NOTE]
-> Balloons and coach marks don't work well with custom components. This feature only applies to default Unified Interface UI components.
  
 Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it.
 
@@ -141,8 +139,9 @@ Author needs to define the target through drag and drop capability in the proper
 
 ![Drag and drop](media/drag-drop.png)
 
-> [!IMPORTANT]
-> Sequential help balloons and coachmarks are not supported yet. 
+> [!NOTE]
+> - Balloons and coach marks don't work well with custom components. This feature only applies to default Unified Interface UI components.
+> - Sequential help balloons and coachmarks are not supported yet. 
 
 ## Solutions and custom help pane content
 All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
