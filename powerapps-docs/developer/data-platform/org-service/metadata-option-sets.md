@@ -53,6 +53,8 @@ Use the following message request classes with both global and local choices.
 
 <a name="BKMK_RetrieveAGlobalOptionSet"></a>
 
+[!NOTE] Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets.
+
 ## Retrieve a global choice  
 
  The following code sample shows how to retrieve a global choice by name using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest> message:  
