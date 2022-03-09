@@ -46,8 +46,6 @@ If a record is in a hierarchy relationship, select the hierarchy icon to open th
 
  If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in.
 
-<!-- Animated gifs have accessibility problems. We're replacing them with either videos or static images. -->
-
 ## View selector
   
 The view selector lists the views that are available for the table. By default, the list is divided into two groups:
