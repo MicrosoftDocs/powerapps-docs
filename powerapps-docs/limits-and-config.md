@@ -118,7 +118,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
 | api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
-| management.azure.com |https |RP |
+| management.azure.com |https |Power Apps Management Service |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |Microsoft Authentication Library |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
@@ -140,7 +140,7 @@ This list identifies all services to which Power Apps communicates and their usa
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 
-## Embedding limits for canvas apps
+## Embedding limits
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
 
