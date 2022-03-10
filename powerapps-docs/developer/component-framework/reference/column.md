@@ -2,10 +2,11 @@
 title: Column in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for column in Power Apps component framework.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 06/12/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -29,15 +30,15 @@ The alias of the column.
 
 **Type**: `string`
 
-### attributes 
+### attributes
 
-This is available only for canvas apps. 
+This is available only for canvas apps.
 
-**Type**: `[AttributeMetadata](./attributemetadata.md)`
+**Type**: [AttributeMetadata](attributemetadata.md)
 
 ### cellType
 
-Cell type. This is available only for canvas apps. 
+Cell type. This is available only for canvas apps.
 
 **Type**: `string`
 
@@ -47,9 +48,9 @@ The data type of the column's values.
 
 **Type**: `string`
 
-### disableSorting 
+### disableSorting
 
-Prevents the UI from making the column sortable. This is available only for canvas apps. 
+Prevents the UI from making the column sortable. This is available only for canvas apps.
 
 **Type**: `boolean`<br />
 
@@ -59,15 +60,15 @@ Localized display name for the column.
 
 **Type**: `string`
 
-### isHidden 
+### isHidden
 
-The column visibility state. This is available only for canvas apps. 
+The column visibility state. This is available only for canvas apps.
 
 **Type**: `boolean`<br />
 
 ### isPrimary
 
-Is specific column the primary column of the view's table. This is available only for model-driven apps. 
+Is specific column the primary column of the view's table. This is available only for model-driven apps.
 
 **Type**: `boolean`<br />
 

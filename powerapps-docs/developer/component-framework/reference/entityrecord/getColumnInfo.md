@@ -2,10 +2,11 @@
 title: getColumnInfo | Microsoft Docs
 description: Gets the current state of the column for the record.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 06/12/2021
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -33,16 +34,7 @@ Canvas apps
 
 ## Return Value
 
-**Type**: `ColumnInfo`
-
-```Typescript
-ColumnInfo{
-readonly error: boolean;
-	readonly errorMessage?: string;
-	readonly security?: SecurityValues;
-	readonly type: string;
-}
-```
+**Type**: [ColumnInfo](./../columninfo.md)
 
 ### Related topics
 

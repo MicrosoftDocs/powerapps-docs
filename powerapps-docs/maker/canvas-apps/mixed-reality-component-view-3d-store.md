@@ -4,8 +4,8 @@ description: Load 3D models into Power Apps from attachments, media content, dir
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: mduelae
-ms.date: 3/2/2022
+ms.reviewer: mkaur
+ms.date: 3/4/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -19,22 +19,17 @@ contributors:
 
 # Load 3D models in canvas apps
 
-Load a 3D model in your canvas apps from an attachment or media content, a direct URL, or a Base64-encoded URI (uniform resource identifier).
+Load a 3D model in your canvas apps from a variety of sources. You can get models from attachments or media content, a direct URL, or a Base64-encoded URI (uniform resource identifier).
 
 Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) to minimize load times.
 
 ## Loading 3D models from common connectors
 
-<!-- PLEASE EXPAND ON THE INFO IN THE FOLLOWING PARAGRAPH. IS "BINARY STORAGE" SIGNIFICANT? IS THERE A TOPIC IN OUR DOCS WE CAN REFER TO FOR MORE INFO? -->
-
-Loading 3D models from attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** control.
-
-<!--WHERE SHOULD THE USER ADD A LABEL AND WHERE SHOULD THE TEXT PROPERTY BE SET TO DO THIS TEST? -->
+Loading 3D models from attachments or media content depends on how a data connector is supported. To check if a data connector will work the mixed reality controls, add a label control to the canvas app and set the **Text** property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
 
 > [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
 
-<!-- I DON'T SEE A WAY IN THESE INSTRUCTIONS, OR IN POWER APPS STUDIO, TO LOAD A MODEL FROM AN ATTACHMENT. PLEASE DOCUMENT THIS, TOO. -->
 
 ### Load 3D models from a SharePoint list
 
@@ -59,12 +54,12 @@ First, create an Excel workbook in OneDrive in the same folder that contains you
 
 1. Create an Excel workbook and save it in the OneDrive folder that contains your model files.
 
-    ![A screenshot of OneDrive that shows the Excel workbook ModelGallery and its accompanying 3D model files.](./media/augmented-3d/augmented-3d-onedrive-list.png "An Excel workbook and its accompanying 3D model files")
+    :::image type="content" source="./media/augmented-3d/augmented-3d-onedrive-list.png" alt-text="A screenshot of OneDrive that shows the Excel workbook ModelGallery and its accompanying 3D model files.":::
 
 2. In the workbook, create a table with columns named **3DModel [image]** and **Name**.
 3. Add a row for each model you want to show in the app gallery. Enter a label for the model in the **Name** column and the relative file path to the model file in the **3DModel [image]** column.
 
-    ![A screenshot of an Excel table with columns for the name of a 3D model and the path to the object file.](./media/augmented-3d/augmented-3d-excel-list.png "An Excel table with columns for the name of a 3D model and the path to the object file")
+    :::image type="content" source="./media/augmented-3d/augmented-3d-excel-list.png" alt-text="{A screenshot of an Excel table with columns for the name of a 3D model and the path to the object file.}":::
 
 4. Close the workbook.
 
@@ -122,7 +117,7 @@ In the following example, a document library named *3DModelBase64Library* and a 
 
     ```concat('data:model/gltf-binary;base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))```
 
-    ![A Power Automate flow showing steps to convert 3D model files in a SharePoint document library to Base64.](./media/augmented-3d/augmented-3d-convert-flow.png "Converting 3D model files to Base64 with Power Automate")
+    :::image type="content" source="./media/augmented-3d/augmented-3d-convert-flow.png" alt-text="A screenshot of a Power Automate workflow that shows the steps to convert 3D model files in a SharePoint document library to Base64.":::
 
 The flow runs when a file is added to the document library, converting the file to a Base64-encoded data URI.
 
@@ -138,3 +133,4 @@ The [Note table](../../developer/data-platform/annotation-note-entity.md) in Mic
 - The server that hosts the model files must not require authentication and must be CORS-compliant.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

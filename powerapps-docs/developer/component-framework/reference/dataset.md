@@ -2,10 +2,11 @@
 title: DataSet in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 02/02/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -35,7 +36,7 @@ Whether an error occurred in data retrieval. This is supported in both model-dri
 
 **Type**: `boolean`
 
-## errorCode
+### errorCode
 
 The error code associated with the last encountered error, if applicable.
 
@@ -100,7 +101,7 @@ The column filtering for the current query. This is supported in both model-driv
 
 **Type**: [Filtering](filtering.md)
 
-### linking 
+### linking
 
 Defines the linked table information. This is supported only in model-driven apps.
 
@@ -143,7 +144,7 @@ The sorting status for the current query. This is supported in both model-driven
 > Sorting feature is only available to Dataverse data source.
 > Also, if sorting is re-configured it will reset the filter `context.parameters.[dataset_property_name].filtering`
 
-**Type**: `[SortStatus](sortstatus.md)[]`
+**Type**: [SortStatus](sortstatus.md)[]
 
 ## Methods
 
@@ -168,7 +169,7 @@ The sorting status for the current query. This is supported in both model-driven
 
 ## Lookup columns
 
-Dataverse table's lookup columns can now be retrieved.For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
+Dataverse table's lookup columns can now be retrieved. For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
 
 ## Example
 

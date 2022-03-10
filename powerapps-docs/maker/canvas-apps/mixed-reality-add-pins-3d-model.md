@@ -170,3 +170,4 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 - Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** control
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
