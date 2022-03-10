@@ -109,6 +109,13 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
 - String
 
 ## Supported Filter Operations Per Attribute Type in Mobile Offline
+The following operations are supported for all attribute types:
+- Equals
+- Not Equals
+- Null
+- Not Null
+
+The following table lists additional operations supported for each attribute type:
 <table style="width:100%">
   <tr>
     <th>Attribute Type</th>
@@ -118,10 +125,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>BigInt</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Greater Than</li>
         <li>Greater Than or Equals</li>
         <li>Less Than</li>
@@ -133,10 +136,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Boolean</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>In</li>
         <li>Not In</li>
       </ul>
@@ -146,10 +145,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Customer</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>In</li>
         <li>Not In</li>
       </ul>
@@ -185,10 +180,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
         <li>Last X Years</li>
         <li>Next X Years</li>
         <li>Anytime</li>
-        <li>Null</li>
-        <li>Not Null</li>
-        <li>Equal</li>
-        <li>Not Equal</li>
         <li>Greater Than</li>
         <li>Greater Than Or Equal</li>
         <li>Less Than</li>
@@ -200,10 +191,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Decimal</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Greater Than</li>
         <li>Greater Than or Equals</li>
         <li>Less Than</li>
@@ -215,10 +202,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Double</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Greater Than</li>
         <li>Greater Than or Equals</li>
         <li>Less Than</li>
@@ -230,10 +213,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>EntityName</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Like</li>
         <li>Not Like</li>
         <li>Begins With</li>
@@ -249,10 +228,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Guid</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>In</li>
         <li>Not In</li>
         <li>Equals User Id</li>
@@ -264,10 +239,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Integer</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Greater Than</li>
         <li>Greater Than or Equals</li>
         <li>Less Than</li>
@@ -279,10 +250,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Lookup</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>In</li>
         <li>Not In</li>
         <li>Equals User Id</li>
@@ -294,10 +261,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Money</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Greater Than</li>
         <li>Greater Than or Equals</li>
         <li>Less Than</li>
@@ -311,10 +274,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Owner</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>In</li>
         <li>Not In</li>
         <li>Equals User Id</li>
@@ -328,10 +287,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Picklist</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Like</li>
         <li>Not Like</li>
         <li>Begins With</li>
@@ -347,10 +302,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>State</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Like</li>
         <li>Not Like</li>
         <li>Begins With</li>
@@ -366,10 +317,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>Status</td>
     <td>
       <ul>
-        <li>Equal</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Like</li>
         <li>Not Like</li>
         <li>Begins With</li>
@@ -385,10 +332,6 @@ Only the following attribute types are supported when doing a `Xrm.WebApi.retrie
     <td>String</td>
     <td>
       <ul>
-        <li>Equals</li>
-        <li>Not Equals</li>
-        <li>Null</li>
-        <li>Not Null</li>
         <li>Like</li>
         <li>Not Like</li>
         <li>Begins With</li>
