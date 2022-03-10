@@ -94,17 +94,17 @@ The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides
 
 - Use the Microsoft Tool, [Accessibility Insights](https://accessibilityinsights.io/) to perform two types of scans:
 
-    - [FastPass](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2Fdocs%2Fen%2Fweb%2Fgetstarted%2Ffastpass%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=v9Ni30%2FGosSEe5Tmcf35FVrnBrrKrLn24ecRowPR%2FQo%3D&reserved=0): automatically checks for compliance with dozens of accessibility requirements.
+    - [FastPass](https://accessibilityinsights.io/docs/en/web/getstarted/fastpass/): automatically checks for compliance with dozens of accessibility requirements.
 
-    - [Assessment](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2Fdocs%2Fen%2Fweb%2Fgetstarted%2Fassessment%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=iuCLSsz1XhTEjqzrZIZkSIvWjzpKaWOGQJbM0JX2PGY%3D&reserved=0): measures compliance with WCAG 2.1 Level AA success criteria.
+    - [Assessment](https://accessibilityinsights.io/docs/en/web/getstarted/assessment/): measures compliance with WCAG 2.1 Level AA success criteria.
 
 - Follow [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) while creating page layout and adding widgets.
 
 - To go a step further, test your site using the same accessibility tools as your users:
 
-    - Use a screen-reader, such as [Windows Narrator](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fwindows%2Fchapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6%23WindowsVersion%3DWindows_11&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=84IQXrWI9NiMj79ESaayvhsVobSv%2BNOPNzhTIZWDaOg%3D&reserved=0).
+    - Use a screen-reader, such as [Windows Narrator](https://support.microsoft.com/en-us/windows/chapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6#WindowsVersion=Windows_11).
 
-    - Test using the [Immersive Reader](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Feducation.microsoft.com%2Fen-us%2Fresource%2F9b010288&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=aLsTp6MsE6qLNpY3FYC7vPmSuYeov%2F7n9nzCSalE2tE%3D&reserved=0) in Edge to make sure your portal renders and is readable, making adjustments to your portal as needed.
+    - Test using the [Immersive Reader](https://education.microsoft.com/en-us/resource/9b010288) in Edge to make sure your portal renders and is readable, making adjustments to your portal as needed.
 
 ## Microsoft accessibility features
 
