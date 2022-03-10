@@ -29,7 +29,7 @@ search.app:
 The new model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
 
 > [!IMPORTANT]
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 > - More information: [Preview features: Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
@@ -74,8 +74,8 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under **Recent** to add it to their pinned rows.
 1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
 1. **Enable Areas**. Disabled by default. When selected, new areas can be added to the app. For apps with existing multiple areas, this setting is enabled by default. You can't disable this setting while the app has multiple areas.
-1. **Enable web resources**. Disabled by default. When selected, web resources can be added to the app as a type of subarea. For information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
-1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea. More information: [Add a URL to an app](app-navigation.md#add-a-url-to-an-app)
+1. **Enable web resources**. Disabled by default. When selected, web resources can be added to the app as a type of subarea. More information: [Add a web resource to an app (preview)](create-edit-web-resources.md#add-a-web-resource-to-an-app-preview).
+1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea. More information: [Add a URL to an app (preview)](app-navigation.md#add-a-url-to-an-app-preview)
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
