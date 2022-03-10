@@ -4,7 +4,7 @@ description: Learn the components inside Power Apps Studio.
 author: jessicaszelo
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/25/2022
+ms.date: 03/10/2022
 ms.subservice: teams
 ms.author: szlo
 ms.reviewer: tapanm
@@ -81,10 +81,6 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Cut** – Cut the selection, and store it in the clipboard.
 - **Copy** – Copy the selection, and store it in the clipboard.
 - **Paste** - Paste the last cut, or copied selection from the clipboard.
-
-### Insert
-
-Allows you to insert controls to the screen using the menu at the top, as an alternative to using the left-pane.
 
 ### Add data
 
@@ -265,7 +261,6 @@ Switch between various authoring options while working with the app.
 - **Insert** - Allows you to add different controls to the screen.
 - **Data** - Add or remove data such as tables that the app connects to.
 - **Media** - Insert or remove media from the app.
-- **Advanced tools** - Use **Monitor** to work with the app. Monitor allows you to view a stream of events from a user's session to diagnose and troubleshoot problems with the app. More information: [Monitor overview](../maker/monitor-overview.md)
 
 ## 8 – App authoring options
 
@@ -491,12 +486,6 @@ If you want to reference more media, consider using [audio and video controls wi
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
 or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
-
-### Power Automate
-
-### Advanced tools
-
-### Search
 
 ## 9 – Canvas/screen
 
