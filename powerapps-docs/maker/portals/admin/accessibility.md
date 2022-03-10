@@ -82,25 +82,25 @@ The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides
 
 ### Quick Tips for Accessible Content
 
-1. Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
+- Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
 
-1. Test your portal by zooming in to 200%, make sure the text is readable, the pages function and work, etc. For more information, see: [WCAG 1.4.4](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FUnderstanding%2Fresize-text.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=7dwyo3J%2F7tC5ykGjHWYo%2FUb7mTSi7AFQ10ypb80wgFU%3D&reserved=0)
+- Test your portal by zooming in to 200%, make sure the text is readable, the pages function and work, etc. For more information, see: [WCAG 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
 
-1. Color contrast matters.  Use a color contrast tool to help you see the contrast ratio. For more information, see: [WCAG 1.4.3](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FUnderstanding%2Fcontrast-minimum.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=%2BYu2bmqn991ZMrtVBsquQ2TW1cazwBvSToKf8iyjwds%3D&reserved=0)
+- Color contrast matters.  Use a color contrast tool to help you see the contrast ratio. For more information, see: [WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 
-1. Color shouldn't be the only visual way of conveying an action or information. If changing the color to highlight text, make sure the color or descriptive information is also available in the text. For more information, see: [WCAG 1.4.1](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FUnderstanding%2Fuse-of-color.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=wITEX%2BDM%2Bp4A6umK%2BCF4RjRAQu%2FMN4FAWnKFtlVh2wk%3D&reserved=0)
+- Color shouldn't be the only visual way of conveying an action or information. If changing the color to highlight text, make sure the color or descriptive information is also available in the text. For more information, see: [WCAG 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 
-1. Use the alt attribute for every image (img tag). Use an empty alt attribute to hide the image from screen readers. Ideally, use CSS to define decorative images hidden from screen readers. For more information, see: [WCAG C9](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FTechniques%2Fcss%2FC9.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=NdvmiSQDPg0AoniEyKo2xTxdlSyP8pNaM0NLfBRJTmQ%3D&reserved=0)
+- Use the alt attribute for every image (img tag). Use an empty alt attribute to hide the image from screen readers. Ideally, use CSS to define decorative images hidden from screen readers. For more information, see: [WCAG C9](https://www.w3.org/WAI/WCAG21/Techniques/css/C9.html)
 
-1. Use the Microsoft Tool, [Accessibility Insights](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=%2F3DRWtlql3YNpTRP%2BBh%2FRrQbnvcqphp0TpJ2bI6oGZI%3D&reserved=0) to perform two types of scans:
+- Use the Microsoft Tool, [Accessibility Insights](https://accessibilityinsights.io/) to perform two types of scans:
 
     - [FastPass](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2Fdocs%2Fen%2Fweb%2Fgetstarted%2Ffastpass%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=v9Ni30%2FGosSEe5Tmcf35FVrnBrrKrLn24ecRowPR%2FQo%3D&reserved=0): automatically checks for compliance with dozens of accessibility requirements.
 
     - [Assessment](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2Fdocs%2Fen%2Fweb%2Fgetstarted%2Fassessment%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=iuCLSsz1XhTEjqzrZIZkSIvWjzpKaWOGQJbM0JX2PGY%3D&reserved=0): measures compliance with WCAG 2.1 Level AA success criteria.
 
-1. Follow [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) while creating page layout and adding widgets.
+- Follow [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) while creating page layout and adding widgets.
 
-1. To go a step further, test your site using the same accessibility tools as your users:
+- To go a step further, test your site using the same accessibility tools as your users:
 
     - Use a screen-reader, such as [Windows Narrator](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fwindows%2Fchapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6%23WindowsVersion%3DWindows_11&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=84IQXrWI9NiMj79ESaayvhsVobSv%2BNOPNzhTIZWDaOg%3D&reserved=0).
 
