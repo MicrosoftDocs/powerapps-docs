@@ -87,6 +87,8 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
+      - name: Create and join a Teams meeting from an appointment (preview)
+        href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
@@ -565,6 +567,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Use the Search pane (preview)
+          href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
         - name: Show dates and times
