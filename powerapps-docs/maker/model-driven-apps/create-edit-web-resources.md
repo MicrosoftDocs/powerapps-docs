@@ -55,9 +55,13 @@ Part of the name of any web resource you create is the solution publisher prefix
    The list of web resources available are displayed. 
 3. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**. To close the list without adding a web resource select **Cancel**.
 
-## Add a web resource to an app
+## Add a web resource to an app (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can add a web resource as a subarea type in a model-driven app. Web resources are files you can use to extend a model-driven app. The web resource subarea can be HTML code or an HTML file, such as .htm or .html. When the user selects the subarea, the HTML is displayed in the app.
+
+:::image type="content" source="media/subarea-web-res-html.png" alt-text="Subarea HTML file web resource example":::
 
 > [!NOTE]
 > By default, web resource subareas are disabled. To enable, go to [Navigation pane options](app-designer-overview.md#navigation-pane-options).
