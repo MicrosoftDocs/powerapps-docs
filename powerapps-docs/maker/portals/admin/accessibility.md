@@ -5,13 +5,14 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/25/2022
+ms.date: 03/10/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
  
 # Accessibility in Power Apps portals
@@ -46,13 +47,68 @@ Power Apps portals conforms to the Section 508 guidelines defined by the U.S. GS
 
 Power Apps portals conforms to the ETSI. For more details, download the **EN 301 549 Accessibility Declaration of Conformance for portals** from the [Microsoft Accessibility Conformance reports](#accessibility-standards).
 
-## Create accessible portal
+## Creating an accessible portal
 
 For a portal to be accessible, use the [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices/) authoring practices.
 
+### Customizing your portal and accessibility
+
+When you customize your portal, you are responsible for meeting accessibility standards.
+
+### Basic forms (entity forms)
+
+A basic form allows a model-driven Power Apps form to be used on the Power Portal. Basic forms typically don't require a developer to design, but depending on portal's form requirements, a developer may be helpful.
+
+More Information: [About Basic Forms](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fpowerapps%2Fmaker%2Fportals%2Fconfigure%2Fentity-forms&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591028714%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=TtpNRtvfYRUJZWxb0LBfC3CqUotLB%2B3xyCEYYJjZ9Yw%3D&reserved=0)
+
+### Basic Form Options
+
+The included Basic Form controls are built to follow [WCAG 2.1](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FTR%2FWCAG21%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591028714%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=2QDo56vto3SrBn6YLp%2FE4Lb9e%2BD5%2BJMmN%2B%2FOX0hwjpE%3D&reserved=0). There are options that help make forms more accessible:
+
+| **Name**                        | **Description**                                                                                                                                                                               |
+|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ToolTips Enabled                | The tooltip is set using the description of the attribute on the target table. This setting adds the title attribute, providing screen readers with more information. Default value is false. |
+| Enable Validation Summary Links | A boolean value of true or false that indicates whether anchor links should be rendered in the validation summary to scroll to the field containing an error. Default value is true.          |
+
+:::image type="content" source="media/accessibility/form-options.png" alt-text="form options menu":::
+
+More Information: [Form Options](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fpowerapps%2Fmaker%2Fportals%2Fconfigure%2Fentity-forms%23form-options&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591028714%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=8TuGWllDRYOG6owNs9GjjjY9%2Fx2RXuGNGRSIKXOe9CQ%3D&reserved=0)
+
+### Liquid Templates and Content Snippets
+
+When custom html and liquid content are added to the portal, accessibility must be taken into consideration. The person making the changes to the liquid template and content snippets is responsible for ensuring the content they add is accessible. It is important to make sure the customizations adhere to the required policies, whether it be [WCAG 2.1](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/accessibility#wcag-21), [US Section 508](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/accessibility#us-section-508), and/or [ETSI EN 301 549](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/accessibility#en-301-549).
+
+The [WCAG 2.1 Quick Reference](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2Fquickref%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=A%2FAF5MsrD%2BkrOG6WK%2BnWjzSZvrl7v9DfgUvfbWicw74%3D&reserved=0) provides a list of the WCAG requirements, with links to the full descriptions.
+
+### Quick Tips for Accessible Content
+
+1. Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
+
+1. Test your portal by zooming in to 200%, make sure the text is readable, the pages function and work, etc. For more information see: [WCAG 1.4.4](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FUnderstanding%2Fresize-text.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=7dwyo3J%2F7tC5ykGjHWYo%2FUb7mTSi7AFQ10ypb80wgFU%3D&reserved=0)
+
+1. Color contrast matters.  Use a color contrast tool to help you see the contrast ratio. For more information see: [WCAG 1.4.3](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FUnderstanding%2Fcontrast-minimum.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=%2BYu2bmqn991ZMrtVBsquQ2TW1cazwBvSToKf8iyjwds%3D&reserved=0)
+
+1. Color shouldn't be the only visual way of conveying an action or information. If changing the color to highlight text, make sure the color or descriptive information is also available in the text. For more information see: [WCAG 1.4.1](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FUnderstanding%2Fuse-of-color.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=wITEX%2BDM%2Bp4A6umK%2BCF4RjRAQu%2FMN4FAWnKFtlVh2wk%3D&reserved=0)
+
+1. Use the alt attribute for every image (img tag). Use an empty alt attribute to hide the image from screen readers. Ideally, use CSS to define decorative images hidden from screen readers. For more information see: [WCAG C9](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FWAI%2FWCAG21%2FTechniques%2Fcss%2FC9.html&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=NdvmiSQDPg0AoniEyKo2xTxdlSyP8pNaM0NLfBRJTmQ%3D&reserved=0)
+
+1. Use the Microsoft Tool, [Accessibility Insights](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=%2F3DRWtlql3YNpTRP%2BBh%2FRrQbnvcqphp0TpJ2bI6oGZI%3D&reserved=0) to perform two types of scans:
+
+    - [FastPass](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2Fdocs%2Fen%2Fweb%2Fgetstarted%2Ffastpass%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591078718%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=v9Ni30%2FGosSEe5Tmcf35FVrnBrrKrLn24ecRowPR%2FQo%3D&reserved=0): automatically checks for compliance with dozens of accessibility requirements.
+
+    - [Assessment](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccessibilityinsights.io%2Fdocs%2Fen%2Fweb%2Fgetstarted%2Fassessment%2F&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=iuCLSsz1XhTEjqzrZIZkSIvWjzpKaWOGQJbM0JX2PGY%3D&reserved=0): measures compliance with WCAG 2.1 Level AA success criteria.
+
+1. Follow [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) while creating page layout and adding widgets.
+
+1. To go a step further, test your site using the same accessibility tools as your users:
+
+    - Use a screen-reader, such as [Windows Narrator](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fwindows%2Fchapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6%23WindowsVersion%3DWindows_11&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=84IQXrWI9NiMj79ESaayvhsVobSv%2BNOPNzhTIZWDaOg%3D&reserved=0).
+
+    - Test using the [Immersive Reader](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Feducation.microsoft.com%2Fen-us%2Fresource%2F9b010288&data=04%7C01%7CNeeraj.Nandwana%40microsoft.com%7Cdf0b316568b14277b61808d9e1a0ecc8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637788903591128708%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=aLsTp6MsE6qLNpY3FYC7vPmSuYeov%2F7n9nzCSalE2tE%3D&reserved=0) in Edge to make sure your portal renders and is readable, making adjustments to your portal as needed.
+
 ## Microsoft accessibility features
 
-Microsoft accessibility features help various agencies address accessibility requirements, and conform to the standards laid out. More information: [Accessibility features of Microsoft products](https://sway.office.com/vAdiAMXOJEQGVbqX)
+Microsoft accessibility features help various agencies address accessibility requirements and conform to the standards laid out. More information: [Accessibility features of Microsoft products](https://sway.office.com/vAdiAMXOJEQGVbqX)
 
 ### See also
 
