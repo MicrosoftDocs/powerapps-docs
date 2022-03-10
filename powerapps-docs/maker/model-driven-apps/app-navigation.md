@@ -88,7 +88,9 @@ To create a new subarea, complete the following steps:
 1. To save your app navigation changes select **Save**.
 1. To publish the changes and make them available to other users, select **Publish**.
 
-### Add a URL to an app
+### Add a URL to an app (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A URL is a type of subarea in the app navigation. When the user selects the subarea, the URL opens in a new tab in the web browser.
 

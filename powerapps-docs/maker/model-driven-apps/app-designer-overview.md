@@ -28,6 +28,10 @@ search.app:
 
 The new model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
 
+> [!IMPORTANT]
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - More information: [Preview features: Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+
 Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
 
    :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added":::
