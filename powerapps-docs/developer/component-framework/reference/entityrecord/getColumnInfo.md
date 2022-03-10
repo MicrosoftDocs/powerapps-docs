@@ -34,16 +34,7 @@ Canvas apps
 
 ## Return Value
 
-**Type**: `ColumnInfo`
-
-```Typescript
-ColumnInfo{
-readonly error: boolean;
-	readonly errorMessage?: string;
-	readonly security?: SecurityValues;
-	readonly type: string;
-}
-```
+**Type**: [ColumnInfo](./../columninfo.md)
 
 ### Related topics
 
