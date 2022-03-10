@@ -2,9 +2,8 @@
 title: "Create or edit model-driven app web resources in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
-ms.date: 01/20/2022
+ms.date: 03/10/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -25,8 +24,6 @@ search.app:
   - D365CE
 ---
 # Create or edit model-driven app web resources to extend an app
-
-
 
 Web resources are typically used by developers to extend an app using files that are used in web development. App users may need to manage web resources provided by a developer or designer.  
 
@@ -51,16 +48,31 @@ Because web resources are data in the system and are solution aware, you can mov
 
 Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you are working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
 
-## View and add web resources
+## View and add web resources for a solution
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
 2. Open an unmanaged solution, on the command bar select **Add existing**, point to **More**, and then select **Web resource**. 
    The list of web resources available are displayed. 
 3. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**. To close the list without adding a web resource select **Cancel**.
 
-## Create or edit a web resource
+## Add a web resource to an app
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
+You can add a web resource as a subarea type in a model-driven app. Web resources are files you can use to extend a model-driven app. The web resource subarea can be HTML code or an HTML file, such as .htm or .html. When the user selects the subarea, the HTML is displayed in the app.
+
+> [!NOTE]
+> By default, web resource subareas are disabled. To enable, go to [Navigation pane options](app-designer-overview.md#navigation-pane-options).
+
+1. In the model-driven app designer, select **Navigation** > **Add** > **Subarea**.
+1. In the subarea properties, enter the following information:
+   - **Content type**: **Web resource**.
+   - **URL**: Select an HTML web resource file name from the list to add the web resource's URL. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+   - **Title**: Enter the title that will appear on the subarea in the app.
+
+1. Select **Save**, and then select **Publish**.
+
+## Create or edit a web resource for a solution
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**.
 1. Open an unmanaged solution.
 1. To edit an existing web resource that is part of the unmanaged solution, select it to display the **Edit web resource** pane. To create a new one, on the command bar select **New**, point to **More**, and then select **Web resource**.
 1. Complete the fields on the right web resource pane to create or edit the web resource:
