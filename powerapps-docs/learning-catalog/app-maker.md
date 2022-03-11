@@ -4,7 +4,7 @@ description: Find all the training options for Power Apps makers
 author: MargoC
 ms.topic: article
 ms.date: 03/25/2020
-ms.service: powerapps
+
 ms.author: margoc
 ---
 

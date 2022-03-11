@@ -4,7 +4,7 @@ description: "Learn about common elements and characteristics, calculated column
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -20,9 +20,7 @@ search.app:
 
 *Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-  
- [Video: Rollup and Calculated columns in Microsoft Dataverse](https://youtu.be/RoahCH1p3T8)  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)] 
   
 <a name="BKMK_CommonElements"></a>   
 
@@ -77,7 +75,7 @@ search.app:
   
  Only columns from an immediate parent table can be used in a calculated column.  
   
- Saved queries, charts, and visualizations can have a maximum of 10 unique calculated columns.  
+ Saved queries, charts, and visualizations can have a maximum of 50 unique calculated columns.  
   
  Calculated columns can reference other calculated columns in their formula, but they can’t reference themselves.  
   

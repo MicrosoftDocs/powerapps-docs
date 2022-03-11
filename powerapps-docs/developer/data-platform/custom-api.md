@@ -4,7 +4,7 @@ description: "Custom API is a new code-first way to define custom messages for t
 ms.custom: ""
 ms.date: 10/31/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer

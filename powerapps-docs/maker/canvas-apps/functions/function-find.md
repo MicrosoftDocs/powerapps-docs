@@ -2,7 +2,7 @@
 title: Find function in Power Apps
 description: Reference information including syntax and examples for the Find function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Find function in Power Apps
 Finds a string of text, if it exists, within another string.

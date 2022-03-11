@@ -1,8 +1,8 @@
 ---
 title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the form OnSave event.
-ms.date: 05/05/2021
-ms.service: powerapps
+ms.date: 12/16/2021
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
@@ -34,9 +34,7 @@ You can cancel the save action by using the preventDefault method within the eve
 
 The OnSave event has ability to wait for promises returned by event handlers to settle before saving, allowing the `OnSave` event to be asynchronous ("async").
 
-The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler and support is enabled. Enable the support by updating the `customization.xml` file for the app you want. More information: [Enable Async OnSave](#enable-async-onsave-using-app-setting).
-
-Saving of the record happens when each promise returned by a handler are resolved. For any promises that are returned, there is a 10-second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have five promises returned, the total wait time is 50 seconds.  
+The `OnSave` event becomes async when a promise is returned by an `OnSave` event handler. Saving of the record happens when each promise returned by a handler is resolved. For any promises that are returned, there is a 10 second limit for each promise, after that the platform considers promises to be timed out. This timeout is applied per promise. For example, if we have 5 promises returned, the total wait time is 50 seconds.  
 
 If the promise is rejected or timed out, the save operation continues to behave similarly to the current script errors. Use the [preventDefault](../save-event-arguments/preventDefault.md) method within the event arguments object in that particular handler if you want to prevent the save event to happen if there is a script error/rejected promise or handler times out.
 
@@ -64,37 +62,28 @@ In this scenario, since there are multiple async processes and both calls return
 
 ### Enable Async OnSave using app setting 
 
-An app setting is a platform component that allows you to override a setting on an app. App setting should have a unique name and must be in the format `solutionpublisherprefix_appname_settingname`.
+To use async onSave handlers you will need to enable it through an app setting:
 
-To enable the async `OnSave` event handlers for a specific app:
+1. Go to https://make.powerapps.com.
+2. Make sure select the correct environment.
+3. Select **Apps** from the left navigation pane.
+4. Select the app and then select **...** (ellipses). Select **Open in preview**.
+5. Select **Settings** from the command bar.
+6. When the dialog opens, select **Features**.
+7. Turn on **Async onSave handler**.
+8. Select **Save**.
 
-- Create a new unmanaged solution. 
-- Open the newly created solution. Select **Add existing** > **App** > **Model-driven app**.
-- From the list of existing model-driven apps, select the app where you want to see this feature. 
-- Publish all customizations. 
-- Again from the list of solutions in the solution explorer, select the solution where you have added the model-driven app and then select **Export**. A zip file is downloaded to your local machine.
-- Extract the downloaded  zip file. Open the **Customizations.xml** file in your preferred editing tool. 
-- Add the following code `AppModule` node in the `customization.xml` file. Setting the `<value>true</value>` enables async `OnSave` event handler support for that specific app. Any form within this app will be able to get access to the async OnSave functionality.
+    ![Async OnSave app setting](../../../media/async_onSave_app_settings.png "Async OnSave app setting")
 
-   ```XML
-   <appsettings>
-   <appsetting uniquename="MyAppName_AsyncOnSave">
-      <iscustomizable>1</iscustomizable>
-      <settingdefinitionid>
-         <uniquename>AsyncOnSave</uniquename>
-      </settingdefinitionid>
-      <value>true</value>
-   </appsetting>
-  </appsettings>
-   ```
+### Async onSave timeouts
 
-- You can verify whether the configuration has been successfully installed using the following request: 
+When using an async save the handler will wait for the promise to be fulfilled. To ensure that a save completes in a timely manner the handler throws a timeout exception after 10 seconds to let you know to tune the async `OnSave` event for better performance.
 
-  ```http
-  GET https://org00000000.crm.dynamics.com/api/data/v9.2/appsettings?$filter=(uniquename eq 'MyAppName_AsyncOnSave')
-  Accept: application/json
-  Authorization: Bearer ey...
-  ```
+There may be scenarios where you want to halt the `OnSave` execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user’s input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
+
+When the **disableAsyncTimeout is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
+
+This should be used with caution as it might affect the performance of the form save.
 
 ### Related article
 

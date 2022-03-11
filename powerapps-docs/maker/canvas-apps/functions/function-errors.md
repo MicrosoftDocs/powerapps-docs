@@ -2,7 +2,7 @@
 title: Errors function in Power Apps
 description: Reference information including syntax and examples for the Errors function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Errors function in Power Apps
 Provides error information for previous changes to a [data source](../working-with-data-sources.md).

@@ -2,7 +2,7 @@
 title: Back and Navigate functions in Power Apps
 description: Reference information including syntax and examples for the Back and Navigate functions in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Back and Navigate functions in Power Apps
 
@@ -120,8 +120,6 @@ When the **Back** function runs, the inverse transition is used by default. For 
     The second screen appears with a gray background through a transition that uncovers to the right (the inverse of **Cover**).
 
 1. Select the button on each screen repeatedly to bounce back and forth.
-
-[Another example](../add-screen-context-variables.md)
 
 ### See also
 

@@ -3,7 +3,7 @@ title: "Web API CDSWebApiService Basic Operations Sample (C#) (Microsoft Dataver
 description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse table rows, using the Dataverse Web API with the CDSWebAPIService class"
 ms.custom: ""
 ms.date: 07/15/2021
-ms.service: powerapps
+
 applies_to: 
   - "Dynamics 365 (online)"
 author: "JimDaly"

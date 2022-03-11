@@ -4,10 +4,10 @@ description: "Learn how to use Word and Excel templates"
 ms.custom: ""
 ms.date: 04/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "how-to"
+ms.topic: overview
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

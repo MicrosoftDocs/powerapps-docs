@@ -1,8 +1,8 @@
 ---
-title: Using multimedia files in canvas apps
+title: Using multimedia files in canvas apps (contains video)
 description: Show multimedia files in a canvas app, and upload them to a data source.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

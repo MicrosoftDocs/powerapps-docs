@@ -4,7 +4,7 @@ description: "Learn how to edit system table messages"
 ms.custom: ""
 ms.date: 05/15/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Edit system table messages
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The default display name of some system tables is used in user interface text and error messages in Microsoft Dataverse. If you change the display name, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
 

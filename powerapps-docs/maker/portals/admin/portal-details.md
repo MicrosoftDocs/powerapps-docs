@@ -2,7 +2,7 @@
 title: Portal details
 description: Know what details are captured when portal is provisioned and what you can use.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

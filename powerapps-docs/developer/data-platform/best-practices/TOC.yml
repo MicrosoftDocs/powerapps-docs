@@ -1,4 +1,4 @@
-- name: Best practices and guidance for the Microsoft Dataverse
+- name: Best practices and guidance for Microsoft Dataverse
   href: index.md
   items: 
   - name: Apply business logic using code

@@ -2,7 +2,7 @@
 title: Improved canvas keyboard navigation in canvas apps (experimental)
 description: Learn about how to use the improved canvas keyboard navigation experience for better accessibility.
 author: hemantgaur
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.date: 10/25/2021
@@ -50,7 +50,7 @@ If not already enabled, follow these steps to enable this feature in your app, a
 
 1. Select your app, and then select **Edit**.
 
-1. In Power Apps Studio, select **File** > **Settings** > **Upcoming features** > **Experimental**.
+1. In Power Apps Studio, select **Settings** > **Upcoming features** > **Experimental**.
 
 1. Select **Improved canvas keyboard navigation** to turn on the feature.
 

@@ -4,7 +4,7 @@ description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
 ms.date: 09/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -25,7 +25,7 @@ search.app:
 ---
 
 # Upgrade or update a solution  
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There are times when you need to update an existing managed solution. To update the solution, follow these steps:
 

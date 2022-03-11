@@ -4,7 +4,7 @@ description: "Learn more about URL addressable elements that enable you to inclu
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
@@ -152,7 +152,7 @@ To open a dialog you need the following:
 ```  
 
 > [!TIP]
->  For browsers other than Internet Explorer, if a dialog process is opened from a link, the **Finish** button may not work. The data will be saved, but the user will need to click the **Close** button on the window to close it. This is because other browsers do not provide a `window.close` method if the window is not opened using JavaScript from another window. When possible, use JavaScript and the `window.open` method to open dialog processes rather than simply providing links.  
+>  If a dialog process is opened from a link, the **Finish** button may not work. The data will be saved, but the user will need to click the **Close** button on the window to close it. This is because other browsers do not provide a `window.close` method if the window is not opened using JavaScript from another window. When possible, use JavaScript and the `window.open` method to open dialog processes rather than simply providing links.  
 
  You can create a JavaScript function to open the dialog as shown in the following example:  
 

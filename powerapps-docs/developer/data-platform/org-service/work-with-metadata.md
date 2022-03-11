@@ -4,7 +4,7 @@ description: "Describes how to programmatically access and modify table and colu
 ms.custom: ""
 ms.date: 06/10/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

@@ -2,7 +2,7 @@
 title: Data table control in Power Apps
 description: Learn about the details, properties and examples of the data table control in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

@@ -4,7 +4,7 @@ description: "Alternate keys can be used to create instances of Entity and Entit
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer
@@ -19,7 +19,7 @@ search.app:
 
 # Use an alternate key to create a record
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This article discusses the usage patterns and possible exceptions that might be thrown when using alternate keys. To understand how to define alternate keys for a table, see [Define alternate keys for a table](define-alternate-keys-entity.md).  
 

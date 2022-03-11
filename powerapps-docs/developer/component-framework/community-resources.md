@@ -2,12 +2,13 @@
 title: Community resources (Power Apps Component Framework) | Microsoft Docs
 description: Access to community resources
 keywords:
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 ms.subservice: pcf
-ms.author: nabuthuk
 manager: kvivek
-ms.date: 12/09/2019
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

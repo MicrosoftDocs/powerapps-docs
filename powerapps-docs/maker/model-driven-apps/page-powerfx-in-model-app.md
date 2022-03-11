@@ -4,7 +4,7 @@ description: "This article outlines how the common Microsoft Power FX functions 
 ms.custom: ""
 ms.date: 07/06/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
@@ -43,15 +43,13 @@ Notify( "Custom page notify warning message", NotificationType.Warning )
 > [!div class="mx-imgBorder"]
 > ![Custom page notify warning message bar](media/page-powerfx-in-model-app/custom-page-notify-warning.png "Custom page notify warning message bar")
 
-## Navigating forms and custom pages
+## Navigating to a custom page
 
-This section provides examples of navigating from a model-driven app form to a custom page, navigating from a custom page to other custom pages, or model-driven app form using Power Fx.
+This section provides examples of navigating from a model-driven app form to a custom page, navigating from a custom page to other custom pages or model-driven app form using Power Fx.
 
 ### Navigating from a custom page
 
 The [Navigate function](../canvas-apps/functions/function-navigate.md) allows the users to navigate either from model-driven app forms or custom pages.  This function is only applicable when the custom page is running within a model-driven app.  During custom page authoring or previewing in canvas designer, this function has no effect.
-
-<!-- Examples that use a table should be added as a data source in the page. -->
 
 ### Navigate to another custom page
 

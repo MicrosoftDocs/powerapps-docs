@@ -4,7 +4,7 @@ description: "The account and contact tables are essential for identifying and m
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

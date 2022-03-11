@@ -4,7 +4,7 @@ description: "Read how you can use the FilterExpression class to build a query t
 ms.custom: ""
 ms.date: 06/02/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

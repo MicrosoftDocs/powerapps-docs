@@ -4,7 +4,7 @@ description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 06/20/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Query and visualize hierarchically related data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can get valuable business insights by visualizing hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
   
@@ -75,7 +75,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 <a name="BKMK_Visualizedata"></a>   
 ## Visualize hierarchical data  
- The system tables that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that have a parent row, a child row, or both.  
+ The system tables that have visualizations available out-of-the-box include `Account`, `Business Unit`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that have a parent row, a child row, or both.  
  
  > [!div class="mx-imgBorder"] 
  > ![Active accounts.](media/cust-hs-active-account.png "Active accounts")  

@@ -2,7 +2,7 @@
 title: "getEntityTypes (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Gets the types of tables allowed in the lookup control.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c20ba958-821f-4168-a518-e39431603b28

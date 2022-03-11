@@ -2,7 +2,7 @@
 title: ReadNFC function | Microsoft Docs
 description: Reference information, including syntax, for the ReadNFC function in Power Apps
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # ReadNFC function in Power Apps
 

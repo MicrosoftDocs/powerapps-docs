@@ -2,7 +2,7 @@
 title: "SharePointSite table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SharePointSite table/entity."
 ms.date: 10/05/2021
-ms.service: "powerapps"
+
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -506,7 +506,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|This record's URL is valid.||
 |3|This record's URL is not valid.||
 |4|The URL schemes of Microsoft Dynamics 365 and SharePoint are different.||
-|5|The URL could not be accessed because of Internet Explorer security settings.||
+|5|The URL could not be accessed because of browser security settings.||
 |6|Authentication failure.||
 |7|Invalid certificates.||
 

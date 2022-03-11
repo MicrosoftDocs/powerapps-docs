@@ -4,7 +4,7 @@ description: "Learn how to use dataflows in Power Apps to prepare your data"
 ms.custom: intro-internal
 ms.date: 08/05/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -27,7 +27,7 @@ search.app:
 ---
 # Self-service data prep with dataflows
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 As the volume of data continues to grow, so does the challenge of shaping that
 data into well-structured, actionable information. You want data that’s ready for

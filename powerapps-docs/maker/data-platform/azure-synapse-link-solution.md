@@ -4,13 +4,13 @@ description: "Learn to transport Azure Synapse Link for Dataverse configurations
 ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
-author: "sama-zaki"
+author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
@@ -20,12 +20,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors: ""
+contributors: "sama-zaki"
 ---
-
 # Transport the Azure Synapse Link for Dataverse configuration across environments
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 In Power Apps, solutions are used to transport apps and components from one environment to another, or to apply a set of customizations to existing apps. Making the Azure Synapse Link for Dataverse configurations solution-aware enables basic application lifecycle management (ALM) abilities such as distribution, copy, and backup and restore of the Azure Synapse Link for Dataverse configuration.
 

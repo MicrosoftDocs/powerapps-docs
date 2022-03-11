@@ -3,7 +3,7 @@ title: "Track your progress with dashboards and charts in model-driven apps| Mic
 description: How to use charts in Power Apps.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
