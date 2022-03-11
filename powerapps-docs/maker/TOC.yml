@@ -567,6 +567,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Use the Search pane (preview)
+          href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
         - name: Show dates and times
@@ -1577,6 +1579,12 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+  - name: 'Power Apps for Windows (preview)'
+    items:
+    - name: Install Power Apps for Windows (preview)
+      href: ../mobile/windows-app-install.md
+    - name: Use Power Apps for Windows (preview)
+      href: ../mobile/windows-app-use.md
 - name: Portals
   items:
     - name: Portals

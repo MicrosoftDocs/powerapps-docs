@@ -101,7 +101,7 @@ The column filtering for the current query. This is supported in both model-driv
 
 **Type**: [Filtering](filtering.md)
 
-### linking 
+### linking
 
 Defines the linked table information. This is supported only in model-driven apps.
 
@@ -144,7 +144,7 @@ The sorting status for the current query. This is supported in both model-driven
 > Sorting feature is only available to Dataverse data source.
 > Also, if sorting is re-configured it will reset the filter `context.parameters.[dataset_property_name].filtering`
 
-**Type**: `[SortStatus](sortstatus.md)[]`
+**Type**: [SortStatus](sortstatus.md)[]
 
 ## Methods
 
