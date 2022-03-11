@@ -24,17 +24,9 @@ ms.custom: intro-internal
 
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
-If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3?activetab=pivot:overviewtab). Also, Power Apps for Windows isn't supported if you have the [Power Apps per app plan](/power-platform/admin/about-powerapps-perapp).
-
-
-| **App type**  | **iOS** |**Android** |**Windows** |
-| --- | --- |--- |--- |
-| **[Model-driven](../maker/index.md#model-driven-apps)** |X |X| |
-| **[Canvas](../maker/index.md#canvas-apps)** |X |X|X|
-
-
 > [!NOTE]
-> Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
+> - If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
+> - Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
 
 In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device.
 
