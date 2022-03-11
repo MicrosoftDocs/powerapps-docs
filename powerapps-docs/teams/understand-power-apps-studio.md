@@ -162,10 +162,6 @@ You can save data such as the result values from a data set into temporary stora
 
 ![Variables.](media/studio-variables.png "Variables")
 
-### App version history
-
-Shows a list of all app versions, along with the version notes.
-
 ## 3 – App actions
 
 Use the options in the upper-right corner of Power Apps Studio to work with app-specific actions.
@@ -185,7 +181,6 @@ Select the name of the app to edit it.
 Save allows you to perform the following actions:
 
 - **Save** - Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
-- **Save with version notes** - Add optional version notes to the app being saved. To check previous version notes, see [app version history](#app-version-history).
 - **Save as** - Duplicate the app by saving the app with a different name.
 - **Save and publish** - Allows you to both save the app, and publish it at the same time.
 
