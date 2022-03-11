@@ -2,12 +2,11 @@
 title: How to check license designation for an app
 description: Explains how to check license designation for the selected canvas app.
 author: tapanm-msft
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.subservice: canvas-maker
-ms.date: 07/13/2021
+ms.date: 02/23/2022
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -70,9 +69,9 @@ The following table outlines the designations and which license an end user must
 
 ## Known issues
 
-The use of the HTTP connector in a flow connected to an app isn't recognized by the app's license designation.
+- The use of a premium connector in a flow connected to an app isn't recognized by the app's license designation.
 
-For example, an app that only uses standard connectors and is connected to a flow using the HTTP connector will have a license designation as "Standard" although it requires end users to have "Premium" use rights.
+    For example, an app that only uses standard connectors and is connected to a flow using a premium connector, like the HTTP connector, will have the license designation as **Standard** although it requires the app users to have **Premium** use rights.
 
 ## Pass assignment
 

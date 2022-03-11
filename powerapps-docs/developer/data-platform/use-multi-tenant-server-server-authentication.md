@@ -4,7 +4,7 @@ description: "Learn how to access Microsoft Dataverse data across multiple tenan
 ms.custom: ""
 ms.date: 2/28/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

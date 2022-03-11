@@ -8,7 +8,7 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ search.app:
 ---
 # Best practices and guidance regarding plug-in and workflow development for the Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This list below contains all of the guidance and best practices regarding the plug-in and workflow development within the Dataverse.
 

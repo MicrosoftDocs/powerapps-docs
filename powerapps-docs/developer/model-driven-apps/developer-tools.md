@@ -4,7 +4,7 @@ description: "Provides information about the community developed tools that you 
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer

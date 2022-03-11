@@ -4,7 +4,7 @@ description: "Read how you can page the results of a FetchXML query by using the
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Page large result sets with FetchXML
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 You can page the results of a FetchXML query by using the paging cookie. The paging cookie is a performance feature that makes paging in the application faster for very large datasets. When you query for a set of records, the result will contain a value for the paging cookie. For better performance, you can pass that value when you retrieve the next set of records.  
   

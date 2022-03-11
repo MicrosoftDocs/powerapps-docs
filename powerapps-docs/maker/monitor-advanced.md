@@ -1,20 +1,22 @@
 ---
 title: Advanced Monitor concepts
 description: Learn about advanced monitoring concepts related to Monitor.
-author: tapanm-msft
-ms.service: powerapps
+author: mattgon
+
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: austinj
-ms.date: 11/19/2020
-ms.author: hasharaf
+ms.reviewer: tapanm
+ms.date: 01/31/2022
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - tapanm-msft
+  - mattgon
+  - maustinjones
 ---
 
 # Advanced monitoring concepts
@@ -53,7 +55,6 @@ Monitor doesn't support the scenarios in the following table.
 |Monitor connected to a canvas app embedded in a model-driven app or custom page.     |  Canvas       |
 |Monitor connected to a SharePoint custom form app.     | Canvas        |
 |Monitor connected to a Microsoft Teams embedded app. As an alternative, you can play the app in a web player for diagnostics purposes.     | Canvas        |
-|Monitor isn't supported on Internet Explorer version 11.     |  Canvas and model-driven       |
 
 ### See also
 

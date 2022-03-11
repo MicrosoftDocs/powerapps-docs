@@ -2,7 +2,7 @@
 title: Notify function in Power Apps
 description: Reference information including syntax and examples for the Notify function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Notify function in Power Apps
 Displays a banner message to the user.

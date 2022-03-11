@@ -2,7 +2,7 @@
 title: Set up data alerts for the Power BI dashboard
 description: Learn about how to add an alert in Power BI to let us know if pending projects are taking too long to approve, and create a flow that responds when that alert occurs.
 author: NickWaggoner
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 

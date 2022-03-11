@@ -2,7 +2,7 @@
 title: Designing - Which type of app to make | Microsoft Docs
 description: As part of the design phase of a Power Apps project, determine whether to make a model-driven app or a canvas app.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020

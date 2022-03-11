@@ -2,23 +2,25 @@
 title: getNamedReference | Microsoft Docs
 description: Gets the object that encapsulates an EntityReference as a plain object.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f879cb97-34d2-49ed-bef3-4df0af972b19
 ---
+
 # getNamedReference
 
 [!INCLUDE[./includes/getnamedreference-description.md](./includes/getnamedreference-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Canvas apps
 
 ## Syntax
 
@@ -27,7 +29,6 @@ Model-driven apps
 ## Return Value
 
 **Type**: [EntityReference](../entityreference.md)
-
 
 ### Related topics
 

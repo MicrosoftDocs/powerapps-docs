@@ -3,7 +3,7 @@ title: Create a report using the Report Wizard| Microsoft Docs
 description: Create a report using the Report Wizard in Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
@@ -89,7 +89,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     
 > [!NOTE]
 > The reports that are querying notes, may display in HTML-formatted text instead of plain text. This is because the rich-text editor is enabled by default. To workaround this issue, do one of the following:
-> - Disable the rich-text editor, for more information see, [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options). When you disable the rich-text editor, new notes that are created will not the have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
+> - Disable the rich-text editor, for more information see, [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options). When you disable the rich-text editor, new notes that are created will not then have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
 > - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
     
 

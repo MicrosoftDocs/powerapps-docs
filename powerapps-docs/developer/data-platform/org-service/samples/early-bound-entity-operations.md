@@ -4,8 +4,8 @@ description: "This sample shows how to create, retrieve, update, and delete oper
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Early-bound table operations
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create, retrieve, update, and delete operations on an account using the early bound class. This sample uses the following common methods:
 

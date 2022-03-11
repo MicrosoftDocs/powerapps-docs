@@ -2,7 +2,7 @@
 title: Supported web browsers for Power Apps portals
 description: Learn about supported web browsers for Power Apps portals.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/10/2021

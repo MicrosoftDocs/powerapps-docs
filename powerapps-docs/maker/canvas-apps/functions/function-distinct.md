@@ -2,7 +2,7 @@
 title: Distinct function in Power Apps
 description: Reference information including syntax and examples for the Distinct function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Distinct function in Power Apps
 Summarizes [records](../working-with-tables.md#records) of a [table](../working-with-tables.md), removing duplicates.

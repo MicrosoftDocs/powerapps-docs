@@ -4,8 +4,8 @@ description: "This sample shows how to work with choices" # 115-145 characters i
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -18,7 +18,7 @@ search.app:
 
 # Work with choices
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to work with choices. Typically, you use choices to set columns so that different columns can share the same set of options, which are maintained in one location. Unlike local options sets which are defined only for a specific column, you can reuse choices. You will also see them used in request parameters in a manner similar to an enumeration.
 

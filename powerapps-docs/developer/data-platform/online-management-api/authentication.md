@@ -2,7 +2,7 @@
 title: "Authenticate to use the Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides information about authenticating to the Online Management API to perform environment-related operations."
 ms.date: 10/23/2020
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek

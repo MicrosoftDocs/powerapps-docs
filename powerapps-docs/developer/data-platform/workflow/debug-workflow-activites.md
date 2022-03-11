@@ -4,7 +4,7 @@ description: "Describes how to debug workflow activities using the Plug-in Regis
 ms.custom: ""
 ms.date: 06/21/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Debug Workflow Activities
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Because custom workflow extensions are .NET Framework assemblies you can debug them using methods very similar to how you debug plug-ins. 
 

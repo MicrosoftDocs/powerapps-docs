@@ -4,7 +4,7 @@ description: "Learn how to enable feedback for a table"
 ms.custom: ""
 ms.date: 07/28/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Configure a table for feedback/ratings
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Let customers or employees submit feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback. Use this capability for the following scenarios: 
 - For customers to capture data via a portal or survey.

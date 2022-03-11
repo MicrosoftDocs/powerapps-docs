@@ -3,7 +3,7 @@ title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft 
 description: "Learn how to create an ASP.NET Core Blazor WebAssembly application that connects to Microsoft Dataverse web services and retrieves business data."
 keywords: ""
 ms.date: 03/23/2021
-ms.service: powerapps
+
 ms.topic: article
 author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer

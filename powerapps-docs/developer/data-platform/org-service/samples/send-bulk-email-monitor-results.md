@@ -4,8 +4,8 @@ description: "This samples hows how to send bulk emails and monitor results" # 1
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Send bulk email and monitor results
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-send-bulk-email-monitor-results -->
 

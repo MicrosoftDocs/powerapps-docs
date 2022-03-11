@@ -4,7 +4,7 @@ description: "The topic contains sample charts along with the respective data de
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: "kvivek"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer

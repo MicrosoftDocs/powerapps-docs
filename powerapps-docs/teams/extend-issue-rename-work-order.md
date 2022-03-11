@@ -1,16 +1,16 @@
 ---
-title: Convert Issue reporting sample app to Work order management app
+title: Convert Issue reporting sample app to Work order management app (contains video)
 description: Learn how to rename labels in the Issue reporting sample app for Teams so that the app can be used for other purposes, such as tracking work orders.
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/16/2021
 author: joel-lindstrom		
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 

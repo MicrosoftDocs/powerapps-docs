@@ -2,10 +2,10 @@
 title: Analyze and resolve Portal Checker diagnostics results
 description: Learn about Portal Checker diagnostics results, how to analyze them, and how to resolve issues or problems found by Portal Checker.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2021
+ms.date: 01/13/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -493,6 +493,133 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 ## MIME type of file isn't text/CSS
 
 To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
+
+## Identifying web pages listed in diagnostic results
+
+The portal checker diagnostic results could list web pages that have the same name as other pages in the portal. If there are multiple web pages with the same name, you can identify the specific page affected using the unique guid of the page.
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Open any web page.
+1. Replace the id in the URL with the guid specified in the portal checker diagnostic results.
+
+    :::image type="content" source="media/portal-checker-analysis/webpage-by-id.png" alt-text="Replacing the web page id the URL.":::
+
+## Web page without a page template
+
+This issue occurs when a [web page](../configure/web-page.md) record does not have a corresponding [page template](../configure/page-templates.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Page Template** field to point to an active page template record.
+
+## Disabled parent web page
+
+This issue occurs when a parent [web page](../configure/web-page.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Parent Page** record to navigate to the record.
+1. Select **Activate** from the command bar.
+
+## Cyclic parent web page
+
+This issue occurs when a [web page](../configure/web-page.md) references itself as a parent page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that is not referencing itself.
+
+## Web page belongs to different Website
+
+This issue occurs when a parent [web page](../configure/web-page.md) is associated with a different [website](../configure/websites.md) than a child web page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages (either parent web page or children web pages) [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Web site** field to point the appropriate website.
+
+## Web page publishing is hidden
+
+This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field is not checked. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Publishing State** record to navigate to the record.
+1. Select the **IsVisible** field and make sure that it is checked (set to true).
+
+## Web page does not have minimum of one language content page
+
+This issue occurs when the [web page](../configure/web-page.md) does not have at least one [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Scroll down to the **Localized Content** section.
+1. Select **+ New Web Page** to create a new language content page.
+
+    > [!Note]
+    > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
+
+## Web page with disabled page template 
+
+This issue occurs when the [page template](../configure/page-templates.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Page Template** record to navigate to the record.
+1. Select **Activate** from the command bar.
+1. Alternatively, update the **Page Template** to point to an active page template in the web page.
+
+## Web Page having a page template belongs to different web site
+
+This issue occurs when a [page template](../configure/page-templates.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Web site** field to point the appropriate website.
+1. Alternatively, update the **Page Template** to point to a page template in the same website.
+
+## Web page without a publishing state
+
+This issue occurs when a [web page](../configure/web-page.md) record does not have a corresponding [publishing state](../configure/publishing-states.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Publishing State** field to point to an publishing state record. 
+
+## Web page having a publishing state belong to different web site
+
+This issue occurs when a [publishing state](../configure/publishing-states.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Publishing State** field to point to an publishing state record in the same website. 
+
+## Web page associated to a localized content page as a parent web page  
+
+This issue occurs when a [web page](../configure/web-page.md) record has it's **Parent Web Page** associated to a [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that is not a content page.
+
+## Portal is inaccessible
+
+This issue may occur when the authentication certificate for the site needs to be renewed.
+
+When portal is created, a new authentication key is generated. Portal uses this authentication key to connect to the Microsoft Dataverse environment. When authentication key is expired portal users will see message that the portal is inaccessible. 
+
+To fix this issue, [renew the authentication key](manage-auth-key.md#renew-authentication-key) for this site. 
 
 ### See also
 

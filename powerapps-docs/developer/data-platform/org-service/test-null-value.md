@@ -4,7 +4,7 @@ description: "This sample shows how to test for a null value by using the Filter
 ms.custom: ""
 ms.date: 05/03/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Test for a null value
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 The following code example shows how to test for a null value by using the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> classes.  
   

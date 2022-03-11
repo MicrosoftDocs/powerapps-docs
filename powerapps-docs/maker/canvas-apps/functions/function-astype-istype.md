@@ -2,7 +2,7 @@
 title: AsType and IsType functions in Power Apps
 description: Reference information including syntax and examples for the AsType and IsType functions in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 
 # AsType and IsType functions in Power Apps

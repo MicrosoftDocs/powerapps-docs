@@ -4,7 +4,7 @@ description: "Learn about exporting the ribbon by including it in a solution and
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

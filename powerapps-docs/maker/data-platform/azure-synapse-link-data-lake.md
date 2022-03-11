@@ -4,7 +4,7 @@ description: "Learn how to export table data to Azure Data Lake Storage Gen2 in 
 ms.custom: ""
 ms.date: 08/17/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ contributors:
 
 # Create an Azure Synapse Link for Dataverse with Azure Data Lake
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to perform the following tasks:
 

@@ -2,11 +2,12 @@
 title: updatedProperties | Microsoft Docs
 description: Provides updatesProperties related methods.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+author: adrianorth
+ms.date: 03/07/2022
+ms.author: jdaly
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 06/08/2021
-ms.service: "powerapps"
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,9 +18,9 @@ ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 
 Provides information on what has changed in the `updateView` method. The information could be change in the property value, component or browser resize event.
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Example
 
@@ -38,11 +39,12 @@ public updateView(context: ComponentFramework.Context<IInputs>): void
         this._isFullScreen =true;
       }
     else if(-1!== context.updatedProperties.indexOf("fullscreen_open"))
-     { 
+     {
           this._isFullScreen =false;
        }
 }
 ```
+
 ### Related topics
 
 [Power Apps component framework API reference](../reference/index.md)<br/>

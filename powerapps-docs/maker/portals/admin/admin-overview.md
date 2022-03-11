@@ -2,9 +2,9 @@
 title: Power Apps portals admin center
 description: Learn about Power Apps portals admin center.
 author: neerajnandwana-msft
-ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+
+ms.topic: overview
+
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw

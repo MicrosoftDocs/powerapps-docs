@@ -2,7 +2,7 @@
 title: "getLabel (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getLabel method.
 ms.date: 04/19/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9f7b1636-7255-4a62-939e-185359f0a428

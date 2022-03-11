@@ -4,7 +4,7 @@ description: Learn how to design a main form that can be used to edit a related 
 ms.custom: ""
 ms.date: 08/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -22,7 +22,7 @@ search.app:
 ---
 # Edit related table records directly from another table’s main form
 
-There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a [quick view form](create-edit-quick-view-forms.md) and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
 Another way you can work with related table records is by adding a form component control to another table's main form. The form component control lets users edit information of a related table record directly from another table’s form.
 
@@ -30,7 +30,7 @@ For example, here's the form component on a separate tab on the main account for
 
 :::image type="content" source="media/form-component-tab.png" alt-text="Form component control added to a separate tab.":::
 
-For example, here's the form component on an existing tab on the main account form, which also lets the user edit a contact record without leaving the account form.
+For example, here's the form component on an **existing tab** on the main account form, which also lets the user edit a contact record without leaving the account form **Summary** tab.
 
 :::image type="content" source="media/form-component-section.png" alt-text="Form component control added to an existing tab.":::
 
@@ -38,7 +38,11 @@ For example, here's the form component on an existing tab on the main account fo
 
 In this example, the **Contact** standard main form is configured for the form component control that’s added to the account main form.
 
-1. Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, select **Forms**, and then open the main form where you want to add the form component.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select **Dataverse**, and then select **Tables** in the left pane. Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
+1. Select **Forms** from the components menu.
+1. Select a form with a form type of **Main** from the forms available.
+1. Select **Switch to classic**. The classic form editor interface opens as a tab in your browser.
 1. Select the **Insert** tab. Then, create a new tab and add a new section or add a new section to an existing tab.  
 1. In the new section, add a lookup column, such as the **Primary Contact** lookup column.
 1. Select the lookup column, and then on the **Home** tab, select **Change Properties**.
@@ -108,7 +112,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - Using the same form for different form component controls isn't supported.
 
-- The form that you use with a form component must be included in your app. More information: [Add a component](add-edit-app-components.md#add-a-component).
+- The form that you use with a form component must be included in your app. If it isn't, or if the current user does not have access to the form, it will fallback to the top-most main form that is included in the app and available to the user (based on form order). More information: [Add a component](add-edit-app-components.md#add-a-component).
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 

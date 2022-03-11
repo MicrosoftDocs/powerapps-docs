@@ -2,7 +2,7 @@
 title: "getEnabledProcesses (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Asynchronously retrieves the business process flows enables for a table that the current user can switch to.
 ms.date: 04/15/2021
-ms.service: powerapps
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 52f79803-2ce0-4ca7-8200-aec544545d62
