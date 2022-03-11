@@ -41,16 +41,16 @@ Follow these steps to install Microsoft Power Platform CLI using Visual Studio C
 > [!NOTE]
 > Power Platform Tools for Visual Studio Code updates automatically. 
 
-1. You can also initiate the install into Visual Studio Code directly from [Marketplace]( https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation.
+1. You can also initiate the install into Visual Studio Code directly from [Marketplace](https://aka.ms/ppcvscode) and it will launch Visual Studio Code and commence the extension installation.
 
 
    > [!div class="mx-imgBorder"]
    > ![Launch install from Marketplace.](media/marketplace-install.png "Launch install from Marketplace")
 
-2. You can also do a side load install into Visual Studio Code by downloading the extension from the [Marketplace] ( https://aka.ms/ppcvscode)
+2. You can also do a side load install into Visual Studio Code by downloading the extension from the [Marketplace](https://aka.ms/ppcvscode)
 
 ## Side Load install for the Power Platform Tools for Visual Studio Code
-In some organizations, downloading or initiating an install over the web is prohibited. Most cases, the organization download the installation media and stores it in a secure location and verify that it is working according to their standards, before it is distributed within the organization. To support this paradigm of installation, you can go to the [Marketplace] ( https://aka.ms/ppcvscode) and instead of pressing the install button, press the download extension.
+In some organizations, downloading or initiating an install over the web is prohibited. Most cases, the organization download the installation media and stores it in a secure location and verify that it is working according to their standards, before it is distributed within the organization. To support this paradigm of installation, you can go to the [Marketplace](https://aka.ms/ppcvscode) and instead of pressing the install button, press the download extension.
 
    > [!div class="mx-imgBorder"]
    > ![Download the extension.](media/side-load-install-1.png "Download the extension")
@@ -97,7 +97,7 @@ Then on the activity bar you will notice the icon for the Power Platform Tools
    > [!div class="mx-imgBorder"]
    > ![Power Platform Tools icon ](media/installation-success-3.png "icon")
 
-The final check would be to launch the Terminal window and type pac
+The final check would be to launch the Terminal window and type `pac`.
    > [!div class="mx-imgBorder"]
    > ![Power Platform Command line in the Terminal window](media/installation-success-2.png "PAC CLI in the terminal window")
 
