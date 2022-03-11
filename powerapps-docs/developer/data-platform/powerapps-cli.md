@@ -6,12 +6,11 @@ ms.subservice: dataverse-developer
 ms.author: jdaly
 author: kkanakas
 manager: kvivek
-ms.date: 06/14/2022
+ms.date: 03/11/2022
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 ---
 
 # What is Microsoft Power Platform CLI? 
