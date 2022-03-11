@@ -34,7 +34,7 @@ Follow these steps to install Microsoft Power Platform CLI using Visual Studio C
 1. Select **Extensions** icon from the **Activity** panel. In the search bar, enter **Power Platform Tools**.
 1. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
 
-:::image type="content" source="media/power-platform-vs-code-extension-install.png" alt-text="VS Code extension install":::
+:::image type="content" source="media/power-platform-vs-code-extension-install.png" alt-text="Visual Studio Code extension install":::
    
 > [!NOTE]
 > Power Platform Tools for Visual Studio Code updates automatically. 
