@@ -27,8 +27,6 @@ The plan enables you to:
 
 - Use a fully managed, scalable data platform with [Dataverse](/common-data-service/entity-reference/introduction), including support for common business application actions. Use out-of-the-box common tables or build your own data schema.
 
-- Create more environments to exercise application lifecycle management (coming soon).
-
 - Export the solutions you create in your developer environment, and [publish them on Microsoft AppSource](/powerapps/developer/data-platform/publish-app-appsource) so your customers can test-drive them.
 
 ## Improvements from the previous Power Apps Community Plan
