@@ -51,9 +51,9 @@ This topic focuses on lists boxes and radio buttons, but the same principles app
 
    | Shape | Set Visible function to |
    | --- | --- |
-   | circle |```If("circle" in MyListBox.SelectedItems.Value, true)``` |
-   | triangle |```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
-   | rectangle |```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
+   | circle |```"circle" in MyListBox.SelectedItems.Value``` |
+   | triangle |```"triangle" in MyListBox.SelectedItems.Value``` |
+   | rectangle |```"rectangle" in MyListBox.SelectedItems.Value``` |
 
 7. While holding down the Alt key, select one or more shapes in **MyListBox**.
 
@@ -77,8 +77,19 @@ In these steps, you used an expression to create a list of items. You can apply 
 
 4. On the **Insert** tab, select **Icons**, and then select the circle.
 
-5. Set the **[Fill](controls/properties-color-border.md)** property of the circle to the following function:  
-   ```If(Choices.Selected.Value = "red", Red, Choices.Selected.Value = "green", Green, Choices.Selected.Value = "blue", Blue)```  
+5. Set the **[Fill](controls/properties-color-border.md)** property of the circle to the following function: 
+
+    ```powerapps-dot
+    Switch(
+        Choices.Selected.Value,
+        "red",
+        Red,
+        "green",
+        Green,
+        "blue",
+        Blue
+    )
+    ```  
 
     In this formula, the circle changes its color depending on which radio button you choose.
 
