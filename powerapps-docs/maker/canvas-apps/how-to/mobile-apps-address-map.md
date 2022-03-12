@@ -81,7 +81,7 @@ To learn about how to enable **Geospatial services** in your environment, see [E
 
 ## Build a canvas app
 
-In this lesson, we'll start with creating an app and then, we'll create a header control to use within the app to standardize the look and feel of the header on different screens.
+We'll start with creating an app and then, we'll create a header control to use within the app to standardize the look and feel of the header on different screens.
 
 1. Create a [blank canvas app](../create-blank-app.md) in the environment you created [earlier](#create-a-trial-environment).
 
