@@ -30,7 +30,6 @@ contributors:
 | Ctrl+S | Save the app with the same name or for the first time |
 | Ctrl+Shift+P | Save the app and activate the publish dialog |
 | F12 | Download the app file (.msapp) |
-| Alt+F | Open the **File** menu |
 
 ## Ribbon
 
@@ -50,9 +49,8 @@ contributors:
 | Ctrl+V | Paste |
 | Ctrl+Z | Undo command |
 | Ctrl+Y | Redo command |
-| Ctrl+M | Add a screen |
-| Ctrl+= or Ctrl+Shift+= | Zoom in |
-| Ctrl+- or Ctrl+Shift+- | Zoom out |
+| Ctrl+= or Ctrl+Shift+= or Ctrl+Mouse wheel up | Zoom in |
+| Ctrl+- or Ctrl+Shift+- or Ctrl+Mouse wheel down | Zoom out |
 | Ctrl+0 | Fit canvas to page |
 | Shift+Enter | Break a line in a formula |
 
@@ -73,6 +71,12 @@ contributors:
 | Left arrow | Nudge the selected control to the left |
 | Up arrow | Nudge the selected control up |
 | Down arrow | Nudge the selected control down |
+| Alt+Right arrow | Move the selected control to the right most position |
+| Alt+Left arrow | Move the selected control to the left most position |
+| Alt+Up arrow | Move the selected control up most position |
+| Alt+Down arrow | Move the selected control down most position |
+| Shift+Alt+Right arrow or Shift+Alt+Left arrow | Center align  selected control horizontally |
+| Shift+Alt+Up arrow or Shift+Alt+Down arrow | Center align  selected control vertically |
 
 ## Tree view
 
@@ -84,8 +88,8 @@ contributors:
 | F2 | Rename a control |
 | Esc | Cancel renaming a control |
 | Ctrl+G | Group/ungroup controls |
-| Ctrl+] | Bring a control forward |
-| Ctrl+[ | Send a control backward |
+| Ctrl+] | Bring forward |
+| Ctrl+[ | Send backward |
 | Ctrl+Shift+] | Bring to front |
 | Ctrl+Shift+[ | Send to back |
 
