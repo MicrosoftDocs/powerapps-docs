@@ -59,10 +59,8 @@ The following table lists the messages you can use with local and global option 
 
 ### See also
 
-[Customize choices](../org-service/metadata-option-sets.md)
-
-[Create and edit global choices overview](../../../maker/data-platform/create-edit-global-option-sets.md)
-
+[Customize choices](../org-service/metadata-option-sets.md)<br />
+[Create and edit global choices overview](../../../maker/data-platform/create-edit-global-option-sets.md)<br />
 [Create a choice](../../../maker/data-platform/custom-picklists.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
