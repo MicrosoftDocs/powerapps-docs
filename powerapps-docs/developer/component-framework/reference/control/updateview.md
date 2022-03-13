@@ -1,15 +1,14 @@
 ---
 title: "updateView| MicrosoftDocs"
 description: This method will be called when any value in the property bag has changed. 
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 899d6eb3-62b4-4c1f-947c-aed1f8643caa
 ---
 # updateView
 

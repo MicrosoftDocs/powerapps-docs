@@ -3,16 +3,14 @@ title: Create and build a code component in Microsoft Dataverse| Microsoft Docs
 description: Start creating a component using the Power Apps component framework tooling.
 keywords: Power Apps component framework, code components, Component Framework
 ms.subservice: pcf
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
 # Create and build a code component
