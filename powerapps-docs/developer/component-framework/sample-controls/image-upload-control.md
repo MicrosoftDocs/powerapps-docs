@@ -1,13 +1,11 @@
 ---
 title: "Image Upload component | Microsoft Docs"
 description: "This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time."
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
 ---
 

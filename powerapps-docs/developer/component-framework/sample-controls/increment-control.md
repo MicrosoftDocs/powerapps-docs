@@ -1,13 +1,11 @@
 ---
 title: " Increment component| Microsoft Docs" 
 description: "This sample component shows how to bind data with Power Apps component framework and error handling." 
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
 ---
 

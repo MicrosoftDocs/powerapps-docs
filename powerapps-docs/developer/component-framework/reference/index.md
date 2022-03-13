@@ -2,12 +2,11 @@
 title: "Power Apps component framework API reference | MicrosoftDocs"
 description: "The topic provides Power Apps component framework API reference."
 ms.topic: "index-page"
-ms.assetid: 7da1b8e9-97af-4acb-a393-2e09caf86fc2 
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
+author: noazarur-microsoft
+manager: kvivek
+ms.date: 03/12/2022
 ms.reviewer: jdaly
-manager: "kvivek"
 ---
 # Power Apps component framework API reference
 
