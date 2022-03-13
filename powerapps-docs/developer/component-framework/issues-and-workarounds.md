@@ -52,7 +52,7 @@ Update the component version (minor or patch) in the component manifest file (fo
    "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
    ```
 
-## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source <Feed Url> when the build fails for authorization issues. 
+## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source &lt;Feed Url&gt; when the build fails for authorization issues.
 
    **Workaround**
 
