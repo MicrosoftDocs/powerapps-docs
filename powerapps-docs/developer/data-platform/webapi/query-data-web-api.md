@@ -234,7 +234,7 @@ The Web API supports these standard OData string query functions:
   
 #### Use Wildcard characters in conditions using string values
 
-You can use wildcard characters when you construct queries using conditions on string values. More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)
+You can use wildcard characters when you construct queries using these standard query function on string values. More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)
 
 > [!NOTE]
 >  This is a sub-set of the [11.2.5.1.2 Built-in Query Functions](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). `Date`, `Math`, `Type`, `Geo` and other string functions aren’t supported in the web API.  
