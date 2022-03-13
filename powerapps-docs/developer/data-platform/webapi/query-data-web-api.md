@@ -2,19 +2,17 @@
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to query Microsoft Dataverse table data using the Web API and the various system query options that can be applied in these queries."
 ms.custom: ""
-ms.date: 04/29/2021
+ms.date: 03/13/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
-caps.latest.revision: 78
 author: "JimDaly"
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "annbe"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +34,7 @@ If you want to retrieve data for an entity set, use a `GET` request. When retrie
   
  **Request**
 
-```http 
+```http
 GET [Organization URI]/api/data/v9.1/accounts?$select=name
 &$top=3 HTTP/1.1  
 Accept: application/json  
@@ -234,6 +232,10 @@ The Web API supports these standard OData string query functions:
 |`endswith`|`$filter=endswith(name,'Inc.')`|  
 |`startswith`|`$filter=startswith(name,'a')`|  
   
+#### Use Wildcard characters in conditions using string values
+
+You can use wildcard characters when you construct queries using conditions on string values. More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)
+
 > [!NOTE]
 >  This is a sub-set of the [11.2.5.1.2 Built-in Query Functions](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). `Date`, `Math`, `Type`, `Geo` and other string functions aren’t supported in the web API.  
   

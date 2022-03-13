@@ -99,7 +99,7 @@ You can use the wildcard pattern matching characters as literal characters. To u
 > You should avoid using trailing wild cards in expressions using `startswith`, `not startswith`, `endswith` or `not endswith`. The following table gives some examples of trailing wildcards:
 
 
-|Bad Example  |
+|Bad Examples  |
 |---------|
 |`startswith(name,'%value')`|
 |`not startswith(name,'%value')`|
@@ -110,7 +110,7 @@ You can use the wildcard pattern matching characters as literal characters. To u
 
 Queries using these anti-patterns can introduce performance problems because the queries cannot be well optimized.
 
-## See also
+### See also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br /> 
 [Use the ConditionExpression class](org-service/use-conditionexpression-class.md)<br />
