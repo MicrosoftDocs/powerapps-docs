@@ -2,16 +2,14 @@
 title: ILinkEntityExposedExpression in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for ILinkEntityExposedExpression in Power Apps component framework.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: e9a70a4c-71e6-4a06-bcc9-6da37cdf52c1
 ---
 
 # LinkEntityExposedExpression
