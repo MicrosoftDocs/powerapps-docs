@@ -76,6 +76,8 @@
     href: how-dataverse-sql-differs-from-transact-sql.md
   - name: Saved Queries
     href: saved-queries.md
+  - name: Wildcard characters
+    href: wildcard-characters.md
   - name: Query throttling
     href: query-throttling.md
   - name: Query Hierarchical data
