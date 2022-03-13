@@ -1,14 +1,13 @@
 ---
 title: "getParent (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getParent method.
-ms.date: 04/21/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 755843d9-c286-420b-ac86-4c3ef8fe2683
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
