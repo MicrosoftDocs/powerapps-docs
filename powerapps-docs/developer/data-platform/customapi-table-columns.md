@@ -2,14 +2,14 @@
 title: "CustomAPI table columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the table columns (entity attributes) to set when creating a Custom API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2021
+ms.date: 03/14/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -34,7 +34,7 @@ The table below includes selected columns of a Custom API table that you can set
 |**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. More information: [Execute Privilege Name](#execute-privilege-name)|
 |**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the Custom API can be customized or deleted when part of a managed solution.|
 |**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>**Important**: A function MUST include at least one Response Property to be valid.<br/>More information: [Use Web API functions](webapi/use-web-api-functions.md)<br />**Cannot be changed after it is saved.**|
-|**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|Indicates if the custom API is private (hidden from table definitions and documentation) More information: [Private Messages](org-service/use-messages.md#private-messages)<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>|
+|**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|Indicates if the custom API is private (hidden from service documents and documentation) More information: [Private Messages](org-service/use-messages.md#private-messages)<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>|
 |**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
 |**Owner**<br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API. |
 |**Plugin Type**<br />`PluginTypeId`<br />`plugintypeid`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API. More information: [Plugin Type](#plugin-type)|
