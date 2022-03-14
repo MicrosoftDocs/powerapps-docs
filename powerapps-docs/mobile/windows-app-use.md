@@ -162,7 +162,7 @@ With Dataverse search, the search box is always available at the top of every pa
 
 ![Search bar at the top](media/pam-windows-image13.png)
 
-## Limitations and know issues
+## Limitations and known issues
 
 -   The app doesn't support advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location).
 
