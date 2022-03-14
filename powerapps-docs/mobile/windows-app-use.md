@@ -77,7 +77,7 @@ For model-driven apps, you can also select the name of the current app that you'
 
 ## Run an app
 
-Because [canvas apps](maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+Because [canvas apps](../maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
 You'll find below the documentation on how to run [model-driven apps](/user/use-model-driven-apps) on Power Apps for Windows.
 
