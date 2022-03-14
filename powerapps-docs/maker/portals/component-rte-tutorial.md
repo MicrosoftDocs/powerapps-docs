@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/24/2022
+ms.date: 03/14/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -23,7 +23,7 @@ In this tutorial, you'll configure Power Apps portals to add the [rich text edit
 
 ## Prerequisites
 
-Your portal version must be [9.4.1.x](/power-platform/released-versions/portals/portalupdate941x) or higher.
+Your portal version must be [9.4.3.x](/power-platform/released-versions/portals/portalupdate942x) or higher.
 
 ## Step 1. Add the rich text editor control to a field in a model-driven app
 
@@ -85,6 +85,45 @@ In this step, you'll create a new basic form in portals and then add the control
 
 1. Select Save & Close.
 
+### Step 3.3 Add table permissions for rich text attachment table
+
+For using and storing images in the rich text editor on the portal, you'll need to add [table permissions](configure/entity-permissions-studio.md) to the *rich text attachment* table (msdyn_richtextfile).
+
+1. Open your portal in the [portals Studio](portal-designer-anatomy.md).
+
+1. On the left pane (toolbelt), choose **Settings** (gear icon) and select **Table Permissions**
+
+    :::image type="content" source="media/component-rte-tutorial/table-permissions.png" alt-text="Selecting table permissions.":::
+
+1. Create a new table permission for the rich text attachment table. The name can be anything you choose, for example; *RTE Attachment*.
+
+1. Set **Access type** to **Global access**.
+
+    > [!NOTE]
+    > The **Global access** type is chosen as there is no relationship between the table configured to use the rich text editor control and the rich text attachment table.
+
+1. Select the *Read*, *Write*, *Create*, and *Delete* check boxes for the **Permission to**.
+ 
+1. Assign an appropriate [web role](configure/create-web-roles.md) to the table permission.
+
+    :::image type="content" source="media/component-rte-tutorial/rich-text-table-permission.png" alt-text="Configuration of the rich text table permissions.":::
+
+> [!IMPORTANT]
+> If you want to store images as base 64 strings directly in the column configured to use the rich text editor control, you need to configure the control using [JSON configuration file](../model-driven-apps/rich-text-editor-control.md#configure-the-rich-text-editor-control). Set *disableImages* and *disableDefaultImageProcessing* to **true** to allow images to be rendered consistently across all clients. Using this method does not require the global table permission on the rich text attachment (msdyn_richtextfile) table.
+
+### Step 3.4 Add web API site setting
+
+1. Open the [Portal Management app](configure/configure-portal.md). 
+
+1. Navigate to **Site Settings**.
+
+1. Create the following site settings, enter the name, your web site and the value of **true** and select **Save & Close**;
+
+    | Site setting name | value |
+    | - | - | 
+    | Webapi/msdyn_richtextfile/enabled | true |
+    | Webapi/msdyn_richtextfile/fields | true |
+
 ## Step 4. Create a web page in portals with the basic form
 
 1. Open your portal in the [Power Apps portals Studio](portal-designer-anatomy.md).
@@ -121,13 +160,9 @@ In this step, you'll create a new basic form in portals and then add the control
 
     :::image type="content" source="media/component-rte-tutorial/basic-form-portal.png" alt-text="Basic form showing rich text component on a web page.":::
 
-## Limitations
+## Rich text editor on a read-only form
 
-If you upload an image using the rich text editor control in a model-driven app using the **From File** option, the image will not render on the portal. You can use the **Web Address (URL)** option to specify an image that can appear on the portal basic form.
-
-:::image type="content" source="media/component-rte-tutorial/image-webaddress.png" alt-text="Uploading an image using the web address option in a model-driven app.":::
-
-Images uploaded using the rich text editor control on forms in portal pages will appear both in portal pages and model-driven apps.
+On a read-only form, the rich text editor content is available to read and displays the formatting and images. Edit and update of the content won't be available.
 
 ### See also
 
