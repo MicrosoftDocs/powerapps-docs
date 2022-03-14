@@ -16,12 +16,12 @@ contributors:
 
 # Configure column permissions
 
-In portals, [table permissions](assign-entity-permissions.md) are used to apply security to individual Dataverse table records. You can add column permissions to individual table columns. Column permissions are an optional configuration that you associate with [web roles](create-web-roles.md).<!--note from editor: Edit okay?-->
+In portals, [table permissions](assign-entity-permissions.md) are used to apply security to individual Dataverse table records. You can add column permissions to individual table columns. Column permissions are an optional configuration that you associate with [web roles](create-web-roles.md).
 
 > [!NOTE]
 > Column permissions are currently only applicable for [portal Web API](../web-api-overview.md) features.
 
-Web roles can have any number of table permissions and column permissions. If a web role has multiple column permissions, all column permissions are applied to the selected web role.<!--note from editor: I'm not sure what this means. Can it say "If a web role has multiple column permissions, all of those column permissions are applied to the selected web role."? And if that's what this means, is it really worth saying?-->
+Web roles can have any number of table permissions and column permissions. If a web role has multiple column permissions, all column permissions are applied to the selected web role.
 
 When permissions are evaluated, table permissions are evaluated first. If a user has access to a table, the table's column permissions will be applied. If the user doesn't have access to the table, any configured column permissions will be ignored.
 
@@ -40,7 +40,7 @@ When no column permissions are defined, the corresponding table permissions will
 
 1. Under **Related**, select **Column Permission Profiles**.
 
-1. Do one of the following:<!--note from editor: Edits assume that this is actually a fork in the road rather than a sequence of steps that must all be taken.--
+1. Do one of the following:
 
    1. To add an existing column permission to the web role, select **Add Existing Column Permission Profiles**, and then browse to the record you want.
 
@@ -59,7 +59,7 @@ The following table explains the table permission attributes.
 | Profile Name | The descriptive name of the table record. This field is required. |
 | Table Name | The logical name of the table in which the column is to be secured. This field is required. |
 | Website | The associated website. This field is required. |
-| All Column Permissions | Available permissions:<ul><li>Create</li><li>Read</li><li>Update</li></ul>This setting allows users to limit the scope of table permission access. It's a multiple selection field.<br><br>For example, the table permissions might allow a user Create and Read permissions on all columns. Using this setting, you can further limit users to only Read permissions for all columns.</br></br>In another example, you might want a specific web role to be able to read all contact fields but you also want to allow the web role to update the first name and last name columns. In this case, you select the **Read** option for the **All Column Permissions** setting, and create column permission profiles<!--note from editor: Edit okay? They were called "profiles" in the procedure earlier in this article.--> for the First Name and Last Name columns with Read and Update permissions. |
+| All Column Permissions | Available permissions:<ul><li>Create</li><li>Read</li><li>Update</li></ul>This setting allows users to limit the scope of table permission access. It's a multiple selection field.<br><br>For example, the table permissions might allow a user Create and Read permissions on all columns. Using this setting, you can further limit users to only Read permissions for all columns.</br></br>In another example, you might want a specific web role to be able to read all contact fields but you also want to allow the web role to update the first name and last name columns. In this case, you select the **Read** option for the **All Column Permissions** setting, and create column permission profiles for the First Name and Last Name columns with Read and Update permissions. |
 | Column Permissions | The associated column permissions. This allows users to define specific permissions for table columns. Columns that aren't defined here will follow the **All Column Permissions** setting. |
 | Web Roles | The associated web roles. |
 
@@ -73,7 +73,7 @@ The following table shows the result of applying different column and table perm
 |-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
 | Contact (Create, Read, Update) | TRUE |  |  | The user won't have any permissions to the columns. |
 | Contact (Create, Read, Update) | FALSE |  |  | The user won't have any permissions to the columns. |
-| Contact (&lt;none&gt;) | TRUE | *<!--note from editor: What does this asterisk (and the others in this column) signify? I assume it indicates a footnote, so we need to add the  what should the footnote say:--> | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
+| Contact (&lt;none&gt;) | TRUE | * | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
 | Contact (Create, Read, Update) | TRUE | * |  | The user will have Create, Read, and Update permissions on all contact table columns. |
 | Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
 | Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | The user will have Read on JobTitle and Create, Read, and Update on all the other columns. |
