@@ -1,24 +1,24 @@
 ---
-title: "Create a Custom API in the maker portal (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create a Custom API in the Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/14/2021
-ms.reviewer: "pehecke"
-
+ms.date: 03/13/2022
+ms.reviewer: "jdaly"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Create a Custom API in the maker portal
+# Create a Custom API in Power Apps
 
-The current experience creating Custom API within the maker portal is temporary. We intend to provide a modern experience in the future.
+> [!NOTE]
+> There is now a better experience for creating Custom API. You can now use a designer within the Plug-in registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
 
 
 > [!IMPORTANT]

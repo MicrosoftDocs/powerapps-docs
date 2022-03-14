@@ -21,7 +21,7 @@ search.app:
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
 > - [Create and use Custom APIs](custom-api.md)
-> - [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
+> - [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)
 
 
 While you can create Custom APIs through a designer or with code, you can also define them by working with files within a solution. This may be the preferred option for solution publishers who apply the recommended best practices for Application Lifecycle Management (ALM).
@@ -239,7 +239,7 @@ As an alternative to using the process described in [Localized Label values](cus
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br />
-[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br />
+[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create your own messages](custom-actions.md)<br />
 

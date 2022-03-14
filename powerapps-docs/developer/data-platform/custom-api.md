@@ -2,14 +2,14 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2021
-ms.reviewer: "pehecke"
+ms.date: 03/13/2022
+ms.reviewer: "jdaly"
 
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -26,7 +26,7 @@ Custom APIs provide capabilities specifically for developers to define their log
 
 ## Create a custom API
 
-A Custom API may or may not include logic implemented with a plug-in. Using Dataverse business events, you may create a Custom API without a plug-in to pass data about an event that other subscribers will respond to.
+A Custom API may or may not include logic implemented with a plug-in. Using [Microsoft Dataverse business events](business-events.md), you may create a Custom API without a plug-in to pass data about an event that other subscribers will respond to.
 
 However, in other cases it is expected that the message you create performs some kind of logic using a plug-in. You can approach the development of your custom API by:
 
@@ -37,7 +37,8 @@ A custom API with a plug-in will be complete when the data defining the Custom A
 
 There are several different ways to create a custom API:
 
-- By manually entering data in available forms.  More information: [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
+- By using the Plug-in Registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
+- By manually entering data in available forms.  More information: [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)
 - By using the web services, such as the Web API or Organization Service. More information: [Create a Custom API with code](create-custom-api-with-code.md)
 - By editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
 
@@ -56,7 +57,7 @@ When creating Custom API and related request parameters and response properties,
 > [!IMPORTANT]
 > When you ship or deploy your solution, you should use a managed solution and we recommend that you always set the **Is Customizable** managed property to these components to `false`. This will prevent people using your managed solution from modifying or deleting these components of your solution. Such changes could break code written for the original definition of the Custom API. More information [Managed properties](/power-platform/alm/managed-properties-alm)
 
-Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your Custom API. However, additional request parameters cannot be made required. If you choose to allow custom processing steps on your custom api, these additional parameters and properties added to the original definition can be used by other plug-ins registered for the message created by your custom api. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom api can ignore them and is not responsible for setting any custom response properties.
+Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your Custom API. However, additional request parameters cannot be made required. If you choose to allow custom processing steps on your custom api, these additional parameters and properties added to the original definition can be used by other plug-ins registered for the message created by your custom api. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom api can ignore them and is not responsible for using any custom request parameters or setting any custom response properties.
 
 ## Custom API tables/entities
 
@@ -75,6 +76,8 @@ See the following topics for detailed information about the columns/attributes y
 This diagram shows how the tables are related to these tables as well as others:
 
 :::image type="content" source="media/custom-api-data-model.png" alt-text="Diagram showing relationships between tables.":::
+
+The relationship to the [CatalogAssignment table](reference/entities/catalogassignment.md) enables using Custom API with [Microsoft Dataverse business events](business-events.md). More information: [Catalog and CatalogAssignment tables](catalog-catalogassignment.md).
 
 
 ## Invoking Custom APIs
@@ -154,7 +157,7 @@ Writing a plug-in to implement the main operation for your Custom API isn't diff
 You need to know the following information:
 
 - The name of the message
-- The names and types of the parameters and properties.
+- The names and types of the request parameters and response properties.
 
 The Request Parameter values will be included in the [InputParameters](understand-the-data-context.md#inputparameters).
 
@@ -218,7 +221,7 @@ After you have registered the assembly, make sure to add the assembly and any ty
 
 You can use the following queries to retrieve data about Custom APIs.
 
-### Web API
+# [Web API](#tab/webapi)
 
  More information: [Query Data using the Web API](webapi/query-data-web-api.md)
 
@@ -260,8 +263,84 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
     name,
     assemblyname)
 ```
+# [QueryExpression](#tab/queryexpression)
 
-### FetchXml
+More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+
+```csharp
+// Instantiate QueryExpression query
+var query = new QueryExpression("customapi");
+
+// Add columns to query.ColumnSet
+query.ColumnSet.AddColumns(
+"isprivate", 
+"description", 
+"displayname", 
+"executeprivilegename", 
+"iscustomizable", 
+"isfunction", 
+"allowedcustomprocessingsteptype", 
+"boundentitylogicalname", 
+"bindingtype", 
+"uniquename", 
+"workflowsdkstepenabled");
+
+// Add link-entity req
+var req = query.AddLink(
+"customapirequestparameter", 
+"customapiid", 
+"customapiid", 
+JoinOperator.LeftOuter);
+
+req.EntityAlias = "req";
+
+// Add columns to req.Columns
+req.Columns.AddColumns(
+"description", 
+"displayname", 
+"iscustomizable", 
+"logicalentityname", 
+"name", 
+"uniquename", 
+"type", 
+"isoptional");
+
+// Add link-entity query_customapiresponseproperty
+var query_customapiresponseproperty = query.AddLink(
+"customapiresponseproperty", 
+"customapiid", 
+"customapiid", 
+JoinOperator.LeftOuter);
+
+// Add columns to query_customapiresponseproperty.Columns
+query_customapiresponseproperty.Columns.AddColumns(
+"description", 
+"displayname", 
+"iscustomizable", 
+"logicalentityname", 
+"name", 
+"uniquename", 
+"type");
+
+// Add link-entity plugintype
+var plugintype = query.AddLink(
+"plugintype", 
+"plugintypeid", 
+"plugintypeid", 
+JoinOperator.LeftOuter);
+
+plugintype.EntityAlias = "plugintype";
+
+// Add columns to plugintype.Columns
+plugintype.Columns.AddColumns(
+"name", 
+"assemblyname", 
+"version", 
+"plugintypeid", 
+"typename");
+```
+
+# [FetchXml](#tab/fetchxml)
 
 More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
@@ -309,7 +388,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
 </fetch>
 ```
 
-### Using SQL
+# [SQL](#tab/sql)
 
 More information: [Use SQL to query data (Preview)](dataverse-sql-query.md)
 
@@ -358,6 +437,8 @@ FROM   customapi AS api
        plugintype AS type
        ON api.plugintypeid = type.plugintypeid
 ```
+
+---
 
 ## Localized Label values
 
@@ -488,7 +569,7 @@ A: You cannot. Although these records have the common **Status** and **Status Re
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 
-A: Yes. Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`. 
+A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`. 
 
 More information: [Private Messages](org-service/use-messages.md#private-messages) and [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
 
@@ -508,7 +589,7 @@ If you define your custom API to be private, you cannot use that message in a pl
 
 ### Next Steps
 
-[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br />
+[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
 
 ### See also
 

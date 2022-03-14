@@ -21,7 +21,7 @@ search.app:
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
 > - [Create and use Custom APIs](custom-api.md)
-> - [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
+> - [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)
 >
 > You should also understand how to create Microsoft Dataverse records, using either the Web API or Organization Service. For more information see:
 > - [Create an entity record using the Web API](webapi/create-entity-web-api.md)
@@ -183,7 +183,7 @@ Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br/>
-[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br/>
+[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br/>
 [Create a Custom API with solution files](create-custom-api-solution.md)<br/>
 
 
