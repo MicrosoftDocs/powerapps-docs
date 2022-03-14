@@ -109,7 +109,7 @@ For using and storing images in the rich text editor on the portal, you'll need 
     :::image type="content" source="media/component-rte-tutorial/rich-text-table-permission.png" alt-text="Configuration of the rich text table permissions.":::
 
 > [!IMPORTANT]
-> If you want to store images as base 64 strings directly in the column configured to use the rich text editor control, you need to configure the control using [JSON configuration file](../model-driven-apps/rich-text-editor-control.md#configure-the-rich-text-editor-control). Set *disableImages* and *disableDefaultImageProcessing* to **true** to allow images to be rendered consistently across all clients. Using this method does not require the global table permission on the rich text attachment (msdyn_richtextfile) table.
+> If you want to store images as base 64 strings directly in the column configured to use the rich text editor control, you need to configure the control using a [JSON configuration file](../model-driven-apps/rich-text-editor-control.md#configure-the-rich-text-editor-control). Set *disableImages* and *disableDefaultImageProcessing* to **true** to allow images to be rendered consistently across all clients. Using this method does not require the global table permission on the *rich text attachment* (msdyn_richtextfile) table.
 
 ### Step 3.4 Add web API site setting
 
