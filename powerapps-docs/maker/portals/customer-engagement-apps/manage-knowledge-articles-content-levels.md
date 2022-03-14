@@ -2,7 +2,7 @@
 title: Manage knowledge articles by using content access levels
 description: Learn how to manage knowledge articles by using content access levels in a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

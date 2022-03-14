@@ -4,7 +4,7 @@ description: "Capabilities, prerequisites, API, and programming of the Data Expo
 ms.custom: ""
 ms.date: 12/02/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sabinn-msft" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Data export service
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!NOTE]
 > Effective November 2021, Data Export Service was deprecated. Data Export Service will continue to work and will be fully supported until it reaches end-of-support and end-of-life in November 2022. More information: [https://aka.ms/DESDeprecationBlog](https://aka.ms/DESDeprecationBlog)

@@ -1,14 +1,13 @@
 ---
 title: "getControlType (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getControlType method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 72d6c761-bcc7-4de6-b73f-5f2833297825
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

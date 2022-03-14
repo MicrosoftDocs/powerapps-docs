@@ -3,7 +3,7 @@ title: "Create a model-driven app site map in Power Apps | MicrosoftDocs"
 description: "Learn how to create a site map for your app"
 keywords: ""
 ms.date: 05/29/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: tutorial
 applies_to: 
@@ -29,7 +29,7 @@ search.app:
 
 # Create a model-driven app site map using the site map designer
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Site maps overview
 

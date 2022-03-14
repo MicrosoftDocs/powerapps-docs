@@ -2,16 +2,17 @@
 title: About lists
 description: Learn how to add and configure lists to render a list of records on a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 1/06/2022
+ms.date: 03/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # About lists
@@ -28,7 +29,6 @@ The list contains relationships to webpages and various properties to control th
 
 > [!Note]
 > - A list must be associated with a webpage in a given website for the list to be viewable within the site.
-> - Multi-select option set is not supported in lists.
 
 The webpages associated with the list can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu. When creating your list, the first step is to choose the table for which you want to render a list on the portal. You'll then choose one or more model-driven app views to render.
 
@@ -55,6 +55,9 @@ When creating or editing a webpage, you can specify a list in the lookup field p
 |    Search Placeholder Text     |                                                                                                                                                      An optional string used as the label displayed in the text box on initial load.                                                                                                                                                       |
 |      Search Tooltip Text       |                                                                                                                                             An optional string used as the tooltip displayed when the user points to the **Search** text box.                                                                                                                                              |
 |                                |                                                                                                                                                                                                                                                                                                                                                                                            |
+## Sort lists
+
+A portal user can select a column header on the list to sort the data if the column is part of the table used to configure the Dataverse view used for the list. To enable sorting by columns displayed on the list from related tables, add a [site setting](configure-site-settings.md) named **Site/EnableSortingOnLinkedEntities** set to **true**.
 
 ## Add custom Javascript
 
@@ -492,7 +495,9 @@ The FetchXML filter uses only one attribute:
 
 ## List Map view
 
-With lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
+On the **Map View** tab, you can enable the list to render as a map view of the data.
+
+The map view is powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
 
 > [!NOTE] 
 > - This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
@@ -500,13 +505,40 @@ With lists, it is possible to enable and configure a Map view of the data, power
 
 ## List Calendar view
 
-Use the List Calendar view to render a list as a calendar, with each individual record configured to act as a single event.
+On the **Calendar View** tab, you can enable the list to render as a calendar view, with each individual record configured to act as a single event.
 
-To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, a List Calendar view will appear on the portal.
+The following field mappings can be configured to display list records as dated events on the calendar. The records need to include at minimum a date field.
+
+> [!Tip]
+> See [date and time](behavior-format-date-time-field.md#date-and-time) field behaviors for information on formatting date and time fields on portals.
+
+| Entity Field Mappings | Details |
+| - | - |
+| Start Date Field Name | A datetime column representing the start date of a calendar event. |
+| End Date Field Name | A datetime column representing the end date of a calendar event. |
+| Summary Field Name | A text column that will show the summary of a calendar event. |
+| Description Field Name | A text column that will display a description of the calendar event. |
+| Organizer Field Name | A text or lookup column that will display the organizer of the calendar event. |
+| Location Field Name | A text column describing the location of the calendar event.|
+| Is All Day Field Name | A yes/no column indicating if the calendar event is all day. |
+
+| Setting | Details |
+| - | - |
+| Initial View | Initial view of the calendar; year, month, week, or day. Default value is month. |
+| Initial Date | The initial start date when the calendar is rendered. Default (blank) will the be the current date. |
+| Time Zone Display Mode | The time zone the calendar will be displayed in. No option selected will display the events based on how the date column was configured in Dataverse. The *User Local Time Zone* will display events in the calendar using the time zone of the user viewing the portal. *Specific Time Zone* will display the calendar events with a specified time zone. |
+| Display Time Zone | If the **Time Zone Display Mode** is set to *Specific Time Zone* this value will determine the time zone the calendar events are displayed. |
+| Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* |
+
+Once the specific fields are configured, a list calendar view will appear on the portal page.
+
+:::image type="content" source="media/lists/calendar-list.png" alt-text="List displayed as a calendar on a web page.":::
 
 ## List OData feeds
 
-If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
+On the **OData Feed** tab, you can enable the list to render as an OData formatted data feed.
+
+When enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
 > [!NOTE]
 > Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.

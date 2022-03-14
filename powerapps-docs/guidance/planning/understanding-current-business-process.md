@@ -2,7 +2,7 @@
 title: Understanding the current business process | Microsoft Docs
 description: When planning a Power Apps project, you first need to understand how the business process you want to automate works today.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020

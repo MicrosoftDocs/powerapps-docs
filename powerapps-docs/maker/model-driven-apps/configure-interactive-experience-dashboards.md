@@ -9,7 +9,7 @@ manager: kvivek
 ms.custom: ""
 ms.date: 06/01/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -27,7 +27,7 @@ search.app:
 
 # Create and configure model-driven app interactive experience dashboards
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Introducing interactive dashboards
 

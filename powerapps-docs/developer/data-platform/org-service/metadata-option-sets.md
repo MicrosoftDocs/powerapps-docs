@@ -4,7 +4,7 @@ description: "Describes how to work with global and local choices (option sets) 
 ms.custom: ""
 ms.date: 06/10/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

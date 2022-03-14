@@ -4,7 +4,7 @@ description: "You can customize model-driven apps by using tools that are availa
 ms.custom: "intro-internal"
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer

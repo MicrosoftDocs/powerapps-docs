@@ -4,7 +4,7 @@ description: "This sample shows how to execute multiple organization messages re
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Execute multiple requests
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to execute multiple organization message requests by using a single web service method call, passing [ExecuteMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.executemultiplerequest?view=dynamics-general-ce-9) as a parameter. Reducing the number of message requests that must be transmitted over the network results in increased message processing performance.
 

@@ -3,7 +3,7 @@ title: Create a Power BI report using the Dataverse connector | Microsoft Docs
 description: Connect to your Dataverse data from Power BI Desktop using the connector.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 04/26/2021
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Create a Power BI report using data from Dataverse
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Microsoft Dataverse allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
 
@@ -26,7 +26,9 @@ Microsoft Dataverse allows you to connect directly to your data using Power BI D
 To use Power BI with Dataverse, you need the following items:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
-* Dataverse environment with maker permissions to access the portal and read permissions to access data within tables.
+* A Dataverse environment with the following privileges: 
+   * To access data in a table, you must have read privileges to the table.
+   * To modify a table in make.powerapps.com, you must have a security role that includes maker privileges, such as system customizer or environment maker.
 * You must have the appropriate Power BI [license](/power-bi/admin/service-admin-licensing-organization) to build and share Power BI reports.
 * To use the **Dataverse** connector, the **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 

@@ -1,15 +1,14 @@
 ---
 title: "Best practices: Client scripting in model-driven apps| MicrosoftDocs"
-ms.date: 10/19/2020
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 16271bd8-cfa8-4a7f-802a-60fbff7c3722
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -71,7 +70,7 @@ If you are still considering using jQuery despite the risks, consider the follow
 
 ## Write your code for multiple browsers
 
-Model-driven apps support multiple browsers. Make sure that any scripts that you use will work with all supported browsers. Most of the significant differences between Internet Explorer and other browser have to do with HTML and XML DOM manipulation. Because HTML DOM manipulation is not supported, if script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support other browsers could be small. 
+Model-driven apps support multiple browsers. Make sure that any scripts that you use will work with all supported browsers. If script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support different browsers could be small.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

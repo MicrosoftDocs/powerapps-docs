@@ -1,14 +1,13 @@
 ---
 title: "getBarcodeValue| MicrosoftDocs"
 description: Includes description and supported parameters for the getBarCodeValue method.
-ms.date: 09/08/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 0218b96c-2809-4f2d-9f9f-d8ee8f8e3b7b
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
 search.app:

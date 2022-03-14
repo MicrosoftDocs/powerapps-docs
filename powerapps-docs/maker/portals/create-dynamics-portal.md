@@ -2,7 +2,7 @@
 title: Create a portal in an environment containing customer engagement apps
 description: Instructions to create a portal in an environment containing customer engagement apps.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 10/11/2021

@@ -1,16 +1,16 @@
 ---
-title: ControlAttributes in Microsoft Dataverse| Microsoft Docs
+title: ControlAttributes| Microsoft Docs
 description: Attributes of control that necessary for formatting.
 keywords:
-ms.author: nabuthuk
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-author: nkrb
-ms.date: 11/23/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 ---
 
 # ControlAttributes
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 The column type.
 
-**Type**: `[ControlAttributesType](../controlattributestype.md) | string`
+**Type**: [ControlAttributesType](ControlAttributesType.md)
 
 ### Precision
 
@@ -39,7 +39,7 @@ The precision of the column.
 
 The precision source of the column.
 
-**Type**: `[MoneyPrecisionSource](./moneyprecisionsource.md)`
+**Type**: [MoneyPrecisionSource](./moneyprecisionsource.md)
 
 ### Format
 
@@ -49,12 +49,12 @@ The format of the string column.
 ### Behavior
 
 The behavior of the datetime column.
-**Type**: `[DateTimeFieldBehavior](./DateTimeFieldBehavior.md)`
+**Type**: [DateTimeFieldBehavior](./DateTimeFieldBehavior.md)
 
 ### OptionSet
 
 The optionset/choice object of this column.
-**Type**: `[OptionDescriptor](./optiondescriptor.md)`
+**Type**: [OptionDescriptor](./optiondescriptor.md)
 
 ### Related topics
 

@@ -2,7 +2,7 @@
 title: Work with permissions in a lookup list from a SharePoint site
 description: This article explains how to configure lookup list permissions in SharePoint when using a canvas app.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

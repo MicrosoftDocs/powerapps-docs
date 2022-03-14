@@ -2,15 +2,14 @@
 title: ICommand | Microsoft Docs
 description: A command button control types.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 12/06/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 16691acb-a58c-4ca6-b6a8-58c76c9db1ca
 ---
 
 # ICommand

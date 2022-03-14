@@ -6,7 +6,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 02/22/2021
-ms.service: powerapps
+
 ms.topic: how-to
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 search.audienceType: 
@@ -17,7 +17,7 @@ search.app:
 ---
 # Configure model-driven app form event handlers
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Form event handlers for Power Apps forms can be configured for the following areas in a form:  
   

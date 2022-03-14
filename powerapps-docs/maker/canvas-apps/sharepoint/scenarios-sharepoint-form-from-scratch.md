@@ -2,11 +2,11 @@
 title: Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items
 description: This article explains how to create an app with SharePoint form functionality from scratch.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/13/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -66,21 +66,7 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
 ## Step 2 – Create a blank canvas app
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **Canvas app from blank**.
-
-    ![Canvas app from blank.](./media/scenarios-sharepoint-form-from-scratch/create-from-blank.png "Canvas app from blank")
-
-1. Enter the app name of your choice. For example, *SharePoint list from scratch*.
-
-1. Select the layout of your choice. This scenario uses *Tablet* layout.
-
-    ![App name and layout.](./media/scenarios-sharepoint-form-from-scratch/create-app-name.png "App name and layout")
-
-1. Select **Create**. The app opens in Power Apps Studio for authoring.
-
-    ![Blank app.](./media/scenarios-sharepoint-form-from-scratch/blank-app.png "Blank app")
+Create a [blank canvas app](../create-blank-app.md).
 
 ## Step 3 – Connect app to SharePoint
 

@@ -4,7 +4,7 @@ description: "How to run a Power Apps model-driven app"
 ms.custom: ""
 ms.date: 12/07/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -21,13 +21,13 @@ search.app:
 ---
 # How to run a model-driven app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 ## Run an app in a browser
 
 To run a model-driven app in a web browser, the user must have a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role) assigned in addition to having the URL for the app.
 
-Learn how to create a [custom security role](../model-driven-apps/share-model-driven-app.md#create-a-custom-security-role)
+Learn how to create a [security role from a copy](../model-driven-apps/share-model-driven-app.md#copy-a-security-role-to-create-a-new-one)
 
 To get the direct link to an app:
 
@@ -44,7 +44,7 @@ To play the app, enter the URL in a web browser.
 
 ## Run an app on a tablet or phone
 
-It is possible to use the app URL to run a model-driven app on a mobile device's web browser. However, users can also download the Power Apps mobile app from the relevant app store. Then, sign into the app, and then select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
+Use the app URL described in the earlier section to run a model-driven app on a tablet's web browser. For phones, users download the Power Apps mobile app from the relevant app store. Then, sign into the app, and select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
 
 ### See also
 

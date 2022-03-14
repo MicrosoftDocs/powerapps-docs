@@ -3,7 +3,7 @@ title: "Web API CDSWebApiService Async Parallel Operations Sample (C#) (Microsof
 description: "This sample demonstrates using Task Parallel Library (TPL) dataflow components with asynchronous requests."
 ms.custom: ""
 ms.date: 07/15/2021
-ms.service: powerapps
+
 applies_to: 
   - "Dynamics 365 (online)"
 author: "JimDaly"

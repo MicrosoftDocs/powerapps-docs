@@ -3,7 +3,7 @@ title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 12/16/2021
@@ -21,7 +21,7 @@ search.app:
 
 # Search for tables and rows by using Dataverse search
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
@@ -272,7 +272,7 @@ Use double quotation marks around a keyword to perform an exact match. Search ig
 
 The Dataverse search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
-Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+Quick actions are a small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
 | Table  | Quick actions |
 |---------|---------|

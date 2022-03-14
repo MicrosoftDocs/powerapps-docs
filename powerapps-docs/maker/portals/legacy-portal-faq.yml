@@ -3,8 +3,8 @@ metadata:
   title: "Frequently asked questions for legacy Adxstudio Portals v7 | MicrosoftDocs"
   description: "Frequently asked questions for legacy Adxstudio Portals v7"
   author: sandhangitmsft
-  ms.service: powerapps
-  ms.topic: conceptual
+  
+  ms.topic: faq
   ms.custom: 
   ms.date: 11/22/2019
   ms.author: sandhan
@@ -15,7 +15,6 @@ metadata:
     - GitanjaliSingh33msft
     - sandhangitmsft
     - dileepsinghmicrosoft
-    
 title: Legacy Adxstudio Portals v7 FAQ
 summary: |
 

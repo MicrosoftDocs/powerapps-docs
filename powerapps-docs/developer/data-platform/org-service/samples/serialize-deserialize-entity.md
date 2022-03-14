@@ -4,7 +4,7 @@ description: "This sample showcases how to serialize and deserialize table insta
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Serialize and deserialize a table instance 
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to serialize early-bound and late-bound table instances into an XML format, and how to de-serialize from an XML format to an early-bound table instance.
 

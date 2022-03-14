@@ -2,15 +2,15 @@
 title: getEntityMetadata | Microsoft Docs
 description: Returns the table definitions for the specified table.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 6a334af7-ca5b-449c-b90f-0901824654d2
 ---
 
 # getEntityMetadata

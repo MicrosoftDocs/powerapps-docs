@@ -4,7 +4,7 @@ description: "Learn how to use OAuth with Cross-Origin Resource Sharing (CORS) t
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

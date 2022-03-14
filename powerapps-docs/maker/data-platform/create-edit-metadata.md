@@ -4,7 +4,7 @@ description: "Learn about tables and metadata in Microsoft Dataverse"
 ms.custom: ""
 ms.date: 11/16/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "overview"
 author: "Mattp123"
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
@@ -21,7 +21,7 @@ search.app:
 
 # Tables and metadata in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you are evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 

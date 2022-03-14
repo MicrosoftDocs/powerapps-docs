@@ -4,7 +4,7 @@ description: "Learn how to change the icon for a custom table"
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -28,7 +28,7 @@ search.app:
 ---
 # Change model-driven app custom table icons 
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When a custom table is created, it is automatically assigned a default icon. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. It is not possible to modify the icons assigned to system tables.
 

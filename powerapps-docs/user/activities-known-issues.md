@@ -3,7 +3,7 @@ title: "Email FAQs and known issues| MicrosoftDocs"
 description: Email FAQs and known issues.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/30/2021
@@ -26,7 +26,7 @@ Find answers to common questions regarding the email experience features and fun
 
 **Issue**: Recent content added to the email may get lost if you enter text in the body of an email and immediately select **Save**, **Save and Close**, or **Send**. 
 
-**Resolution**: To avoid this issue, wait a few seconds before you select **Save**, **Save and Close**, or **Send** after your enter text in the body of the email.
+**Resolution**: To avoid this issue, wait a few seconds before you select **Save**, **Save and Close**, or **Send** after you enter text in the body of the email.
 
 ## The From column is read only or lookup isn't working
 

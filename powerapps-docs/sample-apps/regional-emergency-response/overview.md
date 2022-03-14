@@ -3,7 +3,7 @@ title: Overview of Regional Government Emergency Response and Monitoring solut
 description: Provides an overview of Regional Government Emergency Response and Monitoring solution for state and local governments.
 author: pankajarora-msft
 manager: annbe
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
 ms.date: 05/06/2020

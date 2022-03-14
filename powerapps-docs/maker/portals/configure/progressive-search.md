@@ -2,7 +2,7 @@
 title: Configure progressive search in portals
 description: Accurate results can be tricky when a portal has several tables enabled for search. Learn how to configure progressive search to ensure accurate record counts.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

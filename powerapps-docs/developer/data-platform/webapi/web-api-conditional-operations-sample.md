@@ -3,7 +3,7 @@ title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft D
 description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
 ms.custom: ""
 ms.date: 06/17/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

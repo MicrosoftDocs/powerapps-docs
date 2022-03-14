@@ -2,15 +2,14 @@
 title: DataSet in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/12/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
 ---
 
 # DataSet
@@ -35,7 +34,7 @@ Whether an error occurred in data retrieval. This is supported in both model-dri
 
 **Type**: `boolean`
 
-## errorCode
+### errorCode
 
 The error code associated with the last encountered error, if applicable.
 
@@ -100,7 +99,7 @@ The column filtering for the current query. This is supported in both model-driv
 
 **Type**: [Filtering](filtering.md)
 
-### linking 
+### linking
 
 Defines the linked table information. This is supported only in model-driven apps.
 
@@ -143,7 +142,7 @@ The sorting status for the current query. This is supported in both model-driven
 > Sorting feature is only available to Dataverse data source.
 > Also, if sorting is re-configured it will reset the filter `context.parameters.[dataset_property_name].filtering`
 
-**Type**: `[SortStatus](sortstatus.md)[]`
+**Type**: [SortStatus](sortstatus.md)[]
 
 ## Methods
 
@@ -154,7 +153,6 @@ The sorting status for the current query. This is supported in both model-driven
 | [delete](dataset/delete.md)                                 | [!INCLUDE [delete-description](dataset/includes/delete-description.md)]                                 | Canvas apps                  |
 | [getCommands](dataset/getCommands.md)                       | [!INCLUDE [getcommands-description](dataset/includes/getcommands-description.md)]                       | Canvas apps                  |
 | [getDataSetCapabilities](dataset/getDataSetCapabilities.md) | [!INCLUDE [getcatasetcapabilities-description](dataset/includes/getdatasetcapabilities-description.md)] | Canvas apps                  |
-| [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getrelateddataset-description](dataset/includes/getrelateddataset-description.md)]           | Canvas apps                  |
 | [getSelectedRecordIds](dataset/getSelectedRecordIds.md)     | [!INCLUDE [getselectedrecordids-description](dataset/includes/getselectedrecordids-description.md)]     | Model-driven and Canvas apps |
 | [getTargetEntityType](dataset/getTargetEntityType.md)       | [!INCLUDE [gettargetentitytype-description](dataset/includes/gettargetentitytype-description.md)]       | Model-driven and Canvas apps |
 | [getTitle](dataset/getTitle.md)                             | [!INCLUDE [gettitle-description](dataset/includes/gettitle-description.md)]                             | Model-driven and Canvas apps |
@@ -165,9 +163,11 @@ The sorting status for the current query. This is supported in both model-driven
 | [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieverecordcommand-description](dataset/includes/retrieverecordcommand-description.md)]   | Model-driven                 |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and Canvas apps |
 
+<!-- | [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getrelateddataset-description](dataset/includes/getrelateddataset-description.md)]           | Canvas apps                  | -->
+
 ## Lookup columns
 
-Dataverse table's lookup columns can now be retrieved.For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
+Dataverse table's lookup columns can now be retrieved. For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
 
 ## Example
 
