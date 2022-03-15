@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/10/2022
+ms.date: 03/15/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -55,15 +55,15 @@ For a portal to be accessible, use the [WAI-ARIA Authoring Practices 1.1](https:
 
 When you customize your portal, you're responsible for meeting accessibility standards.
 
-### Basic forms (entity forms)
+### Basic forms
 
-A basic form allows a model-driven Power Apps form to be used on the Power Portal. Basic forms typically don't require a developer to design, but depending on portal's form requirements, a developer may be helpful.
+A basic form (formerly known as an entity form) uses a model-driven Power Apps form to display a form on a web page. Basic forms typically don't require a developer to design and configure, however, a developer may be helpful to extend some of the form features.
 
 More Information: [About Basic Forms](../configure/entity-forms.md)
 
 ### Basic form options
 
-The included Basic Form controls are built to follow [WCAG 2.1](https://www.w3.org/TR/WCAG21/). There are options that help make forms more accessible:
+The included basic form controls are built to follow [WCAG 2.1](https://www.w3.org/TR/WCAG21/). There are options that help make forms more accessible:
 
 | **Name**                        | **Description**                                                                                                                                                                               |
 |---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -76,7 +76,7 @@ More Information: [Form Options](../configure/entity-forms.md#form-options)
 
 ### Liquid Templates and Content Snippets
 
-When custom html and liquid content are added to the portal, accessibility must be taken into consideration. The person making the changes to the liquid template and content snippets is responsible for ensuring the content they add is accessible. It's important to make sure the customizations adhere to the required policies, whether it be [WCAG 2.1](#wcag-21), [US Section 508](#us-section-508), and/or [ETSI EN 301 549](#en-301-549).
+When custom html and [Liquid](../liquid/liquid-overview.md) content are added to the portal, accessibility must be taken into consideration. The person making the changes to the Liquid templates and [content snippets](../configure/customize-content-snippets.md) is responsible for ensuring the content they add is accessible. It's important to make sure the customizations adhere to the required policies, whether it be [WCAG 2.1](#wcag-21), [US Section 508](#us-section-508), and/or [ETSI EN 301 549](#en-301-549).
 
 The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides a list of the WCAG requirements, with links to the full descriptions.
 
