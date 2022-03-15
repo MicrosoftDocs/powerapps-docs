@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the retrieveMulti
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/15/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 search.audienceType: 
