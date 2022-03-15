@@ -2,16 +2,14 @@
 title: NumberFormattingInfo | Microsoft Docs
 description: The interface for the Organization System Settings Number Format info exposed to a code component.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 8c0481ee-abf9-492a-a1ef-b36e8a68167b
 ---
 
 # NumberFormattingInfo

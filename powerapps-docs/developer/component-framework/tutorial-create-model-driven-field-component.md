@@ -1,15 +1,13 @@
 ---
 title: "Create a model-driven app field component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a model-driven app field component, and deploy, configure, and test the component on a form using Visual Studio Code."
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.custom: "intro-internal"
 ms.topic: "index-page"
-ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.subservice: pcf
 contributors:
     - v-scottdurow

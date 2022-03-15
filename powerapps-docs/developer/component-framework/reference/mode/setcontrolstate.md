@@ -2,11 +2,11 @@
 title: setControlState | Microsoft Docs
 description: Set component state so that it will be stored in one session.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +14,6 @@ ms.topic: "article"
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 ---
 
 # setControlState

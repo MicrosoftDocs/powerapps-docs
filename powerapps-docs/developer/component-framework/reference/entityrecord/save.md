@@ -2,16 +2,15 @@
 title: save | Microsoft Docs
 description: Saves the record
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
 # save
