@@ -74,13 +74,13 @@ The included basic form controls are built to follow [WCAG 2.1](https://www.w3.o
 
 More Information: [Form Options](../configure/entity-forms.md#form-options)
 
-### Liquid Templates and Content Snippets
+### Liquid templates and content snippets
 
 When custom html and [Liquid](../liquid/liquid-overview.md) content are added to the portal, accessibility must be taken into consideration. The person making the changes to the Liquid templates and [content snippets](../configure/customize-content-snippets.md) is responsible for ensuring the content they add is accessible. It's important to make sure the customizations adhere to the required policies, whether it be [WCAG 2.1](#wcag-21), [US Section 508](#us-section-508), and/or [ETSI EN 301 549](#en-301-549).
 
 The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides a list of the WCAG requirements, with links to the full descriptions.
 
-### Quick Tips for Accessible Content
+### Quick tips for accessible content
 
 - Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
 
