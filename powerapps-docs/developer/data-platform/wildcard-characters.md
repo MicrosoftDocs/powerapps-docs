@@ -65,14 +65,19 @@ These characters are described in the following table:
 |`[]`     |Matches any single character within the specified range or set that is specified between brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql?view=sql-server-ver15)|
 |`[^]`     |Matches any single character that is not within the range or set specified between the square brackets.|[[^] (Wildcard - Character(s) Not to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql?view=sql-server-ver15)|
 
+
+### Search for strings that contain wildcard characters
+
 You can use the wildcard pattern matching characters as literal characters. To use a wildcard character as a literal character, enclose the wildcard character in brackets. More information: [Using Wildcard Characters As Literals](/sql/t-sql/language-elements/like-transact-sql?view=sql-server-ver15#using-wildcard-characters-as-literals).
 
-## Avoid using trailing wild cards
+## Do not use trailing wild cards
+
+Using trailing wildcards is not supported.
 
 # [FetchXml](#tab/fetchxml)
 
 > [!IMPORTANT]
-> You should avoid using trailing wild cards in expressions using `begins-with`, `not-begin-with`, `ends-with` or `not-end-with`. The following table gives some examples of trailing wildcards:
+> Do not use trailing wild cards in expressions using `begins-with`, `not-begin-with`, `ends-with` or `not-end-with`. The following table gives some examples of trailing wildcards:
 
 |Bad Examples  |
 |---------|
@@ -84,7 +89,7 @@ You can use the wildcard pattern matching characters as literal characters. To u
 # [QueryExpression](#tab/queryexpression)
 
 > [!IMPORTANT]
-> You should avoid using trailing wild cards in expressions using `BeginsWith`, `DoesNotBeginWith`, `EndsWith` or `DoesNotEndWith`. The following table gives some examples of trailing wildcards:
+> Do not use trailing wild cards in expressions using `BeginsWith`, `DoesNotBeginWith`, `EndsWith` or `DoesNotEndWith`. The following table gives some examples of trailing wildcards:
 
 |Bad Examples  |
 |---------|
@@ -96,7 +101,7 @@ You can use the wildcard pattern matching characters as literal characters. To u
 # [Web API](#tab/webapi)
 
 > [!IMPORTANT]
-> You should avoid using trailing wild cards in expressions using `startswith`, `not startswith`, `endswith` or `not endswith`. The following table gives some examples of trailing wildcards:
+> Do not use trailing wild cards in expressions using `startswith`, `not startswith`, `endswith` or `not endswith`. The following table gives some examples of trailing wildcards:
 
 
 |Bad Examples  |
@@ -108,7 +113,7 @@ You can use the wildcard pattern matching characters as literal characters. To u
 
 ---
 
-Queries using these anti-patterns can introduce performance problems because the queries cannot be well optimized.
+Queries using these anti-patterns introduce performance problems because the queries cannot be optimized.
 
 ### See also
 
