@@ -87,33 +87,23 @@ For a successful OData query retrieveMultipleRecords operation, returns a promis
 
 For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
 
-## Supported Attribute Types for OData query options in Mobile Offline
-Only the following attribute types are supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (`$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is not in this list of supported attribute types.
+## Unsupported Attribute Types for OData query options in Mobile Offline
+The following [attribute types](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/entity-attribute-metadata#column-types) are not supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (e.g. `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
 
-- BigInt
-- Boolean
-- Customer
-- DateTime
-- Decimal
-- Double
-- EntityName
-- Guid
-- Integer
-- Lookup
-- Memo
-- Money
-- Owner
-- PickList
-- State
-- Status
-- String
+- [MultiSelectPicklist](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.multiselectpicklistattributemetadata)
+- [File](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.fileattributemetadata)
+- [Image](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata)
+- [ManagedProperty](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.managedpropertyattributemetadata)
+- CalendarRules
+- PartyList
+- Virtual
 
-## Supported Filter Operations Per Attribute Type in Mobile Offline
-The following operations are supported for all attribute types:
-- Equals
-- Not Equals
-- Null
-- Not Null
+## Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML
+The following operations are supported for all attribute types when working with FetchXML:
+- Equals (`eq`)
+- Not Equals (`neq`)
+- Null (`null`)
+- Not Null (`not-null`)
 
 The following table lists additional operations supported for each attribute type:
 <table style="width:100%">
@@ -122,138 +112,48 @@ The following table lists additional operations supported for each attribute typ
     <th>Supported Operations</th>
   </tr>
   <tr>
-    <td>BigInt</td>
+    <td>BigInt, Decimal, Double, Integer</td>
     <td>
       <ul>
-        <li>Greater Than</li>
-        <li>Greater Than or Equals</li>
-        <li>Less Than</li>
-        <li>Less Than or Equals</li>
+        <li>Greater Than (<code>gt</code>)</li>
+        <li>Greater Than or Equals (<code>gte</code>)</li>
+        <li>Less Than (<code>lt</code>)</li>
+        <li>Less Than or Equals (<code>lte</code>)</li>
       </ul>
     </td>
   </tr>
   <tr>
-    <td>Boolean</td>
+    <td>Boolean, Customer</td>
     <td>
       <ul>
-        <li>In</li>
-        <li>Not In</li>
+        <li>In (<code>in</code>)</li>
+        <li>Not In (<code>not-in</code>)</li>
       </ul>
     </td>
   </tr>
   <tr>
-    <td>Customer</td>
+    <td>EntityName, Picklist, State, Status</td>
     <td>
       <ul>
-        <li>In</li>
-        <li>Not In</li>
+        <li>Like (<code>like</code>)</li>
+        <li>Not Like (<code>not-like</code>)</li>
+        <li>Begins With (<code>begins-with</code>)</li>
+        <li>Not Begin With (<code>not-begin-with</code>)</li>
+        <li>Ends With (<code>ends-with</code>)</li>
+        <li>Not End With (<code>not-end-with</code>)</li>
+        <li>In (<code>in</code>)</li>
+        <li>Not In (<code>not-in</code>)</li>
       </ul>
     </td>
   </tr>
   <tr>
-    <td>DateTime</td>
+    <td>Guid, Lookup</td>
     <td>
       <ul>
-        <li>On Or After</li>
-        <li>On</li>
-        <li>On Or Before</li>
-        <li>Today</li>
-        <li>Tomorrow</li>
-        <li>Yesterday</li>
-        <li>Next 7 Days</li>
-        <li>Last 7 Days</li>
-        <li>Next Week</li>
-        <li>Last Week</li>
-        <li>This Week</li>
-        <li>Next Month</li>
-        <li>Last Month</li>
-        <li>This Month</li>
-        <li>Next Year</li>
-        <li>Last Year</li>
-        <li>This Year</li>
-        <li>Last X Days</li>
-        <li>Next X Days</li>
-        <li>Last X Weeks</li>
-        <li>Next X Weeks</li>
-        <li>Last X Months</li>
-        <li>Next X Months</li>
-        <li>Last X Years</li>
-        <li>Next X Years</li>
-        <li>Anytime</li>
-        <li>Greater Than</li>
-        <li>Greater Than Or Equal</li>
-        <li>Less Than</li>
-        <li>Less Than Or Equal</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Decimal</td>
-    <td>
-      <ul>
-        <li>Greater Than</li>
-        <li>Greater Than or Equals</li>
-        <li>Less Than</li>
-        <li>Less Than or Equals</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Double</td>
-    <td>
-      <ul>
-        <li>Greater Than</li>
-        <li>Greater Than or Equals</li>
-        <li>Less Than</li>
-        <li>Less Than or Equals</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>EntityName</td>
-    <td>
-      <ul>
-        <li>Like</li>
-        <li>Not Like</li>
-        <li>Begins With</li>
-        <li>Not Begin With</li>
-        <li>Ends With</li>
-        <li>Not End With</li>
-        <li>In</li>
-        <li>Not In</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Guid</td>
-    <td>
-      <ul>
-        <li>In</li>
-        <li>Not In</li>
-        <li>Equals User Id</li>
-        <li>Not Equals User Id</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Integer</td>
-    <td>
-      <ul>
-        <li>Greater Than</li>
-        <li>Greater Than or Equals</li>
-        <li>Less Than</li>
-        <li>Less Than or Equals</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Lookup</td>
-    <td>
-      <ul>
-        <li>In</li>
-        <li>Not In</li>
-        <li>Equals User Id</li>
-        <li>Not Equals User Id</li>
+        <li>In (<code>in</code>)</li>
+        <li>Not In (<code>not-in</code>)</li>
+        <li>Equals User Id (<code>eq-userid</code>)</li>
+        <li>Not Equals User Id (<code>ne-userid</code>)</li>
       </ul>
     </td>
   </tr>
@@ -261,12 +161,12 @@ The following table lists additional operations supported for each attribute typ
     <td>Money</td>
     <td>
       <ul>
-        <li>Greater Than</li>
-        <li>Greater Than or Equals</li>
-        <li>Less Than</li>
-        <li>Less Than or Equals</li>
-        <li>In</li>
-        <li>Not In</li>
+        <li>Greater Than (<code>gt</code>)</li>
+        <li>Greater Than or Equals (<code>gte</code>)</li>
+        <li>Less Than (<code>lt</code>)</li>
+        <li>Less Than or Equals (<code>lte</code>)</li>
+        <li>In (<code>in</code>)</li>
+        <li>Not In (<code>not-in</code>)</li>
       </ul>
     </td>
   </tr>
@@ -274,57 +174,11 @@ The following table lists additional operations supported for each attribute typ
     <td>Owner</td>
     <td>
       <ul>
-        <li>In</li>
-        <li>Not In</li>
-        <li>Equals User Id</li>
-        <li>Not Equals User Id</li>
-        <li>Equals User Or Team</li>
-        <li>Not Equals User Or Team</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Picklist</td>
-    <td>
-      <ul>
-        <li>Like</li>
-        <li>Not Like</li>
-        <li>Begins With</li>
-        <li>Not Begin With</li>
-        <li>Ends With</li>
-        <li>Not End With</li>
-        <li>In</li>
-        <li>Not In</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>State</td>
-    <td>
-      <ul>
-        <li>Like</li>
-        <li>Not Like</li>
-        <li>Begins With</li>
-        <li>Not Begin With</li>
-        <li>Ends With</li>
-        <li>Not End With</li>
-        <li>In</li>
-        <li>Not In</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Status</td>
-    <td>
-      <ul>
-        <li>Like</li>
-        <li>Not Like</li>
-        <li>Begins With</li>
-        <li>Not Begin With</li>
-        <li>Ends With</li>
-        <li>Not End With</li>
-        <li>In</li>
-        <li>Not In</li>
+        <li>In (<code>in</code>)</li>
+        <li>Not In (<code>not-in</code>)</li>
+        <li>Equals User Id (<code>eq-userid</code>)</li>
+        <li>Not Equals User Id (<code>ne-userid</code>)</li>
+        <li>Equals User Or Team (<code>eq-useroruserteams</code>)</li>
       </ul>
     </td>
   </tr>
@@ -332,12 +186,49 @@ The following table lists additional operations supported for each attribute typ
     <td>String</td>
     <td>
       <ul>
-        <li>Like</li>
-        <li>Not Like</li>
-        <li>Begins With</li>
-        <li>Not Begin With</li>
-        <li>Ends With</li>
-        <li>Not End With</li>
+        <li>Like (<code>like</code>)</li>
+        <li>Not Like (<code>not-like</code>)</li>
+        <li>Begins With (<code>begins-with</code>)</li>
+        <li>Not Begin With (<code>not-begin-with</code>)</li>
+        <li>Ends With (<code>ends-with</code>)</li>
+        <li>Not End With (<code>not-end-with</code>)</li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>DateTime</td>
+    <td>
+      <ul>
+        <li>On Or After (<code>on-or-after</code>)</li>
+        <li>On (<code>on</code>)</li>
+        <li>On Or Before (<code>on-or-before</code>)</li>
+        <li>Today (<code>today</code>)</li>
+        <li>Tomorrow (<code>tomorrow</code>)</li>
+        <li>Yesterday (<code>yesterday</code>)</li>
+        <li>Next 7 Days (<code>next-seven-days</code>)</li>
+        <li>Last 7 Days (<code>last-seven-days</code>)</li>
+        <li>Next Week (<code>next-week</code>)</li>
+        <li>Last Week (<code>last-week</code>)</li>
+        <li>This Week (<code>this-week</code>)</li>
+        <li>Next Month (<code>next-month</code>)</li>
+        <li>Last Month (<code>last-month</code>)</li>
+        <li>This Month (<code>this-month</code>)</li>
+        <li>Next Year (<code>next-year</code>)</li>
+        <li>Last Year (<code>last-year</code>)</li>
+        <li>This Year (<code>this-year</code>)</li>
+        <li>Last X Days (<code>last-x-days</code>)</li>
+        <li>Next X Days (<code>next-x-days</code>)</li>
+        <li>Last X Weeks (<code>last-x-weeks</code>)</li>
+        <li>Next X Weeks (<code>next-x-weeks</code>)</li>
+        <li>Last X Months (<code>last-x-months</code>)</li>
+        <li>Next X Months (<code>next-x-months</code>)</li>
+        <li>Last X Years (<code>last-x-years</code>)</li>
+        <li>Next X Years (<code>next-x-years</code>)</li>
+        <li>Greater Than (<code>gt</code>)</li>
+        <li>Greater Than Or Equal (<code>gte</code>)</li>
+        <li>Less Than (<code>lt</code>)</li>
+        <li>Less Than Or Equal (<code>lte</code>)</li>
       </ul>
     </td>
   </tr>
