@@ -110,133 +110,19 @@ The following operations are supported for all attribute types when working with
 - Not Null (`not-null`)
 
 The following table lists additional operations supported for each attribute type:
-<table>
-  <tr>
-    <th>Attribute Type</th>
-    <th>Supported Operations</th>
-  </tr>
-  <tr>
-    <td>BigInt, Decimal, Double, Integer</td>
-    <td>
-      <ul>
-        <li>Greater Than (`gt`)</li>
-        <li>Greater Than or Equals (`gte`)</li>
-        <li>Less Than (`lt`)</li>
-        <li>Less Than or Equals (`lte`)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Boolean, Customer</td>
-    <td>
-      <ul>
-        <li>In (`in`)</li>
-        <li>Not In (`not-in`)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>EntityName, Picklist, State, Status</td>
-    <td>
-      <ul>
-        <li>Like (`like`)</li>
-        <li>Not Like (`not-like`)</li>
-        <li>Begins With (`begins-with`)</li>
-        <li>Not Begin With (`not-begin-with`)</li>
-        <li>Ends With (`ends-with`)</li>
-        <li>Not End With (`not-end-with`)</li>
-        <li>In (`in`)</li>
-        <li>Not In (`not-in`)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Guid, Lookup</td>
-    <td>
-      <ul>
-        <li>In (`in`)</li>
-        <li>Not In (`not-in`)</li>
-        <li>Equals User Id (`eq-userid`)</li>
-        <li>Not Equals User Id (`ne-userid`)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Money</td>
-    <td>
-      <ul>
-        <li>Greater Than (`gt`)</li>
-        <li>Greater Than or Equals (`gte`)</li>
-        <li>Less Than (`lt`)</li>
-        <li>Less Than or Equals (`lte`)</li>
-        <li>In (`in`)</li>
-        <li>Not In (`not-in`)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Owner</td>
-    <td>
-      <ul>
-        <li>In (`in`)</li>
-        <li>Not In (`not-in`)</li>
-        <li>Equals User Id (`eq-userid`)</li>
-        <li>Not Equals User Id (`ne-userid`)</li>
-        <li>Equals User Or Team (`eq-useroruserteams`)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>String</td>
-    <td>
-      <ul>
-        <li>Like (`like`)</li>
-        <li>Not Like (`not-like`)</li>
-        <li>Begins With (`begins-with`)</li>
-        <li>Not Begin With (`not-begin-with`)</li>
-        <li>Ends With (`ends-with`)</li>
-        <li>Not End With (`not-end-with`)</li>
-      </ul>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>DateTime</td>
-    <td>
-      <ul>
-        <li>On Or After (`on-or-after`)</li>
-        <li>On (`on`)</li>
-        <li>On Or Before (`on-or-before`)</li>
-        <li>Today (`today`)</li>
-        <li>Tomorrow (`tomorrow`)</li>
-        <li>Yesterday (`yesterday`)</li>
-        <li>Next 7 Days (`next-seven-days`)</li>
-        <li>Last 7 Days (`last-seven-days`)</li>
-        <li>Next Week (`next-week`)</li>
-        <li>Last Week (`last-week`)</li>
-        <li>This Week (`this-week`)</li>
-        <li>Next Month (`next-month`)</li>
-        <li>Last Month (`last-month`)</li>
-        <li>This Month (`this-month`)</li>
-        <li>Next Year (`next-year`)</li>
-        <li>Last Year (`last-year`)</li>
-        <li>This Year (`this-year`)</li>
-        <li>Last X Days (`last-x-days`)</li>
-        <li>Next X Days (`next-x-days`)</li>
-        <li>Last X Weeks (`last-x-weeks`)</li>
-        <li>Next X Weeks (`next-x-weeks`)</li>
-        <li>Last X Months (`last-x-months`)</li>
-        <li>Next X Months (`next-x-months`)</li>
-        <li>Last X Years (`last-x-years`)</li>
-        <li>Next X Years (`next-x-years`)</li>
-        <li>Greater Than (`gt`)</li>
-        <li>Greater Than Or Equal (`gte`)</li>
-        <li>Less Than (`lt`)</li>
-        <li>Less Than Or Equal (`lte`)</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+
+
+|Attribute Type|Supported Operations|
+|---------|---------|
+|BigInt, Decimal, Double, Integer|Greater Than (`gt`)<br />Greater Than or Equals (`gte`)<br />Less Than (`lt`)<br />Less Than or Equals (`lte`)|
+|Boolean, Customer|In (`in`)<br />Not In (`not-in`)|
+|EntityName, Picklist, State, Status|Like (`like`)<br />Not Like (`not-like`)<br />Begins With (`begins-with`)<br />Not Begin With (`not-begin-with`)<br />Ends With (`ends-with`)<br />Not End With (`not-end-with`)<br />In (`in`)<br />Not In (`not-in`)|
+|Guid, Lookup|In (`in`)<br />Not In (`not-in`)<br />Equals User Id (`eq-userid`)<br />Not Equals User Id (`ne-userid`)|
+|Money|Greater Than (`gt`)<br />Greater Than or Equals (`gte`)<br />Less Than (`lt`)<br />Less Than or Equals (`lte`)<br />In (`in`)<br />Not In (`not-in`)|
+|Owner|In (`in`)<br />Not In (`not-in`)<br />Equals User Id (`eq-userid`)<br />Not Equals User Id (`ne-userid`)<br />Equals User Or Team (`eq-useroruserteams`)<br />|
+|String|Like (`like`)<br />Not Like (`not-like`)<br />Begins With (`begins-with`)<br />Not Begin With (`not-begin-with`)<br />Ends With (`ends-with`)<br />Not End With (`not-end-with`)|
+|DateTime|On Or After (`on-or-after`)<br />On (`on`)<br />On Or Before (`on-or-before`)<br />Today (`today`)<br />Tomorrow (`tomorrow`)<br />Yesterday (`yesterday`)<br />Next 7 Days (`next-seven-days`)<br />Last 7 Days (`last-seven-days`)<br />Next Week (`next-week`)<br />Last Week (`last-week`)<br />This Week (`this-week`)<br />Next Month (`next-month`)<br />Last Month (`last-month`)<br />This Month (`this-month`)<br />Next Year (`next-year`)<br />Last Year (`last-year`)<br />This Year (`this-year`)<br />Last X Days (`last-x-days`)<br />Next X Days (`next-x-days`)<br />Last X Weeks (`last-x-weeks`)<br />Next X Weeks (`next-x-weeks`)<br />Last X Months (`last-x-months`)<br />Next X Months (`next-x-months`)<br />Last X Years (`last-x-years`)<br />Next X Years (`next-x-years`)<br />Greater Than (`gt`)<br />Greater Than Or Equal (`gte`)<br />Less Than (`lt`)<br />Less Than Or Equal (`lte`)<br />|
+
 
 ## Examples
 
