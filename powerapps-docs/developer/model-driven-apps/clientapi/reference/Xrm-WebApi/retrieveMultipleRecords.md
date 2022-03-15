@@ -110,7 +110,7 @@ The following operations are supported for all attribute types when working with
 - Not Null (`not-null`)
 
 The following table lists additional operations supported for each attribute type:
-<table style="width:100%">
+<table>
   <tr>
     <th>Attribute Type</th>
     <th>Supported Operations</th>
