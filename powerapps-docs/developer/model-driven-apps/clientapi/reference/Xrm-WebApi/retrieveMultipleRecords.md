@@ -25,59 +25,64 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>The table logical name of the records you want to retrieve. For example: "account".</td>
-</tr>
-<tr>
-<td>options</td>
-<td>String</td>
-<td>No</td>
-<td><p>OData system query options or FetchXML query to retrieve your data. </p> 
-<ul>
-<li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
-<li>To specify a FetchXML query, use the <code>fetchXml</code> column to specify the query.</li>
-</ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
-<p>When you specify an OData query string for the <code>options</code> parameter, the query <b>should be encoded</b> for special characters.
-<p>When you specify a FetchXML query for the <code>options</code> parameter, the query <b>should not be encoded</b>. 
-<p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
-</tr>
-<tr>
-<td>maxPageSize</td>
-<td>Number</td>
-<td>No</td>
-<td><p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
-<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> column in the returned promise object will contain a link to retrieve records. </td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
-<ul>
-<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as <code>key: value</code> pairs. The Id of the table record is retrieved by default.</li>
-<li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this returns the URL to return the next page of records.</li>
-<li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
+<table>
+ <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td>entityLogicalName</td>
+  <td>String</td>
+  <td>Yes</td>
+  <td>The table logical name of the records you want to retrieve. For example: "account".</td>
+ </tr>
+ <tr>
+  <td>options</td>
+  <td>String</td>
+  <td>No</td>
+  <td>
+   <p>OData system query options or FetchXML query to retrieve your data. </p>
+   <ul>
+    <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
+    <li>To specify a FetchXML query, use the `fetchXml` column to specify the query.</li>
+   </ul>
+   <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+   <p>You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
+   <p>When you specify an OData query string for the `options` parameter, the query <b>should be encoded</b> for special characters.
+   <p>When you specify a FetchXML query for the `options` parameter, the query <b>should not be encoded</b>.
+   <p>See examples later in this topic to see how you can define the `options` parameter for various retrieve multiple scenarios.
+  </td>
+ </tr>
+ <tr>
+  <td>maxPageSize</td>
+  <td>Number</td>
+  <td>No</td>
+  <td>
+   <p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p>
+   <p>If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.
+  </td>
+ </tr>
+ <tr>
+  <td>successCallback</td>
+  <td>Function</td>
+  <td>No</td>
+  <td>
+   <p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
+   <ul>
+    <li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as `key: value` pairs. The Id of the table record is retrieved by default.</li>
+    <li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this returns the URL to return the next page of records.</li>
+    <li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
+   </ul>
+  </td>
+ </tr>
+ <tr>
+  <td>errorCallback</td>
+  <td>Function</td>
+  <td>No</td>
+  <td>A function to call when the operation fails.</td>
+ </tr>
 </table>
 
 ## Return Value
@@ -87,12 +92,12 @@ For a successful OData query retrieveMultipleRecords operation, returns a promis
 For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
 
 ## Unsupported Attribute Types for OData query options in Mobile Offline
-The following [attribute types](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/entity-attribute-metadata#column-types) are not supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (e.g. `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
+The following [Column types](../../../../data-platform/entity-attribute-metadata.md#column-types) are not supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (e.g. `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
 
-- [MultiSelectPicklist](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.multiselectpicklistattributemetadata)
-- [File](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.fileattributemetadata)
-- [Image](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata)
-- [ManagedProperty](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.metadata.managedpropertyattributemetadata)
+- MultiSelectPicklist
+- File
+- Image
+- ManagedProperty
 - CalendarRules
 - PartyList
 - Virtual
@@ -114,10 +119,10 @@ The following table lists additional operations supported for each attribute typ
     <td>BigInt, Decimal, Double, Integer</td>
     <td>
       <ul>
-        <li>Greater Than (<code>gt</code>)</li>
-        <li>Greater Than or Equals (<code>gte</code>)</li>
-        <li>Less Than (<code>lt</code>)</li>
-        <li>Less Than or Equals (<code>lte</code>)</li>
+        <li>Greater Than (`gt`)</li>
+        <li>Greater Than or Equals (`gte`)</li>
+        <li>Less Than (`lt`)</li>
+        <li>Less Than or Equals (`lte`)</li>
       </ul>
     </td>
   </tr>
@@ -125,8 +130,8 @@ The following table lists additional operations supported for each attribute typ
     <td>Boolean, Customer</td>
     <td>
       <ul>
-        <li>In (<code>in</code>)</li>
-        <li>Not In (<code>not-in</code>)</li>
+        <li>In (`in`)</li>
+        <li>Not In (`not-in`)</li>
       </ul>
     </td>
   </tr>
@@ -134,14 +139,14 @@ The following table lists additional operations supported for each attribute typ
     <td>EntityName, Picklist, State, Status</td>
     <td>
       <ul>
-        <li>Like (<code>like</code>)</li>
-        <li>Not Like (<code>not-like</code>)</li>
-        <li>Begins With (<code>begins-with</code>)</li>
-        <li>Not Begin With (<code>not-begin-with</code>)</li>
-        <li>Ends With (<code>ends-with</code>)</li>
-        <li>Not End With (<code>not-end-with</code>)</li>
-        <li>In (<code>in</code>)</li>
-        <li>Not In (<code>not-in</code>)</li>
+        <li>Like (`like`)</li>
+        <li>Not Like (`not-like`)</li>
+        <li>Begins With (`begins-with`)</li>
+        <li>Not Begin With (`not-begin-with`)</li>
+        <li>Ends With (`ends-with`)</li>
+        <li>Not End With (`not-end-with`)</li>
+        <li>In (`in`)</li>
+        <li>Not In (`not-in`)</li>
       </ul>
     </td>
   </tr>
@@ -149,10 +154,10 @@ The following table lists additional operations supported for each attribute typ
     <td>Guid, Lookup</td>
     <td>
       <ul>
-        <li>In (<code>in</code>)</li>
-        <li>Not In (<code>not-in</code>)</li>
-        <li>Equals User Id (<code>eq-userid</code>)</li>
-        <li>Not Equals User Id (<code>ne-userid</code>)</li>
+        <li>In (`in`)</li>
+        <li>Not In (`not-in`)</li>
+        <li>Equals User Id (`eq-userid`)</li>
+        <li>Not Equals User Id (`ne-userid`)</li>
       </ul>
     </td>
   </tr>
@@ -160,12 +165,12 @@ The following table lists additional operations supported for each attribute typ
     <td>Money</td>
     <td>
       <ul>
-        <li>Greater Than (<code>gt</code>)</li>
-        <li>Greater Than or Equals (<code>gte</code>)</li>
-        <li>Less Than (<code>lt</code>)</li>
-        <li>Less Than or Equals (<code>lte</code>)</li>
-        <li>In (<code>in</code>)</li>
-        <li>Not In (<code>not-in</code>)</li>
+        <li>Greater Than (`gt`)</li>
+        <li>Greater Than or Equals (`gte`)</li>
+        <li>Less Than (`lt`)</li>
+        <li>Less Than or Equals (`lte`)</li>
+        <li>In (`in`)</li>
+        <li>Not In (`not-in`)</li>
       </ul>
     </td>
   </tr>
@@ -173,11 +178,11 @@ The following table lists additional operations supported for each attribute typ
     <td>Owner</td>
     <td>
       <ul>
-        <li>In (<code>in</code>)</li>
-        <li>Not In (<code>not-in</code>)</li>
-        <li>Equals User Id (<code>eq-userid</code>)</li>
-        <li>Not Equals User Id (<code>ne-userid</code>)</li>
-        <li>Equals User Or Team (<code>eq-useroruserteams</code>)</li>
+        <li>In (`in`)</li>
+        <li>Not In (`not-in`)</li>
+        <li>Equals User Id (`eq-userid`)</li>
+        <li>Not Equals User Id (`ne-userid`)</li>
+        <li>Equals User Or Team (`eq-useroruserteams`)</li>
       </ul>
     </td>
   </tr>
@@ -185,12 +190,12 @@ The following table lists additional operations supported for each attribute typ
     <td>String</td>
     <td>
       <ul>
-        <li>Like (<code>like</code>)</li>
-        <li>Not Like (<code>not-like</code>)</li>
-        <li>Begins With (<code>begins-with</code>)</li>
-        <li>Not Begin With (<code>not-begin-with</code>)</li>
-        <li>Ends With (<code>ends-with</code>)</li>
-        <li>Not End With (<code>not-end-with</code>)</li>
+        <li>Like (`like`)</li>
+        <li>Not Like (`not-like`)</li>
+        <li>Begins With (`begins-with`)</li>
+        <li>Not Begin With (`not-begin-with`)</li>
+        <li>Ends With (`ends-with`)</li>
+        <li>Not End With (`not-end-with`)</li>
       </ul>
     </td>
   </tr>
@@ -199,35 +204,35 @@ The following table lists additional operations supported for each attribute typ
     <td>DateTime</td>
     <td>
       <ul>
-        <li>On Or After (<code>on-or-after</code>)</li>
-        <li>On (<code>on</code>)</li>
-        <li>On Or Before (<code>on-or-before</code>)</li>
-        <li>Today (<code>today</code>)</li>
-        <li>Tomorrow (<code>tomorrow</code>)</li>
-        <li>Yesterday (<code>yesterday</code>)</li>
-        <li>Next 7 Days (<code>next-seven-days</code>)</li>
-        <li>Last 7 Days (<code>last-seven-days</code>)</li>
-        <li>Next Week (<code>next-week</code>)</li>
-        <li>Last Week (<code>last-week</code>)</li>
-        <li>This Week (<code>this-week</code>)</li>
-        <li>Next Month (<code>next-month</code>)</li>
-        <li>Last Month (<code>last-month</code>)</li>
-        <li>This Month (<code>this-month</code>)</li>
-        <li>Next Year (<code>next-year</code>)</li>
-        <li>Last Year (<code>last-year</code>)</li>
-        <li>This Year (<code>this-year</code>)</li>
-        <li>Last X Days (<code>last-x-days</code>)</li>
-        <li>Next X Days (<code>next-x-days</code>)</li>
-        <li>Last X Weeks (<code>last-x-weeks</code>)</li>
-        <li>Next X Weeks (<code>next-x-weeks</code>)</li>
-        <li>Last X Months (<code>last-x-months</code>)</li>
-        <li>Next X Months (<code>next-x-months</code>)</li>
-        <li>Last X Years (<code>last-x-years</code>)</li>
-        <li>Next X Years (<code>next-x-years</code>)</li>
-        <li>Greater Than (<code>gt</code>)</li>
-        <li>Greater Than Or Equal (<code>gte</code>)</li>
-        <li>Less Than (<code>lt</code>)</li>
-        <li>Less Than Or Equal (<code>lte</code>)</li>
+        <li>On Or After (`on-or-after`)</li>
+        <li>On (`on`)</li>
+        <li>On Or Before (`on-or-before`)</li>
+        <li>Today (`today`)</li>
+        <li>Tomorrow (`tomorrow`)</li>
+        <li>Yesterday (`yesterday`)</li>
+        <li>Next 7 Days (`next-seven-days`)</li>
+        <li>Last 7 Days (`last-seven-days`)</li>
+        <li>Next Week (`next-week`)</li>
+        <li>Last Week (`last-week`)</li>
+        <li>This Week (`this-week`)</li>
+        <li>Next Month (`next-month`)</li>
+        <li>Last Month (`last-month`)</li>
+        <li>This Month (`this-month`)</li>
+        <li>Next Year (`next-year`)</li>
+        <li>Last Year (`last-year`)</li>
+        <li>This Year (`this-year`)</li>
+        <li>Last X Days (`last-x-days`)</li>
+        <li>Next X Days (`next-x-days`)</li>
+        <li>Last X Weeks (`last-x-weeks`)</li>
+        <li>Next X Weeks (`next-x-weeks`)</li>
+        <li>Last X Months (`last-x-months`)</li>
+        <li>Next X Months (`next-x-months`)</li>
+        <li>Last X Years (`last-x-years`)</li>
+        <li>Next X Years (`next-x-years`)</li>
+        <li>Greater Than (`gt`)</li>
+        <li>Greater Than Or Equal (`gte`)</li>
+        <li>Less Than (`lt`)</li>
+        <li>Less Than Or Equal (`lte`)</li>
       </ul>
     </td>
   </tr>
