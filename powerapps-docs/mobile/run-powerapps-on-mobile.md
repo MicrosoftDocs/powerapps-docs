@@ -39,7 +39,7 @@ Since canvas apps can essentially be anything, there isn’t other help topics o
 
 ## Other mobile apps
 
-Depending on which app you're using there is other mobile apps available. The table outlines which mobile app you should use to run your apps.
+Depending on which app you're using there are other mobile apps available. The table below outlines which mobile app you should use to run your apps.
 
 
 | **Mobile App** | **Apps you can run** |
