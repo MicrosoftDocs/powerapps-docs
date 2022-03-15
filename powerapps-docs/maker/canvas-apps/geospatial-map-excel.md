@@ -2,10 +2,9 @@
 title: Insert pins from data source
 description: Add customized pins to your map control in Power Apps by using a dataset.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 ms.date: 3/2/2021
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -14,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -25,7 +24,7 @@ You can load a table that contains existing data into the map control. The contr
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
+2. In your app, [insert a map](geospatial-component-map.md). 
 
 
 ## Add pin data from an Excel workbook

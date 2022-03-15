@@ -2,15 +2,15 @@
 title: isDirty | Microsoft Docs
 description: Whether this record is dirty.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/12/2021
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 ---
 
 # isDirty

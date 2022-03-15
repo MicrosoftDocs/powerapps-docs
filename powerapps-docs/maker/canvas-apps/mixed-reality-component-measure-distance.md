@@ -1,12 +1,11 @@
 ---
 title: Use the Measure in MR control in Power Apps
-description: Digitally measure distances and create areas and shapes in the real world with augmented reality features in Power Apps.
+description: Digitally measure distances, areas, and freeform shapes in the real world with augmented reality features in Power Apps.
 author: anuitz
-
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/03/2021
+ms.date: 3/4/2022
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -14,133 +13,111 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
   - Alex-MSFT
 ---
 # Take measurements in mixed reality
 
-You can use the **Measure in MR** control in your app to let users measure distance, area, and volume. During the measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
+Use the **Measure in MR** control in a canvas app to measure distance, area, and volume in the real world. You can also create two- and three-dimensional freeform shapes and see how they fit in a real-world space.
 
-The control creates a button in your app. When app users select the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
+The **Measure in MR** control adds a button to your app. When a user selects the button, the app shows a live feed from the device camera. On-screen instructions direct the user to establish tracking by slowly panning the device from right to left across the surface to be measured. The user identifies a starting point and adds segments as needed until the measurement is complete. Dimensions of the measured space are overlaid on the camera feed.
 
+The user can submit the measurements for capture in the control's **Measurements** output properties. The user can also take screenshots while a space is measured. The screenshots are captured in the control's **Photos** output property.
 
-:::image type="content" source="./media/augmented-overview/measure-in-mixed-reality.png" alt-text="Photo showing a corner between two construction walls being measured with a mobile device.":::
-
-When the user exits the control, the measurements that were taken are captured in the **Measurements** and **MeasurementsDetailed** properties so they can be saved or stored.
-
-Screenshots taken during the mixed reality experience are stored in the **Photos** property for viewing within the app.
-
+:::image type="content" source="./media/augmented-overview/measure-in-mixed-reality.png" alt-text="A photo of a phone screen that shows dimensions overlaid on a corner in a room that's under construction.":::
 
 > [!TIP]
-> The mixed-reality controls work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.  
->
-> LIDAR-enabled devices will also result in better tracking.
+> The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
-## Use the control
+## Add a **Measure in MR** button to an app screen
 
-Insert the control into your app as you normally would for any other button control.
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
+1. Open the **Insert** tab and expand **Mixed Reality**.
+2. Select **Measure in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
-1. Open the **Insert** tab.
-2. Expand **Mixed reality**.
-3. Select the control **Measure in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+The control is a button that's labeled with an icon of a cube and the text *Measure in MR*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
 
-:::image type="content" source="./media/augmented-measure/augmented-measure.png" alt-text="Select Measure in MR.":::
-
-
-You can modify the control with many properties.
-
+:::image type="content" source="./media/augmented-measure/augmented-measure.png" alt-text="A screenshot of the Insert tab in Microsoft Power Apps Studio, which shows the Measure in MR control.":::
 
 ### Properties
 
-The following properties are on the control's **Measure in MR** pane on the **Properties** and **Advanced** tabs.
+Change the **Measure in MR** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
-:::image type="content" source="./media/augmented-measure/augmented-measure-properties.png" alt-text="The Measure in MR pane.":::
+:::image type="content" source="./media/augmented-measure/augmented-measure-properties.png" alt-text="A screenshot of a Measure in MR button under construction in Microsoft Power Apps Studio, shown alongside its properties.":::
 
-Some properties are only available under **More options** in the **Advanced** tab on the **Measure in MR** pane.
+| Property | Description | Type | Location |
+| - | - | - | - |
+| Text | Sets the button label text. | String | Properties; Advanced: **Text** |
+| Display type | Determines whether the button label shows an icon of a cube, text, or both. | Dropdown list | Properties; Advanced: **DisplayType** |
+| Unit of measurement | Sets the unit used for the dimensions. | Dropdown list | Properties; Advanced: **Units** |
+| Measurement type | Determines the kind of measurement the user can make, either *Distance*, *Area*, or *Volume* (area plus height or depth). | Dropdown list | Properties; Advanced: **MeasurementType** |
+| Box draw | Locks captured measurements to rectangular shapes. | Boolean | Properties; Advanced: **BoxDraw** |
+| Enable Shadows | Determines whether shadows are used to enhance the 3D effect when a shape is drawn. | Boolean | Properties; Advanced: **EnableShadows** |
+| Expected measurements (Items) | Identifies a [data source](./geospatial-map-excel.md) (**Items**) in the form of a table in an Excel workbook from which to get the measurements the user should capture. | Not applicable | Properties; Advanced: **Items** |
+| Visible | Shows or hides the button. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
+ Position | Places the upper-left corner of the button at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
+| Size | Determines the size of the button using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
+| Padding top | Sets the distance between the button label text and the top of the button. | Floating point number | Properties; Advanced: **[PaddingTop](./controls/properties-size-location.md)** |
+| Padding bottom | Sets the distance between the button label text and the bottom of the button. | Floating point number | Properties; Advanced: **[PaddingBottom](./controls/properties-size-location.md)** |
+| Padding left | Sets the distance between the button label text and the left edge of the button. | Floating point number | Properties; Advanced: **[PaddingLeft](./controls/properties-size-location.md)** |
+| Padding right | Sets the distance between the button label text and the right edge of the button. | Floating point number | Properties; Advanced: **[PaddingRight](./controls/properties-size-location.md)** |
+| Font | Sets the name of the family of fonts used for the button label text. | Dropdown list | Properties; Advanced: **[Font](./controls/properties-text.md)** |
+| Font size | Sets the size of the button label text. | Floating point number | Properties; Advanced: **[FontSize](./controls/properties-text.md)** |
+| Font weight | Sets the weight of the button label text, either *Bold*, *Lighter*, *Normal*, or *Semibold*. | Dropdown list | Properties; Advanced: **[FontWeight](./controls/properties-text.md)** |
+| Text alignment | Sets the horizontal alignment of the label text in the button, either *Center*, *Justify*, *Left*, or *Right*. | Not applicable | Properties; Advanced: **[TextAlignment](./controls/properties-text.md)** |
+| Vertical alignment | Sets the vertical alignment of the label text in the button, either *Bottom*, *Middle*, or *Top*. | Dropdown list | Properties; Advanced: **[VerticalAlign](./controls/properties-text.md)** |
+| Font style | Sets the style of the button label text, either *Italic*, *Underline*, *Strikethrough*, or none. | Not applicable | Properties; Advanced: **Italic**, **Underline**, **Strikethrough** |
+| Border radius | Determines the corner radius of the button border. | Floating point number | Properties; Advanced: **BorderRadius** |
+| [Color](./controls/properties-color-border.md) | Sets the colors of the button label text and the button background. | Not applicable | Properties; Advanced: **FillColor**, **TextColor** |
+| Border | Determines the style, width, and color of the button border. | Not applicable | Properties; Advanced: **[BorderStyle](./controls/properties-color-border.md)**, **[BorderThickness](./controls/properties-color-border.md)**, **[BorderFillColor](./controls/properties-color-border.md)** |
+| Disabled | Turns off the button but leaves it visible. | Boolean | Properties; Advanced: **Disabled** |
+| Disabled color | Sets the colors of the button label text, the button background, and the button border if **[DisplayMode](./controls/properties-core.md)** is **Disabled**. | Not applicable | Properties; Advanced: **DisabledContentColor**, **DisabledFillColor**, **DisabledBorderColor** |
+| Pressed color | Sets the colors of the button label text, the button background, and the button border when the user selects the button. | Not applicable | Properties; Advanced: **PressedContentColor**, **PressedFillColor**, **PressedBorderColor** |
+| Hover color | Sets the colors of the button label text, the button background, and the button border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverContentColor**, **HoverFillColor**, **HoverBorderColor** |
+| OnMixedRealitySelect | Contains code that runs when the user exits the measurement screen with new results. | Event | Advanced |
+| OnChange | Contains code that runs when a button property is changed. | Event | Advanced |
+| OnSelect | Contains code that runs when the user selects the button. | Event | Advanced |
+| ItemsLabels  | Identifies the column in **Items** that contains the labels for the measurements users should capture. | ColumnName | Advanced |
+| ItemsMeasurementType  | (Optional) Identifies the column in **Items** that contains a string  (*Distance*, *Area*, *Volume*, or *Freeform*) that specifies the type of measurement users should capture. | ColumnName | Advanced; see **MeasurementType** |
+| ItemsBoxDraw | (Optional) Identifies the column in **Items** that contains a string (*True* or *False*) that locks measurements to rectangular shapes.  | ColumnName | Advanced; see **BoxDraw** |
+| [Tooltip](./controls/properties-core.md) | Determines the text to display when the user hovers over a visual. | String | Advanced |
+| ContentLanguage | Determines the display language of the control, if it's different from the language used in the app. | String | Advanced |
+| [DisplayMode](./controls/properties-core.md) |  Determines whether the control allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
+| [TabIndex](./controls/properties-accessibility.md) | Specifies the order the control is selected if the user navigates the app using the Tab key. | Integer | Properties; Advanced: **Tab index** |
 
-Property | Description | Type | Location
-| - | - | - | -
-Unit of measurement | What unit the measurements should be shown and returned in. | Drop-down selection | **Properties** (also in **Advanced**)
-Measurement type | What type of measurement the user can make, whether point-to-point distance, a complete area, or a three-dimensional volume (area plus height or depth). | Drop-down selection | **Properties** (also in **Advanced**)
-Box Draw | Lock captured measurements to rectangular shapes by specifying only a width and a depth. | Boolean | **Properties** (also in **Advanced**)
-Expected Measurements (Items) | Data source (table) that lists a predefined set of measurements that you want the user to capture during a single session. You can map the labels you want to use for each measurement by using the _ItemsLabels_ property. | Not applicable | **Properties** (also in **Advanced**)
-ItemsLabels  | A column in _Items_ with the strings you want to use as the labels for the measurements you want users to capture. | ColumnName | **Advanced**
-ItemsMeasurementType  | (Optional) A column in _Items_ with strings that specify the measurement type overrides (distance, area, volume, freeform, or blank)  for the measurements you want users to capture.  | ColumnName | **Advanced**
-ItemsBoxDraw	| (Optional) A column in _Items_ that specifies the Box Draw overrides (true, false, or blank) for the measurements you want users to capture. 	| ColumnName | **Advanced**
-Measurements | Table describing the measured distances, volumes, and areas, composed of:<ul><li>Label - String that identifies the given measurement</li><li>Id - Number that uniquely identifies this measurement</li><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>Length - Number representing the total length of the perimeter or path of the measurement </li><li>BoundingWidth - Number representing minimum width in units that bounds the shape </li><li>BoundingDepth - Number representing the minimum depth in units that bounds the shape  </li><li>Area - Number representing the estimated area of the enclosed shape in units squared </li><li>Volume - Number representing the estimated volume of the enclosed shape in units cubed </li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Length - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>DirectionX - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>DirectionY - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>DirectionZ - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></ul> | Table | Not applicable (output property only)
-Photos | The photos captured during the mixed reality session.<ul><li>ImageURI - String indicating the uniform resource identifier (URI) where the saved photo is stored.</li><li>MimeType - String describing the Multipurpose Internet Mail Extensions (MIME) type for the photo (always image/jpeg).</li><li>FileSize - Number describing size of the photo in bytes.</li><li>Label - String that identifies the measurement associated with this photo or "" if unassociated.  This corresponds to the Label property in the returned Measurements Data Set.</li><br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable | Not applicable (output property only)
-OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
-OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
+### Output properties
 
-### Additional properties
+Your app can make use of more properties when a user interacts with the **View in MR** control. These are known as output properties. You can use these properties in other controls or to customize the app experience.
 
-**[BorderColor](./controls/properties-color-border.md)** – The color of a control's border.
-
-**[BorderStyle](./controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
-
-**[BorderThickness](./controls/properties-color-border.md)** – The thickness of a control's border.
-
-**[Color](./controls/properties-color-border.md)** – The color of text in a control.
-
-**[DisplayMode](./controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+| Property | Description |
+| - | - |
+| Photos | Captures, in a collection, information about photos the user takes while a space is measured. Use the collection to [upload mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). |
+| Measurements | Captures, in a table, the measured distances, volumes, and areas. |
+| Segments | Captures, in a table, information about segments in a measured object. |
 
 
-**[DisabledBorderColor](./controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+ The Measurements table has the following columns:
 
-**[DisabledColor](./controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+- **Label:** A string that identifies the measurement
+- **Id:** A number that uniquely identifies the measurement
+- **Units:** A string that identifies the unit of the measurement
+- **Height:** A number that represents the height of the measured volume (0 if a 2D area was measured)
+- **Length:** A number that represents the total length of the measured perimeter or path
+- **BoundingWidth:** A number that represents the minimum width that bounds the shape
+- **BoundingDepth:** A number that represents the minimum depth that bounds the shape  
+- **Area:** A number that represents the estimated area of the measured shape in units squared
+- **Volume:** A number that represents the estimated volume of the measured shape in units cubed
+  
+The Segments table has the following columns:
 
-**[DisabledFill](./controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+- **Length:** A number that represents the total distance of a segment in the specified units
+- **DirectionX:** A number that represents the X direction of the segment in world (3D) space
+- **DirectionY:** A number that represents the Y direction of the segment in world(3D) space (typically 0)
+- **DirectionZ:** A number that represents the Z direction of the segment in world (3D) space
 
-**[FillColor](./controls/properties-color-border.md)** – The background color of a control.
-
-**[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
-
-**[FontStyle](./controls/properties-text.md)** – The style of the text in the control: **None**, **Strikethrough**, **Underline**, or **Italic**.
-
-**[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
-
-**[FontWeight](./controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**
-
-**[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
-
-**[HoverBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
-
-**[HoverColor](./controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
-
-**[HoverFill](./controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
-
-**[PaddingBottom](./controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
-
-**[PaddingLeft](./controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
-
-**[PaddingRight](./controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
-
-**[PaddingTop](./controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
-
-**[PressedBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user selects that control.
-
-**[PressedColor](./controls/properties-color-border.md)** – The color of text in a control when the user selects that control.
-
-**[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user selects that control.
-
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
-
-**[TextAlignment](./controls/properties-text.md)** – The alignment of the text: **Center**, **Left**, **Right**, or **Justify**
-
-**[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
-
-**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**.
-
-**[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
-
-**[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
-
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
-
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
+Learn more about how to use output properties of the **Measure in MR** control in your apps: [Validate measurements in mixed reality using a spatial test filter](./mixed-reality-spatial-test.md)
 
 ## Other mixed reality controls
 

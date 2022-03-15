@@ -2,15 +2,15 @@
 title: retrieveMultipleRecords | Microsoft Docs
 description: Retrieves a collection of table records.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 824a53f9-c743-435a-9de2-8128846f3191
 ---
 
 # retrieveMultipleRecords

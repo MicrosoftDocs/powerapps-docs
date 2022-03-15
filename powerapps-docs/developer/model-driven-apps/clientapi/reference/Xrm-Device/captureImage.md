@@ -1,14 +1,13 @@
 ---
 title: "captureImage | MicrosoftDocs"
 description: Includes description and supported parameters for the captureImage method.
-ms.date: 09/08/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1b24e8b2-20af-4e75-8c00-1aa393c07aef
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
 search.app:

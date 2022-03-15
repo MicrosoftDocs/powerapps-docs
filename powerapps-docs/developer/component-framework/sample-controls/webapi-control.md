@@ -1,13 +1,12 @@
 ---
 title: " Web API component| Microsoft Docs" 
 description: "The web API component is designed to perform create, retrieve, update and delete actions." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: nkrb
 ---
 # Implementing Web API component
 

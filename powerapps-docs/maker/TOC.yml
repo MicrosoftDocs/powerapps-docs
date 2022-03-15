@@ -89,6 +89,8 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
+      - name: Create and join a Teams meeting from an appointment (preview)
+        href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
@@ -565,6 +567,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Use the Search pane (preview)
+          href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
         - name: Show dates and times
@@ -1361,6 +1365,8 @@
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
+          - name: Use custom connectors with the timeline control
+            href: ./model-driven-apps/custom-connectors-timeline-control.md
           - name: FAQs for the timeline control
             href: ./model-driven-apps/faqs-timeline-control.md
           - name: Quick view control properties
@@ -1573,6 +1579,12 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+  - name: 'Power Apps for Windows (preview)'
+    items:
+    - name: Install Power Apps for Windows (preview)
+      href: ../mobile/windows-app-install.md
+    - name: Use Power Apps for Windows (preview)
+      href: ../mobile/windows-app-use.md
 - name: Portals
   items:
     - name: Portals
@@ -1719,7 +1731,7 @@
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
-        - name: Configure choices column (preview)
+        - name: Configure choices column 
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
@@ -2294,7 +2306,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use settings (preview)
+        - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  
