@@ -44,11 +44,11 @@ Depending on which app you're using there is other mobile apps available. The ta
 
 | **Mobile App** | **Apps you can run** |
 |-------------------------|-------------------------|
-| [Power Apps mobile](run-powerapps-on-mobile.md#install-power-apps-mobile-app) (covered in this topic) | <ul></br><li>[Mode-driven Power Apps](/maker/model-driven-apps)</li><li>[Canvas apps](/maker/canvas-apps/)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamis 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
-| [Power Apps for Windows (preview)](windows-app-install.md) | <ul><li>[Mode-driven Power Apps](/maker/model-driven-apps)</li><li>[Canvas apps](/maker/canvas-apps/)</li></ul> |
-| [Dynamics 365 for phone and tables](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview?view=op-9-1)</li><li>Dynamics 365 for Tables will be deprecated in 2023. |
+| [Power Apps mobile](run-powerapps-on-mobile.md#install-power-apps-mobile-app) (covered in this topic) | <ul></br><li>[Mode-driven Power Apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamis 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
+| [Power Apps for Windows (preview)](windows-app-install.md) | <ul><li>[Mode-driven Power Apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
+| [Dynamics 365 for phone and tables](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview?view=op-9-1)</li> Note, Dynamics 365 for Tables will be deprecated in 2023. |
 | [Dynamics 365 Sales](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
-| [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service ( Dynamics 365 ) ](/dynamics365/field-service/overview)</li></ul> |
+| [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
 ## Required privileges
 
