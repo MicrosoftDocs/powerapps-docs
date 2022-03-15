@@ -157,7 +157,7 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
-## Data types ize limits for canvas apps
+## Data types size limits for canvas apps
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](maker/canvas-apps/functions/data-types.md#text-hyperlink-image-and-media).
 
