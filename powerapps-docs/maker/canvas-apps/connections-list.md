@@ -2,13 +2,12 @@
 title: Overview of connectors for canvas apps
 description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
-
 ms.topic: overview
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 09/20/2021
+ms.date: 03/15/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -59,7 +58,8 @@ For more information about how to customize your formula for custom updates, see
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
 
 > [!NOTE]
->  **Power Apps doesn't work with dynamic schema**. The phrase dynamic schema refers to the possibility that the same action may return a different table with different columns. Conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs. For actions with dynamic schema, the connector documentation shows **The outputs of this operation are dynamic.** as the return value. In contrast, Power Automate works with dynamic schema and might provide a work-around for your scenario.
+> To work with dynamic schema, you can use an **experimental** feature called **Dynamic schema**. Dynamic schema refers to the possibility that the same action may return a different table with different columns. Conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs, or an Azure DevOps instance may use custom fields that aren't available by default. For working with dynamic schema, the [connector documentation](/connectors) shows **The outputs of this operation are dynamic.** as the return value.
+> For more information about how to work with dynamic schema in Power Apps, see [working with dynamic schema in Power Apps (experimental)](working-with-dynamic-schema.md)
 
 ## Popular connectors
 
