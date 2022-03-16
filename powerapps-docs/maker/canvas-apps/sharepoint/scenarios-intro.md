@@ -54,7 +54,7 @@ Some additional samples and step-by-step guides available for different SharePoi
 
 - Install and configure the [Help Desk](../help-desk-install.md) sample in Power Apps.
 - Link lists using a [lookup field](../sharepoint-lookup-fields.md) in Power Apps.
-- Add list to a [collection](../create-update-collection.md#put-a-sharepoint-list-into-a-collection).
+- Add list to a [collection](../create-update-collection.md#put-a-list-into-a-collection).
 
 ### See also
 
