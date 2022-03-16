@@ -21,9 +21,9 @@ Microsoft is committed to make products and services accessible to everyone. For
 
 ## Accessibility standards
 
-Power Apps portals conforms to global accessibility standards to ensure the accessibility to everyone. The following accessibility standards and conformance reports provide more details about accessibility with portals.
+Power Apps portals conforms to global accessibility standards to ensure the accessibility. The following accessibility standards and conformance reports provide more details about accessibility with portals.
 
-For more details on each of the follow accessibility standards, you can download the related documents from [Microsoft Accessibility Conformance Reports](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).
+For more details on each of the follow accessibility standards, download the related documents from [Microsoft Accessibility Conformance Reports](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).
 
 Enter *power apps portals* in the **Search by Online Services** and then download the corresponding reports.
 
@@ -31,7 +31,7 @@ Enter *power apps portals* in the **Search by Online Services** and then downloa
 
 ### WCAG 2.1
 
-[Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/) covers a wide range of recommendations for making web content more accessible. Following the guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photo sensitivity, and combinations of disabilities, and some accommodation for learning disabilities and cognitive limitations; but won't address every user need for people with these disabilities. These guidelines address accessibility of web content on desktops, laptops, tablets, and mobile devices. Following these guidelines will also often make Web content more usable to users in general.
+[Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/) covers a wide range of recommendations for making web content more accessible. Following the guidelines will make content more accessible to a wider range of users, including accommodations for people with visual impairments, hearing loss, limited mobility, are unable to speak, blindness and low vision, deafness and hearing loss, limited movement, photo sensitivity, and cognative and developmental disbilities. These guidelines address accessibility of web content on desktops, laptops, tablets, and mobile devices. Following these guidelines will also often make Web content more easily accessible to users in general.
 
 Power Apps portals conforms to the WCAG 2.1 accessibility standard. For more details, download the **W3C Web Content Accessibility Guidelines (WCAG) 2.1 Conformance Statement for Power Apps portals** from the [Microsoft Accessibility Conformance reports](#accessibility-standards).
 
