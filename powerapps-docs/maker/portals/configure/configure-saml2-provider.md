@@ -2,7 +2,7 @@
 title: Configure a SAML 2.0 provider for portals
 description: Learn how to configure SAML 2.0 provider for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

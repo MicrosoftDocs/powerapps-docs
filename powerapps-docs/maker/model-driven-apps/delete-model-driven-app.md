@@ -3,7 +3,7 @@ title: "Delete a model-driven app | MicrosoftDocs"
 description: "Learn how to delete or remove a model-driven app from your Power Apps environment."
 keywords: ""
 ms.date: 02/14/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 

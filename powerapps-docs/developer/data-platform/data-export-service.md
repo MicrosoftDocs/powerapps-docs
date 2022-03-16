@@ -4,7 +4,7 @@ description: "Capabilities, prerequisites, API, and programming of the Data Expo
 ms.custom: ""
 ms.date: 12/02/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sabinn-msft" # GitHub ID
 ms.subservice: dataverse-developer

@@ -1,14 +1,13 @@
 ---
 title: "getStages (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getStages method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 05f2320e-f6fb-4fe1-88ee-67d57d921738
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

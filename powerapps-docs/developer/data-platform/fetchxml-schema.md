@@ -4,7 +4,7 @@ description: "The FetchXML query language is one available method to create data
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

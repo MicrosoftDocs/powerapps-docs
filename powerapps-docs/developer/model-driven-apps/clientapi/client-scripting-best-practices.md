@@ -1,15 +1,14 @@
 ---
 title: "Best practices: Client scripting in model-driven apps| MicrosoftDocs"
-ms.date: 10/19/2020
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 16271bd8-cfa8-4a7f-802a-60fbff7c3722
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

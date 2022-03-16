@@ -1,15 +1,13 @@
 ---
 title: "Collections (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Collections method.
-ms.date: 09/22/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 29ec134e-8fa5-4f88-a353-a3c15398eb37
-author: "Nkrb"
-ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
 search.app:

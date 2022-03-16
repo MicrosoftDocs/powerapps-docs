@@ -4,7 +4,7 @@ description: "Learn how to copy exported Dataverse data to dedicated SQL pool wi
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

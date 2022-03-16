@@ -4,7 +4,7 @@ description: "Learn about using string web resources to make localized strings a
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

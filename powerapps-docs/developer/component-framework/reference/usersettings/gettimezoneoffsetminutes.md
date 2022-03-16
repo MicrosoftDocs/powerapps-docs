@@ -2,15 +2,15 @@
 title: getTimeZoneOffsetMinutes | Microsoft Docs
 description: Gets the offset in minutes from UTC for the given date.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 ---
 
 # getTimeZoneOffsetMinutes

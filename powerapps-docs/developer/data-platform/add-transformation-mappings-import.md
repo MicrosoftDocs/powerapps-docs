@@ -4,7 +4,7 @@ description: "Transformation mapping enables optional modification of source dat
 ms.custom: ""
 ms.date: 03/15/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

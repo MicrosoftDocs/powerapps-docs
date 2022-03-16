@@ -2,11 +2,11 @@
 title: Create an app with address input and map controls (contains video)
 description: Learn about how to create apps using address input and map controls in canvas apps.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm-msft
-ms.date: 01/27/2022
+ms.reviewer: mduelae
+ms.date: 03/3/2022
 ms.author: anuitz
 search.audienceType:
   - maker
@@ -77,11 +77,11 @@ Your trial environment will now be created, including a Dataverse database and s
 
 Before we can use the Geospatial Services in canvas apps, an admin must enable access to the features for the environment where we want to create the app.
 
-To learn about how to enable **Geospatial services** in your environment, see [Enable the geospatial features for the environment](../geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To learn about how to enable **Geospatial services** in your environment, see [Enable the geospatial features for the environment](../geospatial-overview.md).
 
 ## Build a canvas app
 
-In this lesson, we'll start with creating an app and then, we'll create a header control to use within the app to standardize the look and feel of the header on different screens.
+We'll start with creating an app and then, we'll create a header control to use within the app to standardize the look and feel of the header on different screens.
 
 1. Create a [blank canvas app](../create-blank-app.md) in the environment you created [earlier](#create-a-trial-environment).
 

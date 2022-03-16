@@ -4,7 +4,7 @@ description: "Learn how to create and register a Dataverse plug-in using the Pow
 ms.custom: ""
 ms.date: 11/04/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer

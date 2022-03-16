@@ -4,7 +4,7 @@ description: "Learn how to edit system table messages"
 ms.custom: ""
 ms.date: 05/15/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

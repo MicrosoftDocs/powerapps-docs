@@ -2,7 +2,7 @@
 title: Meeting-screen template for canvas apps
 description: Understand how the meeting-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm

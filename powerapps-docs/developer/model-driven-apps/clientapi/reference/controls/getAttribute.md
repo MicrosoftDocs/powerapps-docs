@@ -1,14 +1,13 @@
 ---
 title: "getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Returns the column that the control is bound to.
-ms.date: 04/15/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 5ba037da-59f3-4e10-80f8-4e46d5410f81
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

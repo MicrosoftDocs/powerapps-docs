@@ -1,14 +1,13 @@
 ---
 title: "preventDefault (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the preventDefault method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9a8802ad-80aa-4386-a192-573280587546
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

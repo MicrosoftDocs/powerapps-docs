@@ -2,7 +2,7 @@
 title: Audio and Video controls in Power Apps
 description: Learn about the details, properties and examples of the audio and video controls in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 01/31/2022

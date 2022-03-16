@@ -2,11 +2,10 @@
 title: Sign up for Power Apps Developer Plan
 description: Sign up for the Power Apps Developer Plan to get a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse.
 author: alaug
-ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 02/02/2022
+ms.date: 03/11/2022
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -28,8 +27,6 @@ The plan enables you to:
 
 - Use a fully managed, scalable data platform with [Dataverse](/common-data-service/entity-reference/introduction), including support for common business application actions. Use out-of-the-box common tables or build your own data schema.
 
-- Create more environments to exercise application lifecycle management (coming soon).
-
 - Export the solutions you create in your developer environment, and [publish them on Microsoft AppSource](/powerapps/developer/data-platform/publish-app-appsource) so your customers can test-drive them.
 
 ## Improvements from the previous Power Apps Community Plan
@@ -40,7 +37,6 @@ Key changes include:
 
 - The ability to share apps with team members for development and testing purposes
 - Increased capacity allocations
-- The ability to create more environments to support ALM (application lifecycle management) scenarios (coming soon)
 
 > [!NOTE]
 > Existing Power Apps Community Plan users will also get all of these updates.
@@ -145,8 +141,6 @@ You can continue using your Power Apps Developer Plan for free as long as there'
 ### Can I get or create multiple developer environments?
 
 Currently, no. You can only have one developer environment, which is created for you by Power Apps when you sign up for the Developer Plan.
-
-The ability to create more environments to support ALM scenarios is coming soon. Stay tuned for more details.
 
 ### What's the difference between the Power Apps Plan Trial and Power Apps Developer Plan? Which one should I sign up for?
 

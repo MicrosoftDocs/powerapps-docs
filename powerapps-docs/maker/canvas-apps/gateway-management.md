@@ -2,7 +2,7 @@
 title: Manage an on-premises data gateway in Power Apps
 description: Learn about how to manage an on-premises data gateway and its connections.
 author: arthiriyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

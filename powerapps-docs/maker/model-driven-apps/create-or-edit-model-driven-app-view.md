@@ -2,7 +2,7 @@
 title: "Create and edit public model-driven app views | MicrosoftDocs"
 description: "Learn how to create or edit public or system model-driven app views."
 ms.date: 07/04/2021
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: Joel-Lindstrom

@@ -2,15 +2,14 @@
 title: UserSettings | Microsoft Docs
 description: Provides information about the current user settings.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: c237ff96-9268-4068-9d61-aea0bdc79fc2
 ---
 
 # UserSettings

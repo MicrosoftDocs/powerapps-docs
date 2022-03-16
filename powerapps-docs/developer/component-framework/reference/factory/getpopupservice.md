@@ -2,15 +2,15 @@
 title: getPopupService | Microsoft Docs
 description: Gets the popup service which helps to create popups and manage popups easily.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 878465d9-3e25-44df-ad7b-de50916fd9d2
 ---
 
 # getPopupService

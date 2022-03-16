@@ -3,7 +3,7 @@ title: Deploy the Regional Government Emergency Response and Monitoring soluti
 description: Provides provides detailed instructions for regional IT admins to deploy the Regional Government Emergency Response and Monitoring solution for their organization.
 author: pankajarora-msft
 manager: annbe
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/05/2020

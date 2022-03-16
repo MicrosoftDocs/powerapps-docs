@@ -3,7 +3,7 @@ title: "Perform conditional operations using the Web API (Microsoft Dataverse)| 
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
 ms.date: 05/04/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

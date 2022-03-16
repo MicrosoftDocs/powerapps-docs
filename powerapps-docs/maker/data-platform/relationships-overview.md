@@ -4,7 +4,7 @@ description: "Learn about table relationships in Power Apps"
 
 ms.date: 07/25/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

@@ -3,7 +3,7 @@ title: "Filter rows with facets| MicrosoftDocs"
 description: How to filter rows by using facets.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/8/2021

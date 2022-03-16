@@ -1,14 +1,13 @@
 ---
 title: "Tutorial: Write your first client script in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+ms.author: jdaly
+author: HemantGaur
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 73dfc13c-a18c-42fc-b511-a37896c2f893
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

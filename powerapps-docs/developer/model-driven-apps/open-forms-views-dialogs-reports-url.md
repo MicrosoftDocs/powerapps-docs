@@ -1,15 +1,13 @@
 ---
 title: "Open forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+ms.author: jdaly
+author: HemantGaur
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

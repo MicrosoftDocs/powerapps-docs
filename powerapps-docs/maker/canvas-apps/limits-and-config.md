@@ -2,7 +2,7 @@
 title: Canvas app system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for canvas apps built in Power Apps.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -105,6 +105,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| config.edge.skype.com | https | Retrieve feature flags for Power Apps |
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
