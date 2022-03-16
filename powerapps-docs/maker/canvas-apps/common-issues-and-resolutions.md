@@ -107,7 +107,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Changing the layout of SharePoint forms** (March 7, 2018)
 
-    While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
+    While customizing a SharePoint forms in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
 
 1. **Data Table control**
 
@@ -124,7 +124,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Column names with spaces**
 
-    If you're using a SharePoint list or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+    If you're using a list created using Microsoft Lists, or a SharePoint library, or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 1. **Changing a flow in a shared app**
 

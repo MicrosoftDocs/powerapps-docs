@@ -1,5 +1,5 @@
 ---
-title: Customize a SharePoint list or library form by using Power Apps (contains video)
+title: Customize a Microsoft Lists or SharePoint form by using Power Apps (contains video)
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
 author: wimcoor
 
@@ -21,9 +21,9 @@ ms.custom:
   - intro-internal
   - canvas
 ---
-# Customize a SharePoint list or library form by using Power Apps
+# Customize a Microsoft Lists or SharePoint form by using Power Apps
 
-You can easily customize the form for a SharePoint list or SharePoint document library by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
+You can easily customize the form for a list created using Microsoft Lists, or a SharePoint document library by opening Power Apps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the list for use by all of its users. In Power Apps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
 To follow the steps in this article, you'll create a list so that you can see how customization works, and then you can apply the same concepts to your own list.
 
@@ -32,7 +32,7 @@ To follow the steps in this article, you'll create a list so that you can see ho
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 > - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
-> - To access custom form, users must have access to the SharePoint list.
+> - To access custom form, users must have access to the list.
 
 Watch this video to learn how to customize a list form:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLK]
