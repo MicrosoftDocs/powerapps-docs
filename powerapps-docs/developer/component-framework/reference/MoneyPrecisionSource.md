@@ -2,16 +2,14 @@
 title: MoneyPrecisionSource in Microsoft Dataverse| Microsoft Docs
 description: Enumeration for money precision source.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 ---
 
 # MoneyPrecisionSource

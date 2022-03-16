@@ -1,14 +1,13 @@
 ---
 title: "getCurrentPosition| MicrosoftDocs"
 description: Includes description and supported parameters for the getCurrentPosition method.
-ms.date: 09/08/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 062a52d8-170c-4e98-b48a-ac99ec759f83
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
 search.app:
