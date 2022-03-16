@@ -53,8 +53,8 @@ For functional consultants, our job-task analysis research showed that everyone 
 
 ## Exam<a name="exam"></a>
 
-| Content | Description | Format | Length |
-|---------|-------------|--------|--------|
-| [Microsoft Power Platform Functional Consultant](/learn/certifications/exams/pl-200?wt.mc_id=learningredirect_certs-web-wwl)| This exam measures your ability to accomplish the following technical tasks: configure Microsoft Dataverse; create apps by using Power Apps; create and manage Power Automate; implement Power Virtual Agents chatbots; integrate Power Apps with other apps and services. | Exam | cost varies by region |
+| Content | Description | Format |
+|---------|-------------|--------|
+| [Microsoft Power Platform Functional Consultant](/learn/certifications/exams/pl-200?wt.mc_id=learningredirect_certs-web-wwl)| This exam measures your ability to accomplish the following technical tasks: configure Microsoft Dataverse; create apps by using Power Apps; create and manage Power Automate; implement Power Virtual Agents chatbots; integrate Power Apps with other apps and services. | Exam, cost varies by region |
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
