@@ -24,7 +24,7 @@ You can load a table that contains existing data into the map control. The contr
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md#use-the-control). 
+2. In your app, [insert a map](geospatial-component-map.md). 
 
 
 ## Add pin data from an Excel workbook

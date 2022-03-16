@@ -3,10 +3,11 @@ title: HTML Element | Microsoft Docs
 description: 
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +15,6 @@ ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: dcb8e71d-9a2f-4789-9a84-34673ccfd5c1
 ---
 
 # html element
