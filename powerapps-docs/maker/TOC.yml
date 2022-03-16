@@ -87,6 +87,8 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
+      - name: Create and join a Teams meeting from an appointment (preview)
+        href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
     - name: Work with email
@@ -225,8 +227,6 @@
       href: ./canvas-apps/expense-report-install.md
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
-    - name: Meeting Capture app
-      href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -275,6 +275,8 @@
               href: canvas-apps/connections/cloud-storage-blob-connections.md
             - name: Azure Blob Storage
               href: canvas-apps/connections/connection-azure-blob-storage.md
+            - name: Azure DevOps
+              href: canvas-apps/connections/azure-devops.md
             - name: Dynamics 365
               href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
@@ -321,6 +323,8 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+        - name: Working with dynamic schema (experimental)
+          href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
           - name: Add and configure controls
@@ -565,6 +569,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Use the Search pane (preview)
+          href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
         - name: Show dates and times
@@ -1361,6 +1367,8 @@
             href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md        
           - name: Set up the timeline control
             href: ./model-driven-apps/set-up-timeline-control.md
+          - name: Use custom connectors with the timeline control
+            href: ./model-driven-apps/custom-connectors-timeline-control.md
           - name: FAQs for the timeline control
             href: ./model-driven-apps/faqs-timeline-control.md
           - name: Quick view control properties
@@ -1573,6 +1581,12 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+  - name: 'Power Apps for Windows (preview)'
+    items:
+    - name: Install Power Apps for Windows (preview)
+      href: ../mobile/windows-app-install.md
+    - name: Use Power Apps for Windows (preview)
+      href: ../mobile/windows-app-use.md
 - name: Portals
   items:
     - name: Portals
@@ -1719,7 +1733,7 @@
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
-        - name: Configure choices column (preview)
+        - name: Configure choices column 
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
@@ -1785,6 +1799,8 @@
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Manage SSL certificates
+          href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md              
         - name: Use Portal Checker
@@ -1992,7 +2008,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md            
+            href: ./portals/component-framework-tutorial.md 
+          - name: "Tutorial: Configure rich text editor control on portals"
+            href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
             href: ./portals/component-framework-liquid.md
           - name: Implement a sample portal Web API component
@@ -2294,7 +2312,7 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
-        - name: Use settings (preview)
+        - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
           href: ./data-platform/create-connection-reference.md  

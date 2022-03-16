@@ -1,15 +1,13 @@
 ---
 title: "What are code components? | MicrosoftDocs"
 description: "Use the Power Apps component framework to create code components to provide enhanced user experiences for users to view and work with data in forms, views, and dashboards."
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 09/05/2019
-
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: overview
-ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 ms.subservice: pcf
-ms.author: "nabuthuk"
-author: Nkrb
 ---
 
 # What are code components
