@@ -164,7 +164,7 @@ With Dataverse search, the search box is always available at the top of every pa
 
 ## Limitations and known issues
 - The followiing is not supported:
-  - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location).
+  - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location)
   - [Push notifications](power-apps-mobile-notification.md)
   - [Guest access](../maker/canvas-apps/share-app-guests.md)
   - Pinning an app on Windows desktop
