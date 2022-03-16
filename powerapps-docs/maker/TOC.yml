@@ -1799,6 +1799,8 @@
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Manage SSL certificates
+          href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md              
         - name: Use Portal Checker
@@ -2006,7 +2008,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md            
+            href: ./portals/component-framework-tutorial.md 
+          - name: "Tutorial: Configure rich text editor control on portals"
+            href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
             href: ./portals/component-framework-liquid.md
           - name: Implement a sample portal Web API component
