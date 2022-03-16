@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/sample-meeting-capture.md",
+      "redirect_url": "open-and-run-a-sample-app",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/optimize-form-performance.md",
       "redirect_url": "design-performant-forms",
       "redirect_document_id": "false"
@@ -3112,7 +3117,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/online-integration-office-365.md",
-      "redirect_url": "../data-platform/online-integration-office-365",
+      "redirect_url": "../data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/online-integration-office-365.md",
+      "redirect_url": "../data-platform",
       "redirect_document_id": false
     },
     {

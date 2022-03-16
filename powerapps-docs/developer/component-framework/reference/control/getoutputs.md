@@ -1,14 +1,15 @@
 ---
 title: "getOutputs | MicrosoftDocs"
 description: It is called by the framework prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: ""
-ms.assetid: c83c3a09-f04e-4dc6-8ddf-ccd0b4cc080e
-ms.author: "nabuthuk"
-author: Nkrb
+
 ---
 # getOutputs
 
