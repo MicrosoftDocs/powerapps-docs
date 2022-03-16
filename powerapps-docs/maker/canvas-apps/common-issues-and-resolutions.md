@@ -154,7 +154,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
      For information about limitations when you use Excel as a data source, see [Cloud-storage connections](connections/cloud-storage-blob-connections.md#known-limitations).
 
-1. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
+1. **Microsoft Lists is supported but not SharePoint libraries, some types of list columns, or columns that support multiple values or selections**.
 
      For more information, see [SharePoint Online](connections/connection-sharepoint-online.md#known-issues).
 

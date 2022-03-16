@@ -1,6 +1,6 @@
 ---
 title: Customize a Microsoft Lists or SharePoint form by using Power Apps (contains video)
-description: Learn about how to use Power Apps to customize the form with which users create and update entries in a SharePoint list.
+description: Learn about how to use Power Apps to customize the form with which users create and update entries in a list.
 author: wimcoor
 
 ms.topic: conceptual
@@ -29,7 +29,7 @@ To follow the steps in this article, you'll create a list so that you can see ho
 
 > [!NOTE]
 > - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](intro-maker-portal.md#choose-an-environment). 
-> - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
+> - Custom forms for lists are only supported in generic lists and generic document libraries. List and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 > - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](/sharepoint/change-site-address#effects-of-changing-a-site-address).
 > - To access custom form, users must have access to the list.
@@ -39,9 +39,9 @@ Watch this video to learn how to customize a list form:
 
 ## Requirements
 
-The following table explains requirements for user type with actions specific to SharePoint list form customized using Power Apps.
+The following table explains requirements for user type with actions specific to list form customized using Power Apps.
 
-| User type | Customized SharePoint list form action | Requirements |
+| User type | Customized list form action | Requirements |
 | - | - | - |
 | Guest | Use | <ul> <li> View access to SharePoint site hosting the custom form. </li> </ul> |
 | Guest | Create | <ul> <li> Edit access to SharePoint site hosting the custom form. </li> <li> Membership of **Environment Maker** security role in the Power Platform environment used to customize the SharePoint site. <br> More information: [Power Apps support for B2B guest maker (preview)](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) </li> </ul> |
@@ -161,9 +161,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** How does a customized form differ from a standalone app that I create from SharePoint or Power Apps?
 
-**A:** If you customize the form for a SharePoint list, the form doesn't appear as an app in Power Apps Studio or Power Apps Mobile. You can open the form only from the list for which you created it.
+**A:** If you customize the form for a list, the form doesn't appear as an app in Power Apps Studio or Power Apps Mobile. You can open the form only from the list for which you created it.
 
-**Q:** When should I customize a form to manage data in a SharePoint list, and when should I create a standalone app?
+**Q:** When should I customize a form to manage data in a list, and when should I create a standalone app?
 
 **A:** Customize a form if you want your users to manage data without leaving SharePoint (for example, in a desktop browser). Create an app if you want your users to manage data outside of SharePoint (for example, on a mobile device).
 
@@ -219,13 +219,13 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** How do I share my form?
 
-**A:** You don't need to share the form—the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-form) so that others can use it.
+**A:** You don't need to share the form—the form inherits permissions from the list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-form) so that others can use it.
 
 **Q:** Who can customize forms?
 
 **A:** See [Requirements](#requirements).
 
-**Q:** Do I need a Power Apps license to create or use custom list forms?
+**Q:** Do I need a Power Apps license to create or use list forms?
 
 **A:** See [Requirements](#requirements).
 

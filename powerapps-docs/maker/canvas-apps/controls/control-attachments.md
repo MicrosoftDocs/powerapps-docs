@@ -19,20 +19,20 @@ contributors:
 
 # Attachments control in Power Apps
 
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse table.
+A control that allows users to download files to their device, as well as upload and delete files from a list or a Microsoft Dataverse table.
 
 ## Limitations
 
 The attachment control has these limitations:
 
-1. Attachments are supported with SharePoint lists and Dataverse tables.
+1. Attachments are supported with lists and Dataverse tables.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
 1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
 
 ## Description
-An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse table.
+An **Attachments** control lets you open, add, and delete files from a list created using Microsoft Lists or a Dataverse table.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
@@ -132,17 +132,17 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 
 ## Example
-1. Add a form to your app, and set a SharePoint list as its data source.
+1. Add a form to your app, and set a list as its data source.
 
 2. Select the **Display Form** control in the tree view on the left-hand side. You can also use **Edit Form** instead.
 
-3. Select **Data Source** in the Properties tab in the options panel on the right and then select the SharePoint list you connected to.
+3. Select **Data Source** in the Properties tab in the options panel on the right and then select the list you connected to.
 
 4. Select **Edit fields** in *Fields* section and select **Add field**. 
 
 5. Select the **Attachments** field and select **Add**.
 
-    The Attachments field associated with the SharePoint list will appear in the form.
+    The Attachments field associated with the list will appear in the form.
 
 [Learn how to add and configure a control](../add-configure-controls.md)
 
