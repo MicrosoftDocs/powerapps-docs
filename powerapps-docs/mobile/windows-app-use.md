@@ -163,16 +163,16 @@ With Dataverse search, the search box is always available at the top of every pa
 ![Search bar at the top](media/pam-windows-image13.png)
 
 ## Limitations and known issues
-- The followiing is not supported:
+- The following is not supported:
   - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location)
   - [Push notifications](power-apps-mobile-notification.md)
   - [Guest access](../maker/canvas-apps/share-app-guests.md)
   - Pinning an app on Windows desktop
   - AI Builder’s document processing 
-  - [Mixed relity controls](../maker/canvas-apps/mixed-reality-overview.md)
+  - [Mixed reality controls](../maker/canvas-apps/mixed-reality-overview.md)
   - [NFC function](../maker/canvas-apps/functions/function-readnfc.md)
 - You can't see favorites, recent, featured apps, or the app details.
 - User picture isn’t displayed in the app list
 - The **Optimize images for Upload** option is not available on Windows.
-- The barcode scanner doesn’t suppport **BarcodeType**, **PreferFrontCamera**, and **FlashlightEnabled** properties. For more information, see [Barcode scanner control in Power Apps - Power Apps](../maker/canvas-apps/controls/control-new-barcode-scanner.md). The barcode scanner does support [symbologiess](/windows/uwp/devices-sensors/pos-camerabarcode-symbologies).
+- The barcode scanner doesn’t support **BarcodeType**, **PreferFrontCamera**, and **FlashlightEnabled** properties. For more information, see [Barcode scanner control in Power Apps - Power Apps](../maker/canvas-apps/controls/control-new-barcode-scanner.md). The barcode scanner does support [symbologies](/windows/uwp/devices-sensors/pos-camerabarcode-symbologies).
 - You can only connect to the public cloud. Other datacenter regions such as Government Community Cloud (GCC) is not supported.
