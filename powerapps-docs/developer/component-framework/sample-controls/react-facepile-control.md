@@ -3,12 +3,11 @@ title: "React Facepile component| Microsoft Docs"
 description: "This sample shows how to use React to create components using Power Apps component framework." 
 ms.custom: ""
 author: ghurlman
+ms.date: 03/07/2022
+ms.reviewer: jdaly
 manager: kvivek
-ms.date: 06/19/2019
-
 ms.topic: "article"
-ms.author: "grhurl"
-ms.reviewer: nkrb
+ms.author: jdaly
 ---
 
 # Implementing the FacePile component
