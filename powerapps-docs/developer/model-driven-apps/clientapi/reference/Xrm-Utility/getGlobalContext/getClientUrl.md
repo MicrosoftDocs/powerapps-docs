@@ -42,8 +42,8 @@ globalContext.getClientUrl();
 ### Related topics
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)  
-[RetrieveCurrentOrganization function](https://docs.microsoft.com/dynamics365/customer-engagement/web-api/retrievecurrentorganization)  
-[RetrieveCurrentOrganizationRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.retrievecurrentorganizationrequest)  
+[RetrieveCurrentOrganization function](/dynamics365/customer-engagement/web-api/retrievecurrentorganization)  
+[RetrieveCurrentOrganizationRequest](/dotnet/api/microsoft.crm.sdk.messages.retrievecurrentorganizationrequest)  
 
 
 

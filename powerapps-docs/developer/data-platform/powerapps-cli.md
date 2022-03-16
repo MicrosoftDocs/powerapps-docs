@@ -72,7 +72,7 @@ To install standalone Power Platform CLI:
 1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
 
 1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
-   - Option 1: Install [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) or later.
+   - Option 1: Install [Visual Studio 2017](/visualstudio/install/install-visual-studio?view=vs-2017) or later.
    - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download)-->
 1. Download and install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
 
@@ -123,7 +123,7 @@ This table lists some of the common commands used in the CLI.
 
 ## Uninstall Microsoft Power Platform CLI 
 
-To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerPlatformCLI).
+To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](/powerapps/developer/data-platform/powerapps-cli).
 
 To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the uninstall button.
 
