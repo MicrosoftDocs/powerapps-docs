@@ -63,7 +63,7 @@ For model-driven apps, you can also select the name of the current app that you'
     > [!div class="mx-imgBorder"] 
     > ![From the list of apps, select an app.](media/pam-windows-image3.png)
 
-### Switch to another model-driven app
+## Switch to another model-driven app
 
 1.  Select the back button or select the current app name.
 
@@ -77,9 +77,9 @@ For model-driven apps, you can also select the name of the current app that you'
 
 ## Run an app
 
-Because [canvas apps](/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+Because [canvas apps](../maker/canvas-apps/getting-started.md) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
-You'll find below the documentation on how to run [model-driven apps](/user/use-model-driven-apps) on Power Apps for Windows.
+You'll find below the documentation on how to run [model-driven apps](../user/use-model-driven-apps.md) on Power Apps for Windows.
 
 ## Navigation in model-driven apps
 
@@ -158,19 +158,19 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 ## Use search
 
-With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](/user/relevance-search).
+With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](../user/relevance-search.md).
 
 ![Search bar at the top](media/pam-windows-image13.png)
 
-## Limitations and know issues
+## Limitations and known issues
 
--   The app doesn't support advanced controls such as [sensors](/maker/canvas-apps/how-to/mobile-sensors) and [location](/maker/canvas-apps/functions/signals#location).
+-   The app doesn't support advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location).
 
--   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
+-   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md).
 
 -   You can't pin an app on your Windows desktop.
 
 -   You can't see your favorites, recent, featured apps, or the app details.
 
--   The app doesn't support [guest access](/maker/canvas-apps/share-app-guests)
+-   The app doesn't support [guest access](../maker/canvas-apps/share-app-guests.md).
 
