@@ -177,4 +177,4 @@ With Dataverse search, the search box is always available at the top of every pa
 - User picture isn’t displayed in the app list
 - The **Optimize images for Upload** option is not available on Windows.
 - The barcode scanner doesn’t suppport **BarcodeType**, **PreferFrontCamera**, and **FlashlightEnabled** properties. For more information, see [Barcode scanner control in Power Apps - Power Apps](../maker/canvas-apps/controls/control-new-barcode-scanner.md). The barcode scanner does support [symbologiess](/windows/uwp/devices-sensors/pos-camerabarcode-symbologies). 
-- You can only connect to Public cloud support (no GCC, no Mooncake
+- You can only connect to the public cloud. Other datacenter regions such as Government Community Cloud (GCC) is not supported.
