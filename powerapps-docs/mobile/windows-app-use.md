@@ -63,7 +63,7 @@ For model-driven apps, you can also select the name of the current app that you'
     > [!div class="mx-imgBorder"] 
     > ![From the list of apps, select an app.](media/pam-windows-image3.png)
 
-### Switch to another model-driven app
+## Switch to another model-driven app
 
 1.  Select the back button or select the current app name.
 
@@ -166,11 +166,11 @@ With Dataverse search, the search box is always available at the top of every pa
 
 -   The app doesn't support advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location).
 
--   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
+-   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md).
 
 -   You can't pin an app on your Windows desktop.
 
 -   You can't see your favorites, recent, featured apps, or the app details.
 
--   The app doesn't support [guest access](../maker/canvas-apps/share-app-guests.md)
+-   The app doesn't support [guest access](../maker/canvas-apps/share-app-guests.md).
 
