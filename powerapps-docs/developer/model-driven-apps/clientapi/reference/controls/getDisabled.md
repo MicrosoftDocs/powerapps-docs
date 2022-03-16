@@ -1,14 +1,13 @@
 ---
 title: "getDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getDisabled method.
-ms.date: 04/19/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: b9a26d0e-c0fb-4239-b17b-df5c9aa84cb2
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
