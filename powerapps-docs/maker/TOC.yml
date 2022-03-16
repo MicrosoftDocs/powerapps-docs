@@ -275,6 +275,8 @@
               href: canvas-apps/connections/cloud-storage-blob-connections.md
             - name: Azure Blob Storage
               href: canvas-apps/connections/connection-azure-blob-storage.md
+            - name: Azure DevOps
+              href: canvas-apps/connections/azure-devops.md
             - name: Dynamics 365
               href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
@@ -321,6 +323,8 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+        - name: Working with dynamic schema (experimental)
+          href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
           - name: Add and configure controls
