@@ -2,7 +2,6 @@
 title: Customize a Microsoft Lists or SharePoint form by using Power Apps (contains video)
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a list.
 author: wimcoor
-
 ms.topic: conceptual
 ms.reviewer: tapanm
 ms.date: 02/04/2022
@@ -250,6 +249,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
     If the app type is SharePoint Form, the app is a customized form.
 
     ![List of customized forms.](./media/customize-list-form/customized-forms.png)
+
+    > [!NOTE]
+    > Customized forms for lists created using Microsoft Lists also show app type as **SharePoint Form**.
 
 ### See also
 
