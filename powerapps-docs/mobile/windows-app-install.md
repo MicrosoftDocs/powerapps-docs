@@ -50,7 +50,7 @@ Power Apps for Windows also won't run correctly if you have an older version of 
 1. On your device, go to **Settings** > **Apps** > **Apps & features**.
 2. Search for **WebView**. You need version **99.0 or later** installed to run Power Apps for Windows.
 
-In both cases, whether you have an older version or get an error, you need to update or install WebView2 Runtime.
+In both cases, whether you or get an error message or have an older version installed, you need to install WebView2 Runtime.
 
 You need administrator rights on your device to install WebView2. If you don't have admin rights, ask your administrator to install it for you. 
  
