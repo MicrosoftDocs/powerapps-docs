@@ -2,8 +2,8 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2022
-ms.reviewer: "jdaly"
+ms.date: 03/17/2022
+ms.reviewer: "pehecke"
 
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -214,6 +214,8 @@ namespace CustomAPIExamples
 
 For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step.
 
+See the example [Sample: IsSystemAdmin Custom API](org-service/samples/issystemadmin-customapi-sample-plugin.md)
+
 After you have registered the assembly, make sure to add the assembly and any types to your solution.
 
 
@@ -267,80 +269,7 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
 
 More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
 
-```csharp
-// Instantiate QueryExpression query
-var query = new QueryExpression("customapi");
-
-// Add columns to query.ColumnSet
-query.ColumnSet.AddColumns(
-"isprivate", 
-"description", 
-"displayname", 
-"executeprivilegename", 
-"iscustomizable", 
-"isfunction", 
-"allowedcustomprocessingsteptype", 
-"boundentitylogicalname", 
-"bindingtype", 
-"uniquename", 
-"workflowsdkstepenabled");
-
-// Add link-entity req
-var req = query.AddLink(
-"customapirequestparameter", 
-"customapiid", 
-"customapiid", 
-JoinOperator.LeftOuter);
-
-req.EntityAlias = "req";
-
-// Add columns to req.Columns
-req.Columns.AddColumns(
-"description", 
-"displayname", 
-"iscustomizable", 
-"logicalentityname", 
-"name", 
-"uniquename", 
-"type", 
-"isoptional");
-
-// Add link-entity query_customapiresponseproperty
-var query_customapiresponseproperty = query.AddLink(
-"customapiresponseproperty", 
-"customapiid", 
-"customapiid", 
-JoinOperator.LeftOuter);
-
-// Add columns to query_customapiresponseproperty.Columns
-query_customapiresponseproperty.Columns.AddColumns(
-"description", 
-"displayname", 
-"iscustomizable", 
-"logicalentityname", 
-"name", 
-"uniquename", 
-"type");
-
-// Add link-entity plugintype
-var plugintype = query.AddLink(
-"plugintype", 
-"plugintypeid", 
-"plugintypeid", 
-JoinOperator.LeftOuter);
-
-plugintype.EntityAlias = "plugintype";
-
-// Add columns to plugintype.Columns
-plugintype.Columns.AddColumns(
-"name", 
-"assemblyname", 
-"version", 
-"plugintypeid", 
-"typename");
-```
-
-# [FetchXml](#tab/fetchxml)
+# [FetchXML](#tab/fetchxml)
 
 More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
 

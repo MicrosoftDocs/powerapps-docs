@@ -61,7 +61,7 @@ Navigate( CustomPage2  )
 
 ### Navigate to the default view of the table
 
-To navigate to the default view of the table, passed table name as the first parameter.
+To navigate to the default view of the table, pass table name as the first parameter.
 
 ```powerappsfl
 Navigate( Accounts )
