@@ -45,7 +45,7 @@ If you don't have WebView2 Runtime installed, you'll get this error message: **U
 > [!div class="mx-imgBorder"]
 > ![WebView2 Runtime errow.](media/webview2.png "WebView2")
 
-If have an older version of WebView2 Runtime then Power Apps (Preview) for Windows won't run correctly. To check which version of WebView2 that you have installed; go to **Settings** > **Apps** > **Apps & features**. Search for **WebView** and verify that you have version **99.0 or later** installed.
+If have an older version of WebView2 Runtime then Power Apps for Windows won't run correctly. To check which version of WebView2 that you have installed; go to **Settings** > **Apps** > **Apps & features**. Search for **WebView** and verify that you have version **99.0 or later** installed.
 
 In both cases to fix the issue, you need to install WebView2 Runtime.
 
