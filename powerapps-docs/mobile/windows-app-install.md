@@ -45,9 +45,7 @@ If you get an **Update Microsoft Edge** error message when you're installing Pow
 > [!div class="mx-imgBorder"]
 > ![WebView2 Runtime errow.](media/webview2.png "WebView2")
 
-Power Apps for Windows also won't run correctly if you have an older version of WebView2 installed. 
-
-Follow these steps to see which version of WebView2 you have installed:
+Power Apps for Windows also won't run correctly if you have an older version of WebView2 installed. Follow these steps to see which version you have installed:
 
 1. On your device, go to **Settings** > **Apps** > **Apps & features**.
 2. Search for **WebView**. You need version **99.0 or later** installed to run Power Apps for Windows.
