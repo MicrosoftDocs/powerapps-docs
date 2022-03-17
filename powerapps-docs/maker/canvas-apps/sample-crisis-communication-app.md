@@ -88,7 +88,7 @@ Data for the app is stored in lists, so the first step is to create a new ShareP
 1. Add additional owners for the site (optional).
 1. Select **Finish**.
 
-### Create lists in Microsoft Lists for the app
+### Create lists in Microsoft Lists
 
 The app uses multiple lists to store its data. You can use the DeploySPLists flow, available from the downloaded [assets package](#prerequisites), to automatically create these lists.
 
