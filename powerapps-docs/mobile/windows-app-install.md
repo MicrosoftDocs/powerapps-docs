@@ -53,9 +53,9 @@ Follow these steps to see which version you have installed on your device:
 1. Go to **Settings** > **Apps** > **Apps & features**.
 2. Search for **WebView**. You need version **99.0 or later** installed to run Power Apps for Windows.
 
-In both cases, wheater you have an older version or you get an error, you need to update or install WebView2 Runtime.
+In both cases, whether you have an older version or get an error, you need to update or install WebView2 Runtime.
 
-To update or install WebView2 you need administrator rights on your devcie. If you don't have administrator rights, then ask your administrator to install it for you. 
+To update or install WebView2 you need administrator rights on your device. If you don't have administrator rights, then ask your administrator to install it for you. 
  
 1. [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 2. Download version **99.0 or later**. Installing an earlier version may cause Power Apps to crash.
