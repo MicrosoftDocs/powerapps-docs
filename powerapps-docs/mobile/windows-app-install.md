@@ -33,24 +33,23 @@ Install Power Apps for Windows to run model-driven app or canvas app on your Win
 
 ## Install the app
 
-1. Go to the Microsoft Store and install [Power Apps (Preview)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) for Windows.
-   > [!NOTE]
-   > If you run into issues during the installation process, follow the steps in the next section: [WebView2 Runtime](windows-app-install.md#webview2-runtime)
-  
+1. Go to the Microsoft Store and install [Power Apps (Preview)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) for Windows.  
 2. When the app is installed, open it and [sign in](windows-app-use.md). 
+> [!NOTE]
+> If you run into issues during the installation process or the app closes without warning, follow the steps in the next section: [WebView2 Runtime](windows-app-install.md#webview2-runtime)
 
 ## Webview2 Runtime
 
-If you don't have WebView2 Runtime installed, you'll get this error message: **Update Microsoft Edge**
+If you get an **Update Microsoft Edge** error message when you're installing Power Apps for Windows, this mean you don't have WebView2 Runtime on your device.
 
 > [!div class="mx-imgBorder"]
 > ![WebView2 Runtime errow.](media/webview2.png "WebView2")
 
 Power Apps for Windows also won't run correctly if you have an older version of WebView2 Runtime installed. 
 
-Follow these steps to see which version you have installed on your device:
+Follow these steps to see which version you of WebView2 installed:
 
-1. Go to **Settings** > **Apps** > **Apps & features**.
+1. On your device, go to **Settings** > **Apps** > **Apps & features**.
 2. Search for **WebView**. You need version **99.0 or later** installed to run Power Apps for Windows.
 
 In both cases, whether you have an older version or get an error, you need to update or install WebView2 Runtime.
