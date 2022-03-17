@@ -48,7 +48,7 @@ To enable the rich text editor with default values on any new text column, you c
 1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
 
    > [!NOTE]
-   > The parameter in the URL is required to see the new **Format** option in the maker experience.
+   > The parameter in the URL is required to display the new **Format** option in the maker experience.
 1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.
