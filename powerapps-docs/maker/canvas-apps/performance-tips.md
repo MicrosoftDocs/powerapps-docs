@@ -107,7 +107,7 @@ For an example of delegable functions, consider an ID column defined as the **Nu
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
-| ``Filter ('Llist data source', ID = 123 )`` | Yes        |
+| ``Filter ('List data source', ID = 123 )`` | Yes        |
 | ``Filter(`List data source', ID ="123")``  | No         |
 
 Because we assume that the ID column in SharePoint is defined with the data type of **Number**, the right-side value should be a numeric variable instead of a string variable. Otherwise, this mismatch might trigger the formula to be non-delegable.

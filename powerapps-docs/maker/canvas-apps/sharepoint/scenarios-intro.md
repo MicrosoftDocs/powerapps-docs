@@ -45,7 +45,7 @@ In addition to the SharePoint integration scenarios, refer to the following arti
 | [SharePoint Connectors documentation](/connectors/sharepointonline/) | SharePoint connector documentation with list of available regions and products. |
 | [Power Apps SharePoint connector documentation](../connections/connection-sharepoint-online.md) | An introduction to the use of SharePoint connector in Power Apps with basic example. |
 | [Create an app from SharePoint](../app-from-sharepoint.md) | Create a canvas app from SharePoint quickly. |
-| [List form integration](../customize-list-form.md) | Understand Llist integration and [customization](../sharepoint-form-integration.md). |
+| [List form integration](../customize-list-form.md) | Understand list integration and [customization](../sharepoint-form-integration.md). |
 | [SharePoint Online integration business process scenario](../sharepoint-scenario-intro.md) | An end-to-end walkthrough of a business process scenario for integrating SharePoint Online with Power Apps, Power Automate, and Power BI.
 
 ## Other SharePoint examples
