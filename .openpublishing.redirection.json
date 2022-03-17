@@ -1601,8 +1601,8 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/limits-and-config.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/limits-and-config",
+      "source_path": "powerapps-docs/maker/canvas-apps/limits-and-config.md",
+      "redirect_url": "/powerapps/limits-and-config",
       "redirect_document_id": "false"
     },
     {
