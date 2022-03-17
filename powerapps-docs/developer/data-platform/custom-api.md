@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2021
+ms.date: 03/17/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -211,6 +211,8 @@ namespace CustomAPIExamples
 
 For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step.
 
+See the example [Sample: IsSystemAdmin Custom API](org-service/samples/issystemadmin-customapi-sample-plugin.md)
+
 After you have registered the assembly, make sure to add the assembly and any types to your solution.
 
 
@@ -218,7 +220,7 @@ After you have registered the assembly, make sure to add the assembly and any ty
 
 You can use the following queries to retrieve data about Custom APIs.
 
-### Web API
+# [Web API](#tab/webapi)
 
  More information: [Query Data using the Web API](webapi/query-data-web-api.md)
 
@@ -261,7 +263,7 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
     assemblyname)
 ```
 
-### FetchXml
+# [FetchXML](#tab/fetchxml)
 
 More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
@@ -309,7 +311,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
 </fetch>
 ```
 
-### Using SQL
+# [SQL](#tab/sql)
 
 More information: [Use SQL to query data (Preview)](dataverse-sql-query.md)
 
@@ -358,6 +360,7 @@ FROM   customapi AS api
        plugintype AS type
        ON api.plugintypeid = type.plugintypeid
 ```
+---
 
 ## Localized Label values
 
