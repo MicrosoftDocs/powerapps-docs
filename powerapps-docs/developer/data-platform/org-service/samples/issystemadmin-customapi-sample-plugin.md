@@ -31,14 +31,14 @@ To run the code found in this sample, you must first create a Custom API in your
 
 ### Import the managed solution file
 
-The `IsSystemAdminFunction_1_0_0_0_managed.zip` in this folder contains the `sample_IsSystemAdmin` Custom API that uses this code. You can simply import this solution file to create the Custom API in your organization.  See [Import solutions](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) for instructions.
+The `IsSystemAdminFunction_1_0_0_0_managed.zip` in this folder contains the `sample_IsSystemAdmin` Custom API that uses this code. You can simply import this solution file to create the Custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
 
 After you are finished testing, delete the managed solution to remove the Custom API.
 
 ### Create the Custom API
 
 You can create the Custom API yourself and set the plug-in assembly created by this code. 
-There are several ways to create Custom API, and they are documented here: [Create and use Custom APIs](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/custom-api)
+There are several ways to create Custom API, and they are documented here: [Create and use Custom APIs](../../custom-api.md)
 
 This Custom API is defined with the following data:
 
