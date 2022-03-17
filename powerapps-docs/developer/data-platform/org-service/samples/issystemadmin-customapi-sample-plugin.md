@@ -85,7 +85,7 @@ For information about the values passed see these topics:
 
 This Custom API is a function bound to the [User (SystemUser) table](../../reference/entities/systemuser.md). It has a single boolean response property `HasRole` which will return `true` when the user has the System Administrator security role.
 
-After you create the create the Custom API as defined above, build this .NET Class Library project to generate a plug-in assembly named `IsSystemAdminCustomAPI.dll`. This assembly will have a single plug-in type named `PowerApps.Samples.IsSystemAdmin`.
+After you create the Custom API as defined above, build this .NET Class Library project to generate a plug-in assembly named `IsSystemAdminCustomAPI.dll`. This assembly will have a single plug-in type named `PowerApps.Samples.IsSystemAdmin`.
 
 You must register the plug-in assembly created by using the Plug-in registration tool as described here: [Register plug-in](../../tutorial-write-plug-in.md#register-plug-in)
 
