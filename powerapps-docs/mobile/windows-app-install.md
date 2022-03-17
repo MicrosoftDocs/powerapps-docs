@@ -52,7 +52,7 @@ If you have an older version or you get an error message, in both cases you need
 
 ### Install Webview2 Runtime
 
-You need administrator rights on your Windows device to install WebView2. If you don't have administrator rights, then your administrator will need to install it for you. Without WebView2 Runtime, you won't be able to run your apps on Power Apps for Windows.
+You need administrator rights on your Windows device to install WebView2. If you don't have administrator rights, then your administrator will need to install it for you. 
 
 1. [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 2. Download version **99.0 or later**. Installing an earlier version may cause Power Apps to crash.
