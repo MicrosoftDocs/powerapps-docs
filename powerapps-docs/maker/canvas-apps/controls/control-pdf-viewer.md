@@ -2,11 +2,10 @@
 title: PDF viewer control (experimental) in Power Apps
 description: Learn about the details, properties and examples of the PDF viewer control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/10/2020
+ms.date: 03/17/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -24,7 +23,8 @@ An experimental control that shows the content of a PDF file.
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
-1. The PDF viewer control only supports PDFs that conform to the PDF32000 specification.
+
+1. The PDF viewer control only supports PDF files that conform to the PDF32000 specification.
 
 1. The security architecture of Power Apps requires the PDF Viewer to support only HTTPS links, not HTTP.  
 
