@@ -55,8 +55,9 @@ In both cases, whether you get an error message or have an older version install
 You need administrator rights on your device to install WebView2. If you don't have admin rights, ask your administrator to install it for you. 
  
 1. [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
-2. Download version **99.0 or later**. Installing an earlier version may cause Power Apps to crash.
-3. Under **Evergreen Bootstrapper**, select **Download**.
-4. Go over the license terms and privacy statement and then select **Accept and Download**.
-5. Run **MicroEdgeWebview2Setup.exe**.
+2. Under **Evergreen Bootstrapper**, select **Download**. Download version **99.0 or later**. Installing an earlier version may cause Power Apps to crash.
+   > [!div class="mx-imgBorder"]
+   > ![Download WebView2 Runtime.](media/webview-install.png "Download WebView2")
+3. Go over the license terms and privacy statement and then select **Accept and Download**.
+4. Run **MicroEdgeWebview2Setup.exe**.
 
