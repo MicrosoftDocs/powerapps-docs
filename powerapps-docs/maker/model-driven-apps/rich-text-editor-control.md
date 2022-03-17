@@ -42,10 +42,13 @@ For a full list of default options, see [Use the rich text editor toolbar](#use-
 Create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
 
 ### Simple configuration
- 
-To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). Note: The parameter in the URL is required to be able to see the new **Format** option in the maker experience.
+To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps:
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
+
+   > [!NOTE]
+> The parameter in the URL is required to see the new **Format** option in the maker experience.
 1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.
