@@ -10,6 +10,8 @@
     href: powerapps-preview-program.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: System requirements, limits, and configuration
+    href: ../limits-and-config.md
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
@@ -25,7 +27,7 @@
     - name: Functional consultant
       href: ../learning-catalog/functional-consultant.md
     - name: Solution architect
-      href: ../learning-catalog/solution-architect.md
+      href: ../learning-catalog/solution-architect.md  
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -215,8 +217,6 @@
     href: ./canvas-apps/index.yml
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
-  - name: System requirements, limits, and configuration
-    href: ./canvas-apps/limits-and-config.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
   - name: Explore sample apps
@@ -2455,6 +2455,8 @@
           href: ../teams/use-the-fluent-ui-controls.md
     - name: Create additional apps
       href: ../teams/create-additional-apps.md
+    - name: Create apps from lists in Teams
+      href: ../teams/create-apps-lists.md
     - name: Work with Dataverse for Teams
       items:
         - name: Overview
