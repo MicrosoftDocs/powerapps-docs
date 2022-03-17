@@ -1,10 +1,10 @@
 ---
-title: Create an app using the Lists tab in Microsoft Teams
-description: Learn about how to create an app using the Lists tab in Microsoft Teams
+title: Create an app from a list in Microsoft Teams
+description: Learn about how to create an app from a list in Microsoft Teams
 author: Steven-Jia
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/16/2022
+ms.date: 03/17/2022
 ms.subservice: teams
 ms.author: jiawen
 ms.reviewer: tapanm
@@ -14,9 +14,9 @@ contributors:
   - Steven-Jia
 ---
 
-# Create an app using the Lists tab in Microsoft Teams
+# Create an app from a list in Microsoft Teams
 
-You can create an app from within the [Lists](https://support.microsoft.com/office/create-a-list-in-a-teams-channel-7d2538c0-0177-4dcc-8e4c-44d218fc5a85) tab in a Microsoft Teams channel.
+You can create an app from within a [list in a Microsoft Teams channel](https://support.microsoft.com/office/create-a-list-in-a-teams-channel-7d2538c0-0177-4dcc-8e4c-44d218fc5a85).
 
 > [!TIP]
 > To learn more about the **Lists** app in Teams, go to [Overview of the Lists app in Microsoft Teams](/microsoftteams/manage-lists-app#overview-of-lists).
