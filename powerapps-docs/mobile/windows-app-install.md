@@ -48,7 +48,7 @@ If you don't have WebView2 Runtime installed, you'll get this error message: **U
 
 If you have an older version of WebView2 Runtime, then Power Apps for Windows won't run correctly. To check the version, go to **Settings** > **Apps** > **Apps & features** > search for **WebView**. You need version **99.0 or later** installed to run Power Apps for Windows.
 
-Whether you have an older version or get an error message, in both cases you need to WebView2 Runtime.
+Whether you have an older version or get an error message, in both cases you need to install WebView2 Runtime.
 
 ### Install Webview2 Runtime
 
