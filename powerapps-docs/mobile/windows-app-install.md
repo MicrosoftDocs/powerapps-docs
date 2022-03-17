@@ -40,7 +40,7 @@ Install Power Apps for Windows to run model-driven app or canvas app on your Win
 
 ## Webview2 Runtime
 
-If you get an **Update Microsoft Edge** error message when you're installing Power Apps for Windows, this mean you don't have WebView2 Runtime on your device.
+If you get an **Update Microsoft Edge** error message when you're installing Power Apps for Windows, this means you don't have WebView2 Runtime on your device.
 
 > [!div class="mx-imgBorder"]
 > ![WebView2 Runtime errow.](media/webview2.png "WebView2")
