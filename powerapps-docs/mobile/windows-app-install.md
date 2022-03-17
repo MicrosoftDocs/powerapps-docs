@@ -49,7 +49,7 @@ If have an older version of WebView2 Runtime then Power Apps (Preview) for Windo
 
 In both cases to fix the issue, you need to install WebView2 Runtime.
 
-### install Webview2 Runtime
+### Install Webview2 Runtime
 
 You need administrator rights on your Windows device to install WebView2. If you don't have administrator rights, then your administrator will need to install it for you. Without WebView2 Runtime, you won't be able to run your apps on Power Apps for Windows.
 
