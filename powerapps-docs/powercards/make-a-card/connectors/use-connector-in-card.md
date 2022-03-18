@@ -1,4 +1,18 @@
-﻿# Flow in Power Cards – Get a Prefilled Card
+﻿---
+title: "Use a connector in a card"
+description: "Learn how to add one connector to your card, and walk through an example"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, connectors"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
+# Use a connector in a card
 
 In this tutorial, you'll learn how to ask a user for their name and then show that name in the title of a card.
 

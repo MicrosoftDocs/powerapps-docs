@@ -1,3 +1,17 @@
+---
+title: "Compound Shopping List"
+description: "Create a compound shopping list card, using more features of power cards"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
 # Compound List Item
 
 When you see a list of items in a user interface, it's common for each item to be made up of several UI elements – for example a picture, a title, and a summary.

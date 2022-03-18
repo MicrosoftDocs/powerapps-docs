@@ -1,4 +1,18 @@
-﻿# Create an Environment in Power Cards
+﻿---
+title: "Create an environment in Cards"
+description: "Learn how to create an environment in cards for your team"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
+# Create an Environment in Power Cards
 
 This procedure presumes you've downloaded the cards zip file.
 

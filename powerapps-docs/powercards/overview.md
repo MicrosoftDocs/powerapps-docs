@@ -1,4 +1,18 @@
-﻿# Power Apps Cards Overview
+﻿---
+title: "Power Cards overview"
+description: "Get a quick overview of Power Cards as a product and what issues this product can help you solve"
+keywords: "Power Cards, Power Apps, Cards, overview"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
+# Power Cards Overview
 
 ## What are Power Apps Cards?
 

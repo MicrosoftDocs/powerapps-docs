@@ -1,4 +1,18 @@
-﻿# Intro to Card Elements
+﻿---
+title: "Intro to Card elements"
+description: "Learn about basic elements of a card by creating a simple card"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
+# Intro to Card Elements
 
 In this tutorial, you'll learn how to ask a user for their name and then show that name in the title of a card.
 

@@ -1,6 +1,20 @@
-# Power Apps Cards Designer Overview
+---
+title: "Cards Designer overview"
+description: "Learn about the designer in Power Cards to confidently create cards"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
 
-## What is Power Apps Cards Designer?
+# Cards Designer overview
+
+## What is the Cards Designer?
 
 The Power Apps Cards Designer is where Excel-level users can build out cards to suit their own needs, enabling them to optimize and automate business user tasks and to create actionable scenarios in interactive and easy-to-make cards. The Designer builds off of the designer for Adaptive Cards, introducing a few new concepts:
 
@@ -13,20 +27,14 @@ The Power Apps Cards Designer is where Excel-level users can build out cards to 
 
 The Designer is made up of the following elements:
 
-- [Power Apps Cards Designer Overview](#power-apps-cards-designer-overview)
-  - [What is Power Apps Cards Designer?](#what-is-power-apps-cards-designer)
-  - [What's in the Designer](#whats-in-the-designer)
-    - [Navigation](#navigation)
-    - [Tool panel](#tool-panel)
-      - [Elements](#elements)
-      - [Inputs](#inputs)
-      - [Containers](#containers)
-    - [Card canvas](#card-canvas)
-    - [Property pane](#property-pane)
-    - [PowerFX editor](#powerfx-editor)
-    - [Play button](#play-button)
+- Navigation
+- Tool panel
+- Card canvas
+- Property pane
+- PowerFX editor
+- Play button
 
-   :::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Power Apps Cards Designer with elements highlighted." border="false":::
+:::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Power Apps Cards Designer with elements highlighted." border="false":::
 
 ### Navigation
 

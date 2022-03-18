@@ -1,3 +1,17 @@
+---
+title: "Use connectors"
+description: "Create a card that uses connectors"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
 # Use Connectors
 
 In this tutorial, you'll learn how to build a card that utilizes the Bing Connector to add search query results to a card. You'll also learn about:

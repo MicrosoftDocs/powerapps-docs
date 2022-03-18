@@ -1,3 +1,17 @@
+---
+title: "Simple shopping list"
+description: "Create a simple shopping list card, learning about the basics of creating a card"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
 # Simple Shopping List
 
 This tutorial will show you how to build a simple card that displays a shopping list and lets you add new items. You'll learn about:

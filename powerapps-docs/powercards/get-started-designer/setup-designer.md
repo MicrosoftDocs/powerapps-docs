@@ -1,4 +1,18 @@
-# Setup instructions
+---
+title: "Get started in the Cards Designer"
+description: "Start using the Cards designer, specifically how to create new cards and find previously made cards"
+keywords: "Power Cards, Power Cards Designer, Power Apps, Cards"
+ms.date: 03/18/2022
+ms.topic: article
+author: v-eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
+
+# Get started in the Cards Designer
 
 To get to the Card Designer, follow the instructions below:
 
