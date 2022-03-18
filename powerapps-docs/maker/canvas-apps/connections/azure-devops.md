@@ -4,7 +4,7 @@ description: See how to connect to Azure DevOps projects, display the queries an
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.date: 03/15/2022
+ms.date: 03/17/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
@@ -172,9 +172,12 @@ For this purpose, we'll use the [UpdateWorkItem](/connectors/visualstudioteamser
 
     The formulas for the save icon uses the [UpdateWorkItem](/connectors/visualstudioteamservices/#update-a-work-item) action. The formula uses the work item selected in the work item gallery, and updates the property of "text" or "description" with the value updated through the given text input controls. In the above example, "TextInput2" for "title" and "TextInput3" for "description".
 
+    > [!NOTE]
+    > Ensure the formula uses lower case for field names. For example, when referring to "Description" field, use `description:TextInput3.Text` instead of `Description:TextInput3.Text`. Incorrect casing might result in the error "400 Required parameter: 'workItem' missing for requested operation: 'UpdateWorkItem'".
+
 1. [Save and publish](../save-publish-app.md) the app.
 
-## Next steps
+## Next steps"
 
 Play the app. Select a query from the list of queries. And then, choose a work item that you want to update the title or description of. Make a change, and then select the save button. The changes are saved to Azure DevOps work item. Switch to another query and switch back to see the changes show inside the app.
 
