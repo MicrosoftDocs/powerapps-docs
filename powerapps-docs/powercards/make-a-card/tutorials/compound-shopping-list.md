@@ -4,7 +4,7 @@ description: "Create a compound shopping list card, using more features of power
 keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

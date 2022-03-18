@@ -4,7 +4,7 @@ description: "Learn about connectors and how you can use them to expand the capa
 keywords: "Power Cards, Power Apps, Cards, connectors"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

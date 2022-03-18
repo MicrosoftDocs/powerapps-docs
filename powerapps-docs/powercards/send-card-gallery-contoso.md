@@ -1,3 +1,16 @@
+---
+title: "Send a card from the Gallery in Contoso Tenant"
+description: "Learn how to send a card from the gallery in Contoso tenant"
+keywords: "Power Cards, Power Apps, Cards, gallery, sending, contoso tennant"
+ms.date: 03/18/2022
+ms.topic: article
+author: eberhardts
+ms.author: v-eberhardts
+manager: shellyha
+ms.reviewer: 
+ms.custom: 
+ms.collection: 
+---
 
 # Send a card from the Gallery in Contoso Tenant
 

@@ -4,7 +4,7 @@ description: "Start using the Cards designer, specifically how to create new car
 keywords: "Power Cards, Power Cards Designer, Power Apps, Cards"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

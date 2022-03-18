@@ -4,7 +4,7 @@ description: "Learn how to add custom connectors to the Designer, to customize t
 keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, connectors, custom connectors"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

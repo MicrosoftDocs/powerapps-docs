@@ -4,7 +4,7 @@ description: "Learn how to add one connector to your card, and walk through an e
 keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, connectors"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

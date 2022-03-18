@@ -4,7 +4,7 @@ description: "Get a quick overview of Power Cards as a product and what issues t
 keywords: "Power Cards, Power Apps, Cards, overview"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

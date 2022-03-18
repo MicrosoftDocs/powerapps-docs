@@ -4,7 +4,7 @@ description: "Learn more about connectors, including the different kinds of conn
 keywords: "Power Cards, Power Apps, Cards, connectors, licensing"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 

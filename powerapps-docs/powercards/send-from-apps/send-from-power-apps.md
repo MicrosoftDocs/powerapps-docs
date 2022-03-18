@@ -4,7 +4,7 @@ description: "Learn how to send your card using Power Apps"
 keywords: "Power Cards, Power Apps, Cards, sending"
 ms.date: 03/18/2022
 ms.topic: article
-author: v-eberhardts
+author: eberhardts
 ms.author: v-eberhardts
 manager: shellyha
 ms.reviewer: 
