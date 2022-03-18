@@ -142,6 +142,7 @@ Use the **Replace** or **Replace all** icons to update one or all matches return
 
 ### See also
 
+- [Use the Search pane (preview)](search.md)
 - [Get started with formulas in canvas apps](working-with-formulas.md)
 - [Add and configure controls](add-configure-controls.md)
 
