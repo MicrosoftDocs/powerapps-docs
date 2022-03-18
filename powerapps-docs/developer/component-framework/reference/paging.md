@@ -2,15 +2,14 @@
 title: Paging | Microsoft Docs
 description: Provides properties and methods to work with paging.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/12/2021
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 12891e96-972c-4289-bbde-2bc261cd1f12
 ---
 
 # Paging
@@ -23,7 +22,7 @@ Model-driven and canvas apps
 
 ## Properties
 
-## firstPageNumber
+### firstPageNumber
 
 First page number.
 

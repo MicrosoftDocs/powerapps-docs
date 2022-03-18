@@ -1,14 +1,13 @@
 ---
 title: "openUrl (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openUrl method.
-ms.date: 04/21/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 29cb3685-21aa-42fc-8e84-0074dcc69197
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

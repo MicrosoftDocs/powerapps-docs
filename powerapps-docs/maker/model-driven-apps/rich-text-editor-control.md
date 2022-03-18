@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 02/28/2022
+ms.date: 03/17/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -20,8 +20,6 @@ search.app:
   - D365CE
 ---
 # Add the rich text editor control to a model-driven app
-
-
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
@@ -42,6 +40,22 @@ For a full list of default options, see [Use the rich text editor toolbar](#use-
 ## Add or replace a text column for rich text editing
 
 Create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
+
+### Simple configuration
+
+To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps:
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
+
+   > [!NOTE]
+   > The parameter in the URL is required to display the new **Format** option in the maker experience.
+1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
+1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
+1. Save the column. You can now add the new column to any existing or new form for this table.
+
+### Advanced configuration
+
+To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
@@ -102,6 +116,7 @@ The following two images visually identify the two configuration sections. For t
 ### defaultSupportedProps
 
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
+
 
 <table>
   <tr>
@@ -268,6 +283,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 ### Individual configuration settings
 
 You can configure additional configuration settings that affect how your editor functions.
+
 
 <table>
   <tr>
@@ -710,10 +726,6 @@ The rich text editor toolbar provides features and functionality that allows you
 ### Formatting options
 The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
 
-> [!Note]
-> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
-
-
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
 |![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
@@ -745,9 +757,11 @@ The following table describes the different formatting features and functionalit
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
+| | | | |
 
-> [!Note]
-> You can access your browser's context menu by pressing **Ctrl** + right-click. This is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.
+> [!Tip]
+> You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
+> Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
 
 ## Accessibility shortcuts
 
@@ -771,7 +785,7 @@ The following table outlines a list of accessibility shortcuts available when us
 | Base commands | Ctrl+U | Underline command. |
 | Base commands | Alt+0 | Accessibility help. |
 | Base commands | Esc | Cancel operation. |
-
+| | | |
 
 ## Frequently asked questions
 

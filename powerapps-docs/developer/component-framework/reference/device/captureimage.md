@@ -2,15 +2,15 @@
 title: CaptureImage | Microsoft Docs
 description: Invokes the device camera to capture the image.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 09/08/2021
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
 ---
 
 # captureImage

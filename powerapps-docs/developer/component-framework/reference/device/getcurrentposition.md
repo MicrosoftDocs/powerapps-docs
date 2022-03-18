@@ -2,15 +2,15 @@
 title: CaptureImageOptions | Microsoft Docs
 description: Returns the current location using the device geo location capability.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 09/08/2021
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 98f341b4-1d5d-4ad2-849d-5ea1d7e143b0
 ---
 
 # getCurrentPosition
