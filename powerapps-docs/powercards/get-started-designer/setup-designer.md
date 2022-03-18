@@ -1,0 +1,18 @@
+# Setup instructions
+
+To get to the Card Designer, follow the instructions below:
+
+1. Navigate to [aka.ms/pcdesigner](https://make.test.powerapps.com/environment/8c0760a1-b9cb-473d-8fdd-8afa2ea50eb3/cards/list)
+
+1. Go to the Environment selector at the top of the page and make sure you're in the Environment PowerCards S environment
+
+   :::image type="content" source="../media/designer-overview/verify-selected-environment.png" alt-text="Screenshot verifying you're in the correct environment." border="false":::
+
+1. Go to the left side panel to access all of the Card-related views
+
+   1. Create a new card: select **Cards** > **Create**
+   1. See all current cards: select **Cards** > **Cards**
+
+      :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen." border="false":::
+
+1. From **Cards** > **Create**, select the Basic card tile to start creating your own card
