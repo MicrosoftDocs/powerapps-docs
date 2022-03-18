@@ -51,6 +51,8 @@
         href: customapirequestparameter-table-columns.md
       - name: CustomAPIResponseProperty Table Columns
         href: customapiresponseproperty-table-columns.md
+      - name: "Sample: IsSystemAdmin Custom API plug-in"
+        href: org-service/samples/issystemadmin-customapi-sample-plugin.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
