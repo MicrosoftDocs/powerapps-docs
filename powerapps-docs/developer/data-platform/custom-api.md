@@ -4,7 +4,6 @@ description: "Custom API is a new code-first way to define custom messages for t
 ms.custom: ""
 ms.date: 03/17/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
@@ -16,34 +15,32 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and use Custom APIs 
+# Create and use Custom APIs
 
-Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Microsoft Dataverse connector enables calling Custom APIs actions in Power Automate. Custom API also can be used as business events to enable creating new integration capabilities such as exposing a new type of trigger event in the Microsoft Dataverse connector. More information: [Microsoft Dataverse business events](business-events.md)
+Use Custom APIs to create your own APIs in Dataverse. You can consolidate one or more operations into a Custom API that you and other developers can call in their code or from Power Automate. The [Microsoft Dataverse connector](/connectors/commondataserviceforapps/) enables calling  actions in Power Automate.
 
-Operations in Dataverse are defined as *messages*. Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages.
+You can use Custom API as business events to enable creating new integration capabilities such as exposing a new type of trigger event in the Microsoft Dataverse connector. More information: [Microsoft Dataverse business events](business-events.md)
 
-Custom APIs provide capabilities specifically for developers to define their logic in code. For a full comparison of Custom Process Action and Custom API, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
+Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages. Custom APIs provide capabilities specifically for developers to define their logic in code with more options. For a full comparison of Custom Process Action and Custom API, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
 
 ## Create a custom API
 
-A Custom API may or may not include logic implemented with a plug-in. Using [Microsoft Dataverse business events](business-events.md), you may create a Custom API without a plug-in to pass data about an event that other subscribers will respond to.
+A Custom API may include logic implemented with a plug-in. Using [Microsoft Dataverse business events](business-events.md), you may create a Custom API without a plug-in to pass data about an event that other subscribers will respond to.
 
-However, in other cases it is expected that the message you create performs some kind of logic using a plug-in. You can approach the development of your custom API by:
-
-- Write the plug-in first, and then define the Custom API for it.
-- Define the Custom API first, then write the plug-in to implement it.
-
-A custom API with a plug-in will be complete when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
+However, in other cases you can combine a Custom API with a plug-in to define some operation that will delegated to Dataverse to compute and return the result.
 
 There are several different ways to create a custom API:
 
-- By using the Plug-in Registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
-- By manually entering data in available forms.  More information: [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)
-- By using the web services, such as the Web API or Organization Service. More information: [Create a Custom API with code](create-custom-api-with-code.md)
-- By editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
+|Method|Benefit|
+|---------|---------|
+|[Plug-in registration tool](create-custom-api-prt.md)|An easy-to-use GUI tool integrated with tools used to develop plug-ins.|
+|[Power Apps](create-custom-api-maker-portal.md)|Using forms to enter data. You don't need to install a separate tool, but the experience is not great.|
+|[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create Custom API very quickly using Postman. Or you can build your own experience to create Custom API.|
+|[With solution files](create-custom-api-solution.md).|When you use ALM tools you can create or modify Custom API definitions with XML files in a solution. The Custom API will be created when you import the solution.|
+
 
 > [!NOTE]
-> Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables. A designer is planned for a future release.
+> Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables.
 > 
 > There are several tools created and supported by the community to work with Custom API:
 > - [Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)
@@ -57,17 +54,17 @@ When creating Custom API and related request parameters and response properties,
 > [!IMPORTANT]
 > When you ship or deploy your solution, you should use a managed solution and we recommend that you always set the **Is Customizable** managed property to these components to `false`. This will prevent people using your managed solution from modifying or deleting these components of your solution. Such changes could break code written for the original definition of the Custom API. More information [Managed properties](/power-platform/alm/managed-properties-alm)
 
-Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your Custom API. However, additional request parameters cannot be made required. If you choose to allow custom processing steps on your custom api, these additional parameters and properties added to the original definition can be used by other plug-ins registered for the message created by your custom api. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom api can ignore them and is not responsible for using any custom request parameters or setting any custom response properties.
+Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your Custom API. However, additional request parameters cannot be made required. If you choose to allow custom processing steps on your Custom API, these additional parameters and properties added to the original definition can be used by other plug-ins registered for the message created by your Custom API. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the Custom API can ignore them and is not responsible for using any custom request parameters or setting any custom response properties.
 
 ## Custom API tables/entities
 
 The data that defines Custom APIs is in the following tables/entities:
 
-- [CustomAPI table/entity reference](reference/entities/customapi.md)
-- [CustomAPIRequestParameter table/entity reference](reference/entities/customapirequestparameter.md)
-- [CustomAPIResponseProperty table/entity reference](reference/entities/customapiresponseproperty.md)
+- [CustomAPI Reference](reference/entities/customapi.md)
+- [CustomAPIRequestParameter Reference](reference/entities/customapirequestparameter.md)
+- [CustomAPIResponseProperty Reference](reference/entities/customapiresponseproperty.md)
 
-See the following topics for detailed information about the columns/attributes you can set for these tables/entities. You should review this as you plan the behavior for your Custom API.
+The following topics contain detailed information about the columns/attributes you can set for these tables/entities. You should review this as you plan the behavior for your Custom API.
 
 - [CustomAPI Table Columns](customapi-table-columns.md)
 - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
@@ -79,16 +76,19 @@ This diagram shows how the tables are related to these tables as well as others:
 
 The relationship to the [CatalogAssignment table](reference/entities/catalogassignment.md) enables using Custom API with [Microsoft Dataverse business events](business-events.md). More information: [Catalog and CatalogAssignment tables](catalog-catalogassignment.md).
 
-
 ## Invoking Custom APIs
 
-A Custom API creates a new message which can be invoked via the Web API or Organization Service SDK.
+A Custom API creates a new message which can be invoked via the Web API or Organization Service SDK just like any other operation.
 
 ### Invoking Custom APIs from the Web API
 
 While testing, you can invoke your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that will generate the access token you will need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it is a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
-This is an example invoking a Custom API Action named `myapi_CustomUnboundAPI` which has a single string request parameter named `InputParameter`:
+See the following examples:
+
+#### Unbound Action
+
+This action is named `myapi_CustomUnboundAPI`. It has a single string request parameter named `InputParameter`:
 
 ```http
 POST [Organization URI]/api/data/v9.1/myapi_CustomUnboundAPI
@@ -101,7 +101,9 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-This is an example invoking a Custom API Function bound to the account entity named `myapi_CustomBoundAPI`:
+#### Bound Action
+
+This action named `myapi_CustomBoundAPI` is bound to the account table:
 
 ```http
 GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
@@ -110,7 +112,9 @@ OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
 ```
 
-This is an example invoking a Custom API Function bound to the account entity collection named `myapi_CustomEntityCollectionBoundAPI`:
+#### Bound Function
+
+This function named `myapi_CustomEntityCollectionBoundAPI` is bound to the account table collection:
 
 ```http
 GET [Organization URI]/api/v9.1/accounts/Microsoft.Dynamics.CRM.myapi_CustomEntityCollectionBoundAPI()
@@ -119,12 +123,9 @@ OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
 ```
 
-
 More information:
  - [Use Web API actions](webapi/use-web-api-actions.md)
  - [Use Web API functions](webapi/use-web-api-functions.md)
-
-
 
 ### Invoking Custom APIs from the Organization Service
 
@@ -135,6 +136,8 @@ For late-bound code, or for a Custom API that you have marked as private, create
 Entity-bound custom APIs have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on.
 
 You can access response properties from the parameters of the returned response.
+
+In this example a Custom API named `myapi_EscalateCase` is bound to the incident table to accept a record as the `Target` parameter together with another option set value request parameter named `Priority`. It has an `EntityReference` response property named `AssignedTo`    .
 
 ```csharp
 var req = new OrganizationRequest("myapi_EscalateCase")
@@ -154,6 +157,7 @@ More information: [Use messages with the Organization service](org-service/use-m
 ## Write a Plug-in for your Custom API
 
 Writing a plug-in to implement the main operation for your Custom API isn't different from writing any other kind of plug-in, except that you do not use the Plug-in Registration tool to set a specific step.
+
 You need to know the following information:
 
 - The name of the message
@@ -500,7 +504,10 @@ A: You cannot. Although these records have the common **Status** and **Status Re
 
 A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`. 
 
-More information: [Private Messages](org-service/use-messages.md#private-messages) and [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
+More information: 
+ - [When to make your Custom API private](customapi-table-columns.md#when-to-make-your-custom-api-private)
+ - [Private Messages](org-service/use-messages.md#private-messages) 
+ - [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
 
 ## Known issues with Custom APIs
 

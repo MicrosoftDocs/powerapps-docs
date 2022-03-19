@@ -16,3 +16,7 @@ search.app:
 ---
 # Create a Custom API using the plug-in registration tool
 
+
+To create a Custom API, you will need the Plug-in Registration tool
+
+[!INCLUDE [cc-connect-plugin-registration-tool](includes/cc-connect-plugin-registration-tool.md)]
