@@ -46,25 +46,27 @@ The table below includes selected columns of a Custom API table that you can set
 
 ## Select a Custom Processing Step Type
 
-The following table describes which **Custom Processing Step Type**(`AllowedCustomProcessingStepType`) you should use. 
+The following table describes which **Custom Processing Step Type** (`AllowedCustomProcessingStepType`) you should use. 
 
 |Option |When to use  |
 |---------|---------|
 |**None**|When the plug-in type set for this Custom API will the only logic that occurs when this operation executes.<br/>You will not allow another developer to register any additional steps that may trigger additional logic, modify the behavior of this operation, or cancel the operation.<br/>Use this when the Custom API provides some capability that will not be of interest to business processes.|
-|**Async Only**|When you want to allow other developers to detect when this operation occurs, but you do not want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This is the option recommended if you are using the Business Events pattern. A Business event will create a trigger in Power Automate to create a trigger for when this event occurs. More information: [Microsoft Dataverse business events](business-events.md)|
+|**Async Only**|When you want to allow other developers to detect when this operation occurs, but you do not want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This is the option recommended if you are using the Business Events pattern. A Business event will create a trigger in Power Automate to you can use when this event occurs. More information: [Microsoft Dataverse business events](business-events.md)|
 |**Sync and Async**|When you want to allow other developers to have the ability to change the behavior of the operation and even cancel it if their business logic dictates.<br/>If the operation succeeds, other developers can also detect this and add logic to run asynchronously.<br/>Most Dataverse messages enable extension in this manner.  Use this when your message represents a business process that should be customizable.|
 
 ## Select a Binding Type
 
-Binding is an OData concept that associates an operation to a specific table. The following table describes the Binding Type (`BindingType`) you should use.
+Binding is an OData concept that associates an operation to a specific table. The following table describes the **Binding Type**(`BindingType`) you should use.
 
 |Option |When to use  |
 |---------|---------|
-|**Global** |When the operation does apply to a specific table.|
-|**Entity**|When the operation accepts a single record of a specific entitytype as a parameter.|
-|**EntityCollection**|When the operation applies changes to, or returns a collection of a specific entitytype.|
+|**Global** |When the operation does not apply to a specific table.|
+|**Entity**|When the operation accepts a single record of a specific table as a parameter.|
+|**EntityCollection**|When the operation applies changes to, or returns a collection of a specific table.|
 
-Selecting **Entity** or **EntityCollection** will require that you use the fully qualified name of the Function or Action when you use the Web API. The fully qualified name is `Microsoft.Dynamics.Crm.<UniqueName of the Custom API>`. More information: 
+Selecting **Entity** or **EntityCollection** will require that you use the fully qualified name of the Function or Action when you use the Web API. The fully qualified name is `Microsoft.Dynamics.CRM.<UniqueName of the Custom API>`. 
+
+More information: 
  - [Actions bound to a table](webapi/use-web-api-actions.md#actions-bound-to-a-table)
  - [Actions bound to a table collection](webapi/use-web-api-actions.md#actions-bound-to-a-table-collection)
  - [Bound functions](webapi/use-web-api-functions.md#bound-functions)
@@ -84,7 +86,7 @@ You can more easily test `GET` requests using your browser alone, but there is a
 
 > [!NOTE]
 > - Functions must return some data. You must include at least one response property for the Custom API to be valid.
-> - A Function is allowed when the Enabled for Workflow option is selected. See [Enabled for Workflow](#enabled-for-workflow)
+> - A Function is not allowed when the **Enabled for Workflow**option is selected. See [Enabled for Workflow](#enabled-for-workflow)
 
 If your Custom API has many complex request parameters which could cause the length of the URL to be too long, it is acceptable to create an Action that performs the same operation passing all the parameter data in the body using a `POST` request.
 

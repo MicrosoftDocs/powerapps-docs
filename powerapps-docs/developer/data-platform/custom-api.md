@@ -38,11 +38,11 @@ There are several different ways to create a custom API:
 |[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create Custom API very quickly using Postman. Or you can build your own experience to create Custom API.|
 |[With solution files](create-custom-api-solution.md).|When you use ALM tools you can create or modify Custom API definitions with XML files in a solution. The Custom API will be created when you import the solution.|
 
-
 > [!NOTE]
 > Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables.
-> 
+>
 > There are several tools created and supported by the community to work with Custom API:
+>
 > - [Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)
 > - [Custom API Tester](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.CustomAPITester/)
 > - [Custom Action to Custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/)
@@ -124,8 +124,9 @@ Content-Type: application/json; charset=utf-8
 ```
 
 More information:
- - [Use Web API actions](webapi/use-web-api-actions.md)
- - [Use Web API functions](webapi/use-web-api-functions.md)
+
+- [Use Web API actions](webapi/use-web-api-actions.md)
+- [Use Web API functions](webapi/use-web-api-functions.md)
 
 ### Invoking Custom APIs from the Organization Service
 
@@ -152,7 +153,6 @@ var newOwner = (EntityReference) resp["AssignedTo"];
 ```
 
 More information: [Use messages with the Organization service](org-service/use-messages.md).
-
 
 ## Write a Plug-in for your Custom API
 
@@ -222,7 +222,6 @@ See the example [Sample: IsSystemAdmin Custom API](org-service/samples/issystema
 
 After you have registered the assembly, make sure to add the assembly and any types to your solution.
 
-
 ## Retrieve data about Custom APIs
 
 You can use the following queries to retrieve data about Custom APIs.
@@ -269,7 +268,73 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
     name,
     assemblyname)
 ```
+
 # [QueryExpression](#tab/queryexpression)
+
+```csharp
+// Instantiate QueryExpression query
+var query = new QueryExpression("customapi");
+
+// Add columns to query.ColumnSet
+query.ColumnSet.AddColumns("isprivate", 
+"description", 
+"displayname", 
+"executeprivilegename", 
+"iscustomizable", 
+"isfunction", 
+"allowedcustomprocessingsteptype", 
+"boundentitylogicalname", 
+"bindingtype", 
+"uniquename", 
+"workflowsdkstepenabled");
+
+// Add link-entity req
+var req = query.AddLink("customapirequestparameter", 
+"customapiid", 
+"customapiid", 
+JoinOperator.LeftOuter);
+req.EntityAlias = "req";
+
+// Add columns to req.Columns
+req.Columns.AddColumns("description", 
+"displayname", 
+"iscustomizable", 
+"logicalentityname", 
+"name", 
+"uniquename", 
+"type", 
+"isoptional");
+
+// Add link-entity query_customapiresponseproperty
+var query_customapiresponseproperty = query.AddLink("customapiresponseproperty", 
+"customapiid", 
+"customapiid", 
+JoinOperator.LeftOuter);
+
+// Add columns to query_customapiresponseproperty.Columns
+query_customapiresponseproperty.Columns.AddColumns("description", 
+"displayname", 
+"iscustomizable", 
+"logicalentityname", 
+"name", 
+"uniquename", 
+"type");
+
+// Add link-entity plugintype
+var plugintype = query.AddLink("plugintype", 
+"plugintypeid", 
+"plugintypeid", 
+JoinOperator.LeftOuter);
+
+plugintype.EntityAlias = "plugintype";
+
+// Add columns to plugintype.Columns
+plugintype.Columns.AddColumns("name", 
+"assemblyname", 
+"version", 
+"plugintypeid", 
+"typename");
+```
 
 More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
 
@@ -392,7 +457,6 @@ If you prefer to set localized labels in code rather than using the manual proce
 
 The following example shows how to use the Web API to set the localized labels for the `displayname` property of a custom API.
 
-
 **Request**
 
 ```http
@@ -431,7 +495,6 @@ Content-Type: application/json
 ```http
 HTTP/1.1 204 No Content
 ```
-
 
 ### Retrieving localized values
 
@@ -502,12 +565,13 @@ A: You cannot. Although these records have the common **Status** and **Status Re
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 
-A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`. 
+A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`.
 
-More information: 
- - [When to make your Custom API private](customapi-table-columns.md#when-to-make-your-custom-api-private)
- - [Private Messages](org-service/use-messages.md#private-messages) 
- - [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
+More information:
+
+- [When to make your Custom API private](customapi-table-columns.md#when-to-make-your-custom-api-private)
+- [Private Messages](org-service/use-messages.md#private-messages)
+- [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
 
 ## Known issues with Custom APIs
 
