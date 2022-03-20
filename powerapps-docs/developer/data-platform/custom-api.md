@@ -271,72 +271,93 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
 
 # [QueryExpression](#tab/queryexpression)
 
-```csharp
-// Instantiate QueryExpression query
-var query = new QueryExpression("customapi");
-
-// Add columns to query.ColumnSet
-query.ColumnSet.AddColumns("isprivate", 
-"description", 
-"displayname", 
-"executeprivilegename", 
-"iscustomizable", 
-"isfunction", 
-"allowedcustomprocessingsteptype", 
-"boundentitylogicalname", 
-"bindingtype", 
-"uniquename", 
-"workflowsdkstepenabled");
-
-// Add link-entity req
-var req = query.AddLink("customapirequestparameter", 
-"customapiid", 
-"customapiid", 
-JoinOperator.LeftOuter);
-req.EntityAlias = "req";
-
-// Add columns to req.Columns
-req.Columns.AddColumns("description", 
-"displayname", 
-"iscustomizable", 
-"logicalentityname", 
-"name", 
-"uniquename", 
-"type", 
-"isoptional");
-
-// Add link-entity query_customapiresponseproperty
-var query_customapiresponseproperty = query.AddLink("customapiresponseproperty", 
-"customapiid", 
-"customapiid", 
-JoinOperator.LeftOuter);
-
-// Add columns to query_customapiresponseproperty.Columns
-query_customapiresponseproperty.Columns.AddColumns("description", 
-"displayname", 
-"iscustomizable", 
-"logicalentityname", 
-"name", 
-"uniquename", 
-"type");
-
-// Add link-entity plugintype
-var plugintype = query.AddLink("plugintype", 
-"plugintypeid", 
-"plugintypeid", 
-JoinOperator.LeftOuter);
-
-plugintype.EntityAlias = "plugintype";
-
-// Add columns to plugintype.Columns
-plugintype.Columns.AddColumns("name", 
-"assemblyname", 
-"version", 
-"plugintypeid", 
-"typename");
-```
-
 More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+
+```csharp
+string conn = $@"
+    Url = {url};
+    AuthType = OAuth;
+    UserName = {userName};
+    Password = {password};
+    AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
+    RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
+    LoginPrompt=Auto;
+    RequireNewInstance = True";
+
+using (var svc = new CrmServiceClient(conn))
+{
+
+    // Instantiate QueryExpression query
+    var query = new QueryExpression("customapi");
+
+    // Add columns to query.ColumnSet
+    query.ColumnSet.AddColumns("isprivate",
+    "description",
+    "displayname",
+    "executeprivilegename",
+    "iscustomizable",
+    "isfunction",
+    "allowedcustomprocessingsteptype",
+    "boundentitylogicalname",
+    "bindingtype",
+    "uniquename",
+    "workflowsdkstepenabled");
+
+    // Add link-entity req
+    var req = query.AddLink("customapirequestparameter",
+    "customapiid",
+    "customapiid",
+    JoinOperator.LeftOuter);
+    req.EntityAlias = "req";
+
+    // Add columns to req.Columns
+    req.Columns.AddColumns("description",
+    "displayname",
+    "iscustomizable",
+    "logicalentityname",
+    "name",
+    "uniquename",
+    "type",
+    "isoptional");
+
+    // Add link-entity query_customapiresponseproperty
+    var query_customapiresponseproperty = query
+        .AddLink("customapiresponseproperty",
+    "customapiid",
+    "customapiid",
+    JoinOperator.LeftOuter);
+
+    // Add columns to query_customapiresponseproperty.Columns
+    query_customapiresponseproperty.Columns
+        .AddColumns("description",
+    "displayname",
+    "iscustomizable",
+    "logicalentityname",
+    "name",
+    "uniquename",
+    "type");
+
+    // Add link-entity plugintype
+    var plugintype = query.AddLink("plugintype",
+    "plugintypeid",
+    "plugintypeid",
+    JoinOperator.LeftOuter);
+
+    plugintype.EntityAlias = "plugintype";
+
+    // Add columns to plugintype.Columns
+    plugintype.Columns.AddColumns("name",
+    "assemblyname",
+    "version",
+    "plugintypeid",
+    "typename");
+
+    EntityCollection results = svc.RetrieveMultiple(query);
+
+    Console.WriteLine("Press any key to exit.");
+    Console.ReadLine();
+}
+```
 
 # [FetchXML](#tab/fetchxml)
 
