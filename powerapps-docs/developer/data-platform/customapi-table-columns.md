@@ -86,6 +86,8 @@ You can more easily test `GET` requests using your browser alone, but there is a
 
 > [!NOTE]
 > - Functions must return some data. You must include at least one response property for the Custom API to be valid.
+>    - A function that does not include a response property will not appear within the Web API $metadata service document.
+>    - If you try to use an invalid function, you will get a `404 Not found` error similar to this:<br />`{"error":{"code":"0x8006088a","message":"Resource not found for the segment 'your_function_name'."}}`
 > - A Function is not allowed when the **Enabled for Workflow**option is selected. See [Enabled for Workflow](#enabled-for-workflow)
 
 If your Custom API has many complex request parameters which could cause the length of the URL to be too long, it is acceptable to create an Action that performs the same operation passing all the parameter data in the body using a `POST` request.

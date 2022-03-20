@@ -47,12 +47,22 @@ There are several different ways to create a custom API:
 > - [Custom API Tester](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.CustomAPITester/)
 > - [Custom Action to Custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/)
 
-### Custom API Customization
+## Custom API Customization
 
 When creating Custom API and related request parameters and response properties, it is important to understand that these API definitions are customizable by default. This is what allows you to iterate and make changes to these items in your unmanaged solution.
 
 > [!IMPORTANT]
-> When you ship or deploy your solution, you should use a managed solution and we recommend that you always set the **Is Customizable** managed property to these components to `false`. This will prevent people using your managed solution from modifying or deleting these components of your solution. Such changes could break code written for the original definition of the Custom API. More information [Managed properties](/power-platform/alm/managed-properties-alm)
+> When you ship or deploy your solution, you should use a managed solution and we recommend that you always set the **Is Customizable** managed property to these components to `false`. This will prevent people using your managed solution from modifying or deleting these components of your solution. Such changes could break code written for the original definition of the Custom API. 
+
+### Set Is Customizable to false
+
+You can set the **Is Customizable** managed property from the solution in Power Apps.
+
+:::image type="content" source="media/set-custom-api-iscustomizable-managed-property.png" alt-text="Setting Is Customizable Managed Property":::
+
+You will need to set this for each Custom API, Request Parameter, and Response Property individually.
+
+More information [Managed properties](/power-platform/alm/managed-properties-alm)
 
 Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your Custom API. However, additional request parameters cannot be made required. If you choose to allow custom processing steps on your Custom API, these additional parameters and properties added to the original definition can be used by other plug-ins registered for the message created by your Custom API. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the Custom API can ignore them and is not responsible for using any custom request parameters or setting any custom response properties.
 
@@ -610,7 +620,7 @@ If you define your custom API to be private, you cannot use that message in a pl
 
 ### Next Steps
 
-[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
+[Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br />
 
 ### See also
 
