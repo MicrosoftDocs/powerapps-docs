@@ -26,7 +26,7 @@ In the **Register** menu, select the **Register new Custom API** command. This w
 
 :::image type="content" source="media/create-custom-api-prt.png" alt-text="PRT Custom API form":::
 
-Use the information in the table below to create the Custom API. 
+Use the information in the table below to create the Custom API. For more details, see [Custom API table columns](custom-api-tables.md#custom-api-table-columns)
 
 > [!IMPORTANT]
 > Some options cannot be changed after you save the Custom API. Make sure you understand the purpose of each setting that cannot be changed. If you later need to change this setting, you must delete and re-create the Custom API. This will also delete any request parameters or response properties that are associated with it.
@@ -60,7 +60,7 @@ A Custom API isn't required to have any request parameters. While creating a Cus
 
 :::image type="content" source="media/custom-api-request-parameter-create-form.png" alt-text="Custom API Request Parameter Create form":::
 
-Use the information in the table below to create the Request Parameter
+Use the information in the table below to create the Request Parameter. For more details see [CustomAPIRequestParameter Table Columns](custom-api-tables.md#customapirequestparameter-table-columns)
 
 
 |Label|Description|Can be changed|
@@ -79,7 +79,7 @@ A Custom API for an action isn't required to have any response properties. While
 
 :::image type="content" source="media/custom-api-response-property-create-form.png" alt-text="Custom API Response Property Create form":::
 
-Use the information in the table below to create the Response Property.
+Use the information in the table below to create the Response Property. For more details see [CustomAPIResponseProperty Table Columns](custom-api-tables.md#customapiresponseproperty-table-columns)
 
 |Label|Description|Can be changed|
 |---------|---------|---------|

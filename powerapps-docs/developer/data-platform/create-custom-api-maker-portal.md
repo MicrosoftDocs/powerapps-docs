@@ -66,7 +66,7 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
     :::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form.":::
 
 > [!NOTE]
-> As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
+> As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Custom API Customization](custom-api.md#custom-api-customization)
 
 ## Create any Response Properties
 
