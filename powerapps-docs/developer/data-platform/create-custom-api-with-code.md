@@ -29,11 +29,8 @@ search.app:
 
 Because Custom API data is saved in tables, you can programmatically create new APIs using either the Web API or the Organization Service.
 
-The tables in [Create and use Custom APIs](custom-api.md) describe all the properties you can set using code. For the following code examples, please refer to the following tables:
+The tables in [Custom API tables](custom-api-tables.md) describe all the properties you can set using code.
 
-- [CustomAPI Table Columns](customapi-table-columns.md)
-- [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
-- [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 
 ## Create a Custom API using the Web API

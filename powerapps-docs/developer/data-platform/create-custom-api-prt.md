@@ -125,8 +125,6 @@ In the list of **Request parameters** or **Response properties**, select this co
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
 [Create your own messages](custom-actions.md)<br />
-[CustomAPI Table Columns](customapi-table-columns.md)<br />
-[CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)<br />
-[CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+[Custom API table columns](custom-api-tables.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

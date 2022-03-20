@@ -2,7 +2,7 @@
 title: "Create a Custom API in Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2022
+ms.date: 03/21/2022
 ms.reviewer: "jdaly"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -18,20 +18,15 @@ search.app:
 # Create a Custom API in Power Apps
 
 > [!NOTE]
-> There is now a better experience for creating Custom API. You can now use a designer within the Plug-in registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
+> There is now a better experience for creating Custom API. You can use a designer within the Plug-in registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
 
 
 > [!IMPORTANT]
 > Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing record and re-create the Custom API.
 >
-> Please review the following to understand which field values cannot be changed:
-> - [CustomAPI Table Columns](customapi-table-columns.md)
-> - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
-> - [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
+> Please review the information about the columns that cannot be changed here: [CustomAPI tables](custom-api-tables.md)
 
-When creating a Custom API it is expected that you will use a solution. Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the following publisher:
-
-:::image type="content" source="media/solution-publisher-with-sample-prefix.png" alt-text="Solution publisher with sample prefix.":::
+When creating a Custom API it is expected that you will use a solution. Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the publisher:
 
 > [!NOTE]
 > This topic assumes you are familar with solutions. If you are not, see [Create a solution](../../maker/data-platform/create-solution.md)
@@ -39,7 +34,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 ## Create a Custom API record
 
 1. In your solution, click **New** and select **Custom API** from the drop-down.
-1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI Table Columns](customapi-table-columns.md)
+1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see  [Custom API table columns](custom-api-tables.md#custom-api-table-columns)
     
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
 
@@ -64,7 +59,7 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
 > Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
 
 1. In your solution, click **New** and select **Custom API Request Parameter** from the drop-down.
-1. Edit the fields to set the properties of your Custom API Request Parameter. For more information see [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+1. Edit the fields to set the properties of your Custom API Request Parameter. For more information see [CustomAPIRequestParameter Table Columns](custom-api-tables.md#customapirequestparameter-table-columns)
 
 1. Click **Save**. Your form should look something like this:
 

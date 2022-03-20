@@ -320,7 +320,7 @@ namespace CustomAPIExamples
 
 ```
 
-For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step.
+For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step. More information: [Use a plug-in to include logic in your Custom API](#use-a-plug-in-to-include-logic-in-your-custom-api)
 
 See the example [Sample: IsSystemAdmin Custom API](org-service/samples/issystemadmin-customapi-sample-plugin.md)
 
@@ -487,8 +487,6 @@ If you define your custom API to be private, you cannot use that message in a pl
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
 [Create your own messages](custom-actions.md)<br />
-[CustomAPI Table Columns](customapi-table-columns.md)<br />
-[CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)<br />
-[CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+[Custom API tables](custom-api-tables.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

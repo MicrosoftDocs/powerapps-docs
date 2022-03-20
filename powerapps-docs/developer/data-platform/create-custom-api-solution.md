@@ -106,7 +106,7 @@ Within the folder, the data representing the Custom API is found within an XML f
     </customapi>
     ```
 
-  See the information in [CustomAPI Table Columns](customapi-table-columns.md) to set the values of the elements.
+  See the information in [Custom API table columns](custom-api-tables.md#custom-api-table-columns) to set the values of the elements.
       
   > [!NOTE]
   > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
@@ -148,7 +148,7 @@ Any definitions of request parameters for the Custom API are included in a folde
   </customapirequestparameter>
   ```
 
-See the information in [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md) to set the values of the elements.
+See the information in [CustomAPIRequestParameter Table Columns](custom-api-tables.md#customapirequestparameter-table-columns) to set the values of the elements.
 
 ## Step 5: Add any Custom API Response Properties
 
@@ -239,6 +239,7 @@ As an alternative to using the process described in [Localized Label values](cus
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br />
+[CustomAPI tables](custom-api-tables.md)<br />
 [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create your own messages](custom-actions.md)<br />
