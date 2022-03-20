@@ -24,13 +24,19 @@ The data that defines Custom APIs is in the following tables/entities:
 - [CustomAPIRequestParameter Reference](reference/entities/customapirequestparameter.md)
 - [CustomAPIResponseProperty Reference](reference/entities/customapiresponseproperty.md)
 
+The sections in this topic below provide detailed information about the column values you will use most.
+
+- [Custom API table columns](#custom-api-table-columns)
+- [CustomAPIRequestParameter Table Columns](#customapirequestparameter-table-columns)
+- [CustomAPIResponseProperty Table Columns](#customapiresponseproperty-table-columns)
+
 This diagram shows how the tables are related to these tables as well as others:
 
 :::image type="content" source="media/custom-api-data-model.png" alt-text="Diagram showing relationships between tables.":::
 
 The relationship to the [CatalogAssignment table](reference/entities/catalogassignment.md) enables using Custom API with [Microsoft Dataverse business events](business-events.md). More information: [Catalog and CatalogAssignment tables](catalog-catalogassignment.md).
 
-### Retrieve data about Custom APIs
+## Retrieve data about Custom APIs
 
 You can use the following queries to retrieve data about Custom APIs.
 
@@ -267,7 +273,7 @@ FROM   customapi AS api
 
 ---
 
-### Custom API table columns
+## Custom API table columns
 
 The table below includes selected columns of a Custom API table that you can set.  
 
@@ -279,7 +285,7 @@ The table below includes selected columns of a Custom API table that you can set
 |**Custom API**<br />`CustomAPIId`<br />`customapiid`|Unique Identifier<br />Guid|Unique Identifier for custom API instances<br />**Cannot be changed after it is saved.**|
 |**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
 |**Display Name**<br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
-|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. See: [Execute Privilege Name](custom-api.md#execute-privilege-name)|
+|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. See: [Secure your Custom API with a privilege](custom-api.md#secure-your-custom-api-with-a-privilege)|
 |**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the Custom API can be customized or deleted when part of a managed solution.|
 |**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>See [When to create a Function](custom-api.md#when-to-create-a-function)<br />**Cannot be changed after it is saved.**|
 |**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li></ul>See [When to make your Custom API private](custom-api.md#when-to-make-your-custom-api-private)|
@@ -287,9 +293,9 @@ The table below includes selected columns of a Custom API table that you can set
 |**Owner**<br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API. |
 |**Plugin Type**<br />`PluginTypeId`<br />`plugintypeid`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API. See: [Plugin Type](custom-api.md#plugin-type)|
 |**Unique Name**<br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API. This will be the name of the message created.<br /> This value must include a customization prefix that matches the prefix set for your solution publisher.<br />**Cannot be changed after it is saved.**|
-|**Enabled for Workflow**<br />`WorkflowSdkStepEnabled`<br />`workflowsdkstepenabled`|Yes/No<br />Boolean|Indicates if the custom API is enabled as a workflow action. See: [Enabled for Workflow](custom-api.md#enabled-for-workflow)<br />**Cannot be changed after it is saved.**|
+|**Enabled for Workflow**<br />`WorkflowSdkStepEnabled`<br />`workflowsdkstepenabled`|Yes/No<br />Boolean|Indicates if the custom API is enabled as a workflow action. See: [Use a Custom API in a workflow](custom-api.md#use-a-custom-api-in-a-workflow)<br />**Cannot be changed after it is saved.**|
 
-### CustomAPIRequestParameter Table Columns
+## CustomAPIRequestParameter Table Columns
 
 A custom API isn’t required to have any parameters. There is no specified order for the parameters, they are identified by name.
 
@@ -314,7 +320,7 @@ The table shown below includes columns (attributes) of the Custom API Request Pa
 |**Type**<br />`Type`<br />`type`|Choice<br />Picklist|The data type of the custom API request parameter.<ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
 |**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API request parameter. This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
 
-### CustomAPIResponseProperty Table Columns
+## CustomAPIResponseProperty Table Columns
 
 The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API Action to return any value, but it must return a value if defined as a Function.
 

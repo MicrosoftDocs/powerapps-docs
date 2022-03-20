@@ -117,7 +117,7 @@ You can more easily test `GET` requests using your browser alone, but there is a
 > - Functions must return some data. You must include at least one response property for the Custom API to be valid.
 >    - A function that does not include a response property will not appear within the Web API $metadata service document.
 >    - If you try to use an invalid function, you will get a `404 Not found` error similar to this:<br />`{"error":{"code":"0x8006088a","message":"Resource not found for the segment 'your_function_name'."}}`
-> - A Function is not allowed when the **Enabled for Workflow**option is selected. See [Enabled for Workflow](#enabled-for-workflow)
+> - A Function is not allowed when the **Enabled for Workflow** option is selected. See [Use a Custom API in a workflow](#use-a-custom-api-in-a-workflow)
 
 If your Custom API has many complex request parameters which could cause the length of the URL to be too long, it is acceptable to create an Action that performs the same operation passing all the parameter data in the body using a `POST` request.
 
@@ -143,19 +143,19 @@ More information:
 - [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
 - [Private Messages](org-service/use-messages.md#private-messages)
 
-## Execute Privilege Name
+## Secure your Custom API with a privilege
 
 Set the Custom API **Execute Privilege Name** (`ExecutePrivilegeName`) property to the name of the privilege to require it. There is currently no supported way for developers outside of Microsoft to create new privileges, but an existing privilege can be used. More information: [Q: Can I create a new privilege for my Custom API?](custom-api.md#q-can-i-create-a-new-privilege-for-my-custom-api) 
 
-## Plugin Type
+## Use a plug-in to include logic in your Custom API
 
-If you do not set the Custom API **Plugin Type** (`PluginTypeId`)  to specify main operation logic the API can still be called.
+If you do not set the Custom API **Plugin Type** (`PluginTypeId`)  to specify main operation logic you can still invoke the Custom API.
 
 You may choose to not include any logic in the plug-in because you are using the Custom API as a business event. More information: [Microsoft Dataverse business events](business-events.md).
 
 You might want to do this as a testing step, but any output parameter values will return the default values for the type because there is no code to set them.
 
-## Enabled for Workflow
+## Use a Custom API in a workflow
 
 Set the Custom API **Enabled for Workflow** (`WorkflowSdkStepEnabled`) to true when you need to enable calling a Custom API as a workflow action. However, when this is selected the following limitations are imposed so that the Custom API can be called in the workflow designer:
 

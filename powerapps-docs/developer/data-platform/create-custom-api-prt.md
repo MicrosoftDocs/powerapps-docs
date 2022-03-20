@@ -44,12 +44,12 @@ Use the information in the table below to create the Custom API.
 |**Allowed Custom Processing Step Type**|Which types of processing steps you will allow. More Information: [Select a Custom Processing Step Type](customapi-table-columns.md#select-a-custom-processing-step-type)|**No**|
 |**Binding Type**|What kind of entity binding. More Information: [Select a Binding Type](customapi-table-columns.md#select-a-binding-type)|**No**|
 |**Bound Entity Logical Name**|If you select **Binding Type** **Entity** or **EntityCollection** you should enter the logical name of the table representing that type.|**No**|
-|**Execute Privilege Name**|The name of a privilege that will control whether someone can use the API. This must be a valid [Name](reference/entities/privilege.md#BKMK_Name) value from the [Privilege](reference/entities/privilege.md) table. |Yes|
+|**Execute Privilege Name**|The name of a privilege that will control whether someone can use the API. This must be a valid [Name](reference/entities/privilege.md#BKMK_Name) value from the [Privilege](reference/entities/privilege.md) table. More information: [Secure your Custom API with a privilege](custom-api.md#secure-your-custom-api-with-a-privilege) |Yes|
 |**Function**|Whether to create a Function. More Information: [When to create a Function](customapi-table-columns.md#when-to-create-a-function)|**No**|
 |**Private**|Whether the Custom API should be private. More Information: [When to make your Custom API private](customapi-table-columns.md#when-to-make-your-custom-api-private)|Yes|
 
 > [!NOTE]
-> - The PRT Custom API designer doesn't expose the **Enabled For Workflow** (WorkflowSdkStepEnabled) property. If you want to create a Custom API that will work for Workflows, you need to use a different method.
+> - The PRT Custom API designer doesn't expose the **Enabled For Workflow** (`WorkflowSdkStepEnabled`) property. If you want to create a Custom API that will work for Workflows, you need to use a different method.
 > - The PRT Custom API designer doesn't expose the **Is Customizable** managed property. You can set this in Power Apps. More information [Custom API Customization](custom-api.md#custom-api-customization)
 
 You can continue to add **Request Parameters** and **Response Properties**, or save the Custom API and add them later.
