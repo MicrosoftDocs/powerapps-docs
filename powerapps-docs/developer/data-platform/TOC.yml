@@ -45,12 +45,8 @@
         href: create-custom-api-with-code.md
       - name: Create a Custom API with solution files
         href: create-custom-api-solution.md
-      - name: CustomAPI Table Columns
-        href: customapi-table-columns.md
-      - name: CustomAPIRequestParameter Table Columns
-        href: customapirequestparameter-table-columns.md
-      - name: CustomAPIResponseProperty Table Columns
-        href: customapiresponseproperty-table-columns.md
+      - name: CustomAPI Tables
+        href: custom-api-tables.md
       - name: "Sample: IsSystemAdmin Custom API plug-in"
         href: org-service/samples/issystemadmin-customapi-sample-plugin.md
     - name: Use Custom Process Actions with code

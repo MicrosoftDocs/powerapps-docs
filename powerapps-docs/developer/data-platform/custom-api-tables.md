@@ -2,7 +2,7 @@
 title: "CustomAPI tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the tables and column values to use when creating Custom APIs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/14/2022
+ms.date: 03/21/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -273,21 +273,21 @@ The table below includes selected columns of a Custom API table that you can set
 
 |Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|
-|**Allowed Custom Processing Step Type**<br />`AllowedCustomProcessingStepType`<br />`allowedcustomprocessingsteptype`|Choice<br />Picklist|<ul> <li>**Value**: 0<br />**Label**: None<br />**Meaning**: No custom processing steps allowed.</li> <li>**Value**: 1<br />**Label**: Async Only<br />**Meaning**: Only asynchronous custom processing steps allowed</li> <li>**Value**: 2<br />**Label**: Sync and Async<br />**Meaning**: No restriction. 3rd party plug-ins can add synchronous logic to change the behavior of the message.</li> </ul>See [Select a Custom Processing Step Type](#select-a-custom-processing-step-type)<br/>**Cannot be changed after it is saved.**|
-|**Binding Type**<br />`BindingType`<br />`bindingtype`|Choice<br />Picklist|<ul><li>**Value**: 0 **Label**: Global</li><li>**Value**: 1 **Label**: Entity</li><li>**Value**: 2 **Label**: EntityCollection</li></ul>See [Select a Binding Type](#select-a-binding-type)<br />**Cannot be changed after it is saved.**|
+|**Allowed Custom Processing Step Type**<br />`AllowedCustomProcessingStepType`<br />`allowedcustomprocessingsteptype`|Choice<br />Picklist|<ul> <li>**Value**: 0<br />**Label**: None<br />**Meaning**: No custom processing steps allowed.</li> <li>**Value**: 1<br />**Label**: Async Only<br />**Meaning**: Only asynchronous custom processing steps allowed</li> <li>**Value**: 2<br />**Label**: Sync and Async<br />**Meaning**: No restriction. 3rd party plug-ins can add synchronous logic to change the behavior of the message.</li> </ul>See [Select a Custom Processing Step Type](custom-api.md#select-a-custom-processing-step-type)<br/>**Cannot be changed after it is saved.**|
+|**Binding Type**<br />`BindingType`<br />`bindingtype`|Choice<br />Picklist|<ul><li>**Value**: 0 **Label**: Global</li><li>**Value**: 1 **Label**: Entity</li><li>**Value**: 2 **Label**: EntityCollection</li></ul>See [Select a Binding Type](custom-api.md#select-a-binding-type)<br />**Cannot be changed after it is saved.**|
 |**Bound Entity Logical Name**<br />`BoundEntityLogicalName`<br />`boundentitylogicalname`|Text<br />String|The logical name of the table bound to the custom API if it is not Global.<br />**Cannot be changed after it is saved.**|
 |**Custom API**<br />`CustomAPIId`<br />`customapiid`|Unique Identifier<br />Guid|Unique Identifier for custom API instances<br />**Cannot be changed after it is saved.**|
 |**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
 |**Display Name**<br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
-|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. See: [Execute Privilege Name](#execute-privilege-name)|
+|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API. See: [Execute Privilege Name](custom-api.md#execute-privilege-name)|
 |**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the Custom API can be customized or deleted when part of a managed solution.|
-|**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>See [When to create a Function](#when-to-create-a-function)<br />**Cannot be changed after it is saved.**|
-|**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li></ul>See [When to make your Custom API private](#when-to-make-your-custom-api-private)|
+|**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>See [When to create a Function](custom-api.md#when-to-create-a-function)<br />**Cannot be changed after it is saved.**|
+|**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li></ul>See [When to make your Custom API private](custom-api.md#when-to-make-your-custom-api-private)|
 |**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
 |**Owner**<br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API. |
-|**Plugin Type**<br />`PluginTypeId`<br />`plugintypeid`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API. See: [Plugin Type](#plugin-type)|
+|**Plugin Type**<br />`PluginTypeId`<br />`plugintypeid`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API. See: [Plugin Type](custom-api.md#plugin-type)|
 |**Unique Name**<br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API. This will be the name of the message created.<br /> This value must include a customization prefix that matches the prefix set for your solution publisher.<br />**Cannot be changed after it is saved.**|
-|**Enabled for Workflow**<br />`WorkflowSdkStepEnabled`<br />`workflowsdkstepenabled`|Yes/No<br />Boolean|Indicates if the custom API is enabled as a workflow action. See: [Enabled for Workflow](#enabled-for-workflow)<br />**Cannot be changed after it is saved.**|
+|**Enabled for Workflow**<br />`WorkflowSdkStepEnabled`<br />`workflowsdkstepenabled`|Yes/No<br />Boolean|Indicates if the custom API is enabled as a workflow action. See: [Enabled for Workflow](custom-api.md#enabled-for-workflow)<br />**Cannot be changed after it is saved.**|
 
 ### CustomAPIRequestParameter Table Columns
 
@@ -296,7 +296,7 @@ A custom API isn’t required to have any parameters. There is no specified orde
 A parameter is related to a single Custom API. You cannot define multiple Custom APIs to use the same parameter definition. You can define multiple request parameter with the same `UniqueName` value if they are used by different Custom APIs.
 
 > [!NOTE]
-> If you define a bound table for your Custom API, the request parameter will be generated for you. You don’t need to create an input parameter for the table when the Custom API is bound to a table. More information: [Select a Binding Type](#select-a-binding-type)
+> If you define a bound table for your Custom API, the request parameter will be generated for you. You don’t need to create an input parameter for the table when the Custom API is bound to a table. More information: [Select a Binding Type](custom-api.md#select-a-binding-type)
 
 The table shown below includes columns (attributes) of the Custom API Request Parameter table that you can set.
 

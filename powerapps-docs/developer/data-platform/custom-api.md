@@ -459,7 +459,7 @@ A: Your private messages will work regardless of whether they are advertised in 
 
 More information:
 
-- [When to make your Custom API private](customapi-table-columns.md#when-to-make-your-custom-api-private)
+- [When to make your Custom API private](#when-to-make-your-custom-api-private)
 - [Private Messages](org-service/use-messages.md#private-messages)
 - [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
 
