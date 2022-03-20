@@ -15,11 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
+# CustomAPIRequestParameter table columns 
 
-
-
-> [!NOTE]
-> Some values are not valid for update. They cannot be changed after the Custom API Request Parameter is saved. If you need to change one of these values, you must delete the Custom API Request Parameter and re-create it with the changes you want to make.
+See [CustomAPIRequestParameter Table Columns](custom-api-tables.md#customapirequestparameter-table-columns)
 
 ### See also
 

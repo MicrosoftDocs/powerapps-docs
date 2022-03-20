@@ -2,7 +2,7 @@
 title: "CustomAPI table columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the table columns (entity attributes) to set when creating a Custom API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/14/2022
+ms.date: 03/21/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -19,15 +19,7 @@ search.app:
 
 # CustomAPI Table Columns
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
-
-
-> [!NOTE]
-> Some values are not valid for update. They cannot be changed after the Custom API is saved. You should have a clear understanding of how your API should work before you begin. If you need to change any values that are not valid for update, you will have to delete the Custom API table record and start over. Deleting the Custom API record will delete any Custom API Request Parameters or Custom API Response Properties associated with it.
-
-
-  
+See [Custom API table columns](custom-api-tables.md#custom-api-table-columns)
 
 ### See also
 
