@@ -36,7 +36,7 @@ Use the information in the table below to create the Custom API.
 |---------|---------|---------|
 |**Display Name**|A localizable name. |Yes|
 |**Name**|A friendly, non-localizable name.|Yes|
-|**Solution**|Create a new solution or select an existing one. Setting this value will set the appropriate customization prefix for the **Unique Name**field.|Yes|
+|**Solution**|Create a new solution or select an existing one. Setting this value will set the appropriate customization prefix for the **Unique Name** field.|Yes|
 |**Unique Name**|The name of the Custom API. This value should contain only alphanumeric characters and no spaces.<br/>The full name includes the customization prefix determined by selecting the solution.|**No**|
 |**Description**|A localizable description. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|Yes|
 |**Assembly**|Optional. Select an assembly that contains a plug-in type that will define what the Custom API does.|Yes|
@@ -52,7 +52,7 @@ Use the information in the table below to create the Custom API.
 > - The PRT Custom API designer doesn't expose the **Enabled For Workflow** (WorkflowSdkStepEnabled) property. If you want to create a Custom API that will work for Workflows, you need to use a different method.
 > - The PRT Custom API designer doesn't expose the **Is Customizable** managed property. You can set this in Power Apps. More information [Custom API Customization](custom-api.md#custom-api-customization)
 
-You can continue to add **Request Parameters**and **Response Properties**, or save the Custom API and add them later.
+You can continue to add **Request Parameters** and **Response Properties**, or save the Custom API and add them later.
 
 ## Create Request parameters
 
@@ -66,7 +66,7 @@ Use the information in the table below to create the Request Parameter
 |Label|Description|Can be changed|
 |---------|---------|---------|
 |**Display Name**|Localizable display name.|Yes|
-|**Name**|The primary name of the custom API request parameter. This naming convention is recommended to differentiate this parameter from others that share a common Unique Name: `{Custom API Unique Name}.{Parameter UniqueName}`|Yes|
+|**Name**|The primary name of the custom API request parameter. This naming convention is recommended to differentiate this parameter from others that share a common **Unique Name**: `{Custom API Unique Name}.{Parameter UniqueName}`|Yes|
 |**Unique Name**|This will be the name of the parameter when you call the Custom API.|**No**|
 |**Type**|Select the type of the parameter. <br/>Boolean<br/>DateTime<br/>Decimal<br/>Entity<br/>EntityCollection<br/>EntityReference<br/>Float<br/>Integer<br/>Money<br/>Picklist<br/>String<br/>StringArray<br/>Guid<br/>|**No**|
 |**Logical Entity Name**|When **Entity**, **EntityCollection**, or **EntityReference** is selected as the **Type**, you can specify the table.|**No**|
