@@ -41,12 +41,12 @@ Use the information in the table below to create the Custom API.
 |**Description**|A localizable description. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|Yes|
 |**Assembly**|Optional. Select an assembly that contains a plug-in type that will define what the Custom API does.|Yes|
 |**Plugin**|Optional. Select a plug-in type within the selected assembly. You may set this later.|Yes|
-|**Allowed Custom Processing Step Type**|Which types of processing steps you will allow. More Information: [Select a Custom Processing Step Type](customapi-table-columns.md#select-a-custom-processing-step-type)|**No**|
-|**Binding Type**|What kind of entity binding. More Information: [Select a Binding Type](customapi-table-columns.md#select-a-binding-type)|**No**|
+|**Allowed Custom Processing Step Type**|Which types of processing steps you will allow. More Information: [Select a Custom Processing Step Type](custom-api.md#select-a-custom-processing-step-type)|**No**|
+|**Binding Type**|What kind of entity binding. More Information: [Select a Binding Type](custom-api.md#select-a-binding-type)|**No**|
 |**Bound Entity Logical Name**|If you select **Binding Type** **Entity** or **EntityCollection** you should enter the logical name of the table representing that type.|**No**|
 |**Execute Privilege Name**|The name of a privilege that will control whether someone can use the API. This must be a valid [Name](reference/entities/privilege.md#BKMK_Name) value from the [Privilege](reference/entities/privilege.md) table. More information: [Secure your Custom API with a privilege](custom-api.md#secure-your-custom-api-with-a-privilege) |Yes|
-|**Function**|Whether to create a Function. More Information: [When to create a Function](customapi-table-columns.md#when-to-create-a-function)|**No**|
-|**Private**|Whether the Custom API should be private. More Information: [When to make your Custom API private](customapi-table-columns.md#when-to-make-your-custom-api-private)|Yes|
+|**Function**|Whether to create a Function. More Information: [When to create a Function](custom-api.md#when-to-create-a-function)|**No**|
+|**Private**|Whether the Custom API should be private. More Information: [When to make your Custom API private](custom-api.md#when-to-make-your-custom-api-private)|Yes|
 
 > [!NOTE]
 > - The PRT Custom API designer doesn't expose the **Enabled For Workflow** (`WorkflowSdkStepEnabled`) property. If you want to create a Custom API that will work for Workflows, you need to use a different method.
