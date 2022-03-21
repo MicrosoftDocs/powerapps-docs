@@ -2,9 +2,8 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/02/2021
+ms.date: 03/21/2022
 ms.reviewer: ""
-
 ms.topic: "article"
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
@@ -19,8 +18,6 @@ search.app:
   - D365CE
 ---
 # Import solutions
-
-
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -99,6 +96,12 @@ A model-driven app change that uses **All** when selecting a component, such as 
 2. Then you created another solution with the same app in the development environment. You selected **All** to select all views in the app designer. The solution is then exported as managed from your development environment and imported into your test (target) environment.
 
 To work around this behavior, select each component individually, such as the newly added views described in step 2, rather than select All.
+
+### Label text doesn’t display in additional languages after import
+
+After you import a solution, label text doesn’t display in other languages. This issue can occur when you import the solution with the translations *before* you enable the language in the target environment.
+
+To workaround this issue, enable the languages that you want and then import the solution again. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
 
 ### See also
 
