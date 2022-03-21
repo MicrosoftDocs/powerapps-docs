@@ -15,15 +15,13 @@ contributors:
 
 ---
 
-# Tutorial: Configure the rich text editor control on portals (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Tutorial: Configure the rich text editor control on portals 
 
 In this tutorial, you'll configure Power Apps portals to add the [rich text editor control](../model-driven-apps/rich-text-editor-control.md) to a basic form and then add the basic form to a web page. Portal users will be able interact with the rich text editor control to format text on the form.
 
 ## Prerequisites
 
-Your portal version must be [9.4.3.x](/power-platform/released-versions/portals/portalupdate942x) or higher.
+Your portal version must be [9.4.3.x](/power-platform/released-versions/portals) or higher.
 
 ## Step 1. Add the rich text editor control to a field in a model-driven app
 

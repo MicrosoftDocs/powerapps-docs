@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 03/04/2022
+ms.date: 03/17/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -40,6 +40,22 @@ For a full list of default options, see [Use the rich text editor toolbar](#use-
 ## Add or replace a text column for rich text editing
 
 Create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
+
+### Simple configuration
+
+To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps:
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
+
+   > [!NOTE]
+   > The parameter in the URL is required to display the new **Format** option in the maker experience.
+1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
+1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
+1. Save the column. You can now add the new column to any existing or new form for this table.
+
+### Advanced configuration
+
+To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
@@ -773,7 +789,7 @@ The following table outlines a list of accessibility shortcuts available when us
 
 ## Frequently asked questions
 
-Q: Why are typed characters are slow to display?
+Q: Why are typed characters slow to display?
 
 A. Large content size can cause latency. For more information, see [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 
