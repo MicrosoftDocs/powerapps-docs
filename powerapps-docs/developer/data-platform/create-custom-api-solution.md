@@ -240,6 +240,7 @@ As an alternative to using the process described in [Localized Label values](cus
 
 [Create and use Custom APIs](custom-api.md)<br />
 [CustomAPI tables](custom-api-tables.md)<br />
+[Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br/>
 [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create your own messages](custom-actions.md)<br />

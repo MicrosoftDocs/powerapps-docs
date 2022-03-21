@@ -348,6 +348,7 @@ The table below includes columns (attributes) of the Custom API Response Propert
 
 [Create and use Custom APIs](custom-api.md)<br />
 [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br />
+[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
 [Create your own messages](custom-actions.md)<br />
