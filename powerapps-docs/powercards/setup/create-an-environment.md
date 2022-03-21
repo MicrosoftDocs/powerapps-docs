@@ -16,7 +16,7 @@ ms.collection:
 
 This procedure presumes you've downloaded the cards zip file.
 
-1. Go to [make.test.powerapps.com](https://www.make.test.powerapps.com) (or [aka.ms/pcdesigner](https://www.aka.ms/pcdesigner) for internal)
+1. Go to [make.test.powerapps.com](https://www.make.test.powerapps.com) (or [aka.ms/pcdesigner](https://www.aka.ms/pcdesigner) for internal).
 
 1. [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 
@@ -24,9 +24,9 @@ This procedure presumes you've downloaded the cards zip file.
 
     :::image type="content" source="../media/create-an-environment/new-environment-success-msg.png" alt-text="Screenshot of successful environment creation notification." border="false":::
 
-1. Once the instance is ready, go back to the Power Apps home page and refresh the page
+1. Once the instance is ready, go back to the Power Apps home page and refresh the page.
 
-1. Select Environment from the top bar. You should see your environment at the bottom of the environment list. If there are too many environments to display at once, search for your environment and select it once it appears in the list.
+1. Select **Environment** from the top bar. You should see your environment at the bottom of the environment list. If there are too many environments to display at once, search for your environment and select it once it appears in the list.
 
     :::image type="content" source="../media/create-an-environment/new-environment-in-list.png" alt-text="Screenshot of all environments plus the newly created environment." border="false":::
 
@@ -36,9 +36,9 @@ This procedure presumes you've downloaded the cards zip file.
 
     :::image type="content" source="../media/create-an-environment/currently-importing-solution-banner.png" alt-text="Screenshot of solution importing banner." border="false":::
 
-1. From the left pane, select Cards, then select Create
+1. From the left pane, select **Cards**, then select **Create**.
 
-1. Select Basic card from the Create page
+1. On the Create page, select **Basic card**.
 
 > [!NOTE]
 > If you get a warning saying "The current environment hasn't been provisioned for card, switch to provisioned environment?", contact your sysadmin.
