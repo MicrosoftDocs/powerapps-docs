@@ -789,7 +789,7 @@ The following table outlines a list of accessibility shortcuts available when us
 
 ## Frequently asked questions
 
-Q: Why are typed characters are slow to display?
+Q: Why are typed characters slow to display?
 
 A. Large content size can cause latency. For more information, see [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 

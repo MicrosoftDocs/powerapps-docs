@@ -76,7 +76,7 @@ Timer control **Data Source** properties use columns for the table.
 |Data Source|Failure Time Field|**Required**. Choose one of the date-time columns for the table to represent when a milestone should be successfully completed.|  
 ||Success Condition|**Required**. Select a column for the table to evaluate the success of the milestone, then choose which option indicates success.|  
 ||Warning Condition|Select a column for the table to evaluate whether the success of the milestone is at risk so that a warning should be displayed, then choose which option indicates that a warning should be displayed.|  
-||Cancel Condition|Select a column for the table to evaluate whether the achievement of th milestone should be cancelled, then choose which option indicates that the milestone is cancelled.|  
+||Cancel Condition|Select a column for the table to evaluate whether the achievement of the milestone should be cancelled, then choose which option indicates that the milestone is cancelled.|  
 
 ## Next steps
 
