@@ -103,6 +103,8 @@ Once you have set the **Plugin Type**, you can test your Custom API to verify th
 
 ## Other ways to create Custom APIs
 
+The plugin registration tool provides a Custom API designer. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
+
 You may have requirements to create a client application which will allow creation of Custom APIs outside of the designer. Because the data for Custom APIs is stored in tables, you can create them using code. More information: [Create a Custom API with code](create-custom-api-with-code.md).
 
 Your ALM process may be better served by creating Custom APIs by editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
@@ -110,6 +112,7 @@ Your ALM process may be better served by creating Custom APIs by editing solutio
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br />
+[Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
 [Create your own messages](custom-actions.md)<br />
