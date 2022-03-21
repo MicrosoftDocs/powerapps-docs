@@ -18,41 +18,7 @@ This procedure presumes you've downloaded the cards zip file.
 
 1. Go to [make.test.powerapps.com](https://www.make.test.powerapps.com) (or [aka.ms/pcdesigner](https://www.aka.ms/pcdesigner) for internal)
 
-1. Select gear from top bar
-
-1. Select Admin center
-
-    :::image type="content" source="../media/create-an-environment/select-admin-center.png" alt-text="Screenshot showing how to get to the Power Apps Admin Center." border="false":::
-
-1. In the Admin center, select Environments from the left pane
-
-    :::image type="content" source="../media/create-an-environment/add-new-environment.png" alt-text="Screenshot showing how to add a new environment to Power Apps." border="false":::
-
-1. Choose the following for your new environment:
-
-   1. Name: add a distinct name so you'll be able to find your environment in the drop down later
-
-   1. Region: default is United States, but you can select Europe if you're based over there
-
-   1. Type: you can choose from [Sandbox](https://docs.microsoft.com/power-platform/admin/sandbox-environments), Production, and [Trial](https://docs.microsoft.com/power-platform/admin/trial-environments). Don't select Production unless you're on a paid license, as this type of environment requires paid capacity. Sandbox will allow you to play with all of the features for an indefinite amount of time (uses a space in Dataverse), and Trial will give you 30 days to play around before it's auto-deleted See the links for more information.
-
-   1. Purpose (optional)
-
-   1. Create a database for this environment: flip toggle to Yes. This enables a dataverse connection.
-
-    :::image type="content" source="../media/create-an-environment/new-environment-options.png" alt-text="Screenshot of environment options for new Power Apps environment." border="false":::
-
-1. Select Next
-
-1. Select any options on the next pane you'd like
-
-   1. If Enable Dynamics 365 apps is greyed out, you may encounter some issues. See your sysadmin for more help.
-
-   1. Add any security groups as needed.
-
-    :::image type="content" source="../media/create-an-environment/new-environment-database.png" alt-text="Screenshot of database options for new Power Apps environments." border="false":::
-
-1. Select Save
+1. [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 
 1. If you've set up your environment successfully, you'll see a green bar across the top of the Environments page letting you know that your new environment is being prepped. This preparation process can take up to five minutes, depending on your connection. If it doesn't automatically refresh once ready, refresh the page to update the status.
 
