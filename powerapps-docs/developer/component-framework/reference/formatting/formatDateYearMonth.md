@@ -2,15 +2,15 @@
 title: formatDateYearMonth | Microsoft Docs
 description: Returns a formatted string that represents a date in the year month format.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: b4c08ece-a164-455c-a1b7-8ce855aedad4
 ---
 
 # formatDateYearMonth

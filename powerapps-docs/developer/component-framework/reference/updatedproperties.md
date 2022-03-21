@@ -2,15 +2,14 @@
 title: updatedProperties | Microsoft Docs
 description: Provides updatesProperties related methods.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/12/2021
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 ---
 
 # updatedProperties
@@ -26,7 +25,7 @@ Model-driven and canvas apps
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): void
 {
-  // check if thi updateView call ahs update on sampleProperty
+  // check if the updateView call has updated the sampleProperty
   if(context.updateProperties.indexOf("SampleProperty")> -1)
    {
       this._value = context.parameters.sampleProperty.raw;
