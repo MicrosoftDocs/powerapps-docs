@@ -2,14 +2,14 @@
 title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2021
-ms.reviewer: "pehecke"
+ms.date: 03/21/2022
+ms.reviewer: "jdaly"
 
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -21,7 +21,7 @@ search.app:
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
 > - [Create and use Custom APIs](custom-api.md)
-> - [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)
+> - [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
 
 
 While you can create Custom APIs through a designer or with code, you can also define them by working with files within a solution. This may be the preferred option for solution publishers who apply the recommended best practices for Application Lifecycle Management (ALM).
