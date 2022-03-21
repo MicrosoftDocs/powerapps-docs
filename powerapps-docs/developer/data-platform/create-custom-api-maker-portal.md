@@ -56,7 +56,7 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
 
 ## Create any Response Properties
 
-A Custom API that represents an action doesn't require response properties. If the operation succeeds, it will return a success response. If it fails, it will return an error. You should define response properties for any data that your API will return.
+A Custom API that represents an Action doesn't require response properties. A Function must have at least one.  If the operation succeeds, it will return a success response. If it fails, it will return an error. You should define response properties for any data that your API will return.
 
 If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple properties, or one or more property of a simple type, the API will return a complex type where each response property will be a property of that complex type.
 
@@ -68,9 +68,6 @@ For example, if your Custom API Unique name is `sample_CustomAPIExample`, it wil
 1. Click **Save**. Your form should look something like this:
 
     :::image type="content" source="media/customapi-response-property-form.png" alt-text="Custom API Response Property Form.":::
-
-> [!NOTE]
-> As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Observe the result in the service document
 
@@ -87,8 +84,6 @@ Search the result to find the name of the Custom API. For example, the API defin
     <ReturnType Type="mscrm.sample_CustomAPIExampleResponse" Nullable="false" />
 </Action>
 ```
-
-If you have set the `IsPrivate` property for your Custom API, you won't find your custom API in the results. But you can set the `IsPrivate` value back to `false` and retrieve the `$metadata` again. The API will work exactly the same whether it is returned by the $metadata or not. You can always set it back to `true` before you ship your solution if you don't want to support others using your Custom API.
 
 
 ## Test your Custom API
