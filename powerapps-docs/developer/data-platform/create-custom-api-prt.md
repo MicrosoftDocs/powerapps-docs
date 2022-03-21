@@ -118,6 +118,32 @@ In the list of **Request parameters** or **Response properties**, select this co
 
 :::image type="content" source="media/prt-custom-api-parameter-delete.png" alt-text="Column to delete parameter":::
 
+## Next steps
+
+If you haven't set the `IsPrivate` property for your Custom API, you can now retrieve the service definition from the [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) using a GET request, even from your browser. If the url for your environment is `https://yourorg.crm.dynamics.com`, you can type this URL in your browser address field to retrieve the $metadata: `https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata`.
+
+Search the result to find the name of the Custom API and you will find the Action or Function created together with any related ComplexType to represent the return value. For example:
+
+```xml
+<ComplexType Name="sample_CustomAPIExampleResponse">
+    <Property Name="StringProperty"
+        Type="Edm.String"
+        Unicode="false"/>
+</ComplexType>
+<Action Name="sample_CustomAPIExample">
+    <Parameter Name="StringParameter"
+        Type="Edm.String"
+        Nullable="false"
+        Unicode="false"/>
+    <ReturnType Type="mscrm.sample_CustomAPIExampleResponse"
+        Nullable="false"/>
+</Action>
+```
+
+Even if you haven't set a **Plugin** for your Custom API, you can test it to verify the signature. Any response properties will return their default values because there is no plug-in to set the values. More information: [Invoking Custom APIs](custom-api.md#invoking-custom-apis)
+
+If you will add a plug-in, you must write it and register the assembly. Then update your Custom API to set the **Assembly** and **Plugin** to specify what code to run in response to your Custom API. More information: [Write a Plug-in for your Custom API](custom-api.md#write-a-plug-in-for-your-custom-api)
+
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br />

@@ -31,10 +31,10 @@ However, in other cases you will combine a Custom API with a plug-in to define s
 
 There are several different ways to create a custom API:
 
-|Method|Benefit|
+|Method link|Benefit|
 |---------|---------|
 |[Plug-in registration tool](create-custom-api-prt.md)|An easy-to-use GUI tool integrated with tools used to develop plug-ins.|
-|[Power Apps](create-custom-api-maker-portal.md)|Using forms to enter data. You don't need to install a separate tool, but the experience is not great.|
+|[Power Apps](create-custom-api-maker-portal.md)|Using forms to enter data. You don't need to install a separate tool, you must create a separate record for each part of the Custom API.|
 |[With Code](create-custom-api-with-code.md)|After you understand the data model, you can create Custom API very quickly using Postman. Or you can build your own experience to create Custom API.|
 |[With solution files](create-custom-api-solution.md)|When you use Application Lifecycle Management (ALM) tools you can create or modify Custom API definitions with XML files in a solution that is included in your source code repository. The Custom API will be created when you import the solution generated from your source code.|
 
@@ -79,8 +79,8 @@ The following table describes which Custom API **Custom Processing Step Type** (
 
 |Option |When to use  |
 |---------|---------|
-|**None**|When the plug-in type set for this Custom API will the only logic that occurs when this operation executes.<br/>You will not allow another developer to register any additional steps that may trigger additional logic, modify the behavior of this operation, or cancel the operation.<br/>Use this when the Custom API provides some capability that will not be of interest to business processes.|
-|**Async Only**|When you want to allow other developers to detect when this operation occurs, but you do not want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This is the option recommended if you are using the Business Events pattern. A Business event will create a trigger in Power Automate to you can use when this event occurs. More information: [Microsoft Dataverse business events](business-events.md)|
+|**None**|When the plug-in type set for this Custom API will the only logic that occurs when this operation executes.<br/>You will not allow another developer to register any additional steps that may trigger additional logic, modify the behavior of this operation, or cancel the operation.<br/>Use this when the Custom API provides some capability that should not be customizable.|
+|**Async Only**|When you want to allow other developers to detect when this operation occurs, but you do not want them to be able to cancel the operation or customize the behavior of the operation.<br/> Other developers can register asynchronous steps to detect that this operation occurred and respond to it after it has completed.<br/>This is the option recommended if you are using the business events pattern. A business event will create a trigger in Power Automate to you can use when this event occurs. More information: [Microsoft Dataverse business events](business-events.md)|
 |**Sync and Async**|When you want to allow other developers to have the ability to change the behavior of the operation and even cancel it if their business logic dictates.<br/>If the operation succeeds, other developers can also detect this and add logic to run asynchronously.<br/>Most Dataverse messages enable extension in this manner.  Use this when your message represents a business process that should be customizable.|
 
 ## Select a Binding Type
@@ -95,11 +95,6 @@ Binding is an OData concept that associates an operation to a specific table. Th
 
 Selecting **Entity** or **EntityCollection** will require that you use the fully qualified name of the Function or Action when you use the Web API. The fully qualified name is `Microsoft.Dynamics.CRM.<UniqueName of the Custom API>`. 
 
-More information: 
- - [Actions bound to a table](webapi/use-web-api-actions.md#actions-bound-to-a-table)
- - [Actions bound to a table collection](webapi/use-web-api-actions.md#actions-bound-to-a-table-collection)
- - [Bound functions](webapi/use-web-api-functions.md#bound-functions)
-
 When you select **Entity**, a request parameter named `Target` with the type <xref:Microsoft.Xrm.Sdk.EntityReference>  is created automatically. You do not need to create it. This value will be passed to any plug-ins registered for this message.
 
 When you select **EntityCollection**, no parameter or response property representing the entity collection is included. Setting this binding simply adds the requirement that the operation be invoked appended to the entityset when using the Web API.
@@ -107,22 +102,25 @@ When you select **EntityCollection**, no parameter or response property represen
 > [!NOTE]
 > These binding types are available for you to use when composing your Custom API, but it is not required that you bind to an entity or entity collection. You can compose all your Custom API as **Global** and add whichever request parameters or response properties you need to achieve the same functionality as a bound Function or Action.
 
+More information:
+ - [Actions bound to a table](webapi/use-web-api-actions.md#actions-bound-to-a-table)
+ - [Actions bound to a table collection](webapi/use-web-api-actions.md#actions-bound-to-a-table-collection)
+ - [Bound functions](webapi/use-web-api-functions.md#bound-functions)
+
 ## When to create a Function
 
 The Custom API **Is Function** property controls whether the Custom API will be a *Function* or *Action*. In OData a Function is an operation called using HTTP `GET` request which returns data without making any changes. With a `GET` request, all the parameters are passed as parameters in the URL when invoking the function.
 
-You can more easily test `GET` requests using your browser alone, but there is a limit to the length of the URL that can be sent, usually around 2000 characters. More information: [Use Web API functions](webapi/use-web-api-functions.md)
+You can more easily test `GET` requests using your browser alone, but there is a limit to the length of the URL that can be sent, usually around 2000 characters. If your Custom API has many complex request parameters which could cause the length of the URL to be too long, it is acceptable to create an Action that performs the same operation passing all the parameter data in the body using a `POST` request.
 
 > [!NOTE]
 > - Functions must return some data. You must include at least one response property for the Custom API to be valid.
 >    - A function that does not include a response property will not appear within the Web API $metadata service document.
 >    - If you try to use an invalid function, you will get a `404 Not found` error similar to this:<br />`{"error":{"code":"0x8006088a","message":"Resource not found for the segment 'your_function_name'."}}`
 > - A Function is not allowed when the **Enabled for Workflow** option is selected. See [Use a Custom API in a workflow](#use-a-custom-api-in-a-workflow)
+> - Currently the [Microsoft Dataverse Connector](/connectors/commondataserviceforapps/) only enables performing actions. If you need the operation to be performed using Power Automate, you should create your Custom API as an Action.
 
-If your Custom API has many complex request parameters which could cause the length of the URL to be too long, it is acceptable to create an Action that performs the same operation passing all the parameter data in the body using a `POST` request.
-
-> [!IMPORTANT]
-> Currently the [Microsoft Dataverse Connector](/connectors/commondataserviceforapps/) only enables performing actions. If you need the operation to be performed using Power Automate, you should create your Custom API as an Action.
+More information: [Use Web API functions](webapi/use-web-api-functions.md)
 
 ## When to make your Custom API private
 
@@ -234,7 +232,7 @@ More information:
 
 ### Invoking Custom APIs from the Organization Service
 
-You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to expose the request parameters and response properties of your custom API.
 
 For late-bound code, or for a Custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
