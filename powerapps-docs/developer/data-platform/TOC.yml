@@ -33,26 +33,24 @@
     href: ./org-service/overview.md
   - name: Create your own messages
     href: custom-actions.md
-    items:
-    - name: Use Custom Process Actions with code
-      href: workflow-custom-actions.md
+    items:    
     - name: Create and use Custom APIs
       href: custom-api.md
       items:
-      - name: Create a Custom API in the maker portal
+      - name: Create a Custom API with plug-in registration tool
+        href: create-custom-api-prt.md
+      - name: Create a Custom API in Power Apps
         href: create-custom-api-maker-portal.md
       - name: Create a Custom API with code
         href: create-custom-api-with-code.md
       - name: Create a Custom API with solution files
         href: create-custom-api-solution.md
-      - name: CustomAPI Table Columns
-        href: customapi-table-columns.md
-      - name: CustomAPIRequestParameter Table Columns
-        href: customapirequestparameter-table-columns.md
-      - name: CustomAPIResponseProperty Table Columns
-        href: customapiresponseproperty-table-columns.md
+      - name: CustomAPI Tables
+        href: custom-api-tables.md
       - name: "Sample: IsSystemAdmin Custom API plug-in"
         href: org-service/samples/issystemadmin-customapi-sample-plugin.md
+    - name: Use Custom Process Actions with code
+      href: workflow-custom-actions.md      
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
