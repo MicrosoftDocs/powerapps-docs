@@ -24,11 +24,11 @@ search.app:
 
 ## How many levels of related table columns can I add to a view using the column editor?
 
-You can add one level of related table columns using the column editor ([**Edit columns**](grid-filters-advanced.md#column-editor)) on a grid page.
+You can add one level of related table columns using the column editor ([**Edit columns**](grid-filters-advanced.md#select-columns-in-the-column-editor)) on a grid page.
 
 ## How many levels of related table columns can I add to nested conditions in a view using the filter editor?
 
-You can add up to 10 levels of related table conditions using the filter editor ([**Edit filters**](grid-filters-advanced.md#filter-editor)) on a grid page.
+You can add up to 10 levels of related table conditions using the filter editor ([**Edit filters**](grid-filters-advanced.md#select-filter-conditions-in-the-filter-editor)) on a grid page.
 
 ## Known issues
 
