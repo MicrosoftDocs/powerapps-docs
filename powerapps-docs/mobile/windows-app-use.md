@@ -171,6 +171,8 @@ With Dataverse search, the search box is always available at the top of every pa
   - AI Builder’s document processing 
   - [Mixed reality controls](../maker/canvas-apps/mixed-reality-overview.md)
   - [NFC function](../maker/canvas-apps/functions/function-readnfc.md)
+  - Import and picture control
+  - Downloading attachments
 - You can't see favorites, recent, featured apps, or the app details.
 - A user picture isn’t displayed in the app list.
 - The **Optimize images for Upload** option is not available on Windows.
