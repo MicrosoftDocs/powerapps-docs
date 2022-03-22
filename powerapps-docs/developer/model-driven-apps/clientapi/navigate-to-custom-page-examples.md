@@ -12,8 +12,10 @@ search.audienceType:
   - maker
   - developer
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Navigating to and from a custom page using client API

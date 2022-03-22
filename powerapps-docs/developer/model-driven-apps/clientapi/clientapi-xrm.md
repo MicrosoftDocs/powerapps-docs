@@ -12,9 +12,11 @@ applies_to:
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Client API Xrm object

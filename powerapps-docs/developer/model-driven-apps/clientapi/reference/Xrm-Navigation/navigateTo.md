@@ -12,6 +12,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # navigateTo (Client API reference)
 

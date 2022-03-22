@@ -11,6 +11,9 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # addGlobalNotification (Client API reference)
 

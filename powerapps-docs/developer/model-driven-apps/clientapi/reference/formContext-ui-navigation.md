@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.navigation item (Client API reference)
 

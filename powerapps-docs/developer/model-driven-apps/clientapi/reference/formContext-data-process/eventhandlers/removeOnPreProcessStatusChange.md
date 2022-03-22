@@ -10,7 +10,10 @@ ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnPreProcessStatusChange (Client API reference)
 

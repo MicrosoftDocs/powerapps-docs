@@ -12,6 +12,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)
 
