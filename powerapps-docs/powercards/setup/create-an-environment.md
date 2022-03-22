@@ -30,7 +30,7 @@ This procedure presumes you've downloaded the cards zip file.
 
     :::image type="content" source="../media/create-an-environment/new-environment-in-list.png" alt-text="Screenshot of all environments plus the newly created environment." border="false":::
 
-1. [Import the adaptive card solution](powerapps/maker/data-platform/import-update-export-solutions) using the `AdaptiveCardsExtensions_managed` zip file.
+1. [Import the adaptive card solution](/powerapps/maker/data-platform/import-update-export-solutions) using the `AdaptiveCardsExtensions_managed` zip file.
 
 1. A "Currently importing solution "Card"." notice will appear while the zip file is being loaded into Power Apps. As soon as the solution is loaded, you'll be notified. This can take up to five minutes, depending on your connection.
 

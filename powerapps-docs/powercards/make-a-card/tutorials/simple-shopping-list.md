@@ -152,4 +152,4 @@ Save first (always save before testing) and then select the **Play** button in t
 
 - Try making the items on the shopping list have a different color than the rest of the text.
 - Use a PowerFX expression to add "please" to every item on the shopping list
-- Advanced: make it so every item in the shopping list has two text blocks instead of one. For more information on this, see the [Complex List tutorial](tutorial-complex-shopping-list).
+- Advanced: make it so every item in the shopping list has two text blocks instead of one. For more information on this, see the [Complex List tutorial](compound-shopping-list.md).
