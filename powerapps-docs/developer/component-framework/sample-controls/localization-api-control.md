@@ -1,13 +1,12 @@
 ---
 title: " Localization API component| Microsoft Docs" 
 description: "This sample showcases how localization is done for code components." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
 ---
 
 # Implementing localization API component

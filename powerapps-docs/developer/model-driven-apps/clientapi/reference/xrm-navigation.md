@@ -1,14 +1,13 @@
 ---
 title: "Xrm.Navigation (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/04/2019
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c1239eca-2148-4bcc-bb7d-aae1da1ab6b5
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

@@ -34,7 +34,7 @@ This experience gives app makers the ability to configure the information displa
 
 ## Add a timeline
 
-A timeline control is located on a form within table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. Notice that there can be only one timeline per form.
+A timeline control is located on a form within a table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. Notice that there can be only one timeline per form.
 
 ### Display a custom table in a timeline
 
@@ -78,7 +78,7 @@ The **Name** column under the **Properties** tab in **Display options** is the u
 
 #### Records shown on page
 
-This section allows you to control the number records that appear before displaying **Load more** at the bottom of the section.
+This section allows you to control the number of records that appear before displaying **Load more** at the bottom of the section.
 
 |Form designer configuration View || Form designer display View |
 |-------------------|-|--------------|
@@ -281,7 +281,7 @@ Records are displayed using the default setting for each activity type. However,
 |You can change the default card settings to a different card form if one has been created.  ||If you create a new card form, you must go to the parent table and add the new form of card type there before it will appear in the timeline list for configuration.  If **Default** is displayed, you are not using the card form.  You can not use the **Email card form** in a timeline unless you select and publish it first.|
 
 > [!NOTE]
-> Not all activity types allow you to create card types, so the default selection will be you’re only option for those records.
+> Not all activity types allow you to create card types, so the default selection will be your only option for those records.
 
 #### Customize a card from within timeline
 
@@ -292,7 +292,7 @@ All card forms are separated into the following four sections:
 Legend
 
 1. **ColorStrip Section**: This section doesn't appear on the timeline record. The **ColorStrip** is located on the left of the card form.
-2. **Header Section**: This section is displayed n the timeline record; however, only the first two columns are displayed on the timeline record. For this example, only the **Subject** and **Modified On** columns are visible.
+2. **Header Section**: This section is displayed on the timeline record; however, only the first two columns are displayed on the timeline record. For this example, only the **Subject** and **Modified On** columns are visible.
 3. **Details Section** This section is displayed on timeline record; however, only the first three columns are displayed on the timeline record. For this example, only the **To**, **CC** and **Description** columns are visible on the timeline record.
 4. **Footer Section.** This section isn't displayed on the timeline record.
 5. **Table Columns** You can select which columns you want to add to your card form from the column options listed on the right. You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline record.
@@ -306,11 +306,11 @@ The card **Header** displays the title/subject in your timeline email form. You 
 |Form designer configuration view || Form designer display view|
 |-------------------|-|------------|
 |![Customize a card form in timeline - Header](media\timeline-create-and-use-card-forms-header-1a.png "Customize a card form in timeline - Header")||![Card form in timeline - Header Display](media\timeline-create-and-use-card-forms-header-display-1a.png "Card form in timeline - Header Display")|
-| **Column 1** <BR>1. Regardless of the column you choose for this section, it will appear as a bold header at the top of your timeline record. For this example, we selected **Subject** for this column. <br><BR>**Column 2** <BR>2. Again, regardless of the column you choose for this section, this column will always appears in the bottom-right corner of the timeline record. For this example, **Modified On** is selected for this column. ||**Column 1**<BR>1. Column 1 from the card header is always displayed in this section of the timeline record.<BR><BR>**Column 2**<BR>2. Column 2 from the card header is always displayed in this section of the timeline record. |  	
+| **Column 1** <BR>1. Regardless of the column you choose for this section, it will appear as a bold header at the top of your timeline record. For this example, we selected **Subject** for this column. <br><BR>**Column 2** <BR>2. Again, regardless of the column you choose for this section, this column will always appear in the bottom-right corner of the timeline record. For this example, **Modified On** is selected for this column. ||**Column 1**<BR>1. Column 1 from the card header is always displayed in this section of the timeline record.<BR><BR>**Column 2**<BR>2. Column 2 from the card header is always displayed in this section of the timeline record. |  	
 
 **Details Section**
 
-The card **Details** section displays in the body of your the timeline email record. You can have up to four columns in the **Details** section, but only the first three columns are viewable on the timeline record.
+The card **Details** section displays in the body of your timeline email record. You can have up to four columns in the **Details** section, but only the first three columns are viewable on the timeline record.
 
 |Form designer configuration view ||Form designer display view|
 |------------------|--|-----------|
@@ -356,7 +356,7 @@ When using Sort date, keep in mind the following:
 
 The activity rollup type can be configured for timelines on forms for the account and contact tables. The available types of rollups are **Extended**, **Related**, and **None**. Activity rollup only affects accounts and contacts in Dynamics 365 apps, such as Dynamics 365 Customer Service applications. To only show activities that are directly related to the table in timeline, select **None**.
 
-More information is on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
+More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
 
 ![Activity rollup type.](media\activity-rollup-type.png "Activity rollup type")
 
@@ -375,7 +375,7 @@ Only enable the activities that you need on the form. If you select more than 10
   
 #### Configure the form for notes
 
-In the **Notes** area, under **Configure form**, select**Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
+In the **Notes** area, under **Configure form**, select **Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
 
 :::image type="content" source="media/timeline-configure-form-notes.png" alt-text="Configure the form for notes":::
 

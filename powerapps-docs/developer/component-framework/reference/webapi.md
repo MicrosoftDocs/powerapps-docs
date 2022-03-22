@@ -2,15 +2,14 @@
 title: WebAPI | Microsoft Docs
 description: Provides properties and methods to use Web API to create and manage records.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: f6e1aca7-7415-42a2-8ca2-44c962cdc90a
 ---
 
 # WebAPI
