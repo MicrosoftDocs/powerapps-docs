@@ -1,20 +1,21 @@
 ---
 title: "Optimistic concurrency (Microsoft Dataverse) | Microsoft Docs" 
 description: "Optimistic concurrency provides the ability for your applications to detect whether a table record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record"
-ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "Sunil-Garg" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Optimistic concurrency
 
