@@ -4,7 +4,7 @@ description: "Learn about creating a table that contains an email address column
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "NHelgren " # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
