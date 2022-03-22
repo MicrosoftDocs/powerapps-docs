@@ -55,7 +55,7 @@ The view selector lists the views that are available for the table. By default, 
 
 :::image type="content" source="./media/view-selector.png" alt-text="A screenshot of the view selector on a grid page.":::
 
-Personal views are listed before system views by default. Both lists are sorted alphabetically. You can [change the order](./grid-filters-advanced.md#change-sort-order) the views are listed in.
+Personal views are listed before system views by default. Both lists are sorted alphabetically. You can [change the order](./grid-filters-advanced.md#sort-the-data) the views are listed in.
 
 > [!NOTE]
 > If your administrator has turned on the [modern advanced find experience](/power-platform/admin/settings-features), the list of views isn't divided. To easily tell which kind of view you're looking at, personal views have a user icon ![Personal view icon.](./media/user-icon.png "Personal view icon."). You can also hover over the information icon ![Information icon.](./media/info-icon.png "Information icon") to see the view type.
@@ -64,15 +64,15 @@ To quickly find a view in a long list, use the search box at the top of the view
 
 :::image type="content" source="./media/search-view.png" alt-text="A screenshot of the view selector on a grid page, showing the search box and personal view icons.":::
 
-Every table in your app has a [default view](./grid-filters-advanced.md#set-default-view) that's set by your administrator. The  **Default** label in the view selector identifies which view is the default for the table.
+Every table in your app has a [default view](./grid-filters-advanced.md#change-the-default-view) that's set by your administrator. The  **Default** label in the view selector identifies which view is the default for the table.
 
 ## Column editor
 
-Use the [column editor](./grid-filters-advanced.md#column-editor) to add, remove, or reorder columns.
+Use the [column editor](./grid-filters-advanced.md#select-columns-in-the-column-editor) to add, remove, or reorder columns.
 
 ## Filter editor
 
-Use the [filter editor](./grid-filters-advanced.md#filter-editor) to see or modify the query that selected the records in the view.
+Use the [filter editor](./grid-filters-advanced.md#select-filter-conditions-in-the-filter-editor) to see or modify the query that selected the records in the view.
 
 ## Grid search
 
