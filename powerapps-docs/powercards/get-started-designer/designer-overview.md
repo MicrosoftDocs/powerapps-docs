@@ -112,7 +112,7 @@ You can also input PowerFX expressions into the properties, utilizing low-code s
 
 ### PowerFX editor
 
-The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. For more information on PowerFX and functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions?view=azure-bot-service-4.0) and [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
+The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. For more information on PowerFX and functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions) and [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
 
 ### Play button
 
