@@ -1,15 +1,14 @@
 ---
 title: "getName (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getName method.
-ms.date: 04/19/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d9f0639b-c14e-4a26-9d1a-c45471e131f1
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
