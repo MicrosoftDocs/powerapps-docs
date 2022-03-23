@@ -42,12 +42,13 @@ For keyboard navigation (with or without the screen reader), ensure that a logic
 - Avoid setting tab index higher than zero.
 
 ## Screen reader support
-The following software combinations are the supported recommendations for consuming Power Apps with a screen reader:
+These screen readers have been tested on the following browsers:
 
-- **Windows**: Microsoft Edge / Narrator
-- **macOS**: Safari / VoiceOver
-- **Android**: Power Apps app / Talkback
-- **iOS**: Power Apps app / VoiceOver
+- **JAWS**: Microsoft Edge
+- **Narrator**: Microsoft Edge
+- **NVDA**: Google Chrome, Firefox
+- **TalkBack**: Google Chrome, [Power Apps mobile](../../mobile/run-powerapps-on-mobile)
+- **VoiceOver**: [Power Apps mobile](../../mobile/run-powerapps-on-mobile), Safari (macOS, iOS, iPadOS)
 
 To ensure a satisfying experience with the screen reader it is recommended to:
 
