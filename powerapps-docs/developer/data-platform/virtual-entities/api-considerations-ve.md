@@ -49,7 +49,7 @@ The following changes to the standard Dataverse reference types were introduced 
 
 ### New tables
 
-The Dataverse exposes virtual table data providers and sources as the following new tables: [EntityDataProvider](../reference/entities/entitydataprovider.md) and [EntityDataSource](../reference/entities/entitydatasource.md). 
+The Dataverse exposes virtual table data providers and sources as the following tables: [EntityDataProvider](../reference/entities/entitydataprovider.md) and `EntityDataSource`.
 
 ### New table definition properties
 
