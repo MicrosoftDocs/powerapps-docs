@@ -18,7 +18,7 @@ ms.collection:
 
 The Power Apps Cards Designer is where Excel-level users can build out cards to suit their own needs, enabling them to optimize and automate business user tasks and to create actionable scenarios in interactive and easy-to-make cards. The Designer builds off of the designer for Adaptive Cards, introducing a few new concepts:
 
-- PowerFX: specify an action to happen when an element is selected
+- PowerFX: specify an action to trigger when an element is selected
 - Connectors: bring data into cards (for now, only Bing Search)
 - Variables: store, bind, and reuse data across a card
 - Dataverse: stores each card you create and allows you to retrieve the card at send time
@@ -38,7 +38,7 @@ The Designer is made up of the following elements:
 
 ### Navigation
 
-The navigation bar on the far left of the screen allows you to swap between the different tools available in the Designer. In order, these are:
+The navigation bar allows you to swap between the different tools available in the Designer. In order, these are:
 
 - Expand toolbar: allows you to see the full name for each option in the navigation bar
 - Card structure: see the card as a hierarchical outline and view the relationships of the card elements; add multiple steps to a card
@@ -54,26 +54,26 @@ When you start making your card, you'll use items from the Add Card Element tool
 
 These are the basic building blocks of a card, and the ones you're most likely to use.
 
-| **Item**     | **Description**                                                                                                                                                                                              |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TextBlock    | Standard text block; supports strings and PowerFX formulas                                                                                                                                                   |
-| Button       | Specify an action to occur when the button is pressed with PowerFX formula                                                                                                                                   |
-| Image        | Supports addition of images to card via URL                                                                                                                                                                  |
-| Media        | Supports addition of other forms of media to card via URL                                                                                                                                                    |
-| Button Group | If you have multiple buttons in one location on the card, use a Button Group to manage the buttons under one parent element (visible on the Structure page). Provides an easy UI method to add more buttons. |
+| **Item**     | **Description**                                                                                                                                                                                               |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TextBlock    | Standard text block; supports strings and PowerFX formulas.                                                                                                                                                   |
+| Button       | Specify an action to occur when the button is pressed with PowerFX formula.                                                                                                                                   |
+| Image        | Supports addition of images to card via URL.                                                                                                                                                                  |
+| Media        | Supports addition of other forms of media to card via URL.                                                                                                                                                    |
+| Button Group | If you have multiple buttons in one location on the card, use a Button Group to manage the buttons under one parent element (visible on the Structure page). Provides an easy UI method to add more buttons.  |
 
 #### Inputs
 
 Use an input element when you want the end user of the card to specify information.
 
-| **Item**        | **Description**                                                                                                          |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------|
-| Input.Text      | Allow the user to input a text response; parses as a string                                                              |
-| Input.Number    | Allow the user to input a numerical response by typing a number or selecting from the up/down arrows; parses as a string |
-| Input.Date      | Allow the user to input a date (mm/dd/yyyy) or choose a date from the dropdown calendar                                  |
-| Input.Time      | Enter a time (HH:MM AM/PM) or select a time from the dropdown clock                                                      |
-| Input.ChoiceSet | User selects a choice from the dropdown; default is two choices, but more can be added                                   |
-| Input.Toggle    | Checkbox for the user to select if applicable; default is unchecked                                                      |
+| **Item**        | **Description**                                                                                                           |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------|
+| Input.Text      | Allow the user to input a text response; parses as a string.                                                              |
+| Input.Number    | Allow the user to input a numerical response by typing a number or selecting from the up/down arrows; parses as a string. |
+| Input.Date      | Allow the user to input a date (mm/dd/yyyy) or choose a date from the dropdown calendar.                                  |
+| Input.Time      | Enter a time (HH:MM AM/PM) or select a time from the dropdown clock.                                                      |
+| Input.ChoiceSet | User selects a choice from the dropdown; default is two choices, but more can be added.                                   |
+| Input.Toggle    | Checkbox for the user to select if applicable; default is unchecked.                                                      |
 
 #### Containers
 
@@ -83,7 +83,7 @@ Just like with the Button Group in the Elements section, use a container when yo
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Container | A standard container, useable with any element; takes on the properties of the first element placed inside. Doesn't support multiple element types at once.                                                          |
 | ImageSet  | Container for images; provides an easy UI method to add more images.                                                                                                                                                 |
-| FactSet   | Creates a table of property/value pairs                                                                                                                                                                              |
+| FactSet   | Creates a table of property/value pairs.                                                                                                                                                                             |
 | ColumnSet | Container for columns; provides an easy UI method to add more columns. Required when using columns.                                                                                                                  |
 | Column    | Add to a ColumnSet to create dividers on the page. Empty columns aren't inherently visible in the final card, so you'll need to put another element (e.g., TextBlock, Input, etc.) into a column to make it visible. |
 
@@ -91,7 +91,7 @@ Just like with the Button Group in the Elements section, use a container when yo
 
 The card canvas is where the magic happens – this is where you'll build the user interface for your card, using connectors, variables, and elements from the Tool Panel.
 
-NOTE: You can't resize a card in the card canvas view because cards automatically fit themselves to the location they're placed into.
+You can't resize a card in the card canvas view because cards automatically fit themselves to the location they're placed into.
 
 ### Property pane
 
@@ -112,7 +112,7 @@ You can also input PowerFX expressions into the properties, utilizing low-code s
 
 ### PowerFX editor
 
-The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. For more information on PowerFX and functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](https://docs.microsoft.com/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions?view=azure-bot-service-4.0) and [Formula reference for Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference).
+The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. For more information on PowerFX and functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions) and [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
 
 ### Play button
 
