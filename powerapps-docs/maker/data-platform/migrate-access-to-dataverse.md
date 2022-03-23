@@ -97,7 +97,7 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 |Long Text  |  Multiline Text    |  Supported for migration       |
 |Number: Single   | Float        |  Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)           |
 |Number: Double     |  Float       | Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)            |
-|Large Number      |  BitInt       | Currently not supported for migration        |
+|Large Number      |  Big Integer (BigInt)       | Supported for migration, usable through Dataverse API, Power Apps UI does not currently support this       |
 |Number: Decimal      | Decimal         | Supported for migration         |
 |Yes/No      | Yes/No         |  Supported for migration        |
 |Int      | Whole Number         |  Supported for migration       |
