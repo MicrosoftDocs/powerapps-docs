@@ -6,7 +6,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -256,7 +256,7 @@ More information: [Sample: Convert queries between Fetch and QueryExpression](sa
 
 Dataverse has a limit of 500 total conditions allowed in a query. Any joins included in the query are counted as part of this limit. If a query (and its joins) exceeds 500 conditions, the user will receive the following error when the query is executed:  "Number of conditions in query exceeded maximum limit." 
 
-If this occurs aa user must either: 
+If this occurs a user must either: 
 
 - Reduce the number of conditions in their query. 
 - Use the In clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
