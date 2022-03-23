@@ -1,6 +1,6 @@
 ---
 title: "attribute.getOptions (Client API reference)| MicrosoftDocs"
-description: Includes description and supported parameters for the getOptions method.
+description: Includes description and supported parameters for the attribute.getOptions method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

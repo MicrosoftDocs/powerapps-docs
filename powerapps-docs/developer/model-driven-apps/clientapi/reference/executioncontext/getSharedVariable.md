@@ -1,5 +1,6 @@
 ---
-title: "getSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs" 
+title: "getSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Describes the getSharedVariable function used with the client api in model-driven apps."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

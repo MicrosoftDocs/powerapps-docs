@@ -30,7 +30,7 @@ You can also move to a previous stage in a different table.
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

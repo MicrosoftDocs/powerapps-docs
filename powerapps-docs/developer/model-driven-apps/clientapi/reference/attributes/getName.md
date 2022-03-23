@@ -1,6 +1,6 @@
 ---
 title: "attribute.getName  (Client API reference)| MicrosoftDocs"
-description: Includes description and supported parameters for the getName method.
+description: Includes description and supported parameters for the attribute.getName method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

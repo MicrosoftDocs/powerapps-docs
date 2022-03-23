@@ -1,5 +1,6 @@
 ---
 title: "Best practices: Client scripting in model-driven apps| MicrosoftDocs"
+description: "Contains tips you could consider while writing your JavaScript code for model-driven apps."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

@@ -1,5 +1,6 @@
 ---
 title: "forEach method for collections (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Describes the forEach method used for collections."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

@@ -1,6 +1,6 @@
 ---
 title: "process.getName (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getName method.
+description: Includes description and supported parameters for the process.getName method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

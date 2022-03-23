@@ -26,7 +26,7 @@ contributors:
 ## Parameters
 
 
-<table style="width:100%">
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th> 
@@ -50,7 +50,7 @@ contributors:
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
 <li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following values.
-<table style="width:100%">
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th> 

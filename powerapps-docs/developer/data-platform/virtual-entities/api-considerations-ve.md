@@ -86,7 +86,7 @@ Two new tables, [EntityDataProvider](../reference/entities/entitydataprovider.md
 
 ### Table definition property behavior changes
 
-The following table details how the behavior of standard [EntityMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata?view=dynamics-general-ce-9#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
+The following table details how the behavior of standard [EntityMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
 
 |**Metadata Property**|**Applies?**|**Notes**|
 |---------------------|------------|---------|
@@ -182,7 +182,7 @@ The following table details how the behavior of standard [EntityMetadata propert
 
 ### Column definition property behavior changes
 
-The following table explains how the behavior of standard [AttributeMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata?view=dynamics-general-ce-9#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
+The following table explains how the behavior of standard [AttributeMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
 
 |**Metadata Property**|**Applies?**|**Notes**|
 |---------------------|------------|---------|

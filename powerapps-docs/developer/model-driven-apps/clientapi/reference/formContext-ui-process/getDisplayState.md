@@ -1,6 +1,6 @@
 ---
-title: "getDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getDisplayState method.
+title: "process.getDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the process.getDisplayState method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getDisplayState (Client API reference)
+# process.getDisplayState (Client API reference)
 
 
 

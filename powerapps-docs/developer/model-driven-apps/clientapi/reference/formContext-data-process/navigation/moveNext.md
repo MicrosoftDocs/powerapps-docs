@@ -32,7 +32,7 @@ Moving to next stage is not supported for different table.
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

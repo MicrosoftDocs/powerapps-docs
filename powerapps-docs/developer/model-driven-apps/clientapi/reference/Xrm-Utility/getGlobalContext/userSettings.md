@@ -147,7 +147,7 @@ Returns a promise which resolves with an object whose keys are the security role
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

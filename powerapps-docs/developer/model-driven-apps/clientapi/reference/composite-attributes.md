@@ -1,6 +1,6 @@
 ---
 title: "Composite columns in model-driven apps in model-driven apps| MicrosoftDocs"
-description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
+description: "Some columns added to a form can represent multiple items of data. These composite columns behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly." 
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
