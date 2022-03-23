@@ -1,6 +1,6 @@
 ---
-title: "getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getVisible method.
+title: "section.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the section.getVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getVisible (Client API reference)
+# section.getVisible (Client API reference)
 
 
 

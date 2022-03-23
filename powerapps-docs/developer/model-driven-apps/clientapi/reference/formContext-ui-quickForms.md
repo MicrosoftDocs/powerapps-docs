@@ -1,6 +1,6 @@
 ---
 title: "formContext.ui.quickForms (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "Provides methods to access all the quick view controls and its constituent controls on the model-driven apps forms when using the new form rendering engine "
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.quickForms (Client API reference)
 
