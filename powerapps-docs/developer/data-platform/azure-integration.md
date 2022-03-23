@@ -5,7 +5,7 @@ ms.custom: intro-internal
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "Sunil-Garg"
+author: "jaredha"
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
 manager: "kvivek"

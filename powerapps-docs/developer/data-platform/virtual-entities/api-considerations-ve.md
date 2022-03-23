@@ -1,20 +1,21 @@
 ---
 title: "API considerations of virtual tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes API considerations of virtual tables"
-ms.date: 04/09/2021
-
+ms.date: 03/22/2022
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996dea
-author: "Sunil-Garg" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "pehecke"
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # API considerations of virtual tables

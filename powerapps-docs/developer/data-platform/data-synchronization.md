@@ -3,9 +3,8 @@ title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs" # Intent an
 description: "Learn about synchronizing Dataverse data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "Sunil-Garg" # GitHub ID
+author: "Peakerbl" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart

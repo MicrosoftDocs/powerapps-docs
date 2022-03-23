@@ -1,20 +1,21 @@
 ---
 title: "Custom virtual table data providers (Microsoft Dataverse) | Microsoft Docs"
 description: "Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 04/09/2021
-
+ms.date: 03/22/2022
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d22
-author: "Sunil-Garg" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "pehecke"
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Custom virtual table data providers

@@ -4,7 +4,7 @@ description: "Optimistic concurrency provides the ability for your applications 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "Sunil-Garg" # GitHub ID
+author: "Peakerbl" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart

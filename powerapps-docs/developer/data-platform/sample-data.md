@@ -4,7 +4,7 @@ description: "Learn how to install or uninstall sample data using the Web API or
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "Sunil-Garg" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
