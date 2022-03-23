@@ -81,7 +81,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<RetrieveMultipleResponse>
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)&lt;RetrieveMultipleResponse&gt;
 
 Description: The `RetrieveMultipleResponse` returns a promise that contains an array of JSON objects containing the retrieved table records and the **nextLink** parameter with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value. It has the following parameters:
 
