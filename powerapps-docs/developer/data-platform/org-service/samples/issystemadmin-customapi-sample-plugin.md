@@ -76,12 +76,7 @@ This Custom API is defined with the following data:
 
 You can use this data to create the Custom API using Postman and the Web API by following the example here: [Create a Custom API using the Web API](../../create-custom-api-with-code.md#create-a-custom-api-using-the-web-api).
 
-For information about the values passed see these topics:
-
-- [CustomAPI Table Columns](../../customapi-table-columns.md)
-- [CustomAPIRequestParameter Table Columns](../../customapirequestparameter-table-columns.md)
-- [CustomAPIResponseProperty Table Columns](../../customapiresponseproperty-table-columns.md)
-
+For information about the values passed see these topics: [CustomAPI tables](../../custom-api-tables.md)
 
 This Custom API is a function bound to the [User (SystemUser) table](../../reference/entities/systemuser.md). It has a single boolean response property `HasRole` which will return `true` when the user has the System Administrator security role.
 

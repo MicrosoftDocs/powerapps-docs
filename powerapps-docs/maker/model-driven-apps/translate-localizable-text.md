@@ -41,7 +41,7 @@ The process has the following steps:
 If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](/power-platform/admin/enable-languages#enable-the-language) to enable them.
 
 > [!IMPORTANT]
-> Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
+> Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at a time that will be least disruptive to users.
 
 > [!TIP]
 > While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](/previous-versions/windows/embedded/ms912047(v=winembedded.10)).

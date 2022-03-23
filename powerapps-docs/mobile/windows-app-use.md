@@ -4,7 +4,7 @@ description: Use Power Apps for Windows (preview).
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/18/2022
+ms.date: 03/16/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -163,14 +163,18 @@ With Dataverse search, the search box is always available at the top of every pa
 ![Search bar at the top](media/pam-windows-image13.png)
 
 ## Limitations and known issues
-
--   The app doesn't support advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location).
-
--   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md).
-
--   You can't pin an app on your Windows desktop.
-
--   You can't see your favorites, recent, featured apps, or the app details.
-
--   The app doesn't support [guest access](../maker/canvas-apps/share-app-guests.md).
-
+- The following is not supported:
+  - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location)
+  - [Push notifications](power-apps-mobile-notification.md)
+  - [Guest access](../maker/canvas-apps/share-app-guests.md)
+  - Pinning an app on Windows desktop
+  - AI Builder’s document processing 
+  - [Mixed reality controls](../maker/canvas-apps/mixed-reality-overview.md)
+  - [NFC function](../maker/canvas-apps/functions/function-readnfc.md)
+  - Import and picture control
+  - Downloading attachments
+- You can't see favorites, recent, featured apps, or the app details.
+- A user picture isn’t displayed in the app list.
+- The **Optimize images for Upload** option is not available on Windows.
+- The barcode scanner doesn’t support **BarcodeType**, **PreferFrontCamera**, and **FlashlightEnabled** properties. For more information, see [Barcode scanner control in Power Apps - Power Apps](../maker/canvas-apps/controls/control-new-barcode-scanner.md). The barcode scanner does support [symbologies](/windows/uwp/devices-sensors/pos-camerabarcode-symbologies).
+- You can only connect to the public cloud. Other datacenter regions such as Government Community Cloud (GCC) are not supported.
