@@ -44,7 +44,7 @@ In this tutorial, you'll learn how to ask a user for their name and then show th
 
 1. Create another variable to use in the card, this one so the user can see their name added to the card title. Select **Variables** from the left pane and then select **New variable**.
 
-   :::image type="content" source="../media/hello-world-card/add-new-variable.png" alt-text="Screenshot showing the New variable button to create a` new variable in the card." border="false":::
+   :::image type="content" source="../media/hello-world-card/add-new-variable.png" alt-text="Screenshot showing the New variable button to create a new variable in the card." border="false":::
 
 1. Enter a descriptive variable name into the **Name** box. In this example, we'll use `UserName`.
 

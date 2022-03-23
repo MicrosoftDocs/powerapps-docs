@@ -34,15 +34,15 @@ This tutorial will only let you add items in this card. For a more complex shopp
 
    :::image type="content" source="../../media/tutorial-simple-shopping-list/create-card.png" alt-text="Screenshot of where to go to create a card." border="false":::
 
-2. You'll see the default "empty" card.
+1. You'll see the default "empty" card.
 
    :::image type="content" source="../../media/tutorial-simple-shopping-list/default-blank-card.png" alt-text="Screenshot of a blank card." border="false":::
 
-3. Select the first heading and enter `Shopping List`.
+1. Select the first heading and enter `Shopping List`.
 
-4. Select the second heading and enter `Use the field below to add items to the list`.
+1. Select the second heading and enter `Use the field below to add items to the list`.
 
-5. Save your card. Cards don't autosave, so it's good to save as you go.
+1. Save your card. Cards don't autosave, so it's good to save as you go.
 
 ## Create a variable to hold your list
 
@@ -74,7 +74,7 @@ This shopping list will hold several individual lines of text (or strings), so y
 
 Time to build the card UI.
 
-1. Open the Tool panel.
+1. Open the Tool pane.
 
    :::image type="content" source="../../media/tutorial-simple-shopping-list/find-tool-panel.png" alt-text="Screenshot of where to find the cards tool panel." border="false":::
 

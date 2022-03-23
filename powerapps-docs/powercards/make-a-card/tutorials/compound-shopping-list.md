@@ -107,7 +107,7 @@ Here, the list has Apple and Banana in it. In the UI, for each item in the list,
 
 ### Use the structure panel
 
-Once you've added all the basic elements to a card, use the Card Structure panel to select different elements quickly and easily so you can modify their properties. Expand all the triangles and you should see the full card structure.
+Once you've added all the basic elements to a card, use the Card Structure pane to select different elements quickly and easily so you can modify their properties. Expand all the triangles and you should see the full card structure.
 
 :::image type="content" source="../../media/tutorial-compound-shopping-list/view-card-structure.png" alt-text="Screenshot of the card structure." border="false":::
 
@@ -134,7 +134,7 @@ For the next step, you'll tweak a few properties to get ready for the one line o
 
 ## Add items to the list
 
-1. Select the button, either via the Card canvas or by selecting it in the Structure panel.
+1. Select the button, either via the Card canvas or by selecting it in the Structure pane.
 
 1. In the property pane, select the **Properties** tab.
 
