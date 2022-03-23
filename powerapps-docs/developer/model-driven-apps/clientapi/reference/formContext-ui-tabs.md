@@ -1,6 +1,6 @@
 ---
 title: "formContext.ui.tabs (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "A tab is a group of sections on a page. It contains properties and methods to manipulate tabs as well as access to sections within the tab through the sections collection."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

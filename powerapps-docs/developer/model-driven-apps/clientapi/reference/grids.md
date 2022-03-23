@@ -1,5 +1,6 @@
 ---
 title: "Grids and subgrids in model-driven apps for Dynamics 365| MicrosoftDocs"
+description: "Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

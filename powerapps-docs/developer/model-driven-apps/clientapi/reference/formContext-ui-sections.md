@@ -1,6 +1,6 @@
 ---
 title: "formContext.ui.sections (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "A section contains methods to manage how it appears as well as accessing the tab that contains the section."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

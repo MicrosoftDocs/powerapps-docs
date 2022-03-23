@@ -1,5 +1,6 @@
 ---
 title: "Xrm.App (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Xrm.App provides app-related methods."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek

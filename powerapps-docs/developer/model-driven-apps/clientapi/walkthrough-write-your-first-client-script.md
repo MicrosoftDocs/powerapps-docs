@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Write your first client script in model-driven apps| MicrosoftDocs"
+description: "This tutorial will help you write your first client script in model-driven apps."
 ms.author: jdaly
 author: HemantGaur
 manager: kvivek
