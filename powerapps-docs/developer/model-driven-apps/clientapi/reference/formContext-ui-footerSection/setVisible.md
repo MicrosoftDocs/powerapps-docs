@@ -1,6 +1,6 @@
 ---
-title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setVisible method.
+title: "footerSection.setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the footerSection.setVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -17,7 +17,7 @@ contributors:
   - JimDaly
 ---
 
-# setVisible (Client API reference)
+# footerSection.setVisible (Client API reference)
 
 [!INCLUDE[./includes/setVisible-description.md](./includes/setVisible-description.md)]
 

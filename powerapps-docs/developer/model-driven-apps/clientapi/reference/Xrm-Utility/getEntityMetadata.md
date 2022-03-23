@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getEntityMetadata
+# getEntityMetadata (Client API)
 
 
 

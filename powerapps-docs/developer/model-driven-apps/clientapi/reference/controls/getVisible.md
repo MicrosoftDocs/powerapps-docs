@@ -1,6 +1,6 @@
 ---
-title: "getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getVisible method.
+title: "formContext.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the formContext.getVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getVisible (Client API reference)
+# formContext.getVisible (Client API reference)
 
 Returns a value that indicates whether the control is currently visible.
 

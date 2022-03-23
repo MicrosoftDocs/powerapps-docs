@@ -1,5 +1,5 @@
 ---
-title: "getValue (Client API reference)| MicrosoftDocs"
+title: "attribute.getValue (Client API reference)| MicrosoftDocs"
 description: Retrieves the data value for a column.
 ms.author: jdaly
 author: adrianorth
@@ -17,7 +17,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getValue (Client API reference)
+# attribute.getValue (Client API reference)
 
 Retrieves the data value for a column.
 

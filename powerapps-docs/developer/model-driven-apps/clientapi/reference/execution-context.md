@@ -1,5 +1,5 @@
 ---
-title: "Client API execution context in model-driven apps| MicrosoftDocs"
+title: "Execution context (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the executionContext method.
 ms.author: jdaly
 author: adrianorth
@@ -18,8 +18,6 @@ contributors:
   - JimDaly
 ---
 # Execution context (Client API reference)
-
-
 
 The execution context defines the event context in which your code executes. More information: [Client API execution context](../clientapi-execution-context.md).
 

@@ -1,6 +1,6 @@
 ---
-title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the addOnLoad method.
+title: "data.addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the data.addOnLoad method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# addOnLoad (Client API reference)
+# data.addOnLoad (Client API reference)
 
 
 

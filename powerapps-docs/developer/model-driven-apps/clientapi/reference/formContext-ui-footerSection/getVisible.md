@@ -1,6 +1,6 @@
 ---
-title: "getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getVisible method.
+title: "footerSection.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the footerSection.getVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -17,7 +17,7 @@ contributors:
   - JimDaly
 ---
 
-# getVisible (Client API reference)
+# footerSection.getVisible (Client API reference)
 
 [!INCLUDE[./includes/getVisible-description.md](./includes/getVisible-description.md)]
 

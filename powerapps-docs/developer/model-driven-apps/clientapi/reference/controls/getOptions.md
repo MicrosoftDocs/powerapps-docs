@@ -1,5 +1,5 @@
 ---
-title: "getOptions (Client API reference)| MicrosoftDocs"
+title: "control.getOptions (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getOptions method.
 ms.author: jdaly
 author: adrianorth
@@ -15,7 +15,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getOptions (Client API reference)
+# control.getOptions (Client API reference)
 
 Returns an array of option objects representing valid options available for a control, including a blank option and excluding any options that have been removed from the control using [removeOption](removeOption.md). 
 

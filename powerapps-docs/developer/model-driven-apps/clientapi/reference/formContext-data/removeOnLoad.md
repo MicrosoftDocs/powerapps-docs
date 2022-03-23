@@ -1,6 +1,6 @@
 ---
-title: "removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the removeOnLoad method.
+title: "data.removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the data.removeOnLoad method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# removeOnLoad (Client API reference)
+# data.removeOnLoad (Client API reference)
 
 
 

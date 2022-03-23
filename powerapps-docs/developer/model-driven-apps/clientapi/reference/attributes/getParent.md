@@ -1,5 +1,5 @@
 ---
-title: "getParent (Client API reference)| MicrosoftDocs"
+title: "attribute.getParent (Client API reference)| MicrosoftDocs"
 description: Returns the formContext.data.entity object that is the parent to all the columns.
 ms.author: jdaly
 author: adrianorth
@@ -17,7 +17,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getParent (Client API reference)
+# attribute.getParent (Client API reference)
 
 Returns the `formContext.data.entity` object that is the parent to all the columns. 
 

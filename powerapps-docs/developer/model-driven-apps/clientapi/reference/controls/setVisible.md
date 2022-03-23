@@ -1,6 +1,6 @@
 ---
-title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setVisible method.
+title: "control.setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.setVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# setVisible (Client API reference)
+# control.setVisible (Client API reference)
 
 Sets a value that indicates whether the control is visible. 
 

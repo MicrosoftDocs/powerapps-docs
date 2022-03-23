@@ -1,6 +1,6 @@
 ---
-title: "getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getVisible method.
+title: "formItem.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the formItem.getVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -15,7 +15,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getVisible (Client API reference)
+# formItem.getVisible (Client API reference)
 
 [!INCLUDE[./includes/getVisible-description.md](./includes/getVisible-description.md)]
 

@@ -1,6 +1,6 @@
 ---
-title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Returns s string representing the logical name of the table for the record.
+title: "entity.getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Returns a string representing the logical name of the table for the record.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getEntityName (Client API reference)
+# entity.getEntityName (Client API reference)
 
 
 [!INCLUDE[./includes/getEntityName-description.md](./includes/getEntityName-description.md)]

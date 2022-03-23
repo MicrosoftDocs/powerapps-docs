@@ -1,6 +1,6 @@
 ---
-title: "refresh (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the refresh method.
+title: "gridContext.refresh (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.refresh method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# refresh (Client API reference)
+# gridContext.refresh (Client API reference)
 
 
 

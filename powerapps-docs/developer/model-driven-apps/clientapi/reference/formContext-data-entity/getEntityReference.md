@@ -1,5 +1,5 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "entity.getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Returns a lookup value that references a record.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getEntityReference (Client API reference)
+# entity.getEntityReference (Client API reference)
 
 [!INCLUDE[./includes/getEntityReference-description.md](./includes/getEntityReference-description.md)]
 

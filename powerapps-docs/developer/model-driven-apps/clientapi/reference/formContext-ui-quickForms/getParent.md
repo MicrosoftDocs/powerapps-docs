@@ -1,5 +1,5 @@
 ---
-title: "getParent (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.getParent (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getParent method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# getParent (Client API reference)
+# quickViewControl.getParent (Client API reference)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "save (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "entity.save (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Saves the record asynchronously with the option to close the form or open a new form after the save is completed.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# save (Client API reference)
+# entity.save (Client API reference)
 
 [!INCLUDE[./includes/save-description.md](./includes/save-description.md)]
 
