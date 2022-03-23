@@ -34,11 +34,11 @@ Here, the list has Apple and Banana in it. In the UI, for each item in the list,
 
 ## Create a card and give it a name
 
-1. Create your card as described in the [Setup instructions](../../get-started-designer/setup-designer.md). You'll be asked for a name for your card&mdash;use something you'll remember later when you go looking for it, like "compound list tutorial".
+1. Create your card as described in the [Setup instructions](../../get-started-designer/setup-designer.md). You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "compound list tutorial".
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/create-card.png" alt-text="Screenshot of where to go to create a card." border="false":::
 
-1. You'll see the default "empty" card:
+1. You'll see the default "empty" card.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/default-blank-card.png" alt-text="Screenshot of a blank card." border="false":::
 
@@ -48,60 +48,60 @@ Here, the list has Apple and Banana in it. In the UI, for each item in the list,
 
 ## Design the UI
 
-1. Open the Tool Panel
+1. Open the Tool panel.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/open-tool-panel.png" alt-text="Screenshot of where to go to open the card tool panel." border="false":::
 
-1. Select the first text block and add "Compound List Example"
+1. Select the first text block and add `Compound List Example`.
 
-1. Select the second text block and add "Use the field below to add items to your list:"
+1. Select the second text block and add `Use the field below to add items to your list:`
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-items-text-block.png" alt-text="Screenshot adding text blocks to card." border="false":::
 
 1. Now make the list, where each row in the list has:
 
    1. a text block with the name of the current item
-   1. a checkbox that says "also" + the name of the current item
+   1. a checkbox that says `also` and the name of the current item
 
-1. Drag a ColumnSet to the card under the text block
+1. Drag a **ColumnSet** to the card under the text block.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-column-set.png" alt-text="Screenshot of adding a column set to a card." border="false":::
 
-1. Select the Add Column drop down twice to create two columns
+1. Select the **Add Column** drop down twice to create two columns.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-two-columns-to-set.png" alt-text="Screenshot showing two added columns to column set in card." border="false":::
 
    > [!NOTE]
-   > The columns will resize automatically when elements are added
+   > The columns will resize automatically when elements are added.
 
-1. Add a text box into the first column
+1. Add a text box into the first column.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-textblock-to-column.png" alt-text="Screenshot of a text block added to the first column in the column set." border="false":::
 
-1. Add an Input.Toggle to the right-hand column
+1. Add an **Input.Toggle** to the right-hand column.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-input-toggle-to-column.png" alt-text="Screenshot adding an input toggle to the second column in the column set." border="false":::
 
-1. Drag and drop a second Input.Text below the ColumnSet to give the user the ability to add a new item to the list
+1. Drag and drop a second **Input.Text** below the ColumnSet to give the user the ability to add a new item to the list.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-input-text-to-card.png" alt-text="Screenshot of a text block added to the second column in the column set." border="false":::
 
-1. In the Properties pane, set the following properties:
+1. In the Properties pane, set the following properties.
 
-   1. Name: item_to_add
-   1. Label: Add Item
+   1. **Name**: `item_to_add`
+   1. **Label**: `Add Item`
 
       :::image type="content" source="../../media/tutorial-compound-shopping-list/set-name-and-label.png" alt-text="Screenshot of the name and label updated in the input text box." border="false":::
 
-1. Drag and drop a button below the text box
+1. Drag and drop a **Button** below the text box.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-button-to-card.png" alt-text="Screenshot of adding a button to the card." border="false":::
 
-1. In the Property pane, set the button title to Add the Item
+1. In the Property pane, set the button title to `Add the Item`.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/update-button-title.png" alt-text="Screenshot updated button title." border="false":::
 
-1. The UI is now complete, and should look something like the following:
+1. The card is now complete, and should look something like the following.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/card-ui-setup.png" alt-text="Screenshot of the card user interface." border="false":::
 
@@ -111,22 +111,22 @@ Once you've added all the basic elements to a card, use the Card Structure pane 
 
 :::image type="content" source="../../media/tutorial-compound-shopping-list/view-card-structure.png" alt-text="Screenshot of the card structure." border="false":::
 
-If you select any element in the card structure panel, it will select the corresponding UI item in the design canvas. This will then let you set up properties on the UI items quickly.
+If you select any element in the card structure panel, it will select the corresponding item in the Card canvas. This will let you set up properties on the items quickly.
 
 For the next step, you'll tweak a few properties to get ready for the one line of PowerFX necessary to make your card work.
 
-1. Select the ColumnSet element in the structure panel. This will show you the properties for the ColumnSet on the right. You should see something like this:
+1. In the structure panel, select the **ColumnSet** element. This will show you the properties for the ColumnSet on the right.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/column-set-properties.png" alt-text="Screenshot of the column set properties pane." border="false":::
 
    > [!NOTE]
    > The Name property of the ColumnSet here has been set to `repeating_element`, but this is just for organization. You don't have to change this name.
 
-1. With the ColumnSet still selected, select the "Advanced" tab in the property pane:
+1. With the **ColumnSet** still selected, in the property pane, select the **Advanced** tab.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/advanced-pane-in-properties.png" alt-text="Screenshot where to find the advanced pane for the column set." border="false":::
 
-1. In the "Repeat for every" property, enter the text `=my_grocery_list`
+1. In the **Repeat for every** property, enter the text `=my_grocery_list`
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/add-var-to-repeat-for-every.png" alt-text="Screenshot of adding the my grocery list variable to the repeat for every field in advanced properties." border="false":::
 
@@ -134,18 +134,18 @@ For the next step, you'll tweak a few properties to get ready for the one line o
 
 ## Add items to the list
 
-1. Select the button, either via the card or by selecting it in the Structure pane
+1. Select the button, either via the Card canvas or by selecting it in the Structure pane.
 
-1. In the property pane, select the "Properties" tab
+1. In the property pane, select the **Properties** tab.
 
-1. Make sure that the type of the button is set to "Run PowerFx"
+1. Make sure that the type of the button is set to `Run PowerFx`.
 
-1. Select the PowerFX edit pane at the top of the screen
+1. Select the PowerFX edit pane at the top of the screen.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/select-pfx-bar.png" alt-text="Screenshot of the power fx bar." border="false":::
 
-1. Type the following into the PowerFX edit field: `AppendItem(my_grocery_list, item_to_add);`
+1. Add the following into the PowerFX edit field: `AppendItem(my_grocery_list, item_to_add);`
 
-   `item_to_add` is the name we gave to the text input field, and `my_grocery_list` is the name of our array. So this line appends the contents of the field to the array variable.
+   This PowerFX expression will append the contents of the `item_to_add` field to the `my_grocery_list` array.
 
-1. Save and preview your card
+1. Save and preview your card.
