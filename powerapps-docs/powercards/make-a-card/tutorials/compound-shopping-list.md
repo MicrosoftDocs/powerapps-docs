@@ -48,9 +48,9 @@ Here, the list has Apple and Banana in it. In the UI, for each item in the list,
 
 ## Design the UI
 
-1. Open the Tool panel.
+1. Open the Tool pane.
 
-   :::image type="content" source="../../media/tutorial-compound-shopping-list/open-tool-panel.png" alt-text="Screenshot of where to go to open the card tool panel." border="false":::
+   :::image type="content" source="../../media/tutorial-compound-shopping-list/open-tool-panel.png" alt-text="Screenshot of where to go to open the card tool pane." border="false":::
 
 1. Select the first text block and add `Compound List Example`.
 
@@ -105,17 +105,17 @@ Here, the list has Apple and Banana in it. In the UI, for each item in the list,
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/card-ui-setup.png" alt-text="Screenshot of the card user interface." border="false":::
 
-### Use the structure panel
+### Use the structure pane
 
 Once you've added all the basic elements to a card, use the Card Structure pane to select different elements quickly and easily so you can modify their properties. Expand all the triangles and you should see the full card structure.
 
 :::image type="content" source="../../media/tutorial-compound-shopping-list/view-card-structure.png" alt-text="Screenshot of the card structure." border="false":::
 
-If you select any element in the card structure panel, it will select the corresponding item in the Card canvas. This will let you set up properties on the items quickly.
+If you select any element in the card structure pane, it will select the corresponding item in the Card canvas. This will let you set up properties on the items quickly.
 
 For the next step, you'll tweak a few properties to get ready for the one line of PowerFX necessary to make your card work.
 
-1. In the structure panel, select the **ColumnSet** element. This will show you the properties for the ColumnSet on the right.
+1. In the structure pane, select the **ColumnSet** element. This will show you the properties for the ColumnSet on the right.
 
    :::image type="content" source="../../media/tutorial-compound-shopping-list/column-set-properties.png" alt-text="Screenshot of the column set properties pane." border="false":::
 

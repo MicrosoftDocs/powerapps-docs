@@ -28,7 +28,7 @@ The Power Apps Cards Designer is where Excel-level users can build out cards to 
 The Designer is made up of the following elements:
 
 - Navigation
-- Tool panel
+- Tool pane
 - Card canvas
 - Property pane
 - PowerFX editor
@@ -41,14 +41,15 @@ The Designer is made up of the following elements:
 The navigation bar allows you to swap between the different tools available in the Designer. In order, these are:
 
 - Expand toolbar: allows you to see the full name for each option in the navigation bar
-- Card structure: see the card as a hierarchical outline and view the relationships of the card elements; add multiple steps to a card
-- Add card element (default view): main UI for editing the card
+- Structure: see the card as a hierarchical outline and view the relationships of the card elements; add multiple steps to a card
+- Elements (default view): main UI for editing the card
 - Data connections: add connectors to your card to use data from external sources
-- Variables: store, bind, and reuse data across a card
+- Variables: store, bind, and reuse data across a card. For more information, see [Data binding in cards](../make-a-card/data-binding-in-cards.md).
+- Power Automate: add Power Automate flows to your card to add automation to your cards, allowing them to take care of repetitive tasks. See [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started) for more information.
 
-### Tool panel
+### Tool pane
 
-When you start making your card, you'll use items from the Add Card Element tool. There are three categories of items to choose from, as shown in the tables below:
+When you start making your card, you'll use items from the Elements pane. There are three categories of items to choose from, as shown in the tables below:
 
 #### Elements
 
@@ -89,7 +90,7 @@ Just like with the Button Group in the Elements section, use a container when yo
 
 ### Card canvas
 
-The card canvas is where the magic happens – this is where you'll build the user interface for your card, using connectors, variables, and elements from the Tool Panel.
+The card canvas is where the magic happens – this is where you'll build the user interface for your card, using connectors, variables, and elements from the Tool pane.
 
 You can't resize a card in the card canvas view because cards automatically fit themselves to the location they're placed into.
 
@@ -97,23 +98,27 @@ You can't resize a card in the card canvas view because cards automatically fit 
 
 The property pane is used to change up specific properties for an element. Each type of element has its own property pane, including the card itself. For most of the drag-and-drop elements, you'll be able to specify things like:
 
-- Name: the variable name of that element, referenceable in a PowerFX formula
-- Label/Text: any text the user will see when they load in the card
-- Default value: the initial value of a field
-- Initially visible: choose if the element will be visible on load
+- **Name**: the variable name of that element, referenceable in a PowerFX formula
+- **Label**/**Text**: any text the user will see when they load in the card
+- **Default value**: the initial value of a field
+- **Initially visible**: choose if the element will be visible on load
 
 Each property pane also contains Advanced features, which allow you to specify things like:
 
-- Repeat for every: provide a trigger for if/when an element should be repeated
-- Show when: provide a trigger to show the element
-- Requires: make the element dependent on certain features, corresponding with a minimum version
+- **Repeat for every**: provide a trigger for if/when an element should be repeated
+- **Show when**: provide a trigger to show the element
+- **Requires**: make the element dependent on certain features, corresponding with a minimum version
 
 You can also input PowerFX expressions into the properties, utilizing low-code solutions to make your card more powerful.
 
 ### PowerFX editor
 
-The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. For more information on PowerFX and functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions) and [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
+The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. To get started with PowerFX, see [Intro to Power FX](../make-a-card/power-fx/intro-to-pfx.md). For more information on the specific functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions) and [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
 
 ### Play button
 
-Once you've set up your card to your liking, you can preview the card with the Play button. This will open your card in a new page and allow you to test out the card's functionalities. This is also where, if needed, you'll be able to debug and troubleshoot your card.
+Once you've set up your card to your liking, you can preview the card with the Play button. This will open your card in a new tab and allow you to test out the card's functionalities. This is also where, if needed, you'll be able to debug and troubleshoot your card. For more information on debugging, see [Debugging cards](../make-a-card/testing/debugging-cards.md). 
+
+## Next steps
+
+Now that you've got an overview of the Power Cards Designer, [Get started making your first card](setup-designer.md).

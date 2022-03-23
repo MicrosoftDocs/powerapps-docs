@@ -76,7 +76,7 @@ Time to build the card UI.
 
 1. Open the Tool pane.
 
-   :::image type="content" source="../../media/tutorial-simple-shopping-list/find-tool-panel.png" alt-text="Screenshot of where to find the cards tool panel." border="false":::
+   :::image type="content" source="../../media/tutorial-simple-shopping-list/find-tool-panel.png" alt-text="Screenshot of where to find the cards tool pane." border="false":::
 
 1. Drag and drop a **Text Block** from the Elements pane onto the card underneath the text blocks you previously added. The Text Block will snap into place, so you don't have to be precise with positioning.
 
