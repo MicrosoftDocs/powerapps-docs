@@ -1,12 +1,10 @@
 ---
 title: "Use FetchXML aggregation (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 09/27/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -15,6 +13,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Use FetchXML aggregation

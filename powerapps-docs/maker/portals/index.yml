@@ -24,7 +24,7 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: "Configure the rich text editor control on portals (preview)"
+          - text: Configure the rich text editor control on portals
             url: component-rte-tutorial.md                 
           - text: Configure column permissions for portals
             url: configure/column-permissions.md             

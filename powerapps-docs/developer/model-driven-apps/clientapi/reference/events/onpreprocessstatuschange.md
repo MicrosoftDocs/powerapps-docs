@@ -10,7 +10,10 @@ ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # onPreProcessStatusChange event (Client API reference)
 
