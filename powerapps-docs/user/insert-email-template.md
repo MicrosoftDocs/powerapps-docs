@@ -18,7 +18,8 @@ search.app:
   - D365CE
 ---
 
-<!-- note from editor: I changed "the following window" to "a window" in line 34 because the image of the window isn't shown until after a lengthy note and another header, which is confusing if the reader expects the see the image right after that sentence. -->
+<!-- note from editor: I changed "the following window" to "a window" in line 35 because the image of the window isn't shown until after a lengthy note and another header, which is confusing if the reader expects the see the image right after that sentence. -->
+<!-- Also, there's a link in line 69 that you should test on the review page. (I can't access the review pages.)  -->
 
 
 # Insert an email template
