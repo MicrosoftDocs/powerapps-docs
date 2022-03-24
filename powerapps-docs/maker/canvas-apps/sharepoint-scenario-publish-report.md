@@ -57,7 +57,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 4. Select **OAuth2** for Authentication method, then click or tap **Sign in**.
    
     ![Sign in to SharePoint.](./media/sharepoint-scenario-publish-report/06-01-09-sign-in.png)
-5. Select or sign in to an account that has permissions for the SharePoint lists.
+5. Select or sign in to an account that has permissions for the lists.
    
     ![Signed into Office 365.](./media/sharepoint-scenario-publish-report/06-01-10-account.png)
    

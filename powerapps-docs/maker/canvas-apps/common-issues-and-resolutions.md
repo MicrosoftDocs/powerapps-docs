@@ -65,7 +65,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium-based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
    
-1. **Problems downloading attachments in SharePoint custom forms** (May 22, 2020)
+1. **Problems downloading attachments in SharePoint forms** (May 22, 2020)
    When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue. **Fix has been deployed in the week of 6/8/2020**
    
 1. **Problems downloading attachments in embedded Power Apps** (May 22, 2020)
@@ -107,7 +107,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Changing the layout of SharePoint forms** (March 7, 2018)
 
-    While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
+    While customizing a SharePoint forms in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
 
 1. **Data Table control**
 
@@ -124,7 +124,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Column names with spaces**
 
-    If you're using a SharePoint list or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+    If you're using a list created using Microsoft Lists, or a SharePoint library, or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 1. **Changing a flow in a shared app**
 
@@ -154,7 +154,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
      For information about limitations when you use Excel as a data source, see [Cloud-storage connections](connections/cloud-storage-blob-connections.md#known-limitations).
 
-1. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
+1. **Microsoft Lists is supported but not SharePoint libraries, some types of list columns, or columns that support multiple values or selections**.
 
      For more information, see [SharePoint Online](connections/connection-sharepoint-online.md#known-issues).
 
