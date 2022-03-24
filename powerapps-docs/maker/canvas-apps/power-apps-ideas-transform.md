@@ -22,7 +22,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it now supports Microsoft Dataverse, Sharepoint List and Excel as connectors. So, if you've a gallery bound to one of these data sources, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
+Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it now supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you've a gallery bound to one of these data sources, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
 
 For example, instead of figuring out how to write the following formula:
 ```powerapps-dot
@@ -94,7 +94,7 @@ Power Apps Ideas has the following limitations currently:
 
 - Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
 - Controls: Supports generating formulas for **Gallery** and **Data table** controls&mdash;on their **Items** property. Can recognize control value of TextInput, Dropdown, DatePicker, Slider, Toggle, Checkbox, Radio as input.
-- Data sources: Currently Ideas supports **Dataverse** tables, SharePoint Lists, Excel sheets.
+- Data sources: Currently Ideas supports **Dataverse** tables, Microsoft Lists, Excel sheets.
 - Functions: Works best on table manipulation functions like `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. And also a list of basic functions for the conditions. See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
 - Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No. Not supported: Lookup, File and Image.
 - This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
