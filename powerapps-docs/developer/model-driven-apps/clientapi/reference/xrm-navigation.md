@@ -1,5 +1,6 @@
 ---
 title: "Xrm.Navigation (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Xrm.Navigation provides navigation-related methods. "
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.Navigation (Client API reference)
 

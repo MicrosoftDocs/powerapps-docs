@@ -12,8 +12,10 @@ search.audienceType:
   - maker
   - developer
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Send in-app notifications within model-driven apps (preview) 

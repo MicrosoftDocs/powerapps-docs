@@ -1,6 +1,6 @@
 ---
-title: "isValid (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the isValid method.
+title: "attribute.isValid (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the attribute.isValid method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,8 +14,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# isValid (Client API reference)
+# attribute.isValid (Client API reference)
 
 
 

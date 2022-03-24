@@ -1,6 +1,6 @@
 ---
-title: "getControl (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getControl method.
+title: "quickViewControl.getControl (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the quickViewControl.getControl method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getControl (Client API reference)
+# quickViewControl.getControl (Client API reference)
 
 
 

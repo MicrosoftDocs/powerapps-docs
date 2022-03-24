@@ -1,24 +1,22 @@
 ---
 title: "Sample: Generic virtual table data provider plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom Dynamics 365 virtual table plug-in."
-ms.custom: ""
-ms.date: 04/09/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d24
-author: "Sunil-Garg" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "pehecke"
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Sample: Generic virtual table data provider plug-in

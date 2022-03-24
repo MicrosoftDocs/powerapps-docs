@@ -1,6 +1,6 @@
 ---
-title: "removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the removeOnLoad method.
+title: "gridContext.removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.removeOnLoad method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# removeOnLoad (Client API reference)
+# gridContext.removeOnLoad (Client API reference)
 
 
 

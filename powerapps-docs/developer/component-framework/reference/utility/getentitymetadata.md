@@ -1,5 +1,5 @@
 ---
-title: getEntityMetadata | Microsoft Docs
+title: getEntityMetadata (Component Framework) | Microsoft Docs
 description: Returns the table definitions for the specified table.
 keywords:
 ms.author: jdaly
@@ -13,7 +13,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# getEntityMetadata
+# getEntityMetadata (Component Framework)
 
 [!INCLUDE [getentitymetadata-description](includes/getentitymetadata-description.md)]
 

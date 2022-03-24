@@ -1,6 +1,6 @@
 ---
-title: "getDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getDisabled method.
+title: "quickViewControl.getDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the quickViewControl.getDisabled method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getDisabled (Client API reference)
+# quickViewControl.getDisabled (Client API reference)
 
 
 
