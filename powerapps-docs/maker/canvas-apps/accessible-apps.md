@@ -48,8 +48,8 @@ The following screen readers have been verified to work with Power Apps:
 - **JAWS**: Microsoft Edge
 - **Narrator**: Microsoft Edge
 - **NVDA**: Google Chrome, Firefox
-- **TalkBack**: Google Chrome, [Power Apps mobile](../../mobile/run-powerapps-on-mobile)
-- **VoiceOver**: [Power Apps mobile](../../mobile/run-powerapps-on-mobile), Safari (macOS, iOS, iPadOS)
+- **TalkBack**: Google Chrome, [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
+- **VoiceOver**: [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md), Safari (macOS, iOS, iPadOS)
 
 To ensure a satisfying experience with the screen reader it is recommended to:
 
