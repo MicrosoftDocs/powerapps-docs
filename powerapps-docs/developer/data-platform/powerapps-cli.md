@@ -16,7 +16,7 @@ ms.assetid: f393f227-7a88-4f25-9036-780b3bf14070
 
 # What is Microsoft Power Platform CLI?
 
-> [!NOTE] 
+> [!NOTE]
 > Effective June 2021, Microsoft Power Apps CLI is rebranded to Microsoft Power Platform CLI. More information: [Blog: Microsoft Power Platform is the best way for teams to build together](https://cloudblogs.microsoft.com/powerplatform/2021/05/25/microsoft-power-platform-is-the-best-way-for-teams-to-build-together/)<p/>Microsoft Power Platform CLI is now available for use in the GCC and GCC High (US Sovereign cloud) regions. Use the command `pac auth create` for help on the `--cloud` parameter to find out about supported US Sovereign cloud environments.
 
 Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on.  
@@ -40,13 +40,13 @@ To install standalone Power Platform CLI, follow these steps.
 
 1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version by using this command (not applicable for Power Platform VS Code Extension):
 
-    ```CLI
+    ```dotnetcli
     pac install latest
     ```
 
    > [!NOTE]
    > - Currently, Microsoft Power Platform standalone CLI is supported only on Windows 10 and Windows 11.
-   > - Power Platform Tools for Visual Studio Code, and works on Windows 10, Windows 11, Linux, and MacOS.
+   > - Power Platform Tools for Visual Studio Code is available on Windows 10, Windows 11, Linux, and MacOS.
 
 ### Using Power Platform Tools for Visual Studio Code
 
@@ -67,9 +67,9 @@ Follow these steps to install Microsoft Power Platform CLI using Visual Studio C
    > [!div class="mx-imgBorder"]
    > ![Launch install from Marketplace.](media/marketplace-install.png "Launch install from Marketplace")
 
-You can also do a side load install into Visual Studio Code by downloading the extension from the [Marketplace](https://aka.ms/ppcvscode).
+You can also do a side-load install into Visual Studio Code by downloading the extension from the [Marketplace](https://aka.ms/ppcvscode).
 
-## Side Load install for the Power Platform Tools for Visual Studio Code
+## Side-load install of Power Platform Tools for Visual Studio Code
 
 In some organizations, downloading or initiating an install over the web is prohibited. Most cases, the organization download the installation media and stores it in a secure location and verify that it is working according to their standards, before it is distributed within the organization. To support this paradigm of installation, you can go to the [Marketplace](https://aka.ms/ppcvscode) and instead of pressing the install button, press the download extension.
 
@@ -80,7 +80,7 @@ This is will download a file with a .vsix extension on to your workstation.
    > [!div class="mx-imgBorder"]
    > ![Extension file downloaded.](media/side-load-install-2.png "Downloaded extension")
 
-Launch Visual Studio Code and select the extensions icon, then click on the ellipsis on the extensions side bar on Visual Studio Code, and select install from VSIX...
+Launch Visual Studio Code and select the **Extensions** icon, click on the ellipsis on the **Extensions** side bar, and then select **Install from VSIX**.
 
    > [!div class="mx-imgBorder"]
    > ![Initiate install with the downloaded file.](media/side-load-install-3.png "Install from VSIX")
@@ -97,7 +97,7 @@ On the **Activity** bar you will notice the icon for the Power Platform Tools.
    > [!div class="mx-imgBorder"]
    > ![Power Platform Tools icon ](media/installation-success-3.png "icon")
 
-The final check would be to launch the Terminal window and type `pac`.
+The final check would be to launch the terminal window and type `pac`.
 
    > [!div class="mx-imgBorder"]
    > ![Power Platform Command line in the Terminal window](media/installation-success-2.png "PAC CLI in the terminal window")
@@ -125,9 +125,9 @@ This table lists some of the common commands used in the CLI.
 
 ## Uninstall Microsoft Power Platform CLI 
 
-To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](https://aka.ms/PowerPlatformCLI).
+To uninstall Microsoft Power Platform CLI tooling, run the MSI installer from [here](https://aka.ms/PowerPlatformCLI).
 
-To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the uninstall button.
+To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the **Uninstall** button.
 
 If you're a Private Preview participant and have an older version of CLI, follow these steps:
 
