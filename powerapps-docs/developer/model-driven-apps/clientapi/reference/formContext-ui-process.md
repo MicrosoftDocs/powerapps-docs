@@ -1,6 +1,6 @@
 ---
 title: "formContext.ui.process (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "Provides methods to interact with the business process flow control on a form."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.process (Client API reference)
 

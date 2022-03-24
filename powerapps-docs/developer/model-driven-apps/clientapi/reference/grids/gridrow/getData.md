@@ -1,6 +1,6 @@
 ---
-title: "getData (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getData method.
+title: "gridRow.getData (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridRow.getData method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getData (Client API reference)
+# gridRow.getData (Client API reference)
 
 
 

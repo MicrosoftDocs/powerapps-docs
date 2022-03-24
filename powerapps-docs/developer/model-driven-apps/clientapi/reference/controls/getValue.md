@@ -1,5 +1,5 @@
 ---
-title: "getValue (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.getValue (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getValue method.
 ms.author: jdaly
 author: adrianorth
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getValue (Client API reference)
+# control.getValue (Client API reference)
 
 
 

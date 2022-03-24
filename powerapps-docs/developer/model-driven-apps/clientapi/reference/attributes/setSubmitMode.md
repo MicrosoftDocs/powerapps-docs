@@ -1,6 +1,6 @@
 ---
 title: "setSubmitMode (Client API reference)| MicrosoftDocs"
-ms.description: Sets whether data from the column will be submitted when the record is saved. 
+description: Sets whether data from the column will be submitted when the record is saved. 
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setSubmitMode (Client API reference)
 
