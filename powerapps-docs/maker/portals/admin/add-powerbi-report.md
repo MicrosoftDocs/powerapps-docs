@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/09/2021
+ms.date: 03/25/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -26,6 +26,7 @@ If you're adding a Power BI report or dashboard created in the new workspace of 
 > [!NOTE]
 > - If you have specified AAD as the authentication type in powerbi Liquid tag, you must share it with the required users before adding the secure Power BI report or dashboard to a web page in portal. More information: [Share Power BI workspace](/power-bi/service-how-to-collaborate-distribute-dashboards-reports#collaborate-with-coworkers-in-an-app-workspace) and [Share Power BI dashboard and report](/power-bi/service-share-dashboards).
 > - **powerbiembedded** supports Power BI dashboards and reports that connect to Azure Analysis Services. You can also use "customdata" property in liquid code to pass value for [CustomData](/dax/customdata-function-dax) property.
+> - [Paginated Power BI reports](/power-bi/paginated-reports/paginated-reports-report-builder-power-bi) are not supported.
 
 For example: 
 
