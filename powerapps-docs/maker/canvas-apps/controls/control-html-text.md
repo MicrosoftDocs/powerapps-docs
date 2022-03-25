@@ -54,6 +54,9 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[OnSelect](properties-core.md)** – Actions to do when the user selects a control.
 
+> [!NOTE]
+> - If **HtmlText** has links within the content, OnSelect is ignored for those links.
+
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
 **[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
