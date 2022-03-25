@@ -23,6 +23,25 @@ The Power Apps Cards Designer is where Excel-level users can build out cards to 
 - Variables: store, bind, and reuse data across a card
 - Dataverse: stores each card you create and allows you to retrieve the card at send time
 
+## Find the Designer
+
+To get to the Card Designer, follow the instructions below:
+
+1. Navigate to [aka.ms/pcdesigner](https://make.test.powerapps.com/environment/8c0760a1-b9cb-473d-8fdd-8afa2ea50eb3/cards/list).
+
+1. Go to the Environment selector at the top of the page and make sure you're in the Environment PowerCards S environment.
+
+   :::image type="content" source="../media/designer-overview/verify-selected-environment.png" alt-text="Screenshot verifying you're in the correct environment." border="false":::
+
+1. Go to the left side pane to access all of the Card-related views.
+
+   1. Create a new card: select **Cards** > **Create**
+   1. See all current cards: select **Cards** > **Cards**
+
+      :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen." border="false":::
+
+1. From **Cards** > **Create**, select the Basic card tile to start creating your own card.
+
 ## What's in the Designer
 
 The Designer is made up of the following elements:
@@ -117,7 +136,7 @@ The PowerFX editor sits at the top of the card designer and allows you to write 
 
 ### Play button
 
-Once you've set up your card to your liking, you can preview the card with the Play button. This will open your card in a new tab and allow you to test out the card's functionalities. This is also where, if needed, you'll be able to debug and troubleshoot your card. For more information on debugging, see [Debugging cards](../make-a-card/testing/debugging-cards.md). 
+Once you've set up your card to your liking, you can preview the card with the Play button. This will open your card in a new tab and allow you to test out the card's functionalities. This is also where, if needed, you'll be able to debug and troubleshoot your card. For more information on debugging, see [Debugging cards](../make-a-card/testing/debugging-cards.md).
 
 ## Next steps
 

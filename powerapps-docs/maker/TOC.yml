@@ -2708,8 +2708,6 @@
       items: 
         - name: Designer overview
           href: ../powercards/get-started-designer/designer-overview.md
-        - name: Use the Designer
-          href: ../powercards/get-started-designer/setup-designer.md
     - name: Make a Card
       items: 
         - name: Get started with a Card
