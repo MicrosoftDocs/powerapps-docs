@@ -50,6 +50,10 @@ Grid context is the grid or subgrid instance on a form against which you want to
 
 ## Objects
 
+Use the following objects to interact with grids. These objects form a hierarchy as shown in the following diagram:
+
+:::image type="content" source="../../media/ClientAPI-grid-object-Model.png" alt-text="The hierarchy of objects available in grids":::
+
 |Name|Description|Available for|
 |--|--|--|
 |[GridControl](grids/gridcontrol.md)|Provides methods to work with the grid or subgrid control.|Read-only and editable grids|
