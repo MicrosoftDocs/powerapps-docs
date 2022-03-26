@@ -26,7 +26,7 @@ This section contains reference documentation for creating code components using
 |[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven and canvas apps|
 |[ControlAttributes](ControlAttributes.md)|[!INCLUDE [controlattributes-description](includes/controlattributes-description.md)]|Model-driven and canvas apps|
 |[ControlAttributesType](ControlAttributesType.md)|[!INCLUDE [controlattributestype-description](includes/controlattributestype-description.md)]|Model-driven and canvas apps|
-|[DataProviderCapabilities](DataProviderCapabilities.md)|[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)|
+|[DataProviderCapabilities](DataProviderCapabilities.md)|[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)]|
 |[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven and canvas apps|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[DateTimeFieldBehavior](DateTimeFieldBehavior.md)|[!INCLUDE [datetimefieldbehavior-description](includes/datetimefieldbehavior-description.md)]|Model-driven apps|
