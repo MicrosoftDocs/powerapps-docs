@@ -32,6 +32,7 @@ Model-driven and canvas apps
 |[css](css.md)|[!INCLUDE [css-description](includes/css-description.md)]|0 or more|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|0 or more|
+|[platform-library](platform-library.md)|[!INCLUDE [platform-library-description](includes/platform-library-description.md)]|0 or more|
 <!--|[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|-->
 
 
@@ -40,8 +41,8 @@ Model-driven and canvas apps
 ```xml
 <resources>
   <code path="JS_HelloWorldControl.js" order="1" />
-<css path="css/JS_HelloWorldControl.css" order="1" />
-		</resources>
+    <css path="css/JS_HelloWorldControl.css" order="1" />
+</resources>
 ```
 
 ### Related topics
