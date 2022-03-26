@@ -27,7 +27,7 @@ You can explore all the Power Apps capabilities for free by signing up for a 30-
 If you have a Power Apps license or a license through Office 365, you already have access to some of these features. However, the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
-> - If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
+> - If you're an administrator, see [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin) or [Power Apps in your organization Q&A](/power-platform/admin/signup-question-and-answer).
 > - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
 
 ## Identify your current license
@@ -96,4 +96,3 @@ Try the Power Apps [community](https://community.powerapps.com).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-
