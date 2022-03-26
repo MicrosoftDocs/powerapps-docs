@@ -1,6 +1,6 @@
 ---
-title: "StandardControl.destroy | MicrosoftDocs"
-description: This method is invoked when the component is to be removed from the DOM tree. Use it for the cleanup and to release any memory that the component is using.
+title: "ReactControl.destroy | MicrosoftDocs"
+description: This method is invoked in a ReactControl when the component is to be removed from the DOM tree. Use it for the cleanup and to release any memory that the component is using.
 ms.topic: "reference"
 applies_to: ""
 ms.author: jdaly
@@ -10,7 +10,7 @@ ms.date: 03/26/2022
 ms.reviewer: jdaly
 
 ---
-# StandardControl.destroy
+# ReactControl.destroy
 
 [!INCLUDE[./includes/destroy-description.md](./includes/destroy-description.md)]
 
@@ -33,7 +33,8 @@ public destroy(): void
 
 ### Related topics
 
-[Control](../control.md)<br/>
+[React Controls & Platform Libraries Public Preview](../../react-controls-platform-libraries.md)<br />
+[ReactControl](../react-control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 

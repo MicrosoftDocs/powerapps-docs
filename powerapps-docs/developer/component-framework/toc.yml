@@ -346,6 +346,17 @@
           href: reference/resources/getresource.md
         - name: getString
           href: reference/resources/getstring.md
+      - name: ReactControl
+        href: reference/react-control.md
+        items:
+        - name: destroy
+          href: reference/react-control/destroy.md
+        - name: getOutputs
+          href: reference/react-control/getOutputs.md
+        - name: init
+          href: reference/react-control/init.md
+        - name: updateView
+          href: reference/react-control/updateview.md
       - name: SecurityValues
         href: reference/securityvalues.md
       - name: SortStatus

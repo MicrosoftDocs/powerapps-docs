@@ -1,16 +1,14 @@
 ---
-title: "StandardControl.init | MicrosoftDocs"
-description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
+title: "init | MicrosoftDocs"
+description: Used to initialize the component instance for a ReactControl. Components can kick off remote server calls and other initialization actions.
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
 ms.date: 03/26/2022
 ms.reviewer: jdaly
-
 ms.topic: "reference"
-applies_to: ""
 ---
-# StandardControl.init
+# init
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
 
@@ -49,7 +47,8 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
 
 ### Related topics
 
-[Control](../control.md)<br/>
+[React Controls & Platform Libraries Public Preview](../../react-controls-platform-libraries.md)<br />
+[ReactControl](../react-control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 

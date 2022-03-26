@@ -6,11 +6,10 @@ author: noazarur-microsoft
 manager: kvivek
 ms.date: 03/26/2022
 ms.reviewer: jdaly
-
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ---
-# StandardControl.updateView
+# updateView
 
 [!INCLUDE[./includes/updateview-description.md](./includes/updateview-description.md)]
 
@@ -44,7 +43,8 @@ Set the value of the field component to the raw value from the configured field
 
 ### Related topics
 
-[Control](../control.md)<br/>
+[React Controls & Platform Libraries Public Preview](../../react-controls-platform-libraries.md)<br />
+[ReactControl](../react-control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
 
