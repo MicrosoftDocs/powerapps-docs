@@ -19,7 +19,7 @@ contributors:
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
 
 > [!NOTE]
-> The Portal Management app also lets you manage Power Pages. More information: [What is Power Pages](/power-pages/overview/introduction).
+> The Portal Management app also lets you manage Power Pages. More information: [What is Power Pages](/power-pages/introduction).
 
 To open Portal Management app:
 
