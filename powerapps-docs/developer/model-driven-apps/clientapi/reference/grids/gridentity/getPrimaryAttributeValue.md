@@ -1,21 +1,22 @@
 ---
-title: "getPrimaryAttributeValue (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getPrimaryAttributeValue method.
-ms.date: 04/21/2021
-
+title: "gridEntity.getPrimaryAttributeValue (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridEntity.getPrimaryAttributeValue method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4bd76f0c-5905-4bc2-a423-7d74a267a464
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getPrimaryAttributeValue (Client API reference)
+# gridEntity.getPrimaryAttributeValue (Client API reference)
 
 
 

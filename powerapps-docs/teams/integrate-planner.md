@@ -5,11 +5,11 @@ author: joel-lindstrom
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 

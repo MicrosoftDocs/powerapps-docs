@@ -4,7 +4,6 @@ description: "Read how you can store data for customer service calendars and hol
 ms.custom: ""
 ms.date: 05/04/2021
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.subservice: dataverse-developer
