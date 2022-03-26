@@ -37,8 +37,8 @@ This section contains reference documentation for creating code components using
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
 |[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven and canvas apps|
 |[FileObject](fileobject.md)|[!INCLUDE [fileobject-description](includes/fileobject-description.md)]|Model-driven apps|
-|[Filtering](filtering.md)|[!INCLUDE [filtering-description](includes/filtering-description.md)]|Model-driven and canvas apps|
 |[FilterExpression](filterexpression.md)|[!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]|Model-driven apps|
+|[Filtering](filtering.md)|[!INCLUDE [filtering-description](includes/filtering-description.md)]|Model-driven and canvas apps|
 |[Formatting](formatting.md)|[!INCLUDE [formatting-description](includes/formatting-description.md)]|Model-driven and canvas apps|
 |[ICommand](ICommand.md)|[!INCLUDE [icommand-description](includes/icommand-description.md)]|Model-driven and canvas apps|
 |[Linking](linking.md)|[!INCLUDE [linking-description](includes/linking-description.md)]|Model-driven apps|
@@ -54,8 +54,8 @@ This section contains reference documentation for creating code components using
 |[Position](position.md)|[!INCLUDE [position-description](includes/position-description.md)]|Provides access to get geographical information from context.device.getCurrentPosition method.|
 |[Property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|Model-driven and canvas apps|
 |[ReactControl (Preview)](react-control.md)|[!INCLUDE [react-control-description](includes/react-control-description.md)]|Model-driven and canvas apps|
-|[RetrieveMultipleResponse](retrievemultipleresponse.md)|[!INCLUDE [retrievemultipleresponse-description](includes/retrievemultipleresponse-description.md)]|Model-driven apps|
 |[Resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|Model-driven and canvas apps|
+|[RetrieveMultipleResponse](retrievemultipleresponse.md)|[!INCLUDE [retrievemultipleresponse-description](includes/retrievemultipleresponse-description.md)]|Model-driven apps|
 |[Security Values](securityvalues.md)|[!INCLUDE [securityvalues-description](includes/securityvalues-description.md)]|Model-driven apps|
 |[SortStatus](sortstatus.md)|[!INCLUDE [sortstatus-description](includes/sortstatus-description.md)]|Model-driven apps|
 |[StandardControl](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven and canvas apps|
