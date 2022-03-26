@@ -26,13 +26,13 @@ This section contains reference documentation for creating code components using
 |[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|Model-driven and canvas apps|
 |[ControlAttributes](ControlAttributes.md)|[!INCLUDE [controlattributes-description](includes/controlattributes-description.md)]|Model-driven and canvas apps|
 |[ControlAttributesType](ControlAttributesType.md)|[!INCLUDE [controlattributestype-description](includes/controlattributestype-description.md)]|Model-driven and canvas apps|
-|[DataProviderCapabilities](DataProviderCapabilities.md)|[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)]|
+|[DataProviderCapabilities](DataProviderCapabilities.md)|[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)]|Canvas apps|
 |[DataSet](dataset.md)|[!INCLUDE [dataset-description](includes/dataset-description.md)]|Model-driven and canvas apps|
 |[DateFormattingInfo](dateformattinginfo.md)|[!INCLUDE [dateformattinginfo-description](includes/dateformattinginfo-description.md)]|Model-driven apps|
 |[DateTimeFieldBehavior](DateTimeFieldBehavior.md)|[!INCLUDE [datetimefieldbehavior-description](includes/datetimefieldbehavior-description.md)]|Model-driven apps|
 |[Device](device.md)|[!INCLUDE [device-description](includes/device-description.md)]|Model-driven and canvas apps|
-|[Entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]||
-|[EntityFormOptions](entityformoptions.md)|[!INCLUDE [entityformoptions-description](includes/entityformoptions-description.md)]||
+|[Entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|Model-driven apps|
+|[EntityFormOptions](entityformoptions.md)|[!INCLUDE [entityformoptions-description](includes/entityformoptions-description.md)]|Model-driven apps|
 |[EntityRecord](entityrecord.md)|[!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]|Model-driven and canvas apps|
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
 |[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven and canvas apps|
@@ -51,7 +51,7 @@ This section contains reference documentation for creating code components using
 |[Paging](paging.md)|[!INCLUDE [paging-description](includes/paging-description.md)]|Model-driven and canvas apps|
 |[Popup](popup.md)|[!INCLUDE [popup-description](includes/popup-description.md)]|Model-driven apps|
 |[PopupService](popupservice.md)|[!INCLUDE [popupservice-description](includes/popupservice-description.md)]|Model-driven and canvas apps|
-|[Position](position.md)|[!INCLUDE [position-description](includes/position-description.md)]|Provides access to get geographical information from context.device.getCurrentPosition method.|
+|[Position](position.md)|[!INCLUDE [position-description](includes/position-description.md)]|Model-driven and canvas apps|
 |[Property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|Model-driven and canvas apps|
 |[ReactControl (Preview)](react-control.md)|[!INCLUDE [react-control-description](includes/react-control-description.md)]|Model-driven and canvas apps|
 |[Resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|Model-driven and canvas apps|
