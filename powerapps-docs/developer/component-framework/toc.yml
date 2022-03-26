@@ -337,15 +337,6 @@
         href: reference/position.md
       - name: Property
         href: reference/property.md
-      - name: RetrieveMultipleResponse
-        href: reference/retrievemultipleresponse.md
-      - name: Resources
-        href: reference/resources.md
-        items:
-        - name: getResource
-          href: reference/resources/getresource.md
-        - name: getString
-          href: reference/resources/getstring.md
       - name: ReactControl (Preview)
         href: reference/react-control.md
         items:
@@ -356,7 +347,16 @@
         - name: init
           href: reference/react-control/init.md
         - name: updateView
-          href: reference/react-control/updateview.md
+          href: reference/react-control/updateview.md        
+      - name: RetrieveMultipleResponse
+        href: reference/retrievemultipleresponse.md
+      - name: Resources
+        href: reference/resources.md
+        items:
+        - name: getResource
+          href: reference/resources/getresource.md
+        - name: getString
+          href: reference/resources/getstring.md
       - name: SecurityValues
         href: reference/securityvalues.md
       - name: SortStatus
