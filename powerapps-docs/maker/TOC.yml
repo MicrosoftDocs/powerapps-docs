@@ -1,3 +1,5 @@
+- name: Power Apps documentation
+  href: ../index.yml
 - name: Get started
   items:
   - name: What is Power Apps?
