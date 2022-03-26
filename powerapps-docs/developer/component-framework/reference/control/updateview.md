@@ -1,5 +1,5 @@
 ---
-title: "updateView| MicrosoftDocs"
+title: "StandardControl.updateView| MicrosoftDocs"
 description: This method will be called when any value in the property bag has changed. 
 ms.author: jdaly
 author: noazarur-microsoft

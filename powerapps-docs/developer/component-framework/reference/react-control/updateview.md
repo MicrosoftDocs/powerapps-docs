@@ -1,6 +1,6 @@
 ---
-title: "updateView| MicrosoftDocs"
-description: This method will be called when any value in the property bag has changed. 
+title: "ReactControl.updateView| MicrosoftDocs"
+description: This method will be called for a ReactControl when any value in the property bag has changed. 
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
@@ -9,7 +9,7 @@ ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ---
-# updateView
+# ReactControl.updateView
 
 [!INCLUDE[./includes/updateview-description.md](./includes/updateview-description.md)]
 
