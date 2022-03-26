@@ -12,7 +12,7 @@ ms.topic: "reference"
 
 # uses-feature element
 
-Indicates which feature their components want to use.
+[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]
 
 ## Available for
 

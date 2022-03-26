@@ -29,7 +29,7 @@ Model-driven apps
 
 |Element|Description|Available for|
 |--|--|-----|
-|[uses-feature](uses-feature.md)|Indicates which feature their components want to use.|Model-driven apps|
+|[uses-feature](uses-feature.md)|[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]|Model-driven apps|
 
 
 ## Example

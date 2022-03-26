@@ -409,14 +409,18 @@
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: feature-usage
+        href: manifest-schema-reference/feature-usage.md
       - name: img
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
-      - name: property
-        href: manifest-schema-reference/property.md
+      - name: platform-library
+        href: manifest-schema-reference/platform-library.md
       - name: property-set
         href: manifest-schema-reference/property-set.md
+      - name: property
+        href: manifest-schema-reference/property.md
       - name: resources
         href: manifest-schema-reference/resources.md
       - name: resx
@@ -425,8 +429,6 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
-      - name: feature-usage
-        href: manifest-schema-reference/feature-usage.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
   - name: Resources
