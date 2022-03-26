@@ -10,7 +10,7 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ---
 
-# ReactControl
+# ReactControl (Preview)
 
 [!INCLUDE [control-description](includes/react-control-description.md)]
 

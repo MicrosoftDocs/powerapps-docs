@@ -346,7 +346,7 @@
           href: reference/resources/getresource.md
         - name: getString
           href: reference/resources/getstring.md
-      - name: ReactControl
+      - name: ReactControl (Preview)
         href: reference/react-control.md
         items:
         - name: destroy
