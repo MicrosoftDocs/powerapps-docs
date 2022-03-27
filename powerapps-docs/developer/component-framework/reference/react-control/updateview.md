@@ -30,9 +30,12 @@ Model-driven and canvas apps
 ## Example
 
 ```TypeScript
-public updateView(context: ComponentFramework.Context<IInputs>): void
+public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement
 {
-    this._labelElement.innerText = "Hello World! (TS)";
+    const props: IHelloWorldProps = { name: 'Hello, World'};
+    return React.createElement(
+        HelloWorld, props
+    );
 }
 ```
 

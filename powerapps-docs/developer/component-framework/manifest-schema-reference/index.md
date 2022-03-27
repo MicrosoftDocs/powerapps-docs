@@ -34,7 +34,7 @@ This section contains reference documentation for manifest schema generated usin
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|Model-driven and canvas apps|
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|Model-driven and canvas apps|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|Model-driven apps|
-|[uses-feature](uses-feature.md)|[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]||Model-driven apps|
+|[uses-feature](uses-feature.md)|[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]|Model-driven apps|
 
 
 ### Related topics

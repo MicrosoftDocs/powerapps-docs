@@ -32,16 +32,19 @@ Model-driven and canvas apps
 |context|[Context](../context.md)|yes|The *Input Properties* containing the parameters, component metadata and interface functions.|
 |notifyOutputChanged|`function`|no|The method to notify the framework that it has new outputs|
 |state|`Dictionary`|no|The component state that is saved from *setControlState* in the last session|
-|container|[HTMLDivElement](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)|no|The div element to render|
+
+> [!NOTE]
+> The ReactControl.init method doesn't have a `container` parameter with a `HTMLDivElement` like the [StandardControl.init](../control/init.md) method does. This is because React controls do not render the DOM directly. Instead, the [ReactControl.updateView](updateview.md) method returns an ReactElement containing a description of the virtual control DOM.
 
 ## Example
 
 ```TypeScript
-public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
+public init(context: ComponentFramework.Context<IInputs>, 
+    notifyOutputChanged: () => void, 
+    state: ComponentFramework.Dictionary)
 {
     this._labelElement = document.createElement("label");
     this._labelElement.setAttribute("class", "HelloWorldColor");
-    container.appendChild(this._labelElement);
 }
 ```
 

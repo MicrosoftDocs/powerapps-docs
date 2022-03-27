@@ -39,7 +39,7 @@ Model-driven and canvas apps
 <resources>
     <code path="index.ts" order="1" />
 	<platform-library name="React" version="16.8.6" />
-	<platform-library path="Fluent" version="8.29.0" />
+	<platform-library name="Fluent" version="8.29.0" />
 </resources>
 ```
 

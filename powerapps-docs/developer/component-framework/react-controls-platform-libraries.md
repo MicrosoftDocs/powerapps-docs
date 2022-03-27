@@ -74,4 +74,56 @@ These are the differences between a React component and a standard component.
 
 ### ControlManifest.Input.xml
 
-The [control element](manifest-schema-reference/control.md) has a new 
+The [control element](manifest-schema-reference/control.md) `control-type` attribute is set to `virtual` rather than `standard`.
+
+> [!NOTE]
+> Changing this value does not convert a component from one type to another.
+
+Within the [resources element](manifest-schema-reference/resources.md), you will find two new [platform-library element](manifest-schema-reference/platform-library.md) child elements like the following:
+
+```xml
+<resources>
+    <code path="index.ts" order="1" />
+	<platform-library name="React" version="16.8.6" />
+	<platform-library name="Fluent" version="8.29.0" />
+</resources>
+```
+
+We recommend using Fluent platform libraries. If you don't use Fluent, you should remove the element with `name` attribute `Fluent`.
+
+### Index.ts
+
+The [ReactControl.init](reference/react-control/init.md) method for control initialization does not have `div` parameters because these controls do not render the DOM directly. Instead [ReactControl.updateView](reference/react-control/updateview.md) returns a ReactElement which has the details fo the actual control in React format.
+
+### bundle.js
+
+Because React and Fluent libraries are not included because they are shared, the size of bundle.js is significantly smaller.
+
+## Sample controls
+
+You can find two new controls added to the samples as part of this preview. Functionally, they are the same as their standard version but will have much better performance.
+
+
+|Sample |Description|Link|
+|---------|---------|---------|
+|ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a ReactControl. |TODO|
+|FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|TODO|
+
+
+## FAQ
+
+### Can I convert an existing standard control to a React control using platform libraries?
+
+No. You must create a new control using the new template and then update the manifest and index.ts methods.
+
+## Related topics
+
+[What are code components?](custom-controls-overview.md)<br/>
+[Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
+[Create and build a code component](create-custom-controls-using-pcf.md)<br/>
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
+[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+

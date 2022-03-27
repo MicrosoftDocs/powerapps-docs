@@ -14,7 +14,7 @@ applies_to: ""
 
 [!INCLUDE[./includes/getoutputs-description.md](./includes/getoutputs-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
