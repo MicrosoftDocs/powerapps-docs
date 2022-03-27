@@ -5,7 +5,7 @@ keywords: "Component Framework, code components, Power Apps controls"
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/27/2022
+ms.date: 03/28/2022
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
