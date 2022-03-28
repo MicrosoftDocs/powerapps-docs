@@ -1,6 +1,6 @@
 ---
-title: "getData (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getData method.
+title: "control.getData (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.getData method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getData (Client API reference)
+# control.getData (Client API reference)
 
 Returns the value of the data query string parameter passed to a Silverlight web resource. 
 

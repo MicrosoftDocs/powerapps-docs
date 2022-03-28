@@ -10,9 +10,11 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # getSelectedRows (Client API reference)

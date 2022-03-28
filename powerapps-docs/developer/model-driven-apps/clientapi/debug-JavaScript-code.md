@@ -1,5 +1,6 @@
 ---
 title: "Debug your JavaScript code for model-driven apps| MicrosoftDocs"
+description: "Explains how to debug JavaScript code for model-driven apps"
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -13,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Debug your JavaScript code for model-driven apps
 

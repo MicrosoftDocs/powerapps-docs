@@ -1,6 +1,6 @@
 ---
-title: "setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setDisabled method.
+title: "quickViewControl.setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the quickViewControl.setDisabled method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setDisabled (Client API reference)
+# quickViewControl.setDisabled (Client API reference)
 
 
 

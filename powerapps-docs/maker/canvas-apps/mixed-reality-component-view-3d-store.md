@@ -31,7 +31,7 @@ Loading 3D models from attachments or media content depends on how a data connec
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
 
 
-### Load 3D models from a SharePoint list
+### Load 3D models from Microsoft Lists
 
 First, create a list in SharePoint and add an entry for each 3D model that you want to have in your app.
 
@@ -44,7 +44,7 @@ First, create a list in SharePoint and add an entry for each 3D model that you w
 Then, add a gallery to your app, set its source to the list, add a **View in 3D** control, and set its source to the gallery.
 
 1. [Add a gallery](./add-gallery.md) in Power Apps Studio.
-2. Set the gallery data source to the SharePoint list.
+2. Set the gallery data source to the list.
 3. [Add the **View in 3D** control](./mixed-reality-component-view-3d.md).
 4. In the **Advanced** properties tab, set **Source** to **First(Gallery1.Selected.Attachments).Value**.
 
@@ -121,7 +121,7 @@ In the following example, a document library named *3DModelBase64Library* and a 
 
 The flow runs when a file is added to the document library, converting the file to a Base64-encoded data URI.
 
-In Power Apps Studio, connect the **View in 3D** control to the SharePoint list using the SharePoint data connector. Set the control's **Source** property to the Base64-encoded data URI.
+In Power Apps Studio, connect the **View in 3D** control to the list using the SharePoint data connector. Set the control's **Source** property to the Base64-encoded data URI.
 
 #### Create a Base64-encoded 3D model with Microsoft Dataverse
 

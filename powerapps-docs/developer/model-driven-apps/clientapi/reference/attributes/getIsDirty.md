@@ -1,6 +1,6 @@
 ---
-title: "getIsDirty (Client API reference)| MicrosoftDocs"
-description: Includes description and supported parameters for the getIsDirty method.
+title: "attribute.getIsDirty (Client API reference)| MicrosoftDocs"
+description: Includes description and supported parameters for the attribute.getIsDirty method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,8 +14,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# formContext.getAttribute().getIsDirty (Client API reference)
+# attribute.getIsDirty (Client API reference)
 
 Returns a boolean value indicating if there are unsaved changes to the column value. An unsaved change to a column value means the client value is different from the last known committed value retrieved from Dataverse by the client from runtime.
 

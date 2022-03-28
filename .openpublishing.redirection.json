@@ -16,11 +16,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/teams/create-apps-lists.md",
-      "redirect_url": "create-additional-apps",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "powerapps-docs/maker/canvas-apps/sample-meeting-capture.md",
       "redirect_url": "open-and-run-a-sample-app",
       "redirect_document_id": "false"

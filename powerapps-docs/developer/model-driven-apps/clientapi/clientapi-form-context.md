@@ -15,6 +15,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Client API form context
 
@@ -93,11 +95,9 @@ More information: [formContext.ui](reference/formContext-ui.md)
 ## Collections in the formContext object model
 
 The following table describes the collections in **Xrm** object model. For
-information about the methods available for collections in general, see
-[Collections (Client API
-reference)](reference/collections.md).
+information about the methods available for collections in general, see [Collections (Client API reference)](reference/collections.md).
 
-| **Collection**  | **Description**|
+|**Collection**| **Description**|
 |-----------------|----------------|
 | [attributes](reference/attributes.md)  | Two objects contain a column collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-table bound columns.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each table column that is available on the form. Only those columns added to the form are available.| 
 | [controls](reference/controls.md)  | Three objects contain a controls collection:<br/><br/> - **formContext.ui.controls**: Provides access to each control present on the form.<br/><br/>- **formContext.data.entity.attribute.controls**: Because a column may have more than one control on the form, this collection provides access to each of them. This collection will contain only one item unless multiple controls for the column are added to the form.<br/><br/>- **formContext.ui.tabs.sections.controls**: This collection only contains the controls found in the section.|

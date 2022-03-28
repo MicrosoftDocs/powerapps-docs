@@ -11,9 +11,11 @@ applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Xrm.Device (Client API reference)

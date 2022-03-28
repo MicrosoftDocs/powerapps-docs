@@ -1,5 +1,6 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
+description: "Explains the client api execution context"
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,6 +15,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Client API execution context
 

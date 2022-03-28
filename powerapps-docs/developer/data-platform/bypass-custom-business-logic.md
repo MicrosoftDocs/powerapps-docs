@@ -1,20 +1,21 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic" 
-ms.custom: ""
-ms.date: 05/27/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" 
+author: "divka78" 
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
-manager: "ryjones" 
+manager: "kvivek" 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Bypass Custom Business Logic
 

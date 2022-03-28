@@ -1,6 +1,6 @@
 ---
-title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the addOnLoad method.
+title: "gridContext.addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.addOnLoad method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -10,12 +10,14 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
-# addOnLoad (Client API reference)
+# gridContext.addOnLoad (Client API reference)
 
 [!INCLUDE[./includes/addOnLoad-description.md](./includes/addOnLoad-description.md)]
 
