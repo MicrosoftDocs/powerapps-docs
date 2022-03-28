@@ -23,7 +23,7 @@ Model-driven and canvas apps
 
 ## Syntax
 
-`init(context,notifyOutputChanged,state,container)`
+`init(context,notifyOutputChanged,state)`
 
 ## Parameters
 
