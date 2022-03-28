@@ -43,7 +43,7 @@ public init(context: ComponentFramework.Context<IInputs>,
     notifyOutputChanged: () => void, 
     state: ComponentFramework.Dictionary)
 {
-    this._labelElement = document.createElement("label");
+    this._labelElement = React.createElement("div", { className: "HelloWorldColor" });
     this._labelElement.setAttribute("class", "HelloWorldColor");
 }
 ```
