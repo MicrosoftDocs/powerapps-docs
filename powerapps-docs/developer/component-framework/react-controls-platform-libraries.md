@@ -18,7 +18,7 @@ ms.subservice: pcf
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you are using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control. All controls will share a common library instance and version to provide a seamless and consistent experience.
+You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you are using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent libraries individually for each control. All controls will share a common library instance and version to provide a seamless and consistent experience.
 
 By re-using the existing platform React and Fluent libraries, you can expect the following benefits:
 
@@ -26,21 +26,22 @@ By re-using the existing platform React and Fluent libraries, you can expect the
 - Optimized solution packaging
 - Faster runtime transfer, scripting and control rendering
 
-With the benefits available by re-using these component resources, we expect this approach will become the common way all Power Apps components will be created after this feature reaches general availability.
+With the benefits available by re-using these component resources, we expect this approach will become the preferred way all Power Apps code components will be created after this feature reaches general availability.
 
 ## Prerequisites
 
 Just as with any component, you must install [Visual Studio Code](https://code.visualstudio.com/Download) and the [Microsoft Power Platform CLI](../data-platform/powerapps-cli.md#install-microsoft-power-platform-cli) as described here: [Prerequisites](implementing-controls-using-typescript.md#prerequisites)
 
 > [!NOTE]
-> If you have already installed the Microsoft Power Platform CLI, make sure you are running the latest version by using the `pac install latest` command.
+> If you have already installed the Standalone Power Platform CLI, make sure you are running the latest version by using the `pac install latest` command.
+> The Power Platform Tools for Visual Studio Code should update automatically.
 
 <!-- Will there be any additional steps to enable the feature? -->
 
 ## Create a React component
 
 > [!NOTE]
-> These instructions expect that you have created components before. If you have not, see this tutorial: [Create your first component](implementing-controls-using-typescript.md)
+> These instructions expect that you have created code components before. If you have not, see this tutorial: [Create your first component](implementing-controls-using-typescript.md)
 
 There is a new `--framework` (`-fw`) parameter for the `pac pcf init` command. Set the value of this parameter to `react`.
 
@@ -66,7 +67,7 @@ PS C:\pcf\reactsample> pac pcf init `
 
 You can now build and view the control in the test harness as usual using `npm start`.
 
-After you build the control you can package it inside solutions and use it for model-driven and canvas apps like standard code components.
+After you build the control you can package it inside solutions and use it for model-driven apps (including custom pages) and canvas apps like standard code components.
 
 ## Differences from standard components
 
@@ -88,8 +89,10 @@ Within the [resources element](manifest-schema-reference/resources.md), you will
 	<platform-library name="Fluent" version="8.29.0" />
 </resources>
 ```
+> [!NOTE]
+> Do not change the version numbers for these `platform-library` elements. These are the versions used by the platform.
 
-We recommend using Fluent platform libraries. If you don't use Fluent, you should remove the element with `name` attribute `Fluent`.
+We recommend using Fluent platform libraries. If you don't use Fluent, you should remove this element: `<platform-library name="Fluent" version="8.29.0" />`
 
 ### Index.ts
 
@@ -97,7 +100,7 @@ The [ReactControl.init](reference/react-control/init.md) method for control init
 
 ### bundle.js
 
-Because React and Fluent libraries are not included because they are shared, the size of bundle.js is significantly smaller.
+React and Fluent libraries are not included in the package because they are shared, therfore the size of bundle.js is significantly smaller.
 
 ## Sample controls
 
@@ -112,9 +115,9 @@ You can find two new controls added to the samples as part of this preview. Func
 
 ## FAQ
 
-### Can I convert an existing standard control to a React control using platform libraries?
+### Q: Can I convert an existing standard control to a React control using platform libraries?
 
-No. You must create a new control using the new template and then update the manifest and index.ts methods.
+A: No. You must create a new control using the new template and then update the manifest and index.ts methods. For reference, compare the standard and react samples described above.
 
 ## Related topics
 
