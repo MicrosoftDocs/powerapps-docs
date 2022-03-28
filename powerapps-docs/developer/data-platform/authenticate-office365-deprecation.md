@@ -59,7 +59,7 @@ There are very straight forward ways to modify your application’s code to use
 the recommended connection interface for authentication with Dataverse.
 
 > [!IMPORTANT]
-> Remember to use the latest available package.
+> Keep your applications up to date with our latest client SDK API changes by downloading and using the latest available NuGet packages whenever possible.
 
 - If your code uses an [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy) instance:
 
