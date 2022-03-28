@@ -1,5 +1,5 @@
 ---
-title: "React Controls & Platform Libraries Public Preview| Microsoft Docs"
+title: "React controls & platform libraries (Preview) | Microsoft Docs"
 description: "You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you are using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control."
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: jdaly
@@ -14,7 +14,7 @@ ms.topic: article
 ms.subservice: pcf
 ---
 
-# React Controls & Platform Libraries Public Preview
+# React controls & platform libraries (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -26,7 +26,7 @@ By re-using the existing platform React and Fluent libraries, you can expect the
 - Optimized solution packaging
 - Faster runtime transfer, scripting and control rendering
 
-With the benefits available by re-using these component resources, we expect this approach will become the standard way all Power Apps components will be created after this feature reaches general availability.
+With the benefits available by re-using these component resources, we expect this approach will become the common way all Power Apps components will be created after this feature reaches general availability.
 
 ## Prerequisites
 
@@ -44,16 +44,16 @@ Just as with any component, you must install [Visual Studio Code](https://code.v
 
 There is a new `--framework` (`-fw`) parameter for the `pac pcf init` command. Set the value of this parameter to `react`.
 
-The following PowerShell command will create a react component project and run `npm-install` in the `C:\pcf\reactsample` folder with the following parameters:
+The following PowerShell command will create a React component project and run `npm-install` in the `C:\pcf\reactsample` folder with the following parameters:
 
 
 |Parameter  |Value  |
 |---------|---------|
-|`name`     |`ReactSample`|
-|`namespace`|`SampleNamespace`|
-|`template`|`field`|
-|`framework`|`react`|
-|`run-npm-install`|`true` (default)|
+|`--name`     |`ReactSample`|
+|`--namespace`|`SampleNamespace`|
+|`--template`|`field`|
+|`--framework`|`react`|
+|`--run-npm-install`|`true` (default)|
 
 ```powershell
 PS C:\pcf\reactsample> pac pcf init `
@@ -106,7 +106,7 @@ You can find two new controls added to the samples as part of this preview. Func
 
 |Sample |Description|Link|
 |---------|---------|---------|
-|ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a ReactControl. |TODO|
+|ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a React Control. |TODO|
 |FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|TODO|
 
 
