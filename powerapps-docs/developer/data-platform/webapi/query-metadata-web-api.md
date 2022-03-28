@@ -124,7 +124,7 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/At
 ```
 
 > [!NOTE]
-> Despite the fact that the `OptionSet` and `GlobalOptionSet` collection-valued navigation properties are defined within <xref href="Microsoft.Dynamics.CRM.EnumAttributeMetadata?text=EnumAttributeMetadata EntityType" />, you cannot cast the attributes to this type. This means that if you want to filter on other types which also inherit these properties (see [Entity types that inherit from EnumAttributeMetadata](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types) ), you must perform separate queries to filter for each type.
+> Despite the fact that the `OptionSet` and `GlobalOptionSet` collection-valued navigation properties are defined within <xref href="Microsoft.Dynamics.CRM.EnumAttributeMetadata?text=EnumAttributeMetadata EntityType" />, you cannot cast the attributes to this type. This means that if you want to filter on other types which also inherit these properties (see [Entity types that inherit from EnumAttributeMetadata](/dynamics365/customer-engagement/web-api/enumattributemetadata#Derived_Types) ), you must perform separate queries to filter for each type.
 
 Another example of this is accessing the `Precision` property available in <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> and <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" /> attributes. To access this property you must cast the attributes collection either as <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> or <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" />. An example showing casting to `MoneyAttributeMetadata` is shown here.
 
@@ -356,7 +356,7 @@ GET [Organization URI]/api/data/v9.0/GlobalOptionSetDefinitions(Name='incident_c
 ````
 
 
-You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
+You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
 
 ### See also
 
