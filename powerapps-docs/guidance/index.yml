@@ -7,7 +7,7 @@ metadata:
   title: Power Apps guidance documentation
   description: Provides best practice guidance information for Power Apps.
   services: service
-  ms.service: powerapps 
+  
   ms.subservice: subservice
   ms.topic: landing-page 
   ms.collection: collection

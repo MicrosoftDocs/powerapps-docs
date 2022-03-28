@@ -7,8 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: aneesa
 ms.reviewer: matp
 manager: kvivek
-ms.date: 11/30/2021
-ms.service: powerapps
+ms.date: 03/01/2022
 ms.topic: how-to
 search.audienceType: 
   - maker
@@ -16,15 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use settings to provide customized app experiences (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use settings to provide customized app experiences
 
 Settings are solution components that enable makers and administrators to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment.
-
-  > [!IMPORTANT]
-  > - This is a preview feature and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 Settings are made up of three subcomponents: Setting definition, setting environment value, and setting app value.
 
@@ -47,9 +40,8 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Name** | The unique name of the setting in an environment.<br> Name is automatically generated based on the display name provided but can be changed before the setting is created. Once a setting is created, the **Name** can't be changed as it may be referenced in applications or code.<br> **Name** has a prefix that corresponds to the solution [publisher](create-solution.md#solution-publisher). This prefix is intended to give the setting a unique name if you want to import them into another solution or environment in the future (which would have a different prefix). |
 |**Description** | The description helps others understand what the setting is used for in all user interfaces where settings are displayed. |
 |**Data type** | The data type of a setting controls how the setting’s value is stored. Data type can be set to **Number**, **String**, or **Yes/No**. Data type can't be changed after the setting is created. |
-|**Default value** | The default value specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
-|**Overridable** | Overridable enables a setting’s default value to be overridden by an environment (setting environment value) or an app (setting app value).<br> Overridable can't be changed after the setting is created. |
-|**Value can be overridden for** | A setting that is overridable can be further configured to enable the override behavior.<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value.</li></ul>|
+|**Default value** | The default value becomes available after you select a **Data type**. It specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
+|**Value can be changed for** | A setting can be overridden at one of the following levels :<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value. </li><li>**None**, the setting can’t not be overridden. </li></ul>|
 |**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
 |**Information Url** | A link to documentation to help consumers of the setting understand the purpose of the setting. Will be used as a *Learn more* link in all user interfaces where settings are displayed.|
 
@@ -213,10 +205,10 @@ Setting app value is used to override the setting's default value and any settin
 
 ## Getting or updating a setting value via code
 
-For the methods available, go to [Get or update a setting value using client API (preview)](../../developer/model-driven-apps/clientapi/get-update-setting-value-using-code.md).
+For the methods available, go to [Get or update a setting value using client API](../../developer/model-driven-apps/clientapi/get-update-setting-value-using-code.md).
 
 ## See also
 
-[Solutions overview](solutions-overview.md)
-
-[Overview of the model-driven app designer (preview)](../model-driven-apps/app-designer-overview.md)
+For developers:
+- [RetrieveSetting Function](/dynamics365/customer-engagement/web-api/retrievesetting?view=dynamics-ce-odata-9&preserve-view=true)
+- [SaveSettingValue Action](/dynamics365/customer-engagement/web-api/savesettingvalue?view=dynamics-ce-odata-9&preserve-view=true)

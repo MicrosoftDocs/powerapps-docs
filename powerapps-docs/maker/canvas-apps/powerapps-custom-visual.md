@@ -2,11 +2,11 @@
 title: Power Apps visual for Power BI
 description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI. 
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/30/2021
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
@@ -98,7 +98,6 @@ The following table lists the browser supportability for view, create, and modif
 |Browser|View|Create|Modify
 |-|-|-|-
 |Microsoft Edge|&check;|&check;|&check;
-|Internet Explorer 11|&check;
 |Google Chrome|&check;|&check;|&check;
 |Safari \*|&check;
 |Mozilla Firefox

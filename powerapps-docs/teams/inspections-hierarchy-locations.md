@@ -1,17 +1,17 @@
 ---
-title: Add hierarchy to inspection location
+title: Add hierarchy to inspection location (contains video)
 description: Learn about how to add hierarchy to inspection locations in Inspections sample app.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/01/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - josephshum
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---

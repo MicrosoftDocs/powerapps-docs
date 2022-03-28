@@ -4,7 +4,7 @@ description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
 ms.date: 05/19/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "how-to"
 author: "Mattp123"
 ms.assetid: e21a4876-08b4-417a-a644-c577a27c5cf1
@@ -20,7 +20,7 @@ search.app:
 ---
 # Create a solution
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution so that it can be backed up or imported to another environment. 
 

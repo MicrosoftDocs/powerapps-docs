@@ -4,7 +4,7 @@ description: "Learn how to add custom workflow activities to the workflow design
 ms.custom: ""
 ms.date: 03/17/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

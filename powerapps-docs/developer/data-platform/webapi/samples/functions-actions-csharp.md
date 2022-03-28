@@ -3,7 +3,7 @@ title: "Web API Functions and Actions Sample (C#) (Microsoft Dataverse)| Microso
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and C#"
 ms.custom: ""
 ms.date: 07/15/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

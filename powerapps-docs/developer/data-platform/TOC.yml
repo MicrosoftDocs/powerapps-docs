@@ -33,24 +33,24 @@
     href: ./org-service/overview.md
   - name: Create your own messages
     href: custom-actions.md
-    items:
-    - name: Use Custom Process Actions with code
-      href: workflow-custom-actions.md
+    items:    
     - name: Create and use Custom APIs
       href: custom-api.md
       items:
-      - name: Create a Custom API in the maker portal
+      - name: Create a Custom API with plug-in registration tool
+        href: create-custom-api-prt.md
+      - name: Create a Custom API in Power Apps
         href: create-custom-api-maker-portal.md
       - name: Create a Custom API with code
         href: create-custom-api-with-code.md
       - name: Create a Custom API with solution files
         href: create-custom-api-solution.md
-      - name: CustomAPI Table Columns
-        href: customapi-table-columns.md
-      - name: CustomAPIRequestParameter Table Columns
-        href: customapirequestparameter-table-columns.md
-      - name: CustomAPIResponseProperty Table Columns
-        href: customapiresponseproperty-table-columns.md
+      - name: CustomAPI Tables
+        href: custom-api-tables.md
+      - name: "Sample: IsSystemAdmin Custom API plug-in"
+        href: org-service/samples/issystemadmin-customapi-sample-plugin.md
+    - name: Use Custom Process Actions with code
+      href: workflow-custom-actions.md      
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -76,6 +76,8 @@
     href: how-dataverse-sql-differs-from-transact-sql.md
   - name: Saved Queries
     href: saved-queries.md
+  - name: Query using wildcard characters
+    href: wildcard-characters.md
   - name: Query throttling
     href: query-throttling.md
   - name: Query Hierarchical data
@@ -410,11 +412,11 @@
   - name: Authenticate apps and services with Microsoft Dataverse
     href: authentication.md
     items:
-    - name: .NET Framework applications
+    - name: Authenticating .NET applications
       href: authenticate-dot-net-framework.md
-    - name: Use OAuth
+    - name: Use OAuth authentication
       href: authenticate-oauth.md
-    - name: Use Office365 (WS-Trust)
+    - name: Use of Office365 (WS-Trust) authentication
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md
@@ -462,6 +464,8 @@
         items:
         - name: admin 
           href: cli/reference/admin-command.md
+        - name: application 
+          href: cli/reference/application-command.md
         - name: auth
           href: cli/reference/auth-command.md
         - name: canvas 

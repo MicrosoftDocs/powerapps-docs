@@ -5,7 +5,7 @@ author: MargoC
 ms.topic: article
 ms.date: 02/19/2020
 ms.author: margoc
-ms.service: powerapps
+
 ---
 
 # Solution architect learning catalog
@@ -23,8 +23,8 @@ The following catalog is organized from core knowledge to specific domains, and 
 
 ## Exam<a name="exam"></a>
 
-| Content | Description | Format | Length |
-|---------|-------------|--------|--------|
+| Content | Description | Format |
+|---------|-------------|--------|
 | [Microsoft Power Platform Solution Architect](/learn/certifications/exams/pl-600)| This exam measures your ability to accomplish the following technical tasks: perform solution envisioning and requirement analysis; architect a solution; and implement the solution. | Exam, cost varies by region |
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

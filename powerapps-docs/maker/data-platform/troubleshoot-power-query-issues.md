@@ -3,7 +3,7 @@ title: Troubleshoot Power Query | Microsoft Docs
 description: Resolve issues by using Power Query to create a custom table in Microsoft Dataverse.
 author: mllopis
 manager: kfile
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/16/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 
 # Troubleshoot Power Query
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you use Power Query for Excel to create a custom table that contains data from external sources, this error might appear:
 

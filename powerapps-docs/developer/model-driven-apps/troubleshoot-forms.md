@@ -4,7 +4,7 @@ description: "Learn about how to resolve the common issues on model-driven apps 
 ms.custom: ""
 ms.date: 09/07/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: troubleshoot
 ms.topic: "article"
 author: "Nkrb" # GitHub ID
@@ -29,6 +29,7 @@ This article helps you fix some of the common issues you might encounter while w
 > - Most of the tools are available in all the production environments. Some of them mentioned in the article might not have been deployed to your organization yet; new tools are added periodically.
 > - Tools listed in this article are written in a scenario-driven way. You can use them independently to troubleshoot different types of issues. 
 > - [Use URL parameters to disable various form components](#use-url-parameters-to-disable-various-form-components) and [View registered form event handlers and libraries in Monitor](#view-registered-form-event-handlers-and-libraries-in-monitor) are critical and fundamental tools you'll frequently use to troubleshoot many scenarios. 
+> - For more information on how to use Monitor, see [Use Monitor to troubleshoot model-driven app form behavior](../../maker/model-driven-apps/monitor-form-checker.md)
 
 ## Use URL parameters to disable various form components
 
@@ -333,13 +334,15 @@ A control can be disabled by using the following list of rules in order. If a ru
 - If the user doesn't have write permissions on the column defined by field-level security, the control is disabled.
 - If the control is disabled or enabled by the Client API script, the control disabled state will honor that setting.
 - If the control is disabled in the form designer, the control is disabled.
-- If the user doesn't have `Assign To` privilege for the lookup control's table, or `Assign` privilege on the current record's table, the lookup control is disabled
+- If the user doesn't have `Append To` privilege for the lookup control's table, or `Append` privilege on the current record's table, the lookup control is disabled
 
 Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 
 > [!NOTE]
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form, whether it's during form load, in OnChange or OnSave events after the form is loaded.
 
+> [!IMPORTANT]
+> A control's disabled and hidden state can change multiple times when a form is first loaded. To know the reason why a control is hidden or disabled, make sure to check the **last** operation logged in the monitor. For example, if there are no `ControlStateChange.visible/ControlStateChange.hidden` operations for the control being investigated, the value and reasoning will be in the `FormControls` operation. Otherwise, it will be the value and reason in the **last** `ControlStateChange.visible/ControlStateChange.hidden` operation. You can order logs by timestamp to search for the last operation. 
 
 ## Why a control has a certain value on form load
 

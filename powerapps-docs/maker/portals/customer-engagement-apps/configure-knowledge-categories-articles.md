@@ -2,7 +2,7 @@
 title: Configure and manage category for knowledge articles
 description: Learn how to create and manage a category for knowledge article.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

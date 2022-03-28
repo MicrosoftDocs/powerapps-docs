@@ -2,7 +2,7 @@
 title: Moderate forums
 description: Learn how to moderate forums in a portal.
 author: sbmjais
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

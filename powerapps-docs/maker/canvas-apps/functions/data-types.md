@@ -2,7 +2,7 @@
 title: Data types in Power Apps
 description: Learn about the different data types in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

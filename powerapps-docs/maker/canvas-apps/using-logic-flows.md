@@ -2,11 +2,11 @@
 title: Start a flow in a canvas app
 description: Learn about how to create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in a canvas app.
 author: TashasEv
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/15/2021
+ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -19,7 +19,7 @@ contributors:
 ---
 # Start a flow in a canvas app
 
-You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close Power Apps.
+You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a list created using Microsoft Lists, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close Power Apps.
 
 > [!NOTE]
 > When a user runs a flow from within an app, that user must have permission to perform the tasks that are specified in the flow. Otherwise, the flow will fail.
@@ -36,7 +36,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 ## Create a flow
 
-In this section, you'll create a flow using Power Automate that creates an item in a SharePoint list using the input value for the list column from an app created using Power Apps. You'll create the app that uses this flow in the next section.
+In this section, you'll create a flow using Power Automate that creates an item in a list using the input value for the list column from an app created using Power Apps. You'll create the app that uses this flow in the next section.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -80,15 +80,9 @@ In this section, you'll create a flow using Power Automate that creates an item 
 
 ## Add a flow to an app
 
-In this section, you'll learn about creating an app using Power Apps that uses the flow created in the earlier section. The app uses text entered in a text box when the button is selected to trigger the flow to create an item in the selected SharePoint list.
+In this section, you'll learn about creating an app using Power Apps that uses the flow created in the earlier section. The app uses text entered in a text box when the button is selected to trigger the flow to create an item in the selected list.
 
-1. Go to [Power Apps](https://make.powerapps.com), or select **Home** in Power Apps.
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-1. Enter an app name, such as **AppWithFlow**. You can also select or change layout between phone and tablet.
-
-1. Select **Create**.
+1. Create a [blank canvas app](create-blank-app.md) with a name such as **AppWithFlow**.
 
 1. Select **+** (Insert) on the left-pane.
 
@@ -101,6 +95,9 @@ In this section, you'll learn about creating an app using Power Apps that uses t
     ![Design the app.](./media/using-logic-flows/assettype-repairshopid.png "Design the app")
 
 1. Select **Action** menu at the top, and then select **Power Automate**.
+    
+    > [!NOTE]
+    > Adding flow to the selected control or component clears out any existing formula for the chosen property. For example, when you add a flow to a button's OnSelect property that has a complex formula, the flow addition clears out this formula. Ensure you make a copy of the formula before adding the flow. However, this behavior is different when adding flow with Power Automate pane enabled. More information: [Reference a flow](working-with-flows.md#reference-a-flow)
 
     ![Action > Power Automate.](./media/using-logic-flows/action-power-automate.png "Action > Power Automate")
 
@@ -108,7 +105,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
     
     :::image type="content" source="media/using-logic-flows/power-automate-pane-add-flow.png" alt-text="A screenshot showing the Power Automate button in the left pane with the Add Flow dialog opened, showing the FlowInApp flow available to add to the app.":::
 
-   More information: [Power Automate Pane](#power-automate-pane-preview)
+   More information: [Use Power Automate pane (preview)](working-with-flows.md)
 
 1. Select **FlowInApp**.
 
@@ -136,7 +133,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
     In this formula, **FlowInApp** is the name of the flow you added using Power Automate. The **.Run** specifies the flow to execute. The flow executes with **TextInput1** text input control added to this canvas, with the value entered in this text box (**.Text**). 
 
-    In other words, when this button is selected, the app will run the flow with the value from the text input control, passing the text value to the flow to execute. And the flow will create the SharePoint list item with this text input value along with rest of the selection inside the flow configuration.
+    In other words, when this button is selected, the app will run the flow with the value from the text input control, passing the text value to the flow to execute. And the flow will create the list item with this text input value along with rest of the selection inside the flow configuration.
 
     ![OnSelect formula for the button.](./media/using-logic-flows/onselect-button.png "OnSelect formula for the button")
 
@@ -145,7 +142,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
 ## Test the flow
 
-Now that you have both the flow, and the app created, you'll run the app and verify the creation of an item inside the selected SharePoint list.
+Now that you have both the flow, and the app created, you'll run the app and verify the creation of an item inside the selected list.
 
 1. In [Power Apps](https://make.powerapps.com), select **Apps**, and then, select the **AppWithFlow** app.
 
@@ -155,43 +152,16 @@ Now that you have both the flow, and the app created, you'll run the app and ver
 
     ![Run the app.](./media/using-logic-flows/run-app.png "Run the app")
 
-1. Verify that the item is created in your SharePoint list.
+1. Verify that the item is created in your list.
 
-    ![Check SharePoint list.](./media/using-logic-flows/check-sharepoint-list.png "Check SharePoint list")
+    ![Check list.](./media/using-logic-flows/check-sharepoint-list.png "Check list")
 
-Now that you've created a sample app that runs a flow and adds item inside a SharePoint list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
-
-## Power Automate Pane (preview)
-
-> [!IMPORTANT]
-> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-With the "Enable Power Automate Pane " feature, you can add flows to your canvas app from the left-pane inside Studio.
-
-> [!NOTE]
-> This feature must be enabled on a per-app basis.
-
-To enable the preview feature:
-
-1. Select **Settings** at the top. 
-
-1. Select **Upcoming Features**. 
-
-1. Under the Preview tab, select **Enable Power Automate Pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change. 
-   
-   :::image type="content" source="media/using-logic-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::
-   
-1. The Power Automate button is added to the left-pane.
-
-   :::image type="content" source="media/using-logic-flows/power-automate-button.png" alt-text="A screenshow highlighting the Power Automate button in the left pane":::   
-
-1. Select **Add flow**, and add flow to your app.
+Now that you've created a sample app that runs a flow and adds item inside a list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
 
 ### See also
 
-[Add and configure controls](add-configure-controls.md)
+- [Use Power Automate pane (preview)](working-with-flows.md)
+- [Add and configure controls](add-configure-controls.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 

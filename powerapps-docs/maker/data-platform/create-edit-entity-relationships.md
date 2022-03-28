@@ -4,7 +4,7 @@ description: Learn about table relationships in Microsoft Dataverse
 ms.custom: intro-internal
 ms.date: 08/17/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Table relationships 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to a table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
   

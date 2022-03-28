@@ -1,6 +1,31 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/customapi-table-columns.md",
+      "redirect_url": "custom-api-tables#custom-api-table-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/customapirequestparameter-table-columns.md",
+      "redirect_url": "custom-api-tables#customapirequestparameter-table-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/customapiresponseproperty-table-columns.md",
+      "redirect_url": "custom-api-tables#customapiresponseproperty-table-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sample-meeting-capture.md",
+      "redirect_url": "open-and-run-a-sample-app",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/optimize-form-performance.md",
+      "redirect_url": "design-performant-forms",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/page-data-connectors.md",
       "redirect_url": "../canvas-apps/connections-list",
       "redirect_document_id": "false"
@@ -387,7 +412,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-environments.md",
-      "redirect_url": "/power-platform/admin/working-with-environments",
+      "redirect_url": "/powerapps/maker/canvas-apps/intro-maker-portal",
       "redirect_document_id": "false"
     },
     {
@@ -507,7 +532,7 @@
     },
     {
       "source_path": "powerapps-docs/administrator/environments-administration.md",
-      "redirect_url": "/power-platform/admin/environments-administration",
+      "redirect_url": "/power-platform/admin/create-environment",
       "redirect_document_id": "false"
     },
     {
@@ -707,7 +732,7 @@
     },
     {
       "source_path": "powerapps-docs/environments-administration.md",
-      "redirect_url": "/powerapps/administrator/environments-administration",
+      "redirect_url": "/power-platform/admin/create-environment",
       "redirect_document_id": "false"
     },
     {
@@ -1591,8 +1616,8 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/limits-and-config.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/limits-and-config",
+      "source_path": "powerapps-docs/maker/canvas-apps/limits-and-config.md",
+      "redirect_url": "/powerapps/limits-and-config",
       "redirect_document_id": "false"
     },
     {
@@ -1807,7 +1832,7 @@
     },
     {
       "source_path": "powerapps-docs/working-with-environments.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/working-with-environments",
+      "redirect_url": "/powerapps/maker/canvas-apps/intro-maker-portal",
       "redirect_document_id": "false"
     },
     {
@@ -3107,7 +3132,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/online-integration-office-365.md",
-      "redirect_url": "../data-platform/online-integration-office-365",
+      "redirect_url": "../data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/online-integration-office-365.md",
+      "redirect_url": "../data-platform",
       "redirect_document_id": false
     },
     {
@@ -6368,6 +6398,26 @@
     {
       "source_path": "powerapps-docs/data-platform/best-practices/index.md",
       "redirect_url": "/powerapps/developer/data-platform/best-practices/",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/clear.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/includes/clear-description.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/includes/removeLinkedEntity-description.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/linking/removeLinkedEntity.md",
+      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
       "redirect_document_id": "false"
     }
   ]

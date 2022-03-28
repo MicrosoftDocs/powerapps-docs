@@ -3,8 +3,8 @@ title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | M
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
 ms.date: 04/09/2021
 ms.reviewer: "nabuthuk"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "Nkrb" # GitHub ID
 ms.author: "nabuthuk"
 manager: "kvivek"
@@ -281,4 +281,3 @@ be added to forms and views to see all associated accounts for each of the servi
 ### See also
 
 [Get started with virtual tables (entities)](get-started-ve.md)
-

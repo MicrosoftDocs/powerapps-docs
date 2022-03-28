@@ -6,10 +6,9 @@ author: Nkrb
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
-ms.custom: "intro-internal"
+
 ms.devlang: na
-ms.topic: article
+ms.topic: overview
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 12/01/2019

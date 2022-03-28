@@ -1,8 +1,8 @@
 ---
-title: Patch function in Power Apps
+title: Patch function in Power Apps (contains video)
 description: Reference information including syntax and examples for the Patch function in Power Apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm

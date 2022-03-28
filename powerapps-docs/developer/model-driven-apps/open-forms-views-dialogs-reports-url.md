@@ -1,15 +1,13 @@
 ---
 title: "Open forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+ms.author: jdaly
+author: HemantGaur
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -152,7 +150,7 @@ To open a dialog you need the following:
 ```  
 
 > [!TIP]
->  For browsers other than Internet Explorer, if a dialog process is opened from a link, the **Finish** button may not work. The data will be saved, but the user will need to click the **Close** button on the window to close it. This is because other browsers do not provide a `window.close` method if the window is not opened using JavaScript from another window. When possible, use JavaScript and the `window.open` method to open dialog processes rather than simply providing links.  
+>  If a dialog process is opened from a link, the **Finish** button may not work. The data will be saved, but the user will need to click the **Close** button on the window to close it. This is because other browsers do not provide a `window.close` method if the window is not opened using JavaScript from another window. When possible, use JavaScript and the `window.open` method to open dialog processes rather than simply providing links.  
 
  You can create a JavaScript function to open the dialog as shown in the following example:  
 

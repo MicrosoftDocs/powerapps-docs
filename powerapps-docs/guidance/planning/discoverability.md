@@ -2,7 +2,7 @@
 title: Deploying a Power Apps project - Discoverability | Microsoft Docs
 description: Get your app into the hands of your users by making it available for production use. Then, explore various ways to make your app discoverable.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020

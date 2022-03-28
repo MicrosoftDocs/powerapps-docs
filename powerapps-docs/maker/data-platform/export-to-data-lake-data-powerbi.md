@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
 author: sabinn-msft
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ contributors:
 
 # Analyze Microsoft Dataverse data in Azure Data Lake Storage Gen2 with Power BI
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After exporting data from Microsoft Dataverse to Azure Data Lake Storage Gen2
 with Azure Synapse Link for Dataverse, you can use Power BI to create business

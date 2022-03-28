@@ -3,10 +3,10 @@ title: Microsoft Dataverse business events| Microsoft Docs
 description: Learn about how to use business events to connect and integrate business applications.
 author: JimDaly
 manager: sunilg
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: conceptual
-ms.date: 10/31/2021
+ms.date: 03/22/2022
 ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
@@ -107,7 +107,7 @@ When you consider custom apis to catalog as business events in your solution use
 
 - **Lightweight**: The event should contain only that data necessary to describe the event. If the subscriber requires additional data, the information in the event should provide the context to allow them to retrieve it if necessary.
 
-- **Not for tranferring data**: If your intent is to transfer data to a recipient and, in effect, realize a data export scenario, you don't have a good use case for business events. In fact, the use of business events for data transfer scenarios is a misuse of the business events.
+- **Not for transferring data**: If your intent is to transfer data to a recipient and, in effect, realize a data export scenario, you don't have a good use case for business events. In fact, the use of business events for data transfer scenarios is a misuse of the business events.
 
 ### Custom Process Actions
 

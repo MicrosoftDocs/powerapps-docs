@@ -3,18 +3,18 @@ title: DataSet Element | Microsoft Docs
 description: The data-set node in the component manifest represents a specific, configurable representation of a set of table records.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 ---
 
 # data-set element

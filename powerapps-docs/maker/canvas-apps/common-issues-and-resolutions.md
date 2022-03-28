@@ -2,11 +2,10 @@
 title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/07/2021
+ms.date: 03/25/2022
 ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
@@ -24,6 +23,7 @@ This article lists some common issues that you might encounter while using Power
 > [!NOTE]
 > - For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](execution-phases-data-flow.md) section.
 > - If you're having trouble accessing or starting Power Apps, read [troubleshooting startup issues](../../troubleshooting-startup-issues.md) section for help.
+> - See [Next steps](#next-steps) later in this article if your issue isn't listed.
 
 ## General Troubleshooting
 If you're running into issues using Power Apps, try these common troubleshooting steps first.
@@ -35,7 +35,23 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 ## Known Issues
 
-   
+1. **Performance degradation when opening Power Apps Studio in China** (March 25, 2022)
+
+    Power Apps Studio may take more than 30 seconds to load within the China region currently. This issue does not impact tenants hosted locally by 21Vianet.
+
+1. **Unable to copy paste forms into data cards** (March 2022)
+
+    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](add-scrolling-screen.md#scrolling-screen-for-forms)
+
+1. **Canvas apps using SharePoint connector** (February 23, 2022)
+
+    [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
+    - You’re the creator of the app.
+    <br> Or
+    - You’re explicitly shared the app with (as a user, or as a co-owner) through a group membership, or directly through the user assignment. <br>
+
+    To play such apps, use the direct link to the app.
+
 1. **Problems with canvas app screen sizes** (April 27, 2021)
 
    Starting with Power Apps 3.21032, screens in some apps may be displaying unexpected dimensions or are not visible entirely. Check the affected screens' Height and Width properties and make sure they are set to an appropriate value, such as the default (`Max(App.Height, App.MinScreenHeight)` for Height, `Max(App.Width, App.MinScreenWidth)` for Width). A fix has already been deployed for screens that have a blank Height or Width. If you're still experiencing issues with the size of screens or the controls on them, the app may have been saved or auto-saved into the error state. Such apps can be restored to an earlier version via the portal, and the deployed fix will be applied the next time the app is opened for editing.
@@ -53,7 +69,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium-based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
    
-1. **Problems downloading attachments in SharePoint custom forms** (May 22, 2020)
+1. **Problems downloading attachments in SharePoint forms** (May 22, 2020)
    When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue. **Fix has been deployed in the week of 6/8/2020**
    
 1. **Problems downloading attachments in embedded Power Apps** (May 22, 2020)
@@ -83,11 +99,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
-    If you run out of memory while using Power Apps, please consider downloading a 64-bit version of Chrome, Microsoft Edge, or Internet Explorer.
-
-1. **Launching a website from an embedded app** (May 10, 2018)
-
-    Internet Explorer and Microsoft Edge browsers might block the launch of a URL or website that’s in protected mode or a lower security zone than the website in which the app is loaded. To resolve this issue, [change the security and privacy settings](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for your browser.
+    If you run out of memory while using Power Apps, please consider downloading a 64-bit version of Chrome or Microsoft Edge.
 
 1. **Combo box controls in galleries** (May 3, 2018)
 
@@ -99,7 +111,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Changing the layout of SharePoint forms** (March 7, 2018)
 
-    While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
+    While customizing a SharePoint forms in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
 
 1. **Data Table control**
 
@@ -116,7 +128,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Column names with spaces**
 
-    If you're using a SharePoint list or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+    If you're using a list created using Microsoft Lists, or a SharePoint library, or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 1. **Changing a flow in a shared app**
 
@@ -146,7 +158,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
      For information about limitations when you use Excel as a data source, see [Cloud-storage connections](connections/cloud-storage-blob-connections.md#known-limitations).
 
-1. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
+1. **Microsoft Lists is supported but not SharePoint libraries, some types of list columns, or columns that support multiple values or selections**.
 
      For more information, see [SharePoint Online](connections/connection-sharepoint-online.md#known-issues).
 
@@ -228,7 +240,6 @@ If you're running into issues using Power Apps, try these common troubleshooting
 ## Next steps
 
 If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). More information: [Get Help + Support](/power-platform/admin/get-help-support)
-
 
 
 ### See also

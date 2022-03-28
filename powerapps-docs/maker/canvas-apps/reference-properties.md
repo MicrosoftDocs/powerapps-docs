@@ -2,11 +2,11 @@
 title: Controls and properties in canvas apps
 description: Learn about properties of different controls in canvas apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 01/24/2020
+ms.date: 01/06/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
@@ -17,6 +17,7 @@ contributors:
   - tapanm-msft
   - chmoncay
 ---
+
 # Controls and properties in canvas apps
 
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
@@ -24,6 +25,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 ## Controls
 
 **[Add picture](controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
+
+**[Address input](geospatial-component-input-address.md)** - See dynamic address suggestions as you type.
 
 **[Attachments](controls/control-attachments.md)** – Download and upload files from the local device to a data source.
 
@@ -75,6 +78,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[List box](controls/control-list-box.md)** – Select one or more items in a list.
 
+**[Map](geospatial-component-map.md)** - View the physical position of objects from a data source, or by inputting new physical locations.
+
+**[Measure in MR](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
+
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
 **[PDF viewer (experimental)](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
@@ -108,6 +115,12 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Toggle](controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
+
+**[View in 3D](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
+
+**[View in MR](mixed-reality-component-view-mr.md)** - See how a particular item might fit within a specified space in mixed reality.
+
+**[View shape in MR](mixed-reality-component-view-shape.md)** - See if a simple cube might fit within a specified space in mixed reality.
 
 **[Web barcode scanner (experimental)](controls/control-barcodescanner.md)** – The legacy barcode scanner, which is obsolete but might be useful for scanning codes in a web browser.
 

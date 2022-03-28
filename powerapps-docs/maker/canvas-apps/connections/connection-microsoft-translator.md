@@ -2,10 +2,10 @@
 title: Connect to Microsoft Translator from Power Apps
 description: See how to connect to Microsoft Translator, step through some examples, and see all the functions.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/12/2017
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: tapanm
@@ -28,13 +28,9 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Microsoft Translator
-1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
-
-   ![Open a blank app.](./media/connection-microsoft-translator/blank-app.png)
-2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.
+1. Create a [blank canvas app](../create-blank-app.md).
+2. In the left-hand pane, select **Data** tab, and then select **Add data source**.
 3. Select **New connection**, and then select **Microsoft Translator**:  
-
-    ![Add connection.](./media/connection-microsoft-translator/addconnection.png "Add connection")
 
     ![Connect to Microsoft Translator.](./media/connection-microsoft-translator/add-translator.png)
 4. Select **Connect**. Your connection appears under **Data sources**:  
@@ -43,9 +39,8 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 ## Use the Microsoft Translator connection in your app
 ### Translate text
-1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename the text input control to **Source**:  
+1. From the **Tree View** on the left-side of the screen, select **Insert**, and then choose the **Text input** control. Rename the text input control to **Source**.
 
-    ![Rename.](./media/connection-microsoft-translator/renametosource.png)
 2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**.
 3. Set the **[Items](../controls/properties-core.md)** property of **TargetLang** to the following formula:  
 

@@ -4,7 +4,7 @@ description: "Find the known issue that might occur when you create a custom pag
 ms.custom: ""
 ms.date: 09/02/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "adrianorth"
@@ -26,7 +26,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 ## Maker-related issues
 
-* When a custom page is modified, such as saved and published, the model-driven app isn't aware of the change. The model-driven app will continue to use the last version of the custom page when the model-driven app was published. A model-driven app publish through app designer, solution explorer, or **Publish all** will update all custom pages in the model-driven app.
+* When a custom page is modified, such as saved and published, the model-driven app isn't aware of the change. The model-driven app will continue to use the last version of the custom page when the model-driven app was published. A model-driven app published through app designer, solution explorer, or **Publish all** will update all custom pages in the model-driven app.
 
 * Layout or control support for Right to Left (RTL) is currently unavailable.
 
@@ -62,8 +62,6 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 * When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation.
 
 * Native player support is available for iOS and Android in online-only mode. Offline support currently isn't supported. The preview Dynamics 365 Windows player displays a blank page when a custom page is opened.
-
-* When a user running Internet Explorer opens a custom page, an error message will appear indicating Internet Explorer isn't supported.
 
 * While attempting to sign in, the current behavior caused by a user selecting anywhere away from the sign in box causes the pop out window for sign in to shift behind the app browser.
 

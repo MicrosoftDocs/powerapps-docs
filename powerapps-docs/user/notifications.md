@@ -4,7 +4,7 @@ description: How notification work in model-driven apps.
 ms.custom: ""
 ms.date: 10/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: end-user
 ms.topic: "article"
 author: "aorth"

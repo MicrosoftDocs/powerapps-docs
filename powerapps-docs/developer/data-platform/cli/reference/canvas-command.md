@@ -7,11 +7,11 @@ ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
 ms.date: 09/15/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ---
 
-# Canvas
+# Canvas (Preview)
 
 Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
 

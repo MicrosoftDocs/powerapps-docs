@@ -2,9 +2,9 @@
 title: Monitor overview
 description: Overview of Power Apps Monitor.
 author: mattgon
-ms.service: powerapps
+
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 11/23/2021

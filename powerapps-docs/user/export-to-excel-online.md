@@ -3,7 +3,7 @@ title: "Open your model-driven app data in Excel Online | MicrosoftDocs"
 description: How to open your data to Excel Online in model-driven app and make  edits.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
@@ -20,7 +20,7 @@ search.app:
 ---
 # Open your app data in Excel Online 
 
-Open your app data in Excel Online and make quick edits or do a ad-hoc analysis. You can make changes to your app data in Excel Online and then save the updated information back your app. 
+Open your app data in Excel Online and make quick edits or do an ad-hoc analysis. You can make changes to your app data in Excel Online and then save the updated information back to your app. 
 
 This feature requires that you have an Office 365 subscription or a subscription to an online service such as SharePoint Online or Exchange Online and a Microsoft account. 
 

@@ -2,7 +2,7 @@
 title: Configure the Facebook provider for portals
 description: Learn how to configure Facebook as the identity provider for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/08/2021

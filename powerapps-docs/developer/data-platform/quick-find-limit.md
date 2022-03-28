@@ -4,7 +4,7 @@ description: "Learn about the record limit of a Quick Search and how to avoid hi
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer

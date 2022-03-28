@@ -2,7 +2,7 @@
 title: Manage connections in canvas apps
 description: Add, delete, and update connections from canvas apps to data sources such as SharePoint, SQL Server, and OneDrive for Business.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -40,7 +40,7 @@ Your next step after this article is to display and manage data from the data so
 ## Background on data connections
 Most Power Apps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connections**.
 
-The most common type of data source is the table, which you can use to retrieve and store information. You can use connections to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, and SQL Server.
+The most common type of data source is the table, which you can use to retrieve and store information. You can use connections to data sources to read and write data in Microsoft Excel workbooks, Microsoft Lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, and SQL Server.
 
 There are other kinds of data sources that aren't tables, such as email, calendars, twitter, and notifications.
 
@@ -48,7 +48,7 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 In addition to creating and managing connections in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you also create connections when you do these tasks:
 
-* Automatically generate an [app from data](app-from-sharepoint.md), such as a custom SharePoint list.
+* Automatically generate an [app from data](app-from-sharepoint.md), such as a list created using Microsoft Lists.
 * Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
 * Open an app that another user created and [shared with you](share-app.md).
 

@@ -2,13 +2,12 @@
 title: Run canvas app and model-driven apps on Power Apps mobile | Microsoft Docs
 description: Learn how to run canvas and model-driven apps on a mobile device.
 author: mduelae
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/08/2021
+ms.date: 01/13/2022
 ms.subservice: mobile
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -18,23 +17,16 @@ search.app:
   - D365CE
 searchScope:
   - "Power Apps"
+ms.custom: intro-internal
 ---
 
 #  Get started with Power Apps mobile
 
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
-If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3?activetab=pivot:overviewtab). Also, Power Apps for Windows isn't supported if you have the [Power Apps per app plan](/power-platform/admin/about-powerapps-perapp).
-
-
-| **App type**  | **iOS** |**Android** |**Windows** |
-| --- | --- |--- |--- |
-| **[Model-driven](../maker/index.md#model-driven-apps)** |X |X| |
-| **[Canvas](../maker/index.md#canvas-apps)** |X |X|X|
-
-
 > [!NOTE]
-> Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
+> - If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
+> - Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
 
 In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device.
 
@@ -53,22 +45,7 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 ## Supported devices 
 
-New major versions of iOS and Android are released each year. When a new version is released, if you're using the oldest previously supported version, you'll have 60 days to update your device to at least the new minimum supported version to continue to run Power Apps mobile.
-
-- **iOS**: The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.
-
-- **Android**: The latest version of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile.
-
-
-| **Minimum required** | **Recommended** |
-| --- | --- |
-| iOS 14 or later |iOS 15 or later|
-| Android 9 or later |Android 12 or later |
-| Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
-
-
-> [!NOTE]
-> We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/mobile/run-canvas-and-model-apps-on-mobile). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to Power Apps mobile for Windows platform will be announced in future.
+For more information, see [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app).
 
 ## Install Power Apps mobile app
 
@@ -241,7 +218,7 @@ Select the ellipsis (...) on the app tile, select **Pin to Home**, and then foll
 
 By default, only production model-driven apps are shown in the list of apps.
 
-To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon.](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
+To see model-driven apps from non-production environments, select the **Settings** menu ![Settings button](media/settings_icon-1.png), and then turn on **Show non-production apps**. Follow the instructions that appear.
 
 ![Non-production apps toggle.](media/non_prod_toggle.png "Non-production apps toggle")
 

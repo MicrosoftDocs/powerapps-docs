@@ -3,9 +3,9 @@ title: "Converge model-driven and canvas apps using the custom page"
 description: "Add a custom page to use canvas as a page in your model-driven app" 
 ms.date: 06/20/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.subservice: mda-maker
-ms.topic: "overview"
+ms.topic: overview
 author: "adrianorth"
 ms.author: "aorth"
 manager: "kvivek"
@@ -78,7 +78,7 @@ In most cases, we recommend that you use custom pages instead of embedded canvas
 
 Existing standalone canvas apps aren't supported for use as a custom page and the expected app structure is different. A standalone canvas app often has many screens with global access to all controls and variables. The custom page is expected to typically be a single screen with loose coupling to provide performance and co-development capabilities.
 
-To migrate an existing standalone canvas app, first start by identify a mapping of screens to separate custom pages. For each separate custom page complete the following steps:
+To migrate an existing standalone canvas app, first start by identifying a mapping of screens to separate custom pages. For each separate custom page complete the following steps:
 
 1. Create a blank custom page from the model-driven app designer. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
 1. Add a canvas app data source for data used by the screen.
@@ -95,7 +95,7 @@ To migrate an existing standalone canvas app, first start by identify a mapping 
 
 * What interactions can the custom page have with the model-driven app?
 
-  Custom pages can be added to the site map for direct navigation using [Add custom page to sitemap](add-page-to-model-app.md#add-an-existing-custom-page-into-a-site-map). Model-driven app pages can open a custom page using the `navigateTo` Client API. Custom pages can navigate to other custom pages or to a model-driven app page such as a form, view, or dashboard with the Power Fx navigate function. More information: [Navigating forms and custom pages](page-powerfx-in-model-app.md#navigating-forms-and-custom-pages)
+  Custom pages can be added to the site map for direct navigation using [Add custom page to sitemap](add-page-to-model-app.md#add-an-existing-custom-page-into-a-site-map). Model-driven app pages can open a custom page using the `navigateTo` Client API. Custom pages can navigate to other custom pages or to a model-driven app page such as a form, view, or dashboard with the Power Fx navigate function. More information: [Navigating to a custom page](page-powerfx-in-model-app.md#navigating-to-a-custom-page)
 
 * How is the custom page made responsive?
 

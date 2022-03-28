@@ -3,7 +3,7 @@ title: "Importing and exporting data | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -22,7 +22,7 @@ search.app:
 
 # Importing and exporting data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There are multiple ways to import and export data into Microsoft Dataverse. You can use dataflows, Power Query, Azure Data Factory, Azure Logic Apps, and Power Automate.
 
@@ -36,7 +36,7 @@ Power Query is a data connection technology you can use to discover, connect, co
 
 ![Dataflows and Power Query with Dataverse.](media/dataflows-power-query-with-cds.png "Dataflows and Power Query with Dataverse")
 
-More information: [Create and use dataflows in Power Apps](./create-and-use-dataflows.md) and [Add data to a table in Dataverse by using Power Query](./add-data-power-query.md)
+More information: [Create and use dataflows in Power Apps](./create-and-use-dataflows.md) and [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query)
 
 ## Azure Data Factory
 

@@ -1,18 +1,19 @@
 ---
 title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openForm method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # openForm (Client API reference)
 
@@ -25,7 +26,7 @@ search.app:
 ## Parameters
 
 
-<table style="width:100%">
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th> 
@@ -40,16 +41,16 @@ search.app:
 <li><b>entityName</b>: String. Logical name of the table to display the form for.</li>
 <li><b>entityId</b>: (Optional) String. ID of the table record to display the form for.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
-<li><b>cmdbar</b>: (Optional) Boolean. Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default.</li>
+<li><b>cmdbar</b>: (Optional) Boolean. Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default. Requires passing `openInNewWindow` parameter as true.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped column values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>height</b>: (Optional) Number. Height of the form window to be displayed in pixels.</li>
-<li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
+<li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: "on", "off", or "entity". Requires passing `openInNewWindow` parameter as true.<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
 <li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On a form, only the navigation options for related tables are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original record.</li></ul></li>
 <li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window or a new tab. If you specify <code>true</code> and do not specify values for height or width, the form will display in a new tab. Opening a form in a new window or a new tab makes the rendering of the form slow compared to opening the form on the same tab; consider opening a form in the main form dialog instead. This property is currently not supported for Quick Create forms, as they can not be opened in a new window or tab.</li>
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
 <li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following values.
-<table style="width:100%">
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th> 

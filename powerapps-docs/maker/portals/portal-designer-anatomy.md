@@ -2,7 +2,7 @@
 title: Power Apps portals Studio
 description: Learn how to use Power Apps portals Studio.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 07/09/2021

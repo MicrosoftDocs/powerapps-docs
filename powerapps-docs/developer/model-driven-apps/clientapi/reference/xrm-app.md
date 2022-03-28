@@ -1,16 +1,20 @@
 ---
 title: "Xrm.App (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/04/2020
-ms.service: powerapps
+description: "Xrm.App provides app-related methods."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.App (Client API reference)
 
