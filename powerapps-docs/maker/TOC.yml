@@ -1,3 +1,5 @@
+- name: Power Apps documentation
+  href: ../index.yml
 - name: Get started
   items:
   - name: What is Power Apps?
@@ -1060,7 +1062,7 @@
     - name: Share app resources
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md    
+      href: /power-bi/visuals/power-bi-visualization-powerapp
   - name: Manage an app
     items:
     - name: Change app name and tile
@@ -1087,7 +1089,7 @@
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
       - name: Configure pipeline using YAML
         href: ./canvas-apps/test-studio-yaml-pipeline.md
-  - name: Customize a SharePoint list form
+  - name: Customize a SharePoint form
     items:
       - name: Make basic changes
         href: ./canvas-apps/customize-list-form.md
@@ -1123,13 +1125,13 @@
           href: ./canvas-apps/sharepoint/scenarios-intro.md
         - name: Filter a search list in an app
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: Use drop down list with choices from lookup column in a SharePoint list
+        - name: Use drop down list with choices from lookup column in Microsoft Lists
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: Customize an app screen based on column status inside SharePoint list
+        - name: Customize an app screen based on column status in Microsoft Lists
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
         - name: Work with permissions in a lookup list from SharePoint site
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items
+        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
@@ -1242,7 +1244,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: ./model-driven-apps/page-data-connectors.md
+            href: /powerapps-docs/maker/../canvas-apps/connections-list
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
@@ -2455,6 +2457,8 @@
           href: ../teams/use-the-fluent-ui-controls.md
     - name: Create additional apps
       href: ../teams/create-additional-apps.md
+    - name: Create apps from lists in Teams
+      href: ../teams/create-apps-lists.md
     - name: Work with Dataverse for Teams
       items:
         - name: Overview

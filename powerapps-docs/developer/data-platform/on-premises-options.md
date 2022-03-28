@@ -4,7 +4,6 @@ description: "Learn about deployment options for an on-premise installation." # 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.subservice: dataverse-developer
@@ -15,15 +14,15 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # On-premises deployment options
-
-
 
 <!-- 
 
 TODO: This page and any links to it will not be published until an on-premises version of Microsoft Dataverse is released.
-
 
  -->
 

@@ -1,12 +1,11 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/09/2021
-ms.reviewer: "nabuthuk"
-
+ms.date: 03/28/2022
+ms.reviewer: "jdaly"
 ms.topic: sample
-author: "Nkrb" # GitHub ID
-ms.author: "nabuthuk"
+author: "NHelgren" # GitHub ID
+ms.author: "jdaly"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -20,14 +19,14 @@ search.app:
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions built on Microsoft Power Platform can leverage virtual tables as if they were native Dataverse tables. More information: [Get started with virtual tables](get-started-ve.md).
 
-In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](https://docs.microsoft.com/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
+In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
 
-To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](https://docs.microsoft.com/connectors/sql/).
+To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](/connectors/sql/).
 
 
 ## Overview
 
-Virtual connector provider extends [connectors](https://docs.microsoft.com/connectors/connectors) allowing you to create virtual tables in Dataverse. When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically generates an **Entity Catalog** with a list of all the available tables by retrieving table definitions (metadata) from the external data source.
+Virtual connector provider extends [connectors](/connectors/connectors) allowing you to create virtual tables in Dataverse. When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically generates an **Entity Catalog** with a list of all the available tables by retrieving table definitions (metadata) from the external data source.
 
 The **Entity Catalog** does not persist any information and always represents the external data source’s current state. You can select tables from the **Entity Catalog** to create virtual tables. If you're working with multiple external data sources, an **Entity Catalog** is generated for each external source.
 
@@ -54,9 +53,9 @@ More information about Application lifecycle management (ALM) and solutions:
 
 ### Prerequisites
 
-- Create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of your Dataverse platform. More information: [Creating service principal from Azure portal](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
+- Create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of your Dataverse platform. More information: [Creating service principal from Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
 
-- Create a **client secret** value for the registered Application ID. You need this information when you create a data source for the external data as part of setting up the virtual connector. More information: [Create a new application secret](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) doc for steps on how to create this.
+- Create a **client secret** value for the registered Application ID. You need this information when you create a data source for the external data as part of setting up the virtual connector. More information: [Create a new application secret](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) doc for steps on how to create this.
 
 > [!NOTE]
 > You will need the **client secret** when setting up the virtual table. You can copy this value when creating it. You will not be able to go back to the screen to copy the value.
@@ -176,7 +175,7 @@ To create a virtual table using **SQL Server** connector:
 
 1. All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
 
-   Review the [SQL Server Connector documentation](https://docs.microsoft.com/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](https://docs.microsoft.com/connectors/sql/#power-apps-data-type-mappings).
+   Review the [SQL Server Connector documentation](/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](/connectors/sql/#power-apps-data-type-mappings).
 
 Once you have created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows.
 

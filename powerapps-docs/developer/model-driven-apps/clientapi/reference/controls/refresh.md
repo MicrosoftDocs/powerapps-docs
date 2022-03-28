@@ -1,6 +1,6 @@
 ---
-title: "refresh (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the refresh method.
+title: "control.refresh (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.refresh method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# refresh (Client API reference)
+# control.refresh (Client API reference)
 
 Refreshes the data displayed in a timelinewall and timer control.
 

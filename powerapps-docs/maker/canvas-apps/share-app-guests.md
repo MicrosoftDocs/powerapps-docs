@@ -122,9 +122,9 @@ As is the case with non-guests, the underlying data sources accessed by the app 
 
 ### What license must be assigned to my guest so they can run an app shared with them?
 
-The following table explains whether the guests can run (use) customized SharePoint list forms, canvas apps, and model-driven apps using the referenced license.
+The following table explains whether the guests can run (use) customized Microsoft Lists or SharePoint library forms, canvas apps, and model-driven apps using the referenced license.
 
-|    Plan                             | Customized SharePoint list form (using non-premium connectors) | Customized SharePoint list form (using premium connectors) | Canvas app (using non-premium connectors) | Canvas app (using premium connectors) | Model-driven app |
+|    Plan                             | Customized Microsoft Lists or SharePoint library form (using non-premium connectors) | Customized Microsoft Lists or SharePoint library (using premium connectors) | Canvas app (using non-premium connectors) | Canvas app (using premium connectors) | Model-driven app |
 |---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
 | No license | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
 | SharePoint user (without Power Apps license) | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |

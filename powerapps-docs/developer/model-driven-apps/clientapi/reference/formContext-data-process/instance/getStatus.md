@@ -1,6 +1,6 @@
 ---
-title: "getStatus (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getStatus method.
+title: "process.getStatus (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the process.getStatus method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getStatus (Client API reference)
+# process.getStatus (Client API reference)
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "getOptions (Client API reference)| MicrosoftDocs"
-description: Includes description and supported parameters for the getOptions method.
+title: "attribute.getOptions (Client API reference)| MicrosoftDocs"
+description: Includes description and supported parameters for the attribute.getOptions method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,8 +14,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getOptions (Client API reference)
+# attribute.getOptions (Client API reference)
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "getId (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getId method.
+title: "process.getId (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the process.getId method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getId (Client API reference)
+# process.getId (Client API reference)
 
 
 
