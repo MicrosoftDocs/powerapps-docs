@@ -1,25 +1,24 @@
 ---
 title: setSelectedRecordIds | Microsoft Docs
-description: 
+description: Set the ids of the selected records.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 61989422-7745-4a0b-9606-37c16a04eab9
 ---
 
 # setSelectedRecordIds
 
 [!INCLUDE[./includes/setselectedrecordids-description.md](./includes/setselectedrecordids-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -27,13 +26,14 @@ Model-driven apps
 
 ## Parameters
 
-|Parameter Name|Type|Required|description|
-|----|----|----|----|
-|ids|`string`|Yes|List of record id's|
-
+| Parameter Name | Type     | Required | description         |
+| -------------- | -------- | -------- | ------------------- |
+| ids            | `string` | Yes      | List of record id's |
 
 ### Related topics
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

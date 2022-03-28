@@ -1,18 +1,21 @@
 ---
 title: "Save event arguments (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "When the form OnSave event occurs, you can use the getEventArgs method of the execution context object to retrieve an object that contains methods you can use to manage the save event."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: dff20ae0-c9ec-4413-9cd1-0ff77639ad91
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Save event arguments (Client API reference)
 
@@ -33,3 +36,6 @@ When the form [OnSave](events/form-onsave.md) event occurs, you can use the [get
 
 [Execution context methods](execution-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

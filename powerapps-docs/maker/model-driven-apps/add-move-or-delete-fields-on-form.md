@@ -1,17 +1,19 @@
 ---
-title: "Add, configure, move, or delete fields on a form | MicrosoftDocs"
+title: "Add, configure, move, or delete columns on a form | MicrosoftDocs"
+description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
-ms.date: 05/04/2020
+ms.date: 02/03/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -23,113 +25,151 @@ search.app:
   - D365CE
 ---
 
-# Add, configure, move, or delete fields on a form  
-Add, configure, move, or delete fields using the form designer.
+# Add, move, configure, or delete columns on a form
 
-## Add fields to a form
-To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
+Add, configure, move, or delete columns using the form designer.
 
-> [!div class="mx-imgBorder"] 
->    ![](media/FormDesignerFieldsPane.png "Fields pane")
+## Add columns to a form
 
-### Add fields to a form using drag and drop
+To add columns to a form, use the **Columns** pane. The **Columns** pane lets you search and filter to help you quickly find columns. It also includes the option to show only unused columns.
+
+<img src = "media/FormDesignerFieldsPane.png" alt = "Columns pane" width = "350" height = "557">
+
+### Add columns to a form using drag and drop
+
 > [!NOTE]
-> When adding or moving fields using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the field being added or moved is in the correct section column, drop or paste it anchored to another field that is already in that section column.
-1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the command bar, select **Add field**, or in the left pane, select **Fields**.  The **Fields** pane is open by default when the form designer is opened. 
-3. In the **Fields** pane, search, filter, or scroll to find the field you want to add. If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
-4. In the **Fields** pane, select a field and drag it onto the form preview. As you drag the field on the form preview, you will see drop targets where you can add the field. 
-5. Drop the field in the location you want. Note the following: 
-    - Fields can be dropped before or after any existing field or component.
-    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields and components across the section columns.
-    - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
-6. Repeat steps 3-5 above if you want to add more fields.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
-
-### Add fields to a form using selection 
+> When adding or moving columns using drag and drop be aware that the form preview is responsive and may be rendering multiple section columns as stacked. To ensure that the column being added or moved is in the correct section column, drop or paste it anchored to another column that is already in that section column.
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select another existing field or section. Note the following:
-    - When you select an existing field, the new field is added after the existing field. 
-    - When you select a section, the new field is added in an available space so as to evenly distribute fields across the section columns. 
-3. In the command bar, select **Add field**, or in the left pane, select **Fields**. The **Fields** pane is open by default when the form designer is opened. 
-4. In the **Fields** pane, search, filter, or scroll to find the field you want to add. If you can't find a field, it might already be on the form. Clear **Show only unused fields** to view all fields, including those already added to the form. 
-5. In the **Fields** pane, select a field to add it to the form. Alternatively, select **...** next to the field you want, and then select **Add to selected section**. 
-6. Repeat steps 2-5 above if you want to add more fields.
-7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+2. On the command bar, select **Add column**, or in the left pane, select **Columns**.  The **Columns** pane is open by default when the form designer is opened.
+3. In the **Columns** pane, search, filter, or scroll to find the column you want to add. If you can't find a column, it might already be on the form. Clear **Show only unused columns** to view all columns, including those already added to the form.
+4. In the **Columns** pane, select a column and drag it onto the form preview. As you drag the column on the form preview, you will see drop targets where you can add the column.
+5. Drop the column in the location you want. Note the following:
+    - Columns can be dropped before or after any existing column or component.
+    - Columns can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
+    - Hovering over a tab header when dragging a column changes the currently selected tab, allowing you to add the column to a different tab.
+6. Repeat steps 3-5 above if you want to add more columns.
+7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
-## Configure fields on a form
-These are the properties available to configure a field when you create or edite a form using the form designer.
+:::image type="content" source="../../maker/model-driven-apps/media/add-columns-drag-and-drop.gif" alt-text="Add columns using drag and drop":::
 
-## Field properties
+### Add columns to a form using selection
+
+1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
+2. In the form preview, select another existing column or section. Note the following:
+    - When you select an existing column, the new column is added after the existing column.
+    - When you select a section, the new column is added in an available space so as to evenly distribute columns across the section columns.
+3. In the command bar, select **Add column**, or in the left pane, select **Columns**. The **Columns** pane is open by default when the form designer is opened.
+4. In the **Columns** pane, search, filter, or scroll to find the column you want to add. If you can't find a column, it might already be on the form. Clear **Show only unused columns** to view all columns, including those already added to the form.
+5. In the **Columns** pane, select a column to add it to the form. Alternatively, select **...** next to the column you want, and then select **Add to selected section**.
+6. Repeat steps 2-5 above if you want to add more columns.
+7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
+
+:::image type="content" source="../../maker/model-driven-apps/media/add-form-columns-using-selection.gif" alt-text="Add form columns using selection":::
+
+## Configure column properties on a form
+
+The properties and events can be configured for column when you create or edit a form using the form designer.
+
+### Column properties
+
+The **Properties** tab displays the following properties.
 
 |Area  |Name  |Description  |
 |---------|---------|---------|
-|**Display options** | **Field label** | By default the label will match the display name of the field. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
-|**Display options** |  **Field name** | The name of the field. This comes from the field properties on the entity and is read-only. |
-|**Display options** | **Hide label** | When selected, the field label is hidden. |
-|**Display options** | **Read-only field** | When selected, the field value is not editable. |
-|**Display options** | **Lock field** |  Lock this field so it can't be removed. |
-|**Display options** | **Hide field** | When selected, the field is hidden by default and can be shown using code. |
-|**Display options** | **Hide on phone** | The field can be hidden to render a condensed version of the form on phone screens. |
-|**Formatting** | **Field width** |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has. |
+|**Display options** | **Table column** | The name of the column. This comes from the column properties on the table and is read-only.  |
+|**Display options** |  **Label** | By default the label will match the display name of the column. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
+|**Display options** | **Hide label** | When selected, the column label is hidden. |
+|**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
+|**Display options** | **Hide** | When selected, the column is hidden by default and can be shown using code. |
+|**Display options** | **Lock** |  Lock this column so it can't be removed. |
+|**Display options** | **Read-only** | When selected, the column value is not editable. |
+|**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
+| **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
 
-[!NOTE] 
-> In the Unified Interface, the label size setting is ignored because the form adjusts width for all fields to ensure proper rendering for screen sizes from very small to extra-large.
+> [!NOTE]
+> In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
 
-## Move fields on a form
-You can move a field on a form using drag and drop or cut and paste actions. 
+:::image type="content" source="../../maker/model-driven-apps/media/app-designer-form-column-properties.png" alt-text="view  column properties":::
 
-### Move fields on a form using drag and drop
+### Edit a column and view column names
+
+To view column names, such as schema name or to change additional column properties, such as required, searchable, description, and size, follow these steps:
+
+1. Select the column, and then in the right column properties pane select the information icon ![Information icon](../data-platform/media/data-platform-import-export/information-icon-inline.png) next to the column name.
+
+   :::image type="content" source="../data-platform/media/data-platform-import-export/column-actions-form-designer.png" alt-text="Select the column information icon.":::
+1. The display and unique names appear. Select **Edit table column** to display the **Edit Table Column** pane where you can make the changes you want.
+1. When you're finished making your changes, select **Done**.
+1. Select **Save** and then select **Publish** to make your changes available to app users.
+
+## Column events
+
+The **Events** tab is where event handlers for model-driven app forms can be configured for a column. An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs, such as when the value for the column changes. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
+
+## Move columns on a form
+
+You can move a column on a form using drag and drop or cut and paste actions.
+
+### Move columns on a form using drag and drop
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to move and drag and drop it. As you drag the field on the form preview, you will see drop targets where you can move the field to. 
+2. In the form preview, select the column that you want to move and drag and drop it. As you drag the column on the form preview, you will see drop targets where you can move the column to.
    Note the following:
-    - Fields can be dropped before or after any existing field or component.
-    - Fields can also be dropped in the empty area within a section. In this case the field will be added in an available space so as to evenly distribute fields and components across the section columns.
-    - Hovering over a tab header when dragging a field changes the currently selected tab, allowing you to add the field to a different tab.   
-3. Repeat step 2 above if you want to move more fields.
-4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+    - Columns can be dropped before or after any existing column or component.
+    - Columns can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
+    - Hovering over a tab header when dragging a column changes the currently selected tab, allowing you to add the column to a different tab.
+3. Repeat step 2 above if you want to move more columns.
+4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
-### Move fields on a form using cut and paste
+:::image type="content" source="../../maker/model-driven-apps/media/moving-form-columns-drag -and-drop.gif" alt-text="moving form columns using drag and drop approach":::
+
+### Move columns on a form using cut and paste
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to move.
+2. In the form preview, select the column that you want to move.
 3. On the command bar, select **Cut**.
-4. In the form preview, select another existing field, component or section. You can also switch to a different tab if needed.
+4. In the form preview, select another existing column, component or section. You can also switch to a different tab if needed.
 5. On the command bar, select **Paste** or select the chevron, and then select **Paste before**.      Note the following:
-     - When you select **Paste**, the field that is moved is pasted after the existing field or component. 
-     - When you select **Paste before**, the field that is moved is pasted before the existing field or component.
-     - When you select a section, the field that is moved is added in an available space so as to evenly distribute fields and components across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
-6. Repeat steps 2-5 above if you want to move more fields.
-7. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+     - When you select **Paste**, the column that is moved is pasted after the existing column or component. 
+     - When you select **Paste before**, the column that is moved is pasted before the existing column or component.
+     - When you select a section, the column that is moved is added in an available space so as to evenly distribute columns and components across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
+6. Repeat steps 2-5 above if you want to move more columns.
+7. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
-## Delete fields on a form
+:::image type="content" source="../../maker/model-driven-apps/media/moving-form-columns-cut-paste.gif" alt-text="move form columns cut and paste":::
+
+## Delete columns on a form
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the field that you want to delete from the form. 
-3. On the command bar, select **Delete**. 
-4. Repeat steps 2-3 if you want to delete more fields.
-5. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
+2. In the form preview, select the column that you want to delete from the form.
+3. On the command bar, select **Delete**.
+4. Repeat steps 2-3 if you want to delete more columns.
+5. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
      > [!NOTE]
-     >   -  If you delete a field by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
-     >   -  You can't delete a field that is locked or is required and not present anywhere else on the form. 
+     >   -  If you delete a column by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
+     >   -  You can't delete a column that is locked or is required and not present anywhere else on the form. 
 
-## Create a new field on the entity when editing a form 
+## Create a new column on the table when editing a form
+
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. On the command bar, select **Add field**, or in the left pane, select **Fields**. The **Fields** pane is open by default when the form designer is opened. 
-3. In the **Fields** pane, select **+ New field**.
-4. In the **New field** dialog, provide the **Display name** and **Name** for the field.
-5. In the **New field** dialog, select the **Data type** and configure any other required properties of the field.
+2. On the command bar, select **Add column**, or in the left pane, select **Columns**. The **Columns** pane is open by default when the form designer is opened.
+3. In the **Columns** pane, select **+ New column**.
+4. In the **New column** dialog, provide the **Display name** and **Name** for the column.
+5. In the **New column** dialog, select the **Data type** and configure any other required properties of the column.
 
      > [!NOTE]
-     >   -  Some field types are not available when you create a field from within the form designer. If a field type you want is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)
+     >   -  Some column types are not available when you create a column from within the form designer. If a column type you want is not available, you can follow the steps outlined in [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
 
-6. Select **Done** to create a new field on the entity. The field appears in the **Fields** pane.
-7. If you want to add the newly created field to the form, follow the steps outlined in the [**Add fields to a form**](add-move-or-delete-fields-on-form.md#add-fields-to-a-form) section.
+6. Select **Done** to create a new column on the table. The column appears in the **Columns** pane.
+7. If you want to add the newly created column to the form, follow the steps outlined in the [**Add columns to a form**](add-move-or-delete-fields-on-form.md#add-columns-to-a-form) section.
 
      > [!NOTE]
-     >  When a field is created on the entity, it is not limited to the current form and will be available for use in other places.
+     >  When a column is created on the table, it is not limited to the current form and will be available for use in other places.
 
 ### See also
+
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
@@ -140,4 +180,6 @@ You can move a field on a form using drag and drop or cut and paste actions.
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

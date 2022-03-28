@@ -3,10 +3,11 @@ title: "Define ribbon commands (model-driven apps) | Microsoft Docs" # Intent an
 description: "A Ribbon command creates a reusable definition that can be referenced by ribbon control elements." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/27/2020
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 60933770-8c7c-499c-12b4-8b64f6eedb35
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -41,4 +42,7 @@ A *Ribbon* command creates a reusable definition that can be referenced by ribbo
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
  [Define Ribbon enable rules](define-ribbon-enable-rules.md)
- [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
+ [Troubleshoot ribbon issues](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

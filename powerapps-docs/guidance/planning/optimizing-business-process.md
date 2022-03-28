@@ -2,10 +2,11 @@
 title: Planning - Optimizing your business process | Microsoft Docs
 description: Now that you've documented the business process you want to automate with Power Apps, optimize it. Learn some helpful approaches and key questions for optimization.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/16/2020
+ms.date: 10/12/2021
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -67,8 +68,15 @@ Some key questions to ask:
 
   - Automating the action taken
 
-  - [Using AI](https://docs.microsoft.com/ai-builder/overview) to replace
+  - [Using AI](/ai-builder/overview) to replace
         human attention
+
+> [!NOTE]
+> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview.md)
+to automatically optimize the process. 
+Process advisor has capabilities to [analyze your process](/power-automate/process-advisor-analyze), 
+and visualize it in a [process map](/power-automate/process-advisor-visualize.md).
+Process map reveals bottlenecks and metrics for your process through an analytical report.
 
 ## Example: Optimizing the expense report process
 
@@ -94,7 +102,10 @@ Rebecca is researching how the semiannual audit might be optimized by using AI.
 
 Our proposed optimized process looks like the following illustration.
 
-![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
+![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article.](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

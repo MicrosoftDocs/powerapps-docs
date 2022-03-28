@@ -1,22 +1,22 @@
 ---
 title: "addCustomView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Adds a new view for the lookup dialog box.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 482b8cd4-e643-48ea-8a54-d8601271ec81
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addCustomView (Client API reference)
-
-
 
 Adds a new view for the lookup dialog box. 
 
@@ -34,12 +34,17 @@ Lookup
     > [!NOTE]
     > This value is never saved and only needs to be unique among the other available views for the lookup on the current form. A string for a non-valid GUID will not work, for example “00000000-0000-0000-0000-000000000001” will not work. It’s recommended that you use a tool like **guidgen.exe** to generate a valid GUID.  
 
-- **entityName**: String. The name of the entity.
+- **entityName**: String. The name of the table.
 - **viewDisplayName**: String. The name of the view.
 - **fetchXml**: String. The fetchXml query for the view.
 - **layoutXml**: String. The XML that defines the layout of the view.
 - **isDefault**: Boolean: Indicates whether the view should be the default view.
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Remarks
 
 This method doesn’t work with **Owner** lookups. Owner lookups are used to assign user-owned records.
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

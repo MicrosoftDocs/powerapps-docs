@@ -2,15 +2,16 @@
 title: Packaged Library Element | Microsoft Docs
 description: 
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.subservice: pcf
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 41c50db2-3096-4990-ac2b-e702c161bf4f
 ---
 
 # packaged_library element
@@ -48,3 +49,6 @@ Model-driven apps
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

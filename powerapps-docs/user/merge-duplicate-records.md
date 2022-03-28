@@ -1,13 +1,14 @@
 ---
 title: "Merge duplicate records| MicrosoftDocs"
-ms.custom: ""
+description: How to merge duplicate records
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/31/2019
-ms.author: mduelae
+ms.date: 02/10/2020
+ms.subservice: end-user
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -17,56 +18,65 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Merge duplicate records 
+# Merge duplicate rows 
 
-Duplicate records can creep into your data when you or others enter data manually or import data in bulk. Common Data Service helps you address potential duplicates by providing duplicate detection for active records such as, accounts and contacts. When you merge a record any related or child records will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
-  
-For example, let's say you enter a contact record, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar record, and displays this dialog box.  
-  
- > [!div class="mx-imgBorder"] 
- > ![Duplicate contact record detectied](media/duplicates-detected.png "Duplicate contact record detectied")  
-  
- You're not sure if this is a new record (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
-  
- Next, you go to the **All Contacts** list and see that now you have two records with the same name. After reviewing the records,  you  determine that they're duplicates that need to be merged.  
- 
- > [!div class="mx-imgBorder"] 
- > ![Duplicate contact record detectied](media/duplicates-detected_1.png "Duplicate contact record detectied")  
- 
-Common Data Service includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these record types.  
-  
-> [!NOTE]
->  If available on your system, you may also be able to check for duplicates of other record types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
-  
-### How to merge duplicate records  
-  
-1. Select the duplicate records, and then select **Merge**.  
-  
-   > [!div class="mx-imgBorder"] 
-   > ![Duplicate contact record detectied](media/duplicates-detected_2.png "Duplicate contact record detectied")  
-  
-2. In the **Merge Records** dialog box, select the master record (the one you want to keep), and then select any fields in the new record that you want to merge into the master record. Data in these fields may override the existing data in the master record. Select **OK**.  
-  
-     
-   > [!div class="mx-imgBorder"] 
-   > ![Dialog box for merging records](media/merge-records-dialog.png "Dialog box for merging records")  
-  
+Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows such as, accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
 
 There are a few situations when duplicates may be found:  
 
-- When a record is created or updated.  
+- When a row is created or updated.  
 - When  you're using Dynamics 365 for Outlook and you go from offline to online.  
 - When you import data using the Import Data wizard.  
-- Duplicates aren't detected when you merge records, save an activity as completed, or change the status of a record, such as activating or reactivating a record.
+- Duplicates aren't detected when you merge rows, save an activity as completed, or change the status of a row, such as activating or reactivating a row.
+  
+For example, let's say you enter a contact row, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
+  
+ > [!div class="mx-imgBorder"] 
+ > ![Duplicate contact row detected.](media/duplicates-detected.png "Duplicate contact row detected")  
+  
+ You're not sure if this is a new row (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
+  
+ Next, you go to the **My Active Contacts** list and see that now you have two rows with the same name. After reviewing the rows,  you  determine that they're duplicates that need to be merged.  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Duplicate contact row is detected.](media/duplicates-detected-1.png "Duplicate contact row is detected")  
+ 
+Dataverse includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these row types.  
+  
+> [!NOTE]
+>  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
+  
+### How to merge duplicate rows
+> [!NOTE]
+>  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables.  
+  
+1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
+  
+   > [!div class="mx-imgBorder"] 
+   > ![Duplicate row detected.](media/duplicates-detected-2.png "Duplicate row detected")  
+  
+2. In the **Merge Contacts** dialog box, select the primary row (the one you want to keep) and then select any columns in the new row that you want to merge into the primary row. Data in these columns may override the existing data in the primary row. Select **OK**.  
+
+   > [!NOTE]
+   > If you run into issues during the merge process, uncheck **Enable parent check**. If files are deleted during the merge process, you can skip the parent check. This allows your merge to continue even if someone deletes a row from the set while the job is running in the background. For more information, see [Asynchronous processing of cascading transactions](/power-platform/admin/async-cascading#troubleshooting-file-deletion-issues-during-cascade-merge).
+  
+     
+   > [!div class="mx-imgBorder"] 
+   > ![Dialog box for merging rows.](media/merge-dups.gif "Dialog box for merging rows")  
+  
+
 
 > [!IMPORTANT]
->  If a field or control matches any of the following conditions, it will not show up in the merge dialog:  
->   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
+>  If a column or control matches any of the following conditions, it will not show up in the merge dialog:  
+>   - The field or containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
 >   - The control does not have a class property.
->   - The attribute's metadata `ValidForUpdate` is False.
+>   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
->   - The attribute's metadata `ValidForUpdate` is False. 
->   - The attribute is `Picklist` or `MultiSelectPickList` and it has either a parent picklist or child picklist attribute.
->   - The attribute is ` parentaccountid` on the Account entity; this is a system setting and cannot be changed. 
->   - The attribute is ` parentcustomerid` on the  Contact Entity; this is a system setting and cannot be changed
+>   - The column's metadata `ValidForUpdate` is False. 
+>   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
+>   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
+>   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

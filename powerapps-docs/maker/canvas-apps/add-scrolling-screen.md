@@ -1,92 +1,141 @@
 ---
-title: Add a scrolling screen to a canvas app | Microsoft Docs
+title: Add a scrolling screen to a canvas app
 description: In Power Apps, create a screen that users can scroll to show more types of content than the screen can show at a time in a canvas app.
-author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
-ms.author: emcoope
+ms.date: 03/08/2022
+ms.subservice: canvas-maker
+ms.author: tashas
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - TashasEv
 ---
-# Add a scrolling screen to a canvas app in Power Apps
+
+# Add a scrolling screen to a canvas app
 
 In a canvas app, create a screen that users can scroll to show different items. For example, create a phone app that shows data in several charts, which users can display if they scroll.
 
-When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
+When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. [Screen size and orientation](set-aspect-ratio-portrait-landscape.md) may also affect how the sections are arranged.  
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen
 
-1. On the **Home** tab, click or tap **New screen**:
+1. Select **New screen** below the top menu.
 
-    ![Option to add a screen to an app][1]
+1. Select **Scrollable**.
 
-2. On the **Home** tab, click or tap **Layouts**, and then click or tap the option to add an infinite scrolling canvas:  
-   
-    ![Option to add an infinite scrolling canvas][2]
-   
-    The canvas is added:  
-   
-    ![A screen with an infinite scrolling canvas, as it appears by default][3]
+    :::image type="content" source="media/add-scrolling-screen/new-scrollable-screen.png" alt-text="Select new screen and then choose scrollable screen type.":::
 
-## Add elements
-Now, let's add some controls to the canvas to see how the scrolling screen works.
+    A new scrollable screen is added to the app.
 
-1. In the canvas you added, click or tap **Add an item from the Insert tab**.
-   
-    ![][4]
-2. On the **Insert** tab, click or tap **Charts**, and then click or tap **Column Chart**.
-   
-    ![The option to add a column chart][5]
-   
-    A column chart appears in the first card on the screen:  
-   
-    ![Default column chart][7]
-3. On the **Insert** tab, click or tap **Text**, and then click or tap **Pen input**:  
-   
-    ![Option to add a pen control][8]
-4. Move the pen control below the chart, and resize the pen control to cover the bottom of the card:  
-   
-    ![Move and resize the pen control][9]
+    :::image type="content" source="media/add-scrolling-screen/scrollable-screen.png" alt-text="A screenshot that shows the scrollable screen added to the app.":::
 
-## Add a section
-Now, let's add another card with another control.
+## Add controls
 
-1. Near the bottom of the screen, click or tap **Add section**:  
-   
-    ![Option to add a section][10]
-   
-    A new card is added to the screen:  
-   
-    ![A new card below the default section][11]
-2. With the card still selected, go to the **Insert** tab, click or tap **Charts**, and then click or tap **Line chart**.
-   
-    The new chart is too big to appear on the screen with the other controls:  
-   
-    ![A line chart added to the bottom of the new card][12]
-3. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
-   
-    ![Open Preview mode](./media/add-scrolling-screen/open-preview.png)
-4. Scroll down to display the new line chart.  
-   
-    ![Preview shows the line chart][13]
+Scrollable screen includes one data card by default. Data cards help separate building blocks on the screen. To make screen scrollable with multiple controls, add more data cards. And then, add controls in data cards as required.
 
-[1]: ./media/add-scrolling-screen/add-screen.png
-[2]: ./media/add-scrolling-screen/add-canvas.png
-[3]: ./media/add-scrolling-screen/default-canvas.png
-[4]: ./media/add-scrolling-screen/insert-visual.png
-[5]: ./media/add-scrolling-screen/add-chart.png
-[7]: ./media/add-scrolling-screen/default-chart.png
-[8]: ./media/add-scrolling-screen/add-pen.png
-[9]: ./media/add-scrolling-screen/move-resize-pen.png
-[10]: ./media/add-scrolling-screen/add-section.png
-[11]: ./media/add-scrolling-screen/new-card.png
-[12]: ./media/add-scrolling-screen/add-line-chart.png
-[13]: ./media/add-scrolling-screen/line-chart-preview.png
+To add data cards, you can select **Add section** at the bottom of the scrollable screen.
+
+:::image type="content" source="media/add-scrolling-screen/add-section-data-card.png" alt-text="Add section button highlighted on the scrollable screen on the canvas.":::
+
+We'll start by adding controls on the data card available with the scrollable screen by default, and then add a new section that adds another data card. Once a new data card is available, we'll then add another control inside the new data card.
+
+Together, both data cards and the controls within the data cards would extend the default length of the screen, requiring the use of the scrolling ability of the screen.
+
+> [!TIP]
+> To learn more about data cards, see [Understand data cards](working-with-cards.md).
+
+1. Select **+** (**Insert**) from the left-pane.
+
+    :::image type="content" source="media/add-scrolling-screen/select-insert.png" alt-text="Alt text that describes the content of the image.":::
+
+1. Expand **Charts**, and then select **Column chart**.
+
+1. Resize the chart added on the screen to consume about two-thirds of the screen.
+
+1. Reduce the size of the data card to the size of the added chart.
+
+    :::image type="content" source="media/add-scrolling-screen/resize-data-card.png" alt-text="Resize the data card on the screen to consume two-thirds of the screen.":::
+
+1. Select **Add section** on the screen to add another section.
+
+    :::image type="content" source="media/add-scrolling-screen/second-data-card.png" alt-text="A new data card added to the screen.":::
+
+1. Select **Insert** > **Charts** > **Line chart**.
+
+1. Scroll down on the screen using the scroll bar on the right-side of the screen, and then select **Add section** to add a third data card.
+
+1. Select **Insert** > **Input** > **Pen input**.
+
+1. Resize the pen input control by increasing the width inside the data card.
+
+    :::image type="content" source="media/add-scrolling-screen/resize-pen-input.png" alt-text="Pen input control resized to use more width on the screen.":::
+
+1. Press **F5** on the keyboard to preview the app. Scroll down using the scroll bar to lower part of the screen.
+
+    :::image type="content" source="media/add-scrolling-screen/preview-scrollable-screen.png" alt-text="Preview scrollable screen.":::
+
+Now that you've demonstrated how to use scrollable screen, customize the app further as per your business requirements.
+
+## Scrolling screen for forms
+
+Since Power Apps uses data cards to create sections, [Display form and Edit form](controls/control-form-detail.md) controls can't be inserted on them. Nesting of such a combination of controls together may degrade the performance of the app. Hence, when using form controls, use layout containers such as a [vertical container](controls/control-vertical-container.md) control.
+
+> [!TIP]
+> To learn about working with forms, see [Understand canvas app forms](working-with-forms.md).
+
+There are multiple different methods to configure scrolling with forms:
+
+### Use Vertical Overflow property
+
+Use of the Vertical Overflow property is a basic method of using a scrolling screen that has a form.
+
+1. Ensure you're using a blank screen, and not a scrollable screen.
+
+1. Select **Insert** > **Layout**, and then select **Vertical container**.
+
+1. From the right-side of the screen in the properties pane, select **Vertical Overflow** property drop-down, and choose **Scroll**.
+
+    :::image type="content" source="media/add-scrolling-screen/vertical-overflow.png" alt-text="Vertical overflow property of the container set to Scroll.":::
+
+1. Add the edit or display form with the required fields. When the list of fields exceeds the size of the container inside the screen, you'll be able to scroll inside the container using the scroll bar.
+
+    :::image type="content" source="media/add-scrolling-screen/scrollable-vertical-container.png" alt-text="Scrollable vertical container using the Vertical Overflow property set to scroll having a display form.":::
+
+### Use containers within Vertical container
+
+For complex apps, you may consider adding containers within a vertical container control. And then, adjust the height of the form and the inner container as shown below.
+
+1. Ensure you're using a blank screen, and not a scrollable screen.
+
+1. Select **Insert** > **Layout**, and then select **Vertical container**.
+
+1. From the right-side of the screen in the properties pane, select **Vertical Overflow** property drop-down, and choose **Scroll**.
+
+1. Select **Insert** > **Layout**, and then select **Container**.
+
+1. From the right-side of the screen in the properties pane, turn **Flexible height** property to **Off**.
+
+    :::image type="content" source="media/add-scrolling-screen/flexible-height.png" alt-text="Flexible height property turned off for the container.":::
+
+1. Add the edit or display form with the required fields.
+
+1. To enable scrolling within the screen for the form, update the height of the container added in step 4, and the form.
+
+    :::image type="content" source="media/add-scrolling-screen/x-y-positions.png" alt-text="Scrollable form that uses container and form height for scroll capability.":::
+
+For more information about working with responsiveness of an app, see [Building responsive canvas apps](build-responsive-apps.md) and [Responsive layouts](create-responsive-layout.md)
+
+### See also
+
+- [Horizontal container](controls/control-horizontal-container.md)
+- [Vertical container](controls/control-vertical-container.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

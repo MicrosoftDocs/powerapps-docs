@@ -1,0 +1,104 @@
+- name: Work with data using code
+  href: ../work-with-data.md
+- name: Use the Web API
+  href: overview.md
+- name: Get started using code
+  items:
+  - name: (C#)
+    items:
+    - name: Get started with using Web API (C#)
+      href: get-started-dynamics-365-web-api-csharp.md
+    - name: 'Quick Start: Web API sample (C#)'
+      href: quick-start-console-app-csharp.md
+    - name: 'Quick Start: Blazor Server sample (C#)'
+      href: quick-start-blazor-server-app.md
+    - name: Enhanced quick start (C#)
+      href: enhanced-quick-start.md
+    - name: Start Web API project in Visual Studio
+      href: start-web-api-project-visual-studio-csharp.md
+- name: Security and web service access
+  items:
+  - name: Web service authentication
+    href: authenticate-web-api.md
+  - name: Active Directory group teams
+    href: aad-group-team.md
+- name: Types and operations
+  href: web-api-types-operations.md
+- name: Perform Web API operations
+  items:
+  - name: Get started with performing operations
+    href: perform-operations-web-api.md
+  - name: Compose HTTP requests and handle errors
+    href: compose-http-requests-handle-errors.md
+  - name: Query Data with Web API
+    items:
+    - name: Query data
+      href: query-data-web-api.md
+    - name: Retrieve related rows with query
+      href: retrieve-related-entities-query.md
+  - name: Retrieve and execute predefined queries
+    href: retrieve-and-execute-predefined-queries.md
+  - name: Create a table row
+    href: create-entity-web-api.md
+  - name: Retrieve a table row
+    href: retrieve-entity-using-web-api.md
+  - name: Update and delete table rows 
+    href: update-delete-entities-using-web-api.md
+  - name: Associate and disassociate rows
+    href: associate-disassociate-entities-using-web-api.md
+  - name: Merge table rows
+    href: merge-entity-using-web-api.md
+  - name: Use functions
+    href: use-web-api-functions.md
+  - name: Use actions
+    href: use-web-api-actions.md
+  - name: Execute batch operations 
+    href: execute-batch-operations-using-web-api.md
+  - name: Impersonate another user
+    href: impersonate-another-user-web-api.md
+  - name: Perform conditional operations
+    href: perform-conditional-operations-using-web-api.md
+  - name: Detect duplicate data
+    href: manage-duplicate-detection-create-update.md
+  - name: Access table data faster using partitions
+    href: azure-storage-partitioning.md
+- name: Work with table definitions (metadata)
+  items:
+  - name: Use the Web API with table definitions
+    href: use-web-api-metadata.md
+  - name: Query table definitions
+    href: query-metadata-web-api.md
+  - name: Retrieve table definitions by name or MetadataId
+    href: retrieve-metadata-name-metadataid.md
+  - name: Create and update table definitions
+    href: create-update-entity-definitions-using-web-api.md 
+  - name: Create and update table relationships
+    href: create-update-entity-relationships-using-web-api.md
+  - name: Use multi-table lookup columns
+    href: multitable-lookup.md
+  - name: Work with choices (option sets)
+    href: create-update-optionsets.md
+- name: Use Postman with Web API
+  items:
+  - name: Get started with Postman
+    href: use-postman-web-api.md
+  - name: Setup a Postman environment
+    href: setup-postman-environment.md
+  - name: Use Postman to perform operations
+    href: use-postman-perform-operations.md
+- name: Client-side JavaScript using Web API in model-driven apps
+  href: get-started-web-api-client-side-javascript.md
+- name: Web API versions and limitations
+  href: web-api-versions.md
+- name: Dataverse search, suggestions, and autocomplete
+  href: relevance-search.md
+- name: Discover the URL for your organization
+  items:
+  - name: Get started
+    href: discover-url-organization-web-api.md
+  - name: Modify your code to use global Discovery Service
+    href: discovery-orgsdk-to-webapi.md
+  - name: Global Discovery Service Sample (C#)
+    href: samples/global-discovery-service-csharp.md
+- name: Samples
+  href: samples/toc.yml

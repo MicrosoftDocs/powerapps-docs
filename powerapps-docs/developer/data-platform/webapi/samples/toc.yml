@@ -1,0 +1,42 @@
+- name: (HTTP) samples
+  items:
+    - name: About the samples
+      href: ../web-api-samples.md
+    - name: Basic Operations
+      href: ../web-api-basic-operations-sample.md
+    - name: Query Data
+      href: ../web-api-query-data-sample.md
+    - name: Conditional Operations
+      href: ../web-api-conditional-operations-sample.md
+    - name: Functions and Actions
+      href: ../web-api-functions-actions-sample.md
+- name: (C#) samples
+  items:
+    - name: CDSWebApiService class
+      href: cdswebapiservice.md
+    - name: Basic Operations
+      href: cdswebapiservice-basic-operations.md
+    - name: Query Data
+      href: cdswebapiservice-query-data.md
+    - name: Conditional Operations
+      href: cdswebapiservice-conditional-operations.md
+    - name: Functions and Actions
+      href: functions-actions-csharp.md
+    - name: Parallel Operations
+      href: cdswebapiservice-parallel-operations.md
+    - name: Async Parallel Operations
+      href: cdswebapiservice-async-parallel-operations.md
+    - name: Global Discovery Service
+      href: global-discovery-service-csharp.md
+- name: (JavaScript) samples
+  items:
+  - name: About the client-side samples
+    href: ../web-api-samples-client-side-javascript.md
+  - name: Basic Operations
+    href: basic-operations-client-side-javascript.md
+  - name: Conditional Operations
+    href: conditional-operations-client-side-javascript.md
+  - name: Functions and Actions
+    href: functions-actions-client-side-javascript.md
+  - name: Query Data
+    href: query-data-client-side-javascript.md

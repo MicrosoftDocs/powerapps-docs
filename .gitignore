@@ -7,6 +7,7 @@ _repo.*/
 
 .openpublishing.buildcore.ps1
 settings.json
+.DS_Store
 
 # Folder config file
 [Dd]esktop.ini
@@ -17,3 +18,6 @@ powerapps-docs/.vs/powerapps-docs/v15/.suo
 powerapps-docs/.vs/ProjectSettings.json
 powerapps-docs/.vs/slnx.sqlite
 powerapps-docs/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite-journal
+powerapps-docs/teams/media/how-to-architecture/Thumbs.db
+powerapps-docs/teams/media/milestones-broad-distribution/Thumbs.db

@@ -1,18 +1,20 @@
 ---
-title: "getSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs" 
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "getSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Describes the getSharedVariable function used with the client api in model-driven apps."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 702a13c1-f4ae-4de2-9e8b-95360ad9240c
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getSharedVariable (Client API reference)
 
@@ -47,3 +49,6 @@ Retrieves a variable set using the [setSharedVariable](setSharedVariable.md) met
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,19 +1,22 @@
 ---
 title: "Client API grid context in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "Describes the client api grid context"
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: f884d7d4-31e6-4080-acd9-493e81e6b278
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Client API grid context
 
@@ -22,7 +25,7 @@ Grids present data in a tabular format. Grids can span the entire form or can be
 The Client API grid context object provides reference to a subgrid on a form against which the current code is executed. 
 
 > [!NOTE]
-> Getting the context of a grid (spanning the entire form) is only supported in ribbon commands. More information: [Form and grid context in ribbon actions](/powerapps/developer/model-driven-apps/pass-data-page-parameter-ribbon-actions#form-and-grid-context-in-ribbon-actions)
+> Getting the context of a grid (spanning the entire form) is only supported in ribbon commands. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
 
 Use the [formContext](clientapi-form-context.md) object to get an instance of the form where the code is executed, and then retrieve the subgrid control on the form. For example, when you know the name of a subgrid control (say **Contacts** subgrid in the default account form), you can access it using the following code:
 
@@ -42,3 +45,6 @@ function doSomething(executionContext) {
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Grids and subgrids](reference/grids.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

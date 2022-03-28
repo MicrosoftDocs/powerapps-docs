@@ -1,19 +1,20 @@
 ---
 title: CSS Element | Microsoft Docs
-description: 
+description: CSS describes how code components are to be displayed on UI.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.subservice: pcf
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 ---
 
 # css element
@@ -22,14 +23,14 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (public preview) |
-|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (public preview) |
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven and canvas apps |
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven and canvas apps |
 
 ## Parent Elements
 
@@ -51,3 +52,6 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,16 +1,15 @@
 ---
 title: Navigation | Microsoft Docs
-description: 
+description: Provides navigation-related methods.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 ---
 
 # Navigation
@@ -41,3 +40,5 @@ To learn more about how to implement navigation methods, see [Navigation API com
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,22 +1,22 @@
 ---
 title: "addOnResultOpened (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the addOnResultOpened method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 5f0eabe1-985a-4e89-b23a-72657208ae7e
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addOnResultOpened (Client API reference)
-
-
 
 Adds an event handler to the [OnResultOpened](../events/onresultopened.md) event. 
 
@@ -26,10 +26,11 @@ knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>");
 kbSearchControl.addOnResultOpened(myFunction);
 ```
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -42,3 +43,6 @@ kbSearchControl.addOnResultOpened(myFunction);
 [OnResultOpened event](../events/onresultopened.md)
 
 [removeOnResultOpened](removeOnResultOpened.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

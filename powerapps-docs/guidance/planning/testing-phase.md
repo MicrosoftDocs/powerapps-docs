@@ -2,10 +2,11 @@
 title: Testing Phase - Planning a Power Apps project | Microsoft Docs
 description: Now that your app is built, the next step is to start testing it. You'll learn the basics of testing an app and discover Power Apps testing tools.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -121,7 +122,10 @@ repository](https://github.com/Microsoft/EasyRepro).
 ### Solution checker
 
 The solution checker is a tool that checks whether the solution you've created is healthy. You
-can quickly review issues and see recommended fixes. More information: [Use solution checker to validate your model-driven apps in Power Apps](../../maker/common-data-service/use-powerapps-checker.md)
+can quickly review issues and see recommended fixes. More information: [Use solution checker to validate your model-driven apps in Power Apps](../../maker/data-platform/use-powerapps-checker.md)
 
 > [!div class="nextstepaction"]
 > [Next step: Publish and share the app](discoverability.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

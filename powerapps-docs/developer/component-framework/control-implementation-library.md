@@ -2,15 +2,15 @@
 title: Component implementation library | Microsoft Docs
 description: Create code components using JavaScript or TypeScript
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.subservice: pcf
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
 # Component implementation library
@@ -28,3 +28,6 @@ The object implements the following methods:
 
 These methods control the lifecycle of the code component.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

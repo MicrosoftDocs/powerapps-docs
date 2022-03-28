@@ -1,18 +1,19 @@
 ---
-title: Mode | Microsoft Docs
-description: 
+title: Mode element| Microsoft Docs
+description: Provides information on methods available for mode element.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Manifest element
+# Mode element
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
@@ -43,3 +44,6 @@ ms.topic: "article"
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

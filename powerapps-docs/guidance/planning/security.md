@@ -2,10 +2,11 @@
 title: Design - Securing the app and data | Microsoft Docs
 description: This article explains general security concepts for people undertaking a Power Apps project, explaining security layers and how to apply them.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -17,7 +18,7 @@ After you've determined what data structure to use, the next step is to
 consider how to secure your data. You should consider what data will be
 accessed by whom, and refer back to tasks, business processes, and personas that
 you listed in the planning phase. This article explains general security concepts for people who are
-unfamiliar with them. For more information about the technical aspects of security, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).
+unfamiliar with them. For more information about the technical aspects of security, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
 ## Layers of security
 
@@ -63,8 +64,8 @@ update, and delete) that you can set up for record-level security:
 
 - **Delete** Allows the user to delete data (like removing a row in Excel).
 
-For Common Data Service, there are four more types of access: append,
-append-to, assign, and share. More information: [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+For Microsoft Dataverse, there are four more types of access: append,
+append-to, assign, and share. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 ### Field-level security
 
@@ -98,7 +99,7 @@ information.
 
 **Step 3**: Identify the requirements for who can see the records.
 
-**Step 4**: If you're using data sources other than Common Data Service&mdash;or
+**Step 4**: If you're using data sources other than Dataverse&mdash;or
 services that don't have Office 365 or Azure Active Directory authentication&mdash;you should
 consider how you'll allow access to those systems. If you aren't in charge
 of those systems, seek advice from those service administrators.
@@ -129,9 +130,12 @@ reports (but not change them).
 
 > We need an Auditors security group. We need to give it and the Approvers security group access to all records, and we need to give the All Employees group access only to "records I create."
 
-![Diagram of expense report security groups](media/expense-report-security.png "Diagram of expense report security groups")
+![Diagram of expense report security groups.](media/expense-report-security.png "Diagram of expense report security groups")
 
-More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security)
+More information: [Security in Dataverse](/power-platform/admin/wp-security)
 
 > [!div class="nextstepaction"]
 > [Next step: Make the app](making-phase.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

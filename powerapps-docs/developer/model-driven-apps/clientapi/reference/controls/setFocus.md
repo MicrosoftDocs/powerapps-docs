@@ -1,20 +1,22 @@
 ---
-title: "setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "control.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.setFocus method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1fedb14d-7d62-45c3-a170-8d8d9599b870
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setFocus (Client API reference)
+# control.setFocus (Client API reference)
 
 
 
@@ -28,3 +30,6 @@ all
 
 `formContext.getControl(arg).setFocus();`
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

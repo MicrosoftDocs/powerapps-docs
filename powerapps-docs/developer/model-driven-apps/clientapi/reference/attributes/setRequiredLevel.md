@@ -1,29 +1,30 @@
 ---
 title: "setRequiredLevel (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the setRequiredLevel method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 67a96fc4-4d65-4858-90da-f41eeba0365a
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setRequiredLevel (Client API reference)
 
-
-
-Sets whether data is required or recommended for the attribute before the record can be saved.
+Sets whether data is required or recommended for the column before the record can be saved.
 
 > [!IMPORTANT]
-> Reducing the required level of an attribute can cause an error when the page is saved. If the attribute is required by the server, an error will occur if there is no value for the attribute. 
+> Reducing the required level of a column can cause an error when the page is saved. If the column is required by the server, an error will occur if there is no value for the column. 
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -44,3 +45,6 @@ All
 [getRequiredLevel (Client API reference)](getRequiredLevel.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

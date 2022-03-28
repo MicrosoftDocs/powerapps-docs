@@ -1,20 +1,22 @@
 ---
-title: "getParent (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "quickViewControl.getParent (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the quickViewControl.getParent method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: ad0d1d8a-b781-403b-9f9f-a13b99a4bf22
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getParent (Client API reference)
+# quickViewControl.getParent (Client API reference)
 
 
 
@@ -34,3 +36,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,25 +1,25 @@
 ---
 title: getSelectedRecordIds | Microsoft Docs
-description: 
+description: Retrieves all the selected record IDs.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 96fa69f3-38d2-4e95-bb25-02d92aa6296c
 ---
 
 # getSelectedRecordIds
 
 [!INCLUDE[./includes/getselectedrecordids-description.md](./includes/getselectedrecordids-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -29,9 +29,10 @@ Model-driven apps
 
 **Type**: `string[]`
 
-
 ### Related topics
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

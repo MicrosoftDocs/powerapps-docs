@@ -1,16 +1,16 @@
 ---
 title: clearFilter | Microsoft Docs
-description: 
+description: Clears the filter associated with the dataset.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 6c306633-14a1-4199-95cb-58000b3cafed
 ---
 
 # clearFilter
@@ -23,10 +23,12 @@ ms.assetid: 6c306633-14a1-4199-95cb-58000b3cafed
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ### Related topics
 
 [Filtering](../filtering.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

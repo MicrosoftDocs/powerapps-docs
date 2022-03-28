@@ -1,0 +1,154 @@
+### YamlMime:Landing
+
+title: Power Apps model-driven apps documentation
+summary: Create powerful apps with easy to use tools that run across the spectrum of devices. 
+
+metadata:
+  title: Power Apps model-driven apps documentation
+  description: Provides access to highlighted areas within the Power Apps model-driven apps documentation
+  services: service
+  
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: Mattp123
+  ms.author: matp
+  ms.date: 09/08/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What are model-driven apps?
+            url: model-driven-app-overview.md
+          - text: Reasons for building model-driven apps
+            url: app-value-proposition.md
+          - text: Meet the app editors
+            url: model-driven-designers.md
+          - text: Sample model-driven apps
+            url: overview-model-driven-samples.md
+          - text: Licensing guide
+            url: /power-platform/admin/pricing-billing-skus
+         
+  # Card
+  - title: Create
+    linkLists:
+       - linkListType: quickstart
+         links:
+          - text: Create a simple app
+            url: build-first-model-driven-app.md
+          - text: Steps to building a model-driven app
+            url: app-building-steps.md
+          - text: Building a modern app
+            url: app-designer-overview.md          
+            
+  # Card
+  - title: App development
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Model driven App components
+            url: model-driven-app-components.md
+          - text: Data modelling
+            url: model-driven-app-glossary.md#data-model
+          - text: Tables
+            url: model-driven-app-glossary.md#table
+          - text: Forms
+            url: model-driven-app-glossary.md#form
+          - text: Views
+            url: model-driven-app-glossary.md#view
+          - text: Relationships
+            url: model-driven-app-glossary.md#relationship
+      
+  # Card
+  - title: Advanced modeling
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Business rules
+            url: ../data-platform/data-platform-create-business-rule.md
+          - text: Business process flows
+            url: /power-automate/business-process-flows-overview
+          - text: Embedding canvas apps
+            url: embed-canvas-app-in-form.md
+          - text: Advanced app making and customization
+            url: advanced-navigation.md
+
+  # Card
+  - title: Apply data visualizations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Reporting overview
+            url: reporting-overview.md
+          - text: Create a system chart for a table
+            url: create-edit-system-chart.md
+          - text: Create or edit dashboards
+            url: create-edit-dashboards.md
+          - text: Work with Power BI
+            url: use-power-bi.md
+
+  # Card
+  - title: Distribute, share, and use
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Use a model-driven app
+            url: /powerapps/user/use-model-driven-apps
+          - text: Share an app
+            url: share-model-driven-app.md
+          - text: Distribute an app
+            url: distribute-model-driven-app.md
+          - text: Use solutions for ALM
+            url: ../data-platform/solutions-overview.md
+
+  # Card
+  - title: Developer zone
+    linkLists:
+      - linkListType: how-to-guide
+        links:      
+          - text: Developer guide
+            url: /powerapps/developer/model-driven-apps/
+          - text: Customize table forms using code
+            url: ../../developer/model-driven-apps/customize-entity-forms.md
+          - text: Apply data visualizations using code
+            url: ../../developer/model-driven-apps/customize-visualizations-dashboards.md
+
+  # Card
+  - title: Best practice
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Planning a Power Apps project
+            url: ../../guidance/planning/introduction.md
+          - text: Performance monitoring
+            url: ../../maker/common/performance-insights-categories.md
+          - text: Designing productive forms
+            url: design-productive-forms.md
+          - text: Optimize forms for performance
+            url: design-performant-forms.md
+
+  # Card
+  - title: Resources
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Glossary of terms
+            url: model-driven-app-glossary.md    
+          - text: Share an app
+            url: share-model-driven-app.md
+          - text: Microsoft Learn
+            url: /learn/modules/get-started-with-model-driven-apps-in-powerapps/
+      - linkListType: concept
+        links:
+          - text: Environments
+            url: /power-platform/admin/environments-overview
+          - text: Solutions
+            url: /power-platform/alm/solution-concepts-alm
+          - text: Dataverse
+            url: /powerapps/maker/data-platform/data-platform-intro

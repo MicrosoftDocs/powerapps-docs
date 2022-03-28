@@ -1,13 +1,14 @@
 ---
 title: "Find your administrator or support person| MicrosoftDocs"
-ms.custom: ""
+description: how to find your admin
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/25/2019
-ms.author: mduelae
+ms.subservice: end-user
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -30,14 +31,17 @@ You may occasionally run across issues that require consultation with your admin
   
 4. Point to **Select**, and then select **Security Roles** from the list.  
   
-5. Under **Fields**, select **Names**.  
+5. Under **Columns**, select **Names**.  
   
 6. Enter **System Administrator** in the box that says **Enter Text**. At this point, your screen should look like this:  
      
    > [!div class="mx-imgBorder"]
-   > ![Advanced Find dialog box](media/find-admnistrator-advanced-find-complete.png "Advanced Find dialog box")  
+   > ![Advanced Find dialog box.](media/find-admnistrator-advanced-find-complete.png "Advanced Find dialog box")  
   
 7. Choose the **Results** button on the ribbon.  
   
    You should see a list of one or more system administrators.  
   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

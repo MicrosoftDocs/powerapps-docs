@@ -1,20 +1,22 @@
 ---
-title: "isValid (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "entity.isValid (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Gets a boolean value indicating whether all of the table data is valid.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 93eba632-5e40-4515-bb4b-4e8cd8303322
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# isValid (Client API reference)
+# entity.isValid (Client API reference)
 
 
 
@@ -24,13 +26,18 @@ search.app:
 
 `formContext.data.entity.isValid();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Type
 
 **Type**: Boolean
 
-**Description**: true if all of the entity data is valid; false otherwise.
+**Description**: true if all of the table data is valid; false otherwise.
 
 ### Related topics
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

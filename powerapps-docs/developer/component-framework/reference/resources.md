@@ -1,16 +1,15 @@
 ---
 title: Resources | Microsoft Docs
-description: 
+description: Provides access to the methods to get all the information about the resource files defined in the manifest.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 ---
 
 # Resources
@@ -19,17 +18,19 @@ ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Methods
 
-|Method | Description |
-| ------|-------------|
-|[getResource](resources/getresource.md)|[!INCLUDE [getresource-description](resources/includes/getresource-description.md)]|
-|[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|
+|Method | Description |Available for|
+| ------|-------------|------------|
+|[getResource](resources/getresource.md)|[!INCLUDE [getresource-description](resources/includes/getresource-description.md)]| Model-driven apps|
+|[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|Model-driven and canvas apps|
 
 
 ### Related topics
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

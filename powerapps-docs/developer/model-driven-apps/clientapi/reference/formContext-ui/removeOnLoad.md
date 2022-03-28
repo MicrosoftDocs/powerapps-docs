@@ -1,20 +1,22 @@
 ---
-title: "removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "ui.removeOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the ui.removeOnLoad method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 0b97afc4-1208-4c1b-8599-424d594ea69f
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# removeOnLoad (Client API reference)
+# ui.removeOnLoad (Client API reference)
 
 
 
@@ -40,3 +42,6 @@ search.app:
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

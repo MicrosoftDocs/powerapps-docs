@@ -1,26 +1,29 @@
 ---
 title: "removeOnChange (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the removeOnChange method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c4a29df2-e2b4-4bc5-a4a7-9780feb59466
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnChange (Client API reference)
 
 
 
-Removes a function from the **OnChange** event hander for an attribute..
+Removes a function from the **OnChange** event handler for a column.
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -39,5 +42,8 @@ All
 
 [addOnChange](addOnChange.md)
 
-[Attribute OnChange Event](../events/attribute-onchange.md)
+[Column OnChange Event](../events/attribute-onchange.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

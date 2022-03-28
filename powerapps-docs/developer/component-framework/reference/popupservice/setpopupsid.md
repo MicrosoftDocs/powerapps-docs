@@ -1,16 +1,16 @@
 ---
 title: setPopupsId | Microsoft Docs
-description: 
+description: Sets the ID (on the DOM and in the system) for the root popup element.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: eae8e529-5aef-4bf0-9f73-f3200aef84ed
 ---
 
 # setPopupsId
@@ -37,3 +37,5 @@ Model-driven apps
 [Popup Service](../popupservice.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

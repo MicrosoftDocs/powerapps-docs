@@ -1,19 +1,20 @@
 ---
 title: "xmlAttributeEncode| MicrosoftDocs"
-description: "The Client API method Encodes the specified string so that it can be used in an XML attribute."
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "The Client API method Encodes the specified string so that it can be used in an XML."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 909443cd-12b5-4a73-9904-8ae623d22c81
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # xmlAttributeEncode (Client API reference)
 
@@ -40,3 +41,5 @@ search.app:
 
 ## Related topics
 [xmlEncode](xmlEncode.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

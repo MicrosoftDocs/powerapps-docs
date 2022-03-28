@@ -1,15 +1,19 @@
 ---
 title: "addGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/09/2020
-ms.service: powerapps
+description: Includes description and supported parameters for the addGlobalNotification method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # addGlobalNotification (Client API reference)
 
@@ -21,7 +25,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -32,9 +36,9 @@ search.app:
 <td>notification</td>
 <td>Object</td>
 <td>Yes</td>
-<td>The notification to add. The object contains the following attributes:
+<td>The notification to add. The object contains the following values:
 <ul>
-<li><b>action</b>: (Optional) Object. Contains the following attributes:
+<li><b>action</b>: (Optional) Object. Contains the following values:
 <ul>
 <li><b>actionLabel</b>: (Optional) String. The label for the action in the message.</li>
 <li><b>eventHandler</b>: (Optional) Function reference. The function to execute when the action label is clicked.</li>
@@ -95,7 +99,7 @@ Xrm.App.addGlobalNotification(notification).then(
 
 This is how the error notification will appear in the app:
 
-![Example error notification](media/add-global-error.png "Example error notification")
+![Example error notification.](media/add-global-error.png "Example error notification")
 
 ### Display a warning notification that can be closed or dismissed by user
 
@@ -123,7 +127,7 @@ Xrm.App.addGlobalNotification(notification).then(
 
 This is how the warning notification will appear in the app:
 
-![Example warning notification](media/add-global-warning.png "Example warning notification")
+![Example warning notification.](media/add-global-warning.png "Example warning notification")
 
 ### Display an information notification with a "Learn more" link that can be clicked by users
 
@@ -161,8 +165,11 @@ Xrm.App.addGlobalNotification(notification).then(
 
 This is how the information notification will appear in the app:
 
-![Example information notification](media/add-global-information.png "Example information notification")
+![Example information notification.](media/add-global-information.png "Example information notification")
 
 ### See also
 
 [clearGlobalNotification](clearGlobalnotification.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

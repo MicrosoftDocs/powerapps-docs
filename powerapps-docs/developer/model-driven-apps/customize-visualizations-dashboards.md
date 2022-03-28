@@ -3,10 +3,11 @@ title: "Customize visualizations and dashboards (model-driven apps) | Microsoft 
 description: "Learn about configuring dashboards in such a way that enables you to view data from multiple areas of Dynamics 365 such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 90c1581b-06cc-505e-caba-2e87720f7f28
 author: Nkrb # GitHub ID
+ms.subservice: mda-developer
 ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -36,3 +37,6 @@ Data visualization and analytics in model-driven apps enable you to graphically 
 [Visualization Data Description Schema](visualization-data-description-schema.md)  
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

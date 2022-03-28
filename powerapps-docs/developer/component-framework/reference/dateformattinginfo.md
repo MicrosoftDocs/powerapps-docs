@@ -1,16 +1,15 @@
 ---
 title: DateFormattingInfo | Microsoft Docs
-description: 
+description: Provides the date formatting information for the current user.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
 ---
 
 # DateFormattingInfo
@@ -182,3 +181,5 @@ yyyy'-'MM'-'dd'T'HH':'mm':'ss"
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

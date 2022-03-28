@@ -8,12 +8,13 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 1/15/2019
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -32,7 +33,7 @@ search.app:
 ## Symptoms
 
 - The following script error will be displayed to users or included in your error logs: `Error: Blocked a frame with origin "https://<yourinstance>.dynamics.com" from accessing a cross-origin frame.`
-- Customizations might not behave correctly in the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Common Data Service within an Iframe.
+- Customizations might not behave correctly in the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Microsoft Dataverse within an Iframe.
 
   > [!NOTE]
   > There might be some scenarios where error handling masks the error and continues script processing, causing unexpected behavior.
@@ -41,7 +42,7 @@ search.app:
 
 ## Guidance
 
-Avoid using `window.top` in scripts running within the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Common Data Service within an Iframe. Even if these scenarios don't currently apply to your organization, you should avoid using `window.top` or guard against this issue.
+Avoid using `window.top` in scripts running within the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Dataverse within an Iframe. Even if these scenarios don't currently apply to your organization, you should avoid using `window.top` or guard against this issue.
 
  > [!IMPORTANT]
  > Usage of `window.parent` or variations of the parent hierarchy (for example,`window.parent.parent`) can cause the same symptoms.
@@ -84,7 +85,7 @@ Any usage of `window.top` should be avoided, if possible. The following are exam
 var myValue = window.top.myGlobalVariable;
 
 // Attempting to access the Xrm namespace at the top level
-myValue = window.top.Xrm.Page.getAttribute("field1");
+myValue = window.top.Xrm.Page.getAttribute("column1");
 ```
 
 <a name='additional'></a>
@@ -94,5 +95,8 @@ myValue = window.top.Xrm.Page.getAttribute("field1");
 In the scenarios mentioned, `window.top` refers to the window owned by an application context external to Dynamics 365. Due to the differing origins, the browser presents the user with a cross-origin security error.
 
 ### See also
-[Apply business logic using client scripting in model-driven apps using JavaScript](/powerapps/developer/model-driven-apps/client-scripting)<br/>
-[Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>
+[Apply business logic using client scripting in model-driven apps using JavaScript](../../client-scripting.md)<br/>
+[Events in forms and grids in model-driven apps](../../clientapi/events-forms-grids.md)<br/>
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

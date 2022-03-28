@@ -1,26 +1,29 @@
 ---
 title: "getRequiredLevel (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getRequiredLevel method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c0b6ea26-2a11-4a49-8ecf-fe700e782bf3
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getRequiredLevel (Client API reference)
 
 
 
-Returns a string value indicating whether a value for the attribute is required or recommended. 
+Returns a string value indicating whether a value for the column is required or recommended. 
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -39,3 +42,6 @@ All
 
 ### Related topic
 [setRequiredLevel (Client API reference)](setRequiredLevel.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

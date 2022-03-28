@@ -1,27 +1,31 @@
 ---
 title: "addOnChange (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about the attribute addOnchange method to set a function to be called when the attribute value is changed." 
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addOnChange (Client API reference)
 
 
-
 Sets a function to be called when the **OnChange** event occurs.
 
-## Attribute types supported
+> [!NOTE]
+> If the `addOnChange` method is used on the form `OnLoad` event handler, you should ensure that it's called when necessary. You can use the [getEventArgs](../executioncontext/getEventArgs.md) to conditionally call the `addOnChange` method based on the data load state.
+
+## Column types supported
 
 All
 
@@ -33,16 +37,19 @@ All
 
 | Parameter Name| Type| Description  |
 | --------|-----------| -----|
-|myFunction| Function reference| Specifies the function to be executed on the attribute **OnChange** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|myFunction| Function reference| Specifies the function to be executed on the column **OnChange** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
 
 ### Related topics
 
 [removeOnChange](removeOnChange.md)
 
-[Attribute OnChange Event](../events/attribute-onchange.md)
+[Column OnChange Event](../events/attribute-onchange.md)
 
 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

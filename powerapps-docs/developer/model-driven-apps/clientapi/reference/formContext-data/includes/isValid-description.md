@@ -1,1 +1,1 @@
-Gets a boolean value indicating whether all of the form data is valid. This includes the main entity and any unbound attributes.
+Gets a boolean value indicating whether all of the form data is valid. This includes the main table and any unbound columns. If the form has empty, required columns on it, control-level error notifications is shown.

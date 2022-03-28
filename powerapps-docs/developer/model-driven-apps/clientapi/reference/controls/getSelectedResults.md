@@ -1,17 +1,19 @@
 ---
 title: "getSelectedResults (Client API Reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getSelectedResults method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getSelectedResults (Client API Reference)
 
@@ -24,7 +26,7 @@ knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>");
 var kbSearchResult = kbSearchControl.getSelectedResults();
 ```
@@ -38,7 +40,7 @@ var kbSearchResult = kbSearchControl.getSelectedResults();
 | **Property**        | **Type** | **Description**  |
 |---------------------|----------|------------------|
 | **answer**          | String   | The HTML markup containing the content of the article. You could pass this content to a custom action that could include it in an email to send to the customer. |
-| **articleId**       | String   | The article ID that is used as an alternate key. You can use it to see if this article already exists in Common Data Service or not.|
+| **articleId**       | String   | The article ID that is used as an alternate key. You can use it to see if this article already exists in Microsoft Dataverse or not.|
 | **articleUid**      | String   | The unique article ID. This value is used as an alternate key. This ID is needed to create a new KB record while associating an article if one doesn't exist already. |
 | **attachmentCount** | Number   | Number of attachments in the article. |
 | **createdOn**       | Date     | The date the article was created. This value will be in the current user’s time zone and format. You may want to use the age of the article in your business logic. |
@@ -54,3 +56,6 @@ var kbSearchResult = kbSearchControl.getSelectedResults();
 | **searchBlurb**     | String   | A short snippet of article content that contains the areas where the search query was hit. Use this to give a glimpse of article to the users in the search list and help them determine if this is the article they are looking for. |
 | **serviceDeskUri**  | String   | Link to the article. Use this link to open the article.   |
 | **timesViewed**     | Number   | The number of times an article is viewed on the portal by customers.  |
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

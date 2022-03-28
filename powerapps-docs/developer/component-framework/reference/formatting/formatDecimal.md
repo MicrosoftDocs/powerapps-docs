@@ -1,16 +1,16 @@
 ---
 title: formatDecimal | Microsoft Docs
-description: 
+description: Returns a formatted string that represents the decimal value after being formatted.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 05c1c54d-14b5-4dad-9cd8-eec07e750c00
 ---
 
 # formatDecimal
@@ -23,7 +23,7 @@ ms.assetid: 05c1c54d-14b5-4dad-9cd8-eec07e750c00
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Parameters
 
@@ -42,3 +42,5 @@ Type: `string`
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

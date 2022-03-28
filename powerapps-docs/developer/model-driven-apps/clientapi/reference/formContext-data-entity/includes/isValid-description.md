@@ -1,1 +1,1 @@
-Gets a boolean value indicating whether all of the entity data is valid.
+Gets a boolean value indicating whether all of the table data is valid.

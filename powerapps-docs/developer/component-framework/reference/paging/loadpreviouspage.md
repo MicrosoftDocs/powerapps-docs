@@ -1,33 +1,34 @@
 ---
 title: loadPreviousPage | Microsoft Docs
-description: 
+description: Request the previous page of results to be loaded.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 93cecfc6-bdce-421f-a410-07d95ea77c37
 ---
 
 # loadPreviousPage
 
 [!INCLUDE [loadpreviouspage-description](includes/loadpreviouspage-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
 `loadPreviousPage()`
-
 
 ### Related topics
 
 [Paging](../paging.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,18 +1,21 @@
 ---
-title: HashTags function | Microsoft Docs
-description: Reference information, including syntax and examples, for the HashTags function in Power Apps
+title: HashTags function in Power Apps
+description: Reference information including syntax and examples for the HashTags function in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/07/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # HashTags function in Power Apps
 Extracts the hashtags (#strings) from a string of text.
@@ -50,3 +53,6 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
    * **\#123abc**
    * **\#1**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

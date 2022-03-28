@@ -1,12 +1,13 @@
 ---
-title: "Sort records in a model-driven app view in Power Apps | MicrosoftDocs"
+title: "Sort rows in a model-driven app view in Power Apps | MicrosoftDocs"
+description: Learn how to sort rows in a model-driven app
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -14,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 25f5aa52-56dc-4be5-884e-9346616f665f
 caps.latest.revision: 25
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -22,29 +24,41 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sort records in a model-driven app view
+# Sort rows in a model-driven app view
 
 
-When you create or edit a view you can configure the sort order for either ascending or descending.
+
+When you create or edit a view, you can configure the sort order for either ascending or descending.
 
 To change the sort order in the view designer, see [Create a public view in Power Apps](create-edit-views-app-designer.md#create-a-public-view-in-power-apps).
 
-## Change the sort order using solution explorer
+## Change the sort order of a view
 
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity you want, select **Views**, and then open the view you want.
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  In the view designer, select **Configure Sorting**.  
+2.  Select **Solutions**, open the solution you want, select **Tables**, open the table you want, and then select the **Views** tab.
+
+3.  Select a view to open it in the view designer.
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure sorting](media/configure-sorting.png "Configure sorting")
-  
-3.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
-  
-4.  Select **OK** to close the **Configure Sort Order** dialog box. 
+    > ![Edit filters.](media/view-column-menu.png "Edit filters")
 
-    > [!IMPORTANT]
-    > Grids in Unified Interface apps take the list of displayed columns from the underlying FetchXML of the view. If the FetchXML that is returned from Common Data Service does not have a column, then that column is not displayed. This is in contrast to the classic web application, where if a column is not present in FetchXML but is in LayoutXML, such a column is automatically added to the list of displayed columns. Unified Interface apps use OData directly with FetchXML to retrieve data from the server.
+4.  Select a column name in the column head, and from the column menu, select **Sort A to Z** or **Sort Z to A**. The sort order is indicated in the column head with an up arrow or a down arrow.
+
+    The sort order can be changed by using the view properties panel. 
+
+5.  If a sort order has not been set for the view, select **Sort by**, and then select the primary sort by column.
+
+6.  To sort the view by additional columns, select **Then sort by** and then select a sort by column for the view.
+
+    :::image type="content" source="media/create-or-edit-model-driven-app-view/sort-view-by-multiple-columns.png" alt-text="Sorting a table view by multiple columns":::
+
+7.  To remove a sort expression, select **Remove sort expression** (the **X** button).
 
 ## Next steps
-[Create or edit a view](create-edit-views.md)
-[Use FetchXML to query data](../../developer/common-data-service/use-fetchxml-construct-query.md)
+
+[Table views overview](create-edit-views.md)
+
+[Setting managed properties for views](managed-properties-views.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

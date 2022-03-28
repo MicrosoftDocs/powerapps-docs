@@ -1,19 +1,21 @@
 ---
 title: "Xrm.Encoding| MicrosoftDocs"
 description: "Xrm.Encoding provides Client API methods to encode and decode strings."
-ms.date: 10/31/2018
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: a6646fc8-c2e4-43fe-95f1-51483de38688
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.Encoding (Client API reference)
 
@@ -32,3 +34,5 @@ Provides methods to encode and decode strings.
 ### Related topics
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

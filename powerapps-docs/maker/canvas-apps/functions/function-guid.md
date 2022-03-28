@@ -1,25 +1,28 @@
 ---
-title: GUID function | Microsoft Docs
-description: Reference information, including syntax, for the GUID function in Power Apps
+title: GUID function in Power Apps
+description: Reference information including syntax and examples for the GUID function in Power Apps.
 author: gregli-msft
-manager: kvivek
 
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 07/17/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # GUID function in Power Apps
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
 
 ## Description
-Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Common Data Service and SQL Server.
+Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Microsoft Dataverse and SQL Server.
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 
@@ -96,14 +99,17 @@ The **Label** control will show **f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4**.
 
     The data table shows a list of GUIDs:
 
-    ![A screen showing a data table with five different GUID values](media/function-guid/guid-collection-1.png)
+    ![A screen showing a data table with five different GUID values.](media/function-guid/guid-collection-1.png)
 
 1. Select the button again to show a different list of GUIDs:
 
-    ![The same screen showing a data table with a new set of five different GUID values](media/function-guid/guid-collection-2.png)
+    ![The same screen showing a data table with a new set of five different GUID values.](media/function-guid/guid-collection-2.png)
 
 To generate a single GUID instead of a table, use this formula:
 
 ```powerapps-dot
 Set( NewGUID, GUID() )
 ```
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

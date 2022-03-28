@@ -1,13 +1,14 @@
 ---
-title: "Relevance Search| MicrosoftDocs"
-ms.custom: ""
+title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
+description: How to use Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 7/07/2020
-ms.author: mduelae
+ms.date: 12/16/2021
+ms.subservice: end-user
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -18,158 +19,305 @@ search.app:
   - D365CE
 ---
 
-# Using relevance search to search for records
+# Search for tables and rows by using Dataverse search
 
-Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
-  
-Relevance search brings the following enhancements and benefits:  
 
-- Improved performance compared to Categorized search.  
-  
-- Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
 
-- Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.  
-  
-- Returns results from all searchable entities in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
-  
-- Highlights matches in the results list. When a search term matches a term in a record, the term appears as bold and italicized text in your search results. 
+With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
-    > [!NOTE]
-    > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify records. Because they're ignored during search, these words are also not highlighted in results.
-    > - Highlighted terms are often returned as a portion of the full value in a field because only the matched terms are highlighted.
-    > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a field has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched field is truncated.
+When Dataverse search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
 
-- Includes search results for text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
-  
-- Enables you to search for records that are shared with you and records that you own.  
-  
-  > [!NOTE]
-  >  Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.  
-  
-- Lets you also search for option sets and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
+> [!div class="mx-imgBorder"]
+> ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
 
-  > [!NOTE]
-  > - Relevance search is text-based, and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
-  
-- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Simple query syntax in Azure Cognitive Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search).<!--note from editor: The "More information:" pattern is good when there aren't any additional modifiers, which you have here. -->
-  
-  > [!NOTE]
-  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.<!--note from editor: Via style guide, it's always capital "Boolean," and it's "might" instead of "may.-->
 
-## Enable relevance search
+## See recent rows and searches
 
-Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
+See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you'll see information pop-up that helps you complete your search.
 
-## Switch between relevance search and categorized search
+Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
-If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
+The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for Dataverse search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
 
-1. To switch between search types, on the navigation bar, select **Search**.
+> [!div class="mx-imgBorder"]
+> ![Screenshot of the Dataverse search flyout window.](media/legend-for-new-exp.png "Screenshot of the Dataverse search flyout window]") 
 
-2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
+Legend
 
-   > [!div class="mx-imgBorder"]
-   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
-    
-## Set a default search experience
+1. **Recent searches**: Shows your recent searches.
+2. **Recently accessed rows**: Shows rows that you recently accessed, grouped by table type.
 
-If your organization has turned on both search options, you can select a default search experience in your personal settings.
+## Inline suggestions
 
-1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for Dataverse search and included in your model-driven app. Suggested results are sometimes also based on non-primary columns of tables enabled for Dataverse search, depending on your search usage pattern and the search usage pattern in the environment. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
-2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
+Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
-   > [!div class="mx-imgBorder"]
-   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
+- **Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the account **AdventureWorks** and the contact **John Worker**, among other results.
 
-## Start a search 
- 
-1.  From the top nav bar, select **Search**.  
+- **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Global Search Button](media/global-search-button.png "Global search") 
-  
-2.  Enter your search words in the search box, and then select **Search**.
+Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is either the field that has the search text or the first non-primary field on the table’s quick find view that contains data for the row.
 
-    > [!div class="mx-imgBorder"]
-    > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
 
-## Filter records with facets
+![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
 
-With Common Data Service, you can now refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
+With suggestions, you can access your information quickly by using minimal keystrokes even when the search term is misspelled by a character. Text that's highlighted in bold in the suggestions shows the term that was matched.
 
-Facets are available in the leftmost pane. Immediately after you perform a search, the following global facets are available for four common fields:  
-  
--   Record Type  
-  
--   Owner  
-  
--   Created On  
-  
--   Modified On  
-  
-### Record Type facets
+## Search results page
 
-To narrow your search results to a specific entity, select the entity under the **Record Type** section.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Record Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Record Type facet used to narrow search results")  
-  
-When you filter on a specific record type, you can include activities and notes that are related to the selected record in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.
- 
-  > [!div class="mx-imgBorder"]
-  > ![Include notes and activities related to a record type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a record type in the search results")  
-  
-Search results that are found in email attachments or appointment entities are shown in the search results under their parent record, either Email or Appointment.  
-  
-When you refine by record type, the facet scope switches to the selected entity, and up to four facets that are specific to the entity are shown. For example, if you select the Account entity, you'll see the **Primary Contact** facet in addition to the global facets.  
-  
-In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
-  
-### Text-based facets
+View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**. Dataverse search will append "\*" to the search if two or less characters are entered.
 
-All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in relevance search")  
-  
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all records where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include records with the value that you specified.  
-  
-### Date and Time facets
+Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 
-Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for relevance search")  
+To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
 
-<a name="BKMK_ConfigureFacets"></a>
 
-## Configure facets and filters
-  
+![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
+
+### Top results tab
+
+The **Top results** tab displays the top 20 results for the search term, with results grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table's **View columns** quick find view.
+
 > [!NOTE]
->  A system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
-  
-1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")
-  
-2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** field, select **Configure**.  
+> - The primary column of a table is always used as the first column in the results on the **Top results** tab.
+> - For notes and attachment tables, two additional columns show information about the related row for that note or attachment.
+> - Party list columns on activity tables&mdash;such as **To**, **CC**, and attendees&mdash;can't be searched on or shown, and will be blank.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
-  
-3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for an entity. Your system administrator or customizer can set a default experience for all entities, but you can set your own here.  
-  
-   - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for relevance search.  
-  
-   - For the selected entity, select up to four facet fields. By default, the first four "facet-able" fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
-  
-   You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
-  
-   > [!NOTE]
-   > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
-   >   -   You'll only see the fields that exist in the default solution and that are configured as searchable by your system customizer.  
+In the following image, the top search results from three tables are displayed.
+
+![Example of top search results from three different tables.](media/rel-search-top-results.png "Example of top search results from three different tables")
+
+Legend:
+
+ 1. **Top results**:  This tab shows the top 20 results for your search term.
+ 2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table-specific tab.
+ 3. **Show more**: When you select **Show more** at the bottom of a group, you switch to the table-specific tab.
+
+### Table-specific tabs
+
+Tabs for the specific tables that contain search results are displayed horizontally. The exact order of the tables from left to right (in a left-to-right environment) is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
+
+The tables that include the rows in the top 20 results are shown in the first three tabs from left to right, from most to least relevant. The tables that include the results outside of the top 20 are displayed in descending order.
+
+![Tabs on the search results page, numbered left to right.](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
+
+Legend:
+
+![Number 1.](media/one.png) Shows the top 20 results from three different tables. 
+
+![Number 2.](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
+
+![Number 3.](media/three.png) Shows the rest of the matched table types, ordered by the number of records that match the search.
+
+Select a tab to drill down into a specific table and view more information about the rows in the results.
+
+![Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on.](media/view-results.png "Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on")
+
+Legend:
+
+1. Shows the number of results for this specific table.
+2. Shows the columns that were searched for the table.
+
+Each table-specific tab displays more information than the **Top results** tab along two different dimensions:
+
+- If the quick find view for the table has more than six **View Column**, then all columns are displayed on the table-specific tab, compared to the maximum of six columns shown on the **Top results** tab.
+- All matching rows for the table are accessible in the table-specific tab as an infinitely scrollable list.
+
+## Filter results by using facets
+
+On the search results page, you can use facets and filters to refine and explore your search results. Facets are available on the **Filter** panel, which you can expand or collapse.
+
+The **Top results** tab shows search results across different row types, such as a contact versus a phone call. Thus, the **Top results** tab only shows the three global facets that apply to all row types:
+
+- Owner
+- Modified On
+- Created On
+
+On a table-specific tab, facets that apply to that table type are displayed above the three global facets.
+
+| The Top results tab shows only global facets  | Other tabs show facets that are specific to that table type |
+|---------|---------|
+| ![Global facets](media/filterpane-1.png "Global facets")     |     ![Activity Status, Priority, and Due facets for the Phone Calls table](media/filterpane-2.png "Activity Status, Priority, and Due facets for the Phone Calls table")  |
+
+You can personalize facets for a table by using the **Set Personal Options** dialog box. More information: [Configure facets and filters](facets-and-filters.md)
+
+### Text-based facets with discrete values
+
+All **Lookup** and **Choice** data types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values (choices) and their corresponding counts.
+
+![The Priority facet has values of High, Normal, and Low.](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
+
+Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
+
+When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.
+
+### Date and time facets
+
+The date and time facets let you filter and see search results for a specific period. Use the **From** and **To** drop-down lists to specify a time period.
+
+![Due and Modified On facets have the values From and To.](media/date-facets.png "Due and Modified On facets have the values From and To") 
+
+## Feedback link
+
+On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
+
+Currently there is no option to disable the feedback question prompt.
+
+> [!div class="mx-imgBorder"]
+> ![Feedback link.](media/feedbacklink.png "Feedback link")  
+
+## Understand search results
+
+Dataverse search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
+
+> [!NOTE]
+> - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
+> - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
+> - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
+
+> [!TIP]
+> The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
+
+- **Boosted search results**  
+  Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
+
+- **Natural language understanding**   
+  Search<!--note from editor: Should this be "Dataverse search" or "intelligent search"?--> has a better understanding of terms that are used to indicated intent. Some examples include:
+  - Searching for **open phone calls** will show phone call activity records that have the status **open**.
+  - Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
+
+- **Spelling correction**  
+   Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results will include the contact record with the name **William**, even though the word **contact** was misspelled.
+
+- **Synonyms, acronyms, and abbreviations**  
+  With support for common abbreviations and synonyms, you can search for your information the way you remember it, not necessarily the way it's stored. Some examples include:
+  - Common name variations like **Bob/Robert** are matched with either search term.
+  - A search term that uses an abbreviation like **active accts** will be interpreted semantically as "active accounts."
+
+- **The power of common knowledge**  
+  Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
+
+<!--
+### Boosted search results
+
+Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
+
+### Natural language understanding
+
+Search has a better understanding of terms that are used to indicated intent. Some examples include:
+
+- Searching for **open phone calls** will show phone call activity records that have the status **open**.
+
+- Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
+
+### Spelling correction
+
+Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results will include the contact record with the name **William**, even though the word **contact** was misspelled.
+
+### Synonyms, acronyms, and abbreviations
+
+With support for common abbreviations and synonyms, you can search for your information the way you remember it, not necessarily the way it's stored. Some examples include:
+
+- Common name variations like **Bob/Robert** are matched with either search term.
+
+- A search term that uses an abbreviation like **active accts** will be interpreted semantically as "active accounts."
+
+### The power of common knowledge
+
+Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
+-->
+> [!NOTE]
+> - All the preceding capabilities are part of intelligent search, which is only available for public cloud environments that have English as the base language.
+> - To get these results, the preceding examples assume that specific fields for each table were indexed.
+
+## Working with operators
+
+Operators help you craft precise search queries that can tailor your results according to specific conditions. This section describes some of the supported operators.
+
+### Boolean operators
+
+Search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
+For example, **alpine + paul** returns the contact record **Paul Cannon** related to the account record **Alpine Ski House**.
+
+![Example with the AND operator.](media/bollean.png "Example with the AND operator")  
+
+Similarly, the **OR** operator can be indicated by separating terms with a vertical bar (**|**). For example, searching for **alpine | paul** returns records with reference to either term.
+
+![Example with the OR operator.](media/bollean-1.png "Example with the OR operator")  
+
+Use the **NOT** operator with a hyphen (**-**) before a keyword to indicate that it should be excluded from results.<!--note from editor: I suggest using this term, otherwise, people might try to find a hyphen on the keyboard.-->
+
+For example, when you search for **evaluation**, all rows matching the term **evaluation** will appear in results.
+
+![Example of searching for the term "evaluation."](media/eval-1.png "Example of searching for the term 'evaluation'")  
+
+However, searching for **evaluation + -agreed** will match all rows that contain the term **evaluation** but not the term **agreed**.
+
+![Example of searching for the term "evaluation" but excluding the term "agreed."](media/eval-2.png "Example of searching for the term 'evaluation' but excluding the term 'agreed'")  
+
+### Wildcards
+
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*win** will show results for all records associated with a keyword that ends with **win**.
+
+![Example of results for a search that uses a wildcard.](media/wild-card.png "Example of results for a search that uses a wildcard")  
+
+### Exact matches
+
+Use double quotation marks around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and **a**. To improve matching, use double quotation marks and force an exact match for your search. For example, searching on **"Call back for resolution (sample)"** will match the exact keywords. 
+
+![Example of results for a search that uses an exact match.](media/exact-match.png "Example of results for a search that uses an exact match")  
+
+## Quick actions
+
+The Dataverse search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
+
+Quick actions are a small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+
+| Table  | Quick actions |
+|---------|---------|
+| Account     |     Assign, Share, Email a link  |
+| Contact     |     Assign, Share, Email a link  |
+| Appointment     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
+| Task     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
+| Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
+| Email     |     Cancel, Set Regarding, Email a link  |
+
+For more information on how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
+
+### Quick actions and suggested results
+
+As you interact with search, you'll find quick actions next to the most recently accessed records and the suggested results that appear as you type.
+
+| Quick actions for recently accessed rows  | Quick actions for suggested results as you type |
+|---------|---------|
+| ![Quick actions for recently accessed rows.](media/recent-accessed-1.png)     |     ![Quick actions for suggested results as you type](media/suggested-results.png)  |
+
+### Quick actions in results pages
+
+As you type, quick actions will appear for suggested results.
+
+![This diagram shows the quick actions menu that appears when you hover over a suggested result.](media/quick-actions-diagram.gif "This diagram shows the quick actions menu that appears when you hover over a suggested result")
+
+On the results page, hover over the results to see quick actions available for the row.
+
+![This diagram shows how hovering over a row on the results page displays the quick actions menu.](media/quick-actions-diagram-1.gif "This diagram shows how hovering over a row on the results page displays the quick actions menu")
+
+
+## Use keyboard shortcuts
+
+The following keyboard shortcuts apply to grids. For more information, see:
+
+- [Navigation](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#navigation) 
+- [Editing](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#editing)
+- [Selection](https://www.ag-grid.com/javascript-grid/keyboard-navigation/#selection)
+
+
+
+### See also
+
+[What is Dataverse search?](relevance-search-benefits.md)<br/>
+[Configure facets and filters](facets-and-filters.md)<br/>
+[Frequently asked questions about Dataverse search](relevance-faq.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,28 +1,29 @@
 ---
-title: "Use OAuth 2.0 implicit grant flow within your portal | MicrosoftDocs"
-description: "Learn how to make client-side calls to external APIs and secure them by using OAuth implicit grant flow in your portal."
+title: Use OAuth 2.0 implicit grant flow within your portal
+description: Learn how to make client-side calls to external APIs and secure them by using OAuth implicit grant flow in your portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/24/2020
+ms.date: 10/25/2021
+ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
+contributors:
+    - nickdoelman
+    - GitanjaliSingh33msft
+    - dileepsinghmicrosoft
+    - nickdoelman    
 ---
 
-# Use OAuth 2.0 implicit grant flow within your portal 
+# Use OAuth 2.0 implicit grant flow within your portal
 
 This feature allows a customer to make client-side calls to external APIs and secure them by using OAuth implicit grant flow. It provides an endpoint to obtain secure access tokens that will contain user identity information to be used by external APIs for authorization following OAuth 2.0 implicit grant flow. The identity information of a signed-in user is passed in a secured manner to the external AJAX calls. This will not only help developers to pass authentication context but will also help users to secure their APIs by using this mechanism.
 
-OAuth 2.0 implicit grant flow supports endpoints that a client can call to get an ID token. Two endpoints are used for this purpose: [authorize](#authorize-endpoint-details) and [token](#token-endpoint-details).
-
 > [!NOTE]
-> Power Apps portals supports following OpenIdConnect flows and response types:
->
-> - **Implicit Flow** with response types *id_token* or *id_token token*.
-> - **Hybrid Flow** with response type *code id_token*.
->
-> **Authorization Code Flow** with response type *code* is **not supported**. For more information, read [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#Authentication) documentation for authentication.
+> For security best practices, it is recommended to use [custom certificates](admin\manage-custom-certificates.md) for OAuth 2.0 implicit grant flow. Using implicit grant flow without a custom certificate will eventually not be supported.
+
+OAuth 2.0 implicit grant flow supports endpoints that a client can call to get an ID token. Two endpoints are used for this purpose: [authorize](#authorize-endpoint-details) and [token](#token-endpoint-details).
 
 ## Authorize endpoint details 
 
@@ -144,3 +145,6 @@ This sample shows how authorize endpoint returns the ID token as a fragment in t
 ### Token Endpoint sample
 
 This sample shows how you can use the getAuthenticationToken function to fetch an ID token using the Token endpoint in Power Apps portals. The sample can be found here: [Token Endpoint sample](https://github.com/microsoft/PowerApps-Samples/blob/master/portals/TokenEndpoint.js).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

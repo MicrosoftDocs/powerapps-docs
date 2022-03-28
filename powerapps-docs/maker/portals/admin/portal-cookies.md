@@ -1,72 +1,68 @@
 ---
-title: "Cookies in Power Apps portals | MicrosoftDocs"
-description: "Know the cookies Power Apps portals uses."
+title: Cookies in Power Apps portals
+description: Learn about cookies used by Power Apps portals.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/10/2020
+ms.date: 09/17/2021
+ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
+contributors:
+    - neerajnandwana-msft
+    - nickdoelman
 ---
  
 # Cookies in Power Apps portals
 
 A cookie is a small file sent from the web site to visitor's device by the browser. A single web session may use multiple cookies.
 
-Power Apps portals also use cookies to store information for various purposes. The following section lists and describes the cookies that Power Apps portals uses:
+Power Apps portals also use cookies to store information for various purposes. The following table describes the cookies that Power Apps portals uses, and their lifetime.
 
-## Names and descriptions of cookies used by portals
+| Cookie name | Description | Lifetime |
+| - | - | - |
+| __RequestVerificationToken | Used by the [antiforgery](/dotnet/api/system.web.helpers.antiforgeryconfig.cookiename) system. | Session |
+| .AspNet.ApplicationCookie | Used to identify user sessions. A user session starts when a user browses portal for the first time. And ends when the session is closed. [Authentication site settings](../configure/set-authentication-identity.md) can be used to change session expiry time span. | Session |
+| adxPreviewUnpublishedEntities | Stores preview **ON/OFF** mode used in classic CMS system for portal administrators. | Session |
+| adx-notification | Used in basic form actions to store alert message to be shown on redirection. | Session |
+| ARRAffinity | Added automatically by Azure websites and ensures that requests are load balanced between different sites. Doesn't store any of user information. | Session |
+| ASP.NET_SessionId | Used to maintain the session of a logged in user to avoid repeated sign-in. | Session |
+| ContextLanguageCode | Stores the default language of the user accessing portal within a session and across webpages. The cookie is deleted after session closes. | Session |
+| Dynamics365PortalAnalytics | Critical service cookie to analyze service usage anonymously and aggregated for statistical purpose. | 90 days |
+| isDSTObserved | Stores a value to indicate if the current moment is in daylight saving time. | Session |
+| isDSTSupport | Indicates whether a specified date and time falls in the range of daylight saving time. | Session |
+| timeZoneCode | Stores the *timezonecode* field value of *CRM timezonedefinition* table for the current timezone. | Session |
+| timezoneoffset | Stores the [timezone difference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset) between UTC and Local browser time. | Session |
 
-#### ARRAffinity
+## Frequently asked questions
 
-Added automatically by Azure websites and ensures that requests are load balanced between different sites. Doesn't store any of user information.
+### Can I deactivate some or all cookies in my portal?
 
-####  ASP.Net Session Id
+No. If required, consider adding a consent dialog for portal users through external scripts.
 
-Used to maintain the session of a logged in user to avoid repeated sign-in. The cookie isn't persistent and is deleted after session closes.
+### Why can't I use my portal without cookies?
 
-#### Dynamics 365 Portal Analytics
+Cookies are required to maintain a portal functional, with the purpose as described in the table above.
 
-Critical service cookie to analyze service usage anonymously and aggregated for statistical purpose.
+### What does the session lifetime mean?
 
-#### ContextLanguageCode
+Cookies with the "session" lifetime are only used while the browser is open, and removed after you close the browser.
 
-Stores the default language of the user accessing portal within a session and across webpages. The cookie is deleted after session closes.
+### What is the data governance policy for cookies in portals?
 
-#### .AspNet.ApplicationCookie
+For information about data governance, data storage and access, read [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
 
-Used to identify user sessions. A user session starts when a user browses portal for the first time. And ends when the session is closed. [Authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity) can be used to change session expiry time span.
+### Do cookies in portals store any personal data?
 
-#### __RequestVerificationToken 
+No.
 
-Used by the [antiforgery](https://docs.microsoft.com/dotnet/api/system.web.helpers.antiforgeryconfig.cookiename) system.
+### Do cookies in portals store my IP address?
 
-#### adxPreviewUnpublishedEntities
-
-Holds preview **ON/OFF** mode used in classic CMS system for portal administrators.
-
-#### adx-notification
-
-Used in entity form actions to store alert message to be shown on redirection.
-
-#### timezoneCode
-
-Holds the *timezonecode* field value of *CRM timezonedefinition* entity for the current timezone.
-
-#### timezoneoffset
-
-Holds the [timezone difference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset) between UTC and Local browser time.
-
-#### isDSTSupport
-
-Indicates whether a specified date and time falls in the range of daylight saving time.
-
-#### isDSTObserved
-
-Stores a value to indicate if the current moment is in daylight saving time.
+No. However, check the terms of your analytics provider if you've configured traffic analysis on your portal. Traffic analysis can be configured through [Portal Management app](../configure/configure-portal.md) > **Administration** > **Enable Traffic Analysis**.
 
 ### See also
 
-[Cookie authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity#cookie-authentication-site-settings)
+[Cookie authentication site settings](../configure/set-authentication-identity.md#cookie-authentication-site-settings)
 
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

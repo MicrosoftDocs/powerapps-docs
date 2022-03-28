@@ -1,18 +1,20 @@
 ---
 title: "setShowTime (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the setShowTime method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 77999c82-3d6a-4db9-af9c-7322491768d9
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setShowTime (Client API reference)
 
@@ -42,3 +44,6 @@ This method will show or hide the time component of a date control where the att
 
 [getShowTime](getShowTime.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

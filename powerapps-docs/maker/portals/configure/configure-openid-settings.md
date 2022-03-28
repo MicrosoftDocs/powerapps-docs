@@ -1,126 +1,169 @@
 ---
-title: "Configure OpenID Connect provider settings for a portal  | MicrosoftDocs"
-description: "Instructions to add and configure OpenID Connect provider settings for a portal."
+title: Configure an OpenID Connect provider for portals with Azure AD
+description: Learn how to configure the OpenID Connect provider for portals with Azure Active Directory using Implicit Grant flow.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
+contributors:
+    - nickdoelman
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
-# Configure Open ID Connect provider settings for portals
+# Configure an OpenID Connect provider for portals with Azure AD
 
-[OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the Open ID Connect [specifications](https://openid.net/developers/specs/). Integrating a provider involves locating the authority (or issuer) URL associated with the provider. A configuration URL can be determined from the authority which supplies metadata required during the authentication workflow. The provider settings are based on the properties of the [OpenIdConnectAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx) class.
+In this article, you'll learn about configuring an OpenID Connect provider for portals with Azure Active Directory (Azure AD) and multitenant Azure AD.
 
-Examples of authority URLs are:
+> [!NOTE]
+> - Portals isn't limited to only Azure AD, multitenant Azure AD, or Azure AD B2C as the OpenID Connect providers. You can use any other provider that conforms to the OpenID Connect specification.
+> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
 
-- [Google](https://developers.google.com/identity/protocols/OpenIDConnect): <https://accounts.google.com/><https://accounts.google.com/.well-known/openid-configuration>
-- [[!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]](https://msdn.microsoft.com/library/azure/mt168838.aspx): [https://login.microsoftonline.com/&lt;[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD Application&gt;/](https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration)
+**To configure Azure AD as the OpenID Connect provider by using the Implicit Grant flow**
 
-Each OpenID Connect provider also involves registering an application (similar to that of an OAuth 2.0 provider) and obtaining a Client Id. The authority URL and the generated application Client Id are the settings required to enable external authentication between the portal and the identity provider.
+1. Select [Add provider](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) for your portal.
 
-> [!Note]
-> The Google OpenID Connect endpoint is currently not supported because the underlying libraries are still in the early stages of release with compatibility issues to address. The [OAuth2 provider settings for portals](configure-oauth2-settings.md) endpoint can be used instead.
+1. For **Login provider**, select **Other**.
 
-## OpenID settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
+1. For **Protocol**, select **OpenID Connect**.
 
-To get started, sign into the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.  
+1. Enter a provider name.
 
-1. Under the **Applications** menu of the directory, select **Add**.
-2. Choose **Add an application my organization is developing**.
-3. Specify a custom **name** for the application and choose the type **web application and/or web API**.
-4. For the **Sign-On URL** and the **App ID URI**, specify the URL of the portal for both fields https://portal.contoso.com/
-5. At this point, a new application is created. Navigate to the **Configure** section in the menu.
+    ![Provider name.](media/authentication/select-other-openid.png "Provider name")
 
-    Under the **single sign-on** section, update the first **Reply URL** entry to include a path in the URL: https://portal.contoso.com/signin-azure-ad. This corresponds to the **RedirectUri** site setting value
+1. Select **Next**.
 
-6. Under the **properties** section, locate the **client ID** field. This corresponds to the **ClientId** site setting value.
-7. In the footer menu, select **View Endpoints** and note the **Federation Metadata Document** field
+1. In this step, you create the application and configure the settings with your identity provider.
 
-The left portion of the URL is the **Authority** value and is in one of the following formats:
+    ![Create application.](media/authentication/step-1-openid.png "Create application")
 
-- https://login.microsoftonline.com/01234567-89ab-cdef-0123-456789abcdef/
-- https://login.microsoftonline.com/contoso.onmicrosoft.com/
+    > [!NOTE]
+    > - The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
+    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
-To get the service configuration URL, replace the FederationMetadata/2007-06/FederationMetadata.xml path tail with the path .well-known/openid-configuration. For instance,   <https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration>
+    1. Sign in to the [Azure portal](https://portal.azure.com).
 
-This corresponds to the **MetadataAddress** site setting value.
+    1. Search for and select **Azure Active Directory**.
 
-### Related site settings
+    1. Under **Manage**, select **App registrations**.
 
-Apply portal site settings referencing the above application.
+    1. Select **New registration**.
 
-> [!Note]
-> A standard [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD configuration only uses the following settings (with example values):                                 
-> - Authentication/OpenIdConnect/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD/Authority - <https://login.microsoftonline.com/01234567-89ab-cdef-0123-456789abcdef/>                                                    
-> - Authentication/OpenIdConnect/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD/ClientId - fedcba98-7654-3210-fedc-ba9876543210                                      
->   The Client ID and the authority URL do not contain the same value and should be retrieved separately.           
-> - Authentication/OpenIdConnect/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD/RedirectUri - https://portal.contoso.com/signin-azure-ad
- 
-Multiple identity providers can be configured by substituting a label for the \[provider\] tag. Each unique label forms a group of settings related to an identity provider. Examples: [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD, MyIdP
+        ![New app registration.](media/authentication/app-registration-new.png "New app registration")
 
+    1. Enter a name.
 
-|                          Site Setting Name                           |                                                                                                                                                                                                         Description                                                                                                                                                                                                          |
-|----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|           Authentication/Registration/ExternalLoginEnabled           |                                                                                                                                                                         Enables or disables external account sign-in and registration. Default: true                                                                                                                                                                         |
-|         Authentication/OpenIdConnect/\[provider\]/Authority          |                                               Required. The Authority to use when making OpenIdConnect calls. Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/`. For more information:[OpenIdConnectAuthenticationOptions.Authority](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.authority.aspx).                                                |
-|      Authentication/OpenIdConnect/\[provider\]/MetadataAddress       | The discovery endpoint for obtaining metadata. Commonly ending with the path:/.well-known/openid-configuration . Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration`. For more information:[OpenIdConnectAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.metadataaddress.aspx). |
-|     Authentication/OpenIdConnect/\[provider\]/AuthenticationType     |                                   The OWIN authentication middleware type. Specify the value of the issuer in the service configuration metadata. Example: `https://sts.windows.net/contoso.onmicrosoft.com/`. For more information: [AuthenticationOptions.AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx).                                   |
-|          Authentication/OpenIdConnect/\[provider\]/ClientId          |                                                  Required. The client ID value from the provider application. It may also be referred to as an "App ID" or "Consumer Key". For more information: [OpenIdConnectAuthenticationOptions.ClientId](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientid.aspx).                                                   |
-|        Authentication/OpenIdConnect/\[provider\]/ClientSecret        |                                              The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". For more information: [OpenIdConnectAuthenticationOptions.ClientSecret](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientsecret.aspx).                                              |
-|        Authentication/OpenIdConnect/\[provider\]/RedirectUri         |                                                        Recommended. The AD FS WS-Federation passive endpoint. Example: https://portal.contoso.com/signin-saml2. For more information: [OpenIdConnectAuthenticationOptions.RedirectUri](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.redirecturi.aspx).                                                        |
-|          Authentication/OpenIdConnect/\[provider\]/Caption           |                                                              Recommended. The text that the user can display on a sign in user interface. Default: \[provider\]. For more information: [OpenIdConnectAuthenticationOptions.Caption](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.caption.aspx).                                                               |
-|          Authentication/OpenIdConnect/\[provider\]/Resource          |                                                                                                       The 'resource'. For more information: [OpenIdConnectAuthenticationOptions.Resource](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.resource.aspx).                                                                                                        |
-|        Authentication/OpenIdConnect/\[provider\]/ResponseType        |                                                                                                The 'response\_type'. For more information: [OpenIdConnectAuthenticationOptions.ResponseType](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.responsetype.aspx).                                                                                                 |
-|           Authentication/OpenIdConnect/\[provider\]/Scope            |                                                                                A space separated list of permissions to request. Default: openid. For more information: [OpenIdConnectAuthenticationOptions.Scope ](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.scope.aspx).                                                                                 |
-|        Authentication/OpenIdConnect/\[provider\]/CallbackPath        |                      An optional constrained path on which to process the authentication callback. If not provided and RedirectUri is available, this value will be generated from RedirectUri. For more information: [OpenIdConnectAuthenticationOptions.CallbackPath](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.callbackpath.aspx).                      |
-|     Authentication/OpenIdConnect/\[provider\]/BackchannelTimeout     |                                                                Timeout value for back channel communications. Example: 00:05:00 (5 mins). For more information: [OpenIdConnectAuthenticationOptions.BackchannelTimeout](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.backchanneltimeout.aspx).                                                                |
-| Authentication/OpenIdConnect/\[provider\]/RefreshOnIssuerKeyNotFound |                                      Determines whether a metadata refresh should be attempted after a SecurityTokenSignatureKeyNotFoundException. For more information: [OpenIdConnectAuthenticationOptions.RefreshOnIssuerKeyNotFound](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.refreshonissuerkeynotfound.aspx).                                       |
-|      Authentication/OpenIdConnect/\[provider\]/UseTokenLifetime      |                                               Indicates that the authentication session lifetime (e.g. cookies) should match that of the authentication token. For more information: [OpenIdConnectAuthenticationOptions.UseTokenLifetime](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.usetokenlifetime.aspx).                                               |
-|     Authentication/OpenIdConnect/\[provider\]/AuthenticationMode     |                                                                                                     The OWIN authentication middleware mode. For more information: [AuthenticationOptions.AuthenticationMode](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationmode.aspx).                                                                                                     |
-| Authentication/OpenIdConnect/\[provider\]/SignInAsAuthenticationType |                                                   The AuthenticationType used when creating the System.Security.Claims.ClaimsIdentity. For more information: [OpenIdConnectAuthenticationOptions.SignInAsAuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.signinasauthenticationtype.aspx).                                                   |
-|   Authentication/OpenIdConnect/\[provider\]/PostLogoutRedirectUri    |                                                                                 The 'post\_logout\_redirect\_uri'. For more information: [OpenIdConnectAuthenticationOptions.PostLogoutRedirectUri](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.postlogoutredirecturi.aspx).                                                                                 |
-|       Authentication/OpenIdConnect/\[provider\]/ValidAudiences       |                                                                                                  Comma-separated list of audience URLs. For more information: [TokenValidationParameters.AllowedAudiences](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.allowedaudiences.aspx).                                                                                                  |
-|        Authentication/OpenIdConnect/\[provider\]/ValidIssuers        |                                                                                                       Comma-separated list of issuer URLs. For more information: [TokenValidationParameters.ValidIssuers](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.validissuers.aspx).                                                                                                       |
-|         Authentication/OpenIdConnect/\[provider\]/ClockSkew          |                                                                                                                                                                                        The clock skew to apply when validating times.                                                                                                                                                                                        |
-|       Authentication/OpenIdConnect/\[provider\]/NameClaimType        |                                                                                                                                                                              The claim type used by the ClaimsIdentity to store the name claim.                                                                                                                                                                              |
-|       Authentication/OpenIdConnect/\[provider\]/RoleClaimType        |                                                                                                                                                                              The claim type used by the ClaimsIdentity to store the role claim.                                                                                                                                                                              |
-|   Authentication/OpenIdConnect/\[provider\]/RequireExpirationTime    |                                                                                                                                                                              A value indicating whether tokens must have an 'expiration' value.                                                                                                                                                                              |
-|    Authentication/OpenIdConnect/\[provider\]/RequireSignedTokens     |                                                                                                                               A value indicating whether a System.IdentityModel.Tokens.SecurityToken xmlns=<https://ddue.schemas.microsoft.com/authoring/2003/5> can be valid if not signed.                                                                                                                                |
-|      Authentication/OpenIdConnect/\[provider\]/SaveSigninToken       |                                                                                                                                                                        A Boolean to control if the original token is saved when a session is created.                                                                                                                                                                        |
-|       Authentication/OpenIdConnect/\[provider\]/ValidateActor        |                                                                                                                                                            A value indicating whether the System.IdentityModel.Tokens.JwtSecurityToken.Actor should be validated.                                                                                                                                                            |
-|      Authentication/OpenIdConnect/\[provider\]/ValidateAudience      |                                                                                                                                                                       A Boolean to control if the audience will be validated during token validation.                                                                                                                                                                        |
-|       Authentication/OpenIdConnect/\[provider\]/ValidateIssuer       |                                                                                                                                                                        A Boolean to control if the issuer will be validated during token validation.                                                                                                                                                                         |
-|      Authentication/OpenIdConnect/\[provider\]/ValidateLifetime      |                                                                                                                                                                       A Boolean to control if the lifetime will be validated during token validation.                                                                                                                                                                        |
-|  Authentication/OpenIdConnect/\[provider\]/ValidateIssuerSigningKey  |                                                                                                                  A Boolean that controls if validation of the System.IdentityModel.Tokens.SecurityKey that signed the securityToken xmlns=<https://ddue.schemas.microsoft.com/authoring/2003/5> is called.                                                                                                                  |
-|                                                                      |                                                                                                                                                                                                                                                                                                                                                                                                                              |
+    1. If necessary, select a different **Supported account type**. More information: [Supported account types](/azure/active-directory/develop/quickstart-register-app)
 
-## Enable authentication using a multi-tenant Azure Active Directory application
+    1. Under **Redirect URI**, select **Web** (if it isn't already selected).
 
-You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, set the **Multi-tenanted** switch to **Yes** in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
+    1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
 
-![Enable multi tenancy in Azure Active Directory application](../media/enable-multi-tenancy.png "Enable multi tenancy in Azure Active Directory application")
+        > [!NOTE]
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** section on the **Configure identity provider** screen (step 6 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, you must use it as-is for the OpenID Connect configuration in portals.
 
-### Related site settings
+        ![Register application.](media/authentication/register-application.png "Register application")
 
-Multiple identity providers can be configured by substituting a label for the [provider] tag. Each unique label forms a group of settings related to an identity provider. You can create or configure the following site settings in portals to support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application:
+    1. Select **Register**.
 
-|Site Setting Name    |Description   |
-|---|---|
-|Authentication/OpenIdConnect/[provider]/Authority   |The Authority to use when making OpenIdConnect calls. For example: `https://login.microsoftonline.com/common`   |
-|Authentication/OpenIdConnect/[provider]/ClientId   |The client ID value from the provider application. It may also be referred to as an App ID or Consumer Key.   |
-|Authentication/OpenIdConnect/[provider]/ExternalLogoutEnabled   |Enables or disables external account sign-out and registration. Set this value as True.   |
-|Authentication/OpenIdConnect/[provider]/IssuerFilter   |A wildcard-based filter that matches on all issuers across all tenants. In most cases, use the value: `https://sts.windows.net/*/`   |
-|Authentication/OpenIdConnect/[provider]/RedirectUri  |The reply URL location where the provider sends the authentication response.For example: `https://portal.contoso.com/signin-oidc` |
-|Authentication/OpenIdConnect/[provider]/ValidateIssuer   |A Boolean to control if the issuer will be validated during token validation. Set this value as False.   |
-|||
+    1. On the left pane, under **Manage**, select **Authentication**.
+
+        ![Enable the Implicit Grant flow with ID tokens.](media/authentication/id-tokens-openid.png "Enable the Implicit Grant flow with ID tokens")
+
+    1. Under **Implicit grant**, select the **ID tokens** check box.
+
+    1. Select **Save**.
+
+1. In this step, you enter the site settings for the portal configuration.
+
+    ![Configure OpenID Connect site settings.](media/authentication/openid-site-settings-1.png "Configure OpenID Connect site settings")
+
+    > [!TIP]
+    > If you closed the browser window after configuring the app registration in the earlier step, sign in to the Azure portal again and go to the app that you registered.
+
+    1. **Authority**: To configure the authority URL, use the following format:
+
+        `https://login.microsoftonline.com/<Directory (tenant) ID>/`
+
+        For example, if the *Directory (tenant) ID* in the Azure portal is `7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb`, the authority URL is `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/`
+
+    1. **Client ID**: Copy the **Application (client) ID** from the Azure portal as the client ID.
+
+        ![Authority and Client ID.](media/authentication/authority-client-id.png "Authority and Client ID")
+
+    1. **Redirect URL**: Confirm that the **Redirect URL** site setting value is the same as the **Redirect URI** that you set in the Azure portal earlier.
+
+        ![Confirm redirect URL.](media/authentication/redirect-uri-azure-power-apps.png "Confirm redirect URL")
+
+        > [!NOTE]
+        > If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** step. If you're using a custom domain name, enter the URL manually. Be sure that the value you enter here is exactly the same as the value you entered as the **Redirect URI** in the Azure portal earlier.
+
+    1. **Metadata address**: To configure the metadata address, do the following:
+
+        1. Select **Overview** in the Azure portal.
+
+        1. Select **Endpoints**.
+
+           ![Endpoints in the Azure portal.](media/authentication/endpoints.png "Endpoints in the Azure portal")
+
+        1. Copy the URL in **OpenID Connect metadata document**.
+
+            ![OpenID Connect metadata document.](media/authentication/openid-connect-metadata-document.png "OpenID Connect metadata document")
+
+        1. Paste the copied document URL as the **Metadata address** for portals.
+
+    1. **Scope**: Set the **Scope** site setting value as:
+
+        `openid email`
+
+        > [!NOTE]
+        > The `openid` value in **Scope** is mandatory. The `email` value is optional; specifying the `email` value in the scope ensures that the email address of the portal user (contact record) is automatically filled in and shown on the **Profile** page after the user signs in. For information about additional claims, see [Configure additional claims](#configure-additional-claims) later in this article.
+
+    1. For **Response type**, select **code id_token**.
+
+    1. For **Response mode**, select **form_post**.
+
+1. Select **Confirm**.
+
+    ![Confirm the configuration.](media/authentication/confirm-config.png "Confirm the configuration")
+
+1. Select **Close**.
+
+## Configure additional claims
+
+1. Enable [optional claims in Azure AD](/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
+
+1. Set **Scope** to include the additional claims.
+    <br> Example: `openid email profile`
+
+1. Set the **Registration claims mapping** additional site setting.
+    <br> Example: `firstname=given_name,lastname=family_name`
+
+1. Set the **Login claims mapping** additional site setting.
+    <br> Example: `firstname=given_name,lastname=family_name`
+
+For example, the first name, last name, and email addresses supplied with the additional claims become the default values in the profile page in the portal.
+
+![Profile page example.](media/authentication/profile-page.png "Profile page example")
+
+<a name="enable-authentication-using-a-multi-tenant-azure-active-directory-application"></a>
+## Enable authentication by using a multitenant Azure AD application
+
+You can configure your portal to accept Azure AD users from any tenant in Azure, and not just from a specific tenant, by using the multitenant application registered in Azure AD. To enable multitenancy, [update the application registration](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the Azure AD application.
+
+To support authentication against Azure AD by using a multitenant application, you have to create or configure the additional **Issuer Filter** site setting.
+
+![Issuer filter for multitenancy.](media/authentication/issuer-filter-multi-tenant.png "Issuer filter for multitenancy")
+
+This site setting is a wildcard-based filter that matches on all issuers across all tenants. Example: `https://sts.windows.net/*/`
 
 ### See also
-[Configure portal authentication](configure-portal-authentication.md)  
-[Set authentication identity for a portal](set-authentication-identity.md)  
-[OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-[WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
-[SAML 2.0 provider settings for portals](configure-saml2-settings.md)  
 
+[FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

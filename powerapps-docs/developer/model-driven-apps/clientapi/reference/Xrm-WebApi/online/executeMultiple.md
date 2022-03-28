@@ -1,17 +1,19 @@
 ---
 title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the Xrm.WebApi.online.executeMultiple method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi.online.executeMultiple (Client API reference)
 
@@ -20,10 +22,11 @@ search.app:
 > [!NOTE]
 > This method is supported only for the online mode ([Xrm.WebApi.online](../online.md)). 
 
-If you want to execute multiple requests in a transaction, you must pass in a change set as a parameter to this method. [Change sets](../../../../../common-data-service/webapi/execute-batch-operations-using-web-api.md#change-sets) represent a collection of operations that are executed in a transaction. You can also pass in individual requests and change sets together as parameters to this method.
+If you want to execute multiple requests in a transaction, you must pass in a change set as a parameter to this method. [Change sets](../../../../../data-platform/webapi/execute-batch-operations-using-web-api.md#change-sets) represent a collection of operations that are executed in a transaction. You can also pass in individual requests and change sets together as parameters to this method.
 
 > [!NOTE]
-> You cannot include read operations (retrieve, retrieve multiple, and Web API functions) as part of a change set; this is as per the OData v4 specifications.
+> - You cannot include read operations (retrieve, retrieve multiple, and Web API functions) as part of a change set; this is as per the OData v4 specifications.
+> - Requests can contain up to 1000 individual requests and cannot contain other batches. More information: [Execute batch operations](../../../../../data-platform/webapi/execute-batch-operations-using-web-api.md).
 
 ## Syntax
 
@@ -57,7 +60,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -68,9 +71,9 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 <td>requests</td>
 <td>Array of objects</td>
 <td>Yes</td>
-<td><p>An array of one of one of the following types:</p>
+<td><p>An array of one of the following types:</p>
 <ul>
-<li>objects where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a <b>getMetadata</b> method that lets you define the metadata for the action, function or CRUD request you want to execute. This is the same object that you pass in the <code>execute</code> method. For information about the object, see <a href="execute.md">execute</a>.</li>
+<li>objects where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a <b>getMetadata</b> method that lets you define the metadata for the action, function, or CRUD request you want to execute. This is the same object that you pass in the <code>execute</code> method. For information about the object, see <a href="execute.md">execute</a>.</li>
 <li>Change set (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set will get executed in a transaction.</li>
 </ul>
 <p>See request examples earlier in the **Syntax** section for more information.</p>
@@ -80,9 +83,10 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following attributes:</p>
+<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following values:</p>
 <ul>
-<li><b>body</b>: (Optional). Object. Response body.</li>
+<li><b>json</b>: (Optional). Promise. Response body in JSON format.</li>
+<li><b>text</b>: (Optional). Promise. Response body in plaintext format. </li>
 <li><b>headers</b>: Object. Response headers.</li>
 <li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
 <li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
@@ -102,9 +106,12 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Return Value
 
-On success, returns a promise containing an array of objects with the attributes specified earlier in the description of **successCallback** function.
+On success, returns a promise containing an array of objects with the values specified earlier in the description of **successCallback** function.
 
-### Related topics
+### See also
 
 [Xrm.WebApi](../../xrm-webapi.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

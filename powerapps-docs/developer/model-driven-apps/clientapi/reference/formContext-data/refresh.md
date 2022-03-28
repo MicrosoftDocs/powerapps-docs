@@ -1,20 +1,22 @@
 ---
-title: "refresh (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "data.refresh (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the data.refresh method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 03e970ee-7ed3-4df2-9670-222d76a479fd
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# refresh (Client API reference)
+# data.refresh (Client API reference)
 
 
 
@@ -36,3 +38,6 @@ search.app:
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

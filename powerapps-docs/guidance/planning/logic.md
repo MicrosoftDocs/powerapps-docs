@@ -1,17 +1,18 @@
 ---
 title: Power Apps architectural design - Where to place logic | Microsoft Docs
-description: "Considerations for deciding where to place the logic in your system: canvas apps, model-driven apps, Common Data Service, or Power Automate flows?"
+description: "Considerations for deciding where to place the logic in your system: canvas apps, model-driven apps, Microsoft Dataverse, or Power Automate flows?"
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
 ---
 
-# Where to place logic: Canvas apps, model-driven apps, Common Data Service, or Power Automate flows?
+# Where to place logic: Canvas apps, model-driven apps, Microsoft Dataverse, or Power Automate flows?
 
 Your app will have business logic, such as data validation (using the right
 format for an email address, for example), calculations, selecting the next
@@ -91,11 +92,11 @@ if:
 
 - You want to reduce dependency on device-side processing power.
 
-More information: [Power Automate documentation](https://docs.microsoft.com/power-automate/)
+More information: [Power Automate documentation](/power-automate/)
 
-## Common Data Service
+## Dataverse
 
-You can set logic in Common Data Service so that all of the logic is run in the
+You can set logic in Dataverse so that all of the logic is run in the
 service rather than the devices. This makes the app more performant, and also
 makes the logic independent of the apps and flows to ensure that data is used in a
 particular way.
@@ -104,12 +105,15 @@ For example, if you want to require that an address is entered for all apps
 and flows that use the Account entity, you should set this logic in Common Data
 Service rather than in each app and flow.
 
-There are several ways of applying logic to Common Data Service. Using low code,
+There are several ways of applying logic to Dataverse. Using low code,
 you can set up things such as auto-numbering fields, calculated fields, and
 roll-up fields. Pro developers can apply business logic that uses code by
 creating a plug-in or developing workflow extensions.
 
-More information: [Apply business logic in Common Data Service](../../maker/common-data-service/cds-processes.md)
+More information: [Apply business logic in Dataverse](../../maker/data-platform/processes.md)
 
 > [!div class="nextstepaction"]
 > [Next step: Secure the app and data](security.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

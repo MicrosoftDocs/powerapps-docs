@@ -4,9 +4,10 @@ description: "Learn about using localized labels with ribbons." # 115-145 charac
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: mda-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -61,3 +62,6 @@ ToolTipDescription="$LocLabels:MyISV.account.SendToOtherSystem.ToolTip"
  [Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)   
  [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
  [Define Ribbon Commands](define-ribbon-commands.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
