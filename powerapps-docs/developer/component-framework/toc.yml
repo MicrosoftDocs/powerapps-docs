@@ -6,6 +6,8 @@
     items:
     - name: Overview
       href: custom-controls-overview.md
+    - name: "React Controls & Platform Libraries (Preview)"
+      href: react-controls-platform-libraries.md
     - name: Code components for model-driven apps
       href: code-components-model-driven-apps.md
     - name: Code components for canvas apps
