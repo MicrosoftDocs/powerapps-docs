@@ -93,7 +93,7 @@ We recommend using Fluent platform libraries. If you don't use Fluent, you shoul
 
 ### Index.ts
 
-The [ReactControl.init](reference/react-control/init.md) method for control initialization does not have `div` parameters because these controls do not render the DOM directly. Instead [ReactControl.updateView](reference/react-control/updateview.md) returns a ReactElement which has the details fo the actual control in React format.
+The [ReactControl.init](reference/react-control/init.md) method for control initialization does not have `div` parameters because these controls do not render the DOM directly. Instead [ReactControl.updateView](reference/react-control/updateview.md) returns a ReactElement which has the details of the actual control in React format.
 
 ### bundle.js
 
