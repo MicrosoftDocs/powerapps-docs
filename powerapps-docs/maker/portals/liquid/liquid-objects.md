@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/27/2021
+ms.date: 03/22/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -267,26 +267,26 @@ The following table explains various attributes associated with blogpost Object.
 ## entities
 
 > [!CAUTION]
-> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode string data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
 
 Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
-{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] | escape %}
+{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
 
 {% if account %}
 
-{{ account.name }} ({{ account.statecode.label }})
+{{ account.name | escape }} ({{ account.statecode.label | escape }})
 
 {% endif %}
 
 {% assign entity_logical_name = 'contact' %}
 
-{% assign contact = entities[entity_logical_name][request.params.contactid] | escape %}
+{% assign contact = entities[entity_logical_name][request.params.contactid] %}
 
 {% if contact %}
 
-{{ contact.fullname }} ({{ contact.parentcustomerid.name }})
+{{ contact.fullname | escape }} ({{ contact.parentcustomerid.name | escape }})
 
 {% endif %}
 ```

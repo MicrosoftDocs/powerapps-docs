@@ -1,6 +1,6 @@
 ---
 title: Create a Power BI report to analyze projects
-description: Learn about how to create a Power BI report based on two SharePoint lists.
+description: Learn about how to create a Power BI report based on two lists.
 author: fikaradz
 
 ms.topic: conceptual
@@ -22,7 +22,7 @@ contributors:
 > [!NOTE]
 > This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-In this task, we'll create a Power BI report based on the two SharePoint lists. We'll bring the list data into Power BI Desktop and clean it up a little, do some basic data modeling, and create a set of visuals that tell us something about the data.
+In this task, we'll create a Power BI report based on the two lists. We'll bring the list data into Power BI Desktop and clean it up a little, do some basic data modeling, and create a set of visuals that tell us something about the data.
 
 ## Quick review of Power BI Desktop
 Before we dive into report creation, let's review Power BI Desktop. This is a powerful tool, with a lot of features, so we will focus on an overview of the areas that you will use in this task. There are three main work areas or *views* in Power BI Desktop: **Report** view, **Data** view, and **Relationships** view. Power BI Desktop also includes **Query Editor**, which opens in a separate window.
@@ -63,22 +63,22 @@ In **Query Editor**, you build queries and transform data, then load that refine
 ## Step 1: Get data into Power BI Desktop
 In this step, we'll first connect to the two lists. Then we'll clean up the data by removing columns we don't need for our data analysis. We'll also change the data types on some of the remaining columns so that calculations work properly. For more information on getting and cleaning data in Power BI Desktop, see the [Getting Data](https://powerbi.microsoft.com/guided-learning/powerbi-learning-1-1-overview-of-power-bi-desktop) section in our Guided Learning course.
 
-### Connect to SharePoint lists
+### Connect to lists
 1. In Power BI Desktop, on the **Home** tab, click or tap **Get Data**, then **More…**
    
     ![Get data.](./media/sharepoint-scenario-build-report/05-01-01-get-data.png)
 2. In the **Get Data** dialog box, click or tap **SharePoint Online List**, then **Connect**.
    
-    ![Connect to SharePoint list.](./media/sharepoint-scenario-build-report/05-01-02-sharepoint-list.png)
+    ![Connect to list.](./media/sharepoint-scenario-build-report/05-01-02-sharepoint-list.png)
 3. Enter the URL for your SharePoint site, then click or tap **OK**.
    
-    ![SharePoint list URL.](./media/sharepoint-scenario-build-report/05-01-03-sharepoint-url.png)
+    ![List URL.](./media/sharepoint-scenario-build-report/05-01-03-sharepoint-url.png)
 4. If you get the following dialog box, make sure you're signed in with the right credentials, then click or tap **Connect**.
    
-    ![SharePoint list credentials.](./media/sharepoint-scenario-build-report/05-01-04-credentials.png)
+    ![List credentials.](./media/sharepoint-scenario-build-report/05-01-04-credentials.png)
 5. Select **Project Details** and **Project Requests**, then click or tap **Edit**.
    
-    ![Select SharePoint lists.](./media/sharepoint-scenario-build-report/05-01-05-list-navigator.png)
+    ![Select lists.](./media/sharepoint-scenario-build-report/05-01-05-list-navigator.png)
    
     The lists are now displayed as tables in Query Editor.
    
@@ -125,7 +125,7 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
 2. Click or tap **File**, then **Save**, and save with the name project-analysis.pbix.
 
 ## Step 2: Improve the data model
-Now that we have the data from our SharePoint lists pulled into Power BI Desktop, we'll move on to data modeling. Data modeling can be a time-consuming process, but we'll briefly show you some interesting things you can do to get more out of the list data in Power BI Desktop:
+Now that we have the data from our lists pulled into Power BI Desktop, we'll move on to data modeling. Data modeling can be a time-consuming process, but we'll briefly show you some interesting things you can do to get more out of the list data in Power BI Desktop:
 
 * Change how the two tables are related to each other
 * Add a date table so we can make calculations based on weekdays

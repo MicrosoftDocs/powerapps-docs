@@ -1,19 +1,20 @@
 ---
 title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Progresses to the next stage.
-ms.date: 04/15/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 97640c6a-816b-4d18-9b0b-e79411787c1a
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # moveNext (Client API reference)
 
@@ -31,7 +32,7 @@ Moving to next stage is not supported for different table.
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
