@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 03/25/2022
+ms.date: 03/28/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -100,7 +100,7 @@ Consider the following when using the rich text editor:
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see defaultSupportProps. The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for additional plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](power-platform/developer/data-platform/plug-ins).
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see defaultSupportProps. The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for additional plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
