@@ -2,15 +2,15 @@
 title: Context | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/12/2021
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 ---
 
 # Context
@@ -20,6 +20,8 @@ ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
 ## Available for
 
 Model-driven and canvas apps
+
+## Properties
 
 ### client
 

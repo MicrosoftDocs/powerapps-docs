@@ -107,6 +107,8 @@
     - name: Power Apps component framework
       href: reference/index.md
       items:
+      - name: AttributeMetadata
+        href: reference/attributemetadata.md
       - name: Client
         href: reference/client.md
         items:

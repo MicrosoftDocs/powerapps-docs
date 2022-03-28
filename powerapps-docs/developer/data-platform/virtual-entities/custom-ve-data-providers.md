@@ -1,20 +1,21 @@
 ---
 title: "Custom virtual table data providers (Microsoft Dataverse) | Microsoft Docs"
 description: "Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 04/09/2021
-
+ms.date: 03/22/2022
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d22
-author: "Sunil-Garg" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "pehecke"
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Custom virtual table data providers
@@ -24,7 +25,7 @@ search.app:
 Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Dataverse plug-ins that implement the supported CRUD operations. For each virtual table, also known as a virtual entity, developers can create plug-ins and register them representing each of the **Create**, **Update**, **Retrieve**, **RetrieveMultiple** and **Delete** operation.  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
 
 > [!NOTE]
-> As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider, which supports CRUD operations as well. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](https://docs.microsoft.com/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
+> As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider, which supports CRUD operations as well. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
 
 ## Prerequisites
 
