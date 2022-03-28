@@ -4,7 +4,7 @@ description: "Learn about defining and applying visual themes for an organizatio
 ms.author: jdaly
 author: HemantGaur
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/28/2022
 ms.reviewer: jdaly
 
 ms.topic: "article"
@@ -114,7 +114,7 @@ After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.Publi
 ### See also
 
  [Theme table](../data-platform/reference/entities/theme.md) <br/>
- [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
+ [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-branding) <br/>
  [Developers guide to customization](overview.md)
 
 
