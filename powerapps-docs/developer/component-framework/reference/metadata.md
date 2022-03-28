@@ -2,15 +2,14 @@
 title: Metadata | Microsoft Docs
 description: Provides all the information about  column definitions.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 0a11feb1-0b7d-4591-b7b3-8e45d4e58805
 ---
 
 # Metadata

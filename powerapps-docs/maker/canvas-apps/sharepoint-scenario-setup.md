@@ -1,6 +1,6 @@
 ---
 title: Set up lists for SharePoint Online integration with Power Apps, Power Automate, and Power BI
-description: Learn about how to set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
+description: Learn about how to set up lists to use as a data source for apps, flows, reports, and dashboards.
 author: NickWaggoner
 
 ms.topic: conceptual
@@ -22,7 +22,7 @@ contributors:
 > [!NOTE]
 > This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-SharePoint has a ton of features for sharing and collaboration, but we will focus on one feature for this scenario: [SharePoint lists](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). A list is just a collection of data that you can share with team members and other site users. We'll review the lists used for this scenario, then you can create them in your own SharePoint Online site.
+SharePoint has a ton of features for sharing and collaboration, but we will focus on one feature for this scenario: [Introduction to lists](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). A list is just a collection of data that you can share with team members and other site users. We'll review the lists used for this scenario, then you can create them in your own SharePoint Online site.
 
 ## Step 1: Understand the lists
 The first list is **Project Requests**, where a project requestor adds a request. The project approver then reviews the request and approves or rejects it.

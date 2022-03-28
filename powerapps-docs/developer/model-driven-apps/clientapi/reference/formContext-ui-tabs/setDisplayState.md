@@ -1,21 +1,22 @@
 ---
-title: "setDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setDisplayState method.
-ms.date: 04/21/2021
-
+title: "tab.setDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the tab.setDisplayState method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 13731ab8-e850-49d4-94c0-eae6135745c7
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setDisplayState (Client API reference)
+# tab.setDisplayState (Client API reference)
 
 > [!IMPORTANT]
 > The setDisplayState method will be deprecated with the 2021 release wave 1 (April 2021). Use the [setFocus](setfocus.md) method in Unified Interface to ensure the correct tab is opened on a form.

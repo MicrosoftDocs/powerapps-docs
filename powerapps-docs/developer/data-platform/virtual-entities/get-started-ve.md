@@ -1,21 +1,22 @@
 ---
 title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Microsoft Docs"
 description: "Virtual tables enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
-ms.date: 04/08/2021
-
+ms.date: 03/22/2022
 ms.topic: conceptual
 ms.custom: intro-internal
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
-author: "Sunil-Garg" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "pehecke"
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Get started with virtual tables (entities)

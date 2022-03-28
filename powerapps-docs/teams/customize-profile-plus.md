@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/21/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
-  - josephshum
+  - msftsamperl
   - joel-lindstrom
   - tapanm-msft
 ---
