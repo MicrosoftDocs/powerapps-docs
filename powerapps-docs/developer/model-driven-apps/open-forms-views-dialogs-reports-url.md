@@ -1,10 +1,10 @@
 ---
-title: "Open forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Open apps, forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: jdaly
-author: HemantGaur
+author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/29/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -14,20 +14,55 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Open forms, views, dialogs, and reports with a URL
+# Open apps, forms, views, dialogs, and reports with a URL
 
-URL addressable elements enable you to include links to forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
+URL addressable elements enable you to include links to apps, forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
 
 > [!NOTE]
-> - URL addressable forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.  
+> - URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.  
 > - Use `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) when you open forms programmatically within the application by using web resources. Do not use `window.open`.  
 > - Outside the application, where pages do not have access to the `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) function, use `window.open` or a link to open a specific record or form for a table.  
+
+## App Urls
+
+You can open any model-driven application using the [AppModule.UniqueName](powerapps/developer/data-platform/reference/entities/appmodule#BKMK_UniqueName) or [AppModule.AppModuleId](powerapps/developer/data-platform/reference/entities/appmodule#BKMK_AppModuleId) values.
+
+You can retrieve these values using Web API using the following query:
+
+```http
+GET [Organization URI]/api/data/v9.1/appmodules?$select=appmoduleid,uniquename
+```
+
+### Using Unique Name
+
+You can use the Unique Name of the application to open the app using either of these URL formats:
+
+```  
+https://myorg.crm.dynamics.com/Apps/uniquename/{UniqueName}
+https://myorg.crm.dynamics.com/main.aspx?appname={UniqueName}
+``` 
+
+For example, if the Unique Name is `msdyn_SolutionHealthHub`, you can open this app using either of these URLs:
+
+```  
+https://myorg.crm.dynamics.com/Apps/uniquename/msdyn_SolutionHealthHub
+https://myorg.crm.dynamics.com/main.aspx?appname=msdyn_SolutionHealthHub
+``` 
+
+### Using AppModuleId
+
+Append the `appid` query parameter to the `main.aspx` page to open the app using the AppModuleId.
+
+```
+https://myorg.crm.dynamics.com/main.aspx?appid={AppModuleId}
+``` 
+
 
 <a name="BKMK_URLAddressableFormsAndViews"></a>
 
 ## URL addressable forms and views
 
- All forms and views are displayed in the main.aspx page. Query string parameters passed to this page control what will be displayed. For example:  
+All forms and views are displayed in the `main.aspx` page. Query string parameters passed to this page control what will be displayed. For example:  
 
 To open an account record form for where the id is {91330924-802A-4B0D-A900-34FD9D790829}:  
 
