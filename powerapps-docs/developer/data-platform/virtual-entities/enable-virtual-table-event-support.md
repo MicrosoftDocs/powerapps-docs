@@ -55,7 +55,7 @@ Let's say we have a Person Virtual Table with these properties, the **Name** pro
 
 :::image type="content" source="../media/new_people-virtual-table-properties.png" alt-text="The properties of the new_people virtual table.":::
 
-1. In Power Apps ([make.powerapps.com/](https://make.powerapps.com/)), within your solution, select **+New** and then select **Virtual Entity Metadata**.
+1. In Power Apps ([make.powerapps.com](https://make.powerapps.com/)), within your solution, select **+New** and then select **Virtual Entity Metadata**.
 
     :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution.":::
 
