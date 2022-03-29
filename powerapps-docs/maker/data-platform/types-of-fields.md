@@ -229,7 +229,6 @@ The image column in this example is the primary image so the image also appears 
 Users can select **Open** to display the image full size in a new browser tab or select **Delete** to remove the image from the record and Dataverse.
 
 More information for developers working with image data:
-- [table metadata > table images](/powerapps/developer/data-platform/table-metadata#table-images)
 - [Image attributes](../../developer/data-platform/image-attributes.md)
 
 ## File columns
