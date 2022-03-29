@@ -12,7 +12,7 @@ ms.custom:
   - "dyn365-developer"
 ms.topic: article
 ms.subservice: pcf
-contributors:
+contributors:HemantGaur
 ---
 
 # React controls & platform libraries (Preview)
