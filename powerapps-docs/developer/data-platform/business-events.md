@@ -3,8 +3,6 @@ title: Microsoft Dataverse business events| Microsoft Docs
 description: Learn about how to use business events to connect and integrate business applications.
 author: JimDaly
 manager: sunilg
-
-ms.component: cds
 ms.topic: conceptual
 ms.date: 03/22/2022
 ms.subservice: dataverse-developer
@@ -118,7 +116,7 @@ Custom process actions can also be cataloged as business events. This is for bac
 However, custom process actions have the following limitations:
 
 - Like any workflow, they can be disabled in the UI. You may not know when someone disables your custom process action until it suddenly stops working.
-- Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action or even cancel it. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](/reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
+- Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action or even cancel it. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](reference/entities/workflow#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
 
 For more information about how they are different, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api)
 
@@ -137,7 +135,7 @@ Custom APIs created for external events should align to these principles:
 
 - They should not have any plug-in type specified for the main operation.
 - They should not allow any synchronous step registrations. 
-    - The custom api [Allowed Custom Processing Step Type](/developer/data-platform/reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any synchronous steps from being applied for this API.
+    - The Custom API [Allowed Custom Processing Step Type](reference/entities/customapi#BKMK_AllowedCustomProcessingStepType) property should be set to **Async Only**. This will prevent any synchronous steps from being applied for this API.
 - They should not have any response properties, only request parameters.
     - With no synchronous logic, there is no way to set response properties.
 
