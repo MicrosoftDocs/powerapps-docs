@@ -111,6 +111,8 @@
           href: ../user/email-template-create.md
         - name: Insert an email template
           href: ../user/insert-email-template.md
+        - name: Configure the enhanced insert email template
+          href: ../user/customize-insert-email-template.md
         - name: Convert an email to a template
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
