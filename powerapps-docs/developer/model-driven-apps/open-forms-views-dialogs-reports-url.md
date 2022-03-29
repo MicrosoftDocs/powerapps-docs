@@ -147,7 +147,7 @@ To display a list of table records within the application for a SubArea set the 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d”  
+Url="/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d"
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
@@ -158,6 +158,9 @@ Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist
 <a name="BKMK_OpenADialogProcess"></a>   
 
 ## Opening a dialog process by using a URL
+
+> [!IMPORTANT]
+> [Dialogs are deprecated](/power-platform/important-changes-coming#process-dialogs-are-deprecated). You should replace dialogs with business process flows or canvas apps. More information: [Replace dialogs with business process flows or canvas apps](/power-automate/replace-dialogs)
 
 A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific table using the id value for current record as an input parameter for the dialog process.  
 
