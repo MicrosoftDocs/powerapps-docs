@@ -25,7 +25,7 @@ URL addressable elements enable you to include links to apps, forms, views, dial
 
 ## App Urls
 
-You can open any model-driven application using the [AppModule.UniqueName](powerapps/developer/data-platform/reference/entities/appmodule#BKMK_UniqueName) or [AppModule.AppModuleId](powerapps/developer/data-platform/reference/entities/appmodule#BKMK_AppModuleId) values.
+You can open any model-driven application using the [AppModule.UniqueName](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_UniqueName) or [AppModule.AppModuleId](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_AppModuleId) values.
 
 You can retrieve these values using Web API using the following query:
 
