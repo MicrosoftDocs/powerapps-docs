@@ -67,7 +67,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 
 ## Next steps
 
-* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](/powerapps/mobile/run-powerapps-on-mobile).
+* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../mobile/run-powerapps-on-mobile.md).
 * [Rename an app](set-name-tile.md) from [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 * [Restore an app](restore-an-app.md) if you have multiple versions of an app.
 
