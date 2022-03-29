@@ -3,7 +3,7 @@ title: "React controls & platform libraries (Preview) | Microsoft Docs"
 description: "You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you are using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control."
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: jdaly
-author: noazarur-microsoft
+author: HemantGaur, noazarur-microsoft
 manager: kvivek
 ms.date: 03/27/2022
 ms.reviewer: jdaly
@@ -13,7 +13,6 @@ ms.custom:
 ms.topic: article
 ms.subservice: pcf
 contributors:
-- HemantGaur
 ---
 
 # React controls & platform libraries (Preview)
