@@ -2,11 +2,10 @@
 title: Power Apps system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/14/2022
+ms.date: 03/28/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -133,7 +132,8 @@ This list identifies all services to which Power Apps communicates and their usa
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
-| config.edge.skype.com | https | Retrieve feature flags for Power Apps |
+| ecs.office.com | https | Retrieve feature flags for Power Apps |
+| config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | gov.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC). |
 | high.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC High). |
