@@ -85,7 +85,6 @@ The screenshot below provides an example that meets the following requirements:
 ### See Also  
 
 [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
-[Table metadata > Table states](/powerapps/developer/data-platform/table-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 
 
