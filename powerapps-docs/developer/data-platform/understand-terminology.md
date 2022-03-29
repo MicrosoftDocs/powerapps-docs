@@ -36,7 +36,6 @@ The data structures that developers work with are exposed as entities, and the t
 |Create a row or record in a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST data defined as an a specific EntityType. You can find a list of these EntityTypes here: [Web API EntityType Reference](/dynamics365/customer-engagement/web-api/entitytypes)|
 |Create a row or record in a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [Entity Class](/dotnet/api/microsoft.xrm.sdk.entity) or a class that inherits from it (Account, Contact, etc.) and use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) to send this to the Organization service. A developer can find the information they need to use the Entity class in the [entity reference](/powerapps/developer/data-platform/reference/about-entity-reference).|
 
-
 ## Terminology use depending on protocol or technology
 
 The terminology used in the developer documentation depends on the protocol or class library used by developers. 

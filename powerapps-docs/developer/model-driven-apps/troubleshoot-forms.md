@@ -334,7 +334,7 @@ A control can be disabled by using the following list of rules in order. If a ru
 - If the user doesn't have write permissions on the column defined by field-level security, the control is disabled.
 - If the control is disabled or enabled by the Client API script, the control disabled state will honor that setting.
 - If the control is disabled in the form designer, the control is disabled.
-- If the user doesn't have `Assign To` privilege for the lookup control's table, or `Assign` privilege on the current record's table, the lookup control is disabled
+- If the user doesn't have `Append To` privilege for the lookup control's table, or `Append` privilege on the current record's table, the lookup control is disabled
 
 Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 

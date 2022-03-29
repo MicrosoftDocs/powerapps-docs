@@ -10,7 +10,10 @@ ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # OnPreStageChange event (Client API reference)
 

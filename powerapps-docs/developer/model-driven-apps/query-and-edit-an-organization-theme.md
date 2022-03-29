@@ -4,7 +4,7 @@ description: "Learn about defining and applying visual themes for an organizatio
 ms.author: jdaly
 author: HemantGaur
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/28/2022
 ms.reviewer: jdaly
 
 ms.topic: "article"

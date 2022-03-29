@@ -1,12 +1,11 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/09/2021
-ms.reviewer: "nabuthuk"
-
+ms.date: 03/28/2022
+ms.reviewer: "jdaly"
 ms.topic: sample
-author: "Nkrb" # GitHub ID
-ms.author: "nabuthuk"
+author: "NHelgren" # GitHub ID
+ms.author: "jdaly"
 manager: "kvivek"
 search.audienceType: 
   - developer

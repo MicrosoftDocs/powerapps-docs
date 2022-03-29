@@ -1,6 +1,6 @@
 ---
-title: "setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setLabel method.
+title: "section.setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the section.setLabel method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setLabel (Client API reference)
+# section.setLabel (Client API reference)
 
 
 

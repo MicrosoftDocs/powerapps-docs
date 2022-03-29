@@ -12,8 +12,10 @@ search.audienceType:
   - maker
   - developer
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Creating side panes by using a client API (preview)

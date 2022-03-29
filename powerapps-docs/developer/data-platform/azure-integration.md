@@ -2,19 +2,20 @@
 title: "Azure integration (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how Microsoft Dataverse can be configured to send data to the Azure cloud." 
 ms.custom: intro-internal
-ms.date: 03/17/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly"
+author: "jaredha"
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Azure integration
 
