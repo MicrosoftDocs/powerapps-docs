@@ -15,6 +15,7 @@ ms.subservice: pcf
 contributors:
  - HemantGaur
  - noazarur-microsoft
+ - JimDaly
 ---
 
 # React controls & platform libraries (Preview)
