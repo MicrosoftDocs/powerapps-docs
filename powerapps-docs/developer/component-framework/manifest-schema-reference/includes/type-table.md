@@ -9,7 +9,7 @@ ms.date: 04/01/2021
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
 ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
@@ -35,6 +35,9 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 |SingleLine.URL|The text expected to provides a hyperlink to open the page specified. Out-of-the-box Unified Interface controls automatically prepend “https://” to input values that does not begin with a valid protocol . Only HTTP, HTTPS, FTP , FTPS, OneNote and TEL protocols are expected in this column. |
 |TwoOptions|This column provides two options. Each option has a number value of 0 or 1 corresponding to a false or true value. Each option also has a label so that true or false values can be represented as "Yes" and "No", "Hot" and "Cold", "On" and "Off" or any pair of labels you want to display.|
 |Whole.None|This option simply displays a number.|
+
+> [!WARNING]
+> If `manifest.xml` file contains at least one dataset, then properties of type `Lookup.Simple` should be also wrapped into the [data-set](./../data-set.md) element.
 
 ## Value elements that are not supported
 
