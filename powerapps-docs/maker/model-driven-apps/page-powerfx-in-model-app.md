@@ -167,6 +167,6 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 
 ### See also
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Model-driven app custom page overview](model-app-page-overview.md)
