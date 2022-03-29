@@ -75,7 +75,7 @@ Some key questions to ask:
 > If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview)
 to automatically optimize the process. 
 Process advisor has capabilities to [analyze your process](/power-automate/process-advisor-analyze), 
-and visualize it in a [process map](/power-automate/process-advisor-visualize.md).
+and visualize it in a [process map](/power-automate/process-advisor-visualize).
 Process map reveals bottlenecks and metrics for your process through an analytical report.
 
 ## Example: Optimizing the expense report process
