@@ -72,7 +72,7 @@ Some key questions to ask:
         human attention
 
 > [!NOTE]
-> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview.md)
+> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview)
 to automatically optimize the process. 
 Process advisor has capabilities to [analyze your process](/power-automate/process-advisor-analyze), 
 and visualize it in a [process map](/power-automate/process-advisor-visualize.md).
