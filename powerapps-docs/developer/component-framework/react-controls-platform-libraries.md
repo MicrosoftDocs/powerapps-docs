@@ -113,8 +113,8 @@ You can find two new controls added to the samples as part of this preview. Func
 
 |Sample |Description|Link|
 |---------|---------|---------|
-|ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a React Control. |TODO|
-|FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|TODO|
+|ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a React Control. |[ChoicesPickerReact Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerReactControl)|
+|FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|[FacepileReact](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FacepileReactControl)|
 
 
 ## FAQ
