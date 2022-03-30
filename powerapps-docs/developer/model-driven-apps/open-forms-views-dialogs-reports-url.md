@@ -43,7 +43,7 @@ You can use the Unique Name of the application to open the app using this URL fo
 https://myorg.crm.dynamics.com/main.aspx?appname={UniqueName}
 ``` 
 
-For example, if the Unique Name is `msdyn_SolutionHealthHub`, you can open this app using either of these URLs:
+For example, if the Unique Name is `msdyn_SolutionHealthHub`, you can open this app using this URL:
 
 ```  
 https://myorg.crm.dynamics.com/main.aspx?appname=msdyn_SolutionHealthHub
