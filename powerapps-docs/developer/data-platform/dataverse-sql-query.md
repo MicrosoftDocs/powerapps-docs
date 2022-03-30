@@ -23,6 +23,10 @@ search.app:
 
 A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
 
+## Prerequisites
+
+The **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
+
 ## Applications support
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described below.
