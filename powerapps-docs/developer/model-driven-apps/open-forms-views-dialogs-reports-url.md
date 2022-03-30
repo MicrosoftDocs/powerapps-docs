@@ -70,13 +70,9 @@ https://myorg.crm.dynamics.com/main.aspx?appid=12fd1cf3-e06e-e911-a95f-000d3a13c
 
 ## URL addressable forms and views
 
-> [!NOTE] 
-
-
-
 All forms and views are displayed in the `main.aspx` page. Query string parameters passed to this page control what will be displayed. For example:  
 
-To open an account record form for where the id is {91330924-802A-4B0D-A900-34FD9D790829}:  
+To open an account record form for where the id is `{91330924-802A-4B0D-A900-34FD9D790829}`:  
 
 ```  
 https://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
@@ -108,7 +104,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 >   
 > `<https://mycrm/myOrg/main.aspx?etc=4&id=%7b899D4FCF-F4D3-E011-9D26-00155DBA3819%7d&pagetype=entityrecord>`.  
 >   
-> The id parameter passed to the URL is the encoded id value for the record. In this example the id value is `{899D4FCF-F4D3-E011-9D26-00155DBA3819}`. The encoded version of the GUID substitutes opening and closing brackets “{” and “}” with “%7B” and “%7D”, respectively,  
+> The id parameter passed to the URL is the encoded id value for the record. In this example the id value is `{899D4FCF-F4D3-E011-9D26-00155DBA3819}`. The encoded version of the GUID substitutes opening and closing brackets `{` and `}` with `%7B` and `%7D`, respectively,  
 
  The following are the query string parameters used with the main.aspx page to open forms or views:  
 
@@ -191,7 +187,7 @@ To open a dialog you need the following:
 [organization url]/cs/dialog/rundialog.aspx?DialogId=[dialog unique identifier]&EntityName=[table logical name]&ObjectId=[unique identifier for the record]  
 ```  
 
- For example, to open the dialog with id ={6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976} with the account record id = {40C9ADFD-90A8-DF11-840E-00155DBA380F}, use the URL in the following example.  
+ For example, to open the dialog with id =`{6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976}` with the account record id = `{40C9ADFD-90A8-DF11-840E-00155DBA380F}`, use the URL in the following example.  
 
 ```
 [organization url]/cs/dialog/rundialog.aspx?DialogId=%7b6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976%7d&EntityName=account&ObjectId=%7b40C9ADFD-90A8-DF11-840E-00155DBA380F%7d  
@@ -214,8 +210,10 @@ function openDialogProcess(dialogId, entityName, objectId)
 }  
 ```  
 
-<a name="BKMK_OpenReportWithURL"></a>   
-## Opening a Report by using a URL  
+<a name="BKMK_OpenReportWithURL"></a>
+
+## Opening a Report by using a URL
+
  You can open a report by passing appropriate parameter values to the following URL: `[organization url]/crmreports/viewer/viewer.aspx`.  
 
  This URL accepts the following parameters:  
@@ -231,12 +229,14 @@ function openDialogProcess(dialogId, entityName, objectId)
 
  The following examples show URLs that can be used to open reports in model-driven apps.  
 
- Open the **Neglected Cases** report using the default filter:  
+ Open the **Neglected Cases** report using the default filter: 
+ 
  ```  
  [organization url]/crmreports/viewer/viewer.aspx?action=run&helpID=Neglected%20Cases.rdl&id=%7b8c9f3e6f-7839-e211-831e-00155db7d98f%7d  
  ```  
 
  Open the **Top Knowledge Base Articles** report and prompt the user to set filter values:  
+
  ```  
  [organization url]/crmreports/viewer/viewer.aspx?action=filter&helpID=Top%20Knowledge%20Base%20Articles.rdl&id=%7bd84ec390-7839-e211-831e-00155db7d98f%7d  
  ```  
@@ -268,6 +268,4 @@ function getReportURL(action,fileName,id) {
  [Web resources](web-resources.md)<br/> 
  [Change application navigation using the SiteMap](../../maker/model-driven-apps/create-site-map-app.md)
  
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
