@@ -82,7 +82,7 @@ CountRows(Self.Selected.AllItems) > 0
 
 ```powerapps-dot
 //Button will be visible for accounts with Account Rating > 20
-Self.ThisContext.SelectedItem.'Account Rating'>20
+Self.Selected.Item.'Account Rating'>20
 ```
 
 ## Navigate

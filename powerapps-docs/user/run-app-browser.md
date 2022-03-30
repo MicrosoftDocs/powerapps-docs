@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/28/2020
+ms.date: 02/14/2022
 ms.subservice: end-user
 ms.author: mkaur
 manager: "kvivek"
@@ -31,9 +31,7 @@ For full functionality and optimized experience on a tablet device, we strongly 
 To follow this quickstart, you need:
 - A Power Apps license. This is available with a Power Apps plan, such as the Power Apps per user plan, or [Power Apps trial](../maker/signup-for-powerapps.md), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include Power Apps.
 - Access to an app that you built or that someone else built and shared with you.
-- Access to a supported web browser and operating system.
-   - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
-   - For model-driven apps, see: [Requirements/supported configurations](/power-platform/admin/online-requirements)
+- Access to a supported web browser and operating system. For more information, see [System requirements, limits, and configuration values for Power Apps](../maker/canvas-apps/limits-and-config.md)
 
 
 ## Sign in to Microsoft 365 apps page

@@ -1,18 +1,19 @@
 ---
 title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openForm method.
-ms.date: 04/21/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # openForm (Client API reference)
 
@@ -25,7 +26,7 @@ search.app:
 ## Parameters
 
 
-<table style="width:100%">
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th> 
@@ -49,7 +50,7 @@ search.app:
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
 <li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following values.
-<table style="width:100%">
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th> 
