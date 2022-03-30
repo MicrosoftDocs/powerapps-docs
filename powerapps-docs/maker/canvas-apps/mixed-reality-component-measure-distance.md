@@ -121,7 +121,7 @@ Learn more about how to use output properties of the **Measure in MR** control i
 
 ## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 
