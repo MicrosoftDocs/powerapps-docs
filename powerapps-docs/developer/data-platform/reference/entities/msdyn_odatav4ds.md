@@ -1,8 +1,8 @@
 ---
-title: "msdyn_odatav4ds table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_odatav4ds table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_odatav4ds table/entity."
-ms.date: 10/05/2021
-
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -130,10 +130,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -153,10 +153,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -176,10 +176,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -199,10 +199,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -222,10 +222,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -245,10 +245,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -268,10 +268,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -291,10 +291,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -314,10 +314,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -337,10 +337,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Header|
-|0|Query String|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -390,10 +390,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Server-side Paging|
-|0|Client-side Paging|
+|1|Server-side Paging||
+|0|Client-side Paging||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -754,10 +754,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 

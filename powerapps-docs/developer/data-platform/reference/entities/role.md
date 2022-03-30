@@ -1,8 +1,8 @@
 ---
-title: "Security Role (Role) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Security Role (Role) table/entity."
-ms.date: 10/05/2021
-
+title: "Security Role (Role)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Security Role (Role)  table/entity."
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Security Role (Role) table/entity reference
+# Security Role (Role)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -393,10 +393,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -693,7 +693,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_role_parent_role"></a> role_parent_role
 
-Same as role table [role_parent_role](role.md#BKMK_role_parent_role) Many-To-One relationship.
+Same as the [role_parent_role](role.md#BKMK_role_parent_role) many-to-one relationship for the [role](role.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -708,7 +708,7 @@ Same as role table [role_parent_role](role.md#BKMK_role_parent_role) Many-To-One
 
 ### <a name="BKMK_Role_AsyncOperations"></a> Role_AsyncOperations
 
-Same as asyncoperation table [Role_AsyncOperations](asyncoperation.md#BKMK_Role_AsyncOperations) Many-To-One relationship.
+Same as the [Role_AsyncOperations](asyncoperation.md#BKMK_Role_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -723,7 +723,7 @@ Same as asyncoperation table [Role_AsyncOperations](asyncoperation.md#BKMK_Role_
 
 ### <a name="BKMK_role_parent_root_role"></a> role_parent_root_role
 
-Same as role table [role_parent_root_role](role.md#BKMK_role_parent_root_role) Many-To-One relationship.
+Same as the [role_parent_root_role](role.md#BKMK_role_parent_root_role) many-to-one relationship for the [role](role.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -738,7 +738,7 @@ Same as role table [role_parent_root_role](role.md#BKMK_role_parent_root_role) M
 
 ### <a name="BKMK_Role_BulkDeleteFailures"></a> Role_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Role_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Role_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Role_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Role_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -753,7 +753,7 @@ Same as bulkdeletefailure table [Role_BulkDeleteFailures](bulkdeletefailure.md#B
 
 ### <a name="BKMK_Role_SyncErrors"></a> Role_SyncErrors
 
-Same as syncerror table [Role_SyncErrors](syncerror.md#BKMK_Role_SyncErrors) Many-To-One relationship.
+Same as the [Role_SyncErrors](syncerror.md#BKMK_Role_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -784,39 +784,39 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_rolebase_modifiedby"></a> lk_rolebase_modifiedby
 
-See systemuser Table [lk_rolebase_modifiedby](systemuser.md#BKMK_lk_rolebase_modifiedby) One-To-Many relationship.
+See the [lk_rolebase_modifiedby](systemuser.md#BKMK_lk_rolebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_role_parent_role"></a> role_parent_role
 
-See role Table [role_parent_role](role.md#BKMK_role_parent_role) One-To-Many relationship.
+See the [role_parent_role](role.md#BKMK_role_parent_role) one-to-many relationship for the [role](role.md) table/entity.
 
 ### <a name="BKMK_organization_roles"></a> organization_roles
 
-See organization Table [organization_roles](organization.md#BKMK_organization_roles) One-To-Many relationship.
+See the [organization_roles](organization.md#BKMK_organization_roles) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_business_unit_roles"></a> business_unit_roles
 
-See businessunit Table [business_unit_roles](businessunit.md#BKMK_business_unit_roles) One-To-Many relationship.
+See the [business_unit_roles](businessunit.md#BKMK_business_unit_roles) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_role_createdonbehalfby"></a> lk_role_createdonbehalfby
 
-See systemuser Table [lk_role_createdonbehalfby](systemuser.md#BKMK_lk_role_createdonbehalfby) One-To-Many relationship.
+See the [lk_role_createdonbehalfby](systemuser.md#BKMK_lk_role_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_role_modifiedonbehalfby"></a> lk_role_modifiedonbehalfby
 
-See systemuser Table [lk_role_modifiedonbehalfby](systemuser.md#BKMK_lk_role_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_role_modifiedonbehalfby](systemuser.md#BKMK_lk_role_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_role_parent_root_role"></a> role_parent_root_role
 
-See role Table [role_parent_root_role](role.md#BKMK_role_parent_root_role) One-To-Many relationship.
+See the [role_parent_root_role](role.md#BKMK_role_parent_root_role) one-to-many relationship for the [role](role.md) table/entity.
 
 ### <a name="BKMK_lk_rolebase_createdby"></a> lk_rolebase_createdby
 
-See systemuser Table [lk_rolebase_createdby](systemuser.md#BKMK_lk_rolebase_createdby) One-To-Many relationship.
+See the [lk_rolebase_createdby](systemuser.md#BKMK_lk_rolebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_solution_role"></a> solution_role
 
-See solution Table [solution_role](solution.md#BKMK_solution_role) One-To-Many relationship.
+See the [solution_role](solution.md#BKMK_solution_role) one-to-many relationship for the [solution](solution.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -832,23 +832,23 @@ Relationship details provided where the Role table is the first table in the rel
 
 ### <a name="BKMK_systemuserroles_association"></a> systemuserroles_association
 
-See systemuser Table [systemuserroles_association](systemuser.md#BKMK_systemuserroles_association) Many-To-Many Relationship.
+See the [systemuserroles_association](systemuser.md#BKMK_systemuserroles_association) many-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_roleprivileges_association"></a> roleprivileges_association
 
-See privilege Table [roleprivileges_association](privilege.md#BKMK_roleprivileges_association) Many-To-Many Relationship.
+See the [roleprivileges_association](privilege.md#BKMK_roleprivileges_association) many-to-many relationship for the [privilege](privilege.md) table/entity.
 
 ### <a name="BKMK_appmoduleroles_association"></a> appmoduleroles_association
 
-See appmodule Table [appmoduleroles_association](appmodule.md#BKMK_appmoduleroles_association) Many-To-Many Relationship.
+See the [appmoduleroles_association](appmodule.md#BKMK_appmoduleroles_association) many-to-many relationship for the [appmodule](appmodule.md) table/entity.
 
 ### <a name="BKMK_teamroles_association"></a> teamroles_association
 
-See team Table [teamroles_association](team.md#BKMK_teamroles_association) Many-To-Many Relationship.
+See the [teamroles_association](team.md#BKMK_teamroles_association) many-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_applicationuserrole"></a> applicationuserrole
 
-See applicationuser Table [applicationuserrole](applicationuser.md#BKMK_applicationuserrole) Many-To-Many Relationship.
+See the [applicationuserrole](applicationuser.md#BKMK_applicationuserrole) many-to-many relationship for the [applicationuser](applicationuser.md) table/entity.
 
 ### See also
 
