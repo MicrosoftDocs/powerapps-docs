@@ -33,19 +33,19 @@ You can retrieve these values using Web API using the following query:
 GET [Organization URI]/api/data/v9.1/appmodules?$select=appmoduleid,uniquename
 ```
 
+More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
+
 ### Using Unique Name
 
-You can use the Unique Name of the application to open the app using either of these URL formats:
+You can use the Unique Name of the application to open the app using this URL formats:
 
 ```  
-https://myorg.crm.dynamics.com/Apps/uniquename/{UniqueName}
 https://myorg.crm.dynamics.com/main.aspx?appname={UniqueName}
 ``` 
 
 For example, if the Unique Name is `msdyn_SolutionHealthHub`, you can open this app using either of these URLs:
 
 ```  
-https://myorg.crm.dynamics.com/Apps/uniquename/msdyn_SolutionHealthHub
 https://myorg.crm.dynamics.com/main.aspx?appname=msdyn_SolutionHealthHub
 ``` 
 
@@ -55,6 +55,11 @@ Append the `appid` query parameter to the `main.aspx` page to open the app using
 
 ```
 https://myorg.crm.dynamics.com/main.aspx?appid={AppModuleId}
+``` 
+For example:
+
+```
+https://myorg.crm.dynamics.com/main.aspx?appid=12fd1cf3-e06e-e911-a95f-000d3a13c42a
 ``` 
 
 
