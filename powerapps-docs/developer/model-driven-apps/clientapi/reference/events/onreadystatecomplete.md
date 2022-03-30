@@ -20,8 +20,17 @@ contributors:
 
 The `OnReadyStateComplete` event indicates that the content of the IFRAME has loaded and can be accessed in code. Use this event when referencing IFRAME controls within your scripts. 
 
+Use the [control's](/powerapps/developer/model-driven-apps/clientapi/reference/controls/getcontrol) **addOnReadyStateComplete** and **removeOnReadyStateComplete** methods to manage event handlers for this event. Here's an example:
 
-
-
+```JavaScript
+function onLoad(executionContext)
+{
+  let formContext = executionContext.getFormContext();
+  let webResource = formContext.getControl("webResourceName");
+  webResource.addOnReadyStateComplete(context => {
+    //do something
+  });
+}
+```
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
