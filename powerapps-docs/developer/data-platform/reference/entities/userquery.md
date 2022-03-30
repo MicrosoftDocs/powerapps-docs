@@ -1,8 +1,8 @@
 ---
-title: "Saved View (UserQuery) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Saved View (UserQuery) table/entity."
-ms.date: 10/05/2021
-
+title: "Saved View (UserQuery)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Saved View (UserQuery)  table/entity."
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Saved View (UserQuery) table/entity reference
+# Saved View (UserQuery)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -378,6 +378,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -635,12 +636,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -698,7 +715,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_UserQuery_BulkDeleteFailures"></a> UserQuery_BulkDeleteFailures
 
-Same as bulkdeletefailure table [UserQuery_BulkDeleteFailures](bulkdeletefailure.md#BKMK_UserQuery_BulkDeleteFailures) Many-To-One relationship.
+Same as the [UserQuery_BulkDeleteFailures](bulkdeletefailure.md#BKMK_UserQuery_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -713,7 +730,7 @@ Same as bulkdeletefailure table [UserQuery_BulkDeleteFailures](bulkdeletefailure
 
 ### <a name="BKMK_UserQuery_SyncErrors"></a> UserQuery_SyncErrors
 
-Same as syncerror table [UserQuery_SyncErrors](syncerror.md#BKMK_UserQuery_SyncErrors) Many-To-One relationship.
+Same as the [UserQuery_SyncErrors](syncerror.md#BKMK_UserQuery_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -728,7 +745,7 @@ Same as syncerror table [UserQuery_SyncErrors](syncerror.md#BKMK_UserQuery_SyncE
 
 ### <a name="BKMK_UserQuery_AsyncOperations"></a> UserQuery_AsyncOperations
 
-Same as asyncoperation table [UserQuery_AsyncOperations](asyncoperation.md#BKMK_UserQuery_AsyncOperations) Many-To-One relationship.
+Same as the [UserQuery_AsyncOperations](asyncoperation.md#BKMK_UserQuery_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -757,31 +774,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_userquery_modifiedonbehalfby"></a> lk_userquery_modifiedonbehalfby
 
-See systemuser Table [lk_userquery_modifiedonbehalfby](systemuser.md#BKMK_lk_userquery_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_userquery_modifiedonbehalfby](systemuser.md#BKMK_lk_userquery_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_userquery"></a> business_unit_userquery
 
-See businessunit Table [business_unit_userquery](businessunit.md#BKMK_business_unit_userquery) One-To-Many relationship.
+See the [business_unit_userquery](businessunit.md#BKMK_business_unit_userquery) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_user_userquery"></a> user_userquery
 
-See systemuser Table [user_userquery](systemuser.md#BKMK_user_userquery) One-To-Many relationship.
+See the [user_userquery](systemuser.md#BKMK_user_userquery) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_userquery"></a> team_userquery
 
-See team Table [team_userquery](team.md#BKMK_team_userquery) One-To-Many relationship.
+See the [team_userquery](team.md#BKMK_team_userquery) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_userquery_modifiedby"></a> lk_userquery_modifiedby
 
-See systemuser Table [lk_userquery_modifiedby](systemuser.md#BKMK_lk_userquery_modifiedby) One-To-Many relationship.
+See the [lk_userquery_modifiedby](systemuser.md#BKMK_lk_userquery_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userquery_createdby"></a> lk_userquery_createdby
 
-See systemuser Table [lk_userquery_createdby](systemuser.md#BKMK_lk_userquery_createdby) One-To-Many relationship.
+See the [lk_userquery_createdby](systemuser.md#BKMK_lk_userquery_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userquery_createdonbehalfby"></a> lk_userquery_createdonbehalfby
 
-See systemuser Table [lk_userquery_createdonbehalfby](systemuser.md#BKMK_lk_userquery_createdonbehalfby) One-To-Many relationship.
+See the [lk_userquery_createdonbehalfby](systemuser.md#BKMK_lk_userquery_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

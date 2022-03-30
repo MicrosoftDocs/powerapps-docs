@@ -1,8 +1,8 @@
 ---
-title: "ActivityParty table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ActivityParty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActivityParty table/entity."
-ms.date: 10/05/2021
-
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -265,10 +265,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Do Not Allow|
-|0|Allow|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -288,10 +288,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Do Not Allow|
-|0|Allow|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -311,10 +311,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Do Not Allow|
-|0|Allow|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -334,10 +334,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Do Not Allow|
-|0|Allow|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -381,10 +381,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -494,7 +494,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ActivityParty_SyncErrors"></a> ActivityParty_SyncErrors
 
-Same as syncerror table [ActivityParty_SyncErrors](syncerror.md#BKMK_ActivityParty_SyncErrors) Many-To-One relationship.
+Same as the [ActivityParty_SyncErrors](syncerror.md#BKMK_ActivityParty_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -530,59 +530,59 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_account_activity_parties"></a> account_activity_parties
 
-See account Table [account_activity_parties](account.md#BKMK_account_activity_parties) One-To-Many relationship.
+See the [account_activity_parties](account.md#BKMK_account_activity_parties) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_letter_activity_parties"></a> letter_activity_parties
 
-See letter Table [letter_activity_parties](letter.md#BKMK_letter_activity_parties) One-To-Many relationship.
+See the [letter_activity_parties](letter.md#BKMK_letter_activity_parties) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_phonecall_activity_parties"></a> phonecall_activity_parties
 
-See phonecall Table [phonecall_activity_parties](phonecall.md#BKMK_phonecall_activity_parties) One-To-Many relationship.
+See the [phonecall_activity_parties](phonecall.md#BKMK_phonecall_activity_parties) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_task_activity_parties"></a> task_activity_parties
 
-See task Table [task_activity_parties](task.md#BKMK_task_activity_parties) One-To-Many relationship.
+See the [task_activity_parties](task.md#BKMK_task_activity_parties) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_recurringappointmentmaster_activity_parties"></a> recurringappointmentmaster_activity_parties
 
-See recurringappointmentmaster Table [recurringappointmentmaster_activity_parties](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_activity_parties) One-To-Many relationship.
+See the [recurringappointmentmaster_activity_parties](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_activity_parties) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_contact_activity_parties"></a> contact_activity_parties
 
-See contact Table [contact_activity_parties](contact.md#BKMK_contact_activity_parties) One-To-Many relationship.
+See the [contact_activity_parties](contact.md#BKMK_contact_activity_parties) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_system_user_activity_parties"></a> system_user_activity_parties
 
-See systemuser Table [system_user_activity_parties](systemuser.md#BKMK_system_user_activity_parties) One-To-Many relationship.
+See the [system_user_activity_parties](systemuser.md#BKMK_system_user_activity_parties) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_appointment_activity_parties"></a> appointment_activity_parties
 
-See appointment Table [appointment_activity_parties](appointment.md#BKMK_appointment_activity_parties) One-To-Many relationship.
+See the [appointment_activity_parties](appointment.md#BKMK_appointment_activity_parties) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_socialactivity_activity_parties"></a> socialactivity_activity_parties
 
-See socialactivity Table [socialactivity_activity_parties](socialactivity.md#BKMK_socialactivity_activity_parties) One-To-Many relationship.
+See the [socialactivity_activity_parties](socialactivity.md#BKMK_socialactivity_activity_parties) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_queue_activity_parties"></a> queue_activity_parties
 
-See queue Table [queue_activity_parties](queue.md#BKMK_queue_activity_parties) One-To-Many relationship.
+See the [queue_activity_parties](queue.md#BKMK_queue_activity_parties) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_knowledgearticle_activity_parties"></a> knowledgearticle_activity_parties
 
-See knowledgearticle Table [knowledgearticle_activity_parties](knowledgearticle.md#BKMK_knowledgearticle_activity_parties) One-To-Many relationship.
+See the [knowledgearticle_activity_parties](knowledgearticle.md#BKMK_knowledgearticle_activity_parties) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_email_activity_parties"></a> email_activity_parties
 
-See email Table [email_activity_parties](email.md#BKMK_email_activity_parties) One-To-Many relationship.
+See the [email_activity_parties](email.md#BKMK_email_activity_parties) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_fax_activity_parties"></a> fax_activity_parties
 
-See fax Table [fax_activity_parties](fax.md#BKMK_fax_activity_parties) One-To-Many relationship.
+See the [fax_activity_parties](fax.md#BKMK_fax_activity_parties) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_activitypointer_activity_parties"></a> activitypointer_activity_parties
 
-See activitypointer Table [activitypointer_activity_parties](activitypointer.md#BKMK_activitypointer_activity_parties) One-To-Many relationship.
+See the [activitypointer_activity_parties](activitypointer.md#BKMK_activitypointer_activity_parties) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### See also
 

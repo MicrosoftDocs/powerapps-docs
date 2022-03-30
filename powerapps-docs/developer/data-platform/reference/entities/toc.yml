@@ -1,5 +1,7 @@
 - name: "About Table/Entity Reference"
   href: ../about-entity-reference.md
+- name: aaduser
+  href: aaduser.md
 - name: Account
   href: account.md
 - name: ACIViewMapper
@@ -108,6 +110,8 @@
   href: datalakeworkspacepermission.md
 - name: DataPerformance
   href: dataperformance.md
+- name: DataProcessingConfiguration
+  href: dataprocessingconfiguration.md
 - name: Dependency
   href: dependency.md
 - name: DisplayString
@@ -230,6 +234,8 @@
   href: msdyn_aibdatasetrecord.md
 - name: msdyn_AIBDatasetsContainer
   href: msdyn_aibdatasetscontainer.md
+- name: msdyn_AIBFeedbackLoop
+  href: msdyn_aibfeedbackloop.md
 - name: msdyn_AIBFile
   href: msdyn_aibfile.md
 - name: msdyn_AIBFileAttachedData
@@ -264,6 +270,10 @@
   href: msdyn_componentlayerdatasource.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
+- name: msdyn_dataflowrefreshhistory
+  href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_entityrefreshhistory
+  href: msdyn_entityrefreshhistory.md
 - name: msdyn_federatedarticle
   href: msdyn_federatedarticle.md
 - name: msdyn_federatedarticleincident
@@ -284,6 +294,8 @@
   href: msdyn_knowledgearticletemplate.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
+- name: msdyn_knowledgemanagementsetting
+  href: msdyn_knowledgemanagementsetting.md
 - name: msdyn_knowledgepersonalfilter
   href: msdyn_knowledgepersonalfilter.md
 - name: msdyn_knowledgesearchfilter
@@ -334,6 +346,8 @@
   href: officegraphdocument.md
 - name: Organization
   href: organization.md
+- name: organizationdatasyncstate
+  href: organizationdatasyncstate.md
 - name: organizationdatasyncsubscription
   href: organizationdatasyncsubscription.md
 - name: organizationdatasyncsubscriptionentity
@@ -350,7 +364,7 @@
   href: picklistmapping.md
 - name: PluginAssembly
   href: pluginassembly.md
-- name: pluginpackage
+- name: PluginPackage
   href: pluginpackage.md
 - name: PluginTraceLog
   href: plugintracelog.md
@@ -436,6 +450,8 @@
   href: serviceplan.md
 - name: ServicePlanMapping
   href: serviceplanmapping.md
+- name: SharedLinkSetting
+  href: sharedlinksetting.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -470,6 +486,18 @@
   href: stagesolutionupload.md
 - name: Subject
   href: subject.md
+- name: synapsedatabase
+  href: synapsedatabase.md
+- name: synapselinkexternaltablestate
+  href: synapselinkexternaltablestate.md
+- name: synapselinkprofile
+  href: synapselinkprofile.md
+- name: synapselinkprofileentity
+  href: synapselinkprofileentity.md
+- name: synapselinkprofileentitystate
+  href: synapselinkprofileentitystate.md
+- name: synapselinkschedule
+  href: synapselinkschedule.md
 - name: SyncError
   href: syncerror.md
 - name: SystemForm
