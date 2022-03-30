@@ -1,15 +1,14 @@
 ---
 title: "init | MicrosoftDocs"
 description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: ""
-ms.assetid: 4485b7d4-c68f-4298-8676-1820eb33c1ad
 ---
 # init
 

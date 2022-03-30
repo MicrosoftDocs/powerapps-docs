@@ -2,15 +2,14 @@
 title: GetRecordId | Microsoft Docs
 description: Gets the record ID.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 8d98a8ca-d4e9-405e-bd59-a1207a46020c
 ---
 
 # getRecordId

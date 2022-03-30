@@ -33,13 +33,15 @@ Make sure you also [review the prerequisites for using geospatial controls](geos
 
 Insert the control into your app as you normally would for any other control or control.
 
+
+
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab. 
 
 2. Expand **Input**.
 
-3. Select the control **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
+3. Select the control **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen. You must enter at least three characters including one number for the address input control.
 
 You can modify the control by using a number of [properties](#input-properties).
 

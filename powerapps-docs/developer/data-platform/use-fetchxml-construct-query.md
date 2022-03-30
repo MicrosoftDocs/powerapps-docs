@@ -2,11 +2,11 @@
 title: "Use FetchXML to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about FetchXML, a proprietary XML based language that is used in Microsoft Dataverse to query data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/25/2021
+ms.date: 03/13/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
@@ -141,5 +141,9 @@ foreach (var c in result.Entities)
 ## FetchXML query results
 
  When you execute a FetchXML query by using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.RetrieveMultiple(Microsoft.Xrm.Sdk.Query.QueryBase)> method, the return value is an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query. You can then iterate through the table collection. The previous example uses the `foreach` loop to iterate through the result collection of the FetchXML query.
+
+## Use Wildcard characters in conditions using string values
+
+You can use wildcard characters when you construct queries using conditions on string values. More information: [Use wildcard characters in conditions for string values](wildcard-characters.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
