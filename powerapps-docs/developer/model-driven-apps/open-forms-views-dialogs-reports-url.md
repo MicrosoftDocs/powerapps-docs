@@ -36,7 +36,7 @@ GET [Organization URI]/api/data/v9.1/appmodules?$select=appmoduleid,uniquename
 
 More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
 
-You can use either the `appname` or `appid` query parameters with the Unique Name or AppModuleId values respectively. But you cannot use both.
+You can use either the `appname` or `appid` query parameters with the Unique Name or AppModuleId values respectively, but you cannot use both at the same time.
 
 ### Using Unique Name
 
