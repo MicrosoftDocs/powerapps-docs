@@ -46,7 +46,7 @@ Create a new text column and configure the control, or replace an existing text 
 To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps.
 
    > [!NOTE]
-   > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions (Microsoft Dataverse) - Power Apps](/power-platform/developer/data-platform/data-type-format-conversions)
+   > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions](/powerapps/developer/data-platform/data-type-format-conversions)
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
 
