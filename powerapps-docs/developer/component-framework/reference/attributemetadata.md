@@ -2,15 +2,15 @@
 title: AttributeMetadata | Microsoft Docs
 description: Provides all the information about attributes/columns definitions.
 keywords:
-ms.author: nabuthuk
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-author: nkrb
-ms.date: 06/12/2021
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
 ---
 
 # AttributeMetadata

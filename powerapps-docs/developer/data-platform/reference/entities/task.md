@@ -1,8 +1,8 @@
 ---
-title: "Task table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Task table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Task table/entity."
-ms.date: 10/05/2021
-
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -252,10 +252,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -275,10 +275,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -672,6 +672,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -836,10 +837,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1004,12 +1005,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the record owner's business unit.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1189,7 +1206,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_task_PostFollows"></a> task_PostFollows
 
-Same as postfollow table [task_PostFollows](postfollow.md#BKMK_task_PostFollows) Many-To-One relationship.
+Same as the [task_PostFollows](postfollow.md#BKMK_task_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1204,7 +1221,7 @@ Same as postfollow table [task_PostFollows](postfollow.md#BKMK_task_PostFollows)
 
 ### <a name="BKMK_Task_SyncErrors"></a> Task_SyncErrors
 
-Same as syncerror table [Task_SyncErrors](syncerror.md#BKMK_Task_SyncErrors) Many-To-One relationship.
+Same as the [Task_SyncErrors](syncerror.md#BKMK_Task_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1219,7 +1236,7 @@ Same as syncerror table [Task_SyncErrors](syncerror.md#BKMK_Task_SyncErrors) Man
 
 ### <a name="BKMK_Task_QueueItem"></a> Task_QueueItem
 
-Same as queueitem table [Task_QueueItem](queueitem.md#BKMK_Task_QueueItem) Many-To-One relationship.
+Same as the [Task_QueueItem](queueitem.md#BKMK_Task_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1234,7 +1251,7 @@ Same as queueitem table [Task_QueueItem](queueitem.md#BKMK_Task_QueueItem) Many-
 
 ### <a name="BKMK_Task_DuplicateBaseRecord"></a> Task_DuplicateBaseRecord
 
-Same as duplicaterecord table [Task_DuplicateBaseRecord](duplicaterecord.md#BKMK_Task_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Task_DuplicateBaseRecord](duplicaterecord.md#BKMK_Task_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1249,7 +1266,7 @@ Same as duplicaterecord table [Task_DuplicateBaseRecord](duplicaterecord.md#BKMK
 
 ### <a name="BKMK_task_connections2"></a> task_connections2
 
-Same as connection table [task_connections2](connection.md#BKMK_task_connections2) Many-To-One relationship.
+Same as the [task_connections2](connection.md#BKMK_task_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1264,7 +1281,7 @@ Same as connection table [task_connections2](connection.md#BKMK_task_connections
 
 ### <a name="BKMK_Task_DuplicateMatchingRecord"></a> Task_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Task_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Task_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Task_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Task_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1279,7 +1296,7 @@ Same as duplicaterecord table [Task_DuplicateMatchingRecord](duplicaterecord.md#
 
 ### <a name="BKMK_task_activity_parties"></a> task_activity_parties
 
-Same as activityparty table [task_activity_parties](activityparty.md#BKMK_task_activity_parties) Many-To-One relationship.
+Same as the [task_activity_parties](activityparty.md#BKMK_task_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1294,7 +1311,7 @@ Same as activityparty table [task_activity_parties](activityparty.md#BKMK_task_a
 
 ### <a name="BKMK_Task_ProcessSessions"></a> Task_ProcessSessions
 
-Same as processsession table [Task_ProcessSessions](processsession.md#BKMK_Task_ProcessSessions) Many-To-One relationship.
+Same as the [Task_ProcessSessions](processsession.md#BKMK_Task_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1309,7 +1326,7 @@ Same as processsession table [Task_ProcessSessions](processsession.md#BKMK_Task_
 
 ### <a name="BKMK_Task_BulkDeleteFailures"></a> Task_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Task_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Task_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Task_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Task_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1324,7 +1341,7 @@ Same as bulkdeletefailure table [Task_BulkDeleteFailures](bulkdeletefailure.md#B
 
 ### <a name="BKMK_task_principalobjectattributeaccess"></a> task_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [task_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_task_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [task_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_task_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1339,7 +1356,7 @@ Same as principalobjectattributeaccess table [task_principalobjectattributeacces
 
 ### <a name="BKMK_task_actioncard"></a> task_actioncard
 
-Same as actioncard table [task_actioncard](actioncard.md#BKMK_task_actioncard) Many-To-One relationship.
+Same as the [task_actioncard](actioncard.md#BKMK_task_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1354,7 +1371,7 @@ Same as actioncard table [task_actioncard](actioncard.md#BKMK_task_actioncard) M
 
 ### <a name="BKMK_slakpiinstance_task"></a> slakpiinstance_task
 
-Same as slakpiinstance table [slakpiinstance_task](slakpiinstance.md#BKMK_slakpiinstance_task) Many-To-One relationship.
+Same as the [slakpiinstance_task](slakpiinstance.md#BKMK_slakpiinstance_task) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1369,7 +1386,7 @@ Same as slakpiinstance table [slakpiinstance_task](slakpiinstance.md#BKMK_slakpi
 
 ### <a name="BKMK_Task_Annotation"></a> Task_Annotation
 
-Same as annotation table [Task_Annotation](annotation.md#BKMK_Task_Annotation) Many-To-One relationship.
+Same as the [Task_Annotation](annotation.md#BKMK_Task_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1384,7 +1401,7 @@ Same as annotation table [Task_Annotation](annotation.md#BKMK_Task_Annotation) M
 
 ### <a name="BKMK_task_connections1"></a> task_connections1
 
-Same as connection table [task_connections1](connection.md#BKMK_task_connections1) Many-To-One relationship.
+Same as the [task_connections1](connection.md#BKMK_task_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1399,7 +1416,7 @@ Same as connection table [task_connections1](connection.md#BKMK_task_connections
 
 ### <a name="BKMK_Task_AsyncOperations"></a> Task_AsyncOperations
 
-Same as asyncoperation table [Task_AsyncOperations](asyncoperation.md#BKMK_Task_AsyncOperations) Many-To-One relationship.
+Same as the [Task_AsyncOperations](asyncoperation.md#BKMK_Task_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1437,67 +1454,67 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_KnowledgeBaseRecord_Tasks"></a> KnowledgeBaseRecord_Tasks
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_Tasks](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Tasks) One-To-Many relationship.
+See the [KnowledgeBaseRecord_Tasks](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Tasks) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_business_unit_task_activities"></a> business_unit_task_activities
 
-See businessunit Table [business_unit_task_activities](businessunit.md#BKMK_business_unit_task_activities) One-To-Many relationship.
+See the [business_unit_task_activities](businessunit.md#BKMK_business_unit_task_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Task"></a> TransactionCurrency_Task
 
-See transactioncurrency Table [TransactionCurrency_Task](transactioncurrency.md#BKMK_TransactionCurrency_Task) One-To-Many relationship.
+See the [TransactionCurrency_Task](transactioncurrency.md#BKMK_TransactionCurrency_Task) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_task_createdby"></a> lk_task_createdby
 
-See systemuser Table [lk_task_createdby](systemuser.md#BKMK_lk_task_createdby) One-To-Many relationship.
+See the [lk_task_createdby](systemuser.md#BKMK_lk_task_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_task"></a> user_task
 
-See systemuser Table [user_task](systemuser.md#BKMK_user_task) One-To-Many relationship.
+See the [user_task](systemuser.md#BKMK_user_task) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Tasks"></a> KnowledgeArticle_Tasks
 
-See knowledgearticle Table [KnowledgeArticle_Tasks](knowledgearticle.md#BKMK_KnowledgeArticle_Tasks) One-To-Many relationship.
+See the [KnowledgeArticle_Tasks](knowledgearticle.md#BKMK_KnowledgeArticle_Tasks) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_team_task"></a> team_task
 
-See team Table [team_task](team.md#BKMK_team_task) One-To-Many relationship.
+See the [team_task](team.md#BKMK_team_task) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_task_createdonbehalfby"></a> lk_task_createdonbehalfby
 
-See systemuser Table [lk_task_createdonbehalfby](systemuser.md#BKMK_lk_task_createdonbehalfby) One-To-Many relationship.
+See the [lk_task_createdonbehalfby](systemuser.md#BKMK_lk_task_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_task"></a> activity_pointer_task
 
-See activitypointer Table [activity_pointer_task](activitypointer.md#BKMK_activity_pointer_task) One-To-Many relationship.
+See the [activity_pointer_task](activitypointer.md#BKMK_activity_pointer_task) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_Account_Tasks"></a> Account_Tasks
 
-See account Table [Account_Tasks](account.md#BKMK_Account_Tasks) One-To-Many relationship.
+See the [Account_Tasks](account.md#BKMK_Account_Tasks) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_Contact_Tasks"></a> Contact_Tasks
 
-See contact Table [Contact_Tasks](contact.md#BKMK_Contact_Tasks) One-To-Many relationship.
+See the [Contact_Tasks](contact.md#BKMK_Contact_Tasks) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_task_modifiedby"></a> lk_task_modifiedby
 
-See systemuser Table [lk_task_modifiedby](systemuser.md#BKMK_lk_task_modifiedby) One-To-Many relationship.
+See the [lk_task_modifiedby](systemuser.md#BKMK_lk_task_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processstage_tasks"></a> processstage_tasks
 
-See processstage Table [processstage_tasks](processstage.md#BKMK_processstage_tasks) One-To-Many relationship.
+See the [processstage_tasks](processstage.md#BKMK_processstage_tasks) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_sla_task"></a> sla_task
 
-See sla Table [sla_task](sla.md#BKMK_sla_task) One-To-Many relationship.
+See the [sla_task](sla.md#BKMK_sla_task) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_manualsla_task"></a> manualsla_task
 
-See sla Table [manualsla_task](sla.md#BKMK_manualsla_task) One-To-Many relationship.
+See the [manualsla_task](sla.md#BKMK_manualsla_task) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_lk_task_modifiedonbehalfby"></a> lk_task_modifiedonbehalfby
 
-See systemuser Table [lk_task_modifiedonbehalfby](systemuser.md#BKMK_lk_task_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_task_modifiedonbehalfby](systemuser.md#BKMK_lk_task_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -1,8 +1,8 @@
 ---
-title: "Feedback table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Feedback table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Feedback table/entity."
-ms.date: 10/05/2021
-
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -437,6 +437,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -874,12 +875,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the knowledge article views.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -987,7 +1004,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Feedback_SyncErrors"></a> Feedback_SyncErrors
 
-Same as syncerror table [Feedback_SyncErrors](syncerror.md#BKMK_Feedback_SyncErrors) Many-To-One relationship.
+Same as the [Feedback_SyncErrors](syncerror.md#BKMK_Feedback_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1002,7 +1019,7 @@ Same as syncerror table [Feedback_SyncErrors](syncerror.md#BKMK_Feedback_SyncErr
 
 ### <a name="BKMK_feedback_feedback"></a> feedback_feedback
 
-Same as feedback table [feedback_feedback](feedback.md#BKMK_feedback_feedback) Many-To-One relationship.
+Same as the [feedback_feedback](feedback.md#BKMK_feedback_feedback) many-to-one relationship for the [feedback](feedback.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1017,7 +1034,7 @@ Same as feedback table [feedback_feedback](feedback.md#BKMK_feedback_feedback) M
 
 ### <a name="BKMK_feedback_principalobjectattributeaccess"></a> feedback_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [feedback_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_feedback_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [feedback_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_feedback_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1032,7 +1049,7 @@ Same as principalobjectattributeaccess table [feedback_principalobjectattributea
 
 ### <a name="BKMK_feedback_DuplicateBaseRecord"></a> feedback_DuplicateBaseRecord
 
-Same as duplicaterecord table [feedback_DuplicateBaseRecord](duplicaterecord.md#BKMK_feedback_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [feedback_DuplicateBaseRecord](duplicaterecord.md#BKMK_feedback_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1047,7 +1064,7 @@ Same as duplicaterecord table [feedback_DuplicateBaseRecord](duplicaterecord.md#
 
 ### <a name="BKMK_feedback_DuplicateMatchingRecord"></a> feedback_DuplicateMatchingRecord
 
-Same as duplicaterecord table [feedback_DuplicateMatchingRecord](duplicaterecord.md#BKMK_feedback_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [feedback_DuplicateMatchingRecord](duplicaterecord.md#BKMK_feedback_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1082,55 +1099,55 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_feedback_modifiedby"></a> lk_feedback_modifiedby
 
-See systemuser Table [lk_feedback_modifiedby](systemuser.md#BKMK_lk_feedback_modifiedby) One-To-Many relationship.
+See the [lk_feedback_modifiedby](systemuser.md#BKMK_lk_feedback_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Contact_Feedback"></a> Contact_Feedback
 
-See contact Table [Contact_Feedback](contact.md#BKMK_Contact_Feedback) One-To-Many relationship.
+See the [Contact_Feedback](contact.md#BKMK_Contact_Feedback) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_feedback_closedby"></a> lk_feedback_closedby
 
-See systemuser Table [lk_feedback_closedby](systemuser.md#BKMK_lk_feedback_closedby) One-To-Many relationship.
+See the [lk_feedback_closedby](systemuser.md#BKMK_lk_feedback_closedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_feedback_feedback"></a> feedback_feedback
 
-See feedback Table [feedback_feedback](feedback.md#BKMK_feedback_feedback) One-To-Many relationship.
+See the [feedback_feedback](feedback.md#BKMK_feedback_feedback) one-to-many relationship for the [feedback](feedback.md) table/entity.
 
 ### <a name="BKMK_lk_feedback_createdonbehalfby"></a> lk_feedback_createdonbehalfby
 
-See systemuser Table [lk_feedback_createdonbehalfby](systemuser.md#BKMK_lk_feedback_createdonbehalfby) One-To-Many relationship.
+See the [lk_feedback_createdonbehalfby](systemuser.md#BKMK_lk_feedback_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Feedback"></a> KnowledgeArticle_Feedback
 
-See knowledgearticle Table [KnowledgeArticle_Feedback](knowledgearticle.md#BKMK_KnowledgeArticle_Feedback) One-To-Many relationship.
+See the [KnowledgeArticle_Feedback](knowledgearticle.md#BKMK_KnowledgeArticle_Feedback) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_feedback"></a> transactioncurrency_feedback
 
-See transactioncurrency Table [transactioncurrency_feedback](transactioncurrency.md#BKMK_transactioncurrency_feedback) One-To-Many relationship.
+See the [transactioncurrency_feedback](transactioncurrency.md#BKMK_transactioncurrency_feedback) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_feedback_modifiedonbehalfby"></a> lk_feedback_modifiedonbehalfby
 
-See systemuser Table [lk_feedback_modifiedonbehalfby](systemuser.md#BKMK_lk_feedback_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_feedback_modifiedonbehalfby](systemuser.md#BKMK_lk_feedback_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_feedback"></a> business_unit_feedback
 
-See businessunit Table [business_unit_feedback](businessunit.md#BKMK_business_unit_feedback) One-To-Many relationship.
+See the [business_unit_feedback](businessunit.md#BKMK_business_unit_feedback) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_contact_feedback_createdonbehalfby"></a> lk_contact_feedback_createdonbehalfby
 
-See contact Table [lk_contact_feedback_createdonbehalfby](contact.md#BKMK_lk_contact_feedback_createdonbehalfby) One-To-Many relationship.
+See the [lk_contact_feedback_createdonbehalfby](contact.md#BKMK_lk_contact_feedback_createdonbehalfby) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_contact_feedback_createdby"></a> lk_contact_feedback_createdby
 
-See contact Table [lk_contact_feedback_createdby](contact.md#BKMK_lk_contact_feedback_createdby) One-To-Many relationship.
+See the [lk_contact_feedback_createdby](contact.md#BKMK_lk_contact_feedback_createdby) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_feedback_createdby"></a> lk_feedback_createdby
 
-See systemuser Table [lk_feedback_createdby](systemuser.md#BKMK_lk_feedback_createdby) One-To-Many relationship.
+See the [lk_feedback_createdby](systemuser.md#BKMK_lk_feedback_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
 
-See knowledgearticle Table [msdyn_knowledgearticle_feedback_context](knowledgearticle.md#BKMK_msdyn_knowledgearticle_feedback_context) One-To-Many relationship.
+See the [msdyn_knowledgearticle_feedback_context](knowledgearticle.md#BKMK_msdyn_knowledgearticle_feedback_context) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### See also
 
