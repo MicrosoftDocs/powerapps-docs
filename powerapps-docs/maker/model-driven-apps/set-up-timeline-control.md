@@ -214,7 +214,7 @@ You can send and receive records with images, but they won't display when the re
    This email has been blocked due to potentially harmful content. View full email content.
 3. When you select the message, the warning goes away and the image appears.
 
-If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity.md) for more information.
+If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity) for more information.
 
 #### Enable “What you’ve missed” summary
 
@@ -430,7 +430,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 
 ## Configure mentions in notes and posts on timeline
 
-To enable mentions in notes and posts, contact [Microsoft Help + support](/power-platform/admin/get-help-support.md). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
+To enable mentions in notes and posts, contact [Microsoft Help + support](/power-platform/admin/get-help-support). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
 
 ```
      &flags=FCB.TimelineWallRichTextPosts=true,FCB.TimelineNotesRichTextMentions=true
