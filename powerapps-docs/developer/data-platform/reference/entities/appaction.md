@@ -1471,5 +1471,4 @@ See the [webresource_appaction_onclickeventjavascriptwebresourceid](webresource.
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.appaction?text=appaction EntityType" />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)
