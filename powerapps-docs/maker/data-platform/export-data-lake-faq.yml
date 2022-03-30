@@ -17,7 +17,7 @@ sections:
   questions:
    - question: Does adding multiple Microsoft Dataverse tables simultaneously to the lake impact performance?
      answer: |
-        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenarios: 
+        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenario: 
         - Delta sync: After the initial sync of tables are completed, any change in Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
    - question: How can I access my table relationships?
      answer: |
