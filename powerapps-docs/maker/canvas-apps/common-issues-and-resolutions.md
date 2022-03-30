@@ -5,7 +5,7 @@ author: KumarVivek
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/08/2022
+ms.date: 03/25/2022
 ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
@@ -34,6 +34,10 @@ If you're running into issues using Power Apps, try these common troubleshooting
 * Try with another device, if possible.
 
 ## Known Issues
+
+1. **Performance degradation when opening Power Apps Studio in China** (March 25, 2022)
+
+    Power Apps Studio may take more than 30 seconds to load within the China region currently. This issue does not impact tenants hosted locally by 21Vianet.
 
 1. **Unable to copy paste forms into data cards** (March 2022)
 

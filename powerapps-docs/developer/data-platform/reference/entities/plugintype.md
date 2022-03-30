@@ -1,8 +1,8 @@
 ---
-title: "Plug-in Type (PluginType) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Plug-in Type (PluginType) table/entity."
-ms.date: 10/05/2021
-
+title: "Plug-in Type (PluginType)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Plug-in Type (PluginType)  table/entity."
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Plug-in Type (PluginType) table/entity reference
+# Plug-in Type (PluginType)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -403,10 +403,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -426,10 +426,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -700,7 +700,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep table [plugintype_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintype_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [plugintype_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintype_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -715,7 +715,7 @@ Same as sdkmessageprocessingstep table [plugintype_sdkmessageprocessingstep](sdk
 
 ### <a name="BKMK_plugintype_plugintypestatistic"></a> plugintype_plugintypestatistic
 
-Same as plugintypestatistic table [plugintype_plugintypestatistic](plugintypestatistic.md#BKMK_plugintype_plugintypestatistic) Many-To-One relationship.
+Same as the [plugintype_plugintypestatistic](plugintypestatistic.md#BKMK_plugintype_plugintypestatistic) many-to-one relationship for the [plugintypestatistic](plugintypestatistic.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -730,7 +730,7 @@ Same as plugintypestatistic table [plugintype_plugintypestatistic](plugintypesta
 
 ### <a name="BKMK_plugintypeid_sdkmessageprocessingstep"></a> plugintypeid_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep table [plugintypeid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintypeid_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [plugintypeid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintypeid_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -747,7 +747,7 @@ Same as sdkmessageprocessingstep table [plugintypeid_sdkmessageprocessingstep](s
 
 **Added by**: Custom API Framework Solution
 
-Same as customapi table [plugintype_customapi](customapi.md#BKMK_plugintype_customapi) Many-To-One relationship.
+Same as the [plugintype_customapi](customapi.md#BKMK_plugintype_customapi) many-to-one relationship for the [customapi](customapi.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -775,27 +775,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_pluginassembly_plugintype"></a> pluginassembly_plugintype
 
-See pluginassembly Table [pluginassembly_plugintype](pluginassembly.md#BKMK_pluginassembly_plugintype) One-To-Many relationship.
+See the [pluginassembly_plugintype](pluginassembly.md#BKMK_pluginassembly_plugintype) one-to-many relationship for the [pluginassembly](pluginassembly.md) table/entity.
 
 ### <a name="BKMK_lk_plugintype_createdonbehalfby"></a> lk_plugintype_createdonbehalfby
 
-See systemuser Table [lk_plugintype_createdonbehalfby](systemuser.md#BKMK_lk_plugintype_createdonbehalfby) One-To-Many relationship.
+See the [lk_plugintype_createdonbehalfby](systemuser.md#BKMK_lk_plugintype_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_plugintype"></a> organization_plugintype
 
-See organization Table [organization_plugintype](organization.md#BKMK_organization_plugintype) One-To-Many relationship.
+See the [organization_plugintype](organization.md#BKMK_organization_plugintype) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_modifiedby_plugintype"></a> modifiedby_plugintype
 
-See systemuser Table [modifiedby_plugintype](systemuser.md#BKMK_modifiedby_plugintype) One-To-Many relationship.
+See the [modifiedby_plugintype](systemuser.md#BKMK_modifiedby_plugintype) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_plugintype"></a> createdby_plugintype
 
-See systemuser Table [createdby_plugintype](systemuser.md#BKMK_createdby_plugintype) One-To-Many relationship.
+See the [createdby_plugintype](systemuser.md#BKMK_createdby_plugintype) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_plugintype_modifiedonbehalfby"></a> lk_plugintype_modifiedonbehalfby
 
-See systemuser Table [lk_plugintype_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintype_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_plugintype_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintype_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -58,7 +58,7 @@ For information about using Organization service to apply optimistic concurrency
   
      When the **IfVersionMatches** behavior is indicated on an update to a table, and where optimistic concurrency isn’t enabled, a fault is returned.  
   
-  You can check the [Code](/dotnet/api/system.servicemodel.faultexception.code) property of the returned fault to determine if the fault is related to optimistic concurrency. The codes for the error conditions that were shown previously were obtained from the ErrorCodes.cs helper code.  
+You can check the [Code](/dotnet/api/system.servicemodel.faultexception.code?view=netframework-4.6.2&preserve-view=true) property of the returned fault to determine if the fault is related to optimistic concurrency. The codes for the error conditions that were shown previously were obtained from the ErrorCodes.cs helper code.  
   
 
 
