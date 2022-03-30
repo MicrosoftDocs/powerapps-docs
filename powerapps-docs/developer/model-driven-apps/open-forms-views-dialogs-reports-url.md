@@ -19,7 +19,7 @@ search.app:
 URL addressable elements enable you to include links to apps, forms, views, dialogs, and reports in other applications. 
 
 > [!NOTE]
-> - URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.    
+> URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.    
 
 ## App Urls
 
