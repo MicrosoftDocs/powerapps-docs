@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# IFRAME OnReadyStateComplete event (Client API reference)
+# iFrame and Web Resource OnReadyStateComplete event (Client API reference)
 
 The `OnReadyStateComplete` event indicates that the content of the IFRAME has loaded and can be accessed in code. Use this event when referencing IFRAME controls within your scripts. 
 
