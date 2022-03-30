@@ -2,16 +2,14 @@
 title: Factory | Microsoft Docs
 description: Provides properties and methods to work with Popup services.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 47a15499-c526-4289-a632-49b717ba455f
 ---
 
 # Factory

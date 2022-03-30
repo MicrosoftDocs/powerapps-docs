@@ -3,9 +3,10 @@ title: "Best practices for code components | Microsoft Docs"
 description: "Learn best practices and get guidance on how to use code components created using Power Apps component framework."
 keywords:
 ms.subservice: pcf
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
+author: noazarur-microsoft
+manager: kvivek
+ms.date: 03/12/2022
 ms.reviewer: jdaly
 contributors:
     - v-scottdurow

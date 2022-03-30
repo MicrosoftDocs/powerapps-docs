@@ -91,7 +91,7 @@ landingContent:
           - text: Create and use dataflows
             url: create-and-use-dataflows.md
           - text: Connect Azure Data Lake Storage Gen2
-            url: connect-azure-data-lake-storage-for-dataflow.md
+            url: /power-query/dataflows/connect-azure-data-lake-storage-for-dataflow
 
   # Card
   - title: Integrate with external data

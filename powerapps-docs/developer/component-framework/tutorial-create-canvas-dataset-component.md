@@ -1,14 +1,14 @@
 ---
 title: "Create canvas app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a canvas app dataset code component, and deploy, add to a screen, and test the component using Visual Studio Code."
-
 ms.custom: "intro-internal"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.subservice: pcf
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
+author: noazarur-microsoft
+manager: kvivek
+ms.date: 03/12/2022
 ms.reviewer: jdaly
 contributors:
   - v-scottdurow
