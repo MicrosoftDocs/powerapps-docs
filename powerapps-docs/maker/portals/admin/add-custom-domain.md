@@ -1,6 +1,6 @@
 ---
 title: Add a custom domain name
-description: Learn how to to add a custom domain name to your portal.
+description: Learn how to add a custom domain name to your portal.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
@@ -17,7 +17,7 @@ contributors:
 
 # Add a custom domain name
 
-A custom domain can help your customers find your support resources more easily and enhance your brand. Only one custom domain name can be added to a portal. After you've provisioned your portal and acquired your domain name, you'll need an SSL certificate to set up a custom host name. You can use the purchased SSL certificate for your domain to link your portal to a custom domain by using a wizard.
+A custom domain can enhance your brand and help your customers more easily find your support resources. Once you provision your portal and acquire your domain name, you'll need an SSL certificate to set up a custom host name. After the SSL certificate is purchased, you can use a wizard to link your portal to a custom domain.  Only one custom domain name can be added to a portal.
 
 > [!IMPORTANT]
 > You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
@@ -28,7 +28,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
 1. Go to **Portal Actions** > **Add a Custom Domain Name**. A wizard opens to choose the SSL certificate.
 
-1. On the **Choose a SSL certificate** page, select one of the following options:
+1. On the **Choose a SSL certificate** page, select one of these options:
    - **Upload a new certificate**: Select this option to upload the .pfx file if you haven't yet uploaded it to the organization. Select the upload button underneath **File** to select the .pfx file. After selecting the file, enter the password for your SSL certificate in the **Password** field.
    - **Use an existing certificate**: Select this option to choose the correct certificate from the drop-down list.
 
@@ -64,7 +64,7 @@ If you want to change your existing custom domain name, you must do the followin
 
 1. Manually delete the current SSL binding.
 1. Manually delete the current assigned hostname.
-1. Re-run the wizard and follow the instructions outlined in **Add a custom domain name**.
+1. Rerun the wizard and follow the instructions outlined in **Add a custom domain name**.
 
 
     
