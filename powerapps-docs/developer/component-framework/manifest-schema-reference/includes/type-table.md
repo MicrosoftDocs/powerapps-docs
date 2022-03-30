@@ -1,20 +1,3 @@
----
-title: Type Table in Microsoft Dataverse| Microsoft Docs
-description: Learn how to use type table in Power Apps component framework
-keywords:
-ms.author: nabuthuk
-manager: kvivek
-ms.date: 04/01/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
----
-
 |Value |Description |
 |--|--|
 |Currency|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.|
@@ -37,7 +20,7 @@ ms.assetid: 41ea27ac-65b6-45a4-ae03-5f8d02dfc67b
 |Whole.None|This option simply displays a number.|
 
 > [!WARNING]
-> If `manifest.xml` file contains at least one dataset, then properties of type `Lookup.Simple` should be also wrapped into the [data-set](./../data-set.md) element.
+> If the `manifest.xml` file contains at least one dataset, then properties of type `Lookup.Simple` should be also wrapped into the [data-set](./../data-set.md) element.
 
 ## Value elements that are not supported
 
