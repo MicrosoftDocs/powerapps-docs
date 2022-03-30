@@ -26,6 +26,9 @@ This event occurs whenever form data is loaded, specifically:
  
 Use the formContext.data.[addOnLoad](../formContext-data/addOnLoad.md) and formContext.data.[removeOnLoad](../formContext-data/removeOnLoad.md) methods to manage event handlers for this event. 
 
+> [!NOTE] 
+> Controls in a form may not be ready when a form's `OnLoad` event occurs. Use the `OnLoad` of the control to wait for it to be ready. More information: [Add or remove event handler function to event using UI](../../events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-ui)
+
 ## Asynchronous OnLoad event handler support
 
 The `OnLoad` event handler has the ability to wait for promises returned by event handlers to settle before loading a form which allows for an OnLoad event to be asynchronous ("async").  The `OnLoad` event becomes async when the event handler returns a promise.
