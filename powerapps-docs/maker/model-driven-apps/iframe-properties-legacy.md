@@ -43,7 +43,8 @@ To view IFrame properties, follow these steps.
 
 
 > [!NOTE]
-> Forms are not designed to be displayed within an iFrame.  
+> * Forms are not designed to be displayed within an iFrame.
+> * Authentication inside an iFrame, either through a redirection or popups, isn't supported on mobile.
   
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  
