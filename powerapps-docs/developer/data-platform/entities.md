@@ -43,7 +43,7 @@ A [solution](../../maker/data-platform/solutions-overview.md) can contain table 
 
 ### From a data source using Power Query
 
-You can create new tables and fill them with data using Power Query. More information: [Add data to a table in Dataverse by using Power Query](../../maker/data-platform/add-data-power-query.md)
+You can create new tables and fill them with data using Power Query. More information: [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query)
 
 ### Use web services to work with table definitions
 

@@ -108,10 +108,10 @@ conceptualContent:
     - title: Administer Power Apps
       links:
         - text: Use Power Platform admin center
-          url: https://docs.microsoft.com/power-platform/admin/admin-documentation
+          url: /power-platform/admin/admin-documentation
           itemType: overview
         - text: Power Apps licensing
-          url: https://docs.microsoft.com/power-platform/admin/pricing-billing-skus
+          url: /power-platform/admin/pricing-billing-skus
           itemType: overview
         - text: Microsoft Power Platform guidance documentation
           url: /power-platform/guidance
@@ -189,21 +189,21 @@ additionalContent:
         # Card
         - title: Power Automate
           summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
-          url: https://docs.microsoft.com/power-automate
+          url: /power-automate
         # Card
         - title: Power BI
           summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
-          url: https://docs.microsoft.com/power-bi
+          url: /power-bi
         - title: Power Virtual Agents
           summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
-          url: https://docs.microsoft.com/power-virtual-agents
+          url: /power-virtual-agents
     - title: See also
       items:
       # Card
       - title: Dynamics 365
         summary: "The next generation of CRM and ERP applications"
-        url: https://docs.microsoft.com/dynamics365/
+        url: /dynamics365/
       # Card
       - title: Microsoft Azure
         summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
-        url: https://docs.microsoft.com/azure
+        url: /azure

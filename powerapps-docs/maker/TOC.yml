@@ -1062,7 +1062,7 @@
     - name: Share app resources
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md    
+      href: /power-bi/visuals/power-bi-visualization-powerapp
   - name: Manage an app
     items:
     - name: Change app name and tile
@@ -1244,7 +1244,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: ./model-driven-apps/page-data-connectors.md
+            href: /powerapps-docs/maker/../canvas-apps/connections-list
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages

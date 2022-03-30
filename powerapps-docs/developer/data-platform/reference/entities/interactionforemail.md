@@ -1,8 +1,8 @@
 ---
-title: "InteractionForEmail table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "For internal use only."
-ms.date: 10/05/2021
-
+title: "InteractionForEmail table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-For internal use only.
+
 
 
 ## Messages
@@ -375,6 +375,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
@@ -742,12 +743,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -820,7 +837,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
 
-Same as activitypointer table [interactionforemail_ActivityPointers](activitypointer.md#BKMK_interactionforemail_ActivityPointers) Many-To-One relationship.
+Same as the [interactionforemail_ActivityPointers](activitypointer.md#BKMK_interactionforemail_ActivityPointers) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -835,7 +852,7 @@ Same as activitypointer table [interactionforemail_ActivityPointers](activitypoi
 
 ### <a name="BKMK_interactionforemail_AsyncOperations"></a> interactionforemail_AsyncOperations
 
-Same as asyncoperation table [interactionforemail_AsyncOperations](asyncoperation.md#BKMK_interactionforemail_AsyncOperations) Many-To-One relationship.
+Same as the [interactionforemail_AsyncOperations](asyncoperation.md#BKMK_interactionforemail_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -865,35 +882,35 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_interactionforemail_createdby"></a> lk_interactionforemail_createdby
 
-See systemuser Table [lk_interactionforemail_createdby](systemuser.md#BKMK_lk_interactionforemail_createdby) One-To-Many relationship.
+See the [lk_interactionforemail_createdby](systemuser.md#BKMK_lk_interactionforemail_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_interactionforemail_createdonbehalfby"></a> lk_interactionforemail_createdonbehalfby
 
-See systemuser Table [lk_interactionforemail_createdonbehalfby](systemuser.md#BKMK_lk_interactionforemail_createdonbehalfby) One-To-Many relationship.
+See the [lk_interactionforemail_createdonbehalfby](systemuser.md#BKMK_lk_interactionforemail_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_interactionforemail_modifiedby"></a> lk_interactionforemail_modifiedby
 
-See systemuser Table [lk_interactionforemail_modifiedby](systemuser.md#BKMK_lk_interactionforemail_modifiedby) One-To-Many relationship.
+See the [lk_interactionforemail_modifiedby](systemuser.md#BKMK_lk_interactionforemail_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_interactionforemail_modifiedonbehalfby"></a> lk_interactionforemail_modifiedonbehalfby
 
-See systemuser Table [lk_interactionforemail_modifiedonbehalfby](systemuser.md#BKMK_lk_interactionforemail_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_interactionforemail_modifiedonbehalfby](systemuser.md#BKMK_lk_interactionforemail_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_interactionforemail"></a> user_interactionforemail
 
-See systemuser Table [user_interactionforemail](systemuser.md#BKMK_user_interactionforemail) One-To-Many relationship.
+See the [user_interactionforemail](systemuser.md#BKMK_user_interactionforemail) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_interactionforemail"></a> team_interactionforemail
 
-See team Table [team_interactionforemail](team.md#BKMK_team_interactionforemail) One-To-Many relationship.
+See the [team_interactionforemail](team.md#BKMK_team_interactionforemail) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_interactionforemail"></a> business_unit_interactionforemail
 
-See businessunit Table [business_unit_interactionforemail](businessunit.md#BKMK_business_unit_interactionforemail) One-To-Many relationship.
+See the [business_unit_interactionforemail](businessunit.md#BKMK_business_unit_interactionforemail) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_InteractionForEmail"></a> TransactionCurrency_InteractionForEmail
 
-See transactioncurrency Table [TransactionCurrency_InteractionForEmail](transactioncurrency.md#BKMK_TransactionCurrency_InteractionForEmail) One-To-Many relationship.
+See the [TransactionCurrency_InteractionForEmail](transactioncurrency.md#BKMK_TransactionCurrency_InteractionForEmail) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 
