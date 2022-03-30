@@ -2,16 +2,16 @@
 title: Add a Power BI report or dashboard to a webpage in a portal
 description: Learn how to add a Power BI report or dashboard to a webpage in the portal by using the powerbi Liquid tag.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/09/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Add a Power BI report or dashboard to a webpage in a portal

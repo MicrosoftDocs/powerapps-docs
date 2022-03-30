@@ -4,7 +4,7 @@ description: "Publishing customizations makes the Web application aware of chang
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer

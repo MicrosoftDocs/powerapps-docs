@@ -1,122 +1,136 @@
 ---
 title: Connect 3D models to Power Apps
-description: Load 3D models into Power Apps by connecting the View in 3D component to existing files as attachments, media content, with direct URLs, or as base64-encoded URIs.
-author: iaanw
-manager: shellyha
-ms.service: powerapps
+description: Load 3D models into Power Apps from attachments, media content, direct URLs, or Base64-encoded URIs.
+author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 5/22/2020
+ms.reviewer: mkaur
+ms.date: 3/4/2022
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - mduelae
+  - anuitz
 ---
 
-# Load models with the View in 3D component
+# Load 3D models in canvas apps
 
-You can set the source for 3D content as attachments or media content, as a direct URL to a .glb file, or as a base64-encoded URI.
+Load a 3D model in your canvas apps from a variety of sources. You can get models from attachments or media content, a direct URL, or a Base64-encoded URI (uniform resource identifier).
 
-For situations where you want to have a gallery of 3D models, you should put the **View in 3D** component outside of the gallery, and then set its source to the gallery's selected property. This process is described in the [Loading models from common connectors](#loading-models-from-common-connectors) section.
+Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) to minimize load times.
 
-To help reduce load times, make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models).
+## Loading 3D models from common connectors
 
-## Loading models from common connectors
-
-Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** component.
+Loading 3D models from attachments or media content depends on how a data connector is supported. To check if a data connector will work the mixed reality controls, add a label control to the canvas app and set the **Text** property to the data source. If the label text starts with `appres://`,then that data connector should work with the **View in 3D control**.
 
 > [!TIP]
 > You can rename a .glb file extension to .jpg and directly upload it to the app.
 
-**To use a SharePoint list**
 
-1. Create a SharePoint list.
-1. In the created list, select the **+ Add** column and then select **Show/hide columns**.
-1. Make sure **Attachments** is selected and press **Apply** at the top.
-1. Create a new item in the list and press **Add attachments**.
-1. Select your 3D model (.glb file).
-1. Create a new item in the list for each 3D model that you want to have in your app.
-1. In a canvas app, add a Gallery.
-1. Set the gallery data source to the SharePoint list created earlier.
-1. Add the **View in 3D** control and in the **Advanced** tab, set the **Source** property to **First(Gallery1.Selected.Attachments).Value**.
+### Load 3D models from Microsoft Lists
 
-**To use Excel Online**
+First, create a list in SharePoint and add an entry for each 3D model that you want to have in your app.
 
-1. Create an Excel Online workbook on OneDrive where you've also stored your .glb files.
+1. [Create a list using Microsoft Lists](https://go.microsoft.com/fwlink/?linkid=2186009).
+2. Select the **+ Add column** column heading and then select **Show/hide columns**.
+3. Select **Attachments** and then select **Apply**.
+4. Add an entry to the list. In the entry form, select **Add attachments** and select your 3D model file.
+5. Repeat for each model you want to include in your app.
 
-    ![Using OneDrive to share .glb file.](./media/augmented-3d/augmented-3d-onedrive-list.png "Using OneDrive to share .glb file")
+Then, add a gallery to your app, set its source to the list, add a **View in 3D** control, and set its source to the gallery.
 
-1. In the workbook, create a table with columns titled **3DModel [image]** and **Name**.
-1. Add a row for each .glb file, inserting the relative file path to the .glb file in the **3DModel [image]** column.
+1. [Add a gallery](./add-gallery.md) in Power Apps Studio.
+2. Set the gallery data source to the list.
+3. [Add the **View in 3D** control](./mixed-reality-component-view-3d.md).
+4. In the **Advanced** properties tab, set **Source** to **First(Gallery1.Selected.Attachments).Value**.
 
-    ![Using Excel Online to share .glb file.](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
+### Load 3D models from an Excel workbook
 
-1. Close the excel workbook.
-1. In a canvas-based app, add a **Gallery**.
-1. Set the gallery data source to the Excel Online workbook through the OneDrive connector.
-1. In the **Advanced** properties tab for the **View in 3D** component, set the **Source** property to **Gallery1.Selected.'3DModel'**.
+First, create an Excel workbook in OneDrive in the same folder that contains your model files. Add a table with rows for each model that you want to have in your app.
 
-### Load models from a URL
+1. Create an Excel workbook and save it in the OneDrive folder that contains your model files.
 
-The **Source** property can be a URL that points to a 3D model file (.glb).
+    :::image type="content" source="./media/augmented-3d/augmented-3d-onedrive-list.png" alt-text="A screenshot of OneDrive that shows the Excel workbook ModelGallery and its accompanying 3D model files.":::
 
-You can't view a 3D model in your app if the file is on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the hosting server must permit cross-origin requests from *powerapps.com*.
+2. In the workbook, create a table with columns named **3DModel [image]** and **Name**.
+3. Add a row for each model you want to show in the app gallery. Enter a label for the model in the **Name** column and the relative file path to the model file in the **3DModel [image]** column.
 
-You can use the following services to host and obtain a CORS-compliant URL.
+    :::image type="content" source="./media/augmented-3d/augmented-3d-excel-list.png" alt-text="{A screenshot of an Excel table with columns for the name of a 3D model and the path to the object file.}":::
 
-**To use Dropbox**
+4. Close the workbook.
 
-1. Upload your file to Dropbox as you normally would.
-1. Select the **Share** button.
-1. Generate a public download link. For example, *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
-1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct-access URL. For example, *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
+Then, add a gallery to your app, set its source to the Excel workbook, add a **View in 3D** control, and set its source to the gallery.
+  
+1. [Add a gallery](./add-gallery.md) in Power Apps Studio.
+2. Use the OneDrive connector to set the gallery data source to the Excel workbook.
+3. [Add the **View in 3D** control](./mixed-reality-component-view-3d.md).
+4. In the **Advanced** properties tab, set **Source** to **Gallery1.Selected.'3DModel'**.
 
-**To use GitHub**
+### Load 3D models from a URL
 
-1. Ensure that your Git repo is set to **Public**.
-1. Navigate to your file. For example, *https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb*.
-1. Remove **/blob/**.
-1. Replace **https://github.com** with **https://raw.githubusercontent.com**. You now have raw access to your file. For example, *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
+The **Source** property of the **View in 3D** control can be the URL of a 3D model file.
 
-### Loading base64-encoded models
+The 3D model file must be on a server that doesn't have restrictive cross-origin resource sharing (CORS) settings. The hosting server must permit cross-origin requests from *powerapps.com*. You can use Dropbox or GitHub to host your files and get a CORS-compliant URL.
 
-The **Source** property can be a base64-encoded 3D model data URI that is in the format *data:base64,\<base64-encoded content\>*.
+#### Host your 3D model files in Dropbox
+
+1. Upload a 3D model file to Dropbox and select **Share**.
+1. Generate a public download link. For example, *<https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0>*.
+1. Modify the URL like this: replace **www** with **dl**, and remove **?dl=0** at the end.
+
+You now have a direct-access URL (in our example, *<https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb>*), that you can use as the source of your 3D control.
+
+#### Host your 3D model files in GitHub
+
+1. Make sure the 3D model file is stored in a public repo.
+2. Get the URL of the file. For example, *<https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb>*.
+3. Modify the URL like this: remove **/blob/**, and replace **<https://github.com>** with **<https://raw.githubusercontent.com>**.
+
+You now have a CORS-compliant URL (in our example, *<https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb>*), that you can use as the source of your 3D control.
+
+### Load Base64-encoded 3D models
+
+The **Source** property of the **View in 3D** control can be a Base64-encoded 3D model data URI that is in the format *data:base64,\<Base64-encoded content\>*.
 
 > [!IMPORTANT]
-> Loading base64-encoded models can be time-consuming, and may cause your app to take a long time to load.
+> Your app may take longer to load if you use Base64-encoded models.
 
-The following are two common ways you can create a base64-encoded URI of your model.
+You can create a Base64-encoded URI of your model using Microsoft Power Automate or Microsoft Dataverse.
 
-**To use Power Automate**
+#### Create a Base64-encoded 3D model with Microsoft Power Automate
 
-Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint document library, you could do the following to load them in Power Apps using the View in 3D:
+Power Automate can convert 3D model files stored in a SharePoint document library to Base64 using the **dataUri(base64(*file content*))** expression.
 
-1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column of type **multiple-line text**.
-1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
-1. Add a new step to **Get file content from SharePoint**, setting **File Identifier** to **Identifier**.
-1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to File Name with extension, and the multiple-line text column to the following expression:
-    ```
-    concat('data:model/gltf-binary;base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))
-    ```
+In the following example, a document library named *3DModelBase64Library* and a list named *3DModelBase64* exist in the same SharePoint site. The list must include a column of type **multiple-line text**.
 
-    ![Convert files with SharePoint.](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
+1. In the document library, [create a flow](/power-automate/sharepoint-overview) based on the **When a new file is added in SharePoint, complete a custom action** template.
+2. Set **Library Name** to *3DModelBase64Library* (the name of the document library in this example).
+3. Add a step, **Get file content from SharePoint**.
+4. Set **File Identifier** to **Identifier**.
+5. Add a step, **Create item from SharePoint**.
+6. Set **List Name** to *3DModelBase64* (the name of the list in this example) and **Title** to **File Name with extension**.
+7. Set **dataUri** to the following expression:
 
-When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
+    ```concat('data:model/gltf-binary;base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))```
 
-**To use Microsoft Dataverse**
+    :::image type="content" source="./media/augmented-3d/augmented-3d-convert-flow.png" alt-text="A screenshot of a Power Automate workflow that shows the steps to convert 3D model files in a SharePoint document library to Base64.":::
 
-The [Note table](../../developer/data-platform/annotation-note-entity.md) in Microsoft Dataverse converts any attached file to base64 in the **Document** field.
+The flow runs when a file is added to the document library, converting the file to a Base64-encoded data URI.
 
+In Power Apps Studio, connect the **View in 3D** control to the list using the SharePoint data connector. Set the control's **Source** property to the Base64-encoded data URI.
 
+#### Create a Base64-encoded 3D model with Microsoft Dataverse
 
-## Known constraints
+The [Note table](../../developer/data-platform/annotation-note-entity.md) in Microsoft Dataverse converts any file attached in the **Document** field to Base64.
+
+## Known constraints when loading 3D models in canvas apps
 
 - The security architecture of Power Apps requires HTTPS links, not HTTP.
-- The server that hosts the document must not require authentication and must be [CORS-compliant](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
+- The server that hosts the model files must not require authentication and must be CORS-compliant.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

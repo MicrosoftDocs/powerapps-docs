@@ -7,7 +7,7 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 07/26/2021
-ms.service: powerapps
+
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -76,6 +76,6 @@ First, you'll need to determine the table and command bar location to place the 
 
 [Design a custom page for your model-driven app](design-page-for-model-app.md)
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)

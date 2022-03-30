@@ -4,7 +4,7 @@ description: "Learn how to export table data to an Azure Synapse Analytics and A
 ms.custom: intro-internal
 ms.date: 05/26/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,7 +26,7 @@ contributors:
 
 # What is Azure Synapse Link for Dataverse?
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Azure Synapse Link for Dataverse enables you to get near real-time insights over your data in Microsoft Dataverse. With a tight seamless integration between Dataverse and Azure Synapse Analytics, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your data.
 

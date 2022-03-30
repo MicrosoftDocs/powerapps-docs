@@ -2,8 +2,7 @@
 title: Embed the Power BI project report in SharePoint Online
 description: Learn about how to embed Power BI report in SharePoint Online site.
 author: NickWaggoner
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -62,7 +61,7 @@ With this type of embedding, Power BI embeds the report as a web part, provides 
 ## Step 3: Grant access to the report.
 If you are using Office 365 Groups as we recommend, make sure users who need access are members of the group workspace within the Power BI service. This ensures that users can view the contents of that group. For more information, see [Collaborate in your Power BI app workspace](/power-bi/service-collaborate-power-bi-workspace).
 
-That wraps up our work in Power BI for this scenario. You started by pulling data from our SharePoint lists into Power BI, and have now come full circle to embedding your Power BI report back into SharePoint.
+That wraps up our work in Power BI for this scenario. You started by pulling data from our lists into Power BI, and have now come full circle to embedding your Power BI report back into SharePoint.
 
 ## Next steps
 The next step in this tutorial series is to [run through the workflow we created end-to-end](sharepoint-scenario-summary.md).

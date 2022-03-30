@@ -1,15 +1,14 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 04/01/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.custom: "intro-internal"
 ms.topic: "index-page"
-ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.subservice: pcf
-ms.author: "nabuthuk"
-author: Nkrb
 ---
 
 # Create your first component 
@@ -53,10 +52,10 @@ To create a new project:
 
 1. Open a command prompt window. Create a new folder for the project using the following command: 
     ```CLI
-     mkdir LinearInputControl
+     mkdir LinearInput
     ```
     
-1. Open your `LinearInputControl` folder inside Visual Studio Code. The quickest way to start is by using `cd LinearInputControl` and then running `code .` from the command prompt once you are in the project directory. This command opens your component project in Visual Studio Code.
+1. Open your `LinearInput` folder inside Visual Studio Code. The quickest way to start is by using `cd LinearInput` and then running `code .` from the command prompt once you are in the project directory. This command opens your component project in Visual Studio Code.
    
 1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
    
@@ -366,6 +365,11 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    ```CLI
    dotnet build
    ```
+5. Again run the following command:
+
+   ```CLI
+   msbuild
+   ```
 
    > [!NOTE]
    If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`. Add `MSBuild.exe/dotnet.exe` in Path environment variable or use `Developer Command Prompt for Visual Studio Code`, you must install either [Visual Studio 2019 for Windows & Mac](https://visualstudio.microsoft.com/downloads/) or [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) (make sure to select the `.NET build tools` workload).
@@ -374,9 +378,12 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > You will see the message *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Dataverse and run the solution checker.
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
 
-5. The generated solution zip file is located in the `Solution\bin\debug` folder.
+6. The generated solution zip file is located in the `Solution\bin\debug` folder.
 
-6. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+7. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+
+> [!NOTE]
+> Manually publish the customizations if you are importing unmanaged solution.
 
 ## Adding code components in model-driven apps
 

@@ -3,7 +3,7 @@ title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft D
 description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/15/2021
-ms.service: powerapps
+
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

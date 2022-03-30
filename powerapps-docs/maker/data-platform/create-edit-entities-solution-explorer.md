@@ -4,7 +4,7 @@ description: "Learn how to create a table using solution explorer"
 ms.custom: ""
 ms.date: 02/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,7 +24,7 @@ search.app:
 
 # Create and edit tables using solution explorer
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can easily create a table using Power Apps ([make.powerapps.com](https://make.powerapps.com) for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Microsoft Dataverse](./data-platform-create-entity.md), you can achieve them by creating or editing tables using the Solution Explorer.
 

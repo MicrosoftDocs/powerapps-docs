@@ -4,7 +4,7 @@ description: "Learn how to configure real-time workflow steps"
 ms.custom: ""
 ms.date: 07/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -22,7 +22,7 @@ search.audienceType:
 ---
 # Configure real-time workflow stages and steps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you design workflows, you have the option to contain the logic you want to perform in stages and steps.  
   

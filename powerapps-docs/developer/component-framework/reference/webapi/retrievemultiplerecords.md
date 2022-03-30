@@ -2,15 +2,15 @@
 title: retrieveMultipleRecords | Microsoft Docs
 description: Retrieves a collection of table records.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 824a53f9-c743-435a-9de2-8128846f3191
 ---
 
 # retrieveMultipleRecords
@@ -27,7 +27,7 @@ Model-driven apps
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -81,7 +81,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<RetrieveMultipleResponse>
+Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)&lt;RetrieveMultipleResponse&gt;
 
 Description: The `RetrieveMultipleResponse` returns a promise that contains an array of JSON objects containing the retrieved table records and the **nextLink** parameter with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value. It has the following parameters:
 

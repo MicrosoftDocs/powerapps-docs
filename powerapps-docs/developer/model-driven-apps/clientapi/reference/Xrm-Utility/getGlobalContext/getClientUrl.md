@@ -1,19 +1,20 @@
 ---
 title: "getClientUrl (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getClientUrl method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getClientUrl (Client API reference)
 
@@ -42,7 +43,9 @@ globalContext.getClientUrl();
 
 ### Related topics
 
-[Xrm.Utility.getGlobalContext](../getGlobalContext.md)
+[Xrm.Utility.getGlobalContext](../getGlobalContext.md)  
+[RetrieveCurrentOrganization function](/dynamics365/customer-engagement/web-api/retrievecurrentorganization)  
+[RetrieveCurrentOrganizationRequest](/dotnet/api/microsoft.crm.sdk.messages.retrievecurrentorganizationrequest)  
 
 
 

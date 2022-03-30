@@ -1,9 +1,8 @@
 ---
-title: Set up and learn about the Crisis Communication sample app in Power Apps
+title: Set up and learn about the Crisis Communication sample app in Power Apps (contains video)
 description: Learn about how to setup, use and work with the Crisis communication sample app in Power Apps.
 author: matthewbolanos
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -67,7 +66,7 @@ Watch how to build and deploy the Crisis Communication app.
 
 ## Create a home for your data
 
-Data for the app is stored in SharePoint lists, so the first step is to create a new SharePoint site.
+Data for the app is stored in lists, so the first step is to create a new SharePoint site.
 
 ### Create a SharePoint site
 
@@ -89,11 +88,11 @@ Data for the app is stored in SharePoint lists, so the first step is to create a
 1. Add additional owners for the site (optional).
 1. Select **Finish**.
 
-### Create SharePoint lists for the app
+### Create lists in Microsoft Lists
 
 The app uses multiple lists to store its data. You can use the DeploySPLists flow, available from the downloaded [assets package](#prerequisites), to automatically create these lists.
 
-#### Import the SharePoint list deployment flow
+#### Import the list deployment flow
 
 1. Go to [flow.microsoft.com](https://flow.microsoft.com).
 1. Select **My flows** from the left navigation pane.
@@ -117,7 +116,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 1. Select **Save**.
 1. Select **Import**.
 
-#### Edit the SharePoint list deployment flow
+#### Edit the list deployment flow
 
 1. After the import is done, go to **My flows** and refresh the list of flows.
 1. Select the newly imported flow, **DeploySPLists**.
@@ -131,7 +130,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 
 1. Select **Save**.
 
-#### Run the SharePoint list deployment flow
+#### Run the list deployment flow
 
 1. Go back to the detail screen for the **DeploySPLists** flow.
 1. Select **Run** on the command bar.
@@ -145,7 +144,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 > You might receive an error stating that location services are required.
   If this occurs, allow location services to access Power Automate and refresh the page before trying again.
 
-The flow creates the following SharePoint lists in your SharePoint site.
+The flow creates the following lists in your SharePoint site.
 
 | **Display title**| **Purpose** | **Description** |
 |-|-|-|
@@ -166,10 +165,10 @@ The flow creates the following SharePoint lists in your SharePoint site.
 
 ## Import and set up the Crisis Communication app
 
-After all SharePoint lists have been created, you can import the app and connect it to your new data sources.
+After all lists have been created, you can import the app and connect it to your new data sources.
 
 > [!NOTE]
-> If you don't want to use the admin app, you can edit these same properties by editing the SharePoint lists manually.
+> If you don't want to use the admin app, you can edit these same properties by editing the lists manually.
 
 ### Import the app
 
@@ -200,7 +199,7 @@ After all SharePoint lists have been created, you can import the app and connect
 
     ![Data sources.](media/sample-crisis-communication-app/data-sources.png)
 
-1. Remove existing SharePoint lists inside the app, because they don't point to your current SharePoint site.
+1. Remove existing lists inside the app, because they don't point to your current SharePoint site.
 
     ![Remove data sources.](media/sample-crisis-communication-app/remove-data-source.png)
 
@@ -217,9 +216,9 @@ After all SharePoint lists have been created, you can import the app and connect
 
     ![SharePoint site URL.](media/sample-crisis-communication-app/site-url.png)
 
-1. Select all the SharePoint lists and libraries, and then select **Connect**.
+1. Select all the lists and libraries, and then select **Connect**.
 
-    ![Connect to SharePoint lists.](media/sample-crisis-communication-app/sharepoint-lists.png)
+    ![Connect to lists.](media/sample-crisis-communication-app/sharepoint-lists.png)
 
 1. Select **Save**, and then select **Publish**.
 
@@ -358,7 +357,7 @@ Now you need to make a few adjustments to the app itself to show your new work s
 1. Edit the following template, and replace the values with your own.
 
     ```
-        ,"<Name of option in SharePoint list; case sensitive>",
+        ,"<Name of option in list; case sensitive>",
         Table(
             {
                 Icon: <Image file>,
@@ -476,7 +475,7 @@ To manage the app you imported, repeat the same steps for the admin app.
 
     ![Data sources.](media/sample-crisis-communication-app/data-sources.png)
 
-1. Remove existing SharePoint lists inside the app, because they don't point to your current SharePoint site.
+1. Remove existing lists inside the app, because they don't point to your current SharePoint site.
 
     ![Remove data sources.](media/sample-crisis-communication-app/remove-data-source.png)
 
@@ -494,9 +493,9 @@ To manage the app you imported, repeat the same steps for the admin app.
 
     ![SharePoint site URL.](media/sample-crisis-communication-app/site-url.png)
 
-1. Select all SharePoint lists and libraries, and then select **Connect**.
+1. Select all lists and libraries, and then select **Connect**.
 
-    ![Connect to SharePoint lists.](media/sample-crisis-communication-app/sharepoint-lists.png)
+    ![Connect to lists.](media/sample-crisis-communication-app/sharepoint-lists.png)
 
 1. Select **Save**, and then select **Publish**.
 
@@ -512,7 +511,7 @@ You use the admin app to customize all the information in the Crisis Communicati
 
 > [!NOTE]
 > As a reminder&mdash;if you don't want to use the admin app, you can edit these properties
-  by editing the SharePoint lists manually.
+  by editing the lists manually.
 
 ### Set up key parameters under Admin Settings
 
@@ -525,7 +524,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 | Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you'd like to send notifications to another inbox, see [optional shared inbox configuration](#optional-configure-shared-inbox), earlier in this article. | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that appears in the upper-left corner. | https://contoso.com/logo.png |
 | AAD group ID | AADGroupID | Used to send notifications to users about internal company updates via the **Notify users on new crisis communication news** flow. Follow the instructions below to get the Azure Active Directory (Azure AD) ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
-| APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
+| APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/\<app URL\>?tenantId=\<tenant ID\>
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature in the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
 | Notification method | PreferredSentNotification | Used by the **Notify users on new crisis communication news** flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, push notification |
 | Feature flags | Feature1...8 | Used to disable or enable each feature in the application. |  |
@@ -782,7 +781,7 @@ Note that you need to [enable location tracking](#optional-enable-location-updat
 > For the Power BI report to work, you must have at least one entry in the **CI_Employee Status** list.
 
 We'll need some information from
-the **CI_Employee Status** SharePoint list we created earlier, so let's get to it first. Open the list in your site, and then select **List Settings** under the **Settings** icon.
+the **CI_Employee Status** list we created earlier, so let's get to it first. Open the list in your site, and then select **List Settings** under the **Settings** icon.
 
 ![Employee Status List Settings.](media/sample-crisis-communication-app/001-SharePointList-ListSettings-nolines.PNG)
 
@@ -799,13 +798,13 @@ After the Power Query editor is opened, right-click the **CI_Employee Status** d
 
 ![Power Query Advanced Editor.](media/sample-crisis-communication-app/004-PowerQuery-AdvancedEditor-nolines.PNG)
 
-This is where we use the site name and list ID from the SharePoint list.
+This is where we use the site name and list ID from the list.
 
 Copy the new SharePoint site into the SharePoint.Tables string as shown in the following illustration and the list ID in the three places where the GUID is highlighted, and then select **Done**.
 
 ![Power Query Advanced Editor updates.](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
-If you see any connection errors after updating the connection information, you might need to update the credentials used to connect to the SharePoint list. 
+If you see any connection errors after updating the connection information, you might need to update the credentials used to connect to the list. 
 
 **To update the connection**
 
@@ -818,11 +817,11 @@ If you see any connection errors after updating the connection information, you 
     ![Edit permissions.](media/sample-crisis-communication-app/PBI-2-DataSourceSettings-EditPermissions.PNG)
 
 1. Ensure the **Credentials** type is set to **Organizational account**,
-and use the credentials to access the SharePoint list.
+and use the credentials to access the list.
 
     ![Edit permissions - credentials set to organizational count.](media/sample-crisis-communication-app/PBI-3-OrganizationalAccount.PNG)
 
-Select **Close & Apply** to update the report to pull data from your SharePoint list.
+Select **Close & Apply** to update the report to pull data from your list.
 
 ![Power Query Close and Apply.](media/sample-crisis-communication-app/006-PowerQuery-CloseAndApply-nolines.PNG)
 

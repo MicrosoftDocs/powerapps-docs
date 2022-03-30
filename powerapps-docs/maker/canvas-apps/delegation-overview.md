@@ -2,12 +2,11 @@
 title: Understand delegation in a canvas app
 description: Learn about how to use delegation to process large data sets efficiently in a canvas app.
 author: lancedMicrosoft
-manager: kvivek
-ms.service: powerapps
-ms.topic: conceptual
+
+ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2021
+ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -55,7 +54,9 @@ These lists will change over time. We're working to support more functions and o
 Within the **Filter** and **LookUp** functions, you can use these with columns of the table to select the appropriate records:
 
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
-* **[In](functions/operators.md)**
+* **[In](functions/operators.md)** 
+    > [!NOTE]
+    > [In](functions/operators.md) is only delegated for columns on the base data source. For instance, if the data source is **Accounts** table then `Filter(Accounts, Name in ["name1", "name2"])` delegates to the data source for evaluation. However, `Filter(Accounts, PrimaryContact.Fullname in ["name1", "name2"])` does not delegate since **Fullname** column is on a different table (**PrimaryContact**) than **Accounts**. The expression is evaluated locally.
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
@@ -83,6 +84,9 @@ In **Sort**, the formula can only be the name of a single column and can't inclu
 
 ### Aggregate functions
 **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sources) for details.
+
+> [!NOTE]
+> If an expression is not delegated, it'll only work on the first 500 records (configurable up to 2000, see [Changing the limit](#changing-the-limit)) retrieved from the data source rather than delegating the processing of all data at the data source.
 
 Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 
@@ -122,12 +126,12 @@ To avoid this, Power Apps imposes a limit on the amount of data that can be proc
 
 Obviously care must be taken when using this facility because it can confuse users. For example, consider a **Filter** function with a selection formula that can't be delegated, over a data source that contains a million records. Because the filtering is done locally, only the first 500 records are scanned. If the desired record is record 501 or 500,001, it isn't considered or returned by **Filter**.
 
-Aggregate functions can also cause confusion. Take **Average** over a column of that same million-record data source. **Average** can't yet be delegated, so only the first 500 records are averaged. If you're not careful, a partial answer could be misconstrued as a complete answer by a user of your app.
+Aggregate functions can also cause confusion. Take **Average** over a column of that same million-record data source. **Average** can't be delegated in this case since the expression isn't delegated (see the [earlier note](#aggregate-functions)), so only the first 500 records are averaged. If you're not careful, a partial answer could be misconstrued as a complete answer by a user of your app.
 
 ## Changing the limit
 500 is the default number of records, but you can change this number for an entire app:
 
-1. On the **File** tab, select **Settings**.
+1. Select **Settings**.
 1. Under **General**, change the **Data row limit** setting from 1 to 2000.
 
 In some cases, you'll know that 2,000 (or 1,000 or 1,500) will satisfy the needs of your scenario. With care, you can increase this number to fit your scenario. As you increase this number, your app's performance may degrade, especially for wide tables with lots of columns. Still, the best answer is to delegate as much as you can.

@@ -4,7 +4,7 @@ description: "Connection tables help you enable, create, and query connections."
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Use connections to link records to each other
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The *connections* provide a flexible way to connect and describe the relationships between any two records in Microsoft Dataverse. It helps you to promote teamwork, collaboration, and effective management of business and sales processes. Connections enable you to easily associate users, contacts, quotes, sales orders, and many other  records with each other. The records in the association can be assigned particular roles that help define the purpose of the relationship.  
   
@@ -71,8 +71,8 @@ The *connections* provide a flexible way to connect and describe the relationshi
   
 ### See also  
  [Describe a relationship between tables with connection roles](describe-relationship-entities-connection-roles.md)   
- [Connection table](/reference/entities/connection.md)   
- [ConnectionRole table](/reference/entities/connectionrole.md)   
+ [Connection table](reference/entities/connection.md)   
+ [ConnectionRole table](reference/entities/connectionrole.md)   
  [Sample Code for connection tables](/dynamics365/customer-engagement/developer/sample-code-connection-entities)   
  [Business Management tables](/dynamics365/customer-engagement/developer/business-management-entities)   
  [View and Analyze Data with Visualizations and Dashboards in Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards)   

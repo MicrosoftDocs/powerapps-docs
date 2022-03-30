@@ -3,7 +3,7 @@ title: "Data (XML) Web resources (model-driven apps) | Microsoft Docs" # Intent 
 description: "Learn about using data (XML) Web resources to save and access data." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 2bf0d49f-8b6d-6d5b-0af5-edf6dd485fed
 author: Nkrb # GitHub ID

@@ -1,19 +1,20 @@
 ---
 title: "setActiveProcessInstance (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the setActiveProcessInstance method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c01a9445-00b6-4152-a482-df830f91a3ea
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setActiveProcessInstance (Client API reference)
 

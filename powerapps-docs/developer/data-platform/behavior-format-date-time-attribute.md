@@ -4,7 +4,7 @@ description: "The DateTimeAttributeMetadata class is used to define and manage c
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -35,7 +35,7 @@ You can also use the customization area in Dataverse to define the behavior and 
   
 |Member name and value|Description|  
 |---------------------------|-----------------|  
-|`UserLocal`|-   Stores the date and time value as UTC value in the system.<br />-   The retrieve operation returns the UTC value.<br />-   The update operation converts the UTC value to the current user’s time zone value, and then stores the updated value as is or as the equivalent UTC value depending on the kind ([DateTimeKind](https://msdn.microsoft.com/library/shx7s921.aspx)) of the value specified for update. If the specified value is of UTC kind, it’s stored as is. Otherwise, the UTC-equivalent value is stored.<br />-   Retrieving the formatted value converts from UTC to the user’s current time zone based on the time zone and locale setting of the user.<br />-   For the Web API, the column is exposed as DateTimeOffset.<br />-   This behavior is used for system columns like `CreatedOn` and `ModifiedOn`, and cannot be changed. You should use this behavior for custom columns where you want to store date and time values with the time zone information.|  
+|`UserLocal`|-   Stores the date and time value as UTC value in the system.<br />-   The retrieve operation returns the UTC value.<br />-   The update operation converts the UTC value to the current user’s time zone value, and then stores the updated value as is or as the equivalent UTC value depending on the kind ([DateTimeKind](/dotnet/api/system.datetimekind)) of the value specified for update. If the specified value is of UTC kind, it’s stored as is. Otherwise, the UTC-equivalent value is stored.<br />-   Retrieving the formatted value converts from UTC to the user’s current time zone based on the time zone and locale setting of the user.<br />-   For the Web API, the column is exposed as DateTimeOffset.<br />-   This behavior is used for system columns like `CreatedOn` and `ModifiedOn`, and cannot be changed. You should use this behavior for custom columns where you want to store date and time values with the time zone information.|  
 |`DateOnly`|-   Stores the actual date value with no time value.<br />-   Retrieving the formatted value displays the date value.<br />-   For the Web API, the column is exposed as Date.<br />-   This behavior should be used for custom columns that store birthdays and anniversaries, where the time information is not required.|  
 |`TimeZoneIndependent`|-   Stores the actual date and time values in the system regardless of the user time zone.<br />-   For the retrieve and update operations, no time zone conversion is performed, and actual date and time values are returned and updated respectively in the system regardless of the user time zone.<br />-   Retrieving the formatted value displays the date and time value (without any time zone conversion) based on the format as specified by the current user’s time zone and locale setting.<br />-   For the Web API, the column is exposed as DateTimeOffset.<br />-   This behavior should be used for columns that store information such as check in and check out time for hotels.|  
   
@@ -99,6 +99,34 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
 <a name="ChangeBehavior"></a>
    
+## Using OData APIs to submit user local date and time values
+
+In Microsoft Power Platform, when a user submits a date and time in the user-specific time zone through the UI, an automatic calculation sets the data to the correct date and time. It performs an analysis to change any submitted date to the corresponding UTC value based on the column and UI settings.
+When submitting a date and time value using OData API operation, the calculation does not occur, resulting in unexplained data displays.
+For example, if you are in the pacific time zone and you submit 4/4/2021 12:00, this is what happens:
+
+-   **Original**: 4/4/2021 12:00 submitter is in the pacific time zone.
+-   **Submitted through UI and retrieved as user local**: 4/4/2021 12:00
+-   **Submitted through API and retrieved as user local**: 4/4/2021 04:00
+
+### Submitting through the UI
+UI is set to user local, and column is set to user local.
+-   **Original Value:** 4/4/2021 12:00 in the pacific time zone.
+-   **Value calculated to UTC and stored in Dataverse:** 4/4/2021 12:00 + 8:00 =  4/4/2021T20:00:00Z . This is because PST is -8:00 from UTC, so +8 is added to the stored value. 
+-   **Value when displayed in UI by a user in the pacific time zone:** 4/4/2021 12:00. The UI applies the -8:00 UTC offset calculation to 4/4/2021T20:00:00Z for the correct value.
+
+### Submitting through the API
+UI is set to user local, and column is set to user local.
+-   **Original Value:** 4/4/2021T12:00:00 or 4/4/2021T12:00:00Z – no offset or UTC indicator provided. The submitter is in the pacific time zone.
+-   **Value calculated to UTC and stored in Dataverse:** No UI calculation is done on submission from OData APIs, so the value is stored as 4/4/2021T12:00:00Z.
+-   **Value when displayed in UI by a user in the pacific time zone:** 4/4/2021 4:00. The UI applies the -8:00 UTC offset calculation on the value in Dataverse.
+
+To prevent this issue when using API calls to input data to user local columns, you need to calculate the offset of the user submitting the data and apply the offset. 
+
+Using the above example: 
+**4/4/2021 12:00** would need to be submitted via the API as **4/4/2021T12:00:00-08:00**. The original time and date and include the offset calculation of the current user’s time zone. Alternately, the submitter can perform the calculation before submission and submit **4/4/2021T20:00:00Z**.
+
+If you choose to include the offset calculation, you cannot have the Z, a UTC indicator, and will prevent the offset from being accepted by the system.
 ## Change the behavior of a date and time column  
 
  You can update a date and time column to change its behavior if you have the System Customizer role in your Dataverse instance and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property for the date and time column is set to `True`.  

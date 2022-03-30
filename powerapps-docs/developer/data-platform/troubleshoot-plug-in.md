@@ -1,20 +1,20 @@
 ---
 title: "Troubleshoot plug-ins (Microsoft Dataverse for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn what plug-in errors can occur and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 07/12/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Troubleshoot plug-ins
 
@@ -38,7 +38,7 @@ This error simply means that the worker process running your plug-in code crashe
 
 As mentioned in [Handle exceptions in plug-ins](handle-exceptions.md), when you write a plug-in you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to gracefully terminate the operation with an error meaningful to the user.
 
-A common scenario for this is when using a the [HttpClient.SendAsync Method](/dotnet/api/system.net.http.httpclient.sendasync?view=netframework-4.6.2) or [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2) which are asynchronous operations that returns a [Task](/dotnet/api/system.threading.tasks.task-1?view=netframework-4.6.2). To make this work in a plug-in where code needs to be synchronous, people may use the [Task<TResult>.Result Property](/dotnet/api/system.threading.tasks.task-1.result?view=netframework-4.6.2). When an error occurs, this returns an [AggregateException](/dotnet/api/system.aggregateexception?view=netframework-4.6.2) which consolidates multiple failures into a single exception which can be difficult to handle. A better design is to use [Task<TResult>.ConfigureAwait(false)](/dotnet/api/system.threading.tasks.task-1.configureawait?view=netframework-4.6.2).[GetAwaiter()](/dotnet/api/system.aggregateexception?view=netframework-4.6.2).[GetResult()](/dotnet/api/system.runtime.compilerservices.taskawaiter-1.getresult?view=netframework-4.6.2) because it propagates the results as the specific error that caused the failure.
+A common scenario for this is when using a the [HttpClient.SendAsync Method](/dotnet/api/system.net.http.httpclient.sendasync?view=netframework-4.6.2) or [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2) which are asynchronous operations that returns a [Task](/dotnet/api/system.threading.tasks.task-1?view=netframework-4.6.2). To make this work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](/dotnet/api/system.threading.tasks.task-1.result?view=netframework-4.6.2). When an error occurs, this returns an [AggregateException](/dotnet/api/system.aggregateexception?view=netframework-4.6.2) which consolidates multiple failures into a single exception which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.ConfigureAwait(false)](/dotnet/api/system.threading.tasks.task-1.configureawait?view=netframework-4.6.2).[GetAwaiter()](/dotnet/api/system.aggregateexception?view=netframework-4.6.2).[GetResult()](/dotnet/api/system.runtime.compilerservices.taskawaiter-1.getresult?view=netframework-4.6.2) because it propagates the results as the specific error that caused the failure.
 
 The following example shows the correct way to manage the exception and an outbound call using [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2). This plug-in will attempt to get the response text for a Url set in the unsecure config for a step registered for it.
 

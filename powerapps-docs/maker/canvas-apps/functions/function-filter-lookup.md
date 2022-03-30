@@ -1,12 +1,10 @@
 ---
-title: Filter, Search, and LookUp functions in Power Apps
+title: Filter, Search, and LookUp functions in Power Apps (contains video)
 description: Reference information including syntax and examples for the Filter, Search, and LookUp functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 02/05/2017
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,10 +14,13 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # Filter, Search, and LookUp functions in Power Apps
 Finds one or more [records](../working-with-tables.md#records) in a [table](../working-with-tables.md).
+
+Watch this video to learn how to use Filter, Search and LookUp functions:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3m]
 
 ## Description
 The **Filter** function finds records in a table that satisfy a formula.  Use **Filter** to find a set of records that match one or more criteria and to discard those that don't.
@@ -117,7 +118,7 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 
 In many apps, you can type one or more characters into a search box to filter a list of records in a large data set. As you type, the list shows only those records that match the search criteria.
 
-The examples in the rest of this topic show the results of searching a list, named **Customers, that contain this data:
+The examples in the rest of this topic show the results of searching a list, named **Customers**, that contain this data:
 
 ![Search on customers.](media/function-filter-lookup/customers.png "Search on customers")
 

@@ -4,8 +4,8 @@ description: "This sample showcases how to create, retrieve, update, and delete 
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -18,7 +18,7 @@ search.app:
 
 # Sample: Create, retrieve, update, and delete a dashboard
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to create, retrieve, update, and delete an user-owned dashboard using the following methods:
 

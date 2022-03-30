@@ -4,8 +4,8 @@ description: "This sample shows how to enable field security for a table" # 115-
 ms.custom: ""
 ms.date: 3/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart

@@ -3,15 +3,14 @@ title: Code components for model-driven apps  | Microsoft Docs
 description: Learn how to create code components using Power Apps component framework for model-driven apps
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 02/24/2020
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
 # Code components for model-driven apps

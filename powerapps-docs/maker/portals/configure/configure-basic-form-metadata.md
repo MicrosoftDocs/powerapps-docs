@@ -2,15 +2,15 @@
 title: Configure basic form metadata for portals
 description: Learn how to add and configure basic form metadata for a portal.
 author: GitanjaliSingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/21/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
     - sandhangitmsft
 ---

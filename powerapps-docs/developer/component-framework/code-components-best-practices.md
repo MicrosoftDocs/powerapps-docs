@@ -3,12 +3,14 @@ title: "Best practices for code components | Microsoft Docs"
 description: "Learn best practices and get guidance on how to use code components created using Power Apps component framework."
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 contributors:
     - v-scottdurow
-ms.date: 06/30/2021
-ms.service: "powerapps"
+
 ms.topic: "article"
 ---
 
@@ -35,7 +37,7 @@ Code components can be built in [production or development mode](code-components
 
 #### Avoid using unsupported framework methods
 
-These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods may work but, because they're not supported, they may stop working in future versions.
+These include using undocumented internal methods that exist on the `ComponentFramework.Context`. These methods may work but, because they're not supported, they may stop working in future versions. Use of control script that accesses host application HTML Document Object Model (DOM) is not supported. Any parts of the host application DOM which are outside the code component boundary, are subject to change without notice. 
 
 #### Use `init` method to request network required resources
 
@@ -98,7 +100,7 @@ This section contains best practices and guidance relating to TypeScript and Jav
 
 #### ES5 vs ES6
 
-By default, code components target ES5 to support older browsers (for example, Internet Explorer 11). If you don't want to support these older browsers, you can change the target to ES6 inside your `pcfproj` folder's `tsconfig.json`. More information: [ES5 vs ES6](debugging-custom-controls.md#es5-vs-es6).
+By default, code components target ES5 to support older browsers. If you don't want to support these older browsers, you can change the target to ES6 inside your `pcfproj` folder's `tsconfig.json`. More information: [ES5 vs ES6](debugging-custom-controls.md#es5-vs-es6).
 
 #### Module imports
 
@@ -246,7 +248,7 @@ When making network calls, never use a synchronous blocking request since this c
 
 #### Write code for multiple browsers
 
-Model-driven apps, canvas apps, and portals all support multiple browsers. Be sure to only use techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience. Support for Internet Explorer 11 is set for removal, however at this time, it still may be in use by some users.
+Model-driven apps, canvas apps, and portals all support multiple browsers. Be sure to only use techniques that are supported on all modern browsers, and test with a representative set of browsers for your intended audience.
 
 - [Limits and configurations](/powerapps/maker/canvas-apps/limits-and-config)
 - [Supported web browsers](/power-platform/admin/supported-web-browsers-and-mobile-devices)

@@ -4,7 +4,7 @@ description: "Activities are tasks that you or your teams perform when they cont
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

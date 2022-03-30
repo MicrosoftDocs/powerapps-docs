@@ -1,12 +1,10 @@
 ---
 title: "Build queries with LINQ (.NET language-integrated query) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use .NET Language-Integrated Query (LINQ) to write queries for Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/08/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 

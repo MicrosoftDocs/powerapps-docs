@@ -1,38 +1,39 @@
 ---
 title: Enter and resolve address in maps
-description: Use the address input component in your apps to let users search for and find addresses.
-author: iaanw
-manager: shellyha
-ms.service: powerapps
+description: Use the address input control in your apps to let users search for and find addresses.
+author: anuitz
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 1/19/2021
+ms.reviewer: mduelae
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
-ms.author: iawilt
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - iaanw
+  - mduelae
+  - anuitz
 ---
 
-# Address input component 
+# Address input control 
 
 Entering addresses can be frustrating and error-prone, particularly in mobile scenarios. 
 
-The address input component lets you see dynamic address suggestions as you type. Using fuzzy matching logic, the component suggests multiple potential address matches that the user can select&mdash;making it quicker and easier to enter accurate addresses.
+The address input control lets you see dynamic address suggestions as you type. Using fuzzy matching logic, the control suggests multiple potential address matches that the user can select&mdash;making it quicker and easier to enter accurate addresses.
 
-The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
+The control returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md).
 
-Make sure you also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
+Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
-## Use the component
+## Use the control
 
-Insert the component into your app as you normally would for any other control or component.
+Insert the control into your app as you normally would for any other control or control.
+
+
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
@@ -40,25 +41,25 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 2. Expand **Input**.
 
-3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
+3. Select the control **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen. You must enter at least three characters including one number for the address input control.
 
-You can modify the component by using a number of [properties](#input-properties).
+You can modify the control by using a number of [properties](#input-properties).
 
 ### Set a default search radius
 
-By default, the component will search around the user's location (providing the user has consented for the app to access their location). However, you can refine the default search area to help narrow or change initial results when users input an address.
+By default, the control will search around the user's location (providing the user has consented for the app to access their location). However, you can refine the default search area to help narrow or change initial results when users input an address.
 
 1. On the **Properties** pane, set the **Search within radius** switch to **On**.
 
 1. Enter a longitude, latitude, and radius (in meters).
 
-The component will start searching at the latitude and longitude, out to the distance specified in the radius field.
+The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
 
-### Use the map component with the input address component
+### Use the map control with the input address control
 
-You can save addresses that a user inputs into the address component as a data collection. You can then retrieve these addresses and display them in [the map component](geospatial-component-map.md).
+You can save addresses that a user inputs into the address control as a data collection. You can then retrieve these addresses and display them in [the map control](geospatial-component-map.md).
 
-1. App the map component and the input address component to your app.
+1. App the map control and the input address control to your app.
 2. On the **Insert** menu, select **Button** and move it into your app.
 3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following:
 
@@ -70,19 +71,19 @@ You can save addresses that a user inputs into the address component as a data c
 
     ![Screenshot of the button on the app.](./media/geospatial/input-code.png)
 
-4. Select the map component, and go to the **Advanced** tab on the **Properties** pane.
+4. Select the map control, and go to the **Advanced** tab on the **Properties** pane.
 
 5. Set the following properties:
 
     - **Items** as *locations*
-    - **ItemLatitudes** as *locations.Latitude*
-    - **ItemsLongitudes** as *locations.Longitude*
+    - **ItemsLatitudes** as *"Latitude"*
+    - **ItemsLongitudes** as *"Longitude"*
 
-Each time a user selects the button, the result from the address input component will be added to the map as a new pin.
+Each time a user selects the button, the result from the address input control will be added to the map as a new pin.
 
 ### Input properties
 
-The following properties are on the component's **Address Input** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the control's **Address Input** pane on the **Properties** and **Advanced** tabs.
 
 ![The properties are in the side panel.](./media/geospatial/address-properties.png "The properties are in the side panel")
 
@@ -90,8 +91,8 @@ Some properties are only available on the **Advanced** tab, in the **More option
 
 | Property | Description | Type | Location |
 | - | - | - | - |
-| Search result limit | The number of suggested addresses the component displays. | Integer | Properties |
-| Search within radius | Whether the component should suggest addresses within the user-defined **Radius** of the **Latitude** and **Longitude**. | Boolean | Properties |
+| Search result limit | The number of suggested addresses the control displays. | Integer | Properties |
+| Search within radius | Whether the control should suggest addresses within the user-defined **Radius** of the **Latitude** and **Longitude**. | Boolean | Properties |
 | Latitude | The latitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on. | Decimal from &ndash;180 through 180 | Properties |
 | Longitude | The longitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on. | Decimal from &ndash;180 through 180 | Properties |
 | Radius | The radius, in meters, around **Latitude** and **Longitude** to constrain the address suggestions. Requires **Search within radius** to be on. | Decimal | Properties |
@@ -100,7 +101,7 @@ Some properties are only available on the **Advanced** tab, in the **More option
 
 ### Output properties
 
-The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience. 
+The control outputs various properties when a user interacts with it inside an app. You can use these outputs in other controls or to customize the experience. 
 
 The following table lists the output properties available.
 
@@ -111,7 +112,7 @@ The following table lists the output properties available.
 | SelectedLongitude | Longitude of the user-selected address in the input field. |
 | SearchResultJson | The search result (based on the UserInput property), displayed as a string in JSON format. |
 | FreeformAddress | Selected address from the list of suggested addresses. |
-| LocalName | An address component which represents the name of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. |
+| LocalName | An address control which represents the name of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. |
 | PostalCode | Postal code. |
 | ExtendedPostalCode | Extended Postal Code. |
 | CountryCode | Country code. |
@@ -209,9 +210,9 @@ The following table lists the output properties available.
 
 **[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or screen, if the control has no parent container).
 
-## Other geospatial components
+## Other geospatial controls
 
-To visualize and interpret location data, use the **[Interactive map](geospatial-component-map.md)** component.
+To visualize and interpret location data, use the **[Interactive map](geospatial-component-map.md)** control.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 

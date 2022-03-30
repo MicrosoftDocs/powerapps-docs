@@ -4,7 +4,7 @@ description: "Learn the different types of data you can work with in Dataverse."
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,7 +23,7 @@ search.app:
 
 # Work with any data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Microsoft Dataverse provides an abstraction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Dataverse exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
 
@@ -96,7 +96,7 @@ Dataverse supports analytics by providing the capability to choose tables for ma
 
 Dataverse provides three ways to query rows:
 
-- Relevance search
+- Dataverse search
 
 - Quick find (single-table or multi-table)
 
@@ -107,11 +107,11 @@ Dataverse provides three ways to query rows:
 
 For more information, see [Compare searches](../../user/search.md).
 
-### Relevance search
+### Dataverse search
 
-Relevance search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
+Dataverse search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
 
-Relevance search brings the following enhancements and benefits:
+Dataverse search brings the following enhancements and benefits:
 
 - Improves performance by using external indexing and Azure search technology.
 
@@ -123,7 +123,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results.
 
-For more information about relevance search, see [Using relevance search to search for rows](../../user/relevance-search.md).
+For more information about Dataverse search, see [Using Dataverse search to search for rows](../../user/relevance-search.md).
 
 ### Quick find
 

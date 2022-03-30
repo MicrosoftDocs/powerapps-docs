@@ -4,7 +4,7 @@ description: "Learn how to set up and configure a Postman environment that conne
 ms.custom: 
 ms.date: 04/09/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -59,7 +59,7 @@ Use these steps to create a Postman environment that you can use to connect with
     |`callback`|`https://callbackurl`|
     |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`|
     > [!NOTE]
-    > For [relevance search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
+    > For [Dataverse search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
     ![Create a new Postman environment to connect with Online instance.](media/postman-add-online-env.png "Create a new Postman environment to connect with Online instance")
 

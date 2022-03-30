@@ -6,7 +6,7 @@ author: Mattp123
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.component: model
 ms.date: 10/22/2020

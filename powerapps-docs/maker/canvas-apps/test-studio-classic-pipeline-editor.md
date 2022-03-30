@@ -1,23 +1,23 @@
 ---
 title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
-author: aengusheaney
-manager: kvivek
-ms.service: powerapps
+author: maustinjones
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/20/2021
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
-ms.author: aheaney
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - tapanm-msft
-  - aengusheaney
+  - mattgon
   - TYLEROL
+  - maustinjones
 ---
 
 # Automate tests with Azure Pipelines using classic editor
@@ -307,8 +307,6 @@ Select **RunTestAutomation** test to drill into the details on what test case ha
 ## Known limitations
 
 - Multifactor authentication isn't supported.
-
-- Internet Explorer 11 and Microsoft Edge aren't supported browsers.
 
 - Test summary will report a single test result per browser. The test result will contain one or more test cases or test suite results. 
 
