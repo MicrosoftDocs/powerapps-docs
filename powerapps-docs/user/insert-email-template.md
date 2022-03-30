@@ -66,7 +66,7 @@ The application displays the enhanced email template selection window only if yo
 2. **All templates**. Choose and browse from the templates based on TO or Regarding that are displayed in this window. You can change the view to display the templates in a grid, list, or tile view. Hover over the template tile to see the zoom option. Select the tile to open the template on a full screen.
 3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed in the email editor.
 4. **Filter**. You can filter templates based on standard or custom attributes.
-5. **View**. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](customer-service-hub-user-guide-email-font-admin.md#configure-the-default-email-template-selection-view).
+5. **View**. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
  
 > [!Note] 
 > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
