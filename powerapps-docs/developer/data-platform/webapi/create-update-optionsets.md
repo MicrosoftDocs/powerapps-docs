@@ -2,7 +2,7 @@
 title: "Create and update choices (option sets) using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating choices in Microsoft Dataverse."
 ms.custom: ""
-ms.date: 04/29/2021
+ms.date: 03/11/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -10,10 +10,10 @@ ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
 caps.latest.revision: 15
-author: "JimDaly" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -59,6 +59,8 @@ The following table lists the messages you can use with local and global option 
 
 ### See also
 
-[Customize choices](../org-service/metadata-option-sets.md)
+[Customize choices](../org-service/metadata-option-sets.md)<br />
+[Create and edit global choices overview](../../../maker/data-platform/create-edit-global-option-sets.md)<br />
+[Create a choice](../../../maker/data-platform/custom-picklists.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

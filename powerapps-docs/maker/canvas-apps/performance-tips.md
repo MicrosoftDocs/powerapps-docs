@@ -27,7 +27,7 @@ In the previous articles, you learned about the [execution phases and data call 
 
 **Don't add more than 30 connections in one app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
 
-You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections. Each added connection is counted individually in this limit, irrespective of the connected data source type&mdash;such as Microsoft Dataverse or SQL Server tables, or SharePoint lists.
+You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections. Each added connection is counted individually in this limit, irrespective of the connected data source type&mdash;such as Microsoft Dataverse or SQL Server tables, or lists created using Microsoft Lists.
 
 ## Limit the number of controls
 
@@ -103,12 +103,12 @@ Where possible, use functions that delegate data processing to the data source i
 > [!TIP]
 > To learn about delegable functions supported by specific connectors, go to the [connector documentation](/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a list created using Microsoft Lists. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
-| ``Filter ('SharePoint list data source', ID = 123 )`` | Yes        |
-| ``Filter(`SharePoint list data source', ID ="123")``  | No         |
+| ``Filter ('List data source', ID = 123 )`` | Yes        |
+| ``Filter(`List data source', ID ="123")``  | No         |
 
 Because we assume that the ID column in SharePoint is defined with the data type of **Number**, the right-side value should be a numeric variable instead of a string variable. Otherwise, this mismatch might trigger the formula to be non-delegable.
 

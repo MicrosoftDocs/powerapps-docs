@@ -1,20 +1,21 @@
 ---
 title: "Use Upsert to insert or update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "UpsertRequest(Update or Insert) message helps you simplify various data integration scenarios where you do not know if a record already exists in Microsoft Dataverse. In such cases you won’t know if you should call an UpdateRequest or a CreateRequest operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. UpsertRequest message helps you solve that issue" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/24/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Use Upsert to insert or update a record
 

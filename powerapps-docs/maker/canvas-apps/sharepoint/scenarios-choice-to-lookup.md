@@ -1,6 +1,6 @@
 ---
-title: Use drop-down lists with choices from lookup columns in a SharePoint list
-description: This article explains how to use the drop-down list in your app to show choices from a lookup column in a SharePoint list.
+title: Use drop-down lists with choices from lookup columns in a list created using Microsoft Lists
+description: This article explains how to use the drop-down list in your app to show choices from a lookup column in a list created using Microsoft Lists.
 author: emcoope-msft
 
 ms.topic: conceptual
@@ -19,14 +19,14 @@ contributors:
   - wimcoor
   - emcoope-msft
 ---
-# Use drop-down lists with choices from lookup columns in a SharePoint list
+# Use drop-down lists with choices from lookup columns in a list created using Microsoft Lists
 
-In this scenario article, you'll learn how to use a drop-down list with choices from a lookup column in a SharePoint list.
+In this scenario article, you'll learn how to use a drop-down list with choices from a lookup column in a list.
 
 ## Prerequisites
 
-- You must have created an app using SharePoint connector that connects to a SharePoint list.
-- The SharePoint list should consist of a lookup column with values from another column.
+- You must have created an app using SharePoint connector that connects to a list.
+- The list should consist of a lookup column with values from another column.
 
 ## Scenario details
 
@@ -36,7 +36,7 @@ When using such columns as a field in a canvas app, you can use a drop-down list
 
 To use the choices in a drop-down list, you have to use the function [choices](../functions/function-choices.md).
 
-For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration**:
+For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the list **Vehicle Registration**:
 
 :::image type="content" source="media/scenarios-choice-to-lookup/vehicle-registration-list.png" alt-text="Vehicle registration list.":::
 
@@ -51,7 +51,7 @@ The column **Vehicle type** is a lookup column for the type of the vehicle:
 1. [Create](../app-from-sharepoint.md) a new app, or [edit](../edit-app.md) an existing app.
 
     > [!NOTE]
-    > Ensure the app uses a SharePoint connection and connects to a SharePoint list as described in the prerequisites.
+    > Ensure the app uses a SharePoint connection and connects to a list as described in the prerequisites.
 
 1. Select **+** (insert) from the left pane.
 
@@ -63,7 +63,7 @@ The column **Vehicle type** is a lookup column for the type of the vehicle:
 
     `Choices([@'Vehicle registration'].Vehicle_x0020_type)`
 
-    Replace **Vehicle registration** with the name of your SharePoint list and **Vehicle type** with the name of the lookup column in the list.
+    Replace **Vehicle registration** with the name of your list and **Vehicle type** with the name of the lookup column in the list.
 
     ![Choices formula.](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
 
