@@ -56,7 +56,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
 1. Open the **Insert** tab and expand **Mixed Reality**.
 1. Select **View in MR** to place the control on the app screen, or drag the control to the screen to position it more precisely.
-1. Change the control's **Source** property to **ViewIn3D1.Source**. (*ViewIn3D1* is the name of the **3D object** control we added earlier.) This expression directs the **View in MR** control to overlay the 3D model on the device camera feed.
+1. Change the control's **Source** property to **3DObject1.Source**. (*3DObject1* is the name of the **3D object** control we added earlier.) This expression directs the **View in MR** control to overlay the 3D model on the device camera feed.
 
    :::image type="content" source="./media/augmented-upload-photo/augmented-view-mr.png" alt-text="A screenshot of a View in MR control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
 

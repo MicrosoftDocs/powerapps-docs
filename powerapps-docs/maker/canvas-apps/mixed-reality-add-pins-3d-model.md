@@ -64,7 +64,7 @@ Next, add the table as a data source to display pins on a 3D model.
 2. [Set the **3D object** control's **Source** property](mixed-reality-component-view-3d-store.md) to *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb* (or any other model file of your choosing).
 
 > [!NOTE]
-> The first instance of the **3D object** control is named *ViewIn3D1* by default and that's the name we'll use in the following examples. Additional instances of the control would be referred to as *ViewIn3D2*, *ViewIn3D3*, and so on.
+> The first instance of the **3D object** control is named *3DObject1* by default and that's the name we'll use in the following examples. Additional instances of the control would be referred to as *ViewIn3D2*, *ViewIn3D3*, and so on.
 
 1. On the model's **Properties** tab, select the **Pins(Items)** dropdown list.
 2. Type *excel* in the search box, and then select **Import from Excel**.
@@ -88,7 +88,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
    - **Show all pins:** In the **Properties** pane, select the **Pins(Items)** dropdown list and select the Excel table you connected to earlier.
 
-   - **Show the selected pin only:** In the Power Apps Studio expression editor, enter *ViewIn3D1.SelectedItems*.
+   - **Show the selected pin only:** In the Power Apps Studio expression editor, enter *3DObject1.SelectedItems*.
 
        :::image type="content" source="./media/augmented/pins-label-selected.png" alt-text="A screenshot of the Power Apps Studio expression editor showing the expression used to display information about a selected pin.":::
 
@@ -105,7 +105,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
 1. Open the **Insert** tab.
 2. Select **Text label** to place a text box in the app screen, or drag the control to the screen to position it more precisely.
-3. In the expression editor, enter *ViewIn3D1.Selected.Label*.
+3. In the expression editor, enter *3DObject1.Selected.Label*.
 
 ## Create a collection to let users add their own pins to a 3D model
 
