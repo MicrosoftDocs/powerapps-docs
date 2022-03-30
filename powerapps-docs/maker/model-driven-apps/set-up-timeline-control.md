@@ -214,7 +214,7 @@ You can send and receive records with images, but they won't display when the re
    This email has been blocked due to potentially harmful content. View full email content.
 3. When you select the message, the warning goes away and the image appears.
 
-If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity.md) for more information.
+If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity) for more information.
 
 #### Enable “What you’ve missed” summary
 
