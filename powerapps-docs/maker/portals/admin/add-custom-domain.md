@@ -5,13 +5,14 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/09/2021
+ms.date: 3/30/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add a custom domain name
@@ -25,9 +26,9 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
 1. Open [Power Apps portals admin center](admin-overview.md).
 
-2. Go to **Portal Actions** > **Add a Custom Domain Name**. A wizard opens to choose the SSL certificate.
+1. Go to **Portal Actions** > **Add a Custom Domain Name**. A wizard opens to choose the SSL certificate.
 
-3. On the **Choose a SSL certificate** page, select one of the following options:
+1. On the **Choose a SSL certificate** page, select one of the following options:
    - **Upload a new certificate**: Select this option to upload the .pfx file if you haven't yet uploaded it to the organization. Select the upload button underneath **File** to select the .pfx file. After selecting the file, enter the password for your SSL certificate in the **Password** field.
    - **Use an existing certificate**: Select this option to choose the correct certificate from the drop-down list.
 
@@ -43,9 +44,9 @@ To learn about the roles required to perform this task, read [Admin roles requir
      > 
      > The steps to export SSL certificate as a password-protected PFX file may vary depending on your certificate provider. Check with your certificate provider for recommendation. For example, certain providers may suggest to use OpenSSL 3rd party tool from [OpenSSL](https://www.openssl.org/) or [OpenSSL Binaries](https://wiki.openssl.org/index.php/Binaries) sites. 
 
-4. Select **Next**.
+1. Select **Next**.
 
-5. On the **Choose a host name** page, select one of the following options:
+1. On the **Choose a host name** page, select one of the following options:
     - **Add a new host name**: Select this option to create a new custom domain. Enter the CNAME you want in the **Domain Name** field.
     - **Use an existing host name**: Select this option to choose a host name from the drop-down list. 
    
@@ -57,8 +58,15 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
 7. Select **Finish** to close the wizard.
 
-    > [!NOTE]
-    > If you want to change your existing custom domain name, you must upload a new SSL certificate and follow the steps as mentioned in this section.
+## Change current custom domain name
+
+If you want to change your existing custom domain name, you must do the following:
+
+1. Manually delete the current SSL binding.
+1. Manually delete the current assigned hostname.
+1. Re-run the wizard and follow the instructions outlined in **Add a custom domain name**.
+
+
     
 ### See also
 
