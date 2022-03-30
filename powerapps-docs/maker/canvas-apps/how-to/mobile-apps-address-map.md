@@ -26,7 +26,7 @@ The address input control presents the user with dynamic address suggestions as 
 
 The control returns the address as structured data, allowing the application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the control, you need to enable the [Geospatial Services](/../geospatial-overview.md#enable-the-geospatial-features-for-the-environment) for the environment.
+To use the control, you need to enable the [Geospatial Services](../geospatial-overview.md#enable-geospatial-features-for-the-environment) for the environment.
 
 - Watch this video to learn how to use the address input control:
     > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLPQg]
