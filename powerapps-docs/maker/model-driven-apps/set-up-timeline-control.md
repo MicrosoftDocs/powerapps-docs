@@ -430,7 +430,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 
 ## Configure mentions in notes and posts on timeline
 
-To enable mentions in notes and posts, contact [Microsoft Help + support](/power-platform/admin/get-help-support.md). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
+To enable mentions in notes and posts, contact [Microsoft Help + support](/power-platform/admin/get-help-support). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
 
 ```
      &flags=FCB.TimelineWallRichTextPosts=true,FCB.TimelineNotesRichTextMentions=true
