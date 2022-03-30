@@ -953,5 +953,4 @@ See the [organization_dataprocessingconfiguration](organization.md#BKMK_organiza
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.dataprocessingconfiguration?text=dataprocessingconfiguration EntityType" />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)
