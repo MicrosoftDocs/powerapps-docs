@@ -4,7 +4,7 @@ description: "Learn more about URL addressable elements that enable you to inclu
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/29/2022
+ms.date: 03/30/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -16,12 +16,10 @@ search.app:
 ---
 # Open apps, forms, views, dialogs, and reports with a URL
 
-URL addressable elements enable you to include links to apps, forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
+URL addressable elements enable you to include links to apps, forms, views, dialogs, and reports in other applications. 
 
 > [!NOTE]
-> - URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.  
-> - Use `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) when you open forms programmatically within the application by using web resources. Do not use `window.open`.  
-> - Outside the application, where pages do not have access to the `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) function, use `window.open` or a link to open a specific record or form for a table.  
+> - URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.    
 
 ## App Urls
 
@@ -38,9 +36,11 @@ GET [Organization URI]/api/data/v9.1/appmodules?$select=appmoduleid,uniquename
 
 More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
 
+You can use either the `appname` or `appid` query parameters with the Unique Name or AppModuleId values respectively. But you cannot use both.
+
 ### Using Unique Name
 
-You can use the Unique Name of the application to open the app using this URL formats:
+Append the `appname` query parameter to the `main.aspx` page to open the app using the Unique Name.
 
 ```  
 https://myorg.crm.dynamics.com/main.aspx?appname={UniqueName}
@@ -70,11 +70,13 @@ https://myorg.crm.dynamics.com/main.aspx?appid=12fd1cf3-e06e-e911-a95f-000d3a13c
 
 ## URL addressable forms and views
 
+> [!NOTE] 
+
+
+
 All forms and views are displayed in the `main.aspx` page. Query string parameters passed to this page control what will be displayed. For example:  
 
 To open an account record form for where the id is {91330924-802A-4B0D-A900-34FD9D790829}:  
-
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ```  
 https://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
@@ -91,8 +93,8 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
  ```  
 
 > [!NOTE]
->  Opening forms in a dialog window by using [showModalDialog](/previous-versions/ms536759(v=vs.85)) or [showModelessDialog](https://msdn.microsoft.com/library/ie/ms536761.aspx) is not supported.  
->   
+> - Use `Xrm.Navigation.`[navigateTo](clientapi/reference/Xrm-Navigation/navigateTo.md) or `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) when you open forms programmatically within the application by using web resources. Do not use `window.open`.  
+> - Outside the application, where pages do not have access to the `Xrm.Navigation.openForm` or `Xrm.Navigation.navigateTo` functions, use `window.open` or a link to open a specific record or form for a table. 
 >  Displaying a form within an IFrame embedded in another form is not supported.  
 
  You will typically use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) method to retrieve the organization root Url for Model-driven apps.  
