@@ -5,7 +5,7 @@ keywords: "Component Framework, code components, Power Apps controls"
 ms.author: jdaly
 author: HemantGaur
 manager: kvivek
-ms.date: 03/27/2022
+ms.date: 03/31/2022
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -40,8 +40,6 @@ Just as with any component, you must install [Visual Studio Code](https://code.v
 > If you have already installed the Standalone Power Platform CLI, make sure you are running the latest version by using the `pac install latest` command.
 > The Power Platform Tools for Visual Studio Code should update automatically.
 
-<!-- Will there be any additional steps to enable the feature? -->
-
 ## Create a React component
 
 > [!NOTE]
@@ -49,8 +47,7 @@ Just as with any component, you must install [Visual Studio Code](https://code.v
 
 There is a new `--framework` (`-fw`) parameter for the `pac pcf init` command. Set the value of this parameter to `react`.
 
-The following PowerShell command will create a React component project and run `npm-install` in the `C:\pcf\reactsample` folder with the following parameters:
-
+The following table shows the long form of the commands:
 
 |Parameter  |Value  |
 |---------|---------|
@@ -60,13 +57,10 @@ The following PowerShell command will create a React component project and run `
 |`--framework`|`react`|
 |`--run-npm-install`|`true` (default)|
 
+The following PowerShell command uses the parameter shortcuts and will create a React component project and run `npm-install` in the folder where you run the command:
+
 ```powershell
-PS C:\pcf\reactsample> pac pcf init `
--n ReactSample `
--ns SampleNamespace `
--t field `
--fw react `
--npm
+pac pcf init -n ReactSample -ns SampleNamespace -t field -fw react -npm
 ```
 
 You can now build and view the control in the test harness as usual using `npm start`.
