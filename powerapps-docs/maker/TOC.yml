@@ -391,7 +391,7 @@
               items:
               - name: View 3D models in Power Apps
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
-              - name: Load models with the View in 3D control
+              - name: Load models with the 3D object control
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
               - name: Add pins to 3D models
                 href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
@@ -1062,7 +1062,7 @@
     - name: Share app resources
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md    
+      href: /power-bi/visuals/power-bi-visualization-powerapp
   - name: Manage an app
     items:
     - name: Change app name and tile
@@ -1244,7 +1244,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: ./model-driven-apps/page-data-connectors.md
+            href: /powerapps-docs/maker/../canvas-apps/connections-list
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages

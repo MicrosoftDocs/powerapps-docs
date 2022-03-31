@@ -19,6 +19,9 @@
 |TwoOptions|This column provides two options. Each option has a number value of 0 or 1 corresponding to a false or true value. Each option also has a label so that true or false values can be represented as "Yes" and "No", "Hot" and "Cold", "On" and "Off" or any pair of labels you want to display.|
 |Whole.None|This option simply displays a number.|
 
+> [!WARNING]
+> If the `manifest.xml` file contains at least one dataset, then properties of type `Lookup.Simple` should be also wrapped into the [data-set](./../data-set.md) element.
+
 ## Value elements that are not supported
 
 Following `of-type` property values are not supported currently:
