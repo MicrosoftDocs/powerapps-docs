@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
-ms.date: 02/25/2022
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -27,6 +27,7 @@ The control returns the address as structured data. Your app can extract informa
 
 Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
+
 ## Add an address input control to your app
 
 With your app open for [editing](./edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
@@ -35,6 +36,10 @@ With your app open for [editing](./edit-app.md) in [Power Apps Studio](https://c
 1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely.
 
 ## Set a default search radius
+=======
+
+
+
 
 By default, the control will search around the user's location. You can refine the default search area to help narrow the initial results.
 

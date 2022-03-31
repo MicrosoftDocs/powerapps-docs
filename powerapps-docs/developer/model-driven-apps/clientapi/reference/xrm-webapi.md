@@ -1,19 +1,22 @@
 ---
 title: "Xrm.WebApi (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+description: "Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: a6646fc8-c2e4-43fe-95f1-51483de38688
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi (Client API reference)
 

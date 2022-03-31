@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/29/2021
+ms.date: 03/23/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -13,6 +13,7 @@ contributors:
     - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - nageshbhat-msft
 ---
 
 # Configure an OpenID Connect provider for portals
@@ -99,7 +100,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     | Validate issuers | If enabled, the issuer is validated during token validation. |
     | Valid issuers | Comma-separated list of issuer URLs. |
     | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
-    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
+    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during every sign-in to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
     | Nonce lifetime | Lifetime of the nonce value, in minutes. Default: 10 minutes. |
     | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the **Application Cookie Expire Timespan** value in the **Authentication/ApplicationCookie/ExpireTimeSpan** site setting. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to **On**, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |

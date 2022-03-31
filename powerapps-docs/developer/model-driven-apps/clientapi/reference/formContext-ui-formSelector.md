@@ -1,20 +1,22 @@
 ---
 title: "formContext.ui.FormSelector (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 04/15/2021
+description: "This property lets you work with form items where a form item represents a form that is available to a user because it is associated with a security role that the user is also associated to. "
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.formSelector (Client API reference)
 

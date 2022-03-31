@@ -243,7 +243,7 @@ Sample collection is created that you can use in the following example.
     ```
 
     > [!NOTE]
-    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* table to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a SharePoint list or a SQL Server table, using *global disambgulation operator* is not required.
+    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* table to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a list or a SQL Server table, using *global disambgulation operator* is not required.
 
     ![OnSelect for trash icon.](media/function-remove-removeif/gallery-onselect.png)
 

@@ -1,17 +1,19 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the navigateTo method.
-ms.date: 02/15/2022
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # navigateTo (Client API reference)
 
@@ -56,7 +58,7 @@ The entity record object contains the following values.
 | entityName | String | Logical name of the table to display the form for. |
 | entityId | String | (Optional) ID of the table record to display the form for. If you don't specify this value, the form will be opened in create mode. |
 | createFromEntity | Lookup | (Optional) Designates a record that will provide default values based on mapped column values. The lookup object has the following String properties: entityType, id, and name (optional). |
-| data | Object | (Optional) A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error. <p/>For information about passing parameters to a form, see [Set column values using parameters passed to a form](/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters.md). |
+| data | Object | (Optional) A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error. <p/>For information about passing parameters to a form, see [Set column values using parameters passed to a form](/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form) and [Configure a form to accept custom querystring parameters](/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters). |
 | formId | String | (Optional) ID of the form instance to be displayed. |
 | isCrossEntityNavigate | Boolean | (Optional) Indicates whether the form is navigated to from a different table using cross-table business process flow. |
 | isOfflineSyncError | Boolean | (Optional) Indicates whether there are any offline sync errors. |
