@@ -4,7 +4,7 @@ description: "This sample showcases how localization is done for code components
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/30/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ---
@@ -13,7 +13,8 @@ ms.topic: "article"
 
 This sample showcases how localization is done for code components. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
 
-[!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
+> [!NOTE]
+> Code component runtime localization is in Public Preview for Custom page and Canvas applications. More information: [Blog: Runtime localization support for Code components on Custom pages and Canvas apps](https://powerapps.microsoft.com/en-us/blog/runtime-localization-support-for-code-components-on-custom-pages-and-canvas-apps/). 
 
 Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) Web resources](/dynamics365/customer-engagement/developer/resx-web-resources). 
 > [!div class="mx-imgBorder"]
