@@ -28,10 +28,10 @@ You can access the email template you created from the command bar by selecting 
 
 ## Insert an email template overview  
 
-Once you select **Insert Template**, a window appears displaying a list of existing **Email templates** that are available to use.
+After you select **Insert Template**, a window appears displaying a list of existing **Email templates** that are available to use.
 
 > [!Note]
-> There is an intermediary window that may display if:
+> There is an intermediary window that might appear if:
 > - You don't have either a Recipient or Regarding field for your email.
 >
 >   ![Message window for no Recipient or Regarding field.](media\email-template-recipient.png "Message when missing Recipient or Regarding field")
@@ -44,7 +44,7 @@ Once you select **Insert Template**, a window appears displaying a list of exist
 > - Recipient (TO): user (global) and contact templates are displayed.
 > - Regarding: user (global) and templates for the regarding entity are shown.
 
-### Enhanced email template selection window
+### Enhanced email template selection dialog
 
 The application displays the enhanced email template selection window only if your admin has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions in the ehanced email template selection window:
 
@@ -67,7 +67,7 @@ The application displays the enhanced email template selection window only if yo
 > [!Note] 
 > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
   
-### Email template selection window
+### Email template selection dialog
 
 You can perform the following actions on the email template selection window:
 
