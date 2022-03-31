@@ -25,7 +25,7 @@ The control returns the address as structured data. Your app can extract informa
 
 ## Prerequisites
 
-Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
+Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md).
 
 
 ## Add an address input control to your app
