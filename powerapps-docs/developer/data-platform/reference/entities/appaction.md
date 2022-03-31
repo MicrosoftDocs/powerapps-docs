@@ -1,8 +1,8 @@
 ---
-title: "appaction table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "appaction table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the appaction table/entity."
-ms.date: 10/05/2021
-
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -315,10 +315,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -997,10 +997,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1286,7 +1286,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [appaction_SyncErrors](syncerror.md#BKMK_appaction_SyncErrors) Many-To-One relationship.
+Same as the [appaction_SyncErrors](syncerror.md#BKMK_appaction_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1303,7 +1303,7 @@ Same as syncerror table [appaction_SyncErrors](syncerror.md#BKMK_appaction_SyncE
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [appaction_AsyncOperations](asyncoperation.md#BKMK_appaction_AsyncOperations) Many-To-One relationship.
+Same as the [appaction_AsyncOperations](asyncoperation.md#BKMK_appaction_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1320,7 +1320,7 @@ Same as asyncoperation table [appaction_AsyncOperations](asyncoperation.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [appaction_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_appaction_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [appaction_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_appaction_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1337,7 +1337,7 @@ Same as mailboxtrackingfolder table [appaction_MailboxTrackingFolders](mailboxtr
 
 **Added by**: System Solution Solution
 
-Same as processsession table [appaction_ProcessSession](processsession.md#BKMK_appaction_ProcessSession) Many-To-One relationship.
+Same as the [appaction_ProcessSession](processsession.md#BKMK_appaction_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1354,7 +1354,7 @@ Same as processsession table [appaction_ProcessSession](processsession.md#BKMK_a
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [appaction_BulkDeleteFailures](bulkdeletefailure.md#BKMK_appaction_BulkDeleteFailures) Many-To-One relationship.
+Same as the [appaction_BulkDeleteFailures](bulkdeletefailure.md#BKMK_appaction_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1371,7 +1371,7 @@ Same as bulkdeletefailure table [appaction_BulkDeleteFailures](bulkdeletefailure
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [appaction_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_appaction_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [appaction_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_appaction_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1406,70 +1406,69 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appaction_createdby](systemuser.md#BKMK_lk_appaction_createdby) One-To-Many relationship.
+See the [lk_appaction_createdby](systemuser.md#BKMK_lk_appaction_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appaction_createdonbehalfby"></a> lk_appaction_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appaction_createdonbehalfby](systemuser.md#BKMK_lk_appaction_createdonbehalfby) One-To-Many relationship.
+See the [lk_appaction_createdonbehalfby](systemuser.md#BKMK_lk_appaction_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appaction_modifiedby"></a> lk_appaction_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appaction_modifiedby](systemuser.md#BKMK_lk_appaction_modifiedby) One-To-Many relationship.
+See the [lk_appaction_modifiedby](systemuser.md#BKMK_lk_appaction_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appaction_modifiedonbehalfby"></a> lk_appaction_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appaction_modifiedonbehalfby](systemuser.md#BKMK_lk_appaction_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appaction_modifiedonbehalfby](systemuser.md#BKMK_lk_appaction_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_appaction"></a> organization_appaction
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_appaction](organization.md#BKMK_organization_appaction) One-To-Many relationship.
+See the [organization_appaction](organization.md#BKMK_organization_appaction) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_appmodule_appaction_appmoduleid"></a> appmodule_appaction_appmoduleid
 
 **Added by**: System Solution Solution
 
-See appmodule Table [appmodule_appaction_appmoduleid](appmodule.md#BKMK_appmodule_appaction_appmoduleid) One-To-Many relationship.
+See the [appmodule_appaction_appmoduleid](appmodule.md#BKMK_appmodule_appaction_appmoduleid) one-to-many relationship for the [appmodule](appmodule.md) table/entity.
 
 ### <a name="BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid"></a> canvasapp_appaction_onclickeventformulacomponentlibraryid
 
 **Added by**: System Solution Solution
 
-See canvasapp Table [canvasapp_appaction_onclickeventformulacomponentlibraryid](canvasapp.md#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid) One-To-Many relationship.
+See the [canvasapp_appaction_onclickeventformulacomponentlibraryid](canvasapp.md#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid) one-to-many relationship for the [canvasapp](canvasapp.md) table/entity.
 
 ### <a name="BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid"></a> canvasapp_appaction_visibilityformulacomponentlibraryid
 
 **Added by**: System Solution Solution
 
-See canvasapp Table [canvasapp_appaction_visibilityformulacomponentlibraryid](canvasapp.md#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid) One-To-Many relationship.
+See the [canvasapp_appaction_visibilityformulacomponentlibraryid](canvasapp.md#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid) one-to-many relationship for the [canvasapp](canvasapp.md) table/entity.
 
 ### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
 
 **Added by**: System Solution Solution
 
-See entity Table [entity_appaction_ContextEntity](entity.md#BKMK_entity_appaction_ContextEntity) One-To-Many relationship.
+See the [entity_appaction_ContextEntity](entity.md#BKMK_entity_appaction_ContextEntity) one-to-many relationship for the [entity](entity.md) table/entity.
 
 ### <a name="BKMK_webresource_appaction_iconwebresourceid"></a> webresource_appaction_iconwebresourceid
 
 **Added by**: System Solution Solution
 
-See webresource Table [webresource_appaction_iconwebresourceid](webresource.md#BKMK_webresource_appaction_iconwebresourceid) One-To-Many relationship.
+See the [webresource_appaction_iconwebresourceid](webresource.md#BKMK_webresource_appaction_iconwebresourceid) one-to-many relationship for the [webresource](webresource.md) table/entity.
 
 ### <a name="BKMK_webresource_appaction_onclickeventjavascriptwebresourceid"></a> webresource_appaction_onclickeventjavascriptwebresourceid
 
 **Added by**: System Solution Solution
 
-See webresource Table [webresource_appaction_onclickeventjavascriptwebresourceid](webresource.md#BKMK_webresource_appaction_onclickeventjavascriptwebresourceid) One-To-Many relationship.
+See the [webresource_appaction_onclickeventjavascriptwebresourceid](webresource.md#BKMK_webresource_appaction_onclickeventjavascriptwebresourceid) one-to-many relationship for the [webresource](webresource.md) table/entity.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.appaction?text=appaction EntityType" />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)

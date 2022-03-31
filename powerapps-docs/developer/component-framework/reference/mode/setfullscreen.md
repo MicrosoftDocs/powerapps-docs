@@ -2,10 +2,11 @@
 title: setFullScreen | Microsoft Docs
 description: Make the component full screen.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,7 +14,6 @@ ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 ---
 
 # setFullScreen

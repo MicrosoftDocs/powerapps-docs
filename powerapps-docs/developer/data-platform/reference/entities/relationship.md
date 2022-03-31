@@ -1,8 +1,8 @@
 ---
-title: "Relationship Entity (Relationship) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Relationship Entity (Relationship) table/entity."
-ms.date: 10/05/2021
-
+title: "Relationship Entity (Relationship)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Relationship Entity (Relationship)  table/entity."
+ms.date: 03/29/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Relationship Entity (Relationship) table/entity reference
+# Relationship Entity (Relationship)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -211,7 +211,7 @@ Listed by **SchemaName**.
 
 **Added by**: Metadata Extension Solution
 
-Same as relationshipattribute table [relationship_relationshipattribute](relationshipattribute.md#BKMK_relationship_relationshipattribute) Many-To-One relationship.
+Same as the [relationship_relationshipattribute](relationshipattribute.md#BKMK_relationship_relationshipattribute) many-to-one relationship for the [relationshipattribute](relationshipattribute.md) table/entity.
 
 |Property|Value|
 |--------|-----|

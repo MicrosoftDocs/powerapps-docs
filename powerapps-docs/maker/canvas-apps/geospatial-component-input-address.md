@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
-ms.date: 1/19/2021
+ms.date: 3/3/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -25,7 +25,7 @@ The address input control lets you see dynamic address suggestions as you type. 
 
 The control returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
+To use the control, you need to [enable geospatial features for the environment](geospatial-overview.md).
 
 Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
 
@@ -33,13 +33,15 @@ Make sure you also [review the prerequisites for using geospatial controls](geos
 
 Insert the control into your app as you normally would for any other control or control.
 
+
+
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab. 
 
 2. Expand **Input**.
 
-3. Select the control **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
+3. Select the control **Address input** to place it in the center of the app screen, or drag it to position it anywhere on the screen. You must enter at least three characters including one number for the address input control.
 
 You can modify the control by using a number of [properties](#input-properties).
 

@@ -38,7 +38,7 @@ In the solution that we opened earlier, create a new table or find an existing t
    > [!NOTE]
    > It is best practice to create tables inside a custom solution. More information: [Solution (glossary)](model-driven-app-glossary.md#solution)
 
-1. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.  If using a custom solution, open the solution, open then table, and then select the **Views** tab.
+1. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.  If using a custom solution, open the solution, open the table, and then select the **Views** tab.
 1. On the toolbar, select **Add view**.
    :::image type="content" source="media/add-view.png" alt-text="Add view to table":::
 1. On the **Create a view** dialog, enter a name and, optionally, a description, and then select **Create**.
