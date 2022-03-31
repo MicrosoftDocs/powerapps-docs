@@ -92,6 +92,6 @@ You can perform the following actions on the email template selection window:
 
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)
-
+[Understand the email experience](customize-insert-email-template.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
