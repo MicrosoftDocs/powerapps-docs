@@ -25,7 +25,7 @@ To configure the enhanced email template for apps across the organization, perfo
 1. Navigate to **Power Apps** > **Solutions**.
 1. On the **Solutions** page, select the solution in which you want to configure the template.
    > [!NOTE]
-   > Don't configure the template in the default solution.
+   > Don't select the default solution to configure the template.
 1. Select **Add Existing** > **More** > **Setting**.
 1. On the Add existing Setting Definition page, select the **Enable the New Insert Template Dialog** option and then select **Next**.
 1. Select **Add** on the Selected Setting Definition page. The **Enable the new Insert Template Dialog** option is added to your solution. Select **Edit**.
