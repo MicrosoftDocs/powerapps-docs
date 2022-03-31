@@ -18,10 +18,6 @@ search.app:
   - D365CE
 ---
 
-<!-- note from editor: I changed "the following window" to "a window" in line 35 because the image of the window isn't shown until after a lengthy note and another header, which is confusing if the reader expects the see the image right after that sentence. -->
-<!-- Also, there's a link in line 69 that you should test on the review page. (I can't access the review pages.)  -->
-
-
 # Insert an email template
 
 If you previously created an email template, you can easily use it as the basis for your email by inserting it into the email.
@@ -58,7 +54,7 @@ The application displays the enhanced email template selection window only if yo
  - Zoom in to view templates on a full screen. The application provides an option to navigate between templates.
  - Admins can add custom attributes to the Template Gallery Filter Form to extend Filters, Email Template Sorted View to extend the grids, and Template Gallery Properties Form to extend the template details section.
 
-![Enhanced email template selection window.](media\email-templates.png "New Email template selection window")
+![Enhanced email template selection window.](media\config_enhance_email_template.png "New Email template selection window")
 
 **Legend**
   
