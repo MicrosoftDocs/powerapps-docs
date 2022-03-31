@@ -1,7 +1,7 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic" 
-ms.date: 03/22/2022
+ms.date: 03/30/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" 
@@ -51,7 +51,7 @@ Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365
 
 You can use this option with either the Web API or the Organization service.
 
-### Using the Web API
+# [Using Web API](#tab/webapi)
 
 To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution : true` as a header in the request.
 
@@ -71,8 +71,7 @@ Accept: */*
 }
 ```
 
-
-### Using the Organization Service
+# [Using the Organization Service](#tab/orgservice)
 
 There are two ways to use this with the Organization Service.
 
@@ -122,29 +121,38 @@ This optional parameter must be applied to each request individually. You cannot
 
 You can use this method for data operations you initiate in your plug-ins.
 
+---
+
 ## Adding the prvBypassCustomPlugins privilege to another role
 
 Because the `prvBypassCustomPlugins` is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
 
 The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
 
-### Using Web API
+# [Using Web API](#tab/webapi)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the `roleprivileges_association` collection-valued navigation property.
+Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />
 
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/roles(<id of role>)/roleprivileges_association/$ref HTTP/1.1
+POST [Organization URI]/api/data/v9.1/roles(<id of role>)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
 Content-Type: application/json   
 Accept: application/json   
 OData-MaxVersion: 4.0   
 OData-Version: 4.0 
 
-{  
-"@odata.id":"[Organization URI]/api/data/v9.1/privileges(148a9eaf-d0c4-4196-9852-c3a38e35f6a1)"
-} 
+{
+  "Privileges": [
+    {
+      "PrivilegeId": "148a9eaf-d0c4-4196-9852-c3a38e35f6a1",
+      "Depth": "3"
+    }
+  ]
+}
 ```
+
+You must set the depth to 3 because this is a global privilege.
 
 **Response**
 
@@ -153,29 +161,27 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```
 
-More information: [Add a reference to a collection-valued navigation property](webapi/associate-disassociate-entities-using-web-api.md#add-a-reference-to-a-collection-valued-navigation-property).
 
-### Using the Organization Service
+# [Using the Organization Service](#tab/orgservice)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the `roleprivileges_association` relationship.
+Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
 
 
 ```csharp
-var roleId = new Guid(<id of role>);
-service.Associate(
-    "role",
-    roleId,
-    new Relationship("roleprivileges_association"),
-    new EntityReferenceCollection {
-        {
-            new EntityReference("privilege", new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"))
+var request = new AddPrivilegesRoleRequest
+{
+    RoleId = new Guid("<id of role>"),
+    Privileges = new[]{
+        new RolePrivilege{
+            PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
+                Depth = PrivilegeDepth.Global
         }
     }
-);
+};
+svc.Execute(request);
 ```
 
-More information: [Associate and disassociate entities using the Organization Service](org-service/entity-operations-associate-disassociate.md).
-
+---
 
 ## Frequently asked questions (FAQ)
 
