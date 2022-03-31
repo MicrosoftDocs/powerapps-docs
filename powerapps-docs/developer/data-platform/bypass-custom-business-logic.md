@@ -97,7 +97,7 @@ Because this setting is applied to the service, it will remain set for all reque
 
 #### Set the value as an optional parameter
 
-The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>
+The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class.
 
 ```csharp
 var svc = new CrmServiceClient(conn);
@@ -117,7 +117,7 @@ createRequest.Parameters.Add("BypassCustomPluginExecution", true);
 
 svc.Execute(createRequest);
 ```
-This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>
+This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>.
 
 You can use this method for data operations you initiate in your plug-ins.
 
@@ -125,13 +125,13 @@ You can use this method for data operations you initiate in your plug-ins.
 
 ## Adding the prvBypassCustomPlugins privilege to another role
 
-Because the `prvBypassCustomPlugins` is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
+Because the `prvBypassCustomPlugins` privilege is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
 
 The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
 
 # [Using Web API](#tab/webapi)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />
+Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />.
 
 **Request**
 
