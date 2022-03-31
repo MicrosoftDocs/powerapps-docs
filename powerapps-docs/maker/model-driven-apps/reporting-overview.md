@@ -64,7 +64,7 @@ There are three techniques for adding Power BI into your model driven apps.
 |Technique|Notes|Power BI Object|
 |---------|--------------|------------|
 |[Embed a Power BI report in a model-driven system form](embed-powerbi-report-in-system-form.md)|This allows a Power BI report to be presented within a table form and this can be performed in the context of the current record.|Report|
-|[Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)|This is technique that an administrator can use to introducing a Power BI dashboard|Dashboard|
+|[Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)|This is a technique that an administrator can use to introduce a Power BI dashboard|Dashboard|
 |[How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md)|This allows a full Power BI dashboard to be introduced, however it is introduced by the user, not an administrator.|Dashboard|
 
 :::image type="content" source="../../maker/model-driven-apps/media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png" alt-text="Example of embedded Power BI without contextual filtering":::
