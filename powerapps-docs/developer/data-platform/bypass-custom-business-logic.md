@@ -117,7 +117,7 @@ createRequest.Parameters.Add("BypassCustomPluginExecution", true);
 
 svc.Execute(createRequest);
 ```
-This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.CreateRequest>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.DeleteRequest>
+This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>
 
 You can use this method for data operations you initiate in your plug-ins.
 
@@ -152,7 +152,7 @@ OData-Version: 4.0
 }
 ```
 
-You must set the depth to 3 because this is a global privilege.
+You must set the <xref href="Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege" />.`Depth` property to <xref href="Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth" />.`Global` (`3`) because this is a global privilege.
 
 **Response**
 
@@ -174,7 +174,7 @@ var request = new AddPrivilegesRoleRequest
     Privileges = new[]{
         new RolePrivilege{
             PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
-                Depth = PrivilegeDepth.Global
+            Depth = PrivilegeDepth.Global
         }
     }
 };
