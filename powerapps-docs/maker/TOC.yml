@@ -1139,6 +1139,18 @@
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
+  - name: Create native mobile apps (preview)
+    items:
+      - name: Wrap (preview) overview
+        href: ./common/wrap/overview.md
+      - name: Customize and build your mobile app
+        href: ./common/wrap/how-to.md
+      - name: Code sign for iOS
+        href: ./common/wrap/code-sign-ios.md
+      - name: Code sign for Android
+        href: ./common/wrap/code-sign-android.md
+      - name: Frequently asked questions
+        href: ./common/wrap/faq.yml
   - name: For developers
     items:
     - name: Canvas apps for enterprise developers, partners, and ISVs
