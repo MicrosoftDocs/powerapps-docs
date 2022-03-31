@@ -2,8 +2,7 @@
 title: "Tutorial: Customize a gallery in Power Apps"
 description: Learn about how to customize data that appears in gallery and other elements of canvas apps generated automatically.
 author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: 
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
 ---
 # Tutorial: Customize a gallery in Power Apps
 
@@ -36,7 +38,7 @@ You'll also add a scroll bar so that users who don't have touch screens or mouse
 > * Change the screen title
 > * Show a scroll bar
 
-This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in Power Apps, whether from a SharePoint list, an Excel table, or some other data source.
+This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in Power Apps, whether from a list created using Microsoft Lists, a SharePoint library, an Excel table, or some other data source.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 

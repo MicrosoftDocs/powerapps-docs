@@ -2,11 +2,10 @@
 title: Split function in Power Apps
 description: Reference information including syntax and examples for the Split function in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 09/14/2019
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Split function in Power Apps
 Splits a text string into a table of substrings.

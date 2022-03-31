@@ -1,13 +1,13 @@
 ---
-title: "SemiAnnualFiscalCalendar table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SemiAnnualFiscalCalendar table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SemiAnnualFiscalCalendar table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -386,8 +386,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -608,7 +608,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SemiAnnualFiscalCalendar_AsyncOperations"></a> SemiAnnualFiscalCalendar_AsyncOperations
 
-Same as asyncoperation table [SemiAnnualFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_SemiAnnualFiscalCalendar_AsyncOperations) Many-To-One relationship.
+Same as the [SemiAnnualFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_SemiAnnualFiscalCalendar_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -623,7 +623,7 @@ Same as asyncoperation table [SemiAnnualFiscalCalendar_AsyncOperations](asyncope
 
 ### <a name="BKMK_SemiAnnualFiscalCalendar_BulkDeleteFailures"></a> SemiAnnualFiscalCalendar_BulkDeleteFailures
 
-Same as bulkdeletefailure table [SemiAnnualFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SemiAnnualFiscalCalendar_BulkDeleteFailures) Many-To-One relationship.
+Same as the [SemiAnnualFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SemiAnnualFiscalCalendar_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -651,27 +651,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_semiannualfiscalcalendar_createdonbehalfby"></a> lk_semiannualfiscalcalendar_createdonbehalfby
 
-See systemuser Table [lk_semiannualfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_createdonbehalfby) One-To-Many relationship.
+See the [lk_semiannualfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_semiannualfiscalcalendar_salespersonid"></a> lk_semiannualfiscalcalendar_salespersonid
 
-See systemuser Table [lk_semiannualfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_semiannualfiscalcalendar_salespersonid) One-To-Many relationship.
+See the [lk_semiannualfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_semiannualfiscalcalendar_salespersonid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_semiannualfiscalcalendar_modifiedonbehalfby"></a> lk_semiannualfiscalcalendar_modifiedonbehalfby
 
-See systemuser Table [lk_semiannualfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_semiannualfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_semiannualfiscalcalendar_modifiedby"></a> lk_semiannualfiscalcalendar_modifiedby
 
-See systemuser Table [lk_semiannualfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_modifiedby) One-To-Many relationship.
+See the [lk_semiannualfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_semiannualfiscalcalendar_createdby"></a> lk_semiannualfiscalcalendar_createdby
 
-See systemuser Table [lk_semiannualfiscalcalendar_createdby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_createdby) One-To-Many relationship.
+See the [lk_semiannualfiscalcalendar_createdby](systemuser.md#BKMK_lk_semiannualfiscalcalendar_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_semiannualfiscalcalendar"></a> transactioncurrency_semiannualfiscalcalendar
 
-See transactioncurrency Table [transactioncurrency_semiannualfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_semiannualfiscalcalendar) One-To-Many relationship.
+See the [transactioncurrency_semiannualfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_semiannualfiscalcalendar) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 

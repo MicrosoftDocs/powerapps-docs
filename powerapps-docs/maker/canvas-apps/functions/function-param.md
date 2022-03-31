@@ -2,18 +2,20 @@
 title: Launch and Param functions in Power Apps
 description: Reference information including syntax and examples for the Launch and Param functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 06/30/2021
+ms.reviewer: tapanm
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Launch and Param functions in Power Apps
 
@@ -96,13 +98,6 @@ Use the *LaunchTarget* argument to specify the target browser window in which to
 
 > [!NOTE]
 > - Using a *LaunchTarget* with any value other than **New** in embedded scenarios (for example, Power BI or SharePoint) is not supported and may result in unexpected behavior. In the future, this behavior may change, or may cause an error.
-<!-- *LaunchTarget* enum names are in transition. You may use **Blank** and **Self** currently, though these names will change in the future. **Self** will go through an intermediate change to **'Self'** as a new **Self** keyword is introduced. To avoid this conflict, the expected names may be **New** and **Replace**. Your app will automatically update when these changes occur. Your formulas won't need an update manually.-->
-
-### Security zones
-
-In Internet Explorer and classic Microsoft Edge, the **Launch** function opens a website or canvas app only if its security settings are the same or higher than the calling app.
-
-For example, if you add the **Launch** function to an app that will run in the **Trusted sites** security zone, ensure that the website or app you want the function to open is in the **Trusted sites** or **Local intranet** zone (not in **Restricted sites**). More information: [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
 
 ## Param
 

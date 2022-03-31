@@ -2,15 +2,15 @@
 title: Implement General Data Protection Regulations in portals
 description: Learn how to implement GDPR in your Power Apps portals. Identify minor users, get parental consent, and have portal users agree to terms and conditions.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 

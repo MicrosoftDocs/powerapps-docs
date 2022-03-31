@@ -2,15 +2,15 @@
 title: Example - Configure table permissions using portals Studio
 description: Walk through an example scenario with step-by-step instructions on how to configure security by using table permissions using Power Apps portals Studio.
 author: ckwan-ms
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/27/2021
 ms.subservice: portals
 ms.author: ckwan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - ckwan-ms
 ---
 

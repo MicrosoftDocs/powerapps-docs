@@ -2,8 +2,7 @@
 title: Pie chart control in Power Apps
 description: Learn about the details, properties and examples of the Pie chart control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Pie chart control in Power Apps
 A control that shows relative values in comparison to each other.

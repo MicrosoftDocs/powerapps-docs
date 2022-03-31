@@ -2,11 +2,10 @@
 title: With function in Power Apps
 description: Reference information including syntax and examples for the With function in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 02/07/2020
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # With function in Power Apps
 Calculates values and performs actions for a single [record](../working-with-tables.md#records), including inline records of named values.
@@ -117,6 +119,9 @@ This example extracts the hours, minutes, and seconds from an ISO 8601 duration 
 
 Note that although the sub-matches contain numbers they are still in a text string.  Use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  
 
+### Map a record in a component
+
+See [Map record](../map-component-input-fields.md#map-records).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

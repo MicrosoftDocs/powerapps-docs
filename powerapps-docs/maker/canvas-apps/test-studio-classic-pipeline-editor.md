@@ -1,19 +1,23 @@
 ---
 title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
-author: aengusheaney
-manager: kvivek
-ms.service: powerapps
+author: maustinjones
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
-ms.author: aheaney
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - mattgon
+  - TYLEROL
+  - maustinjones
 ---
 
 # Automate tests with Azure Pipelines using classic editor
@@ -25,9 +29,6 @@ You can use a public project on GitHub - [Microsoft/PowerAppsTestAutomation](htt
 - Automate operations of signing in to your application.
 - Open a browser on the build agent and execute a set of test cases and suites.
 - View the status of the test execution in the Azure DevOps pipeline.
-
-> [!NOTE]
-> The [Test Studio](test-studio.md) feature is still experimental and we recommend you use it to write tests for non-production apps. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Prerequisites
 
@@ -227,7 +228,7 @@ from the pipeline in this sequence:
 1. Copy the following in the **Override test run parameters** field.
 
     ```
-    -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeChrome) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(ChromeWebDriver)
+    -OnlineUsername "$(OnlineUsername)" -OnlinePassword "$(OnlinePassword)" -BrowserType "$(BrowserTypeChrome)" -OnlineUrl "$(OnlineUrl)" -UsePrivateMode "$(UsePrivateMode)" -TestAutomationURLFilePath "$(TestAutomationURLFilePath)" -DriversPath "$(ChromeWebDriver)"
     ```
 
     > [!NOTE]
@@ -249,7 +250,7 @@ from the pipeline in this sequence:
     1.  **Override test run parameters**
 
         ```
-        -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeFirefox) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(GeckoWebDriver)
+        -OnlineUsername "$(OnlineUsername)" -OnlinePassword "$(OnlinePassword)" -BrowserType "$(BrowserTypeFirefox)" -OnlineUrl "$(OnlineUrl)" -UsePrivateMode "$(UsePrivateMode)" -TestAutomationURLFilePath "$(TestAutomationURLFilePath)" -DriversPath "$(GeckoWebDriver)"
         ```
 
     1.  **Test Run Title**: Run Power Apps Test Automation Tests via
@@ -306,8 +307,6 @@ Select **RunTestAutomation** test to drill into the details on what test case ha
 ## Known limitations
 
 - Multifactor authentication isn't supported.
-
-- Internet Explorer 11 and Microsoft Edge aren't supported browsers.
 
 - Test summary will report a single test result per browser. The test result will contain one or more test cases or test suite results. 
 

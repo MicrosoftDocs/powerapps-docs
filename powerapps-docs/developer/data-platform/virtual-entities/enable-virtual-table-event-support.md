@@ -1,8 +1,8 @@
 ---
 title: "Enable Virtual Tables to support Dataverse events (Microsoft Dataverse) | Microsoft Docs"
 description: "You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector When a row is added, modified or deleted trigger."
-ms.date: 06/12/2021
-ms.service: powerapps
+ms.date: 10/31/2021
+
 ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -18,7 +18,7 @@ search.app:
 
 # Enable Virtual Tables to support Dataverse events
 
-You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger. This capability is enabled as part of Dataverse business events. More information: [Microsoft Dataverse business events (preview)](../business-events.md)
+You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger. This capability is enabled as part of Dataverse business events. More information: [Microsoft Dataverse business events](../business-events.md)
  
 Without any of the configuration described in this topic, most virtual entities do not participate in the Event Framework pipeline like other entities. This means you cannot register plug-in steps against Create, Update, and Delete (CUD) events that occur, and although CUD events appear for these entities in the Power Automate Dataverse connector, an error is thrown when people try to save a flow that uses them.
 
@@ -55,7 +55,7 @@ Let's say we have a Person Virtual Table with these properties, the **Name** pro
 
 :::image type="content" source="../media/new_people-virtual-table-properties.png" alt-text="The properties of the new_people virtual table.":::
 
-1. In the maker portal ([make.powerapps.com/](https://make.powerapps.com/)) , within your solution, select **+New** and then select **Virtual Entity Metadata**.
+1. In Power Apps ([make.powerapps.com](https://make.powerapps.com/)), within your solution, select **+New** and then select **Virtual Entity Metadata**.
 
     :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution.":::
 
@@ -468,5 +468,5 @@ var service = new CrmServiceClient(conn);
 ## See Also
 
 [Event framework](../event-framework.md)<br />
-[Microsoft Dataverse business events (preview)](../business-events.md)<br />
+[Microsoft Dataverse business events](../business-events.md)<br />
 [Get started with virtual tables (entities)](get-started-ve.md)

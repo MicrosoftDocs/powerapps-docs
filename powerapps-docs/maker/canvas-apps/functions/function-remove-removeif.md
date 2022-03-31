@@ -2,11 +2,10 @@
 title: Remove and RemoveIf functions in Power Apps
 description: Reference information including syntax and examples for the Remove and RemoveIf functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 05/13/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Remove and RemoveIf functions in Power Apps
 Removes [records](../working-with-tables.md#records) from a [data source](../working-with-data-sources.md).
@@ -241,7 +243,7 @@ Sample collection is created that you can use in the following example.
     ```
 
     > [!NOTE]
-    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* table to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a SharePoint list or a SQL Server table, using *global disambgulation operator* is not required.
+    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* table to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a list or a SQL Server table, using *global disambgulation operator* is not required.
 
     ![OnSelect for trash icon.](media/function-remove-removeif/gallery-onselect.png)
 

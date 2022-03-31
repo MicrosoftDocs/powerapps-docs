@@ -3,7 +3,7 @@ title: "Walkthrough: Update a service endpoint imported from a solution (Microso
 description: "Demonstrates updating a Dataverse service endpoint imported from a solution."
 keywords: ""
 ms.date: 03/18/2021
-ms.service: powerapps
+
 ms.topic: article
 ms.assetid: 66795838-3b15-bfb3-6f59-68cfe2fe988e
 author: JimDaly # GitHub ID

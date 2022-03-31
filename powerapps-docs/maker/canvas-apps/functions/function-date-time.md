@@ -2,11 +2,10 @@
 title: Date and Time functions in Power Apps
 description: Reference information including syntax and examples for the Date and Time functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Date and Time functions in Power Apps
 Converts date and time components to a date/time value.

@@ -2,8 +2,7 @@
 title: Connect to Office 365 Outlook from Power Apps
 description: Reference information, including examples, for the Office 365 Outlook connection to Power Apps.
 author: lancedMicrosoft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 08/07/2020
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Office 365 Outlook from Power Apps
 

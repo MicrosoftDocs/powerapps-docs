@@ -4,7 +4,7 @@ description: "This topic covers how to implement HTML web resources and its capa
 ms.custom: ""
 ms.date: 04/14/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
@@ -33,6 +33,8 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 - An HTML web resource can’t contain any code that must be executed on the server. ASP.NET pages can’t be uploaded as HTML web resources.
 
 - HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
+
+- HTML web resources embedded as controls in a form can be reloaded by the form runtime for performance reasons. For example, the form runtime may destroy and re-initialize the control during tab navigations. 
 
 <a name="BKMK_UsingTextEditor"></a>
 

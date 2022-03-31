@@ -2,13 +2,14 @@
 title: Create additional apps using Power Apps app from Teams | Microsoft Docs
 description: Learn about the available different methods to create additional apps using Power Apps app from Teams.
 author: chmoncay
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: chmoncay
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
 ---
 
 # Create additional apps from Microsoft Teams
@@ -59,8 +60,8 @@ information: [Canvas apps terminology reference and definitions](overview-of-the
 
 ### See also
 
-[Microsoft Teams integration object](use-teams-integration-object.md)  
-[Use the Fluent UI controls](use-the-fluent-ui-controls.md)
-
+- [Microsoft Teams integration object](use-teams-integration-object.md)  
+- [Use the Fluent UI controls](use-the-fluent-ui-controls.md)
+- [Create apps from lists in Teams](create-apps-lists.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

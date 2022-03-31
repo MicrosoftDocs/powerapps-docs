@@ -1,13 +1,13 @@
 ---
-title: "DuplicateRuleCondition table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "DuplicateRuleCondition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the DuplicateRuleCondition table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -63,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OperatorCode](#BKMK_OperatorCode)
 - [OperatorParam](#BKMK_OperatorParam)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
+- [UniqueRuleName](#BKMK_UniqueRuleName)
 
 
 ### <a name="BKMK_BaseAttributeName"></a> BaseAttributeName
@@ -75,6 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|baseattributename|
 |MaxLength|128|
 |RequiredLevel|SystemRequired|
@@ -109,12 +111,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IgnoreBlankValues Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -128,9 +130,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|matchingattributename|
 |MaxLength|128|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|String|
 
 
@@ -142,21 +145,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DisplayName|Operator Code|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|operatorcode|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 
 #### OperatorCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Exact Match|
-|1|Same First Characters|
-|2|Same Last Characters|
-|3|Same Date|
-|4|Same Date and Time|
-|5|Exact Match (Pick List Label)|
-|6|Exact Match (Pick List Value)|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Exact Match||
+|1|Same First Characters||
+|2|Same Last Characters||
+|3|Same Date||
+|4|Same Date and Time||
+|5|Exact Match (Pick List Label)||
+|6|Exact Match (Pick List Value)||
 
 
 
@@ -189,6 +193,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|duplicaterule|
 |Type|Lookup|
+
+
+### <a name="BKMK_UniqueRuleName"></a> UniqueRuleName
+
+**Added by**: msft_DupDetectionNewColumnsExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|UniqueRuleName|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|uniquerulename|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 <a name="read-only-attributes"></a>
 
@@ -491,7 +514,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_DuplicateRuleCondition_SyncErrors"></a> DuplicateRuleCondition_SyncErrors
 
-Same as syncerror table [DuplicateRuleCondition_SyncErrors](syncerror.md#BKMK_DuplicateRuleCondition_SyncErrors) Many-To-One relationship.
+Same as the [DuplicateRuleCondition_SyncErrors](syncerror.md#BKMK_DuplicateRuleCondition_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -518,23 +541,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_duplicaterulecondition_createdonbehalfby"></a> lk_duplicaterulecondition_createdonbehalfby
 
-See systemuser Table [lk_duplicaterulecondition_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_createdonbehalfby) One-To-Many relationship.
+See the [lk_duplicaterulecondition_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_DuplicateRule_DuplicateRuleConditions"></a> DuplicateRule_DuplicateRuleConditions
 
-See duplicaterule Table [DuplicateRule_DuplicateRuleConditions](duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) One-To-Many relationship.
+See the [DuplicateRule_DuplicateRuleConditions](duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) one-to-many relationship for the [duplicaterule](duplicaterule.md) table/entity.
 
 ### <a name="BKMK_lk_duplicaterulecondition_modifiedonbehalfby"></a> lk_duplicaterulecondition_modifiedonbehalfby
 
-See systemuser Table [lk_duplicaterulecondition_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_duplicaterulecondition_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_duplicateruleconditionbase_modifiedby"></a> lk_duplicateruleconditionbase_modifiedby
 
-See systemuser Table [lk_duplicateruleconditionbase_modifiedby](systemuser.md#BKMK_lk_duplicateruleconditionbase_modifiedby) One-To-Many relationship.
+See the [lk_duplicateruleconditionbase_modifiedby](systemuser.md#BKMK_lk_duplicateruleconditionbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_duplicateruleconditionbase_createdby"></a> lk_duplicateruleconditionbase_createdby
 
-See systemuser Table [lk_duplicateruleconditionbase_createdby](systemuser.md#BKMK_lk_duplicateruleconditionbase_createdby) One-To-Many relationship.
+See the [lk_duplicateruleconditionbase_createdby](systemuser.md#BKMK_lk_duplicateruleconditionbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -4,8 +4,8 @@ description: "This sample shows how to send an email" # 115-145 characters inclu
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Send an email
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-send-email -->
 
@@ -38,8 +38,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Contact` method creates a contact to send an email to `(To: field)`.
-1. The `WhoAmIRequest` method gets the current user information to send the email `(From: field)`.
+1. The `Contact` method creates a contact to send an email to `(To: column)`.
+1. The `WhoAmIRequest` method gets the current user information to send the email `(From: column)`.
 1. The `ActivityParty`method creates  `To` and `From` activity party for the email.
 1. The `Email` method creates an email message.
 
@@ -49,7 +49,7 @@ The `SendEmailRequest` method sends an email message created in the [Setup](#set
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

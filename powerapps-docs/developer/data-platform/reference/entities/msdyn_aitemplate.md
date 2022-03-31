@@ -1,13 +1,13 @@
 ---
-title: "msdyn_AITemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_AITemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AITemplate table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -198,12 +198,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_IsTrainable Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -483,6 +483,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -504,12 +505,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -646,12 +647,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -846,12 +847,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -947,7 +966,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_aitemplate_SyncErrors](syncerror.md#BKMK_msdyn_aitemplate_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_aitemplate_SyncErrors](syncerror.md#BKMK_msdyn_aitemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -964,7 +983,7 @@ Same as syncerror table [msdyn_aitemplate_SyncErrors](syncerror.md#BKMK_msdyn_ai
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_aitemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_aitemplate_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_aitemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_aitemplate_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -981,7 +1000,7 @@ Same as asyncoperation table [msdyn_aitemplate_AsyncOperations](asyncoperation.m
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_aitemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aitemplate_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_aitemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aitemplate_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -998,7 +1017,7 @@ Same as mailboxtrackingfolder table [msdyn_aitemplate_MailboxTrackingFolders](ma
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_aitemplate_ProcessSession](processsession.md#BKMK_msdyn_aitemplate_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_aitemplate_ProcessSession](processsession.md#BKMK_msdyn_aitemplate_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1015,7 +1034,7 @@ Same as processsession table [msdyn_aitemplate_ProcessSession](processsession.md
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_aitemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aitemplate_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_aitemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aitemplate_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1032,7 +1051,7 @@ Same as bulkdeletefailure table [msdyn_aitemplate_BulkDeleteFailures](bulkdelete
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_aitemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aitemplate_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_aitemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aitemplate_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1047,7 +1066,7 @@ Same as principalobjectattributeaccess table [msdyn_aitemplate_PrincipalObjectAt
 
 ### <a name="BKMK_msdyn_aitemplate_msdyn_aimodel"></a> msdyn_aitemplate_msdyn_aimodel
 
-Same as msdyn_aimodel table [msdyn_aitemplate_msdyn_aimodel](msdyn_aimodel.md#BKMK_msdyn_aitemplate_msdyn_aimodel) Many-To-One relationship.
+Same as the [msdyn_aitemplate_msdyn_aimodel](msdyn_aimodel.md#BKMK_msdyn_aitemplate_msdyn_aimodel) many-to-one relationship for the [msdyn_aimodel](msdyn_aimodel.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1078,43 +1097,43 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aitemplate_createdby](systemuser.md#BKMK_lk_msdyn_aitemplate_createdby) One-To-Many relationship.
+See the [lk_msdyn_aitemplate_createdby](systemuser.md#BKMK_lk_msdyn_aitemplate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aitemplate_createdonbehalfby"></a> lk_msdyn_aitemplate_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aitemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aitemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_aitemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aitemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aitemplate_modifiedby"></a> lk_msdyn_aitemplate_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aitemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_aitemplate_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_aitemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_aitemplate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aitemplate_modifiedonbehalfby"></a> lk_msdyn_aitemplate_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aitemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aitemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_aitemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aitemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_aitemplate"></a> user_msdyn_aitemplate
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_aitemplate](systemuser.md#BKMK_user_msdyn_aitemplate) One-To-Many relationship.
+See the [user_msdyn_aitemplate](systemuser.md#BKMK_user_msdyn_aitemplate) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_aitemplate"></a> team_msdyn_aitemplate
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_aitemplate](team.md#BKMK_team_msdyn_aitemplate) One-To-Many relationship.
+See the [team_msdyn_aitemplate](team.md#BKMK_team_msdyn_aitemplate) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_aitemplate"></a> business_unit_msdyn_aitemplate
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_aitemplate](businessunit.md#BKMK_business_unit_msdyn_aitemplate) One-To-Many relationship.
+See the [business_unit_msdyn_aitemplate](businessunit.md#BKMK_business_unit_msdyn_aitemplate) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

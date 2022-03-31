@@ -4,7 +4,7 @@ description: Understand the information returned with performance insights.
 ms.custom: ""
 ms.date: 07/07/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -19,7 +19,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understanding insights
+# Understanding insights (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

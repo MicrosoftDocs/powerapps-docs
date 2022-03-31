@@ -2,7 +2,7 @@
 title: "Power Apps pattern: Inspection | Microsoft Docs"
 description: See real-world examples of how customers have used Power Apps to create timely, efficient, and actionable inspections, from aircraft maintenance to elementary school.
 author: kathyos
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/21/2021
@@ -58,7 +58,7 @@ The Inspection solution for Microsoft Teams is a general inspection app that can
 
 ![Screenshot of the Inspection app for Microsoft Teams.](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
 
-Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](https://aka.ms/TeamsInspectionDocs) |  [Teams app installer](https://aka.ms/TeamsInspection)
+Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](/powerapps/teams/inspection) |  [Teams app installer](https://aka.ms/TeamsInspection)
 
 ## Template: Hospital Emergency Response sample solution
 
@@ -168,4 +168,3 @@ as oral reading goals and comprehension goals.
 ### Microsoft Power Apps Community
 
 - [App sample gallery: Audit](https://powerusers.microsoft.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=forum-board:AppFeedbackGallery&q=audit)
-

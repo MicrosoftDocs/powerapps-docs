@@ -2,8 +2,7 @@
 title: Walk end-to-end through the completed SharePoint Online integration scenario
 description: Take an end-to-end walk through the scenario we've built out in this series of tutorials.
 author: NickWaggoner
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -14,6 +13,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Walk end-to-end through the completed SharePoint Online integration scenario
 > [!NOTE]
@@ -52,7 +55,7 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
     ![View all items.](./media/sharepoint-scenario-summary/09-01-01a-view-all.png)
 7. Verify the new entry in the list.
    
-    ![SharePoint list with new entry.](./media/sharepoint-scenario-summary/09-01-02-list-new.png)
+    ![List with new entry.](./media/sharepoint-scenario-summary/09-01-02-list-new.png)
 
 ## Step 2: Approve the project
 1. When you add the item in Step 1, the flow should run and send out an approval mail. Check the inbox of the approver's email account.
@@ -66,12 +69,12 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
     ![Approval email to requestor.](./media/sharepoint-scenario-summary/09-02-02-megan-email.png)
 4. Verify the updated entry in the list.
    
-    ![SharePoint list with updated entry.](./media/sharepoint-scenario-summary/09-02-03-yes.png)
+    ![List with updated entry.](./media/sharepoint-scenario-summary/09-02-03-yes.png)
 
 ## Step 3: Assign a manager to the project
 1. First, let's look at the **Project Details** list in SharePoint. The new project has a value of **Unassigned** in the **PMAssigned** column.
    
-    ![Unassigned SharePoint list item.](./media/sharepoint-scenario-summary/09-03-01-unassigned.png)
+    ![Unassigned list item.](./media/sharepoint-scenario-summary/09-03-01-unassigned.png)
 2. In the SharePoint site, in the left navigation, click or tap **Project Management app**.
 3. On the first screen, click or tap **Assign Manager**.
    
@@ -84,9 +87,9 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
     The change is applied to the list, and the gallery refreshes so only the remaining unassigned project is displayed.
    
     ![Manager assigned to project.](./media/sharepoint-scenario-summary/09-03-04-updated.png)
-6. Close the app, and go back to the SharePoint list. You'll see that the project entry is now updated with the project manager name.
+6. Close the app, and go back to the list. You'll see that the project entry is now updated with the project manager name.
    
-    ![Assigned SharePoint list item.](./media/sharepoint-scenario-summary/09-03-05-assigned.png)
+    ![Assigned list item.](./media/sharepoint-scenario-summary/09-03-05-assigned.png)
 
 ## Step 4: Add time estimates for the project
 1. Click or tap ![Back icon.](./media/sharepoint-scenario-summary/icon-back.png) to go back to the first screen, then click or tap **Update Details**.
@@ -109,10 +112,10 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
    * The **ProjectedDays** field = "15"
      
      ![Update project details.](./media/sharepoint-scenario-summary/09-04-03-update.png)
-5. Click or tap ![Check mark icon.](./media/sharepoint-scenario-summary/icon-check-mark.png) to apply the change to the SharePoint list.
+5. Click or tap ![Check mark icon.](./media/sharepoint-scenario-summary/icon-check-mark.png) to apply the change to the list.
 6. Close the app, and go back to the list. You'll see that the project entry is now updated with the date and day changes.
    
-   ![Details updated in SharePoint list.](./media/sharepoint-scenario-summary/09-04-04-updated-list.png)
+   ![Details updated in list.](./media/sharepoint-scenario-summary/09-04-04-updated-list.png)
 
 ## Step 5: Review report data for existing projects
 1. In SharePoint Online, click or tap **Site contents**, then **Site Pages**.

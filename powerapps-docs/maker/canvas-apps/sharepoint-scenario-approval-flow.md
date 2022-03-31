@@ -2,8 +2,7 @@
 title: Create a flow to manage project approvals
 description: Learn about how to create a flow that drives the process of approving projects.
 author: stepsic-microsoft-com
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -14,12 +13,16 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Create a flow to manage project approvals
 > [!NOTE]
 > This article is part of a tutorial series on using Power Apps, Power Automate, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-In this task we'll create a flow that drives the process of approving projects. Power Automate is integrated with SharePoint, so it's easy to create a flow directly from a list. The flow we'll create is triggered when an item is added to the **Project Requests** list. The flow sends an email to the project approver, who approves or rejects the request directly in email. The flow then sends an approval or rejection email to the project requestor and updates our SharePoint lists appropriately.
+In this task we'll create a flow that drives the process of approving projects. Power Automate is integrated with SharePoint, so it's easy to create a flow directly from a list. The flow we'll create is triggered when an item is added to the **Project Requests** list. The flow sends an email to the project approver, who approves or rejects the request directly in email. The flow then sends an approval or rejection email to the project requestor and updates our lists appropriately.
 
 ## Step 1: Configure the flow template
 1. In the **Project Requests** list, click or tap **Flow**, then **Create a flow**.
@@ -65,7 +68,7 @@ By default, this branch sends an approval email to the requestor. We'll also upd
    
     ![List ID dynamic content.](./media/sharepoint-scenario-approval-flow/03-00-04-list-id.png)
    
-    Dynamic content is available throughout the flow, based on previous steps. In this case, the SharePoint list information is available, and we can use it in the actions that we create.
+    Dynamic content is available throughout the flow, based on previous steps. In this case, the list information is available, and we can use it in the actions that we create.
 7. Select the **Title** box, search for "Title" in the dynamic content dialog box, then click or tap **Title**.
    
     ![List title dynamic content.](./media/sharepoint-scenario-approval-flow/03-00-05-list-title.png)

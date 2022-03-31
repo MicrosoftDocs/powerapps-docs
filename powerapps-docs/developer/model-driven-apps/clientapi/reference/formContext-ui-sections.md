@@ -1,20 +1,21 @@
 ---
 title: "formContext.ui.sections (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "A section contains methods to manage how it appears as well as accessing the tab that contains the section."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: e362dfb2-cb64-49f5-b3d4-d77e813325ca
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.sections (Client API reference)
 

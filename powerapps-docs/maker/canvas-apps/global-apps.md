@@ -2,8 +2,7 @@
 title: Build global support into canvas apps
 description: Learn about how to use Power Apps to build apps that use different languages.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Build global support into canvas apps
 Power Apps is a global product. You can build and use canvas apps in many different languages and regions.

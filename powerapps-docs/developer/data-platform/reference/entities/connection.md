@@ -1,13 +1,13 @@
 ---
-title: "Connection table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Connection table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Connection table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -385,6 +385,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [Record1IdName](#BKMK_Record1IdName)
@@ -559,8 +560,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -579,12 +580,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsMaster Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -749,12 +750,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -815,29 +832,29 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Record1ObjectTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Account|
-|2|Contact|
-|8|User|
-|9|Team|
-|50|Position|
-|99|Social Profile|
-|2013|Territory|
-|4200|Activity|
-|4201|Appointment|
-|4202|Email|
-|4204|Fax|
-|4207|Letter|
-|4210|Phone Call|
-|4212|Task|
-|4216|Social Activity|
-|4251|Recurring Appointment|
-|4710|Process Session|
-|9400|Channel Access Profile Rule|
-|9600|Goal|
-|9930|Knowledge Base Record|
-|9953|Knowledge Article|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Account|Business that represents a customer or potential customer. The company that is billed in business transactions.|
+|2|Contact|Person with whom a business unit has a relationship, such as customer, supplier, and colleague.|
+|8|User|Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database.|
+|9|Team|Collection of system users that routinely collaborate. Teams can be used to simplify record sharing and provide team members with common access to organization data when team members belong to different Business Units.|
+|50|Position|Position of a user in the hierarchy|
+|99|Social Profile|This entity is used to store social profile information of its associated account and contacts on different social channels.|
+|2013|Territory|Territory represents sales regions.|
+|4200|Activity|Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.|
+|4201|Appointment|Commitment representing a time interval with start/end times and duration.|
+|4202|Email|Activity that is delivered using email protocols.|
+|4204|Fax|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|
+|4207|Letter|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|
+|4210|Phone Call|Activity to track a telephone call.|
+|4212|Task|Generic activity representing work needed to be done.|
+|4216|Social Activity|For internal use only.|
+|4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
+|4710|Process Session|Information that is generated when a dialog is run. Every time that you run a dialog, a dialog session is created.|
+|9400|Channel Access Profile Rule|Defines the rules for automatically associating channel access profiles to external party records.For internal use only|
+|9600|Goal|Target objective for a user or a team for a specified time period.|
+|9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
+|9953|Knowledge Article|Organizational knowledge for internal and external use.|
 
 
 
@@ -887,29 +904,29 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Record2ObjectTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Account|
-|2|Contact|
-|8|User|
-|9|Team|
-|50|Position|
-|99|Social Profile|
-|2013|Territory|
-|4200|Activity|
-|4201|Appointment|
-|4202|Email|
-|4204|Fax|
-|4207|Letter|
-|4210|Phone Call|
-|4212|Task|
-|4216|Social Activity|
-|4251|Recurring Appointment|
-|4710|Process Session|
-|9400|Channel Access Profile Rule|
-|9600|Goal|
-|9930|Knowledge Base Record|
-|9953|Knowledge Article|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Account|Business that represents a customer or potential customer. The company that is billed in business transactions.|
+|2|Contact|Person with whom a business unit has a relationship, such as customer, supplier, and colleague.|
+|8|User|Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database.|
+|9|Team|Collection of system users that routinely collaborate. Teams can be used to simplify record sharing and provide team members with common access to organization data when team members belong to different Business Units.|
+|50|Position|Position of a user in the hierarchy|
+|99|Social Profile|This entity is used to store social profile information of its associated account and contacts on different social channels.|
+|2013|Territory|Territory represents sales regions.|
+|4200|Activity|Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.|
+|4201|Appointment|Commitment representing a time interval with start/end times and duration.|
+|4202|Email|Activity that is delivered using email protocols.|
+|4204|Fax|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|
+|4207|Letter|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|
+|4210|Phone Call|Activity to track a telephone call.|
+|4212|Task|Generic activity representing work needed to be done.|
+|4216|Social Activity|For internal use only.|
+|4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
+|4710|Process Session|Information that is generated when a dialog is run. Every time that you run a dialog, a dialog session is created.|
+|9400|Channel Access Profile Rule|Defines the rules for automatically associating channel access profiles to external party records.For internal use only|
+|9600|Goal|Target objective for a user or a team for a specified time period.|
+|9930|Knowledge Base Record|Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.|
+|9953|Knowledge Article|Organizational knowledge for internal and external use.|
 
 
 
@@ -988,7 +1005,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Connection_AsyncOperations"></a> Connection_AsyncOperations
 
-Same as asyncoperation table [Connection_AsyncOperations](asyncoperation.md#BKMK_Connection_AsyncOperations) Many-To-One relationship.
+Same as the [Connection_AsyncOperations](asyncoperation.md#BKMK_Connection_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1003,7 +1020,7 @@ Same as asyncoperation table [Connection_AsyncOperations](asyncoperation.md#BKMK
 
 ### <a name="BKMK_connection_related_connection"></a> connection_related_connection
 
-Same as connection table [connection_related_connection](connection.md#BKMK_connection_related_connection) Many-To-One relationship.
+Same as the [connection_related_connection](connection.md#BKMK_connection_related_connection) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1018,7 +1035,7 @@ Same as connection table [connection_related_connection](connection.md#BKMK_conn
 
 ### <a name="BKMK_connection_principalobjectattributeaccess"></a> connection_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [connection_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_connection_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [connection_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_connection_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1033,7 +1050,7 @@ Same as principalobjectattributeaccess table [connection_principalobjectattribut
 
 ### <a name="BKMK_Connection_SyncErrors"></a> Connection_SyncErrors
 
-Same as syncerror table [Connection_SyncErrors](syncerror.md#BKMK_Connection_SyncErrors) Many-To-One relationship.
+Same as the [Connection_SyncErrors](syncerror.md#BKMK_Connection_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1048,7 +1065,7 @@ Same as syncerror table [Connection_SyncErrors](syncerror.md#BKMK_Connection_Syn
 
 ### <a name="BKMK_Connection_ProcessSessions"></a> Connection_ProcessSessions
 
-Same as processsession table [Connection_ProcessSessions](processsession.md#BKMK_Connection_ProcessSessions) Many-To-One relationship.
+Same as the [Connection_ProcessSessions](processsession.md#BKMK_Connection_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1119,203 +1136,203 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
 
-See knowledgearticle Table [knowledgearticle_connections1](knowledgearticle.md#BKMK_knowledgearticle_connections1) One-To-Many relationship.
+See the [knowledgearticle_connections1](knowledgearticle.md#BKMK_knowledgearticle_connections1) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_knowledgearticle_connections2"></a> knowledgearticle_connections2
 
-See knowledgearticle Table [knowledgearticle_connections2](knowledgearticle.md#BKMK_knowledgearticle_connections2) One-To-Many relationship.
+See the [knowledgearticle_connections2](knowledgearticle.md#BKMK_knowledgearticle_connections2) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_KnowledgeBaseRecord_connections1"></a> KnowledgeBaseRecord_connections1
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_connections1](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_connections1) One-To-Many relationship.
+See the [KnowledgeBaseRecord_connections1](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_connections1) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_KnowledgeBaseRecord_connections2"></a> KnowledgeBaseRecord_connections2
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_connections2](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_connections2) One-To-Many relationship.
+See the [KnowledgeBaseRecord_connections2](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_connections2) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_processsession_connections1"></a> processsession_connections1
 
-See processsession Table [processsession_connections1](processsession.md#BKMK_processsession_connections1) One-To-Many relationship.
+See the [processsession_connections1](processsession.md#BKMK_processsession_connections1) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_contact_connections1"></a> contact_connections1
 
-See contact Table [contact_connections1](contact.md#BKMK_contact_connections1) One-To-Many relationship.
+See the [contact_connections1](contact.md#BKMK_contact_connections1) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_recurringappointmentmaster_connections1"></a> recurringappointmentmaster_connections1
 
-See recurringappointmentmaster Table [recurringappointmentmaster_connections1](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_connections1) One-To-Many relationship.
+See the [recurringappointmentmaster_connections1](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_connections1) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_processsession_connections2"></a> processsession_connections2
 
-See processsession Table [processsession_connections2](processsession.md#BKMK_processsession_connections2) One-To-Many relationship.
+See the [processsession_connections2](processsession.md#BKMK_processsession_connections2) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_letter_connections1"></a> letter_connections1
 
-See letter Table [letter_connections1](letter.md#BKMK_letter_connections1) One-To-Many relationship.
+See the [letter_connections1](letter.md#BKMK_letter_connections1) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_connection_role_connections2"></a> connection_role_connections2
 
-See connectionrole Table [connection_role_connections2](connectionrole.md#BKMK_connection_role_connections2) One-To-Many relationship.
+See the [connection_role_connections2](connectionrole.md#BKMK_connection_role_connections2) one-to-many relationship for the [connectionrole](connectionrole.md) table/entity.
 
 ### <a name="BKMK_systemuser_connections2"></a> systemuser_connections2
 
-See systemuser Table [systemuser_connections2](systemuser.md#BKMK_systemuser_connections2) One-To-Many relationship.
+See the [systemuser_connections2](systemuser.md#BKMK_systemuser_connections2) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_letter_connections2"></a> letter_connections2
 
-See letter Table [letter_connections2](letter.md#BKMK_letter_connections2) One-To-Many relationship.
+See the [letter_connections2](letter.md#BKMK_letter_connections2) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_appointment_connections1"></a> appointment_connections1
 
-See appointment Table [appointment_connections1](appointment.md#BKMK_appointment_connections1) One-To-Many relationship.
+See the [appointment_connections1](appointment.md#BKMK_appointment_connections1) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_email_connections1"></a> email_connections1
 
-See email Table [email_connections1](email.md#BKMK_email_connections1) One-To-Many relationship.
+See the [email_connections1](email.md#BKMK_email_connections1) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_account_connections1"></a> account_connections1
 
-See account Table [account_connections1](account.md#BKMK_account_connections1) One-To-Many relationship.
+See the [account_connections1](account.md#BKMK_account_connections1) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_fax_connections2"></a> fax_connections2
 
-See fax Table [fax_connections2](fax.md#BKMK_fax_connections2) One-To-Many relationship.
+See the [fax_connections2](fax.md#BKMK_fax_connections2) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_activitypointer_connections2"></a> activitypointer_connections2
 
-See activitypointer Table [activitypointer_connections2](activitypointer.md#BKMK_activitypointer_connections2) One-To-Many relationship.
+See the [activitypointer_connections2](activitypointer.md#BKMK_activitypointer_connections2) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_socialprofile_connections2"></a> socialprofile_connections2
 
-See socialprofile Table [socialprofile_connections2](socialprofile.md#BKMK_socialprofile_connections2) One-To-Many relationship.
+See the [socialprofile_connections2](socialprofile.md#BKMK_socialprofile_connections2) one-to-many relationship for the [socialprofile](socialprofile.md) table/entity.
 
 ### <a name="BKMK_createdby_connection"></a> createdby_connection
 
-See systemuser Table [createdby_connection](systemuser.md#BKMK_createdby_connection) One-To-Many relationship.
+See the [createdby_connection](systemuser.md#BKMK_createdby_connection) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_account_connections2"></a> account_connections2
 
-See account Table [account_connections2](account.md#BKMK_account_connections2) One-To-Many relationship.
+See the [account_connections2](account.md#BKMK_account_connections2) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_phonecall_connections1"></a> phonecall_connections1
 
-See phonecall Table [phonecall_connections1](phonecall.md#BKMK_phonecall_connections1) One-To-Many relationship.
+See the [phonecall_connections1](phonecall.md#BKMK_phonecall_connections1) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_task_connections1"></a> task_connections1
 
-See task Table [task_connections1](task.md#BKMK_task_connections1) One-To-Many relationship.
+See the [task_connections1](task.md#BKMK_task_connections1) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_modifiedby_connection"></a> modifiedby_connection
 
-See systemuser Table [modifiedby_connection](systemuser.md#BKMK_modifiedby_connection) One-To-Many relationship.
+See the [modifiedby_connection](systemuser.md#BKMK_modifiedby_connection) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_appointment_connections2"></a> appointment_connections2
 
-See appointment Table [appointment_connections2](appointment.md#BKMK_appointment_connections2) One-To-Many relationship.
+See the [appointment_connections2](appointment.md#BKMK_appointment_connections2) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_phonecall_connections2"></a> phonecall_connections2
 
-See phonecall Table [phonecall_connections2](phonecall.md#BKMK_phonecall_connections2) One-To-Many relationship.
+See the [phonecall_connections2](phonecall.md#BKMK_phonecall_connections2) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Connection"></a> TransactionCurrency_Connection
 
-See transactioncurrency Table [TransactionCurrency_Connection](transactioncurrency.md#BKMK_TransactionCurrency_Connection) One-To-Many relationship.
+See the [TransactionCurrency_Connection](transactioncurrency.md#BKMK_TransactionCurrency_Connection) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_task_connections2"></a> task_connections2
 
-See task Table [task_connections2](task.md#BKMK_task_connections2) One-To-Many relationship.
+See the [task_connections2](task.md#BKMK_task_connections2) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_fax_connections1"></a> fax_connections1
 
-See fax Table [fax_connections1](fax.md#BKMK_fax_connections1) One-To-Many relationship.
+See the [fax_connections1](fax.md#BKMK_fax_connections1) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_position_connection2"></a> position_connection2
 
-See position Table [position_connection2](position.md#BKMK_position_connection2) One-To-Many relationship.
+See the [position_connection2](position.md#BKMK_position_connection2) one-to-many relationship for the [position](position.md) table/entity.
 
 ### <a name="BKMK_goal_connections1"></a> goal_connections1
 
-See goal Table [goal_connections1](goal.md#BKMK_goal_connections1) One-To-Many relationship.
+See the [goal_connections1](goal.md#BKMK_goal_connections1) one-to-many relationship for the [goal](goal.md) table/entity.
 
 ### <a name="BKMK_connection_role_connections1"></a> connection_role_connections1
 
-See connectionrole Table [connection_role_connections1](connectionrole.md#BKMK_connection_role_connections1) One-To-Many relationship.
+See the [connection_role_connections1](connectionrole.md#BKMK_connection_role_connections1) one-to-many relationship for the [connectionrole](connectionrole.md) table/entity.
 
 ### <a name="BKMK_position_connection1"></a> position_connection1
 
-See position Table [position_connection1](position.md#BKMK_position_connection1) One-To-Many relationship.
+See the [position_connection1](position.md#BKMK_position_connection1) one-to-many relationship for the [position](position.md) table/entity.
 
 ### <a name="BKMK_email_connections2"></a> email_connections2
 
-See email Table [email_connections2](email.md#BKMK_email_connections2) One-To-Many relationship.
+See the [email_connections2](email.md#BKMK_email_connections2) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_team_connections1"></a> team_connections1
 
-See team Table [team_connections1](team.md#BKMK_team_connections1) One-To-Many relationship.
+See the [team_connections1](team.md#BKMK_team_connections1) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_connectionbase_modifiedonbehalfby"></a> lk_connectionbase_modifiedonbehalfby
 
-See systemuser Table [lk_connectionbase_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_connectionbase_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_socialactivity_connections1"></a> socialactivity_connections1
 
-See socialactivity Table [socialactivity_connections1](socialactivity.md#BKMK_socialactivity_connections1) One-To-Many relationship.
+See the [socialactivity_connections1](socialactivity.md#BKMK_socialactivity_connections1) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_connection_related_connection"></a> connection_related_connection
 
-See connection Table [connection_related_connection](connection.md#BKMK_connection_related_connection) One-To-Many relationship.
+See the [connection_related_connection](connection.md#BKMK_connection_related_connection) one-to-many relationship for the [connection](connection.md) table/entity.
 
 ### <a name="BKMK_contact_connections2"></a> contact_connections2
 
-See contact Table [contact_connections2](contact.md#BKMK_contact_connections2) One-To-Many relationship.
+See the [contact_connections2](contact.md#BKMK_contact_connections2) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_connectionbase_createdonbehalfby"></a> lk_connectionbase_createdonbehalfby
 
-See systemuser Table [lk_connectionbase_createdonbehalfby](systemuser.md#BKMK_lk_connectionbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_connectionbase_createdonbehalfby](systemuser.md#BKMK_lk_connectionbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_activitypointer_connections1"></a> activitypointer_connections1
 
-See activitypointer Table [activitypointer_connections1](activitypointer.md#BKMK_activitypointer_connections1) One-To-Many relationship.
+See the [activitypointer_connections1](activitypointer.md#BKMK_activitypointer_connections1) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_systemuser_connections1"></a> systemuser_connections1
 
-See systemuser Table [systemuser_connections1](systemuser.md#BKMK_systemuser_connections1) One-To-Many relationship.
+See the [systemuser_connections1](systemuser.md#BKMK_systemuser_connections1) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_connections2"></a> team_connections2
 
-See team Table [team_connections2](team.md#BKMK_team_connections2) One-To-Many relationship.
+See the [team_connections2](team.md#BKMK_team_connections2) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_connections"></a> business_unit_connections
 
-See businessunit Table [business_unit_connections](businessunit.md#BKMK_business_unit_connections) One-To-Many relationship.
+See the [business_unit_connections](businessunit.md#BKMK_business_unit_connections) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_goal_connections2"></a> goal_connections2
 
-See goal Table [goal_connections2](goal.md#BKMK_goal_connections2) One-To-Many relationship.
+See the [goal_connections2](goal.md#BKMK_goal_connections2) one-to-many relationship for the [goal](goal.md) table/entity.
 
 ### <a name="BKMK_socialprofile_connections1"></a> socialprofile_connections1
 
-See socialprofile Table [socialprofile_connections1](socialprofile.md#BKMK_socialprofile_connections1) One-To-Many relationship.
+See the [socialprofile_connections1](socialprofile.md#BKMK_socialprofile_connections1) one-to-many relationship for the [socialprofile](socialprofile.md) table/entity.
 
 ### <a name="BKMK_socialactivity_connections2"></a> socialactivity_connections2
 
-See socialactivity Table [socialactivity_connections2](socialactivity.md#BKMK_socialactivity_connections2) One-To-Many relationship.
+See the [socialactivity_connections2](socialactivity.md#BKMK_socialactivity_connections2) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_recurringappointmentmaster_connections2"></a> recurringappointmentmaster_connections2
 
-See recurringappointmentmaster Table [recurringappointmentmaster_connections2](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_connections2) One-To-Many relationship.
+See the [recurringappointmentmaster_connections2](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_connections2) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_territory_connections1"></a> territory_connections1
 
 **Added by**: Application Common Solution
 
-See territory Table [territory_connections1](territory.md#BKMK_territory_connections1) One-To-Many relationship.
+See the [territory_connections1](territory.md#BKMK_territory_connections1) one-to-many relationship for the [territory](territory.md) table/entity.
 
 ### <a name="BKMK_territory_connections2"></a> territory_connections2
 
 **Added by**: Application Common Solution
 
-See territory Table [territory_connections2](territory.md#BKMK_territory_connections2) One-To-Many relationship.
+See the [territory_connections2](territory.md#BKMK_territory_connections2) one-to-many relationship for the [territory](territory.md) table/entity.
 
 ### See also
 

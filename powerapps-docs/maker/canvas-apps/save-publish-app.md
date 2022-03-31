@@ -1,19 +1,22 @@
 ---
 title: Save and publish canvas apps
 description: Step-by-step instructions for saving and publishing canvas apps.
-author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
+author: amchern
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 05/08/2020
+ms.reviewer: tapanm
+ms.date: 02/09/2022
 ms.subservice: canvas-maker
-ms.author: tapanm
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
+  - amchern
 ---
 # Save and publish canvas apps
 
@@ -32,7 +35,7 @@ In Power Apps Studio, select **Save** on the **File** menu (on the left edge), a
 
     ![Save updated app.](./media/save-publish-app/save-app.png)
 
-Power Apps can also periodically save the app every 2 minutes. If you have saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
+Power Apps can also periodically save the app every 2 minutes. If you've saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
 
 ![Auto save setting.](./media/save-publish-app/autosave.png)
 
@@ -46,23 +49,26 @@ Power Apps can also periodically save the app every 2 minutes. If you have saved
    ![Review Publish.](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get   the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
+   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
 
 ## Identify the live version
 
-In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps** on the **File** menu (on the left edge), select the details icon for an app, and then select the **Versions** tab.
+To see all versions of an app, go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps** > select your app > **Details** > **Versions**.
 
-The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those who have edit permissions for it.
+The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those users who have edit permissions for it.
 
 ![Publish from portal.](./media/save-publish-app/publish-portal.png)
 
-To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop down menu.
+To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop-down menu.
+
+> [!NOTE]
+> - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Occasionally, it may take a few minutes.
+> - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
 
 ## Next steps
 
-* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
-* [Rename an app](set-name-tile.md) from powerapps.com.
+* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../mobile/run-powerapps-on-mobile.md).
+* [Rename an app](set-name-tile.md) from [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 * [Restore an app](restore-an-app.md) if you have multiple versions of an app.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

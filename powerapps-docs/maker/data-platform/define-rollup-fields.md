@@ -4,7 +4,7 @@ description: "Learn how to define rollup columns"
 ms.custom: ""
 ms.date: 01/23/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Define rollup columns that aggregate values
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Rollup columns help users obtain insights into data by monitoring key business metrics. A rollup column contains an aggregate value computed over the rows related to a specified row. This includes regular tables and activity tables such as emails and appointments.
 
@@ -216,8 +216,6 @@ Certain table  forms, such as Account or Contact, out-of-the-box, contain the as
 [Define calculated columns](define-calculated-fields.md)<br />
 [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)<br />
 [Define and query hierarchically related data](define-query-hierarchical-data.md)<br />
-[Video: Rollup and Calculated Fields](https://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
-[Video: Using Power BI](https://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

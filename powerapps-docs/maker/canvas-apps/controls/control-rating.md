@@ -2,8 +2,7 @@
 title: Rating control in Power Apps
 description: Learn about the details, properties and examples of the Rating control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Rating control in Power Apps
 A control with which users can indicate a value between 1 and a maximum number that you specify.

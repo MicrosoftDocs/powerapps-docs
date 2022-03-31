@@ -4,7 +4,7 @@ description: "Insert a preformatted email message while composing an email."
 ms.custom: ""
 author: sbmjais
 manager: shujoshi
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/30/2021
@@ -40,7 +40,7 @@ Once you select **Insert Template**, the following window appears displaying a l
 >
 > 2. When you have both a Recipient and Regarding field. You must select one.
 >
-> ![Message when both recipient and regarding field are present.](media\email-template-select-record.png "Message when both recipient and regarding fields are present)
+> ![Message when both recipient and regarding field are present.](media\email-template-select-record.png "Message when both recipient and regarding fields are present")
 >
 > The selection of one of these fields determines which template types are shown to a user in the template selection window:
 > - Recipient (TO): user (global) and contact templates are displayed.

@@ -2,11 +2,10 @@
 title: Table function in Power Apps
 description: Reference information including syntax and examples for the Table function in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk tapanm
+ms.reviewer: tapanm tapanm
 ms.date: 11/07/2015
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Table function in Power Apps
 Creates a temporary [table](../working-with-tables.md).

@@ -1,13 +1,13 @@
 ---
-title: "WorkflowLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the WorkflowLog table/entity."
-ms.date: 05/20/2021
+title: "Process Log (WorkflowLog)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Process Log (WorkflowLog)  table/entity."
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# WorkflowLog table/entity reference
+# Process Log (WorkflowLog)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -411,13 +411,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|In Progress|
-|2|Succeeded|
-|3|Failed|
-|4|Canceled|
-|5|Waiting|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|In Progress||
+|2|Succeeded||
+|3|Failed||
+|4|Canceled||
+|5|Waiting||
 
 
 
@@ -872,55 +872,55 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_business_unit_workflowlogs"></a> business_unit_workflowlogs
 
-See businessunit Table [business_unit_workflowlogs](businessunit.md#BKMK_business_unit_workflowlogs) One-To-Many relationship.
+See the [business_unit_workflowlogs](businessunit.md#BKMK_business_unit_workflowlogs) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_createdby"></a> lk_workflowlog_createdby
 
-See systemuser Table [lk_workflowlog_createdby](systemuser.md#BKMK_lk_workflowlog_createdby) One-To-Many relationship.
+See the [lk_workflowlog_createdby](systemuser.md#BKMK_lk_workflowlog_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_processsession"></a> lk_workflowlog_processsession
 
-See processsession Table [lk_workflowlog_processsession](processsession.md#BKMK_lk_workflowlog_processsession) One-To-Many relationship.
+See the [lk_workflowlog_processsession](processsession.md#BKMK_lk_workflowlog_processsession) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_processsession_childworkflow"></a> lk_workflowlog_processsession_childworkflow
 
-See processsession Table [lk_workflowlog_processsession_childworkflow](processsession.md#BKMK_lk_workflowlog_processsession_childworkflow) One-To-Many relationship.
+See the [lk_workflowlog_processsession_childworkflow](processsession.md#BKMK_lk_workflowlog_processsession_childworkflow) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_asyncoperation_childworkflow"></a> lk_workflowlog_asyncoperation_childworkflow
 
-See asyncoperation Table [lk_workflowlog_asyncoperation_childworkflow](asyncoperation.md#BKMK_lk_workflowlog_asyncoperation_childworkflow) One-To-Many relationship.
+See the [lk_workflowlog_asyncoperation_childworkflow](asyncoperation.md#BKMK_lk_workflowlog_asyncoperation_childworkflow) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_asyncoperations"></a> lk_workflowlog_asyncoperations
 
-See asyncoperation Table [lk_workflowlog_asyncoperations](asyncoperation.md#BKMK_lk_workflowlog_asyncoperations) One-To-Many relationship.
+See the [lk_workflowlog_asyncoperations](asyncoperation.md#BKMK_lk_workflowlog_asyncoperations) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_modifiedby"></a> lk_workflowlog_modifiedby
 
-See systemuser Table [lk_workflowlog_modifiedby](systemuser.md#BKMK_lk_workflowlog_modifiedby) One-To-Many relationship.
+See the [lk_workflowlog_modifiedby](systemuser.md#BKMK_lk_workflowlog_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_workflowlogs"></a> lk_newprocess_workflowlogs
 
-See newprocess Table [lk_newprocess_workflowlogs](newprocess.md#BKMK_lk_newprocess_workflowlogs) One-To-Many relationship.
+See the [lk_newprocess_workflowlogs](newprocess.md#BKMK_lk_newprocess_workflowlogs) one-to-many relationship for the [newprocess](newprocess.md) table/entity.
 
 ### <a name="BKMK_team_workflowlog"></a> team_workflowlog
 
-See team Table [team_workflowlog](team.md#BKMK_team_workflowlog) One-To-Many relationship.
+See the [team_workflowlog](team.md#BKMK_team_workflowlog) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_createdonbehalfby"></a> lk_workflowlog_createdonbehalfby
 
-See systemuser Table [lk_workflowlog_createdonbehalfby](systemuser.md#BKMK_lk_workflowlog_createdonbehalfby) One-To-Many relationship.
+See the [lk_workflowlog_createdonbehalfby](systemuser.md#BKMK_lk_workflowlog_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_workflowlogs"></a> lk_translationprocess_workflowlogs
 
-See translationprocess Table [lk_translationprocess_workflowlogs](translationprocess.md#BKMK_lk_translationprocess_workflowlogs) One-To-Many relationship.
+See the [lk_translationprocess_workflowlogs](translationprocess.md#BKMK_lk_translationprocess_workflowlogs) one-to-many relationship for the [translationprocess](translationprocess.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_workflowlogs"></a> lk_expiredprocess_workflowlogs
 
-See expiredprocess Table [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK_lk_expiredprocess_workflowlogs) One-To-Many relationship.
+See the [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK_lk_expiredprocess_workflowlogs) one-to-many relationship for the [expiredprocess](expiredprocess.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_modifiedonbehalfby"></a> lk_workflowlog_modifiedonbehalfby
 
-See systemuser Table [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

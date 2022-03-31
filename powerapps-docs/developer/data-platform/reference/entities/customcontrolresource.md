@@ -1,13 +1,13 @@
 ---
-title: "CustomControlResource table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CustomControlResource table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomControlResource table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -215,12 +215,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -358,12 +358,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -575,27 +575,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_customcontrolresource_createdby"></a> lk_customcontrolresource_createdby
 
-See systemuser Table [lk_customcontrolresource_createdby](systemuser.md#BKMK_lk_customcontrolresource_createdby) One-To-Many relationship.
+See the [lk_customcontrolresource_createdby](systemuser.md#BKMK_lk_customcontrolresource_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrolresource_createdonbehalfby"></a> lk_customcontrolresource_createdonbehalfby
 
-See systemuser Table [lk_customcontrolresource_createdonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_createdonbehalfby) One-To-Many relationship.
+See the [lk_customcontrolresource_createdonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_customcontrol_resource_id"></a> customcontrol_resource_id
 
-See customcontrol Table [customcontrol_resource_id](customcontrol.md#BKMK_customcontrol_resource_id) One-To-Many relationship.
+See the [customcontrol_resource_id](customcontrol.md#BKMK_customcontrol_resource_id) one-to-many relationship for the [customcontrol](customcontrol.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrolresource_modifiedonbehalfby"></a> lk_customcontrolresource_modifiedonbehalfby
 
-See systemuser Table [lk_customcontrolresource_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_customcontrolresource_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_customcontrolresource_organization"></a> customcontrolresource_organization
 
-See organization Table [customcontrolresource_organization](organization.md#BKMK_customcontrolresource_organization) One-To-Many relationship.
+See the [customcontrolresource_organization](organization.md#BKMK_customcontrolresource_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrolresource_modifiedby"></a> lk_customcontrolresource_modifiedby
 
-See systemuser Table [lk_customcontrolresource_modifiedby](systemuser.md#BKMK_lk_customcontrolresource_modifiedby) One-To-Many relationship.
+See the [lk_customcontrolresource_modifiedby](systemuser.md#BKMK_lk_customcontrolresource_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

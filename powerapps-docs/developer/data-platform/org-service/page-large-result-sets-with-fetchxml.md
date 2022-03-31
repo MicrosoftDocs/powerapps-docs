@@ -2,13 +2,12 @@
 title: "Page large result sets with FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can page the results of a FetchXML query by using the paging cookie" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 03/21/2022
+ms.reviewer: "jdaly"
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -16,8 +15,6 @@ search.app:
   - D365CE
 ---
 # Page large result sets with FetchXML
-
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can page the results of a FetchXML query by using the paging cookie. The paging cookie is a performance feature that makes paging in the application faster for very large datasets. When you query for a set of records, the result will contain a value for the paging cookie. For better performance, you can pass that value when you retrieve the next set of records.  
   
@@ -35,6 +32,7 @@ strQueryXML = @"
 ```  
   
 ## FetchXML and the Paging Cookie Example  
+
  The following example shows how to use the paging cookie with a FetchXML query. For the complete sample code, see [Sample: Use FetchXML with a Paging Cookie](samples/use-fetchxml-paging-cookie.md).  
   
 ```csharp
@@ -107,6 +105,46 @@ while (true)
         // If no more records in the result nodes, exit the loop.
         break;
     }
+}
+```
+
+This code depends on a static `CreateXml` method shown below:
+
+```csharp
+public static string CreateXml(string xml, string cookie, int page, int count)
+{
+    StringReader stringReader = new StringReader(xml);
+    var reader = new XmlTextReader(stringReader);
+
+    // Load document
+    XmlDocument doc = new XmlDocument();
+    doc.Load(reader);
+
+    XmlAttributeCollection attrs = doc.DocumentElement.Attributes;
+
+    if (cookie != null)
+    {
+        XmlAttribute pagingAttr = doc.CreateAttribute("paging-cookie");
+        pagingAttr.Value = cookie;
+        attrs.Append(pagingAttr);
+    }
+
+    XmlAttribute pageAttr = doc.CreateAttribute("page");
+    pageAttr.Value = System.Convert.ToString(page);
+    attrs.Append(pageAttr);
+
+    XmlAttribute countAttr = doc.CreateAttribute("count");
+    countAttr.Value = System.Convert.ToString(count);
+    attrs.Append(countAttr);
+
+    StringBuilder sb = new StringBuilder(1024);
+    StringWriter stringWriter = new StringWriter(sb);
+
+    XmlTextWriter writer = new XmlTextWriter(stringWriter);
+    doc.WriteTo(writer);
+    writer.Close();
+
+    return sb.ToString();
 }
 ```
   

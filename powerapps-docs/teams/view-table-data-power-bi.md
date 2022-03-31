@@ -1,16 +1,18 @@
 ---
-title: View Dataverse for Teams table data in Power BI Desktop (Preview) | Microsoft Docs
+title: View Dataverse for Teams table data in Power BI Desktop (preview) | Microsoft Docs
 description: Provides an overview of Dataverse for Teams.
 author: RichdiMSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/13/2020
 ms.subservice: teams
 ms.author: richdi
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
-# View Dataverse for Teams table data in Power BI Desktop (Preview)
+# View Dataverse for Teams table data in Power BI Desktop (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -39,7 +41,7 @@ Follow the steps to get the URL of your Dataverse for Teams environment, which i
 
 1. Select the **About** tab, and then select **Session Details** to display the session details information.<br/> Copy the Instance url value to notepad. This is the environment URL of your Dataverse for Team environment. For example: `https://orga0e34f66.crm.dynamics.com/`
 
-    ![Select a team to view data.](media/copy-env-url.png)
+    ![Select about tab - session details.](media/copy-env-url.png)
 
 ## Step 2: View the table data in Power BI
 
@@ -72,7 +74,7 @@ For more information about working with Power BI Desktop, see [Get started with 
 
 ### See also
 
-[View Dataverse table data in Power BI Desktop (Preview)](../maker/data-platform/view-entity-data-power-bi.md) <br/>
+[View Dataverse table data in Power BI Desktop (preview)](../maker/data-platform/view-entity-data-power-bi.md) <br/>
 [Dataverse for Teams FAQs](data-platform-faqs.md)
 
 

@@ -3,7 +3,7 @@ title: "Search options in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to to use the different search option
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/27/2020
@@ -23,7 +23,7 @@ search.app:
 
 There are three ways to search rows in Dataverse:
 
--   Relevance Search   
+-   Dataverse search   
   
 -   Quick Find (single-table or multi-table)  
 
@@ -34,7 +34,7 @@ There are three ways to search rows in Dataverse:
   
 The following table provides a brief comparison of the three options.
 
-|Functionality|[Relevance Search](relevance-search.md)|[Quick Find](quick-find.md)|[Advanced Find](advanced-find.md)|  
+|Functionality|[Dataverse search](relevance-search.md)|[Quick Find](quick-find.md)|[Advanced Find](advanced-find.md)|  
 |-------------------|---------------------------|----------------|-------------------|  
 |Enabled by default?|No. An administrator must manually enable it.|Yes|Yes|  
 |Single-table search scope|Not available in a table grid. You can filter the search results by a table on the results page.|Available in a table grid.|Available in a table grid.|  

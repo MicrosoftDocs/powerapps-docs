@@ -1,19 +1,20 @@
 ---
 title: "Build queries with QueryExpression (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the QueryExpression class to programmatically build a query containing data filters and search conditions that define the scope of a database search" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/01/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" 
+author: "divka78" 
 ms.author: "jdaly" 
-manager: "ryjones" 
+manager: "kvivek" 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Build queries with QueryExpression

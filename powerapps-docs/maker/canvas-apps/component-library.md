@@ -1,11 +1,11 @@
 ---
-title: Component library
+title: Component library (preview)
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
-ms.service: powerapps
+
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2021
+ms.date: 11/03/2021
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -17,10 +17,9 @@ contributors:
   - tapanm-msft
 ---
 
-# Component library
+# Component library (preview)
 
-> [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
+[This article is pre-release documentation and is subject to change.]
 
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
@@ -79,6 +78,24 @@ The steps to create components inside a component library are the same as creati
 
     ![Publish component library version.](./media/component-library/publish-component-library.png "Publish component library version")
 
+## Library component customization
+
+When creating component inside a component library, you have the option to allow the component to be customized when used by apps consuming the library components. By default, this setting is turned **On**. Turn this setting to **Off** to remove the ability to customize component while using in other apps.
+
+:::image type="content" source="media/component-library/allow-customization-on.png" alt-text="Option to allow customization to this component when being used by an app.":::
+
+When you add a component that allows customization, you'll see an option to edit this component for additional customization. App makes a local copy and you can make changes to local component copy. Note that the association with the component library is removed once the component is edited.
+
+:::image type="content" source="media/component-library/edit-customizable-component.png" alt-text="Edit a component allowed for customization.":::
+
+Selecting **Edit component** prompts you to copy the component locally for customization.
+
+However, when you don't allow the components to be customized, the consuming apps won't show the option to edit the component.
+
+:::image type="content" source="media/component-library/allow-customization-off.png" alt-text="No option to edit component inside consuming app.":::
+
+In this case, the only way to edit the component is to edit the component library where the component is stored.
+
 ## Import from a component library
 
 After you create a component library and publish, apps can consume the components from this component library by importing the library. You can also [share a component library](component-library.md#component-library-permissions).
@@ -104,6 +121,10 @@ Components available inside the app are listed under the **Custom** category in 
 
 You can modify an existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. The [example component library](component-library.md#create-an-example-component-library) steps above explain how to publish a component library after saving it.
 
+There are two ways apps using the components from library can get the latest changes.
+
+### Method 1: Component update notification on app edit
+
 Makers of other apps are notified of updated components being available. The notification appears when makers edit the apps in canvas app studio. They can choose to update the components:
 
 ![Update available.](./media/component-library/update-available.png "Update available")
@@ -115,6 +136,22 @@ Select **Review**, and you'll see the option to update the component:
 Notice that the version note you added when publishing the component library version shows up here. 
 
 Select **Update** to update the components.
+
+![App updated with latest components](./media/component-library/updated-app.png "App updated with latest components")
+
+### Method 2: Proactive check for updates
+
+This method is to check for the app update proactively while working on the app in Studio.
+
+To do this check, select Insert component panel on the left-side, and then select **...** (ellipsis) next to the search button. And then, select **Check for updates**.
+
+![Check for latest components](./media/component-library/check-for-updates.png "Check for latest components")
+
+If there are updates in the components used from library , maker will get the message to review and get the latest changes. Upon review and update, the app gets updated with the latest components.
+
+The following animation shows the process to get the latest components.
+
+![Steps to get the latest components](./media/component-library/get-latest-components.gif "Steps to get the latest components")
 
 ## Component library permissions
 

@@ -2,22 +2,22 @@
 title: getTargetEntityType | Microsoft Docs
 description: Returns the target table type name.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 4027f62f-1cc7-4eb6-aae8-a05d1a5fc722
 ---
 
 # getTargetEntityType
 
 [!INCLUDE[./includes/gettargetentitytype-description.md](./includes/gettargetentitytype-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven and canvas apps
 
@@ -28,7 +28,6 @@ Model-driven and canvas apps
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

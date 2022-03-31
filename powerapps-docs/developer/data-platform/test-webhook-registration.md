@@ -1,26 +1,27 @@
 ---
 title: "Test WebHook registration with request logging site (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use a request logging site to examine the contextual data passed with a WebHook." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/18/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "jaredha" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Test WebHook registration with request logging site
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Before you create or configure a service to consume WebHooks, you should test what kind of data the service will receive so that you can know what kind of data you will need to process. For this purpose, you can use one of several request logging sites. For the purpose of this example, we will use [WebHook Tester](https://WebHook.site) to configure a target for the WebHook requests.
+Before you create or configure a service to consume Webhooks, you should test what kind of data the service will receive so that you can know what kind of data you will need to process. For this purpose, you can use one of several request logging sites. For the purpose of this example, we will use [WebHook Tester](https://WebHook.site) to configure a target for the WebHook requests.
 
 Use the following steps:
 
@@ -42,7 +43,7 @@ Use the following steps:
 
 ## Next steps
 
-[Use WebHooks to create external handlers for server events](use-WebHooks.md)
+[Use Webhooks to create external handlers for server events](use-webhooks.md)
 
 ### See also
 [Register a WebHook](register-web-hook.md)

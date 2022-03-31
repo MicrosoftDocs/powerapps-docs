@@ -4,7 +4,7 @@ description: "Organization service allows you to detect duplicate rows in Micros
 ms.custom: ""
 ms.date: 06/09/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

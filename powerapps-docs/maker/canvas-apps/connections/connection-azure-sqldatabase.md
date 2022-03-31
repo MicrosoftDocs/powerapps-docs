@@ -2,8 +2,7 @@
 title: Connect to SQL Server from Power Apps
 description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
 author: lancedMicrosoft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 04/28/2021
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to SQL Server from Power Apps
 ![SQL Server icon.](./media/connection-azure-sqldatabase/sqlicon.png)

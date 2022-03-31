@@ -2,13 +2,15 @@
 title: Table relationships in Dataverse for Teams | Microsoft Docs
 description: Explains how to create and use table relationships in in Dataverse for Teams.
 author: NHelgren
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 
 # Work with table relationships

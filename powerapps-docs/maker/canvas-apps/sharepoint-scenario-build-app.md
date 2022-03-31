@@ -2,18 +2,21 @@
 title: Create a canvas app to manage projects
 description: Learn about how to build a canvas app from scratch allowing users to assign a manager to projects and to update project details.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/18/2020
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - navjotm
+  - wimcoor
 ---
 # Create a canvas app to manage projects
 > [!NOTE]
@@ -36,18 +39,9 @@ Power Apps Studio has three panes and a ribbon that make app creation feel like 
 ## Step 1: Create screens
 With that review out of the way, let's start building an app.
 
-### Create and save the app
-1. In Power Apps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
-   
-    ![Blank app - phone layout.](./media/sharepoint-scenario-build-app/04-01-01-blank-phone-app.png)
-2. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
-   
-    ![App name.](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
-3. Click or tap **Save as**, verify that the app will save to the cloud, then click **Save** in the lower right corner.
-   
-    ![Save to the cloud.](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
+### Create the app
 
-4. Click or tap ![Back to app icon.](./media/sharepoint-scenario-build-app/icon-back-to-app.png) to go back to the app.
+Create a [blank canvas app](create-blank-app.md) with **Phone** layout, and "Project Management app" name.
 
 ### Add four screens to the app
 In this step, we'll create four blank screens for the app. We'll use different screen layouts, depending on the screen's purpose. We'll add to these screens in later steps.
@@ -78,8 +72,8 @@ The app should now look like the following image.
 
 ![All app screens.](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
 
-## Step 2: Connect to a SharePoint list
-In this step, we'll connect to the **Project Details** SharePoint list. We only use one list in this app, but you could easily connect to both if you want to extend the app.
+## Step 2: Connect to a list created using Microsoft Lists
+In this step, we'll connect to the **Project Details** list. We only use one list in this app, but you could easily connect to both if you want to extend the app.
 
 1. In the left navigation bar, click or tap the **SelectTask** screen.
 2. In the right pane, click or tap **Add data source**.
@@ -433,7 +427,7 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
 
 1. First, let's look at the **Project Details** list in SharePoint. Two projects have a value of **Unassigned** in the **PMAssigned** column. We will see these in the app.
    
-    ![Unassigned projects in SharePoint list.](./media/sharepoint-scenario-build-app/04-07-01-unassigned.png)
+    ![Unassigned projects in list.](./media/sharepoint-scenario-build-app/04-07-01-unassigned.png)
 
 2. Click or tap the link that you created to the app.
 
@@ -451,9 +445,9 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
    
     ![Assign manager to project.](./media/sharepoint-scenario-build-app/04-07-05-updated.png)
 
-6. Go back to the SharePoint list and refresh the page. You'll see that the project entry is now updated with the project manager name.
+6. Go back to the list and refresh the page. You'll see that the project entry is now updated with the project manager name.
    
-    ![Project manager assigned in SharePoint list.](./media/sharepoint-scenario-build-app/04-07-07-assigned.png)
+    ![Project manager assigned in list.](./media/sharepoint-scenario-build-app/04-07-07-assigned.png)
 
 ### Update details for the project
 
@@ -479,11 +473,11 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
    
    ![Update item details.](./media/sharepoint-scenario-build-app/04-07-11-update.png)
 
-5. Click or tap ![Check mark icon.](./media/sharepoint-scenario-build-app/icon-check-mark.png) to apply the change to the SharePoint list.
+5. Click or tap ![Check mark icon.](./media/sharepoint-scenario-build-app/icon-check-mark.png) to apply the change to the list.
 
 6. Close the app, and go back to the list. You see that the project entry is now updated with the date and day changes.
    
-    ![Updated SharePoint list.](./media/sharepoint-scenario-build-app/04-07-11-updated-list.png)
+    ![Updated list.](./media/sharepoint-scenario-build-app/04-07-11-updated-list.png)
 
 ## Formula deep-dive
 This is the second optional section on Power Apps formulas. In the first deep-dive, we looked at one of the formulas that Power Apps generates for the browse gallery in a three-screen app. In this deep-dive, we'll look at a formula that we use for the **AssignManager** screen of our second app. Here's the formula:

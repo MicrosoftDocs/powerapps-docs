@@ -2,18 +2,20 @@
 title: Show items of different heights in canvas apps gallery
 description: Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery.
 author: fikaradz
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/01/2017
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - fikaradz
 ---
 # Show items of different heights in canvas apps gallery
 If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control so that you can:
@@ -34,15 +36,11 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
     ![Flooring products.](./media/gallery-dynamic-sizing/flooring-products.png)
 
-2. Upload the Excel file to a cloud-storage account such as OneDrive, Dropbox, or Google Drive.
+1. Upload the Excel file to a cloud-storage account such as OneDrive, Dropbox, or Google Drive.
 
-3. In Power Apps Studio, click or tap **New** on the **File** menu.
+1. Create a [blank app](create-blank-app.md) with **Phone** layout.
 
-4. On the **Blank app** tile, click or tap **Phone layout**.
-
-    ![New option on the File menu.](./media/gallery-dynamic-sizing/blank-app.png)
-
-5. Add a connection to the **FlooringEstimates** table in the Excel file.
+1. Add a connection to the **FlooringEstimates** table in the Excel file.
 
     For more information, see [Add a connection](add-data-connection.md).
 

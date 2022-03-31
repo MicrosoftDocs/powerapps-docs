@@ -2,8 +2,7 @@
 title: Edit form and Display form controls in Power Apps
 description: Learn about the details, properties and examples of the Edit form and Display form controls in Power Apps.
 author: aneesmsft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
+  - aneesmsft
 ---
 # Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.

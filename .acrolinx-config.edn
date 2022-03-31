@@ -1,5 +1,5 @@
-{:allowed-branchname-matches ["^master$"]
- :allowed-filename-matches ["powerapps-docs"]
+{:allowed-branchname-matches ["^main$"]
+ :allowed-filename-matches ["(?i)powerapps-docs/(?:(?!developer/data-platform/reference/entities))"]
  :guidance-profile "dc59e3ef-24fd-46d7-9156-0491aaae6bef" ;; Profile ID for "BAG-specific" 
  :use-skip-label true
  :acrolinx-check-settings

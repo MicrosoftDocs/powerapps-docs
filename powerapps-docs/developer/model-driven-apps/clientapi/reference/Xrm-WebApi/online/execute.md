@@ -1,19 +1,21 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi.online.execute (Client API reference)
 
@@ -28,7 +30,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -473,7 +475,7 @@ var createRequest = new Sdk.CreateRequest("account", payload);
 Xrm.WebApi.online.execute(createRequest)
 .then(function (response) {
     if (response.ok) {
-        console.log("Status: %s %s", result.status, result.statusText);
+        console.log("Status: %s %s", response.status, response.statusText);
         
         // The Create request does not return any response body content. So we
         // need not access the response.json() property.
@@ -523,10 +525,10 @@ var retrieveRequest = new Sdk.RetrieveRequest(entityReference, ["name"]);
 Xrm.WebApi.online.execute(retrieveRequest)
 .then(function (response) {
     if (response.ok) {
-        console.log("Status: %s %s", result.status, result.statusText);
+        console.log("Status: %s %s", response.status, response.statusText);
 
         // Use response.json() to access the content of the response body.
-        return result.json();
+        return response.json();
     }
 })
 .then(function(responseBody) {
@@ -645,7 +647,7 @@ Xrm.WebApi.online.execute(deleteRequest)
 ```
 
 ### Associate a record
-The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (One-To-Many and Many-To-Many relationships). For single-valued navigation properties (Many-To-One relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -711,7 +713,7 @@ Xrm.WebApi.online.execute(manyToManyAssociateRequest)
 ```
 
 ### Disassociate a record
-The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (One-To-Many and Many-To-Many relationships). For single-valued navigation properties (Many-To-One relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 > [!NOTE]
 > Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.

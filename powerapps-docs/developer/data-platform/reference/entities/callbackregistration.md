@@ -1,13 +1,13 @@
 ---
-title: "CallbackRegistration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CallbackRegistration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -59,14 +59,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EntityName](#BKMK_EntityName)
 - [FilterExpression](#BKMK_FilterExpression)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
+- [HardDelete](#BKMK_HardDelete)
 - [Message](#BKMK_Message)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PostponeUntil](#BKMK_PostponeUntil)
 - [RunAs](#BKMK_RunAs)
+- [RuntimeIntegrationProperties](#BKMK_RuntimeIntegrationProperties)
 - [Scope](#BKMK_Scope)
 - [SdkMessageName](#BKMK_SdkMessageName)
+- [SoftDeleteStatus](#BKMK_SoftDeleteStatus)
 - [Url](#BKMK_Url)
 - [Version](#BKMK_Version)
 
@@ -133,6 +136,26 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_HardDelete"></a> HardDelete
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds hard delete information.|
+|DisplayName|Hard Delete|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|harddelete|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### HardDelete Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+
+
 ### <a name="BKMK_Message"></a> Message
 
 |Property|Value|
@@ -147,15 +170,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Message Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Create|
-|2|Delete|
-|3|Update|
-|4|Create or Update|
-|5|Create or Delete|
-|6|Update or Delete|
-|7|Create or Update or Delete|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Added||
+|2|Deleted||
+|3|Modified||
+|4|Added or Modified||
+|5|Added or Deleted||
+|6|Modified or Deleted||
+|7|Added or Modified or Deleted||
 
 
 
@@ -232,12 +255,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RunAs Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Triggering User|
-|2|Record Owner|
-|3|Process Owner|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Modifying user||
+|2|Row owner||
+|3|Flow owner||
 
+
+
+### <a name="BKMK_RuntimeIntegrationProperties"></a> RuntimeIntegrationProperties
+
+**Added by**: RuntimeIntegration Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds miscellaneous properties related to runtime integration.|
+|DisplayName|Runtime Integration Properties|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|runtimeintegrationproperties|
+|MaxLength|512|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Scope"></a> Scope
@@ -254,12 +295,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Scope Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|User|
-|2|BusinessUnit|
-|3|ParentChildBusinessUnit|
-|4|Organization|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|User||
+|2|BusinessUnit||
+|3|ParentChildBusinessUnit||
+|4|Organization||
 
 
 
@@ -279,6 +320,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_SoftDeleteStatus"></a> SoftDeleteStatus
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds soft delete information.|
+|DisplayName|Soft Delete Status|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|softdeletestatus|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_Url"></a> Url
@@ -311,11 +370,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Version Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|V1|
-|2|V2|
-|3|V3|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|V1||
+|2|V2||
+|3|V3||
 
 
 <a name="read-only-attributes"></a>
@@ -613,23 +672,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
 
-See systemuser Table [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_modifiedby"></a> lk_callbackregistration_modifiedby
 
-See systemuser Table [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) One-To-Many relationship.
+See the [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
 
-See systemuser Table [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) One-To-Many relationship.
+See the [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_createdby"></a> lk_callbackregistration_createdby
 
-See systemuser Table [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) One-To-Many relationship.
+See the [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_businessunit_callbackregistration"></a> businessunit_callbackregistration
 
-See businessunit Table [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) One-To-Many relationship.
+See the [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

@@ -3,10 +3,10 @@ title: "Use the lookup column on a row | MicrosoftDocs"
 description: How to use the lookup column in Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/08/2021
+ms.date: 08/01/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -27,7 +27,8 @@ For example, you might search for the name **Adrian Dumitrascu**. When you type 
   > ![Automatically populates matching rows.](media/automatically-populate-matching-records.png "Automatically populates matching rows")
   
 >[!NOTE] 
->An administrator can define the criteria that lookup uses for resolving partial search text.
+> - An administrator can define the criteria that lookup uses for resolving partial search text.
+> - To enable search on multiple columns, see [Configure searchable fields](/power-platform/admin/configure-relevance-search-organization#configure-searchable-fields-for-relevance-search).
 
 Also, you can create a new row by selecting the **New** button. You must have sufficient permissions to view the **New** button and create a row. When you select the lookup column, the five most recently used rows are displayed along with five favorite rows. Which rows are displayed depends on your view history and the favorites you’ve pinned. 
 
@@ -48,7 +49,7 @@ Legend
 4. **Types of records**: Select to filter by a table type such as Contact table or Account table. The number in front of **type of records** represents how many table are available to filter from.
 5. **Browse in a lookup column**: To browse a lookup, select the lookup icon (magnifying glass). A full list of items will be shown in the dropdown.
 6. **Expand item**: Use the Right and Left arrow keys on your keyboard to expand collapse each item. For more information on keyboard shortcuts, see [Use keyboard shortcuts in Power Apps](keyboard-shortcuts.md).
-7. **Change View**: Select to switch to another view. For more information on views, see [Use grid filters](grid-filters.md#use-search-on-a-grid).
+7. **Change View**: Select to switch to another view. For more information on views, see [Explore data in a view on a grid page](grid-filters.md).
 
 
 ## Types of lookups
@@ -139,7 +140,7 @@ When lookup has more rows in a column than can fit in the available display area
 
 ## Advanced lookup
 
-To use **Advanced lookup**, your administrator needs to enable this feature. For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
+The **Advanced lookup** feature is available for early access in 2021 release wave 2. To use **Advanced lookup** your administrator needs to [enable early access](/power-platform/admin/opt-in-early-access-updates). For more information, see [Manage behavior settings](/power-platform/admin/settings-behavior).
 
 Once enabled **Advanced lookup** is available on any lookup column that's on a quick create form, edit form, or dialog box. With **Advanced lookup** you can easily sort rows and switch between tables or views in a lookup column. 
 

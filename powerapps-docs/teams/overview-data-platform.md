@@ -2,13 +2,13 @@
 title: Microsoft Dataverse for Teams overview | Microsoft Docs
 description: Provides the benefits of Dataverse for Teams.
 author: NHelgren
-ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+ms.topic: overview
 ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Overview of Microsoft Dataverse for Teams
 
@@ -32,7 +32,7 @@ Some of the benefits of Dataverse for Teams include:
 
 - Storage of 2 GB per team, and support for up to 1 million rows.
 
-- Support for up to 500 teams.
+- Support for 5 teams plus 1 additional team for every 20 licensed users.
 
 - The capability to be upgraded to Dataverse.
 

@@ -1,13 +1,13 @@
 ---
-title: "EntityRelationship table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "EntityRelationship table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EntityRelationship table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -109,12 +109,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -156,7 +156,7 @@ Listed by **SchemaName**.
 
 **Added by**: Solution Component Configuration Solution
 
-Same as solutioncomponentrelationshipconfiguration table [entityrelationship_config](solutioncomponentrelationshipconfiguration.md#BKMK_entityrelationship_config) Many-To-One relationship.
+Same as the [entityrelationship_config](solutioncomponentrelationshipconfiguration.md#BKMK_entityrelationship_config) many-to-one relationship for the [solutioncomponentrelationshipconfiguration](solutioncomponentrelationshipconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|

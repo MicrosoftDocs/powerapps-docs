@@ -2,8 +2,7 @@
 title: Format a table in Excel and naming tips
 description: Learn about how to format a table in an Excel file to use the table as the source of data while building a canvas app.
 author: yifwang
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - yifwang
 ---
 # Format a table in Excel and naming tips
 In Power Apps, you can create a canvas app based on Excel data only if it's formatted as a table. By following this content, you'll learn how to format a table in Excel and some tips of naming Excel columns.

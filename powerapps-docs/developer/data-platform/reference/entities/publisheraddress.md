@@ -1,13 +1,13 @@
 ---
-title: "PublisherAddress table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "PublisherAddress table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the PublisherAddress table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -116,12 +116,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Bill To|
-|2|Ship To|
-|3|Primary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Bill To||
+|2|Ship To||
+|3|Primary||
+|4|Other||
 
 
 
@@ -203,10 +203,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FOB|
-|2|No Charge|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FOB||
+|2|No Charge||
 
 
 
@@ -426,9 +426,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default||
 
 
 
@@ -825,23 +825,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_publisheraddressbase_modifiedonbehalfby"></a> lk_publisheraddressbase_modifiedonbehalfby
 
-See systemuser Table [lk_publisheraddressbase_modifiedonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_publisheraddressbase_modifiedonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_publisheraddressbase_createdonbehalfby"></a> lk_publisheraddressbase_createdonbehalfby
 
-See systemuser Table [lk_publisheraddressbase_createdonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_publisheraddressbase_createdonbehalfby](systemuser.md#BKMK_lk_publisheraddressbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Publisher_PublisherAddress"></a> Publisher_PublisherAddress
 
-See publisher Table [Publisher_PublisherAddress](publisher.md#BKMK_Publisher_PublisherAddress) One-To-Many relationship.
+See the [Publisher_PublisherAddress](publisher.md#BKMK_Publisher_PublisherAddress) one-to-many relationship for the [publisher](publisher.md) table/entity.
 
 ### <a name="BKMK_lk_publisheraddressbase_createdby"></a> lk_publisheraddressbase_createdby
 
-See systemuser Table [lk_publisheraddressbase_createdby](systemuser.md#BKMK_lk_publisheraddressbase_createdby) One-To-Many relationship.
+See the [lk_publisheraddressbase_createdby](systemuser.md#BKMK_lk_publisheraddressbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_publisheraddressbase_modifiedby"></a> lk_publisheraddressbase_modifiedby
 
-See systemuser Table [lk_publisheraddressbase_modifiedby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedby) One-To-Many relationship.
+See the [lk_publisheraddressbase_modifiedby](systemuser.md#BKMK_lk_publisheraddressbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

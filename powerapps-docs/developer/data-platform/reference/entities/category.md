@@ -1,13 +1,13 @@
 ---
-title: "Category table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Category table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Category table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -261,6 +261,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentCategoryIdName](#BKMK_ParentCategoryIdName)
@@ -385,8 +386,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -520,12 +521,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -614,7 +631,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_category_parent_category"></a> category_parent_category
 
-Same as category table [category_parent_category](category.md#BKMK_category_parent_category) Many-To-One relationship.
+Same as the [category_parent_category](category.md#BKMK_category_parent_category) many-to-one relationship for the [category](category.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -629,7 +646,7 @@ Same as category table [category_parent_category](category.md#BKMK_category_pare
 
 ### <a name="BKMK_Category_SyncErrors"></a> Category_SyncErrors
 
-Same as syncerror table [Category_SyncErrors](syncerror.md#BKMK_Category_SyncErrors) Many-To-One relationship.
+Same as the [Category_SyncErrors](syncerror.md#BKMK_Category_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -658,31 +675,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_category_parent_category"></a> category_parent_category
 
-See category Table [category_parent_category](category.md#BKMK_category_parent_category) One-To-Many relationship.
+See the [category_parent_category](category.md#BKMK_category_parent_category) one-to-many relationship for the [category](category.md) table/entity.
 
 ### <a name="BKMK_lk_category_createdonbehalfby"></a> lk_category_createdonbehalfby
 
-See systemuser Table [lk_category_createdonbehalfby](systemuser.md#BKMK_lk_category_createdonbehalfby) One-To-Many relationship.
+See the [lk_category_createdonbehalfby](systemuser.md#BKMK_lk_category_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_category"></a> transactioncurrency_category
 
-See transactioncurrency Table [transactioncurrency_category](transactioncurrency.md#BKMK_transactioncurrency_category) One-To-Many relationship.
+See the [transactioncurrency_category](transactioncurrency.md#BKMK_transactioncurrency_category) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_category_createdby"></a> lk_category_createdby
 
-See systemuser Table [lk_category_createdby](systemuser.md#BKMK_lk_category_createdby) One-To-Many relationship.
+See the [lk_category_createdby](systemuser.md#BKMK_lk_category_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_category_modifiedonbehalfby"></a> lk_category_modifiedonbehalfby
 
-See systemuser Table [lk_category_modifiedonbehalfby](systemuser.md#BKMK_lk_category_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_category_modifiedonbehalfby](systemuser.md#BKMK_lk_category_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_category_modifiedby"></a> lk_category_modifiedby
 
-See systemuser Table [lk_category_modifiedby](systemuser.md#BKMK_lk_category_modifiedby) One-To-Many relationship.
+See the [lk_category_modifiedby](systemuser.md#BKMK_lk_category_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_category"></a> business_unit_category
 
-See businessunit Table [business_unit_category](businessunit.md#BKMK_business_unit_category) One-To-Many relationship.
+See the [business_unit_category](businessunit.md#BKMK_business_unit_category) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -692,7 +709,7 @@ Relationship details provided where the Category table is the first table in the
 
 ### <a name="BKMK_knowledgearticle_category"></a> knowledgearticle_category
 
-See knowledgearticle Table [knowledgearticle_category](knowledgearticle.md#BKMK_knowledgearticle_category) Many-To-Many Relationship.
+See the [knowledgearticle_category](knowledgearticle.md#BKMK_knowledgearticle_category) many-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### See also
 

@@ -2,18 +2,18 @@
 title: Use the content editor to edit page content
 description: Learn how to use portal content editor to edit pages and page content.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 searchScope:
   - "Power Apps"
 contributors:
     - sandhangitmsft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Use the content editor to edit page content

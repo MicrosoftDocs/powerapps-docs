@@ -1,13 +1,13 @@
 ---
-title: "ProcessStage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ProcessStage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProcessStage table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -101,12 +101,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsTrigger Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -144,33 +144,33 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OperationKind Choices/Options
 
-|Value|Label|
-|-----|-----|
-|473330000|Http|
-|473330001|PowerApp|
-|473330002|PowerAppV2|
-|473330003|Button|
-|473330004|ApiConnection|
-|473330005|Alert|
-|473330006|EventGrid|
-|473330007|CurrentTime|
-|473330008|ConvertTimeZone|
-|473330009|GetFutureTime|
-|473330010|GetPastTime|
-|473330011|AddToTime|
-|473330012|SubtractFromTime|
-|473330013|AzureMonitorAlert|
-|473330014|SecurityCenterAlert|
-|473330015|JsonToJson|
-|473330016|JsonToText|
-|473330017|XmlToJson|
-|473330018|XmlToText|
-|473330019|Geofence|
-|473330020|ODataOpenApiConnection|
-|473330021|IndexOf|
-|473330022|Substring|
-|473330023|VirtualAgent|
-|473330024|FormatNumber|
+|Value|Label|Description|
+|-----|-----|--------|
+|473330000|Http||
+|473330001|PowerApp||
+|473330002|PowerAppV2||
+|473330003|Button||
+|473330004|ApiConnection||
+|473330005|Alert||
+|473330006|EventGrid||
+|473330007|CurrentTime||
+|473330008|ConvertTimeZone||
+|473330009|GetFutureTime||
+|473330010|GetPastTime||
+|473330011|AddToTime||
+|473330012|SubtractFromTime||
+|473330013|AzureMonitorAlert||
+|473330014|SecurityCenterAlert||
+|473330015|JsonToJson||
+|473330016|JsonToText||
+|473330017|XmlToJson||
+|473330018|XmlToText||
+|473330019|Geofence||
+|473330020|ODataOpenApiConnection||
+|473330021|IndexOf||
+|473330022|Substring||
+|473330023|VirtualAgent||
+|473330024|FormatNumber||
 
 
 
@@ -190,61 +190,61 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OperationType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|473330000|Http|
-|473330001|ApiApp|
-|473330002|Recurrence|
-|473330003|Workflow|
-|473330004|Flow|
-|473330005|Wait|
-|473330006|ApiConnection|
-|473330007|OpenApiConnection|
-|473330008|Manual|
-|473330009|ApiConnectionWebhook|
-|473330010|OpenApiConnectionWebhook|
-|473330011|Response|
-|473330012|HttpWebhook|
-|473330013|Compose|
-|473330014|Query|
-|473330015|Function|
-|473330016|ApiManagement|
-|473330017|XmlValidation|
-|473330018|FlatFileEncoding|
-|473330019|Scope|
-|473330020|Request|
-|473330021|If|
-|473330022|Foreach|
-|473330023|Until|
-|473330024|Xslt|
-|473330025|FlatFileDecoding|
-|473330026|Terminate|
-|473330027|IntegrationAccountArtifactLookup|
-|473330028|Switch|
-|473330029|ParseJson|
-|473330030|Table|
-|473330031|Join|
-|473330032|Select|
-|473330033|InitializeVariable|
-|473330034|IncrementVariable|
-|473330035|DecrementVariable|
-|473330036|SetVariable|
-|473330037|AppendToArrayVariable|
-|473330038|AppendToStringVariable|
-|473330039|Batch|
-|473330040|SendToBatch|
-|473330041|SlidingWindow|
-|473330042|Expression|
-|473330043|Liquid|
-|473330044|JavascriptCode|
-|473330045|As2Decode|
-|473330046|As2Encode|
-|473330047|RosettaNetEncode|
-|473330048|RosettaNetDecode|
-|473330049|RosettaNetWaitForResponse|
-|473330050|ApiConnectionNotification|
-|473330051|Changeset|
-|473330052|SwiftEncode|
+|Value|Label|Description|
+|-----|-----|--------|
+|473330000|Http||
+|473330001|ApiApp||
+|473330002|Recurrence||
+|473330003|Workflow||
+|473330004|Flow||
+|473330005|Wait||
+|473330006|ApiConnection||
+|473330007|OpenApiConnection||
+|473330008|Manual||
+|473330009|ApiConnectionWebhook||
+|473330010|OpenApiConnectionWebhook||
+|473330011|Response||
+|473330012|HttpWebhook||
+|473330013|Compose||
+|473330014|Query||
+|473330015|Function||
+|473330016|ApiManagement||
+|473330017|XmlValidation||
+|473330018|FlatFileEncoding||
+|473330019|Scope||
+|473330020|Request||
+|473330021|If||
+|473330022|Foreach||
+|473330023|Until||
+|473330024|Xslt||
+|473330025|FlatFileDecoding||
+|473330026|Terminate||
+|473330027|IntegrationAccountArtifactLookup||
+|473330028|Switch||
+|473330029|ParseJson||
+|473330030|Table||
+|473330031|Join||
+|473330032|Select||
+|473330033|InitializeVariable||
+|473330034|IncrementVariable||
+|473330035|DecrementVariable||
+|473330036|SetVariable||
+|473330037|AppendToArrayVariable||
+|473330038|AppendToStringVariable||
+|473330039|Batch||
+|473330040|SendToBatch||
+|473330041|SlidingWindow||
+|473330042|Expression||
+|473330043|Liquid||
+|473330044|JavascriptCode||
+|473330045|As2Decode||
+|473330046|As2Encode||
+|473330047|RosettaNetEncode||
+|473330048|RosettaNetDecode||
+|473330049|RosettaNetWaitForResponse||
+|473330050|ApiConnectionNotification||
+|473330051|Changeset||
+|473330052|SwiftEncode||
 
 
 
@@ -305,16 +305,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### StageCategory Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Qualify|
-|1|Develop|
-|2|Propose|
-|3|Close|
-|4|Identify|
-|5|Research|
-|6|Resolve|
-|7|Approval|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Qualify||
+|1|Develop||
+|2|Propose||
+|3|Close||
+|4|Identify||
+|5|Research||
+|6|Resolve||
+|7|Approval||
 
 
 
@@ -460,7 +460,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
 
-Same as knowledgearticle table [processstage_knowledgearticle](knowledgearticle.md#BKMK_processstage_knowledgearticle) Many-To-One relationship.
+Same as the [processstage_knowledgearticle](knowledgearticle.md#BKMK_processstage_knowledgearticle) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -475,7 +475,7 @@ Same as knowledgearticle table [processstage_knowledgearticle](knowledgearticle.
 
 ### <a name="BKMK_processstage_contact"></a> processstage_contact
 
-Same as contact table [processstage_contact](contact.md#BKMK_processstage_contact) Many-To-One relationship.
+Same as the [processstage_contact](contact.md#BKMK_processstage_contact) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -490,7 +490,7 @@ Same as contact table [processstage_contact](contact.md#BKMK_processstage_contac
 
 ### <a name="BKMK_processstage_teams"></a> processstage_teams
 
-Same as team table [processstage_teams](team.md#BKMK_processstage_teams) Many-To-One relationship.
+Same as the [processstage_teams](team.md#BKMK_processstage_teams) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -505,7 +505,7 @@ Same as team table [processstage_teams](team.md#BKMK_processstage_teams) Many-To
 
 ### <a name="BKMK_ProcessStage_SyncErrors"></a> ProcessStage_SyncErrors
 
-Same as syncerror table [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage_SyncErrors) Many-To-One relationship.
+Same as the [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -520,7 +520,7 @@ Same as syncerror table [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage
 
 ### <a name="BKMK_processstage_recurringappointmentmasters"></a> processstage_recurringappointmentmasters
 
-Same as recurringappointmentmaster table [processstage_recurringappointmentmasters](recurringappointmentmaster.md#BKMK_processstage_recurringappointmentmasters) Many-To-One relationship.
+Same as the [processstage_recurringappointmentmasters](recurringappointmentmaster.md#BKMK_processstage_recurringappointmentmasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -535,7 +535,7 @@ Same as recurringappointmentmaster table [processstage_recurringappointmentmaste
 
 ### <a name="BKMK_processstage_letters"></a> processstage_letters
 
-Same as letter table [processstage_letters](letter.md#BKMK_processstage_letters) Many-To-One relationship.
+Same as the [processstage_letters](letter.md#BKMK_processstage_letters) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -550,7 +550,7 @@ Same as letter table [processstage_letters](letter.md#BKMK_processstage_letters)
 
 ### <a name="BKMK_processstage_faxes"></a> processstage_faxes
 
-Same as fax table [processstage_faxes](fax.md#BKMK_processstage_faxes) Many-To-One relationship.
+Same as the [processstage_faxes](fax.md#BKMK_processstage_faxes) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -565,7 +565,7 @@ Same as fax table [processstage_faxes](fax.md#BKMK_processstage_faxes) Many-To-O
 
 ### <a name="BKMK_processstage_tasks"></a> processstage_tasks
 
-Same as task table [processstage_tasks](task.md#BKMK_processstage_tasks) Many-To-One relationship.
+Same as the [processstage_tasks](task.md#BKMK_processstage_tasks) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -580,7 +580,7 @@ Same as task table [processstage_tasks](task.md#BKMK_processstage_tasks) Many-To
 
 ### <a name="BKMK_processstage_account"></a> processstage_account
 
-Same as account table [processstage_account](account.md#BKMK_processstage_account) Many-To-One relationship.
+Same as the [processstage_account](account.md#BKMK_processstage_account) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -595,7 +595,7 @@ Same as account table [processstage_account](account.md#BKMK_processstage_accoun
 
 ### <a name="BKMK_lk_translationprocess_activestageid"></a> lk_translationprocess_activestageid
 
-Same as translationprocess table [lk_translationprocess_activestageid](translationprocess.md#BKMK_lk_translationprocess_activestageid) Many-To-One relationship.
+Same as the [lk_translationprocess_activestageid](translationprocess.md#BKMK_lk_translationprocess_activestageid) many-to-one relationship for the [translationprocess](translationprocess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -610,7 +610,7 @@ Same as translationprocess table [lk_translationprocess_activestageid](translati
 
 ### <a name="BKMK_processstage_systemusers"></a> processstage_systemusers
 
-Same as systemuser table [processstage_systemusers](systemuser.md#BKMK_processstage_systemusers) Many-To-One relationship.
+Same as the [processstage_systemusers](systemuser.md#BKMK_processstage_systemusers) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -625,7 +625,7 @@ Same as systemuser table [processstage_systemusers](systemuser.md#BKMK_processst
 
 ### <a name="BKMK_lk_newprocess_activestageid"></a> lk_newprocess_activestageid
 
-Same as newprocess table [lk_newprocess_activestageid](newprocess.md#BKMK_lk_newprocess_activestageid) Many-To-One relationship.
+Same as the [lk_newprocess_activestageid](newprocess.md#BKMK_lk_newprocess_activestageid) many-to-one relationship for the [newprocess](newprocess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -640,7 +640,7 @@ Same as newprocess table [lk_newprocess_activestageid](newprocess.md#BKMK_lk_new
 
 ### <a name="BKMK_processstage_emails"></a> processstage_emails
 
-Same as email table [processstage_emails](email.md#BKMK_processstage_emails) Many-To-One relationship.
+Same as the [processstage_emails](email.md#BKMK_processstage_emails) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -655,7 +655,7 @@ Same as email table [processstage_emails](email.md#BKMK_processstage_emails) Man
 
 ### <a name="BKMK_processstage_appointments"></a> processstage_appointments
 
-Same as appointment table [processstage_appointments](appointment.md#BKMK_processstage_appointments) Many-To-One relationship.
+Same as the [processstage_appointments](appointment.md#BKMK_processstage_appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -670,7 +670,7 @@ Same as appointment table [processstage_appointments](appointment.md#BKMK_proces
 
 ### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
 
-Same as phonecall table [processstage_phonecalls](phonecall.md#BKMK_processstage_phonecalls) Many-To-One relationship.
+Same as the [processstage_phonecalls](phonecall.md#BKMK_processstage_phonecalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -685,7 +685,7 @@ Same as phonecall table [processstage_phonecalls](phonecall.md#BKMK_processstage
 
 ### <a name="BKMK_lk_expiredprocess_activestageid"></a> lk_expiredprocess_activestageid
 
-Same as expiredprocess table [lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredprocess_activestageid) Many-To-One relationship.
+Same as the [lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredprocess_activestageid) many-to-one relationship for the [expiredprocess](expiredprocess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -702,7 +702,7 @@ Same as expiredprocess table [lk_expiredprocess_activestageid](expiredprocess.md
 
 **Added by**: Power Automate Extensions core package Solution
 
-Same as processstageparameter table [processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter) Many-To-One relationship.
+Same as the [processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter) many-to-one relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -723,7 +723,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_process_processstage"></a> process_processstage
 
-See workflow Table [process_processstage](workflow.md#BKMK_process_processstage) One-To-Many relationship.
+See the [process_processstage](workflow.md#BKMK_process_processstage) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 

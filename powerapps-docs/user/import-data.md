@@ -4,10 +4,10 @@ description: How to import data
 ms.custom: ""
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/12/2021
+ms.date: 01/03/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -20,11 +20,11 @@ search.app:
 ---
 # How to import data
 
-Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. 
+Import data that's stored somewhere else into your model-driven app using the import feature in Power Apps. 
 
 Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
 
-Before you import a file make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in the app. If they don't match, then you'll have to manually map the fields or you may run into issues during the import process.
+Before you import a file make sure the column headings match the column names in your app. During the import process, the system will try to map the column names from your input file to the column names in the app. If they don't match, then you'll have to manually map the fields or you may run into issues during the import process.
 
 If you're an advanced user and know the required columns for a given Dataverse table, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to [import data](import-data.md#import-your-data) to your app. These file formats are supported:
 
@@ -36,13 +36,13 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 ## Download an Excel template
 
-To avoid mapping issue, it's recommended that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues during the import process.
+To avoid mapping issues, it's recommended that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues during the import process.
 
 1. Open your app and from the left nav select a table.
 
 2. On the command bar, select **Excel Templates** > **Download Template**.
 
-3. Select the table type and view that to download or select **Edit Columns** and choose the rows to include in the template.
+3. Select the table type and view to download or select **Edit Columns** and choose the rows to include in the template.
 
 5. Select **Download**. 
  
@@ -76,7 +76,7 @@ Use the template that you downloaded in the previous step (modified with your da
 
 4. For CSV and XML files (skip this step if you're importing an Excel file): 
 
-   - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that's used the CSV file.
+   - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that's used for the CSV file.
    
    - For CSV or XML file: If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](../maker/data-platform/define-alternate-keys-reference-records.md).
 
@@ -88,7 +88,7 @@ Use the template that you downloaded in the previous step (modified with your da
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping.](media/mapping-excel-file.png "Import selected Excel file and checking mapping")
 
-4. Select **Track Progress** see the progress of the import.
+4. Select **Track Progress** to see the progress of the import.
 
    > [!div class="mx-imgBorder"]
    > ![Track the progress of the file that you're importing.](media/track-progress.png "Track import file progress")
@@ -133,6 +133,9 @@ After import, the import wizard will add all mapped values in your app, but will
 
 >[!NOTE]
 >You can also map a column in your source file to a column of type "Two Options" and "Multiselect Option Set" (where a column can have multiple values). You must map each **Source Option Values** to the items in the **Dynamics 365 Option Values** list. When mapping to a column of type "Multiselect Option Set," if your source file includes values that aren't available in your app, new values won't be created in your app.
+
+
+### Map lookup columns
 
 If some data in your source file references other existing rows in your app, you must map the column in the source file to a lookup column in your app.
 

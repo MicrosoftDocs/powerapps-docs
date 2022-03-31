@@ -2,8 +2,7 @@
 title: Check box control in Power Apps
 description: Learn about the details, properties and examples of the check box control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Check box control in Power Apps
 A control that the user can select or clear to set its value to **true** or **false**.

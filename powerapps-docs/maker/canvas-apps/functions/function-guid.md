@@ -2,12 +2,11 @@
 title: GUID function in Power Apps
 description: Reference information including syntax and examples for the GUID function in Power Apps.
 author: gregli-msft
-manager: kvivek
 
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 07/17/2020
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -15,6 +14,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # GUID function in Power Apps
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.

@@ -2,8 +2,7 @@
 title: Add picture control in canvas apps
 description: Information, including properties and examples, about the Add picture control.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 04/17/2020
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Add picture control in canvas apps
 

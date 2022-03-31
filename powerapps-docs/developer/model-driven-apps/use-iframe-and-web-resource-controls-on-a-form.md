@@ -2,14 +2,13 @@
 title: "Use IFRAME and web resource controls on a form (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/15/2021
-ms.reviewer: ""
-ms.service: powerapps
+ms.author: jdaly
+author: HemantGaur
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -23,7 +22,11 @@ IFRAME and web resource controls embed content from another location in pages by
 > [!NOTE]
 >  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
- You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying a form within an IFrame embedded in another form is not supported.  
+You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. 
+
+It is recommended to use [Power Apps component framework components](../component-framework/custom-controls-overview.md) if you're considering to use a web resource to show content that users will interact with.
+ 
+Displaying a form within an IFrame embedded in another form is not supported.  
 
  You can use one of the following web resources to display the contents of web resources in a form:  
 
@@ -45,14 +48,14 @@ IFRAME and web resource controls embed content from another location in pages by
 
 |        Parameter        |        Description      |
 |-------------------------|--------------------------|
-| `security="restricted"` |    This parameter is supported only by versions of Internet Explorer no earlier than version 6. The security parameter applies the user security setting Restricted Sites to the source file of the IFRAME. (Zone settings are found on the **Security** tab of the **Internet Options** dialog box.) By default, scripting isn’t enabled in the Restricted Sites zone. By changing the security settings of the zone, various negative results can occur, including allowing scripts to run. For more information, see [security](https://msdn.microsoft.com/library/ie/ms534622.aspx).                                                                                                                                                                                                                                                                                                     |
-|      `sandbox=""`       | For browsers that support this parameter, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This parameter is defined by W3C and is supported by the following browsers:<br /><br /> - Internet Explorer 10, Internet Explorer 11, and Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox parameter see:<br /><br /> -   [How to safeguard your site with HTML5 sandbox](/previous-versions/msdn10/hh563496(v=msdn.10))<br />-   [WC3 Sandbox parameter](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673561(v=vs.85)) |
+| `security="restricted"` | This parameter is no longer supported. |
+|      `sandbox=""`       | For browsers that support this parameter, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This parameter is defined by W3C and is supported by the following browsers:<br /><br /> - Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox parameter see:<br /><br /> -   [How to safeguard your site with HTML5 sandbox](/previous-versions/msdn10/hh563496(v=msdn.10))<br />-   [WC3 Sandbox parameter](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673561(v=vs.85)) |
 
 <a name="BKMK_EnableIFrameCommunicationAcrossDomains"></a>   
 
 ### Enabling IFrame communication across domains  
 
- There are times when you want to enable communication for an IFRAME that contains content on a different domain. `Window.postMessage` is a browser method that provides this capability for versions of Internet Explorer no earlier than Internet Explorer 8. Google Chrome, Mozilla Firefox, and Apple Safari also support it. For more information about using `postMessage`, see the following blog posts:  
+ There are times when you want to enable communication for an IFRAME that contains content on a different domain. `Window.postMessage` is a browser method that provides this capability for Google Chrome, Mozilla Firefox, and Apple Safari. For more information about using `postMessage`, see the following blog posts:  
 
 -   [Cross domain calls to the parent form](https://blogs.msdn.com/b/devkeydet/archive/2012/02/14/cross-domain-calls-to-the-parent-crm-2011-form.aspx)  
 

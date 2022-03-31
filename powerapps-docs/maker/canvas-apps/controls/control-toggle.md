@@ -2,8 +2,7 @@
 title: Toggle control in Power Apps
 description: Learn about the details, properties and examples of the Toggle control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Toggle control in Power Apps
 A control that the user can turn on or off by moving its handle.

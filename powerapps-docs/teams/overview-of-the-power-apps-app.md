@@ -2,13 +2,16 @@
 title: Overview of the Power Apps app in Microsoft Teams | Microsoft Docs
 description: Learn about the Power Apps app in Microsoft Teams.
 author: chmoncay
-ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+
+ms.topic: overview
+
 ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: chmoncay
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Overview of the Power Apps app
@@ -97,7 +100,7 @@ Shows the apps created with Power Apps. More information: [Manage your apps](man
 ### Flows
 
 Shows all the Power Automate flows in the selected team's environment. Power Automate is a service that helps you create automated workflows between your
-favorite apps and services to synchronize files, get notifications, collect data, and more. Different types of flows are available. More information: [Get started with Power Automate](/power-automate/teams/overview.md)
+favorite apps and services to synchronize files, get notifications, collect data, and more. Different types of flows are available. More information: [Get started with Power Automate](/power-automate/teams/overview)
 
 ![Solution explorer - Flows.](media/power-apps-overview-11.png "Solution explorer - Flows")
 

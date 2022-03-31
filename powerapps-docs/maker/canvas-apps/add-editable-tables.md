@@ -2,11 +2,11 @@
 title: Add editable tables in canvas apps | Microsoft Docs
 description: Learn how to configure an app interface with editable tables that allow you to edit data from the data source directly through the app.
 author: denisem-msft
-ms.service: powerapps
+
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/08/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: denisem
 search.audienceType: 
@@ -51,11 +51,7 @@ To learn about how to create a main form with the required columns, see [Create 
 
 ## Step 1: Create blank app
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Canvas app from blank** under **Make your own app** in Power Apps Home.
-1. Enter a name for the app, such as "Catalog Management App".
-1. Choose **Tablet** format.
-1. Select **Create**.
+Create a [blank canvas app](create-blank-app.md) with the name "Catalog Management app" and **Tablet** layout.
 
 ## Step 2: Add a data source
 
@@ -202,7 +198,7 @@ This step adds the options to edit and cancel the edit progress. Gallery having 
     | Edit | OnSelect | `Set(galleryDisplayMode, DisplayMode.Edit)` |
     | Edit | Visible | `galleryDisplayMode = DisplayMode.Disabled` |
     | Cancel | OnSelect | `Set(galleryDisplayMode, DisplayMode.Disabled)` |
-    | Cancel | Visible | `galleryDisplayMode = DisplayMode.Disabled` |
+    | Cancel | Visible | `galleryDisplayMode = DisplayMode.Edit` |
 
     - [Set](functions/function-set.md) function sets the display mode of the gallery depending on which icon is selected.
     - The variable "galleryDisplayMode" controls the visibility of the edit or cancel icons. When the gallery is editable, only cancel button appears. And only edit button appears when gallery is disabled.

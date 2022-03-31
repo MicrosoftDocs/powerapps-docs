@@ -1,19 +1,22 @@
 ---
 title: Automate tests with Azure Pipelines using YAML
 description: Describes how to automate test suites and cases using an Azure Pipelines YAML.
-author: aengusheaney
-manager: kvivek
-ms.service: powerapps
+author: maustinjones
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 01/31/2022
 ms.subservice: canvas-maker
-ms.author: aheaney
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - mattgon
+  - maustinjones
 ---
 
 # Automate tests with Azure Pipelines using YAML
@@ -25,9 +28,6 @@ You can use a public project on GitHub&mdash;[Microsoft/PowerAppsTestAutomation]
 - Automate the operations of signing in to your application.
 - Open a browser on the build agent and execute a set of test cases and suites.
 - View the status of the test execution in the Azure DevOps pipeline.
-
-> [!NOTE]
-> The [Test Studio](test-studio.md) feature is still experimental, and we recommend you use it to write tests for non-production apps only. More information: [Experimental and preview features](working-with-experimental-preview.md)
 
 ## Prerequisites
 
@@ -208,8 +208,6 @@ Select **RunTestAutomation** to drill into the details about the failed test cas
 ## Known limitations
 
 - Multi-factor authentication isn't supported.
-
-- Internet Explorer 11 and Microsoft Edge aren't supported browsers.
 
 - The test summary will report a single test result per browser. The test result will contain one or more test cases or test suite results.
 

@@ -1,13 +1,12 @@
 ---
 title: " Table grid component| Microsoft Docs" 
 description: "This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
 ---
 
 # Implementing table grid component

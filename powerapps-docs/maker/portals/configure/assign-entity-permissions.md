@@ -2,15 +2,15 @@
 title: Set up security in portals with table permissions
 description: To apply security in Power Apps portals to individual records, use table permissions. Learn how to add a table permission and assign web roles to it.
 author: GitanjaliSingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/13/2021
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - GitanjaliSingh33msft
 ---
 

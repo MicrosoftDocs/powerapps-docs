@@ -1,14 +1,16 @@
 ---
-title: Understand Power Apps Studio | Microsoft Docs
+title: Understand Power Apps Studio (contains video) | Microsoft Docs
 description: Learn the components inside Power Apps Studio.
-author: emcoope-msft
-ms.service: powerapps
+author: jessicaszelo
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2021
+ms.date: 03/11/2022
 ms.subservice: teams
-ms.author: emcoope
+ms.author: szlo
 ms.reviewer: tapanm
+contributors:
+  - tapanm-msft
+  - jessicaszelo
 ---
 
 # Understand Power Apps Studio
@@ -59,7 +61,11 @@ that inherits the Teams interface and options. The **Home**, **Build**, and **Ab
 Power Apps Studio options are available on the menu in the upper-left corner. The
 options are relevant to the current session and app-related settings.
 
-![Power Apps Studio options.](media/studio-options.png "Power Apps Studio options")
+:::image type="content" source="media/studio-options.png" alt-text="Power Apps Studio options.":::
+
+### Back
+
+Takes you back to the build hub, closing the current Power Apps Studio session.
 
 ### Undo and redo
 
@@ -78,7 +84,7 @@ options are relevant to the current session and app-related settings.
 
 ### Add data
 
-![Add data.](media/studio-add-data.png "Add data")
+:::image type="content" source="media/studio-add-data.png" alt-text="Add data.":::
 
 - Create a new table by selecting **Create new table**.
 - Select any other existing tables from the current environment.
@@ -106,13 +112,13 @@ Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-no
 
 Configure the app's general settings.
 
-![App settings.](media/studio-general-settings.png "App settings")
+:::image type="content" source="media/studio-general-settings.png" alt-text="App settings.":::
 
-#### Name + icon
+#### General
 
 Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Browse** option.
 
-### Screen size + orientation
+#### Display
 
 Shows the screen size and orientation. To change, select the radio buttons for **Orientation** and **Size**.
 
@@ -126,13 +132,15 @@ To change the setting, toggle the switch.
 
 More information: [Change screen size and orientation](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md)
 
-#### Advanced settings
+#### Upcoming features
 
-Allows you to configure advanced settings for the app.
+Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
 
-- **Data row limit for non-delegable views** - Set the delegable data row limit. More information: [Understand delegation in canvas apps](../maker/canvas-apps/delegation-overview.md)
-- **Improve data source experience and Dataverse views** - Use the improved data source experience when working with Dataverse. More information: [Dataverse and the improved data source experience](../maker/canvas-apps/use-native-cds-connector.md)
-- **Preview, experimental and deprecated features** - Features that are in preview or experimental phases, or deprecated. More information: [Understand experimental, preview, and deprecated features in Power Apps](../maker/canvas-apps/working-with-experimental-preview.md)
+More information: [Understand experimental, preview, and deprecated features in Power Apps](../maker/canvas-apps/working-with-experimental-preview.md)
+
+#### Support
+
+Shows current Power Apps Studio session details, version, and other information useful when working with Microsoft support.
 
 ### Power Automate
 
@@ -154,31 +162,11 @@ You can save data such as the result values from a data set into temporary stora
 
 ![Variables.](media/studio-variables.png "Variables")
 
-### Account details
-
-Shows account details including session details, current Power Apps app build
-version, and other session details. You can also turn the **Auto save** option **On** or **Off**.
-
-![Account details.](media/studio-account-details.png "Account details")
-
-| Name | Description |
-| - | - |
-| Account | Allows to sign out from the current session. |
-| Environment | Shows the current environment name. |
-| Auto save | Set **Auto save** *On* or *Off*. When *On*, saves your changes at the interval of 2 minutes. |
-| Power Apps version | Shows the version of Power Apps. |
-| About Power Apps | Additional information and help. |
-| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md#about)
-
-> [!NOTE]
-> We recommend that you keep the **Auto save** setting turned **On** and
-save the changes to your app before closing Power Apps Studio.
-
 ## 3 – App actions
 
 Use the options in the upper-right corner of Power Apps Studio to work with app-specific actions.
 
-![App actions.](media/studio-app-actions.png "App actions")
+:::image type="content" source="media/studio-app-actions.png" alt-text="App actions.":::
 
 ### App name editor
 
@@ -188,7 +176,13 @@ Select the name of the app to edit it.
 
 ### Save
 
-Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
+:::image type="content" source="media/studio-save-options.png" alt-text="Studio save options.":::
+
+Save allows you to perform the following actions:
+
+- **Save** - Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
+- **Save as** - Duplicate the app by saving the app with a different name.
+- **Save and publish** - Allows you to both save the app, and publish it at the same time.
 
 ### Preview
 
@@ -251,23 +245,27 @@ The Power Apps app in Teams is described in detail in [Overview of the Power App
 
 ## 7 – App authoring menu
 
-On the left pane in Power Apps Studio, you switch between options such as **Insert**, **Data Sources**, and **Media**.
+Switch between various authoring options while working with the app.
 
-![App authoring menu.](media/studio-app-1.png "App authoring menu")
+:::image type="content" source="media/studio-app-1.png" alt-text="App authoring menu.":::
 
-You can also select the expand button to expand the list to include names instead of just icons.
+> [!TIP]
+> You can also select the expand button to expand the list to include names instead of just icons.
+
+- **Tree view** - Shows a tree view of all screens and controls in the current app.
+- **Insert** - Allows you to add different controls to the screen.
+- **Data** - Add or remove data such as tables that the app connects to.
+- **Media** - Insert or remove media from the app.
 
 ## 8 – App authoring options
 
-The options for working with canvas apps change depending on the selection on the left pane, such as **Tree view**, **Insert**, **Data sources**, or **Media**.
-
-![App authoring options.](media/studio-app-2.png "App authoring options")
+The options for working with canvas apps change depending on the selection on the left pane.
 
 ### Tree view
 
 Select the tree view to show the screens available in the app,
 
-![Tree view.](media/studio-tree-view.png "Tree view")
+:::image type="content" source="media/studio-tree-view.png" alt-text="Tree view.":::
 
 > [!TIP]
 > Select **App** in the tree view to work with app-specific controls or to
@@ -286,7 +284,7 @@ add on the selected screen in your canvas app. You can also expand other
 choices or use the components option to insert controls from a component
 library.
 
-![Insert.](media/studio-insert.png "Insert")
+:::image type="content" source="media/studio-insert.png" alt-text="Insert.":::
 
 To insert controls on the canvas, you can drag the control to the canvas,
 select the control, or select **(...)** and then select **Add to canvas**.
@@ -312,11 +310,11 @@ and definitions, go to [Controls and properties in Power Apps](../maker/canvas-a
 
 #### Classic controls
 
-Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** -> **Advanced settings** -> toggle **Classic controls** to **On** under experimental features.
+Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** > **Upcoming features** > **Experimental** > toggle **Classic controls** to **On**.
 
 After you enable classic controls, you'll be able to see and add them from the **Classic** category.
 
-![Classic controls.](media/classic-control.png "Classic controls")
+:::image type="content" source="media/classic-control.png" alt-text="Classic controls.":::
 
 For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse for Teams.
 
@@ -329,9 +327,7 @@ by using data sources.
 
 In addition to data stored within tables, there are many connectors available to interact with data in popular SaaS, services, and systems.
 
-![Data.](media/studio-data.png "Data")
-
-![Add data - select data source.](media/studio-add-1.png "Add data - select data source")
+:::image type="content" source="media/studio-data.png" alt-text="Data.":::
 
 Select **Create new table** to create a new table in the Dataverse for Teams
 environment.
@@ -353,6 +349,9 @@ To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 ![Create table.](media/studio-create-table.png "Create table")
+
+Watch this video that shows you how to quickly create table and columns.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWJ4MI]
 
 > [!NOTE]
 > You can use visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
@@ -429,8 +428,6 @@ To ensure that changes to the table are saved, you can select the next row insid
 After you close a saved table, you'll see the table added to the list of
 available data sources in **Data** on the left pane.
 
-![Data source added.](media/studio-data-1.png "Data source added")
-
 ##### Visual editor view
 
 Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change visual editor layout.
@@ -468,7 +465,7 @@ the app controls or go back to visual editor.
 To edit the table, select the table data source, and then select **Edit data** to
 open the table in visual editor.
 
-![Edit table data.](media/studio-edit-2.png "Edit table data")
+:::image type="content" source="media/studio-edit-2.png" alt-text="Edit table data.":::
 
 After you close visual editor, the data source is automatically refreshed
 to reflect the updated data in Power Apps Studio. You can also select **Refresh**
@@ -478,7 +475,7 @@ to manually refresh Power Apps Studio to reflect the data in the controls you ad
 
 Select **Media** to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media must be 64 MB or smaller, and the size of all media files uploaded to an app can't exceed 200 MB.
 
-![Media.](media/studio-media.png "Media")
+:::image type="content" source="media/studio-media.png" alt-text="Media.":::
 
 If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),

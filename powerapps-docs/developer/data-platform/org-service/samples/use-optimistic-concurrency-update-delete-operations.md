@@ -4,8 +4,8 @@ description: "This sample shows how to use optimistic concurrency for update and
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Use optimistic concurrency with update and delete operations
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-optimistic-concurrency-update-delete-operations -->
 
@@ -44,8 +44,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. Retrieves the account record that is created in the [Setup](#setup).
-1. Updates the account record by increasing the `creditlimit` attribute.
-1. The `UpdateRequest` method sets the request's concurrency behaviour to check for a row version match.
+1. Updates the account record by increasing the `creditlimit` column.
+1. The `UpdateRequest` method sets the request's concurrency behavior to check for a row version match.
 
 ### Clean up
 

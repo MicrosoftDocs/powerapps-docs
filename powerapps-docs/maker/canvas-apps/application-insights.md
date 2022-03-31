@@ -1,18 +1,20 @@
 ---
 title: Analyze telemetry of a canvas app using Application Insights
 description: Learn about how to analyze app telemetry of canvas apps using Application Insights.
-author: hasharaf
-ms.service: powerapps
+author: tapanm-msft
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/19/2021
 ms.subservice: canvas-maker
-ms.author: hasharaf
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
 ---
 
 # Analyze telemetry of a canvas app using Application Insights

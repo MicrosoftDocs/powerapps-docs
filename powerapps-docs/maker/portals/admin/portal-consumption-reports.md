@@ -2,16 +2,16 @@
 title: Portals capacity consumption reports
 description: Learn how to view, download, and review the Power Apps portals capacity consumption reports from the Power Platform admin center.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
  
 # Portals capacity consumption reports

@@ -2,18 +2,20 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 03/23/2021
+ms.reviewer: tapanm-msft
+ms.date: 01/24/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Formula reference for Power Apps
 
@@ -186,6 +188,8 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Int](functions/function-round.md)** – Rounds down to the nearest integer.
+
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
 **[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
@@ -198,9 +202,13 @@ Other elements include:
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
-**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
+**[ISOWeekNum](functions/function-weeknum.md)** – Returns the ISO week number of a date/time value.
+
+**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today in the user's time zone.
 
 **[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific table type.
+
+**[IsUTCToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today in Coordinated Universal Time (UTC).
 
 ## J
 **[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
@@ -223,6 +231,8 @@ Other elements include:
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
+
+**[Log](functions/function-numericals.md)** – Returns the logarithm in any base of a number.
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
@@ -254,7 +264,7 @@ Other elements include:
 
 **[Notify](functions/function-showerror.md)** – Displays a banner message to the user.
 
-**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value in the user's time zone.
 
 ## O
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
@@ -280,6 +290,8 @@ Other elements include:
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
+**[RecordInfo](functions/function-recordinfo.md)** – Provides information about a record of a data source.
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
@@ -373,13 +385,15 @@ Other elements include:
 
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
-**[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Today](functions/function-now-today-istoday.md)** – Returns the current date-only value.
 
 **[Trace](functions/function-trace.md)** - Provide additional information in your test results.
 
 **[Trim](functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
+
+**[Trunc](functions/function-round.md)** – Truncates the number to only the integer portion by removing any decimal portion.
 
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
@@ -396,6 +410,10 @@ Other elements include:
 
 **[User](functions/function-user.md)** – Returns information about the current user.
 
+**[UTCNow](functions/function-now-today-istoday.md)** – Returns the current date/time value in Coordinated Universal Time (UTC).
+
+**[UTCToday](functions/function-now-today-istoday.md)** – Returns the current date-only value in Coordinated Universal Time (UTC).
+
 ## V
 **[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
 
@@ -407,6 +425,8 @@ Other elements include:
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+
+**[WeekNum](functions/function-weeknum.md)** – Returns the week number of a date/time value.
 
 **[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 

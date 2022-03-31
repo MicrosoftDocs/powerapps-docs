@@ -2,8 +2,7 @@
 title: Timer control in Power Apps
 description: Learn about the details, properties and examples of the Timer control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -14,6 +13,9 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # Timer control in Power Apps
 A control that can determine how your app responds after a certain amount of time passes.
