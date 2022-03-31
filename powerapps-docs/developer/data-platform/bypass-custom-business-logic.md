@@ -75,7 +75,7 @@ Accept: */*
 
 There are two ways to use this with the Organization Service.
 
-#### You can set CrmServiceClient.BypassPluginExecution Property to true
+#### Set the CrmServiceClient.BypassPluginExecution property
 
 The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
 
@@ -93,11 +93,11 @@ var account = new Entity("account")
 
 svc.Create(account);
 ```
-Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to false.
+Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
 
-#### You can set the value as an optional parameter with one of the Request classes
+#### Set the value as an optional parameter
 
-The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record:
+The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>
 
 ```csharp
 var svc = new CrmServiceClient(conn);
@@ -117,7 +117,7 @@ createRequest.Parameters.Add("BypassCustomPluginExecution", true);
 
 svc.Execute(createRequest);
 ```
-This optional parameter must be applied to each request individually. You cannot use this with the 7 other IOrganizationService Methods, such as Create, Update, Delete. You can only use the [Execute method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.execute) using one of the classes that are derived from the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
+This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.CreateRequest>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.DeleteRequest>
 
 You can use this method for data operations you initiate in your plug-ins.
 
