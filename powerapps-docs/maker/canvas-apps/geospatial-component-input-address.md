@@ -59,7 +59,7 @@ The control will start searching at the latitude and longitude, out to the dista
 
 You can save addresses that a user inputs into the address control as a data collection. You can then retrieve these addresses and display them in [the map control](geospatial-component-map.md).
 
-1. App the map control and the input address control to your app.
+1. Add the map control and the input address control to your app.
 2. On the **Insert** menu, select **Button** and move it into your app.
 3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following:
 
