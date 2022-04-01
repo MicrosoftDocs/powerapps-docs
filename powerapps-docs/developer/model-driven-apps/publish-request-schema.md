@@ -7,10 +7,7 @@ manager: evlew
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

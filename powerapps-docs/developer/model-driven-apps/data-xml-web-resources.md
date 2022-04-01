@@ -8,7 +8,6 @@ ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
