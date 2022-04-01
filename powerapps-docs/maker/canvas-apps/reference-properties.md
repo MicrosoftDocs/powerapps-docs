@@ -116,7 +116,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
 
-**[View in 3D](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
+**[3D object](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
 
 **[View in MR](mixed-reality-component-view-mr.md)** - See how a particular item might fit within a specified space in mixed reality.
 

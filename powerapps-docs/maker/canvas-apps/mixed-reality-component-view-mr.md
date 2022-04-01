@@ -124,7 +124,7 @@ Your app can make use of more properties when a user interacts with the **View i
 
 ## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 
