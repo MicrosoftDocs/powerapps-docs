@@ -707,17 +707,17 @@
     },
     {
       "source_path": "powerapps-docs/admin-view-user-licenses.md",
-      "redirect_url": "/powerapps/administrator/admin-view-user-licenses",
+      "redirect_url": "/power-platform/admin/admin-view-user-licenses",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/app-analytics.md",
-      "redirect_url": "/powerapps/administrator/index",
+      "redirect_url": "/power-platform/admin/analytics-powerapps",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/create-database.md",
-      "redirect_url": "/powerapps/administrator/create-database",
+      "redirect_url": "/power-platform/admin/create-database",
       "redirect_document_id": "false"
     },
     {
