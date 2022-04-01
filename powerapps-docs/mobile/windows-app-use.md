@@ -50,8 +50,8 @@ By default, only production model-driven apps are shown in the list of apps.
 
 To see model-driven apps from non-production environments, select More button (...) > **Settings** and then turn on **Show non-production apps**. 
 
-    > [!div class="mx-imgBorder"] 
-    > ![See non-production apps.](media/non-prod-apps.png)
+   > [!div class="mx-imgBorder"] 
+   > ![See non-production apps.](media/non-prod-apps.png)
 
 
 
