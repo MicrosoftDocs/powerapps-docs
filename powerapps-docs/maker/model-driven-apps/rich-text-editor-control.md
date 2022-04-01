@@ -96,6 +96,18 @@ Consider the following when using the rich text editor:
 
 - By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64. 
 
+## How configuration is applied to the rich text editor
+
+The experience and capabilities of the rich text editor are controlled with configuration. The default configuration for the rich text editor control has property and values that are intended to meet normal rich text needs but these can be adjusted. Configuration properties and values can be applied to a specific rich text editor control instance and there can be up to 3 levels of configuration applied to each rich text editor instance. The logic used for applying properties and values are as follows
+
+First, the non-editable global configuration file RTEGlobalConfiguration_Readonly.json is loaded.
+Second. the editable global configuration file RTEGlobalConfiguration.json is loaded.
+-Each property in this configuration replaces* the same property in the prior configuration file.
+Third, an instance specific configuration file, if it exists, is loaded. See **Advanced configuration** for more information on instance level configuration.
+-Each property in this configuration replaces* the same property in either of the prior configuration files.
+
+NOTE: All properties are replaced except for externalPlugins which are merged. Merging externalPlugins allows you to load a wide range of plugins in the RTEGlobalConfiguration.json but only activate the ones you need in the instance specific configuration.
+
 ## Rich text editor properties
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
