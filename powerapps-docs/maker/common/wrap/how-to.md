@@ -41,7 +41,7 @@ Create a new registration for your app in the organizational directory using the
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
 > [!IMPORTANT]
-> - Wrap (preview) currently only supports 'Multitenant' account types. 'Single tenant' is not yet supported. 
+> Wrap (preview) only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
