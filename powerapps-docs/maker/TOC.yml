@@ -393,7 +393,7 @@
               items:
               - name: View 3D models in Power Apps
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
-              - name: Load models with the View in 3D control
+              - name: Load models with the 3D object control
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
               - name: Add pins to 3D models
                 href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
