@@ -102,11 +102,14 @@ The experience and capabilities of the rich text editor are controlled with conf
 
 1. The non-editable global configuration file RTEGlobalConfiguration_Readonly.json is loaded.
 1. The editable global configuration file RTEGlobalConfiguration.json is loaded.
-   - The properties in this configuration _replace *_ the same named properties in the prior configuration file.
+   - The properties in this configuration _replace*_ the same named properties in the prior configuration file.
 1. The instance specific configuration file, if it exists, is loaded. See **Advanced configuration** for more information on instance level configuration.
-   - The properties in this configuration _replace *_ the same named properties in either of the prior configuration files.
+   - The properties in this configuration _replace*_ the same named properties in either of the prior configuration files.  
 
-   > * All properties are _replaced_ **except** for extraPlugins which are merged. Merging extraPlugins allow you to enable a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins and then activate only the ones you need by adding the extraPlugins values in the instance specific configuration.
+
+> [!NOTE] _replace*_
+> 
+> All properties are replaced **except** for extraPlugins which are merged. Merging extraPlugins allow the use of a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Only the necessary plugins are then activated by adding them to the extraPlugins values in the instance specific configuration.
 
 ## Rich text editor properties
 
