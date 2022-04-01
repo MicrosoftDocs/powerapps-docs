@@ -53,6 +53,9 @@ You'll need to allow the apps registered using the Azure portal in your Power Pl
 Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 ```
 
+> [!NOTE]
+> - The Add-AdminAllowedThirdPartyApps cmdlet is available since version 2.0.144 of the Adminstrator PowerShell module. Please ensure you have at least this version installed. 
+
 ## Configure API permissions
 
 [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app you registered earlier using the Azure portal:
