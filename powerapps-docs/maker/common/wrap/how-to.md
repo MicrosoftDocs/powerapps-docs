@@ -79,10 +79,10 @@ In this step, you'll use App Center to create an app container for your mobile a
 1. Select **Apps** &gt; **Add app**.
 1. Enter app name.
 1. Select app release type.
-1. Select **Custom** OS for iOS/Android distributed using Google Play Store, or **Android** for Android apps that aren't distributed using Google Play Store.
+1. Select **Custom** OS for iOS apps, or **Android** OS for Android apps.
 
     > [!NOTE]
-    > You must create separate apps for each type of platform that your app will support.
+    > You must create separate App Center containers for each platform.
 
 1. For **Android** OS, select **Platform** as **Reactive Native**.
 
