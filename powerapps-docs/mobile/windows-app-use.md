@@ -44,6 +44,16 @@ Sign into Power Apps for Windows quickly using your work email address. If you n
     > [!div class="mx-imgBorder"] 
     > ![Select an app to use.](media/pam-windows-image3.png)
 
+### See non-production apps
+
+By default, only production model-driven apps are shown in the list of apps.
+
+To see model-driven apps from non-production environments, select More button (...) > **Settings** and then turn on **Show non-production apps**. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![See non-production apps.](media/non-prod-apps.png)
+
+
 
 ## Move between apps
 
