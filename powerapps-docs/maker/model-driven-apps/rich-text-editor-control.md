@@ -100,13 +100,13 @@ Consider the following when using the rich text editor:
 
 The experience and capabilities of the rich text editor are controlled with configuration. The default configuration for the rich text editor control has property and values that are intended to meet normal rich text needs but these can be adjusted. Configuration properties and values can be applied to a specific rich text editor control instance and there can be up to 3 levels of configuration applied to each rich text editor instance. The logic used for applying properties and values are as follows
 
-First, the non-editable global configuration file RTEGlobalConfiguration_Readonly.json is loaded.
-Second. the editable global configuration file RTEGlobalConfiguration.json is loaded.
--Each property in this configuration replaces* the same property in the prior configuration file.
-Third, an instance specific configuration file, if it exists, is loaded. See **Advanced configuration** for more information on instance level configuration.
--Each property in this configuration replaces* the same property in either of the prior configuration files.
+1. The non-editable global configuration file RTEGlobalConfiguration_Readonly.json is loaded.
+1. The editable global configuration file RTEGlobalConfiguration.json is loaded.
+   - The properties in this configuration _replace *_ the same named properties in the prior configuration file.
+1. The instance specific configuration file, if it exists, is loaded. See **Advanced configuration** for more information on instance level configuration.
+   - The properties in this configuration _replace *_ the same named properties in either of the prior configuration files.
 
-NOTE: All properties are replaced except for externalPlugins which are merged. Merging externalPlugins allows you to load a wide range of plugins in the RTEGlobalConfiguration.json but only activate the ones you need in the instance specific configuration.
+   > * All properties are _replaced_ **except** for extraPlugins which are merged. Merging extraPlugins allow you to enable a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins and then activate only the ones you need by adding the extraPlugins values in the instance specific configuration.
 
 ## Rich text editor properties
 
