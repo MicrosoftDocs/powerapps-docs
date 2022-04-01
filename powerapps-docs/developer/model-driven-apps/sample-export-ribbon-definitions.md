@@ -1,15 +1,13 @@
 ---
 title: "Sample: Export ribbon definitions  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The sample shows how to export Ribbon definitions. It uses the RetrieveApplicationRibbonRequest and RetrieveEntityRibbonRequest messages." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-
-ms.topic: "article"
-author: "KumarVivek" # GitHub ID
+description: "The sample shows how to export Ribbon definitions. It uses the RetrieveApplicationRibbon and RetrieveEntityRibbon messages." # 115-145 characters including spaces. This abstract displays in the search result.
+author: JimDaly
+ms.author: jdaly
+manager: kvivek
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: sample
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
