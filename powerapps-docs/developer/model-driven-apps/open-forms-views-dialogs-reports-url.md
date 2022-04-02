@@ -3,8 +3,8 @@ title: "Open forms, views, dialogs, and reports with a URL (model-driven apps) |
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: jdaly
 author: HemantGaur
-manager: kvivek
-ms.date: 03/12/2022
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -13,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Open forms, views, dialogs, and reports with a URL
 
