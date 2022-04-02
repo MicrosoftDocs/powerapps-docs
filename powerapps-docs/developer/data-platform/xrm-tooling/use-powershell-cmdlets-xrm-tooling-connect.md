@@ -142,14 +142,16 @@ Use the `Get-CrmConnection` cmdlet to connect to a Dataverse instance. The cmdle
 
 OAuth authentication is used internally by XRM tooling when you specify the -InteractiveMode parameter.
 
-    ```powershell  
-    $CRMConn = Get-CrmConnection -InteractiveMode  
-    ```  
+```powershell  
+$CRMConn = Get-CrmConnection -InteractiveMode  
+```
+
 OAuth authentication can also be specified when using a connection string where AuthType=OAuth or AuthType=ClientSecret.
 
-    ```powershell  
-    $CRMConn = Get-CrmConnection -ConnectionString "AuthType=ClientSecret;ClientId=..."
-    ``` 
+```powershell  
+$CRMConn = Get-CrmConnection -ConnectionString "AuthType=ClientSecret;ClientId=..."
+```
+ 
 More information: [Use connection strings in XRM tooling to connect to Microsoft Dataverse](use-connection-strings-xrm-tooling-connect.md)
 
 ### See also
