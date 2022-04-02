@@ -19,11 +19,31 @@ sections:
   - name: General
     questions:
       - question: |
-          What are Primary and Secondary apps in the context of wrap?
+          Can I create mobile apps with Power Apps?
         answer: |
-          See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
+          Yes. See [creating mobile apps with Power Apps](overview.md) for more information.
 
       - question: |
-          Does wrap change or extend the purpose of the Power Apps platform?
+          If I create a mobile app with Power Apps, does Microsoft release it for me?
         answer: |
-          No. This feature only wraps existing canvas apps for the consumption of the mobile users providing a native mobile app experience.
+          No. Microsoft will wrap your Power Apps app in a native mobile app shell for you to digitally sign and distribute.
+
+      - question: |
+          How do I digitally sign my mobile app?
+        answer: |
+          Signing instructions are provided for [Android](code-sign-android.md) and [iOS](code-sign-ios.md).
+
+      - question: |
+          How do I distribute my mobile app?
+        answer: |
+          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune.md), [Managed Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
+
+      - question: |
+          What are Primary and Secondary apps in the context of wrap?
+        answer: |
+          The primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
+
+      - question: |
+          Can I create B2C mobile apps with Power Apps?
+        answer: |
+          No. Power Apps is a platform for creating business applications and uses AAD authentication. The wrap feature wraps existing canvas apps for the same set of end users.
