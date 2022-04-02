@@ -1,10 +1,10 @@
 ---
 title: "Creating side panes by using a client API in model-driven apps" 
 description: Learn how to create side panes in model-driven apps by using a client API.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: HemantGaur
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "article"
@@ -14,8 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors:
+contributors: 
   - JimDaly
+  - caburk
 ---
 
 # Creating side panes by using a client API (preview)
