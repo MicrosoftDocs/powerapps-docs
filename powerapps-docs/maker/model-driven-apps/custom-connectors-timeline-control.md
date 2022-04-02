@@ -2,7 +2,7 @@
 title: Use custom connectors with the timeline in Power Apps | MicrosoftDocs
 description: "Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps."
 ms.custom: ""
-ms.date: 11/2/2021
+ms.date: 04/02/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -44,9 +44,20 @@ Records that are configured within custom connectors are a JavaScript web resour
 
 TimelineWallControl is expected to load the JavaScript web resource and then create the instance of IRecordSource from the configured constructor.
 
-The IRecordSource is then initialized (init), with a request for pages of records (getRecordsData), and a request for the UX representation of a single record (getRecordUX).
+The IRecordSource is then initialized (init), with a request for pages of records (getRecordsData), request for filter details (getFilterDetails), and a request for the UX representation of a single record (getRecordUX).
 
 The response from requesting records is persisted to minimize the number of record requests that occur within multi-session scenarios.
+
+## Filter support
+
+Custom connector filter support includes the following actions.
+
+- Add new filter type to existing filter group.
+- Add new filter group.
+- Update the existing filter type count.
+- Filter on search key.
+
+Custom connectors must use UserSettings Timezone information from context passin init() to be consistent with Timeline rendering.
 
 ## Scope
 
