@@ -2,7 +2,7 @@
 title: "Sample: Custom virtual table provider with CRUD operations (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom virtual table that supports CRUD operations.."
 ms.date: 04/01/2022
-author: NHelgren 
+author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
 manager: sunilg
