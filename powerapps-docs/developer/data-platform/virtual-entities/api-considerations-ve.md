@@ -1,13 +1,14 @@
 ---
 title: "API considerations of virtual tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes API considerations of virtual tables"
-ms.date: 03/22/2022
-ms.topic: "article"
+ms.date: 04/01/2022
+author: NHelgren 
+ms.author: nhelgren
+ms.reviewer: pehecke
+manager: sunilg
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: "NHelgren" # GitHub ID
-ms.author: "pehecke"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

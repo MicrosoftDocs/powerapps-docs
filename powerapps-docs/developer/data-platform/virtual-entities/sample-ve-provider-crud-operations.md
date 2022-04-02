@@ -1,19 +1,20 @@
 ---
 title: "Sample: Custom virtual table provider with CRUD operations (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom virtual table that supports CRUD operations.."
-ms.date: 04/09/2021
-ms.reviewer: "nabuthuk"
-
+ms.date: 04/01/2022
+author: NHelgren 
+ms.author: nhelgren
+ms.reviewer: pehecke
+manager: sunilg
 ms.topic: sample
-ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d24
-author: "Nkrb" # GitHub ID
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Custom virtual table provider with CRUD operations

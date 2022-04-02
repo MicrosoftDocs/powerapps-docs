@@ -1,21 +1,20 @@
 ---
 title: "Use PowerShell cmdlets for XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
 description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Microsoft Dataverse and retrieve organizations that the current user has access to"
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "nkrb"
-
-ms.topic: "get-started-article"
-ms.assetid: 81816457-c963-46ca-b350-615fa75f56a7
-caps.latest.revision: 27
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: get-started-article
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use PowerShell cmdlets for XRM tooling to connect to Microsoft Dataverse
 

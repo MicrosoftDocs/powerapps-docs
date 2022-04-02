@@ -1,25 +1,22 @@
 ---
 title: "Use CrmServiceClient constructors to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
 description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Microsoft Dataverse"
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 74862506-a955-4846-a148-ac266f65592f
-caps.latest.revision: 27
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Use CrmServiceClient constructors to connect to Microsoft Dataverse
 
