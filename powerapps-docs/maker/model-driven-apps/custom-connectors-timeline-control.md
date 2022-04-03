@@ -50,14 +50,14 @@ The response from requesting records is persisted to minimize the number of reco
 
 ## Filter support
 
-Custom connector filter support includes the following actions.
+Custom connector filter support includes the following abilities.
 
-- Add new filter type to existing filter group.
-- Add new filter group.
-- Update the existing filter type count.
-- Filter on search key.
+- Add new filter type to existing filter group
+- Add new filter group
+- Update the existing filter type count
+- Filter on search key
 
-Custom connectors must use UserSettings Timezone information from context passin init() to be consistent with Timeline rendering.
+Custom connectors must use UserSettings Timezone information from context passin init() to be consistent with timeline rendering.
 
 ## Scope
 
