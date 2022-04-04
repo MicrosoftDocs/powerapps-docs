@@ -1,5 +1,5 @@
 ---
-title: "Create and retrieve Outlook filters (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Create and retrieve Outlook filters (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create and retrieve outlook filters." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
@@ -19,7 +19,7 @@ contributors:
 
 # Sample: Create and retrieve Outlook filters
 
-
+<!-- Same as powerapps-docs\developer\data-platform\outlook-client\sample-create-retrieve-outlook-filters.md -->
 
 This sample shows how to retrieve filters for Outlook.
 

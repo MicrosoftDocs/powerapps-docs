@@ -1,25 +1,25 @@
 ---
 title: "Sample: Create and retrieve Outlook filters (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample shows how to retrieve filters for Microsoft Dynamics 365 for Outlook"
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "sriharibs-msft" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: sriharibs-msft
+ms.author: srihas
+manager: evchaki
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Create and retrieve Outlook filters
 
+<!-- Same as powerapps-docs\developer\data-platform\org-service\samples\create-retrieve-outlook-filters.md -->
 
-
-This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Create and retrieve Outlook filters](/dynamics365/customer-engagement/developer/outlook-client/sample-create-retrieve-outlook-filters).
+This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Create and retrieve Outlook filters](../org-service/samples/create-retrieve-outlook-filters.md).
 
 ## Prerequisites
 
