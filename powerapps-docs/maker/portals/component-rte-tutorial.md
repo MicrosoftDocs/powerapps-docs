@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/16/2022
+ms.date: 04/04/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -26,6 +26,9 @@ Your portal version must be [9.4.3.x](/power-platform/released-versions/portals)
 ## Step 1. Add the rich text editor control to a field in a model-driven app
 
 Follow the steps in the tutorial [Add or replace a text column for rich text editing](../model-driven-apps/rich-text-editor-control.md#add-or-replace-a-text-column-for-rich-text-editing) to add the component to a table on a model-driven form.
+
+> [!NOTE]
+> You may have to increase the character size of the [text fields](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/types-of-fields#text-columns) to accommodate the extra information to display the data as rich text.
 
 ## Step 2. Verify the model-driven app with the new control
 
@@ -120,7 +123,7 @@ For using and storing images in the rich text editor on the portal, you'll need 
     | Site setting name | value |
     | - | - | 
     | Webapi/msdyn_richtextfile/enabled | true |
-    | Webapi/msdyn_richtextfile/fields | true |
+    | Webapi/msdyn_richtextfile/fields | * |
 
 ## Step 4. Create a web page in portals with the basic form
 
