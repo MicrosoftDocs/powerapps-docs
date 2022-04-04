@@ -23,7 +23,7 @@ search.app:
 
 # Use custom connectors with the timeline control
 
-Custom connectors is a feature that provides a way for developers to surface information such as Dataverse table rows, external data sources, and so forth, as records entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
+The custom connectors feature provides a way for developers to surface information such as Dataverse table rows, external data sources, and so forth, as records entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
 
 For information about configuring and using the timeline, see the following topics:
 
@@ -61,7 +61,7 @@ Custom connectors must use UserSettings Timezone information from context passed
 
 ## Scope
 
-Custom connectors is supported within single-session and multi-session table forms in Unified Interface client model apps.
+The custom connectors feature is supported within single-session and multi-session table forms in Unified Interface client model apps.
 
 ### Out of scope
 The following functionality isn't available for the custom connectors feature:
