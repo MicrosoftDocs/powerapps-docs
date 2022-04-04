@@ -2,7 +2,7 @@
 title: Use custom connectors with the timeline in Power Apps | MicrosoftDocs
 description: "Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps."
 ms.custom: ""
-ms.date: 04/02/2022
+ms.date: 04/04/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -57,7 +57,7 @@ Custom connector filter support includes the following abilities.
 - Update the existing filter type count
 - Filter on search key
 
-Custom connectors must use UserSettings Timezone information from context passin init() to be consistent with timeline rendering.
+Custom connectors must use UserSettings Timezone information from context passed in init() to be consistent with timeline rendering.
 
 ## Scope
 
