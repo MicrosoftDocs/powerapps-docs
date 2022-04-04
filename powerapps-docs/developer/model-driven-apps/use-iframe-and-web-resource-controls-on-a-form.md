@@ -4,7 +4,7 @@ description: "IFRAME and web resource controls embed content from another locati
 ms.custom: ""
 ms.author: jdaly
 author: HemantGaur
-manager: kvivek
+manager: evchaki
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Use IFRAME and web resource controls on a form
 
