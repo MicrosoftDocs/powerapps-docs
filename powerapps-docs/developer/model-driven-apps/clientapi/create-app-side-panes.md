@@ -4,7 +4,7 @@ description: Learn how to create side panes in model-driven apps by using a clie
 author: HemantGaur
 ms.author: hemantg
 manager: evchaki
-ms.date: 04/01/2022
+ms.date: 04/04/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "article"
@@ -19,19 +19,13 @@ contributors:
   - caburk
 ---
 
-# Creating side panes by using a client API (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+# Creating side panes by using a client API
 
 Developers can create and manage app side panes within a model-driven app by using the [Xrm.App.sidePanes](reference/xrm-app-sidepanes.md) API, which represents the collection of side panes. Calling the [createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) method adds a new pane that allows navigation to any model-driven app form or custom page. Pages displayed in the side pane must fit within the minimum width of 300 pixels and resize to larger widths based on the pane width.
 
 Tabs are listed in the side pane in two groups&mdash;non-closable and closable. Within each group, the tabs are listed in the order they were created in. The top group contains the panes that a user can't close, and the bottom group has user-closable panes. The non-closable group is populated when the app is opened, whereas the closable group is added based on user actions within the app.
 
 You can use a platform-provided header with the title and Close button, or you can use a custom header.
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 You can add a badge to the side pane to indicate to the user that a change needs attention. The badge supports three modes: a simple dot, a count, or an image. By default, the badge is cleared when the user switches to the pane. You can control when the badge is cleared.
 
