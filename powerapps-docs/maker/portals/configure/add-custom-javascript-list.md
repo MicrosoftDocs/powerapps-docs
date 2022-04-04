@@ -1,6 +1,6 @@
 ---
-title: Add custom Javascript
-description: Learn how to add custom Javascript to a portal.
+title: Add custom JavaScript
+description: Learn how to add custom JavaScript to a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
@@ -15,13 +15,13 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Add custom Javascript
+# Add custom JavaScript
 
-The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]; if your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
+The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]. If your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
 ![Custom JavaScript example.](../media/custom-javascript-example.png "Custom JavaScript example")  
 
-The list gets its data asynchronously, and when it is complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
+The list gets its data asynchronously, and when it's complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
 ```
 $(document).ready(function (){
 $(".entitylist.entity-grid").on("loaded", function () {
