@@ -21,7 +21,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The notification table stores notifications for each user. Your model-driven app automatically checks the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
+The notification table stores notifications for each user. Your model-driven app automatically polls the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
 Each notification row is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
 
@@ -109,6 +109,9 @@ Accept: application/json
   "toasttype": 200000000 // timed
 }
 ```
+## Notification polling
+
+In-app notifications uses polling to retrieve notifications periodically when the app is running.  New notification are retreived at start of the model-driven app and when a page navigation occurs as long as the last retreival is more than one minute ago.  If a user stays on a page for a long duration, new notifications will be retrieved.
 
 ## Notification table
 
@@ -123,6 +126,9 @@ The following are the columns for the notification table.
 |Toast Type|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this topic.|
 |Expiry (seconds)|The number of seconds from when the notification should be deleted if not already dismissed.|
 |Data|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
+
+  > [!IMPORTANT]
+  > - The `appmoduleid` field is not used and should not be set on the appnotification entity.
 
 ### Changing the notification behavior
 
