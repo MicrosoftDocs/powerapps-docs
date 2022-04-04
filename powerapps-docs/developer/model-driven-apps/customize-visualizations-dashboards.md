@@ -1,21 +1,20 @@
 ---
 title: "Customize visualizations and dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about configuring dashboards in such a way that enables you to view data from multiple areas of Dynamics 365 such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 10/31/2018
-
+ms.date: 04/01/2022
 ms.topic: article
-ms.assetid: 90c1581b-06cc-505e-caba-2e87720f7f28
-author: Nkrb # GitHub ID
+author: mspilde # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
+ms.author: mspilde # MSFT alias of Microsoft employees only
+manager: evchaki # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Customize visualizations and dashboards

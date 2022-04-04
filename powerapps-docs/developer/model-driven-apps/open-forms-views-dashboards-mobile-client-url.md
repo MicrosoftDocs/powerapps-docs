@@ -1,10 +1,10 @@
 ---
 title: "Open forms, views, and dashboards in Dynamics 365 mobile client with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the new application handler for Dynamics 365 mobile clients to directly link to Dynamics 365 forms, views, and dashboards from external applications so that when you click on the link in an external application, the target element opens in Dynamics 365 for phones or Dynamics 365 for tablets." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.author: jdaly
+ms.author: hemantg
 author: HemantGaur
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -13,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Open forms, views, and dashboards in mobile client with a URL
 
