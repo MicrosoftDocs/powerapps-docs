@@ -1,19 +1,20 @@
 ---
 title: " Associate security role to a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign a security role to a user " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Sample: Associate security role to a user

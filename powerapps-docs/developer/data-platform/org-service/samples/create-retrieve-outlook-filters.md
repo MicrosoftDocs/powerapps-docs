@@ -1,22 +1,23 @@
 ---
-title: " Create and retrieve outlook filters (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create and retrieve Outlook filters (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create and retrieve outlook filters." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
-# Create and retrieve outlook filters
+# Sample: Create and retrieve Outlook filters
 
 
 
@@ -38,7 +39,7 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `fetchXml` method creates asn retrieves offline filter. In your Outlook client, this will appear in System Filters tab under **File -> CRM -> Synchronize -> Outlook Filters**.
+1. The `fetchXml` method creates a retrieves offline filter. In your Outlook client, this will appear in **System Filters** tab under **File -> CRM -> Synchronize -> Outlook Filters**.
 2. The `InstantiateFiltersRequest` method activates the selected offline templates for the current user.
 3. The `ResetUserFilterRequest` method resets the current user's offline templates to the defaults.
 
