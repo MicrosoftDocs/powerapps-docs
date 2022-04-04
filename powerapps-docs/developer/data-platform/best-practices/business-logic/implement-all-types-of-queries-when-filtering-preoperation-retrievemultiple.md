@@ -1,26 +1,22 @@
 ---
 title: "Implement all types of queries when filtering results using PreOperation RetrieveMultiple | MicrosoftDocs"
 description: "For best performance and consistent results for all applications you must implement filtering for all types of queries that can be used with plug-ins that are registered for the PreOperation stage of RetrieveMultiple"
-services: ''
 suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: ryjones
-editor: ''
-tags: ''
-
-ms.devlang: na
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 09/23/2019
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Implement all types of queries when filtering results using PreOperation RetrieveMultiple
 
@@ -77,7 +73,7 @@ If a plug-in is written to change the records returned in a specific application
 
 When using the Web API, GET requests on a collection are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> unless the query uses FetchXml as described in [Retrieve and execute predefined queries](../../webapi/retrieve-and-execute-predefined-queries.md). In that case the queries use <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>.
 
-The legacy web client for model-driven apps is being replaced by Unified Interface. Unified Interface uses the FetchXml defined in the [SavedQuery.FetchXml](../../reference/entities/savedquery.md#BKMK_FetchXml) or [UserQuery.FetchXml](../../reference/entities/userquery.md#BKMK_FetchXml) properties. For better performance, Unified Interface does not convert the FetchXml data to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> before executing these queries as the legacy web client did. Therefore, queries that were modified in plug-in code for the legacy web client which used  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will not apply the same changes now that the query to support views is being passed using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> unless the plug-in code is written to apply same logic to <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> queries. 
+The legacy web client for model-driven apps was replaced by Unified Interface. Unified Interface uses the FetchXml defined in the [SavedQuery.FetchXml](../../reference/entities/savedquery.md#BKMK_FetchXml) or [UserQuery.FetchXml](../../reference/entities/userquery.md#BKMK_FetchXml) properties. For better performance, Unified Interface does not convert the FetchXml data to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> before executing these queries as the legacy web client did. Therefore, queries that were modified in plug-in code for the legacy web client which used  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will not apply the same changes now that the query to support views is being passed using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> unless the plug-in code is written to apply same logic to <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> queries. 
 
 <a name='seealso'></a>
 
