@@ -24,7 +24,7 @@ To secure a list, you must configure Table Permissions for the table for which r
 
 "Table permissions should be enabled for this record or anyone on the internet can view the data.".
 
-Securing your list will ensure that users only see the records they have permissions for when accessing the page. This is achieved by adding another filter to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
+Securing your list will ensure that users only see the records they have permissions for when accessing the page. This is accomplished by adding another filter to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
 In addition, any actions that are defined for the list will respect the corresponding permissions for that action on a per-record basis. That is, if you have Edit permission for a record, the Edit action will be enabled for that record. The same applies for Delete, Create, and so on. If no records are available, a message will display when the list is loaded.
 
