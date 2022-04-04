@@ -1,5 +1,5 @@
 ---
-title: "entity.getId (Client API reference) in model-driven apps| MicrosoftDocs"
+title: entity.getId (Client API reference) in model-driven apps
 description: Returns a string representing the GUID value for the record.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# entity.getId (Client API reference)
+# entity.getId (Client API reference) in model-driven apps
 
 
 

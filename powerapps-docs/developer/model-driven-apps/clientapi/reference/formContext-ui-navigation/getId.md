@@ -1,5 +1,5 @@
 ---
-title: "navigationItem.getId (Client API reference) in model-driven apps| MicrosoftDocs"
+title: navigationItem.getId (Client API reference) in model-driven apps
 description: Includes description and supported parameters for the navigationItem.getId method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# navigationItem.getId (Client API reference)
+# navigationItem.getId (Client API reference) in model-driven apps
 
 
 

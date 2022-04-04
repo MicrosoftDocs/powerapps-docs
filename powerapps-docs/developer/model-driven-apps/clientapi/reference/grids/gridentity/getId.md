@@ -1,5 +1,5 @@
 ---
-title: "gridEntity.getId (Client API reference) in model-driven apps| MicrosoftDocs"
+title: gridEntity.getId (Client API reference) in model-driven apps
 description: Includes description and supported parameters for the gridEntity.getId method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# gridEntity.getId (Client API reference)
+# gridEntity.getId (Client API reference) in model-driven apps
 
 
 
