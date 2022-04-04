@@ -28,7 +28,7 @@ Your portal version must be [9.4.3.x](/power-platform/released-versions/portals)
 Follow the steps in the tutorial [Add or replace a text column for rich text editing](../model-driven-apps/rich-text-editor-control.md#add-or-replace-a-text-column-for-rich-text-editing) to add the component to a table on a model-driven form.
 
 > [!NOTE]
-> You may have to increase the character size of the [text fields](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/types-of-fields#text-columns) to accommodate the extra information to display the data as rich text.
+> You may have to increase the character size of the [text fields](../maker/data-platform/types-of-fields.md#text-columns) to accommodate the extra information to display the data as rich text.
 
 ## Step 2. Verify the model-driven app with the new control
 
