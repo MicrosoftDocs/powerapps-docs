@@ -57,7 +57,7 @@ To create a new poll placement region:
 
 ## Polls
 
-A poll is a simple yes/no or multiple-choice question that you can display on your portal via poll placements. There are many customizable options for the display of polls available for developers, but for content managers, adding polls to your website is as easy as choosing a question and series of possible answers (poll options). A poll must have related options to function, and must be associated with a poll placement to be rendered on the portal.
+A poll is a simple yes/no question that you can display on your portal via poll placements. There are many customizable options for the display of polls available for developers, but for content managers, adding polls to your website is as easy as choosing a question and series of possible answers (poll options). A poll must have related options to function, and must be associated with a poll placement to be rendered on the portal.
 
 A new poll can be created in two ways: 
 - By going to the **Polls** section in the **Portals** area.
