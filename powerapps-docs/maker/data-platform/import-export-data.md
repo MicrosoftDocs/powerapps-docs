@@ -11,7 +11,7 @@ applies_to:
   - "powerapps"
 author: "mmercuri"
 ms.subservice: dataverse-maker
-ms.author: "mmercuri"
+ms.author: "kvivek"
 manager: "kvivek"
 search.audienceType: 
   - maker

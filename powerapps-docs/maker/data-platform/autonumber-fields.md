@@ -13,7 +13,7 @@ applies_to:
 author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
-ms.author: daemelia
+ms.author: kvivek
 manager: kvivek
 ms.reviewer: Mattp123
 ms.suite: 
