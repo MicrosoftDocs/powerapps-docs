@@ -1,21 +1,21 @@
 ---
 title: "Walkthrough: Update a service endpoint imported from a solution (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates updating a Dataverse service endpoint imported from a solution."
-keywords: ""
-ms.date: 03/18/2021
-
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 66795838-3b15-bfb3-6f59-68cfe2fe988e
-author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Update a service endpoint imported from a solution

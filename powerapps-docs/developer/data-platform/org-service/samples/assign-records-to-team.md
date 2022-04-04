@@ -1,19 +1,21 @@
 ---
 title: " Assign a record to a team (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
+
 ---
 
 # Assign a record to a team
