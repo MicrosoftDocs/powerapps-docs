@@ -1,20 +1,21 @@
 ---
 title: "Write Telemetry to your Application Insights resource using ILogger (preview)(Microsoft Dataverse) | Microsoft Docs"
 description: "When you enable Application Insights for your organization, any plug-ins written using the ILogger Interface provided in the SDK will write telemetry to your Application Insights resource."
-ms.custom: ""
-ms.date: 06/28/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: "article"
-author: JimDaly
 ms.subservice: dataverse-developer
-ms.author: pehecke
-manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Write Telemetry to your Application Insights resource using ILogger (Preview)
