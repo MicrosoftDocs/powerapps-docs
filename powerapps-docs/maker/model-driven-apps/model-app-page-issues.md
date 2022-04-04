@@ -28,9 +28,9 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When a custom page is modified, such as saved and published, the model-driven app isn't aware of the change. The model-driven app will continue to use the last version of the custom page when the model-driven app was published. A model-driven app published through app designer, solution explorer, or **Publish all** will update all custom pages in the model-driven app.
 
-* Layout or control support for Right to Left (RTL) is currently unavailable.
-
-* The ability to get the current users settings including locale and language is currently unavailable.
+* Images, icons and shapes are not currently supported with Righ-To-Left languages.
+ 
+* The ability to get the current data formats from users settings including date, time, numbers and currency is not supported.
 
 * Custom pages use a canvas app hosting session that can time out after 8 hours.  However, the Unified Interface session has a longer timeout. When the timeout happens, an error message bar appears that prompts the user to refresh the browser.
 
