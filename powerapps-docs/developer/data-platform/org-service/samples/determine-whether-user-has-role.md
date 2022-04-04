@@ -1,24 +1,23 @@
 ---
-title: " Determine whether a user has a role(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Determine whether a user has a role (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to determine whether a user has a specific role." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
-# Determine whether a user has a role
-
-
+# Sample: Determine whether a user has a role
 
 This sample shows how to determine whether a user in Microsoft Dataverse has been associated with a specific role. This is performed by using a query with the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method.  You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DetermineWhetherUserHasRole).
 

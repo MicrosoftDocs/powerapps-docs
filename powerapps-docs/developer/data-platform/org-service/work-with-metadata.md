@@ -1,14 +1,12 @@
 ---
 title: "Work with table definitions using the Organization service (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to programmatically access and modify table and column definitions using the Organization service"
-ms.custom: ""
-ms.date: 06/10/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

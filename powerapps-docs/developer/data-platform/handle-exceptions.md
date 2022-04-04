@@ -1,20 +1,21 @@
 ---
 title: "Handle exceptions in a plug-in (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
-ms.custom: ""
-ms.date: 04/30/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: "article"
-author: JimDaly
 ms.subservice: dataverse-developer
-ms.author: pehecke
-manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Handle exceptions in plug-ins
 
