@@ -17,7 +17,7 @@ contributors:
 >[!NOTE]
 > - This is a preview feature.  Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can configure image column fields on Basic and Advanced forms to upload, view, modify and delete images. Image column allows you to store an image file up to the specified maximum size in Microsoft Dataverse table column. The thumbnail images can be seen in the web application when viewing the form data.
+You can configure image column fields on Basic and Advanced forms to upload, view, modify, and delete images. Image column allows you to store an image file up to the specified maximum size in Microsoft Dataverse table column. The thumbnail images can be seen in the web application when viewing the form data.
 
 :::image type="content" source="media/image-column/edit-image.png" alt-text="Navigating the edit image functionality.":::
 
