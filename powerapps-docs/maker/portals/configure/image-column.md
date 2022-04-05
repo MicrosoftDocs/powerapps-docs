@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configuring an image column on portals (preview)
 description: Learn how to configure an image column on portals.
 author: nageshbhat-msft
@@ -17,7 +17,7 @@ contributors:
 >[!NOTE]
 > - This is a preview feature.  Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can configure image column fields on Basic and Advanced forms to upload, view, modify, and delete images. Image column allows you to store an image file up to the specified maximum size in Microsoft Dataverse table column. The thumbnail images can be seen in the web application when viewing the form data.
+You can configure image column fields on Basic and Advanced forms to upload, view, modify, and delete images. Image column allows you to store an image file up to the specified maximum size in Microsoft Dataverse table columns. The thumbnail images can be seen in the web application when viewing the form data.
 
 :::image type="content" source="media/image-column/edit-image.png" alt-text="Navigating the edit image functionality.":::
 
@@ -50,7 +50,14 @@ The URL is composed in following way
 
 Developers can design the website by using Liquid code to retrieve the records from Dataverse tables. Image column values can be fetched while data being queried by using fetchXML and entity view
 
-```{% for item in tables.results.entities %}</br>{{ item.columnname.Type }}</br>{{ item.columnname.Size }}</br>{{ item.columnname.Url }}</br>{{ item.columnname.Value }}</br>{% endfor %}```
+```
+    {% for item in tables.results.entities %}
+        {{ item.columnname.Type }}
+        {{ item.columnname.Size }}
+        {{ item.columnname.Url }}
+        {{ item.columnname.Value }}
+    {% endfor %}
+```
 
 | Type  | Mime type of the image       |
 |-------|------------------------------|
@@ -62,7 +69,26 @@ Example: Retrieve default contact image
 
 Note: Make sure you have configured appropriate table permission on contact table to read the record
 
-```{% fetchxml contacts %}</br>&lt;fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false"&gt;</br>&lt;entity name="contact"&gt;</br>&lt;attribute name="fullname" /&gt;</br>&lt;attribute name="entityimage" /&gt;</br>&lt;/entity&gt;</br>&lt;/fetch&gt;</br>{% endfetchxml %}</br>{% for item in contacts.results.entities %}</br>{</br>"Full Name":"{{ item.fullname }}"</br>"Entity Image Url":"{{ item.entityimage.Url}}",</br>"Entity Image Size":"{{ item.entityimage.Size}}",</br>"Entity Image Type":"{{ item.entityimage.Type}}" ,</br>"Entity Image Value":"{{ item.entityimage.Value}}"</br>}</br>{% endfor %}``` |
+```
+    {% fetchxml contacts %}
+        <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+            <entity name="contact">
+                <attribute name="fullname">
+                <attribute name="entityimage">
+            </entity>
+        </fetch>
+    {% endfetchxml %}
+
+    {% for item in contacts.results.entities %}
+        {
+            "Full Name":"{{ item.fullname }}"
+            "Entity Image Url":"{{ item.entityimage.Url}}",
+            "Entity Image Size":"{{ item.entityimage.Size}}",
+            "Entity Image Type":"{{ item.entityimage.Type}}",
+            "Entity Image Value":"{{ item.entityimage.Value}}"
+        }
+    {% endfor %}
+```
 
 
 ## Web API
@@ -73,7 +99,9 @@ Portals Web API can be used to perform, create, read, update, and delete operati
 
 To download thumbnail image data, use following APIs
 
-```GET /\_api/&lt;entity-type&gt;(id)/&lt;image-attribute-name&gt;/$value```
+```
+    GET /_api/<entity-type>(id)/<image-attribute-name>/$value
+```
 
 Image data transfers from the web service endpoints are limited to a maximum of 16-MB data in a single service call.
 
@@ -82,21 +110,41 @@ Image data transfers from the web service endpoints are limited to a maximum of 
 #### Request
 
 **HTTP** 
-```GET [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/entityimage/$value</br>Headers:</br>Content-Type: application/octet-stream``` 
+```
+    GET [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/entityimage/$value
+    
+    Headers:
+    Content-Type: application/octet-stream
+``` 
 
 #### Response
 
 **HTTP**
-```204 No Content</br>Body:</br>Byte[ ]```
+```
+    204 No Content
+    
+    Body:
+    Byte[ ]
+```
 
 ## Upload image data
 
 To upload the images, set the value of the image column to a byte array that contains the content of the image file
 
-```PUT or PATCH /\_api/&lt;entity-type&gt;(id)/&lt;image-attribute-name&gt;```
+```
+    PUT or PATCH /_api<entity-type>(id)/<image-attribute-name>
+```
 
 ### Example: image upload
 
 #### Request
 
-```PUT [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/entityimage</br>Headers:</br>Content-Type: application/octet-stream</br>Body :</br>Byte [ ]```
+```
+    PUT [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/entityimage
+
+    Headers:
+    Content-Type: application/octet-stream
+    
+    Body :
+    Byte [ ]
+```
