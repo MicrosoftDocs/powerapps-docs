@@ -17,13 +17,13 @@ contributors:
 >[!NOTE]
 > - This is a preview feature.  Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Portals maker can configure image column field on Basic and Advanced form to provide upload, view, modify and delete the images. Image column provides storing image file up to the specified maximum size in Microsoft Dataverse table column. The thumbnail images can be seen in the web application when viewing the form data.
+Portals maker can configure image column fields on Basic and Advanced forms to upload, view, modify and delete the images. Image column provides storing image file up to the specified maximum size in Microsoft Dataverse table column. The thumbnail images can be seen in the web application when viewing the form data.
 
 :::image type="content" source="media/image-column/edit-image.png" alt-text="Navigating the edit image functionality.":::
 
 ## Enable Image control on form
 
-You must configure site settings **Control/EnableImagePreview** and set its value to **true** to enable **Image** controls on the form. You do not require to make any configuration to make image column with Liquid code and Web API.
+You must configure site settings **Control/EnableImagePreview** and set its value to **true** to enable **Image** controls on the form. You don't require to make any configuration to make image column with Liquid code and Web API.
 
 :::image type="content" source="media/image-column/image-preview.png" alt-text="Enable image preview.":::
 
@@ -46,9 +46,7 @@ The URL is composed in following way
 
 2 – column logical name
 
-3 – image id
-
-Ex: https://myorg.powerappsportal.com/Image/download.aspx?attribute=entityimage&entity=contact&id=1ece5cd4-ae56-e711-abaa-00155d701c02
+3 – image ID
 
 ## Liquid
 
@@ -72,17 +70,17 @@ Note: Make sure you have configured appropriate table permission on contact tabl
 
 ## Web API
 
-Portals Web API can be used to perform create, read, update, and delete operations on image columns across Microsoft Dataverse tables.
+Portals Web API can be used to perform, create, read, update, and delete operations on image columns across Microsoft Dataverse tables.
 
 ## Retrieving image data
 
-To download thumbnail image data use following APIs
+To download thumbnail image data, use following APIs
 
 |                                                                        |
 |------------------------------------------------------------------------|
 | ```GET /\_api/&lt;entity-type&gt;(id)/&lt;image-attribute-name&gt;/$value``` |
 
-Image data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call.
+Image data transfers from the web service endpoints are limited to a maximum of 16-MB data in a single service call.
 
 ### Example: Thumbnail download
 
