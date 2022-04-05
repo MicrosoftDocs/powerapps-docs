@@ -172,6 +172,14 @@ With Dataverse search, the search box is always available at the top of every pa
 
 ![Search bar at the top](media/pam-windows-image13.png)
 
+## Set up mobile offline
+
+To configure your app in offline mode, see:
+ 
+•	For canvas apps: [Develop offline-capable canvas app](../maker/canvas-apps/offline-apps)
+•	For model-driven apps: [Set up mobile offline (preview)](setup-mobile-offline.md)
+
+
 ## Limitations and known issues
 - The following is not supported:
   - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location)
