@@ -14,7 +14,7 @@ Portals maker can configure image column field on Basic and Advanced form to pro
 
 You must configure site settings **Control/EnableImagePreview** and set its value to **true** to enable **Image** controls on the form. You do not require to make any configuration to make image column with Liquid code and Web API.
 
-:::image type="content" source="media/image-column/image-preview.png alt-text="Enable image preview."::: 
+:::image type="content" source="media/image-column/image-preview.png alt-text="Enable image preview.":::
 
 >[!IMPORTANT]
 > This site setting is only required during the preview period.
@@ -73,15 +73,15 @@ To download thumbnail image data use following APIs
 
 Image data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call.
 
-Example: Thumbnail download
+### Example: Thumbnail download
 
-### Request
+#### Request
 
 | HTTP |
 |-------------------------|
 | ```GET [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/entityimage/$value</br>Headers:</br>Content-Type: application/octet-stream``` |
 
-### Response
+#### Response
 
 | HTTP |
 |-------------------------|
@@ -95,9 +95,9 @@ To upload the images, set the value of the image column to a byte array that con
 |--------------------------------------------------------------------------|
 | ```PUT or PATCH /\_api/&lt;entity-type&gt;(id)/&lt;image-attribute-name&gt;``` |
 
-## Example: image upload
+### Example: image upload
 
-### Request
+#### Request
 
 | HTTP |
 |-------------------------|
