@@ -8,7 +8,7 @@ title: Configuring an Image column on portals (Preview)
 
 Portals maker can configure image column field on Basic and Advanced form to provide upload, view, modify and delete the images. Image column provides storing image file up to the specified maximum size in Microsoft Dataverse table column. The thumbnail images can be seen in the web application when viewing the form data.
 
-:::image type="content" source="media/image-column/edit-image.png" alt-text="Editing image options.":::
+:::image type="content" source="media/image-column/edit-image.png" alt-text="Navigating the edit image functionality.":::
 
 ## Enable Image control on form
 
