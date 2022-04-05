@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 04/05/2022
 ms.subservice: portals
-ms.author: nageshbhat
+ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - ProfessorKendrick
