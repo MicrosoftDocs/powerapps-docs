@@ -1,5 +1,16 @@
 ﻿---
-title: Configuring an Image column on portals (Preview)
+title: Configuring an image column on portals (preview)
+description: Learn how to configure an image column on portals.
+author: nageshbhat-msft
+
+ms.topic: conceptual
+ms.custom: 
+ms.date: 04/05/2022
+ms.subservice: portals
+ms.author: nageshbhat
+ms.reviewer: ndoelman
+contributors:
+    - ProfessorKendrick
 ---
 # Configuring an image column on portals (preview)
 
