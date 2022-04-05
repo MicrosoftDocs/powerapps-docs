@@ -182,7 +182,7 @@ To configure your app in offline mode, see:
 
 ## Session ID
 
-If you are having an issues with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
+If you are having an issue with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
 
 To see get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
 
