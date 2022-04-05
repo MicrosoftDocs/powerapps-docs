@@ -176,8 +176,8 @@ With Dataverse search, the search box is always available at the top of every pa
 
 To configure your app in offline mode, see:
  
-•	For canvas apps: [Develop offline-capable canvas app](../maker/canvas-apps/offline-apps)
-•	For model-driven apps: [Set up mobile offline (preview)](setup-mobile-offline.md)
+- For canvas apps: [Develop offline-capable canvas app](../maker/canvas-apps/offline-apps.md)
+- For model-driven apps: [Set up mobile offline (preview)](setup-mobile-offline.md)
 
 
 ## Session ID
