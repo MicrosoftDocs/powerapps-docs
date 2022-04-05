@@ -25,7 +25,7 @@ Portals maker can configure image column field on Basic and Advanced form to pro
 
 You must configure site settings **Control/EnableImagePreview** and set its value to **true** to enable **Image** controls on the form. You do not require to make any configuration to make image column with Liquid code and Web API.
 
-:::image type="content" source="media/image-column/image-preview.png alt-text="Enable image preview.":::
+:::image type="content" source="media/image-column/image-preview.png" alt-text="Enable image preview.":::
 
 >[!IMPORTANT]
 > This site setting is only required during the preview period.
