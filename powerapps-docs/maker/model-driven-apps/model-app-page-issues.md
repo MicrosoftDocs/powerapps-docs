@@ -61,8 +61,6 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation.
 
-* Native player support is available for iOS and Android in online-only mode. Offline support currently isn't supported. The preview Dynamics 365 Windows player displays a blank page when a custom page is opened.
-
 * While attempting to sign in, the current behavior caused by a user selecting anywhere away from the sign in box causes the pop out window for sign in to shift behind the app browser.
 
 * When a user runs an app that isn't compliant with their organization's [Data Loss Prevention (DLP) policies](/power-platform/admin/wp-data-loss-prevention), they'll see an error dialog and the 'Technical details' reflects the app isn't DLP compliant. 
