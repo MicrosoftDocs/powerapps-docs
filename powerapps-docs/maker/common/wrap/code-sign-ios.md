@@ -173,11 +173,11 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Unzip the package.
 
-    For example, a sample build project **ShrinkWrap-Release-archive.zip** file downloaded from the App Center shows a folder structure like below.
+    For example, a sample build project **iOS-Archive.zip** file downloaded from the App Center shows a folder structure like below.
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="Folder structure.":::
 
-1. Open terminal, and change directory to the folder. In this example, **ShrinkWrap**.
+1. Open terminal, and change directory to the folder. In this example, **com_single_wrap**.
 
 1. Enter `pwsh` to start PowerShell in the terminal.
 
@@ -185,7 +185,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
-1. After the script finishes, you'll see an .ipa  file created. In this example, **ShrinkWrap.ipa**.
+1. After the script finishes, you'll see an .ipa  file created. In this example, **com_single_wrap.ipa**.
 
     :::image type="content" source="media/code-sign-ios/package.png" alt-text="IPA package.":::
 
