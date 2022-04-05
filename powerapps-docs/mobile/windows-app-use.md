@@ -180,6 +180,15 @@ To configure your app in offline mode, see:
 •	For model-driven apps: [Set up mobile offline (preview)](setup-mobile-offline.md)
 
 
+## Session ID
+
+If you are having an issues with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
+
+To see get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![See non-production apps.](media/non-prod-apps.png)
+
 ## Limitations and known issues
 - The following is not supported:
   - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location)
