@@ -29,6 +29,29 @@ This section covers aspects of Power Fx that are specific to commanding. Many ot
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
+## OnSelect
+Defines the logic that will be executed when the button is clicked within the app.
+
+## Visible
+Defines logic for hiding or showing the button when running the app. 
+
+To define visibility logic select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You may now select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
+
+ ## Selected property
+
+|Field  |Type  |Description  |
+|---------|---------|---------|
+|Item     |Record of DataSource         |One of the records selected from the DataSource         |
+|AllItems     |Table of records from the DataSource         |All of the records selected from the DataSource         |
+|State     |Enum    |State of the selected control. Edit (=0), New (=1), View (=2)     |
+|Unsaved     |Boolean     |Returns true if Selected or SelectedItems have unsaved changes. Otherwise returns false. Always returns false if AutoSave is set to true (default option) within the command component library.     |
+
+- The **Selected** property is provided by the host of the command.
+- **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
+- If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
+- Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
+- **Item** is always Blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
+
 ## AutoSave
 
 - Many JavaScript commands start by saving the form buffer. This is because it makes the rest of the code easier to work with.
@@ -37,19 +60,6 @@ This section covers aspects of Power Fx that are specific to commanding. Many ot
   - Any problems that occur during the save operation are dealt with in the form's UI.
 <!--- Not currently configurable:
   - We later need facilities for working with the buffer.  -->
- 
- ## Selected property
-
-|Field  |Type  |Description  |
-|---------|---------|---------|
-|Item     |Record of DataSource         |One of the records selected from the DataSource         |
-|AllItems     |Table of records from the DataSource         |All of the records selected from the DataSource         |
-
-- The **Selected** property is provided by the host of the command.
-- **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
-- If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
-- Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
-- **Item** is always Blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
 
 ### Patch the current selected record
 
