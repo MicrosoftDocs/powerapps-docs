@@ -1,24 +1,18 @@
 ---
 title: "Web API types and operations (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes how you can find information you need from the Web API service and metadata documents, including documentation of the Web API system entity types, functions, and actions"
-ms.custom: ""
-ms.date: 04/20/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)" 
-ms.assetid: d80cfb87-d4f1-4c75-bcc8-4f54d1351e26
-caps.latest.revision: 27
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "shujoshi"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Web API types and operations
 

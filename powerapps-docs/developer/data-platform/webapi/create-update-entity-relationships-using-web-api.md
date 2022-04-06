@@ -1,25 +1,18 @@
 ---
 title: "Create and update table relationships using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table relationships using the Web API"
-ms.custom: ""
-ms.date: 07/06/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 923538e2-15fe-4718-8eae-d939c5d200cd
-caps.latest.revision: 15
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: NHelgren 
+ms.author: nhelgren
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Create and update table relationships using the Web API

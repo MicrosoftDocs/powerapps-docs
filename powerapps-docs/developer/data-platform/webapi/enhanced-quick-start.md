@@ -1,25 +1,18 @@
 ---
 title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
-ms.custom: intro-internal
-ms.date: 10/01/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 08377156-32c7-492a-8e66-50a47a330dc6
-caps.latest.revision: 14
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Enhanced quick start
 

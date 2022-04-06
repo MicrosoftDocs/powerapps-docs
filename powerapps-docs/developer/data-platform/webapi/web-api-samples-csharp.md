@@ -1,24 +1,18 @@
 ---
 title: "Web API  Data operations  Samples (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using C#"
-ms.custom: ""
-ms.date: 10/31/2018
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 66e26684-819e-45f7-bec4-c250be4d6fed
-caps.latest.revision: 14
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Web API Data operations Samples (C#)
 
