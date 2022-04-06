@@ -68,7 +68,8 @@ Developers can design the website by using Liquid code to retrieve the records f
 
 ### Example: Retrieve default contact image
 
-> [!Note] Make sure you have configured the appropriate table permissions on the contact table to read the record.
+> [!NOTE]
+> Make sure you have configured the appropriate table permissions on the contact table to read the record.
 
 ```
     {% fetchxml contacts %}
