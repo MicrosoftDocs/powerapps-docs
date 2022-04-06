@@ -11,17 +11,18 @@ ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - ProfessorKendrick
+    - nickdoelman
 ---
 # Configuring an image column on portals (preview)
 
 >[!NOTE]
 > - This is a preview feature.  Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can configure image column fields on Basic and Advanced forms to upload, view, modify, and delete images. Image column allows you to store an image file up to the specified maximum size in Microsoft Dataverse table columns. The thumbnail images can be seen in the web application when viewing the form data.
+You can configure image column fields on basic and advanced forms to upload, view, modify, and delete images. Image column allows you to store an image file up to the specified maximum size in Dataverse table columns. The thumbnail images can be seen in the web application when viewing the form data.
 
 :::image type="content" source="media/image-column/edit-image.png" alt-text="Navigating the edit image functionality.":::
 
-## Enable Image control on form
+## Enable image control on forms
 
 You must configure site settings **Control/EnableImagePreview** and set its value to **true** to enable **Image** controls on the form. You don't require to make any configuration to make image column with Liquid code and Web API.
 
@@ -65,9 +66,9 @@ Developers can design the website by using Liquid code to retrieve the records f
 | Value | Image value in base64 string |
 | Url   | Image url                    |
 
-Example: Retrieve default contact image
+### Example: Retrieve default contact image
 
-Note: Make sure you have configured appropriate table permission on contact table to read the record
+> [!Note] Make sure you have configured the appropriate table permissions on the contact table to read the record.
 
 ```
     {% fetchxml contacts %}
@@ -93,7 +94,7 @@ Note: Make sure you have configured appropriate table permission on contact tabl
 
 ## Web API
 
-Portals Web API can be used to perform, create, read, update, and delete operations on image columns across Microsoft Dataverse tables.
+The portals Web API can be used to perform, create, read, update, and delete operations on image columns across Microsoft Dataverse tables.
 
 ## Retrieving image data
 
@@ -129,7 +130,7 @@ Image data transfers from the web service endpoints are limited to a maximum of 
 
 ## Upload image data
 
-To upload the images, set the value of the image column to a byte array that contains the content of the image file
+To upload the images, set the value of the image column to a byte array that contains the content of the image file:
 
 ```
     PUT or PATCH /_api<entity-type>(id)/<image-attribute-name>
