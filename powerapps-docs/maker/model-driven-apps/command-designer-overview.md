@@ -1,7 +1,7 @@
 ---
 title: "Command designer overview | MicrosoftDocs"
 description: "Overview of modern commanding, command designer, and Power Fx"
-Keywords: command bar, command designer
+Keywords: command bar, command designer, ribbon, action bar, Power Fx command, command component, button
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
