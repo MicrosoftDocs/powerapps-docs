@@ -23,7 +23,7 @@ In a canvas app, customize a **Display form** control and an **Edit form** contr
 
 Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form and move cards up and down within a form.
 
-If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-started.md).
+If you're unfamiliar with canvas apps, see [What are canvas apps?](getting-started.md).
 
 ## Prerequisites
 
