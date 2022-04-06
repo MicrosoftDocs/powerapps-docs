@@ -218,20 +218,18 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Power Fx functions not supported
-
+## Not supported in Power Fx
+### Functions not supported
 The following Power Fx functions are currently not supported with commanding in model-driven apps.
 
 - Back()
 - Clear()
 - Collect()
 - Disable()
-- EditForm()
 - Enable()
 - Exit()
 - InvokeControl()
 - LoadData()
-- NewForm()
 - Param()
 - ReadNFC()
 - RequestHide()
@@ -243,6 +241,61 @@ The following Power Fx functions are currently not supported with commanding in 
 - SubmitForm()
 - UpdateContext()
 - ViewForm()
+
+### Enums not supported
+-BorderStyle
+-Color
+-Direction
+-DisplayMode
+-LayoutMode
+-LayoutAlignItems
+-AlignInContainer
+-LayoutJustifyContent
+-LayoutOverflow
+-Font
+-FontWeight
+-ImagePosition
+-Layout
+-LayoutDirection
+-TextPosition
+-TextMode
+-TextFormat
+-VirtualKeyboardMode
+-TeamsTheme
+-Themes
+-PenMode
+-RemoveFlags
+-ScreenTransition
+-Align
+-VerticalAlign
+-Transition
+-Overflow
+-MapStyle
+-GridStyle
+-LabelPosition
+-Zoom
+-PDFPasswordState
+-BarcodeType
+-ImageRotation
+-FormPattern
+-ListItemTemplate
+-LoadingSpinner
+-Live
+-TextRole
+-ScreenSize
+-Icon
+-MessageSource
+
+### Other unsupported or unuseful areas
+-Acceleration
+-App
+-Compass
+-Connection
+-Environment
+-Host
+-Location
+-Layout 
+-ScreenSize
 
 ### See also
 
