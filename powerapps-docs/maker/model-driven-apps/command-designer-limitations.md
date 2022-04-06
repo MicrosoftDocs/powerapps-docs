@@ -26,7 +26,7 @@ search.app:
 We look forward to your feedback on what you like or dislike as well as what features are missing for your use cases. -->
 
 ## Power Fx and Command component libraries limitations
-Power Fx shares infrustructure with custom pages and certain limitations of custom pages may also apply.
+Power Fx shares certain infrustructure with custom pages and canvas apps. Relevant [limitations of custom pages](model-app-page-issues.md) are also applicable to commands.
 
 - Not all Power Fx functions are currently supported for commands. More functions will become available incrementally.
 - Microsoft Dataverse is currently the only supported data source when using Power Fx with commands. However, custom pages can be used for connecting to external data.
