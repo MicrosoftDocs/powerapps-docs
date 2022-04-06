@@ -31,11 +31,10 @@ The data structures that developers work with are exposed as entities, and the t
 
 |To...|Using...|Developers will...|
 |--|--|--|
-|Create a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST an instance of the [EntityMetadata EntityType](/dynamics365/customer-engagement/web-api/entitymetadata?view=dynamics-ce-odata-9&preserve-view=true) to the `/EntityDefinitions` resource|
-|Create a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata?view=dynamics-general-ce-9&preserve-view=true) and use the [CreateEntityRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest?view=dynamics-general-ce-9&preserve-view=true) to send this to the Organization service|
-|Create a row or record in a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST data defined as an a specific EntityType. You can find a list of these EntityTypes here: [Web API EntityType Reference](/dynamics365/customer-engagement/web-api/entitytypes?view=dynamics-ce-odata-9&preserve-view=true)|
-|Create a row or record in a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [Entity Class](/dotnet/api/microsoft.xrm.sdk.entity?view=dynamics-general-ce-9&preserve-view=true) or a class that inherits from it (Account, Contact, etc.) and use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest?view=dynamics-general-ce-9&preserve-view=true) to send this to the Organization service. A developer can find the information they need to use the Entity class in the [entity reference](/powerapps/developer/data-platform/reference/about-entity-reference).|
-
+|Create a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST an instance of the [EntityMetadata EntityType](/dynamics365/customer-engagement/web-api/entitymetadata) to the `/EntityDefinitions` resource|
+|Create a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) and use the [CreateEntityRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) to send this to the Organization service|
+|Create a row or record in a Dataverse table|[Web API](/powerapps/developer/data-platform/webapi/overview)|POST data defined as an a specific EntityType. You can find a list of these EntityTypes here: [Web API EntityType Reference](/dynamics365/customer-engagement/web-api/entitytypes)|
+|Create a row or record in a Dataverse table|[.NET SDK](/powerapps/developer/data-platform/org-service/overview)|Create an instance of the [Entity Class](/dotnet/api/microsoft.xrm.sdk.entity) or a class that inherits from it (Account, Contact, etc.) and use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) to send this to the Organization service. A developer can find the information they need to use the Entity class in the [entity reference](/powerapps/developer/data-platform/reference/about-entity-reference).|
 
 ## Terminology use depending on protocol or technology
 
@@ -43,7 +42,7 @@ The terminology used in the developer documentation depends on the protocol or c
 
 - When working with the [Web API](/powerapps/developer/data-platform/webapi/overview), we use the terminology defined by the OData protocol. Data structures are defined as *EntityTypes*, which have properties and navigation properties. 
 
-- When working with the [.NET SDK](/powerapps/developer/data-platform/org-service/overview), we use *Entity* because there is an Entity class. The Entity class has an [Attributes](/dotnet/api/microsoft.xrm.sdk.entity.attributes?view=dynamics-general-ce-9&preserve-view=true) property that contains a collection of attributes that are defined by data in an  [AttributeMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata?view=dynamics-general-ce-9&preserve-view=true) and many other classes derived from it. 
+- When working with the [.NET SDK](/powerapps/developer/data-platform/org-service/overview), we use *Entity* because there is an Entity class. The Entity class has an [Attributes](/dotnet/api/microsoft.xrm.sdk.entity.attributes) property that contains a collection of attributes that are defined by data in an  [AttributeMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) and many other classes derived from it. 
 
 We use the appropriate terminology to describe the SDK and Web API technology. The developer documentation will *at times* use different terminology than the Power Apps user interface. The table below will help guide you to some of the terminology differences between the developer documentation and rest of the Power Apps documentation. 
 

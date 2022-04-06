@@ -268,6 +268,8 @@
   items:
   - name: Work with solutions
     href: work-solutions.md 
+  - name: Staging and async import
+    href: solution-stage-and-import.md 
   - name: Detect solution dependencies
     href: detect-solution-dependencies.md
 - name: Time zones
