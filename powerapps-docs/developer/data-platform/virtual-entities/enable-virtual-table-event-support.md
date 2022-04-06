@@ -1,7 +1,7 @@
 ---
 title: "Enable Virtual Tables to support Dataverse events (Microsoft Dataverse) | Microsoft Docs"
 description: "You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector When a row is added, modified or deleted trigger."
-ms.date: 04/01/2022
+ms.date: 04/04/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -66,20 +66,6 @@ Let's say we have a Person Virtual Table with these properties, the **Name** pro
     :::image type="content" source="../media/virtualentitymetadata-form.png" alt-text="virtualentitymetadata form.":::
 
 1. Complete the form, setting the **Extension Entity Id** value to the name of your virtual table. You are not required to enable all three messages. You can set one or more of them and come back to enable the rest later.
-
-There are two issues you may encounter while doing this:
-
-- If you cannot set the **Extension Entity Id** field in the form, there is a fix being deployed to enable this by the end of June 2021. If this isn't available yet, you can still use the steps below to [Enable with code](#enable-with-code).
-- Despite creating the virtual entity metadata row in the context of the solution, it is not actually added to the solution. 
-
-    The workaround for this is:
-
-    1. Within your solution, select **+Add existing**
-    1. Select **Virtual Entity Metadata**
-
-        :::image type="content" source="../media/add-virtualentitymetadata-solution.png" alt-text="Add the virtual entity metadata you made to your solution.":::
-        
-    1. Then search for the item you just created and add it.
 
 When you have enabled these messages, you can observe and confirm what was added using the steps in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table).
 

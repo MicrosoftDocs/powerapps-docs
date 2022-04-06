@@ -85,6 +85,28 @@ Launch Visual Studio Code and select the **Extensions** icon, click on the ellip
    > [!div class="mx-imgBorder"]
    > ![Initiate install with the downloaded file.](media/side-load-install-3.png "Install from VSIX")
 
+### Standalone Power Platform CLI
+
+To install standalone Power Platform CLI:
+
+<!--1. Install [Npm](https://www.npmjs.com/get-npm) (comes with Node.js) or [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS because it seems to be the most stable.
+
+1. Install [.NET Framework 4.6.2 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net462). 
+
+1. If you don’t already have Visual Studio 2017 or later, follow one of these options:
+   - Option 1: Install [Visual Studio 2017](/visualstudio/install/install-visual-studio?view=vs-2017) or later.
+   - Option 2: Install [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) and then install [Visual Studio Code](https://code.visualstudio.com/Download)-->
+1. Download and install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+
+1. To take advantage of all the latest capabilities, update Microsoft Power Platform CLI tooling to the latest version by using this command (not applicable for Power Platform VS Code Extension):
+    ```CLI
+    pac install latest
+
+    ```
+> [!NOTE]
+> - Currently, Microsoft Power Platform CLI is supported only on Windows 10 and Windows 11.
+> - Power Platform Tools for Visual Studio Code, and works on Windows 10, Windows 11, Linux, and MacOS.
+
 ## Successful installation
 
 Once the installation is successful, you will need to restart Visual Studio Code, upon which you will see the following notification.
@@ -125,8 +147,7 @@ This table lists some of the common commands used in the CLI.
 
 ## Uninstall Microsoft Power Platform CLI 
 
-To uninstall Microsoft Power Platform CLI tooling, run the MSI installer from [here](/powerapps/developer/data-platform/powerapps-cli).
-
+To uninstall Microsoft Power Platform CLI tooling, run the MSI from [here](/powerapps/developer/data-platform/powerapps-cli).
 
 To uninstall the Visual Studio Code extension, follow the same steps as installing the extension, except this time select the **Uninstall** button.
 
@@ -148,3 +169,5 @@ If you're a Private Preview participant and have an older version of CLI, follow
 
 [Power Apps component framework](../component-framework/overview.md)
 
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
