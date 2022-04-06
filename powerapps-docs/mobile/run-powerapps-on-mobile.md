@@ -57,7 +57,7 @@ Choose the download link for your device:
 
 - For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
 
-- For Winows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
+- For Windows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
 
 
 ## Sign in
