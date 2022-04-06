@@ -65,13 +65,11 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 Once you are in the app designer, use the command designer to customize your command bars.
 
 > [!NOTE]
-> - Currently, the command designer can only be accessed through the modern app designer.
+> - Currently, the command designer can only be accessed through the modern app designer or within solutions for existing commands.
 > - Currently, classic commands can't be edited within the command designer.
  
 ### Edit the command bar
  
-Make sure you **Publish** your app before you work with the command designer.
-
 #### Open the command designer to edit a command bar
 
 1. Select any table from the **Pages** area in the app designer.
@@ -88,26 +86,31 @@ Make sure you **Publish** your app before you work with the command designer.
 
 Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance.
 
-When you create a new command, a command component library is created on your behalf to store **Power Fx** formulas.
+The first time command designer is opened for an app, you'll see a prompt to either use **JavaScript** only or **Power Fx**. Selecting Power Fx also allows you to use JavaScript if desired. Selecting **Power Fx** in the dialog will create a command component library to store **Power Fx** formulas.
 
-1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New** on the command designer command bar.
+1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New Command**.
    :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
 1. On the right pane, enter or select from the following options:
-   - **Label**. Enter a label that will be displayed on the command button. 
+   - **Label (optional)**. Enter a label that will be displayed on the command button. 
    - **Icon**. Select an icon for the command button. You may choose from any system icons or web resource SVG files. To upload your own icon, choose **Web resource** then upload an **SVG** format file. Then, select **Save** and **Publish** the web resource. For more information about how to create a web resource for the icon image you want, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
-   - **Tooltip title**. Enter a tooltip title. The title appears to the user when they hover their mouse over the command.
-   - **Tooltip description**. Enter a tooltip description. The description appears for the user below the tooltip title when they hover their mouse over the command.
-
-      :::image type="content" source="media/command-tooltip.png" alt-text="Example of a command tooltip title and description.":::
-   - **Accessibility text**. Enter the text that will be read by screen readers.
-   - **Order number**. The order the command will display in at runtime in relation to other commands within the same command bar.
    - **Action**. Select from the following:
       - **Run formula**. Enter the Power Fx formula to run the command action. More information: [Use Power Fx for actions and visibility](#use-power-fx-for-actions-and-visibility)
       - **JavaScript**. Provide the JavaScript library and command to run the command action. More information: [Use JavaScript for actions](#use-javascript-for-actions)
-   - **Visibility**. Select whether to **Always show** the command button or to **Show on condition from formula**. 
+   - **Visibility**. Select whether to **Show** the command button or to **Show on condition from formula**. 
+   - **Tooltip title (optional)**. Enter a tooltip title. The title appears to the user when they hover their mouse over the command.
+   - **Tooltip description (optional)**. Enter a tooltip description. The description appears for the user below the tooltip title when they hover their mouse over the command.
+
+      :::image type="content" source="media/command-tooltip.png" alt-text="Example of a command tooltip title and description.":::
+   - **Accessibility text (optional)**. Enter the text that will be read by screen readers.
+   - **Order number**. The order the command will display in at runtime in relation to other commands within the same command bar.
+
 
 1. Drag and drop the command to the desired location. You can arrange modern commands amongst classic commands.
-1. Select **Play** to run the command or **Save and Publish** to make the command available to app users.
+1. Select **Save and Publish** to make the command available to app users.
+2. Select **Play** to run the app and test your changes 
+
+> [!NOTE]
+> - Publishing Power Fx formulas can take a few minutes to publish the command component library. This background operation may still be in-progress after command designer has completed the request and unlocks the designer. 
 
 ## Use Power Fx for actions and visibility
 
