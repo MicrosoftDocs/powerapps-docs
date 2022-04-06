@@ -43,7 +43,6 @@ The following table provides information about the formats available for each da
 |                       | Ticker Symbol      | For most languages, the text will be enabled as a link to open the [MSN Money](https://money.msn.com/) website to show details about the stock price represented by the ticker symbol. | Yes     |   |
 |                       | Phone              | Columns will be click-enabled to initiate calls.  | Yes |         |
 |                       | JSON               | Stores text using JSON formatting   | Yes (API only)   | Only in non-SQL stores like Audit. |
-|                       | Rich Text          | Allows rich text formatting, including HTML markup.   | Yes (API only) |   |
 |                       | Version Number     | Stores the version number for rows.   | No  | System use only.  |
 | Multiline Text (Memo) | Text               | Basic text column that contains text characters.  | Yes   |        |
 |                       | Text Area          | Text column contains text characters and allows line breaks. | Yes | |
