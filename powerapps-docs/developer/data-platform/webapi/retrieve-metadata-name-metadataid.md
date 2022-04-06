@@ -2,7 +2,7 @@
 title: "Retrieve table definitions by name or MetadataId (Microsoft Dataverse) | Microsoft Docs"
 description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and additional system table columns."
 ms.date: 04/06/2022
-author: NHelgren 
+author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
 manager: sunilg

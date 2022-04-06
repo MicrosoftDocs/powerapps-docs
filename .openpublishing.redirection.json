@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/sample-create-retrieve-outlook-filters.md",
+      "redirect_url": "../data-platform/org-service/samples/create-retrieve-outlook-filters",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/install-remove-sample-data.md",
       "redirect_url": "../data-platform/sample-data",
       "redirect_document_id": "false"
