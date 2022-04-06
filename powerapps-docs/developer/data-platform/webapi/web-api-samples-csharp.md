@@ -38,7 +38,7 @@ The following is required to build and run the Dataverse Web API C# samples :
 - In order to run samples against Dataverse, you must register your application with Azure Active Directory to obtain a client ID and redirect URL. For more information, see [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 > [!NOTE]
-> These samples require version 2.x of assembly [Microsoft.IdentityModel.Client.ActiveDirectory](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet) for OAuth based authentication.
+> These samples require version 2.x of assembly [Microsoft.IdentityModel.Client.ActiveDirectory](/dotnet/api/microsoft.identitymodel.clients.activedirectory) for OAuth based authentication.
   
 <a name="bkmk_webApiSamplesListing"></a>
 

@@ -1,6 +1,6 @@
 ---
 title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
-description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
+description: "An enhanced quick start building on the simple quick start using Dataverse Web API"
 ms.date: 04/06/2022
 author: divka78
 ms.author: dikamath
