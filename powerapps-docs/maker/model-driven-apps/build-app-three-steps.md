@@ -43,7 +43,7 @@ In this experience you...
 
 ## How it works
 
-New Power Apps makers will see the new tutorial banner when these conditions are true:
+You'll see the **Make an app in just five minutes** banner on the Power Apps home page of your environment when these conditions are true:
 
 * You have permission to create a Microsoft Dataverse database in the environment.
 * You haven't yet created and saved an app in the environment.
@@ -56,4 +56,4 @@ Makers who don’t meet these conditions can experience this feature in a previe
 
 [What are model-driven apps in Power Apps?](model-driven-app-overview.md)
 
-a[Steps to building a model-driven app](app-building-steps.md)
+[Steps to building a model-driven app](app-building-steps.md)
