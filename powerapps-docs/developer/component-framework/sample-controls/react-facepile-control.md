@@ -6,9 +6,8 @@ author: ghurlman
 ms.date: 03/07/2022
 ms.reviewer: jdaly
 manager: kvivek
-
 ms.topic: "article"
-ms.author: "grhurl"
+ms.author: jdaly
 ---
 
 # Implementing the FacePile component

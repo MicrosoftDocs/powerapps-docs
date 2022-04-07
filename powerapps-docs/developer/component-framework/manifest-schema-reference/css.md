@@ -3,18 +3,15 @@ title: CSS Element | Microsoft Docs
 description: CSS describes how code components are to be displayed on UI.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 ---
 
 # css element

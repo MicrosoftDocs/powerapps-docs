@@ -1,25 +1,18 @@
 ---
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve table data."
-ms.custom: ""
-ms.date: 05/07/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 3d771a18-3dc5-4372-a7c7-40b3b1f986d8
-caps.latest.revision: 16
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Retrieve and execute predefined queries

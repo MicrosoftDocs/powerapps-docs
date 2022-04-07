@@ -1,18 +1,17 @@
 ---
-title: "getOutputs | MicrosoftDocs"
+title: "StandardControl.getOutputs | MicrosoftDocs"
 description: It is called by the framework prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
+ms.date: 03/26/2022
+ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: ""
-ms.assetid: c83c3a09-f04e-4dc6-8ddf-ccd0b4cc080e
 
 ---
-# getOutputs
+# StandardControl.getOutputs
 
 [!INCLUDE[./includes/getoutputs-description.md](./includes/getoutputs-description.md)]
 

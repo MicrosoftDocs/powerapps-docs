@@ -1,23 +1,20 @@
 ---
 title: "Edit the customizations XML file with schema validation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "The customizations.xml file is included within the compressed .zip file exported as a solution. Certain portions of the customizations.xml file can be edited manually. Information about the schema helps you confirm that any modifications you make are valid." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 10/31/2018
-
-ms.custom:
-  - ""
+author: caburk
+ms.author: caburk
+manager: evlew
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: b77d962e-6e3c-bd28-d03c-cf2e23cd742d
-author: Nkrb # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Edit the customizations XML file with schema validation

@@ -1,3 +1,5 @@
+- name: Power Apps documentation
+  href: ../index.yml
 - name: Get started
   items:
   - name: What is Power Apps?
@@ -10,6 +12,8 @@
     href: powerapps-preview-program.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: System requirements, limits, and configuration
+    href: ../limits-and-config.md
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
@@ -25,7 +29,7 @@
     - name: Functional consultant
       href: ../learning-catalog/functional-consultant.md
     - name: Solution architect
-      href: ../learning-catalog/solution-architect.md
+      href: ../learning-catalog/solution-architect.md  
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -117,6 +121,8 @@
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md
+      - name: Configure the enhanced insert email template
+        href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
       - name: Explore data in a view on a grid page (preview)
@@ -215,8 +221,6 @@
     href: ./canvas-apps/index.yml
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
-  - name: System requirements, limits, and configuration
-    href: ./canvas-apps/limits-and-config.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
   - name: Explore sample apps
@@ -227,8 +231,6 @@
       href: ./canvas-apps/expense-report-install.md
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
-    - name: Meeting Capture app
-      href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -277,6 +279,8 @@
               href: canvas-apps/connections/cloud-storage-blob-connections.md
             - name: Azure Blob Storage
               href: canvas-apps/connections/connection-azure-blob-storage.md
+            - name: Azure DevOps
+              href: canvas-apps/connections/azure-devops.md
             - name: Dynamics 365
               href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
@@ -323,6 +327,8 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+        - name: Working with dynamic schema (experimental)
+          href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
           - name: Add and configure controls
@@ -387,7 +393,7 @@
               items:
               - name: View 3D models in Power Apps
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
-              - name: Load models with the View in 3D control
+              - name: Load models with the 3D object control
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
               - name: Add pins to 3D models
                 href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
@@ -567,6 +573,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Use the Search pane (preview)
+          href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
         - name: Show dates and times
@@ -1056,7 +1064,7 @@
     - name: Share app resources
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md    
+      href: /power-bi/visuals/power-bi-visualization-powerapp
   - name: Manage an app
     items:
     - name: Change app name and tile
@@ -1083,7 +1091,7 @@
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
       - name: Configure pipeline using YAML
         href: ./canvas-apps/test-studio-yaml-pipeline.md
-  - name: Customize a SharePoint list form
+  - name: Customize a SharePoint form
     items:
       - name: Make basic changes
         href: ./canvas-apps/customize-list-form.md
@@ -1119,13 +1127,13 @@
           href: ./canvas-apps/sharepoint/scenarios-intro.md
         - name: Filter a search list in an app
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: Use drop down list with choices from lookup column in a SharePoint list
+        - name: Use drop down list with choices from lookup column in Microsoft Lists
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: Customize an app screen based on column status inside SharePoint list
+        - name: Customize an app screen based on column status in Microsoft Lists
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
         - name: Work with permissions in a lookup list from SharePoint site
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items
+        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
@@ -1238,7 +1246,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: ./model-driven-apps/page-data-connectors.md
+            href: /powerapps-docs/maker/../canvas-apps/connections-list
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
@@ -1577,6 +1585,12 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+  - name: 'Power Apps for Windows (preview)'
+    items:
+    - name: Install Power Apps for Windows (preview)
+      href: ../mobile/windows-app-install.md
+    - name: Use Power Apps for Windows (preview)
+      href: ../mobile/windows-app-use.md
 - name: Portals
   items:
     - name: Portals
@@ -1789,6 +1803,8 @@
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Manage SSL certificates
+          href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md              
         - name: Use Portal Checker
@@ -1996,7 +2012,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md            
+            href: ./portals/component-framework-tutorial.md 
+          - name: "Tutorial: Configure rich text editor control on portals"
+            href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
             href: ./portals/component-framework-liquid.md
           - name: Implement a sample portal Web API component
@@ -2441,6 +2459,8 @@
           href: ../teams/use-the-fluent-ui-controls.md
     - name: Create additional apps
       href: ../teams/create-additional-apps.md
+    - name: Create apps from lists in Teams
+      href: ../teams/create-apps-lists.md
     - name: Work with Dataverse for Teams
       items:
         - name: Overview

@@ -1,20 +1,21 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic" 
-ms.custom: ""
-ms.date: 05/27/2021
+ms.date: 03/30/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" 
+author: "divka78" 
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
-manager: "ryjones" 
+manager: "kvivek" 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Bypass Custom Business Logic
 
@@ -50,7 +51,7 @@ Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365
 
 You can use this option with either the Web API or the Organization service.
 
-### Using the Web API
+# [Using Web API](#tab/webapi)
 
 To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution : true` as a header in the request.
 
@@ -70,12 +71,11 @@ Accept: */*
 }
 ```
 
-
-### Using the Organization Service
+# [Using the Organization Service](#tab/orgservice)
 
 There are two ways to use this with the Organization Service.
 
-#### You can set CrmServiceClient.BypassPluginExecution Property to true
+#### Set the CrmServiceClient.BypassPluginExecution property
 
 The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
 
@@ -93,11 +93,11 @@ var account = new Entity("account")
 
 svc.Create(account);
 ```
-Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to false.
+Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
 
-#### You can set the value as an optional parameter with one of the Request classes
+#### Set the value as an optional parameter
 
-The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record:
+The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class.
 
 ```csharp
 var svc = new CrmServiceClient(conn);
@@ -117,33 +117,42 @@ createRequest.Parameters.Add("BypassCustomPluginExecution", true);
 
 svc.Execute(createRequest);
 ```
-This optional parameter must be applied to each request individually. You cannot use this with the 7 other IOrganizationService Methods, such as Create, Update, Delete. You can only use the [Execute method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.execute) using one of the classes that are derived from the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
+This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>.
 
 You can use this method for data operations you initiate in your plug-ins.
 
+---
+
 ## Adding the prvBypassCustomPlugins privilege to another role
 
-Because the `prvBypassCustomPlugins` is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
+Because the `prvBypassCustomPlugins` privilege is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
 
 The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
 
-### Using Web API
+# [Using Web API](#tab/webapi)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the `roleprivileges_association` collection-valued navigation property.
+Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />.
 
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/roles(<id of role>)/roleprivileges_association/$ref HTTP/1.1
+POST [Organization URI]/api/data/v9.1/roles(<id of role>)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
 Content-Type: application/json   
 Accept: application/json   
 OData-MaxVersion: 4.0   
 OData-Version: 4.0 
 
-{  
-"@odata.id":"[Organization URI]/api/data/v9.1/privileges(148a9eaf-d0c4-4196-9852-c3a38e35f6a1)"
-} 
+{
+  "Privileges": [
+    {
+      "PrivilegeId": "148a9eaf-d0c4-4196-9852-c3a38e35f6a1",
+      "Depth": "3"
+    }
+  ]
+}
 ```
+
+You must set the <xref href="Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege" />.`Depth` property to <xref href="Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth" />.`Global` (`3`) because this is a global privilege.
 
 **Response**
 
@@ -152,29 +161,27 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```
 
-More information: [Add a reference to a collection-valued navigation property](webapi/associate-disassociate-entities-using-web-api.md#add-a-reference-to-a-collection-valued-navigation-property).
 
-### Using the Organization Service
+# [Using the Organization Service](#tab/orgservice)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the `roleprivileges_association` relationship.
+Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
 
 
 ```csharp
-var roleId = new Guid(<id of role>);
-service.Associate(
-    "role",
-    roleId,
-    new Relationship("roleprivileges_association"),
-    new EntityReferenceCollection {
-        {
-            new EntityReference("privilege", new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"))
+var request = new AddPrivilegesRoleRequest
+{
+    RoleId = new Guid("<id of role>"),
+    Privileges = new[]{
+        new RolePrivilege{
+            PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
+            Depth = PrivilegeDepth.Global
         }
     }
-);
+};
+svc.Execute(request);
 ```
 
-More information: [Associate and disassociate entities using the Organization Service](org-service/entity-operations-associate-disassociate.md).
-
+---
 
 ## Frequently asked questions (FAQ)
 

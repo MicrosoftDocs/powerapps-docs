@@ -1,19 +1,20 @@
 ---
 title: "GridRowData (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the GridRowData method.
-ms.date: 04/21/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 8139c622-e4d9-478f-9510-414d140e5556
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # GridRowData (Client API reference)
 

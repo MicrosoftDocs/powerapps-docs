@@ -2,13 +2,11 @@
 title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
 description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
-ms.subservice: pcf
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -54,7 +52,7 @@ Update the component version (minor or patch) in the component manifest file (fo
    "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
    ```
 
-## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source <Feed Url> when the build fails for authorization issues. 
+## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source &lt;Feed Url&gt; when the build fails for authorization issues.
 
    **Workaround**
 

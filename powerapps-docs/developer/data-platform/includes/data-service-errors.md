@@ -2097,7 +2097,7 @@
 |0x8004F050<br />-2147159984|Name: **LayerDesiredOrderInvalidXMLDetail**<br />Message: The LayerDesiredOrder parameter contains an invalid XML schema. Check the property [{0}].|
 |0x8004F052<br />-2147159982|Name: **LayerDesiredOrderNotAllowedOnPatch**<br />Message: The LayerDesiredOrder parameter cannot be used when importing a Patch. The parameter can only be used while importing a solution.|
 |0x8004F048<br />-2147159992|Name: **LayerDesiredOrderNotSamePublisher**<br />Message: The solution [{0}] was used in the LayerDesiredOrder parameter, but its publisher [{1}] does not match the publisher of the solution being installed: [{2}]. This parameter can be used only by solutions from the same publisher.|
-|0x8004F065<br />-2147159963|Name: **LayerDesiredOrderNotWhitelist**<br />Message: The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be whitelisted to use this feature.|
+|0x8004F065<br />-2147159963|Name: **LayerDesiredOrderNotWhitelist**<br />Message: The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be allow listed to use this feature.|
 |0x8004F047<br />-2147159993|Name: **LayerDesiredOrderPendingUpgrade**<br />Message: The solution [{0}] used in LayerDesiredOrder parameter has a pending upgrade. Please complete its upgrade before retrying this operation.|
 |0x8004F056<br />-2147159978|Name: **LayerDesiredOrderPublisherNotAllowed**<br />Message: The publisher [{0}] is not allowed to use the LayerDesiredOrder parameter.|
 |0x8004F058<br />-2147159976|Name: **LayerDesiredOrderRestrictedSolution**<br />Message: The LayerDesiredOrder parameter cannot be used on [{0}].|

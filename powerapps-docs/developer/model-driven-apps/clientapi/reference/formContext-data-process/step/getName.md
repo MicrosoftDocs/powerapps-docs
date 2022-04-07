@@ -1,21 +1,22 @@
 ---
-title: "getName (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getName method.
-ms.date: 04/19/2021
-
+title: "step.getName (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the step.getName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c1873743-0608-423b-8f5c-f74ec68c4eaf
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getName (Client API reference)
+# step.getName (Client API reference)
 
 
 

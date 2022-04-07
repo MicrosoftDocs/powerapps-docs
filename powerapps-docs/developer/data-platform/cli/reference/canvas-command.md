@@ -3,15 +3,17 @@ title: Microsoft Power Platform CLI canvas command| Microsoft Docs
 description: "Includes descriptions and supported parameters for the canvas command."
 keywords: Microsoft Power Platform CLI, code components, component framework, CLI
 ms.subservice: dataverse-developer
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 09/15/2021
-
-ms.topic: "article"
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: reference
+contributors: 
+  - JimDaly
 ---
 
-# Canvas
+# Canvas (Preview)
 
 Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
 
