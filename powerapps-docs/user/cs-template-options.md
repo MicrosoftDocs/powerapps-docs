@@ -33,7 +33,7 @@ The design canvas enables you to configure sections, columns for your layout and
 
 - Add an element or configure columns. Do the following steps:
    - Drag the element into the canvas section. When you have dragged the element to a suitable location, a blue shaded region appears. Release the mouse button to drop the element at the location.
-    - Select the element or the column layout. An add icon appears on the canvas. Select the icon for the element to appear at the location.
+   - Select the element or the column layout. An add icon appears on the canvas. Select the icon for the element to appear at the location.
 - Move a section 
 - Delete a section or a column
 - Clone a section 
