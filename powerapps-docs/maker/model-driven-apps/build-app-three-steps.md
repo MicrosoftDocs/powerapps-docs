@@ -30,12 +30,7 @@ search.app:
 
 This interactive experience guides new makers through the creation of a model-driven app. Using the modern app designer, anyone can quickly create an app in three simple steps.
 
-:::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
-
-> [!IMPORTANT]
-> This is a preview feature. More information: [Preview program for portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
-
-As part of the experience you...
+In this experience you...
 
 1. Name your app.
 1. Create a page.
@@ -43,9 +38,14 @@ As part of the experience you...
 
 Then publish and play the app.
 
+:::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
+
+> [!IMPORTANT]
+> This is a preview feature. More information: [Preview program for portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+
 ## How it works
 
-New makers will see the new tutorial banner when these conditions are true:
+New Power Apps makers will see the new tutorial banner when these conditions are true:
 
 * You have permission to create a Microsoft Dataverse database in the environment.
 * You haven't yet created and saved an app in the environment.
