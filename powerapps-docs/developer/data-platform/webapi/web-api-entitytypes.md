@@ -59,15 +59,20 @@ This element defines a common abstract type for any table that contain business 
 
 `<EntityType Name="crmbaseentity" Abstract="true" />`
 
-Because almost all entity types inherit from `crmbaseentity`, you will find `crmbaseentity` referenced when a value isn't specific to one table.
+Because all entity types that contain business data inherit from `crmbaseentity`, you will find `crmbaseentity` referenced when a value isn't specific to one table.
 
 ### expando
 
-This element defines an EntityType that inherits from crmbaseentity but is also an OpenType.
+This element defines an EntityType that inherits from crmbaseentity but is also an [OData OpenType](https://www.odata.org/getting-started/advanced-tutorial/#openType).
 
 `<EntityType Name="expando" BaseType="mscrm.crmbaseentity" OpenType="true" />`
 
-An expando entity type can be used as a parameter to an Action or Function. More information: Expando EntityType.
+An expando entity type can be used as a parameter to an Action or Function. 
+
+<!-- 
+TODO: create a topic that describes how to use Expando
+More information: Expando EntityType. 
+-->
 
 ### crmmodelbaseentity
 
@@ -75,7 +80,7 @@ Near the bottom of the $metadata document, you will find this element:
 
 `<EntityType Name="crmmodelbaseentity" Abstract="true" />`
 
-This element defines a common abstract type for any schema definitions. It is the base type for another abstract base class used for table definitions. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
+This element defines a common abstract type for any schema definitions. It is the base type for another abstract base class used for table definitions. Unless you want to create and modifiy tables, columns, and relationships you won't need to use entitytypes that inherit from this type. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## EntityType inheritance
 
@@ -83,10 +88,10 @@ For business data you will find two more abstract EntityTypes:
 
 |EntityType  |Description  |
 |---------|---------|
-|`principal`|`systemuser` and `team` EntityTypes inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned entity has. This is what allows for user-owned entities to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
-|`activitypointer`|Any table that is configured as an activity will inherit from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
+|`principal`|`systemuser` and `team` EntityTypes inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned table has. This is what allows for user-owned records to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
+|`activitypointer`|Any table that is configured as an activity will inherit from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. You can also create a custom table that represents and activity. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
 
-When working with table definitions, there another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType/> inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
+When working with table definitions, there another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType> inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## Alternate Keys
 

@@ -47,6 +47,13 @@ For more information, see these documents:
 - [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html)
 - [OData JSON Format Version 4.0](https://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html)
 
+## Next steps
+
+Learn about the Web API service documents.
+
+> [!div class="nextstepaction"]
+> [Service Documents](web-api-service-documents.md)<br/>
+
 
 ### See also  
 

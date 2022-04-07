@@ -20,7 +20,7 @@ search.app:
 ---
 # Web API Service Documents
 
-OData endpoints provide service documents that describe the capabilities of the service. Understanding these service documents will help you understand how to use the resources that are available in the environment you are working with.
+OData endpoints provide service documents that describe the capabilities of the service. Understanding these service documents will help you use the resources that are available in the environment you are working with.
 
 ## Service document
 
@@ -74,7 +74,7 @@ Append `$metadata` to the Web API endpoint to retrieve the Common Schema Definit
 
 For example: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata`
 
-This large XML document describes all the data and operations that you can use in your environment.
+This XML document describes all the tables and operations that you can use in your environment.
 
 > [!IMPORTANT]
 > This document is the source of truth for everything related to Web API. You will want to reference it frequently. Use `Ctrl+F` on this document to locate the specific `EntityType`, `Action`, `Function`, `ComplexType`, or `EnumType` that you will use. The names are case sensitive.
@@ -99,6 +99,14 @@ Near the top of the $metadata you will find this XML element:
 ```
 
 This informs you that all the items in the service are within the `Microsoft.Dynamics.CRM` namespace and that `mscrm` is the alias for the namespace. In some situations, you will need to use the fully qualified name of an object, so this will require using the namespace value.
+
+
+## Next steps
+
+Learn about entity types
+
+> [!div class="nextstepaction"]
+> [Entity Types](web-api-entitytypes.md)<br/>
 
 ### See also  
 
