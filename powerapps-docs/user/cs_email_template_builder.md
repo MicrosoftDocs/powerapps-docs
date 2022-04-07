@@ -1,3 +1,24 @@
+---
+title: "How to create an email template  in model-driven apps | MicrosoftDocs"
+description: Learn how to create an email template.
+author: mgandham
+manager: shujoshi
+
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 6/30/2021
+ms.subservice: end-user
+ms.author: gandhamm
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
+---
+
 # Create email templates
 
 Email templates are a fast and easy way to send repetitive and recurring email to multiple customers. They can help save you time and give you a way to create consistent, professional, preformatted email messages that you can use when communicating with your customers. You can view, create, and edit any email templates you've created.
