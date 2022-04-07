@@ -39,8 +39,6 @@ You can do the following:
     
 - On the **Attachments** tab, include attachments to your template.
 
-   3. **Insert dynamic text**. Allows you to use dynamic text in both the Subject line and body of the email.
-
 ## Start with existing templates
 
 Starting with an existing template means the template is automatically pre-populated with the pre-established data that you can customize. 
@@ -66,5 +64,11 @@ When you select an existing template, the following display appears:
 
    ![Creating email template copies.](media\email-template-copy-1a.png "Creating email template copies")
 
-   - **Name**. The new template you created from the existing template will display **– Copy** at the end of the template name to identify it is a copy of an existing template.
-   - **Template Editor**. All of the data is carried over from the existing template which can be edited and modified.
+You can do the following:
+
+- On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
+- On the **Editor** tab, design and customize an email template for a particular type of  message. The following options are available: 
+    -  A design canvas, where you can drag, arrange, and enter content.
+    -  A Toolbox that provides design elements that you can use to construct your message.
+    - A Layout section that allows you to choose layout types for your template. You can also customize your layout. 
+- On the **Attachments** tab, include attachments to your template.
