@@ -1,19 +1,18 @@
 ---
 title: "Conditional Operation sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample shows how to perform conditional message operations when accessing table rows of the Microsoft Dataverse."
-ms.custom: ""
-ms.date: 07/15/2021
-
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Conditional Operations sample (C#)

@@ -1,24 +1,18 @@
 ---
 title: "Web API types and operations (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes how you can find information you need from the Web API service and metadata documents, including documentation of the Web API system entity types, functions, and actions"
-ms.custom: ""
-ms.date: 04/20/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)" 
-ms.assetid: d80cfb87-d4f1-4c75-bcc8-4f54d1351e26
-caps.latest.revision: 27
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "shujoshi"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Web API types and operations
 
@@ -264,7 +258,7 @@ OData supports a wide range of data types but Dataverse doesn’t use all of the
  
 ### Lookup properties
 
-For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` matches the name of the single-valued navigation property. The exception to this pattern is when a lookup attribute of the entity can accept multiple types of entity references. A common example is how the `incident` entity `customerid` attribute may be set to a reference that is either a `contact` or `account` entity. In the <xref:Microsoft.Dynamics.CRM.incident?text=incident EntityType/> [Single-valued navigation properties](/dynamics365/customer-engagement/web-api/incident?view=dynamics-ce-odata-9#Single-valued_navigation_properties) you will find `customerid_account` and `customerid_contact` as separate single-valued navigation properties to reflect the customer associated with an opportunity. If you set one of these single-valued navigation properties, the other will be set to null because they are both bound to the `customerid` attribute. In the <xref:Microsoft.Dynamics.CRM.incident?text=incident EntityType/> [Properties](/dynamics365/customer-engagement/web-api/incident?view=dynamics-ce-odata-9#Properties) you’ll find a `_customerid_value` lookup property that contains the same value that is set for whichever of the single-valued navigation properties contain a value.  
+For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` matches the name of the single-valued navigation property. The exception to this pattern is when a lookup attribute of the entity can accept multiple types of entity references. A common example is how the `incident` entity `customerid` attribute may be set to a reference that is either a `contact` or `account` entity. In the <xref:Microsoft.Dynamics.CRM.incident?text=incident EntityType/> [Single-valued navigation properties](/dynamics365/customer-engagement/web-api/incident#Single-valued_navigation_properties) you will find `customerid_account` and `customerid_contact` as separate single-valued navigation properties to reflect the customer associated with an opportunity. If you set one of these single-valued navigation properties, the other will be set to null because they are both bound to the `customerid` attribute. In the <xref:Microsoft.Dynamics.CRM.incident?text=incident EntityType/> [Properties](/dynamics365/customer-engagement/web-api/incident#Properties) you’ll find a `_customerid_value` lookup property that contains the same value that is set for whichever of the single-valued navigation properties contain a value.  
   
 Generally, you should avoid using lookup properties and use the corresponding single-valued navigation properties instead. These properties have been included because they may be useful for certain integration scenarios. These properties are read-only and computed because they will simply reflect the changes applied using the corresponding single-valued navigation property.  
   

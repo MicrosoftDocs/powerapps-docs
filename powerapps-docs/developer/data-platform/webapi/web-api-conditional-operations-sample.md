@@ -1,24 +1,18 @@
 ---
 title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
-ms.custom: ""
-ms.date: 06/17/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: f2e5d22b-93fe-43b7-af15-3e281f3b3084
-caps.latest.revision: 13
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Conditional Operations Sample
