@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This interactive experience shows new makers how to build model-driven app for the first time. Using the modern app designer, quickly create an app in three simple steps.
+This interactive experience guides new makers through the creation of a model-driven app. Using the modern app designer, anyone can quickly create an app in three simple steps.
 
 :::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
 
@@ -46,3 +46,8 @@ Makers who don’t meet these conditions can experience this feature in a previe
 
 ### See also
 
+[Explore Power Apps for free for 30 days](../signup-for-powerapps.md)
+
+[What are model-driven apps in Power Apps?](model-driven-app-overview.md)
+
+a[Steps to building a model-driven app](app-building-steps.md)
