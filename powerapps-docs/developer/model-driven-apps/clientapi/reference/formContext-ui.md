@@ -4,7 +4,7 @@ description: "Provides properties and methods to retrieve information about the 
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 04/07/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -52,6 +52,9 @@ Provides properties and methods to retrieve information about the user interface
 |[setFormNotification](formContext-ui/setFormNotification.md)|[!INCLUDE[formContext-ui/includes/setFormNotification-description.md](formContext-ui/includes/setFormNotification-description.md)]|
 
 
+## formContext.ui.footerSection removed
+
+The formContext.ui.footerSection was removed in October of 2021. More information: [Form footers in model-driven apps won't be supported with the 2021 release wave 2](https://docs.microsoft.com/en-us/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2)
 
 ### Related topics
 
