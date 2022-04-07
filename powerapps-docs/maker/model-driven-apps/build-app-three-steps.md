@@ -35,14 +35,22 @@ This interactive experience guides new makers through the creation of a model-dr
 > [!IMPORTANT]
 > This is a preview feature. More information: [Preview program for portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
+As part of the experience you...
+
+1. Name your app.
+1. Create a page.
+1. Add the account table to the page.
+
+Then publish and play the app.
+
 ## How it works
 
 New makers will see the new tutorial banner when these conditions are true:
 
 * You have permission to create a Microsoft Dataverse database in the environment.
-* You have not yet created and saved an app in the environment.
+* You haven't yet created and saved an app in the environment.
 
-Makers who don’t meet these conditions can experience this feature in a preview environment by adding this parameter to the end of the make.preview.powerapps.com URL: ?cdsCommon.forcePowerAppsFirstRunTour=true
+Makers who don’t meet these conditions can experience this feature in a preview environment by adding this parameter to the end of the make.preview.powerapps.com URL: `?cdsCommon.forcePowerAppsFirstRunTour=true`
 
 ### See also
 
