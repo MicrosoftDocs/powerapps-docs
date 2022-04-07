@@ -1,5 +1,5 @@
 ---
-title: "Build an app in 3 steps with Power Apps"
+title: "Build an app in three steps with Power Apps"
 description: "This first run tutorial shows you how to build a model-driven app in just a few steps."
 keywords: ""
 ms.date: 04/07/2022
@@ -24,20 +24,23 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Build an app in 3 steps (preview)
+# Build an app in three steps (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This interactive experience shows new makers how to build model-driven app for the first time. Using the modern app designer, quickly create and play an app in three simple steps.
+This interactive experience shows new makers how to build model-driven app for the first time. Using the modern app designer, quickly create an app in three simple steps.
 
+:::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
 
+> [!IMPORTANT]
+> This is a preview feature. More information: [Preview program for portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 ## How it works
 
 New makers will see the new tutorial banner when these conditions are true:
 
 * You have permission to create a Microsoft Dataverse database in the environment.
-* You have not yet created and saved an app.
+* You have not yet created and saved an app in the environment.
 
 Makers who don’t meet these conditions can experience this feature in a preview environment by adding this parameter to the end of the make.preview.powerapps.com URL: ?cdsCommon.forcePowerAppsFirstRunTour=true
 
