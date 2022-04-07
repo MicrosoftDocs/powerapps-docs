@@ -1,6 +1,27 @@
-# Customize an email template using the Editor
+---
+title: "Customize an email template using the template editor| MicrosoftDocs"
+description: Learn how to create an email template.
+author: mgandham
+manager: shujoshi
 
-Use the Editor tab in Email Template page to create a customized email template per your business requirements. The Editor tab has three sections:
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 6/30/2021
+ms.subservice: end-user
+ms.author: gandhamm
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
+---
+
+# Customize an email template using the template editor
+
+Use the **Editor** tab in the **Email Template** page to create a customized email template per your business requirements. The Editor tab has three sections:
 
 - Design canvas
 -  Toolbox
