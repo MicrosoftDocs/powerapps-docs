@@ -1,18 +1,18 @@
 {
   "redirections": [
     {
-      "source_path": "powerapps-docs/developer/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md",
-      "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui#formcontextuifootersection-removed",
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md",
+      "redirect_url": "formcontext-ui#formcontextuifootersection-removed",
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/developer/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/getVisible.md",
-      "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui#formcontextuifootersection-removed",
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/getVisible.md",
+      "redirect_url": "../formcontext-ui#formcontextuifootersection-removed",
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/developer/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md",
-      "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui#formcontextuifootersection-removed",
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md",
+      "redirect_url": "../formcontext-ui#formcontextuifootersection-removed",
       "redirect_document_id": "false"
     },
     {
