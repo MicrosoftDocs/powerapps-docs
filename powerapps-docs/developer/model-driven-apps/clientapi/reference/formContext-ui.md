@@ -54,7 +54,7 @@ Provides properties and methods to retrieve information about the user interface
 
 ## formContext.ui.footerSection removed
 
-The formContext.ui.footerSection was removed in October of 2021. More information: [Form footers in model-driven apps won't be supported with the 2021 release wave 2](https://docs.microsoft.com/en-us/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2)
+The formContext.ui.footerSection was removed in October of 2021. More information: [Form footers in model-driven apps won't be supported with the 2021 release wave 2](/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2)
 
 ### Related topics
 
