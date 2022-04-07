@@ -84,5 +84,5 @@ When you select an existing template, the following display appears:
 You can do the following:
 
 - On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
-- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see:see: [Customize an email template using the Editor](cs-template-options.md)
+- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
 - On the **Attachments** tab, include attachments to your template.
