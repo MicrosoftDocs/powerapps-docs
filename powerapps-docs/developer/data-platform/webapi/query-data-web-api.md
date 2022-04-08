@@ -1,23 +1,18 @@
 ---
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to query Microsoft Dataverse table data using the Web API and the various system query options that can be applied in these queries."
-ms.custom: ""
-ms.date: 03/13/2022
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "kvivek"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Query data using the Web API

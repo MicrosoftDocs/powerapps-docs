@@ -1,25 +1,22 @@
 ---
 title: "Use XRM tooling to execute actions in Microsoft Dataverse (Dataverse) | Microsoft Docs"
 description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Microsoft Dataverse data"
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 845a198f-a2b1-4c38-83e8-0968e684b627
-caps.latest.revision: 13
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use XRM tooling to execute actions in Microsoft Dataverse
 

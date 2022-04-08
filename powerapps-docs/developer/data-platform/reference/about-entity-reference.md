@@ -1,12 +1,12 @@
 ---
 title: "Dataverse table/entity reference | Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific tables, the default columns/attributes of each table/entity and the relationships between tables in Microsoft Dataverse"
-author: JimDaly
-ms.devlang: na
+author: phecke
 ms.topic: reference
-ms.date: 03/27/2021
-ms.author: jdaly
-ms.reviewer: "pehecke"
+ms.date: 04/03/2022
+ms.author: pehecke
+ms.reviewer: jdaly
+manager: kvivek
 search.audienceType: 
   - developer
 search.app: 

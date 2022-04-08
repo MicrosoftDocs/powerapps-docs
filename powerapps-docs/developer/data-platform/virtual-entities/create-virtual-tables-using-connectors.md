@@ -12,6 +12,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Create virtual tables using the virtual connector provider (preview)
 

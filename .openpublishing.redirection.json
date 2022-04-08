@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md",
+      "redirect_url": "formcontext-ui#formcontextuifootersection-removed",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/getVisible.md",
+      "redirect_url": "../formcontext-ui#formcontextuifootersection-removed",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md",
+      "redirect_url": "../formcontext-ui#formcontextuifootersection-removed",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/sample-create-retrieve-outlook-filters.md",
+      "redirect_url": "../data-platform/org-service/samples/create-retrieve-outlook-filters",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/install-remove-sample-data.md",
+      "redirect_url": "../data-platform/sample-data",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/work-with-discovery-service.md",
+      "redirect_url": "../data-platform/org-service/samples/access-discovery-service",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/create-client-app.md",
+      "redirect_url": "../data-platform/connect-dataverse",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/on-premises-options.md",
+      "redirect_url": "../data-platform",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/customapi-table-columns.md",
       "redirect_url": "custom-api-tables#custom-api-table-columns",
       "redirect_document_id": "false"
@@ -707,17 +747,17 @@
     },
     {
       "source_path": "powerapps-docs/admin-view-user-licenses.md",
-      "redirect_url": "/powerapps/administrator/admin-view-user-licenses",
+      "redirect_url": "/power-platform/admin/admin-view-user-licenses",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/app-analytics.md",
-      "redirect_url": "/powerapps/administrator/index",
+      "redirect_url": "/power-platform/admin/analytics-powerapps",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/create-database.md",
-      "redirect_url": "/powerapps/administrator/create-database",
+      "redirect_url": "/power-platform/admin/create-database",
       "redirect_document_id": "false"
     },
     {
@@ -1172,7 +1212,7 @@
     },
     {
       "source_path": "powerapps-docs/controls/control-text-input.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/controls/control-text-input",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/control-text-input",
       "redirect_document_id": "false"
     },
     {
