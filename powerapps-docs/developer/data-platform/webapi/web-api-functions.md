@@ -26,14 +26,14 @@ Every function has a `Name` attribute. This name will be part of the URL when yo
 
 ## Bound Functions
 
-Functions may have a `IsBound="true"` attribute. This means it is a *bound* function. Functions without the `IsBound` attribute are *unbound*. A bound function means that the first parameter is a reference to a to a table record or to an entity set.
+Just like actions, functions may have a `IsBound="true"` attribute. This means it is a *bound* function. Functions without the `IsBound` attribute are *unbound*. A bound function means that the first parameter is a reference to a to a table record or to an entity set.
 
 When an function is bound, it will have a reference to a specific item within the service namespace. To use the function, you must use the fully qualified name including the `Microsoft.Dynamics.CRM` namespace. More information: [Service namespace](web-api-service-documents.md#service-namespace)
 
 
 ## Composable functions
 
-Functions may have a `IsComposable="true"` attribute. This means that you can append some system query options such as `$filter` or `$select` to the URL to specify the results returned. This option is only available for specific system functions. You cannot create a function using Custom API that is composable.
+Functions may have a `IsComposable="true"` attribute. This means that you can append some system query options such as `$filter` or `$select` to the URL to specify the results returned. This option is only available for specific system functions. You cannot create a function using [Custom API](../custom-api.md) that is composable.
 
 ## Parameters
 
@@ -57,7 +57,7 @@ Functions MUST return values. It will always have a `ReturnType` element.
 
 ## Function definition examples
 
-The following represent some examples of `Function` definitions showing different binding patterns. Each of these examples returns an integer value.
+The following represent some fictional examples of `Function` definitions showing different binding patterns. Each of these examples returns an integer value.
 
 ### Unbound functions
 
@@ -96,9 +96,16 @@ A function bound to the `account` EntitySet with a single integer `Number` param
 
 ## Overloaded functions
 
-Usually, each function you find in the $metadata will be the only function with that name. However bound functions can have multiple definitions when bound to different types. The system <xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" /> and <xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" /> functions are some examples. You cannot create an overloaded function using Custom API.
+Usually, each function you find in the $metadata will be the only function with that name. However bound functions can have multiple definitions when bound to different types. The system <xref:Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function> and <xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function> functions are some examples. You cannot create an overloaded function using [Custom API](../custom-api.md).
 
 More information: [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03:12.2.1.1 Function Overload Rules](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Function_Overload_Rules)
+
+## Next steps
+
+Learn about Complex & Enum types.
+
+> [!div class="nextstepaction"]
+> [Complex & Enum types](web-api-complex-enum-types.md)<br/>
 
 ### See also  
 

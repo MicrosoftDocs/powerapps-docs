@@ -141,6 +141,14 @@ For example, every many-to-many relationship has an *intersect table* which supp
 You can't work with entity types that represent intersect tables directly because all the properties are read-only. Perform operations on the collection-valued navigation properties. More information: [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)
 
 
+## Next steps
+
+Learn about Action Definitions.
+
+> [!div class="nextstepaction"]
+> [Action Definitions](web-api-actions.md)<br/>
+
+
 ### See also  
 
 [Use the Dataverse Web API](overview.md)<br />

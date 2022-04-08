@@ -53,7 +53,7 @@ Actions may return values. When an action returns a value, it will have a `Retur
 
 ## Action definition examples
 
-The following represent some examples of `Action` definitions showing different binding patterns. Each of these examples returns an integer value.
+The following represent some fictional examples of `Action` definitions showing different binding patterns. Each of these examples returns an integer value.
 
 ### Unbound actions
 
@@ -96,9 +96,16 @@ An action bound to the `account` EntitySet with a single integer `Number` parame
 
 ## Overloaded Actions
 
-Usually, each action you find in the $metadata will be the only action with that name. However bound actions can have multiple definitions when bound to different types. The `AddItemCampaign` action included the marketing solution is one example. You cannot create an overloaded action using Custom API.
+Usually, each action you find in the $metadata will be the only action with that name. However bound actions can have multiple definitions when bound to different types. The `AddItemCampaign` action included the marketing solution is one example. You cannot create an overloaded action using [Custom API](../custom-api.md).
 
 More information: [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03: 12.1.1.1 Action Overload Rules](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc451407830)
+
+## Next steps
+
+Learn about Function Definitions.
+
+> [!div class="nextstepaction"]
+> [Function Definitions](web-api-functions.md)<br/>
 
 ### See also  
 

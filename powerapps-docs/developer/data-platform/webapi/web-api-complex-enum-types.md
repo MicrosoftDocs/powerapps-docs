@@ -26,7 +26,7 @@ Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-
 
 Complex types are keyless named structured types consisting of a set of properties. Complex types are commonly used as property values in table definitions, or as parameters or return values for operations.
 
-For example the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" />  returns this <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />:
+For example the <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function>  returns this <xref:Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType>:
 
 ```xml
 <ComplexType Name="WhoAmIResponse">  
@@ -40,7 +40,7 @@ For example the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" 
 
 Enumeration types are named primitive types whose values are named constants with underlying integer values.
 
-For example, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.AccessRights?text=AccessRights EnumType" />
+For example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights EnumType>
 
 ```xml
 <EnumType Name="AccessRights">  
@@ -56,7 +56,8 @@ For example, the following is the definition of the <xref href="Microsoft.Dynami
 </EnumType>
 ```
 
-The `AccessRights` enum type is used for the `AccessMask` property of the <xref href="Microsoft.Dynamics.CRM.PrincipalAccess?text=PrincipalAccess ComplexType" />, which is used to set the `PrincipalAccess` parameter for the <xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />. This is the action used to change the access when sharing a record.
+The `AccessRights` enum type is used for the `AccessMask` property of the <xref:Microsoft.Dynamics.CRM.PrincipalAccess?text=PrincipalAccess ComplexType>, which is used to set the `PrincipalAccess` parameter for the <xref:Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action>. This is the action used to change the access when sharing a record.
+
 The example below grants `ReadAccess`, `WriteAccess`, `DeleteAccess`, `AppendAccess`, and `AssignAccess` access rights to the `account` record specified by the `Target` parameter to the `systemuser` designated by the `Principal` property of the `PrincipalAccess` complex type.
 
 **Request**
@@ -88,6 +89,14 @@ Accept: application/json
 ```http
 HTTP/1.1 204 No Content
 ```
+
+## Next steps
+
+Perform operations using the Web API.
+
+> [!div class="nextstepaction"]
+> [Perform operations using the Web API](perform-operations-web-api.md)<br/>
+
 
 ### See also  
 
