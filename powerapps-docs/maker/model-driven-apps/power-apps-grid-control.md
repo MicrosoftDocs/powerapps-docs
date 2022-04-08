@@ -20,7 +20,7 @@ search.app:
 ---
 # Power Apps read-only grid control
 
-The Power Apps read-only grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps read-only grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. This controlwill eventually replace the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
+The Power Apps read-only grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps read-only grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. This control will eventually replace the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
 
 > [!NOTE] 
 > - The Power Apps read-only grid control is now the default control for all previously read-only views and subgrids.
