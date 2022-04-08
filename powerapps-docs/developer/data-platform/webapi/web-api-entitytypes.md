@@ -118,14 +118,12 @@ The following example shows the annotation when the `account` entity has been co
 
 More information: [Retrieve using an alternate key](retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
 
-<!-- 
-TODO:
-Use Alternate Keys
-o	Update using an alternate key
-o	Delete using an alternate key
-o	Reference a record using alternate key in a Function
-o	Reference a record using an alternate key in an Action
--->
+## Next steps
+
+Learn about properties.
+
+> [!div class="nextstepaction"]
+> [Properties](web-api-properties.md)<br/>
 
 ### See also  
 

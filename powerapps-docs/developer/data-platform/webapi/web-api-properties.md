@@ -87,6 +87,14 @@ To change the value of a lookup property, you must change the single-valued navi
 
 When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes which aren’t represented by a single-valued navigation property. More information: [Retrieve data about lookup properties](query-data-web-api.md#retrieve-data-about-lookup-properties).
 
+## Next steps
+
+Learn about Navigation Properties.
+
+> [!div class="nextstepaction"]
+> [Navigation Properties](web-api-navigation-properties.md)<br/>
+
+
 ### See also  
 
 [Use the Dataverse Web API](overview.md)<br />

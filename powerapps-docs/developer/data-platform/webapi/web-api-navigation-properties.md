@@ -34,11 +34,12 @@ The `NavigationProperty` element describes data related to the current entity ty
 |`Partner`|The name of the navigation property on the other side of the relationship.|
 |`Nullable="false"`|Whether the value can be null.|
 
-There are two types of navigation properties: ***single-valued*** and ***collection-valued***. This distinction is important because capabilities for each type of navigation property are different.
+> [!IMPORTANT]
+> There are two types of navigation properties: ***single-valued*** and ***collection-valued***. This distinction is important because capabilities for each type of navigation property are different.
 
 ## Single-valued navigation properties
 
-When a navigation property Type refers to a single value, it represents a many-to-one relationship to set a reference to another table record. This is commonly called a 'lookup'. For example, this is the `account` table `createdby` navigation property:
+When a navigation property `Type` refers to a single value, it represents a many-to-one relationship to set a reference to another table record. This is commonly called a 'lookup'. For example, this is the `account` table `createdby` navigation property:
 
 ```xml
 <NavigationProperty 
@@ -56,6 +57,8 @@ This single-valued navigation property connects multiple `account` records to a 
 
 ### Lookup properties
 
+We introduced Lookup properties in the the [Web API Properties](web-api-properties.md) topic. See [Lookup properties](web-api-properties.md#lookup-properties).
+
 Single-valued navigation properties will also have a `ReferentialConstraint` with a `Property` attribute that refers to a lookup property. You can recognize lookup properties because they use the following naming convention: `_<name>_value`. 
 
 The `ReferentialConstraint` will also have a `ReferencedProperty` attribute that identifies the primary key name of the related entity type.
@@ -72,28 +75,28 @@ An entity type may have something like the following combination where a single 
         <PropertyRef Name="socialprofileid" />
     </Key>
     <Property 
-        Name="_customerid_value" 
+        Name="_customerid_value" <!-- lookup property -->
         Type="Edm.Guid">
         <Annotation 
             Term="Org.OData.Core.V1.Description" 
             String="Shows the customer that this social profile belongs to." />
     </Property>
     <NavigationProperty 
-        Name="customerid_contact" 
+        Name="customerid_contact" <!-- Name different from lookup property -->
         Type="mscrm.contact" 
         Nullable="false" 
         Partner="Socialprofile_customer_contacts">
         <ReferentialConstraint 
-            Property="_customerid_value" 
+            Property="_customerid_value" <!--  Reference to lookup property  -->
             ReferencedProperty="contactid" />
     </NavigationProperty>
     <NavigationProperty 
-        Name="customerid_account" 
+        Name="customerid_account" <!-- Name different from lookup property -->
         Type="mscrm.account" 
         Nullable="false" 
         Partner="Socialprofile_customer_accounts">
         <ReferentialConstraint 
-            Property="_customerid_value" 
+            Property="_customerid_value"  <!--  Reference to lookup property  -->
             ReferencedProperty="accountid" />
     </NavigationProperty>
 </EntityType>

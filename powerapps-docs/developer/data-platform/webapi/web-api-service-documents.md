@@ -103,7 +103,7 @@ This informs you that all the items in the service are within the `Microsoft.Dyn
 
 ## Next steps
 
-Learn about entity types
+Learn about entity types.
 
 > [!div class="nextstepaction"]
 > [Entity Types](web-api-entitytypes.md)<br/>
