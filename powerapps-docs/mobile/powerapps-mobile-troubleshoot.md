@@ -136,8 +136,8 @@ If you experience a reset, contact your app developer, and point them to this to
 
 For more information for developers, see:
 
-- [Blog post: PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
-- [Whitepaper: PowerApps canvas app coding
+- Blog post: [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
+- Whitepaper: [PowerApps canvas app coding
 standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
 
 
