@@ -1,25 +1,18 @@
 ---
 title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "These code samples shows how to query data using the Web API. These samples are implemented using client-side JavaScript and C#."
-ms.custom: ""
-ms.date: 06/15/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 9457ce4f-0ef6-4085-8346-fe3134ec7106
-caps.latest.revision: 18
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Query Data Sample

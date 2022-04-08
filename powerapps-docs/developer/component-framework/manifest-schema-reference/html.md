@@ -1,17 +1,14 @@
 ---
 title: HTML Element | Microsoft Docs
-description: 
+description: Use HTML web resources to create user interface elements for client extensions. 
 keywords:
 ms.subservice: pcf
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/26/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "reference"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

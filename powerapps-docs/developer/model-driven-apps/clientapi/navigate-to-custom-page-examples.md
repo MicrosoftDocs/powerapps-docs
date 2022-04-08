@@ -1,10 +1,10 @@
 ---
 title: "Navigating to and from a custom page in your model-driven app using client API" 
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/28/2022
+author: HemantGaur
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "how-to"
@@ -14,8 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors:
+contributors: 
   - JimDaly
+  - caburk
 ---
 
 # Navigating to a custom page using client API

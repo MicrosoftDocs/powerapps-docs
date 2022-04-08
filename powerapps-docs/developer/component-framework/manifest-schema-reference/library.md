@@ -1,17 +1,14 @@
 ---
 title: Library Element | Microsoft Docs
-description: 
+description: Refers to external, published libraries that multiple controls from various ISVs rely on.
 keywords:
 ms.subservice: pcf
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/26/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "reference"
 ---
 
 # library element
