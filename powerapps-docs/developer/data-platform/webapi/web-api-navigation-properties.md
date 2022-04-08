@@ -54,12 +54,12 @@ When a navigation property `Type` refers to a single value, it represents a many
 
 This single-valued navigation property connects multiple `account` records to a single `systemuser` record. Each `systemuser` record will have a collection-valued navigation property named `lk_accountbase_createdby` that connects them to the `account` records they have created.
 
-These values are stored in the relationship definition.
+These values are stored in the relationship definitions that can be accessed either using the Organization Service SDK <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> or Web API <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata> entity type.
 
-|Attribute   |<xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> property|
+|Attribute   | OneToManyRelationshipMetadata property|
 |---------|---------|
-|`Name`|<xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingEntityNavigationPropertyName>|
-|`Partner`|<xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencedEntityNavigationPropertyName>|
+|`Name`|`ReferencingEntityNavigationPropertyName`|
+|`Partner`|`ReferencedEntityNavigationPropertyName`|
 
 
 ### Lookup properties
