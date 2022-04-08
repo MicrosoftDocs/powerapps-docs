@@ -57,7 +57,6 @@ Learn about the Web API service documents.
 
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
 [Web API Service Documents](web-api-service-documents.md)<br />
 [Web API EntityTypes](web-api-entitytypes.md)<br />
 [Web API Properties](web-api-properties.md)<br />
@@ -65,6 +64,7 @@ Learn about the Web API service documents.
 [Web API Actions](web-api-actions.md)<br />
 [Web API Functions](web-api-functions.md)<br />
 [Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 [Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br/>
 

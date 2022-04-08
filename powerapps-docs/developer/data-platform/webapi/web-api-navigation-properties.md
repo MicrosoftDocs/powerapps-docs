@@ -203,7 +203,6 @@ Learn about Action Definitions.
 
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Web API Service Documents](web-api-service-documents.md)<br />
 [Web API EntityTypes](web-api-entitytypes.md)<br />
@@ -211,6 +210,7 @@ Learn about Action Definitions.
 [Web API Actions](web-api-actions.md)<br />
 [Web API Functions](web-api-functions.md)<br />
 [Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03 7.1 Element edm:NavigationProperty](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752537)<br />
 
 

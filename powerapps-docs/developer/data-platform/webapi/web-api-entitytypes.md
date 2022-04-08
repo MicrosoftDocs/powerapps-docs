@@ -121,10 +121,14 @@ Learn about properties.
 
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Web API Service Documents](web-api-service-documents.md)<br />
 [Web API Properties](web-api-properties.md)<br />
+[Web API Navigation Properties](web-api-navigation-properties.md)<br />
+[Web API Actions](web-api-actions.md)<br />
+[Web API Functions](web-api-functions.md)<br />
+[Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -99,13 +99,14 @@ Perform operations using the Web API.
 
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Web API Service Documents](web-api-service-documents.md)<br />
 [Web API EntityTypes](web-api-entitytypes.md)<br />
 [Web API Properties](web-api-properties.md)<br />
 [Web API Navigation Properties](web-api-navigation-properties.md)<br />
 [Web API Actions](web-api-actions.md)<br />
+[Web API Functions](web-api-functions.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03 9.1 9 Complex Type](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Complex_Type)<br />
 [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03 9.1 10 Enumeration Type](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Enumeration_Type)<br />
 

@@ -21,7 +21,7 @@ contributors:
 
 Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), you will find `Action` elements that describe operations that change data.
 
-Every action has a `Name` attribute. This name will be part of the URL when you use `HTTP` `POST`, sending any defined parameters for the action in the body of the request.
+Every action has a `Name` attribute. This name will be part of the URL when you use `HTTP` `POST`, sending any defined parameters for the action in the body of the request. More information: [Use Web API actions](use-web-api-actions.md)
 
 ## Bound actions
 
@@ -38,7 +38,7 @@ Actions usually have one or more `Parameter` elements. Each parameter will have 
 |---------|---------|
 |`Name`|The name of the parameter.<br />The name is unique unless the `Action` is overloaded. More information: [Overloaded Actions](#overloaded-actions).|
 |`Type`|The type of the parameter.|
-|`Nullable="false"`|Whether the parameter can accept a null value|
+|`Nullable="false"`|Whether the parameter can accept a null value.|
 
 
 ## ReturnType
@@ -63,7 +63,6 @@ An unbound action with a single integer `Number` parameter.
     <Parameter Name="Number" Type="Edm.Int32" Nullable="false" />
     <ReturnType Type="Edm.Int32" Nullable="false" />
 </Action>
-
 ```
 
 ### Action bound to an entity
@@ -76,7 +75,6 @@ An action bound to the `account` entity with a single integer `Number` parameter
     <Parameter Name="Number" Type="Edm.Int32" Nullable="false" />
     <ReturnType Type="Edm.Int32" Nullable="false" />
 </Action>
-
 ```
 
 ### Action bound to an entity set
@@ -89,15 +87,13 @@ An action bound to the `account` EntitySet with a single integer `Number` parame
     <Parameter Name="Number" Type="Edm.Int32" Nullable="false" />
     <ReturnType Type="Edm.Int32" Nullable="false" />
 </Action>
-
-
 ```
 
 ## Overloaded Actions
 
 Usually, each action you find in the $metadata will be the only action with that name. However bound actions can have multiple definitions when bound to different types. The `AddItemCampaign` action included the marketing solution is one example. You cannot create an overloaded action using [Custom API](../custom-api.md).
 
-More information: [OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03: 12.1.1.1 Action Overload Rules](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc451407830)
+More information: [Action Overload Rules](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc451407830)
 
 ## Next steps
 
@@ -108,7 +104,6 @@ Learn about Function Definitions.
 
 ### See also  
 
-[Use the Dataverse Web API](overview.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Web API Service Documents](web-api-service-documents.md)<br />
 [Web API EntityTypes](web-api-entitytypes.md)<br />
@@ -116,7 +111,8 @@ Learn about Function Definitions.
 [Web API Navigation Properties](web-api-navigation-properties.md)<br />
 [Web API Functions](web-api-functions.md)<br />
 [Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
-[OData Version 4.0. Part 3: Common Schema Definition Language (CSDL) Plus Errata 03 Element edm:Action](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752579)<br />
+[Use the Dataverse Web API](overview.md)<br />
+[OData 4.0 Action specification](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752579)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
