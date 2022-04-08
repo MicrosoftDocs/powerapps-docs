@@ -132,7 +132,13 @@ When you run a canvas or model-driven app on Power Apps mobile it can reset if t
 
 Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest specificized device that your end-users will use.
 
-If you experience a reset, contact your app developer, and point them to this topic. For more information for developers, see [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/). Note, review the section titled, **Optimizing for performance**.
+If you experience a reset, contact your app developer, and point them to this topic. 
+
+For more information for developers, see:
+
+- [Blog post: PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/). 
+- [Whitepaper: PowerApps canvas app coding
+standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
 
 
 
