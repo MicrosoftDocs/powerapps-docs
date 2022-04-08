@@ -23,7 +23,7 @@ search.app:
 The Power Apps read-only grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps read-only grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. This control will eventually replace the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
 
 > [!NOTE] 
-> - The Power Apps read-only grid control is now the default control for all previously read-only views and subgrids.
+> As of April 2022, the Power Apps read-only grid control is the default control for all read-only views and subgrids.
 
 ## Add the Power Apps read-only grid control to views for a table
 
@@ -49,6 +49,15 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 1. Select the subgrid where you want to configure the Power Apps grid control, and then select **Change Properties** on the command bar.
 1. In the **Set Properties** dialog box, select the **Controls** tab, select **Add Control**, and then select **Power Apps Grid**. 
 1. To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
+
+## Opt out of the Power Apps read-only grid control
+While the Power Apps read-only grid control became the default grid experience in April 2022, you can opt your organization out of the automatic switch to the this grid. 
+
+1. Go to the [Power Platform Admin Center](https://admin.powerplatform.com/) > Environments > Features.
+2. Turn off the **Enable the modern read-only grid experience** option in the **Grids and views** section.
+
+> [!NOTE]
+> The modern read-only grid will eventually become the default read-only grid experience, at which point this setting will be removed.  
 
 ## Known issues and limitations
 
