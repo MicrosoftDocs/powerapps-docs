@@ -512,13 +512,6 @@
         href: clientapi/reference/formcontext-ui/setFormEntityName.md
       - name: setFormNotification
         href: clientapi/reference/formcontext-ui/setFormNotification.md
-    - name: formContext.ui.footerSection
-      href: clientapi/reference/formcontext-ui-footerSection.md
-      items: 
-      - name: getVisible
-        href: clientapi/reference/formcontext-ui-footerSection/getVisible.md
-      - name: setVisible
-        href: clientapi/reference/formcontext-ui-footerSection/setVisible.md
     - name: formContext.ui.formSelector
       href: clientapi/reference/formcontext-ui-formselector.md
       items:
