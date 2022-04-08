@@ -1,22 +1,21 @@
 ---
 title: "Web API Complex and Enumeration types (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Complex and Enumeration types elements defined for the Dataverse Web API."
-ms.custom: ""
-ms.date: 11/24/2021
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)" 
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Web API Complex and Enumeration types
 

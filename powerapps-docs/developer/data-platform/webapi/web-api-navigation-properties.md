@@ -1,22 +1,21 @@
 ---
 title: "Web API Navigation Properties (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Navigation Property elements defined for EntityTypes within the Dataverse Web API."
-ms.custom: ""
-ms.date: 11/24/2021
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)" 
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Web API Navigation Properties
 
@@ -29,7 +28,7 @@ The `NavigationProperty` element describes data related to the current entity ty
 
 |Attribute |Description  |
 |---------|---------|
-|`Name`|The name of the navigation property. This value is case sensitive.|
+|`Name`|The name of the navigation property. This value is case sensitive. |
 |`Type`|The related entity type. This can be to a single value or a collection of a type.|
 |`Partner`|The name of the navigation property on the other side of the relationship.|
 |`Nullable="false"`|Whether the value can be null.|
@@ -54,6 +53,14 @@ When a navigation property `Type` refers to a single value, it represents a many
 ```
 
 This single-valued navigation property connects multiple `account` records to a single `systemuser` record. Each `systemuser` record will have a collection-valued navigation property named `lk_accountbase_createdby` that connects them to the `account` records they have created.
+
+These values are stored in the relationship definition.
+
+|Attribute   |<xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> property|
+|---------|---------|
+|`Name`|<xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencingEntityNavigationPropertyName>|
+|`Partner`|<xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.ReferencedEntityNavigationPropertyName>|
+
 
 ### Lookup properties
 

@@ -1,22 +1,21 @@
 ---
 title: "Web API Service Documents (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment."
-ms.custom: ""
-ms.date: 11/24/2021
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)" 
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Web API Service Documents
 

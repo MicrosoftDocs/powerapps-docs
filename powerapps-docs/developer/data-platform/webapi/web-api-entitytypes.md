@@ -1,22 +1,21 @@
 ---
 title: "Web API EntityTypes (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData EntityTypes which are named structured types with a key. EntityTypes describe the data types available in Dataverse Web API."
-ms.custom: ""
-ms.date: 11/24/2021
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)" 
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Web API EntityTypes
 
@@ -26,15 +25,15 @@ Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-
 
 |Attribute  |Description  |
 |---------|---------|
-|Name     |The name of the type|
-|BaseType |The EntityType that the type inherits from.|
+|`Name`     |The name of the type. This is the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> for the table.|
+|`BaseType` |The EntityType that the type inherits from.|
 
 For example, this is the `EntityType` element for the `account` entity, excluding properties and navigation properties.
 
 ```xml
 <EntityType Name="account" BaseType="mscrm.crmbaseentity">  
   <Key>  
-    <PropertyRef Name="accountid" />  
+    <PropertyRef Name="accountid" />  <!--The name of the primary key --> 
   </Key>  
   <!--Properties and navigation properties removed for brevity-->  
   <Annotation Term="Org.OData.Core.V1.Description" String="Business that represents a customer or potential customer. The company that is billed in business transactions." />  
@@ -63,16 +62,11 @@ Because all entity types that contain business data inherit from `crmbaseentity`
 
 ### expando
 
-This element defines an EntityType that inherits from crmbaseentity but is also an [OData OpenType](https://www.odata.org/getting-started/advanced-tutorial/#openType).
+This element defines an entity type that inherits from `crmbaseentity` but is also an [OData OpenType](https://www.odata.org/getting-started/advanced-tutorial/#openType).
 
 `<EntityType Name="expando" BaseType="mscrm.crmbaseentity" OpenType="true" />`
 
-An expando entity type can be used as a parameter to an Action or Function. 
-
-<!-- 
-TODO: create a topic that describes how to use Expando
-More information: Expando EntityType. 
--->
+An expando entity type can be used as a parameter to an action or function. 
 
 ### crmmodelbaseentity
 
@@ -80,18 +74,18 @@ Near the bottom of the $metadata document, you will find this element:
 
 `<EntityType Name="crmmodelbaseentity" Abstract="true" />`
 
-This element defines a common abstract type for any schema definitions. It is the base type for another abstract base class used for table definitions. Unless you want to create and modifiy tables, columns, and relationships you won't need to use entitytypes that inherit from this type. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
+This element defines a common abstract type for any schema definitions. It is the base type for another abstract base class used for table definitions. Unless you want to create and modify tables, columns, and relationships using Web API you won't need to use entity types that inherit from this type. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## EntityType inheritance
 
-For business data you will find two more abstract EntityTypes:
+For business data you will find two more abstract entity types that inherit from `crmbaseentity`:
 
 |EntityType  |Description  |
 |---------|---------|
-|`principal`|`systemuser` and `team` EntityTypes inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned table has. This is what allows for user-owned records to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
-|`activitypointer`|Any table that is configured as an activity will inherit from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. You can also create a custom table that represents and activity. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
+|`principal`|`systemuser` and `team` entity types inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned table has. This is what allows for user-owned records to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
+|`activitypointer`|Any table that is configured as an activity will inherit from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. You can also create a custom table that represents an activity. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
 
-When working with table definitions, there another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType> inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
+When working with table definitions, there another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase> entity type inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## Alternate Keys
 

@@ -1,22 +1,21 @@
 ---
 title: "Web API Properties (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Property elements defined for EntityTypes within the Dataverse Web API."
-ms.custom: ""
-ms.date: 11/24/2021
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)" 
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Web API Properties
 
@@ -26,8 +25,8 @@ Each `Property` element has the following attributes:
 
 |Attribute  |Description  |
 |---------|---------|
-|`Name`|The name of the property. This value is case sensitive.|
-|`Type`|The primitive type of the property. See Primitive types used by Dataverse|
+|`Name`|The name of the property. This is usually the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> of the column and is always lower case. One exception to this is [Lookup properties](#lookup-properties).|
+|`Type`|The primitive type of the property. See [Primitive types used by Dataverse](#primitive-types-used-by-dataverse)|
 
 When you retrieve the $metadata document with [Metadata annotations](web-api-service-documents.md#metadata-annotations) you can see some `Annotation` elements that can be useful. For example, the following `name` and `openrevenue` properties:
 
@@ -65,21 +64,21 @@ The following are primitive types currently used by Dataverse.
 
 |Type|Description|
 |---------|---------|
-|Edm.Binary|Binary data. Used for file and image data.|
-|Edm.Boolean|Binary-valued logic.|
-|Edm.Date|Date without a time-zone offset.|
-|Edm.DateTimeOffset|Date and time with a time-zone offset, no leap seconds|
-|Edm.Decimal|Numeric values with fixed precision and scale|
-|Edm.Double|IEEE 754 binary64 floating-point number (15-17 decimal digits)|
-|Edm.Guid|16-byte (128-bit) unique identifier|
-|Edm.Int16|Signed 16-bit integer. Used only for certain schema EntityType properties|
-|Edm.Int32|Signed 32-bit integer|
-|Edm.Int64|Signed 64-bit integer|
-|Edm.String|Sequence of UTF-8 characters<br />This type may include the `Unicode="false"` facet.<br /><br />When this facet exists, the string property will only contain and accept string values with characters limited to the ASCII character set.<br /><br />If no value is specified, the Unicode facet defaults to true.|
+|`Edm.Binary`|Binary data. Used for file and image data.|
+|`Edm.Boolean`|Binary-valued logic.|
+|`Edm.Date`|Date without a time-zone offset.|
+|`Edm.DateTimeOffset`|Date and time with a time-zone offset, no leap seconds|
+|`Edm.Decimal`|Numeric values with fixed precision and scale|
+|`Edm.Double`|IEEE 754 binary64 floating-point number (15-17 decimal digits)|
+|`Edm.Guid`|16-byte (128-bit) unique identifier|
+|`Edm.Int16`|Signed 16-bit integer. Used only for certain schema EntityType properties|
+|`Edm.Int32`|Signed 32-bit integer|
+|`Edm.Int64`|Signed 64-bit integer|
+|`Edm.String`|Sequence of UTF-8 characters<br />This type may include the `Unicode="false"` facet.<br /><br />When this facet exists, the string property will only contain and accept string values with characters limited to the ASCII character set.<br /><br />If no value is specified, the Unicode facet defaults to true.|
 
 ## Lookup properties
 
-You can find properties which use the following naming convention: `_<name>_value`. These are called *lookup properties*.
+You can find properties which use the following naming convention: `_<name>_value`. These are called *lookup properties*. OData represents lookup columns as [Single-valued navigation properties](web-api-navigation-properties.md#single-valued-navigation-properties) rather than properties. Dataverse provides lookup properties to simplify scenarios to retrieve data using the primary key of a related record.
 
 Lookup properties are computed, read-only properties that have an `Edm.Guid` value. You can use these lookup properties in a query filter to match all the records associated to the single record in the many-to-one relationship.
 
