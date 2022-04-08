@@ -38,7 +38,7 @@ The `NavigationProperty` element describes data related to the current entity ty
 
 ## Single-valued navigation properties
 
-When a navigation property `Type` refers to a single value, it represents a many-to-one relationship to set a reference to another table record. This is commonly called a 'lookup'. For example, this is the `account` table `createdby` navigation property:
+When a navigation property `Type` refers to a single value, it represents a one-to-many relationship to set a reference to another table record. This is commonly called a 'lookup'. For example, this is the `account` table `createdby` navigation property:
 
 ```xml
 <NavigationProperty 
@@ -56,21 +56,25 @@ This single-valued navigation property connects multiple `account` records to a 
 
 These values are stored in the relationship definitions that can be accessed either using the Organization Service SDK <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> or Web API <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata> entity type.
 
-|Attribute   | OneToManyRelationshipMetadata property|
-|---------|---------|
-|`Name`|`ReferencingEntityNavigationPropertyName`|
-|`Partner`|`ReferencedEntityNavigationPropertyName`|
+|Attribute   | OneToManyRelationshipMetadata property|Description|
+|---------|---------|---------|
+|`Name`|`ReferencingEntityNavigationPropertyName`|The name of the single-valued navigation property.|
+|`Partner`|`ReferencedEntityNavigationPropertyName`|The name of the collection-valued navigation property.|
 
 
 ### Lookup properties
 
-We introduced Lookup properties in the the [Web API Properties](web-api-properties.md) topic. See [Lookup properties](web-api-properties.md#lookup-properties).
+We introduced lookup properties in the the [Web API Properties](web-api-properties.md) topic. See [Lookup properties](web-api-properties.md#lookup-properties).
 
-Single-valued navigation properties will also have a `ReferentialConstraint` with a `Property` attribute that refers to a lookup property. You can recognize lookup properties because they use the following naming convention: `_<name>_value`. 
+Single-valued navigation properties have a `ReferentialConstraint` with a `Property` attribute that refers to a lookup property. You can recognize lookup properties because they use the following naming convention: `_<name>_value`. 
 
-The `ReferentialConstraint` will also have a `ReferencedProperty` attribute that identifies the primary key name of the related entity type.
+The `ReferentialConstraint` has a `ReferencedProperty` attribute that identifies the primary key name of the related entity type.
 
-In most cases the `<name>` found in the lookup property will match the name of the navigation property. However, when the single-valued navigation property is part of a multi-table (or polymorphic) lookup there may be a single lookup property which is the `ReferentialConstraint` for more than one single-valued navigation property.
+In most cases the `<name>` found in the lookup property will match the name of the navigation property, except in the case of multi-table lookups.
+
+#### Multi-table lookups
+
+When the single-valued navigation property is part of a multi-table (or polymorphic) lookup there will be a single lookup property which is the `ReferentialConstraint` for more than one single-valued navigation property.
 
 An entity type may have something like the following combination where a single `_customerid_value` lookup property supports  multiple single-valued navigation properties that represent a multi-table lookup. There will be one single-valued navigation property for each type of table supported by the multi-table lookup.
 
@@ -113,7 +117,7 @@ In these cases, setting the value of any of the single-valued navigation propert
 
 ## Collection-valued navigation properties
 
-When a navigation property `Type` refers to a collection value, it represents a one-to-many or many-to-many relationship. For example, this is the account entity `Account_Tasks` navigation property.
+When a navigation property `Type` refers to a collection value, it represents a many-to-one or many-to-many relationship. For example, this is the account entity `Account_Tasks` navigation property.
 
 ```xml
 <NavigationProperty 
@@ -125,28 +129,69 @@ When a navigation property `Type` refers to a collection value, it represents a 
 
 This navigation property connects an `account` record to many `task` records. Each `task` has a single-valued navigation property named `regardingobjectid_account_task` that refers to the `account` as the regarding object.
 
-When the `Name` and the `Partner` of the collection-valued navigation property are the same, it represents a many-to-many relationship.
+The way you work with collection-valued navigation properties using OData is the same regardless of whether the relationship is a one-to-many or many-to-many relationship. Both are considered collections and you interact with them the same way.
+
+### Many-to-one Relationships
+
+A many-to-one relationship is the mirror image of the one-to-many relationship. It will have a partner single-valued navigation property. In the [Single-valued navigation properties](#single-valued-navigation-properties) example above we looked at the `createdby` single-valued navigation property for the `account` entity type.
+
+Within the `systemuser` entity type you will find the collection-valued navigation property partner named `lk_accountbase_createdby`.
+
+```xml
+<NavigationProperty Name="lk_accountbase_createdby"
+    Type="Collection(mscrm.account)"
+    Partner="createdby" />
+```
 
 ### Many-to-Many Relationships
 
-The way you work with collection-valued navigation properties using OData is the same regardless of whether the relationship is a one-to-many or many-to-many relationship. Both are considered collections, but many-to-many relationships have some implementation details you can find in the service documents. For most use cases, you can ignore them.
+When the `Name` and the `Partner` of the collection-valued navigation property are the same, it represents a many-to-many relationship.
 
-For example, every many-to-many relationship has an *intersect table* which supports it. These intersect tables have entity types that typically have just 4 read-only properties. The following is an example of an entity type for an intersect table that supports a many-to-many relationship between `customer` and `product` tables.
+Many-to-many relationships have some implementation details you can find in the service documents. For most use cases, you can ignore them.
+
+For example, every many-to-many relationship has an *intersect table* which supports it. These intersect tables have entity types that typically have just 4 read-only properties. The following is an example of the `teammembership` entity type which is an intersect table that supports a many-to-many relationship between `systemuser` and `team` entity types.
 
 ```xml
-<EntityType Name="new_customer_product" BaseType="mscrm.crmbaseentity">
+<EntityType Name="teammembership"
+    BaseType="mscrm.crmbaseentity">
     <Key>
-        <PropertyRef Name="new_customer_productid" />
+        <PropertyRef Name="teammembershipid" />
     </Key>
-    <Property Name="new_customerid" Type="Edm.Guid" />
-    <Property Name="versionnumber" Type="Edm.Int64"/>
-    <Property Name="new_customer_productid" Type="Edm.Guid"/>
-    <Property Name="new_productid" Type="Edm.Guid"/>
+    <Property Name="systemuserid"
+        Type="Edm.Guid" />
+    <Property Name="versionnumber"
+        Type="Edm.Int64" />
+    <Property Name="teammembershipid"
+        Type="Edm.Guid" />
+    <Property Name="teamid"
+        Type="Edm.Guid" />
 </EntityType>
 ```
 
-You can't work with entity types that represent intersect tables directly because all the properties are read-only. Perform operations on the collection-valued navigation properties. More information: [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)
+You can't work with entity types that represent intersect tables directly because all the properties are read-only. Perform operations on the respective collection-valued navigation properties for each entity type. More information: [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)
 
+For this many-to-many relationship, the `systemuser` entity type has this collection-valued navigation property:
+
+```xml
+<NavigationProperty Name="teammembership_association"
+    Type="Collection(mscrm.team)"
+    Partner="teammembership_association" />
+```
+
+The `team` entity type has this collection-valued navigation property:
+
+```xml
+<NavigationProperty Name="teammembership_association"
+    Type="Collection(mscrm.systemuser)"
+    Partner="teammembership_association" />
+```
+
+These values are stored in the relationship definitions that can be accessed either using the Organization Service SDK <xref:Microsoft.Xrm.Sdk.Metadata.ManyToManyRelationshipMetadata> or Web API <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata> entity type.
+
+|Attribute   | ManyToManyRelationshipMetadata property|Description|
+|---------|---------|---------|
+|`Name`|`Entity1NavigationPropertyName`|The name of the collection-valued navigation property for one of the entity types.|
+|`Partner`|`Entity2NavigationPropertyName`|The name of the collection-valued navigation property for the other entity type.|
 
 ## Next steps
 
