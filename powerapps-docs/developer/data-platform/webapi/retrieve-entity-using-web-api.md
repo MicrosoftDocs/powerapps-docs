@@ -331,9 +331,6 @@ If you simply include the name of the navigation property, you’ll receive all 
      ]
   }
   ```
-  
- > [!NOTE]
- > If you expand on collection-valued navigation parameters to retrieve related entities for *entity sets*, a @odata.nextLink property will be returned instead for the related entities. You should use the value of the @odata.nextLink property with a new GET request to return the required data. More information:[Retrieve related tables by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)
 
 - **Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties**: The following example demonstrates how you can expand related entities for an entity instance using both single- and collection-values navigation properties.  
 
