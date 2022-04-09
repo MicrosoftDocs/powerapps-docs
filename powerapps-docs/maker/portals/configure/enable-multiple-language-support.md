@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/17/2021
+ms.date: 04/09/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -47,10 +47,11 @@ You can set the default language of your portal by changing the *Default Languag
 
 ## Supported languages
 
-The table below shows all the languages currently available out of the box. This list can be found by going to **Portals** &gt; **Content** &gt; **Portal Languages**. The Portal Display Name of a language can be changed after selecting the language to change from this page. Note that the list now includes East Asian languages (Japanese, Chinese, and Korean).
+The table below shows all the languages currently available out of the box. This list can be found by going to **Portals** &gt; **Content** &gt; **Portal Languages**. The Portal Display Name of a language can be changed after selecting the language to change from this page.
 
 | **Name**                           | **Language Code** | **LCID** | **Portal Display Name** |
 |------------------------------------|-------------------|----------|-------------------------|
+| Arabic                             | ar-SA             | 1025     | عربي                    |
 | Basque - Basque                    | eu-ES             | 1069     | euskara                 |
 | Bulgarian - Bulgaria               | bg-BG             | 1026     | български               |
 | Catalan - Catalan                  | ca-ES             | 1027     | català                  |
@@ -68,6 +69,7 @@ The table below shows all the languages currently available out of the box. This
 | Galician - Spain                   | gl-ES             | 1110     | galego                  |
 | German - Germany                   | de-DE             | 1031     | Deutsch                 |
 | Greek - Greece                     | el-GR             | 1032     | Ελληνικά                |
+| Hebrew                             | he-IL             | 1037     | עִברִית                 |  
 | Hindi - India                      | hi-IN             | 1081     | हिंदी                   |
 | Hungarian - Hungary                | hu-HU             | 1038     | magyar                  |
 | Indonesian - Indonesia             | id-ID             | 1057     | Bahasa Indonesia        |
