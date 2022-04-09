@@ -270,7 +270,7 @@ The following table explains various attributes associated with blogpost Object.
 > To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode string data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
 
 > [!NOTE]
-> Some of the naming conventions of Dataverse have changed, for example, Dataverse entities are now called [tables](../../maker/data-platform/data-platform-intro.md#terminology-updates). However, the Liquid entities object will continue to be referred to **entities**.
+> Some of the naming conventions of Dataverse have changed, for example, Dataverse entities are now called [tables](../../data-platform/data-platform-intro.md#terminology-updates). However, the Liquid entities object will continue to be referred to **entities**.
 
 Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
