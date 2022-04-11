@@ -55,4 +55,6 @@ These options are self-explanatory. If you set all the individual options to `Fa
 
 [Create and edit columns](create-edit-fields.md)
 
+[Solutions overview](solutions-overview.md)
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
