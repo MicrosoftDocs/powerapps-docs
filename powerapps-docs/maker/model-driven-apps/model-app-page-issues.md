@@ -4,7 +4,6 @@ description: "Find the known issue that might occur when you create a custom pag
 ms.custom: ""
 ms.date: 09/02/2021
 ms.reviewer: ""
-
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "adrianorth"
@@ -58,6 +57,8 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 * When a user is prompted for consent with connectors and selects **Don't allow**, the custom page will render but without data.  The user doesn't get notified that data retrieval is skipped.
 
 * After a model-driven app or custom page is changed and published, loading a custom page can take longer than normal and no page loading spinner is shown.
+
+* Native player support is available for iOS, Android, and Windows in online-only mode. Offline support currently isn't supported.
 
 * When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation.
 
