@@ -1,24 +1,18 @@
 ---
 title: "Merge table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to use the Merge unbound action to merge two table rows"
-ms.custom: ""
-ms.date: 05/04/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-caps.latest.revision: 21
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Merge table rows using the Web API
