@@ -30,7 +30,7 @@ This feature requires exporting a solution, modifying it to add the xml snippet,
 
 ## Embed without contextual filtering
 
-You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all records of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
+You can use Power BI reports by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all records of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
 
 > [!div class="mx-imgBorder"] 
 > ![Embedded  Power BI report without contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embedded  Power BI report without contextual filtering")
@@ -84,7 +84,7 @@ You can customize a main form XML `sections` node so that it can host an embedde
 
 ## Embed with contextual filtering
 
-You can make the Power BI reports and tiles more meaningful by applying contextual filters to the current model-driven form, so that the report or tile is filtered based on attributes of the current row. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all rows of the table.
+You can make Power BI reports and tiles more meaningful by applying contextual filters to the current model-driven form, so that the report and tile is filtered based on attributes of the current row. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all rows of the table.
 
 > [!div class="mx-imgBorder"] 
 > ![Embedded Power BI report with contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-filtered.png "Embedded Power BI report with contextual filtering")
