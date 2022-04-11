@@ -126,13 +126,21 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
-## Power Apps canvas or model-driven app resets during use
+## App resets when running it on Power Apps mobile
 
-A Power Apps canvas or model-driven app can reset during use if it attempts to use more resources than are available on the device on which it is being run. An equivalent scenario is when you visit a large, complex webpage and the web browser suspends the page because it is consuming too much power.
+When you run a canvas or model-driven app on Power Apps mobile it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, and the web browser suspends the page because it is consuming too much power.
 
-The Power Apps mobile app is designed to run on a wide range of devices, including low-end devices with limited resources. Canvas or model-driven apps likewise need to be optimized by their developers to run on the lowest specification device used by the target end users. Even high-end devices can struggle to run poorly optimized or overly demanding applications.
+Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest specificized device that your end-users will use.
 
-If you experience a reset, please contact the developer of your application and refer them to this notice. If you are the developer, please read the [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/en-us/blog/powerapps-canvas-app-coding-standards-and-guidelines/), especially the section titled 'Optimizing for performance'.
+If you experience a reset, contact your app developer, and point them to this topic. 
+
+For more information for developers, see:
+
+- Blog post: [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
+- Whitepaper: [PowerApps canvas app coding
+standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
+
+
 
 ### See also  
 
