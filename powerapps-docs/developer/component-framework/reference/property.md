@@ -25,26 +25,35 @@ Model-driven and canvas apps
 ### error
 
 **Type**: `boolean`
+A boolean indicator to tell the control whether this parameter has either encountered an error in the population of its data, or that the data currently associated with this field is of an invalid format.
 
 ### errorMessage
 
 **type**: `string`
+The error message associated with the last encountered error, if applicable.
 
 ### formatted
 
 **Type**: `string`
+The formatted string value of this field. This is only set if the parameter is of usage=bound.
+
 
 ### security
 
 **Type**: [SecurityValues](securityvalues.md)
+Information concerning the field level security of the field to which this control was bound. This value is only present if the usage=bound.
+
 
 ### raw
 
 **Type**: `any`
+The raw, unformatted value of this field (i.e. number, date object, Entity reference, etc).
 
 ### attributes
 
 **Type**: `FieldPropertyMetadata`
+The attribute metadata associated with the field this property is configured against. This is only set when the parameter is of usage=bound.
+
 
 ### Related topics
 
