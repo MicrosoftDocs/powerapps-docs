@@ -39,6 +39,11 @@ sections:
           It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Managed Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
 
       - question: |
+          Do I need to update (re-wrap) my mobile app when I change the canvas app(s) inside?
+        answer: |
+          It depends. Changes to canvas app(s) inside your mobile app will be downloaded automatically by existing, released versions of your mobile app. For tactical changes (like fixing a typo) it is not strictly required to produce a new version. However, the Power Apps Mobile Platform (the 'runtime') in your mobile app is static and does not get updated automatically. To stay compatible with the Power Apps online services and benefit from bugfixes and new platform features, you are recommended to re-wrap and redistribute your mobile app to your end users at least monthly.
+
+      - question: |
           What are Primary and Secondary apps in the context of wrap?
         answer: |
           Primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
