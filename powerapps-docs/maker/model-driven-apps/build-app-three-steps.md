@@ -33,7 +33,7 @@ This interactive experience guides new makers through the creation of a model-dr
 In this experience you...
 
 1. Name your app.
-1. Create a page and add the account table to the page.
+1. Create a page and add the preselected table to the page.
 1. Publish and play your app.
 
 :::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
