@@ -21,14 +21,20 @@ Provides all the information about  table definitions security values.
 ### editable
 
 **Type**: `boolean`
+Whether this value is meant to be editable in the current context.
+
 
 ### readable
 
 **Type**: `boolean`
+Whether this value is meant to be readable in the current context.
+
 
 ### secured
 
 **Type**: `boolean`
+Whether this field has security rules applied to it.
+
 
 ### Related topics
 
