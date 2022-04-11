@@ -228,7 +228,7 @@ Use the `$expand` system query option to control what data from related entities
 If you simply include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.
 
 > [!NOTE]
-> To retrieve related entities for entity sets, see [Retrieve related tables by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated).  
+> To retrieve related entities for entity sets, see [Retrieve related table records with a query](retrieve-related-entities-query.md).  
 
 - **Retrieve related entities for an entity instance by expanding single-valued navigation properties**: <br />The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
 
@@ -331,9 +331,6 @@ If you simply include the name of the navigation property, you’ll receive all 
      ]
   }
   ```
-  
- > [!NOTE]
- > If you expand on collection-valued navigation parameters to retrieve related entities for *entity sets*, a @odata.nextLink property will be returned instead for the related entities. You should use the value of the @odata.nextLink property with a new GET request to return the required data. More information:[Retrieve related tables by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)
 
 - **Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties**: The following example demonstrates how you can expand related entities for an entity instance using both single- and collection-values navigation properties.  
 
