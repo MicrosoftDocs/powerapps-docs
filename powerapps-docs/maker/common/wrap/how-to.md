@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/07/2022
+ms.date: 04/12/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -84,10 +84,10 @@ In this step, you'll use App Center to create an app container for your mobile a
     > [!NOTE]
     > You must create separate App Center containers for each platform.
 
-1. For **Android** OS, select **Platform** as **Reactive Native**.
+1. For **Android** OS, select **Platform** as **React Native**.
 
     > [!NOTE]
-    > **Platform** must be **Reactive Native** for all apps in App Center.
+    > **Platform** must be **React Native** for all apps in App Center.
 
     :::image type="content" source="media/wrap-canvas-app/app-center-app.png" alt-text="App center app configuration.":::
 
