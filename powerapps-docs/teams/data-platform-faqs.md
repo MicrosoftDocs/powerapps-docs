@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
-ms.author: mmercuri
+ms.author: kvivek
 ms.reviewer: kvivek
 contributors:
   - kvivek
