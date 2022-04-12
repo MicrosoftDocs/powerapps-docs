@@ -306,8 +306,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Application Id that is allow listed in AAD tenant id to access the Graph API.|
-|DisplayName|Whitelisted App ID|
+|Description|Application Id that is allowlisted in AAD tenant id to access the Graph API.|
+|DisplayName|Allowlisted App ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
