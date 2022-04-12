@@ -1,20 +1,14 @@
 ---
 title: "Configure tracing for XRM tooling (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how you can configure tracing for components such as operation calls, warnings, exceptions, and other significant events in XRM Tooling"
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: d7586a5a-40da-427e-bbeb-4f8a371a8dcf
-caps.latest.revision: 8
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

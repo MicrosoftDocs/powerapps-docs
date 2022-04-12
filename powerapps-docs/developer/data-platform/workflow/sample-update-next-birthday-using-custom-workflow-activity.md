@@ -1,25 +1,18 @@
 ---
 title: "Sample: Update next birthday using a custom workflow activity (Microsoft Dataverse) | Microsoft Docs"
 description: "The sample demonstrates workflow activity returns the next birthday. Use this in a workflow that sends a birthday greeting to a customer. "
-ms.custom: ""
-ms.date: 1/28/2020
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: sample
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 1cff83b0-1f7b-4ddb-a2af-b85f9f785529
-caps.latest.revision: 21
-author: "JimDaly"
-ms.author: "jdaly"
-manager: "KumarVivek"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Sample: Update next birthday using a custom workflow activity
 
