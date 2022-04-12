@@ -78,6 +78,6 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 ## Limitations
 
-Rich text editor cannot be used within a Gallery.
+Rich text editor can't be used within a gallery.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
