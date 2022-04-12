@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 3/30/2022
+ms.date: 04/12/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -62,6 +62,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
 If you want to change your existing custom domain name, you must do the following:
 
+1. From the admin center, select Set up custom domains and SSL.
 1. Manually delete the current SSL binding.
 1. Manually delete the current assigned hostname.
 1. Rerun the wizard and follow the instructions outlined in **Add a custom domain name**.
