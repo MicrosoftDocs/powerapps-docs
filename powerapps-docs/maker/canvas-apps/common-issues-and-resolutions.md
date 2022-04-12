@@ -5,7 +5,7 @@ author: KumarVivek
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/25/2022
+ms.date: 04/11/2022
 ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
@@ -16,6 +16,7 @@ contributors:
   - tapanm-msft
   - mduelae
 ---
+
 # Common issues and resolutions for Power Apps
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
@@ -34,6 +35,10 @@ If you're running into issues using Power Apps, try these common troubleshooting
 * Try with another device, if possible.
 
 ## Known Issues
+
+1. **Power Apps Studio is not accessible from Power BI Desktop versions 2.102.845.0 and earlier** (April 11, 2022)
+
+    Power Apps Studio will not load from Power BI Desktop on versions 2.102.845.0 and earlier anymore. Update your Power BI Desktop to version 2.103.881.0 or later, or access Power App Studio in Power BI from a browser instead.
 
 1. **Performance degradation when opening Power Apps Studio in China** (March 25, 2022)
 

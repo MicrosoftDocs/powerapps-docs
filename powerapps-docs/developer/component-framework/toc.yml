@@ -1,3 +1,4 @@
+items:
 - name: Power Apps component framework
   items:
   - name: Overview
@@ -12,6 +13,8 @@
       href: component-framework-for-canvas-apps.md
     - name: Code components for portals
       href: ../../maker/portals/component-framework.md
+    - name: "React controls & platform libraries (Preview)"
+      href: react-controls-platform-libraries.md
   - name: Get Microsoft Power Platform CLI
     href: get-powerapps-cli.md
   - name: Learn Power Apps component framework
@@ -124,6 +127,10 @@
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
+      - name: ControlAttributes
+        href: reference/controlattributes.md
+      - name: ControlAttributesType
+        href: reference/controlattributestype.md
       - name: DataProviderCapabilities
         href: reference/dataprovidercapabilities.md
       - name: DataSet
@@ -157,10 +164,8 @@
           href: reference/dataset/retrieverecordcommand.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
-      - name: ControlAttributes
-        href: reference/controlattributes.md
-      - name: ControlAttributesType
-        href: reference/controlattributestype.md
+      - name: DateFormattingInfo
+        href: reference/dateformattinginfo.md
       - name: DateTimeFieldBehavior
         href: reference/datetimefieldbehavior.md
       - name: Device
@@ -178,8 +183,6 @@
           href: reference/device/getcurrentposition.md
         - name: pickFile
           href: reference/device/pickfile.md
-      - name: DateFormattingInfo
-        href: reference/dateformattinginfo.md
       - name: Entity
         href: reference/entity.md
       - name: EntityFormOptions
@@ -337,6 +340,17 @@
         href: reference/position.md
       - name: Property
         href: reference/property.md
+      - name: ReactControl (Preview)
+        href: reference/react-control.md
+        items:
+        - name: destroy
+          href: reference/react-control/destroy.md
+        - name: getOutputs
+          href: reference/react-control/getOutputs.md
+        - name: init
+          href: reference/react-control/init.md
+        - name: updateView
+          href: reference/react-control/updateview.md        
       - name: RetrieveMultipleResponse
         href: reference/retrievemultipleresponse.md
       - name: Resources
@@ -398,14 +412,18 @@
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: feature-usage
+        href: manifest-schema-reference/feature-usage.md
       - name: img
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
-      - name: property
-        href: manifest-schema-reference/property.md
+      - name: platform-library
+        href: manifest-schema-reference/platform-library.md
       - name: property-set
         href: manifest-schema-reference/property-set.md
+      - name: property
+        href: manifest-schema-reference/property.md
       - name: resources
         href: manifest-schema-reference/resources.md
       - name: resx
@@ -414,8 +432,6 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
-      - name: feature-usage
-        href: manifest-schema-reference/feature-usage.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
   - name: Resources

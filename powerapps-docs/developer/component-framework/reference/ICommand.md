@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # ICommand
 
-A command button control types.
+[!INCLUDE [icommand-description](includes/icommand-description.md)]
 
 ## Available for
 
