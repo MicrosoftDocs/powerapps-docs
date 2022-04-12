@@ -160,7 +160,7 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
 ### Controls not supported within Galleries
 
-The following controls are not supported within a gallery Barcode, Form, Form viewer, Forms Pro, PDF viewer, Power BI tile, Rich Text Editor, Fluid grid (scrollable screen)
+The following controls are not supported within a gallery: Barcode, Form, Form viewer, Forms Pro, PDF viewer, Power BI tile, Rich Text Editor, Fluid grid (scrollable screen)
 
 ### See also
 
