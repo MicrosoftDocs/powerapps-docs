@@ -1,12 +1,11 @@
 ---
 title: Analyze telemetry of a canvas app using Application Insights
 description: Learn about how to analyze app telemetry of canvas apps using Application Insights.
-author: tapanm-msft
-
+author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/19/2021
+ms.date: 04/12/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -15,6 +14,8 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
+  - maustinjones 
+  - mattgon
 ---
 
 # Analyze telemetry of a canvas app using Application Insights
@@ -318,6 +319,7 @@ A set of default dimensions is also added to the *customDimensions* property on 
 | ms-appId        | The Application ID of the app that sent the event.     |
 | ms-appName      | The Application name of the app that sent the event.   |
 | ms-appSessionId | The application session ID.                           |
+| ms-duration | An imputed value measuring the it takes for a user to navigate from one screen to another. This value overrides the standard App Insights PageView duration dimension. |
 
 ## Unsupported scenarios
 
