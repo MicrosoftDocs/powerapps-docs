@@ -122,6 +122,8 @@ Use your [primary canvas app](overview.md#primary-app) to create a wrap project 
 
 To create a wrap project, go to the preview version of [Power Apps](https://make.preview.powerapps.com) > **Apps** > select the primary canvas app > select **Wrap**, and enter the wrap project details described in this section. After entering all details, select **Save** > **Build** to build the project.
 
+![image](https://user-images.githubusercontent.com/30095306/163098375-a6ca1267-0d9c-48a6-a42b-6092a9226bbf.png)
+
 Depending on the platform chosen, the build process queues the requests to create your packages for Android, iOS, or Google platforms.
 
 > [!NOTE]
