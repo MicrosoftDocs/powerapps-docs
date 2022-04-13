@@ -69,17 +69,20 @@ Modern commanding offers many new capabilities and is much simpler to use. Howev
 |Customized using |Hand editing XML within solution files or using 3rd party tools. Required time consuming solution export and import operations.|Command designer as well as Dataverse API support|
 |Supports Power Fx|No|Yes. For actions and visibility|
 |Time required to customize|Slow, error prone|Fast|
-|Reliability and performance|Easy to make mistakes. Bad customization and lack of scoping  often impact app performance|Inline error handling prevents mistakes, Power Fx optimized for better runtime performanceSharing|Standard Dataverse role based security|Non-Power Fx commands use standard Dataverse role based security. Power Fx commands currently require the command component library to be shared in addition to having an appropriate security role.|
-|Solution and ALM behaviors|Inconsistent and problematic solution layering, no presence in solution interface Many standard solution behaviors not supported such as patches, segmentation, solution upgrade, managed properties, and many more.|Standard solution layering centrally managed for multiple solution object types within Dataverse. Present in solution interface. All standard solution behaviors supported|
+|Reliability and performance|Easy to make mistakes. Bad customization and lack of scoping often impact app performance|Inline error handling prevents mistakes. Power Fx optimized for better runtime performance |
+|Sharing|Standard Dataverse role-based security|Non-Power Fx commands use standard Dataverse role based security. Power Fx commands currently require the command component library to be shared in addition to having an appropriate security role.|
+|Solution and ALM behaviors|Inconsistent and problematic solution layering, no presence in solution interface. Many standard solution behaviors not supported such as patches, segmentation, solution upgrade, managed properties, and many more.|Standard solution layering centrally managed for multiple solution object types within Dataverse. Present in solution interface. All standard solution behaviors supported|
 |Localization|Non-standard|Standardized using export & import translations for the entire solution|
 |Data model|Complex. Optimized for classic ribbons and contain many properties that are no longer needed|Simple, optimized for today’s model-driven app command bars|
 |Use JavaScript|Yes|Yes. Now simpler. Note: The same JavaScript can be used for classic and modern commands|
 |Customize out of the box commands|Yes|Coming soon (once migrated)|
-|Convert your own custom classic commands to modern | |Coming soon. You’ll soon be able to migrate all classic commands within a solution in one-clickApp specific commands|No|Yes|
+|Convert your own custom classic commands to modern | |Coming soon. You’ll soon be able to migrate all classic commands within a solution in one-click|
+|App specific commands|No|Yes. Using modern command designer ensures commands are only visible within the selected app|
 |Table specific commands that will display in all apps containing the table|Yes|New! Not supported in command designer|
 |Global commands that will display for all tables & apps for the specified command bar location|Yes|New! Not supported in command designer|
 |Create split buttons, flyouts, and groups|Yes|New!|
-|Dynamically populate a flyout with code|Yes|No. We recommend creating commands declaratively.Customize global application header commands|Yes|No|
+|Dynamically populate a flyout with code|Yes|No. We recommend creating commands declaratively|
+|Customize global application header commands|Yes|No|
 |Customize commands for other / uncommon or obsolete command bar locations|Yes|No|
 |Run a modern flow or workflow|Using JavaScript|Using JavaScript and/or a custom page|
 
