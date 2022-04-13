@@ -24,7 +24,7 @@ Commands drive core application behavior for model-driven apps. They are the but
 
 ![Command bar](media/CommandDesigner-location.png "Command bar")
 
-At a very high level command customization fits into the following categories. Various capabilities exist within each category and are covered in more depth throughout these documents.  
+At a very high level command customization fits into the following categories. Various capabilities exist within each category and are covered in more depth throughout modern commanding documentation.  
 - **Display** How the button looks and where it's located in an app. For example, the button's label, icon, and accessibility labels as well as the command bar location and position within a command bar. 
 - **Action** The logic that is executed when a button is clicked. For example, creating and updating data or interacting with various controls and pages inside the app.
 - **Visibility** Logical conditions that specify when a button is visible or hidden to a user. For example, you may want the button visible for some users and hidden for others. Or perhaps the button should only be visible when certain criteria of the data record(s) are satisfied. 
@@ -51,12 +51,12 @@ At a very high level command customization fits into the following categories. V
     > [!div class="mx-imgBorder"]
     > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
     
--	**Quick actions**. There isn't a specialized entry point from the command designer because quick actions are edited from the main grid of the table.
+-	**Quick actions**. Quick actions are associated with the main grid location. To add or edit commands for both quick actions and main grid locations, select the desired table from within modern app designer, then edit command bar and choose the main grid location. The first five commands, determined by order, will also be shown as quick actions when playing the app. 
     > [!div class="mx-imgBorder"]
     > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
 
 > [!NOTE]
-> - Less frequently customized command bar locations (formerly known as "Ribbons") are not supported in command designer. See the [Global command bar and Other ribbons](../../developer/model-driven-apps/ribbons-available.md) sections for more information on customizing commands for these locations.
+> - Less frequently customized command bar locations are not supported in command designer. See the [Global command bar and Other ribbons](../../developer/model-driven-apps/ribbons-available.md) sections for more information on customizing commands for these locations.
 
 ## Key differences between classic and modern commands
 Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as use custom pages to converge canvas and model-driven apps, it was vital to reinvent and rebuild the command infrastructure. 
