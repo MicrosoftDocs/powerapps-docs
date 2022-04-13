@@ -23,10 +23,12 @@ The ability to create additional environments is determined by the template chos
 | - | - | - | - |
 | [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. |
 | [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. |
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self service, Employee self service portals | 50 portals\* | No limits for language.  For example, one or all portals can use the same language.
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | All templates except "Portal from blank" | one portal for each language | For example, one English language portal for "Community portal" template allowed. |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self service, Employee self service portals | 50 portals\*\* | No limits for language.  For example, one or all portals can use the same language.
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal | one portal for each language | For example, one English language portal for **Partner portal** template allowed. |
 
 \* Requires Starter portal package version [9.3.2109.x or later](release-updates.md#starter-portal-package-updates)
+
+\*\* Requires Starter portal package version [9.3.2201.0 or later](release-updates.md#starter-portal-package-updates)
 
 When an [environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) already has a portal of the available template type (all templates except "Portal from blank") created, and if the environment doesn't have any other languages enabled, you'll see this error message:
 
