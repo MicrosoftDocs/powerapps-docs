@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 # First, FirstN, Index, Last, and LastN functions in Power Apps
-Returns a table's first or last set of [records](../working-with-tables.md#records).
+Returns the first, last, or a specific [record](../working-with-tables.md#records), or a set of first or last records, from a table.
 
 ## Description
 The **First** function returns the first record of a [table](../working-with-tables.md).
