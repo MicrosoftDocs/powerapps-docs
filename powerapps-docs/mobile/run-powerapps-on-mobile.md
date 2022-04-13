@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/13/2022
+ms.date: 04/6/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.reviewer: ""
@@ -67,6 +67,8 @@ Choose the download link for your device:
 - For iOS (iPad or iPhone), go to the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8).
 
 - For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
+
+- For Windows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
 
 
 ## Sign in

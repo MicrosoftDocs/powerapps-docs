@@ -1,25 +1,18 @@
 ---
 title: "Impersonate another user using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Impersonation is used to execute business logic(code) on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Dataverse using the Web API"
-ms.custom: ""
-ms.date: 05/04/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 74d07683-63ff-4d05-a434-dcfd44cd634d
-caps.latest.revision: 9
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 <!-- TOD0: The higher level topic [Impersonate another user](../impersonate-another-user.md) should include all generic concepts.
