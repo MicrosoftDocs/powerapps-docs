@@ -319,7 +319,7 @@ A set of default dimensions is also added to the *customDimensions* property on 
 | ms-appId        | The Application ID of the app that sent the event.     |
 | ms-appName      | The Application name of the app that sent the event.   |
 | ms-appSessionId | The application session ID.                           |
-| ms-duration | An imputed value measuring the it takes for a user to navigate from one screen to another. This value overrides the standard App Insights PageView duration dimension. |
+| ms-duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value overrides the standard App Insights PageView duration dimension. |
 
 ## Unsupported scenarios
 
