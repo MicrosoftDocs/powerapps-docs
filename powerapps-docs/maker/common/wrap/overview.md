@@ -1,5 +1,5 @@
 ﻿---
-title: Wrap (preview) overview
+title: Overview of Wrap (preview)
 description: Learn about the wrap functionality in Power Apps.
 author: larryk78
 ms.topic: article
@@ -17,7 +17,7 @@ contributors:
   - larryk78
 ---
 
-# Wrap (preview) overview
+# Overview of Wrap (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
