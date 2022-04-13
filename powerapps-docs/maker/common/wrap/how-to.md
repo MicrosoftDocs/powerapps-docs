@@ -79,7 +79,7 @@ In this step, you'll use App Center to create an app container for your mobile a
 1. Select **Apps** &gt; **Add app**.
 1. Enter app name.
 1. Select app release type.
-1. Select **Custom** OS for iOS apps, or **Android** OS for Android apps.
+1. Select **iOS** OS for iOS apps, or **Android** OS for Android apps.
 
     > [!NOTE]
     > You must create separate App Center containers for each platform.
