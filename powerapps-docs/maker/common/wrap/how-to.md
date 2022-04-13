@@ -55,6 +55,8 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 
 > [!NOTE]
 > - The Add-AdminAllowedThirdPartyApps cmdlet is available since version 2.0.144 of the Adminstrator PowerShell module. Please ensure you have at least this version installed. 
+> 
+> - This command requires global tenant administrator privileges. It allows an administrator to designate which registered 3rd party applications in Azure AD can invoke Power Platform connections. 
 
 ## Configure API permissions
 
