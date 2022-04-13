@@ -61,7 +61,7 @@ This table can be placed in a collection with this formula (put in the OnStart f
 ```powerapps-dot
 Collect( IceCream, Table( { Flavor: "Chocolate", Quantity: 100 }, 
                           { Flavor: "Vanilla", Quantity: 200 },
-                          { Flavor: "Strawberry", Quantity: 0 },
+                          { Flavor: "Strawberry", Quantity: 300 },
                           { Flavor: "Mint Chocolate", Quantity: 60 },
                           { Flavor: "Pistachio", Quantity: 200 } ) )
 ```
