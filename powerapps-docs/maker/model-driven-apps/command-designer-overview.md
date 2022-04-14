@@ -83,7 +83,7 @@ Modern commanding offers many new capabilities and is much simpler to use. Howev
 |Dynamically populate a flyout with code|Yes|No. We recommend creating commands declaratively|
 |Customize global application header commands|Yes|No|
 |Customize commands for other / uncommon or obsolete command bar locations|Yes|No|
-|Run a modern flow or workflow|Using JavaScript|Using JavaScript and/or a custom page|
+|Run a modern flow or workflow|Using JavaScript|Using JavaScript. Also supported using a custom page|
 
 ### Classic vs modern visibility rule comparisson 
 Classic visibility rules often had a specific rule for each scenario. With Power Fx, a declarative function replaces many classic rules. And it’s much simpler to use.
@@ -91,7 +91,7 @@ Note classic visibility rules will also be supported soon within modern commands
 
 |Use case|Classic Rule|Classic options|Power Fx visible property|
 |:----|:----|:----|:----|
-|Show / hide based on data value(s)|CustomRule|Use JavaScript |Self.Selected.Item.’DesiredColumnName’ =’DesiredColumnValue’|
+|Show / hide based on data value(s)|CustomRule|Use JavaScript |!IsBlank(Self.Selected.Item.Email)|
 |Show/hide based on table permission|EntityPrivilegeRule|Multiple|DataSourceInfo()|
 |Show/hide based on record permission|RecordPrivilegeRule|Multiple|RecordInfo()|
 |Reference the control context for primary and related tables|EntityRule|PrimaryEntity. SelectedEntity|Self.Selected|
