@@ -60,12 +60,11 @@ At a very high level command customization fits into the following categories. V
 
 ## Key differences between classic and modern commands
 Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as use custom pages to converge canvas and model-driven apps, it was vital to reinvent and rebuild the command infrastructure. 
-Modern commanding offers many new capabilities and is much simpler to use. However, when preview was announced many important parity gaps needed to be addressed. Many of those gaps have since been closed while certain differences do remain. Also note that many perceived gaps were intentionally left behind if they’re irrelevant within today’s modern apps.
-
+Modern commanding offers many new capabilities and is much simpler to use. However, when preview was announced many important parity gaps needed to be addressed. Many of those gaps have since been closed while certain differences do remain. Also note that many perceived gaps were intentionally left behind as they were identified to be not relevant with modern apps commanding design.
 
 |Capability|Classic |Modern|
 |:----|:----|:----|
-|Supported in model-driven app runtime|Yes|Yes. Power Fx runtime also supported|
+|Supported in model-driven app runtime|Yes|Yes, Additionally supports Power Fx runtime.|
 |Customized using |Hand editing XML within solution files or using 3rd party tools. Required time consuming solution export and import operations.|Command designer as well as Dataverse API support|
 |Supports Power Fx|No|Yes. For actions and visibility|
 |Time required to customize|Slow, error prone|Fast|
@@ -75,12 +74,12 @@ Modern commanding offers many new capabilities and is much simpler to use. Howev
 |Localization|Non-standard|Standardized using export & import translations for the entire solution|
 |Data model|Complex. Optimized for classic ribbons and contain many properties that are no longer needed|Simple, optimized for today’s model-driven app command bars|
 |Use JavaScript|Yes|Yes. Now simpler. Note: The same JavaScript can be used for classic and modern commands|
-|Customize out of the box commands|Yes|Coming soon (once migrated)|
-|Convert your own custom classic commands to modern | |Coming soon. You’ll soon be able to migrate all classic commands within a solution in one-click|
+|Customize out of the box commands|Yes|Commands become editable in command designer once migrated to the modern framework. The first set is in-progress and more will be migrated incrementally. |
+|Convert your own custom classic commands to modern | |Coming soon |
 |App specific commands|No|Yes. Using modern command designer ensures commands are only visible within the selected app|
-|Table specific commands that will display in all apps containing the table|Yes|New! Not supported in command designer|
-|Global commands that will display for all tables & apps for the specified command bar location|Yes|New! Not supported in command designer|
-|Create split buttons, flyouts, and groups|Yes|New!|
+|Table specific commands that will display in all apps containing the table|Yes|Yes. Requires modifying the appaction definition within the solution file|
+|Global commands that will display for all tables & apps for the specified command bar location|Yes|Yes. Requires modifying the appaction definition within the solution file|
+|Create split buttons, flyouts, and groups|Yes|Yes|
 |Dynamically populate a flyout with code|Yes|No. We recommend creating commands declaratively|
 |Customize global application header commands|Yes|No|
 |Customize commands for other / uncommon or obsolete command bar locations|Yes|No|
