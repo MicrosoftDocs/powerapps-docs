@@ -1,16 +1,16 @@
 ---
-title: "updateView| MicrosoftDocs"
+title: "StandardControl.updateView| MicrosoftDocs"
 description: This method will be called when any value in the property bag has changed. 
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/26/2022
 ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ---
-# updateView
+# StandardControl.updateView
 
 [!INCLUDE[./includes/updateview-description.md](./includes/updateview-description.md)]
 

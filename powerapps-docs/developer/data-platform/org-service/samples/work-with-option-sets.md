@@ -1,23 +1,23 @@
 ---
 title: "Sample: Work with choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with choices" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.date: 04/06/2022
+author: NHelgren
+ms.author: nhelgren
+ms.reviewer: pehecke
+manager: sunilg
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 
 # Work with choices
-
 
 
 This sample shows how to work with choices. Typically, you use choices to set columns so that different columns can share the same set of options, which are maintained in one location. Unlike local options sets which are defined only for a specific column, you can reuse choices. You will also see them used in request parameters in a manner similar to an enumeration.
@@ -26,20 +26,20 @@ When you define a choices column by using [CreateOptionSetRequest](/dotnet/api/m
 
 Use the following message request classes to work with choices:
 
-- [CreateOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.createoptionsetrequest?view=dynamics-general-ce-9)
-- [DeleteOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.deleteoptionsetrequest?view=dynamics-general-ce-9)
-- [RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest?view=dynamics-general-ce-9)
-- [RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest?view=dynamics-general-ce-9)
-- [UpdateOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.updateoptionsetrequest?view=dynamics-general-ce-9)
+- <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllOptionSetsRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest>  
+- <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionSetRequest> 
 
 Use the following message request classes with choices:
 
-- [DeleteOptionValueRequest](/dotnet/api/microsoft.xrm.sdk.messages.deleteoptionvaluerequest?view=dynamics-general-ce-9)
-- [InsertOptionValueRequest](/dotnet/api/microsoft.xrm.sdk.messages.insertoptionvaluerequest?view=dynamics-general-ce-9)
-- [InsertStatusValueRequest](/dotnet/api/microsoft.xrm.sdk.messages.insertstatusvaluerequest?view=dynamics-general-ce-9)
-- [OrderOptionRequest](/dotnet/api/microsoft.xrm.sdk.messages.orderoptionrequest?view=dynamics-general-ce-9)
-- [UpdateOptionValueRequest](/dotnet/api/microsoft.xrm.sdk.messages.updateoptionvaluerequest?view=dynamics-general-ce-9)
-- [UpdateStateValueRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatestatevaluerequest?view=dynamics-general-ce-9)
+- <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.InsertStatusValueRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionValueRequest>
+- <xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest>  
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithOptionSets).
 

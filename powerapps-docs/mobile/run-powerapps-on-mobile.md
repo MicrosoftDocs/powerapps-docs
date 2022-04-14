@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/13/2022
+ms.date: 04/6/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.reviewer: ""
@@ -25,10 +25,8 @@ ms.custom: intro-internal
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
 > [!NOTE]
-> - If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
-> - Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
+> If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
 
-In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device.
 
 ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
 
@@ -38,6 +36,19 @@ Legend:
 2. **Canvas apps**
 
 Since canvas apps can essentially be anything, there isn’t other help topics on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+
+## Other mobile apps
+
+The table below outlines which mobile app you can use to run your app.
+
+
+| **Mobile App** | **Apps you can run** |
+|-------------------------|-------------------------|
+| [Power Apps mobile](run-powerapps-on-mobile.md#install-power-apps-mobile-app) (covered in this topic) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamis 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
+| [Power Apps for Windows (preview)](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
+| [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
+| [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
+| [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
 ## Required privileges
 
@@ -56,6 +67,8 @@ Choose the download link for your device:
 - For iOS (iPad or iPhone), go to the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8).
 
 - For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
+
+- For Windows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
 
 
 ## Sign in

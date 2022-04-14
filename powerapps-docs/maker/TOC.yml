@@ -1141,6 +1141,18 @@
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
+  - name: Create native mobile apps (preview)
+    items:
+      - name: Overview of Wrap (preview)
+        href: ./common/wrap/overview.md
+      - name: Customize and build your mobile app
+        href: ./common/wrap/how-to.md
+      - name: Code sign for iOS
+        href: ./common/wrap/code-sign-ios.md
+      - name: Code sign for Android
+        href: ./common/wrap/code-sign-android.md
+      - name: Frequently asked questions
+        href: ./common/wrap/faq.yml
   - name: For developers
     items:
     - name: Canvas apps for enterprise developers, partners, and ISVs
@@ -1186,7 +1198,9 @@
     - name: What are model-driven apps?
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
-      href: ./model-driven-apps/app-value-proposition.md            
+      href: ./model-driven-apps/app-value-proposition.md
+    - name: Build an app in three steps (preview)
+      href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Meet the model-driven designers
@@ -2095,8 +2109,6 @@
           href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
-    - name: Supported web browsers
-      href: ./portals/supported-web-browsers.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
