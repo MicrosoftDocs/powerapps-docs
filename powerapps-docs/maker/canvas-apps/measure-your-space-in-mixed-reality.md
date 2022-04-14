@@ -33,17 +33,10 @@ Before you start taking measurements, follow these steps to enter basic informat
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
 
-3. On **the Measurement Inputs** screen, enter the required measurements:
-
-    - Wall distance
-
-    - Chair freeform
-
-    - Desk area
-
-    - Carpet freeform
-
-    - Shelf volume
+3. On **the Measurement Inputs** screen, enter the required measurements.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Enter measurements](./media/mr-measurement/measurement-inputs-5.png)
 
 4. When you're done, select the close button.
 
