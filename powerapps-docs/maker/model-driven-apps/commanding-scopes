@@ -1,6 +1,6 @@
 ---
-title: "Command designer overview | MicrosoftDocs"
-description: "Overview of modern commanding, command designer, and Power Fx"
+title: "Commanding scopes | MicrosoftDocs"
+description: "Determine breadth of where commands are rendered"
 Keywords: command bar, command designer, ribbon, action bar, Power Fx command, command component, button
 author: caburk
 ms.author: caburk
@@ -20,16 +20,176 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Commands may have one of three types of scopes. The scope determines how broadly a command will render. For example, if the command should only render within one app, within all apps that share a particular table, or within all apps and all tables for a specific command bar location.
+Commands may have one of three scopes. The scope determines whether a single command will render for a single app, in all apps within the environment that include the same table, or in all apps and tables for a certain command bar location. 
 
-- **App** This is the default behavior when creating or editing commands using command designer. The command will only be present within the model-driven app command designer was opened from.
-- **Table** Also known as entity scope. Table scoped commands will be present within all apps in an environment. They are bound to the table and command bar location. For example, a table scope command for the Account table and Main form location will be present in all apps when viewing the main form for an account record.
-- **Global** This is the broadest scope. Global scope commands are bound to a command bar location. They are Not associated with any table or app. For example, a global scope command for the Main form location will be present in all apps when viewing the main form for all tables.
+
+- **App** This is the **default behavior** when creating or editing commands using command designer. The command will only be present within the model-driven app command designer was opened from.
+- **Table** Also known as entity scope. They are bound to a certain table and command bar location, but not bound to any specific app. Therefore Table scoped commands will be present within all apps in an environment that share the table bound to the command. For example, a table scope command for the Account table and Main form location will be present in all apps when viewing the main form for an account record.
+- **Global** This is the broadest scope. Global scope commands are only bound to a command bar location. Not an app or table. For example, a global scope command for the Main form location will be present in all apps within an environment when viewing the main form for every table.
+
+> [!IMPORTANT]
+> Creating or editing commands using command designer is always in the context of App scope. If a Global or Table scope command is edited using moder command designer, a copy (instance) is created and associated with the original command. For example, editing a Global scope command will replace the original command for the specific app, location, and table context used within command designer. All other apps and tables will will render the original command.
+
+> [!IMPORTANT]
+> Commands using Power Fx for the Action and/or Visibility cannot be converted to Table or Global scope at this time.
+> When commands are nested within Dropdowns, Groups, and Split buttons all must be set to the same scope.
 
 //Advanced topic
 ## Override Table (Entity) and Global Scoped commands
+More narrow scopes can override a broader scope command at every level. The most narrow scope wins.
 
-- An **App Scoped** command overrides Table (Entity) and Global scoped commands in context of particular App. Commands edited using moder command designer will create a copy (instance) of the command will app scope. For example, editing a Global scope command will replace the original command for the specific app, location, and table. Other apps and tables will render the original global scope command. 
-- A **Table (Entity) scoped** command overrides Global scoped commands.
+- A **Table (Entity) scoped** command overrides Global scoped commands. You can define a command that will be the same across all tables, but modify the behavior only for specific table(s).
+- An **App Scoped** command overrides both Table (Entity) and Global scoped commands only for a particular App. Other apps are not impacted by the change. For example, perhaps the sales and marketing divisions in your company use different terminology to describe the same business process. You could create a global or table scope command that will have the same behavior for sales and marketing, but use a different label and icon in each app.    
+
+
+## How to create a Table (Entity) scope command
+Export the solution as unmanaged, open appactions.xml, remove the  ```XML appuniquename  ``` node from the XML, the re-zip and import the solution.
+
+### Detailed steps
+1. Create one or more commands within your solution using command designer.
+
+1. Alternatively, create a separate solution and select **Add existing** > **Table**.  
+
+1. Chose **Select objects** then select and add the desired commands.
+
+1. 1. Select **Export** to export your solution.
+
+    > [!div class="mx-imgBorder"]
+    > ![Export solution.](media/export-solution-from-command-bar.png "Export solution")
+
+1. If you've made recent changes that haven't yet been published, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Publish the solution.](media/publish-check-issues-before-exporting-solution.png "Publish the solution")
+
+1. With the **Unmanaged** option selected, select **Export**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Unmanaged solution.](media/export-as-unmanaged-solution.png "Unmanaged solution")
+
+1. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**.
+
+1. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**.
+
+1. Select a location to extract the files to, and then select **Extract**.
+
+    Open the *appactions** folder and drill into the desired command (appaction). The appaction.xml file is the file that you'll edit.
+
+1. Open the appaction.xml file
+
+1. Delete the **appmoduleid** node from the xml: 
+ ```XML
+    <appmoduleid>
+      <uniquename>demo_DemoFestApp</uniquename>
+    </appmoduleid>
+ ```
+ 
+ 1. Example XML
+     ```XML
+<appaction uniquename="crdff_NewCommand!a078463b5d7c473d8965f0f80469f412!crdff_CustomApp!crdff_entity1!1">
+  <buttonlabeltext default="Show Alert">
+    <label description="Show Alert" languagecode="1033" />
+  </buttonlabeltext>
+  <buttonsequencepriority>10.0000000000</buttonsequencepriority>
+  <context>1</context>
+  <contextentity>
+    <logicalname>crdff_entity1</logicalname>
+  </contextentity>
+  <fonticon>AALinkedInLogo</fonticon>
+  <contextvalue>crdff_entity1</contextvalue>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <location>1</location>
+  <name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
+  <onclickeventjavascriptfunctionname>ShowAppAlert</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>ac21ad24-3c11-ef11-b6u7-000d3a1d942c</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+</appaction>
+
+
+1. After you've edited and saved the appaction.xml file, zip your solution in the same format it was exported in.  
+  
+1. **Import** the solution back into your environment and test the behavior.
+  
+
+## How to create a Global scope command
+Export the solution as unmanaged, open appactions.xml, remove the ```XML <appuniquename>  ```, ```XML <contextentity>``` and ```XML contextvalue``` nodes from the XML, the re-zip and import the solution.
+
+### Detailed steps
+1. Follow the same steps above to edit the appaction.xml file
+
+1. **Delete** the **appmoduleid** node from the xml: 
+ ```XML
+    <appmoduleid>
+      <uniquename>demo_DemoFestApp</uniquename>
+    </appmoduleid>
+ ```
+1. **Delete** the **contextentity** and **contextvalue** nodes from the xml: 
+ ```XML
+  <contextentity>
+    <logicalname>account</logicalname>
+  </contextentity>
+   <contextvalue>account</contextvalue>
+ ```
+1. Change the **context** value from 1 to 0.
+
+1. Example XML
+ ```XML
+<appaction uniquename="crdff_NewCommand1!8fe72a85-1f84-431e-ac56-854f1bfadc4e!1">
+  <buttonlabeltext default="Show Alert">
+    <label description="Show Alert" languagecode="1033" />
+  </buttonlabeltext>
+  <buttonsequencepriority>10.0000000000</buttonsequencepriority>
+  <context>0</context>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <fonticon>AALinkedInLogo</fonticon>
+  <location>1</location>
+  <name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
+  <onclickeventjavascriptfunctionname>ShowGlobalAlert</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>ac21ad24-3c01-ec11-b6e7-000d3a1d942c</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+</appaction>
+ ```
+1. After you've edited and saved the appaction.xml file, zip your solution in the same format it was exported in.  
+  
+1. **Import** the solution back into your environment and test the behavior.
+
+
+## How to override a Global scope command with a table scope
+This example is for when you want a global scope command to be the same everywhere **except** for a certain table. 
+- Entity Scoped Action will be visible on crdff_entity1 grids in all apps except in crdff_CustomApp.
+- Global Scoped Action will be visible on all the entity grids except crdff_entity1.
+
+> [!NOTE]
+> To override either Global or Table scope comands with an App scope command, simply edit the command using command designer.
+
+To override a Global Scoped command with a Table scope command, modify the appactions.xml files so they have the same **name**. 
+
+### Steps
+1. Follow the above steps, but create **two** commands using command designer
+
+1. Then follow those same steps to export your solution and edit the appactions.xml files.
+
+1. Follow the steps above to create one global and one entity scope scope command.
+
+1. Set the **name** property to be the exact same for both the global and entity scope commands.
+
+1. Example **Global scope** command XML
+ ```XML
+
+```
 
 
