@@ -2,51 +2,45 @@
 
 Measure the distance, area, and volume of your physical space using your device camera.
 
-To use the measurement feature, your app must enable the [Measure in MR](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/mixed-reality-component-measure-distance) control for your canvas app.
+To use the measurement feature, your app must enable the  [Measure in MR](mixed-reality-component-measure-distance.md) control for your canvas app.
 
 ## Prerequisites
 
 Before you start taking measurements, follow these steps to enter basic information about your space.
 
-1.  Open your canvas app and select the **Measure in MR** button.
+1. Open your canvas app and select the **Measure in MR** button.
 
-2.  At the top select the drop-down list or select the list button.
+2. At the top select the drop-down list or select the list button.
 
-3.  On **the Measurement Inputs** screen, enter the required measurements:
+3. On **the Measurement Inputs** screen, enter the required measurements:
 
-    -   Wall distance
+    - Wall distance
 
-    -   Chair freeform
+    - Chair freeform
 
-    -   Desk area
+    - Desk area
 
-    -   Carpet freeform
+    - Carpet freeform
 
-    -   Shelf volume
+    - Shelf volume
 
-4.  When you're done, select the close button.
+4. When you're done, select the close button.
 
 ## Take a measurement
 
--   Open your canvas app and select the **Measure in MR** button.
+1. Open your canvas app and select the **Measure in MR** button.
 
--   Select the camera button and then follow the instructions on your screen
+2. Select the camera button and then follow the instructions on your screen
 
--   Keep moving your device until it vibrates, and you see white dots appear. The white dot with a circle is the starting point of your measurement.
+3. Keep moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
 
--   Select the ![Icon Description automatically generated](media/image8.png) button to start a new measurement. Follow these steps depending on the type of measurement:
+4. Select the ![Measurement button](media/image8.png) button to start a new measurement. Follow these steps depending on the type of measurement:
 
-- **Distance:** Bring the dot to where you would like to end measurement and select the green checkmark button to finish.
+    - **Distance:** Bring the dot to where you would like to end measurement and select the green checkmark button to finish.
 
-*Select an endpoint After finishing*
+    - **Area**: Outline the area you would like to measure by clicking the ![Icon Description automatically generated](media/image11.png) button to add points. Once you are done, bring the dot to where you began measuring and click the green check to finish measuring.
 
-- **Area**: Outline the area you would like to measure by clicking the ![Icon Description automatically generated](media/image11.png) button to add points. Once you are done, bring the dot to where you began measuring and click the green check to finish measuring.
-
-*Choosing points Choosing ending point Finished measured area*
-
-- **Volume:** Outline the base of the volume you would like to measure by clicking the ![Icon Description automatically generated](media/image11.png) button to add points. Once you are done, bring the dot to where you began measuring to finish the base. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
-
-*Choose base points Close base Select height Finished volume*
+    - **Volume:** Outline the base of the volume you would like to measure by clicking the ![Icon Description automatically generated](media/image11.png) button to add points. Once you are done, bring the dot to where you began measuring to finish the base. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
 
 Some Power Apps may have Box Draw enabled, where volumes are restricted to rectangular prisms. Drawing is accomplished by selecting just four points: three to draw the base, and one for height.
 
