@@ -58,6 +58,17 @@ At a very high level command customization fits into the following categories. V
 > [!NOTE]
 > - Less frequently customized command bar locations are not supported in command designer. See the [Global command bar and Other ribbons](../../developer/model-driven-apps/ribbons-available.md) sections for more information on customizing commands for these locations.
 
+## Types of commands
+    > [!div class="mx-imgBorder"]
+    > ![Command types](media/CommandDesigner-commandTypes.jpg "Command types")
+    
+- **Command** Standard button. Performs an action when clicked. Can also be nested in group(s) within dropdowns and split buttons. Note these were called Flyouts in classic commanding.
+- **Dropdown** Creates a menu where you can organize commands within a group.
+- **Group** Add titles to groups of commands nested within dropdowns and split buttons.
+- **Split button** Similar to a dropdown, but has a primary command. When the split button is clicked, the action from the primary command is executed. If the expand chevron is clicked the primary command will not be executed. Instead a list will expand to show additional groups, flyouts, and commands.
+
+
+
 ## Key differences between classic and modern commands
 Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as use custom pages to converge canvas and model-driven apps, it was vital to reinvent and rebuild the command infrastructure. 
 Modern commanding offers many new capabilities and is much simpler to use. However, when preview was announced many important parity gaps needed to be addressed. Many of those gaps have since been closed while certain differences do remain. Also note that many perceived gaps were intentionally left behind as they were identified to be not relevant with modern apps commanding design.
