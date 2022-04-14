@@ -25,7 +25,7 @@ ms.custom: intro-internal
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
 > [!NOTE]
-> - If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
+> If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
 
 
 ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
@@ -46,7 +46,7 @@ The table below outlines which mobile app you can use to run your app.
 |-------------------------|-------------------------|
 | [Power Apps mobile](run-powerapps-on-mobile.md#install-power-apps-mobile-app) (covered in this topic) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamis 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
 | [Power Apps for Windows (preview)](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
-| [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and will no longer be supported in 2023. |
+| [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
