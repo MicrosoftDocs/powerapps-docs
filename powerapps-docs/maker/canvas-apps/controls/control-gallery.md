@@ -2,11 +2,10 @@
 title: Gallery control in Power Apps
 description: Learn about the details, properties and examples of the gallery control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/11/2021
+ms.date: 04/14/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
@@ -36,7 +35,38 @@ Predefined templates for showing images and text in a gallery are available, and
 
 ## Limitations
 
-If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
+- If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
+
+- The following controls are not supported within a gallery: 
+
+    :::row:::
+       :::column span="":::
+          [Barcode](control-new-barcode-scanner.md)
+       :::column-end:::
+       :::column span="":::
+          [Edit form and Display form](control-form-detail.md)
+       :::column-end:::
+       :::column span="":::
+          Form viewer <!--- Display form? --->
+       :::column-end:::
+       :::column span="":::
+          Form Pro <!--- https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/transform-infopath ? --->
+       :::column-end:::
+    :::row-end:::
+    :::row:::
+       :::column span="":::
+          [PDF viewer](control-pdf-viewer.md)
+       :::column-end:::
+       :::column span="":::
+          [Power BI tile](control-power-bi-tile.md)
+       :::column-end:::
+       :::column span="":::
+          [Rich text editor](control-richtexteditor.md)
+       :::column-end:::
+       :::column span="":::
+          [Fluid grid (scrollable screen)](../add-scrolling-screen.md) <!--- validate? --->
+       :::column-end:::
+    :::row-end:::
 
 ## Key properties
 
@@ -155,12 +185,6 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
     > [!NOTE]
   > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md) controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
-
-## Limitations
-
-### Controls not supported within Galleries
-
-The following controls are not supported within a gallery: Barcode, Form, Form viewer, Forms Pro, PDF viewer, Power BI tile, Rich Text Editor, Fluid grid (scrollable screen)
 
 ### See also
 
