@@ -1,4 +1,23 @@
-﻿# Measure your space in mixed reality
+---
+title: Measure your space in mixed reality
+description: Measure your space in mixed reality.
+author: anuitz
+ms.topic: overview
+ms.custom: canvas
+ms.reviewer: mduelae
+ms.date: 04/14/2022
+ms.subservice: canvas-maker
+ms.author: anuitz
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+contributors:
+  - mduelae
+  - anuitz
+---
+
+# Measure your space in mixed reality
 
 Measure the distance, area, and volume of your physical space using your device camera.
 
@@ -10,7 +29,12 @@ Before you start taking measurements, follow these steps to enter basic informat
 
 1. Open your canvas app and select the **Measure in MR** button.
 
+   > [!div class="mx-imgBorder"]
+   > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
+
 2. At the top select the drop-down list or select the list button.
+
+
 
 3. On **the Measurement Inputs** screen, enter the required measurements:
 
