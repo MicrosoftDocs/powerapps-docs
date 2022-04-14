@@ -68,6 +68,8 @@ Predefined templates for showing images and text in a gallery are available, and
        :::column-end:::
     :::row-end:::
 
+- You can only add one gallery inside another gallery.
+
 ## Key properties
 
 [Default](properties-core.md) – The item or record from the data source to be selected in the gallery when the app starts up.
