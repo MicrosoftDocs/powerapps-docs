@@ -39,13 +39,12 @@ Predefined templates for showing images and text in a gallery are available, and
 
 - The following controls are not supported within a gallery:
     - [Barcode](control-new-barcode-scanner.md)
-    - [Edit form and Display form](control-form-detail.md)
-    - Form viewer <!--- Display form? --->
-    - [Form Pro](../transform-infopath.md) <!--- validate ? --->
+    - [Display form](control-form-detail.md)
+    - [Edit form](control-form-detail.md)
     - [PDF viewer](control-pdf-viewer.md)
     - [Power BI tile](control-power-bi-tile.md)
     - [Rich text editor](control-richtexteditor.md)
-    - [Fluid grid (scrollable screen)](../add-scrolling-screen.md) <!--- validate? --->
+    - [Sscrollable screen (Fluid grid)](../add-scrolling-screen.md)
 
 - You can only add one gallery inside another gallery.
 
