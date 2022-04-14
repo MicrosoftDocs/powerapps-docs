@@ -1,0 +1,35 @@
+---
+title: "Command designer overview | MicrosoftDocs"
+description: "Overview of modern commanding, command designer, and Power Fx"
+Keywords: command bar, command designer, ribbon, action bar, Power Fx command, command component, button
+author: caburk
+ms.author: caburk
+ms.reviewer: matp
+manager: kvivek
+ms.date: 07/26/2021
+
+ms.subservice: mda-maker
+ms.topic: overview
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
+# Scopes for modern commands (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Commands may have one of three types of scopes. The scope determines how broadly a command will render. For example, if the command should only render within one app, within all apps that share a particular table, or within all apps and all tables for a specific command bar location.
+
+- **App** This is the default behavior when creating or editing commands using command designer. The command will only be present within the model-driven app command designer was opened from.
+- **Table** Also known as entity scope. Table scoped commands will be present within all apps in an environment. They are bound to the table and command bar location. For example, a table scope command for the Account table and Main form location will be present in all apps when viewing the main form for an account record.
+- **Global** This is the broadest scope. Global scope commands are bound to a command bar location. They are Not associated with any table or app. For example, a global scope command for the Main form location will be present in all apps when viewing the main form for all tables.
+
+//Advanced topic
+## Override Table (Entity) and Global Scoped commands
+
+- An **App Scoped** command overrides Table (Entity) and Global scoped commands in context of particular App. Commands edited using moder command designer will create a copy (instance) of the command will app scope. For example, editing a Global scope command will replace the original command for the specific app, location, and table. Other apps and tables will render the original global scope command. 
+- A **Table (Entity) scoped** command overrides Global scoped commands.
+
+
