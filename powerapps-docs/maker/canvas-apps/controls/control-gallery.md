@@ -41,7 +41,7 @@ Predefined templates for showing images and text in a gallery are available, and
     - [Barcode](control-new-barcode-scanner.md)
     - [Edit form and Display form](control-form-detail.md)
     - Form viewer <!--- Display form? --->
-    - Form Pro <!--- https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/transform-infopath ? --->
+    - [Form Pro](../transform-infopath.md) <!--- validate ? --->
     - [PDF viewer](control-pdf-viewer.md)
     - [Power BI tile](control-power-bi-tile.md)
     - [Rich text editor](control-richtexteditor.md)
