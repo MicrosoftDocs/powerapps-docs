@@ -28,13 +28,10 @@ To use the measurement feature, your app must enable the  [Measure in MR](mixed-
 Before you start taking measurements, follow these steps to enter basic information about your space.
 
 1. Open your canvas app and select the **Measure in MR** button.
-
+2. At the top select the drop-down list or select the list button.
+ 
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
-
-2. At the top select the drop-down list or select the list button.
-
-
 
 3. On **the Measurement Inputs** screen, enter the required measurements:
 
