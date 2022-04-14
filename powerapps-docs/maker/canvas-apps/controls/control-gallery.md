@@ -37,36 +37,15 @@ Predefined templates for showing images and text in a gallery are available, and
 
 - If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
 
-- The following controls are not supported within a gallery: 
-
-    :::row:::
-       :::column span="":::
-          [Barcode](control-new-barcode-scanner.md)
-       :::column-end:::
-       :::column span="":::
-          [Edit form and Display form](control-form-detail.md)
-       :::column-end:::
-       :::column span="":::
-          Form viewer <!--- Display form? --->
-       :::column-end:::
-       :::column span="":::
-          Form Pro <!--- https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/transform-infopath ? --->
-       :::column-end:::
-    :::row-end:::
-    :::row:::
-       :::column span="":::
-          [PDF viewer](control-pdf-viewer.md)
-       :::column-end:::
-       :::column span="":::
-          [Power BI tile](control-power-bi-tile.md)
-       :::column-end:::
-       :::column span="":::
-          [Rich text editor](control-richtexteditor.md)
-       :::column-end:::
-       :::column span="":::
-          [Fluid grid (scrollable screen)](../add-scrolling-screen.md) <!--- validate? --->
-       :::column-end:::
-    :::row-end:::
+- The following controls are not supported within a gallery:
+    - [Barcode](control-new-barcode-scanner.md)
+    - [Edit form and Display form](control-form-detail.md)
+    - Form viewer <!--- Display form? --->
+    - Form Pro <!--- https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/transform-infopath ? --->
+    - [PDF viewer](control-pdf-viewer.md)
+    - [Power BI tile](control-power-bi-tile.md)
+    - [Rich text editor](control-richtexteditor.md)
+    - [Fluid grid (scrollable screen)](../add-scrolling-screen.md) <!--- validate? --->
 
 - You can only add one gallery inside another gallery.
 
