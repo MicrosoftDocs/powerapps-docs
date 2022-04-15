@@ -101,11 +101,18 @@ String interpolation can include standard text strings in the embedded formula. 
 $"Welcome {Coalesce( NickName, FirstName, "Friend" )}, it's great to meet you!"  
 ```
 
-String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined, with one and only space between each part even when a part is *blank*:
+String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined into a greeting.  Even if one or two of these values are *blank*, the correct number of spaces will be between the name parts.  If none of the parts are provided, the inner string interpolation will collapse to an empty string, and be repalced by the [**Coalesce**](function-isblank-isempty.md) function by "Friend".  
 
 ```powerapps-dot
-$"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}, it's great to meet you!"
+$"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}!"
 ```
+
+| First | Middle | Last | Result |
+|-------|--------|------|--------|
+| John | Qunicy | Doe | `Welcome John Quincy Doe!` |
+| John | *blank* | Doe | `Welcome John Doe!` |
+| *blank* | *blank* | Doe | `Welcome Doe!` |
+| *blank* | *blank* | *blank* | `welcome Friend!` |
 
 ### Image and Media resources
 
