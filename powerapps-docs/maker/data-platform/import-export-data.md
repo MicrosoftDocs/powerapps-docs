@@ -1,9 +1,9 @@
 ---
 title: "Importing and exporting data | MicrosoftDocs"
+description: Learn about importing and exporting data into Microsoft Dataverse.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -11,7 +11,7 @@ applies_to:
   - "powerapps"
 author: "mmercuri"
 ms.subservice: dataverse-maker
-ms.author: "mmercuri"
+ms.author: "kvivek"
 manager: "kvivek"
 search.audienceType: 
   - maker

@@ -1,25 +1,18 @@
 ---
 title: "Web API  Data operations Samples (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
 description: "This article provides a description of various Web API samples that are implemented using client-side JavaScript"
-ms.custom: ""
-ms.date: 07/15/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: a32e9a04-7bc1-41dd-b9af-bb4f21a613c6
-caps.latest.revision: 15
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Data operations Samples (Client-side JavaScript)

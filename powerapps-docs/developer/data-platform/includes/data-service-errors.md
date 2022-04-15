@@ -1533,7 +1533,7 @@
 |0x80048027<br />-2147188697|Name: **ImportWorkflowNameConflictError**<br />Message: Workflow {0} cannot be imported because a workflow with same name and different unique identifier exists in the target system. Change the name of this workflow, and then try again.|
 |0x80048028<br />-2147188696|Name: **ImportWorkflowPublishedError**<br />Message: Workflow {0}({1}) cannot be imported because a workflow with same unique identifier is published on the target system. Unpublish the workflow on the target system before attempting to import this workflow again.|
 |0x8004801C<br />-2147188708|Name: **ImportWrongPublisherError**<br />Message: The following managed solution cannot be imported: {0}. The publisher name cannot be changed from {1} to {2}.|
-|0x8004801A<br />-2147188710|Name: **ImportXsdValidationError**<br />Message: The import file is invalid. XSD validation failed with the following error: '{0}'. The validation failed at: '...{1} <<<<<ERROR LOCATION>>>>> {2}...'."|
+|0x8004801A<br />-2147188710|Name: **ImportXsdValidationError**<br />Message: The import file is invalid. XSD validation failed with the following error: '{0}'. The validation failed at: '...{1} <<<<\<ERROR LOCATION\>>>>> {2}...'."|
 |0x8005E227<br />-2147098073|Name: **InaccessibleSmtpServer**<br />Message: Cannot reach to the smtp server. Please check that the smtp server is accessible.|
 |0x8005E228<br />-2147098072|Name: **InactiveEmailServerProfile**<br />Message: Email server profile is disabled. Cannot process email for disabled profile.|
 |0x8005E219<br />-2147098087|Name: **InactiveMailbox**<br />Message: The mailbox is in inactive state. Send/Receive mails are allowed only for active mailboxes.|
@@ -2019,7 +2019,7 @@
 |0x80040204<br />-2147220988|Name: **InvalidUserAuth**<br />Message: User does not have the privilege to perform this action.|
 |0x8004F712<br />-2147158254|Name: **InvalidUserIdInProvisionLanguageForUser**<br />Message: UserId provided '{0}' is invalid.|
 |0x8004B027<br />-2147176409|Name: **InvalidUserLicenseCount**<br />Message: Cannot purchase {0} user licenses for the Offering {1}.|
-|0x80048095<br />-2147188587|Name: **InvalidUserName**<br />Message: You must enter the user name in the format <name>@<domain>. Correct the format and try again.|
+|0x80048095<br />-2147188587|Name: **InvalidUserName**<br />Message: You must enter the user name in the format \<name\>@\<domain\>. Correct the format and try again.|
 |0x8004B011<br />-2147176431|Name: **InvalidUserQuota**<br />Message: You have reached the maximum number of user quota|
 |0x80060807<br />-2147088377|Name: **InvalidUserToImportExcelOnlineFile**<br />Message: You don't have permission to import this file. Only the user who exported this data can import this file.|
 |0x80060806<br />-2147088378|Name: **InvalidUserToViewExcelOnlineFile**<br />Message: You don't have permission to view this file. Only the user who exported this data can view this file.|
@@ -2097,7 +2097,7 @@
 |0x8004F050<br />-2147159984|Name: **LayerDesiredOrderInvalidXMLDetail**<br />Message: The LayerDesiredOrder parameter contains an invalid XML schema. Check the property [{0}].|
 |0x8004F052<br />-2147159982|Name: **LayerDesiredOrderNotAllowedOnPatch**<br />Message: The LayerDesiredOrder parameter cannot be used when importing a Patch. The parameter can only be used while importing a solution.|
 |0x8004F048<br />-2147159992|Name: **LayerDesiredOrderNotSamePublisher**<br />Message: The solution [{0}] was used in the LayerDesiredOrder parameter, but its publisher [{1}] does not match the publisher of the solution being installed: [{2}]. This parameter can be used only by solutions from the same publisher.|
-|0x8004F065<br />-2147159963|Name: **LayerDesiredOrderNotWhitelist**<br />Message: The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be whitelisted to use this feature.|
+|0x8004F065<br />-2147159963|Name: **LayerDesiredOrderNotWhitelist**<br />Message: The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be allow listed to use this feature.|
 |0x8004F047<br />-2147159993|Name: **LayerDesiredOrderPendingUpgrade**<br />Message: The solution [{0}] used in LayerDesiredOrder parameter has a pending upgrade. Please complete its upgrade before retrying this operation.|
 |0x8004F056<br />-2147159978|Name: **LayerDesiredOrderPublisherNotAllowed**<br />Message: The publisher [{0}] is not allowed to use the LayerDesiredOrder parameter.|
 |0x8004F058<br />-2147159976|Name: **LayerDesiredOrderRestrictedSolution**<br />Message: The LayerDesiredOrder parameter cannot be used on [{0}].|
@@ -2809,10 +2809,10 @@
 |0x8004F10B<br />-2147159797|Name: **RibbonImportDuplicateElementId**<br />Message: The ribbon element with the Id:{0} cannot be imported because an existing ribbon element with the same Id already exists.|
 |0x8004F103<br />-2147159805|Name: **RibbonImportEntityNotSupported**<br />Message: The solution cannot be imported because the {0} entity contains a Ribbon definition, which is not supported for that entity. Remove the RibbonDiffXml node from the entity definition and try to import again.|
 |0x8004F101<br />-2147159807|Name: **RibbonImportHidingBasicHomeTab**<br />Message: The definition of the ribbon being imported will remove the Microsoft Dynamics 365 home tab. Include a home tab definition, or a ribbon will not be displayed in areas of the application that display the home tab.|
-|0x8004F10A<br />-2147159798|Name: **RibbonImportHidingJewel**<br />Message: Ribbon customizations cannot hide the <Jewel> node. Any ribbon customization that hides this node is ignored during import and will not be exported.|
+|0x8004F10A<br />-2147159798|Name: **RibbonImportHidingJewel**<br />Message: Ribbon customizations cannot hide the \<Jewel\> node. Any ribbon customization that hides this node is ignored during import and will not be exported.|
 |0x8004F102<br />-2147159806|Name: **RibbonImportInvalidPrivilegeName**<br />Message: The RibbonDiffXml in this solution contains a reference to an invalid privilege: {0}. Update the RibbonDiffXml to reference a valid privilege and try importing again.|
 |0x8004F109<br />-2147159799|Name: **RibbonImportLocationAndIdDoNotMatch**<br />Message: CustomAction Id '{0}' cannot override '{1}' because '{2}' does not match the CustomAction Location value.|
-|0x8004F108<br />-2147159800|Name: **RibbonImportModifyingTopLevelNode**<br />Message: Ribbon customizations cannot be made to the following top-level ribbon nodes: <Ribbon>, <ContextualGroups>, and <Tabs>.|
+|0x8004F108<br />-2147159800|Name: **RibbonImportModifyingTopLevelNode**<br />Message: Ribbon customizations cannot be made to the following top-level ribbon nodes: \<Ribbon\>, \<ContextualGroups\>, and \<Tabs\>.|
 |0x8004F10C<br />-2147159796|Name: **RibbonImportRibbonDiffIdInvalidLength**<br />Message: We can’t import this ribbon element because the ID length exceeds the maximum length of 128 characters: {0}|
 |0x80044281<br />-2147204479|Name: **RINotProvisioned**<br />Message: Relationship Insights hasn’t been turned on for your organization {0}.|
 |0x80060471<br />-2147089295|Name: **RoboticProcessAutomationFlowProcessesNotEnabled**<br />Message: Creation of Reserved processes is not enabled.|
