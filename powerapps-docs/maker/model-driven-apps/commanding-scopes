@@ -6,40 +6,45 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
+ms.date: 04/14/2022
 
 ms.subservice: mda-maker
-ms.topic: overview
+ms.topic: article
 search.audienceType: 
   - maker
+  - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
+
 # Scopes for modern commands (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Commands may have one of three scopes. The scope determines whether a single command will render for a single app, in all apps within the environment that include the same table, or in all apps and tables for a certain command bar location. 
-
-
-- **App** This is the **default behavior** when creating or editing commands using command designer. The command will only be present within the model-driven app command designer was opened from.
-- **Table** Also known as entity scope. They are bound to a certain table and command bar location, but not bound to any specific app. Therefore Table scoped commands will be present within all apps in an environment that share the table bound to the command. For example, a table scope command for the Account table and Main form location will be present in all apps when viewing the main form for an account record.
-- **Global** This is the broadest scope. Global scope commands are only bound to a command bar location. Not an app or table. For example, a global scope command for the Main form location will be present in all apps within an environment when viewing the main form for every table.
-
-> [!IMPORTANT]
-> Creating or editing commands using command designer is always in the context of App scope. If a Global or Table scope command is edited using moder command designer, a copy (instance) is created and associated with the original command. For example, editing a Global scope command will replace the original command for the specific app, location, and table context used within command designer. All other apps and tables will will render the original command.
+Commands may have one of three scopes. The scope determines whether a command (shemaname = appaction) will render for a table within a single app, for a table acrross all apps, or for all tables and all apps. 
+A command must be bound to a command bar location such as Main grid or Main form regardless of scope. Therefore changing the scope will not render the command in different command bar locations such as Main grid and Main form.
 
 > [!IMPORTANT]
 > Commands using Power Fx for the Action and/or Visibility cannot be converted to Table or Global scope at this time.
 > When commands are nested within Dropdowns, Groups, and Split buttons all must be set to the same scope.
 
-//Advanced topic
+- **App** This is the narrowest scope and **default behavior** when creating or editing commands using moder command designer. Command designer is opened within the context of a model-driven app, table, and command bar location.
+- **Table** Also known as entity scope. Bound to a specific table and command bar location. Not bound to any specific app. Therefore Table scoped commands will render in all apps that use the table. For example, a table scope command for the Account table and Main form location will be present in all apps when viewing the main form for an account record.
+- **Global** This is the broadest scope. Global scope commands are only bound to a command bar location. Not an app or table. For example, a global scope command for the Main form location will be present in all apps within an environment when viewing the main form for every table.
+
+> [!IMPORTANT]
+> If a Global or Table scope command is edited within modern command designer, a copy (instance) is created with App scope and linked to the original command. 
+> For example, editing a Global scope command in command designer overrides the original Global scope command but only for the specific app and table chosen when opening command designer. 
+> All other apps and tables will will render the original command.
+> The copy (instance) now has its' own lifecycle. Changes to the original Global scope command will not effect the new App scope instance and vice versa.
+
+
 ## Override Table (Entity) and Global Scoped commands
 More narrow scopes can override a broader scope command at every level. The most narrow scope wins.
 
 - A **Table (Entity) scoped** command overrides Global scoped commands. You can define a command that will be the same across all tables, but modify the behavior only for specific table(s).
-- An **App Scoped** command overrides both Table (Entity) and Global scoped commands only for a particular App. Other apps are not impacted by the change. For example, perhaps the sales and marketing divisions in your company use different terminology to describe the same business process. You could create a global or table scope command that will have the same behavior for sales and marketing, but use a different label and icon in each app.    
+- An **App Scoped** command overrides all other scopes but only for a particular app and table. 
 
 
 ## How to create a Table (Entity) scope command
@@ -176,7 +181,7 @@ This example is for when you want a global scope command to be the same everywhe
 > [!NOTE]
 > To override either Global or Table scope comands with an App scope command, simply edit the command using command designer.
 
-To override a Global Scoped command with a Table scope command, modify the appactions.xml files so they have the same **name**. 
+To override a Global Scoped command with a Table scope command, modify the appactions.xml files so they have the same  ```XML <name> ```. 
 
 ### Steps
 1. Follow the above steps, but create **two** commands using command designer
@@ -187,9 +192,58 @@ To override a Global Scoped command with a Table scope command, modify the appac
 
 1. Set the **name** property to be the exact same for both the global and entity scope commands.
 
-1. Example **Global scope** command XML
+####Example **Global scope** command XML
  ```XML
-
+<appaction uniquename="crdff_NewCommand1!8fe72a85-1f84-431e-ac56-854f1bfadc4e!1">
+<buttonlabeltext default="Show Alert">
+  <label description="Show Alert" languagecode="1033" />
+</buttonlabeltext>
+<buttonsequencepriority>10.0000000000</buttonsequencepriority>
+<context>0</context>
+<hidden>0</hidden>
+<iscustomizable>1</iscustomizable>
+<fonticon>AALinkedInLogo</fonticon>
+<location>1</location>
+<name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
+<onclickeventjavascriptfunctionname>ShowGlobalAlert</onclickeventjavascriptfunctionname>
+<onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+<onclickeventjavascriptwebresourceid>
+  <webresourceid>ac21ad24-3c01-ec11-b6e7-000d3a1d942c</webresourceid>
+</onclickeventjavascriptwebresourceid>
+<onclickeventtype>2</onclickeventtype>
+<statecode>0</statecode>
+<statuscode>1</statuscode>
+<type>0</type>
+</appaction>
 ```
 
+#### Example **Table (entity) scope** command XML
+ ```XML
+<appaction uniquename="crdff_NewCommand!a078463b5d7c473d8965f0f80469f412!crdff_entity1!1">
+<buttonlabeltext default="Show Alert">
+<label description="Show Alert" languagecode="1033" />
+</buttonlabeltext>
+<buttonsequencepriority>10.0000000000</buttonsequencepriority>
+<context>1</context>
+<contextentity>
+<logicalname>crdff_entity1</logicalname>
+</contextentity>
+<fonticon>AALinkedInLogo</fonticon>
+<contextvalue>crdff_entity1</contextvalue>
+<hidden>0</hidden>
+<iscustomizable>1</iscustomizable>
+<location>1</location>
+<name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
+<onclickeventjavascriptfunctionname>ShowEntityAlert</onclickeventjavascriptfunctionname>
+<onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+<onclickeventjavascriptwebresourceid>
+<webresourceid>ac21ad24-3c01-ec11-b6e7-000d3a1d942c</webresourceid>
+</onclickeventjavascriptwebresourceid>
+<onclickeventtype>2</onclickeventtype>
+<statecode>0</statecode>
+<statuscode>1</statuscode>
+<type>0</type>
+</appaction>
+```
 
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
