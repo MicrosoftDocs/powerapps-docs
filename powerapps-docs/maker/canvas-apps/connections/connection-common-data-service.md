@@ -38,6 +38,11 @@ The name of the selected environment appears under the tables list.
 
 ![New environments.](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
 
+
+## Visibility and access
+When you select **Change** you are presented with a list of environments. While you may see an environment in the list, it is the security role(s) in the environment that govern what you can do. For example, if you do not have read privileges you will not be able to see the tables and records in the environment.
+
+
 ## Power Apps data type mappings
 
 The Microsoft Dataverse connector is more robust than the Dynamics 365 connector and approaching feature parity. The following table lists the data types in Power Apps, and how they map to data types in Dataverse.
