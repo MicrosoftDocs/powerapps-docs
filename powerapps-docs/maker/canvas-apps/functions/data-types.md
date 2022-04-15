@@ -98,7 +98,7 @@ If **NickName** is set to "Joe", then this formula produces the text string **We
 String interpolation can include standard text strings in the embedded formula.  For example, if neither **NickName** nor **FirstName** were supplied, we could still provide **"Friend"** as a substiute:
 
 ```powerapps-dot
-$"Welcome {Coalesce( NickName, FirstName, "Friend" )}, it's great to meet you!"  
+$"Welcome {Coalesce( NickName, FirstName, "Friend" )}!"  
 ```
 
 String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined into a greeting.  Even if one or two of these values are *blank*, the correct number of spaces will be between the name parts.  If none of the parts are provided, the inner string interpolation will collapse to an empty string, and be repalced by the [**Coalesce**](function-isblank-isempty.md) function by "Friend".  
