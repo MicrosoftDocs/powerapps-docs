@@ -51,8 +51,8 @@ Before you start taking measurements, follow these steps to enter basic informat
 4. Select the ![Measurement button](media/image8.png) button to start a new measurement. Then follow these steps depending on the type of measurement:
 
     - **Distance:** After pressing the measure button, slowly move the dot to where you want the measurement to end then select the checkmark button. 
-
-![Measurement button](media/image8.png)
+       > [!div class="mx-imgBorder"]
+       > ![Measure wall distance.](./media/mr-measurement/distance-9.png)
 
 
 
