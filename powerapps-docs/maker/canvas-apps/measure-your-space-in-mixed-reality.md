@@ -79,13 +79,20 @@ Before you start taking measurements, follow these steps to enter basic informat
          > [!div class="mx-imgBorder"]
          > ![Add point to outline the base of the volume.](./media/mr-measurement/volume-add-points-15.png)
       
-      3. Connect the last dot to the first dot to complete the measurement. 
+      2. Connect the last dot to the first dot to complete the measurement. 
          > [!div class="mx-imgBorder"]
          > ![Connect the volume measurement.](./media/mr-measurement/volume-complete-measurement-16.png)
 
-      5. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
+      3. Move your device upwards and select the desired height and then select the checkmark. 
+         > [!div class="mx-imgBorder"]
+         > ![Move your device upwards to campute the objects height.](./media/mr-measurement/volume-upwards-17) 
+      
+     > [!NOTE]
+     > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.
+         > ![How to measure a box draw.](./media/mr-measurement/box-drawing-18) 
 
-Some Power Apps may have Box Draw enabled, where volumes are restricted to rectangular prisms. Drawing is accomplished by selecting just four points: three to draw the base, and one for height.
+
+
 
 ![A screenshot of a cell phone Description automatically generated with medium confidence](media/image19.png) ![](media/image20.png) ![Diagram Description automatically generated](media/image21.jpeg) ![](media/image22.jpeg)
 
