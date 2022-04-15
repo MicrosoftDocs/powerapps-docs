@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/07/2020
+ms.date: 04/14/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -72,6 +72,40 @@ results in a banner when the button is pressed, where the first and last double 
 ![pop up notification with the message Jane said "Hello, World."](media/data-types/literal-string.png)
 
 Single quotation marks are not used for [identifier names](operators.md#identifier-names) that contain special characters and have no significance within a text string.  
+
+### String interpolation
+
+Use string interpolation to embed formulas within a text string.  This is often easier to work with and visualize the output than using the [**Concatenate**](function-concatenate.md) function or [**&**](operators.md) operator.  
+
+Prefix the text string with a dollar sign **$** and enclose the formula to be embedded with curly braces **{ }**.  To include a curly brace in the text string, use repeated curly braces: **{{** or **}}**.  String interpolation can be used anywhere a standard text string can be used.
+
+For example, consider this formula with global variables **Apples** set to 3 and **Bananas** set to 4:
+
+```powerapps-dot
+$"We have {Apples} apples, {Bananas} bananas, yielding {Apples+Bananas} fruit total." 
+```
+
+This formula returns the text string **We have 3 apples, 4 bananas, yielding 7 fruit total.**  The variables **Apples** and **Bananas** are inserted in the text replacing the curly braces, along with the result of the mathemtical formula **Apples+Bananas**.  Spaces and other characters around the curly braces are preserved as they are.
+
+Embedded formulas can include any functions or operators.  All that is requires is that the result of the formula can be coerced to a text string.  For example, this formula will insert **NickName** if it is supplied, or the **FirstName** if not, in a greeting:
+
+```powerapps-dot
+$"Welcome {Coalesce( NickName, FirstName )}, it's great to meet you!" )
+```
+
+If **NickName** is set to "Joe", then this formula produces the text string **Welcome Joe, it's great to meet you!**.  But if **NickName** is *blank* and **FirstName** is "Joseph", then this formula produces **Dear Joseph, great to meet you!** instead.
+
+String interpolation can include standard text strings in the embedded formula.  For example, if neither **NickName** nor **FirstName** were supplied, we could still provide **"Friend"** as a substiute:
+
+```powerapps-dot
+$"Welcome {Coalesce( NickName, FirstName, "Friend" )}, it's great to meet you!"  
+```
+
+String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined, with one and only space between each part even when a part is *blank*:
+
+```powerapps-dot
+$"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}, it's great to meet you!"
+```
 
 ### Image and Media resources
 
