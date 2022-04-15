@@ -2,7 +2,6 @@
 title: Connect to SharePoint from a canvas app
 description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -51,7 +50,7 @@ If you want to manage data in a list, Power Apps can [generate a three-screen ap
 
         ![To connect to SharePoint Online, select Connect directly (cloud services).](./media/connection-sharepoint-online/select-online.png "Connect to a site")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
     - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
@@ -68,7 +67,7 @@ If you want to manage data in a list, Power Apps can [generate a three-screen ap
 
         ![Choose gateway.](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
 ## Add data to an existing app
 

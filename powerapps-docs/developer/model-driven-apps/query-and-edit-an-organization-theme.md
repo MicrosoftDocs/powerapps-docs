@@ -1,12 +1,11 @@
 ---
 title: "Query and edit an organization theme(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.author: jdaly
+ms.author: hemantg
 author: HemantGaur
-manager: kvivek
-ms.date: 03/12/2022
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
-
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
@@ -14,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Query and edit an organization theme
 
@@ -114,7 +115,7 @@ After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.Publi
 ### See also
 
  [Theme table](../data-platform/reference/entities/theme.md) <br/>
- [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
+ [Create a theme](/powerapps/maker/model-driven-apps/create-themes-organization-branding) <br/>
  [Developers guide to customization](overview.md)
 
 

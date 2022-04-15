@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "JimDaly" #TODO: NoOwner
+author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart

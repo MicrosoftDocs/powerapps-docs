@@ -1,25 +1,18 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.custom: ""
-ms.date: 02/17/2022
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 799b2346-bda1-4a26-a330-79d0927a7743
-caps.latest.revision: 11
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "kvivek"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Execute batch operations using the Web API

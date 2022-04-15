@@ -1,25 +1,22 @@
 ---
 title: "Sample: Quick start for XRM Tooling API (Microsoft Dataverse)| Microsoft Docs"
 description: "This code sample demonstrates how to connect to a Microsoft Dataverse environment by using the XRM Tooling APIs, and then perform basic create, update, retrieve, and delete operations on a table"
-ms.custom: ""
-ms.date: 04/12/2021
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
 ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 060d45bb-b7fd-48bd-ab8f-629c1b8bc1dc
-caps.latest.revision: 20
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Sample: Quick start for XRM Tooling API
 

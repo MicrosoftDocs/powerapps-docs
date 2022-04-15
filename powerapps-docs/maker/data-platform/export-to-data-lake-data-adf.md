@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: 03/22/2021
 ms.reviewer: "matp"
 author: sabinn-msft
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,8 +23,6 @@ contributors:
   - sama-zaki
 ---
 # Ingest exported Dataverse data with Azure Data Factory
-
-
 
 After exporting data from Microsoft Dataverse to Azure Data Lake Storage Gen2 with Azure Synapse Link for Dataverse, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
 
@@ -68,7 +65,8 @@ This section describes the prerequisites necessary to ingest exported Dataverse 
 4. Under **Source settings**, do the following:
 
     - **Output stream name**: Enter the name you want.
-    - **Source type**: Select **Common Data Model**.
+    - **Source type**: Select **Inline**.
+    - **Inline dataset type**: Select **Common Data Model**.
     - **Linked Service**: Select the storage account from the drop-down menu, and then link a new service by providing your subscription details and leaving all default configurations.
     - **Sampling**: If you want to use all your data, select **Disable**.
 
