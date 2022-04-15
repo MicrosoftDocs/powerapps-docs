@@ -1,8 +1,7 @@
 ---
-title: Component library (preview)
+title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
-
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 11/03/2021
@@ -17,9 +16,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Component library (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Component library
 
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
@@ -163,8 +160,6 @@ Sharing a component library works the same way you share a canvas app. When you 
 - You can't import components using a component library from locally saved component library files. If you try to import a locally saved component library using **File** > **Save As** > **This Computer** and download the component library file as an app, following error message appears: 
 
     ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
-
-- You can't add existing component libraries to a [solution](add-app-solution.md). However, you can create new component libraries for solutions using add component library flow.
 
 - If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
 
