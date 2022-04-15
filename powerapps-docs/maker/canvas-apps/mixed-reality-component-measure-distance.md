@@ -37,7 +37,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 1. Open the **Insert** tab and expand **Media**.
 2. Select **Measuring camera** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
-The control is a button that's labeled with an icon of a cube and the text *Measuring Camera*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
+The control is a button that's labeled with an icon of a cube and the text *Measure*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
 
 ### Properties
 
