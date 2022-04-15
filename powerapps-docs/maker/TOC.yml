@@ -1145,7 +1145,7 @@
       href: ./canvas-apps/application-insights.md
   - name: Create native mobile apps (preview)
     items:
-      - name: Wrap (preview) overview
+      - name: Overview of Wrap (preview)
         href: ./common/wrap/overview.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
