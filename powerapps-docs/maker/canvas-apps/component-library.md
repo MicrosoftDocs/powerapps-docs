@@ -150,6 +150,15 @@ The following animation shows the process to get the latest components.
 
 ![Steps to get the latest components](./media/component-library/get-latest-components.gif "Steps to get the latest components")
 
+### Update component library in a consuming app
+
+If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
+
+![Edit library component.](./media/component-library/edit-library-component.png "Edit library component")
+
+If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
+
+
 ## Component library permissions
 
 Sharing a component library works the same way you share a canvas app. When you share a component library, you allow others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps. If shared as a co-owner, a user can use, edit, and share a component library but not delete or change the owner.
@@ -157,15 +166,9 @@ Sharing a component library works the same way you share a canvas app. When you 
 ## Known limitations
 
 - [Known limitations](create-component.md#known-limitations) applicable to components also applies to component libraries.
-- You can't import components using a component library from locally saved component library files. If you try to import a locally saved component library using **File** > **Save As** > **This Computer** and download the component library file as an app, following error message appears: 
+- You can't import components from a locally saved component library. It's possible to save a component library using **File** > **Save As** > **This Computer**. But if you try to import such saved component library, you'll see the following error message: 
 
     ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
-
-- If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
-
-    ![Edit library component.](./media/component-library/edit-library-component.png "Edit library component")
-
-    If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
 
 ## Next steps
 
