@@ -497,7 +497,7 @@
               href: ./canvas-apps/controls/control-list-box.md
             - name: Map
               href: ./canvas-apps/geospatial-component-map.md
-            - name: Measure in MR
+            - name: Measuring Camera
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
             - name: Microphone
               href: ./canvas-apps/controls/control-microphone.md
@@ -1047,7 +1047,7 @@
       href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
     - name: Create an app with address input and map controls
       href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measure in MR control
+    - name: Create an app using the Measuring Camera control
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
     - name: Create a canvas app with deep link to a specific screen
       href: ./canvas-apps/how-to/deep-linking.md
