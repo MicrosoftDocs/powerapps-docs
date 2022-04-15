@@ -109,7 +109,7 @@ The experience and capabilities of the rich text editor are controlled with conf
 
 > [!NOTE] _replace*_
 > 
-> All properties are replaced **except** for extraPlugins which are merged. Merging extraPlugins allow the use of a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Only the necessary plugins are then activated by adding them to the extraPlugins values in the instance specific configuration.
+> All properties are replaced **except** for extraPlugins which are merged. Merging extraPlugins allow the use of a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Then, only the necessary plugins can be activated by adding them to the extraPlugins values in the instance specific configuration.
 
 ## Rich text editor properties
 
@@ -157,37 +157,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 
 </tr>
-<tr>
-<td>
-  font_defaultLabel
-</td>
-
-<td>
-
-  Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI.
-</td>
-<td>
-
-  ```"font_defaultLabel": "Segoe UI"```
-</td>
-
-</tr>
-
-<tr>
-<td>
-  fontSize_defaultLabel
-</td>
-
-<td>
-
-  Sets the default label that is displayed in the toolbar for font size. The default is 9.
-</td>
-<td>
-
-  ```"fontSize_defaultLabel": "9"```
-</td>
-
-<tr>
+	<tr>
 <td>
   stickyStyle
 </td>
@@ -205,6 +175,39 @@ You can configure all of the CKEditor-supported properties under this property. 
 }
   ```
 </td>
+</tr>
+
+<tr>
+<td>
+  font_defaultLabel
+</td>
+
+<td>
+
+  Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI. The default label is purely visual and is not functional, stickyStyle configuration applies the functional font and size.
+</td>
+<td>
+
+  ```"font_defaultLabel": "Segoe UI"```
+</td>
+
+</tr>
+
+<tr>
+<td>
+  fontSize_defaultLabel
+</td>
+
+<td>
+
+  Sets the default label that is displayed in the toolbar for font size. The default is 9. The default label is purely visual and is not functional, stickyStyle configuration applies the functional font and size.
+</td>
+<td>
+
+  ```"fontSize_defaultLabel": "9"```
+</td>
+</tr>
+
 <tr>
 <td>
   toolbarLocation
@@ -218,7 +221,8 @@ You can configure all of the CKEditor-supported properties under this property. 
 
   ```"toolbarLocation": "bottom"```
 </td>
-
+</tr>
+	
 <tr>
 <td>
   toolbar
@@ -233,7 +237,8 @@ You can configure all of the CKEditor-supported properties under this property. 
   ```"toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]```
   
 </td>
-
+</tr>
+	
 <tr>
 <td>
   plugins
@@ -520,9 +525,30 @@ Depends on showAsTabControl and showPreview set to true.
 </tr>
 </table>
 
+
+
 ## Commonly used rich text editor configurations
 
 The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Advanced configuration for the rich text editor control](#advanced-configuration-for-the-rich-text-editor-control) and [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
+
+### Set the default font to Calibri with font-size 11pt
+
+ ```
+ { "defaultSupportedProps": {"font_defaultLabel":"Calibri", "fontSize_defaultLabel":"11", "stickyStyle":{"font-size":"11pt", "font-family":"Calibri/Calibri, Helvetica, sans-serif;"}  }}
+ ```
+ 
+ ### Make line breaks (Enter key) create a &lt;br&gt; instead of &lt;p&gt;
+ 
+ ```
+ { "defaultSupportedProps": {"enterMode":2}  }}
+ ```
+ 
+### All content pasted or created is HTML 5 compliant
+
+ ```
+ { "defaultSupportedProps": {"allowedContent":"a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};"}  }}
+ ```
+
 
 ## Additional sample rich text editor configurations
 
