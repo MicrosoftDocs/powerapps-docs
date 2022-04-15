@@ -2,11 +2,10 @@
 title: Connect to Microsoft Dataverse
 description: Learn how to connect to Microsoft Dataverse and use it for building apps in Power Apps.
 author: tapanm-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/10/2021
+ms.date: 04/15/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -30,7 +29,7 @@ When you add data from Dataverse, you can change the environment and then select
 
 ![Default environment.](media/connection-common-data-service/common-data-service-connection-change-environment.png)
 
-If you select **Change**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
+If you select **Change environment**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
 
 ![Other environments.](media/connection-common-data-service/common-data-service-connection-select-environment.png)
 
@@ -40,8 +39,8 @@ The name of the selected environment appears under the tables list.
 
 
 ## Visibility and access
-When you select **Change** you are presented with a list of environments. While you may see an environment in the list, it is the security role(s) in the environment that govern what you can do. For example, if you do not have read privileges you will not be able to see the tables and records in the environment.
 
+When you select **Change environment**, you're presented with a list of environments. Though you might see an environment in the list, the security role(s) in the environment govern what you can do in that environment. For example, if you don't have read privileges, you won't be able to see the tables and records in the environment.
 
 ## Power Apps data type mappings
 
@@ -74,13 +73,12 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
 | Sum, Min, Max, Avg                                              | Yes [5]        | \-           | \-         | No               | \-       |
 
-1.  Numeric with arithmetic expressions (for example, Filter(table, field + 10
-    \> 100) ) aren't delegable. Language and TimeZone aren't delegable.
+1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable.
 
 2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
     Left, Mid, Right, Upper, Lower, Replace, Substitute, etc.
 
-3.  DateTime is generally delegatable except for DateTime functions Now() and
+3.  DateTime is delegable except for DateTime functions Now() and
     Today().
 
 4.  Supports comparisons. For example, Filter(TableName, MyCol = Blank()).
