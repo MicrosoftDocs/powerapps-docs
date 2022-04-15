@@ -60,7 +60,8 @@ Before you start taking measurements, follow these steps to enter basic informat
       3. Select **Submint** to save the final measurement.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/distance-final-measurement-10.png)
-    - **Area**
+   
+   - **Area**
       1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the area that you want to measure.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/area-choose-points-12.png)
@@ -75,8 +76,14 @@ Before you start taking measurements, follow these steps to enter basic informat
 
     - **Volume** 
       1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the base of the volume you want to measure.
-      2. Connect the last dot to the first dot to complete the measurement. 
-      3. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
+         > [!div class="mx-imgBorder"]
+         > ![Add point to outline the base of the volume.](./media/mr-measurement/volume-add-points-15.png)
+      
+      3. Connect the last dot to the first dot to complete the measurement. 
+         > [!div class="mx-imgBorder"]
+         > ![Connect the volume measurement.](./media/mr-measurement/volume-complete-measurement-16.png)
+
+      5. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
 
 Some Power Apps may have Box Draw enabled, where volumes are restricted to rectangular prisms. Drawing is accomplished by selecting just four points: three to draw the base, and one for height.
 
