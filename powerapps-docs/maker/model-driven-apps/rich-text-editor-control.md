@@ -43,7 +43,7 @@ Create a new text column and configure the control, or replace an existing text 
 
 ### Simple configuration
 
-To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps.
+To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps. More information on default values: [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
 
    > [!NOTE]
    > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions (Microsoft Dataverse) - Power Apps](/power-platform/developer/data-platform/data-type-format-conversions)
@@ -58,7 +58,7 @@ To enable the rich text editor with default values on any new text column, you c
 
 ### Advanced configuration
 
-To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
+The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
@@ -66,15 +66,15 @@ To enable the rich text editor with a specific configuration on a new or existin
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
 1. On the **Add rich text editor control** pane, select from the following options, and then select **Done**:  
    - **Bind to table column**: We don’t recommend that you enable this option because this property doesn’t support binding to a different table column.
-   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
+   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Advanced configuration for the rich text editor control](#advanced-configuration-for-the-rich-text-editor-control)
    - **Web**, **Phone**, and **Tablet**: Enable all if you want all client apps to have the ability to use rich text in the column.
 
       <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
 1. **Save**, and then **Publish** the form.
 
-## Configure the rich text editor control
+## Advanced configuration for the rich text editor control
 
-The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
+To create and use advanced configuration for the rich text editor control, follow these steps:
 
 1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
@@ -121,7 +121,7 @@ The individual configuration settings allow you to change how your editor behave
 
 ### Visualization of the rich text editor configuration file
 
-The following two images visually identify the two configuration sections. For the full configuration file, go to [Use the web resource for organization-wide changes](#use-the-web-resource-for-organization-wide-changes).
+The following two images visually identify the two configuration sections. For the full configuration file, go to [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes).
 
 **defaultSupportedProps**
 
@@ -245,7 +245,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```"plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"```
+  ```"plugins": "button,toolbar,dialogui,dialog,autogrow,notification,clipboard,textmatch,fakeobjects,link,autolink,basicstyles,bidi,blockquote,panelbutton,panel,floatpanel,colorbutton,colordialog,listblock,richcombo,menu,contextmenu,copyformatting,enterkey,entities,popup,find,floatingspace,font,format,htmlwriter,horizontalrule,indent,indentblock,indentlist,justify,lineutils,openlink,list,liststyle,maximize,undo,menubutton,notificationaggregator,xml,ajax,pastetools,pastefromword,pastetext,preview,table,quicktable,removeformat,resize,selectall,showborders,sourcearea,specialchar,stylescombo,tab,tabletools,tableresize,tableselection,widgetselection,widget,wysiwygarea,textwatcher"```
 </td>
 </tr>
 
@@ -260,7 +260,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```"extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi, blockquote,button,collapser,colorbutton,colordialog,onfighelper, contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock, justify,panel,panelbutton,pastefromword,quicktable,selectall, stickystyles,superimage,tableresize,tableselection,tabletools"```
+  ```"extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filebrowser,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,notification,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools,uploadfile,uploadimage,uploadwidget"```
 </td>
 </tr>
 
@@ -276,7 +276,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```"removePlugins": "a11yhelp,codemirror,liststyle,magicline,scayt,showborders"```
+  ```"removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders,uploadfile,,image,elementspath,stickystyles,confighelper"```
 </td>
 </tr>
 
@@ -520,10 +520,12 @@ Depends on showAsTabControl and showPreview set to true.
 </tr>
 </table>
 
+## Commonly used rich text editor configurations
 
-## Sample rich text editor configurations
+The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Advanced configuration for the rich text editor control](#advanced-configuration-for-the-rich-text-editor-control) and [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
 
-The following sample rich text editor configuration code sample data can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
+## Additional sample rich text editor configurations
+
 
 ### Add the full screen expander
 
@@ -604,7 +606,7 @@ Enabling this functionality removes the contextual right-click editing capabilit
 
 :::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
 
-## Use the web resource for organization-wide changes
+## Use the default web resource for organization-wide changes
 
 The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
 
