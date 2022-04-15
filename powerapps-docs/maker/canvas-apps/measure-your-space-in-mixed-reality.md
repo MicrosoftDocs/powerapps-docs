@@ -48,28 +48,35 @@ Before you start taking measurements, follow these steps to enter basic informat
 
 3. Keep moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
 
-4. Select ![Add button](./media/mr-measurement/add-button-8.png) to start a new measurement. Then follow one of these steps depending on the type of measurement:
+4. Select ![Add button](./media/mr-measurement/add-button-8.png) to start a new measurement. Then follow these steps depending on the type of area that you're measuring:
 
-    - **Distance**
+   - **Distance**
      1. Select ![Add button](./media/mr-measurement/add-button-8.png) and then slowly move the dot to where you want the measurement to end. 
      2. Select the checkmark button to finish the measurement. 
     
         > [!div class="mx-imgBorder"]
         > ![Measure wall distance.](./media/mr-measurement/distance-9.png)
-      
-
+       
+      3. Select **Submint** to save the final measurement.
+         > [!div class="mx-imgBorder"]
+         > ![Measure desk area](./media/mr-measurement/distance-final-measurement-10.png)
     - **Area**
-     1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the area that you want to measure.
-       > [!div class="mx-imgBorder"]
-       > ![Measure desk area](./media/mr-measurement/desk-area-9.png)
+      1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the area that you want to measure.
+         > [!div class="mx-imgBorder"]
+         > ![Measure desk area](./media/mr-measurement/area-choose-points-12.png)
 
-   2. Connect the last dot to the first dot to complete the measurement. When you're done, select the checkmark button.
-       > [!div class="mx-imgBorder"]
-       > ![Measure desk area](./media/mr-measurement/desk-area-9.png)
+      2. Connect the last dot to the first dot to complete the measurement. When you're done, select the checkmark button.
+         > [!div class="mx-imgBorder"]
+         > ![Measure desk area](./media/mr-measurement/area-endpoint-13.png)
 
+      3. Select **Submint** to save the final measurement.
+         > [!div class="mx-imgBorder"]
+         > ![Measure desk area](./media/mr-measurement/area-final-measurement-14.png)
 
-
-    - **Volume:** Outline the base of the volume you would like to measure by clicking the ![Add button](./media/mr-measurement/add-button-8.png) to add points. Once you are done, bring the dot to where you began measuring to finish the base. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
+    - **Volume** 
+      1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the base of the volume you want to measure.
+      2. Connect the last dot to the first dot to complete the measurement. 
+      3. Rotate your phone upwards to select the desired height of the volume and click the green check to finish measuring. ![A screenshot of a video game Description automatically generated with medium confidence](media/image15.jpeg) ![A picture containing text Description automatically generated](media/image16.jpeg) ![A picture containing diagram Description automatically generated](media/image17.png) ![](media/image18.png)
 
 Some Power Apps may have Box Draw enabled, where volumes are restricted to rectangular prisms. Drawing is accomplished by selecting just four points: three to draw the base, and one for height.
 
