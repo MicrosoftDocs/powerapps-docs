@@ -267,7 +267,6 @@ Once you save the app, you can reuse the components of this app using the same m
 - You can't save data sources, forms, and data tables with components.
 - You can't insert a component into a gallery or a form (including SharePoint form).
 - If a component that you imported from another app is modified in the original app, you must manually import the component again in the consuming app to receive latest component changes. Use component libraries instead to work with [component updates](component-library.md#update-a-component-library) more efficiently.
-- You can't package media files when you import a component.
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
 
 ## Next steps
