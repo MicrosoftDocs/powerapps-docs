@@ -48,7 +48,7 @@ Before you start taking measurements, follow these steps to enter basic informat
 
 3. Keep moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
 
-4. Select the ![Measurement button](media/image8.png) button to start a new measurement. Then follow these steps depending on the type of measurement:
+4. Select ![Add button](media/add-button-8.png) to start a new measurement. Then follow these steps depending on the type of measurement:
 
     - **Distance:** After pressing the measure button, slowly move the dot to where you want the measurement to end then select the checkmark button. 
        > [!div class="mx-imgBorder"]
