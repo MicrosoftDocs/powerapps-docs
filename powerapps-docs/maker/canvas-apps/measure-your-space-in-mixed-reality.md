@@ -33,7 +33,7 @@ Before you start taking measurements, follow these steps to enter basic informat
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
 
-3. On **the Measurement Inputs** screen, enter the required measurements.
+3. On **the Measurement Inputs** screen, enter the required measurements such as wall distance and desk area.
    
    > [!div class="mx-imgBorder"]
    > ![Enter measurements](./media/mr-measurement/measurement-inputs-5.png)
@@ -48,9 +48,13 @@ Before you start taking measurements, follow these steps to enter basic informat
 
 3. Keep moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
 
-4. Select the ![Measurement button](media/image8.png) button to start a new measurement. Follow these steps depending on the type of measurement:
+4. Select the ![Measurement button](media/image8.png) button to start a new measurement. Then follow these steps depending on the type of measurement:
 
-    - **Distance:** Bring the dot to where you would like to end measurement and select the green checkmark button to finish.
+    - **Distance:** After pressing the measure button, slowly move the dot to where you want the measurement to end then select the checkmark button. 
+
+![Measurement button](media/image8.png)
+
+
 
     - **Area**: Outline the area you would like to measure by clicking the ![Icon Description automatically generated](media/image11.png) button to add points. Once you are done, bring the dot to where you began measuring and click the green check to finish measuring.
 
