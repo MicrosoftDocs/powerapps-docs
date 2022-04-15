@@ -51,7 +51,7 @@ If you want to manage data in a list, Power Apps can [generate a three-screen ap
 
         ![To connect to SharePoint Online, select Connect directly (cloud services).](./media/connection-sharepoint-online/select-online.png "Connect to a site")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
     - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
@@ -68,7 +68,7 @@ If you want to manage data in a list, Power Apps can [generate a three-screen ap
 
         ![Choose gateway.](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
 ## Add data to an existing app
 
@@ -89,6 +89,7 @@ If you want to manage data in a list, Power Apps can [generate a three-screen ap
     Not all types of lists appear by default. Power Apps supports lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
     ![Type the name of the list in the box that contains Enter a list name.](./media/connection-sharepoint-online/custom-list.png "Enter name")
+    
     The data source or sources are added to your app.
 
 ## Build your own app from scratch
