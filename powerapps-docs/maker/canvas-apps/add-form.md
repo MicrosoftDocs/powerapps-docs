@@ -19,7 +19,7 @@ contributors:
 ---
 # Show, edit, or add a record in a canvas app
 
-In a canvas app, add and configure a **[Display](controls/control-form-detail.md)** form control to show all fields in a record, You can also add and configure an **[Edit](controls/control-form-detail.md)** form control to edit any field in a record, add a record, and save your changes back to a data source.
+In a canvas app, add and configure a **[Display](controls/control-form-detail.md)** form control to show all fields in a record. You can also add and configure an **[Edit](controls/control-form-detail.md)** form control to edit any field in a record, add a record, and save your changes back to a data source.
 
 ## Prerequisites
 
