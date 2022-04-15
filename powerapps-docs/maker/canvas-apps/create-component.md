@@ -265,7 +265,6 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
-- Collections in components aren't supported.
 - You can't insert a component into a gallery or a form (including SharePoint form).
 - If a component that you imported from another app is modified in the original app, you must manually import the component again in the consuming app to receive latest component changes. Use component libraries instead to work with [component updates](component-library.md#update-a-component-library) more efficiently.
 - You can't package media files when you import a component.
