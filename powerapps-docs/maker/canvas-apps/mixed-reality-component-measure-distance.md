@@ -39,8 +39,6 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
 The control is a button that's labeled with an icon of a cube and the text *Measuring Camera*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
 
-:::image type="content" source="./media/augmented-measure/augmented-measure.png" alt-text="A screenshot of the Insert tab in Microsoft Power Apps Studio, which shows the Measuring Camera control.":::
-
 ### Properties
 
 Change the **Measuring camera** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
