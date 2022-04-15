@@ -19,7 +19,7 @@ contributors:
 
 # Sample: Use Dynamics 365 for Outlook class methods
 
-This sample shows how to use the methods available in the [Microsoft.Crm.Outlook.Sdk.dll](/dotnet/api/microsoft.crm.outlook.sdk?view=dynamics-outlookclient-ce-9) assembly. You can download the sample from [here]().
+This sample shows how to use the methods available in the [Microsoft.Crm.Outlook.Sdk.dll](/dotnet/api/microsoft.crm.outlook.sdk) assembly. You can download the sample from [here]().
 
 ## How to run this sample
 
