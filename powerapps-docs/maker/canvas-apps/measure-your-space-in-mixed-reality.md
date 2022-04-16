@@ -89,17 +89,15 @@ Before you start taking measurements, follow these steps to enter basic informat
         
        4. Select **Submint** to save the final measurement.
           > [!div class="mx-imgBorder"]
-          > ![Measure desk area](./media/mr-measurement/area-submint-18.png)
+          > ![Measure desk area](./media/mr-measurement/area-submint-18.png)  
+     
+          > [!NOTE]
+          > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
+            ![Measure desk area](./media/mr-measurement/measure-four-points.png)
 
-      
-     > [!NOTE]
-     > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
-![Measure desk area](./media/mr-measurement/measure-four-points.png)
- 
+## Freeform
 
-
-
-- **Freeform** Freeform allows distance, multi-segment, area, and volume all together. You can stop measuring by selecting the last point added. For example:
+With freeform you can measure distance, multi-segment, area, and volume all together. T
 
 ![Graphical user interface Description automatically generated with low confidence](media/image23.jpeg) ![A screenshot of a phone Description automatically generated with medium confidence](media/image24.jpeg)
 
