@@ -85,20 +85,21 @@ Before you start taking measurements, follow these steps to enter basic informat
 
       3. Move your device upwards and select the desired height and then select the checkmark. 
          > [!div class="mx-imgBorder"]
-         > ![Move your device upwards to campute the objects height.](./media/mr-measurement/volume-upwards-17) 
+         > ![Move your device upwards to campute the objects height.](./media/mr-measurement/volume-upwards-17.png) 
+        
+       4. Select **Submint** to save the final measurement.
+          > [!div class="mx-imgBorder"]
+          > ![Measure desk area](./media/mr-measurement/area-submint-18.png)
+
       
      > [!NOTE]
-     > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.
-         > ![How to measure a box draw.](./media/mr-measurement/box-drawing-18) 
+     > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
+![Measure desk area](./media/mr-measurement/measure-four-points.png)
+ 
 
 
 
-
-![A screenshot of a cell phone Description automatically generated with medium confidence](media/image19.png) ![](media/image20.png) ![Diagram Description automatically generated](media/image21.jpeg) ![](media/image22.jpeg)
-
-*Define length Define width Define height Finished volume*
-
-- **Freeform:** Freeform allows distance, multi-segment, area, and volume all together. You can stop measuring by selecting the last point added. For example:
+- **Freeform** Freeform allows distance, multi-segment, area, and volume all together. You can stop measuring by selecting the last point added. For example:
 
 ![Graphical user interface Description automatically generated with low confidence](media/image23.jpeg) ![A screenshot of a phone Description automatically generated with medium confidence](media/image24.jpeg)
 
