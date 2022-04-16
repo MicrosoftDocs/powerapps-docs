@@ -19,7 +19,7 @@ contributors:
 
 # Sample: Retrieve multiple with the QueryByAttribute class
 
-This sample shows how to use [QueryByAttribute](/dotnet/api/microsoft.xrm.sdk.query.querybyattribute?view=dynamics-general-ce-9) in the [RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute).
+This sample shows how to use [QueryByAttribute](/dotnet/api/microsoft.xrm.sdk.query.querybyattribute) in the [RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute).
 
 ## How to run this sample
 
