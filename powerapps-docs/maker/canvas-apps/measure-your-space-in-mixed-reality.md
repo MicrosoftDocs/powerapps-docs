@@ -134,8 +134,8 @@ When you taken measurments, you can always go back and review the measurements t
     - Select the delete botton to clear a measurement.
 
     - Select the close button or list button to continue measuring where you left off.
-      > [!div class="mx-imgBorder"]
-      > ![Reivew your measurements.](./media/mr-measurement/measurement-input.png)
+     > [!div class="mx-imgBorder"]
+     > ![Reivew your measurements.](./media/mr-measurement/measurement-input.png)
 
 
 ## Button Guide
