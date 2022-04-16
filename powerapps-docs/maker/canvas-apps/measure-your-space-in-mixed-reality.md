@@ -28,7 +28,7 @@ To use the measurement feature, your app must enable the  [Measure in MR](mixed-
 Before you start taking measurements, follow these steps to enter basic information about your space.
 
 1. Open your canvas app and select the **Measure in MR** button.
-2. At the top select the drop-down list or select the list button.
+2. At the top select the measurement list or select the list button.
  
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
@@ -101,39 +101,42 @@ Before you start taking measurements, follow these steps to enter basic informat
           > [!div class="mx-imgBorder"]
           > ![Freeform measurement.](./media/mr-measurement/measure-freeform.png)  
      
-      4. Select **Submint** to save the final measurement.
+      4. To the complete the measurement keep the dot at the last point you added and then select **Submint**.
           > [!div class="mx-imgBorder"]
           > ![Measure desk area.](./media/mr-measurement/measure-form-submint.png)  
-          
-          
-          
-          
-          
-![Graphical user interface Description automatically generated with low confidence](media/image23.jpeg) ![A screenshot of a phone Description automatically generated with medium confidence](media/image24.jpeg)
+                 
+          The same rectangle can be part of a volume measurement. Instead of selecting the last point you added, rotate your phone upwards to select a height and then select **Submint**.
+           > [!div class="mx-imgBorder"]
+           > ![Measure rectangle freeform.](./media/mr-measurement/rectangle-freeform.png)
 
-A rectangle has been drawn on the floor. To decide to finish the area, keep your dot cursor at the last point you added. Click the green check to finish the measurement.
+          > [!NOTE]
+          > If you app has **Box Draw** enabled then you can only measure in freeform in a rectangular area and volume.
 
-![](media/image25.jpeg) ![](media/image26.jpeg)
-
-Alternatively, the same rectangle can be part of a volume measurement. Instead of selecting the same last point you added, rotate your phone upwards to select a height. Click the green check to finish the measurement.
-
-Some Power Apps may have box draw enabled. In box draw, drawing in Freeform is limited to rectangular areas and volumes, similar to box draw for Volume measurements.
 
 ## Keeping track of your measurements
 
-This feature has a useful log to show what measurements you've already taken.
+When you taken measurments, you can always go back and review the measurements that you have taken.
 
-1.  Tap either the measurement label at the top or the list button on the bottom to open the measurement log. Here you can see what kind of measurements you have, which measurements you have taken, and which you haven't.
+1. At the top select the measurement list or select the list button.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
 
-2.  Tap the right arrow next to a measurement to see its details. Some things you can do here:
+2. Select the arrow next to measure to view more details.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Reivew measurements.](./media/mr-measurement/review-measurements.png)
 
--   Tap one of the measurements' labels to remeasure or take a measurement out of the listed order.
+3. On the **Measurement Inputs** screen, you can do the following:
 
--   Tap the trash can![Icon Description automatically generated](media/image27.png) icon to clear a measurement.
+    - Select measurement to remeasure or take a measurement out of the listed order.
 
--   Click the ![](media/image28.png) or ![A picture containing icon Description automatically generated](media/image29.png) button to continue measuring where you left off.
+    - Select the delete botton to clear a measurement.
 
-*Tap to open menu Tap for details See measurement details*
+    - Select the close button or list button to continue measuring where you left off.
+      > [!div class="mx-imgBorder"]
+      > ![Reivew your measurements.](./media/mr-measurement/measurement-input.png)
+
 
 ## Button Guide
 
