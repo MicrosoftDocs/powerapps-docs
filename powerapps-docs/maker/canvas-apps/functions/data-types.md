@@ -71,7 +71,8 @@ results in a banner when the button is pressed, where the first and last double 
 
 ![pop up notification with the message Jane said "Hello, World."](media/data-types/literal-string.png)
 
-Single quotation marks are not used for [identifier names](operators.md#identifier-names) that contain special characters and have no significance within a text string.  
+
+Single quotation marks are used for [identifier names](operators.md#identifier-names) that contain special characters and have no special significance within a text string.  
 
 ### String interpolation
 
@@ -113,6 +114,30 @@ $"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}!"
 | John | *blank* | Doe | `Welcome John Doe!` |
 | *blank* | *blank* | Doe | `Welcome Doe!` |
 | *blank* | *blank* | *blank* | `welcome Friend!` |
+
+### Newlines
+
+Embedded text strings can contain newlines.  For example, if we set the **Text** property of a [**Label**](../controls/control-text-box.md) control to:
+
+```powerapps-dot
+"Line 1
+Line 2
+Line 3" 
+```
+
+results in three lines shown in the label control:
+![embedded text string and label control showing three lines with "Line 1", "Line 2", and "Line 3".](media/data-types/text-string-literal-newlines.png)
+
+Newlines are also supported with string interpolation:
+
+```powerapps-dot
+$"Line {1}
+Line {1+1}
+Line {1+1+1}" 
+```
+
+resulting in the same output:
+![string interpolation formula and label control showing three lines with "Line 1", "Line 2", and "Line 3".](media/data-types/string-interpolation-newlines.png)
 
 ### Image and Media resources
 
