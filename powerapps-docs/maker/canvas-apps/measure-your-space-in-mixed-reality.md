@@ -89,16 +89,26 @@ Before you start taking measurements, follow these steps to enter basic informat
         
        4. Select **Submint** to save the final measurement.
           > [!div class="mx-imgBorder"]
-          > ![Measure desk area](./media/mr-measurement/area-submint-18.png)  
+          > ![Measure desk area.](./media/mr-measurement/area-submint-18.png)  
      
           > [!NOTE]
           > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
-            ![Measure desk area](./media/mr-measurement/measure-four-points.png)
+            ![Measure four points.](./media/mr-measurement/measure-four-points.png)
 
-## Freeform
-
-With freeform you can measure distance, multi-segment, area, and volume all together. T
-
+    - **Freeform** 
+       1. Select ![Add button](./media/mr-measurement/add-button-8.png) to measure distance, multi-segment, area, and volume all together. 
+       2. Connect the last dot to the first dot to complete the measurement.
+          > [!div class="mx-imgBorder"]
+          > ![Freeform measurement.](./media/mr-measurement/measure-freeform.png)  
+     
+      4. Select **Submint** to save the final measurement.
+          > [!div class="mx-imgBorder"]
+          > ![Measure desk area.](./media/mr-measurement/measure-form-submint.png)  
+          
+          
+          
+          
+          
 ![Graphical user interface Description automatically generated with low confidence](media/image23.jpeg) ![A screenshot of a phone Description automatically generated with medium confidence](media/image24.jpeg)
 
 A rectangle has been drawn on the floor. To decide to finish the area, keep your dot cursor at the last point you added. Click the green check to finish the measurement.
