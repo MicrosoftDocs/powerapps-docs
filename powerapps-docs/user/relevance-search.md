@@ -3,10 +3,10 @@ title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/04/2021
+ms.date: 12/16/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -21,7 +21,7 @@ search.app:
 
 # Search for tables and rows by using Dataverse search
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
@@ -66,9 +66,14 @@ With suggestions, you can access your information quickly by using minimal keyst
 
 ## Search results page
 
-View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**.
+View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**. Dataverse search will append "\*" to the search if two or less characters are entered.
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
+
+To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
+
+
+![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
 ### Top results tab
 
@@ -171,6 +176,9 @@ Dataverse search has a powerful set of capabilities to help you put Microsoft Da
 > - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
 > - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 
+> [!TIP]
+> The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
+
 - **Boosted search results**  
   Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
 
@@ -264,7 +272,7 @@ Use double quotation marks around a keyword to perform an exact match. Search ig
 
 The Dataverse search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
-Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+Quick actions are a small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
 | Table  | Quick actions |
 |---------|---------|

@@ -1,7 +1,7 @@
 ---
-title: "SolutionComponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SolutionComponent table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SolutionComponent table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -277,10 +277,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Metadata|
-|0|Data|
+|1|Metadata||
+|0|Data||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -473,7 +473,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_solutioncomponent_parent_solutioncomponent"></a> solutioncomponent_parent_solutioncomponent
 
-Same as solutioncomponent table [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) Many-To-One relationship.
+Same as the [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) many-to-one relationship for the [solutioncomponent](solutioncomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -499,19 +499,19 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_solutioncomponentbase_modifiedonbehalfby"></a> lk_solutioncomponentbase_modifiedonbehalfby
 
-See systemuser Table [lk_solutioncomponentbase_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_solutioncomponentbase_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentbase_createdonbehalfby"></a> lk_solutioncomponentbase_createdonbehalfby
 
-See systemuser Table [lk_solutioncomponentbase_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_solutioncomponentbase_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
 
-See solution Table [solution_solutioncomponent](solution.md#BKMK_solution_solutioncomponent) One-To-Many relationship.
+See the [solution_solutioncomponent](solution.md#BKMK_solution_solutioncomponent) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### <a name="BKMK_solutioncomponent_parent_solutioncomponent"></a> solutioncomponent_parent_solutioncomponent
 
-See solutioncomponent Table [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) One-To-Many relationship.
+See the [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) one-to-many relationship for the [solutioncomponent](solutioncomponent.md) table/entity.
 
 ### See also
 

@@ -1,17 +1,17 @@
 ---
-title: How to export Ideas data for reporting
+title: How to export Ideas data for reporting (contains video)
 description: Learn about how the Ideas data can be exported for reporting purposes
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---
@@ -224,7 +224,7 @@ Next, we'll add a step to get the idea records and for each idea, get the campai
        
     3. For **Employee** field, select the Display Name from the Get user profile step created in step 14
        
-    4. Set the **Department** field to the following formula: if(not(empty(outputs('Get_user_profile_(V2)\_2')?['body/department'])),outputs('Get_user_profile_(V2)_2')?['body/department'])
+    4. Set the **Department** field to the following formula: if(not(empty(outputs('Get_user_profile_(V2)')?['body/department'])),outputs('Get_user_profile_(V2)')?['body/department'])
 
 16. Save the flow. Your flow should look like this:
 

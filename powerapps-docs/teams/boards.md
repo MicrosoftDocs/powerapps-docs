@@ -2,16 +2,16 @@
 title: Boards sample app (preview)
 description: Learn how to use the Boards app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/24/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - msftsamperl
   - tapanm-msft
 ---
 

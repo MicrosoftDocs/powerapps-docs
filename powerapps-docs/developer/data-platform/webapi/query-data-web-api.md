@@ -1,25 +1,18 @@
 ---
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to query Microsoft Dataverse table data using the Web API and the various system query options that can be applied in these queries."
-ms.custom: ""
-ms.date: 04/29/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
-caps.latest.revision: 78
-author: "JimDaly"
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/08/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Query data using the Web API
@@ -36,7 +29,7 @@ If you want to retrieve data for an entity set, use a `GET` request. When retrie
   
  **Request**
 
-```http 
+```http
 GET [Organization URI]/api/data/v9.1/accounts?$select=name
 &$top=3 HTTP/1.1  
 Accept: application/json  
@@ -236,6 +229,10 @@ The Web API supports these standard OData string query functions:
   
 > [!NOTE]
 >  This is a sub-set of the [11.2.5.1.2 Built-in Query Functions](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). `Date`, `Math`, `Type`, `Geo` and other string functions aren’t supported in the web API.  
+
+#### Use Wildcard characters in conditions using string values
+
+You can use wildcard characters when you construct queries using these standard query function on string values. More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)
   
 ### Microsoft Dataverse Web API query functions
 
@@ -701,162 +698,7 @@ Preference-Applied: odata.include-annotations="*"
     }
 } 
 ```  
-  
-<a name="bkmk_expandRelated"></a>
 
-## Retrieve related tables by expanding navigation properties
- 
-<a name="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
-
-### Retrieve related tables by expanding collection-valued navigation properties
-
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, an `@odata.nextLink` property will be returned for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
-
-The following example retrieves the tasks assigned to the top 5 account records.  
-  
-**Request**
-
-```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=5
-&$select=name
-&$expand=Account_Tasks($select=subject,scheduledstart) HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response** 
- 
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))",
-   "value":[  
-      {  
-         "@odata.etag":"W/\"513475\"",
-         "name":"Fourth Coffee (sample)",
-         "accountid":"36dbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"513477\"",
-         "name":"Litware, Inc. (sample)",
-         "accountid":"38dbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"514074\"",
-         "name":"Adventure Works (sample)",
-         "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3adbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"513481\"",
-         "name":"Fabrikam, Inc. (sample)",
-         "accountid":"3cdbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3cdbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"514057\"",
-         "name":"Blue Yonder Airlines (sample)",
-         "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(3edbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart"
-          }
-       ]
-    }
- 
-```  
-
-<a name="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
-  
-### Retrieve related rows (records) by expanding both single-valued and collection-valued navigation properties
-
-The following example demonstrates how you can expand related rows (records) for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns an `@odata.nextLink` property for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
-  
-In this example, we are retrieving the contact and tasks assigned to the top 3 accounts.  
-  
-**Request**
-
-```http 
-GET [Organization URI]/api/data/v9.1/accounts?$top=3
-&$select=name
-&$expand=primarycontactid($select=contactid,fullname),Account_Tasks($select=subject,scheduledstart)  HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
-
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid,Account_Tasks,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
-   "value":[  
-      {  
-         "@odata.etag":"W/\"550614\"",
-         "name":"Fourth Coffee (sample)",
-         "accountid":"5b9648c3-68f7-e511-80d3-00155db53318",
-         "primarycontactid":{  
-            "contactid":"c19648c3-68f7-e511-80d3-00155db53318",
-            "fullname":"Yvonne McKay (sample)"
-         },
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"550615\"",
-         "name":"Litware, Inc. (sample)",
-         "accountid":"5d9648c3-68f7-e511-80d3-00155db53318",
-         "primarycontactid":{  
-            "contactid":"c39648c3-68f7-e511-80d3-00155db53318",
-            "fullname":"Susanna Stubberod (sample)"
-         },
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"550616\"",
-         "name":"Adventure Works (sample)",
-         "accountid":"5f9648c3-68f7-e511-80d3-00155db53318",
-         "primarycontactid":{  
-            "contactid":"c59648c3-68f7-e511-80d3-00155db53318",
-            "fullname":"Nancy Anderson (sample)"
-         },
-         "Account_Tasks":[  
-
-         ],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5f9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
-      }
-   ]
-}
-  
-```  
 <a name="BKMK_changetracking"></a>
 
 ## Use change tracking to synchronize data with external systems

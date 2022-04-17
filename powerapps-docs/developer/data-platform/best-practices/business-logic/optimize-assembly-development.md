@@ -1,30 +1,26 @@
 ---
 title: "Optimize custom assembly development | MicrosoftDocs"
 description: "Consider merging separate plug-ins/custom workflow activities into a single custom assembly to improve performance and maintainability and move plug-ins/custom workflow activities into multiple custom assemblies if an assembly size is near the sandbox assembly size constraints."
-services: ''
 suite: powerapps
-documentationcenter: na
-author: JimDaly
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
 manager: sunilg
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
+ms.reviewer: pehecke
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 1/15/2019
 ms.subservice: dataverse-developer
-ms.author: pehecke
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Optimize assembly development
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Performance, Maintainability, Design
 

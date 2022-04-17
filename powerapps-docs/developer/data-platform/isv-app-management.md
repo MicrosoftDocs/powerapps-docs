@@ -1,26 +1,21 @@
 ---
 title: Microsoft Power Platform ISV Studio | Microsoft Docs
 description: Learn how apps are managed and supported through the ISV Studio portal.
-services: ''
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
+ms.reviewer: jdaly
+manager: jstrauss
 suite: powerapps
-documentationcenter: na
-author: "Nkrb" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.reviewer: nabuthuk
-ms.workload: na
-ms.date: 04/11/2021
+ms.topic: overview
 ms.subservice: dataverse-developer
-ms.author: nabuthuk
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Microsoft Power Platform ISV Studio

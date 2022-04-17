@@ -1,7 +1,7 @@
 ---
-title: "VirtualEntityMetadata table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "VirtualEntityMetadata table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the VirtualEntityMetadata table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -127,10 +127,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -165,10 +165,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -188,10 +188,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -211,10 +211,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -565,10 +565,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -806,7 +806,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [virtualentitymetadata_SyncErrors](syncerror.md#BKMK_virtualentitymetadata_SyncErrors) Many-To-One relationship.
+Same as the [virtualentitymetadata_SyncErrors](syncerror.md#BKMK_virtualentitymetadata_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -823,7 +823,7 @@ Same as syncerror table [virtualentitymetadata_SyncErrors](syncerror.md#BKMK_vir
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [virtualentitymetadata_AsyncOperations](asyncoperation.md#BKMK_virtualentitymetadata_AsyncOperations) Many-To-One relationship.
+Same as the [virtualentitymetadata_AsyncOperations](asyncoperation.md#BKMK_virtualentitymetadata_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -840,7 +840,7 @@ Same as asyncoperation table [virtualentitymetadata_AsyncOperations](asyncoperat
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [virtualentitymetadata_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_virtualentitymetadata_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [virtualentitymetadata_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_virtualentitymetadata_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -857,7 +857,7 @@ Same as mailboxtrackingfolder table [virtualentitymetadata_MailboxTrackingFolder
 
 **Added by**: System Solution Solution
 
-Same as processsession table [virtualentitymetadata_ProcessSession](processsession.md#BKMK_virtualentitymetadata_ProcessSession) Many-To-One relationship.
+Same as the [virtualentitymetadata_ProcessSession](processsession.md#BKMK_virtualentitymetadata_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -874,7 +874,7 @@ Same as processsession table [virtualentitymetadata_ProcessSession](processsessi
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [virtualentitymetadata_BulkDeleteFailures](bulkdeletefailure.md#BKMK_virtualentitymetadata_BulkDeleteFailures) Many-To-One relationship.
+Same as the [virtualentitymetadata_BulkDeleteFailures](bulkdeletefailure.md#BKMK_virtualentitymetadata_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -891,7 +891,7 @@ Same as bulkdeletefailure table [virtualentitymetadata_BulkDeleteFailures](bulkd
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [virtualentitymetadata_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_virtualentitymetadata_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [virtualentitymetadata_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_virtualentitymetadata_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -921,37 +921,37 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_virtualentitymetadata_createdby](systemuser.md#BKMK_lk_virtualentitymetadata_createdby) One-To-Many relationship.
+See the [lk_virtualentitymetadata_createdby](systemuser.md#BKMK_lk_virtualentitymetadata_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_virtualentitymetadata_createdonbehalfby"></a> lk_virtualentitymetadata_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_virtualentitymetadata_createdonbehalfby](systemuser.md#BKMK_lk_virtualentitymetadata_createdonbehalfby) One-To-Many relationship.
+See the [lk_virtualentitymetadata_createdonbehalfby](systemuser.md#BKMK_lk_virtualentitymetadata_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_virtualentitymetadata_modifiedby"></a> lk_virtualentitymetadata_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_virtualentitymetadata_modifiedby](systemuser.md#BKMK_lk_virtualentitymetadata_modifiedby) One-To-Many relationship.
+See the [lk_virtualentitymetadata_modifiedby](systemuser.md#BKMK_lk_virtualentitymetadata_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_virtualentitymetadata_modifiedonbehalfby"></a> lk_virtualentitymetadata_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_virtualentitymetadata_modifiedonbehalfby](systemuser.md#BKMK_lk_virtualentitymetadata_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_virtualentitymetadata_modifiedonbehalfby](systemuser.md#BKMK_lk_virtualentitymetadata_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_virtualentitymetadata"></a> organization_virtualentitymetadata
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_virtualentitymetadata](organization.md#BKMK_organization_virtualentitymetadata) One-To-Many relationship.
+See the [organization_virtualentitymetadata](organization.md#BKMK_organization_virtualentitymetadata) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_virtualentitymetadata_extensionofrecordid"></a> virtualentitymetadata_extensionofrecordid
 
 **Added by**: System Solution Solution
 
-See entity Table [virtualentitymetadata_extensionofrecordid](entity.md#BKMK_virtualentitymetadata_extensionofrecordid) One-To-Many relationship.
+See the [virtualentitymetadata_extensionofrecordid](entity.md#BKMK_virtualentitymetadata_extensionofrecordid) one-to-many relationship for the [entity](entity.md) table/entity.
 
 ### See also
 

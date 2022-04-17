@@ -2,20 +2,20 @@
 title: "Customize views (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about customizing the views." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 04/15/2021
-ms.service: powerapps
+ms.date: 04/01/2022
 ms.topic: article
-ms.assetid: da2a9b57-fcd2-38c5-c670-63acf1767efa
-author: Nkrb # GitHub ID
+author: HemantGaur # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: evchaki # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Customize views

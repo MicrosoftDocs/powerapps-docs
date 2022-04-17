@@ -4,7 +4,7 @@ description: "Dynamics 365 for Outlook lets users interact with data while theyâ
 ms.custom: ""
 ms.date: 04/07/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,8 +18,6 @@ search.app:
 
 # Extend Dynamics 365 for Outlook
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 > [!IMPORTANT]
 > Effective March 2020, the legacy Dynamics 365 for Outlook (also referred to as Outlook COM add-in) is deprecated. Customers must transition to the modern [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview) before October 1, 2020. Microsoft will continue to provide support, security and other critical updates to the Outlook COM Add-in until October 1, 2020.
 > 
@@ -32,21 +30,11 @@ Dynamics 365 for Outlook lets users interact with data while theyâ€™re offline a
 ## In This Section
 
 [Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />  
-[Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br />  
+[Sample: Create and retrieve Outlook filters](../org-service/samples/create-retrieve-outlook-filters.md)<br />  
 [Sample: Use Outlook Methods](sample-outlook-methods.md)<br />
   
 ## Related Sections
 
-<!-- TODO:
-[Extend Dynamics 365](extend-dynamics-365-server.md)<br />
-[Supported Extensions for Dynamics 365](supported-extensions.md)<br />
-[The Metadata and Data Models in Dynamics 365](metadata-data-models.md)<br />
-[Extend Dynamics 365 on the server](extend-dynamics-365-server.md)<br />
-[Extend Dynamics 365 on the client](extend-client.md)<br />
-[Customize Dynamics 365 applications](customize-dev/customize-applications.md)<br />
-[Package and distribute extensions using solutions](package-distribute-extensions-use-solutions.md)<br />
-[Integrate Dynamics 365 with SharePoint](integration-dev/integrate-sharepoint.md)<br />
- -->
 <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" /><br />
 [SavedQuery Entity](../reference/entities/savedquery.md)<br />
   

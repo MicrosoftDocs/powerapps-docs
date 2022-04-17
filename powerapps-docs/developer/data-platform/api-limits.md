@@ -2,11 +2,10 @@
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 09/24/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 03/22/2022
+ms.reviewer: "jdaly"
 ms.topic: "article"
-author: "JimDaly" 
+author: "divka78" 
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
 manager: "ryjones" 
@@ -15,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Service protection API limits
@@ -60,13 +61,13 @@ When a service protection API limit error occurs, it will provide a value indica
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
 - With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
 
-### Interactive application re-try 
+### Interactive application re-try
 
 If the client is an interactive application, you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
 
 ### Non-interactive application re-try
 
-If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current thread using [Thread.Sleep](/dotnet/api/system.threading.thread.sleep) or equivalent methods.
+If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current task using [Task.Delay](/dotnet/api/system.threading.tasks.task.delay) or equivalent methods.
 
 ## How Service Protection API Limits are enforced
 
@@ -76,8 +77,8 @@ The service protection API limits are evaluated per user. Each authenticated use
 
 Service protection API limits are enforced based on three facets:
 
-- The number of requests were sent by a user.
-- The combined execution time was required to process requests sent by a user.
+- The number of requests sent by a user.
+- The combined execution time required to process requests sent by a user.
 - The number of concurrent requests sent by a user.
 
 If the only limit was on the number of requests sent by a user, it would be possible to bypass it. The other facets were added to counter these attempts. For example:
@@ -170,6 +171,8 @@ Don't try to calculate how many requests to send at a time. Each environment can
 
 The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
 
+The `x-ms-dop-hint` response header value provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide good results for a given environment. The value of this header will be an integer between 1 and 1024. When using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, the `RecommendedDegreesOfParallelism` property will return this value.
+
 More information:
 
 - [Use Task Parallel Library with Web API](#use-task-parallel-library-with-web-api)
@@ -197,7 +200,7 @@ When you make a connection to a service on Azure a cookie is returned with the r
 > [!NOTE]
 > This strategy should only be used by applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
 
-The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegatinghandler)
+The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegating-message-handler)
 
 ```csharp
 HttpMessageHandler messageHandler = new OAuthMessageHandler(
@@ -224,7 +227,7 @@ System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
 System.Threading.ThreadPool.SetMinThreads(100, 100);
 //Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
 System.Net.ServicePointManager.Expect100Continue = false;
-//Can decreas overall transmission overhead but can cause delay in data packet arrival
+//Can decrease overall transmission overhead but can cause delay in data packet arrival
 System.Net.ServicePointManager.UseNagleAlgorithm = false;
 ```
 More information: [Managing Connections](/dotnet/framework/network-programming/managing-connections)
@@ -290,7 +293,7 @@ private async Task<HttpResponseMessage> SendAsync(
                 //Otherwise, use an exponential backoff strategy
                 seconds = (int)Math.Pow(2, retryCount);
             }
-            Thread.Sleep(TimeSpan.FromSeconds(seconds));
+            await Task.Delay(TimeSpan.FromSeconds(seconds));
 
             return await SendAsync(request, httpCompletionOption, retryCount);
         }

@@ -1,13 +1,12 @@
 ---
-title: Understand experimental, preview, and retired features in Power Apps
+title: Understand experimental, preview, and retired features in canvas apps
 description: Learn about experimental, preview, and retired features.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/22/2021
+ms.date: 02/04/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -18,9 +17,9 @@ contributors:
   - tapanm-msft
   - gregli-msft
 ---
-# Understand experimental, preview, and retired features in Power Apps
+# Understand experimental, preview, and retired features in canvas apps
 
-With every release, we make changes and add features to make Power Apps the best tool to fit your needs. We move the product forward.  
+With every release, we make changes and add features to make Power Apps Studio the best tool to fit your needs. We move the product forward.  
 
 We take backward compatibility very seriously. However, with any change or improvement, we might introduce an unintended side effect, and your app might not work exactly the way it did before.
 
@@ -72,7 +71,7 @@ Experimental features are different.  They are works in progress, and we don't c
 
 ## Controlling which features are enabled
 
-Experimental and preview features are listed in the app's **Settings** > **Upcoming features**.  From within the app, select the **File** menu, select **Settings**, and then select **Upcoming features**. Select **Preview**, **Experimental**, or **Retired** features using the available tabs.
+Experimental and preview features are listed in the app's **Settings** > **Upcoming features**.  From within the app, select **Settings**, and then select **Upcoming features**. Select **Preview**, **Experimental**, or **Retired** features using the available tabs.
 
 ![Advanced settings for canvas app.](media/working-with-experimental/advanced-settings.png "Advanced settings for canvas app")
 

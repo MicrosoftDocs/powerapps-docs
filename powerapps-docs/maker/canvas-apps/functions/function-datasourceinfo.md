@@ -2,11 +2,10 @@
 title: DataSourceInfo function in Power Apps
 description: Reference information including syntax and examples for the DataSourceInfo function in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 09/30/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 # DataSourceInfo function in Power Apps
 Provides information about a [data source](../working-with-data-sources.md).
@@ -31,7 +30,7 @@ You can use information at the data-source level, for example, to disable or hid
 Data sources vary in how much information they provide, including not providing any at all.  [Collections](../working-with-data-sources.md#collections) provide no information. If a piece of information isn't provided, a default is used, or *blank* is returned.
 
 > [!NOTE]
-> Currently, the DataSourceInfo function is not supported in SharePoint List.
+> Currently, the DataSourceInfo function is not supported in Microsoft Lists.
 
 ## Description
 ### Column information

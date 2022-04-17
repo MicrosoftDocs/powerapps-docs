@@ -1,11 +1,11 @@
 ---
-title: "Filter data on grids | MicrosoftDocs"
+title: Explore data on a grid page
+description: Explore tabular data on a grid page in model-driven apps.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/31/2020
+ms.date: 03/04/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
@@ -16,126 +16,109 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use grid filters 
 
-Grids in Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
+# Explore data on a grid page (preview)
 
-Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find. 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> In Unified Interface, grids don't prepopulate column filters based on the current view definition.
+In model-driven apps, the default control that's used to show data in tabular form is the read-only grid. When a subarea contains a table, the subarea's default layout in the app sitemap is called the grid page.
 
-   > [!div class="mx-imgBorder"]
-   > ![Grid filtering.](media/filter-options.png "Grid filtering")
-   
+:::image type="content" source="./media/grid-page-1.png" alt-text="A screenshot of a grid page in a model-driven app.":::
 
-## Grid and filter navigation
+Legend:
 
-When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same when data is filtered on quick find, column filtering, page number, and more. 
+1. **Command bar**: The commands available for the page
+1. **View selector**: Select to change views
+1. **Edit columns**: Select to add, remove, or reorder columns
+1. **Edit filters**: Select to filter the view with advanced queries
+1. [**Search this view** or **Quick find**](#grid-search): Show only the rows in the current view that match your search criteria
+1. **Hierarchy icon**: Indicates the record is part of a hierarchy
+1. **Record counter**: The position of this page of records in the total number of records that are shown in the view
+1. **Page navigation**: Move forward or backward by page in the set of records that are shown in the view
 
+## Navigation
 
-   > [!div class="mx-imgBorder"]
-   > ![Navigating back to the page opens it in the same state.](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
+To view the details of a record, select the link in the first column. To open the record details in a new tab or a new window, right-click the link in the column and select **Open link in new tab** or **Open link in new window**.
 
-The page jump bar uses the first sorted column. If no change has been made to the sort order, the jump bar uses the primary column.
+If a record is in a hierarchy relationship, select the hierarchy icon to open the hierarchy view.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select a filter on the jump bar.](media/jumpbar-filter-on-sorted-column.gif "Select a filter on the jump bar")
+:::image type="content" source="./media/grid-page-hierarchy-view.png" alt-text="A screenshot of a record hierarchy view.":::
+
+ If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in.
+
+## View selector
   
-When you select the hierarchy icon, you navigate to the hierarchy view.
+The view selector lists the views that are available for the table. By default, the list is divided into two groups:
 
-   > [!div class="mx-imgBorder"]
-   > ![Hierarchy icon.](media/grid-row-hierarchy-icon.png "Hierarchy icon")
+- **My Views**: Personal views that you created
+- **System Views**: Views that your administrator created and shared with you
 
-You can also open primary column and lookup columns in a new tab or window.
+:::image type="content" source="./media/view-selector.png" alt-text="A screenshot of the view selector on a grid page.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Open in a new window.](media/newtab.png "[Open in a new window")
+Personal views are listed before system views by default. Both lists are sorted alphabetically. You can [change the order](./grid-filters-advanced.md#sort-the-data) the views are listed in.
+
+> [!NOTE]
+> If your administrator has turned on the [modern advanced find experience](/power-platform/admin/settings-features), the list of views isn't divided. To easily tell which kind of view you're looking at, personal views have a user icon ![Personal view icon.](./media/user-icon.png "Personal view icon."). You can also hover over the information icon ![Information icon.](./media/info-icon.png "Information icon") to see the view type.
+
+To quickly find a view in a long list, use the search box at the top of the view selector.
+
+:::image type="content" source="./media/search-view.png" alt-text="A screenshot of the view selector on a grid page, showing the search box and personal view icons.":::
+
+Every table in your app has a [default view](./grid-filters-advanced.md#change-the-default-view) that's set by your administrator. The  **Default** label in the view selector identifies which view is the default for the table.
+
+## Column editor
+
+Use the [column editor](./grid-filters-advanced.md#select-columns-in-the-column-editor) to add, remove, or reorder columns.
+
+## Filter editor
+
+Use the [filter editor](./grid-filters-advanced.md#select-filter-conditions-in-the-filter-editor) to see or modify the query that selected the records in the view.
+
+## Grid search
+
+The search box can offer two different experiences, depending on how your administrator has configured search.
+
+### Search this view
+
+**Search this view** is the default experience. When you enter text in the **Search this view** box, the system searches the current view. It displays the results in the same columns that are used in the current view.
+
+### Quick find
+
+If your administrator has turned on quick find, then the search box shows **Quick find** instead of **Search this view**. When you enter text in the **Quick find** box, the system searches the table's quick find view. It displays the results in the columns of the quick find view rather than the current view.
+
+## Column filters
   
+To focus on records that meet particular criteria, you can filter a view by column. The type of data in the column determines the filter options you can select.
+
+>[!IMPORTANT]
+>In Unified Interface, grids don't pre-populate column filters based on the current view definition.
+
+### Filtering on a lookup column
+
+When you filter data on a lookup column, you can select from a list of values rather than typing. For example, to filter a view by **Primary Contact**, you can select a name from the list that appears when you select the filter text box.
+
+If you start typing, the filter suggests matching results to help you complete the search. The results include all rows that aren't otherwise filtered out.
+
+:::image type="content" source="./media/lookup-filter.png" alt-text="A screenshot of the Primary Contact column filter that shows search completion.":::
+
+### Filtering on a date column
+
+When you filter on a date column, you can select from many different ways to specify a date or a time frame. For example, you can search **On or after** an exact date, **Next fiscal year**, or **Last week**.
   
-## Lookup column 
+### Filtering activities
 
-When you filter on a lookup column, you can select from a list of rows to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
+Use the activity type filter to show only the activities you're interested in, such as appointments or email.
 
-The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the table being looked up and will include all rows with no filter.
+:::image type="content" source="./media/activity_filter.png" alt-text="A screenshot of the activity type filter that shows several types of activities selected.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Lookup filtering.](media/lookup-filter.png "Lookup filtering")
+## Jump bar
 
-## Date filter
+The jump bar is a quick way to filter out records based on letters of the alphabet. To see only records that start with the letter *S*, for instance, select **S** in the jump bar.
 
-The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
+The jump bar acts on the first sorted column. If the sort order hasn't changed, the jump bar uses the primary column.
 
-   > [!div class="mx-imgBorder"]
-   > ![Date filtering.](media/date-filter.png "Date filtering")
+:::image type="content" source="./media/jumpbar-filter-on-sorted-column.png" alt-text="A screenshot of the jump bar that's used to filter records by letter.":::
 
-## Filter the list of activities
-
-You can filter the list of activities to see only the ones you're interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
-
-
-   > [!div class="mx-imgBorder"]
-   > ![Activities filter.](media/activity_filter.png "Activities filter")
-
-
-### Known issue 
-
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
-
-To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
-
-1. In the upper-right corner, select the gear icon ![Gear icon.](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
-
-2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Format settings.](media/default-format.png "Format settings")
-    
-We're working on this issue, please check back for information about the availability of a fix.
-
-  
-## Use search on a grid
-
-When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
-
-1. Go to the **Contacts** grid, and then select **My Active Contacts** from the list of views.
-
-    > [!div class="mx-imgBorder"]
-    > ![My active contact view.](media/myactive-contacts-view.png "My Active Contacts view")
-
-2. Select **Search this view** to search for data in the view you're in.
-
-    > [!div class="mx-imgBorder"]
-    > ![Search view.](media/search-view.png "Search this view")
-
-The system searches for data in the **My Active Contacts** view and displays search results by using the same set of columns that are used in your current view.
-
-   > [!div class="mx-imgBorder"]
-   > ![Search view.](media/search-view2.png "Search results from the Search this view command")
-
-
-## Use the quick-find search experience
-
-To switch back to the old quick-find search experience that uses a table's quick-find view definition to perform searches, you'll need admin permissions.
-
-1. In the upper-right corner, select the gear icon ![Gear icon.](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
-
-2. Go to **Settings** > **Administration** > **System Settings**.
-
-3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of a table for searching on grids and sub-grids**.
-
-## Use the column options in a view or grid (preview)
-
-If the app you're using has the [Power Apps grid control](../maker/model-driven-apps/power-apps-grid-control.md), you can view and open records in views and sub-grids. Additionally, you can add or remove columns in the view or sub-grid.
-
-1. From a model-driven app view, select the **Column options** icon.
-   :::image type="content" source="media/column-options.png" alt-text="Select column option to change how your view appears":::
-1. From the **Edit columns** pane you can select from the following actions:
-   - Select **Add columns** to add a column to the view.
-   - Drag and drop a column to move the column order.
-   - Select **...** next to a column you want to remove from the view, and then select **Remove**.
-   :::image type="content" source="media/column-options-2.png" alt-text="Choose the options you want to change your view":::
-1. Select **Apply** to save your changes.
-
+<!-- I don't see the jump bar in my demo environment. I did some Binging and found that the jump bar was removed in the latest wave. You can bring it back, but it involves using the classic settings and seems kind of involved. Would it be better to remove the section on the jump bar instead? -->
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,12 +2,10 @@
 title: Rich text editor control in Power Apps
 description: Learn about the details, properties, and examples of the Rich text editor control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/23/2021
+ms.date: 04/12/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -77,5 +75,9 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 > [!NOTE]
 > When the toolbar is focused, **Tab** and **Shift+Tab** keys will navigate between toolbar groups. But you can't cycle back from the last group to the first group and vice versa.
+
+## Limitations
+
+Rich text editor can't be used within a gallery.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,11 +1,11 @@
 ---
-title: Create a component for canvas apps
+title: Create a component for canvas apps (preview) (contains video)
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
-ms.service: powerapps
+
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 08/18/2021
+ms.date: 02/11/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -16,12 +16,16 @@ contributors:
   - hemantgaur
   - tapanm-msft
   - gregli-msft
+ms.custom: intro-internal
 ---
 
-# Create a component for canvas apps
+# Create a component for canvas apps (preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] More information: [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md)
 
 Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across apps using a [component library](component-library.md). Components can use advanced features such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
 
@@ -70,11 +74,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 ### Create a new component
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **Apps** and select **Canvas app from blank**.
-
-1. Provide an app name, select any layout, and then select **Create**.
+1. Create a [blank canvas app](create-blank-app.md).
 
 1. In the **Tree View**, select **Components** and then select **New component** to create a new component.
 
@@ -214,7 +214,7 @@ Components in a component library can never have access to app scope, as there's
 > [!NOTE]
 > This feature is retired. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
 
-The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **File** > **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
+The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
 
 ![Enable export and import of components.](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
 
@@ -270,9 +270,10 @@ Once you save the app, you can reuse the components of this app using the same m
 
 ## Known limitations
 
+- Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
 - Collections in components aren't supported.
-- You can't insert a component into a gallery or a form.
+- You can't insert a component into a gallery or a form (including SharePoint form).
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You can't package media files when you import a component.
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.

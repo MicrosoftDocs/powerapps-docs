@@ -2,7 +2,7 @@
 title: Use the mobile app | Microsoft Docs
 description: Provides an overview of how to use the mobile app.
 author: ramanasridhar
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020

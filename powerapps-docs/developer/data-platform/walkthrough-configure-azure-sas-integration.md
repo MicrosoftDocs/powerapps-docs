@@ -1,21 +1,21 @@
 ---
 title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Microsoft Dataverse) | Microsoft Docs"
 description: "This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Microsoft Dataverse messages posted to the Azure Service Bus."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: article
-ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
-author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Configure Azure (SAS) for integration with Microsoft Dataverse

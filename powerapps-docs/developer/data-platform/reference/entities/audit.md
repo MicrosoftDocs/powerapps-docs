@@ -1,7 +1,7 @@
 ---
-title: "Auditing (Audit) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Auditing (Audit) table/entity."
-ms.date: 10/05/2021
+title: "Auditing (Audit)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Auditing (Audit)  table/entity."
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Auditing (Audit) table/entity reference
+# Auditing (Audit)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -434,11 +434,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_audit_userid"></a> lk_audit_userid
 
-See systemuser Table [lk_audit_userid](systemuser.md#BKMK_lk_audit_userid) One-To-Many relationship.
+See the [lk_audit_userid](systemuser.md#BKMK_lk_audit_userid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_audit_callinguserid"></a> lk_audit_callinguserid
 
-See systemuser Table [lk_audit_callinguserid](systemuser.md#BKMK_lk_audit_callinguserid) One-To-Many relationship.
+See the [lk_audit_callinguserid](systemuser.md#BKMK_lk_audit_callinguserid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

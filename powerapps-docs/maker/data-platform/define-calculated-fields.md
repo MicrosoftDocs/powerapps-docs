@@ -4,7 +4,7 @@ description: "Learn how to define calculated columns"
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Define calculated columns to automate calculations
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 
@@ -211,7 +211,7 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
  
 You should be aware of certain conditions and limitations when working with calculated columns:  
   
-- [Saved queries](../../developer/data-platform/saved-queries.md), charts, and visualizations can have a maximum of 10 unique calculated columns.  
+- [Saved queries](../../developer/data-platform/saved-queries.md), charts, and visualizations can have a maximum of 50 unique calculated columns.  
 - The calculated column values are not displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
 - A maximum number of chained calculated columns is 5.  
 - A calculated column can’t refer to itself or have cyclic chains.  

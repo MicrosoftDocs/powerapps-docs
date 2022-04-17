@@ -3,10 +3,10 @@ title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
 description: Troubleshooting and known issues for the Power Apps mobile app 
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/28/2021
+ms.date: 11/12/2021
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -29,25 +29,22 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Unable to sign in on an Android device using Authenticator or Company Portal
 
-There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which causes sign-in to fail with no error message in the Power Apps mobile app.
+There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which caused sign-in to fail with no error message in the Power Apps mobile.
 
-A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following version:
 
-1.	Make sure you have a good internet connection.
-2.	Wait for one minute and then try signing in again.
+ - Authenticator that's **later** than version **6.2104.2518**
+ - Company portal that's **later** than  version **5.0.5123.0**
 
-If you still can't sign in after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
 
 ## Unable to open an app
 
-There is an intermittent issue with Microsoft Authenticator app version 6.2104.2518 and Company Portal version 5.0.5123.0, which prevents apps opening in the Power Apps mobile app.
+There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which prevents apps opening in the Power Apps mobile app.
 
-A fix will be released shortly. Regularly check the Authenticator app or the Company Portal mobile app for updates. Until then, try this workaround:
+The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following:
 
-1.	Make sure you have a good internet connection.
-2.	Wait for one minute and then try opening the app again.
-
-If you still can't open the app after several attempts, try launching your app in the web browser as a temporary solution until the Authenticator or Company Portal apps are updated.
+ - Authenticator app that's **later** than version **6.2104.2518**
+ - Company portal that's **later** than  version **5.0.5123.0**
 
 ## Error: There was a problem signing you in
 
@@ -128,6 +125,22 @@ To resolve connection related issues, ensure you remain connected to the interne
 ## Flows created in a solution is not supported on Power Apps mobile
 
 The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
+
+## App resets when running it on Power Apps mobile
+
+When you run a canvas or model-driven app on Power Apps mobile it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, and the web browser suspends the page because it is consuming too much power.
+
+Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest specificized device that your end-users will use.
+
+If you experience a reset, contact your app developer, and point them to this topic. 
+
+For more information for developers, see:
+
+- Blog post: [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
+- Whitepaper: [PowerApps canvas app coding
+standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
+
+
 
 ### See also  
 

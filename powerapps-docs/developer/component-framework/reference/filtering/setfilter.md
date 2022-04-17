@@ -2,15 +2,15 @@
 title: setFilter | Microsoft Docs
 description: Sets the top-most filter associated with the dataset.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5af40d6f-111f-4c74-a2eb-4ffc79025415
 ---
 
 # setFilter

@@ -2,15 +2,15 @@
 title: Define advanced form steps for portals
 description: Learn how to create an advanced form step for an advanced form on a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/12/2021
+ms.date: 12/09/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -35,11 +35,14 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 | Move Previous Permitted    | Indicates whether the user is given an option to navigate to the previous step in a multiple step advanced form. Default is true. Uncheck to prevent the user from being able to move to the previous step. |
 ||
 
+> [!NOTE]
+> The step type of **Load User Control** is retired and no longer supported.
+
 ## Considerations for advanced form steps
 
 Advanced form steps can't be reused. If you try to use advanced form step again, you'll see the following message:
 
-"The step <advanced form step name> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again."
+"The step \<advanced form step name\> has already been used earlier in this form. Update the Advanced Form to use each step only once, and try again."
 
 When that happens, ensure you use don't reuse advanced form steps in an Advanced Form.
 

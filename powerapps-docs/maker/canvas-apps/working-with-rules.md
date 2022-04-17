@@ -2,8 +2,7 @@
 title: Create a rule in canvas apps
 description: Learn about how to build app logic by creating rules in canvas apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

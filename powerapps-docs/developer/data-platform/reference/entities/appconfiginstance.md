@@ -1,7 +1,7 @@
 ---
-title: "App Configuration Instance (AppConfigInstance) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the App Configuration Instance (AppConfigInstance) table/entity."
-ms.date: 10/05/2021
+title: "App Configuration Instance (AppConfigInstance)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the App Configuration Instance (AppConfigInstance)  table/entity."
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# App Configuration Instance (AppConfigInstance) table/entity reference
+# App Configuration Instance (AppConfigInstance)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -372,10 +372,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -587,31 +587,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_appconfig_appconfiginstance"></a> appconfig_appconfiginstance
 
-See appconfig Table [appconfig_appconfiginstance](appconfig.md#BKMK_appconfig_appconfiginstance) One-To-Many relationship.
+See the [appconfig_appconfiginstance](appconfig.md#BKMK_appconfig_appconfiginstance) one-to-many relationship for the [appconfig](appconfig.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_modifiedby"></a> lk_appconfiginstance_modifiedby
 
-See systemuser Table [lk_appconfiginstance_modifiedby](systemuser.md#BKMK_lk_appconfiginstance_modifiedby) One-To-Many relationship.
+See the [lk_appconfiginstance_modifiedby](systemuser.md#BKMK_lk_appconfiginstance_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_createdby"></a> lk_appconfiginstance_createdby
 
-See systemuser Table [lk_appconfiginstance_createdby](systemuser.md#BKMK_lk_appconfiginstance_createdby) One-To-Many relationship.
+See the [lk_appconfiginstance_createdby](systemuser.md#BKMK_lk_appconfiginstance_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_createdonbehalfby"></a> lk_appconfiginstance_createdonbehalfby
 
-See systemuser Table [lk_appconfiginstance_createdonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_createdonbehalfby) One-To-Many relationship.
+See the [lk_appconfiginstance_createdonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_modifiedonbehalfby"></a> lk_appconfiginstance_modifiedonbehalfby
 
-See systemuser Table [lk_appconfiginstance_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appconfiginstance_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_appconfiginstance"></a> organization_appconfiginstance
 
-See organization Table [organization_appconfiginstance](organization.md#BKMK_organization_appconfiginstance) One-To-Many relationship.
+See the [organization_appconfiginstance](organization.md#BKMK_organization_appconfiginstance) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_appconfigmaster_appconfiginstance"></a> appconfigmaster_appconfiginstance
 
-See appconfigmaster Table [appconfigmaster_appconfiginstance](appconfigmaster.md#BKMK_appconfigmaster_appconfiginstance) One-To-Many relationship.
+See the [appconfigmaster_appconfiginstance](appconfigmaster.md#BKMK_appconfigmaster_appconfiginstance) one-to-many relationship for the [appconfigmaster](appconfigmaster.md) table/entity.
 
 ### See also
 

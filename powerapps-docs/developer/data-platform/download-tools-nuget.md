@@ -4,7 +4,7 @@ description: "Download the Plug-in Registration, Package Deployment, and other d
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -57,7 +57,7 @@ You can download all SDK tools using the PowerShell script provided below. Note 
     ##
     ./nuget install Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool -O .\Tools
     md .\Tools\PluginRegistration
-    $prtFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}
+    $prtFolder = (Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}).Name
     move .\Tools\$prtFolder\tools\*.* .\Tools\PluginRegistration
     Remove-Item .\Tools\$prtFolder -Force -Recurse
     

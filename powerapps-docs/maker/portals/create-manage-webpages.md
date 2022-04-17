@@ -2,16 +2,16 @@
 title: Create and manage webpages
 description: Instructions to create and manage webpages in portal.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/10/2021
+ms.date: 12/08/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Create and manage webpages
@@ -25,7 +25,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  From the command bar, select **New page** and either choose a page from **Layouts** or **Fixed layouts**.
+1.  From the command bar, select **New page** and either choose a page from **Layouts** or **Fixed layouts**.
 
     > [!div class=mx-imgBorder]
     > ![create a new webpage.](media/create-webpage.png "Create a new webpage")
@@ -33,8 +33,9 @@ A webpage is a document that is identified by a unique URL in a website. It is o
     > [!NOTE]
     > - Creating a page using **Layouts** gives you the flexibility to edit the complete page. **Fixed layouts** contains the page templates that are installed as part of portal provisioning and the custom page templates created using the [Portal Management app](configure/configure-portal.md).
     > - For the pages to be created using the **Layouts** option, a new **Default studio template** page template is installed.
+    > - If no fixed page layouts are visible when adding webpages in the portals Studio, they can be [added using the Portal Management app](configure\add-fixed-layouts.md).
 
-3.  In the properties pane on the right side of the screen, enter the following information:
+1.  In the properties pane on the right side of the screen, enter the following information:
 
     - **Name**: Name of the page. This value is also used as the title of the page.
 
@@ -68,11 +69,11 @@ If you are working with a portal created in an environment containing customer e
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+1.  Select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
-3.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
+1.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
 
-4.  Select the required action from the context menu:
+1.  Select the required action from the context menu:
 
     - **Hide in default menu**: Hide the page from being displayed in the sitemap through default menu.
 

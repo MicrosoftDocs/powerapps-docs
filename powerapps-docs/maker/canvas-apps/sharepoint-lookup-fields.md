@@ -1,13 +1,12 @@
 ---
-title: How to link SharePoint lists using a lookup column in Power Apps
-description: Learn about how to link SharePoint lists using lookup columns in Power Apps.
+title: How to link lists from Microsoft Lists using a lookup column in Power Apps
+description: Learn about how to link lists from Microsoft Lists using lookup columns in Power Apps.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/12/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -19,9 +18,9 @@ contributors:
   - navjotm
   - wimcoor
 ---
-# How to link SharePoint lists using a lookup column in Power Apps
+# How to link lists from Microsoft Lists using a lookup column in Power Apps
 
-This tutorial shows how you can connect two SharePoint lists with a lookup column in a canvas app.
+This tutorial shows how you can connect two lists with a lookup column in a canvas app.
 
 ## Overview
 
@@ -34,7 +33,7 @@ In this tutorial, you build an app that uses these kinds of lookup column.
 
 ### Why use a lookup column
 
-Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup column are the primary way such business data comes together.
+Data in an enterprise is large and complex. Data in one list often relates to data in another list. Lookup column are the primary way such business data comes together.
 
 For example, you might have an **Orders** list which has a lookup column that links to a **Customers** list, to show which customer placed the order. The lookup column in the **Orders** list lets you get other data from the **Customers** list as well. You might also use a lookup column to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
 
@@ -49,7 +48,7 @@ Examples include data like Customer Status Code, Product Availability, State Cod
 
 ## Create the lists in SharePoint
 
-In this tutorial, you link two SharePoint custom lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
+In this tutorial, you link two lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
 ### The lookup column used in this example
 
@@ -104,19 +103,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 ## Create an app from the Assets list
 
-You use this app to add data to the **Assets** list.
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Under **Start from data**, select **SharePoint**.
-
-    ![Create app.](./media/sharepoint-lookup-fields/create-app.png)
-
-1. Select your SharePoint site. If you don't have a SharePoint connection, select **Create** instead, connect to SharePoint online, and then choose your site.
-
-1. Choose the main list from your SharePoint site, in this example, **Assets**. Select the **Connect** button in the lower-right corner.
-
-    ![Choose main list.](./media/sharepoint-lookup-fields/choose-main-list.png)
+Create a [canvas app](app-from-sharepoint.md) from the [Assets list](#define-the-assets-list) created earlier.
 
 ## Add data to the Assets list
 

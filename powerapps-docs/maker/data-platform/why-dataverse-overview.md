@@ -1,18 +1,18 @@
 ---
 title: "Why choose Microsoft Dataverse? | MicrosoftDocs"
 description: Understand how Microsoft Dataverse can help your business become more agile.
-ms.custom: intro-internal
+
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: overview
 applies_to: 
   - "powerapps"
 author: "mmercuri"
 ms.subservice: dataverse-maker
-ms.author: "mmercuri"
+ms.author: "kvivek"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -23,7 +23,7 @@ search.app:
 
 # Why choose Microsoft Dataverse?
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Data is at the center of everything a business does today and powers the
 insights that can drive what it should do tomorrow. To thrive and grow,

@@ -1,7 +1,7 @@
 ---
-title: "NewProcess table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "NewProcess table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the NewProcess table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -677,7 +677,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_NewProcess_ProcessSessions"></a> NewProcess_ProcessSessions
 
-Same as processsession table [NewProcess_ProcessSessions](processsession.md#BKMK_NewProcess_ProcessSessions) Many-To-One relationship.
+Same as the [NewProcess_ProcessSessions](processsession.md#BKMK_NewProcess_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -692,7 +692,7 @@ Same as processsession table [NewProcess_ProcessSessions](processsession.md#BKMK
 
 ### <a name="BKMK_lk_newprocess_workflowlogs"></a> lk_newprocess_workflowlogs
 
-Same as workflowlog table [lk_newprocess_workflowlogs](workflowlog.md#BKMK_lk_newprocess_workflowlogs) Many-To-One relationship.
+Same as the [lk_newprocess_workflowlogs](workflowlog.md#BKMK_lk_newprocess_workflowlogs) many-to-one relationship for the [workflowlog](workflowlog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -707,7 +707,7 @@ Same as workflowlog table [lk_newprocess_workflowlogs](workflowlog.md#BKMK_lk_ne
 
 ### <a name="BKMK_NewProcess_SyncErrors"></a> NewProcess_SyncErrors
 
-Same as syncerror table [NewProcess_SyncErrors](syncerror.md#BKMK_NewProcess_SyncErrors) Many-To-One relationship.
+Same as the [NewProcess_SyncErrors](syncerror.md#BKMK_NewProcess_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -738,39 +738,39 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_newprocess_activestageid"></a> lk_newprocess_activestageid
 
-See processstage Table [lk_newprocess_activestageid](processstage.md#BKMK_lk_newprocess_activestageid) One-To-Many relationship.
+See the [lk_newprocess_activestageid](processstage.md#BKMK_lk_newprocess_activestageid) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_knowledgearticleid"></a> lk_newprocess_knowledgearticleid
 
-See knowledgearticle Table [lk_newprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_newprocess_knowledgearticleid) One-To-Many relationship.
+See the [lk_newprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_newprocess_knowledgearticleid) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_processid"></a> lk_newprocess_processid
 
-See workflow Table [lk_newprocess_processid](workflow.md#BKMK_lk_newprocess_processid) One-To-Many relationship.
+See the [lk_newprocess_processid](workflow.md#BKMK_lk_newprocess_processid) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_createdby"></a> lk_newprocess_createdby
 
-See systemuser Table [lk_newprocess_createdby](systemuser.md#BKMK_lk_newprocess_createdby) One-To-Many relationship.
+See the [lk_newprocess_createdby](systemuser.md#BKMK_lk_newprocess_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_modifiedonbehalfby"></a> lk_newprocess_modifiedonbehalfby
 
-See systemuser Table [lk_newprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_newprocess_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_newprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_newprocess_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_createdonbehalfby"></a> lk_newprocess_createdonbehalfby
 
-See systemuser Table [lk_newprocess_createdonbehalfby](systemuser.md#BKMK_lk_newprocess_createdonbehalfby) One-To-Many relationship.
+See the [lk_newprocess_createdonbehalfby](systemuser.md#BKMK_lk_newprocess_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_modifiedby"></a> lk_newprocess_modifiedby
 
-See systemuser Table [lk_newprocess_modifiedby](systemuser.md#BKMK_lk_newprocess_modifiedby) One-To-Many relationship.
+See the [lk_newprocess_modifiedby](systemuser.md#BKMK_lk_newprocess_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_newprocess"></a> transactioncurrency_newprocess
 
-See transactioncurrency Table [transactioncurrency_newprocess](transactioncurrency.md#BKMK_transactioncurrency_newprocess) One-To-Many relationship.
+See the [transactioncurrency_newprocess](transactioncurrency.md#BKMK_transactioncurrency_newprocess) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_organization_newprocess"></a> organization_newprocess
 
-See organization Table [organization_newprocess](organization.md#BKMK_organization_newprocess) One-To-Many relationship.
+See the [organization_newprocess](organization.md#BKMK_organization_newprocess) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

@@ -1,24 +1,18 @@
 ---
 title: "Retrieve related table records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related table records by expanding the navigation properties."
-ms.custom: ""
-ms.date: 04/29/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 3D8FB9AF-3663-437A-988E-CBAE9579F167
-caps.latest.revision: 78
-author: "JimDaly"
-ms.author: "pehecke"
-manager: "ryjones"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Retrieve related table records with a query

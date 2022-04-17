@@ -1,19 +1,20 @@
 ---
 title: "getAttributeType (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getAttributeType method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 9ef1c886-a0b8-4ba9-bb9f-e6ecfa9d6dff
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getAttributeType (Client API reference)
 
@@ -41,8 +42,8 @@ This method will return one of the following **string** values:
 - lookup
 - memo
 - money
-- choices
-- choice
+- multiselectoptionset (choices)
+- optionset (choice)
 - string
 
 

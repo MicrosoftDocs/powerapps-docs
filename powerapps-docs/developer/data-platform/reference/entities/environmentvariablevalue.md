@@ -1,7 +1,7 @@
 ---
-title: "EnvironmentVariableValue table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "EnvironmentVariableValue table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EnvironmentVariableValue table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -340,6 +340,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -534,10 +535,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -719,12 +720,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -821,7 +840,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [environmentvariablevalue_SyncErrors](syncerror.md#BKMK_environmentvariablevalue_SyncErrors) Many-To-One relationship.
+Same as the [environmentvariablevalue_SyncErrors](syncerror.md#BKMK_environmentvariablevalue_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -838,7 +857,7 @@ Same as syncerror table [environmentvariablevalue_SyncErrors](syncerror.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [environmentvariablevalue_DuplicateMatchingRecord](duplicaterecord.md#BKMK_environmentvariablevalue_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [environmentvariablevalue_DuplicateMatchingRecord](duplicaterecord.md#BKMK_environmentvariablevalue_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -855,7 +874,7 @@ Same as duplicaterecord table [environmentvariablevalue_DuplicateMatchingRecord]
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [environmentvariablevalue_DuplicateBaseRecord](duplicaterecord.md#BKMK_environmentvariablevalue_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [environmentvariablevalue_DuplicateBaseRecord](duplicaterecord.md#BKMK_environmentvariablevalue_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -872,7 +891,7 @@ Same as duplicaterecord table [environmentvariablevalue_DuplicateBaseRecord](dup
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [environmentvariablevalue_AsyncOperations](asyncoperation.md#BKMK_environmentvariablevalue_AsyncOperations) Many-To-One relationship.
+Same as the [environmentvariablevalue_AsyncOperations](asyncoperation.md#BKMK_environmentvariablevalue_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -889,7 +908,7 @@ Same as asyncoperation table [environmentvariablevalue_AsyncOperations](asyncope
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [environmentvariablevalue_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_environmentvariablevalue_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [environmentvariablevalue_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_environmentvariablevalue_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -906,7 +925,7 @@ Same as mailboxtrackingfolder table [environmentvariablevalue_MailboxTrackingFol
 
 **Added by**: System Solution Solution
 
-Same as processsession table [environmentvariablevalue_ProcessSession](processsession.md#BKMK_environmentvariablevalue_ProcessSession) Many-To-One relationship.
+Same as the [environmentvariablevalue_ProcessSession](processsession.md#BKMK_environmentvariablevalue_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -923,7 +942,7 @@ Same as processsession table [environmentvariablevalue_ProcessSession](processse
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [environmentvariablevalue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_environmentvariablevalue_BulkDeleteFailures) Many-To-One relationship.
+Same as the [environmentvariablevalue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_environmentvariablevalue_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -940,7 +959,7 @@ Same as bulkdeletefailure table [environmentvariablevalue_BulkDeleteFailures](bu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [environmentvariablevalue_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_environmentvariablevalue_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [environmentvariablevalue_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_environmentvariablevalue_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -972,47 +991,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_environmentvariablevalue_createdby](systemuser.md#BKMK_lk_environmentvariablevalue_createdby) One-To-Many relationship.
+See the [lk_environmentvariablevalue_createdby](systemuser.md#BKMK_lk_environmentvariablevalue_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_environmentvariablevalue_createdonbehalfby"></a> lk_environmentvariablevalue_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_environmentvariablevalue_createdonbehalfby](systemuser.md#BKMK_lk_environmentvariablevalue_createdonbehalfby) One-To-Many relationship.
+See the [lk_environmentvariablevalue_createdonbehalfby](systemuser.md#BKMK_lk_environmentvariablevalue_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_environmentvariablevalue_modifiedby"></a> lk_environmentvariablevalue_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_environmentvariablevalue_modifiedby](systemuser.md#BKMK_lk_environmentvariablevalue_modifiedby) One-To-Many relationship.
+See the [lk_environmentvariablevalue_modifiedby](systemuser.md#BKMK_lk_environmentvariablevalue_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_environmentvariablevalue_modifiedonbehalfby"></a> lk_environmentvariablevalue_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_environmentvariablevalue_modifiedonbehalfby](systemuser.md#BKMK_lk_environmentvariablevalue_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_environmentvariablevalue_modifiedonbehalfby](systemuser.md#BKMK_lk_environmentvariablevalue_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_environmentvariablevalue"></a> user_environmentvariablevalue
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_environmentvariablevalue](systemuser.md#BKMK_user_environmentvariablevalue) One-To-Many relationship.
+See the [user_environmentvariablevalue](systemuser.md#BKMK_user_environmentvariablevalue) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_environmentvariablevalue"></a> team_environmentvariablevalue
 
 **Added by**: System Solution Solution
 
-See team Table [team_environmentvariablevalue](team.md#BKMK_team_environmentvariablevalue) One-To-Many relationship.
+See the [team_environmentvariablevalue](team.md#BKMK_team_environmentvariablevalue) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_environmentvariablevalue"></a> business_unit_environmentvariablevalue
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_environmentvariablevalue](businessunit.md#BKMK_business_unit_environmentvariablevalue) One-To-Many relationship.
+See the [business_unit_environmentvariablevalue](businessunit.md#BKMK_business_unit_environmentvariablevalue) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_environmentvariabledefinition_environmentvariablevalue"></a> environmentvariabledefinition_environmentvariablevalue
 
-See environmentvariabledefinition Table [environmentvariabledefinition_environmentvariablevalue](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_environmentvariablevalue) One-To-Many relationship.
+See the [environmentvariabledefinition_environmentvariablevalue](environmentvariabledefinition.md#BKMK_environmentvariabledefinition_environmentvariablevalue) one-to-many relationship for the [environmentvariabledefinition](environmentvariabledefinition.md) table/entity.
 
 ### See also
 

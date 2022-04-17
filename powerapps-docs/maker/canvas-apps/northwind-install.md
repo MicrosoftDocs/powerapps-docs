@@ -2,8 +2,7 @@
 title: Install Northwind Traders database and apps
 description: Learn about how to install the Northwind database and apps into an environment to explore relational concepts.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

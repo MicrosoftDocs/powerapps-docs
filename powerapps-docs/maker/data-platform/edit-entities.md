@@ -4,7 +4,7 @@ description: "Learn the different ways that a table can be edited"
 ms.custom: ""
 ms.date: 10/20/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Edit a table
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can edit any custom table that you create. Standard tables or managed custom tables may have limitations about changes you can make.  
 

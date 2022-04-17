@@ -2,24 +2,24 @@
 title: getViewId | Microsoft Docs
 description: Returns the Id of view used by dataset parameter.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 52c0cd68-5558-4985-a56c-21dc8a1f55de
 ---
 
 # getViewId
 
 [!INCLUDE[./includes/getviewid-description.md](./includes/getviewid-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -28,7 +28,6 @@ Model-driven apps
 ## Return Value
 
 **Type**: `string`
-
 
 ### Related topics
 

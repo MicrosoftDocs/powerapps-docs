@@ -1,7 +1,7 @@
 ---
-title: "View (SavedQuery) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the View (SavedQuery) table/entity."
-ms.date: 10/05/2021
+title: "View (SavedQuery)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the View (SavedQuery)  table/entity."
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# View (SavedQuery) table/entity reference
+# View (SavedQuery)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -225,10 +225,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -248,10 +248,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -602,10 +602,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -625,10 +625,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -648,10 +648,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -671,10 +671,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -929,7 +929,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SavedQuery_SyncErrors"></a> SavedQuery_SyncErrors
 
-Same as syncerror table [SavedQuery_SyncErrors](syncerror.md#BKMK_SavedQuery_SyncErrors) Many-To-One relationship.
+Same as the [SavedQuery_SyncErrors](syncerror.md#BKMK_SavedQuery_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -944,7 +944,7 @@ Same as syncerror table [SavedQuery_SyncErrors](syncerror.md#BKMK_SavedQuery_Syn
 
 ### <a name="BKMK_lk_mobileofflineprofileitem_savedquery"></a> lk_mobileofflineprofileitem_savedquery
 
-Same as mobileofflineprofileitem table [lk_mobileofflineprofileitem_savedquery](mobileofflineprofileitem.md#BKMK_lk_mobileofflineprofileitem_savedquery) Many-To-One relationship.
+Same as the [lk_mobileofflineprofileitem_savedquery](mobileofflineprofileitem.md#BKMK_lk_mobileofflineprofileitem_savedquery) many-to-one relationship for the [mobileofflineprofileitem](mobileofflineprofileitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -959,7 +959,7 @@ Same as mobileofflineprofileitem table [lk_mobileofflineprofileitem_savedquery](
 
 ### <a name="BKMK_SavedQuery_BulkDeleteFailures"></a> SavedQuery_BulkDeleteFailures
 
-Same as bulkdeletefailure table [SavedQuery_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SavedQuery_BulkDeleteFailures) Many-To-One relationship.
+Same as the [SavedQuery_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SavedQuery_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -974,7 +974,7 @@ Same as bulkdeletefailure table [SavedQuery_BulkDeleteFailures](bulkdeletefailur
 
 ### <a name="BKMK_SavedQuery_AsyncOperations"></a> SavedQuery_AsyncOperations
 
-Same as asyncoperation table [SavedQuery_AsyncOperations](asyncoperation.md#BKMK_SavedQuery_AsyncOperations) Many-To-One relationship.
+Same as the [SavedQuery_AsyncOperations](asyncoperation.md#BKMK_SavedQuery_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1001,23 +1001,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_savedquery_modifiedonbehalfby"></a> lk_savedquery_modifiedonbehalfby
 
-See systemuser Table [lk_savedquery_modifiedonbehalfby](systemuser.md#BKMK_lk_savedquery_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_savedquery_modifiedonbehalfby](systemuser.md#BKMK_lk_savedquery_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_savedquerybase_createdby"></a> lk_savedquerybase_createdby
 
-See systemuser Table [lk_savedquerybase_createdby](systemuser.md#BKMK_lk_savedquerybase_createdby) One-To-Many relationship.
+See the [lk_savedquerybase_createdby](systemuser.md#BKMK_lk_savedquerybase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_savedquerybase_modifiedby"></a> lk_savedquerybase_modifiedby
 
-See systemuser Table [lk_savedquerybase_modifiedby](systemuser.md#BKMK_lk_savedquerybase_modifiedby) One-To-Many relationship.
+See the [lk_savedquerybase_modifiedby](systemuser.md#BKMK_lk_savedquerybase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_saved_queries"></a> organization_saved_queries
 
-See organization Table [organization_saved_queries](organization.md#BKMK_organization_saved_queries) One-To-Many relationship.
+See the [organization_saved_queries](organization.md#BKMK_organization_saved_queries) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_savedquery_createdonbehalfby"></a> lk_savedquery_createdonbehalfby
 
-See systemuser Table [lk_savedquery_createdonbehalfby](systemuser.md#BKMK_lk_savedquery_createdonbehalfby) One-To-Many relationship.
+See the [lk_savedquery_createdonbehalfby](systemuser.md#BKMK_lk_savedquery_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

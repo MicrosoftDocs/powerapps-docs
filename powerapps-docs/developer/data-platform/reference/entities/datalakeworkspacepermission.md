@@ -1,7 +1,7 @@
 ---
-title: "datalakeworkspacepermission table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "datalakeworkspacepermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakeworkspacepermission table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -106,10 +106,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -129,10 +129,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -152,10 +152,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -306,8 +306,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Application Id that is white listed in AAD tenant id to access the Graph API.|
-|DisplayName|Whitelisted App ID|
+|Description|Application Id that is allowlisted in AAD tenant id to access the Graph API.|
+|DisplayName|Allowlisted App ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -540,10 +540,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -841,7 +841,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [datalakeworkspacepermission_SyncErrors](syncerror.md#BKMK_datalakeworkspacepermission_SyncErrors) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_SyncErrors](syncerror.md#BKMK_datalakeworkspacepermission_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -858,7 +858,7 @@ Same as syncerror table [datalakeworkspacepermission_SyncErrors](syncerror.md#BK
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [datalakeworkspacepermission_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -875,7 +875,7 @@ Same as duplicaterecord table [datalakeworkspacepermission_DuplicateMatchingReco
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [datalakeworkspacepermission_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -892,7 +892,7 @@ Same as duplicaterecord table [datalakeworkspacepermission_DuplicateBaseRecord](
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [datalakeworkspacepermission_AsyncOperations](asyncoperation.md#BKMK_datalakeworkspacepermission_AsyncOperations) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_AsyncOperations](asyncoperation.md#BKMK_datalakeworkspacepermission_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -909,7 +909,7 @@ Same as asyncoperation table [datalakeworkspacepermission_AsyncOperations](async
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [datalakeworkspacepermission_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakeworkspacepermission_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakeworkspacepermission_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -926,7 +926,7 @@ Same as mailboxtrackingfolder table [datalakeworkspacepermission_MailboxTracking
 
 **Added by**: System Solution Solution
 
-Same as processsession table [datalakeworkspacepermission_ProcessSession](processsession.md#BKMK_datalakeworkspacepermission_ProcessSession) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_ProcessSession](processsession.md#BKMK_datalakeworkspacepermission_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -943,7 +943,7 @@ Same as processsession table [datalakeworkspacepermission_ProcessSession](proces
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [datalakeworkspacepermission_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakeworkspacepermission_BulkDeleteFailures) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakeworkspacepermission_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -960,7 +960,7 @@ Same as bulkdeletefailure table [datalakeworkspacepermission_BulkDeleteFailures]
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [datalakeworkspacepermission_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakeworkspacepermission_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakeworkspacepermission_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -990,35 +990,35 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakeworkspacepermission_createdby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_createdby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_createdonbehalfby"></a> lk_datalakeworkspacepermission_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakeworkspacepermission_createdonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdonbehalfby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_createdonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_modifiedby"></a> lk_datalakeworkspacepermission_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakeworkspacepermission_modifiedby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_modifiedby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby"></a> lk_datalakeworkspacepermission_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_datalakeworkspacepermission_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_datalakeworkspacepermission"></a> organization_datalakeworkspacepermission
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_datalakeworkspacepermission](organization.md#BKMK_organization_datalakeworkspacepermission) One-To-Many relationship.
+See the [organization_datalakeworkspacepermission](organization.md#BKMK_organization_datalakeworkspacepermission) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_datalakeworkspace_workspacepermission"></a> datalakeworkspace_workspacepermission
 
-See datalakeworkspace Table [datalakeworkspace_workspacepermission](datalakeworkspace.md#BKMK_datalakeworkspace_workspacepermission) One-To-Many relationship.
+See the [datalakeworkspace_workspacepermission](datalakeworkspace.md#BKMK_datalakeworkspace_workspacepermission) one-to-many relationship for the [datalakeworkspace](datalakeworkspace.md) table/entity.
 
 ### See also
 

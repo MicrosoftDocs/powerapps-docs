@@ -2,16 +2,16 @@
 title: Manage portals from the Power Platform admin center
 description: Learn about Power Apps portals settings in the Power Platform admin center.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Manage portals from the Power Platform admin center

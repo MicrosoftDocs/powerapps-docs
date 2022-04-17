@@ -2,9 +2,9 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 08/10/2021
+ms.date: 03/28/2022
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -21,9 +21,7 @@ search.app:
 ---
 # Add the rich text editor control to a model-driven app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. 
+The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
 Some of the format options available are:
 
@@ -37,36 +35,56 @@ Some of the format options available are:
 
 For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).<br></br>
 
-
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app"> 
 
 ## Add or replace a text column for rich text editing
 
-You can create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
+Create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
 
-1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab. 
-2. Select the form, and then select **Edit form**.
-3. In the form designer on the command bar, select **Switch to classic**.
-4. On the legacy form designer canvas, add or create a text column or select an existing text column, such as the account table **Description** column. On the **Home** tab, select **Change Properties**.
-5. On the **Column Properties** page, select the **Controls** tab, and then select **Add control**.
-6. Select **Rich Text Editor Control**, and then select **Add**.
-7. Select **Web**, **Phone**, and **Tablet** if you want all client apps to have the ability to use rich text in the column. Then select **OK** to use the default rich text editor control configuration. If you want to change the rich text editor control configuration, see [Rich text editor control configuration options](#rich-text-editor-control-configuration-options).
+### Simple configuration
 
-    <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
-8. Save and then publish the form.
+To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps.
 
-## Rich text editor control configuration options
+   > [!NOTE]
+   > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions](/powerapps/developer/data-platform/data-type-format-conversions)
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
+
+   > [!NOTE]
+   > The parameter in the URL is required to display the new **Format** option in the maker experience.
+1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
+1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
+1. Save the column. You can now add the new column to any existing or new form for this table.
+
+### Advanced configuration
+
+To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
+1. Select the form, and then select **Edit form** > **Edit form in new tab**.
+1. On the form designer canvas, add or create a text column or select an existing text column, such as the custom multi-line text column used in this article.
+1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
+1. On the **Add rich text editor control** pane, select from the following options, and then select **Done**:  
+   - **Bind to table column**: We don’t recommend that you enable this option because this property doesn’t support binding to a different table column.
+   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
+   - **Web**, **Phone**, and **Tablet**: Enable all if you want all client apps to have the ability to use rich text in the column.
+
+      <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
+1. **Save**, and then **Publish** the form.
+
+## Configure the rich text editor control
 
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
-1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
-2. In Power Apps, create a Script(JScript) type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-3. Open the **Column Properties** page for the text column with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
-   > [!div class="mx-imgBorder"] 
-   > ![Rich text editor control URL.](media/richtexteditorcontrol-url.png)
-4. Select **Bind to static value**, enter the relative URL to the JavaScript web resource in the box next to **SingleLine.URL**, and then select **OK**. The relative URL is located on the web resource definition.
-5. Select **OK** to close the **Column Properties** page.
-6. On the form editor command bar, select **Publish**.
+1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
+1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+1. Add the relative URL for the JavaScript web resource, for example */WebResources/contoso_toolbartoprte*, in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
+
+   > [!TIP]
+   > - The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
+   > - Although you can use the absolute URL for the **Static value**, by using the relative URL the web resource will continue to work after it has been imported into another environment as a solution.
+   > :::image type="content" source="media/web-resource-url.png" alt-text="URL for JavaScript web resource":::
+1. **Save**, and then **Publish** the form.
 
 ## Best practices for using the rich text editor
 
@@ -74,34 +92,34 @@ Consider the following when using the rich text editor:
 
 - The best performance is achieved when the HTML content size is 1 MB or less. When your HTML content size exceeds 1 MB, you may notice slower response times for loading and editing content. By default, image content is referenced from the content HTML but isn't stored as part of the HTML content, so in the default configuration, images don't negatively impact performance. 
 
-- Rich text fields will store HTML tags which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
+- Rich text fields will store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the msdyn_richtextfiles entity. Base64 content is extremely large, so you generally don't want to store images as base64. 
+- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64. 
 
 ## Rich text editor properties
 
-The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the defaultSupportedProps section, and individual configuration settings that provide various functionality. 
+The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The defaultSupportedProps is a set of properties for the plugins, and includes support for all the the CKEditor configurations. For more information, see defaultSupportProps. The defaultSupportedProps isn’t limited to only plugin properties documented from CKEditor, but also allows you to set properties for additional plugins you add or create. For more information about plug-ins, see Use plug-ins to extend business processes. 
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see defaultSupportProps. The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for additional plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
 ### Visualization of the rich text editor configuration file
 
-The following two images visually identify the two configuration sections. For the full configuration file, see [Use the webresource for organization-wide changes](#use-the-webresource-for-organization-wide-changes).
+The following two images visually identify the two configuration sections. For the full configuration file, go to [Use the web resource for organization-wide changes](#use-the-web-resource-for-organization-wide-changes).
 
 **defaultSupportedProps**
 
-:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualation.":::
+:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualization.":::
 
 **Individual configuration settings**
 
 :::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization.":::
 
-
 ### defaultSupportedProps
 
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
+
 
 <table>
   <tr>
@@ -161,7 +179,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".
+  Sets the actual default font size and style.<br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".
 </td>
 <td>
 
@@ -268,6 +286,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 ### Individual configuration settings
 
 You can configure additional configuration settings that affect how your editor functions.
+
 
 <table>
   <tr>
@@ -489,7 +508,7 @@ Depends on showAsTabControl and showPreview set to true.
 
 ## Sample rich text editor configurations
 
-The following sample rich text editor configuration code sample data can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource. More information: [Rich text editor control configuration options](#rich-text-editor-control-configuration-options)
+The following sample rich text editor configuration code sample data can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource. More information: [Configure the rich text editor control](#configure-the-rich-text-editor-control)
 
 ### Add the full screen expander
 
@@ -539,7 +558,7 @@ The following sample rich text editor configuration code sample data can be used
 
 :::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor.":::
 
-### Start the editor at 30 px height and then auto-grow to fit content
+### Start the editor at 30-px height and then autogrow to fit content
 
  ```
  { "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}
@@ -570,9 +589,9 @@ Enabling this functionality removes the contextual right-click editing capabilit
 
 :::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
 
-## Use the webresource for organization-wide changes
+## Use the web resource for organization-wide changes
 
-The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
+The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
 
 ```json
 {
@@ -682,7 +701,7 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
  
     "showPreview": false,
  
-    "showPreviewHeaderWarning": false}
+    "showPreviewHeaderWarning": false
 }
 ``` 
 ## Find the current setting for a rich text editor configuration
@@ -710,10 +729,6 @@ The rich text editor toolbar provides features and functionality that allows you
 ### Formatting options
 The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
 
-> [!Note]
-> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
-
-
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
 |![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
@@ -734,8 +749,8 @@ The following table describes the different formatting features and functionalit
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
 |![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
-|![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type very small letters just above the line of text. |
-|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type very small letters just below the line of text. |
+|![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
+|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
 |![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
 |![Insert Image.](media/insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
 |![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
@@ -743,11 +758,13 @@ The following table describes the different formatting features and functionalit
 |![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
-|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Click to expand the toolbar and make all options visible. |
+|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
+| | | | |
 
-> [!Note]
-> You can access your browser's context menu by pressing **Ctrl** + right-click. This is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.
+> [!Tip]
+> You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
+> Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
 
 ## Accessibility shortcuts
 
@@ -771,13 +788,13 @@ The following table outlines a list of accessibility shortcuts available when us
 | Base commands | Ctrl+U | Underline command. |
 | Base commands | Alt+0 | Accessibility help. |
 | Base commands | Esc | Cancel operation. |
-
+| | | |
 
 ## Frequently asked questions
 
-Q: Why are typed characters are slow to display?
+Q: Why are typed characters slow to display?
 
-A. Large content size can cause latency. For more information, see [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
+A. Large content size can cause latency. More information: [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 
 
 ## Known issues

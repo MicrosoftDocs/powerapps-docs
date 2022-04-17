@@ -4,7 +4,7 @@ description: "Learn how to add a canvas app component using a custom page"
 ms.custom: ""
 ms.date: 08/26/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "hemantg"
@@ -26,6 +26,7 @@ This article outlines the use of low-code canvas components to build custom UX f
   > [!IMPORTANT]
   > - This is a preview feature, and may not be available in all regions.
   > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+  > - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
   > [!NOTE]
   > - Custom page currently supports a [limited set of controls](/powerapps/maker/model-driven-apps/design-page-for-model-app#supported-controls-in-a-custom-page) and only the currently supported controls should be used to create canvas components for the custom page.

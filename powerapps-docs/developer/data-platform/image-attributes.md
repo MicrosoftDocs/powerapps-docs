@@ -4,7 +4,7 @@ description: "Learn about image columns that store image data, supporting column
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -18,7 +18,7 @@ search.app:
 ---
 # Image columns
 
-Certain system tables and all custom tables support entity images. Those tables that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the form data. There can be multiple image columns in a table but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that column to `true`. Each full-sized image column is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image column is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
+Certain system tables and all custom tables support entity images. Those tables that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the form data. There can be multiple image columns in a table but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that column to `true`. Each full-sized image column is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image column is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -27,7 +27,7 @@ Thumbnail images and image metadata are stored in Microsoft Dataverse, which inc
 Web API (REST) | .NET API (SOAP) 
 ------- | -------
 [ImageAttributeMetadata](/dynamics365/customer-engagement/web-api/imageattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata>
-IsPrimaryImage, MaxHeight, MaxWidth | [IsPrimaryImage](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage), [MaxHeight](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxheight?view=dynamics-general-ce-9), [MaxWidth](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxwidth?view=dynamics-general-ce-9)
+IsPrimaryImage, MaxHeight, MaxWidth | [IsPrimaryImage](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage), [MaxHeight](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxheight), [MaxWidth](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxwidth)
 
 In addition to image columns, custom tables support zero or more file columns that can contain any file data. These file columns can contain a much larger amount of data than image columns. For more information see [File columns](file-attributes.md).
 

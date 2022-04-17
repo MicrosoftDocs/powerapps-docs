@@ -1,24 +1,18 @@
 ---
 title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
-ms.custom: ""
-ms.date: 06/17/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 953c3137-6171-4e6e-b249-6a96221c6e96
-caps.latest.revision: 16
-author: "JimDaly" # GitHub ID
-ms.reviewer: "pehecke"
-ms.author: "jdaly"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Functions and Actions Sample

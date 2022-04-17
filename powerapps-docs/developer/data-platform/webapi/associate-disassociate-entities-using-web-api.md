@@ -1,25 +1,18 @@
 ---
 title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to add a reference to a collection-valued navigation property, remove a reference, and change an existing reference using the Web API"
-ms.custom: ""
-ms.date: 05/03/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: ad4e4eac-117a-4958-9df0-b7353305b0c7
-caps.latest.revision: 13
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Associate and disassociate table rows using the Web API

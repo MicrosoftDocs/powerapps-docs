@@ -1,7 +1,7 @@
 ---
-title: "RollupField table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "RollupField table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the RollupField table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -150,10 +150,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -541,7 +541,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_rollupfield_ProcessSessions"></a> rollupfield_ProcessSessions
 
-Same as processsession table [rollupfield_ProcessSessions](processsession.md#BKMK_rollupfield_ProcessSessions) Many-To-One relationship.
+Same as the [rollupfield_ProcessSessions](processsession.md#BKMK_rollupfield_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -556,7 +556,7 @@ Same as processsession table [rollupfield_ProcessSessions](processsession.md#BKM
 
 ### <a name="BKMK_RollupField_SyncErrors"></a> RollupField_SyncErrors
 
-Same as syncerror table [RollupField_SyncErrors](syncerror.md#BKMK_RollupField_SyncErrors) Many-To-One relationship.
+Same as the [RollupField_SyncErrors](syncerror.md#BKMK_RollupField_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -571,7 +571,7 @@ Same as syncerror table [RollupField_SyncErrors](syncerror.md#BKMK_RollupField_S
 
 ### <a name="BKMK_rollupfield_AsyncOperations"></a> rollupfield_AsyncOperations
 
-Same as asyncoperation table [rollupfield_AsyncOperations](asyncoperation.md#BKMK_rollupfield_AsyncOperations) Many-To-One relationship.
+Same as the [rollupfield_AsyncOperations](asyncoperation.md#BKMK_rollupfield_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -598,23 +598,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_rollupfield_createdby"></a> lk_rollupfield_createdby
 
-See systemuser Table [lk_rollupfield_createdby](systemuser.md#BKMK_lk_rollupfield_createdby) One-To-Many relationship.
+See the [lk_rollupfield_createdby](systemuser.md#BKMK_lk_rollupfield_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_rollupfield_createdonbehalfby"></a> lk_rollupfield_createdonbehalfby
 
-See systemuser Table [lk_rollupfield_createdonbehalfby](systemuser.md#BKMK_lk_rollupfield_createdonbehalfby) One-To-Many relationship.
+See the [lk_rollupfield_createdonbehalfby](systemuser.md#BKMK_lk_rollupfield_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_rollupfield_modifiedby"></a> lk_rollupfield_modifiedby
 
-See systemuser Table [lk_rollupfield_modifiedby](systemuser.md#BKMK_lk_rollupfield_modifiedby) One-To-Many relationship.
+See the [lk_rollupfield_modifiedby](systemuser.md#BKMK_lk_rollupfield_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_rollupfield_modifiedonbehalfby"></a> lk_rollupfield_modifiedonbehalfby
 
-See systemuser Table [lk_rollupfield_modifiedonbehalfby](systemuser.md#BKMK_lk_rollupfield_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_rollupfield_modifiedonbehalfby](systemuser.md#BKMK_lk_rollupfield_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_metric_rollupfield"></a> metric_rollupfield
 
-See metric Table [metric_rollupfield](metric.md#BKMK_metric_rollupfield) One-To-Many relationship.
+See the [metric_rollupfield](metric.md#BKMK_metric_rollupfield) one-to-many relationship for the [metric](metric.md) table/entity.
 
 ### See also
 

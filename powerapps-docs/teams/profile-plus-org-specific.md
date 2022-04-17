@@ -1,16 +1,16 @@
 ---
-title: Extend Profile+ app (preview) with additional org-specific data
+title: Extend Profile+ app (preview) with additional org-specific data (contains video)
 description: Learn how to extend Profile + to include additional information from your company.
 author: Joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/16/2021
 ms.subservice: teams
-ms.author: namarwah
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
-  - navjotm
+  - msftsamperl
   - tapanm-msft
   - Joel-lindstrom
 ---

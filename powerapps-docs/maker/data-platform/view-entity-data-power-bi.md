@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 12/03/2020
 ms.topic: how-to
 ms.reviewer: "matp"
-ms.service: powerapps
+
 author: "Mattp123"
 ms.assetid: 
 ms.subservice: dataverse-maker
@@ -18,7 +18,7 @@ search.app:
 ---
 # View table data in Power BI Desktop
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can use Power BI Desktop to view tables in Microsoft Dataverse. The table
 row data that you can access from your environment is read-only. Data access
@@ -64,7 +64,8 @@ For more information about Power BI Desktop, see [Get started with Power BI Desk
 > SQL options, such as a T-SQL queries aren’t supported.
 
 ### See also
-[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)
-
+[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)</br>
+[Dataverse SQL](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql)</br>
+[Power Query Dataverse connector](/power-query/connectors/dataverse)</br>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

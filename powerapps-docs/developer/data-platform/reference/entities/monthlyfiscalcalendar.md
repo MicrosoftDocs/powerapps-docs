@@ -1,7 +1,7 @@
 ---
-title: "MonthlyFiscalCalendar table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "MonthlyFiscalCalendar table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MonthlyFiscalCalendar table/entity."
-ms.date: 10/05/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -950,7 +950,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_MonthlyFiscalCalendar_AsyncOperations"></a> MonthlyFiscalCalendar_AsyncOperations
 
-Same as asyncoperation table [MonthlyFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_MonthlyFiscalCalendar_AsyncOperations) Many-To-One relationship.
+Same as the [MonthlyFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_MonthlyFiscalCalendar_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -965,7 +965,7 @@ Same as asyncoperation table [MonthlyFiscalCalendar_AsyncOperations](asyncoperat
 
 ### <a name="BKMK_MonthlyFiscalCalendar_BulkDeleteFailures"></a> MonthlyFiscalCalendar_BulkDeleteFailures
 
-Same as bulkdeletefailure table [MonthlyFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_MonthlyFiscalCalendar_BulkDeleteFailures) Many-To-One relationship.
+Same as the [MonthlyFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_MonthlyFiscalCalendar_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -993,27 +993,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_monthlyfiscalcalendar_modifiedonbehalfby"></a> lk_monthlyfiscalcalendar_modifiedonbehalfby
 
-See systemuser Table [lk_monthlyfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_monthlyfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_monthlyfiscalcalendar_modifiedby"></a> lk_monthlyfiscalcalendar_modifiedby
 
-See systemuser Table [lk_monthlyfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_modifiedby) One-To-Many relationship.
+See the [lk_monthlyfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_monthlyfiscalcalendar_createdonbehalfby"></a> lk_monthlyfiscalcalendar_createdonbehalfby
 
-See systemuser Table [lk_monthlyfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_createdonbehalfby) One-To-Many relationship.
+See the [lk_monthlyfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_monthlyfiscalcalendar"></a> transactioncurrency_monthlyfiscalcalendar
 
-See transactioncurrency Table [transactioncurrency_monthlyfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_monthlyfiscalcalendar) One-To-Many relationship.
+See the [transactioncurrency_monthlyfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_monthlyfiscalcalendar) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_monthlyfiscalcalendar_salespersonid"></a> lk_monthlyfiscalcalendar_salespersonid
 
-See systemuser Table [lk_monthlyfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_monthlyfiscalcalendar_salespersonid) One-To-Many relationship.
+See the [lk_monthlyfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_monthlyfiscalcalendar_salespersonid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_monthlyfiscalcalendar_createdby"></a> lk_monthlyfiscalcalendar_createdby
 
-See systemuser Table [lk_monthlyfiscalcalendar_createdby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_createdby) One-To-Many relationship.
+See the [lk_monthlyfiscalcalendar_createdby](systemuser.md#BKMK_lk_monthlyfiscalcalendar_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

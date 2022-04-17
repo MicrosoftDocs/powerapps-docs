@@ -1,17 +1,14 @@
 ---
 title: Library Element | Microsoft Docs
-description: 
+description: Refers to external, published libraries that multiple controls from various ISVs rely on.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 90f2b4c9-7396-4ab9-bc9f-810189dc18b7
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 ---
 
 # library element
