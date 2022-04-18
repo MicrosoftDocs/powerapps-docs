@@ -2,7 +2,6 @@
 title: Rand and RandBetween functions in Power Apps
 description: Reference information including syntax and examples for the Rand and RandBetween functions in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -30,9 +29,9 @@ The **RandBetween** function returns a pseudo-random integer (whole number with 
 
 When used in a data flow formula, a volatile function will only return a different value if the formula in which it appears is reevaluated.  If nothing else changes in the formula then it will have the same value throughout the execution of your app.
 
-For example, a label control with **Label1.Text = Rand()** will not change while your app is active.  Only closing and reopening the app will result in a new value.
+For example, a label control with **Label1.Text = Rand()** won't change while your app is active.  Only closing and reopening the app will result in a new value.
 
-The function will be reevaluated if it is part of a formula in which something else has changed.  For example, if we change our example to involve a slider control with **Label1.Text = Slider1.Value + Rand()** then a new random number is generated each time the Slider control's value changes and the label's text property is reevaluated.  See below for this example.
+The function will be reevaluated if it's part of a formula in which something else has changed.  For example, if we change our example to involve a slider control with **Label1.Text = Slider1.Value + Rand()** then a new random number is generated each time the Slider control's value changes and the label's text property is reevaluated.  See below for this example.
 
 When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand** and **RandBetween** will be evaluated each time the behavior formula is evaluated.  See below for an example.
 
@@ -85,7 +84,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
 
     ![Data source selection of the RandomNumbers collection.](media/function-rand/set-show-data.png)
 
-1. While holding down the Alt key, select the button by clicking or tapping it.
+1. While holding down the **Alt** key, select the button by clicking or tapping it.
 
     The data table shows 100 hundred random numbers between 1 and 20:
 
