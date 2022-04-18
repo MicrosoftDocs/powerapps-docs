@@ -126,7 +126,7 @@ Line 3"
 
 The above formula results in three lines shown in the label control:
 
-:::image type="content" source="media/data-types/text-string-literal-newlines.png" alt-text="Embedded text string and label control showing three lines with "Line 1", "Line 2", and "Line 3".":::
+:::image type="content" source="media/data-types/text-string-literal-newlines.png" alt-text="Embedded text string and label control showing three lines with Line 1, Line 2, and Line 3.":::
 
 Newlines are also supported with string interpolation, as shown below:
 
@@ -138,7 +138,7 @@ Line {1+1+1}"
 
 The above formula results in the same output:
 
-:::image type="content" source="media/data-types/string-interpolation-newlines.png" alt-text="String interpolation formula and label control showing three lines with "Line 1", "Line 2", and "Line 3".":::
+:::image type="content" source="media/data-types/string-interpolation-newlines.png" alt-text="String interpolation formula and label control showing three lines with Line 1, Line 2, and Line 3.":::
 
 ### Image and Media resources
 
