@@ -2,11 +2,10 @@
 title: Operators and Identifiers in Power Apps
 description: Reference information including syntax and examples for the Operators and Identifiers in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -59,6 +58,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                             **Parent**                              |         [Parent operator](#self-and-parent-operators)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
 |                            **ThisRecord**                             |       [ThisRecord operator](#thisrecord-operator)       |                                                                            **ThisRecord.FirstName**                                                                            |                                                                                                          Access to the complete record and individual fields of the record within **ForAll**, **Sum**, **With**, and other record scope functions.  Can be overridden with the **As** operator.                                                                                                           |
+
 
 > [!NOTE]
 > The **@** operator can also be used to validate the type of the record object against a data source. For example, `Collect(coll,Account@{'Account Number: 1111')`

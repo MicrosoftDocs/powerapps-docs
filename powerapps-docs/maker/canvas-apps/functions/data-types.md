@@ -2,11 +2,10 @@
 title: Data types in Power Apps
 description: Learn about the different data types in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -102,7 +101,7 @@ String interpolation can include standard text strings in the embedded formula. 
 $"Welcome {Coalesce( NickName, FirstName, "Friend" )}!"  
 ```
 
-String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined into a greeting.  Even if one or two of these values are *blank*, the correct number of spaces will be between the name parts.  If none of the parts are provided, the inner string interpolation will collapse to an empty string, and be repalced by the [**Coalesce**](function-isblank-isempty.md) function by "Friend".  
+String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined into a greeting.  Even if one or two of these values are *blank*, the correct number of spaces will be between the name parts.  If none of the parts are provided, the inner string interpolation will collapse to an empty string, and be replaced by the [**Coalesce**](function-isblank-isempty.md) function by "Friend".  
 
 ```powerapps-dot
 $"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}!"
@@ -117,7 +116,7 @@ $"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}!"
 
 ### Newlines
 
-Embedded text strings can contain newlines.  For example, if we set the **Text** property of a [**Label**](../controls/control-text-box.md) control to:
+Embedded text strings can contain newlines. For example, consider setting the **Text** property of a [**Label**](../controls/control-text-box.md) control to the following:
 
 ```powerapps-dot
 "Line 1
@@ -125,10 +124,11 @@ Line 2
 Line 3" 
 ```
 
-results in three lines shown in the label control:
-![embedded text string and label control showing three lines with "Line 1", "Line 2", and "Line 3".](media/data-types/text-string-literal-newlines.png)
+The above formula results in three lines shown in the label control:
 
-Newlines are also supported with string interpolation:
+:::image type="content" source="media/data-types/text-string-literal-newlines.png" alt-text="Embedded text string and label control showing three lines with "Line 1", "Line 2", and "Line 3".":::
+
+Newlines are also supported with string interpolation, as shown below:
 
 ```powerapps-dot
 $"Line {1}
@@ -136,8 +136,9 @@ Line {1+1}
 Line {1+1+1}" 
 ```
 
-resulting in the same output:
-![string interpolation formula and label control showing three lines with "Line 1", "Line 2", and "Line 3".](media/data-types/string-interpolation-newlines.png)
+The above formula results in the same output:
+
+:::image type="content" source="media/data-types/string-interpolation-newlines.png" alt-text="String interpolation formula and label control showing three lines with "Line 1", "Line 2", and "Line 3".":::
 
 ### Image and Media resources
 

@@ -2,11 +2,10 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 01/24/2022
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 

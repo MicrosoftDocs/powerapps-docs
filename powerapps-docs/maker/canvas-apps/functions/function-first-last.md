@@ -2,11 +2,10 @@
 title: First, FirstN, Index, Last, and LastN functions in Power Apps
 description: Reference information including syntax and examples for the First, FirstN, Index, Last, and LastN functions in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/13/2022
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -54,7 +53,7 @@ The **Index** function returns a record of a table based on its ordered position
 
 For the following examples, we'll use the **IceCream** [data source](../working-with-data-sources.md), which contains the data in this table:
 
-![IceCream example.](media/function-first-last/icecream.png)
+:::image type="content" source="media/function-first-last/icecream.png" alt-text="IceCream example.":::
 
 This table can be placed in a collection with this formula (put in the OnStart formula for a Button control and press the button):
 
