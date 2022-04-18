@@ -851,6 +851,8 @@
             href: ./canvas-apps/functions/function-trig.md
           - name: Rand
             href: ./canvas-apps/functions/function-rand.md
+          - name: RandBetween
+            href: ./canvas-apps/functions/function-rand.md            
           - name: ReadNFC
             href: ./canvas-apps/functions/function-readnfc.md
           - name: RecordInfo

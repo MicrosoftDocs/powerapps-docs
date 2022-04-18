@@ -288,7 +288,9 @@ Other elements include:
 ## R
 **[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
-**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number between 0 and 1.
+
+**[RandBetween](functions/function-rand.md)** – Returns a pseudo-random number between two numbers.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
 
