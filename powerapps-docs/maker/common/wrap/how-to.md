@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/07/2022
+ms.date: 04/13/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -54,7 +54,8 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 ```
 
 > [!NOTE]
-> - The Add-AdminAllowedThirdPartyApps cmdlet is available since version 2.0.144 of the Adminstrator PowerShell module. Please ensure you have at least this version installed. 
+> - This cmdlet is available in 2.0.144 or later versions of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**.
+> - You'll need global tenant administrator privileges to run this cmdlet. The cmdlet allows an administrator to designate which registered 3rd-party applications in Azure AD can invoke Power Platform connections.
 
 ## Configure API permissions
 
@@ -84,10 +85,10 @@ In this step, you'll use App Center to create an app container for your mobile a
     > [!NOTE]
     > You must create separate App Center containers for each platform.
 
-1. For **Android** OS, select **Platform** as **Reactive Native**.
+1. For **Android** OS, select **Platform** as **React Native**.
 
     > [!NOTE]
-    > **Platform** must be **Reactive Native** for all apps in App Center.
+    > **Platform** must be **React Native** for all apps in App Center.
 
     :::image type="content" source="media/wrap-canvas-app/app-center-app.png" alt-text="App center app configuration.":::
 
