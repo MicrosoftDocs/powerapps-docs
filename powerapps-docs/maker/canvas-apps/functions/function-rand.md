@@ -55,7 +55,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
 | **Rand()&nbsp;*&nbsp;100** |Building on the previous example, uses multiplication to extend the range to greater than or equal to 0 and less than 100. |Varies with each evaluation, for example **78.42521**. |
 | **Int(&nbsp;Rand()&nbsp;*&nbsp;100&nbsp;)** |Building on the previous example, uses the **Int** function to remove the decimal portion, resulting in an integer greater than or equal to 0 and less than 100 | Varies with each evaluation, for example **84**.|
 | **RandBetween(&nbsp;0,&nbsp;99&nbsp;)** |Building on the previous example, performs the same operation using the **RandBetween** function|Varies with each evaluation, for example **21**. |
-| **RandBetween(&nbsp;-1,&nbsp;1&nbsp;)** | Returns a pseudo-random number that is between -1 and 1 inclusive (**-1**, **0**, or **1**).  | Varies with each evaluation, for example **-1**. |
+| **RandBetween(&nbsp;-1,&nbsp;1&nbsp;)** | Returns a pseudo-random number that is between -1 and 1 inclusive: **-1**, **0**, or **1**.  | Varies with each evaluation, for example **-1**. |
 
 #### Display a different random number as user input changes with Rand
 1. Add a **[Slider](../controls/control-slider.md)** control, and rename it **Slider1** if it has a different name.
