@@ -2,11 +2,10 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 01/24/2022
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -187,6 +186,8 @@ Other elements include:
 **[IfError](functions/function-iferror.md)** - Detects errors and provides an alternative value or takes action. 
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
+
+**[Index](functions/function-first-last.md)** – Returns a record from a table based on ordered position.
 
 **[Int](functions/function-round.md)** – Rounds down to the nearest integer.
 

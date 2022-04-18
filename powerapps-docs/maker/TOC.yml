@@ -753,6 +753,8 @@
             href: ./canvas-apps/functions/function-iferror.md
           - name: in
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+          - name: Index
+            href: ./canvas-apps/functions/function-first-last.md
           - name: Int
             href: ./canvas-apps/functions/function-round.md
           - name: IsBlank
