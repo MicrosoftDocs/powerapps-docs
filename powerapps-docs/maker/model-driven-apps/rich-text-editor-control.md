@@ -235,8 +235,37 @@ You can configure all of the CKEditor-supported properties under this property. 
 <td>
 
   ```
-	"toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]
-	```
+"toolbar": [
+    [ "CopyFormatting" ],
+    [ "Font" ],
+    [ "FontSize" ],
+    [ "Bold" ],
+    [ "Italic" ],
+    [ "Underline" ],
+    [ "BGColor" ],
+    [ "TextColor" ],
+    [ "BulletedList" ],
+    [ "NumberedList" ],
+    [ "Outdent" ],
+    [ "Indent" ],
+    [ "Blockquote" ],
+    [ "JustifyLeft" ],
+    [ "JustifyCenter" ],
+    [ "JustifyRight" ],
+    [ "Link" ],
+    [ "Unlink" ],
+    [ "Subscript" ],
+    [ "Superscript" ],
+    [ "Strike" ],
+    [ "Image" ],
+    [ "BidiLtr" ],
+    [ "BidiRtl" ],
+    [ "Undo" ],
+    [ "Redo" ],
+    [ "RemoveFormat" ],
+    [ "Table" ]
+  ]
+```
   
 </td>
 </tr>
@@ -375,9 +404,7 @@ You can configure additional configuration settings that affect how your editor 
 No default value as this is how you can extend your functionality by adding additional plugins not originally provided.
 
 Example:
-
 ```
-  XMLCopy
 "externalPlugins": [
     {
       "name": "<<Plugin Name>>",
@@ -420,7 +447,7 @@ Example:
 	"imageFileAttributeName": "<<attribute name of the blob reference>>"
 }
   ```
-  
+Example:
   ```
   "imageEntity": {
 	"imageEntityName": "msdyn_richtextfiles",
