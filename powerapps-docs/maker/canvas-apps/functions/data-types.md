@@ -85,9 +85,9 @@ For example, consider this formula with global variables **Apples** set to 3 and
 $"We have {Apples} apples, {Bananas} bananas, yielding {Apples+Bananas} fruit total." 
 ```
 
-This formula returns the text string **We have 3 apples, 4 bananas, yielding 7 fruit total.**  The variables **Apples** and **Bananas** are inserted in the text replacing the curly braces, along with the result of the mathemtical formula **Apples+Bananas**.  Spaces and other characters around the curly braces are preserved as they are.
+This formula returns the text string **We have 3 apples, 4 bananas, yielding 7 fruit total.**  The variables **Apples** and **Bananas** are inserted in the text replacing the curly braces, along with the result of the mathematical formula **Apples+Bananas**.  Spaces and other characters around the curly braces are preserved as they are.
 
-Embedded formulas can include any functions or operators.  All that is requires is that the result of the formula can be coerced to a text string.  For example, this formula will insert **NickName** if it is supplied, or the **FirstName** if not, in a greeting:
+Embedded formulas can include any functions or operators.  All that is requires is that the result of the formula can be coerced to a text string.  For example, this formula will insert **NickName** if it's supplied, or the **FirstName** if not, in a greeting:
 
 ```powerapps-dot
 $"Welcome {Coalesce( NickName, FirstName )}, it's great to meet you!" )
@@ -95,7 +95,7 @@ $"Welcome {Coalesce( NickName, FirstName )}, it's great to meet you!" )
 
 If **NickName** is set to "Joe", then this formula produces the text string **Welcome Joe, it's great to meet you!**.  But if **NickName** is *blank* and **FirstName** is "Joseph", then this formula produces **Dear Joseph, great to meet you!** instead.
 
-String interpolation can include standard text strings in the embedded formula.  For example, if neither **NickName** nor **FirstName** were supplied, we could still provide **"Friend"** as a substiute:
+String interpolation can include standard text strings in the embedded formula.  For example, if neither **NickName** nor **FirstName** were supplied, we could still provide **"Friend"** as a substitute:
 
 ```powerapps-dot
 $"Welcome {Coalesce( NickName, FirstName, "Friend" )}!"  
@@ -276,7 +276,7 @@ Choices and two-option data types provide a two or more choices for an app user 
 
 Both of these data types show their labels in a text-string context. For example, a label control shows one of the order-status options if the control's **Text** property is set to a formula that references that choice. Option labels might be localized for app users in different locations.
 
-When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in an choice is transmitted and stored as a number, and an option in a two-option data type is transmitted and stored as a boolean value.
+When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in a choice is transmitted and stored as a number, and an option in a two-option data type is transmitted and stored as a boolean value.
 
 The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each choice has an enumeration that works with the underlying number or boolean value. For example, you can't use this formula:
 
