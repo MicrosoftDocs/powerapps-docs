@@ -1,5 +1,5 @@
 ---
-title: entity.getEntityReference (Client API reference) in model-driven apps
+title: entity.getEntityReference (Client API reference)
 description: Returns a lookup value that references a record.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# entity.getEntityReference (Client API reference) in model-driven apps
+# entity.getEntityReference (Client API reference)
 
 [!INCLUDE[./includes/getEntityReference-description.md](./includes/getEntityReference-description.md)]
 

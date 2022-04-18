@@ -1,5 +1,5 @@
 ---
-title: formItem.getId (Client API reference) in model-driven apps
+title: formItem.getId (Client API reference)
 description: Includes description and supported parameters for the formItem.getId method.
 ms.author: jdaly
 author: adrianorth
@@ -17,7 +17,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# formItem.getId (Client API reference) in model-driven apps
+# formItem.getId (Client API reference)
 
 
 

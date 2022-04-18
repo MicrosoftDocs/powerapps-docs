@@ -1,5 +1,5 @@
 ---
-title: quickViewControl.getLabel (Client API reference) in model-driven apps
+title: quickViewControl.getLabel (Client API reference)
 description: Includes description and supported parameters for the quickViewControl.getLabel method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# quickViewControl.getLabel (Client API reference) in model-driven apps
+# quickViewControl.getLabel (Client API reference)
 
 
 

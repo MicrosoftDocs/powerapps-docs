@@ -1,5 +1,5 @@
 ---
-title: formItem.getLabel (Client API reference) in model-driven apps
+title: formItem.getLabel (Client API reference)
 description: Includes description and supported parameters for the formItem.getLabel method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# formItem.getLabel (Client API reference) in model-driven apps
+# formItem.getLabel (Client API reference)
 
 
 

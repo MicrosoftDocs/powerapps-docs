@@ -1,5 +1,5 @@
 ---
-title: EventArgs.getEntityReference (Client API reference) in model-driven apps
+title: EventArgs.getEntityReference (Client API reference)
 description: Includes description and supported parameters for the EventArgs.getEntityReference method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# EventArgs.getEntityReference (Client API reference) in model-driven apps
+# EventArgs.getEntityReference (Client API reference)
 
 Use this method to know information about a table being saved/updated. It returns table ID, and table name if success.
 

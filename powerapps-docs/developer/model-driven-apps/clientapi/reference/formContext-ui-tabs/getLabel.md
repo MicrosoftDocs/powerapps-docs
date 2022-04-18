@@ -1,5 +1,5 @@
 ---
-title: tab.getLabel (Client API reference) in model-driven apps
+title: tab.getLabel (Client API reference)
 description: Includes description and supported parameters for the tab.getLabel method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# tab.getLabel (Client API reference) in model-driven apps
+# tab.getLabel (Client API reference)
 
 
 

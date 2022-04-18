@@ -1,5 +1,5 @@
 ---
-title: stage.getId (Client API reference) in model-driven apps
+title: stage.getId (Client API reference)
 description: Includes description and supported parameters for the stage.getId method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# stage.getId (Client API reference) in model-driven apps
+# stage.getId (Client API reference)
 
 
 

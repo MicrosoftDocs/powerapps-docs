@@ -1,5 +1,5 @@
 ---
-title: entity.getIsDirty (Client API reference) in model-driven apps
+title: entity.getIsDirty (Client API reference)
 description: Gets a boolean value indicating whether any attributes of the entity have been modified.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# entity.getIsDirty (Client API reference) in model-driven apps
+# entity.getIsDirty (Client API reference)
 
 
 

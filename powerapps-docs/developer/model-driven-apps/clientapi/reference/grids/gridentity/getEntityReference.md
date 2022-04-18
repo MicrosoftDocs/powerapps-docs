@@ -1,5 +1,5 @@
 ---
-title: gridEntity.getEntityReference (Client API reference) in model-driven apps
+title: gridEntity.getEntityReference (Client API reference)
 description: Includes description and supported parameters for the gridEntity.getEntityReference method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# gridEntity.getEntityReference (Client API reference) in model-driven apps
+# gridEntity.getEntityReference (Client API reference)
 
 
 

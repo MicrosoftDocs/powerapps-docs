@@ -1,5 +1,5 @@
 ---
-title: navigationItem.getLabel (Client API reference) in model-driven apps
+title: navigationItem.getLabel (Client API reference)
 description: Includes description and supported parameters for the navigationItem.getLabel method.
 ms.author: jdaly
 author: adrianorth
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# navigationItem.getLabel (Client API reference) in model-driven apps
+# navigationItem.getLabel (Client API reference)
 
 
 
