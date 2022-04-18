@@ -66,13 +66,13 @@ The rich text editor control comes with a rich set of configuration options that
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
 1. On the **Add rich text editor control** pane, select from the following options, and then select **Done**:  
    - **Bind to table column**: We don’t recommend that you enable this option because this property doesn’t support binding to a different table column.
-   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Advanced configuration for the rich text editor control](#advanced-configuration-for-the-rich-text-editor-control)
+   - **Static value**: If you want to customize the rich text editor appearance, features, and behavior, enter the relative URL to the JavaScript web resource that contains the properties you want. More information: [Create and use advanced configuration for the rich text editor control](#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
    - **Web**, **Phone**, and **Tablet**: Enable all if you want all client apps to have the ability to use rich text in the column.
 
       <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
 1. **Save**, and then **Publish** the form.
 
-## Advanced configuration for the rich text editor control
+## Create and use advanced configuration for the rich text editor control
 
 To create and use advanced configuration for the rich text editor control, follow these steps:
 
@@ -234,7 +234,9 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```"toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]```
+  ```
+	"toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]
+	```
   
 </td>
 </tr>
@@ -250,7 +252,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```"plugins": "button,toolbar,dialogui,dialog,autogrow,notification,clipboard,textmatch,fakeobjects,link,autolink,basicstyles,bidi,blockquote,panelbutton,panel,floatpanel,colorbutton,colordialog,listblock,richcombo,menu,contextmenu,copyformatting,enterkey,entities,popup,find,floatingspace,font,format,htmlwriter,horizontalrule,indent,indentblock,indentlist,justify,lineutils,openlink,list,liststyle,maximize,undo,menubutton,notificationaggregator,xml,ajax,pastetools,pastefromword,pastetext,preview,table,quicktable,removeformat,resize,selectall,showborders,sourcearea,specialchar,stylescombo,tab,tabletools,tableresize,tableselection,widgetselection,widget,wysiwygarea,textwatcher"```
+  ```"plugins": [["button,toolbar,dialogui,dialog,autogrow,notification,clipboard,textmatch,fakeobjects,link,autolink,basicstyles,bidi,blockquote,panelbutton,panel,floatpanel,colorbutton,colordialog,listblock,richcombo,menu,contextmenu,copyformatting,enterkey,entities,popup,find,floatingspace,font,format,htmlwriter,horizontalrule,indent,indentblock,indentlist,justify,lineutils,openlink,list,liststyle,maximize,undo,menubutton,notificationaggregator,xml,ajax,pastetools,pastefromword,pastetext,preview,table,quicktable,removeformat,resize,selectall,showborders,sourcearea,specialchar,stylescombo,tab,tabletools,tableresize,tableselection,widgetselection,widget,wysiwygarea,textwatcher"]]```
 </td>
 </tr>
 
@@ -529,24 +531,41 @@ Depends on showAsTabControl and showPreview set to true.
 
 ## Commonly used rich text editor configurations
 
-The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Advanced configuration for the rich text editor control](#advanced-configuration-for-the-rich-text-editor-control) and [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
+The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Create and use advanced configuration for the rich text editor control](#create-and-use-advanced-configuration-for-the-rich-text-editor-control) and [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
 
 ### Set the default font to Calibri with font-size 11pt
-
+Set your default font and size to match the Microsoft Windows defaults. This example shows which settings you use to implement this change in your experience.
  ```
- { "defaultSupportedProps": {"font_defaultLabel":"Calibri", "fontSize_defaultLabel":"11", "stickyStyle":{"font-size":"11pt", "font-family":"Calibri/Calibri, Helvetica, sans-serif;"}  }}
+{
+  "defaultSupportedProps": {
+    "font_defaultLabel": "Calibri",
+    "fontSize_defaultLabel": "11",
+    "stickyStyle": {
+      "font-size": "11pt",
+      "font-family": "Calibri/Calibri, Helvetica, sans-serif;"
+    }
+  }
+}
  ```
  
  ### Make line breaks (Enter key) create a &lt;br&gt; instead of &lt;p&gt;
- 
+ The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpretting pasted content). Paragraph blocks are used in HTML to group information. In some cases when creating new or pasting information from Microsoft Word or other content editor, due to each browser interpreting the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you may prefer to use the &lt;br&gt; HTML tag instead of paragraph blocks.  The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
  ```
- { "defaultSupportedProps": {"enterMode":2}  }}
+{
+  "defaultSupportedProps": {
+    "enterMode": 2
+  } 
+}
  ```
  
 ### All content pasted or created is HTML 5 compliant
-
+The rich text editor control works best with HTML 5 content, although HTML 4 tags and formatting can also be used successfully. In some cases the mixture of both HTML 4 and HTML 5 tags can create usability challenges when selecting and setting fonts and sizes. Use of "allowedContent" can ensure all your content is HTML 5.  This example allows  all supported HTML 5 tags. Any non-compliant tags are converted to their HTML 5 equivalent. 
  ```
- { "defaultSupportedProps": {"allowedContent":"a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};"}  }}
+{
+  "defaultSupportedProps": {
+    "allowedContent": "a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};"
+  } 
+}
  ```
 
 
@@ -556,7 +575,10 @@ The following are common configurations for the rich text editor. These sample c
 ### Add the full screen expander
 
  ```
-{ "showAsTabControl": true, "showFullScreenExpander": true }
+{
+  "showAsTabControl": true,
+  "showFullScreenExpander": true
+}
  ```
 
 :::image type="content" source="media/cke-screen-expander.png" alt-text="Screen expander control.":::
@@ -564,7 +586,10 @@ The following are common configurations for the rich text editor. These sample c
 ### Add the HTML source view tab
 
  ```
-{ "showAsTabControl": true, "showHtml": true }
+{
+  "showAsTabControl": true,
+  "showHtml": true
+}
  ```
 
 :::image type="content" source="media/cke-html-source.png" alt-text="HTML tab control.":::
@@ -572,7 +597,11 @@ The following are common configurations for the rich text editor. These sample c
 ### Add a simple toolbar with font size, bold, italic, underline, and highlight
 
  ```
- { "defaultSupportedProps": {"toolbar":[{ "items": ["FontSize", "Bold", "Italic", "Underline", "BGColor"]}]  }}
+{
+  "defaultSupportedProps": {
+    "toolbar": [ { "items": [ "FontSize", "Bold", "Italic", "Underline", "BGColor" ] } ]
+  }
+}
  ```
 
 :::image type="content" source="media/cke-simple-editor.png" alt-text="Controls for a simple editor.":::
@@ -580,7 +609,11 @@ The following are common configurations for the rich text editor. These sample c
 ### Remove the toolbar to make a rich text rendering surface
 
  ```
-{ "defaultSupportedProps": {"toolbar":[]  }}
+{
+  "defaultSupportedProps": {
+    "toolbar": []
+  }
+}
  ```
 
 :::image type="content" source="media/cke-no-toolbar.png" alt-text="No toolbar.":::
@@ -588,7 +621,18 @@ The following are common configurations for the rich text editor. These sample c
 ### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
 
  ```
- { "defaultSupportedProps": {"font_names":"Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;", "font_defaultLabel":"Brush Script MT", "fontSize_sizes":"8/8px;12/12px;20/20px;32/32px", "fontSize_defaultLabel":"20", "stickyStyle":{"font-size":"20px", "font-family":"'Brush Script MT', cursive"}  }}
+{
+  "defaultSupportedProps": {
+    "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;",
+    "font_defaultLabel": "Brush Script MT",
+    "fontSize_sizes": "8/8px;12/12px;20/20px;32/32px",
+    "fontSize_defaultLabel": "20",
+    "stickyStyle": {
+      "font-size": "20px",
+      "font-family": "'Brush Script MT', cursive"
+    }
+  }
+}
  ```
 
 :::image type="content" source="media/cke-default-font.png" alt-text="Set a new default font.":::
@@ -596,7 +640,11 @@ The following are common configurations for the rich text editor. These sample c
 ### Position the toolbar at the top of the rich text editor
 
  ```
- { "defaultSupportedProps": {"toolbarLocation":"top"  }}
+{
+  "defaultSupportedProps": {
+    "toolbarLocation": "top"
+  }
+}
  ```
 
 :::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor.":::
@@ -604,7 +652,14 @@ The following are common configurations for the rich text editor. These sample c
 ### Start the editor at 30-px height and then autogrow to fit content
 
  ```
- { "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}
+{
+  "defaultSupportedProps": {
+    "autoGrow_onStartup": false,
+    "autoGrow_maxHeight": 0,
+    "autoGrow_minHeight": 30,
+    "height": 30
+  }
+}
  ```
 
 :::image type="content" source="media/cke-autogrow.png" alt-text="Typing into the rich text area will increase it to fit the content.":::
@@ -612,7 +667,12 @@ The following are common configurations for the rich text editor. These sample c
 ### Fix the height of the editor at 500 px
 
  ```
- { "defaultSupportedProps": { "removePlugins":["autogrow"], "height": 500   }}
+{
+  "defaultSupportedProps": {
+    "removePlugins": [ "autogrow" ],
+    "height": 500
+  }
+}
  ```
 
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
@@ -620,15 +680,34 @@ The following are common configurations for the rich text editor. These sample c
 
 ### Create plain text surface that removes all html tag (except for the "br" tag)
 
-`{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
-
+ ```
+{
+  "defaultSupportedProps": {
+    "enterMode": 2,
+    "shiftEnterMode": 2,
+    "allowedContent": "*",
+    "disallowedContent": "*",
+    "forcePasteAsPlainText": true,
+    "toolbar": [],
+    "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"
+  },
+  "disableImages": true
+}
+ ```
+ 
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
 ### Remove the context menu so right-clicking will work with the default browser spell check
 
 Enabling this functionality removes the contextual right-click editing capability.
 
-`{  "defaultSupportedProps": {     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  }}`
+ ```
+{
+  "defaultSupportedProps": {
+    "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"
+  }
+}
+ ```
 
 :::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
 
