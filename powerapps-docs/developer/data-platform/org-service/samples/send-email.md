@@ -18,7 +18,7 @@ contributors:
 ---
 # Sample: Send an email
 
-This sample shows how to send an email using [SendEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SenEmail).
+This sample shows how to send an email using [SendEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SenEmail).
 
 ## How to run this sample
 
