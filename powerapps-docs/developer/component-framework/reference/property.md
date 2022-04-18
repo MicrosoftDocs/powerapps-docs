@@ -2,14 +2,14 @@
 title: Property | Microsoft Docs
 description: Interface for context.parameters.<property_key>
 keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: evchaki
+ms.date: 04/17/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
+contributor:
+ - JimDaly
 ---
 
 # Property
@@ -47,7 +47,7 @@ Information concerning the field level security of the field to which this contr
 ### raw
 
 **Type**: `any`
-The raw, unformatted value of this field (i.e. number, date object, Entity reference, etc).
+The raw, unformatted value of this field.
 
 ### attributes
 
