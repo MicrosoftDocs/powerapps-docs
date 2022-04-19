@@ -47,7 +47,7 @@ Using the answers to the questions above, use the table below to help identify t
 <sup>1</sup>You can't create or pin lists on Power Apps mobile.
 
 ### See also
-[Dataverse and Dataverse for Teams licensing]/power-platform/admin/powerapps-flow-licensing-faq#dataverse) <br />
+[Dataverse and Dataverse for Teams licensing](/power-platform/admin/powerapps-flow-licensing-faq#dataverse) <br />
 [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md) <br />
 [What is Dataverse?](/powerapps/maker/data-platform/data-platform-intro)
 
