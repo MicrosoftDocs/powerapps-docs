@@ -51,7 +51,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 1. Select **Add to Teams** and you'll be asked to open Teams.
 
-    :::image type="content" source="media/embed-teams-app/add-to-teams-button.png" alt-text="Add additional details.":::
+    :::image type="content" source="media/embed-teams-app/add-to-teams-button.png" alt-text="Add to Teams button.":::
 
     > [!TIP]
     > If you want, you can also choose **Download app** to download the app, and then use the steps described in [Upload your app in Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) article to upload the app to Teams.
