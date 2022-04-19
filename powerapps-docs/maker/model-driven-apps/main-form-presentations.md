@@ -60,7 +60,7 @@ The layout of the form works with a wide range of displays and window sizes. As 
 
 The image below illustrate the accounts table main form as it would be viewed through a web browser.
 
- :::image type="content" source="media/create-and-edit-a-model-driven-form/main-form-accounts.png" alt-text="Sample model-driven app":::  
+ :::image type="content" source="media/create-and-edit-a-model-driven-form/main-form-accounts.png" alt-text="Sample model-driven app" lightbox="media/create-and-edit-a-model-driven-form/main-form-accounts.png":::  
   
  The following table summarizes available components of the main form for tables.  
   
