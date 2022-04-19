@@ -1,5 +1,5 @@
 ---
-title: "section.getLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+title: section.getLabel (Client API reference)
 description: Includes description and supported parameters for the section.getLabel method.
 ms.author: jdaly
 author: adrianorth

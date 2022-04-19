@@ -1,7 +1,7 @@
 ---
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the various ways to query Microsoft Dataverse table data using the Web API and the various system query options that can be applied in these queries."
-ms.date: 04/08/2022
+description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
+ms.date: 04/18/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -30,7 +30,7 @@ If you want to retrieve data for an entity set, use a `GET` request. When retrie
  **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$top=3 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -46,7 +46,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
    "value":[  
       {  
          "@odata.etag":"W/\"501097\"",
@@ -84,7 +84,7 @@ OData-Version: 4.0
 You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account rows.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue&$top=3  
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3  
 ```  
   
 > [!NOTE]
@@ -106,7 +106,7 @@ Use the `odata.maxpagesize` preference value to request the number of rows retur
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/accounts?$select=name HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -123,7 +123,7 @@ Content-Length: 402
 Preference-Applied: odata.maxpagesize=3  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
    "value":[  
       {  
          "@odata.etag":"W/\"437194\"",
@@ -141,7 +141,7 @@ Preference-Applied: odata.maxpagesize=3
          "accountid":"8151925c-cde2-e411-80db-00155d2a68cb"
       }
    ],
-   "@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b8151925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520first%253d%2522%257b7D51925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20/%3E"
+   "@odata.nextLink":"[Organization URI]/api/data/v9.2/accounts?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b8151925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520first%253d%2522%257b7D51925C-CDE2-E411-80DB-00155D2A68CB%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20/%3E"
 }
   
 ```  
@@ -158,7 +158,7 @@ Preference-Applied: odata.maxpagesize=3
  Each of the system query options you append to the URL for the entity set is added using the syntax for query strings. The first is appended after [?] and subsequent query options are separated using [&]. All query options are case-sensitive as shown in the following example.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$top=3
 &$filter=revenue gt 100000  
 ```  
@@ -170,7 +170,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
  Use the `$select` system query option to limit the properties returned as shown in the following example.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue  
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue  
 ```  
   
 > [!IMPORTANT]
@@ -178,7 +178,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
   
  When you request certain types of properties you can expect additional read-only properties to be returned automatically.  
   
- If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the <xref:Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType />. Alternatively, by requesting annotations you can also get additional data in the same request. More information: [Retrieve data about lookup properties](#bkmk_lookupProperty)  
+ If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the <xref:Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType>. Alternatively, by requesting annotations you can also get additional data in the same request. More information: [Retrieve data about lookup properties](#bkmk_lookupProperty)  
   
  If you request a property that is part of a composite attribute for an address, you will get the composite property as well. For example, if your query requests the `address1_line1` property for a contact, the `address1_composite` property will be returned as well. 
   
@@ -236,10 +236,10 @@ You can use wildcard characters when you construct queries using these standard 
   
 ### Microsoft Dataverse Web API query functions
 
-Dataverse provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=nameWithType> for a list of these functions. The following is an example of the <xref:Microsoft.Dynamics.CRM.Between?text=Between Function /> searching for accounts with a number of employees between 5 and 2000.  
+Dataverse provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=nameWithType> for a list of these functions. The following is an example of the <xref:Microsoft.Dynamics.CRM.Between?text=Between Function> searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 &$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
   
@@ -262,7 +262,7 @@ The `any` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all account entity records that have at least one email with "sometext" in the subject.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=Account_Emails/any(o:contains(o/subject,'sometext')) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
@@ -281,7 +281,7 @@ The `all` operator returns `true` if the Boolean expression applied is `true` fo
 The example given below shows how you can retrieve all account entity records that have all associated tasks closed.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=Account_Tasks/all(o:o/statecode eq 1) HTTP/1.1
 Prefer: odata.include-annotations="*"
 Accept: application/json  
@@ -292,7 +292,7 @@ OData-Version: 4.0
 The example given below shows how you can retrieve all account entity records that have at least one email with "sometext" in the subject and whose statecode is active.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=Account_Emails/any(o:contains(o/subject,'sometext') and 
 o/statecode eq 0) HTTP/1.1
 Prefer: odata.include-annotations="*"
@@ -304,7 +304,7 @@ OData-Version: 4.0
 The example given below shows how you can also create a nested query using `any` and `all` operators.
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and 
 c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and 
 endswith(name,'{0}') HTTP/1.1
@@ -325,7 +325,7 @@ The example given below shows how you can use the [/any operator](#bkmk_anyopera
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=not opportunity_customer_accounts/any(o:o/description eq null and 
 o/budgetamount le 300 or 
 contains(o/description, 'bad')) and 
@@ -351,7 +351,7 @@ For example:
 **Request** 
  
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -366,7 +366,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-"@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
+"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
 "value":[  
         {  
             "@odata.etag":"W/\"513479\"",
@@ -387,7 +387,7 @@ OData-Version: 4.0
 **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -402,7 +402,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-"@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
+"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
 "value":[  
         {  
             "@odata.etag":"W/\"514058\"",
@@ -430,7 +430,7 @@ The two options for filtering results based on values of collection-valued navig
 Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
+GET [Organization URI]/api/data/v9.2/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
 &$select=fullname,businessunitid,title,address1_telephone1,systemuserid
 &$orderby=fullname
 Accept: application/json  
@@ -446,10 +446,32 @@ To get the same results as the example above, you can retrieve records of two en
 Follow the steps in the below example to understand how we can filter results using the iteration method:
 
 1. Get a distinct list of <xref:Microsoft.Dynamics.CRM.team?displayProperty=nameWithType>._administratorid_value values.
-      - `GET [OrganizationURI]/api/data/v9.1/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
+      - `GET [OrganizationURI]/api/data/v9.2/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
       - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
       - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
-2. Query <xref:Microsoft.Dynamics.CRM.systemuser?displayProperty=nameWithType> using <xref:Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function /> to compare the `systemuserid` values with the list collected in Step 1.
+2. Query <xref:Microsoft.Dynamics.CRM.systemuser?displayProperty=nameWithType> using <xref:Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function> to compare the `systemuserid` values with the list collected in Step 1.
+
+### Manage single quotes in string filter values
+
+When specifying values for comparison in filters that accept an array of string values, such as the <xref:Microsoft.Dynamics.CRM.In?text=In Query Function>, which contain single quote (apostrophe) characters, such as `O'Brian` or `Men's clothes` you must use double quotes around the values. For example: 
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
+&$filter=Microsoft.Dynamics.CRM.In(PropertyName=@p1,PropertyValues=@p2)
+&@p1='lastname'
+&@p2=["OBrian","OBryan","O'Brian","O'Bryan"]
+```
+
+Otherwise you will get the following error: `Invalid JSON. A comma character ',' was expected in scope 'Array'. Every two elements in an array and properties of an object must be separated by commas.`
+
+If the filter is for a single value, replace the single quote character with two consecutive single quote characters. For example:
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
+&$filter=lastname eq 'O''Bryan'
+```
+
+Otherwise you will get an error like the following: `There is an unterminated literal at position 21 in 'lastname eq 'O'Bryan''.`
 
 <a name="bkmk_order"></a>
 
@@ -458,7 +480,7 @@ Follow the steps in the below example to understand how we can filter results us
  Specify the order in which items are returned using the `$orderby` system query option. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn’t applied. The following example shows retrieving the name and revenue properties of accounts ordered by ascending revenue and by descending name.  
   
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$orderby=revenue asc,name desc
 &$filter=revenue ne null  
 ```  
@@ -493,7 +515,7 @@ Additional details on OData data aggregation can be found here: [OData extension
  Without parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$orderby=revenue asc,name desc
 &$filter=revenue ne null  
 ```  
@@ -501,7 +523,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
  With parameter aliases:
 
 ```http  
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$orderby=@p1 asc,@p2 desc
 &$filter=@p1 ne @p3&@p1=revenue&@p2=name  
 ```  
@@ -517,7 +539,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
 > [!NOTE]
 > The count value does not represent the total number of rows in the system. It is limited by the maximum number of rows that can be returned. More information: [Limits on number of rows returned](#bkmk_limits)
 >
-> If you want to retrieve the total number of rows for a table beyond 5000, use the <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function />.
+> If you want to retrieve the total number of rows for a table beyond 5000, use the <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function>.
   
  The response `@odata.count` property will contain the number of rows that match the filter criteria irrespective of an `odata.maxpagesize` preference limitation.  
   
@@ -529,7 +551,7 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=contains(name,'sample')
 &$count=true HTTP/1.1  
 Accept: application/json  
@@ -547,7 +569,7 @@ OData-Version: 4.0
 Preference-Applied: odata.maxpagesize=3  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name)",
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
    "@odata.count":10,
    "value":[  
       {  
@@ -566,7 +588,7 @@ Preference-Applied: odata.maxpagesize=3
          "accountid":"695eaf89-f083-e511-80d3-00155d2a68d3"
       }
    ],
-   "@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts?$select=name&$filter=contains(name,'sample')&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b695EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520first%253d%2522%257b655EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
+   "@odata.nextLink":"[Organization URI]/api/data/v9.2/accounts?$select=name&$filter=contains(name,'sample')&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b695EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520first%253d%2522%257b655EAF89-F083-E511-80D3-00155D2A68D3%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
 }
 
   
@@ -577,7 +599,7 @@ Preference-Applied: odata.maxpagesize=3
  **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts/$count HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/accounts/$count HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -606,7 +628,7 @@ OData-Version: 4.0
  **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.1/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,donotpostalmail,accountratingcode,numberofemployees,revenue
 &$top=1 HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -622,7 +644,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"  
   
 {  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,donotpostalmail,accountratingcode,numberofemployees,revenue)",
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name,donotpostalmail,accountratingcode,numberofemployees,revenue)",
    "value":[  
       {  
          "@odata.etag":"W/\"502170\"",
@@ -666,7 +688,7 @@ Use the `$expand` system query option in the navigation properties to control wh
  **Request**  
 
 ```http 
-GET [Organization URI]/api/data/v9.1/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value
+GET [Organization URI]/api/data/v9.2/incidents(39dd0b31-ed8b-e511-80d2-00155d2a68d4)?$select=title,_customerid_value
 &$expand=customerid_contact($select=fullname) HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -684,7 +706,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="*"  
   
 {  
-    "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#incidents(title,_customerid_value,customerid_contact(fullname))/$entity",
+    "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#incidents(title,_customerid_value,customerid_contact(fullname))/$entity",
     "@odata.etag":"W/\"504696\"",
     "_customerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty":"customerid_contact",
     "_customerid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"contact",
