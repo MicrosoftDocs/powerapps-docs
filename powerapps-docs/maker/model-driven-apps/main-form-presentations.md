@@ -193,7 +193,7 @@ For example, if you have the following main forms for the opportunity table and 
 
 ## Classic forms
 
-For information about the classic forms available with Dynamics 365 Customer Engagement (on-premises), see [Classic forms](/dynamics365/customerengagement/on-premises/customize/main-form-presentations?view=op-9-1#classic-forms).
+For information about the classic forms available with Dynamics 365 Customer Engagement (on-premises), see [Classic forms](/dynamics365/customerengagement/on-premises/customize/main-form-presentations#classic-forms).
   
 ## Next steps
 
