@@ -23,20 +23,20 @@ The ability to create additional environments is determined by the template chos
 | - | - | - | - |
 | [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. |
 | [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. |
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self service, Employee self service portals | 50 portals\*\* | No limits for language.  For example, one or all portals can use the same language.
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal | one portal for each language | For example, one English language portal for **Partner portal** template allowed. |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self-service, Employee self-service portals | 50 portals\*\* | No limits for language.  For example, one or all portals can use the same language.
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal, Customer portal (Dynamics 365 SCM) | one portal for each language | For example, one English language portal for **Partner portal** template allowed. |
 
 \* Requires Starter portal package version [9.3.2109.x or later](release-updates.md#starter-portal-package-updates)
 
 \*\* Requires Starter portal package version [9.3.2201.0 or later](release-updates.md#starter-portal-package-updates)
 
-When an [environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) already has a portal of the available template type (all templates except "Portal from blank") created, and if the environment doesn't have any other languages enabled, you'll see this error message:
+To enable multiple Modern Community portals, see the following:
 
-"You've reached the maximum limit of 1 portal(s) on this environment. Choose another environment or create new environment."
+[Get started with community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-get-started)
 
-When an [environment with Dataverse](portal-templates.md#environment-with-dataverse) exceeds the maximum limit, you'll see this error message:
+[Create community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-create-websites)
 
-"You've exceeded the maximum number of portals possible for this environment. Choose another environment or create a new environment."
+Once you've reached the maximum number of a specific portal type for an environment, you'll see a message displayed indicating that the maximum number of portals has been reached.
 
 For more information about enabling languages in an environment, go to [Enable language for an environment](/power-platform/admin/enable-languages#enable-the-language).
 
