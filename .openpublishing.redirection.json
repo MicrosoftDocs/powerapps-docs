@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/library.md",
+      "redirect_url": "../manifest-schema-reference",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/packaged_library.md",
+      "redirect_url": "../manifest-schema-reference",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md",
       "redirect_url": "formcontext-ui#formcontextuifootersection-removed",
       "redirect_document_id": "false"
