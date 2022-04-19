@@ -2,9 +2,8 @@
 title: "Model-driven app main form presentations in Power Apps | MicrosoftDocs"
 description: "Learn how main forms appear when displayed on different devices"
 ms.custom: ""
-ms.date: 06/27/2018
+ms.date: 04/19/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -42,53 +41,49 @@ Additionally, the main form is an intrinsic part of the table and it travels wit
 
 ## Main form presentation options
 
- Any main forms that exist for a table may be displayed differently depending on the factors in the following table below. When you design a main form, consider how it works in each presentation tool.  
+Any main forms that exist for a table may be displayed differently depending on the factors in the following table below. When you design a main form, consider how it works in each presentation tool.  
   
 |Presentation|Description|  
 |------------------|-----------------|  
-|**Updated**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the updated form provides a new user experience. These forms have the newer command bar design, and enable additional features such as AutoSave and business process flows.|  
+|**Current**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the current form provides a new user experience. These forms have the newer command bar design, and enable additional features such as AutoSave and business process flows.|  
 |**Dynamics 365 for tablets**| Dynamics 365 for tablets presents the content of the main form in a manner optimized for a tablet.|  
 |**Dynamics 365 for phones**| Dynamics 365 for phones presents the content of the main form in a manner optimized for a phone.|  
 |**Classic**|These forms are for the tables that haven't been updated. They use the ribbon rather than the command bar and the navigation pane on the left side of the form.<br /><br /> These forms have a two-column layout.|  
   
 <a name="BKMK_MainFormComponentsForUpdatedEntities"></a>
 
-## Updated forms
-
- This diagram represents common components found in updated table forms.  
+This diagram represents common components found in main table forms.  
   
- ![Diagram shows Updated table form structure in Dynamics 365.](media/updated-form-diagram.png "Diagram shows Updated table form structure in Dynamics 365")  
+![Diagram shows main table form structure.](media/updated-form-diagram.png "Diagram shows main table form structure")  
   
- For updated tables, the layout of the form works with a wide range of displays and window sizes. As the width of window decreases, tab columns move down so that you can scroll down to work with them instead of being compressed or requiring you to scroll to the right.
+The layout of the form works with a wide range of displays and window sizes. As the width of window decreases, section columns move down so that you can scroll down to work with them instead of being compressed or requiring you to scroll to the right.
 
-The image below illustrate the accounts table main form as it would be viewed through a web browser. 
+The image below illustrate the accounts table main form as it would be viewed through a web browser.
 
  :::image type="content" source="media/create-and-edit-a-model-driven-form/main-form-accounts.png" alt-text="Sample model-driven app":::  
   
- The following table summarizes available components of the main form for updated tables.  
+ The following table summarizes available components of the main form for tables.  
   
 |Component|Summary|  
 |---------------|-------------|  
-|**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a row, the navigation bar provides access to views of related rows. Rather than navigating to related rows using the navigation pane or by using the navigation bar, adding [subgrids](model-driven-app-glossary.md#subgrid) configured to show useful related table rows provides a better experience for most people.|  
-|**Command bar**|Uses the data defined for ribbons to provide commands relevant for the row.<br /><br /> The first five commands are displayed followed by an ellipsis (![More commands button.](media/not-available.gif "More commands button")) that provides a flyout menu to choose additional commands.|  
+|**Navigation bar**| In the context of the table, the navigation bar provides access to managing records, such as search, create, and advanced find.  |  
+|**Command bar**| The first several commands are displayed followed by a vertical ellipsis that provides a menu to choose additional commands.|  
 |**Image**|When a table has an image column and the table **Primary Image** option is set to **Default Image**, an image can be displayed in the header when the form is configured to show the image.|  
-|**Header**|Columns placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four columns can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header and footer share some properties with sections.|  
+|**Header**|Columns placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four columns can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header shares some properties with sections.|  
 |**Process Control**|When a table has active business process flows, the process control displays below the header. More information: [Business process flows](/flow/business-process-flows-overview)|  
-|**Body**|The body is the scrollable part of the form that contains the tabs.|  
-|**Tabs**|In the body of the form, tabs provide horizontal separation. Tabs have a label that can be displayed. If the label is displayed, tabs can be expanded or collapsed to show or hide their content by selecting the label.<br /><br /> Tabs contain up to three columns and the width of each column can be set to a percentage of the total width. When you create a new tab, each column is prepopulated with a section.|  
+|**Body**|The body is the scrollable part of the form that contains the sections.|  
+|**Tabs**|In the body of the form, tabs provide horizontal separation. Tabs have a label that can be displayed. Tabs contain up to three columns and the width of each column can be set to a percentage of the total width. When you create a new tab, each column is prepopulated with a section.|  
 |**Sections**|A section occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.<br /><br /> Sections can have up to four columns and include options for displaying how labels for columns in the section are displayed.|  
 |**Columns**|Columns display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.|  
 |**Spacer**|A spacer allows for an empty space to be added to a section column.|  
-|**Sub-grids**|Subgrids allow for the display of a list within the form. The ability to display charts using a subgrid isn’t available in forms for updated tables.|  
+|**Sub-grids**|Subgrids allow for the display of a list within the form. |  
 |**Quick View Form**|A quick view form displays data from a row referenced by a lookup column on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
 |**Web Resources**|HTML and Microsoft Silverlight web resources can be added to main forms but they won’t be displayed when using Dynamics 365 for phones and tablets.|  
 |**iFrame**|An inline-frame that you configure to show a webpage from another website. **Important:**  <ul><li>When the page displayed in an iFrame is on another domain, browsers apply a higher level of security. This may complicate the requirements for the contents of an iFrame to interact with data in the form.</li><li>Displaying a table form within an iFrame embedded in another table form is not supported. 
-|**Bing Maps**|When this control is present in a form for an updated table and the system setting **Enable Bing Maps** is enabled with a valid Bing Maps key, this control can be used one time in a form to show the location for one of the addresses in an updated table. More information: [Configuring Bing maps](configure-bing-maps-legacy.md)|  
-|**Footer**|Any number of columns, web resources, or iFrames can be added to the footer. Columns are read-only when displayed in the footer. The header and footer share some properties with sections.|  
-|**Status Bar**|The status bar displays the status column for the row, a notification area, and a save button.|  
+|**Bing Maps**|When this control is present in a form for a table and the system setting **Enable Bing Maps** is enabled with a valid Bing Maps key, this control can be used one time in a form to show the location for one of the addresses in an updated table. More information: [Configuring Bing maps](configure-bing-maps-legacy.md)|  
   
 <a name="BKMK_CRMforTabletsPresentation"></a>   
-## Dynamics 365 for phones and tablets forms  
+## Dynamics 365 for phones and tablets forms
  Most system tables and custom tables are available for Dynamics 365 for phones and tablets. The main form for these tables is transformed to a presentation optimized for phones or tablets.  
   
 <a name="BKMK_EntitiesEnabledForCRMForTablets"></a>   
@@ -96,7 +91,7 @@ The image below illustrate the accounts table main form as it would be viewed th
  Only tables that are enabled for Dynamics 365 for phones and tablets use this presentation of the main form. More information: [Entities displayed in Dynamics 365 for phones and tablets](/dynamics365/customer-engagement/customize/customize-phones-tablets#BKMK_CustomEntity)  
   
 ### Form design  
- Dynamics 365 for phones and tablets takes many of the main form elements and presents them in a way optimized for phones or tablets. The following diagrams show the reflow from the web app to the tablet and phone apps.  
+Dynamics 365 for phones and tablets takes many of the main form elements and presents them in a way optimized for phones or tablets. The following diagrams show the reflow from the web app to the tablet and phone apps.  
   
  **Web app**  
   
