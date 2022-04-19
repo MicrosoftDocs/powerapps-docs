@@ -119,5 +119,13 @@ Once the languages have been enabled, by default, users will see a drop-down on 
 
 :::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
+## Configure user's default language
+
+To avoid choosing the language from the drop down each time, Portal users can set the default language by entering it in the **Preferred Language field** within the user profile section.  
+
+:::image type="content" source="media/multi-language/preferred-language.png" alt-text="Preferred language":::
+
+> [Note]
+> You will need to configure table permissions on the portal language table (schema name) to allow read and append access linked to the default authenticated user web role to allow for users to choose their default language.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
