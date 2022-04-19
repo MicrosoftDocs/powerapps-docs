@@ -29,14 +29,14 @@ To use the measurement feature, your app must enable the  [Measure in MR](mixed-
 
 Legend
 
-1. **Camera**: Takes a picture of your current view. These pictures may be used by your 
-app and are not viewable while in the mixed reality experience.
+1. **Camera**: Take a picture of your current view. The picture can be used by your 
+canvas app and are not viewable while in the mixed reality experience.
 2. **Undo**: Delete the last measurement and take the measurement again.
 3. **Add**: TbD
-4. **List**: Opens a lists with measurement detials. 
-5. **Submit**: When you're done taking measurements, use the submit button to close the mixed reality experience and send your measurement to your app. The button is grayed out if there's no measurements and when you're in the process of taking measurements. 
-6. **List**: Opens a lists with measurement detials. 
-7. **Reset**: Removes the current 3D object so you can add a new oject.
+4. **List**: Opens a list with details of the items you've measuremented. 
+5. **Submit**: When you're done taking a measurement, use the Submit button to close the mixed reality experience and send your measurement to your canvas app. The button is grayed out if there's no measurements or when you're in the process of taking measurements. 
+6. **List**: Opens a list with details of the items you've measuremented 
+7. **Reset**: Removes the current 3D object so you can add a new object.
 8. **Exit**: Leave the mixed reality experience and return to your canvas app.
 
 ## Prerequisites
