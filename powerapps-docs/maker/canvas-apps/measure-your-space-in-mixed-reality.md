@@ -23,6 +23,22 @@ Measure the distance, area, and volume of your physical space using your device 
 
 To use the measurement feature, your app must enable the  [Measure in MR](mixed-reality-component-measure-distance.md) control for your canvas app.
 
+   > [!div class="mx-imgBorder"]
+   > ![This pictures shows the sceens where you can take measurements.](./media/mr-measurement/measurement-legend.png)
+
+
+Legend
+
+1. **Camera**: Takes a picture of your current view. These pictures may be used by your 
+app and are not viewable while in the mixed reality experience.
+2. **Undo**: Delete the last measurement and take the measurement again.
+3. **Add**: TbD
+4. **List**: Opens a lists with measurement detials. 
+5. **Submit**: When you're done taking measurements, use the submit button to close the mixed reality experience and send your measurement to your app. The button is grayed out if there's no measurements and when you're in the process of taking measurements. 
+6. **List**: Opens a lists with measurement detials. 
+7. **Reset**: Removes the current 3D object so you can add a new oject.
+8. **Exit**: Leave the mixed reality experience and return to your canvas app.
+
 ## Prerequisites
 
 Before you start taking measurements, follow these steps to enter basic information about your space.
@@ -138,26 +154,3 @@ When you taken measurments, you can always go back and review the measurements t
      > ![Reivew your measurements.](./media/mr-measurement/measurement-input.png)
 
 
-## Button Guide
-
-![](media/image33.png)![](media/image34.png) *Exit button*  
-Leave the mixed reality experience to return to your Power App screen
-
-![](media/image35.png) *Reset button*  
-Remove the 3D model and enter placement mode to place the model again
-
-![](media/image1.png) *Camera button*  
-Screen capture the current view. These pictures may be used by your  
-Power App and are not viewable while in the mixed reality experience.
-
-#### ![](media/image2.png) Undo button
-
-Undo the last chosen point to redo part of the measurement.
-
-#### ![](media/image3.png) List button
-
-Open a window that lists the details of the measurements.
-
-#### ![A picture containing text Description automatically generated](media/image36.png) Submit button
-
-Once you have finished measuring some or all measurements, you can press the submit button to close the mixed reality experience and send the measurement data to your app. Note that the button may be grayed out if no measurements were taken or a measurement is currently being taken.
