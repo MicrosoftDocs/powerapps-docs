@@ -27,10 +27,10 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description          |
-| -------------- | -------- | -------- | -------------------- |
-| name           | `string` | Yes      | Name of the column.  |
-| columnAlias    | `string` | No       | Alias of the column. |
+| Parameter Name | Type     | Required | Description                                                                                                                          |
+| -------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| name           | `string` | Yes      | Name of the column. For linked entities concatenate linking entity alias and the column name, for instance "contact_alias.firstname". |
+| columnAlias    | `string` | No       | Alias of the column.                                                                                                                 |
 
 ## Return value
 
