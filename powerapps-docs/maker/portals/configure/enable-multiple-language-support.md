@@ -125,7 +125,7 @@ To avoid choosing the language from the drop down each time, Portal users can se
 
 :::image type="content" source="media/multi-language/preferred-language.png" alt-text="Preferred language":::
 
-> [Note]
+> [!Note]
 > You will need to configure table permissions on the portal language table (schema name) to allow read and append access linked to the default authenticated user web role to allow for users to choose their default language.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
