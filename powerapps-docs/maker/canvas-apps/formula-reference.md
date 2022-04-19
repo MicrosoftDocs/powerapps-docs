@@ -2,11 +2,10 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 01/24/2022
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -188,6 +187,8 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Index](functions/function-first-last.md)** – Returns a record from a table based on ordered position.
+
 **[Int](functions/function-round.md)** – Rounds down to the nearest integer.
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
@@ -287,7 +288,9 @@ Other elements include:
 ## R
 **[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
-**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number between 0 and 1.
+
+**[RandBetween](functions/function-rand.md)** – Returns a pseudo-random number between two numbers.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
 
