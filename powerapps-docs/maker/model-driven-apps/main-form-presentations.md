@@ -45,10 +45,10 @@ Any main forms that exist for a table may be displayed differently depending on 
   
 |Presentation|Description|  
 |------------------|-----------------|  
-|**Current**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the current form provides a new user experience. These forms have the newer command bar design, and enable additional features such as AutoSave and business process flows.|  
+|**Current**| Most of the standard tables and all custom tables created use the current form, which provides a modern user experience. The current forms have a layout with an improved command bar design, and support features such as AutoSave and business process flows.|  
 |**Dynamics 365 for tablets**| Dynamics 365 for tablets presents the content of the main form in a manner optimized for a tablet.|  
 |**Dynamics 365 for phones**| Dynamics 365 for phones presents the content of the main form in a manner optimized for a phone.|  
-|**Classic**|[Classic forms](#classic-forms) are from earlier versions of Dynamics 365 Customer Engagement apps. They use the ribbon rather than the command bar and the navigation pane on the left side of the form.<br /><br /> These forms have a two-column layout.|  
+|**Classic**|[Classic forms](#classic-forms) are from earlier versions of Dynamics 365 Customer Engagement apps. They use the ribbon rather than the command bar and the navigation pane on the left side of the form.<br /><br /> These forms have a two-column layout. Notice that there are a few tables that still use the classic forms. More information: [Updated verses classic tables](create-design-forms.md#updated-versus-classic-tables) |  
   
 <a name="BKMK_MainFormComponentsForUpdatedEntities"></a>
 
