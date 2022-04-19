@@ -453,7 +453,7 @@ Follow the steps in the below example to understand how we can filter results us
 
 ### Manage single quotes in string filter values
 
-When specifying values for comparison in filters that accept an array, such as <xref:Microsoft.Dynamics.CRM.In?text=In Query Function>, which contain single quote (apostrophe) characters, such as `O'Brian` or `Men's clothes` you must use double quotes around the values. For example: 
+When specifying values for comparison in filters that accept an array of string values, such as the <xref:Microsoft.Dynamics.CRM.In?text=In Query Function>, which contain single quote (apostrophe) characters, such as `O'Brian` or `Men's clothes` you must use double quotes around the values. For example: 
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
