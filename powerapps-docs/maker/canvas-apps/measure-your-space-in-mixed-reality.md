@@ -30,12 +30,12 @@ To use the measurement feature, your app must enable the  [Measure in MR](mixed-
 Legend
 
 1. **Camera**: Take a picture of your current view. The picture can be used by your 
-canvas app and are not viewable while in the mixed reality experience.
+canvas app and isn't viewable while in the mixed reality experience.
 2. **Undo**: Delete the last measurement and take the measurement again.
-3. **Add**: TbD
-4. **List**: Opens a list with details of the items you've measuremented. 
+3. **Add**: TBD
+4. **List**: Opens a list with details of the items you've measured. 
 5. **Submit**: When you're done taking a measurement, use the Submit button to close the mixed reality experience and send your measurement to your canvas app. The button is grayed out if there's no measurements or when you're in the process of taking measurements. 
-6. **List**: Opens a list with details of the items you've measuremented 
+6. **List**: Opens a list with details of the items you've measured. 
 7. **Reset**: Removes the current 3D object so you can add a new object.
 8. **Exit**: Leave the mixed reality experience and return to your canvas app.
 
@@ -73,7 +73,7 @@ Before you start taking measurements, follow these steps to enter basic informat
         > [!div class="mx-imgBorder"]
         > ![Measure wall distance.](./media/mr-measurement/distance-9.png)
        
-      3. Select **Submint** to save the final measurement.
+      3. Select **Submit** to save the final measurement.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/distance-final-measurement-10.png)
    
@@ -86,7 +86,7 @@ Before you start taking measurements, follow these steps to enter basic informat
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/area-endpoint-13.png)
 
-      3. Select **Submint** to save the final measurement.
+      3. Select **Submit** to save the final measurement.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/area-final-measurement-14.png)
 
@@ -103,12 +103,12 @@ Before you start taking measurements, follow these steps to enter basic informat
          > [!div class="mx-imgBorder"]
          > ![Move your device upwards to campute the objects height.](./media/mr-measurement/volume-upwards-17.png) 
         
-       4. Select **Submint** to save the final measurement.
+       4. Select **Submit** to save the final measurement.
           > [!div class="mx-imgBorder"]
           > ![Measure desk area.](./media/mr-measurement/area-submint-18.png)  
      
           > [!NOTE]
-          > If you app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
+          > If your app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
             ![Measure four points.](./media/mr-measurement/measure-four-points.png)
 
     - **Freeform** 
@@ -117,21 +117,21 @@ Before you start taking measurements, follow these steps to enter basic informat
           > [!div class="mx-imgBorder"]
           > ![Freeform measurement.](./media/mr-measurement/measure-freeform.png)  
      
-      4. To the complete the measurement keep the dot at the last point you added and then select **Submint**.
+      4. To complete the measurement, keep the dot at the last point you added and then select **Submit**.
           > [!div class="mx-imgBorder"]
           > ![Measure desk area.](./media/mr-measurement/measure-form-submint.png)  
                  
-          The same rectangle can be part of a volume measurement. Instead of selecting the last point you added, rotate your phone upwards to select a height and then select **Submint**.
+          The same rectangle can be part of a volume measurement. Instead of selecting the last point you added, rotate your phone upwards to select a height and then select **Submit**.
            > [!div class="mx-imgBorder"]
            > ![Measure rectangle freeform.](./media/mr-measurement/rectangle-freeform.png)
 
           > [!NOTE]
-          > If you app has **Box Draw** enabled then you can only measure in freeform in a rectangular area and volume.
+          > If you app has **Box Draw** enabled, then you can only measure in freeform in a rectangular area and volume.
 
 
 ## Keeping track of your measurements
 
-When you taken measurments, you can always go back and review the measurements that you have taken.
+When you take measurements, you can always go back and review the measurements that you have taken.
 
 1. At the top select the measurement list or select the list button.
    
@@ -147,7 +147,7 @@ When you taken measurments, you can always go back and review the measurements t
 
     - Select measurement to remeasure or take a measurement out of the listed order.
 
-    - Select the delete botton to clear a measurement.
+    - Select the delete button to clear a measurement.
 
     - Select the close button or list button to continue measuring where you left off.
      > [!div class="mx-imgBorder"]
