@@ -33,9 +33,9 @@ Legend
 canvas app and isn't viewable while in the mixed reality experience.
 2. **Undo**: Delete the last measurement and take the measurement again.
 3. **Add**: TBD
-4. **List**: Opens a list with details of the items you've measured. 
+4. **List**: Opens a list with details of the items you have measured. 
 5. **Submit**: When you're done taking a measurement, use the Submit button to close the mixed reality experience and send your measurement to your canvas app. The button is grayed out if there's no measurements or when you're in the process of taking measurements. 
-6. **List**: Opens a list with details of the items you've measured. 
+6. **List**: Opens a list with details of the items you have measured. 
 7. **Reset**: Removes the current 3D object so you can add a new object.
 8. **Exit**: Leave the mixed reality experience and return to your canvas app.
 
