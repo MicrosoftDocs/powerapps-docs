@@ -117,7 +117,7 @@ To create a solution project based on an existing solution in Dataverse, run the
    > [!NOTE]
    > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
 
-More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
+More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest)
 
 > [!NOTE]
 > Manually publish the customizations if you are importing unmanaged solution.

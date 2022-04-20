@@ -1,7 +1,7 @@
 ---
 title: "Use Web API functions (Microsoft Dataverse)| Microsoft Docs"
 description: "Functions are reusable operations that are used with a GET request to retrieve data from Microsoft Dataverse"
-ms.date: 04/06/2022
+ms.date: 04/19/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -76,7 +76,7 @@ Only those functions found in <xref:Microsoft.Dynamics.CRM.FunctionIndex> may be
 
 ### Bound functions
 
-In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when a `Function` element represents a bound function, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined in the function represents the entity that the function is bound to. When the `Type` attribute of the parameter is a collection, the function is bound to an entity collection. As an example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident?text=CalculateTotalTimeIncident Function /> and <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse?text=CalculateTotalTimeIncidentResponse ComplexType /> in the CSDL.  
+In the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), when a `Function` element represents a bound function, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined in the function represents the entity that the function is bound to. When the `Type` attribute of the parameter is a collection, the function is bound to an entity collection. As an example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident?text=CalculateTotalTimeIncident Function /> and <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse?text=CalculateTotalTimeIncidentResponse ComplexType /> in the CSDL.  
   
 ```xml
 <ComplexType Name="CalculateTotalTimeIncidentResponse">  
