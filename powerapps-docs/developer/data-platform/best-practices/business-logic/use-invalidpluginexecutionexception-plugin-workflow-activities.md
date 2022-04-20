@@ -48,7 +48,7 @@ Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecu
 
 ### Handle errors from functions called in plug-ins
 
-Within your plug-in you will commonly call other functions to re-use code. How you handle errors in these functions is very important because an unhandled error may cause the worker process to crash. This will not only terminate your plug-in, but may also terminate any concurrent plug-ins running for your organization. More information: [Error: No Sandbox Worker processes are currently available](../../troubleshoot-plug-in.md#error-no-sandbox-worker-processes-are-currently-available)
+Within your plug-in you will commonly call other functions to re-use code. How you handle errors in these functions is very important because an unhandled error may cause the worker process to crash. This will not only terminate your plug-in, but may also terminate any concurrent plug-ins running for your organization. More information: [Error: No Sandbox Worker processes are currently available](../../troubleshoot-plug-in.md#error-the-sandbox-worker-processes-crashed)
 
 <a name='problem'></a>
 
