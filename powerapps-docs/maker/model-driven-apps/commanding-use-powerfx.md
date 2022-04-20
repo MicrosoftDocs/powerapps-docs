@@ -19,6 +19,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+  > [!NOTE]
+  > Publishing Power Fx commands may take a few minutes. It may not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
+
 This section covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
 - All existing data flow functions are supported.
 - Imperative functions that work with data are supported.
@@ -61,7 +64,9 @@ To define visibility logic select the command. Then select **Visibility** on the
 <!--- Not currently configurable:
   - We later need facilities for working with the buffer.  -->
 
-### Patch the current selected record
+## Patch function
+
+### Patch (update) the current selected record
 
 ```powerapps-dot
 Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
@@ -138,6 +143,89 @@ To navigate to the default form of the table, pass a Dataverse record created fr
 ```powerappsfl
 Navigate( Defaults( Accounts ) )
 ```
+
+## RecordInfo function
+Provides information about a [record](../working-with-tables.md#elements-of-a-table) of a [data source](../working-with-data-sources.md).
+
+Use **RecordInfo** to obtain information about a particular record of a data source. At this time, only Microsoft Dataverse is supported. 
+
+The information available:
+
+| Information argument | Description |
+| --- | --- |
+| **RecordInfo.DeletePermission** | Does the current user have permission to remove this record from the data source? |
+| **RecordInfo.EditPermission** | Does the current user have permission to modify this record in the data source? |
+| **RecordInfo.ReadPermission** | Does the current user have permission to view this record from the data source? |
+
+**RecordInfo** returns a Boolean value:
+
+| Return value | Description |
+| --- | --- |
+| *true* | The user has the permission. |
+| *false* | The user does not have permission.  If the record is *blank* then **RecordInfo** will also return *false*. |
+
+**RecordInfo** takes into account permissions at the data source level too.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.  Use the [**DataSourceInfo**](function-datasourceinfo.md) function to obtain information about the data source as a whole.
+
+### RecordInfo Syntax
+**RecordInfo**( *Record*, *Information* )
+
+* *Record* – Required. The record to test.
+* *Information* – Required. The desired information for the record.
+
+### RecordInfo Examples
+
+```powerapps-dot
+RecordInfo(Self.Selected.Item, RecordInfo.EditPermission )
+```
+Used for the **Visible** property in this example. Checks whether the logged in user has edit permission for the selected record. If the user has permission to edit this record and modify the `Accounts` data source in general, then **RecordInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
+
+## DataSourceInfo function
+Data sources can provide a wealth of information to optimize the user experience.
+
+You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function. The **[Validate](function-validate.md)** function uses this same information.
+
+You can use information at the data-source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have permissions to edit and create [records](../working-with-tables.md#records).
+
+
+### Data-source Table information
+You can use **DataSourceInfo** to obtain information about a data source as a whole. For commanding, it's also very common to use for **Visibility**. For example, to show or hide a command depending on whether the user has one or more permissions for the table.
+
+| Information Argument | Result Type | Description |
+| --- | --- | --- |
+| **DataSourceInfo.AllowedValues** |Boolean |What types of permissions can users be granted for this data source? If not set by the data source, returns *blank*. |
+| **DataSourceInfo.CreatePermission** |Boolean |Does the current user have permission to create records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.DeletePermission** |Boolean |Does the current user have permission to delete records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.EditPermission** |Boolean |Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
+
+> [!NOTE]
+> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.  At this time, permissions checking with **DataSourceInfo** is only possible when using Microsoft Dataverse.
+
+### DataSourceInfo Syntax
+**DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
+
+* *DataSource* – Required. The data source to use.
+* *Information* – Required. The type of information that you want to retrieve.
+* *ColumnName* – Optional. For column-level information, the column name as a string. Column **Phone** would be passed as **"Phone"**, including the double quotes. For information at the data-source level, the *ColumnName* argument can't be used.
+
+### Data-source Column information
+You can use **DataSourceInfo** to obtain information about a particular column of a data source:  
+
+| Information Argument | Result Type | Description |
+| --- | --- | --- |
+| **DataSourceInfo.DisplayName** |String |Display name for the column. If no display name is defined, returns the column name. |
+| **DataSourceInfo.MaxLength** |Number |Maximum number of characters that the column can hold. Applies only to columns that contain strings. If a maximum isn't set, returns *blank*. |
+| **DataSourceInfo.MaxValue** |Number |Maximum numeric value that a column can hold. Applies only to columns that contain numbers. If a maximum isn't set, returns *blank*. |
+| **DataSourceInfo.MinValue** |Number |Minimum numeric value that a column can hold. Applies only to columns that contain numbers. If a minimum isn't set, returns *blank*. |
+| **DataSourceInfo.Required** |Boolean |Is a value required for this column? If not set by the data source, returns **false**. |
+
+### DataSourceInfo Examples
+
+```powerapps-dot
+DataSourceInfo(Accounts, DataSourceInfo.DeletePermission)
+```
+Used for the **Visible** property in this example. Checks whether the logged in user has Delete permission for records within the Account table (Determined by the security role(s) the user has). If the user has permission to delete Account records, then **DataSourceInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
+
 
 ## Confirm function
 
