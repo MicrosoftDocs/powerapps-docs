@@ -4,7 +4,7 @@ description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 02/11/2022
+ms.date: 04/19/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:

@@ -4,7 +4,7 @@ description: Learn about working with a library of reusable components for canva
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 11/03/2021
+ms.date: 04/19/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
