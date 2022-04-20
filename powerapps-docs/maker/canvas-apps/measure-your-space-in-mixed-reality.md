@@ -21,40 +21,33 @@ contributors:
 
 Measure the distance, area, and volume of your physical space using your device camera.
 
-To use the measurement feature, your app maker needs to enable the [Measure in MR](mixed-reality-component-measure-distance.md) control for your canvas app.
+To use the measurement feature, your app maker needs to enable the [Measure in MR](mixed-reality-component-measure-distance.md) control for your canvas app. Depending on how your app maker has configured the app, the type of measurements that you can take can vary as shown in the exaple below. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Enter measurements](./media/mr-measurement/measurement-inputs-5.png)
+
+
+
+## Basic navigation
+
+It's easy to get around and take measurements of your space. The following illustration shows the primary navigation elements.
+
 
    > [!div class="mx-imgBorder"]
    > ![This pictures shows the sceens where you can take measurements.](./media/mr-measurement/measurement-legend.png)
-
 
 Legend
 
 1. **Camera**: Take a picture of your current view. The picture can be used by your 
 canvas app but isn't viewable when you're in the mixed reality experience.
 2. **Undo**: Delete the last measurement and take the measurement again.
-3. **Add**: TBD
+3. **Add**: Start a new measurement or add a new measurement point.
 4. **List**: Opens a list with details of the items you have measured. 
 5. **Submit**: When you're done taking a measurement, use the Submit button to close the mixed reality experience and send your measurement to your canvas app. The button is grayed out if there's no measurements or when you're in the process of taking measurements. 
 6. **List**: Opens a list with details of the items you have measured. 
 7. **Reset**: Removes the current 3D object so you can add a new object.
 8. **Exit**: Leave the mixed reality experience and return to your canvas app.
 
-## Prerequisites
-
-Before you can start taking measurements, follow these steps to enter basic information about your space.
-
-1. Open your canvas app and select the **Measure in MR** button.
-2. At the top select the measurement list or select the list button.
- 
-   > [!div class="mx-imgBorder"]
-   > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
-
-3. On **the Measurement Inputs** screen, enter the required measurements such as wall distance and desk area.
-   
-   > [!div class="mx-imgBorder"]
-   > ![Enter measurements](./media/mr-measurement/measurement-inputs-5.png)
-
-4. When you're done, select the close button.
 
 ## Take a measurement
 
