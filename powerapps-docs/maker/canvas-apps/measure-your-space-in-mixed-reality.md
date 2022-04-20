@@ -134,7 +134,7 @@ When you take measurements, you can always go back and review your measurements.
 2. Select the arrow next to measurement to view more details.
    
    > [!div class="mx-imgBorder"]
-   > ![Reivew measurements.](./media/mr-measurement/review-measurements.png)
+   > ![Review measurements.](./media/mr-measurement/review-measurements.png)
 
 3. On the **Measurement Inputs** screen, you can do the following:
 
