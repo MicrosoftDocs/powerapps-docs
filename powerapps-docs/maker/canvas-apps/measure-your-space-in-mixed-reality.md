@@ -30,7 +30,7 @@ To use the measurement feature, your app maker needs to enable the [Measure in M
 Legend
 
 1. **Camera**: Take a picture of your current view. The picture can be used by your 
-canvas app but isn't viewable while in the mixed reality experience.
+canvas app but isn't viewable when you're in the mixed reality experience.
 2. **Undo**: Delete the last measurement and take the measurement again.
 3. **Add**: TBD
 4. **List**: Opens a list with details of the items you have measured. 
