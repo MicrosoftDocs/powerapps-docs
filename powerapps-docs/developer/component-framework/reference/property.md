@@ -36,14 +36,18 @@ The error message associated with the last encountered error, if applicable.
 
 ### formatted
 
-The formatted string value of this field. This is only set if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+The formatted string value of this field. 
+
+This is only set if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
 
 **Type**: `string`
 
 
 ### security
 
-Information concerning the field level security of the field to which this control was bound. This value is only present if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+Information concerning the field level security of the field to which this control was bound. 
+
+This value is only present if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
 
 **Type**: [SecurityValues](securityvalues.md)
 
@@ -56,7 +60,9 @@ The raw, unformatted value of this field.
 
 ### attributes
 
-The attribute metadata associated with the field this property is configured against. This is only set when the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+The attribute metadata associated with the field this property is configured against. 
+
+This is only set when the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
 
 **Type**:  `FieldPropertyMetadata`
 
