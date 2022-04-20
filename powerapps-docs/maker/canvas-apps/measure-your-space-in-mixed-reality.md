@@ -41,7 +41,7 @@ Legend
 1. **Camera**: Take a picture of your current view. The picture can be used by your 
 canvas app but isn't viewable when you're in the mixed reality experience.
 2. **Undo**: Delete the last measurement and take the measurement again.
-3. **Add**: Start a new measurement or add a new measurement point.
+3. **Add**: Select to start a new measurement or add a new measurement point. When you're done measuring the button changes to a checkmark button that you select to complete your measurement.
 4. **List**: Opens a list with details of the items you have measured. 
 5. **Submit**: When you're done taking a measurement, use the Submit button to close the mixed reality experience and send your measurement to your canvas app. The button is grayed out if there's no measurements or when you're in the process of taking measurements. 
 6. **List**: Opens a list with details of the items you have measured. 
