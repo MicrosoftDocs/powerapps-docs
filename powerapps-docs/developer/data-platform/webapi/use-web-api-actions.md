@@ -72,7 +72,7 @@ OData-Version: 4.0
 
 There are two ways that an action can be bound. The most common way is for the action to be bound by an entity. Less frequently, it can also be bound to an entity collection.
 
-In the [CSDL $metadata document](web-api-types-operations.md#bkmk_csdl), when an `Action` element represents a bound action, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined within the action represents the entity that the operation is bound to. When the `Type` attribute of the parameter is a collection, the operation is bound to a collection of entities.
+In the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), when an `Action` element represents a bound action, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined within the action represents the entity that the operation is bound to. When the `Type` attribute of the parameter is a collection, the operation is bound to a collection of entities.
 
 When invoking a bound function, you must include the full name of the function including the `Microsoft.Dynamics.CRM` namespace. If you do not include the full name, you will get the following error: `Status Code:400 Request message has unresolved parameters`.
 
