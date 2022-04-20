@@ -179,6 +179,16 @@ RecordInfo(Self.Selected.Item, RecordInfo.EditPermission )
 ```
 Used for the **Visible** property in this example. Checks whether the logged in user has edit permission for the selected record. If the user has permission to edit this record and modify the `Accounts` data source in general, then **RecordInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
 
+```powerapps-dot
+CountRows(Filter(Self.Selected.AllItems, RecordInfo(ThisRecord,RecordInfo.EditPermission)))>0
+```
+Used for the **Visible** property for the **Main grid** location in this example. The button will be visiable to the user running the app when one or more records within the grid are selected and the user has edit permission to *at least one* of the selected records.
+
+```powerapps-dot
+CountRows(Filter(Self.Selected.AllItems, RecordInfo(ThisRecord,RecordInfo.EditPermission)))=CountRows(Self.Selected.AllItems)
+```
+Used for the **Visible** property for the **Main grid** location in this example. The button will be visiable to the user running the app when one or more records within the grid are selected and the user has edit permission for *all* of the selected records.
+
 ## DataSourceInfo function
 Data sources can provide a wealth of information to optimize the user experience.
 
