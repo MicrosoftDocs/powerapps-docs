@@ -45,6 +45,9 @@ When creating a new app registration, ensure to use the supported account type t
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
+> [!TIP]
+> If you are creating an Android app, don't forget to generate and include a signature hash in your Redirect URI.
+
 ### Allow registered apps in your environment
 
 You'll need to allow the apps registered using the Azure portal in your Power Platform environment. To perform this step, use the latest version of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**, and run the following cmdlet with the Application (client) ID from the [App registration](#app-registration) step:
