@@ -32,9 +32,9 @@ The ability to create additional environments is determined by the template chos
 
 To enable multiple Modern Community portals, see the following:
 
-[Get started with community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-get-started)
+    [Get started with community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-get-started)
 
-[Create community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-create-websites)
+    [Create community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-create-websites)
 
 Once you've reached the maximum number of a specific portal type for an environment, you'll see a message displayed indicating that the maximum number of portals has been reached.
 
