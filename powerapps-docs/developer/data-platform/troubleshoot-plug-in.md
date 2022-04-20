@@ -22,10 +22,10 @@ contributors:
 
 This topic contains information about errors that can occur due to plug-in execution and how to fix them.
 
-## Error: No Sandbox Worker processes are currently available
+## Error: The Sandbox Worker process crashed
 
 Error Code: `-2147204723`<br />
-Error Message: `The plug-in execution failed because no Sandbox Hosts are currently available.`
+Error Message: `The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2189390`
 
 This error simply means that the worker process running your plug-in code crashed. The reason it crashed may be your plug-in, but it could also be another plug-in running concurrently for your organization. Because the process crashed, we can’t extract any more specific information about why it crashed. But after examining data from the crash dumps after the fact, we have found that this usually happens for one of the 4 reasons below:
 
