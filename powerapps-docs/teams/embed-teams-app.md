@@ -76,7 +76,7 @@ You can also add canvas apps to Teams using the web player. There are two ways t
 
 After the app is open using the web player, choose the **Add to Teams** button from the top-right side of the screen.
 
-:::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams, a team, or a chat.":::
+:::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams using web player.":::
 
 When prompted, select **Open Microsoft Teams** to open Teams app, or select **Cancel** followed by **Use the web app instead** to open Teams web. And then, select **Add** to add the app to Teams.
 
