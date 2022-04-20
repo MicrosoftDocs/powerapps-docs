@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/13/2022
+ms.date: 04/19/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -46,7 +46,7 @@ When creating a new app registration, ensure to use the supported account type t
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
 > [!TIP]
-> If you are creating an Android app, don't forget to generate and include a signature hash in your Redirect URI.
+> When creating an Android app, ensure that you generate and include a signature hash in your Redirect URI.
 
 ### Allow registered apps in your environment
 
