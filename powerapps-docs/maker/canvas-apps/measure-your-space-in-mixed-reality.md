@@ -21,7 +21,7 @@ contributors:
 
 Measure the distance, area, and volume of your physical space using your device camera.
 
-To use the measurement feature, your app must enable the  [Measure in MR](mixed-reality-component-measure-distance.md) control for your canvas app.
+To use the measurement feature, your app maker needs to enable the [Measure in MR](mixed-reality-component-measure-distance.md) control for your canvas app.
 
    > [!div class="mx-imgBorder"]
    > ![This pictures shows the sceens where you can take measurements.](./media/mr-measurement/measurement-legend.png)
