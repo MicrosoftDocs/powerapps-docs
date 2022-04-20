@@ -18,6 +18,9 @@ contributors:
 
 The Web API provides a RESTful web service interface that you can use to interact with data in Microsoft Dataverse using a wide variety of programming languages and libraries.
 
+> [!TIP]
+> Before you start, you may find it valuable to review the topics under [Web API types and operations](web-api-types-operations.md) to understand the OData service documents which provide important information about what you can do with the Web API.
+
 > [!NOTE]
 > Information under this section is also applicable to the Dynamics 365 Customer Engagement (on-premises) users.
 
