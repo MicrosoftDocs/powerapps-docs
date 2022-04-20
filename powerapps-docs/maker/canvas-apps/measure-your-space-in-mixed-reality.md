@@ -41,7 +41,7 @@ canvas app and isn't viewable while in the mixed reality experience.
 
 ## Prerequisites
 
-Before you start taking measurements, follow these steps to enter basic information about your space.
+Before you can start taking measurements, follow these steps to enter basic information about your space.
 
 1. Open your canvas app and select the **Measure in MR** button.
 2. At the top select the measurement list or select the list button.
@@ -60,9 +60,9 @@ Before you start taking measurements, follow these steps to enter basic informat
 
 1. Open your canvas app and select the **Measure in MR** button.
 
-2. Select the camera button and then follow the instructions on your screen
+2. Select the camera button and then follow the instructions on your screen.
 
-3. Keep moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
+3. Keep moving your device until it vibrates, and white dots appears. The white dot with a circle is the starting point of your measurement.
 
 4. Select ![Add button](./media/mr-measurement/add-button-8.png) to start a new measurement. Then follow these steps depending on the type of area that you're measuring:
 
@@ -91,7 +91,7 @@ Before you start taking measurements, follow these steps to enter basic informat
          > ![Measure desk area](./media/mr-measurement/area-final-measurement-14.png)
 
     - **Volume** 
-      1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the base of the volume you want to measure.
+      1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the base of the volume that you want to measure.
          > [!div class="mx-imgBorder"]
          > ![Add point to outline the base of the volume.](./media/mr-measurement/volume-add-points-15.png)
       
@@ -99,7 +99,7 @@ Before you start taking measurements, follow these steps to enter basic informat
          > [!div class="mx-imgBorder"]
          > ![Connect the volume measurement.](./media/mr-measurement/volume-complete-measurement-16.png)
 
-      3. Move your device upwards and select the desired height and then select the checkmark. 
+      3. Move your device upwards and select the desired height and then select the checkmark button. 
          > [!div class="mx-imgBorder"]
          > ![Move your device upwards to campute the objects height.](./media/mr-measurement/volume-upwards-17.png) 
         
@@ -126,26 +126,26 @@ Before you start taking measurements, follow these steps to enter basic informat
            > ![Measure rectangle freeform.](./media/mr-measurement/rectangle-freeform.png)
 
           > [!NOTE]
-          > If you app has **Box Draw** enabled, then you can only measure in freeform in a rectangular area and volume.
+          > If your app has **Box Draw** enabled, then you can only measure in freeform in a rectangular area and volume.
 
 
 ## Keeping track of your measurements
 
-When you take measurements, you can always go back and review the measurements that you have taken.
+When you take measurements, you can always go back and review your measurements.
 
 1. At the top select the measurement list or select the list button.
    
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
 
-2. Select the arrow next to measure to view more details.
+2. Select the arrow next to measurement to view more details.
    
    > [!div class="mx-imgBorder"]
    > ![Reivew measurements.](./media/mr-measurement/review-measurements.png)
 
 3. On the **Measurement Inputs** screen, you can do the following:
 
-    - Select measurement to remeasure or take a measurement out of the listed order.
+    - Select a measurement to remeasure it or remove the measurement from the list.
 
     - Select the delete button to clear a measurement.
 
