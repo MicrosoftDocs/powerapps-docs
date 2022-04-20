@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the retrieveMulti
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/15/2022
+ms.date: 04/19/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 search.audienceType: 
@@ -174,7 +174,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
 ### Retrieve or filter by lookup properties
 For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options are not supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null is not supported in offline mode.
 
-More information: [Lookup properties](../../../../data-platform/webapi/web-api-types-operations.md#bkmk_lookupProperties)
+More information: [Lookup properties](../../../../data-platform/webapi/web-api-properties.md#lookup-properties)
 
 Here are code examples for both the scenarios:
 

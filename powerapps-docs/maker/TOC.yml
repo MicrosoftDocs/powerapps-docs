@@ -753,6 +753,8 @@
             href: ./canvas-apps/functions/function-iferror.md
           - name: in
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+          - name: Index
+            href: ./canvas-apps/functions/function-first-last.md
           - name: Int
             href: ./canvas-apps/functions/function-round.md
           - name: IsBlank
@@ -849,6 +851,8 @@
             href: ./canvas-apps/functions/function-trig.md
           - name: Rand
             href: ./canvas-apps/functions/function-rand.md
+          - name: RandBetween
+            href: ./canvas-apps/functions/function-rand.md            
           - name: ReadNFC
             href: ./canvas-apps/functions/function-readnfc.md
           - name: RecordInfo
@@ -1163,7 +1167,7 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component (preview)
+    - name: Create a component
       items:
         - name: Components overview
           href: ./canvas-apps/create-component.md

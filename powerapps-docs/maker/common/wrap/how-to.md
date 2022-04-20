@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/12/2022
+ms.date: 04/19/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -45,6 +45,9 @@ When creating a new app registration, ensure to use the supported account type t
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
+> [!TIP]
+> When creating an Android app, ensure that you generate and include a signature hash in your Redirect URI.
+
 ### Allow registered apps in your environment
 
 You'll need to allow the apps registered using the Azure portal in your Power Platform environment. To perform this step, use the latest version of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**, and run the following cmdlet with the Application (client) ID from the [App registration](#app-registration) step:
@@ -54,7 +57,8 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 ```
 
 > [!NOTE]
-> - The Add-AdminAllowedThirdPartyApps cmdlet is available since version 2.0.144 of the Adminstrator PowerShell module. Please ensure you have at least this version installed. 
+> - This cmdlet is available in 2.0.144 or later versions of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**.
+> - You'll need global tenant administrator privileges to run this cmdlet. The cmdlet allows an administrator to designate which registered 3rd-party applications in Azure AD can invoke Power Platform connections.
 
 ## Configure API permissions
 

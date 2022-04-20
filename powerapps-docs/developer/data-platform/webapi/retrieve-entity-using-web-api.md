@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 04/06/2022
+ms.date: 04/19/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -91,7 +91,7 @@ If an entity has an alternate key defined, you can also use the alternate key to
 GET [Organization URI]/api/data/v9.0/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
 
-If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [lookup property](./web-api-types-operations.md#lookup-properties) as shown here.
+If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties) as shown here.
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001)
