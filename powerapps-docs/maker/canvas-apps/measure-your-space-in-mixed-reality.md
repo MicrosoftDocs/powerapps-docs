@@ -34,7 +34,7 @@ It's easy to get around and take measurements of your space. The following illus
 
 
    > [!div class="mx-imgBorder"]
-   > ![This pictures shows the sceens where you can take measurements.](./media/mr-measurement/measurement-legend.png)
+   > ![Image that shows the screen where you can take measurements.](./media/mr-measurement/measurement-legend.png)
 
 Legend
 
@@ -94,7 +94,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
 
       3. Move your device upwards and select the desired height and then select the checkmark button. 
          > [!div class="mx-imgBorder"]
-         > ![Move your device upwards to campute the objects height.](./media/mr-measurement/volume-upwards-17.png) 
+         > ![Move your device upwards to complete the objects height.](./media/mr-measurement/volume-upwards-17.png) 
         
        4. Select **Submit** to save the final measurement.
           > [!div class="mx-imgBorder"]
@@ -129,7 +129,7 @@ When you take measurements, you can always go back and review your measurements.
 1. At the top select the measurement list or select the list button.
    
    > [!div class="mx-imgBorder"]
-   > ![Choose the item you want to meaaure.](./media/mr-measurement/measure-4.png)
+   > ![Choose the item you want to measure.](./media/mr-measurement/measure-4.png)
 
 2. Select the arrow next to measurement to view more details.
    
@@ -144,6 +144,6 @@ When you take measurements, you can always go back and review your measurements.
 
     - Select the close button or list button to continue measuring where you left off.
      > [!div class="mx-imgBorder"]
-     > ![Reivew your measurements.](./media/mr-measurement/measurement-input.png)
+     > ![Review your measurements.](./media/mr-measurement/measurement-input.png)
 
 
