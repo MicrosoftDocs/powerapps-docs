@@ -1,7 +1,7 @@
 ---
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
-ms.date: 04/18/2022
+ms.date: 04/19/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -340,7 +340,7 @@ OData-Version: 4.0
 
 ### Filter rows (records) based on single-valued navigation property
 
-Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation properties](web-api-types-operations.md#bkmk_navprops).  
+Navigation properties let you access data related to the current entity. *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity. More information: [Navigation Properties](web-api-navigation-properties.md).  
   
 You can filter your entity set records based on single-valued navigation property values. For example, you can retrieve child accounts for the specified account.  
   
@@ -674,7 +674,7 @@ Use the `$expand` system query option in the navigation properties to control wh
 
 ## Retrieve data about lookup properties
 
- If your query includes lookup properties you can request annotations that will provide additional information about the data in these properties. Most of the time, the same data is can be derived with knowledge of the single-valued navigation properties and the data included in the related entities. However, in cases where the property represents a lookup attribute that can refer to more than one type of entity, this information can tell you what type of entity is referenced by the lookup property. More information: [Lookup properties](web-api-types-operations.md#bkmk_lookupProperties)  
+ If your query includes lookup properties you can request annotations that will provide additional information about the data in these properties. Most of the time, the same data is can be derived with knowledge of the single-valued navigation properties and the data included in the related entities. However, in cases where the property represents a lookup attribute that can refer to more than one type of entity, this information can tell you what type of entity is referenced by the lookup property. More information: [Lookup properties](web-api-properties.md#lookup-properties). 
   
  There are two additional types of annotations available for these properties,  
   
