@@ -1,11 +1,10 @@
 ---
-title: Create a component for canvas apps (preview) (contains video)
+title: Create a component for canvas apps (contains video)
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
-
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 02/11/2022
+ms.date: 04/19/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -19,13 +18,7 @@ contributors:
 ms.custom: intro-internal
 ---
 
-# Create a component for canvas apps (preview)
-
-[This article is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] More information: [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md)
+# Create a component for canvas apps
 
 Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across apps using a [component library](component-library.md). Components can use advanced features such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
 
@@ -272,10 +265,8 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
-- Collections in components aren't supported.
 - You can't insert a component into a gallery or a form (including SharePoint form).
-- A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
-- You can't package media files when you import a component.
+- If a component that you imported from another app is modified in the original app, you must manually import the component again in the consuming app to receive latest component changes. Use component libraries instead to work with [component updates](component-library.md#update-a-component-library) more efficiently.
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
 
 ## Next steps
