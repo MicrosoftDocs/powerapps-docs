@@ -22,7 +22,7 @@ contributors:
 
 This topic contains information about errors that can occur due to plug-in execution and how to fix them.
 
-## Error: The Sandbox Worker process crashed
+## Error: Sandbox Worker process crashed
 
 Error Code: `-2147204723`<br />
 Error Message: `The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.`
