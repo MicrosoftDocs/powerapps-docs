@@ -168,7 +168,6 @@ namespace ILoggerExample
 
                         HttpResponseMessage response = client
                             .GetAsync(webAddress)
-                            .ConfigureAwait(false)
                             .GetAwaiter()
                             .GetResult(); //Make sure it is synchronous
 
@@ -176,7 +175,6 @@ namespace ILoggerExample
 
                         string responseText = response.Content
                             .ReadAsStringAsync()
-                            .ConfigureAwait(false)
                             .GetAwaiter()
                             .GetResult(); //Make sure it is synchronous
 
