@@ -202,7 +202,7 @@ Components in a component library can never have access to app scope, as there's
 > - You can insert instances of components into a screen within a component library, and preview that screen for testing purposes.
 > - Component library doesn't display when using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/).
 
-## Import and export components
+## Import and export components (retired)
 
 > [!NOTE]
 > This feature is retired. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
@@ -226,6 +226,9 @@ You can save an app with existing components to a file locally and then reuse th
 If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
 
 After you create components in an app, other apps can consume the components from this app by importing them.
+
+> [!NOTE]
+> If a component that you imported from another app is modified in the original app, you must manually import the component again in the consuming app to receive latest component changes. Use component libraries instead to work with [component updates](component-library.md#update-a-component-library) more efficiently.
 
 ### Export components from your app
 
@@ -266,7 +269,6 @@ Once you save the app, you can reuse the components of this app using the same m
 - Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
 - You can't insert a component into a gallery or a form (including SharePoint form).
-- If a component that you imported from another app is modified in the original app, you must manually import the component again in the consuming app to receive latest component changes. Use component libraries instead to work with [component updates](component-library.md#update-a-component-library) more efficiently.
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
 
 ## Next steps
