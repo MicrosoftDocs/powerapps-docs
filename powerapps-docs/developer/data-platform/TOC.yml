@@ -304,6 +304,8 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Azure AD user tables
+      href: aaduser-entities.md
   - name: Template tables
     href: upload-manage-document-templates.md
 - name: Work with table definitions using code
