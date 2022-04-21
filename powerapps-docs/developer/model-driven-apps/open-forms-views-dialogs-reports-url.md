@@ -1,10 +1,10 @@
 ---
-title: "Open forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Open apps, forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: jdaly
 author: HemantGaur
-manager: kvivek
-ms.date: 03/12/2022
+manager: evchaki
+ms.date: 04/06/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -13,25 +13,68 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
-# Open forms, views, dialogs, and reports with a URL
+# Open apps, forms, views, dialogs, and reports with a URL
 
-URL addressable elements enable you to include links to forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
+URL addressable elements enable you to include links to apps, forms, views, dialogs, and reports in other applications. 
 
 > [!NOTE]
-> - URL addressable forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.  
-> - Use `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) when you open forms programmatically within the application by using web resources. Do not use `window.open`.  
-> - Outside the application, where pages do not have access to the `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) function, use `window.open` or a link to open a specific record or form for a table.  
+> URL addressable apps, forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.    
+
+## App Urls
+
+> [!NOTE]
+> Embedding a model-driven application within an IFrame in another application is not supported.
+
+You can open any model-driven application using the [AppModule.UniqueName](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_UniqueName) or [AppModule.AppModuleId](/powerapps/developer/data-platform/reference/entities/appmodule#BKMK_AppModuleId) values.
+
+You can retrieve these values using Web API using the following query:
+
+```http
+GET [Organization URI]/api/data/v9.1/appmodules?$select=appmoduleid,uniquename
+```
+
+More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
+
+You can use either the `appname` or `appid` query parameters with the Unique Name or AppModuleId values respectively, but you cannot use both at the same time.
+
+### Using Unique Name
+
+Append the `appname` query parameter to the `main.aspx` page to open the app using the Unique Name.
+
+```  
+https://myorg.crm.dynamics.com/main.aspx?appname={UniqueName}
+``` 
+
+For example, if the Unique Name is `msdyn_SolutionHealthHub`, you can open this app using this URL:
+
+```  
+https://myorg.crm.dynamics.com/main.aspx?appname=msdyn_SolutionHealthHub
+``` 
+
+### Using AppModuleId
+
+Append the `appid` query parameter to the `main.aspx` page to open the app using the AppModuleId.
+
+```
+https://myorg.crm.dynamics.com/main.aspx?appid={AppModuleId}
+``` 
+For example:
+
+```
+https://myorg.crm.dynamics.com/main.aspx?appid=12fd1cf3-e06e-e911-a95f-000d3a13c42a
+``` 
+
 
 <a name="BKMK_URLAddressableFormsAndViews"></a>
 
 ## URL addressable forms and views
 
- All forms and views are displayed in the main.aspx page. Query string parameters passed to this page control what will be displayed. For example:  
+All forms and views are displayed in the `main.aspx` page. Query string parameters passed to this page control what will be displayed. For example:  
 
-To open an account record form for where the id is {91330924-802A-4B0D-A900-34FD9D790829}:  
-
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+To open an account record form for where the id is `{91330924-802A-4B0D-A900-34FD9D790829}`:  
 
 ```  
 https://myorg.crm.dynamics.com/main.aspx?etn=account&pagetype=entityrecord&id=%7B91330924-802A-4B0D-A900-34FD9D790829%7D  
@@ -48,8 +91,8 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
  ```  
 
 > [!NOTE]
->  Opening forms in a dialog window by using [showModalDialog](/previous-versions/ms536759(v=vs.85)) or [showModelessDialog](https://msdn.microsoft.com/library/ie/ms536761.aspx) is not supported.  
->   
+> - Use `Xrm.Navigation.`[navigateTo](clientapi/reference/Xrm-Navigation/navigateTo.md) or `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) when you open forms programmatically within the application by using web resources. Do not use `window.open`.  
+> - Outside the application, where pages do not have access to the `Xrm.Navigation.openForm` or `Xrm.Navigation.navigateTo` functions, use `window.open` or a link to open a specific record or form for a table. 
 >  Displaying a form within an IFrame embedded in another form is not supported.  
 
  You will typically use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) method to retrieve the organization root Url for Model-driven apps.  
@@ -63,7 +106,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 >   
 > `<https://mycrm/myOrg/main.aspx?etc=4&id=%7b899D4FCF-F4D3-E011-9D26-00155DBA3819%7d&pagetype=entityrecord>`.  
 >   
-> The id parameter passed to the URL is the encoded id value for the record. In this example the id value is `{899D4FCF-F4D3-E011-9D26-00155DBA3819}`. The encoded version of the GUID substitutes opening and closing brackets “{” and “}” with “%7B” and “%7D”, respectively,  
+> The id parameter passed to the URL is the encoded id value for the record. In this example the id value is `{899D4FCF-F4D3-E011-9D26-00155DBA3819}`. The encoded version of the GUID substitutes opening and closing brackets `{` and `}` with `%7B` and `%7D`, respectively,  
 
  The following are the query string parameters used with the main.aspx page to open forms or views:  
 
@@ -112,7 +155,7 @@ To display a list of table records within the application for a SubArea set the 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d”  
+Url="/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&etn=account&viewid=%7b<GUID value of view id>%7d"
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
@@ -123,6 +166,9 @@ Url=“/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist
 <a name="BKMK_OpenADialogProcess"></a>   
 
 ## Opening a dialog process by using a URL
+
+> [!IMPORTANT]
+> [Dialogs are deprecated](/power-platform/important-changes-coming#process-dialogs-are-deprecated). You should replace dialogs with business process flows or canvas apps. More information: [Replace dialogs with business process flows or canvas apps](/power-automate/replace-dialogs)
 
 A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific table using the id value for current record as an input parameter for the dialog process.  
 
@@ -143,7 +189,7 @@ To open a dialog you need the following:
 [organization url]/cs/dialog/rundialog.aspx?DialogId=[dialog unique identifier]&EntityName=[table logical name]&ObjectId=[unique identifier for the record]  
 ```  
 
- For example, to open the dialog with id ={6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976} with the account record id = {40C9ADFD-90A8-DF11-840E-00155DBA380F}, use the URL in the following example.  
+ For example, to open the dialog with id =`{6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976}` with the account record id = `{40C9ADFD-90A8-DF11-840E-00155DBA380F}`, use the URL in the following example.  
 
 ```
 [organization url]/cs/dialog/rundialog.aspx?DialogId=%7b6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976%7d&EntityName=account&ObjectId=%7b40C9ADFD-90A8-DF11-840E-00155DBA380F%7d  
@@ -166,8 +212,10 @@ function openDialogProcess(dialogId, entityName, objectId)
 }  
 ```  
 
-<a name="BKMK_OpenReportWithURL"></a>   
-## Opening a Report by using a URL  
+<a name="BKMK_OpenReportWithURL"></a>
+
+## Opening a Report by using a URL
+
  You can open a report by passing appropriate parameter values to the following URL: `[organization url]/crmreports/viewer/viewer.aspx`.  
 
  This URL accepts the following parameters:  
@@ -183,12 +231,14 @@ function openDialogProcess(dialogId, entityName, objectId)
 
  The following examples show URLs that can be used to open reports in model-driven apps.  
 
- Open the **Neglected Cases** report using the default filter:  
+ Open the **Neglected Cases** report using the default filter: 
+ 
  ```  
  [organization url]/crmreports/viewer/viewer.aspx?action=run&helpID=Neglected%20Cases.rdl&id=%7b8c9f3e6f-7839-e211-831e-00155db7d98f%7d  
  ```  
 
  Open the **Top Knowledge Base Articles** report and prompt the user to set filter values:  
+
  ```  
  [organization url]/crmreports/viewer/viewer.aspx?action=filter&helpID=Top%20Knowledge%20Base%20Articles.rdl&id=%7bd84ec390-7839-e211-831e-00155db7d98f%7d  
  ```  
@@ -220,6 +270,4 @@ function getReportURL(action,fileName,id) {
  [Web resources](web-resources.md)<br/> 
  [Change application navigation using the SiteMap](../../maker/model-driven-apps/create-site-map-app.md)
  
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,19 +1,20 @@
 ---
 title: "Sample: Audit table data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to audit table data changes" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/17/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: Bluebear73
+ms.author: munzinge
+manager: mayadu
+ms.reviewer: jdaly
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Audit table data changes
 

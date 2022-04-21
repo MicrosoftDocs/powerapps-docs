@@ -44,6 +44,16 @@ Sign into Power Apps for Windows quickly using your work email address. If you n
     > [!div class="mx-imgBorder"] 
     > ![Select an app to use.](media/pam-windows-image3.png)
 
+### See non-production apps
+
+By default, only production model-driven apps are shown in the list of apps.
+
+To see model-driven apps from non-production environments, select the More button (...) > **Settings** and then turn on **Show non-production apps**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![See non-production apps.](media/non-prod-apps.png)
+
+
 
 ## Move between apps
 
@@ -161,6 +171,23 @@ Note, the Quick create option is only available for rows that are enabled by you
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](../user/relevance-search.md).
 
 ![Search bar at the top](media/pam-windows-image13.png)
+
+## Set up mobile offline
+
+To configure your app in offline mode, see:
+ 
+- For canvas apps: [Develop offline-capable canvas app](../maker/canvas-apps/offline-apps.md)
+- For model-driven apps: [Set up mobile offline (preview)](setup-mobile-offline.md)
+
+
+## Session ID
+
+If you are having an issue with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
+
+To see get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![See non-production apps.](media/non-prod-apps.png)
 
 ## Limitations and known issues
 - The following is not supported:

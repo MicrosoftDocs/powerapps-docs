@@ -26,7 +26,7 @@ contributors:
 >This is a preview feature.
 >[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Want to build apps with mixed-reality 3D content without having to create your own 3D models? Use the [CGTrader connector](/connectors/cgtrader/) to import 3D content from CGTrader into your canvas apps. CGTrader offers a library of thousands of free and premium 3D models. Browse and load models inside your app, and then use them with the [View in 3D](mixed-reality-component-view-3d.md) and [View in MR](mixed-reality-component-view-mr.md) controls.
+Want to build apps with mixed-reality 3D content without having to create your own 3D models? Use the [CGTrader connector](/connectors/cgtrader/) to import 3D content from CGTrader into your canvas apps. CGTrader offers a library of thousands of free and premium 3D models. Browse and load models inside your app, and then use them with the [3D object](mixed-reality-component-view-3d.md) and [View in MR](mixed-reality-component-view-mr.md) controls.
 
 The connector provides a no-code replacement for working with the CGTrader API. Using [*actions*](/connectors/connectors#actions), apps send requests to the CGTrader API and fetch model data. For more information, see the [Connectors overview](/connectors/custom-connectors/use-custom-connector-powerapps).
 
@@ -66,17 +66,17 @@ A CGTrader connection is now listed on the **Connections** page.
 
 1. Select the connection you created earlier.
 
-## Load CGTrader models directly into View in 3D or View in MR controls
+## Load CGTrader models directly into 3D object or View in MR controls
 
 1. Find and select a model on the [CGTrader website](https://www.cgtrader.com/).
 1. Note the supported file types and Model ID.
 
     :::image type="content" source="./media/augmented/mixed-reality-connector-model-id.png" alt-text="A screenshot of the file types and Model ID of a 3D object on CGTrader.com.":::
 
-1. In Power Apps Studio, add a [**View in 3D**](./mixed-reality-component-view-3d.md) or [**View in MR**](./mixed-reality-component-view-mr.md) control to the app screen.
+1. In Power Apps Studio, add a [**3D object**](./mixed-reality-component-view-3d.md) or [**View in MR**](./mixed-reality-component-view-mr.md) control to the app screen.
 1. Set the control's **Source** property to **CGTrader.GetModel(*model_id*, "*file_type*")**, where *model_id* is the ID of the model you selected, and *file_type* is one of the supported file types.
 
-    :::image type="content" source="./media/augmented/mixed-reality-connector-example.png" alt-text="A screenshot of a View in 3D control under construction in Microsoft Power Apps Studio, shown with its Source property set to a CGTrader model.":::
+    :::image type="content" source="./media/augmented/mixed-reality-connector-example.png" alt-text="A screenshot of a 3D object control under construction in Microsoft Power Apps Studio, shown with its Source property set to a CGTrader model.":::
 
 ## Connector actions
 

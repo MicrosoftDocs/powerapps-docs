@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the getPane metho
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 04/04/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 search.audienceType: 
@@ -17,13 +17,7 @@ contributors:
 ---
 # getPane (Client API reference)
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Returns the side pane corresponding to the input ID. If the side pane does not exist, undefined is returned.
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
 
 ## Syntax
 
