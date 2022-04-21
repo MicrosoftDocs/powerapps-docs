@@ -7,7 +7,6 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 04/14/2022
-
 ms.subservice: mda-maker
 ms.topic: article
 search.audienceType: 
@@ -17,37 +16,37 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Scopes for modern commands (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Commands may have one of three scopes. The scope determines whether a command (shemaname = appaction) will render for a table within a single app, for a table acrross all apps, or for all tables and all apps. 
-A command must be bound to a command bar location such as Main grid or Main form regardless of scope. Therefore changing the scope will not render the command in different command bar locations such as Main grid and Main form.
+Commands have one of three scopes. The scope determines whether a command (`schemaname = appaction`) will render for a table within a single app, for a table across all apps, or for all tables and all apps.
+
+A command must be bound to a command bar location such as main grid or main form regardless of scope. Therefore, changing the scope will not render the command in different command bar locations such as main grid and main form.
 
 > [!IMPORTANT]
-> Commands using Power Fx for the Action and/or Visibility cannot be converted to Table or Global scope at this time.
-> When commands are nested within Dropdowns, Groups, and Split buttons all must be set to the same scope.
+> Commands using Power Fx for the action and/or visibility can't be converted to table or global scope at this time.
+> When commands are nested within dropdown lists, groups, and split buttons, all must be set to the same scope.
 
-- **App** This is the narrowest scope and **default behavior** when creating or editing commands using moder command designer. Command designer is opened within the context of a model-driven app, table, and command bar location.
-- **Table** Also known as entity scope. Bound to a specific table and command bar location. Not bound to any specific app. Therefore Table scoped commands will render in all apps that use the table. For example, a table scope command for the Account table and Main form location will be present in all apps when viewing the main form for an account record.
-- **Global** This is the broadest scope. Global scope commands are only bound to a command bar location. Not an app or table. For example, a global scope command for the Main form location will be present in all apps within an environment when viewing the main form for every table.
+- **App** This is the narrowest scope and **default behavior** when creating or editing commands using the modern command designer. Command designer is opened within the context of a model-driven app, table, and command bar location.
+- **Table** Also known as entity scope. Bound to a specific table and command bar location. Not bound to any specific app. Therefore table scoped commands will render in all apps that use the table. For example, a table scope command for the account table and main form location will be present in all apps when viewing the main form for an account record.
+- **Global** This is the broadest scope. Global scope commands are only bound to a command bar location, not an app or table. For example, a global scope command for the main form location is present in all apps within an environment when viewing the main form for every table.
 
 > [!IMPORTANT]
-> If a Global or Table scope command is edited within modern command designer, a copy (instance) is created with App scope and linked to the original command. 
-> For example, editing a Global scope command in command designer overrides the original Global scope command but only for the specific app and table chosen when opening command designer. 
+> If a global or table scope command is edited within modern command designer, a copy (instance) is created with app scope and linked to the original command.
+> For example, editing a global scope command in command designer overrides the original global scope command but only for the specific app and table chosen when opening command designer.
 > All other apps and tables will will render the original command.
-> The copy (instance) now has its' own lifecycle. Changes to the original Global scope command will not effect the new App scope instance and vice versa.
-
+> The copy (instance) now has it's own lifecycle. Changes to the original global scope command will not effect the new app scope instance and vice versa.
 
 ## Override Table (Entity) and Global Scoped commands
+
 More narrow scopes can override a broader scope command at every level. The most narrow scope wins.
 
-- A **Table (Entity) scoped** command overrides Global scoped commands. You can define a command that will be the same across all tables, but modify the behavior only for specific table(s).
-- An **App Scoped** command overrides all other scopes but only for a particular app and table. 
-
+- A **table (entity) scoped** command overrides global scoped commands. You can define a command that will be the same across all tables, but modify the behavior only for specific table(s).
+- An **App Scoped** command overrides all other scopes but only for a particular app and table.
 
 ## How to create a Table (Entity) scope command
+
 Export the solution as unmanaged, open appactions.xml, remove the  ```XML appuniquename  ``` node from the XML, the re-zip and import the solution.
 
 ### Detailed steps
