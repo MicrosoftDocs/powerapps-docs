@@ -60,7 +60,7 @@ At a high level, command customization fits into the following categories. Vario
 
 ## Types of commands
 
-- **Command**. Standard button. Performs an action when selected. Can also be nested in groups within dropdowns and split buttons. Note these were called Flyouts in classic commanding.
+- **Command**. Standard button. Performs an action when selected. Can also be nested in groups within dropdowns and split buttons. Note these were called flyouts in classic commanding.
 - **Dropdown**. Creates a menu where you can organize commands within a group.
 - **Group**. Add titles to groups of commands nested within dropdowns and split buttons.
 - **Split button**. Similar to a dropdown, but has a primary command. When the split button is selected, the action from the primary command is executed. If the expand chevron is selected, the primary command will not be executed. Instead a list will expand to show additional groups, flyouts, and commands.
@@ -125,6 +125,7 @@ Note classic visibility rules will also be supported soon within modern commands
   - Yes, you’ll receive updates weekly as we continuously ship improvements, new features, and fix bugs.
 
 ### See also
+
 [Customize the command bar using command designer](use-command-designer.md) <br />
 [Manage commands in solutions](manage-commands-in-solutions.md) <br />
 [Modern commanding known limitations](command-designer-limitations.md)

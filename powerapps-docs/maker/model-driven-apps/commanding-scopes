@@ -57,18 +57,15 @@ Export the solution as unmanaged, open appactions.xml, extract the package, remo
 
 1. Select **Export** to export your solution.
 
-   > [!div class="mx-imgBorder"]
-   > ![Export solution.](media/export-solution-from-command-bar.png "Export solution")
+   :::image type="content" source="../../developer/model-driven-apps/media/export-solution-from-command-bar.png" alt-text="Export solution.":::
 
 1. If you've made recent changes that haven't yet been published, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Publish the solution.](media/publish-check-issues-before-exporting-solution.png "Publish the solution")
+   :::image type="content" source="../../developer/model-driven-apps/media/publish-check-issues-before-exporting-solution.png" alt-text="Publish all components and then select check issues before you export the solution":::
 
 1. With the **Unmanaged** option selected, select **Export**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Unmanaged solution.](media/export-as-unmanaged-solution.png "Unmanaged solution")
+   :::image type="content" source="../../developer/model-driven-apps/media/export-as-unmanaged-solution.png" alt-text="Select unmanaged.":::
 
 1. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**.
 
@@ -76,121 +73,130 @@ Export the solution as unmanaged, open appactions.xml, extract the package, remo
 
 1. Select a location to extract the files to, and then select **Extract**.
 
-    Open the *appactions** folder and drill into the desired command (appaction). The appaction.xml file is the file that you'll edit.
+    Open the *appactions** folder, open the appaction.xml file, and find the desired command (appaction).
 
-1. Open the appaction.xml file
+1. Delete the **appmoduleid** node from the xml.
 
-1. Delete the **appmoduleid** node from the xml: 
- ```XML
+   ```XML
     <appmoduleid>
       <uniquename>demo_DemoFestApp</uniquename>
     </appmoduleid>
- ```
- 
- 1. Example XML
-     ```XML
-<appaction uniquename="crdff_NewCommand!a078463b5d7c473d8965f0f80469f412!crdff_CustomApp!crdff_entity1!1">
+   ```
+
+ 1. Example XML.
+
+   ```XML
+   <appaction uniquename="crdff_NewCommand!a078463b5d7c473d8965f0f80469f412!crdff_CustomApp!crdff_entity1!1">
   <buttonlabeltext default="Show Alert">
     <label description="Show Alert" languagecode="1033" />
-  </buttonlabeltext>
-  <buttonsequencepriority>10.0000000000</buttonsequencepriority>
-  <context>1</context>
-  <contextentity>
+   </buttonlabeltext>
+   <buttonsequencepriority>10.0000000000</buttonsequencepriority>
+   <context>1</context>
+   <contextentity>
     <logicalname>crdff_entity1</logicalname>
-  </contextentity>
-  <fonticon>AALinkedInLogo</fonticon>
-  <contextvalue>crdff_entity1</contextvalue>
-  <hidden>0</hidden>
-  <iscustomizable>1</iscustomizable>
-  <location>1</location>
-  <name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
-  <onclickeventjavascriptfunctionname>ShowAppAlert</onclickeventjavascriptfunctionname>
-  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
-  <onclickeventjavascriptwebresourceid>
+   </contextentity>
+   <fonticon>AALinkedInLogo</fonticon>
+   <contextvalue>crdff_entity1</contextvalue>
+   <hidden>0</hidden>
+   <iscustomizable>1</iscustomizable>
+   <location>1</location>
+   <name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
+   <onclickeventjavascriptfunctionname>ShowAppAlert</onclickeventjavascriptfunctionname>
+   <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+   <onclickeventjavascriptwebresourceid>
     <webresourceid>ac21ad24-3c11-ef11-b6u7-000d3a1d942c</webresourceid>
-  </onclickeventjavascriptwebresourceid>
-  <onclickeventtype>2</onclickeventtype>
-  <statecode>0</statecode>
-  <statuscode>1</statuscode>
-  <type>0</type>
-</appaction>
+   </onclickeventjavascriptwebresourceid>
+   <onclickeventtype>2</onclickeventtype>
+   <statecode>0</statecode>
+   <statuscode>1</statuscode>
+   <type>0</type>
+   </appaction>
+   ```
 
-
-1. After you've edited and saved the appaction.xml file, zip your solution in the same format it was exported in.  
+11. After you've edited and saved the appaction.xml file, zip your solution in the same format it was exported in.  
   
-1. **Import** the solution back into your environment and test the behavior.
+12. **Import** the solution back into your environment and test the behavior.
   
 
-## How to create a Global scope command
-Export the solution as unmanaged, open appactions.xml, remove the ```XML <appuniquename>  ```, ```XML <contextentity>``` and ```XML contextvalue``` nodes from the XML, the re-zip and import the solution.
+## How to create a global scope command
+
+Export the solution as unmanaged, open appactions.xml, remove the ```XML <appuniquename>  ```, ```XML <contextentity>```, and ```XML contextvalue``` nodes from the XML, then zip and import the solution.
 
 ### Detailed steps
+
 1. Follow the same steps above to edit the appaction.xml file
 
 1. **Delete** the **appmoduleid** node from the xml: 
- ```XML
+
+   ```XML
     <appmoduleid>
       <uniquename>demo_DemoFestApp</uniquename>
     </appmoduleid>
- ```
+   ```
+
 1. **Delete** the **contextentity** and **contextvalue** nodes from the xml: 
- ```XML
-  <contextentity>
+
+   ```XML
+   <contextentity>
     <logicalname>account</logicalname>
-  </contextentity>
+   </contextentity>
    <contextvalue>account</contextvalue>
- ```
+   ```
+
 1. Change the **context** value from 1 to 0.
 
-1. Example XML
- ```XML
-<appaction uniquename="crdff_NewCommand1!8fe72a85-1f84-431e-ac56-854f1bfadc4e!1">
-  <buttonlabeltext default="Show Alert">
-    <label description="Show Alert" languagecode="1033" />
-  </buttonlabeltext>
-  <buttonsequencepriority>10.0000000000</buttonsequencepriority>
-  <context>0</context>
-  <hidden>0</hidden>
-  <iscustomizable>1</iscustomizable>
-  <fonticon>AALinkedInLogo</fonticon>
-  <location>1</location>
-  <name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
-  <onclickeventjavascriptfunctionname>ShowGlobalAlert</onclickeventjavascriptfunctionname>
-  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
-  <onclickeventjavascriptwebresourceid>
+1. Example XML.
+   ```XML
+   <appaction uniquename="crdff_NewCommand1!8fe72a85-1f84-431e-ac56-854f1bfadc4e!1">
+   <buttonlabeltext default="Show Alert">
+   <label description="Show Alert" languagecode="1033" />
+   </buttonlabeltext>
+   <buttonsequencepriority>10.0000000000</buttonsequencepriority>
+   <context>0</context>
+   <hidden>0</hidden>
+   <iscustomizable>1</iscustomizable>
+   <fonticon>AALinkedInLogo</fonticon>
+   <location>1</location>
+   <name>EntityScoped!a078463b5d7c473d8965f0f80469f412</name>
+   <onclickeventjavascriptfunctionname>ShowGlobalAlert</onclickeventjavascriptfunctionname>
+   <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+   <onclickeventjavascriptwebresourceid>
     <webresourceid>ac21ad24-3c01-ec11-b6e7-000d3a1d942c</webresourceid>
-  </onclickeventjavascriptwebresourceid>
-  <onclickeventtype>2</onclickeventtype>
-  <statecode>0</statecode>
-  <statuscode>1</statuscode>
-  <type>0</type>
-</appaction>
- ```
+   </onclickeventjavascriptwebresourceid>
+   <onclickeventtype>2</onclickeventtype>
+   <statecode>0</statecode>
+   <statuscode>1</statuscode>
+   <type>0</type>
+   </appaction>
+    ```
+
 1. After you've edited and saved the appaction.xml file, zip your solution in the same format it was exported in.  
   
 1. **Import** the solution back into your environment and test the behavior.
 
+## How to override a global scope command with a table scope
 
-## How to override a Global scope command with a table scope
-This example is for when you want a global scope command to be the same everywhere **except** for a certain table. 
-- Entity Scoped Action will be visible on crdff_entity1 grids in all apps except in crdff_CustomApp.
-- Global Scoped Action will be visible on all the entity grids except crdff_entity1.
+This example is for when you want a global scope command to be the same everywhere *except* for a certain table.
+- **Entity Scoped Action** will be visible on `crdff_entity1` grids in all apps except in `crdff_CustomApp`.
+- **Global Scoped Action** will be visible on all the entity grids except `crdff_entity1`.
 
 > [!NOTE]
-> To override either Global or Table scope comands with an App scope command, simply edit the command using command designer.
+> To override either global or table scope commands with an app scope command, simply edit the command using command designer.
+>
+> To override a global scoped command with a table scope command, modify the appactions.xml files so they have the same  ```XML <name> ```.
 
-To override a Global Scoped command with a Table scope command, modify the appactions.xml files so they have the same  ```XML <name> ```. 
+### Steps to override
 
-### Steps
-1. Follow the above steps, but create **two** commands using command designer
+1. Follow the [detailed steps](#detailed-steps) above, but create two commands using command designer.
 
-1. Then follow those same steps to export your solution and edit the appactions.xml files.
+1. Then follow the [detailed steps](#detailed-steps) to export your solution and edit the appactions.xml files.
 
-1. Follow the steps above to create one global and one entity scope scope command.
+1. Continue following the [detailed steps](#detailed-steps) to create one global and one entity scope scope command.
 
 1. Set the **name** property to be the exact same for both the global and entity scope commands.
 
-####Example **Global scope** command XML
+#### Example global scope command XML
+
  ```XML
 <appaction uniquename="crdff_NewCommand1!8fe72a85-1f84-431e-ac56-854f1bfadc4e!1">
 <buttonlabeltext default="Show Alert">
@@ -215,8 +221,9 @@ To override a Global Scoped command with a Table scope command, modify the appac
 </appaction>
 ```
 
-#### Example **Table (entity) scope** command XML
- ```XML
+#### Example table scope command XML
+
+```XML
 <appaction uniquename="crdff_NewCommand!a078463b5d7c473d8965f0f80469f412!crdff_entity1!1">
 <buttonlabeltext default="Show Alert">
 <label description="Show Alert" languagecode="1033" />
