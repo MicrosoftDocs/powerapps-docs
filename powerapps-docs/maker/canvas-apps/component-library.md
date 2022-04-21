@@ -150,7 +150,7 @@ The following animation shows the process to get the latest components.
 
 ![Steps to get the latest components](./media/component-library/get-latest-components.gif "Steps to get the latest components")
 
-### Update component library in a consuming app
+### Updating component from a component library in a consuming app
 
 If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
 
@@ -158,6 +158,11 @@ If you import a component from a component library, you can't edit it inside the
 
 If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
 
+## Deleting a component library
+
+If a component library is referenced by a canvas app it cannot be deleted. This is true for both Dataverse and non-Dataverse environments.  Please remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or the message which is shown when you try to delete library.
+
+![Delete library component.](./media/component-library/delete-component-library-dependencies.png "Delete library component")
 
 ## Component library permissions
 
