@@ -1,14 +1,12 @@
 ---
 title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
-description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
+description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
 keywords:
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 04/21/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
@@ -151,8 +149,6 @@ Currently there is an issue with canvas app datasets bound to code components. W
 **Workaround**
 
 No workaround as of now. A fix for this issue is being deployed.
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
 ## Authentication for third party services fails in Canvas
 
