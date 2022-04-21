@@ -48,7 +48,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 1. Open the form that contains the subgrid.
 1. Select the subgrid where you want to configure the Power Apps grid control, and then select **Change Properties** on the command bar.
 1. In the **Set Properties** dialog box, select the **Controls** tab, select **Add Control**, and then select **Power Apps Grid**. 
-1. To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
+1. To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-read-only-grid-control).
 
 ## Opt out of the Power Apps read-only grid control
 While the Power Apps read-only grid control became the default grid experience in April 2022, you can opt your organization out of the automatic switch to this grid by following the steps below. 
