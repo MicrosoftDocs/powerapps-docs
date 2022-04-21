@@ -18,75 +18,71 @@ contributors:
 
 # Component library application lifecycle management (ALM)
 
-A [component library](component-library.md) is a special type of canvas app that can contain one or more canvas components and these library components can then be used by all the other canvas apps in the environment. This provides a way to create reusable shared components across all apps in an environment, unlike [app level components](create-component.md#components-in-canvas-apps) which are restricted to one app. A component from a component library can be used by first importing it into a canvas app and then adding it to app screen. Any further updates in the component definition from the component library will prompt app maker to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Dataverse solutions](/power-platform/alm/solution-concepts-alm).
+A [component library](component-library.md) is a special type of canvas app that can contain one or more canvas components. These library components can then be used by all the other canvas apps in the environment. This capability enables you to create reusable shared components across all apps in an environment&mdash;unlike [app-level components](create-component.md#components-in-canvas-apps) that are restricted to one app.
+
+To use a component from a component library, you have to first import it into the canvas app. Once imported, you can then add the component to the app screen. Any updates in the component definition from the component library will prompt you to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Microsoft Dataverse solutions](/power-platform/alm/solution-concepts-alm).
 
 > [!NOTE]
-> Term "import," component used here refers to importing component from component library to an app and should not be confused with "importing" a solution into Datavese.
+> In this article, the term "import" refers to importing a component from a component library to an app, and shouldn't be confused with importing a solution into Dataverse.
 
-When a component from a component library is imported into a canvas app, that component's definition is copied into the definition of the canvas app itself. Once a component definition has been imported, the app is "self-contained" as far as that component definition is concerned: The app maker can choose to [edit component](component-library.md#library-component-customization) and create local instances of the component within the app. At this point there is no direct link to the component library from where the component originated. Significantly, this self-containment characteristic even applies if the canvas app is subsequently migrated to a different environment where the component library is not present. In the target environment, an app author can continue creating instances of the imported component definition, and the app can still be published and played. No new updates will be prompted or received in the app in this case. In order to maintain the relationship from app to component library it is important to not edit the component in the app, instead use the master definition in the component library.
+When a component from a component library is imported into a canvas app, that component's definition is copied into the definition of the canvas app. Once a component definition has been imported, the app is "self-contained" as far as that component definition is concerned. The app maker can choose to [edit the component](component-library.md#library-component-customization), and create  local instances of the component within the app. At this point there's no direct link to the component library from where the component originated. This self-containment characteristic also applies if the canvas app is then migrated to a different environment where the component library is not present.
 
-**Canvas apps and Component libraries solution support**
+You can continue to create instances of the imported component definition within the apps in the target environment, and the apps can still be published and played. No new updates will be prompted or received in the consuming app in this case. In order to maintain the relationship from the app to the component library, ensure that you use the component library to make any changes to the component, instead of editing the component within the consuming app.
 
-Inline with the other solution object dependencies, if a canvas app uses a control from component library it will have a dependency on that component library. In order to move an app to the new environment you will need to either package the library inside the same solution or install library as a pre-requisite. Later when the component library with the updated component is imported via solution into the target environment, existing apps can get the new component definitions using the normal [component update flow](component-library.md#update-a-component-library).
+## Canvas apps and component libraries solution support
 
-**Creating and Exporting component library in a solution**
+Consistent with the other solution object dependencies, if a canvas app uses a control from a component library, it'll have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution, or install it as a pre-requisite. Once the component library with the updated component is imported using a solution into the target environment, existing apps can get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
 
-You can either create a component library directly from within the solution or add it to existing solution via solutions add existing component library button.
+### Creating and exporting component library in a solution
 
-Animation - Gif: [Adding component library to solution.](https://microsoft-my.sharepoint.com/:i:/p/hemantg/Ed0CDoi6AINFpZeQFPEnW6cBZmRq1Jd7WE7t3TlMR7EyBw?e=9pyje5)
+You can either create a component library directly from within the solution, or add it to an existing solution.
 
-When a component library is saved in an environment which has Dataverse available, component library is automatically added to the default solution. Note that the unique logical name is generated for the component library which also has the default CDS publisher prefix. This is to ensure that the solution system is aware of its presence and can link dependencies from apps which use library logical name.
+:::image type="content" source="media/component-library-alm/new-add-existing-library-solution.png" alt-text="Add an existing component library to a solution, or a new one.":::
 
-Note: Component libraries created before the component ALM feature rollout need to be edited, published, and editor closed explicitly before they are enabled for ALM capabilities. You can check the component library ALM readiness by its presence in the default solution.
+When a component library is saved in an environment that has Dataverse available, component library is automatically added to the default solution. A unique logical name is generated for the component library with the **Default CDS Publisher** prefix. This is to ensure that the solution system is aware of its presence, and can link the dependencies from the apps that use the component library's logical name.
 
-![Graphical user interface  text  application  email Description automatically generated](media/image1.png)
+> [!NOTE]
+> Component libraries created before the rollout of the component library ALM feature need to be edited, published, and the editor must be closed explicitly before they're enabled for the ALM capabilities. You can check the component library ALM readiness by its presence in the default solution.
 
-Component libraries inside solution also supports "allow customization" managed properties which govern the behavior of component inside the app.
+:::image type="content" source="media/component-library-alm/check-default-solution.png" alt-text="Check default solution for your component library presence.":::
 
-![Graphical user interface  text  email Description automatically generated](media/image2.png)
+Component libraries inside a solution also support **Allow customizations** managed properties that govern the behavior of component inside the app. If you turn off this setting, and export the solution to a target environment, you won't be able to edit the component inside the app that will use this component.
 
-If "Allow customizations" is turned off and solution is exported to target environment. component cannot be edited inside the app which uses this component.
+:::image type="content" source="media/component-library-alm/allow-customizations.png" alt-text="Check default solution for your component library presence.":::
 
-![Graphical user interface  text  application  email Description automatically generated](media/image3.png)
+### Component library dependencies
 
-Apps which use components from the component library will be marked as dependent in the solutions infrastructure. Note that this applies to all apps which are added to any Dataverse solution in a given environment. Users can still create apps outside dataverse/solutions but these non-dataverse apps will not have any solution depedencies. Users can later add these apps to solutions to make them part of solution ALM.
+Apps that use components from the component library will be marked as dependent in the solutions infrastructure. This behavior applies to all apps that are added to any Dataverse solution in a given environment. You can still create apps outside of solutions, but those apps won't have any solution dependencies. You can later add these apps to solutions to make them part of the solution ALM.
 
-Gif : [Show solution dependecies](https://microsoft-my.sharepoint.com/:i:/p/hemantg/ESHBpcFUxLVMk0ri-kWQZtQBatfbhuDjfVGpK2fro33bTQ?e=aIgteR)
+:::image type="content" source="media/component-library-alm/dependencies.gif" alt-text="Animation that shows a canvas app in a solution using the component from the component library in the same solution and the dependencies for both.":::
 
-If a solution which just has a app using component from library is imported and target environment does not has the right component library, users will see import failed message due to missing depedency.
+If you import a solution that only has an app that uses a component from a component library, but excludes the component library, you'll see the following message:
 
-![Graphical user interface  application Description automatically generated](media/image4.png)
+"Import failed due to missing dependencies for \<app name\>".
 
-Users can either pre-install the library solution or bundle it with the app inside the same solution to make app available in the target environment. The app will have the dependency created in the target environment. When the library is updated and newer component version is imported via solutions, app will get notification and can get the change.
+In this case, you can choose to install the component library solution first, or bundle the component library with the solution that contains the canvas app. Either of the steps would ensure the app will have the dependency created in the target environment.
 
-GIF - [UpdateFromLibrary.gif](https://microsoft-my.sharepoint.com/:i:/p/hemantg/EcKXl-evzcBHo5QLFMV0opEBYskdjFjY4ruEAhAWMDkvpg?e=5q9JvO)
+When the library is updated and a newer component version is imported through the solutions, the app will get a notification and receive the updates when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit).
 
-If managed properties of the component library is set to say "allow customizations " = false, library cannot be edited in the target environment.
+> [!NOTE]
+> If the component library managed property **Allow customizations** is turned off, the component library can't be edited in the target environment.
 
-Note that the dependencies are calculated based on the latest published state of an app. So if you restore the older version which does not uses a library component, depedency will be removed in the app and hence solutions. Importing the component into the app from library without actually using it also creates dependency as library component remains available for use via insert menu.
+Dependencies are calculated based on the latest published state of an app. If you restore an older version of the app that doesn't use a library component, the dependency will be removed from the app, and the solution. Importing a component into an app from a component library without actually using it also creates a dependency since the unused library component remains available within the app for a future use.
 
-Tip: If you edit the Library component in the consuming app it creates a local copy. At this point the library component is still available for use in the insert pane. In order to remove the dependency completely you can delete the compoent from insert menu -&gt; Library component -&gt; Remove from app
+> [!TIP]
+> Editing a component from a component library inside the consuming app creates a local copy. At this point, the library component is still available for use through the **Insert** pane. In order to remove the dependency completely, delete the component from **Insert** > **Library components** > **...** (ellipsis) > **Remove from app**.
 
-**Best practices and troubleshooting**
+## Best practices and troubleshooting
 
-1.  Limit the number of components in a library to 20 to get optimal performance. Plan and create multiple component libraries ahead of time as the number of components in them will grow over time. This will also reduce the solution payload as apps are moved across the environment.
+1. Limit the number of components in a library to 20 to get optimal performance. Plan and create multiple component libraries in advance as the number of components in them will likely grow over time. This method will also reduce the solution payload as apps are moved across the environment.
 
-2.  There is a delay from when the component library is published to when it is available to the application and can take up to 5 minutes.
+1. There's a delay from when the component library is published to when it's available to the application, and can take up to 5 minutes.
 
-3.  If the app is not able to receive the update from the library component in the target environment where the solution is installed. Please check the following:
+1. If the app is not able to receive the update from the library component in the target environment where the solution is installed, check the following:
 
-    -   Determine the component library logical name from the solution view. Use default solution if library is not explicitly added to solution.
-
-Download app using the library component to local computer using File -&gt;save as -&gt; This computer. Rename the downloaded file to have zip extension and inspect Properties. Json for LibraryDependencies. This should have the matching library logical name.
-
-.
-
--   Solution consumers:, please check that the canvas app has properly identified the component libraries as [solution dependencies](https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm#solution-dependencies). If the solution does not properly identify the component libraries as solution dependencies, that means the app dependency to the component library link has not been created properly. Please check with the solution provider to resolve the issue.
-
--   Solution publishers, please check that component libraries are saved with
-
--   library logical name in the solution and it is same as one referenced in msapp.
-
-
+    - Determine the component library logical name from the solution view. Use the default solution if library is not explicitly added to solution.
+    - Download app using the library component to local computer using **File** > **Save as** > **This computer**. Rename the downloaded file to have a .zip extension, and unzip the package. Open the **Properties.json** file, and then search for the keyword "LibraryDependencies". You should see a matching library logical name.
+    - If you're consuming the solution, check that the canvas app has properly identified the component libraries as [solution dependencies](/power-platform/alm/solution-concepts-alm#solution-dependencies). If the solution doesn't properly identify the component libraries as solution dependencies, that means the app dependency to the component library link hasn't been created properly. In that case, check with the solution provider to resolve the issue.
+    - If you're the solution publisher, check that the component libraries are saved with the library logical name in the solution, and that it's same as the one referenced in the component library .msapp package.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
