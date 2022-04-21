@@ -1,24 +1,18 @@
 ---
 title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
-ms.custom: ""
-ms.date: 06/17/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 953c3137-6171-4e6e-b249-6a96221c6e96
-caps.latest.revision: 16
-author: "JimDaly" # GitHub ID
-ms.reviewer: "pehecke"
-ms.author: "jdaly"
+ms.date: 04/19/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Functions and Actions Sample
@@ -122,7 +116,7 @@ The sample operations in this topic are organized in the following ways.
   
 ## Working with functions  
 
-[Functions](web-api-types-operations.md#bkmk_functions) are operations that do not have side effects. A function can be bound to a table row or table (entity type) collection. Query functions are never bound. For more info, see [Use Web API functions](use-web-api-functions.md). This section shows samples of how bound and unbound functions are used and how parameters are passed in.  
+[Functions](web-api-functions.md) are operations that do not have side effects. A function can be bound to a table row or table (entity type) collection. Query functions are never bound. For more info, see [Use Web API functions](use-web-api-functions.md). This section shows samples of how bound and unbound functions are used and how parameters are passed in.  
   
 <a name="bkmk_unboundFunctionNoParams"></a>  
  
@@ -234,7 +228,7 @@ Bound function: CalculateTotalTimeIncident
   
 ## Working with actions  
 
-[Actions](web-api-types-operations.md#bkmk_actions) are operations that allow side effects. An action is either bound or unbound. For more info, see [Use Web API actions](use-web-api-actions.md). This section shows samples of how bound and unbound actions are used and how parameters are passed in. It also shows how custom actions are used and how to handle exceptions from these custom actions.  
+[Actions](web-api-actions.md) are operations that allow side effects. An action is either bound or unbound. For more info, see [Use Web API actions](use-web-api-actions.md). This section shows samples of how bound and unbound actions are used and how parameters are passed in. It also shows how custom actions are used and how to handle exceptions from these custom actions.  
   
 <a name="bkmk_unboundActionWithParams"></a>
    
