@@ -38,28 +38,27 @@ A command must be bound to a command bar location such as main grid or main form
 > All other apps and tables will will render the original command.
 > The copy (instance) now has it's own lifecycle. Changes to the original global scope command will not effect the new app scope instance and vice versa.
 
-## Override Table (Entity) and Global Scoped commands
+## Override table and global scoped commands
 
 More narrow scopes can override a broader scope command at every level. The most narrow scope wins.
 
-- A **table (entity) scoped** command overrides global scoped commands. You can define a command that will be the same across all tables, but modify the behavior only for specific table(s).
-- An **App Scoped** command overrides all other scopes but only for a particular app and table.
+- A **table (entity) scoped** command overrides global scoped commands. You can define a command that will be the same across all tables, but modify the behavior only for specific tables.
+- An **App scoped** command overrides all other scopes but only for a particular app and table.
 
-## How to create a Table (Entity) scope command
+## How to create a table scope command
 
-Export the solution as unmanaged, open appactions.xml, remove the  ```XML appuniquename  ``` node from the XML, the re-zip and import the solution.
+Export the solution as unmanaged, open appactions.xml, extract the package, remove the ```XML appuniquename  ``` node from the XML, repackage as a compressed (zipped) folder, and then import the solution.
 
 ### Detailed steps
-1. Create one or more commands within your solution using command designer.
 
-1. Alternatively, create a separate solution and select **Add existing** > **Table**.  
+1. Create one or more commands within your solution using command designer. Alternatively, create a separate solution and select **Add existing** > **Table**.  
 
-1. Chose **Select objects** then select and add the desired commands.
+1. Choose **Select objects**, and then add the desired commands.
 
-1. 1. Select **Export** to export your solution.
+1. Select **Export** to export your solution.
 
-    > [!div class="mx-imgBorder"]
-    > ![Export solution.](media/export-solution-from-command-bar.png "Export solution")
+   > [!div class="mx-imgBorder"]
+   > ![Export solution.](media/export-solution-from-command-bar.png "Export solution")
 
 1. If you've made recent changes that haven't yet been published, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.
 
