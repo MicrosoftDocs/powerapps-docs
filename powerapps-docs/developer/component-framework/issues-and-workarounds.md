@@ -152,5 +152,14 @@ Currently there is an issue with canvas app datasets bound to code components. W
 
 No workaround as of now. A fix for this issue is being deployed.
 
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+## Authentication for third party services fails in Canvas
+
+PCF authentication for third parties is not supported.
+
+**Workaround**
+
+Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview) and a [connector](../../maker/canvas-apps/connections-list.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
