@@ -131,7 +131,7 @@ Use the back button in the top-left corner to return to the app screen and chang
 ### See also
 
 - [3D object control](../mixed-reality-component-view-3d.md)
-- [Measure in MR control](../mixed-reality-component-measure-distance.md)
+- [Measuring Camera control](../mixed-reality-component-measure-distance.md)
 - [View shape in MR control](../mixed-reality-component-view-shape.md) 
 
 
