@@ -156,6 +156,6 @@ PCF authentication for third parties is not supported.
 
 **Workaround**
 
-Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview) and a [connector](../../maker/canvas-apps/connections-list.md).
+Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
