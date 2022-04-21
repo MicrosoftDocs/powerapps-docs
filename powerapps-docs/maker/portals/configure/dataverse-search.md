@@ -5,16 +5,17 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 02/17/2022
+ms.date: 04/20/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
-# Configure Dataverse search in portals (preview)
+# Configure Dataverse search in portals
 
 [This article is pre-release documentation and is subject to change.]
 
