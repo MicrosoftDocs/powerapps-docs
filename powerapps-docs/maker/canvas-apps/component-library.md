@@ -4,7 +4,7 @@ description: Learn about working with a library of reusable components for canva
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 04/19/2022
+ms.date: 04/21/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -158,9 +158,12 @@ If you import a component from a component library, you can't edit it inside the
 
 If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
 
+> [!NOTE]
+> The in-use instances of components from the component library won't be affected after you create a local copy of a component, and will remain linked to the component library definition. Only instances of the locally copied components (from **Custom** category) are considered to be the local app components.
+
 ## Deleting a component library
 
-If a component library is referenced by a canvas app it cannot be deleted. This is true for both Dataverse and non-Dataverse environments.  Please remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or the message which is shown when you try to delete library.
+If a component library is referenced by a canvas app it cannot be deleted. This is true for both Dataverse and non-Dataverse environments.  Please remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or in the message which is shown when you try to delete library.
 
 ![Delete library component.](./media/component-library/delete-component-library-dependencies.png "Delete library component")
 

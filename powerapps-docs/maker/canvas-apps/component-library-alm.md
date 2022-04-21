@@ -4,7 +4,7 @@ description: Learn about the application lifecycle management (ALM) with compone
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 04/19/2022
+ms.date: 04/21/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -20,7 +20,7 @@ contributors:
 
 A [component library](component-library.md) is a special type of canvas app that can contain one or more canvas components. These library components can then be used by all the other canvas apps in the environment. This capability enables you to create reusable shared components across all apps in an environment&mdash;unlike [app-level components](create-component.md#components-in-canvas-apps) that are restricted to one app.
 
-To use a component from a component library, you have to first import it into the canvas app. Once imported, you can then add the component to the app screen. Any updates in the component definition from the component library will prompt you to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Microsoft Dataverse solutions](/power-platform/alm/solution-concepts-alm).
+To use a component from a component library, you have to first import the component into the canvas app. Once imported, you can then add the component to the app screen. Any updates in the component definition from the component library will prompt you to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Microsoft Dataverse solutions](/power-platform/alm/solution-concepts-alm).
 
 > [!NOTE]
 > In this article, the term "import" refers to importing a component from a component library to an app, and shouldn't be confused with importing a solution into Dataverse.
@@ -31,7 +31,7 @@ You can continue to create instances of the imported component definition within
 
 ## Canvas apps and component libraries solution support
 
-Consistent with the other solution object dependencies, if a canvas app uses a control from a component library, it'll have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution, or install it as a pre-requisite. Once the component library with the updated component is imported using a solution into the target environment, existing apps can get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
+Consistent with the other solution object dependencies, if a canvas app uses a control from a component library, it'll have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution or install it as a pre-requisite. App to component library dependency is maintained in the target environment. At a later point when a component library with the updated component is imported using a solution into the target environment, existing apps will get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
 
 ### Creating and exporting component library in a solution
 
@@ -46,9 +46,13 @@ When a component library is saved in an environment that has Dataverse available
 
 :::image type="content" source="media/component-library-alm/check-default-solution.png" alt-text="Check default solution for your component library presence.":::
 
-Component libraries inside a solution also support **Allow customizations** managed properties that govern the behavior of component inside the app. If you turn off this setting, and export the solution to a target environment, you won't be able to edit the component inside the app that will use this component.
+Component libraries inside a solution also support **Allow customizations** managed properties that govern the behavior of the component library in the target environment.
 
 :::image type="content" source="media/component-library-alm/allow-customizations.png" alt-text="Allow customizations managed property for component library.":::
+
+If you turn off this setting, and export the solution to a target environment, you won't be able to edit the component library.
+
+:::image type="content" source="media/component-library-alm/edit-disabled.png" alt-text="You can't edit the component library that doesn't allow customizations.":::
 
 ### Component library dependencies
 
