@@ -48,7 +48,7 @@ When a component library is saved in an environment that has Dataverse available
 
 Component libraries inside a solution also support **Allow customizations** managed properties that govern the behavior of component inside the app. If you turn off this setting, and export the solution to a target environment, you won't be able to edit the component inside the app that will use this component.
 
-:::image type="content" source="media/component-library-alm/allow-customizations.png" alt-text="Check default solution for your component library presence.":::
+:::image type="content" source="media/component-library-alm/allow-customizations.png" alt-text="Allow customizations managed property for component library.":::
 
 ### Component library dependencies
 
