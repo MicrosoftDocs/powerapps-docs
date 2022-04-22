@@ -30,7 +30,7 @@ The ability to create additional environments is determined by the template chos
 
 \*\* Requires Starter portal package version [9.3.2201.0 or later](release-updates.md#starter-portal-package-updates)
 
-To enable multiple [modern community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-get-started) portals, see [Create new websites in Community](https://docs.microsoft.com/en-us/dynamics365/customer-service/community-create-websites).
+To enable multiple [modern community](/dynamics365/customer-service/community-get-started) portals, see [Create new websites in Community](/dynamics365/customer-service/community-create-websites).
 
 Once you've reached the maximum number of a specific portal type for an environment, you'll see a message displayed indicating that the maximum number of portals has been reached.
 
