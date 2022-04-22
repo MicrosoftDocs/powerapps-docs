@@ -44,12 +44,11 @@ Legend
    4. **Language**. You can display your installed language packs in this field. **Language** also helps to categorize your templates. 
    5. **Create**. Once an email is formatted, you can create it into a template.
    
-### Enhanced Email Template overview
+### Enhanced Email Template editor overview
 
 If your admin has enabled the **Enhanced email template** option in Power Apps, the enhanced email template editor page appears. 
 
    ![Create a new email template.](media\email-template-enh.png "Start  with a blank template option")
-
 You can do the following:
 
 - specify the template details and the subject line on the **Template** tab, .
