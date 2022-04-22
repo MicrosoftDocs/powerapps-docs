@@ -110,7 +110,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
           > [!div class="mx-imgBorder"]
           > ![Freeform measurement.](./media/mr-measurement/measure-freeform.png)  
      
-      4. To complete the measurement, keep the dot at the last point you added and then select **Submit**.
+      4. Keep the dot at the last point and then select **Submit** to save the final measurement.
           > [!div class="mx-imgBorder"]
           > ![Measure desk area.](./media/mr-measurement/measure-form-submint.png)  
                  
