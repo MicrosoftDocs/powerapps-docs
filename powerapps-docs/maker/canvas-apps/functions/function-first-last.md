@@ -32,7 +32,10 @@ The **Index** function returns a record of a table based on its ordered position
 
 **First**, **Index**, and **Last** return a single record.  **FirstN** and **LastN** return a table, even if you specify only a single record.
 
+### Delegation
 [!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
+
+For example, when used with a data source containing a large, million record table, **Last** will be subject to the non-delegation limit and will not return the last record of the entire data source.  Likewise, using **Index** to request a record in the middle of the million records will result in an error because the index is out of range based on the non-delegation limit.
 
 ## Syntax
 **First**( *Table* )<br>**Last**( *Table* )

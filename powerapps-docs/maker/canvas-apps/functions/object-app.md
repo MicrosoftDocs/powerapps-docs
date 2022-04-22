@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/03/2021
+ms.date: 04/21/2022
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -106,6 +106,21 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 
     > [!div class="mx-imgBorder"]
     > ![Form-specific confirmation dialog box.](media/object-app/confirm-native-custom.png)
+
+## OnError property
+
+> [!NOTE]
+> - OnError is part of an experimental feature and is subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
+> - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
+> - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+
+Use **OnError** to take action after an error has been detected.  It provides a global opportunity to intercept an error banner before it is displayed to the end user.  It can also be used to log an error.  
+
+One thing that **OnError** cannot do is replace an error in calculations the way that **IfError** can.  At the point that **OnError** is invoked, the error has already happened and it has already been processed through formula calculations.  
+
+**OnError** provides the same **FirstError** and **AllErrors** scope variables that are availabe in **IfError**.
+
+If **OnError** is empty, the default error handling mechanism is used that will show an error banner to the user with the Message of the error.  If the formula in **OnError** would like to filter errors, errors can be repeated with the **Error** function.
 
 ## OnStart property
 

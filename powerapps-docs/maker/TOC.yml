@@ -719,6 +719,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: EndsWith
             href: ./canvas-apps/functions/function-startswith.md
+          - name: Error
+            href: ./canvas-apps/functions/function-iferror.md
           - name: Errors
             href: ./canvas-apps/functions/function-errors.md
           - name: exactin

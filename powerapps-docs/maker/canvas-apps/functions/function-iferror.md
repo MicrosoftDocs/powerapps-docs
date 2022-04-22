@@ -1,12 +1,12 @@
 ---
-title: IfError, IsError, and IsBlankOrError functions in Power Apps
-description: Reference information including syntax and examples for the IfError, IsError, IsBlankOrError functions in Power Apps. 
+title: Error, IfError, IsError, and IsBlankOrError functions in Power Apps
+description: Reference information including syntax and examples for the Error, IfError, IsError, IsBlankOrError functions in Power Apps. 
 author: gregli-msft
 
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/22/2021
+ms.date: 04/21/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -18,14 +18,14 @@ contributors:
   - tapanm-msft
 ---
 
-# IfError, IsError, IsBlankOrError functions in Power Apps
+# Error, IfError, IsError, IsBlankOrError functions in Power Apps
 
 [This article is pre-release documentation and is subject to change.]
 
-Detects errors and provides an alternative value or takes action.
+Detects errors and provides an alternative value or takes action.  Create a custom error or pass throguh an error.
 
 > [!NOTE]
-> - IfError, IsError, and IsBlankOrError functions are part of an experimental feature and are subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
+> - Error, IfError, IsError, and IsBlankOrError functions are part of an experimental feature and are subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
 > - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
@@ -116,8 +116,8 @@ Within in the replacement formulas, the **FirstError** record and **AllErrors** 
 |---------------------|------|-------------|
 | **Kind** | **ErrorKind** enum (number) | Categorized the error. |
 | **Message** | Text string | Message about the error, suitable to be displayed to the end user. |
-| **Source** | Text string | Location in the format *ControlName*.*PropertyName* where the error originated, used for reporting. |
-| **Observed** | Text string | Location in the format *ControlName*.*PropertyName* where the error is surfaced to the user, used for reporting. |
+| **Source** | Text string | Location in where the error originated, used for reporting. For example, for a formula bound to a control property, this will be in the form *ControlName.PropertyName*. |
+| **Observed** | Text string | Location in where the error is surfaced to the user, used for reporting.  For example, for a formula bound to a control property, this will be in the form *ControlName.PropertyName*.  |
 
 For example, consider the following formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property:
 
@@ -155,7 +155,17 @@ The return value is a boolean *true* or *false*.
 
 Using **IsBlankOrError** will prevent any further processing of the error.
 
+## Error
+
+Use the **Error** function to create and report a custom error.  Your logic may, for example, deteremine that a value is invalid for your context, something that the system does not detect as a problem by default.  You can create and return your own error, complete with **Kind** and **Message**, using the same record described above for the **IfError** function.
+
+In the context of **IfError**, use the **Error** function to pass through an error.  For example, your logic in **IfError** may decide that in some cases an error can be safely ignored, but in other cases the error is important to send through.  Within **IfError** or **App.OnError**, use **Error( FirstError )** to pass through an error.
+
 ## Syntax
+
+**Error**( **ErrorRecord** )
+
+* *ErrorRecord* – Required. Record of error information, including **Kind**, **Message**, and other fields.  **Kind** is required.
 
 **IfError**( *Value1*, *Replacement1* [, *Value2*, *Replacement2*, ... [, *DefaultResult* ] ] )
 
@@ -195,6 +205,27 @@ Using **IsBlankOrError** will prevent any further processing of the error.
 | **IsBlankOrError( 1 )** | The argument isn't an error or a blank.  | *false* | 
 | **IsBlankOrError( Blank() )** | The argument is a blank.  | *true* |
 | **IsBlankOrError( 1/0 )** | The argument is an error.  | *true* | 
+
+### Simple Error
+
+In this example, dates are validated relative to one another, resulting in an error if there is a problem.
+
+```powerapps-dot
+If( StartDate > EndDate, 
+    Error( { Kind: ErrorKind.Validation, Message: "Start Date must be before End Date" } ) )
+```
+
+In this example, some errors are allowed to pass through while others are supressed and replaced with a value.  In the first case, **b** will be in an error state because the **Value** function has an invalid argument.  Because this is unexpcted by the formula writer, it is passed through.  In the second case, with the same formula, **b** will have the value 0, resulting in a division by zero.  In this case, the formula writer may know that this is OK for this logic, suppress the error (no banner is shown), and return a -1 instead.
+
+```powerapps-dot
+With( {a: 1, b: Value("a")},
+      IfError( a/b, If( FirstError.Kind <> ErrorKind.Div0, Error( FirstError ), -1 ) ) )
+// returns an error with Kind = ErrorKind.InvalidArgument
+
+With( {a: 1, b: 0})
+      IfError( a/b, If( FirstError.Kind <> ErrorKind.Div0, Error( FirstError ), -1 ) ) )
+// returns -1
+```
 
 ### Step by step
 
