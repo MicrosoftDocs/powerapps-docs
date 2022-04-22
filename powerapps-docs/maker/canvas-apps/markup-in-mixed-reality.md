@@ -69,7 +69,7 @@ Studio](https://create.powerapps.com/):
 3. Select the component **Markup in MR** to place it in the center of the app
     screen or drag and drop it to position it anywhere on the screen.
 
-![Add the Mark in MR control.](media/markup-control-add-control-1.png)
+![Add the Mark in MR control.](./media/mr-controls/markup-control-add-control-1.png)
 
 Graphical user interface application Description automatically generated
 
@@ -77,7 +77,7 @@ You can modify the component with several properties.
 
 > [!TIP]
 > Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
-> ![Markup in MR control properties.](media/markup-control-properties-2.png)
+> ![Markup in MR control properties.](./media/mr-controls/markup-control-properties-2.png)
 
 Graphical user interface application Description automatically generated
 
