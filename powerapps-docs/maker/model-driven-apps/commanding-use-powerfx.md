@@ -7,7 +7,6 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 07/26/2021
-
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -19,23 +18,26 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-  > [!NOTE]
-  > Publishing Power Fx commands may take a few minutes. It may not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
+This article covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
 
-This section covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
-- All existing data flow functions are supported.
+- All existing dataflow functions are supported. [What are dataflows?](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)
 - Imperative functions that work with data are supported.
-- Imperative functions for simple Confirm and Notify are supported.
-- For a list of functions not supported, go to [Power Fx functions not supported](#power-fx-functions-not-supported).
+- Imperative functions for simple `Confirm` and `Notify` are supported.
+- For a list of functions not supported, go to [Functions not supported](#functions-not-supported).
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> - This is a preview feature, and may not be available in all regions.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+> [!NOTE]
+> Publishing Power Fx commands may take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
 
 ## OnSelect
-Defines the logic that will be executed when the button is clicked within the app.
+
+Defines the logic that will be executed when the button is selected within the app.
 
 ## Visible
+
 Defines logic for hiding or showing the button when running the app. 
 
 To define visibility logic select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You may now select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
@@ -61,8 +63,6 @@ To define visibility logic select the command. Then select **Visibility** on the
 - By default, the form buffer is saved on behalf of the app maker.
   - The form is saved before the command is initiated.
   - Any problems that occur during the save operation are dealt with in the form's UI.
-<!--- Not currently configurable:
-  - We later need facilities for working with the buffer.  -->
 
 ## Patch function
 
@@ -75,7 +75,7 @@ Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
 ### Create a related record
 
 > [!NOTE]
-> If the related table is not already in the command component library you will need to open it in canvas studio and add the data source there.
+> If the related table is not already in the command component library you'll need to open it in canvas studio and add the data source there.
 
 ```powerapps-dot
 Patch(Tasks,Defaults(Tasks),{Regarding:Self.Selected.Item},{Subject:"Subject of the Task"})
@@ -112,9 +112,10 @@ To navigate to a custom canvas page within a model-driven app, pass the page nam
 ```powerappsfl
 Navigate( myCustomPage )
 ```
+
 ### Navigate to the default view of the table
 
-To navigate to the default view of the table, passed table name as the first argument.
+To navigate to the default view of the table, pass the table name as the first argument.
 
 ```powerappsfl
 Navigate( Accounts )
@@ -122,7 +123,7 @@ Navigate( Accounts )
 
 ### Navigate to specific system view of the table
 
-To navigate to a specific system view of the table, pass the table's Views enum.
+To navigate to a specific system view of the table, pass the table's `Views` enum.
 
 ```powerappsfl
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
@@ -145,9 +146,10 @@ Navigate( Defaults( Accounts ) )
 ```
 
 ## RecordInfo function
+
 Provides information about a [record](../working-with-tables.md#elements-of-a-table) of a [data source](../working-with-data-sources.md).
 
-Use **RecordInfo** to obtain information about a particular record of a data source. At this time, only Microsoft Dataverse is supported. 
+Use **RecordInfo** to obtain information about a particular record of a data source. At this time, only Microsoft Dataverse is supported.
 
 The information available:
 
@@ -157,16 +159,17 @@ The information available:
 | **RecordInfo.EditPermission** | Does the current user have permission to modify this record in the data source? |
 | **RecordInfo.ReadPermission** | Does the current user have permission to view this record from the data source? |
 
-**RecordInfo** returns a Boolean value:
+**RecordInfo** returns a boolean value:
 
 | Return value | Description |
 | --- | --- |
 | *true* | The user has the permission. |
-| *false* | The user does not have permission.  If the record is *blank* then **RecordInfo** will also return *false*. |
+| *false* | The user doesnt have permission. If the record is *blank* then **RecordInfo** will also return *false*. |
 
-**RecordInfo** takes into account permissions at the data source level too.  For example, if the user has permission at the record level to modify a record, but the user does not have permissions at the table level, then it will return *false* for **ModifyPermission**.  Use the [**DataSourceInfo**](function-datasourceinfo.md) function to obtain information about the data source as a whole.
+**RecordInfo** takes into account permissions at the data source level too.  For example, if the user has privileges at the record level to modify a record, but the user does not have privileges at the table level, then it will return *false* for **ModifyPermission**.  Use the [**DataSourceInfo**](function-datasourceinfo.md) function to obtain information about the data source as a whole.
 
 ### RecordInfo Syntax
+
 **RecordInfo**( *Record*, *Information* )
 
 * *Record* – Required. The record to test.
@@ -177,48 +180,54 @@ The information available:
 ```powerapps-dot
 RecordInfo(Self.Selected.Item, RecordInfo.EditPermission )
 ```
-Used for the **Visible** property in this example. Checks whether the logged in user has edit permission for the selected record. If the user has permission to edit this record and modify the `Accounts` data source in general, then **RecordInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
+
+Used for the **Visible** property in this example. Checks whether the logged in user has edit privilege for the selected record. If the user has permission to edit this record and modify the `Accounts` data source in general, then **RecordInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
 
 ```powerapps-dot
 CountRows(Filter(Self.Selected.AllItems, RecordInfo(ThisRecord,RecordInfo.EditPermission)))>0
 ```
-Used for the **Visible** property for the **Main grid** location in this example. The button will be visiable to the user running the app when one or more records within the grid are selected and the user has edit permission to *at least one* of the selected records.
+
+Used for the **Visible** property for the **Main grid** location in this example. The button will be visible to the user running the app when one or more records within the grid are selected and the user has edit privilege to *at least one* of the selected records.
 
 ```powerapps-dot
 CountRows(Filter(Self.Selected.AllItems, RecordInfo(ThisRecord,RecordInfo.EditPermission)))=CountRows(Self.Selected.AllItems)
 ```
-Used for the **Visible** property for the **Main grid** location in this example. The button will be visiable to the user running the app when one or more records within the grid are selected and the user has edit permission for *all* of the selected records.
+
+Used for the **Visible** property for the **Main grid** location in this example. The button will be visible to the user running the app when one or more records within the grid are selected and the user has edit privilege for *all* of the selected records.
 
 ## DataSourceInfo function
+
 Data sources can provide a wealth of information to optimize the user experience.
 
 You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function. The **[Validate](function-validate.md)** function uses this same information.
 
-You can use information at the data-source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have permissions to edit and create [records](../working-with-tables.md#records).
+You can use information at the data source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have privileges to edit and create [records](../working-with-tables.md#records).
 
+### Data-source table information
 
-### Data-source Table information
-You can use **DataSourceInfo** to obtain information about a data source as a whole. For commanding, it's also very common to use for **Visibility**. For example, to show or hide a command depending on whether the user has one or more permissions for the table.
+You can use **DataSourceInfo** to obtain information about a data source as a whole. For commanding, it's also very common to use for **Visibility**. For example, to show or hide a command depending on whether the user has one or more privileges for the table.
 
 | Information Argument | Result Type | Description |
 | --- | --- | --- |
 | **DataSourceInfo.AllowedValues** |Boolean |What types of permissions can users be granted for this data source? If not set by the data source, returns *blank*. |
-| **DataSourceInfo.CreatePermission** |Boolean |Does the current user have permission to create records in this data source? If not set by the data source, returns **true**. |
-| **DataSourceInfo.DeletePermission** |Boolean |Does the current user have permission to delete records in this data source? If not set by the data source, returns **true**. |
-| **DataSourceInfo.EditPermission** |Boolean |Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**. |
-| **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.CreatePermission** |Boolean |Does the current user have privileges to create records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.DeletePermission** |Boolean |Does the current user have privileges to delete records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.EditPermission** |Boolean |Does the current user have privilege to edit records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.ReadPermission** |Boolean |Does the current user have privilege to read records in this data source? If not set by the data source, returns **true**. |
 
 > [!NOTE]
-> **DataSourceInfo** returns *true* if it cannot determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.  At this time, permissions checking with **DataSourceInfo** is only possible when using Microsoft Dataverse.
+> **DataSourceInfo** returns *true* if it can't determine whether the current user has the requested permission.  Permissions will be checked again by the server when the actual operation is carried out and an error is displayed if it was not allowed.  At this time, permissions checking with **DataSourceInfo** is only possible when using Microsoft Dataverse.
 
-### DataSourceInfo Syntax
+### DataSourceInfo syntax
+
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
 * *DataSource* – Required. The data source to use.
 * *Information* – Required. The type of information that you want to retrieve.
-* *ColumnName* – Optional. For column-level information, the column name as a string. Column **Phone** would be passed as **"Phone"**, including the double quotes. For information at the data-source level, the *ColumnName* argument can't be used.
+* *ColumnName* – Optional. For column-level information, the column name as a string. Column **Phone** would be passed as **"Phone"**, including the double quotes. For information at the data source level, the *ColumnName* argument can't be used.
 
-### Data-source Column information
+### Data source column information
+
 You can use **DataSourceInfo** to obtain information about a particular column of a data source:  
 
 | Information Argument | Result Type | Description |
@@ -317,7 +326,9 @@ Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
 ## Not supported in Power Fx
+
 ### Functions not supported
+
 The following Power Fx functions are currently not supported with commanding in model-driven apps.
 
 - Back()
@@ -341,6 +352,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - ViewForm()
 
 ### Enums not supported
+
 -BorderStyle
 -Color
 -Direction
@@ -385,6 +397,7 @@ The following Power Fx functions are currently not supported with commanding in 
 -MessageSource
 
 ### Other unsupported or unuseful areas
+
 -Acceleration
 -App
 -Compass
