@@ -1,6 +1,6 @@
 ---
-title: "How to create an email template  in model-driven apps | MicrosoftDocs"
-description: Learn how to create an email template.
+title: "How to enable the enhanced email template  in Power Apps | MicrosoftDocs"
+description: Learn how to enable an  enhancd email template page
 author: mgandham
 manager: shujoshi
 
