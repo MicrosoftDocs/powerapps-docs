@@ -1,6 +1,6 @@
 ---
-title: Measure your space in mixed reality
-description: Measure your space in mixed reality.
+title: Use the Measure in MR control to take measurements
+description: Use the Measure in MR control to take measurements in mixed reality.
 author: anuitz
 ms.topic: overview
 ms.custom: canvas
@@ -17,7 +17,7 @@ contributors:
   - anuitz
 ---
 
-# Measure your space in mixed reality
+# Use the Measure in MR control to take measurements 
 
 Measure the distance, area, and volume of your physical space using your device camera.
 
