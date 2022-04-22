@@ -28,7 +28,7 @@ landingContent:
             url: component-rte-tutorial.md                 
           - text: Configure column permissions for portals
             url: configure/column-permissions.md             
-          - text: Configure Dataverse search in portals (preview)
+          - text: Configure Dataverse search in portals
             url: configure/dataverse-search.md         
           - text: Configure choices column for portals
             url: configure/choices-column.md         
