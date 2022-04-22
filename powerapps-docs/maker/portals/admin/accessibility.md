@@ -13,6 +13,7 @@ contributors:
     - neerajnandwana-msft
     - nickdoelman
     - ProfessorKendrick
+    - carltoncolter
 ---
  
 # Accessibility in Power Apps portals
