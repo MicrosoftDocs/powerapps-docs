@@ -1,5 +1,24 @@
-Annotate in mixed reality
-=========================
+---
+title: Annotate in mixed reality
+description: Annotate in mixed reality.
+author: anuitz
+ms.topic: conceptual
+ms.custom: canvas
+ms.date: 4/22/2022
+ms.reviewer: mduelae
+ms.subservice: canvas-maker
+ms.author: anuitz
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+contributors:
+  - mduelae
+  - anuitz
+---
+
+
+#Annotate in mixed reality
 
 You can use the **Markup in MR** component in your app to allow users to give
 guidance in their environment. Place arrows, add drawings, and take photos of
@@ -15,8 +34,8 @@ Photo properties.
 
 Tip: The mixed-reality (MR) controls work best in well-lit environments.
 
-How it works
-============
+## How it works
+
 
 Once the user presses the Markup in MR button, they will be prompted to move
 their phone side-to-side for better object or area detection.
@@ -24,8 +43,8 @@ their phone side-to-side for better object or area detection.
 After an object or area has been detected the user may make use of the markup
 toolbar.
 
-Adding an arrow
----------------
+## Adding an arrow
+
 
 To position the arrow:
 
@@ -39,8 +58,7 @@ To position the arrow:
 -   To rotate the arrow, tap and drag the arrow in a circular motion (360
     degrees)
 
-Inking
-------
+## Inking
 
 To determine where you start drawing:
 
@@ -48,9 +66,7 @@ To determine where you start drawing:
 
 -   Tap and drag on the screen to start drawing
 
-Use the component.
-==================
-
+## Use the component 
 Insert the component into your app as you normally would for any other button
 component.
 
@@ -70,8 +86,8 @@ Graphical user interface application Description automatically generated
 
 You can modify the component with several properties.
 
-Properties
-==========
+## Properties
+
 
 Note that some properties are only available under **More options** in
 the **Advanced** tab on the **Markup in MR** pane.
@@ -88,8 +104,8 @@ Graphical user interface application Description automatically generated
 | OnChange             | Behavior that is triggered when any property on the button is changed.                                                                                                                                                                | Defined Action | Advanced                              |
 |                      |                                                                                                                                                                                                                                       |                |                                       |
 
-Additional properties
----------------------
+## Additional properties
+
 
 [BorderColor](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border) –
 The color of a control's border.
@@ -205,8 +221,8 @@ Output properties
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 | Photos       | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-take-upload-photos). | Not applicable |
 
-Other Mixed Reality Components
-==============================
+## Other Mixed Reality Components
+
 
 -   View 3D content with the [View in
     3D](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-component-view-3d) component.
