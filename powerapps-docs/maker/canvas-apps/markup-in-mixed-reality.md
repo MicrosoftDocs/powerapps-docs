@@ -17,7 +17,6 @@ contributors:
   - anuitz
 ---
 
-
 # Annotate in mixed reality
 
 Add the **Markup in MR** component in your app to allow users to use annotations to visually specify an area or a particular asset in their environment. 
@@ -70,17 +69,15 @@ Studio](https://create.powerapps.com/):
 3. Select the component **Markup in MR** to place it in the center of the app
     screen or drag and drop it to position it anywhere on the screen.
 
-![Graphical user interface application Description automatically generated](media/9495a778f7a7b2aba295d133851a02f0.png)
+![Add the Mark in MR control.](media/markup-control-add-control-1.png)
 
 Graphical user interface application Description automatically generated
 
 You can modify the component with several properties.
 
-## Properties
-
-Note that some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
-
-![Graphical user interface application Description automatically generated](media/982999e4dee35318b0d22c09268faf1f.png)
+> [!TIP]
+> Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
+> ![Markup in MR control properties.](media/markup-control-properties-2.png)
 
 Graphical user interface application Description automatically generated
 
@@ -223,6 +220,4 @@ container (or the screen if there's no parent container).
 -   Measure distance, area, and volume with the [Measure in mixed
     reality](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-component-measure-distance) component.
 
-![Text Description automatically generated](media/02d585078b91fc96775e3a1300712a32.png)
 
-Text Description automatically generated
