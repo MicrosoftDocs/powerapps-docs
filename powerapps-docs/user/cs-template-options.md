@@ -63,7 +63,7 @@ On the design canvas, you can also select a column. The **Edit column** flyout a
 ### See also
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
-[How to create an email template  in model-driven apps](cs_email_template_builder.md)
+[Enable the enhanced email template editor page](cs_email_template_builder.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
