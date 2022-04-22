@@ -44,9 +44,21 @@ Legend
    4. **Language**. You can display your installed language packs in this field. **Language** also helps to categorize your templates. 
    5. **Create**. Once an email is formatted, you can create it into a template.
    
-### New Customer Template overview
+### Enhanced Email Template overview
 
-If you select **New Customer Template**, the following example page displays, where you can make edits. 
+If your admin has enabled the **Enhanced email template** option in Power Apps, the enhanced email template editor page appears. 
+
+   ![Create a new email template.](media\email-template-enh.png "Start  with a blank template option")
+
+You can do the following:
+
+- specify the template details and the subject line on the **Template** tab, .
+- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
+- include attachments to your template, on the **Attachments** tab.
+
+### Email Template overview
+
+If the **Enhanced email template** option is not enabled, the following example page appears, where you can make edits.
 
    ![New Customer Template.](media\email-new-customer-template-1c.png "New Customer Template")
 
@@ -57,7 +69,7 @@ Legend
 
 ## Start with existing templates
 
-Starting with an existing template means the template is automatically pre-populated with the pre-established data that you can customize. 
+Starting with an existing template means the template is automatically pre-populated with the pre-established data that you can customize.
 
 #### Create a new email template overview
 
@@ -80,5 +92,11 @@ When you select an existing template, the following display appears:
 
    ![Creating email template copies.](media\email-template-copy-1a.png "Creating email template copies")
 
-   - **Name**. The new template you created from the existing template will display **– Copy** at the end of the template name to identify it is a copy of an existing template.
-   - **Template Editor**. All of the data is carried over from the existing template which can be edited and modified.
+You can do the following:
+
+- On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
+- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
+- On the **Attachments** tab, include attachments to your template.
+
+> [!NOTE]
+> If you select a template created using the enhanced email template dialog, the enhanced template editor page is displayed irrespective of the admin configuration.

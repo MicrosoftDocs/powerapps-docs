@@ -19,70 +19,55 @@ search.app:
   - D365CE
 ---
 
-# Create email templates
+# Enable the enhanced email template editor page
+ 
+You can configure and enable the enhanced email template editor for apps across the organization. You can disable the enhanced email template page for a specific app. The app displays the default email template editor page if you disable this option.
 
-Email templates are a fast and easy way to send repetitive and recurring email to multiple customers. They can help save you time and give you a way to create consistent, professional, preformatted email messages that you can use when communicating with your customers. You can view, create, and edit any email templates you've created.
+## Enable the enhanced email template editor across all apps
 
-When creating a template, you have the option to work with a blank or existing template.
+To configure the enhanced email template for apps across the organization, perform the following steps:
 
-   ![Create an email template.](media\email-how-to-create-an-email-template-1a.png "Create an email template")
+1. Go to **Power Apps** instance and select the environment in which you you want to configure the template.
+2. Select **Solutions**.
+3. On the **Solutions** page, select the solution in which you want to configure the template.
+   > [!NOTE]
+   > Don't select the default solution to configure the template.
+4. Select **Add Existing** > **More** > **Setting**.
+5. On the **Add existing Setting Definition** pane, select the **Enable the New Email Template Editor** option and then select **Next**.
+6. Select **Add** on the **Selected Setting Definition**. The **Enable the New Email Template Editor** option is added to your solution. 
+7. Select the **Enable the New Email Template Editor** option. The **Edit Enable the New Email Template Editor** pane appears.
+8. Set the **Setting environment value** option to **Yes** on the **Edit Enable the New Email Template Editor** pane.
+9. Select **Publish All Customizations**.
 
-When you select **New** from the **Email Templates** command bar, a drop-down list appears with options to either **Start with a blank template** or **Start with existing templates**.
+## Disable the enhanced email template for an app
 
-## Start with a blank template
+For an app to display the default email template editor page, you must disable the enhanced email template selection option. To disable the option for a specific app, you must add the app to the Solution in which you've added the the email template editor selection option. Perform the following steps:
 
-Starting with a blank template means that you build and add all the data to the template.
+1. Go to **Power Apps** instance.
+2. Select **Solutions**.
+1. On the **Solutions** page, select the Solution in which you've added the the email template selection option.
+1. Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the app for which you want to disable the enhanced insert email template selection page. The app is added to the solution. 
+1. Select the **Enable the New Email Template Editor** option in the solution.
+1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the selected app is displayed. 
+2. Select **New app value** for the app, and select **No** for the specified app. 
+4. Select **Save** and **Publish All Customizations**.
 
-If you select **Create an email template**, the following is displayed:
+### Example
 
-   ![Start with a blank template option.](media\email-create-an-email-template-1a.png "Start  with a blank template option")
+To disable the enhanced email template editor page in the Customer Service Workspace app, perform the following steps:
 
-Legend 
-   1. **Template name**. Assign your email template a detailed name you want to save for future use.
-   2. **Permission level**. You can share the template you create with your **Organization** or as  **Individual** for personal use.
-   3. **Category**. The default for this field is set to **User**. Categories determine which dynamic text fields are available for use in your template.
-   4. **Language**. You can display your installed language packs in this field. **Language** also helps to categorize your templates. 
-   5. **Create**. Once an email is formatted, you can create it into a template.
-   
-### New Customer Template overview
+1. Select the Solution where you've enabled the **Enable the New Email Template Editor** option.
+2.  Add the Customer Service Workspace app to the Solution. Go to **Add Existing** > **App** > **Model-driven app**>**Add existing model-driven apps** and select the Customer Service Workspace app.
+3.  Select the **Enable the New Email Template Editor** option. 
+4.  On the **EEnable the New Email Template Editor** pane, the Customer Service Workspace option is displayed. 
+5.  Select **New app value** and then select **No**. 
+Once you publish the customizations, the Customer Service Workspace app displays the default email template editor page.
 
-If you select **New Customer Template**, the Email Template page appears. 
 
-   ![Create a new email template.](media\new_template_builder.png "Start  with a blank template option")
+### See also
 
-You can do the following:
+[How to create an email template  in model-driven apps](email-template-create.md)  
+[Customize an email template using the template editor](cs-template-options.md)
 
-- On the **Template** tab, specify the template details and the subject line.
-- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
-- On the **Attachments** tab, include attachments to your template.
 
-## Start with existing templates
-
-Starting with an existing template means the template is automatically pre-populated with the pre-established data that you can customize. 
-
-#### Create a new email template overview
-
-The following **Create a new email template** screen appears, which allows you to customize your template
-
-  ![Start with existing templates.](media\email-start-with-existing-templates-1a.png "Start with existing templates")
-
-   Legend
-   1. **Search**. Allows you to search for templates. Search does not support regular expressions and it works on the template name only.
-   2. **Browse**. Allows you to browse through out-of-the-box email templates. A list of available out-of-the-box email templates (global and entity specific) will display in alphabetical order. Global templates are shown as the type User. If you've created a custom email template, it will also be displayed here. 
-   3. **Details**. Allows you to preview the email template.  When you select an email template, you can preview the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the template content as needed.
-   3. **Select**. Allows you to insert the template content into your email.
-
-      > [!Important] 
-      > When you begin working in the new environment, do not edit your templates in the old legacy web client; otherwise you will lose your inline images and strip out some of the advanced formatting and functionality.
-
-### Work with existing templates
-
-When you select an existing template, the following display appears:
-
-   ![Creating email template copies.](media\email-template-copy-1a.png "Creating email template copies")
-
-You can do the following:
-
-- On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
-- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
-- On the **Attachments** tab, include attachments to your template.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

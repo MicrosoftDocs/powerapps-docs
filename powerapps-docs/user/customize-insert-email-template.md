@@ -1,6 +1,6 @@
 ---
-title: "Configure the enhanced insert email template selection window | MicrosoftDocs"
-description: "Configure the email template selection window at the org level or app."
+title: "Configure the enhanced email editor page | MicrosoftDocs"
+description: "Configure the email template editor page at the org level or app."
 ms.custom: ""
 author: gandhamm
 manager: shujoshi
