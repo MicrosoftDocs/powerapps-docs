@@ -86,7 +86,7 @@ Graphical user interface application Description automatically generated
 | Photos               | The photos captured during the mixed reality session.<br>Note: You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md).                                                                                                                                                                                | Not Applicable | Not Applicable (Output property only) |                   
 | OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results.                                                                                                                                                           | Defined Action | Advanced                              |
 | OnChange             | Behavior that is triggered when any property on the button is changed.                                                                                                                                                                | Defined Action | Advanced                              |
-|                      |                                                                                                                                                                                                                                       |                |                                       |
+
 
 ## Additional properties
 
