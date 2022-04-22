@@ -2,7 +2,7 @@
 title: "Create a Custom API in Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 04/19/2022
 ms.reviewer: "jdaly"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -71,7 +71,7 @@ For example, if your Custom API Unique name is `sample_CustomAPIExample`, it wil
 
 ## Observe the result in the service document
 
-If you haven't set the `IsPrivate` property for your Custom API, you can now retrieve the service definition from the [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) using a GET request, even from your browser. If the url for your environment is `https://yourorg.crm.dynamics.com`, you can type this URL in your browser address field to retrieve the $metadata: `https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata`.
+If you haven't set the `IsPrivate` property for your Custom API, you can now retrieve the service definition from the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) using a `GET` request, even from your browser. If the url for your environment is `https://yourorg.crm.dynamics.com`, you can type this URL in your browser address field to retrieve the $metadata: `https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata`.
 
 Search the result to find the name of the Custom API. For example, the API defined using the steps above looks like this:
 

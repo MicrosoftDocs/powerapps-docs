@@ -1,0 +1,1 @@
+This method will be called when any value in the property bag has changed. This includes field values, datasets, global values such as container height and width, offline status, component metadata values such as label, visible, etc.
