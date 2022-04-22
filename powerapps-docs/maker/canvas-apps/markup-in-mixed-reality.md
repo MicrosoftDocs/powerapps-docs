@@ -18,7 +18,7 @@ contributors:
 ---
 
 
-#Annotate in mixed reality
+# Annotate in mixed reality
 
 You can use the **Markup in MR** component in your app to allow users to give
 guidance in their environment. Place arrows, add drawings, and take photos of
@@ -214,8 +214,8 @@ container (or the screen if there's no parent container).
 The distance between the top edge of a control and the top edge of the parent
 container (or the screen if there's no parent container).
 
-Output properties
------------------
+## Output properties
+
 
 | **Property** | **Description**                                                                                                                                                                                                                                 | **Type**       |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
