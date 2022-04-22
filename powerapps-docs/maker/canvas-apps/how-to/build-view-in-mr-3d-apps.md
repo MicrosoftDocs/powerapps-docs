@@ -238,7 +238,7 @@ Since the gallery contains several objects in 3D, swipe down on the screen to se
 ### See also
 
 - [3D object control](../mixed-reality-component-view-3d.md)
-- [Measure in MR control](../mixed-reality-component-measure-distance.md)
+- [Measuring Camera control](../mixed-reality-component-measure-distance.md)
 - [View shape in MR control](../mixed-reality-component-view-shape.md) 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
