@@ -20,64 +20,54 @@ contributors:
 
 # Annotate in mixed reality
 
-You can use the **Markup in MR** component in your app to allow users to give
-guidance in their environment. Place arrows, add drawings, and take photos of
-your markup.
+Use the **Markup in MR** component in your app to allow users to use annotations to visually specify an area or a particular asset in their environment. 
+Users can instantly place mixed-reality annotations such as arrows, add drawings, and then take photos of the marked up object.
 
-The component creates a button in your app. When app users click the button, it
-shows a live camera feed of the device. App users can then identify points of
-interest to begin inking or adding arrows directly on the object. Ink and arrows
-will scale appropriately depending on the distance from the objects.
+The **Markup in MR** component creates a **Markup in MR** button in your mixed reality app. When a users selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
 
-When the user exits the component, if media was taken, it can be found in the
-Photo properties.
+Ink and arrows will scale appropriately depending on the distance from the objects. When you exit the **Markup in MR** screen any photo or video that was taken is saved in your devices photo library.
 
-Tip: The mixed-reality (MR) controls work best in well-lit environments.
+> [!TIP]
+> The mixed-reality (MR) controls work best in well-lit environments.
 
-## How it works
+## Use Markup in MR
 
+When a user selects the **Markup in MR** button, they will be prompted to move their phone side-to-side for better object or area detection. Once an object or area is  detected the user are start using the markup toolbar.
 
-Once the user presses the Markup in MR button, they will be prompted to move
-their phone side-to-side for better object or area detection.
-
-After an object or area has been detected the user may make use of the markup
-toolbar.
-
-## Adding an arrow
-
+### Add an arrow
 
 To position the arrow:
 
--   Make sure the arrow is selected in the markup toolbar.
+- Make sure the arrow is selected in the markup toolbar.
 
--   Move your device around to position the dot on the object or area you want
+- Move your device around to position the dot on the object or area you want
     to highlight
 
--   Tap to place the ghost arrow on your device screen
+- Tap to place the ghost arrow on your device screen
 
--   To rotate the arrow, tap and drag the arrow in a circular motion (360
+- To rotate the arrow, tap and drag the arrow in a circular motion (360
     degrees)
 
-## Inking
+### Inking
 
 To determine where you start drawing:
 
--   Make sure the ink pen is selected in the markup toolbar.
+- Make sure the ink pen is selected in the markup toolbar.
 
--   Tap and drag on the screen to start drawing
+- Tap and drag on the screen to start drawing
 
-## Use the component 
-Insert the component into your app as you normally would for any other button
-component.
+## Add the  **Markup in MR** component 
+
+Insert the component into your app as you normally would for any other button component.
 
 With an app open for editing in [Power Apps
 Studio](https://create.powerapps.com/):
 
-1.  Open the **Insert** tab.
+1. Open the **Insert** tab.
 
-2.  Expand **Mixed reality**.
+2. Expand **Mixed reality**.
 
-3.  Select the component **Markup in MR** to place it in the center of the app
+3. Select the component **Markup in MR** to place it in the center of the app
     screen or drag and drop it to position it anywhere on the screen.
 
 ![Graphical user interface application Description automatically generated](media/9495a778f7a7b2aba295d133851a02f0.png)
@@ -88,9 +78,7 @@ You can modify the component with several properties.
 
 ## Properties
 
-
-Note that some properties are only available under **More options** in
-the **Advanced** tab on the **Markup in MR** pane.
+Note that some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
 
 ![Graphical user interface application Description automatically generated](media/982999e4dee35318b0d22c09268faf1f.png)
 
@@ -105,7 +93,6 @@ Graphical user interface application Description automatically generated
 |                      |                                                                                                                                                                                                                                       |                |                                       |
 
 ## Additional properties
-
 
 [BorderColor](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border) –
 The color of a control's border.
