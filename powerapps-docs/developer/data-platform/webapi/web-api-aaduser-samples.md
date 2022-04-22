@@ -1,5 +1,5 @@
 ---
-title: "AADUser table samples (Microsoft Dataverse)| Microsoft Docs"
+title: "AADUser table request examples (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to send HTTP requests for common AAD user table operations using the Microsoft Dataverse Web API."
 ms.date: 04/22/2022
 author: nhelgren
@@ -13,7 +13,7 @@ search.app:
   - D365CE
 ---
 
-# AADUser table samples
+# AADUser table request examples
 
 This article contains HTTP request examples for accessing data from the AADUser table.
 
@@ -24,7 +24,7 @@ The following example demonstrate retrieving data from the AADUser table.
 **Retrieve all AADUser table rows**
 
 ```http
-https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers
+https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers  
 ```
 
 **Retrieve AADUser records with surname 'admin'**
@@ -69,7 +69,18 @@ https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers?$filter=start
 https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers?$filter=not startswith(givenname, 'test')
 ```
 
-**Set lookup field value referencing a AADUser record**
+**Retrieve related Account records that referencing an AADUser record**  
+Below, "new_aaduser_account" is the name of the 1:N relationship between AADUser and the Account entity.
+
+```http
+https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers(<user ID>)?$expand=new_aaduser_account($select=accountid,name)
+```
+
+## Referencing an AADUser row
+
+The following example demonstrates referencing an AADUser table row.
+
+**Set lookup field value referencing an AADUser row**  
 In this example "new_testaaduserId" is the ReferencingNavigationPropertyName of the 1:N relationship between AADUser and Account entity.
 
 ```http
@@ -78,13 +89,6 @@ https://[Organization URI].crm.dynamics.com/api/data/v9.0/accounts(<account ID>)
 {
   new_testaaduserId@odata.bind : "/aadusers(user ID)"
 }
-```
-
-**Retrieve related Account records that referencing an AADUser record**
-Below, "new_aaduser_account" is the name of the 1:N relationship between AADUser and the Account entity.
-
-```http
-https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers(<user ID>)?$expand=new_aaduser_account($select=accountid,name)
 ```
 
 ### See also
