@@ -1,5 +1,5 @@
 ---
-title: "Azure Active Directory user (AADuser) table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Azure Active Directory user (AADUser) table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An Azure Active Directory user virtual table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/20/2022
@@ -20,7 +20,7 @@ search.app:
 
 Microsoft Dataverse includes a virtual table named AAD user (aaduser). This virtual table provides a connection to Azure Active Directory (AAD) and returns data about users within your AAD organization. No virtual table configuration is required to use the functionality. This is an online only feature.
 
-## Lookups using AAD user
+## Lookups using AADUser
 
 You can easily add a lookup to this virtual table from within the Power Apps portal.
 
@@ -28,15 +28,16 @@ You can easily add a lookup to this virtual table from within the Power Apps por
 
 ## Permissions
 
-The AAD user table functions using Microsoft Graph. Users in your organization need to be assigned Graph permissions in order to view and use the AAD user virtual table.
+The AADUser table functions using Microsoft Graph. Users in your organization need to be assigned Graph permissions in order to view and use the AADUser virtual table.
 
 ## Allowed operations
 
-Only read and read-multiple operations are possible through the AAD user virtual table.
+Only read and read-multiple operations are possible through the AADUser virtual table.
 
 ### See also
 
-[aaduser table/entity reference](reference/entities/aaduser.md)<br/>
+[aaduser table/entity reference](reference/entities/aaduser.md)  
+[AADUser table request examples](webapi/web-api-aaduser-samples.md)  
 [Security and data access](security-model.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
