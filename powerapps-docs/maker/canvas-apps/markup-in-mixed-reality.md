@@ -39,13 +39,13 @@ To position the arrow:
 
 - Make sure the arrow is selected in the markup toolbar.
 
-- Move your device around to position the dot on the object or area you want
+- Move your device around to position the dot on the object or area you want.
     to highlight
 
-- Tap to place the ghost arrow on your device screen
+- Select to place the ghost arrow on your device screen.
 
-- To rotate the arrow, tap and drag the arrow in a circular motion (360
-    degrees)
+- To rotate the arrow, select and drag the arrow in a circular motion (360
+    degrees).
 
 ### Inking
 
@@ -53,7 +53,7 @@ To determine where you start drawing:
 
 - Make sure the ink pen is selected in the markup toolbar.
 
-- Tap and drag on the screen to start drawing
+- Select and drag on the screen to start drawing.
 
 ## Add the Markup in MR component 
 
@@ -71,7 +71,6 @@ Studio](https://create.powerapps.com/):
    > [!div class="mx-imgBorder"] 
    >![Add the Mark in MR control.](./media/mr-controls/markup-control-add-control-1.png)
 
-Graphical user interface application Description automatically generated
 
 You can modify the component with several properties.
 
@@ -79,7 +78,6 @@ You can modify the component with several properties.
 > Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
 >   ![Markup in MR control properties.](./media/mr-controls/markup-control-properties-2.png)
 
-Graphical user interface application Description automatically generated
 
 | **Property**         | **Description**                                                                                                                                                                                                                       | **Type**       | **Location**                          |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|---------------------------------------|
