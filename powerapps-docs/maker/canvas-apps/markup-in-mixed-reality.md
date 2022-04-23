@@ -55,7 +55,7 @@ To determine where you start drawing:
 
 - Tap and drag on the screen to start drawing
 
-## Add the  **Markup in MR** component 
+## Add the Markup in MR component 
 
 Insert the component into your app as you normally would for any other button component.
 
@@ -88,64 +88,64 @@ Graphical user interface application Description automatically generated
 | OnChange             | Behavior that is triggered when any property on the button is changed.                                                                                                                                                                | Defined Action | Advanced                              |
 
 
-## Additional properties
+### Additional properties
 
 | **Property**                                                                                                             | **Description**                                                                                                                                                                            |
 |--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**BorderColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)         | The color of a control's border.                                                                                                                                                           |
-| [**BorderStyle**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)         | Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.                                                                                                              |
-| [**BorderThickness**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)     | The thickness of a control's border.                                                                                                                                                       |
-| [**Color**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)               | The color of text in a control.                                                                                                                                                            |
-| [**DisplayMode**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-core)                 | Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).                                                                            |
-| [**DisabledBorderColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border) | The color of a control's border if the control's [**DisplayMode**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-core) property is set to **Disabled**. |
-| [**DisabledColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)       | The color of text in a control if its [**DisplayMode**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-core) property is set to **Disabled**.            |
-| [**DisabledFill**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)        | The background color of a control if its [**DisplayMode**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-core) property is set to **Disabled**.         |
-| [**FillColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)           | The background color of a control.                                                                                                                                                         |
-| [**Font**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-text)                        | The name of the family of fonts in which text appears.                                                                                                                                     |
-| [**FontStyle**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-text)                   | The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.                                                                                         |
-| [**FontSize**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-text)                    | The font size of the text that appears on a control.                                                                                                                                       |
-| [**FontWeight**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-text)                  | The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**                                                                                                    |
-| [**Height**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)             | The distance between a control's top and bottom edges.                                                                                                                                     |
-| [**HoverBorderColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)    | The color of a control's border when the user keeps the mouse pointer on that control.                                                                                                     |
-| [**HoverColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)          | The color of the text in a control when the user keeps the mouse pointer on it.                                                                                                            |
-| [**HoverFill**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)           | The background color of a control when the user keeps the mouse pointer on it.                                                                                                             |
-| [**PaddingBottom**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)      | The distance between text in a control and the bottom edge of that control.                                                                                                                |
-| [**PaddingLeft**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)        | The distance between text in a control and the left edge of that control.                                                                                                                  |
-| [**PaddingRight**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)       | The distance between text in a control and the right edge of that control.                                                                                                                 |
-| [**PaddingTop**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)         | The distance between text in a control and the top edge of that control.                                                                                                                   |
-| [**PressedBorderColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)  | The color of a control's border when the user taps or clicks that control.                                                                                                                 |
-| [**PressedColor**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)        | The color of text in a control when the user taps or clicks that control.                                                                                                                  |
-| [**PressedFill**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-color-border)         | The background color of a control when the user taps or clicks that control.                                                                                                               |
-| [**TabIndex**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-accessibility)           | Keyboard navigation order.                                                                                                                                                                 |
-| [**TextAlignment**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-text)               | The alignment of the text: **Center**, **Left**, **Right**, or **Justify**                                                                                                                 |
-| [**Tooltip**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-core)                     | Explanatory text that appears when the user hovers over a control.                                                                                                                         |
-| [**VerticalAlign**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-text)               | The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**                                                                   |
-| [**Visible**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-core)                     | Whether a control appears or is hidden.                                                                                                                                                    |
-| [**Width**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)              | The distance between a control's left and right edges.                                                                                                                                     |
-| [**X**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)                  | The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).                                                  |
-| [**Y**](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/properties-size-location)                  | The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).                                                    |
+| [**BorderColor**](./controls/properties-color-border.md)         | The color of a control's border.                                                                                                                                                           |
+| [**BorderStyle**](./controls/properties-color-border.md)         | Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.                                                                                                              |
+| [**BorderThickness**](./controls/properties-color-border.md)     | The thickness of a control's border.                                                                                                                                                       |
+| [**Color**](./controls/properties-color-border.md)               | The color of text in a control.                                                                                                                                                            |
+| [**DisplayMode**](./controls/properties-core.md)                 | Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).                                                                            |
+| [**DisabledBorderColor**](./controls/properties-color-border.md) | The color of a control's border if the control's [**DisplayMode**](./controls/properties-core) property is set to **Disabled**. |
+| [**DisabledColor**](./controls/properties-color-border.md)       | The color of text in a control if its [**DisplayMode**](./controls/properties-core) property is set to **Disabled**.            |
+| [**DisabledFill**](./controls/properties-color-border.md)        | The background color of a control if its [**DisplayMode**](./controls/properties-core) property is set to **Disabled**.         |
+| [**FillColor**](./controls/properties-color-border.md)           | The background color of a control.                                                                                                                                                         |
+| [**Font**](./canvas-apps/controls/properties-text.md)                        | The name of the family of fonts in which text appears.                                                                                                                                     |
+| [**FontStyle**](./controls/properties-text.md)                   | The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.                                                                                         |
+| [**FontSize**](./controls/properties-text.md)                    | The font size of the text that appears on a control.                                                                                                                                       |
+| [**FontWeight**](./controls/properties-text.md)                  | The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**                                                                                                    |
+| [**Height**](./controls/properties-size-location.md)             | The distance between a control's top and bottom edges.                                                                                                                                     |
+| [**HoverBorderColor**](./controls/properties-color-border.md)    | The color of a control's border when the user keeps the mouse pointer on that control.                                                                                                     |
+| [**HoverColor**](./controls/properties-color-border.md)          | The color of the text in a control when the user keeps the mouse pointer on it.                                                                                                            |
+| [**HoverFill**](./controls/properties-color-border)           | The background color of a control when the user keeps the mouse pointer on it.                                                                                                             |
+| [**PaddingBottom**](./controls/properties-size-location.md)      | The distance between text in a control and the bottom edge of that control.                                                                                                                |
+| [**PaddingLeft**](./controls/properties-size-location.md)        | The distance between text in a control and the left edge of that control.                                                                                                                  |
+| [**PaddingRight**](./controls/properties-size-location.md)       | The distance between text in a control and the right edge of that control.                                                                                                                 |
+| [**PaddingTop**](./controls/properties-size-location.md)         | The distance between text in a control and the top edge of that control.                                                                                                                   |
+| [**PressedBorderColor**](./controls/properties-color-border.md)  | The color of a control's border when the user taps or clicks that control.                                                                                                                 |
+| [**PressedColor**](./controls/properties-color-border.md)        | The color of text in a control when the user taps or clicks that control.                                                                                                                  |
+| [**PressedFill**]./controls/properties-color-border.md)         | The background color of a control when the user taps or clicks that control.                                                                                                               |
+| [**TabIndex**](./controls/properties-accessibility.md)           | Keyboard navigation order.                                                                                                                                                                 |
+| [**TextAlignment**](./controls/properties-text.md)               | The alignment of the text: **Center**, **Left**, **Right**, or **Justify**                                                                                                                 |
+| [**Tooltip**](./controls/properties-core.md)                     | Explanatory text that appears when the user hovers over a control.                                                                                                                         |
+| [**VerticalAlign**](./controls/properties-text.md)               | The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**                                                                   |
+| [**Visible**](./controls/properties-core.md))                     | Whether a control appears or is hidden.                                                                                                                                                    |
+| [**Width**](./controls/properties-size-location.md)              | The distance between a control's left and right edges.                                                                                                                                     |
+| [**X**](./controls/properties-size-location.md)                  | The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).                                                  |
+| [**Y**](./controls/properties-size-location.md)                  | The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).                                                    |
 
 
-## Output properties
+### Output properties
 
 
 | **Property** | **Description**                                                                                                                                                                                                                                 | **Type**       |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
-| Photos       | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-take-upload-photos). | Not applicable |
+| Photos       | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable |
 
 ## Other Mixed Reality Components
 
 
 -   View 3D content with the [View in
-    3D](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-component-view-3d) component.
+    3D](mixed-reality-component-view-3d.md) component.
 
 -   View images and 3D content in the real world with the [View in mixed
-    reality](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-component-view-mr) component.
+    reality](mixed-reality-component-view-mr.md) component.
 
 -   Create and view predefined 3D shapes with the [View shape in mixed
-    reality](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-component-view-shape) component
+    reality](mixed-reality-component-view-shape.md) component
 
 -   Measure distance, area, and volume with the [Measure in mixed
-    reality](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/mixed-reality-component-measure-distance) component.
+    reality](mixed-reality-component-measure-distance.md) component.
 
 
