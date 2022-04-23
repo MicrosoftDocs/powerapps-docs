@@ -49,11 +49,6 @@ sections:
           No. Published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your mobile app. However, we recommend that you wrap your mobile app on a [monthly basis](faq.yml#do-i-need-to-rewrap-my-mobile-app-frequently-).
 
       - question: |
-          How do I distribute my mobile app?
-        answer: |
-          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Managed Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
-
-      - question: |
           What are Primary and Secondary apps in the context of wrap?
         answer: |
           Primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
