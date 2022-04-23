@@ -70,6 +70,7 @@ https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers?$filter=not s
 ```
 
 **Retrieve related Account records that referencing an AADUser record**  
+
 Below, "new_aaduser_account" is the name of the 1:N relationship between AADUser and the Account entity.
 
 ```http
@@ -81,6 +82,7 @@ https://[Organization URI].crm.dynamics.com/api/data/v9.1/aadusers(<user ID>)?$e
 The following example demonstrates referencing an AADUser table row.
 
 **Set lookup field value referencing an AADUser row**  
+
 In this example "new_testaaduserId" is the ReferencingNavigationPropertyName of the 1:N relationship between AADUser and Account entity.
 
 ```http
