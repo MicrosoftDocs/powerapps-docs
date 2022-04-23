@@ -20,9 +20,9 @@ contributors:
 # Annotate in mixed reality
 
 Add the **Markup in MR** component in your app to allow users to use annotations to visually specify an area or a particular asset in their environment. 
-Users can instantly place mixed-reality annotations such as arrows, add drawings, and then take photos of the marked up object.
+Users can instantly place mixed-reality annotations such as arrows, add drawings, and then take photos of the marked-up object.
 
-The **Markup in MR** component creates a **Markup in MR** button in your mixed reality app. When a users selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
+The **Markup in MR** component creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
 
 Ink and arrows will scale appropriately depending on the distance from the objects. When you exit the **Markup in MR** screen any photo or video that was taken is saved in your devices photo library.
 
