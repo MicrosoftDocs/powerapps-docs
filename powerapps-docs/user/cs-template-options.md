@@ -20,7 +20,7 @@ search.app:
 
 # Customize an email template using the template editor
 
-Use the **Editor** tab in the **Email Template** page to create customized email templates per your organization's business requirements. The Editor tab has three sections:
+Use the **Editor** tab in the **Email Template** form to create customized email templates per your organization's business requirements. The **Editor** tab has three sections:
 
 - Design canvas
 - Toolbox
