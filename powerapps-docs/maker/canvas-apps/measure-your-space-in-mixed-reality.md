@@ -55,6 +55,9 @@ canvas app but isn't viewable when you're in the mixed reality experience.
 
 2. Follow the intructions on the screen by moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
 
+![Start ameasurement.](./media/mr-measurement/mr-take-measurement-2.gif)
+
+
 3. Select ![Add button](./media/mr-measurement/add-button-8.png) to start a new measurement. Then follow these steps depending on the type of measurement you're taking:
 
    - **Distance**
