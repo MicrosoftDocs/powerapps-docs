@@ -147,7 +147,7 @@ Navigate( Defaults( Accounts ) )
 
 ## RecordInfo function
 
-Provides information about a [record](../working-with-tables.md#elements-of-a-table) of a [data source](../working-with-data-sources.md).
+Provides information about a [record](../canvas-apps/working-with-tables.md#elements-of-a-table) of a [data source](../canvas-apps/working-with-data-sources.md).
 
 Use **RecordInfo** to obtain information about a particular record of a data source. At this time, only Microsoft Dataverse is supported.
 
@@ -164,9 +164,9 @@ The information available:
 | Return value | Description |
 | --- | --- |
 | *true* | The user has the permission. |
-| *false* | The user doesnt have permission. If the record is *blank* then **RecordInfo** will also return *false*. |
+| *false* | The user doesn't have permission. If the record is *blank* then **RecordInfo** will also return *false*. |
 
-**RecordInfo** takes into account permissions at the data source level too.  For example, if the user has privileges at the record level to modify a record, but the user does not have privileges at the table level, then it will return *false* for **ModifyPermission**.  Use the [**DataSourceInfo**](function-datasourceinfo.md) function to obtain information about the data source as a whole.
+**RecordInfo** takes into account permissions at the data source level too.  For example, if the user has privileges at the record level to modify a record, but the user does not have privileges at the table level, then it will return *false* for **ModifyPermission**.  Use the [DataSourceInfo function](../canvas-apps/functions/function-datasourceinfo.md) to obtain information about the data source as a whole.
 
 ### RecordInfo Syntax
 
@@ -199,9 +199,9 @@ Used for the **Visible** property for the **Main grid** location in this example
 
 Data sources can provide a wealth of information to optimize the user experience.
 
-You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function. The **[Validate](function-validate.md)** function uses this same information.
+You can use [column](../canvas-apps/working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the [Patch function](../canvas-apps/functions/function-patch.md). The [Validate function](../canvas-apps/functions/function-validate.md) uses this same information.
 
-You can use information at the data source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have privileges to edit and create [records](../working-with-tables.md#records).
+You can use information at the data source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have privileges to edit and create [records](../canvas-apps/working-with-tables.md#records).
 
 ### Data-source table information
 
@@ -243,8 +243,8 @@ You can use **DataSourceInfo** to obtain information about a particular column o
 ```powerapps-dot
 DataSourceInfo(Accounts, DataSourceInfo.DeletePermission)
 ```
-Used for the **Visible** property in this example. Checks whether the logged in user has Delete permission for records within the Account table (Determined by the security role(s) the user has). If the user has permission to delete Account records, then **DataSourceInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
 
+Used for the **Visible** property in this example. Checks whether the logged in user has delete privilege for records within the account table (determined by the security roles the user has). If the user has permission to delete account records, then **DataSourceInfo** will return *true* and the command will be visible. Otherwise the command will not be visible to the user.  
 
 ## Confirm function
 
@@ -252,7 +252,7 @@ The `Confirm` function displays a dialog box on top of the current screen. Two b
 
 The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
 
-Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a "best effort" basis. 
+Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a "best effort" basis.
 
 > [!NOTE]
 > The options in the table below aren't currently available with canvas apps.
@@ -276,7 +276,7 @@ Use the `Notify` function to display a banner at the top of the app that doesn't
 **Confirm**( Message [, OptionsRecord ] )
 - `Message` - Required. Message to display to the user.
 - `OptionsRecord` - Optional. Provide advanced options for the dialog. Not all options are available on every platform and are handled on a best effort basis. At this time, in canvas apps, none of these options are supported.
-	
+
 ### Examples
 
 Simple confirmation dialog, asking the user to confirm deletion of a record before it is removed. Unless the user presses the **OK** button, the record will not be deleted.
@@ -396,7 +396,7 @@ The following Power Fx functions are currently not supported with commanding in 
 -Icon
 -MessageSource
 
-### Other unsupported or unuseful areas
+### Other unsupported areas
 
 -Acceleration
 -App
@@ -405,7 +405,7 @@ The following Power Fx functions are currently not supported with commanding in 
 -Environment
 -Host
 -Location
--Layout 
+-Layout
 -ScreenSize
 
 ### See also
@@ -415,4 +415,3 @@ The following Power Fx functions are currently not supported with commanding in 
 [Formula reference](../canvas-apps/formula-reference.md)
 
 [Overview of Power Fx](/power-platform/power-fx/overview)
-

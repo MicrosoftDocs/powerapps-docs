@@ -7,7 +7,6 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 07/26/2021
-
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -86,7 +85,7 @@ Once you are in the app designer, use the command designer to customize your com
 
 Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance.
 
-The first time command designer is opened for an app, you'll see a prompt to either use **JavaScript** only or **Power Fx**. Selecting Power Fx also allows you to use JavaScript if desired. Selecting **Power Fx** in the dialog will create a command component library to store **Power Fx** formulas.
+The first time command designer is opened for an app, a prompt to either use **JavaScript** only or **Power Fx** is displayed. Selecting Power Fx also allows you to use JavaScript if desired. Selecting **Power Fx** in the dialog will create a command component library to store **Power Fx** formulas.
 
 1. [Open the command designer to edit a command bar](#open-the-command-designer-to-edit-a-command-bar), and then select **+ New Command**.
    :::image type="content" source="media/commanddesigner-new.png" alt-text="Create a new command":::
@@ -104,10 +103,9 @@ The first time command designer is opened for an app, you'll see a prompt to eit
    - **Accessibility text (optional)**. Enter the text that will be read by screen readers.
    - **Order number**. The order the command will display in at runtime in relation to other commands within the same command bar.
 
-
 1. Drag and drop the command to the desired location. You can arrange modern commands amongst classic commands.
 1. Select **Save and Publish** to make the command available to app users.
-2. Select **Play** to run the app and test your changes 
+1. Select **Play** to run the app and test your changes 
 
 > [!NOTE]
 > - Publishing Power Fx formulas can take a few minutes to publish the command component library. This background operation may still be in-progress after command designer has completed the request and unlocks the designer. 
