@@ -31,7 +31,10 @@ In this public preview release, we are introducing the virtual connector provide
 
 We will continue to expand and support other tabular connectors as part of this provider in subsequent releases.
 
-To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](/connectors/sql/), [connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/), [connector reference for the SharePoint Online connector](/connectors/sharepointonline).
+To learn more about supported actions and limitations, see:
+- [Connector reference for the SQL Server connector](/connectors/sql/)
+- [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
+- [Connector reference for the SharePoint Online connector](/connectors/sharepointonline).
 
 
 ## Overview
@@ -98,10 +101,7 @@ Creating a virtual table with the virtual connector provider includes the follow
 ### Create the connection
   
 1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
-1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. 
-
-  :::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
-  
+1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. <br />:::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
 1. Select one of the following Virtual Connectors from the list of connections. 
   - SQL Server
   - Microsoft Excel Online (Business)
@@ -111,13 +111,8 @@ Creating a virtual table with the virtual connector provider includes the follow
 # [SQL Server](#tab/sql)
 
 - Select SQL Server Authentication as Authentication Type. 
-- Enter SQL server name, SQL database name, the credentials needed to connect.
-
-:::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
-
-- If you are using an on-premises SQL server also enter the Gateway information and then select **Create**.
-
-:::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
+- Enter SQL server name, SQL database name, the credentials needed to connect.<br />:::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
+- If you are using an on-premises SQL server also enter the Gateway information and then select **Create**.<br />:::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 
@@ -127,17 +122,9 @@ Click **Create**, your current signed-in credentials will be used.
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
-- Select to Connect Directly (Cloud) or Connect Using on Premises Gateway
-
-:::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
-
-- For Direct connection, Sign in to SharePoint
-
-:::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
-
-- For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click **Create**.
-
-:::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
+- Select to Connect Directly (Cloud) or Connect Using on Premises Gateway<br />:::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
+- For Direct connection, Sign in to SharePoint<br />:::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
+- For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click **Create**.<br />:::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
   
@@ -146,9 +133,7 @@ Click **Create**, your current signed-in credentials will be used.
 1. Go to **Solutions**.
 1. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
 1. Select **New** and then select **Connection Reference (preview).**
-1. Enter **Display name**, select the connection you just created for the **Connectors** option and then select the data connection that you have created.
-
-  :::image type="content" source="../media/ve-new-connection-reference.png" alt-text="New connection reference":::
+1. Enter **Display name**, select the connection you just created for the **Connectors** option and then select the data connection that you have created.<br />:::image type="content" source="../media/ve-new-connection-reference.png" alt-text="New connection reference":::
 
 ### Create the Data Source
 
@@ -159,13 +144,12 @@ Now create the Virtual Table data source in Dataverse.
 1. Select **Virtual Entity Data Source**<br />:::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
 1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.:::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::<br />:::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
 1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.<br />:::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
-  # [SQL Server](#tab/sql)
-  Leave the Data Source field empty
-  # [Microsoft Excel Online (Business)](#tab/excel)
-  Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
-  # [Microsoft SharePoint](#tab/sharepoint)
-  Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
-  ---
+- SQL Server
+  - Leave the Data Source field empty
+- Microsoft Excel Online (Business)
+  - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+- Microsoft SharePoint
+  - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
 1. Click **Save**
 
 ### Entity Catalog
