@@ -42,20 +42,20 @@ Defines logic for hiding or showing the button when running the app.
 
 To define visibility logic select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You may now select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
 
- ## Selected property
+## Selected property
 
 |Field  |Type  |Description  |
 |---------|---------|---------|
-|Item     |Record of DataSource         |One of the records selected from the DataSource         |
-|AllItems     |Table of records from the DataSource         |All of the records selected from the DataSource         |
-|State     |Enum    |State of the selected control. Edit (=0), New (=1), View (=2)     |
+|Item     |Record of DataSource         |One of the records selected from the DataSource.         |
+|AllItems     |Table of records from the DataSource         |All of the records selected from the DataSource.        |
+|State     |Enum    |State of the selected control. Edit (=0), New (=1), View (=2)    |
 |Unsaved     |Boolean     |Returns true if Selected or SelectedItems have unsaved changes. Otherwise returns false. Always returns false if AutoSave is set to true (default option) within the command component library.     |
 
 - The **Selected** property is provided by the host of the command.
 - **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
 - If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
 - Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
-- **Item** is always Blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
+- **Item** is always blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
 
 ## AutoSave
 
@@ -228,7 +228,7 @@ You can use **DataSourceInfo** to obtain information about a data source as a wh
 
 ### Data source column information
 
-You can use **DataSourceInfo** to obtain information about a particular column of a data source:  
+You can use **DataSourceInfo** to obtain information about a particular column of a data source.
 
 | Information Argument | Result Type | Description |
 | --- | --- | --- |
@@ -279,7 +279,7 @@ Use the `Notify` function to display a banner at the top of the app that doesn't
 
 ### Examples
 
-Simple confirmation dialog, asking the user to confirm deletion of a record before it is removed. Unless the user presses the **OK** button, the record will not be deleted.
+Simple confirmation dialog, asking the user to confirm deletion of a record before it is removed. Unless the user selects the **OK** button, the record will not be deleted.
 
 ```powerapps-dot
 If( Confirm( "Are you sure?" ), Remove( ThisItem ) )
@@ -353,60 +353,60 @@ The following Power Fx functions are currently not supported with commanding in 
 
 ### Enums not supported
 
--BorderStyle
--Color
--Direction
--DisplayMode
--LayoutMode
--LayoutAlignItems
--AlignInContainer
--LayoutJustifyContent
--LayoutOverflow
--Font
--FontWeight
--ImagePosition
--Layout
--LayoutDirection
--TextPosition
--TextMode
--TextFormat
--VirtualKeyboardMode
--TeamsTheme
--Themes
--PenMode
--RemoveFlags
--ScreenTransition
--Align
--VerticalAlign
--Transition
--Overflow
--MapStyle
--GridStyle
--LabelPosition
--Zoom
--PDFPasswordState
--BarcodeType
--ImageRotation
--FormPattern
--ListItemTemplate
--LoadingSpinner
--Live
--TextRole
--ScreenSize
--Icon
--MessageSource
+- BorderStyle
+- Color
+- Direction
+- DisplayMode
+- LayoutMode
+- LayoutAlignItems
+- AlignInContainer
+- LayoutJustifyContent
+- LayoutOverflow
+- Font
+- FontWeight
+- ImagePosition
+- Layout
+- LayoutDirection
+- TextPosition
+- TextMode
+- TextFormat
+- VirtualKeyboardMode
+- TeamsTheme
+- Themes
+- PenMode
+- RemoveFlags
+- ScreenTransition
+- Align
+- VerticalAlign
+- Transition
+- Overflow
+- MapStyle
+- GridStyle
+- LabelPosition
+- Zoom
+- PDFPasswordState
+- BarcodeType
+- ImageRotation
+- FormPattern
+- ListItemTemplate
+- LoadingSpinner
+- Live
+- TextRole
+- ScreenSize
+- Icon
+- MessageSource
 
 ### Other unsupported areas
 
--Acceleration
--App
--Compass
--Connection
--Environment
--Host
--Location
--Layout
--ScreenSize
+- Acceleration
+- App
+- Compass
+- Connection
+- Environment
+- Host
+- Location
+- Layout
+- ScreenSize
 
 ### See also
 
