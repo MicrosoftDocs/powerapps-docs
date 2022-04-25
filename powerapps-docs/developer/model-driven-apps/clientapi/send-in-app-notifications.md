@@ -6,15 +6,18 @@ ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
 ms.topic: "article"
-author: adrianorth
-ms.author: aorth
+author: HemantGaur
+ms.author: hemantg
 manager: rycu
 search.audienceType: 
   - maker
   - developer
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Send in-app notifications within model-driven apps (preview) 
