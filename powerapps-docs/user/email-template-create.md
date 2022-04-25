@@ -54,8 +54,8 @@ When you select **Create**, one of the following pages appear:
 You can do the following:
 
 - specify the template details and the subject line on the **Template** tab, .
-- On the **Editor** tab, design and customize an email template. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
-- include attachments to your template, on the **Attachments** tab.
+- design and customize an email template on the **Editor** tab. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
+- include attachments to your template on the **Attachments** tab.
 
 ### Default email template editor overview
 
