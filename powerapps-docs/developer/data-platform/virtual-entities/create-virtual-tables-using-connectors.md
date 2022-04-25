@@ -144,12 +144,12 @@ Now create the Virtual Table data source in Dataverse.
 1. Select **Virtual Entity Data Source**<br />:::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
 1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.:::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::<br />:::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
 1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.<br />:::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
-  - SQL Server
-    - Leave the Data Source field empty
-  - Microsoft Excel Online (Business)
-    - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
-  - Microsoft SharePoint
-    - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
+   - SQL Server
+      - Leave the Data Source field empty
+   - Microsoft Excel Online (Business)
+      - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+   - Microsoft SharePoint
+      - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
 1. Click **Save**
 
 ### Entity Catalog
