@@ -105,23 +105,32 @@ More information about Application lifecycle management (ALM) and solutions:
 # [SQL Server](#tab/sql)
 
 - Select SQL Server Authentication as Authentication Type. 
-- Enter SQL server name, SQL database name, the credentials needed to connect
+- Enter SQL server name, SQL database name, the credentials needed to connect.
+
   :::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
-- If you are using an on-premises SQL server also enter the Gateway information and then select Create.
+
+- If you are using an on-premises SQL server also enter the Gateway information and then select **Create**.
+
   :::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 
-Click Create, your current signed-in credentials will be used 
+Click **Create**, your current signed-in credentials will be used.
+
 :::image type="content" source="media/ve-excel-connection.png" alt-text="Connect to Excel":::
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
 - Select to Connect Directly (Cloud) or Connect Using on Premises Gateway
+
   :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
+
 - For Direct connection, Sign in to SharePoint
+
   :::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
-- For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click Create
+
+- For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click **Create**.
+
   :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
@@ -132,6 +141,7 @@ Click Create, your current signed-in credentials will be used
 1. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
 1. Select **New** and then select **Connection Reference (preview).**
 1. Enter **Display name**, select the connection you just created for the **Connectors** option and then select the data connection that you have created.
+
   :::image type="content" source="../media/ve-new-connection-reference.png" alt-text="New connection reference":::
 
 ### Create the Data Source
@@ -139,22 +149,39 @@ Click Create, your current signed-in credentials will be used
 Now create the Virtual Table data source in Dataverse.
 
 1. Select the **Gear icon -> Advanced Settings**
-  :::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::  
+
+  :::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::
+
 1. In the top navigation bar select **Settings** and then **Administration**
+
   :::image type="content" source="media/ve-advanced-settings-system-administration.png" alt-text="Navigate to system administration":::
+
 1. Select **Virtual Entity Data Source**
+
   :::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
-1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider. 
+
+1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.
+
   :::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::
+
   :::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
+
 1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.
+  
   :::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
+
   # [SQL Server](#tab/sql)
+
   Leave the Data Source field empty
+
   # [Microsoft Excel Online (Business)](#tab/excel)
+
   Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+
   # [Microsoft SharePoint](#tab/sharepoint)
+
   Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
+
   ---
 1. Click **Save**
 
@@ -164,21 +191,22 @@ With the connection reference and the virtual table data source setup, an **Enti
   
 :::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
 
-   > [!NOTE] 
-   > - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes. 
-   > - The tables you see in the Entity Catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
+> [!NOTE] 
+> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes. 
+> - The tables you see in the Entity Catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
  
 #### View the Entity Catalog
   
 - Select Data -> Tables and select the entity catalog that was created. Selecting the Data tab will show all available tables or lists.
->- SQL: All tables in the database that are eligible are shown
->- SharePoint: All lists in the site are shown
->- Excel: All tables in the Excel file are shown
-- Select Advanced Find and use the Look for: column. The catalog will include a prefix Entity Catalog for followed by the connection reference (example: Entity Catalog for Adventure Works DB). Find the Entity Catalog for your respective data connection and select the Results button to see all the external data source tables. 
+  - SQL: All tables in the database that are eligible are shown
+  - SharePoint: All lists in the site are shown
+  - Excel: All tables in the Excel file are shown
+- Select **Advanced Find** and use the Look for: column. The catalog will include a prefix Entity Catalog for followed by the connection reference (example: Entity Catalog for Adventure Works DB). Find the Entity Catalog for your respective data connection and select the Results button to see all the external data source tables. 
+
   :::image type="content" source="../media/ve-advance-find-table-catalog.png" alt-text="Advanced find table catalog":::
 
-    >[!Note]
-    > Bulk creation of virtual tables is not supported currently. Even though the Entity Catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
+  >[!Note]
+  > Bulk creation of virtual tables is not supported currently. Even though the Entity Catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
 
 1. **create a virtual table** by clicking the record from the entity catalog. In the provided form set the **Create or Refresh Entity** column to **Yes**.
 1. Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use. 
@@ -189,7 +217,7 @@ With the connection reference and the virtual table data source setup, an **Enti
   Once the virtual table is created, you can either:
   - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.
 
-:::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
+  :::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
   
   - Use **Advanced Find** and select the virtual table to retrieve all the records.
     :::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
@@ -197,8 +225,8 @@ With the connection reference and the virtual table data source setup, an **Enti
     > [!IMPORTANT] 
     > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
     > - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
-  > - All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
-  > - Virtual Tables require there to be at least one string field to use as the Primary Name column.
+    > - All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
+    > - Virtual Tables require there to be at least one string field to use as the Primary Name column.
 
    Review the [SQL Server Connector documentation](/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](/connectors/sql/#power-apps-data-type-mappings).
 
@@ -232,14 +260,20 @@ A representation of the **Service Request** virtual table is shown below. You wi
   1. In the **Lookup Field** section – set the **Display Name** to **Account.**
   1. The **Name** column will automatically populate with the lookup column name.
   1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
+  
     :::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
+
 1. Refer to the columns for the **Service Request** virtual table, and you will notice that the **AccountID** column is not a **Lookup** type. This column can now
 be added to forms and views to see all associated accounts for each of the service request record.
+
   :::image type="content" source="../media/ve-custom-table-columns.png" alt-text="Custom table columns":::
+
 1. With the relationship established you can now create a new service request and pick accounts to associate them to.
+
   :::image type="content" source="../media/ve-new-custom-table.png" alt-text="New custom table":::
-   > [!NOTE]
-   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
+
+  > [!NOTE]
+  > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
 
 #### Tips
 
@@ -257,12 +291,15 @@ be added to forms and views to see all associated accounts for each of the servi
 1. Rollups cannot be calculated for Virtual tables, this is because Rollups are a server side calculation in Dataverse which requires the data to be stored locally.
 
 # [SQL Server](#tab/sql)
+
 1. SQL data type bigint columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created. 
 1. SQL Server tables without primary keys: Any non-string field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple will work, the other operations will fail with the following error message (coming from SQL connector): "APIM request was not successful : BadRequest : No primary key exists in table".
 1. SQL Server tables with a string primary key: The SQL string primary key will be the only option available for the virtual table primary key. The virtual table creation will succeed, but fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID". SQL Server string primary keys are supported only if the values can be parsed as GUID.
 1. SQL Server tables without non-primary key string fields: The primary field list will be empty and the user will not be able to create the virtual table. At least one non-primary key string field is required.
 1. SQL Server Connector Limitations: see [SQL Server connector reference](/connectors/sql/). 
+
 # [Microsoft Excel Online (Business)](#tab/excel)
+
 1. Excel files must be stored on a OneDrive to participate in a Virtual Table connection.
 1. The Primary key can only be a column holding GUID values: Because the Excel table metadata shows all columns as string, our current design assumes that the primary key will always be a GUID represented as a string.
   > [!NOTE]
@@ -271,6 +308,7 @@ be added to forms and views to see all associated accounts for each of the servi
 1. Specific Excel Connector Limitations: [Excel Online (Business) connector reference](connectors/excelonlinebusiness/).
 # [Microsoft SharePoint](#tab/sharepoint)
 You currently cannot select an “All” view for SharePoint columns on a Virtual Table. This is a known bug and is being fixed.
+
 ---
 
 ## Troubleshooting
