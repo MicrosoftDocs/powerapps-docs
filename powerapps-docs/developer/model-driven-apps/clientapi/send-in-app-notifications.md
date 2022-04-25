@@ -135,17 +135,17 @@ In-app notifications uses polling to retrieve notifications periodically when th
 
 ## Notification table
 
-The following are the columns for the notification table.
+The following are the columns for the **Notification** (`appnotification`) table.
 
 |Column display|Column name|Description|
 |---|---|
-|Title|title|The title of the notification.|
-|Owner|ownerid|The user who receives the notification.|
-|Body|body|Details about the notification.|
-|IconType|icontype|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this topic.|
-|Toast Type|toasttype|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this topic.|
-|Expiry (seconds)|ttlinseconds|The number of seconds from when the notification should be deleted if not already dismissed.|
-|Data|data|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
+|Title|`title`|The title of the notification.|
+|Owner|`ownerid`|The user who receives the notification.|
+|Body|`body`|Details about the notification.|
+|IconType|`icontype`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this topic.|
+|Toast Type|`toasttype`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this topic.|
+|Expiry (seconds)|`ttlinseconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
+|Data|`data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
 
   > [!IMPORTANT]
   > - The `appmoduleid` field is not used and should not be set on the appnotification entity.
@@ -156,8 +156,8 @@ You can change in-app notification behavior by setting **Toast Type** to one of 
 
 |Toast Type|Behavior|Value|
 |---|---|---|
-|Timed|The notification appears for a brief duration (the default is four seconds) and then disappears.|200000000|
-|Hidden|The notification appears only in the notification center and not as a toast notification.|200000001|
+|Timed|The notification appears for a brief duration (the default is four seconds) and then disappears.|`200000000`|
+|Hidden|The notification appears only in the notification center and not as a toast notification.|`200000001`|
 
 ### Changing the notification icon
 
@@ -165,12 +165,12 @@ You can change the in-app notification icon by setting **Icon Type** to one of t
 
 |Icon Type|Value|Image|
 |---|---|---|
-|Info|100000000|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
-|Success|100000001|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
-|Failure|100000002|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
-|Warning|100000003|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
-|Mention|100000004|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
-|Custom|100000005||
+|Info|`100000000`|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
+|Success|`100000001`|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
+|Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
+|Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
+|Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
+|Custom|`100000005`||
 
 
 
@@ -194,9 +194,9 @@ You can control where a navigation link opens by setting the `navigationTarget` 
 
 |Navigation target|Behavior|Example|
 |----------|-----------|-----------|
-|dialog|Opens in the center dialog.|`"navigationTarget": "dialog"` |
-|inline|Default. Opens in the current page.|`"navigationTarget": "inline"` |
-|newWindow|Opens in a new browser tab.|`"navigationTarget": "newWindow"` |
+|`dialog`|Opens in the center dialog.|`"navigationTarget": "dialog"` |
+|`inline`|Default. Opens in the current page.|`"navigationTarget": "inline"` |
+|`newWindow`|Opens in a new browser tab.|`"navigationTarget": "newWindow"` |
 
 ### Managing security for notifications
 
@@ -467,5 +467,5 @@ The Power Apps Notification connector is for push notifications, which are separ
 - [createRecord (Client API reference)](reference/xrm-webapi/createrecord.md)
 - [In-app notifications in model-driven apps](/powerapps/user/notifications)
 - [appnotification EntityType](/power-apps/developer/data-platform/webapi/reference/appnotification)
-- [appnotification table/entity reference](../../data-platform/reference/entities/appnotification.md)
+- [Notification (appnotification) table/entity reference](../../data-platform/reference/entities/appnotification.md)
 
