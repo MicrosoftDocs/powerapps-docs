@@ -25,19 +25,21 @@ Virtual tables enable integrating data from external data sources by seamlessly 
 In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
 
 In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the following connectors:
-- [SQL Server](/connectors/sql) 
-- Microsoft Excel Online ([Business](connectors/excelonlinebusiness))
-- [Microsoft SharePoint](connectors/sharepointonline)
+- [SQL Server](/connectors/sql/) 
+- Microsoft Excel Online ([Business](/connectors/excelonlinebusiness/))
+- [Microsoft SharePoint](/connectors/sharepointonline/)
 
 We will continue to expand and support other tabular connectors as part of this provider in subsequent releases.
 
-To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](/connectors/sql/), [connector reference for the Microsoft Excel Online Business connector](connectors/excelonlinebusiness/), [connector reference for the SharePoint Online connector](connectors/sharepointonline).
+To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](/connectors/sql/), [connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/), [connector reference for the SharePoint Online connector](/connectors/sharepointonline).
 
 
 ## Overview
 
 Virtual Tables include the following components:
+
 :::image type="content" source="media/ve-components.png" alt-text="Virtual table components":::
+
 - Data Source – the location where the external data is stored
 - Data Provider – defines the behavior of the virtual table
 - Connection – this sets up the ability to connect to the data source/ Authentication
@@ -49,8 +51,7 @@ The **Entity Catalog** does not persist any information and always represents th
 
 The underlying data source is key for allowing the provider to establish an authenticated remote connection to the external data. It uses a connection reference that stores pertinent details regarding the external source. The information stored in the connection reference is specific to the connector type and the connection it refers to. 
 
-> [!div class="mx-imgBorder"]
-> ![Virtual connectors provider overview](../media/ve-connector-provider-overview.png "Virtual connectors provider overview")
+:::image type="content" source="../media/ve-connector-provider-overview.png" alt-text="Virtual connectors provider overview":::
 
 For example, setting up the **SQL Server** connector needs server name, database name, the authentication method, username, password, and (optionally) gateway connection details. Each external data source needs a new connection reference defined to create an instance of its **Entity Catalog**.
 
@@ -61,12 +62,19 @@ Application lifecycle management (ALM) is supported for virtual tables created u
 More information about Application lifecycle management (ALM) and solutions:
 
 - [Application lifecycle management (ALM) in Microsoft Power Platform](/power-platform/alm/)
-
 - [Solutions overview](/powerapps/maker/data-platform/solutions-overview)
 
 ## Create a virtual table with the virtual connector provider
 
-<!-- TODO Need to introduce the subsections below -->
+Creating a virtual table with the virtual connector provider includes the following steps:
+
+1. [Download and install the Virtual connector](#download-and-install-the-virtual-connector)
+1. [Create the connection](#create-the-connection)
+1. [Create the Connection Reference](#create-the-connection-reference)
+1. [Create the Data Source](#create-the-data-source)
+1. [Entity Catalog](#entity-catalog)
+1. [Setting up virtual table relationship](#setting-up-virtual-table-relationship)
+
 
 ### Download and install the Virtual connector
 
@@ -90,7 +98,6 @@ More information about Application lifecycle management (ALM) and solutions:
 ### Create the connection
   
 1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
-  
 1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. 
 
   :::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
@@ -98,8 +105,7 @@ More information about Application lifecycle management (ALM) and solutions:
 1. Select one of the following Virtual Connectors from the list of connections. 
   - SQL Server
   - Microsoft Excel Online (Business)
-  - Microsoft SharePoint
-  
+  - Microsoft SharePoint  
 1. You will be asked to provide additional details to connect to the data source. 
 
 # [SQL Server](#tab/sql)
@@ -107,11 +113,11 @@ More information about Application lifecycle management (ALM) and solutions:
 - Select SQL Server Authentication as Authentication Type. 
 - Enter SQL server name, SQL database name, the credentials needed to connect.
 
-  :::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
+:::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
 
 - If you are using an on-premises SQL server also enter the Gateway information and then select **Create**.
 
-  :::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
+:::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 
@@ -123,15 +129,15 @@ Click **Create**, your current signed-in credentials will be used.
 
 - Select to Connect Directly (Cloud) or Connect Using on Premises Gateway
 
-  :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
+:::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
 - For Direct connection, Sign in to SharePoint
 
-  :::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
+:::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
 
 - For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click **Create**.
 
-  :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
+:::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
   
@@ -148,47 +154,24 @@ Click **Create**, your current signed-in credentials will be used.
 
 Now create the Virtual Table data source in Dataverse.
 
-1. Select the **Gear icon -> Advanced Settings**
-
-  :::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::
-
-1. In the top navigation bar select **Settings** and then **Administration**
-
-  :::image type="content" source="media/ve-advanced-settings-system-administration.png" alt-text="Navigate to system administration":::
-
-1. Select **Virtual Entity Data Source**
-
-  :::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
-
-1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.
-
-  :::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::
-
-  :::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
-
-1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.
-  
-  :::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
-
+1. Select the **Gear icon -> Advanced Settings**<br />:::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::
+1. In the top navigation bar select **Settings** and then **Administration**<br />:::image type="content" source="media/ve-advanced-settings-system-administration.png" alt-text="Navigate to system administration":::
+1. Select **Virtual Entity Data Source**<br />:::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
+1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.:::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::<br />:::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
+1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.<br />:::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
   # [SQL Server](#tab/sql)
-
   Leave the Data Source field empty
-
   # [Microsoft Excel Online (Business)](#tab/excel)
-
   Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
-
   # [Microsoft SharePoint](#tab/sharepoint)
-
   Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
-
   ---
 1. Click **Save**
 
 ### Entity Catalog
 
 With the connection reference and the virtual table data source setup, an **Entity Catalog** is automatically generated. The **Entity Catalog** is specific to the data source and will list all the tables that are in the respective data source.
-  
+
 :::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
 
 > [!NOTE] 
@@ -197,7 +180,7 @@ With the connection reference and the virtual table data source setup, an **Enti
  
 #### View the Entity Catalog
   
-- Select Data -> Tables and select the entity catalog that was created. Selecting the Data tab will show all available tables or lists.
+- Select **Data** -> **Tables** and select the entity catalog that was created. Selecting the Data tab will show all available tables or lists.
   - SQL: All tables in the database that are eligible are shown
   - SharePoint: All lists in the site are shown
   - Excel: All tables in the Excel file are shown
@@ -208,7 +191,7 @@ With the connection reference and the virtual table data source setup, an **Enti
   >[!Note]
   > Bulk creation of virtual tables is not supported currently. Even though the Entity Catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
 
-1. **create a virtual table** by clicking the record from the entity catalog. In the provided form set the **Create or Refresh Entity** column to **Yes**.
+1. **Create a virtual table** by clicking the record from the entity catalog. In the provided form set the **Create or Refresh Entity** column to **Yes**.
 1. Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use. 
 
 :::image type="content" source="media/ve-select-primary-key-primary-field.png" alt-text="Select the primary key and primary field":::   
@@ -217,7 +200,7 @@ With the connection reference and the virtual table data source setup, an **Enti
   Once the virtual table is created, you can either:
   - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.
 
-  :::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
+:::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
   
   - Use **Advanced Find** and select the virtual table to retrieve all the records.
     :::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
@@ -259,18 +242,10 @@ A representation of the **Service Request** virtual table is shown below. You wi
   1. Optionally, if you want to edit the name of the relationship, you can do so in the **Name** column.
   1. In the **Lookup Field** section – set the **Display Name** to **Account.**
   1. The **Name** column will automatically populate with the lookup column name.
-  1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
-  
-    :::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
-
+  1. Set the **External Name** value to **AccountId** (matching the column name in your source table).<br/>:::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
 1. Refer to the columns for the **Service Request** virtual table, and you will notice that the **AccountID** column is not a **Lookup** type. This column can now
-be added to forms and views to see all associated accounts for each of the service request record.
-
-  :::image type="content" source="../media/ve-custom-table-columns.png" alt-text="Custom table columns":::
-
-1. With the relationship established you can now create a new service request and pick accounts to associate them to.
-
-  :::image type="content" source="../media/ve-new-custom-table.png" alt-text="New custom table":::
+be added to forms and views to see all associated accounts for each of the service request record.<br />:::image type="content" source="../media/ve-custom-table-columns.png" alt-text="Custom table columns":::
+1. With the relationship established you can now create a new service request and pick accounts to associate them to.<br />:::image type="content" source="../media/ve-new-custom-table.png" alt-text="New custom table":::
 
   > [!NOTE]
   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
@@ -283,6 +258,8 @@ be added to forms and views to see all associated accounts for each of the servi
 
 
 ## Known limitations
+
+The following is a list of known limitations for virtual tables created using the viertual connector provider.
 
 ### General
 1. Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
@@ -305,7 +282,7 @@ be added to forms and views to see all associated accounts for each of the servi
   > [!NOTE]
   > No validation is performed when the virtual entity is created, if a non-GUID column is selected, the entity will fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID".
 1. Support for PowerAppsId__ auto-generated column: The _PowerAppsId_ auto-generated column will be used if found (it will be the only option available for Primary key). Providing a value for PowerAppsId is required at record creation even if the value will actually be overwritten by an automatically generated one. This doesn't happen if the primary key column is not the PowerAppsId auto-generated column.
-1. Specific Excel Connector Limitations: [Excel Online (Business) connector reference](connectors/excelonlinebusiness/).
+1. Specific Excel Connector Limitations: [Excel Online (Business) connector reference](/connectors/excelonlinebusiness/).
 # [Microsoft SharePoint](#tab/sharepoint)
 You currently cannot select an “All” view for SharePoint columns on a Virtual Table. This is a known bug and is being fixed.
 
@@ -313,16 +290,14 @@ You currently cannot select an “All” view for SharePoint columns on a Virtua
 
 ## Troubleshooting
 
-1. You are seeing only one (1) record in your virtual table even though you have more in your source table.
+1. You are seeing only one (1) record in your virtual table even though you have more in your source table.<br />
   **Solution:** Check your source table and make sure it has primary key defined.
   
-1. I created a virtual table but I can't see it in "Tables".
+1. I created a virtual table but I can't see it in "Tables".<br />
   **Solution**: Since the virtual table creation is asynchronous, you can check the status of the process in "System Jobs". Look for system jobs with a Name starting Microsoft.Wrm.DataProvider.Connector.Plugins.ConnectorGenerateVEPlugin and a "Regarding" column's value equal to the name of the new virtual table. If status is still In Progress, just wait for the job to complete. If there is an error, you can get details by clicking the system, job name hyperlink.
-  In this example, table creation is still pending:
-  :::image type="content" source="media/ve-table-creation-pending.png" alt-text="table creation pending":::
-  Here, table creation failed due to 429 "Too Many Requests" error:
-  :::image type="content" source="media/ve-table-creation-failed-429-error.png" alt-text="table creation failed due to 429 error":::
-1. Table creation's system job succeeded but I am getting runtime errors related to invalid or missing columns
+  In this example, table creation is still pending:<br />:::image type="content" source="media/ve-table-creation-pending.png" alt-text="table creation pending":::
+  Here, table creation failed due to 429 "Too Many Requests" error:<br />:::image type="content" source="media/ve-table-creation-failed-429-error.png" alt-text="table creation failed due to 429 error":::
+1. Table creation's system job succeeded but I am getting runtime errors related to invalid or missing columns<br />
   **Solution**: If a failure occurs while creating a table's field, the table creation process will not fail and try to continue with the remaining fields. This is because we don't want to block the virtual table creation when some column types are unsupported. To get details on the error, you can enable logging in Administration > System Settings > Customizations > Enable logging to plug-in trace log, then delete the virtual table and try to create it again.
 
 ### See also
