@@ -36,6 +36,9 @@ You'll need the following information to get started:
 
 ## Generate keys
 
+> [!NOTE]
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
+
 We'll use [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) from Java SDK to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
 To generate a key, open a command prompt and run the following command:
@@ -61,6 +64,9 @@ Example:
 
 ## Generate signature hash
 
+> [!NOTE]
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
+
 After generating the key, we'll use the **exportcert** command in **keytool** to export the keystore certificate.
 
 `keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64`
@@ -76,7 +82,7 @@ Add the generated signature has in the **Redirect URI** while [registering the a
 
 ## Sign the APK package
 
-The next step is to sign the APK package using **apksigner** tool. The [apksigner tool](https://developer.android.com/studio/command-line/apksigner) allows you to sign APKs and ensure that the APK package signature will be verified successfully on all Android platforms supported by the APKs.
+To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature will be verified successfully on all Android platforms supported by the APKs.
 
 ### Find your apksigner
 
