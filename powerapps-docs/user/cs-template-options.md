@@ -28,7 +28,7 @@ Use the **Editor** tab in the **Email Template** form to create customized email
  
 ![Enhanced Email Template.](media\email_designer_callout.png "Enhanced Template")
 
-## Create an email template
+## Create an email template 
 
 - In the main part of the page, on the design canvas, you can drag, arrange, delete, and enter content. By default, an empty single one-column section (layout) element appears.
 You can perform the following actions:
@@ -38,8 +38,8 @@ You can perform the following actions:
 
       ![Design options.](media\email_dsgn_options.png "Enhanced Template")
 
-- From the **Layout section types** section, choose the basic layout of your email template and add it to the design canvas. The **Edit layout** flyout appears. You can change the columns in the layout, spacing, style, add a background color, and add a background image. You can also customize the number of columns you need in your layout and the width of each column in this panel. 
-On the design canvas, to change the appearance of a column, select the column. The **Edit column** flyout appears. You can change the spacing, style, and add background colors or images for the column. 
+- From the **Layout section types** section, choose the basic layout of your email template and add it to the design canvas. On the **Edit layout** flyout, you can change the spacing, style, background color, and image of the layout. You can also customize the number of columns you need in your layout and the width of each column in this panel. 
+On the design canvas, to change the appearance of a column, select a column. On the **Edit column** flyout, you can change the spacing, style, background colors or images for the column. 
 
 - The Toolbox section provides design elements that you'll use to construct your message. The following elements are available:
 
@@ -47,11 +47,11 @@ On the design canvas, to change the appearance of a column, select the column. T
           - Enter the content of the email or insert dynamic text. 
           - Use the options in the toolbar to further format the content.
           
-    - Image: To add an image to your template, select the image and add it to the design canvas. When you add the image element, you'll see an image placeholder and the **Edit Image**, which shows configuration settings for the selected element. You can perform the following actions:
+    - Image: To add an image to your template, select the image element and add it to the design canvas. An image placeholder appears on the canvas. On the **Edit Image** flyout, you can perform the following actions:
           - Upload an image or specify an image URL. 
           - Modify the image size and alignment.
           
-    - Button: To add a button to the template, select the Button element and add it to the design canvas. When you add the button element, The **Edit Button** panel appears. You can perform the following actions:
+    - Button: To add a button to the template, select the button element and add it to the design canvas. On The **Edit Button** flyout, you can perform the following actions:
           - Link to which a user must be redirected to when the button is clicked
           - Change the text, font, color, and appearance of the button. 
           
