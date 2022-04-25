@@ -124,15 +124,7 @@ appnotification appNotification = new appnotification() {
 
 Guid appNotificationId = svc.Create(appNotification);
 ```
-
 ---
-
-
-
-
-
-
-
 
 ## Notification polling
 
