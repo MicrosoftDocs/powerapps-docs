@@ -19,17 +19,41 @@ contributors:
 # Create virtual tables using the virtual connector provider (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+## In this article
+<<<<These need to be doc links>>>>
+1.	Overview
+2.	Getting started with virtual connector provider
+3.	Create a virtual table using a virtual connector
+4.	Known limitations
+5.	Troubleshooting
+
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions built on Microsoft Power Platform can leverage virtual tables as if they were native Dataverse tables. More information: [Get started with virtual tables](get-started-ve.md).
 
+
+
 In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
 
-To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](/connectors/sql/).
+In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the following connectors:
+> - [SQL Server](/connectors/sql) 
+> - Microsoft Excel Online ([Business](connectors/excelonlinebusiness))
+> - [Microsoft SharePoint](connectors/sharepointonline)
+We will continue to expand and support other tabular connectors as part of this provider in subsequent releases.
+
+
+To learn more about supported actions and limitations, see [connector reference for the SQL Server connector](/connectors/sql/), [connector reference for the Microsoft Excel Online Business connector](connectors/excelonlinebusiness/), [connector reference for the SharePoint Online connector](connectors/sharepointonline).
 
 
 ## Overview
 
-Virtual connector provider extends [connectors](/connectors/connectors) allowing you to create virtual tables in Dataverse. When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically generates an **Entity Catalog** with a list of all the available tables by retrieving table definitions (metadata) from the external data source.
+Virtual Tables include the following components:
+<<<<Insert Image here>>>>
+- Data Source – the location where the external data is stored
+- Data Provider – defines the behavior of the virtual table
+- Connection – this sets up the ability to connect to the data source/ Authentication
+- Connection Reference – this provides a way for Dataverse to use the connection to the data source
+
+Virtual connector provider streamlines the creation experience by automating some of the creation process for you. When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically generates an Entity Catalog with a list of all the available tables by retrieving table definitions (metadata) from the external data source.
 
 The **Entity Catalog** does not persist any information and always represents the external data source’s current state. You can select tables from the **Entity Catalog** to create virtual tables. If you're working with multiple external data sources, an **Entity Catalog** is generated for each external source.
 
@@ -42,9 +66,7 @@ For example, setting up the **SQL Server** connector needs server name, database
 
 The connector permissions enforce the ability for organizational users to access and operate on the virtual table. The connection can be shared with one user or can be shared with entire organization. This allows users to access and operate on virtual tables using a shared connection.
 
-Additionally, you need to create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of the organization. The provider supports the use of **client ID** and **secret** values when setting up the data source. See the [prerequisite](#prerequisites) section below on how to set up a service principal.
-
-Application lifecycle management (ALM) is supported for virtual tables created using the virtual connector provider. Virtual tables should be part of the managed solution along with the connection reference to distribute the solution. The solution can have other components, such as a model-driven app that uses virtual tables. When importing the solution into a new Dataverse environment, the data source should be updated to use a connection reference setup in the respective environment and **client ID** and **secret**.
+Application lifecycle management (ALM) is supported for virtual tables created using the virtual connector provider. Virtual tables should be part of the managed solution along with the connection reference to distribute the solution. The solution can have other components, such as a model-driven app that uses virtual tables. 
 
 More information about Application lifecycle management (ALM) and solutions:
 
@@ -54,34 +76,7 @@ More information about Application lifecycle management (ALM) and solutions:
 
 ## Getting started with virtual connector provider
 
-### Prerequisites
-
-- Create a service principal (Application ID) that will be used to authenticate with the provider. The service principal needs to be created in the tenant of your Dataverse platform. More information: [Creating service principal from Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
-
-- Create a **client secret** value for the registered Application ID. You need this information when you create a data source for the external data as part of setting up the virtual connector. More information: [Create a new application secret](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret) doc for steps on how to create this.
-
-> [!NOTE]
-> You will need the **client secret** when setting up the virtual table. You can copy this value when creating it. You will not be able to go back to the screen to copy the value.
-
-Save the following values from Azure portal. This will help in setting up the Virtual Table Data Source:
-
-1. **Directory (tenant) ID:** A GUID value representing the Dataverse tenant in which you are setting up the virtual table.
-
-2. **Application (client) ID:** A GUID value representing the service principal (application ID) you created.
-
-3. Select **Certificates & secrets** in the left navigation pane and select **New client secret** to create a new secret value.
-
-4. **Client secret Value:** A unique secret value for the client you created.
-
-
-
-> [!div class="mx-imgBorder"]
-> ![Certificates and secrets](../media/ve-creating-certificates-and-secret-values.png "Certificates and secrets")
-
-> [!div class="mx-imgBorder"]
-> ![Client secret value](../media/ve-client-secret-value.png "Client secret value")
-
-## Create a virtual table using SQL Server connector
+### Create a virtual table using SQL Server connector
 
 To create a virtual table using **SQL Server** connector: 
 
@@ -90,66 +85,101 @@ To create a virtual table using **SQL Server** connector:
    > [!div class="mx-imgBorder"]
    > ![Virtual connectors in Dataverse](../media/ve-virtual-connectors-provider.png "Virtual connectors in Dataverse")
 
-1. Select **Get it now**. In the sign-in dialog, enter work or school account email. Agree the terms and conditions and then select **Continue**. The Power Platform Admin Center will open automatically.
+2. Select **Get it now**. In the sign-in dialog, enter work or school account email. Agree the terms and conditions and then select **Continue**. The Power Platform Admin Center will open automatically.
 
-1. Select the environment where you want to install the solution. Agree the terms and conditions and then select **Install**. Once the installation is complete, you will see the **Virtual connectors in Dataverse** app installed under **Environments -> [your environment name] -> Dynamics 365 apps**.
+3. Select the environment where you want to install the solution. Agree the terms and conditions and then select **Install**. Once the installation is complete, you will see the **Virtual connectors in Dataverse** app installed under **Environments -> [your environment name] -> Dynamics 365 apps**.
 
    > [!div class="mx-imgBorder"]
    > ![Select environment to install connector](../media/ve-select-the-environment.png "Select environment to install connector")
 
-1. You should also see the **Virtual Connector Provider** solution and other solutions enabled in the Power Apps environment.
+4. You should also see the **Virtual Connector Provider** solution and other solutions enabled in the Power Apps environment.
 
     > [!div class="mx-imgBorder"]
     > ![Virtual connector provider solution](../media/ve-select-virtual-connectors-solution.png "Virtual connector provider solution")
 
-1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. In the left navigation pane, select **Data** > **Connections** then select **New connection**. Select **SQL Server** connector from the list of connections. Select **SQL Server Authentication** as **Authentication Type**. Enter **SQL server name**, **SQL database name** and then select **Create**.
+### Create the connection
+  
+1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
+  
+2. In the left navigation pane, select **Data** > **Connections** then select **New connection**. 
+<<<<Insert Image here>>>>
+  
+3. Select one of the following Virtual Connectors from the list of connections. 
+> - SQL Server
+> - Microsoft Excel Online (Business)
+> - Microsoft SharePoint
+  
+4. You will be asked to provide additional details to connect to the data source. 
+>#### **SQL Server:** 
+> - Select SQL Server Authentication as Authentication Type. 
+> - Enter SQL server name, SQL database name, the credentials needed to connect
+> <<<<Insert Image here>>>> 
+> - If you are using an on-premises SQL server also enter the Gateway information and then select Create.
+  
+>#### **Microsoft Excel Online (Business):**
+>- Click Create, your current signed-in credentials will be used 
+><<<<Insert Image here>>>> 
+  
+>#### **Microsoft SharePoint:** 
+> - Select to Connect Directly (Cloud) or Connect Using on Premises Gateway
+><<<<Insert Image here>>>> 
+> - For Direct connection, Sign in to SharePoint
+> <<<<Insert Image here>>>> 
+> - For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click Create
+ <<<<Insert Image here>>>> 
+  
+### Create the Connection Reference
 
-    > [!div class="mx-imgBorder"]
-    > ![Select connections](../media/ve-select-connections.png "Select connection")
-
-1. Select the connection you created and share this connection with all the users in your organization by selecting the **Share** action in the connection details view.
-
-    > [!div class="mx-imgBorder"]
-    > ![Created connection](../media/ve-created-connection.png "Created connection")
-
-    > [!IMPORTANT] 
-    > Sharing the connection with the organization is an important step. This allows for the service principal that was created in this tenant to have access to the connection. 
-
-
-1. With the connection to the external data source established, you can now start creating **Connection Reference**. As the name suggests, a connection reference is a reference that provides a way for the Dataverse platform to access the connection information associated with the external data source. To create a connection reference:
-
-   1. Go to **Solutions**.
-   1. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
-   1. Select **New** and then select **Connection Reference (preview).**
-   1. Enter **Display name**, select **SQL Server** for the **Connectors** option and then select the data connection that you have created earlier.
+  5. Go to **Solutions**.
+  
+  6. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
+  
+  7. Select **New** and then select **Connection Reference (preview).**
+  
+  8. Enter **Display name**, select the connection you just created for the **Connectors** option and then select the data connection that you have created.
 
    > [!div class="mx-imgBorder"]
    > ![New connection reference](../media/ve-new-connection-reference.png "New connection reference")
 
-    > [!NOTE] 
-    > You can also create a new data connection from this dialog. You will be presented with a list of connectors to choose from. Select the **SQL Server** connector for setting up the new connection.
+### Create the Data Source
+Now create the Virtual Table data source in Dataverse.
+9. Select the **Gear icon -> Advanced Settings**
+ <<<<Insert Image here>>>> 
+  
+10. In the top navigation bar select **Settings** and then **Administration**
+ <<<<Insert Image here>>>> 
+  
+11. Select **Virtual Entity Data Source**
+   <<<<Insert Image here>>>> 
+  
+12. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider. 
+<<<<Insert Image here>>>> 
+  
+13.	Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.
+<<<<Insert Image here>>>>  
+  
+- SQL: Leave the Data Source field empty
+- SharePoint: Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+- Excel Online (Business): Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
+  
+14. Click **Save**
 
-1. Create a new **Virtual Entity Data Source** by selecting the **Gear icon -> Advanced Setting -> Administration -> Virtual Entity Data Source**. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider. Enter the connection reference, Tenant ID, environment ID, client ID, and client secret values.
-
-    > [!div class="mx-imgBorder"]
-    > ![Virtual connector data source](../media/ve-virtual-connector-data-source.png "Virtual connector data source")
-
-    > [!NOTE]
-    > - If you have more than one Dataverse environment, enter the environment GUID in which you are setting up the virtual table data source in the environment column. To find the environment specific GUID – copy the value from the URL as highlighted below.
-    >  ![Environment GUID](../media/ve-environment-guid.png "Environment GUID")
-    > - If you have only one Default environment, note that you will have to include the full environment value in the environment column. This includes a `Default-` prefix before the GUID.
-    >   ![Default environment GUID](../media/ve-default-environment-guid.png "Default environment GUID")
-
-1. With the connection reference and the virtual table data source setup, an **Entity Catalog** is automatically generated. The **Entity Catalog** is specific to the data source and will list all the tables that are in the respective data source.
+### Entity Catalog
+With the connection reference and the virtual table data source setup, an **Entity Catalog** is automatically generated. The **Entity Catalog** is specific to the data source and will list all the tables that are in the respective data source.
+  
+<<<<Insert Image here>>>> 
    > [!NOTE] 
    > - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes. 
    > - The tables you see in the Entity Catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
-   
-   You can view the **Entity Catalog** by selecting **Advanced Find** and using the **Look for:** column. The catalog will include a prefix `Entity Catalog for` followed by the connection reference (example: *Entity Catalog for Adventure Works DB*).
+ #### View the Entity Catalog
+  
+- Select Data -> Tables and select the entity catalog that was created. Selecting the Data tab will show all available tables or lists.
+>- SQL: All tables in the database that are eligible are shown
+>- SharePoint: All lists in the site are shown
+>- Excel: All tables in the Excel file are shown
+<<<<Insert Image here>>>> 
+- Select Advanced Find and use the Look for: column. The catalog will include a prefix Entity Catalog for followed by the connection reference (example: Entity Catalog for Adventure Works DB). Find the Entity Catalog for your respective data connection and select the Results button to see all the external data source tables. 
 
-
-
-1. Find the **Entity Catalog** for your respective data connection and select the **Results** button to see all the external data source tables. You can also see the Entity Catalog by going to **Data -> Tables** view and selecting the **Data** tab.
 
     > [!div class="mx-imgBorder"]
     > ![Advance find table catalog](../media/ve-advance-find-table-catalog.png "Advance find table catalog")
@@ -157,26 +187,26 @@ To create a virtual table using **SQL Server** connector:
     >[!Note]
     > Bulk creation of virtual tables is not supported currently. Even though the Entity Catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
 
-1. You can now **create a virtual table** by clicking the record from the entity catalog record and setting the **Create or Refresh Entity** column to **Yes**.  Set the **Primary field of the virtual entity** by select the appropriate column name listed. The drop-down lists all the columns of datatype string (nvarchar) that are eligible to be used as the primary field for the virtual table.
-    
-    > [!div class="mx-imgBorder"]
-    > ![Create virtual table](../media/ve-create-virtual-table.png "Create virtual table")
+15. **create a virtual table** by clicking the record from the entity catalog. In the provided form set the **Create or Refresh Entity** column to **Yes**.
+16. Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use. 
+<<<<Insert Image here>>>>     
 
-    Saving the record creates the virtual table. Once the virtual table is created, you can go back to **Advanced Find** and select the virtual table to retrieve all the records.
+  Save the record to create the virtual table. Your Virtual Table is now created with a “Custom Entity” prefix. 
+  Once the virtual table is created, you can either:
+  - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.
+<<<<Insert Image here>>>>    
+  
+  - Use **Advanced Find** and select the virtual table to retrieve all the records.
 
     > [!div class="mx-imgBorder"]
     > ![Advance find virtual table](../media/ve-advance-find-virtual-table.png "Advance find virtual table")
 
-    Here is the view of the same records from the virtual table in the **Data** tab in Power Apps (**Data -> Tables** view).
-
-    > [!div class="mx-imgBorder"]
-    > ![View of records](../media/ve-view-of-records.png "View of records")
-
+   
     > [!IMPORTANT] 
     > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
     > - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
-
-1. All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
+  > - All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
+  > - Virtual Tables require there to be at least one string field to use as the Primary Name column.
 
    Review the [SQL Server Connector documentation](/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](/connectors/sql/#power-apps-data-type-mappings).
 
@@ -246,39 +276,53 @@ be added to forms and views to see all associated accounts for each of the servi
 
 2. If **Entity Catalog** creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
 
-3. The easiest way to identify the environment you are working is from the URL. The value following the *https://make.powerapps.com/environments/* path is the GUID representing the environment.
 
 ## Known limitations
 
-1. SQL data type `bigint` columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for `bigint` mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created.
+### General
+1.	Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
+2.	Virtual table queries are limited to return 250 records. If you have a 1:N or N:N relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
+3.	Audit functionality is not available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
+4.	Rollups cannot be calculated for Virtual tables, this is because Rollups are a server side calculation in Dataverse which requires the data to be stored locally.
 
-2. Maximum length of characters allowed for a text column in a virtual table is 4000 characters. Suppose the destination table has the character set to greater than this value. In that case, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
+### SQL
+1.	SQL data type bigint columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created. 
+2.	SQL Server tables without primary keys: Any non-string field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple will work, the other operations will fail with the following error message (coming from SQL connector): "APIM request was not successful : BadRequest : No primary key exists in table".
+3.	SQL Server tables with a string primary key: The SQL string primary key will be the only option available for the virtual table primary key. The virtual table creation will succeed, but fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID". SQL Server string primary keys are supported only if the values can be parsed as GUID.
+4.	SQL Server tables without non-primary key string fields: The primary field list will be empty and the user will not be able to create the virtual table. At least one non-primary key string field is required.
+5.	SQL Server Connector Limitations: see [SQL Server connector reference](/connectors/sql/). 
 
-3. If you have a 1:N or N:N relationship with a virtual table, you will see an error when any query with table reference to the virtual table exceeds the 250 record limit. Use filtering in your query to reduce the record set as a workaround to this limitation.
+### Excel
+1.	Excel files must be stored on a OneDrive to participate in a Virtual Table connection.
 
+2.	The Primary key can only be a column holding GUID values: Because the Excel table metadata shows all columns as string, our current design assumes that the primary key will always be a GUID represented as a string.
+
+Note that no validation is performed when the virtual entity is created, if a non-GUID column is selected, the entity will fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID".
+
+3.	Support for PowerAppsId__ auto-generated column: The _PowerAppsId_ auto-generated column will be used if found (it will be the only option available for Primary key). Providing a value for PowerAppsId is required at record creation even if the value will actually be overwritten by an automatically generated one. This doesn't happen if the primary key column is not the PowerAppsId auto-generated column.
+  
+4.	Specific Excel Connector Limitations: [Excel Online (Business) connector reference](connectors/excelonlinebusiness/).
+
+### SharePoint
+1.	You currently cannot select an “All” view for SharePoint columns on a Virtual Table. This is a known bug and is being fixed.
+
+  
 ## Troubleshooting
 
-1. You have configured the virtual table data source, but the **Entity Catalog** did not get created
 
-    **Solution:** One or more values you used when creating the virtual table data source are incorrect. See the [prerequisite](#prerequisites) section and make sure you are copying the correct values from the Azure portal. You need the Tenant ID, Application (Client) ID, and the client secret value. Additionally, you will also need the environment GUID when setting up the data source.
-
-2. When querying the **Entity Catalog** from the Power Apps maker portal, you see an error – *The remote server returned an error: (403) forbidden.*
-
-    **Solution:** Make sure you have the service principal (Application ID) created in the respective tenant, and when creating the connection using the **SQL Server** connector, you have shared the connection with everyone in your org. To share the connection, select the connection and select **Share**. Then, select **Add everyone in my org** and save the connection.
-
-    > [!div class="mx-imgBorder"]
-    > ![Add everyone in the org](../media/ve-add-everyone-in-org.png "Add everyone in the org")
-    
-    > [!div class="mx-imgBorder"]
-    > ![Add users to org](../media/ve-add-users-to-org.png "Add users to org")
-
-3. When querying the **Entity Catalog** from the Power Apps maker portal, you see an error – *The given key was not present in the dictionary.*
-
-    **Solution:** Check the values you have for the Tenant, Client ID, and client secret columns when setting up the virtual table data source
-
-4. You are seeing only one (1) record in your virtual table even though you have more in your source table.
+1. You are seeing only one (1) record in your virtual table even though you have more in your source table.
 
     **Solution:** Check your source table and make sure it has primary key defined.
+  
+2.	I created a virtual table but I can't see it in "Tables"
+Solution: Since the virtual table creation is asynchronous, you can check the status of the process in "System Jobs". Look for system jobs with a Name starting Microsoft.Wrm.DataProvider.Connector.Plugins.ConnectorGenerateVEPlugin and a "Regarding" column's value equal to the name of the new virtual table. If status is still In Progress, just wait for the job to complete. If there is an error, you can get details by clicking the system, job name hyperlink.
+In this example, table creation is still pending:
+<<<<Insert Image here>>>>    
+Here, table creation failed due to 429 "Too Many Requests" error:
+ <<<<Insert Image here>>>>   
+3.	Table creation's system job succeeded but I am getting runtime errors related to invalid or missing columns
+Solution: If a failure occurs while creating a table's field, the table creation process will not fail and try to continue with the remaining fields. This is because we don't want to block the virtual table creation when some column types are unsupported. To get details on the error, you can enable logging in Administration > System Settings > Customizations > Enable logging to plug-in trace log, then delete the virtual table and try to create it again.
+
 
 ### See also
 
