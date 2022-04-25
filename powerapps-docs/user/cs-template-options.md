@@ -38,8 +38,8 @@ You can perform the following actions:
 
       ![Design options.](media\email_dsgn_options.png "Enhanced Template")
 
-- From the **Layout section types** section, choose the basic layout of your email template and add it to the design canvas. The **Edit layout** flyout appears. You can change the columns in the layout, spacing, style, add a background color, and add a background image. You can also customize the number of columns you can add and the width of each column in this panel. 
-On the design canvas, you can also select a column. The **Edit column** flyout appears. Customize the layout, spacing, style, add a background color or a background  image for the column. 
+- From the **Layout section types** section, choose the basic layout of your email template and add it to the design canvas. The **Edit layout** flyout appears. You can change the columns in the layout, spacing, style, add a background color, and add a background image. You can also customize the number of columns you need in your layout and the width of each column in this panel. 
+On the design canvas, to change the appearance of a column, select the column. The **Edit column** flyout appears. You can change the spacing, style, and add background colors or images for the column. 
 
 - The Toolbox section provides design elements that you'll use to construct your message. The following elements are available:
 
@@ -55,9 +55,9 @@ On the design canvas, you can also select a column. The **Edit column** flyout a
           - Link to which a user must be redirected to when the button is clicked
           - Change the text, font, color, and appearance of the button. 
           
-    - Divider: Select this element to divide one section of the template from another with a line. When you add this element,the **Edit Divider** panel appears. You can change the appearance, color, width, alignment, and spacing of the divider line with the options in this panel.
+    - Divider: Select this element to divide sections of the template with a line. When you add this element, the **Edit Divider** panel appears. You can change the appearance, color, width, alignment, and spacing of the divider line with the options in this panel.
 
-- General Styles: Use the options in this tab to change the width, font, font size, background color, and text color of the layout.
+- General Styles: Use the options in this tab to change the width, font, font size, background and text color of the layout.
 
 ### See also
 
