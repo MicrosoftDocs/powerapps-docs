@@ -46,16 +46,16 @@ Legend
 
 When you select **Create**, one of the following pages appear:
 - The enhanced email template editor page, if your admin has enabled the [enhanced email template editor option](cs_email_template_builder.md) in Power Apps.
-- The default email template editor page, if your admin hasn't enabled the enhanced email template editor option in Power Apps. 
+- The default email template editor page, if your admin hasn't enabled the [enhanced email template editor option](cs_email_template_builder.md) in Power Apps. 
 
 ### Enhanced email template editor overview
 
    ![Create a new email template.](media\email-template-enh.png "Start  with a blank template option")
 You can do the following actions:
 
-- specify the template details and the subject line on the **Template** tab, .
-- design and customize an email template on the **Editor** tab. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
-- include attachments to your template on the **Attachments** tab.
+- specify the template details and the subject line in the **Template** tab, .
+- design and customize an email template in the **Editor** tab. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
+- include attachments to your template in the **Attachments** tab.
 
 ### Default email template editor overview
 
@@ -97,6 +97,6 @@ When you select an existing template, the following display appears:
 You can do the following actions:
 
 - On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
-- On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
+- On the **Editor** tab, design and customize an email template. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
 - On the **Attachments** tab, include attachments to your template.
 
