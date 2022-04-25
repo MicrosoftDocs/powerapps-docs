@@ -20,7 +20,7 @@ contributors:
 
 # Take and upload mixed-reality photos
 
-In this article, we'll create an app that can take photos of a mixed-reality session and upload them to a folder on OneDrive. We'll use the **View in MR** control in this example, but the **View shape in MR** and **Measure in MR** controls would work as well.
+In this article, we'll create an app that can take photos of a mixed-reality session and upload them to a folder on OneDrive. We'll use the **View in MR** control in this example, but the **View shape in MR** and **Measuring camera** controls would work as well.
 
 We'll cover the following tasks:
 
@@ -184,7 +184,7 @@ You can use your app even when you have limited or no network connectivity using
 ### See also
 
 - [3D object control](mixed-reality-component-view-3d.md)
-- [Measure in MR control](mixed-reality-component-measure-distance.md)
+- [Measuring Camera control](mixed-reality-component-measure-distance.md)
 - [View shape in MR control](mixed-reality-component-view-shape.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

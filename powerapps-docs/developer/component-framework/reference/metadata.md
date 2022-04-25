@@ -5,7 +5,7 @@ keywords:
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/26/2022
 ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Metadata
 
-Provides all the information about  column definitions.
+[!INCLUDE [metadata-description](includes/metadata-description.md)]
 
 ## Available for 
 

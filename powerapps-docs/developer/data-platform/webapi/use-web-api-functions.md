@@ -1,25 +1,18 @@
 ---
 title: "Use Web API functions (Microsoft Dataverse)| Microsoft Docs"
 description: "Functions are reusable operations that are used with a GET request to retrieve data from Microsoft Dataverse"
-ms.custom: ""
-ms.date: 05/04/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: c6de9c12-e8e3-4ed5-a6ed-18ade572065f
-caps.latest.revision: 45
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/19/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Use Web API functions
 
@@ -83,7 +76,7 @@ Only those functions found in <xref:Microsoft.Dynamics.CRM.FunctionIndex> may be
 
 ### Bound functions
 
-In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when a `Function` element represents a bound function, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined in the function represents the entity that the function is bound to. When the `Type` attribute of the parameter is a collection, the function is bound to an entity collection. As an example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident?text=CalculateTotalTimeIncident Function /> and <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse?text=CalculateTotalTimeIncidentResponse ComplexType /> in the CSDL.  
+In the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), when a `Function` element represents a bound function, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined in the function represents the entity that the function is bound to. When the `Type` attribute of the parameter is a collection, the function is bound to an entity collection. As an example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident?text=CalculateTotalTimeIncident Function /> and <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse?text=CalculateTotalTimeIncidentResponse ComplexType /> in the CSDL.  
   
 ```xml
 <ComplexType Name="CalculateTotalTimeIncidentResponse">  
