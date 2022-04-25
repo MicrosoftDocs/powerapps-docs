@@ -51,7 +51,7 @@ When you select **Create**, one of the following pages appear:
 ### Enhanced email template editor overview
 
    ![Create a new email template.](media\email-template-enh.png "Start  with a blank template option")
-You can do the following:
+You can do the following actions:
 
 - specify the template details and the subject line on the **Template** tab, .
 - design and customize an email template on the **Editor** tab. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
@@ -94,7 +94,7 @@ When you select an existing template, the following display appears:
 > [!NOTE]
 > If you select a template created using the enhanced email template editor, the Enhanced template editor page is displayed irrespective of the admin configuration.
    
-You can do the following:
+You can do the following actions:
 
 - On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
 - On the **Editor** tab, design and customize an email template for a particular type of  message. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
