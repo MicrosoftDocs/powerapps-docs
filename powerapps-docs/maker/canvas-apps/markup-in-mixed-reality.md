@@ -1,6 +1,6 @@
 ---
-title: Enable the Markup in MR component to annotate in mixed reality
-description: Enable the Markup in MR component to annotate in mixed reality.
+title: Enable Markup in mixed reality
+description: Enable the Markup in MR component to allow users to use to markup in mixed reality.
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
@@ -17,10 +17,10 @@ contributors:
   - anuitz
 ---
 
-# Enable the Markup in MR component to annotate in mixed reality
+# Enable Markup in mixed reality
 
-Add the **Markup in MR** component in your app to allow users to use annotations to visually specify an area or a particular asset in their environment. 
-Users can instantly place mixed-reality annotations such as arrows, add drawings, and then take photos of the marked-up object.
+Add the **Markup in MR** component in your app to allow users to add markups to visually specify an area or a particular asset in their environment. 
+Users can instantly place mixed-reality markups such as arrows, add drawings, and then take photos of the marked-up object.
 
 The **Markup in MR** component creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
 
