@@ -53,7 +53,7 @@ When you select **Create**, one of the following pages appear:
    ![Create a new email template.](media\email-template-enh.png "Start  with a blank template option")
 You can do the following actions:
 
-- specify the template details and the subject line in the **Template** tab, .
+- specify the template details and the subject line in the **Template** tab.
 - design and customize an email template in the **Editor** tab. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
 - include attachments to your template in the **Attachments** tab.
 
