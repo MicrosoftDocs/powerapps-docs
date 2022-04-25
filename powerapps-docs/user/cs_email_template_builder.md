@@ -1,6 +1,6 @@
 ---
-title: "How to enable the enhanced email template  in Power Apps | MicrosoftDocs"
-description: Learn how to enable an  enhancd email template page
+title: How to enable the enhanced email template  in Power Apps
+description:Enable the enhancd email template option in Power Apps
 author: mgandham
 manager: shujoshi
 
