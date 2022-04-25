@@ -89,7 +89,7 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord).
   );
 ```
 
-# [Web API](#tab/web api)
+# [Web API](#tab/webapi)
 
 In-app notifications can be sent by using the Web API. More information: [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md).
 
@@ -471,6 +471,6 @@ The Power Apps Notification connector is for push notifications, which are separ
 - [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)
 - [createRecord (Client API reference)](reference/xrm-webapi/createrecord.md)
 - [In-app notifications in model-driven apps](/powerapps/user/notifications)
-- [Web API EntityType](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/appnotification)
-- [Table reference](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/reference/entities/appnotification)
+- <xref:Microsoft.Dynamics.CRM.appnotification>
+- [appnotification table/entity reference](../../data-platform/reference/entities/appnotification.md)
 
