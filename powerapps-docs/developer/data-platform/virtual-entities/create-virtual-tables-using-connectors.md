@@ -274,11 +274,16 @@ You currently cannot select an “All” view for SharePoint columns on a Virtua
   **Solution:** Check your source table and make sure it has primary key defined.
   
 1. I created a virtual table but I can't see it in "Tables".<br />
-  **Solution**: Since the virtual table creation is asynchronous, you can check the status of the process in "System Jobs". Look for system jobs with a Name starting Microsoft.Wrm.DataProvider.Connector.Plugins.ConnectorGenerateVEPlugin and a "Regarding" column's value equal to the name of the new virtual table. If status is still In Progress, just wait for the job to complete. If there is an error, you can get details by clicking the system, job name hyperlink.
-  In this example, table creation is still pending:<br />:::image type="content" source="media/ve-table-creation-pending.png" alt-text="table creation pending":::
-  Here, table creation failed due to 429 "Too Many Requests" error:<br />:::image type="content" source="media/ve-table-creation-failed-429-error.png" alt-text="table creation failed due to 429 error":::
+  **Solution**: Since the virtual table creation is asynchronous, you can check the status of the process in "System Jobs". Look for system jobs with a Name starting Microsoft.Wrm.DataProvider.Connector.Plugins.ConnectorGenerateVEPlugin and a "Regarding" column's value equal to the name of the new virtual table. If status is still In Progress, just wait for the job to complete. If there is an error, you can get details by clicking the system, job name hyperlink. In this example, table creation is still pending:
+
+   :::image type="content" source="media/ve-table-creation-pending.png" alt-text="table creation pending":::
+
+   Here, table creation failed due to 429 "Too Many Requests" error:
+   
+   :::image type="content" source="media/ve-table-creation-failed-429-error.png" alt-text="table creation failed due to 429 error":::
+
 1. Table creation's system job succeeded but I am getting runtime errors related to invalid or missing columns<br />
-  **Solution**: If a failure occurs while creating a table's field, the table creation process will not fail and try to continue with the remaining fields. This is because we don't want to block the virtual table creation when some column types are unsupported. To get details on the error, you can enable logging in Administration > System Settings > Customizations > Enable logging to plug-in trace log, then delete the virtual table and try to create it again.
+  **Solution**: If a failure occurs while creating a table's field, the table creation process will not fail and try to continue with the remaining fields. This is because we don't want to block the virtual table creation when some column types are unsupported. To get details on the error, you can enable logging in **Administration**> **System Settings** > **Customizations** > **Enable logging to plug-in trace log**, then delete the virtual table and try to create it again.
 
 ### See also
 
