@@ -103,9 +103,9 @@ Creating a virtual table with the virtual connector provider includes the follow
 1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
 1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. <br />:::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
 1. Select one of the following Virtual Connectors from the list of connections. 
-  - SQL Server
-  - Microsoft Excel Online (Business)
-  - Microsoft SharePoint  
+   - SQL Server
+   - Microsoft Excel Online (Business)
+   - Microsoft SharePoint  
 1. You will be asked to provide additional details to connect to the data source. 
 
 # [SQL Server](#tab/sql)
@@ -144,12 +144,12 @@ Now create the Virtual Table data source in Dataverse.
 1. Select **Virtual Entity Data Source**<br />:::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
 1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.:::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::<br />:::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
 1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.<br />:::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
-- SQL Server
-  - Leave the Data Source field empty
-- Microsoft Excel Online (Business)
-  - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
-- Microsoft SharePoint
-  - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
+  - SQL Server
+    - Leave the Data Source field empty
+  - Microsoft Excel Online (Business)
+    - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+  - Microsoft SharePoint
+    - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
 1. Click **Save**
 
 ### Entity Catalog
@@ -182,20 +182,16 @@ With the connection reference and the virtual table data source setup, an **Enti
 
   Save the record to create the virtual table. Your Virtual Table is now created with a “Custom Entity” prefix. 
   Once the virtual table is created, you can either:
-  - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.
+  - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.<br />:::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
+  - Use **Advanced Find** and select the virtual table to retrieve all the records.<br />:::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
 
-:::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
-  
-  - Use **Advanced Find** and select the virtual table to retrieve all the records.
-    :::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
+> [!IMPORTANT] 
+> - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
+> - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
+> - All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
+> - Virtual Tables require there to be at least one string field to use as the Primary Name column.
 
-    > [!IMPORTANT] 
-    > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
-    > - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
-    > - All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
-    > - Virtual Tables require there to be at least one string field to use as the Primary Name column.
-
-   Review the [SQL Server Connector documentation](/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](/connectors/sql/#power-apps-data-type-mappings).
+Review the [SQL Server Connector documentation](/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](/connectors/sql/#power-apps-data-type-mappings).
 
 Once you have created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows.
 
