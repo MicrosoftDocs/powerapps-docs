@@ -4,8 +4,7 @@ description:Enable the enhancd email template option in Power Apps
 author: mgandham
 manager: shujoshi
 
-ms.component: pa-user
-ms.topic: conceptual
+ms.topic: task
 ms.date: 6/30/2021
 ms.subservice: end-user
 ms.author: gandhamm
