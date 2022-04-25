@@ -40,12 +40,12 @@ Legend
 
 1. **Camera**: Take a picture of your current view. The picture can be used by your 
 canvas app but isn't viewable when you're in the mixed reality experience.
-2. **Undo**: Delete the last measurement and take the measurement again.
+2. **Undo**: Delete the last measurement point and take the measurement again.
 3. **Add**: Select to start a new measurement or add a new measurement point. When you're done measuring the button changes to a checkmark button that you select to complete your measurement.
 4. **List**: Opens a list with details of the items you have measured. 
-5. **Submit**: When you're done taking a measurement, use the Submit button to close the mixed reality experience and send your measurement to your canvas app. The button is grayed out if there's no measurements or when you're in the process of taking measurements. 
+5. **Submit**: When you're done taking your measurement(s), use the Submit button to close the mixed reality experience and send the measurement(s) to your canvas app. The button is grayed out if there are no measurements or when you're in the process of taking measurements. 
 6. **List**: Opens a list with details of the items you have measured. 
-7. **Reset**: Removes the current 3D object so you can add a new object.
+7. **Reset**: Clear all of your measurements at once.
 8. **Exit**: Leave the mixed reality experience and return to your canvas app.
 
 
@@ -53,11 +53,9 @@ canvas app but isn't viewable when you're in the mixed reality experience.
 
 1. Open your canvas app and select the **Measure in MR** button.
 
-2. Select the camera button and then follow the instructions on your screen.
+2. Follow the intructions on the screen by moving your device until it vibrates, and white dots appear. The white dot with a circle is the starting point of your measurement.
 
-3. Keep moving your device until it vibrates, and white dots appears. The white dot with a circle is the starting point of your measurement.
-
-4. Select ![Add button](./media/mr-measurement/add-button-8.png) to start a new measurement. Then follow these steps depending on the type of area that you're measuring:
+3. Select ![Add button](./media/mr-measurement/add-button-8.png) to start a new measurement. Then follow these steps depending on the type of measurement you're taking:
 
    - **Distance**
      1. Select ![Add button](./media/mr-measurement/add-button-8.png) and then slowly move the dot to where you want the measurement to end. 
@@ -66,7 +64,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
         > [!div class="mx-imgBorder"]
         > ![Measure wall distance.](./media/mr-measurement/distance-9.png)
        
-      3. Select **Submit** to save the final measurement.
+      3. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/distance-final-measurement-10.png)
    
@@ -79,7 +77,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/area-endpoint-13.png)
 
-      3. Select **Submit** to save the final measurement.
+      3. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
          > [!div class="mx-imgBorder"]
          > ![Measure desk area](./media/mr-measurement/area-final-measurement-14.png)
 
@@ -96,7 +94,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
          > [!div class="mx-imgBorder"]
          > ![Move your device upwards to complete the objects height.](./media/mr-measurement/volume-upwards-17.png) 
         
-       4. Select **Submit** to save the final measurement.
+       4. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
           > [!div class="mx-imgBorder"]
           > ![Measure desk area.](./media/mr-measurement/area-submint-18.png)  
      
@@ -110,16 +108,16 @@ canvas app but isn't viewable when you're in the mixed reality experience.
           > [!div class="mx-imgBorder"]
           > ![Freeform measurement.](./media/mr-measurement/measure-freeform.png)  
      
-      4. Keep the dot at the last point and then select **Submit** to save the final measurement.
+      4. Keep the dot at the last point and tap the green checkmark to finish your current measurement. Continue taking other measurements, or if you are done, select **Submit** to return to your canvas app.
           > [!div class="mx-imgBorder"]
           > ![Measure desk area.](./media/mr-measurement/measure-form-submint.png)  
                  
-          The same rectangle can be part of a volume measurement. Instead of selecting the last point you added, rotate your phone upwards to select a height and then select **Submit**.
+          The same rectangle can be part of a volume measurement. Instead of selecting the last point you added, rotate your phone upwards to select a height and then  tap the green checkmark. Continue taking other measurements, or if you are done, select **Submit** to return to your canvas app.
            > [!div class="mx-imgBorder"]
            > ![Measure rectangle freeform.](./media/mr-measurement/rectangle-freeform.png)
 
           > [!NOTE]
-          > If your app has **Box Draw** enabled, then you can only measure in freeform in a rectangular area and volume.
+          > If your app has **Box Draw** enabled, then in freeform you can only measure in a rectangular area and volume.
 
 
 ## Keeping track of your measurements
@@ -131,16 +129,16 @@ When you take measurements, you can always go back and review your measurements.
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to measure.](./media/mr-measurement/measure-4.png)
 
-2. Select the arrow next to measurement to view more details.
+2. If your app maker has given you specific measurements to take, you can see their types here, beneath their label. Select the arrow next to measurement to view more details.
    
    > [!div class="mx-imgBorder"]
    > ![Review measurements.](./media/mr-measurement/review-measurements.png)
 
 3. On the **Measurement Inputs** screen, you can do the following:
 
-    - Select a measurement to remeasure it or remove the measurement from the list.
+    - Select an uncompleted measurement to measure it immediately.
 
-    - Select the delete button to clear a measurement.
+    - Select the delete button to clear or remove a measurement.
 
     - Select the close button or list button to continue measuring where you left off.
      > [!div class="mx-imgBorder"]
