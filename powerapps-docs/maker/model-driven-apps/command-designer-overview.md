@@ -25,9 +25,9 @@ Commands drive core application behavior for model-driven apps. They are the but
 
 At a high level, command customization fits into the following categories. Various capabilities exist within each category and are covered in more depth throughout modern commanding documentation:  
 
-- **Display** How the button appears and where it's located in an app. For example, the button's label, icon, and accessibility labels as well as the command bar location and position within a command bar.
-- **Action** The logic that is executed when a button is selected. For example, creating and updating data or interacting with various controls and pages inside the app.
-- **Visibility** Logical conditions that specify when a button is visible or hidden to a user. For example, you may want the button visible for some users and hidden for others. Or perhaps the button should only be visible when certain criteria of the data records are satisfied.
+- **Display**. How the button appears and where it's located in an app. For example, the button's label, icon, and accessibility labels as well as the command bar location and position within a command bar.
+- **Action**. The logic that is executed when a button is selected. For example, creating and updating data or interacting with various controls and pages inside the app.
+- **Visibility**. Logical conditions that specify when a button is visible or hidden to a user. For example, you may want the button visible for some users and hidden for others. Or perhaps the button should only be visible when certain criteria of the data records are satisfied.
 
 > [!IMPORTANT]
 > - This is a preview feature, and may not be available in all regions.
