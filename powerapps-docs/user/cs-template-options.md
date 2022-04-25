@@ -1,12 +1,11 @@
 ---
-title: "Customize an email template using the template editor| MicrosoftDocs"
-description: Learn how to create an email template.
+title: Customize an email template using the template editor
+description: Create an email template using the enhanced email template editor
 author: mgandham
 manager: shujoshi
 
-ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/30/2021
+ms.date: 4/20/2022
 ms.subservice: end-user
 ms.author: gandhamm
 ms.custom: ""
