@@ -33,10 +33,10 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 ### Create a new model-driven app using modern app designer
 
 1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
-
+.
 1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
 
-1. Select **New** > **App** > **Model-driven app**
+1. Select **New** > **App** > **Model-driven app**.
 
 1. Select **Modern app designer**, and then select **Create**.
 
@@ -83,7 +83,7 @@ Once you are in the app designer, use the command designer to customize your com
   
 #### Create a new command
 
-Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted cross pollination within other apps as well as better runtime performance.
+Unlike classic commands, modern commands are only displayed within the app you're editing. This prevents unwanted command transferring to other apps as well as better runtime performance.
 
 The first time command designer is opened for an app, a prompt to either use **JavaScript** only or **Power Fx** is displayed. Selecting Power Fx also allows you to use JavaScript if desired. Selecting **Power Fx** in the dialog will create a command component library to store **Power Fx** formulas.
 
