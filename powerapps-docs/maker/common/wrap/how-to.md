@@ -65,7 +65,7 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app you registered earlier using the Azure portal:
 
 - **Microsoft APIs**&mdash;*Dynamics CRM*
-- **APIs my organization uses**&mdash;*PowerApps Service*
+- **APIs my organization uses**&mdash;*Azure API Connections* and *PowerApps Service*
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
@@ -230,5 +230,5 @@ For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and 
 
 - [Wrap overview (preview)](overview.md)
 - [Code sign for iOS (preview)](code-sign-ios.md)
-- [Code sign for Android (preview)](code-sign-ios.md)
+- [Code sign for Android (preview)](code-sign-android.md)
 
