@@ -1,6 +1,6 @@
 ---
-title: Enable Markup in mixed reality
-description: Enable the Markup in MR component to allow users to use to markup in mixed reality.
+title: Use the Markup in MR control in Power Apps
+description: Paint lines in 3D or draw 3D arrows with augmented reality features in Power Apps.
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
@@ -17,25 +17,28 @@ contributors:
   - anuitz
 ---
 
-# Enable Markup in mixed reality
+# Use the Markup in MR control in Power Apps
 
-Add the **Markup in MR** component in your app to allow users to add markups to visually specify an area or a particular asset in their environment. 
+Add the **Markup in MR** control in your app to allow users to add markups to visually specify an area or a particular asset in their environment. 
 Users can instantly place mixed-reality markups such as arrows, add drawings, and then take photos of the marked-up object.
 
-The **Markup in MR** component creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
+The **Markup in MR** control creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
 
 Ink and arrows will scale appropriately depending on the distance from the objects. When you exit the **Markup in MR** screen any photo or video that was taken is saved in your devices photo library.
 
 > [!TIP]
-> The mixed-reality (MR) controls work best in well-lit environments.
+> The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
+
+> [!TIP]
+> The MR controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
 
 ## Use Markup in MR
 
-When a user selects the **Markup in MR** button, they will be prompted to move their phone side-to-side for better object or area detection. Once an object or area is  detected the user are start using the markup toolbar.
+When a user selects the **Markup in MR** button, they will be prompted to move their phone side-to-side for better object or area detection. Once an object or area is detected the user can start using the markup toolbar.
 
 ### Add an arrow
 
-To position the arrow:
+To position an arrow:
 
 - Make sure the arrow is selected in the markup toolbar.
 
@@ -55,9 +58,9 @@ To determine where you start drawing:
 
 - Select and drag on the screen to start drawing.
 
-## Add the Markup in MR component 
+## Add the Markup in MR control 
 
-Insert the component into your app as you normally would for any other button component.
+Insert the control into your app as you normally would for any other button control.
 
 With an app open for editing in [Power Apps
 Studio](https://create.powerapps.com/):
@@ -66,13 +69,13 @@ Studio](https://create.powerapps.com/):
 
 2. Expand **Mixed reality**.
 
-3. Select the component **Markup in MR** to place it in the center of the app screen or drag and drop it to position it anywhere on the screen.
+3. Select the control **Markup in MR** to place it in the center of the app screen or drag and drop it to position it anywhere on the screen.
 
    > [!div class="mx-imgBorder"] 
    >![Add the Mark in MR control.](./media/mr-controls/markup-control-add-control-1.png)
 
 
-You can modify the component with several properties.
+You can modify the control with several properties.
 
 > [!TIP]
 > Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
@@ -100,7 +103,7 @@ You can modify the component with several properties.
 | [**DisabledFill**](./controls/properties-color-border.md)        | The background color of a control if its [**DisplayMode**](./controls/properties-core.md) property is set to **Disabled**.         |
 | [**FillColor**](./controls/properties-color-border.md)           | The background color of a control.                                                                                                                                                         |
 | [**Font**](./canvas-apps/controls/properties-text.md)                        | The name of the family of fonts in which text appears.                                                                                                                                     |
-| [**FontStyle**](./controls/properties-text.md)                   | The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.                                                                                         |
+| [**FontStyle**](./controls/properties-text.md)                   | The style of the text in the control: **None**, **Strikethrough**, **Underline**, or **Italic**.                                                                                         |
 | [**FontSize**](./controls/properties-text.md)                    | The font size of the text that appears on a control.                                                                                                                                       |
 | [**FontWeight**](./controls/properties-text.md)                  | The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**                                                                                                    |
 | [**Height**](./controls/properties-size-location.md)             | The distance between a control's top and bottom edges.                                                                                                                                     |
@@ -131,11 +134,11 @@ You can modify the component with several properties.
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 | Photos       | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable |
 
-## Other Mixed Reality Components
+## Other Mixed Reality controls
 
 
 -   View 3D content with the [View in
-    3D](mixed-reality-component-view-3d.md) component.
+    3D](mixed-reality-component-view-3d.md)
 
 -   View images and 3D content in the real world with the [View in mixed
     reality](mixed-reality-component-view-mr.md) component.
