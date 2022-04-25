@@ -1,14 +1,14 @@
 ---
 title: "Send in-app notifications within model-driven apps (preview)" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 09/03/2021
-ms.reviewer: "nabuthuk"
+ms.date: 04/25/2022
+ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
 ms.topic: "article"
-author: "aorth"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: adrianorth
+ms.author: aorth
+manager: rycu
 search.audienceType: 
   - maker
   - developer
@@ -62,7 +62,7 @@ Because the notification system uses a table, you can use any table functionalit
 
 The following examples use the notification table and a notification record to create notifications.
 
-### Send basic in-app notification by using a client API
+# [Client API](#tab/clientapi)
 
 In-app notifications can be sent by using the [createRecord](reference/xrm-webapi/createrecord.md) API.
 
@@ -89,7 +89,7 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord).
   );
 ```
 
-### Send basic in-app notifications by using the Web API
+# [Web API](#tab/web api)
 
 In-app notifications can be sent by using the Web API. More information: [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md).
 
@@ -109,6 +109,31 @@ Accept: application/json
   "toasttype": 200000000 // timed
 }
 ```
+
+# [Dataverse SDK](#tab/sdk)
+
+In-app notifications can be sent by using the Dataverse SDK with the organization service. More information: [Create table rows using the Organization Service](../../data-platform/org-service/entity-operations-create.md)
+
+```csharp
+appnotification appNotification = new appnotification() { 
+    Title = "Welcome to the world of app notifications!",
+    OwnerId = new EntityReference("systemuser", <Guid of the user>),
+    IconType = new OptionSetValue(100000000), //info
+    ToastType = new OptionSetValue(200000000) //timed
+};
+
+Guid appNotificationId = svc.Create(appNotification);
+```
+
+---
+
+
+
+
+
+
+
+
 ## Notification polling
 
 In-app notifications uses polling to retrieve notifications periodically when the app is running.  New notification are retreived at start of the model-driven app and when a page navigation occurs as long as the last retreival is more than one minute ago.  If a user stays on a page for a long duration, new notifications will be retrieved.
@@ -145,12 +170,14 @@ You can change the in-app notification icon by setting **Icon Type** to one of t
 
 |Icon Type|Value|Image|
 |---|---|---|
-|Info|100000000|![Info Icon](media/send-in-app-notifications/app-notification-info-icon.png "Info Icon")|
-|Success|100000001|![Info Icon](media/send-in-app-notifications/app-notification-success-icon.png "Success Icon")|
-|Failure|100000002|![Failure Icon](media/send-in-app-notifications/app-notification-failure-icon.png "Failure Icon")|
-|Warning|100000003|![Warning Icon](media/send-in-app-notifications/app-notification-warning-icon.png "Warning Icon")|
-|Mention|100000004|![Mention Icon](media/send-in-app-notifications/app-notification-mention-icon.png "Mention Icon")|
-|Custom|100000005|
+|Info|100000000|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
+|Success|100000001|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
+|Failure|100000002|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
+|Warning|100000003|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
+|Mention|100000004|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
+|Custom|100000005||
+
+
 
 ### Using markdown in Title and Body
 
