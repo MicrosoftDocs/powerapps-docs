@@ -230,5 +230,5 @@ For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and 
 
 - [Wrap overview (preview)](overview.md)
 - [Code sign for iOS (preview)](code-sign-ios.md)
-- [Code sign for Android (preview)](code-sign-ios.md)
+- [Code sign for Android (preview)](code-sign-android.md)
 
