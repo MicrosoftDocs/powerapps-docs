@@ -69,7 +69,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
        
       3. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
          > [!div class="mx-imgBorder"]
-         > ![Measure desk area](./media/mr-measurement/distance-final-measurement-10.png)
+         > ![Submint measurement of desk area](./media/mr-measurement/distance-final-measurement-10.png)
    
    - **Area**
       1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the area that you want to measure.
@@ -78,11 +78,11 @@ canvas app but isn't viewable when you're in the mixed reality experience.
 
       2. Connect the last dot to the first dot to complete the measurement. When you're done, select the checkmark button.
          > [!div class="mx-imgBorder"]
-         > ![Measure desk area](./media/mr-measurement/area-endpoint-13.png)
+         > ![Connect the last dot to the first dot.](./media/mr-measurement/area-endpoint-13.png)
 
       3. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
          > [!div class="mx-imgBorder"]
-         > ![Measure desk area](./media/mr-measurement/area-final-measurement-14.png)
+         > ![Continue or submit measurement.](./media/mr-measurement/area-final-measurement-14.png)
 
     - **Volume** 
       1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the base of the volume that you want to measure.
@@ -99,7 +99,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
         
        4. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
           > [!div class="mx-imgBorder"]
-          > ![Measure desk area.](./media/mr-measurement/area-submint-18.png)  
+          > ![Continue taking volume measurements or submit the measurements.](./media/mr-measurement/area-submint-18.png)  
      
           > [!NOTE]
           > If your app has **Box Draw** enabled then you can only measure volume by a rectangular prism. To take this measurement select four points; three to draw the base and one for the height.<br><br>
@@ -113,7 +113,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
      
       4. Keep the dot at the last point and tap the green checkmark to finish your current measurement. Continue taking other measurements, or if you are done, select **Submit** to return to your canvas app.
           > [!div class="mx-imgBorder"]
-          > ![Measure desk area.](./media/mr-measurement/measure-form-submint.png)  
+          > ![Continue taking freeform measurements or submit the measurements.](./media/mr-measurement/measure-form-submint.png)  
                  
           The same rectangle can be part of a volume measurement. Instead of selecting the last point you added, rotate your phone upwards to select a height and then  tap the green checkmark. Continue taking other measurements, or if you are done, select **Submit** to return to your canvas app.
            > [!div class="mx-imgBorder"]
