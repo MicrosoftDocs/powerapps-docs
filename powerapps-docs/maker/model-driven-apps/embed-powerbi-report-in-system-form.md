@@ -77,14 +77,14 @@ You can customize a main form XML `sections` node so that it can host an embedde
 |-------------------------|-----------------------------------|
 |  **PowerBIGroupId**          |     The Power BI workspace Id. If your report is in **My workspace** then the workspace Id is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace Id. You can find the Id of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
 |   **PowerBIReportId**       |    The Power BI report Id. Replace this with the report that you want to embed. You can find the Id of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
-|   **TileUrl**            |    The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
+|   **TileUrl**            |    The Power BI report URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report Id (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
 | **solutionaction="Added"** | If the table already exists in the target environment leave the `solutionaction=Added` parameter for the cell element as provided in the XML sample. If the table doesn’t exist in the target environment, remove the `solutionaction=Added` parameter. |
 
 4. Create a zip file out of all the solution files previously extracted. Then, import the solution into the target environment.
 
 ## Embed with contextual filtering
 
-You can make Power BI reports and tiles more meaningful by applying contextual filters to the current model-driven form, so that the report and tile is filtered based on attributes of the current row. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all rows of the table.
+You can make Power BI reports more meaningful by applying contextual filters to the current model-driven form, so that the report is filtered based on attributes of the current row. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all rows of the table.
 
 > [!div class="mx-imgBorder"] 
 > ![Embedded Power BI report with contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-filtered.png "Embedded Power BI report with contextual filtering")
