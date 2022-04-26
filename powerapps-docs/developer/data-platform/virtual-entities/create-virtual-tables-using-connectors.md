@@ -182,9 +182,10 @@ Now create the Virtual Table data source in Dataverse.
    - SQL Server
       - Leave the Data Source field empty
    - Microsoft Excel Online (Business)
-      - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+      - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)      
    - Microsoft SharePoint
-      - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)
+      - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+      
 1. Click **Save**
 
 ### Entity Catalog
@@ -258,11 +259,14 @@ A representation of the **Service Request** virtual table is shown below. You wi
 1. To create the relationship, select the **N:1 Relationship** within the Service Request table.
 1. Select **New Many-to-1 Relationship**.
 1. Enter the following details to create the relationship between the Service Request virtual table and the Account table.
-  1. In the **Relationship Definition** section – set the **Primary Entity** column value to **Account**.
-  1. Optionally, if you want to edit the name of the relationship, you can do so in the **Name** column.
-  1. In the **Lookup Field** section – set the **Display Name** to **Account.**
-  1. The **Name** column will automatically populate with the lookup column name.
-  1. Set the **External Name** value to **AccountId** (matching the column name in your source table).<br/>:::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
+   1. In the **Relationship Definition** section – set the **Primary Entity** column value to **Account**.
+   1. Optionally, if you want to edit the name of the relationship, you can do so in the **Name** column.
+   1. In the **Lookup Field** section – set the **Display Name** to **Account.**
+   1. The **Name** column will automatically populate with the lookup column name.
+   1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
+   
+      :::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
+   
 1. Refer to the columns for the **Service Request** virtual table, and you will notice that the **AccountID** column is not a **Lookup** type. This column can now
 be added to forms and views to see all associated accounts for each of the service request record.
 
