@@ -40,11 +40,11 @@ Legend
 
 1. **Camera**: Take a picture of your current view. The picture can be used by your 
 canvas app but isn't viewable when you're in the mixed reality experience.
-2. **Undo**: Delete the last measurement point and take the measurement again.
+2. **Undo**: Rewinds the last measurement action taken and returns to the state before the last add, reset, or delete.
 3. **Add**: Select to start a new measurement or add a new measurement point. When you're done measuring the button changes to a checkmark button that you select to complete your measurement.
-4. **List**: Opens a list with details of the items you have measured. 
+4. **Overview**: Opens a list with details of the items you have measured. 
 5. **Submit**: When you're done taking your measurement(s), use the Submit button to close the mixed reality experience and send the measurement(s) to your canvas app. The button is grayed out if there are no measurements or when you're in the process of taking measurements. 
-6. **List**: Opens a list with details of the items you have measured. 
+6. **Overview**: Opens a list with details of the items you have measured. 
 7. **Reset**: Clear all of your measurements at once.
 8. **Exit**: Leave the mixed reality experience and return to your canvas app.
 
@@ -127,7 +127,7 @@ canvas app but isn't viewable when you're in the mixed reality experience.
 
 When you take measurements, you can always go back and review your measurements.
 
-1. At the top select the measurement list or select the list button.
+1. At the top select the measurement overview or select the overview button.
    
    > [!div class="mx-imgBorder"]
    > ![Choose the item you want to measure.](./media/mr-measurement/measure-4.png)
@@ -143,7 +143,7 @@ When you take measurements, you can always go back and review your measurements.
 
     - Select the delete button to clear or remove a measurement.
 
-    - Select the close button or list button to continue measuring where you left off.
+    - Select the close button or overview button to continue measuring where you left off.
      > [!div class="mx-imgBorder"]
      > ![Review your measurements.](./media/mr-measurement/measurement-input.png)
 
