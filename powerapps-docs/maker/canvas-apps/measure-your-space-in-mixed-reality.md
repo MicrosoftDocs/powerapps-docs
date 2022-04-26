@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mduelae
-ms.date: 04/14/2022
+ms.date: 04/26/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -69,7 +69,7 @@ canvas app but isn't viewable when you're in a mixed reality experience.
        
       3. Continue taking measurements, or select **Submit** to save your final measurements and return to your canvas app.
          > [!div class="mx-imgBorder"]
-         > ![Submint measurement of desk area](./media/mr-measurement/distance-final-measurement-10.png)
+         > ![Submit measurement of desk area](./media/mr-measurement/distance-final-measurement-10.png)
    
    - **Area**
       1. Select ![Add button](./media/mr-measurement/add-button-8.png) to add points and outline the area that you want to measure.
