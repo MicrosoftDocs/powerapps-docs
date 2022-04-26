@@ -13,6 +13,7 @@ contributors:
     - neerajnandwana-msft
     - nickdoelman
     - ProfessorKendrick
+    - carltoncolter
 ---
  
 # Accessibility in Power Apps portals
@@ -82,7 +83,7 @@ The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides
 
 - Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
 
-- Test your portal by zooming in to 200 percent. Make sure the text is readable, and pages and controls function as expected<!--note from editor: Suggested. Writing Style Guide doesn't like us to use "etc." or even "and so on." -->. For more information, go to [WCAG 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html).
+- Test your portal by zooming in to 200 percent. Make sure the text is readable, and pages and controls function as expected. For more information, go to [WCAG 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html).
 
 - Color contrast matters. Use a color contrast tool to help you see the contrast ratio. For more information, go to [WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
