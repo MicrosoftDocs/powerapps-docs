@@ -1,12 +1,11 @@
 ---
-title: Share a canvas app with guest users
+title: Share a canvas app with guest users (contains video)
 description: Learn about how to share canvas app with guest users.
 author: alaug
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/25/2021
+ms.date: 03/15/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -21,6 +20,9 @@ contributors:
 
 Canvas apps can be shared with guest users of an Azure Active Directory (Azure AD) tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
 
+Watch this video to learn how to share an app with guests:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
+
 ## Prerequisites
 
 - In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
@@ -30,10 +32,12 @@ Canvas apps can be shared with guest users of an Azure Active Directory (Azure A
 
 - Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
-- The guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
+- To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
 
   - The tenant hosting the app being shared
   - The home tenant of the guest user
+
+- To access an app that connects to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app. And it must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a [Microsoft Dataverse for Teams environment](/power-platform/admin/about-teams-environment).
 
 ## Steps to grant guest access
 
@@ -72,9 +76,7 @@ After you share an app for guest access, guests can discover and access apps sha
 
 - Guests can only be assigned the User role, and not the Co-owner role, for apps shared with them.
 - Power Apps guest access uses Azure B2B.
-- Power Apps recognizes guests in states 1 through 4&mdash;as outlined in the [Azure B2B documentation](/azure/active-directory/b2b/user-properties)&mdash;when the guest uses a web browser.
-- Power Apps recognizes guests in states 1, 3, and 4&mdash;as outlined in the Azure B2B documentation&mdash;when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
-- Power Apps can't recognize guests that authenticate by using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation) or [email one-time passcode authentication](/azure/active-directory/external-identities/one-time-passcode).
+- Power Apps Mobile doesn't support authentication using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
 - Power Apps [included with Office](/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [per user plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) have the following characteristics:
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
@@ -98,7 +100,7 @@ The following table outlines a few core capability differences between Power App
 
 ### Can guests access customized forms in SharePoint?
 
-Yes. Any user who can access a SharePoint list with a customized form can create and edit items in the list by using the form. As long as the custom form only uses standard connectors, the guest isn't required to have any Power Apps license.
+See [What license must be assigned to my guest so they can run an app shared with them?](#what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them)
 
 ### Why is a guest who accesses a customized form in SharePoint prompted for a trial?
 
@@ -120,14 +122,15 @@ As is the case with non-guests, the underlying data sources accessed by the app 
 
 ### What license must be assigned to my guest so they can run an app shared with them?
 
-You must assign your guest the same license that's required for non-guests to run the app. For instance, if the app uses premium connectors, a Power Apps per app plan or a Power Apps per user plan must be assigned to the guest.  
+The following table explains whether the guests can run (use) customized Microsoft Lists or SharePoint library forms, canvas apps, and model-driven apps using the referenced license.
 
-|    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model-driven app |
-|---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
-| SharePoint user (no Power Apps license) | x                          |                                                    |                                                |                  |
-| Power Apps included with Office    | x                          | x                                                  |                                                |                  |
-| Power Apps per app plan          | x                          | x                                                  | x                                              | x                |
-| Power Apps per user plan         | x                          | x                                                  | x                                              | x                |
+|    Plan                             | Customized Microsoft Lists or SharePoint library form (using non-premium connectors) | Customized Microsoft Lists or SharePoint library (using premium connectors) | Canvas app (using non-premium connectors) | Canvas app (using premium connectors) | Model-driven app |
+|---------------------------------|----------------------------------------------------|------------------------------------------------|------------------| - | - |
+| No license | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
+| SharePoint user (without Power Apps license) | &check;                                               | &cross;                 | &cross; | &cross; | &cross; |
+| Power Apps included with Office    | &check;                                                  | &cross;                                               | &check;                 | &cross; | &cross; | 
+| Power Apps per app plan          | &check;                                                  | &check;                                               | &check;                | &check; | &check; |
+| Power Apps per user plan         | &check;                                                  | &check;                                              | &check;                | &check; | &check; |
 
 For more information about pricing and the capabilities of various plans, go to [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 

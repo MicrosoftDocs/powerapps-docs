@@ -3,15 +3,14 @@ title: Code components for canvas apps  | Microsoft Docs
 description: Learn how to create code components using Power Apps component framework for canvas apps.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/08/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 ---
 
 # Code components for canvas apps
@@ -72,7 +71,7 @@ After you enable the Power Apps component framework feature in your environment,
    > [!div class="mx-imgBorder"]
    > ![Insert components.](media/insert-code-components-using-get-more-components.png "Insert components")
 
-4. Select the **Code** tab, select a component from the list, and then select **Import**.<!--note from editor: Here and in step 5, I deleted "sample" because maybe the reader is adding a component they truly want, not necessarily a sample.-->
+4. Select the **Code** tab, select a component from the list, and then select **Import**.
 
     > [!div class="mx-imgBorder"]
     > ![Import a component.](media/insert-component-add-sample-component.png "Import a component")
@@ -83,9 +82,9 @@ After you enable the Power Apps component framework feature in your environment,
    > ![Add a component.](media/add-sample-component-from-list.png "Add a component")
 
    > [!NOTE]
-   > You can also add components by selecting **Insert** > **Custom** > **Import component**. This option will be removed in a future release, so we suggest using the flow described above.<!--note from editor: Recommend deleting this unless there's a mechanism in place to revisit this topic in tandem with the future release. This is especially not a good candidate for note format, since it draws extra attention to this step that won't work before long.-->
+   > You can also add components by selecting **Insert** > **Custom** > **Import component**. This option will be removed in a future release, so we suggest using the flow described above.
+   > 
 
-<!--note from editor: The following isn't really a step, so I removed the numbering and indent. -->
 On the **Properties** tab, you'll notice the code component properties are displayed. 
 
 > [!div class="mx-imgBorder"]
@@ -107,10 +106,10 @@ On the **Properties** tab, you'll notice the code component properties are displ
 
 ## Update existing code components
 
-Whenever you update the code components and want to see the runtime changes, you need to change<!--note from editor: I don't think "bump" is going to necessarily be well-understood by non-native English readers. Maybe this should be "increase"?--> the `version` property in the manifest file. We recommend that you change the version of the component whenever you make changes.
+Whenever you update the code components and want to see the runtime changes, you need to change the `version` property in the manifest file. We recommend that you change the version of the component whenever you make changes.
 
 > [!NOTE]
-> Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting or adding code components back into the app won't update the components.
+> Existing code components are updated only when the app is closed or reopened in Power Apps Studio. When you reopen the app, it asks you to update the code components. Simply deleting or adding code components back into the app won't update the components. Publish all the customizations in the updated solution first, otherwise updates made to the code component won't appear.
 
 ### See also
 

@@ -4,7 +4,7 @@ description: "Learn how to compose and send Web API requests using Postman."
 ms.custom: 
 ms.date: 03/22/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -144,7 +144,7 @@ More information: [Update and delete tables using the Web API](update-delete-ent
 
 ## Use a function
 
-Use a `GET` request with the functions listed in [Web API Function Reference](/dynamics365/customer-engagement/web-api/functions?view=dynamics-ce-odata-9) to perform reusable operations with the Web API. The example that follows shows how to send a Web API request that uses the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function /> to detect and retrieve duplicates of a specified record.
+Use a `GET` request with the functions listed in [Web API Function Reference](/dynamics365/customer-engagement/web-api/functions) to perform reusable operations with the Web API. The example that follows shows how to send a Web API request that uses the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function /> to detect and retrieve duplicates of a specified record.
 
 |HTTP method|URL|
 |----|----|
@@ -169,7 +169,7 @@ More information: [Use Web API functions](use-web-api-functions.md).
 
 ## Use an action
 
-Use a `POST` request with the actions listed in [Web API Action Reference](/dynamics365/customer-engagement/web-api/actions?view=dynamics-ce-odata-9) to perform operations that have side effects.
+Use a `POST` request with the actions listed in [Web API Action Reference](/dynamics365/customer-engagement/web-api/actions) to perform operations that have side effects.
 
 This example shows how to use <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />.
 

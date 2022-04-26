@@ -4,7 +4,7 @@ description: "Data that should be synchronized between the Microsoft Dataverse a
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Offline and Outlook filters and templates
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Data filters for Office Outlook  determine what data should be synchronized between the Microsoft Dataverse and Dynamics 365 for Outlook. Dataverse supports the ability to change the default filter using the SDK and push these changes to any or all users.  
 You can write code that allows administrators to create and publish filter templates. This allows a Dataverse administrator to create common or desirable filters that can be published to users for synchronizing with the Outlook Store and offline database. This also provides a way to customize the default filter template that will be applied for users who are added to the system after the templates are originally published. The administrator also has the ability to update or delete user filters after they are published.  
@@ -58,7 +58,7 @@ You can reset the filters for a user to the default by using the <xref:Microsoft
 
 [Extend Dynamics 365 for Outlook](extend-dynamics-365-outlook.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md)<br />
-[Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br /> 
+[Sample: Create and retrieve Outlook filters](../org-service/samples/create-retrieve-outlook-filters.md)<br /> 
 <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest><br />
 <xref:Microsoft.Crm.Sdk.Messages.ResetUserFiltersRequest>
 

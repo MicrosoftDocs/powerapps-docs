@@ -1,16 +1,15 @@
 ---
-title: Integrate your Teams Power App with Planner
+title: Integrate your Teams Power App with Planner (contains video)
 description: Learn how to make your Power Apps in Teams work with Planner.
 author: joel-lindstrom
-ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/25/2021
-ms.author: namarwah
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - msftsamperl
   - tapanm-msft
 ---
 
@@ -19,6 +18,9 @@ contributors:
 In this article, we'll learn how to integrate Power Apps with Planner to create and assign tasks to users within the organization.
 
 Power Apps in Microsoft Teams enables collaboration between people and groups. Employees already use Teams to work, communicate, and collaborate. Apps in Teams have deep integration with other Teams capabilities. For example, in Teams, you can assign tasks to team members using Planner in your Teams channel. Apps that require follow-up by others in your team, such as to address issues reported in the Issue Reporting app, can leverage Planner in the Teams channel and create Tasks where users already manage their tasks.
+
+Watch this video to learn how to integrate Power Apps with Planner:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ut]
 
 ## Prerequisites
 
@@ -34,7 +36,7 @@ In this section, we'll create a new Teams team and then create an app within tha
 
 1. To create a new team, select the **Teams** tab > select **Join or create a team** > select **Create Team** > select **From Scratch** > select **Public**, and give the team a name such as "Planner Integration". And then, select **Create**.
 
-1. Select and add any members in your organization that you'd like to add to the team for testing purposes, and select *Add**.
+1. Select and add any members in your organization that you'd like to add to the team for testing purposes, and select **Add**.
 
 1. Select **Close**.
 
@@ -262,15 +264,15 @@ This integration can be easily extended to add logic to automatically assign the
 
 ### See also
 
-- [Boards (Preview) sample app](boards.md)
+- [Boards (preview) sample app](boards.md)
 - [Bulletins sample app](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)
-- [Get connected (Preview)](get-connected.md)  
+- [Get connected (preview)](get-connected.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
 - [Milestones sample app](milestones.md)
-- [Perspectives (Preview) sample app](perspectives.md)
-- [Profile+ (Preview) sample app](profile-app.md)
+- [Perspectives (preview) sample app](perspectives.md)
+- [Profile+ (preview) sample app](profile-app.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 

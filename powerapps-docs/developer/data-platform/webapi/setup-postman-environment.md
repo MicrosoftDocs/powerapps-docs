@@ -1,22 +1,20 @@
 ---
 title: "Set up a Postman environment (Microsoft Dataverse for Apps)| MicrosoftDocs"
 description: "Learn how to set up and configure a Postman environment that connects with Microsoft Dataverse environments."
-ms.custom: 
-ms.date: 04/09/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 955BA444-A53D-4843-9429-833B1636E2B4
-caps.latest.revision: 7
-author: JimDaly
-ms.author: jdaly
-manager: ryjones
 search.audienceType: 
   - developer
 search.app: 
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
+
 ---
 
 # Set up a Postman environment
@@ -59,7 +57,7 @@ Use these steps to create a Postman environment that you can use to connect with
     |`callback`|`https://callbackurl`|
     |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`|
     > [!NOTE]
-    > For [relevance search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
+    > For [Dataverse search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
     ![Create a new Postman environment to connect with Online instance.](media/postman-add-online-env.png "Create a new Postman environment to connect with Online instance")
 

@@ -1,21 +1,21 @@
 ---
 title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration tool (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to register a service endpoint step using the Plug-in Registration tool for use with Azure-Dataverse integration."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: marcelbf
+ms.author: marcelbf
+manager: pemikkel
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
-author: JimDaly # GitHub ID - Brandon Simmons
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Register an Azure-aware plug-in using the Plug-in Registration tool

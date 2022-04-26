@@ -2,7 +2,7 @@
 title: "5: Creating and publishing a Web API in Azure  | Microsoft Docs"
 description: "Learn about creating and publishing a Web API in Azure."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021

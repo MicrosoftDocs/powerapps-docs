@@ -4,7 +4,7 @@ description: "Learn about how various services can be used offline. There are se
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Offline use of services
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 Dynamics 365 for Outlook with Offline Access enables you to continue your work when you are disconnected from the server.  
   

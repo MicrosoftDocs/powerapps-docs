@@ -1,13 +1,13 @@
 ---
-title: "AppConfig table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppConfig table/entity."
-ms.date: 05/20/2021
+title: "App Configuration (AppConfig)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the App Configuration (AppConfig)  table/entity."
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# AppConfig table/entity reference
+# App Configuration (AppConfig)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -224,12 +224,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -354,12 +354,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -566,7 +566,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_navigationsetting_appconfig"></a> navigationsetting_appconfig
 
-Same as navigationsetting table [navigationsetting_appconfig](navigationsetting.md#BKMK_navigationsetting_appconfig) Many-To-One relationship.
+Same as the [navigationsetting_appconfig](navigationsetting.md#BKMK_navigationsetting_appconfig) many-to-one relationship for the [navigationsetting](navigationsetting.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -581,7 +581,7 @@ Same as navigationsetting table [navigationsetting_appconfig](navigationsetting.
 
 ### <a name="BKMK_appconfig_appconfiginstance"></a> appconfig_appconfiginstance
 
-Same as appconfiginstance table [appconfig_appconfiginstance](appconfiginstance.md#BKMK_appconfig_appconfiginstance) Many-To-One relationship.
+Same as the [appconfig_appconfiginstance](appconfiginstance.md#BKMK_appconfig_appconfiginstance) many-to-one relationship for the [appconfiginstance](appconfiginstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -609,27 +609,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_appconfig_createdby"></a> lk_appconfig_createdby
 
-See systemuser Table [lk_appconfig_createdby](systemuser.md#BKMK_lk_appconfig_createdby) One-To-Many relationship.
+See the [lk_appconfig_createdby](systemuser.md#BKMK_lk_appconfig_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfig_modifiedonbehalfby"></a> lk_appconfig_modifiedonbehalfby
 
-See systemuser Table [lk_appconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfig_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfig_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfig_createdonbehalfby"></a> lk_appconfig_createdonbehalfby
 
-See systemuser Table [lk_appconfig_createdonbehalfby](systemuser.md#BKMK_lk_appconfig_createdonbehalfby) One-To-Many relationship.
+See the [lk_appconfig_createdonbehalfby](systemuser.md#BKMK_lk_appconfig_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_appconfig"></a> organization_appconfig
 
-See organization Table [organization_appconfig](organization.md#BKMK_organization_appconfig) One-To-Many relationship.
+See the [organization_appconfig](organization.md#BKMK_organization_appconfig) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_appmodule_appconfig"></a> appmodule_appconfig
 
-See appmodule Table [appmodule_appconfig](appmodule.md#BKMK_appmodule_appconfig) One-To-Many relationship.
+See the [appmodule_appconfig](appmodule.md#BKMK_appmodule_appconfig) one-to-many relationship for the [appmodule](appmodule.md) table/entity.
 
 ### <a name="BKMK_lk_appconfig_modifiedby"></a> lk_appconfig_modifiedby
 
-See systemuser Table [lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_modifiedby) One-To-Many relationship.
+See the [lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

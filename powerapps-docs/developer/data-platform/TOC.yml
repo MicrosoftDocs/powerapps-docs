@@ -22,6 +22,8 @@
     href: security-sharing-assigning.md
   - name: Verifying access in code
     href: security-access-coding.md
+  - name: Security roles and templates
+    href: security-roles.md
 - name: Work with data using code
   href: work-with-data.md
   items:
@@ -31,24 +33,24 @@
     href: ./org-service/overview.md
   - name: Create your own messages
     href: custom-actions.md
-    items:
-    - name: Use Custom Process Actions with code
-      href: workflow-custom-actions.md
+    items:    
     - name: Create and use Custom APIs
       href: custom-api.md
       items:
-      - name: Create a Custom API in the maker portal
+      - name: Create a Custom API with plug-in registration tool
+        href: create-custom-api-prt.md
+      - name: Create a Custom API in Power Apps
         href: create-custom-api-maker-portal.md
       - name: Create a Custom API with code
         href: create-custom-api-with-code.md
       - name: Create a Custom API with solution files
         href: create-custom-api-solution.md
-      - name: CustomAPI Table Columns
-        href: customapi-table-columns.md
-      - name: CustomAPIRequestParameter Table Columns
-        href: customapirequestparameter-table-columns.md
-      - name: CustomAPIResponseProperty Table Columns
-        href: customapiresponseproperty-table-columns.md
+      - name: CustomAPI Tables
+        href: custom-api-tables.md
+      - name: "Sample: IsSystemAdmin Custom API plug-in"
+        href: org-service/samples/issystemadmin-customapi-sample-plugin.md
+    - name: Use Custom Process Actions with code
+      href: workflow-custom-actions.md      
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -74,6 +76,8 @@
     href: how-dataverse-sql-differs-from-transact-sql.md
   - name: Saved Queries
     href: saved-queries.md
+  - name: Query using wildcard characters
+    href: wildcard-characters.md
   - name: Query throttling
     href: query-throttling.md
   - name: Query Hierarchical data
@@ -169,7 +173,7 @@
         href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
-  - name: Business Events (preview)
+  - name: Business Events
     href: business-events.md
   - name: Scalable customization design
     href: scalable-customization-design/overview.md
@@ -283,7 +287,7 @@
     href: transaction-currency-currency-entity.md
   - name: Category table
     href: use-category-entity.md
-  - name: Catalog & CatalogAssignment (preview)
+  - name: Catalog & CatalogAssignment
     href: catalog-catalogassignment.md
   - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
@@ -300,6 +304,8 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Azure AD user tables
+      href: aaduser-entity.md
   - name: Template tables
     href: upload-manage-document-templates.md
 - name: Work with table definitions using code
@@ -408,11 +414,11 @@
   - name: Authenticate apps and services with Microsoft Dataverse
     href: authentication.md
     items:
-    - name: .NET Framework applications
+    - name: Authenticating .NET applications
       href: authenticate-dot-net-framework.md
-    - name: Use OAuth
+    - name: Use OAuth authentication
       href: authenticate-oauth.md
-    - name: Use Office365 (WS-Trust)
+    - name: Use of Office365 (WS-Trust) authentication
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md
@@ -452,8 +458,34 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Microsoft Power Platform CLI 
-      href: powerapps-cli.md
+    - name: Microsoft Power Platform CLI
+      items:
+      - name: Overview
+        href: powerapps-cli.md
+      - name: CLI reference
+        items:
+        - name: admin 
+          href: cli/reference/admin-command.md
+        - name: application 
+          href: cli/reference/application-command.md
+        - name: auth
+          href: cli/reference/auth-command.md
+        - name: canvas 
+          href: cli/reference/canvas-command.md
+        - name: org 
+          href: cli/reference/org-command.md
+        - name: package
+          href: cli/reference/package-command.md
+        - name: paportal 
+          href: cli/reference/paportal-command.md
+        - name: pcf
+          href: cli/reference/pcf-command.md
+        - name: plugin 
+          href: cli/reference/plugin-command.md
+        - name: solution 
+          href: cli/reference/solution-command.md
+        - name: telemetry
+          href: cli/reference/telemetry-command.md
     - name: Power Platform Tools for Visual Studio
       href: ./tools/devtools-install.md
   - name: Community Tools
@@ -467,15 +499,13 @@
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
   - name: Organization Service
-    href: /dotnet/api/?view=dynamics-general-ce-9
+    href: /dotnet/api/microsoft.crm.sdk
   - name: XRM Tooling
-    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Table
-    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
+    href: /dotnet/api/microsoft.xrm.tooling.connector  
   - name: Workflow
-    href: /dotnet/api/?view=dynamics-workflow-ce-9 
+    href: /dotnet/api/microsoft.xrm.sdk.workflow 
   - name: Package Deployer
-    href: /dotnet/api/?view=dynamics-deployer-ce-9
+    href: /dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
   - name: FetchXML schema

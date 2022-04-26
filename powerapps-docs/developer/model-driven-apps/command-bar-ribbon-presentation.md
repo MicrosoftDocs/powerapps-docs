@@ -1,21 +1,21 @@
 ---
 title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Data defining commands in Microsoft Dataverse can be presented in several different ways depending on the client and differences in how some tables are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/15/2021
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 5b1d7633-ab0d-94ec-166f-f5bc1af2a657
-author: Nkrb # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Command bar or ribbon presentation

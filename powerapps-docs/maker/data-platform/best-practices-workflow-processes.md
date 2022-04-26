@@ -4,7 +4,7 @@ description: "Understand the recommended ways to use workflows"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -27,7 +27,7 @@ search.audienceType:
 # Best practices for real-time workflow processes
 
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This article contains best practices for creating and managing real-time workflow processes.  
 

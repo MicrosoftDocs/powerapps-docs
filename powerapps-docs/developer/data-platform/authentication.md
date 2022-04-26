@@ -2,9 +2,9 @@
 title: "Authenticate with Microsoft Dataverse web services (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Introduces authentication options that depend on the software framework you use." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/23/2021
+ms.date: 01/06/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -23,9 +23,9 @@ How you authenticate depends on the software framework you use and which web ser
 
 ## .NET Framework applications
 
-If your client application uses the .NET Framework, you have two options:
+If your client application uses the .NET Framework, you have two authentication options:
 
-- OAuth
+- OAuth (recommended)
 - Microsoft 365
 
 ### OAuth
@@ -41,16 +41,18 @@ More information: [Use OAuth with Dataverse](authenticate-oauth.md)
 
 ### Microsoft 365
 
-Microsoft 365 authentication requires using the .NET Framework SDK assemblies with the SOAP web services only.
+Microsoft 365 authentication (referred to as Office365 in code) requires using the .NET Framework SDK assemblies with the SOAP web services only.
 
 Using Microsoft 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
 
-More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md), [Use of Microsoft 365 authentication with the WS-Trust security protocol](authenticate-office365-deprecation.md)
+More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md)
+
+> [!IMPORTANT]
+> Microsoft 365 authentication for Dataverse is deprecated. More information: [Use of Office365 authentication with Microsoft Dataverse](authenticate-office365-deprecation.md)
 
 ## All other software frameworks
 
-If you are using anything other than .NET Framework, you must authenticate using OAuth and you must use the OData RESTful 
-web services (Web API and OData global Discovery service).
+If you are using anything other than .NET Framework, you must authenticate using OAuth and you must use the OData RESTful web services (Web API and OData global Discovery service).
 
 More information:  [Use OAuth with Dataverse](authenticate-oauth.md)
 

@@ -8,7 +8,7 @@ brand: power-apps
 metadata:
   title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
+  
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
@@ -108,10 +108,10 @@ conceptualContent:
     - title: Administer Power Apps
       links:
         - text: Use Power Platform admin center
-          url: https://docs.microsoft.com/power-platform/admin/admin-documentation
+          url: /power-platform/admin/admin-documentation
           itemType: overview
         - text: Power Apps licensing
-          url: https://docs.microsoft.com/power-platform/admin/pricing-billing-skus
+          url: /power-platform/admin/pricing-billing-skus
           itemType: overview
         - text: Microsoft Power Platform guidance documentation
           url: /power-platform/guidance
@@ -129,6 +129,18 @@ conceptualContent:
           url: /powerapps/maker/canvas-apps/dev-enterprise-intro
           itemType: reference    
     
+    - title: Power Apps mobile
+      links:
+        - text: Get started with Power Apps mobile
+          url: /powerapps/mobile/run-powerapps-on-mobile
+          itemType: get-started
+        - text: Use model-driven apps on Power Apps mobile
+          url: /powerapps/mobile/use-custom-model-driven-app-on-mobile
+          itemType: how-to-guide 
+        - text: Configure mobile offline
+          url: /powerapps/mobile/setup-mobile-offline
+          itemType: how-to-guide
+    
     - title: Sample apps and solutions
       links:
         - text: Hospital Emergency Response
@@ -141,6 +153,7 @@ conceptualContent:
           url: /powerapps/sample-apps/crisis-financial-impact-tracker/overview
           itemType: overview
     
+       
     - title: Best practices guidance
       links:
         - text: Power Apps patterns
@@ -164,6 +177,7 @@ conceptualContent:
       footerLink:
         url: /powerapps/learning-catalog/learning-catalog
         text: More
+         
 
 # additionalContent section (optional)
 # Card with summary style
@@ -175,21 +189,21 @@ additionalContent:
         # Card
         - title: Power Automate
           summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
-          url: https://docs.microsoft.com/power-automate
+          url: /power-automate
         # Card
         - title: Power BI
           summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
-          url: https://docs.microsoft.com/power-bi
+          url: /power-bi
         - title: Power Virtual Agents
           summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
-          url: https://docs.microsoft.com/power-virtual-agents
+          url: /power-virtual-agents
     - title: See also
       items:
       # Card
       - title: Dynamics 365
         summary: "The next generation of CRM and ERP applications"
-        url: https://docs.microsoft.com/dynamics365/
+        url: /dynamics365/
       # Card
       - title: Microsoft Azure
         summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
-        url: https://docs.microsoft.com/azure
+        url: /azure

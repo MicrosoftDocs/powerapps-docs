@@ -1,20 +1,21 @@
 ---
 title: "setValue (Client API reference)| MicrosoftDocs"
 description: Sets the data value for a column.
-ms.date: 04/15/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/14/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1324b465-6012-47d4-bf35-837df82014cb
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setValue (Client API reference)
 
@@ -53,7 +54,7 @@ Depends on the type of column.
 
 > [!NOTE]
 > Updating a column using **setValue** will not cause the **OnChange** event handlers to run. If you want the **OnChange** event handlers to run you must use [fireOnChange](../attributes/fireOnChange.md) in addition to **setValue**. <br/><br/>
-When model-driven apps for tablets is not connected to the server, **setValue** will not work.<br/><br/>You cannot set the value of composite columns. More information: [Write scripts for composite columns](../composite-attributes.md).
+You cannot set the value of composite columns. More information: [Write scripts for composite columns](../composite-attributes.md).
 
 ### Related topic
 [getValue (Client API reference)](getValue.md)

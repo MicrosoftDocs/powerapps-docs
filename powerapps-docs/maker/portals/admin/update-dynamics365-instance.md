@@ -2,16 +2,16 @@
 title: Update the Dynamics 365 instance for your portal
 description: Learn how to update the Dynamics 365 instance for your portal.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 03/16/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Update the Dynamics 365 instance for your portal
@@ -44,6 +44,9 @@ You can use the Power Platform admin center to update the Dynamics 365 instance 
     ![Update request submitted.](media/power-platform-admin-center/update-request-submitted.png "Update request submitted")
 
 The update might take a while after you select **Submit**. More information: [Upgrade a portal](upgrade-portal.md)
+
+> [!NOTE]
+> You may be required to [reload SSL certificates](manage-ssl-certificates.md) after you have updated the Dynamics 365 instance. Go to **Manage SSL certificates** in the [Power Apps portals admin center](admin-overview.md) to verify if custom SSL certificates need to be reloaded.
 
 ## Next steps
 

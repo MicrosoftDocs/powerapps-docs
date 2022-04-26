@@ -4,7 +4,7 @@
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
- [Service bus queue](https://azure.microsoft.com/documentation/articles/service-bus-dotnet-get-started-with-queues/)  
+ [Service bus queue](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)  
   
  This provides a queue for both inbound and outbound messages (commands) flowing between [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] and [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. When an IoT alert is sent to [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], or a command is sent from [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] to the IoT hub, it will be queued here.  
   

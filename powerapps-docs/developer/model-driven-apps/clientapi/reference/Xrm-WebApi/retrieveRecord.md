@@ -1,19 +1,20 @@
 ---
 title: "retrieveRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the retrieveRecord method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # retrieveRecord (Client API reference)
 
@@ -27,7 +28,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

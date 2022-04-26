@@ -2,12 +2,11 @@
 title: Show a list of items in canvas apps
 description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/28/2017
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -32,13 +31,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
     2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
 - Open a blank app:
-    1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-    1. Under **Make your own app**, select **Canvas app from blank**.
-
-    1. Specify a name for your app, select **Phone**, and then select **Create**.
-
-    1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
+    1. Create a [blank canvas app](create-blank-app.md).
 
     1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 

@@ -2,16 +2,16 @@
 title: How to run Portal Checker
 description: Learn how to run Portal Checker within Power Apps to help you identify common problems within your portal and get suggestions on how to fix them.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Run Portal Checker

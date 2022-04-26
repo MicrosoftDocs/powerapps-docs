@@ -9,7 +9,7 @@
       "moniker_ranges": [],
       "xref_query_tags": [
         "/dotnet",
-        "/dynamics365/customer-engagement/web-api"
+        "/power-apps/developer/data-platform/webapi/reference"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -32,7 +32,7 @@
       "JoinTOCPlugin": [
         {
           "ConceptualTOC": "powerapps-docs/developer/data-platform/webapi/toc.yml",
-          "ReferenceTOCUrl": "/dynamics365/customer-engagement/web-api/toc.json"
+          "ReferenceTOCUrl": "/power-apps/developer/data-platform/webapi/reference/toc.json"
         },
         {
           "ConceptualTOC": "powerapps-docs/developer/data-platform/org-service/toc.yml",
@@ -71,13 +71,13 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
@@ -88,6 +88,15 @@
         "master": "master",
         "live": "live"
       }
+    },
+    {
+      "path_to_root": "PowerApps-Samples",
+      "url": "https://github.com/microsoft/PowerApps-Samples",
+      "branch": "master",
+      "branch_mapping": {
+        "master": "master",
+        "live": "master"
+      }
     }
   ],
   "branch_target_mapping": {
@@ -95,7 +104,7 @@
       "Publish",
       "PDF"
     ],
-    "master": [
+    "main": [
       "Publish",
       "PDF"
     ],

@@ -1,22 +1,23 @@
 ---
-title: "getValue (Client API reference)| MicrosoftDocs"
+title: "attribute.getValue (Client API reference)| MicrosoftDocs"
 description: Retrieves the data value for a column.
-ms.date: 04/15/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: acc78a1e-212a-4eef-88c5-8272f9ba3009
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getValue (Client API reference)
+# attribute.getValue (Client API reference)
 
 Retrieves the data value for a column.
 

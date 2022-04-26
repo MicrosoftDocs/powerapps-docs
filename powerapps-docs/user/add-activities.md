@@ -3,9 +3,9 @@ title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 06/22/2021
 ms.subservice: end-user
 ms.author: mkaur
@@ -43,7 +43,7 @@ When enabled by your system administrator, you can use the icons that are displa
 - [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](../maker/model-driven-apps/set-up-timeline-control.md).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/powerapps/maker/model-driven-apps/set-up-timeline-control.md).
 
 > [!Note]
 > The Notes feature is not available from the timeline. 
@@ -122,7 +122,7 @@ Legend
 1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides additional functionality options.
 2. The **Refresh timeline** command updates row details in the timeline.
 3. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
-4. The **Always show email as conversations** or **Always show email as individual messages** command is used to enable or disables threaded email views.
+4. The **Always show email as conversations** or **Always show email as individual messages** command is used to enable or disable threaded email views.
 
 ## Threaded email views in timeline
 
@@ -404,7 +404,7 @@ The following table describes the different formatting features and functionalit
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
-For more information, see [Enable rich-text editor for notes in timeline](../maker/model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline).
+For more information, see [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
 
 ## See also
 

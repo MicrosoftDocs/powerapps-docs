@@ -1,12 +1,12 @@
 ---
-title: Create a canvas app with the barcode scanner control
+title: Create a canvas app with the barcode scanner control (contains video)
 description: Learn how to make a canvas app that uses the barcode scanner control.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/01/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vipare
 search.audienceType: 
@@ -31,6 +31,9 @@ Some of the common uses of barcode scanner control in a canvas app are:
 
 In this article, we'll create a canvas app with barcode scanner and display scanned items in a gallery.
 
+Watch this video to learn how to create an app with barcode scanner:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk8]
+
 ## Prerequisites
 
 - [Power Apps license](/power-platform/admin/pricing-billing-skus)
@@ -39,13 +42,7 @@ In this article, we'll create a canvas app with barcode scanner and display scan
 
 ## Open a blank app
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Under **Make your own app**, select **Canvas app from blank**.
-
-1. Enter a name for your app, select **Phone**, and then select **Create**.
-
-    ![Name the app](media/ceate-app-barcode-scanner/open-a-blank-app-1.png)
+Create a [blank canvas app](../create-blank-app.md).
 
 ## Add barcode scanner
 

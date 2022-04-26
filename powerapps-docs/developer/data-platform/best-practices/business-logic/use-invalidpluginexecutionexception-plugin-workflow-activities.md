@@ -1,26 +1,22 @@
 ---
 title: "Use InvalidPluginExecutionException in plug-ins and workflow activities | MicrosoftDocs"
 description: "Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity."
-services: ''
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: ryjones
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/06/2021
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Use InvalidPluginExecutionException in plug-ins and workflow activities
 
@@ -52,7 +48,7 @@ Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecu
 
 ### Handle errors from functions called in plug-ins
 
-Within your plug-in you will commonly call other functions to re-use code. How you handle errors in these functions is very important because an unhandled error may cause the worker process to crash. This will not only terminate your plug-in, but may also terminate any concurrent plug-ins running for your organization. More information: [Error: No Sandbox Worker processes are currently available](../../troubleshoot-plug-in.md#error-no-sandbox-worker-processes-are-currently-available)
+Within your plug-in you will commonly call other functions to re-use code. How you handle errors in these functions is very important because an unhandled error may cause the worker process to crash. This will not only terminate your plug-in, but may also terminate any concurrent plug-ins running for your organization. More information: [Error: Sandbox Worker process crashed](../../troubleshoot-plug-in.md#error-sandbox-worker-process-crashed)
 
 <a name='problem'></a>
 

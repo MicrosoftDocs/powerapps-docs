@@ -4,7 +4,6 @@ description: "Learn the different types of data you can work with in Dataverse."
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -12,7 +11,7 @@ applies_to:
   - "powerapps"
 author: "mmercuri"
 ms.subservice: dataverse-maker
-ms.author: "mmercuri"
+ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -23,7 +22,7 @@ search.app:
 
 # Work with any data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Microsoft Dataverse provides an abstraction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Dataverse exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
 
@@ -83,7 +82,7 @@ The relationship types are:
 
 Because many-to-one relationships are the most common, Dataverse provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
 
-For more information about creating table relationships, see [Create a relationship between tables](/powerapps/maker/data-platform/data-platform-table-lookup).
+For more information about creating table relationships, see [Create a relationship between tables](/powerapps/maker/data-platform/data-platform-entity-lookup).
 
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Dataverse data for security and analytical purposes.
 
@@ -96,7 +95,7 @@ Dataverse supports analytics by providing the capability to choose tables for ma
 
 Dataverse provides three ways to query rows:
 
-- Relevance search
+- Dataverse search
 
 - Quick find (single-table or multi-table)
 
@@ -107,11 +106,11 @@ Dataverse provides three ways to query rows:
 
 For more information, see [Compare searches](../../user/search.md).
 
-### Relevance search
+### Dataverse search
 
-Relevance search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
+Dataverse search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
 
-Relevance search brings the following enhancements and benefits:
+Dataverse search brings the following enhancements and benefits:
 
 - Improves performance by using external indexing and Azure search technology.
 
@@ -123,7 +122,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results.
 
-For more information about relevance search, see [Using relevance search to search for rows](../../user/relevance-search.md).
+For more information about Dataverse search, see [Using Dataverse search to search for rows](../../user/relevance-search.md).
 
 ### Quick find
 

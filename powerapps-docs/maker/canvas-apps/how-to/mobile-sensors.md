@@ -1,13 +1,13 @@
 ---
-title: Create an app that uses mobile sensors
+title: Create an app that uses mobile sensors (contains video)
 description: Learn how to use mobile sensors in Power Apps - including NFC, accelerometer, and location.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.subservice: canvas-maker
-ms.date: 09/01/2021
+ms.date: 10/06/2021
 ms.author: anuitz
 search.audienceType: 
   - maker
@@ -28,6 +28,9 @@ To set up the scenario behind the first screen, imagine that you are building an
 
 For the second screen, imagine needing a tool to roughly measure angles. When on the second screen, the participant will be able to place or hold their device on a surface, and get the angles on the X and Y axis of the device as well as view a visual representation of those angles.
 
+Watch this video to learn how to build an app that uses mobile sensors:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiu]
+
 ## Prerequisites
 
 - Any level of Power Apps license can be used for this app, as no data connections are being used.
@@ -35,9 +38,9 @@ For the second screen, imagine needing a tool to roughly measure angles. When on
 - An [NFC capable device](https://en.wikipedia.org/wiki/List_of_NFC-enabled_mobile_devices) is needed for the NFC scanning feature. It's also assumed that the NFC tags to be scanned have been pre-configured to produce text values in the following example format:
 
     ```
-    \<b\>Heading: \</b\> 80 degrees \<br\>
-    \<b\>Latitude: \</b\> 44.4604788 \<br\>
-    \<b\>Longitude: \</b\> -110.82813759
+    "<b>Heading: </b> 80 degrees <br>
+    <b>Latitude: </b> 44.4604788 <br>
+    <b>Longitude: </b> -110.82813759"
     ```
 
     This will provide the text in an HTML-friendly format for the app. The setup of the NFC tags is beyond the scope of this article, and the NFC elements can be ignored if needed; the primary focus is using the mobile sensors in Power Apps.
@@ -67,17 +70,17 @@ This will provide a header for the screen.
 
 ### HTML text for the device sensor outputs
 
-Next, add an **HTML text** control. This will be used to display all the device sensor outputs in one place. Use this code in the **HTMLText** property:
+Next, add an **HTML text** control. This will be used to display all the device sensor outputs in one place. Use this code in the **HtmlText** property:
 
 ```powerapps-dot
-"\<b\>\<u\>Current Location\</u\>\</b\>\<br\>  
-\<br\>
-\<b\>Compass Heading: \</b\>" & Round(Compass.Heading, 2) & Char(0176) &
-"\<br\>
-\<br\>
-\<b\>Lat: \</b\>" & Location.Latitude & "\<br\>
-\<b\>Long: \</b\>" & Location.Longitude & "\<br\>
-\<b\>Alt: \</b\>" & Round(Location.Altitude, 2) & " m"”"
+"<b><u>Current Location</u></b><br>  
+<br>
+<b>Compass Heading: </b>" & Round(Compass.Heading, 2) & Char(0176) &
+"<br>
+<br>
+<b>Lat: </b>" & Location.Latitude & "<br>
+<b>Long: </b>" & Location.Longitude & "<br>
+<b>Alt: </b>" & Round(Location.Altitude, 2) & " m"
 ```
 
 Change the following properties in the Advanced pane:
@@ -115,13 +118,13 @@ Round(Location.Altitude \* 3.2808, 2) & " ft"
 > [!NOTE]
 > Many sensor properties might not work correctly if you preview the app inside Power Apps Studio. To work with sensor properties for testing, prefer to use a mobile phone instead.
 
-Now position the **Html text** control near the lower half of the screen.
+Now position the **HTML text** control near the lower half of the screen.
 
 ## Add Button for the NFC scan and HTML text control
 
 ### NFC scan button
 
-Add a button to the app, positioning in below the **Html text** control that you added in the last step, and change the following properties in the Advanced pane:
+Add a button to the app, positioning in below the **HTML text** control that you added in the last step, and change the following properties in the Advanced pane:
 
 | Property        | Value                               |
 |-----------------|-------------------------------------|
@@ -130,13 +133,13 @@ Add a button to the app, positioning in below the **Html text** control that you
 
 The code in the **OnSelect** property is utilizing the [ReadNFC()](../functions/function-readnfc.md) function, which activates the NFC reader. It then stores what is read from the NFC tag in a collection called **colNFCScan**. This collection will have four fields: **RTD**, **Text**, **TNF**, and **URI**. While a full explanation of these fields is beyond the scope of this article, some explanation may be helpful. **TNF** stands for **Type Name Format** and is used to define the structure of the **Record Type Definition**, or **RTD**, which in turn defines the type of record contained in the **Text** and/or **URI** fields. **URI** stands for **Uniform Resource Identifier**, which is essentially the address of a resource. For the NFC tags being used in this example, in addition to the **Text** field containing the example text from the introduction of this topic, they would contain a **TNF** value of *1*, an **RTD** value of *T*, and a blank **URI** value.
 
-### Add Html text control to display the NFC scan information
+### Add HTML text control to display the NFC scan information
 
-Add a second **Html text** control and use the following formula in the **HTMLText** property:
+Add a second **HTML text** control and use the following formula in the **HTMLText** property:
 
 ```powerapps-dot
-\<b\>\<u\>Next Destination\</u\>\</b\>\<br\>
-\<br\>" &
+"<b><u>Next Destination</u></b><br>
+<br>" &
 First(colNFCScan).Text
 ```
 
@@ -218,16 +221,16 @@ If you've renamed the first screen that was just added, substitute that name for
 Finally, add an **HTML text** control. This will be used to display all the device sensor outputs in one place. Use the following formula in the HTML Text property:
 
 ```powerapps-dot
-"\<b\>\<u\>Angles:\</u\>\</b\>\<br\>
-\<br\>
-\<table width='100%'\>
-\<tr\>
-\<td width='50%'\>\<b\>X: \</b\>" & Abs(Round(Acceleration.X \* (90 / 9.81),
-0)) & Char(0176) & "\</td\>
-\<td width='50%'\>\<b\>Y: \</b\>" & Abs(Round(Acceleration.Y \* (90 / 9.81),
-0)) & Char(0176) & "\</td\>
-\</tr\>
-\</table\>"
+"<b><u>Angles:</u></b><br>
+<br>
+<table width='100%'>
+<tr>
+<td width='50%'><b>X: </b>" & Abs(Round(Acceleration.X * (90 / 9.81),
+0)) & Char(0176) & "</td>
+<td width='50%'><b>Y: </b>" & Abs(Round(Acceleration.Y * (90 / 9.81),
+0)) & Char(0176) & "</td>
+</tr>
+</table>"
 ```
 
 Change the following properties in the Advanced tab:
@@ -252,7 +255,7 @@ This sensor detects gravitational forces on the device over three planes. Using 
 
 The accelerometer will measure forces acting on the device both in motion, such as if you dropped the device, and at rest, such as tilting the device on one or more of the axes described earlier. At rest, the theoretical values should be between 0 and +/- 9.81 m/s2, with 0 indicating that the relative axis is parallel to the Earth with no gravity acting on the sensor and a reading of 9.81 indicating that the relative axis is perpendicular to the Earth and the full force of gravity is acting on the sensor.
 
-Looking at the code in the **Html text** control you just added, notice the following section:
+Looking at the code in the **HTML text** control you just added, notice the following section:
 
 ```powerapps-dot
 Abs(Round(Acceleration.X * (90 / 9.81), 0))
@@ -287,7 +290,7 @@ To begin, add a **Button** control to the screen, renaming it to **btnCircleLeve
 
 The result of these changes should produce a circular button in the center of the screen that cannot be pressed due to being disabled.
 
-Next, add a **Circle** shape and change the following properties in the **Advanced** pane:
+Next, add a **Circle** shape, set it's Border Radius to 400 and change the following properties in the **Advanced** pane:
 
 | Property               | Value                                                                                                            |
 |------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -296,8 +299,6 @@ Next, add a **Circle** shape and change the following properties in the **Advanc
 | Y                      | (Parent.Height - Self.Height) / 2 - (Round(Acceleration.Y / 9.81 \* 90, 0) / 90 \* btnCircleLevel.Width / 2) |
 | Width                  | 42                                                                                                               |
 | Height                 | Self.Width                                                                                                       |
-| X                      | (Parent.Width - Self.Width) / 2                                                                                  |
-| Y                      | (Parent.Height - Self.Height) / 2                                                                                |
 | Width                  | 400                                                                                                              |
 | Height                 | Self.Width                                                                                                       |
 
@@ -361,5 +362,5 @@ Save and publish the app. On a mobile device with the necessary sensors, open th
 ### See also
 
 - [Acceleration, App, Compass, Connection, and Location signals in Power Apps](../functions/signals.md)
-- [Mixed reality components in Power Apps](../mixed-reality-overview.md)
-- [Geospatial components in Power Apps](../geospatial-overview.md)
+- [Mixed reality controls in Power Apps](../mixed-reality-overview.md)
+- [Geospatial controls in Power Apps](../geospatial-overview.md)

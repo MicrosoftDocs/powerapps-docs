@@ -2,8 +2,6 @@
 title: Connect to SharePoint from a canvas app
 description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -22,19 +20,19 @@ contributors:
 
 ![SharePoint.](./media/connection-sharepoint-online/sharepointicon.png "SharePoint")
 
-Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
+Connect to a SharePoint site to generate an app automatically from a list, or create a connection before you add data to an existing app or build an app from scratch.
 
 Depending on where your data resides, you can take either or both of these approaches:
 
-- Show data from a custom list in a SharePoint Online site or an on-premises site.
+- Show data from a list in a SharePoint Online site or an on-premises site.
 - Show images and play video or audio files in a library (SharePoint Online only).
 
 ## Generate an app
 
-If you want to manage data in a custom list, Power Apps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
+If you want to manage data in a list, Power Apps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
 
 > [!NOTE]
-> If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
+> If your list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
 
 ## Create a connection
 
@@ -52,7 +50,7 @@ If you want to manage data in a custom list, Power Apps can [generate a three-sc
 
         ![To connect to SharePoint Online, select Connect directly (cloud services).](./media/connection-sharepoint-online/select-online.png "Connect to a site")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
     - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
@@ -69,7 +67,7 @@ If you want to manage data in a custom list, Power Apps can [generate a three-sc
 
         ![Choose gateway.](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
 ## Add data to an existing app
 
@@ -87,10 +85,9 @@ If you want to manage data in a custom list, Power Apps can [generate a three-sc
 
     ![Under Choose a list, select the check box for one or more lists that you want to use, and then select Connect.](./media/connection-sharepoint-online/select-sp-tables.png "Select list")
 
-    Not all types of lists appear by default. Power Apps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
+    Not all types of lists appear by default. Power Apps supports lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
-    ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png "Enter name")
-
+    ![Type the name of the list in the box that contains Enter a list name.](./media/connection-sharepoint-online/custom-list.png "Enter name")
     The data source or sources are added to your app.
 
 ## Build your own app from scratch
@@ -99,7 +96,7 @@ Apply the concepts in [Create an app from scratch](../get-started-create-from-bl
 
 ## Show list columns in a gallery
 
-If your custom list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
+If your list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
 
 - For a **Choice** or **Lookup** column, specify **ThisItem.**_ColumnName_**.Value** to show data in that column.
 
@@ -202,7 +199,7 @@ Not all types of columns are supported, and not all types of columns support all
 
 ### SharePoint document library images render intermittently
 
-SharePoint lists with links to images stored in SharePoint document libraries may fail to render inside Power Apps with authentication errors.
+Lists with links to images stored in SharePoint document libraries may fail to render inside Power Apps with authentication errors.
 
 Power Apps connections to SharePoint are made to an explicitly identified list, and not to a SharePoint site in general. Power Apps will try to resolve an external link to an external source. Rendering such images succeeds if there's no authentication required, or if the user has previously authenticated to the referenced SharePoint site. However, it's common that the Power Apps users on mobile devices may not have previously authenticated to the referenced SharePoint site for images. Using links to refer to images from SharePoint document libraries in this scenario may not succeed. This behavior applies even if a separate connection exists for the document library inside the app.
 

@@ -1,13 +1,13 @@
 ---
-title: "SocialProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SocialProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SocialProfile table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -101,12 +101,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Blocked Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -125,11 +125,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Community Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Other|
-|1|Facebook|
-|2|Twitter|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Other|Other default|
+|1|Facebook|Facebook item.|
+|2|Twitter|Twitter.|
 
 
 
@@ -309,7 +309,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|Shows the customer that this social profile belongs to.|
 |DisplayName|Profile Link|
-|FormatName|Text|
+|FormatName|Url|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -472,6 +472,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
@@ -563,8 +564,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -666,12 +667,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -751,7 +768,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SocialProfile_ProcessSessions"></a> SocialProfile_ProcessSessions
 
-Same as processsession table [SocialProfile_ProcessSessions](processsession.md#BKMK_SocialProfile_ProcessSessions) Many-To-One relationship.
+Same as the [SocialProfile_ProcessSessions](processsession.md#BKMK_SocialProfile_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -766,7 +783,7 @@ Same as processsession table [SocialProfile_ProcessSessions](processsession.md#B
 
 ### <a name="BKMK_SocialProfile_DuplicateBaseRecord"></a> SocialProfile_DuplicateBaseRecord
 
-Same as duplicaterecord table [SocialProfile_DuplicateBaseRecord](duplicaterecord.md#BKMK_SocialProfile_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [SocialProfile_DuplicateBaseRecord](duplicaterecord.md#BKMK_SocialProfile_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -781,7 +798,7 @@ Same as duplicaterecord table [SocialProfile_DuplicateBaseRecord](duplicaterecor
 
 ### <a name="BKMK_SocialProfile_DuplicateMatchingRecord"></a> SocialProfile_DuplicateMatchingRecord
 
-Same as duplicaterecord table [SocialProfile_DuplicateMatchingRecord](duplicaterecord.md#BKMK_SocialProfile_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [SocialProfile_DuplicateMatchingRecord](duplicaterecord.md#BKMK_SocialProfile_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -796,7 +813,7 @@ Same as duplicaterecord table [SocialProfile_DuplicateMatchingRecord](duplicater
 
 ### <a name="BKMK_Socialprofile_SocialActivities"></a> Socialprofile_SocialActivities
 
-Same as socialactivity table [Socialprofile_SocialActivities](socialactivity.md#BKMK_Socialprofile_SocialActivities) Many-To-One relationship.
+Same as the [Socialprofile_SocialActivities](socialactivity.md#BKMK_Socialprofile_SocialActivities) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -811,7 +828,7 @@ Same as socialactivity table [Socialprofile_SocialActivities](socialactivity.md#
 
 ### <a name="BKMK_socialprofile_principalobjectattributeaccess"></a> socialprofile_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [socialprofile_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_socialprofile_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [socialprofile_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_socialprofile_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -826,7 +843,7 @@ Same as principalobjectattributeaccess table [socialprofile_principalobjectattri
 
 ### <a name="BKMK_SocialProfile_SyncErrors"></a> SocialProfile_SyncErrors
 
-Same as syncerror table [SocialProfile_SyncErrors](syncerror.md#BKMK_SocialProfile_SyncErrors) Many-To-One relationship.
+Same as the [SocialProfile_SyncErrors](syncerror.md#BKMK_SocialProfile_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -841,7 +858,7 @@ Same as syncerror table [SocialProfile_SyncErrors](syncerror.md#BKMK_SocialProfi
 
 ### <a name="BKMK_socialprofile_connections2"></a> socialprofile_connections2
 
-Same as connection table [socialprofile_connections2](connection.md#BKMK_socialprofile_connections2) Many-To-One relationship.
+Same as the [socialprofile_connections2](connection.md#BKMK_socialprofile_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -856,7 +873,7 @@ Same as connection table [socialprofile_connections2](connection.md#BKMK_socialp
 
 ### <a name="BKMK_SocialProfile_AsyncOperations"></a> SocialProfile_AsyncOperations
 
-Same as asyncoperation table [SocialProfile_AsyncOperations](asyncoperation.md#BKMK_SocialProfile_AsyncOperations) Many-To-One relationship.
+Same as the [SocialProfile_AsyncOperations](asyncoperation.md#BKMK_SocialProfile_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -871,7 +888,7 @@ Same as asyncoperation table [SocialProfile_AsyncOperations](asyncoperation.md#B
 
 ### <a name="BKMK_socialprofile_connections1"></a> socialprofile_connections1
 
-Same as connection table [socialprofile_connections1](connection.md#BKMK_socialprofile_connections1) Many-To-One relationship.
+Same as the [socialprofile_connections1](connection.md#BKMK_socialprofile_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -900,31 +917,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_transactioncurrency_SocialProfile"></a> transactioncurrency_SocialProfile
 
-See transactioncurrency Table [transactioncurrency_SocialProfile](transactioncurrency.md#BKMK_transactioncurrency_SocialProfile) One-To-Many relationship.
+See the [transactioncurrency_SocialProfile](transactioncurrency.md#BKMK_transactioncurrency_SocialProfile) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_business_unit_socialprofiles"></a> business_unit_socialprofiles
 
-See businessunit Table [business_unit_socialprofiles](businessunit.md#BKMK_business_unit_socialprofiles) One-To-Many relationship.
+See the [business_unit_socialprofiles](businessunit.md#BKMK_business_unit_socialprofiles) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_Socialprofile_customer_contacts"></a> Socialprofile_customer_contacts
 
-See contact Table [Socialprofile_customer_contacts](contact.md#BKMK_Socialprofile_customer_contacts) One-To-Many relationship.
+See the [Socialprofile_customer_contacts](contact.md#BKMK_Socialprofile_customer_contacts) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_SocialProfile_createdonbehalfby"></a> lk_SocialProfile_createdonbehalfby
 
-See systemuser Table [lk_SocialProfile_createdonbehalfby](systemuser.md#BKMK_lk_SocialProfile_createdonbehalfby) One-To-Many relationship.
+See the [lk_SocialProfile_createdonbehalfby](systemuser.md#BKMK_lk_SocialProfile_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_socialProfile_owning_user"></a> socialProfile_owning_user
 
-See systemuser Table [socialProfile_owning_user](systemuser.md#BKMK_socialProfile_owning_user) One-To-Many relationship.
+See the [socialProfile_owning_user](systemuser.md#BKMK_socialProfile_owning_user) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_SocialProfile_modifiedonbehalfby"></a> lk_SocialProfile_modifiedonbehalfby
 
-See systemuser Table [lk_SocialProfile_modifiedonbehalfby](systemuser.md#BKMK_lk_SocialProfile_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_SocialProfile_modifiedonbehalfby](systemuser.md#BKMK_lk_SocialProfile_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Socialprofile_customer_accounts"></a> Socialprofile_customer_accounts
 
-See account Table [Socialprofile_customer_accounts](account.md#BKMK_Socialprofile_customer_accounts) One-To-Many relationship.
+See the [Socialprofile_customer_accounts](account.md#BKMK_Socialprofile_customer_accounts) one-to-many relationship for the [account](account.md) table/entity.
 
 ### See also
 

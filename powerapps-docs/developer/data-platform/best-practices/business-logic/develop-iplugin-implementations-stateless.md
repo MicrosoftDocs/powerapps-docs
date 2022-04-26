@@ -9,7 +9,7 @@ ms.reviewer: phecke
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -25,7 +25,7 @@ search.app:
 ---
 # Develop IPlugin implementations as stateless
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Design, Performance
 

@@ -1,13 +1,13 @@
 ---
-title: "ProcessTrigger table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ProcessTrigger table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProcessTrigger table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -98,10 +98,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ControlType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Attribute|
-|2|Form Tab|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Attribute||
+|2|Form Tab||
 
 
 
@@ -176,11 +176,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PipelineStage Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Default Value|
-|20|Before Main Operation|
-|40|After Main Operation|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Default Value||
+|20|Before Main Operation||
+|40|After Main Operation||
 
 
 
@@ -241,10 +241,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Scope Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Form|
-|2|Entity|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Form||
+|2|Entity||
 
 
 <a name="read-only-attributes"></a>
@@ -296,12 +296,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -442,12 +442,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -704,7 +704,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ProcessTrigger_SyncErrors"></a> ProcessTrigger_SyncErrors
 
-Same as syncerror table [ProcessTrigger_SyncErrors](syncerror.md#BKMK_ProcessTrigger_SyncErrors) Many-To-One relationship.
+Same as the [ProcessTrigger_SyncErrors](syncerror.md#BKMK_ProcessTrigger_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -732,27 +732,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_process_processtrigger"></a> process_processtrigger
 
-See workflow Table [process_processtrigger](workflow.md#BKMK_process_processtrigger) One-To-Many relationship.
+See the [process_processtrigger](workflow.md#BKMK_process_processtrigger) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_lk_processtriggerbase_createdby"></a> lk_processtriggerbase_createdby
 
-See systemuser Table [lk_processtriggerbase_createdby](systemuser.md#BKMK_lk_processtriggerbase_createdby) One-To-Many relationship.
+See the [lk_processtriggerbase_createdby](systemuser.md#BKMK_lk_processtriggerbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_processtriggerbase_createdonbehalfby"></a> lk_processtriggerbase_createdonbehalfby
 
-See systemuser Table [lk_processtriggerbase_createdonbehalfby](systemuser.md#BKMK_lk_processtriggerbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_processtriggerbase_createdonbehalfby](systemuser.md#BKMK_lk_processtriggerbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processtrigger_systemform"></a> processtrigger_systemform
 
-See systemform Table [processtrigger_systemform](systemform.md#BKMK_processtrigger_systemform) One-To-Many relationship.
+See the [processtrigger_systemform](systemform.md#BKMK_processtrigger_systemform) one-to-many relationship for the [systemform](systemform.md) table/entity.
 
 ### <a name="BKMK_lk_processtriggerbase_modifiedonbehalfby"></a> lk_processtriggerbase_modifiedonbehalfby
 
-See systemuser Table [lk_processtriggerbase_modifiedonbehalfby](systemuser.md#BKMK_lk_processtriggerbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_processtriggerbase_modifiedonbehalfby](systemuser.md#BKMK_lk_processtriggerbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_processtriggerbase_modifiedby"></a> lk_processtriggerbase_modifiedby
 
-See systemuser Table [lk_processtriggerbase_modifiedby](systemuser.md#BKMK_lk_processtriggerbase_modifiedby) One-To-Many relationship.
+See the [lk_processtriggerbase_modifiedby](systemuser.md#BKMK_lk_processtriggerbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

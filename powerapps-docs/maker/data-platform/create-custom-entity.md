@@ -3,7 +3,7 @@ title: Create a custom table that has components with Power Apps | Microsoft Doc
 description: Topic with step-by-step instructions for creating and configuring a table to use with a Power Apps app.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: tutorial
 ms.date: 01/26/2021
@@ -18,7 +18,7 @@ search.app:
 
 # Create a custom table that has components in Power Apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. A table defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 

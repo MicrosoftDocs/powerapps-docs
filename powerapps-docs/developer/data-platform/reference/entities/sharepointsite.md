@@ -1,13 +1,13 @@
 ---
-title: "SharePointSite table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SharePointSite table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SharePointSite table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -165,12 +165,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -188,12 +188,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsGridPresent Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -211,12 +211,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPowerBISite Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -351,12 +351,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ServiceType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|SharePoint|
-|1|OneDrive|
-|2|Shared with me|
-|3|MS Teams|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|SharePoint||
+|1|OneDrive||
+|2|Shared with me||
+|3|MS Teams||
 
 
 
@@ -476,13 +476,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ValidationStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Not Validated|
-|2|In Progress|
-|3|Invalid|
-|4|Valid|
-|5|Could not validate|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Not Validated||
+|2|In Progress||
+|3|Invalid||
+|4|Valid||
+|5|Could not validate||
 
 
 
@@ -500,15 +500,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ValidationStatusErrorCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|This record's URL has not been validated.|
-|2|This record's URL is valid.|
-|3|This record's URL is not valid.|
-|4|The URL schemes of Microsoft Dynamics 365 and SharePoint are different.|
-|5|The URL could not be accessed because of Internet Explorer security settings.|
-|6|Authentication failure.|
-|7|Invalid certificates.|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|This record's URL has not been validated.||
+|2|This record's URL is valid.||
+|3|This record's URL is not valid.||
+|4|The URL schemes of Microsoft Dynamics 365 and SharePoint are different.||
+|5|The URL could not be accessed because of Internet Explorer security settings.||
+|6|Authentication failure.||
+|7|Invalid certificates.||
 
 
 <a name="read-only-attributes"></a>
@@ -535,6 +535,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentSiteName](#BKMK_ParentSiteName)
@@ -661,8 +662,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -812,12 +813,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the document location record.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -939,7 +956,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_sharepointdocumentlocation_parent_sharepointsite"></a> sharepointdocumentlocation_parent_sharepointsite
 
-Same as sharepointdocumentlocation table [sharepointdocumentlocation_parent_sharepointsite](sharepointdocumentlocation.md#BKMK_sharepointdocumentlocation_parent_sharepointsite) Many-To-One relationship.
+Same as the [sharepointdocumentlocation_parent_sharepointsite](sharepointdocumentlocation.md#BKMK_sharepointdocumentlocation_parent_sharepointsite) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -954,7 +971,7 @@ Same as sharepointdocumentlocation table [sharepointdocumentlocation_parent_shar
 
 ### <a name="BKMK_sharepointsite_principalobjectattributeaccess"></a> sharepointsite_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [sharepointsite_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_sharepointsite_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [sharepointsite_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_sharepointsite_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -969,7 +986,7 @@ Same as principalobjectattributeaccess table [sharepointsite_principalobjectattr
 
 ### <a name="BKMK_SharePointSite_SyncErrors"></a> SharePointSite_SyncErrors
 
-Same as syncerror table [SharePointSite_SyncErrors](syncerror.md#BKMK_SharePointSite_SyncErrors) Many-To-One relationship.
+Same as the [SharePointSite_SyncErrors](syncerror.md#BKMK_SharePointSite_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -984,7 +1001,7 @@ Same as syncerror table [SharePointSite_SyncErrors](syncerror.md#BKMK_SharePoint
 
 ### <a name="BKMK_sharepointsite_parentsite_sharepointsite"></a> sharepointsite_parentsite_sharepointsite
 
-Same as sharepointsite table [sharepointsite_parentsite_sharepointsite](sharepointsite.md#BKMK_sharepointsite_parentsite_sharepointsite) Many-To-One relationship.
+Same as the [sharepointsite_parentsite_sharepointsite](sharepointsite.md#BKMK_sharepointsite_parentsite_sharepointsite) many-to-one relationship for the [sharepointsite](sharepointsite.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -999,7 +1016,7 @@ Same as sharepointsite table [sharepointsite_parentsite_sharepointsite](sharepoi
 
 ### <a name="BKMK_SharePointSite_DuplicateBaseRecord"></a> SharePointSite_DuplicateBaseRecord
 
-Same as duplicaterecord table [SharePointSite_DuplicateBaseRecord](duplicaterecord.md#BKMK_SharePointSite_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [SharePointSite_DuplicateBaseRecord](duplicaterecord.md#BKMK_SharePointSite_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1014,7 +1031,7 @@ Same as duplicaterecord table [SharePointSite_DuplicateBaseRecord](duplicatereco
 
 ### <a name="BKMK_SharePointSite_AsyncOperations"></a> SharePointSite_AsyncOperations
 
-Same as asyncoperation table [SharePointSite_AsyncOperations](asyncoperation.md#BKMK_SharePointSite_AsyncOperations) Many-To-One relationship.
+Same as the [SharePointSite_AsyncOperations](asyncoperation.md#BKMK_SharePointSite_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1029,7 +1046,7 @@ Same as asyncoperation table [SharePointSite_AsyncOperations](asyncoperation.md#
 
 ### <a name="BKMK_SharePointSite_DuplicateMatchingRecord"></a> SharePointSite_DuplicateMatchingRecord
 
-Same as duplicaterecord table [SharePointSite_DuplicateMatchingRecord](duplicaterecord.md#BKMK_SharePointSite_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [SharePointSite_DuplicateMatchingRecord](duplicaterecord.md#BKMK_SharePointSite_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1044,7 +1061,7 @@ Same as duplicaterecord table [SharePointSite_DuplicateMatchingRecord](duplicate
 
 ### <a name="BKMK_SharePointSite_ProcessSessions"></a> SharePointSite_ProcessSessions
 
-Same as processsession table [SharePointSite_ProcessSessions](processsession.md#BKMK_SharePointSite_ProcessSessions) Many-To-One relationship.
+Same as the [SharePointSite_ProcessSessions](processsession.md#BKMK_SharePointSite_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1075,39 +1092,39 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_user_sharepointsite"></a> user_sharepointsite
 
-See systemuser Table [user_sharepointsite](systemuser.md#BKMK_user_sharepointsite) One-To-Many relationship.
+See the [user_sharepointsite](systemuser.md#BKMK_user_sharepointsite) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_sharepointsite"></a> team_sharepointsite
 
-See team Table [team_sharepointsite](team.md#BKMK_team_sharepointsite) One-To-Many relationship.
+See the [team_sharepointsite](team.md#BKMK_team_sharepointsite) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_sharepointsites"></a> business_unit_sharepointsites
 
-See businessunit Table [business_unit_sharepointsites](businessunit.md#BKMK_business_unit_sharepointsites) One-To-Many relationship.
+See the [business_unit_sharepointsites](businessunit.md#BKMK_business_unit_sharepointsites) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_SharePointSite"></a> TransactionCurrency_SharePointSite
 
-See transactioncurrency Table [TransactionCurrency_SharePointSite](transactioncurrency.md#BKMK_TransactionCurrency_SharePointSite) One-To-Many relationship.
+See the [TransactionCurrency_SharePointSite](transactioncurrency.md#BKMK_TransactionCurrency_SharePointSite) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_sharepointsitebase_modifiedonbehalfby"></a> lk_sharepointsitebase_modifiedonbehalfby
 
-See systemuser Table [lk_sharepointsitebase_modifiedonbehalfby](systemuser.md#BKMK_lk_sharepointsitebase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_sharepointsitebase_modifiedonbehalfby](systemuser.md#BKMK_lk_sharepointsitebase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sharepointsitebase_createdby"></a> lk_sharepointsitebase_createdby
 
-See systemuser Table [lk_sharepointsitebase_createdby](systemuser.md#BKMK_lk_sharepointsitebase_createdby) One-To-Many relationship.
+See the [lk_sharepointsitebase_createdby](systemuser.md#BKMK_lk_sharepointsitebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_sharepointsite_parentsite_sharepointsite"></a> sharepointsite_parentsite_sharepointsite
 
-See sharepointsite Table [sharepointsite_parentsite_sharepointsite](sharepointsite.md#BKMK_sharepointsite_parentsite_sharepointsite) One-To-Many relationship.
+See the [sharepointsite_parentsite_sharepointsite](sharepointsite.md#BKMK_sharepointsite_parentsite_sharepointsite) one-to-many relationship for the [sharepointsite](sharepointsite.md) table/entity.
 
 ### <a name="BKMK_lk_sharepointsitebase_createdonbehalfby"></a> lk_sharepointsitebase_createdonbehalfby
 
-See systemuser Table [lk_sharepointsitebase_createdonbehalfby](systemuser.md#BKMK_lk_sharepointsitebase_createdonbehalfby) One-To-Many relationship.
+See the [lk_sharepointsitebase_createdonbehalfby](systemuser.md#BKMK_lk_sharepointsitebase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sharepointsitebase_modifiedby"></a> lk_sharepointsitebase_modifiedby
 
-See systemuser Table [lk_sharepointsitebase_modifiedby](systemuser.md#BKMK_lk_sharepointsitebase_modifiedby) One-To-Many relationship.
+See the [lk_sharepointsitebase_modifiedby](systemuser.md#BKMK_lk_sharepointsitebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

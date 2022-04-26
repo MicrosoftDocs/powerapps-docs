@@ -1,8 +1,8 @@
 ---
 title: Collaborative troubleshooting using Monitor
 description: Learn about collaborative troubleshooting using Monitor with features such as inviting a user or connecting a user to Monitor.
-author: tapanm-msft
-ms.service: powerapps
+author: mattgon
+
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
@@ -15,6 +15,8 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
+  - mattgon
+  - maustinjones
 ---
 
 # Collaborative troubleshooting using Monitor

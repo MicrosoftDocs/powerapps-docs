@@ -1,15 +1,13 @@
 ---
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
-ms.custom: ""
-ms.date: 07/28/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 04/01/2022
+ms.reviewer: phecke
 ms.topic: "article"
-author: "shmcarth" # GitHub ID
+author: shmcarth # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: shmcarth # MSFT alias of Microsoft employees only
+manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

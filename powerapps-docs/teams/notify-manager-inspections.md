@@ -1,16 +1,16 @@
 ---
-title: Notify a manager on completion of an inspection
+title: Notify a manager on completion of an inspection (contains video)
 description: Learn about the changes that would be required to notify the manager on completion of an inspection.
-author: navjotm
-ms.service: powerapps
+author: msftsamperl
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/16/2021
-ms.author: namarwah
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
   - joel-lindstrom
-  - navjotm
+  - msftsamperl
   - tapanm-msft
   - sbahl10
 ---
@@ -25,6 +25,9 @@ The outcome is that the Inspection app can be used to verify that employees are 
 
 > [!NOTE]
 > Before you begin, read [Customize the Inspection app](customize-inspections.md).
+
+Watch this video to learn how to configure manager notification on completion of an inspection:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9G]
 
 ## Prerequisites
 

@@ -2,10 +2,10 @@
 title: Connect to Azure Blob Storage from Power Apps
 description: Learn how to connect and upload files to Azure Blob Storage using canvas apps.
 author: vasavib
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.date: 03/15/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
 ms.reviewer: tapanm
@@ -69,18 +69,9 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 > [!NOTE]
 > In this section, you'll create a sample app with sample controls, functionality and layout design. Depending on your business requirement, you can create the app with a different structure, or customize differently.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. On the left-pane, select **Create**.
+1. Create a [blank canvas app](../create-blank-app.md) with the name "Sample app for Azure Blob Storage" and **Phone** layout.
 
-1. Select **Canvas app from blank**.
-
-1. Enter app name, such as "Sample app for Azure Blob Storage".
-
-1. Select **Phone** layout.
-
-1. Select **Create**.
-
-1. Inside the Power Apps Studio, on the left-pane, select ![Data.](./media/connection-azure-blob-storage/select-data.png "Data").
+1. Inside Power Apps Studio, on the left-pane, select ![Data](./media/connection-azure-blob-storage/select-data.png "Data").
 
 1. Select **Add data**.
 
@@ -131,7 +122,8 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
     ```powerapps-dot
     AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
     ```
-    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs) <br>
+
+    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs)
     
     > [!NOTE]
     > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. Update the formula with the gallery name if different.
@@ -206,7 +198,7 @@ Let's configure the app with controls and logic to allow upload of files to the 
 
 ## Download files from Azure Blob Storage
 
-So far you've added the ability to view containers, files from the selected container, and the option to upload file to the storage. Now, let's understand how to work with the download capability with the connected storage.
+So far you've added the ability to view containers, files from the selected container, and the option to upload files to the storage. Now, let's understand how to work with the download capability with the connected storage.
 
 1. Select the first row in the gallery with the list of files from a container.
 
@@ -215,7 +207,7 @@ So far you've added the ability to view containers, files from the selected cont
 1. Select **Insert** -> **Icons** -> **Download**.
     This adds the download icon for all rows in the gallery.
 
-1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves rest of the icons for next rows in gallery.
+1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves the rest of the icons for the next rows in the gallery.
 
     ![Move first row in the file list gallery.](./media/connection-azure-blob-storage/move-download-icon.png "Move first row in the file list gallery")
 
@@ -263,9 +255,9 @@ Similarly, you can use different file extension types, or media types to additio
 
 The Azure Blob Storage connection doesn't refresh data inside the galleries automatically when the data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
 
-Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
+Another method that can be considered is to use a collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
 
-For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible screen property).
+For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when the upload button is selected, or when the screen appears (OnVisible screen property).
 
 1. Set the **Items** property of the first gallery for the list of containers to "TopLevelList".
 

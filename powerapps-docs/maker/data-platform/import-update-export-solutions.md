@@ -2,9 +2,8 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/02/2021
+ms.date: 03/21/2022
 ms.reviewer: ""
-ms.service: powerapps
 ms.topic: "article"
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
@@ -20,8 +19,6 @@ search.app:
 ---
 # Import solutions
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can manually import solutions using the steps in this article. You must import only those solutions that you've obtained from a trusted source.
@@ -33,7 +30,7 @@ You can manually import solutions using the steps in this article. You must impo
 
 When you import an **unmanaged** solution:
 - You add all the components of that solution into your environment and can't delete the components by deleting the solution. Deleting the unmanaged solution deletes only the solution container.
-- That contains components you have already customized, your customizations will be overwritten by the customizations in the imported unmanaged solution. You can’t undo this.
+- That contains customized components, the existing customizations to the component will be overwritten after the unmanaged solution import. You can’t undo this.
 
 To import a solution:
 
@@ -79,7 +76,7 @@ During solution import the system must ensure that there is a fallback form for 
 
 During export of unmanaged solutions, some forms that aren't modified get exported with the attribute `unmodified=1` in the form XML of the customizations.xml file located in the solution package. This attribute is located in the FormXml node in the customization.xml file within the solution package. This attribute ensures that, even though these forms are part of the solution being exported, when the same solution is imported in a new environment the form will be omitted from the import. To avoid this scenario, the form must have active customizations for it to be exported without the unmodified=1 attribute. To verify this, extract the exported solution package and search the customizations.xml file for the FormXml node in question and verify the unmodified attribute.
 
-### *Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form <formid>* message during solution import
+### *Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form &lt;formid&gt;* message during solution import
 
 This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the `solutionaction` attribute) and can be obtained from the instance this form was originally created in as unmanaged.
 
@@ -99,6 +96,12 @@ A model-driven app change that uses **All** when selecting a component, such as 
 2. Then you created another solution with the same app in the development environment. You selected **All** to select all views in the app designer. The solution is then exported as managed from your development environment and imported into your test (target) environment.
 
 To work around this behavior, select each component individually, such as the newly added views described in step 2, rather than select All.
+
+### Label text doesn’t display in additional languages after import
+
+After you import a solution, label text doesn’t display in other languages. This issue can occur when you import the solution with the translations *before* you enable the language in the target environment.
+
+To workaround this issue, enable the languages that you want and then import the solution again. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
 
 ### See also
 

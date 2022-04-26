@@ -1,12 +1,10 @@
 ---
 title: "Subject table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about subject categorizing table rows in Power Apps, such as articles and sales literature. Using subjects you can create a hierarchy of topics to organize and maintain information."
-ms.custom: ""
-ms.date: 03/28/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" #TODO: NoOwner
+author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
@@ -14,6 +12,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Subject table
 

@@ -1,13 +1,13 @@
 ---
-title: "SLAKPIInstance table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SLAKPIInstance table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLAKPIInstance table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -222,11 +222,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_ActionExecutionStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Warning|
-|2|Success|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Warning||
+|2|Success||
 
 
 
@@ -331,7 +331,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|Owning Business Unit.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
@@ -458,14 +458,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|In Progress|
-|1|Noncompliant|
-|2|Nearing Noncompliance|
-|3|Paused|
-|4|Succeeded|
-|5|Canceled|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|In Progress||
+|1|Noncompliant||
+|2|Nearing Noncompliance||
+|3|Paused||
+|4|Succeeded||
+|5|Canceled||
 
 
 
@@ -517,12 +517,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TerminalStateReached Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -586,10 +586,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### WarningTimeReached Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|No|
-|1|Yes|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|No||
+|1|Yes||
 
 
 <a name="read-only-attributes"></a>
@@ -616,6 +616,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [msdyn_slaitemidName](#BKMK_msdyn_slaitemidName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [RegardingIdName](#BKMK_RegardingIdName)
 - [RegardingYomiName](#BKMK_RegardingYomiName)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
@@ -739,8 +740,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -902,6 +903,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_RegardingIdName"></a> RegardingIdName
 
 |Property|Value|
@@ -973,7 +990,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SLAKPIInstance_SyncErrors"></a> SLAKPIInstance_SyncErrors
 
-Same as syncerror table [SLAKPIInstance_SyncErrors](syncerror.md#BKMK_SLAKPIInstance_SyncErrors) Many-To-One relationship.
+Same as the [SLAKPIInstance_SyncErrors](syncerror.md#BKMK_SLAKPIInstance_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1012,71 +1029,71 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_slakpiinstance_activitypointer"></a> slakpiinstance_activitypointer
 
-See activitypointer Table [slakpiinstance_activitypointer](activitypointer.md#BKMK_slakpiinstance_activitypointer) One-To-Many relationship.
+See the [slakpiinstance_activitypointer](activitypointer.md#BKMK_slakpiinstance_activitypointer) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_email"></a> slakpiinstance_email
 
-See email Table [slakpiinstance_email](email.md#BKMK_slakpiinstance_email) One-To-Many relationship.
+See the [slakpiinstance_email](email.md#BKMK_slakpiinstance_email) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_fax"></a> slakpiinstance_fax
 
-See fax Table [slakpiinstance_fax](fax.md#BKMK_slakpiinstance_fax) One-To-Many relationship.
+See the [slakpiinstance_fax](fax.md#BKMK_slakpiinstance_fax) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_lk_slakpiinstancebase_createdonbehalfby"></a> lk_slakpiinstancebase_createdonbehalfby
 
-See systemuser Table [lk_slakpiinstancebase_createdonbehalfby](systemuser.md#BKMK_lk_slakpiinstancebase_createdonbehalfby) One-To-Many relationship.
+See the [lk_slakpiinstancebase_createdonbehalfby](systemuser.md#BKMK_lk_slakpiinstancebase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_slakpiinstancebase_modifiedonbehalfby"></a> lk_slakpiinstancebase_modifiedonbehalfby
 
-See systemuser Table [lk_slakpiinstancebase_modifiedonbehalfby](systemuser.md#BKMK_lk_slakpiinstancebase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_slakpiinstancebase_modifiedonbehalfby](systemuser.md#BKMK_lk_slakpiinstancebase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_account"></a> slakpiinstance_account
 
-See account Table [slakpiinstance_account](account.md#BKMK_slakpiinstance_account) One-To-Many relationship.
+See the [slakpiinstance_account](account.md#BKMK_slakpiinstance_account) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_letter"></a> slakpiinstance_letter
 
-See letter Table [slakpiinstance_letter](letter.md#BKMK_slakpiinstance_letter) One-To-Many relationship.
+See the [slakpiinstance_letter](letter.md#BKMK_slakpiinstance_letter) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_phonecall"></a> slakpiinstance_phonecall
 
-See phonecall Table [slakpiinstance_phonecall](phonecall.md#BKMK_slakpiinstance_phonecall) One-To-Many relationship.
+See the [slakpiinstance_phonecall](phonecall.md#BKMK_slakpiinstance_phonecall) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_business_unit_slakpiinstance"></a> business_unit_slakpiinstance
 
-See businessunit Table [business_unit_slakpiinstance](businessunit.md#BKMK_business_unit_slakpiinstance) One-To-Many relationship.
+See the [business_unit_slakpiinstance](businessunit.md#BKMK_business_unit_slakpiinstance) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_socialactivity"></a> slakpiinstance_socialactivity
 
-See socialactivity Table [slakpiinstance_socialactivity](socialactivity.md#BKMK_slakpiinstance_socialactivity) One-To-Many relationship.
+See the [slakpiinstance_socialactivity](socialactivity.md#BKMK_slakpiinstance_socialactivity) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_task"></a> slakpiinstance_task
 
-See task Table [slakpiinstance_task](task.md#BKMK_slakpiinstance_task) One-To-Many relationship.
+See the [slakpiinstance_task](task.md#BKMK_slakpiinstance_task) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_lk_slakpiinstancebase_modifiedby"></a> lk_slakpiinstancebase_modifiedby
 
-See systemuser Table [lk_slakpiinstancebase_modifiedby](systemuser.md#BKMK_lk_slakpiinstancebase_modifiedby) One-To-Many relationship.
+See the [lk_slakpiinstancebase_modifiedby](systemuser.md#BKMK_lk_slakpiinstancebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_slakpiinstance"></a> TransactionCurrency_slakpiinstance
 
-See transactioncurrency Table [TransactionCurrency_slakpiinstance](transactioncurrency.md#BKMK_TransactionCurrency_slakpiinstance) One-To-Many relationship.
+See the [TransactionCurrency_slakpiinstance](transactioncurrency.md#BKMK_TransactionCurrency_slakpiinstance) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_contact"></a> slakpiinstance_contact
 
-See contact Table [slakpiinstance_contact](contact.md#BKMK_slakpiinstance_contact) One-To-Many relationship.
+See the [slakpiinstance_contact](contact.md#BKMK_slakpiinstance_contact) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_slakpiinstancebase_createdby"></a> lk_slakpiinstancebase_createdby
 
-See systemuser Table [lk_slakpiinstancebase_createdby](systemuser.md#BKMK_lk_slakpiinstancebase_createdby) One-To-Many relationship.
+See the [lk_slakpiinstancebase_createdby](systemuser.md#BKMK_lk_slakpiinstancebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_slakpiinstance_appointment"></a> slakpiinstance_appointment
 
-See appointment Table [slakpiinstance_appointment](appointment.md#BKMK_slakpiinstance_appointment) One-To-Many relationship.
+See the [slakpiinstance_appointment](appointment.md#BKMK_slakpiinstance_appointment) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_msdyn_slaitem_slakpiinstance"></a> msdyn_slaitem_slakpiinstance
 
-See slaitem Table [msdyn_slaitem_slakpiinstance](slaitem.md#BKMK_msdyn_slaitem_slakpiinstance) One-To-Many relationship.
+See the [msdyn_slaitem_slakpiinstance](slaitem.md#BKMK_msdyn_slaitem_slakpiinstance) one-to-many relationship for the [slaitem](slaitem.md) table/entity.
 
 ### See also
 

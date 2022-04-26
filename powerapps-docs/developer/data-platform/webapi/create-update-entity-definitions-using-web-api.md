@@ -1,25 +1,18 @@
 ---
 title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table definitions using the Web API."
-ms.custom: ""
-ms.date: 04/21/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 1f430d2d-e829-4ffa-922e-dfcfb7c9e86e
-caps.latest.revision: 24
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Create and update table definitions using the Web API
 

@@ -3,7 +3,7 @@ title: What is Microsoft Dataverse? | Microsoft Docs
 description: Introduction to Microsoft Dataverse, tables, server-side logic, security, and developer capabilities.
 author: mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.topic: overview
 ms.component: cds
 ms.custom: intro-internal
@@ -21,7 +21,7 @@ searchScope:
 ---
 
 # What is Microsoft Dataverse?
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse lets you securely store and manage data that's used by business applications. Data within Dataverse is stored within a set of tables. A *table* is a set of rows (formerly referred to as records) and columns (formerly referred to as fields/attributes). Each column in the table is designed to store a certain type of data, for example, name, age, salary, and so on. Dataverse includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data by using Power Query. App makers can then use Power Apps to build rich applications that use this data.
 
@@ -78,7 +78,7 @@ Building an app typically involves data from more than one source. Although this
 * **Transform and import data using Power Query** &ndash; Transforming data when importing into Dataverse can be done through Power Query&mdash;a tool commonly used across Excel and Power BI&mdash;from many online data sources.
 * **One-time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one-time (or infrequent) import of data into Dataverse.
 
-For more information about integrating data into the Dataverse, go to [Add data to a table in Dataverse by using Power Query](add-data-power-query.md).
+For more information about integrating data into the Dataverse, go to [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
 
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Dataverse provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
@@ -109,7 +109,7 @@ To get started using Dataverse:
 - [Create a canvas app using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md).
 - [Create a custom table](create-custom-entity.md) and then [create a canvas app that uses the table](../canvas-apps/data-platform-create-app.md).
 - [Create a model-driven app](../model-driven-apps/build-first-model-driven-app.md) built on Dataverse.
-- [Use Power Query](./add-data-power-query.md) to connect to an online or on-premises data source and import the data directly into Dataverse.
+- [Use Power Query](/power-query/dataflows/add-data-power-query) to connect to an online or on-premises data source and import the data directly into Dataverse.
 
 ## Privacy notice
 With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

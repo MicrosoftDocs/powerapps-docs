@@ -4,7 +4,7 @@ description: "The second in a series of topics. This topic focuses on the impact
 ms.custom: ""
 ms.date: 1/15/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "rogergilchrist" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -18,7 +18,7 @@ search.app:
 
 # Scalable Customization Design: Database transactions
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 > [!NOTE]
 > This is the second in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Microsoft Dataverse](overview.md).

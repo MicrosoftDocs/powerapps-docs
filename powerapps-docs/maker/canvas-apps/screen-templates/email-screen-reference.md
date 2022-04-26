@@ -2,8 +2,7 @@
 title: Reference information about the email-screen template in canvas apps
 description: Understand details of how the email-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

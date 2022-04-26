@@ -4,8 +4,8 @@ description: "The first in a series of topics. This topic introduces symptoms th
 ms.custom: ""
 ms.date: 9/13/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
+
+ms.topic: overview
 author: "rogergilchrist" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Scalable Customization Design in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 > [!NOTE]
 > This is the first in a series of topics about scalable customization design. While this content has been divided into separate topics, it presents a wholistic view of concepts, issues, and strategies surrounding the design of scalable customizations. Each topic builds upon concepts established in preceding topics.

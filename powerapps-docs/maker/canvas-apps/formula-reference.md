@@ -2,12 +2,10 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nkrb
-ms.date: 08/09/2021
+ms.reviewer: tapanm-msft
+ms.date: 04/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -15,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - nkrb
+  - tapanm-msft
   - gregli-msft
 ---
 # Formula reference for Power Apps
@@ -189,6 +187,8 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Index](functions/function-first-last.md)** – Returns a record from a table based on ordered position.
+
 **[Int](functions/function-round.md)** – Rounds down to the nearest integer.
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
@@ -205,9 +205,11 @@ Other elements include:
 
 **[ISOWeekNum](functions/function-weeknum.md)** – Returns the ISO week number of a date/time value.
 
-**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
+**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today in the user's time zone.
 
 **[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific table type.
+
+**[IsUTCToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today in Coordinated Universal Time (UTC).
 
 ## J
 **[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
@@ -230,6 +232,8 @@ Other elements include:
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
+
+**[Log](functions/function-numericals.md)** – Returns the logarithm in any base of a number.
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
@@ -261,7 +265,7 @@ Other elements include:
 
 **[Notify](functions/function-showerror.md)** – Displays a banner message to the user.
 
-**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value in the user's time zone.
 
 ## O
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
@@ -284,9 +288,13 @@ Other elements include:
 ## R
 **[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
-**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number between 0 and 1.
+
+**[RandBetween](functions/function-rand.md)** – Returns a pseudo-random number between two numbers.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
+**[RecordInfo](functions/function-recordinfo.md)** – Provides information about a record of a data source.
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
@@ -380,7 +388,7 @@ Other elements include:
 
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
-**[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Today](functions/function-now-today-istoday.md)** – Returns the current date-only value.
 
 **[Trace](functions/function-trace.md)** - Provide additional information in your test results.
 
@@ -404,6 +412,10 @@ Other elements include:
 **[Upper](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
 
 **[User](functions/function-user.md)** – Returns information about the current user.
+
+**[UTCNow](functions/function-now-today-istoday.md)** – Returns the current date/time value in Coordinated Universal Time (UTC).
+
+**[UTCToday](functions/function-now-today-istoday.md)** – Returns the current date-only value in Coordinated Universal Time (UTC).
 
 ## V
 **[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.

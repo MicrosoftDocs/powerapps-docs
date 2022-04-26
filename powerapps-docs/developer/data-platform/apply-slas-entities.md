@@ -4,9 +4,8 @@ description: "Learn about applying SLAs to custom tables by enabling tables for 
 ms.custom: ""
 ms.date: 07/19/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" #TODO: NoOwner
+author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -18,7 +17,7 @@ search.app:
 ---
 # Apply SLAs to tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Service level agreements (SLAs) in Dataverse help you define the level of service or support that your organization agrees to offer a customer by including items to define metrics or key performance indicators (KPIs) to attain the service level. You can apply SLAs to custom tables and the following system tables:  
   

@@ -3,18 +3,15 @@ title: Image Element | Microsoft Docs
 description: The img web resource allows you to add images for the code components.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 ---
 
 # img element

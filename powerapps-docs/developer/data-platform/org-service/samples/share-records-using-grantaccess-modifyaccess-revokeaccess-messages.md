@@ -1,36 +1,30 @@
 ---
 title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to share a record using grant, modify and revoke access message." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-share-records-using-grantaccess-modifyaccess-revokeaccess-messages 
-
-Change sample to make sure it works with Microsoft Dataverse
--->
-
 This sample shows how to share a record using the following messages:
 
-[GrantAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.grantaccessrequest?view=dynamics-general-ce-9)
+[GrantAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.grantaccessrequest)
 
-[ModifyAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.modifyaccessrequest?view=dynamics-general-ce-9)
+[ModifyAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.modifyaccessrequest)
 
-[RevokeAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.revokeaccessrequest?view=dynamics-general-ce-9)
+[RevokeAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.revokeaccessrequest)
 
 You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/GrantModifyRevokeAccess).
 

@@ -1,20 +1,20 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 09/13/2021
+ms.date: 03/28/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 
 # Register a plug-in
@@ -164,7 +164,7 @@ When you register a step, there are many options available to you which depend o
 |**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
 |**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonate a user](impersonate-a-user.md) |
-|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. If all plug-ins for the same stage, table, and message have the same value, the [SdkMessageProcessingStep.SdkMessageFilterId](/dynamics365/customer-engagement/developer/entities/sdkmessageprocessingstep#BKMK_SdkMessageFilterId) value will determine the order in which they are executed.|
+|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. The actual execution order of the plugins with the same Execution Order value (for the same stage, table and message) is not guaranteed and can be random.|
 |**Description**|A description for step. This value is pre-populated but can be overwritten.|
 
 ### Event Pipeline Stage of execution
@@ -254,7 +254,9 @@ When you configure an entity image it is important that you recognize that the t
 
 #### Add an entity image
 
-See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps to add an entity image.
+Use the [Power Platform Tools](tools/devtools-install.md) extension for Visual Studio to [add an entity image](tools/devtools-create-plugin.md#add-an-entity-image) to a plug-in step.
+
+Alternately, you can use the Plug-in Registration Tool to add an entity image to a step by following the instructions in [Tutorial: Update a plug-in](tutorial-update-plug-in.md) under the section [Add an image](tutorial-update-plug-in.md#add-an-image).
 
 ### Add step to solution
 

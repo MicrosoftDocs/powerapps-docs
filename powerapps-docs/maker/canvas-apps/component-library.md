@@ -2,10 +2,9 @@
 title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
 author: hemantgaur
-ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/23/2021
+ms.date: 04/19/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -18,9 +17,6 @@ contributors:
 ---
 
 # Component library
-
-> [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
 
 In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
@@ -48,7 +44,7 @@ You can preview component library components using the screens inside the librar
 
 ## Working with component library
 
-You can create a new component library or edit an existing component library from the same interface. Browse to [make.powerapps.com](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
+You can create a new component library or edit an existing component library from the same interface. Go to [Power Apps](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
 
 ![Create or edit component library.](./media/component-library/create-edit-component-library.png "Create or edit component library")
 
@@ -56,7 +52,7 @@ You can create a new component library or edit an existing component library fro
 
 The steps to create components inside a component library are the same as creating components inside an app. You'll create a component library and then reuse the steps for creating components from [components overview example](create-component.md#create-an-example-component). Then you'll use the component library to provide the reusable components in a new app.
 
-1. Sign in to [make.powerapps.com](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** in the left navigation, select **Component Libraries**, and then select **New component library**.
 
@@ -78,6 +74,24 @@ The steps to create components inside a component library are the same as creati
 1. A saved component library can be published. Only published component library updates are available for apps that consume a component library. Select **Publish** to publish the component library version:
 
     ![Publish component library version.](./media/component-library/publish-component-library.png "Publish component library version")
+
+## Library component customization
+
+When creating component inside a component library, you have the option to allow the component to be customized when used by apps consuming the library components. By default, this setting is turned **On**. Turn this setting to **Off** to remove the ability to customize component while using in other apps.
+
+:::image type="content" source="media/component-library/allow-customization-on.png" alt-text="Option to allow customization to this component when being used by an app.":::
+
+When you add a component that allows customization, you'll see an option to edit this component for additional customization. App makes a local copy and you can make changes to local component copy. Note that the association with the component library is removed once the component is edited.
+
+:::image type="content" source="media/component-library/edit-customizable-component.png" alt-text="Edit a component allowed for customization.":::
+
+Selecting **Edit component** prompts you to copy the component locally for customization.
+
+However, when you don't allow the components to be customized, the consuming apps won't show the option to edit the component.
+
+:::image type="content" source="media/component-library/allow-customization-off.png" alt-text="No option to edit component inside consuming app.":::
+
+In this case, the only way to edit the component is to edit the component library where the component is stored.
 
 ## Import from a component library
 
@@ -136,6 +150,15 @@ The following animation shows the process to get the latest components.
 
 ![Steps to get the latest components](./media/component-library/get-latest-components.gif "Steps to get the latest components")
 
+### Update component library in a consuming app
+
+If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
+
+![Edit library component.](./media/component-library/edit-library-component.png "Edit library component")
+
+If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
+
+
 ## Component library permissions
 
 Sharing a component library works the same way you share a canvas app. When you share a component library, you allow others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps. If shared as a co-owner, a user can use, edit, and share a component library but not delete or change the owner.
@@ -143,19 +166,9 @@ Sharing a component library works the same way you share a canvas app. When you 
 ## Known limitations
 
 - [Known limitations](create-component.md#known-limitations) applicable to components also applies to component libraries.
-- You can't import components using a component library from locally saved component library files. If you try to import a locally saved component library using **File** > **Save As** > **This Computer** and download the component library file as an app, following error message appears: 
+- You can't import components from a locally saved component library. It's possible to save a component library using **File** > **Save As** > **This Computer**. But if you try to import such saved component library, you'll see the following error message: 
 
     ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
-
-- You can't add existing component libraries to a [solution](add-app-solution.md). However, you can create new component libraries for solutions using add component library flow.
-
-- If you import a component from a component library, you can't edit it inside the consuming app. If you select **Edit component**, you'll see an option to create a copy of the component inside the current app for you to make changes: 
-
-    ![Edit library component.](./media/component-library/edit-library-component.png "Edit library component")
-
-    If you select **Create a copy**, the component is copied to the local app. The local copy of the component appears under the **Custom** category in the **Insert** pane. This local copy of the component won't receive updates if a new version of the originating component library is published later.
-    
-- When a component is added to an app from the component library and the theme of the app is updated, the component becomes a local app component and is no longer associated with the master component in the component library.
 
 ## Next steps
 

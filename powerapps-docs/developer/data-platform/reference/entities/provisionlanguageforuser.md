@@ -1,13 +1,13 @@
 ---
-title: "ProvisionLanguageForUser table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ProvisionLanguageForUser table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProvisionLanguageForUser table/entity."
-ms.date: 05/20/2021
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -126,12 +126,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OperationStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Queued|
-|1|Completed|
-|2|Waiting For Language Provision|
-|3|Failed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Queued||
+|1|Completed||
+|2|Waiting For Language Provision||
+|3|Failed||
 
 
 
@@ -198,7 +198,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [provisionlanguageforuser_SyncErrors](syncerror.md#BKMK_provisionlanguageforuser_SyncErrors) Many-To-One relationship.
+Same as the [provisionlanguageforuser_SyncErrors](syncerror.md#BKMK_provisionlanguageforuser_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -215,7 +215,7 @@ Same as syncerror table [provisionlanguageforuser_SyncErrors](syncerror.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [provisionlanguageforuser_AsyncOperations](asyncoperation.md#BKMK_provisionlanguageforuser_AsyncOperations) Many-To-One relationship.
+Same as the [provisionlanguageforuser_AsyncOperations](asyncoperation.md#BKMK_provisionlanguageforuser_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -232,7 +232,7 @@ Same as asyncoperation table [provisionlanguageforuser_AsyncOperations](asyncope
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [provisionlanguageforuser_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_provisionlanguageforuser_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [provisionlanguageforuser_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_provisionlanguageforuser_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -249,7 +249,7 @@ Same as mailboxtrackingfolder table [provisionlanguageforuser_MailboxTrackingFol
 
 **Added by**: System Solution Solution
 
-Same as processsession table [provisionlanguageforuser_ProcessSession](processsession.md#BKMK_provisionlanguageforuser_ProcessSession) Many-To-One relationship.
+Same as the [provisionlanguageforuser_ProcessSession](processsession.md#BKMK_provisionlanguageforuser_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -266,7 +266,7 @@ Same as processsession table [provisionlanguageforuser_ProcessSession](processse
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [provisionlanguageforuser_BulkDeleteFailures](bulkdeletefailure.md#BKMK_provisionlanguageforuser_BulkDeleteFailures) Many-To-One relationship.
+Same as the [provisionlanguageforuser_BulkDeleteFailures](bulkdeletefailure.md#BKMK_provisionlanguageforuser_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -283,7 +283,7 @@ Same as bulkdeletefailure table [provisionlanguageforuser_BulkDeleteFailures](bu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [provisionlanguageforuser_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_provisionlanguageforuser_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [provisionlanguageforuser_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_provisionlanguageforuser_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|

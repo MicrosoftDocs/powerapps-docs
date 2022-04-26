@@ -1,13 +1,13 @@
 ---
-title: "PickListMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PickListMapping table/entity."
-ms.date: 05/20/2021
+title: "List Value Mapping (PickListMapping)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the List Value Mapping (PickListMapping)  table/entity."
+ms.date: 03/29/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# PickListMapping table/entity reference
+# List Value Mapping (PickListMapping)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -122,12 +122,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Process|
-|2|Ignore|
-|3|Internal|
-|4|Unmapped|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Process||
+|2|Ignore||
+|3|Internal||
+|4|Unmapped||
 
 
 
@@ -242,12 +242,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -372,12 +372,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -576,23 +576,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_picklistmapping_modifiedonbehalfby"></a> lk_picklistmapping_modifiedonbehalfby
 
-See systemuser Table [lk_picklistmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_picklistmapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_picklistmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_picklistmapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_PickListMapping_ColumnMapping"></a> PickListMapping_ColumnMapping
 
-See columnmapping Table [PickListMapping_ColumnMapping](columnmapping.md#BKMK_PickListMapping_ColumnMapping) One-To-Many relationship.
+See the [PickListMapping_ColumnMapping](columnmapping.md#BKMK_PickListMapping_ColumnMapping) one-to-many relationship for the [columnmapping](columnmapping.md) table/entity.
 
 ### <a name="BKMK_lk_picklistmapping_createdby"></a> lk_picklistmapping_createdby
 
-See systemuser Table [lk_picklistmapping_createdby](systemuser.md#BKMK_lk_picklistmapping_createdby) One-To-Many relationship.
+See the [lk_picklistmapping_createdby](systemuser.md#BKMK_lk_picklistmapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_picklistmapping_createdonbehalfby"></a> lk_picklistmapping_createdonbehalfby
 
-See systemuser Table [lk_picklistmapping_createdonbehalfby](systemuser.md#BKMK_lk_picklistmapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_picklistmapping_createdonbehalfby](systemuser.md#BKMK_lk_picklistmapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_picklistmapping_modifiedby"></a> lk_picklistmapping_modifiedby
 
-See systemuser Table [lk_picklistmapping_modifiedby](systemuser.md#BKMK_lk_picklistmapping_modifiedby) One-To-Many relationship.
+See the [lk_picklistmapping_modifiedby](systemuser.md#BKMK_lk_picklistmapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -1,19 +1,19 @@
 ---
 title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 07/15/2021
-ms.service: powerapps
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-ms.reviewer: "pehecke"
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.date: 04/06/2022
+author: ImadYanni
+ms.author: iyanni
+ms.reviewer: jdaly
+manager: sporter
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 
 # Global Discovery Service Sample (C#)

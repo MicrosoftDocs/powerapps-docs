@@ -2,11 +2,10 @@
 title: IfError, IsError, and IsBlankOrError functions in Power Apps
 description: Reference information including syntax and examples for the IfError, IsError, IsBlankOrError functions in Power Apps. 
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 06/22/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - gregli-msft
-  - nkrb
+  - tapanm-msft
 ---
 
 # IfError, IsError, IsBlankOrError functions in Power Apps
@@ -194,7 +193,7 @@ Using **IsBlankOrError** will prevent any further processing of the error.
 | Formula | Description | Result |
 | --- | --- | --- | 
 | **IsBlankOrError( 1 )** | The argument isn't an error or a blank.  | *false* | 
-| **IsBlankOrErrro( Blank() )** | The argument is a blank.  | *true* |
+| **IsBlankOrError( Blank() )** | The argument is a blank.  | *true* |
 | **IsBlankOrError( 1/0 )** | The argument is an error.  | *true* | 
 
 ### Step by step
