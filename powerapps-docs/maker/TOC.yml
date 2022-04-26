@@ -395,8 +395,6 @@
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
               - name: Load models with the 3D object control
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
-              - name: Use the Markup in MR control in Power Apps
-                href: ./canvas-apps/markup-in-mixed-reality.md
               - name: Add pins to 3D models
                 href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Use mixed reality experiences in Power Apps
@@ -413,6 +411,8 @@
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
                 href: ./canvas-apps/mixed-reality-cgtrader.md
+              - name: Use the Markup in MR control in Power Apps
+                href: ./canvas-apps/markup-in-mixed-reality.md
           - name: "Add geospatial controls"
             items:
             - name: Geospatial controls
