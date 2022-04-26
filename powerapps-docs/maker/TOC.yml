@@ -1442,6 +1442,8 @@
           href: ./model-driven-apps/commanding-designer-use-custom-pages-as-dialogs.md
         - name: Manage commands in solutions
           href: ./model-driven-apps/manage-commands-in-solutions.md
+        - name: Command scopes
+          href: ./model-driven-apps/commanding-scopes.md
         - name: Command designer limitations
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
