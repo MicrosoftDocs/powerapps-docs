@@ -17,13 +17,16 @@ contributors:
 
 # Use Web API actions
 
-Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they’ll be available for you to use.
+Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they’ll be available for you to use. More information: [Create your own messages](../custom-actions.md).
+
+Actions are defined in [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). See [Web API Actions](web-api-actions.md) for more information.
+
 
 <a name="bkmk_unboundActions"></a>
 
 ## Unbound actions
 
-Actions are defined in [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). As an example, the following is the definition of the <xref:Microsoft.Dynamics.CRM.Merge> action represented in the metadata document.
+The following is the definition of the <xref:Microsoft.Dynamics.CRM.Merge> action represented in the $metadata service document.
 
 ```xml
 <Action Name="Merge">
@@ -325,6 +328,7 @@ If you do not specify the type of entity in this situation, you can get the foll
 
 ### See also
 
+[Web API Actions](web-api-actions.md)<br />
 [Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
