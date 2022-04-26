@@ -1,7 +1,7 @@
 ---
-title: "Send in-app notifications within model-driven apps (preview)" 
+title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 04/25/2022
+ms.date: 04/26/2022
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -20,9 +20,7 @@ contributors:
   - caburk
 ---
 
-# Send in-app notifications within model-driven apps (preview) 
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+# Send in-app notifications within model-driven apps
 
 The notification table stores notifications for each user. Your model-driven app automatically polls the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
