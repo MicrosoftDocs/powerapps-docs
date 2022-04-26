@@ -118,6 +118,7 @@ Within in the replacement formulas, the **FirstError** record and **AllErrors** 
 | **Message** | Text string | Message about the error, suitable to be displayed to the end user. |
 | **Source** | Text string | Location in where the error originated, used for reporting. For example, for a formula bound to a control property, this will be in the form *ControlName.PropertyName*. |
 | **Observed** | Text string | Location in where the error is surfaced to the user, used for reporting.  For example, for a formula bound to a control property, this will be in the form *ControlName.PropertyName*.  |
+| **Details** | Record | Details about the error.  At present, details are provided only for network errors.  This record includes **HttpStatusCode** whcih contains the HTTP status code and **HttpResponse** which contains the body of the response from the connector or service. |
 
 For example, consider the following formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property:
 
