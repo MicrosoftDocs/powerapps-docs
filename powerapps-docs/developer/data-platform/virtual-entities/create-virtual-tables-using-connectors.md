@@ -287,10 +287,10 @@ The following is a list of known limitations for virtual tables created using th
 
 ### General
 
-1. Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
-1. Virtual table queries are limited to return 250 records. If you have a 1:N or N:N relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
-1. Audit functionality is not available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
-1. Rollups cannot be calculated for Virtual tables, this is because Rollups are a server side calculation in Dataverse which requires the data to be stored locally.
+Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
+Virtual table queries are limited to return 250 records. If you have a 1:N or N:N relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
+Audit functionality is not available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
+Rollups cannot be calculated for Virtual tables, this is because Rollups are a server side calculation in Dataverse which requires the data to be stored locally.
 
 ### For each data source
 
