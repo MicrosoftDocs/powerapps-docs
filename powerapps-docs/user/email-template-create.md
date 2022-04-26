@@ -8,10 +8,7 @@ ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/20/2022
 ms.subservice: end-user
-ms.author: mkaur
-ms.custom: ""
-ms.reviewer: ""
-ms.assetid: 
+ms.author: mkaur 
 search.audienceType: 
   - enduser
 search.app: 
@@ -44,18 +41,22 @@ Legend
    4. **Language**. You can display your installed language packs in this field. **Language** also helps to categorize your templates. 
    5. **Create**. Once an email is formatted, you can create it into a template.
 
-When you select **Create**, one of the following pages appear:
-- The enhanced email template editor page, if your admin has enabled the [enhanced email template editor option](cs_email_template_builder.md) in Power Apps.
-- The default email template editor page, if your admin hasn't enabled the [enhanced email template editor option](cs_email_template_builder.md) in Power Apps. 
+When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs_email_template_builder.md):
+
+- If yes, you'll use the enhanced email template editor page.
+- If not, you'll use the default email template editor page.
 
 ### Enhanced email template editor overview
 
    ![Create a new email template.](media\email-template-enh.png "Start  with a blank template option")
-You can do the following actions:
+You can do the following:
 
 - specify the template details and the subject line in the **Template** tab.
 - design and customize an email template in the **Editor** tab. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
 - include attachments to your template in the **Attachments** tab.
+
+> [!NOTE]
+> Email templates created using the enhanced e-mail template experience will open in the enhanced email template editor form even if the admin disables this experience for you.
 
 ### Default email template editor overview
 
@@ -66,6 +67,9 @@ Legend
    2. **Subject**. Allows you to change the subject line.
    3. **Insert dynamic text**. Allows you to use dynamic text in both the Subject line and body of the email.
 
+> [!NOTE]
+> Email templates created using the default email template experience will open in the default email template editor form even if the admin enables the enhanced email template editor experience. 
+ 
 ## Start with existing templates
 
 Starting with an existing template means the template is automatically pre-populated with the pre-established data that you can customize.
