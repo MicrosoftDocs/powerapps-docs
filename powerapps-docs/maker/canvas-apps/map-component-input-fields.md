@@ -1,5 +1,5 @@
 ---
-title: Map input fields of a component (preview)
+title: Map input fields of a component
 description: Learn about how to map input fields of a component to the table or record.
 author: hemantgaur
 ms.subservice: canvas-developer
@@ -17,9 +17,7 @@ contributors:
   - gregli-msft
 ---
 
-# Map input fields of a component (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Map input fields of a component
 
 A component can receive input values to emit or process data using custom input properties. In this article, you'll learn about working with such components expecting one or more input properties with a specific schema for the given table or record, and how to map the component input fields to the columns of the data source.
 

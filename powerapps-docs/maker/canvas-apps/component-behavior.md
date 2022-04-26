@@ -1,5 +1,5 @@
 ---
-title: Behavior formulas for components (preview)
+title: Behavior formulas for components
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: hemantgaur
 ms.subservice: canvas-developer
@@ -16,9 +16,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Behavior formulas for components (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Behavior formulas for components
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
 
