@@ -27,13 +27,13 @@ Turn on the enhanced email template editing experience in apps across your organ
    > Don't select the default solution to configure the template.
 4. Select **Add Existing** > **More** > **Setting**.
 
-   > ![Add a setting to a solution](../media/usr_soln_setting.png)
+   > ![Add a setting to a solution](/media/usr_soln_setting.png)
 1. On the **Add existing Setting Definition** pane, select the **Enable the New Email Template Editor** option and then select **Next**.
-   > ![Add a setting to a solution](../media/usr_soln_email_setting.png)
+   > ![Add a setting to a solution](/media/usr_soln_email_setting.png)
 1. Select **Add** on the **Selected Setting Definition** to add the **Enable the New Email Template Editor** option to your solution. 
 1. Select the **Enable the New Email Template Editor** option. The **Edit Enable the New Email Template Editor** pane appears.
 1. Set the **Setting environment value** option to **Yes** on the **Edit Enable the New Email Template Editor** pane.
-  > ![Add a setting to a solution](../media/enable-email-template-option.png)
+  > ![Add a setting to a solution](/media/enable-email-template-option.png)
 1. Select **Publish All Customizations**.
 
 ## Disable the enhanced email template for an app
@@ -44,11 +44,11 @@ To force app to display the default email template editor page, turn off the enh
 2. Select **Solutions**.
 1. On the **Solutions** page, select the Solution in which you've added the the email template selection option.
 1. Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the app for which you want to disable the enhanced insert email template selection page. The app is added to the solution. 
-  > ![Add a setting to a solution](../media/disable-add-app.png)
+  > ![Add a setting to a solution](/media/disable-add-app.png)
 1. Select the **Enable the New Email Template Editor** option in the solution.
 1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the selected app is displayed. 
 1. Select **New app value** for the app, and select **No** for the specified app.
-   > ![Add a setting to a solution](../media/enh_disable_app.png)
+   > ![Add a setting to a solution](/media/enh_disable_app.png)
 1. Select **Save** and **Publish All Customizations**.
 
 ### See also
