@@ -7,10 +7,7 @@ manager: shujoshi
 ms.topic: conceptual
 ms.date: 4/20/2022
 ms.subservice: end-user
-ms.author: gandhamm
-ms.custom: ""
-ms.reviewer: ""
-ms.assetid: 
+ms.author: gandhamm 
 search.audienceType: 
   - enduser
 search.app: 
@@ -20,7 +17,7 @@ search.app:
 
 # Customize an email template using the template editor
 
-Use the **Editor** tab in the **Email Template** form to create customized email templates per your organization's business requirements. The **Editor** tab has three sections:
+Use the **Editor** tab in the **Email Template** form to create customized email templates. The **Editor** tab has three sections:
 
 - Design canvas
 - Toolbox
@@ -28,7 +25,11 @@ Use the **Editor** tab in the **Email Template** form to create customized email
  
 ![Enhanced Email Template.](media\email_designer_callout.png "Enhanced Template")
 
-## Create an email template 
+## Customize an email template 
+
+On the design canvas, you can drag, arrange, enter, and delete content. By default, the canvas contains one empty one-column layout section.
+
+### Add an element to the template
 
 - In the main part of the page, on the design canvas, you can drag, arrange, delete, and enter content. By default, an empty single one-column section (layout) element appears.
 You can perform the following actions:
@@ -58,6 +59,17 @@ On the design canvas, to change the appearance of a column, select a column. On 
     - Divider: Select this element to divide sections of the template with a line. When you add this element, the **Edit Divider** panel appears. You can change the appearance, color, width, alignment, and spacing of the divider line with the options in this panel.
 
 - General Styles: Use the options in this tab to change the width, font, font size, background and text color of the layout.
+
+### Limitations
+
+When you select the text element, the following features of the rich text editor toolbar are not supported: 
+
+1. The personalization option
+2. Adding images from the Image option
+3. Tracking option of the Link option
+4. Insert table
+5. On  copy paste of a formatted content in the rich text editor of the Text Element, Font style in the Font dropdown of the toolbar of the rich text editor is not auto detected
+
 
 ### See also
 
