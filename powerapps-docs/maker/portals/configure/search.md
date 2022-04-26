@@ -5,20 +5,62 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 12/01/2021
+ms.date: 4/26/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - Professor Kendrick
 ---
 
-# Search
+# Portal Search Overview
 
-In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality. 
+Starting from Website version 9.4.4.xx portal search uses Dataverse search to deliver result from multiple tables and fields for new portals. Existing portals will continue to use Lucene .Net search. You can enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
 
-List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results. 
+## Pre-requisite
+
+Portal search needs Dataverse search feature to be enabled at Dataverse environment
+
+To enable Dataverse search, do the following:
+
+1. In the Power Platform admin center, select an environment.
+
+1. Select Settings > Product > Features.
+
+1. Under Search, set Dataverse search to On.
+
+1. Select Save.
+
+Once the index is provisioned, it may take anywhere between an hour or more to complete a full sync for average size organizations, to a couple of days for very large size organizations.
+
+## What is Dataverse Search
+
+Dataverse search delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse.  
+
+## Global Search
+
+Provides intelligent search by applying AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results
+
+## Tables searchable in portal global search
+
+> [!NOTE]
+> To get better search performance enable “Portal Search” view for only required tables and columns.
+
+## Related site settings
+
+| Name    | Default value     | Description       |
+|-----------------------|--------------------|-------------|
+| **Search/EnableDataverseSearch** | **True** | A Booleanvalue that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .Net based search.  <br /><br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. | 
+
+<!--old content starts here-->
+
+## Search
+
+In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality.
+
+List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results.
 
 Global search uses an external search index that is based on Lucene.Net and is used to search within multiple tables and fields at once.
 
