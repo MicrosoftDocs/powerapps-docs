@@ -1,7 +1,7 @@
 ---
 title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
-ms.date: 04/19/2022
+ms.date: 04/26/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -23,38 +23,47 @@ Actions and functions represent re-usable operations you can perform using the W
 
 ## Unbound actions
 
-Actions are defined in [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). As an example, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action"> represented in the metadata document.
+Actions are defined in [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). As an example, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.Merge?text=Merge Action"> represented in the metadata document.
 
 ```xml
-<Action Name="WinOpportunity">
-  <Parameter Name="OpportunityClose" Type="mscrm.opportunityclose" Nullable="false" />
-  <Parameter Name="Status" Type="Edm.Int32" Nullable="false" />
+<Action Name="Merge">
+   <Parameter Name="Target" 
+      Type="mscrm.crmbaseentity" 
+      Nullable="false" />
+   <Parameter Name="Subordinate" 
+      Type="mscrm.crmbaseentity" 
+      Nullable="false" />
+   <Parameter Name="UpdateContent" 
+      Type="mscrm.crmbaseentity" />
+   <Parameter Name="PerformParentingChecks" 
+      Type="Edm.Boolean" 
+      Nullable="false" />
 </Action>
 ```
 
-The <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action"> corresponds to the <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest> using the organization service. Use this action to set the state of an opportunity to **Won** and create an <xref href="Microsoft.Dynamics.CRM.opportunityclose?text=opportunityclose EntityType"> to record the event. This action doesn’t include a return value. If it succeeds, the operation is complete.
+The <xref:Microsoft.Dynamics.CRM.Merge> action corresponds to the <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> using the organization service. Use this action to merge a pair of duplicate records. This action doesn’t include a return value. If it succeeds, the operation is complete.
 
-The `OpportunityClose` parameter requires a JSON representation of the `opportunityclose` entity to create in the operation. This entity must be related to the opportunity issuing the `opportunityid` single-valued navigation property. In the JSON this is set using the `@odata.bind` annotation as explained in [Associate tables on create](create-entity-web-api.md#bkmk_associateOnCreate).
-
-The `Status` parameter must be set to the status to for the opportunity when it is closed. You can find the default value for this in the <xref href="Microsoft.Dynamics.CRM.opportunity?text=opportunity EntityType"> `statuscode` property. The **Won** option has a value of `3`. You may ask yourself, why is it necessary to set this value when there is only one status reason option that represents **Won**? The reason is because you may define custom status options to represent a win, such as **Big Win** or **Small Win**, so the value could potentially be different from `3` in that situation.
-
-The following example is the HTTP request and response to call the `WinOpportunity` action for an opportunity with an `opportunityid` value of `b3828ac8-917a-e511-80d2-00155d2a68d2`.
+The following example is the HTTP request and response to call the `Merge` action for two account records.
 
  **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/WinOpportunity HTTP/1.1
+POST [Organization URI]/api/data/v9.2/Merge HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 
 {
- "Status": 3,
- "OpportunityClose": {
-  "subject": "Won Opportunity",
-  "opportunityid@odata.bind": "[Organization URI]/api/data/v9.0/opportunities(b3828ac8-917a-e511-80d2-00155d2a68d2)"
- }
+  "Target": {
+    "@odata.type": "Microsoft.Dynamics.CRM.account",
+    "accountid": "cc1e2c4a-e577-ec11-8d21-000d3a554dcd"
+  },
+  "Subordinate": {
+    "@odata.type": "Microsoft.Dynamics.CRM.account",
+    "accountid": "e408fa45-3a70-ec11-8943-00224823561e"
+  },
+  "PerformParentingChecks": false
 }
 
 ```
@@ -65,6 +74,8 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
+
+More information: [Merge table rows using the Web API](merge-entity-using-web-api.md)
 
 <a name="bkmk_boundActions"></a>
 
@@ -134,21 +145,29 @@ OData-Version: 4.0
 
 It is less common to find actions bound to an entity collection. The following are some you may find:
 
-|&nbsp; |&nbsp;|&nbsp;|
+|&nbsp; |&nbsp;|&nbsp;|&nbsp;|
 |-|-|-|  
-|<xref:Microsoft.Dynamics.CRM.CreateException?text=CreateException Action/>|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?text=DeliverIncomingEmail Action/>|<xref:Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action/>|  
-|<xref:Microsoft.Dynamics.CRM.FulfillSalesOrder?text=FulfillSalesOrder Action/>|<xref:Microsoft.Dynamics.CRM.ValidateSavedQuery?text=ValidateSavedQuery Action >||
+|<xref:Microsoft.Dynamics.CRM.CreateException>|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail>|<xref:Microsoft.Dynamics.CRM.ExportTranslation>|  
+|<xref:Microsoft.Dynamics.CRM.ValidateSavedQuery>|`FulfillSalesOrder` in [Dynamics 365 for Sales](/dynamics365/sales/help-hub)||
 
-As an example of an action bound to an entity collection, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action"> represented in the CSDL:
+As an example of an action bound to an entity collection, the following is the definition of the <xref:Microsoft.Dynamics.CRM.ExportTranslation> action represented in the CSDL $metadata:
 
 ```xml
 <ComplexType Name="ExportTranslationResponse">
-	<Property Name="ExportTranslationFile" Type="Edm.Binary" />
+	<Property Name="ExportTranslationFile" 
+    Type="Edm.Binary" />
 </ComplexType>
-<Action Name="ExportTranslation" IsBound="true">
-	<Parameter Name="entityset" Type="Collection(mscrm.solution)" Nullable="false" />
-	<Parameter Name="SolutionName" Type="Edm.String" Nullable="false" Unicode="false" />
-	<ReturnType Type="mscrm.ExportTranslationResponse" Nullable="false" />
+<Action Name="ExportTranslation" 
+    IsBound="true">
+	<Parameter Name="entityset" 
+    Type="Collection(mscrm.solution)" 
+    Nullable="false" />
+	<Parameter Name="SolutionName" 
+    Type="Edm.String" 
+    Nullable="false" 
+    Unicode="false" />
+	<ReturnType Type="mscrm.ExportTranslationResponse" 
+    Nullable="false" />
 </Action>
 ```
 
