@@ -17,7 +17,7 @@ contributors:
 # Manage SSL certificates
 
 You'll need an SSL certificate to set up a [custom host name](add-custom-domain.md). You can upload and update your own custom certificates by using the Power Apps portals admin center.
-<!--note from editor: I added the following H2 because I don't think this list of requirements belonged deep in the procedure. If you disagree, you'll want to turn the "Add a new certificate" H2 into a simple procedure heading ("**To add a new certificate**") because there should never be just one H2. You need two or more, or none.-->
+
 ## SSL certificate requirements
 
 An SSL certificate is a PFX file that must:
@@ -40,7 +40,7 @@ An SSL certificate is a PFX file that must:
 
 1. Select **Add new**.
 
-1. In the **Upload a Certificate** dialog, select **Upload file**, browse to select the certificate file<!--note from editor: Edit okay?-->, and then enter the password.
+1. In the **Upload a Certificate** dialog, select **Upload file**, browse to select the certificate file, and then enter the password.
 
     :::image type="content" source="media/manage-custom-certificates/upload-custom-certificate.png" alt-text="Upload a Certificate dialog with an Upload file button and password field.":::
 
@@ -50,11 +50,8 @@ An SSL certificate is a PFX file that must:
 > 
 > The steps to export an SSL certificate as a password-protected PFX file can vary depending on your certificate provider. Check with your certificate provider for recommendations. For example, certain providers might suggest using an OpenSSL third-party tool from the [OpenSSL](https://www.openssl.org/) or [OpenSSL Binaries](https://wiki.openssl.org/index.php/Binaries) sites. 
 
-
-
 ### See also
 
 [Add a custom domain name](add-custom-domain.md)<br>
 [Microsoft Learn: Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
