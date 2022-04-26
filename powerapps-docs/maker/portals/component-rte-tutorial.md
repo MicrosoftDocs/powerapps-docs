@@ -21,17 +21,17 @@ In this tutorial, you'll configure Power Apps portals to add the [rich text edit
 
 ## Prerequisites
 
-Your portal version must be [9.4.3.x](/power-platform/released-versions/portals) or later.<!--note from editor: "Or later" is via Writing Style Guide.-->
+Your portal version must be [9.4.3.x](/power-platform/released-versions/portals) or later.
 
-## Step 1. Add the rich text editor control to a field in a model-driven app
-<!--note from editor: I'm not sure why it's "field" above and "table" below. Will the reader know the difference?-->
-Follow the steps in the tutorial [Add or replace a text column for rich text editing](../model-driven-apps/rich-text-editor-control.md#add-or-replace-a-text-column-for-rich-text-editing) to add the component to a table on a model-driven form.
+## Step 1. Add the rich text editor control to a column in a model-driven app
+
+Follow the steps in the tutorial [Add or replace a text column for rich text editing](../model-driven-apps/rich-text-editor-control.md#add-or-replace-a-text-column-for-rich-text-editing) to add the component to a column on a model-driven form.
 
 > [!NOTE]
-> To display the data as rich text, you might have to increase the character size of the text fields to accommodate the extra information.
+> To display the data as rich text, you might have to increase the character size of the text columns to accommodate the extra information.
 
 ## Step 2. Verify that the model-driven app uses the new control
-<!--note from editor: Edit okay? "With" is a bit ambiguous here.-->
+
 You can [update an existing model-driven app](../model-driven-apps/design-custom-business-apps-using-app-designer.md) or [create a new app](../model-driven-apps/build-first-model-driven-app.md) with the form to which you added the component. For example, the following image shows the feedback table **simple contact us form** using the rich text editor control in a model-driven app.
 
 :::image type="content" source="media/component-rte-tutorial/rich-text-editor-mda.png" alt-text="Rich text editor for a feedback table.":::
@@ -48,7 +48,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 1. Select **New**.
 
-1. Enter a **Name** for the form. In this example, we use **Feedback basic form with RTE**<!--note from editor: Bold is the primary way to indicate user input or anything you select in a UI. Italics are actually kind of rare (new terms, variable names, book titles, game names, song titles, and "sparingly for emphasis"), I think because they're seen as being hard to read online.-->.
+1. Enter a **Name** for the form. In this example, we use **Feedback basic form with RTE**.
 
 1. For **Table Name**, select **Feedback (feedback)**.
 
@@ -90,7 +90,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 For using and storing images in the rich text editor on the portal, you'll need to add [table permissions](configure/entity-permissions-studio.md) to the rich text attachment table (msdyn_richtextfile).
 
-1. Open your portal in [Power Apps portals Studio](portal-designer-anatomy.md).
+1. Open your portal in [portals Studio](portal-designer-anatomy.md).
 
 1. On the left pane, choose **Settings** (gear icon) and select **Table Permissions**
 
@@ -101,7 +101,7 @@ For using and storing images in the rich text editor on the portal, you'll need 
 1. For **Access type**, select **Global access**.
 
     > [!NOTE]
-    > The **Global access** type is chosen because no relationship exists<!--note from editor: Suggested, to avoid "there is." (Which is via Writing Style Guide.)--> between the table configured to use the rich text editor control and the rich text attachment table.
+    > The **Global access** type is chosen because no relationship exists between the table configured to use the rich text editor control and the rich text attachment table.
 
 1. Under **Permission to**, select the **Read**, **Write**, **Create**, and **Delete** checkboxes.
  
@@ -118,7 +118,7 @@ For using and storing images in the rich text editor on the portal, you'll need 
 
 1. Go to **Site Settings**.
 
-1. Create the following site settings: enter the name, your website,<!--note from editor: Will it be obvious to the reader where the name and website are to be entered? The table below doesn't seem to correspond to these steps.--> and the value of **true**, and then select **Save & Close**.
+1. Create the following site settings: enter the name, your website, and the value of **true**, and then select **Save & Close**.
 
     | Site setting name | Value |
     | - | - | 
@@ -126,7 +126,7 @@ For using and storing images in the rich text editor on the portal, you'll need 
     | Webapi/msdyn_richtextfile/fields | * |
 
 ## Step 4. Create a webpage in portals that uses the basic form
-<!--note from editor: Edit okay? "Create a webage in portals with the basic form" implies that you use the form to create the webpage.-->
+
 1. Open your portal in the [Power Apps portals Studio](portal-designer-anatomy.md).
 
 1. In the upper-left corner, select **New page**.
@@ -157,13 +157,13 @@ For using and storing images in the rich text editor on the portal, you'll need 
 
 1. In the upper-right corner, select **Browse website**.
 
-    The webpage will now show the basic form for the feedback table with the rich text editor control, similar to how the form appears while the model-driven app is being used.<!--note from editor: Passive voice is necessary here, to fix the misplaced modifier.-->
+    The webpage will now show the basic form for the feedback table with the rich text editor control, similar to how the form appears while the model-driven app is being used.
 
     :::image type="content" source="media/component-rte-tutorial/basic-form-portal.png" alt-text="Basic form showing rich text component on a webpage.":::
 
 ## Rich text editor on a read-only form
 
-On a read-only form, the rich text editor displays the content with formatting and images. The content can be read, but not edited or updated.<!--note from editor: Suggested.-->
+On a read-only form, the rich text editor displays the content with formatting and images. The content can be read, but not edited or updated.
 
 ### See also
 
