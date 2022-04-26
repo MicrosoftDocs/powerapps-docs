@@ -21,7 +21,7 @@ contributors:
 
 Use the **Measuring camera** control in a canvas app to measure distance, area, and volume in the real world. You can also create two- and three-dimensional freeform shapes and see how they fit in a real-world space.
 
-The **Measuring camera** control adds a button to your app. When a user selects the button, the app shows a live feed from the device camera. On-screen instructions direct the user to establish tracking by slowly panning the device from right to left across the surface to be measured. The user identifies a starting point and adds segments as needed until the measurement is complete. Dimensions of the measured space are overlaid on the camera feed.
+The **Measuring camera** control adds a button to your app. When a user selects the button, the app shows a live feed from the device camera. On-screen instructions direct the user to establish tracking by slowly panning the device from right to left across the surface to be measured. The user identifies a starting point and adds segments as needed until the measurement is complete. Dimensions of the measured space are overlaid on the camera feed. For more information, see [Use the Measure in MR control to take measurements](measure-your-space-in-mixed-reality.md).
 
 The user can submit the measurements for capture in the control's **Measurements** output properties. The user can also take screenshots while a space is measured. The screenshots are captured in the control's **Photos** output property.
 
@@ -122,6 +122,7 @@ Learn more about how to use output properties of the **Measuring camera** contro
 - View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
+- Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 ### See also
 
