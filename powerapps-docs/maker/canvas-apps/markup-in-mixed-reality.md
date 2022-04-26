@@ -4,7 +4,7 @@ description: Paint lines in 3D or draw 3D arrows with augmented reality features
 author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 4/22/2022
+ms.date: 4/26/2022
 ms.reviewer: mduelae
 ms.subservice: canvas-maker
 ms.author: anuitz
@@ -24,7 +24,7 @@ Users can instantly place mixed-reality markups such as arrows, add drawings, an
 
 The **Markup in MR** control creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
 
-Ink and arrows will scale appropriately depending on the distance from the objects. When you exit the **Markup in MR** screen any photo that was taken is saved in your  photo properties.
+Ink and arrows will scale appropriately depending on the distance from the objects. When you exit the **Markup in MR** screen screenshots are captured in the control's **Photos** output property.
 
 > [!TIP]
 > The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
