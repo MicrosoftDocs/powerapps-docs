@@ -27,17 +27,17 @@ To enable Dataverse search, do the following:
 
 1. In the Power Platform admin center, select an environment.
 
-1. Select Settings > Product > Features.
+1. Select **Settings > Product > Features**.
 
-1. Under Search, set Dataverse search to On.
+1. Under **Search**, set **Dataverse search** to **On**.
 
-1. Select Save.
+1. Select **Save**.
 
 Once the index is provisioned, it may take anywhere between an hour or more to complete a full sync for average size organizations, to a couple of days for very large size organizations.
 
 ## What is Dataverse Search
 
-Dataverse search delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse.  
+[Dataverse search](.../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse.  
 
 ## Global Search
 
