@@ -1169,7 +1169,7 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component
+    - name: Create a component (preview)
       items:
         - name: Components overview
           href: ./canvas-apps/create-component.md
