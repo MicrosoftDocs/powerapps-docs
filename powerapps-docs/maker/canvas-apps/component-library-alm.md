@@ -18,7 +18,7 @@ contributors:
 
 # Component library application lifecycle management (ALM)
 
-A [component library](component-library.md) is a special type of canvas app that can contain one or more canvas components. These library components can then be used by all the other canvas apps in the environment. This capability enables you to create reusable shared components across all apps in an environment&mdash;unlike [app-level components](create-component.md#components-in-canvas-apps) that are restricted to one app.
+A [component library](component-library.md) is a special type of canvas app that can contain one or more canvas components. These library components can then be used by all the other canvas apps in the environment. This capability enables you to create reusable shared components across all apps in an environment, unlike [app-level components](create-component.md#components-in-canvas-apps) that are restricted to one app.
 
 To use a component from a component library, you have to first import the component into the canvas app. Once imported, you can then add the component to the app screen. Any updates in the component definition from the component library will prompt you to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Microsoft Dataverse solutions](/power-platform/alm/solution-concepts-alm).
 
@@ -78,7 +78,7 @@ Dependencies are calculated based on the latest published state of an app. If yo
 
 ## Best practices and troubleshooting
 
-1. Limit the number of components in a library to 20 to get optimal performance. Plan and create multiple component libraries in advance as the number of components in them will likely grow over time. This method will also reduce the solution payload as apps are moved across the environment.
+1. Limit the number of components in a library to 20 to get optimal performance. Plan and create multiple component libraries in advance as the number of components in them will likely grow over time. This approach will also reduce the solution payload as apps are moved across the environment.
 
 1. There's a delay from when the component library is published to when it's available to the application, and can take up to 5 minutes.
 
