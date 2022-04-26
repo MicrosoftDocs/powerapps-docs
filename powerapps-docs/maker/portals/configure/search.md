@@ -37,7 +37,7 @@ Once the index is provisioned, it may take anywhere between an hour or more to c
 
 ## What is Dataverse Search
 
-[Dataverse search](.../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse.  
+[Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse.  
 
 ## Global Search
 
