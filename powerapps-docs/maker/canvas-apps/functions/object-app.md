@@ -114,13 +114,13 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 > - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
-Use **OnError** to take action after an error has been detected.  It provides a global opportunity to intercept an error banner before it is displayed to the end user.  It can also be used to log an error with the [**Trace** function](function-trace.md).  
+Use **OnError** to take action after an error has been detected.  It provides a global opportunity to intercept an error banner before it is displayed to the end user.  It can also be used to log an error with the [**Trace** function](function-trace.md) or write to a database or web service.
 
-The result of every formula evaluation is checked for an error.  If it is an error, **OnError** will be automatically evaluated with the same **FirstError** and **AllErrors** scope variables that would have been present if the entire formula was wrapped in an [**IfError** function](function-iferror.md).  
+The result of every formula evaluation is checked for an error.  If it is an error, **OnError** will be evaluated with the same **FirstError** and **AllErrors** scope variables that would have been present if the entire formula was wrapped in an [**IfError** function](function-iferror.md).  
 
-If **OnError** is empty, the default error handling mechanism is used that will show an error banner to the user with the Message of the error.  If the formula in **OnError** would like to filter errors, errors can be passed through to the default handler with the [**Error** function](function-iferror.md).
+If **OnError** is empty, a default error banner is shown with the **FirstError.Message** of the error.  Defining an **OnError** formula overrides this behavior enabling the maker to handle the error reporting as they see fit.  The default behavior can be requested in the **OnError** by re-throwing the error with the [**Error** function](function-iferror.md).  This is useful if some errors are to be filtered out or handled in a different manner, while others are to be passed through.
 
-One thing that **OnError** cannot do is replace an error in calculations the way that **IfError** can.  At the point that **OnError** is invoked, the error has already happened and it has already been processed through formula calculations.  
+One thing that **OnError** cannot do is replace an error in calculations the way that **IfError** can.  At the point that **OnError** is invoked, the error has already happened and it has already been processed through formula calculations.  **OnError** controls error reporting only.
 
 **OnError** formulas are evaluated concurrently and it is possible that their evalution may overlap with the processing of other errors.  For example, if you set a global variable at the top of an **OnError** and read it later on in the same formula, the value may have changed.  Use the [**With** function](funciton-with.md) to create a named value that is local to the formula.
 
