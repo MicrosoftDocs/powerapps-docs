@@ -72,9 +72,9 @@ More narrow scopes can override a broader scope command at every level. The most
     </appmoduleid>
    ```
 
-1. Example XML.
+Example XML.
 
-   ```XML
+```XML
    <appaction uniquename="crdff_NewCommand!a078463b5d7c473d8965f0f80469f412!crdff_CustomApp!crdff_entity1!1">
   <buttonlabeltext default="Show Alert">
     <label description="Show Alert" languagecode="1033" />
@@ -100,7 +100,7 @@ More narrow scopes can override a broader scope command at every level. The most
    <statuscode>1</statuscode>
    <type>0</type>
    </appaction>
-   ```
+```
 
 After you've edited and saved the appaction.xml file, zip your solution in the same format it was exported in.  Then **Import** the solution back into your environment and test the behavior.
   
