@@ -101,7 +101,10 @@ Creating a virtual table with the virtual connector provider includes the follow
 ### Create the connection
   
 1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
-1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. <br />:::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
+1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. 
+
+   :::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
+
 1. Select one of the following Virtual Connectors from the list of connections. 
    - SQL Server
    - Microsoft Excel Online (Business)
@@ -111,8 +114,13 @@ Creating a virtual table with the virtual connector provider includes the follow
 # [SQL Server](#tab/sql)
 
 - Select SQL Server Authentication as Authentication Type. 
-- Enter SQL server name, SQL database name, the credentials needed to connect.<br />:::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
-- If you are using an on-premises SQL server also enter the Gateway information and then select **Create**.<br />:::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
+- Enter SQL server name, SQL database name, the credentials needed to connect.
+
+   :::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
+
+- If you are using an on-premises SQL server also enter the Gateway information and then select **Create**.
+
+   :::image type="content" source="media/ve-sql-connection-on-prem.png" alt-text="Connect to SQL on-premises with gateway information":::
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 
@@ -122,9 +130,17 @@ Click **Create**, your current signed-in credentials will be used.
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
-- Select to Connect Directly (Cloud) or Connect Using on Premises Gateway<br />:::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
-- For Direct connection, Sign in to SharePoint<br />:::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
-- For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click **Create**.<br />:::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
+- Select to Connect Directly (Cloud) or Connect Using on Premises Gateway
+
+   :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
+
+- For Direct connection, Sign in to SharePoint
+
+   :::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
+
+- For On Premises, Select your authentication type, provide your credentials, choose a Gateway and click **Create**.
+
+   :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
   
@@ -133,17 +149,36 @@ Click **Create**, your current signed-in credentials will be used.
 1. Go to **Solutions**.
 1. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
 1. Select **New** and then select **Connection Reference (preview).**
-1. Enter **Display name**, select the connection you just created for the **Connectors** option and then select the data connection that you have created.<br />:::image type="content" source="../media/ve-new-connection-reference.png" alt-text="New connection reference":::
+1. Enter **Display name**, select the connection you just created for the **Connectors** option and then select the data connection that you have created.
+
+   :::image type="content" source="../media/ve-new-connection-reference.png" alt-text="New connection reference":::
 
 ### Create the Data Source
 
 Now create the Virtual Table data source in Dataverse.
 
-1. Select the **Gear icon -> Advanced Settings**<br />:::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::
-1. In the top navigation bar select **Settings** and then **Administration**<br />:::image type="content" source="media/ve-advanced-settings-system-administration.png" alt-text="Navigate to system administration":::
-1. Select **Virtual Entity Data Source**<br />:::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
-1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.:::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::<br />:::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
-1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.<br />:::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
+1. Select the **Gear icon -> Advanced Settings**
+
+   :::image type="content" source="media/ve-power-apps-advanced-settings.png" alt-text="Advanced Settings command":::
+
+1. In the top navigation bar select **Settings** and then **Administration**
+
+   :::image type="content" source="media/ve-advanced-settings-system-administration.png" alt-text="Navigate to system administration":::
+
+1. Select **Virtual Entity Data Source**
+
+   :::image type="content" source="media/ve-virtual-entity-data-sources-settings.png" alt-text="Virtual entity data sources settings":::
+
+1. Select **New**. In the pop-up dialog, select the Virtual Connector Data Provider.
+
+   :::image type="content" source="media/ve-create-new-data-source.png" alt-text="New Data source":::
+
+   :::image type="content" source="media/ve-select-data-provider.png" alt-text="Select Virtual Connector Data Provider":::
+
+1. Name your **Data Source** and select the **Connection Reference** you just created in the drop down list.
+
+   :::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
+
    - SQL Server
       - Leave the Data Source field empty
    - Microsoft Excel Online (Business)
@@ -182,8 +217,13 @@ With the connection reference and the virtual table data source setup, an **Enti
 
   Save the record to create the virtual table. Your Virtual Table is now created with a “Custom Entity” prefix. 
   Once the virtual table is created, you can either:
-  - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.<br />:::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::   
-  - Use **Advanced Find** and select the virtual table to retrieve all the records.<br />:::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
+  - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.
+   
+      :::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::
+
+  - Use **Advanced Find** and select the virtual table to retrieve all the records.
+
+      :::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
 
 > [!IMPORTANT] 
 > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
@@ -224,8 +264,13 @@ A representation of the **Service Request** virtual table is shown below. You wi
   1. The **Name** column will automatically populate with the lookup column name.
   1. Set the **External Name** value to **AccountId** (matching the column name in your source table).<br/>:::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
 1. Refer to the columns for the **Service Request** virtual table, and you will notice that the **AccountID** column is not a **Lookup** type. This column can now
-be added to forms and views to see all associated accounts for each of the service request record.<br />:::image type="content" source="../media/ve-custom-table-columns.png" alt-text="Custom table columns":::
-1. With the relationship established you can now create a new service request and pick accounts to associate them to.<br />:::image type="content" source="../media/ve-new-custom-table.png" alt-text="New custom table":::
+be added to forms and views to see all associated accounts for each of the service request record.
+
+   :::image type="content" source="../media/ve-custom-table-columns.png" alt-text="Custom table columns":::
+
+1. With the relationship established you can now create a new service request and pick accounts to associate them to.
+
+   :::image type="content" source="../media/ve-new-custom-table.png" alt-text="New custom table":::
 
   > [!NOTE]
   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
