@@ -277,9 +277,8 @@ be added to forms and views to see all associated accounts for each of the servi
 
 #### Tips
 
-1. Primary Key column should be included in create form if you did not set up the column to increment during the design of the underlying source table automatically. You will have to enter a valid value in the primary key column for an insert operation to succeed.
-
-2. If **Entity Catalog** creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
+- Primary Key column should be included in create form if you did not set up the column to increment during the design of the underlying source table automatically. You will have to enter a valid value in the primary key column for an insert operation to succeed.
+- If **Entity Catalog** creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
 
 
 ## Known limitations
@@ -287,27 +286,33 @@ be added to forms and views to see all associated accounts for each of the servi
 The following is a list of known limitations for virtual tables created using the viertual connector provider.
 
 ### General
+
 1. Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
 1. Virtual table queries are limited to return 250 records. If you have a 1:N or N:N relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
 1. Audit functionality is not available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
 1. Rollups cannot be calculated for Virtual tables, this is because Rollups are a server side calculation in Dataverse which requires the data to be stored locally.
 
+### For each data source
+
+The following are limitations for each data source.
+
 # [SQL Server](#tab/sql)
 
-1. SQL data type bigint columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created. 
-1. SQL Server tables without primary keys: Any non-string field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple will work, the other operations will fail with the following error message (coming from SQL connector): "APIM request was not successful : BadRequest : No primary key exists in table".
-1. SQL Server tables with a string primary key: The SQL string primary key will be the only option available for the virtual table primary key. The virtual table creation will succeed, but fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID". SQL Server string primary keys are supported only if the values can be parsed as GUID.
-1. SQL Server tables without non-primary key string fields: The primary field list will be empty and the user will not be able to create the virtual table. At least one non-primary key string field is required.
-1. SQL Server Connector Limitations: see [SQL Server connector reference](/connectors/sql/). 
+- SQL data type bigint columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created. 
+- SQL Server tables without primary keys: Any non-string field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple will work, the other operations will fail with the following error message (coming from SQL connector): "APIM request was not successful : BadRequest : No primary key exists in table".
+- SQL Server tables with a string primary key: The SQL string primary key will be the only option available for the virtual table primary key. The virtual table creation will succeed, but fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID". SQL Server string primary keys are supported only if the values can be parsed as GUID.
+- SQL Server tables without non-primary key string fields: The primary field list will be empty and the user will not be able to create the virtual table. At least one non-primary key string field is required.
+- SQL Server Connector Limitations: see [SQL Server connector reference](/connectors/sql/). 
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 
-1. Excel files must be stored on a OneDrive to participate in a Virtual Table connection.
-1. The Primary key can only be a column holding GUID values: Because the Excel table metadata shows all columns as string, our current design assumes that the primary key will always be a GUID represented as a string.
+- Excel files must be stored on a OneDrive to participate in a Virtual Table connection.
+- The Primary key can only be a column holding GUID values: Because the Excel table metadata shows all columns as string, our current design assumes that the primary key will always be a GUID represented as a string.
   > [!NOTE]
   > No validation is performed when the virtual entity is created, if a non-GUID column is selected, the entity will fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID".
-1. Support for PowerAppsId__ auto-generated column: The _PowerAppsId_ auto-generated column will be used if found (it will be the only option available for Primary key). Providing a value for PowerAppsId is required at record creation even if the value will actually be overwritten by an automatically generated one. This doesn't happen if the primary key column is not the PowerAppsId auto-generated column.
-1. Specific Excel Connector Limitations: [Excel Online (Business) connector reference](/connectors/excelonlinebusiness/).
+- Support for PowerAppsId__ auto-generated column: The _PowerAppsId_ auto-generated column will be used if found (it will be the only option available for Primary key). Providing a value for PowerAppsId is required at record creation even if the value will actually be overwritten by an automatically generated one. This doesn't happen if the primary key column is not the PowerAppsId auto-generated column.
+- Specific Excel Connector Limitations: [Excel Online (Business) connector reference](/connectors/excelonlinebusiness/).
+
 # [Microsoft SharePoint](#tab/sharepoint)
 You currently cannot select an “All” view for SharePoint columns on a Virtual Table. This is a known bug and is being fixed.
 
@@ -315,10 +320,10 @@ You currently cannot select an “All” view for SharePoint columns on a Virtua
 
 ## Troubleshooting
 
-1. You are seeing only one (1) record in your virtual table even though you have more in your source table.<br />
+- You are seeing only one (1) record in your virtual table even though you have more in your source table.<br />
   **Solution:** Check your source table and make sure it has primary key defined.
   
-1. I created a virtual table but I can't see it in "Tables".<br />
+- I created a virtual table but I can't see it in "Tables".<br />
   **Solution**: Since the virtual table creation is asynchronous, you can check the status of the process in "System Jobs". Look for system jobs with a Name starting Microsoft.Wrm.DataProvider.Connector.Plugins.ConnectorGenerateVEPlugin and a "Regarding" column's value equal to the name of the new virtual table. If status is still In Progress, just wait for the job to complete. If there is an error, you can get details by clicking the system, job name hyperlink. In this example, table creation is still pending:
 
    :::image type="content" source="media/ve-table-creation-pending.png" alt-text="table creation pending":::
@@ -327,7 +332,7 @@ You currently cannot select an “All” view for SharePoint columns on a Virtua
    
    :::image type="content" source="media/ve-table-creation-failed-429-error.png" alt-text="table creation failed due to 429 error":::
 
-1. Table creation's system job succeeded but I am getting runtime errors related to invalid or missing columns<br />
+- Table creation's system job succeeded but I am getting runtime errors related to invalid or missing columns<br />
   **Solution**: If a failure occurs while creating a table's field, the table creation process will not fail and try to continue with the remaining fields. This is because we don't want to block the virtual table creation when some column types are unsupported. To get details on the error, you can enable logging in **Administration**> **System Settings** > **Customizations** > **Enable logging to plug-in trace log**, then delete the virtual table and try to create it again.
 
 ### See also
