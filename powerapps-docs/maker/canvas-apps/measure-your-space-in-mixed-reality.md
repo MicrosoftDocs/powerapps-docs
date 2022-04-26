@@ -119,8 +119,8 @@ canvas app but isn't viewable when you're in a mixed reality experience.
            > [!div class="mx-imgBorder"]
            > ![Measure rectangle freeform.](./media/mr-measurement/rectangle-freeform.png)
 
-          > [!NOTE]
-          > If your app has **Box Draw** enabled, then in freeform you can only measure in a rectangular area and volume.
+> [!NOTE]
+> If your app has **Box Draw** enabled, then in freeform you can only measure in a rectangular area and volume.
 
 
 ## Keeping track of your measurements
