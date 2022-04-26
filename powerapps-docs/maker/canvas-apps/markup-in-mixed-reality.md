@@ -17,7 +17,14 @@ contributors:
   - anuitz
 ---
 
-# Use the Markup in MR control in Power Apps
+# Use the Markup in MR control in Power Apps (preview)
+
+[This article is pre-release documentation and is subject to change.]
+
+
+>[!IMPORTANT]
+>This is a preview feature.
+>[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 Add the **Markup in MR** control in your app to allow users to add markups to visually specify an area or a particular asset in their environment. 
 Users can instantly place mixed-reality markups such as arrows, add drawings, and then take photos of the marked-up object.
