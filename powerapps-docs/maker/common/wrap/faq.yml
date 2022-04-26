@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently asked questions for Wrap (preview)
-  description: Frequently asked questions for Wrap (preview).
+  title: Frequently asked questions for wrap (preview)
+  description: Frequently asked questions for wrap (preview).
   author: larryk78
   ms.topic: faq
   ms.custom: 
@@ -11,7 +11,7 @@ metadata:
   contributors:
     - larryk78
     - tapanm-msft
-title: Frequently asked questions for Wrap (preview)
+title: Frequently asked questions for wrap (preview)
 summary: |
   Frequently asked questions about the **wrap** feature are listed below. If you don't find an answer to your question, send an email to <pamobsup@microsoft.com> with your question.
 
@@ -47,11 +47,6 @@ sections:
           Do I need to rewrap my mobile app after making changes to the canvas app(s) included in the package?
         answer: |
           No. Published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your mobile app. However, we recommend that you wrap your mobile app on a [monthly basis](faq.yml#do-i-need-to-rewrap-my-mobile-app-frequently-).
-
-      - question: |
-          How do I distribute my mobile app?
-        answer: |
-          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Managed Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
 
       - question: |
           What are Primary and Secondary apps in the context of wrap?
