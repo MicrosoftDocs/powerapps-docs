@@ -1,12 +1,11 @@
 ---
 title: Work with Dataverse tables using code | Microsoft Docs
 description: Learn about programmatically working with tables in Microsoft Dataverse.
-author: "mayadumesh" # GitHub ID
-manager: kvivek
-
-ms.date: 03/28/2021
+author: mayadumesh # GitHub ID
+manager: sunilg
+ms.date: 04/19/2022
 ms.subservice: dataverse-developer
-ms.author: jdaly
+ms.author: mayadu
 search.audienceType: 
   - developer
 search.app: 
@@ -72,7 +71,7 @@ The table definition includes the following information:
 
 ## Private tables
 
-Dataverse contains some tables that are not intended for third-party developers to use. These tables are added by Microsoft to enable feature functionality. Private tables are indicated by the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsPrivate> property. These tables are not included in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document). However, you will find them when querying entity metadata.
+Dataverse contains some tables that are not intended for third-party developers to use. These tables are added by Microsoft to enable feature functionality. Private tables are indicated by the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsPrivate> property. These tables are not included in the Web API [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document). However, you will find them when querying entity metadata.
 
 > [!CAUTION]
 > You should not use private tables in your solutions. By marking a table as private, Microsoft is explicitly indicating that we do not support other apps to use the table. Microsoft may remove the table or introduce breaking changes at any time. Use of these tables by anyone other than Microsoft is not supported.
