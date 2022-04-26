@@ -122,7 +122,7 @@ If **OnError** is empty, a default error banner is shown with the **FirstError.M
 
 One thing that **OnError** cannot do is replace an error in calculations the way that **IfError** can.  At the point that **OnError** is invoked, the error has already happened and it has already been processed through formula calculations.  **OnError** controls error reporting only.
 
-**OnError** formulas are evaluated concurrently and it is possible that their evalution may overlap with the processing of other errors.  For example, if you set a global variable at the top of an **OnError** and read it later on in the same formula, the value may have changed.  Use the [**With** function](funciton-with.md) to create a named value that is local to the formula.
+**OnError** formulas are evaluated concurrently and it is possible that their evalution may overlap with the processing of other errors.  For example, if you set a global variable at the top of an **OnError** and read it later on in the same formula, the value may have changed.  Use the [**With** function](function-with.md) to create a named value that is local to the formula.
 
 Although each error is processed individually by **OnError**, the default error banner may not appear for each error individually.  To avoid having too many error banners displayed at the same time, the same error will not trigger a new error banner if it has recently been shown.
 
