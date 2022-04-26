@@ -238,7 +238,9 @@ Once you have created a virtual table, you can work with it much the same way as
 
 ### Setting up virtual table relationship
 
-Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and N:N relationships. These relationships can be established between `native: virtual tables` and between `virtual: virtual tables`. You can only set up `virtual: virtual relationship` between tables from the same virtual table provider. 
+Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and N:N relationships. Relationships can be established between:
+- Local tables in Dataverse and Virtual Tables
+- Virtual tables and other virtual tables from the same provider (Example: SQL->SQL)
 
 For instance, you cannot set up a relationship between a virtual table created using the OData virtual table provider and a virtual table created using the Virtual Connector provider.
 
