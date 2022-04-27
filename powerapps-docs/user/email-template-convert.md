@@ -30,7 +30,7 @@ When you've composed an email that you'd like to reuse with other customers, you
    To save an email you've composed and formatted an email message as a template, select the downward-facing caret (v) next to **Insert Template**, and then select **Convert to an email template** from the drop-down list.
    
 > [!NOTE]
-> The email templates created will open in the default email template editor page, even if your admin has enabled the enhanced email template editor option in Power Apps.
+> The email templates will open only in the default email template editor page, even if your admin has enabled the [enhanced email template editor option](cs_email_template_builder.md) in Power Apps.
 
 #### Convert an email to a template overview
 The following window will display with a list you can customize.
