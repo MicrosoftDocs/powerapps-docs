@@ -1,5 +1,5 @@
 ---
-title: Use the Measure in MR control in Power Apps
+title: Use the Measuring Camera control in Power Apps
 description: Digitally measure distances, areas, and freeform shapes in the real world with augmented reality features in Power Apps.
 author: anuitz
 ms.topic: conceptual
@@ -19,9 +19,9 @@ contributors:
 ---
 # Take measurements in mixed reality
 
-Use the **Measure in MR** control in a canvas app to measure distance, area, and volume in the real world. You can also create two- and three-dimensional freeform shapes and see how they fit in a real-world space.
+Use the **Measuring camera** control in a canvas app to measure distance, area, and volume in the real world. You can also create two- and three-dimensional freeform shapes and see how they fit in a real-world space.
 
-The **Measure in MR** control adds a button to your app. When a user selects the button, the app shows a live feed from the device camera. On-screen instructions direct the user to establish tracking by slowly panning the device from right to left across the surface to be measured. The user identifies a starting point and adds segments as needed until the measurement is complete. Dimensions of the measured space are overlaid on the camera feed.
+The **Measuring camera** control adds a button to your app. When a user selects the button, the app shows a live feed from the device camera. On-screen instructions direct the user to establish tracking by slowly panning the device from right to left across the surface to be measured. The user identifies a starting point and adds segments as needed until the measurement is complete. Dimensions of the measured space are overlaid on the camera feed. For more information, see [Use the Measure in MR control to take measurements](measure-your-space-in-mixed-reality.md).
 
 The user can submit the measurements for capture in the control's **Measurements** output properties. The user can also take screenshots while a space is measured. The screenshots are captured in the control's **Photos** output property.
 
@@ -30,22 +30,20 @@ The user can submit the measurements for capture in the control's **Measurements
 > [!TIP]
 > The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
-## Add a **Measure in MR** button to an app screen
+## Add a **Measuring camera** button to an app screen
 
 With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
-1. Open the **Insert** tab and expand **Mixed Reality**.
-2. Select **Measure in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
+1. Open the **Insert** tab and expand **Media**.
+2. Select **Measuring camera** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
-The control is a button that's labeled with an icon of a cube and the text *Measure in MR*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
-
-:::image type="content" source="./media/augmented-measure/augmented-measure.png" alt-text="A screenshot of the Insert tab in Microsoft Power Apps Studio, which shows the Measure in MR control.":::
+The control is a button that's labeled with an icon of a cube and the text *Measure*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
 
 ### Properties
 
-Change the **Measure in MR** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
+Change the **Measuring camera** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
-:::image type="content" source="./media/augmented-measure/augmented-measure-properties.png" alt-text="A screenshot of a Measure in MR button under construction in Microsoft Power Apps Studio, shown alongside its properties.":::
+:::image type="content" source="./media/augmented-measure/augmented-measure-properties.png" alt-text="A screenshot of a Measuring Camera button under construction in Microsoft Power Apps Studio, shown alongside its properties.":::
 
 | Property | Description | Type | Location |
 | - | - | - | - |
@@ -117,7 +115,7 @@ The Segments table has the following columns:
 - **DirectionY:** A number that represents the Y direction of the segment in world(3D) space (typically 0)
 - **DirectionZ:** A number that represents the Z direction of the segment in world (3D) space
 
-Learn more about how to use output properties of the **Measure in MR** control in your apps: [Validate measurements in mixed reality using a spatial test filter](./mixed-reality-spatial-test.md)
+Learn more about how to use output properties of the **Measuring camera** control in your apps: [Validate measurements in mixed reality using a spatial test filter](./mixed-reality-spatial-test.md)
 
 ## Other mixed reality controls
 
@@ -127,6 +125,6 @@ Learn more about how to use output properties of the **Measure in MR** control i
 
 ### See also
 
-[Create an app using the Measure in MR control](how-to/build-apps-measure-in-mr.md)
+[Create an app using the Measuring Camera control](how-to/build-apps-measure-in-mr.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

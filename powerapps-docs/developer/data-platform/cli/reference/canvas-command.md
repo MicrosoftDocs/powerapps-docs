@@ -6,19 +6,23 @@ ms.subservice: dataverse-developer
 author: kkanakas
 ms.author: kartikka
 manager: pemikkel
-ms.date: 04/01/2022
+ms.date: 04/07/2022
 ms.reviewer: jdaly
 ms.topic: reference
 contributors: 
   - JimDaly
+  - jt000
 ---
 
 # Canvas (Preview)
 
 Commands for working with canvas app source files. Edit, manage, and collaborate on your app outside of Power Apps Studio with tools such as VS Code and GitHub.
 
-> [!NOTE]
-> The Canvas commands are in public preview. They may not be available in the version of Microsoft Power Platform CLI that you're using currently. 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]]
+
+  > [!IMPORTANT]
+  > - The Canvas commands are in public preview. 
+  > - [!INCLUDE [cc-preview-features-definition](../../../../includes/cc-preview-features-definition.md)]
 
 ## Parameters
 
