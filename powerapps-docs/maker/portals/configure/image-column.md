@@ -164,12 +164,13 @@ Profile picture serve as a visual of the person, so that he can be recognized vi
 
 1. Create or Update setting, **Profile/ShowImage**, and set its value to **true**.
 
-Below steps required only during the preview period.
+> [!NOTE]
+> The following steps are only required during the preview period.
 
 1. Create or Update setting, **Webapi/contact/enabled**, and set its value to **true**.
 1. Create or Update setting, **Webapi/contact/fields**, and set its value to **entityimage**.
 
-Create a table permission to allow authenticated user to upload profile picture to his contact records.
+### Create a table permission to allow authenticated user to upload profile picture to his contact records.
 
 1. Select **Table Permissions** in the left navigation pane.
 1. Select **New**.
