@@ -30,7 +30,7 @@ Portal search needs Dataverse search feature to be enabled at Dataverse environm
 
 To enable Dataverse search, do the following:
 
-1. In the Power Platform admin center, select an environment.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select an environment.
 
 1. Select **Settings > Product > Features**.
 
@@ -54,6 +54,7 @@ Among the benefits of global search are its ability to:
 - Highlight matches in the search results.
 - Provide facet options that can be used to further filter search results.
 - Global search of portals allows you to search for records across multiple tables. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
+- Provides intelligent search by applying AI technology to interpret natural language such as misspellings, common abbreviations,and synonymns to deliver quality results.
 
 In global search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, with matched works highlighted. 
 
