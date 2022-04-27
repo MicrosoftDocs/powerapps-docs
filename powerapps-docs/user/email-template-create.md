@@ -56,7 +56,7 @@ You can do the following:
 - include attachments to your template in the **Attachments** tab.
 
 > [!NOTE]
-> Email templates created using the enhanced e-mail template experience will open in the enhanced email template editor form even if the admin disables this experience for you.
+> Email templates created using the enhanced e-mail template experience will open in the enhanced email template editor form even if the admin disables this experience.
 
 ### Default email template editor overview
 
