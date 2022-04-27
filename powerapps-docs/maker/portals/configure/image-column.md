@@ -160,7 +160,7 @@ Profile picture serve as a visual of the person, so that he can be recognized vi
 1. Select **Apps** in the left navigation pane, and locate the **Portal Management** model-driven app.
 1. Select to open the **Portal Management** app, and then go to **Site Settings** in the left navigation pane.
 
-    ![Graphical user interface  text  application  email Description automatically generated](media/image-column/site-settings.png)
+    :::image type="content" source="media/image-column/site-settings.png" alt-text="The site settings options within the Portal management app.":::
 
 1. Create or Update setting, **Profile/ShowImage**, and set its value to **true**.
 
