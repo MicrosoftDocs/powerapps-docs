@@ -16,7 +16,9 @@ search.app:
 ---
 
 # Enable the enhanced email template editor page
- 
+
+Email templates are a fast and easy way to send repetitive and recurring email to multiple customers. They can help save you time and give you a way to create consistent, professional, preformatted email messages that you can use when communicating with your customers. 
+
 Turn on the enhanced email template editing experience in apps across your organization. If you need to, you can turn off the enhanced email template page for a specific app. Users of that app see the default email template editor page.
 
 ## Enable the enhanced email template editor across all apps
