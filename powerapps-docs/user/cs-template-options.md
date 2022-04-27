@@ -53,7 +53,7 @@ On the design canvas, to change the appearance of a column, select a column. On 
         > - Insert image. Use the image element to add an image to column.
         > - Tracking for links
         > - Inserting tables
-        > - If you paste formatted content from other sources such as Word, the Font style and size of the text isn't detected.
+        > - Font style and size of the text isn't detected, if you paste formatted content from other sources.
                   
     - Image: To add an image to your template, select the image element and add it to the design canvas. An image placeholder appears on the canvas. On the **Edit Image** flyout, you can perform the following actions:
           - Upload an image or specify an image URL. 
