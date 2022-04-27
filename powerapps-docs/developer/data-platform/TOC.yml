@@ -435,15 +435,14 @@
     href: sdk-client-transition.md
   - name: Discover user organizations
     href: discovery-service.md
-  - name: Tutorials
-  - href: 
+  - name: Tutorials 
     items:
-      - name: "Tutorial: Register an app with Azure Active Directory"
-        href: walkthrough-register-app-azure-active-directory.md
-      - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
-        href: walkthrough-blazor-webassembly-single-tenant.md
-      - name: "Tutorial: Register and configuring a SPA application with adal.js"
-        href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+    - name: "Tutorial: Register an app with Azure Active Directory"
+      href: walkthrough-register-app-azure-active-directory.md
+    - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
+      href: walkthrough-blazor-webassembly-single-tenant.md
+    - name: "Tutorial: Register and configuring a SPA application with adal.js"
+      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
 - name: Best practices
   href: best-practices/index.md
 - name: Online Management API
