@@ -1,5 +1,5 @@
 | Error values | Error name and message |
-|-----|---|
+|--------------|------------------------|
 |0x80072559<br />-2147015335|Name: **AADError**<br />Message: Error from AAD|
 |0x80048350<br />-2147187888|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})|
 |0x80048405<br />-2147187707|Name: **AccessDenied**<br />Message: Access is denied.|
@@ -709,7 +709,7 @@
 |0x80048107<br />-2147188473|Name: **CascadeReparentOnNonUserOwned**<br />Message: Cannot perform Cascade Reparent on Non-UserOwned entities|
 |0x80090446<br />-2146892730|Name: **CascadeSPGenerationLockException**<br />Message: Cannot start the Cascade SP generation as there is already one running at this moment.|
 |0x800404cf<br />-2147220273|Name: **CaseAlreadyResolved**<br />Message: This case has already been resolved. Close and reopen the case record to see the updates.|
-|0x8006074<br />134242420|Name: **CaseStateChangeInvalid**<br />Message: Because of the status transition rules, you can't resolve a case in the current status. Change the case status, and then try resolving it, or contact your system administrator.|
+|0x8006074<br />134242420   |Name: **CaseStateChangeInvalid**<br />Message: Because of the status transition rules, you can't resolve a case in the current status. Change the case status, and then try resolving it, or contact your system administrator.|
 |0x8004E01A<br />-2147164134|Name: **CategoryDataTypeInvalid**<br />Message: The Data Description for the visualization is invalid. The attribute type for the group by of one of the categories is invalid. Correct the Data Description.|
 |0x80060404<br />-2147089404|Name: **CategoryNotSetToBusinessProcessFlow**<br />Message: Category should be set to BusinessProcessFlow while creating business process flow category|
 |0x80044510<br />-2147203824|Name: **CDSOrgNotSupported**<br />Message: Dynamics 365 for Outlook is not supported for this organization.|
@@ -1950,7 +1950,7 @@
 |0x80048052<br />-2147188654|Name: **InvalidSharePointSiteCollectionUrl**<br />Message: The URL must conform to the http or https schema.|
 |0x80044254<br />-2147204524|Name: **InvalidSimilarityRuleStateError**<br />Message: Invalid similarity rule state.|
 |0x8004024f<br />-2147220913|Name: **InvalidSingletonResults**<br />Message: Crm Internal Exception: Singleton Retrieve Query should not return more than 1 record.|
-|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { | }.|
+|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { \| }./|
 |0x80072000<br />-2147016704|Name: **InvalidSolutionAwarenessDeclaration**<br />Message: The entity {0} cannot have its solution awareness setting updated.|
 |0x8007200E<br />-2147016690|Name: **InvalidSolutionComponentKey**<br />Message: The attribute {0} from key {1} and entity {2} should be exportable to be an export key.|
 |0x8004701B<br />-2147192805|Name: **InvalidSolutionConfigurationPage**<br />Message: The specified configuration page for this solution is invalid.|
