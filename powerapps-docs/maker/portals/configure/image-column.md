@@ -175,15 +175,15 @@ Profile picture serve as a visual of the person, so that he can be recognized vi
 1. Select **Table Permissions** in the left navigation pane.
 1. Select **New**.
 
-    ![Graphical user interface  application Description automatically generated](media/image-column/new.png)
+    :::image type="content" source="media/image-column/new.png" alt-text="Select new from table permissions.":::
 
 1. Update the details as provided below.
 
-    ![Graphical user interface  text  application  email Description automatically generated](media/image-column/update-details.png)
+    :::image type="content" source="media/image-column/update-details.png" alt-text="Update details.":::
 
 1. Select **Save & Close**.
 1. Select and open **Contact Profile Update Permission**.
 1. Scroll down to the **Web Roles** section, and then select **Add Existing Web Role**.
 1. Search for **Authenticated Users**, and then select **Add**:
 
-    ![Graphical user interface  application Description automatically generated](media/image-column/add.png)
+    :::image type="content" source="media/image-column/add.png" alt-text="Add authenticated users":::
