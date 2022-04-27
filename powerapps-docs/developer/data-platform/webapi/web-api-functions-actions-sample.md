@@ -21,7 +21,8 @@ contributors:
 
 This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:  
   
--   [Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)  
+- [Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)
+- [Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)
   
 This topic explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample topics above for language-specific implementation details about how to perform the operations described in this topic.  
   
@@ -36,8 +37,8 @@ This sample is divided into the following principal sections, containing Web API
 |[Sample data](#bkmk_sampleData)||  
 |[Using unbound function with no parameters](#bkmk_unboundFunctionNoParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.WhoAmI> function<br /><br /> <xref:Microsoft.Dynamics.CRM.systemuser> entity type|  
 |[Using unbound function with parameters](#bkmk_unboundFunctionWithParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName> function|  
-|[Using bound function with no parameters](#bkmk_boundFunctionWithParams)|[Bound functions](use-web-api-functions.md#bkmk_boundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident> function|  
-|[Using unbound action with parameters](#bkmk_unboundActionWithParams)|[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.WinOpportunity> action<br /><br /> <xref:Microsoft.Dynamics.CRM.opportunity> entity type|  
+|[Using bound function with no parameters](#bkmk_boundFunctionWithParams)|[Bound functions](use-web-api-functions.md#bkmk_boundFunctions)<br /><br /> `CalculateTotalTimeIncident` function|  
+|[Using unbound action with parameters](#bkmk_unboundActionWithParams)|[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> `WinOpportunity` action<br /><br /> `opportunity` entity type|  
 |[Using bound action with parameters](#bkmk_boundActionWithParams)|[Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.AddToQueue> action<br /><br /> <xref:Microsoft.Dynamics.CRM.WhoAmI> function<br /><br /> <xref:Microsoft.Dynamics.CRM.systemuser> entity type<br /><br /> <xref:Microsoft.Dynamics.CRM.letter> entity type|  
 |[Using bound custom action with parameters](#bkmk_boundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.contact> entity type|  
 |[Using unbound custom action with parameters](#bkmk_unboundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.account> entity type|  
@@ -155,7 +156,7 @@ Content-Length: 273
    
 ### Using unbound function with parameters  
 
-Use an unbound function to retrieve the time zone code. This operation demonstrates how to call an unbound function that accept parameters. This operation returns the current time zone code for the specified time zone. More information:[Passing parameters to a function](use-web-api-functions.md#bkmk_passParametersToFunctions)  
+Use an unbound function to retrieve the time zone code. This operation demonstrates how to call an unbound function that accept parameters. This operation returns the current time zone code for the specified time zone. More information: [Passing parameters to a function](use-web-api-functions.md#bkmk_passParametersToFunctions)  
   
  **Request**  
   
@@ -191,7 +192,7 @@ Unbound function: GetTimeZoneCodeByLocalizedName
    
 ### Using bound function with no parameters  
 
-Use a  bound function to retrieve the total time it took to complete all the tasks of an incident. This operation demonstrates how to call a bound function that does not accept parameters. This operation returns the total minutes the incident took to close out all its tasks. This function also makes use of the incident data we created for this sample program. More information:[Bound functions](use-web-api-functions.md#bkmk_boundFunctions)  
+Use a  bound function to retrieve the total time it took to complete all the tasks of an incident. This operation demonstrates how to call a bound function that does not accept parameters. This operation returns the total minutes the incident took to close out all its tasks. This function also makes use of the incident data we created for this sample program. More information: [Bound functions](use-web-api-functions.md#bkmk_boundFunctions)  
   
  **Request**  
   
@@ -234,7 +235,7 @@ Bound function: CalculateTotalTimeIncident
    
 ### Using unbound action with parameters 
  
-Use an unbound action that takes a set of parameters. This operation closes an opportunity and marks it as won by calling the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The <xref:Microsoft.Dynamics.CRM.opportunity> entity type was created as sample data earlier in the program. More information:[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)  
+Use an unbound action that takes a set of parameters. This operation closes an opportunity and marks it as won by calling the `WinOpportunity` action. The `opportunity` entity type was created as sample data earlier in the program. More information: [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)  
   
  **Request**  
   
@@ -271,7 +272,7 @@ Unbound Action: WinOpportunity
    
 ### Using bound action with parameters
   
-Use a bound action that takes parameters. This operation adds a letter to the current user's queue. To accomplish this, we use the <xref:Microsoft.Dynamics.CRM.WhoAmI> function and the <xref:Microsoft.Dynamics.CRM.systemuser> entity type to get a reference to the current user's queue.  We also need reference to the <xref:Microsoft.Dynamics.CRM.letter> entity type. This letter was created as sample data earlier in the program. Then the bound <xref:Microsoft.Dynamics.CRM.AddToQueue> action is called to add the letter to the current user's queue. More information:[Bound actions](use-web-api-actions.md#bkmk_boundActions)  
+Use a bound action that takes parameters. This operation adds a letter to the current user's queue. To accomplish this, we use the <xref:Microsoft.Dynamics.CRM.WhoAmI> function and the <xref:Microsoft.Dynamics.CRM.systemuser> entity type to get a reference to the current user's queue.  We also need reference to the <xref:Microsoft.Dynamics.CRM.letter> entity type. This letter was created as sample data earlier in the program. Then the bound <xref:Microsoft.Dynamics.CRM.AddToQueue> action is called to add the letter to the current user's queue. More information: [Bound actions](use-web-api-actions.md#bkmk_boundActions)  
   
  **Request**  
   
