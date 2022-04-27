@@ -150,3 +150,39 @@ To upload the images, set the value of the image column to a byte array that con
     Body :
     Byte [ ]
 ```
+
+## Configure Profile Image
+
+Profile picture serve as a visual of the person, so that he can be recognized visually. Now authenticated portal user can upload their image in the profile section. These images are saved in **Entity Image** column of the corresponding contact record in Microsoft Dataverse. Users can upload image size up to 10 MB. Portal maker can allow uploading profile picture for the authenticated users by updating the site setting.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. Ensure that you're in the appropriate environment where your portal exists.
+1. Select **Apps** in the left navigation pane, and locate the **Portal Management** model-driven app.
+1. Select to open the **Portal Management** app, and then go to **Site Settings** in the left navigation pane.
+
+    ![Graphical user interface  text  application  email Description automatically generated](media/image-column/site-settings.png)
+
+1. Create or Update setting, **Profile/ShowImage**, and set its value to **true**.
+
+Below steps required only during the preview period.
+
+1. Create or Update setting, **Webapi/contact/enabled**, and set its value to **true**.
+1. Create or Update setting, **Webapi/contact/fields**, and set its value to **entityimage**.
+
+Create a table permission to allow authenticated user to upload profile picture to his contact records.
+
+1. Select **Table Permissions** in the left navigation pane.
+1. Select **New**.
+
+    ![Graphical user interface  application Description automatically generated](media/image-column/new.png)
+
+1. Update the details as provided below.
+
+    ![Graphical user interface  text  application  email Description automatically generated](media/image-column/update-details.png)
+
+1. Select **Save & Close**.
+1. Select and open **Contact Profile Update Permission**.
+1. Scroll down to the **Web Roles** section, and then select **Add Existing Web Role**.
+1. Search for **Authenticated Users**, and then select **Add**:
+
+    ![Graphical user interface  application Description automatically generated](media/image-column/add.png)
