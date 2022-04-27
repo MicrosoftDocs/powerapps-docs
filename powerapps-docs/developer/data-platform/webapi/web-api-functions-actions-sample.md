@@ -1,7 +1,7 @@
 ---
 title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
-ms.date: 04/19/2022
+ms.date: 04/26/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -34,14 +34,14 @@ This sample is divided into the following principal sections, containing Web API
 |Topic section|Associated topic(s)|  
 |-------------------|---------------------------|  
 |[Sample data](#bkmk_sampleData)||  
-|[Using unbound function with no parameters](#bkmk_unboundFunctionNoParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.systemuser?text=systemuser EntityType" />|  
-|[Using unbound function with parameters](#bkmk_unboundFunctionWithParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName?text=GetTimeZoneCodeByLocalizedName Function" />|  
-|[Using bound function with no parameters](#bkmk_boundFunctionWithParams)|[Bound functions](use-web-api-functions.md#bkmk_boundFunctions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.CalculateTotalTimeIncident?text=CalculateTotalTimeIncident Function" />|  
-|[Using unbound action with parameters](#bkmk_unboundActionWithParams)|[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.opportunity?text=opportunity EntityType" />|  
-|[Using bound action with parameters](#bkmk_boundActionWithParams)|[Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.systemuser?text=systemuser EntityType" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.letter?text=letter EntityType" />|  
-|[Using bound custom action with parameters](#bkmk_boundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />|  
-|[Using unbound custom action with parameters](#bkmk_unboundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />|  
-|[Handling custom action exceptions](#bkmk_boundCustomActionErrorHandling)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />|  
+|[Using unbound function with no parameters](#bkmk_unboundFunctionNoParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.WhoAmI> function<br /><br /> <xref:Microsoft.Dynamics.CRM.systemuser> entity type|  
+|[Using unbound function with parameters](#bkmk_unboundFunctionWithParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName> function|  
+|[Using bound function with no parameters](#bkmk_boundFunctionWithParams)|[Bound functions](use-web-api-functions.md#bkmk_boundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident> function|  
+|[Using unbound action with parameters](#bkmk_unboundActionWithParams)|[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.WinOpportunity> action<br /><br /> <xref:Microsoft.Dynamics.CRM.opportunity> entity type|  
+|[Using bound action with parameters](#bkmk_boundActionWithParams)|[Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.AddToQueue> action<br /><br /> <xref:Microsoft.Dynamics.CRM.WhoAmI> function<br /><br /> <xref:Microsoft.Dynamics.CRM.systemuser> entity type<br /><br /> <xref:Microsoft.Dynamics.CRM.letter> entity type|  
+|[Using bound custom action with parameters](#bkmk_boundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.contact> entity type|  
+|[Using unbound custom action with parameters](#bkmk_unboundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.account> entity type|  
+|[Handling custom action exceptions](#bkmk_boundCustomActionErrorHandling)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.contact> entity type|  
   
 The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.  
   
@@ -122,9 +122,9 @@ The sample operations in this topic are organized in the following ways.
  
 ### Using unbound function with no parameters 
  
-Use an unbound function to retrieve the current user's full name by making use of the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" />. This operation demonstrates how to call an unbound function that does not accept parameters. This operation returns the current user's full name.  
+Use an unbound function to retrieve the current user's full name by making use of the <xref:Microsoft.Dynamics.CRM.WhoAmI> function. This operation demonstrates how to call an unbound function that does not accept parameters. This operation returns the current user's full name.  
   
-Getting the request and response for the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" />.  
+Getting the request and response for the <xref:Microsoft.Dynamics.CRM.WhoAmI> function.  
   
  **Request**  
   
@@ -234,7 +234,7 @@ Bound function: CalculateTotalTimeIncident
    
 ### Using unbound action with parameters 
  
-Use an unbound action that takes a set of parameters. This operation closes an opportunity and marks it as won by calling the <xref href="Microsoft.Dynamics.CRM.WinOpportunity?text=WinOpportunity Action" />. The <xref href="Microsoft.Dynamics.CRM.opportunity?text=opportunity EntityType" /> was created as sample data earlier in the program. More information:[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)  
+Use an unbound action that takes a set of parameters. This operation closes an opportunity and marks it as won by calling the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The <xref:Microsoft.Dynamics.CRM.opportunity> entity type was created as sample data earlier in the program. More information:[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)  
   
  **Request**  
   
@@ -271,7 +271,7 @@ Unbound Action: WinOpportunity
    
 ### Using bound action with parameters
   
-Use a bound action that takes parameters. This operation adds a letter to the current user's queue. To accomplish this, we use the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> and the <xref href="Microsoft.Dynamics.CRM.systemuser?text=systemuser EntityType" /> to get a reference to the current user's queue.  We also need reference to the <xref href="Microsoft.Dynamics.CRM.letter?text=letter EntityType" />. This letter was created as sample data earlier in the program. Then the bound <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /> is called to add the letter to the current user's queue. More information:[Bound actions](use-web-api-actions.md#bkmk_boundActions)  
+Use a bound action that takes parameters. This operation adds a letter to the current user's queue. To accomplish this, we use the <xref:Microsoft.Dynamics.CRM.WhoAmI> function and the <xref:Microsoft.Dynamics.CRM.systemuser> entity type to get a reference to the current user's queue.  We also need reference to the <xref:Microsoft.Dynamics.CRM.letter> entity type. This letter was created as sample data earlier in the program. Then the bound <xref:Microsoft.Dynamics.CRM.AddToQueue> action is called to add the letter to the current user's queue. More information:[Bound actions](use-web-api-actions.md#bkmk_boundActions)  
   
  **Request**  
   
@@ -315,19 +315,18 @@ Bound Action: AddToQueue
   
 ## Working with custom actions  
 
-If you define custom actions for your solution, you can call them using the Dataverse Web API. Regardless of whether the operations included in your custom action have side effects, they can potentially modify data and therefore are considered actions rather than functions. There is no way to create a custom function. More information:[Use a custom action](use-web-api-actions.md#bkmk_customActions).  
+If you define custom actions for your solution, you can call them using the Dataverse Web API. Regardless of whether the operations included in your custom action have side effects, they can potentially modify data and therefore are considered actions rather than functions. There is no way to create a custom function. More information: [Use a custom action](use-web-api-actions.md#bkmk_customActions).  
   
 This sample comes with two custom actions. They both require parameters but one is bound and the other is unbound.  
   
-- `sample_AddNoteToContact`: A bound custom action that takes two parameters. One is a `NoteTitle` and the other is a `NoteText`. This custom action adds a note to a <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />. Below is a screen shot of the **Information** page for this custom action.  
-  
- <!-- TODO:
- ![Custom Action &#45; AddNoteToContact information.](../media/custom-action-add-note-contact.PNG "Custom Action - AddNoteToContact information")   -->
+- `sample_AddNoteToContact`: A bound custom action that takes two parameters. One is a `NoteTitle` and the other is a `NoteText`. This custom action adds a note to a <xref:Microsoft.Dynamics.CRM.contact> enity type. Below is a screen shot of the **Information** page for this custom action.  
+
+:::image type="content" source="../media/custom-action-add-note-contact.PNG" alt-text="Custom action AddNoteToContact information":::
   
 - `sample_CreateCustomer`: An unbound custom action that require different parameters depending on what type of customer is being created. For example, when the `AccountType` is "account" then it only requires `AccountName` parameter. When the `AccountType` is "contact", a `ContactFirstName` and `ContactLastName` parameters are required. Below is a screen shot of the **Information** page for this custom action.  
-<!-- TODO:  
- ![Custom Action &#45; CreateCustomer information.](../media/custom-action-create-customer.PNG "Custom Action - CreateCustomer information")  
-   -->
+
+:::image type="content" source="../media/custom-action-create-customer.PNG" alt-text="Custom Action - Create Customer information":::
+
 <a name="bkmk_boundCustomActionWithParams"></a>
    
 ### Using bound custom action with parameters 
