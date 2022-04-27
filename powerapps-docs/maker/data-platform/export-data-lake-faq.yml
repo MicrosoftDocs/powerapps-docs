@@ -71,7 +71,7 @@ sections:
         - Use Azure Synapse pipelines or Azure Data Factory to copy data from Azure resources in one region to Azure resources in another.
    - question: Why do I see the error message - cannot bulk load because the file is incomplete or could not be read?
      answer: |
-        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#view-your-data-in-azure-synapse-analytics)
+        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data)
 additionalContent: |
 
   ## See also

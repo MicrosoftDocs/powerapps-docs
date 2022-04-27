@@ -2406,6 +2406,8 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Query and analyze incremental updates 
+        href: ./data-platform/azure-synapse-incremental-updates.md
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
