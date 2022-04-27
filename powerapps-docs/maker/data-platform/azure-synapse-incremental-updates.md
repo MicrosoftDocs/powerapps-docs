@@ -24,14 +24,15 @@ contributors:
 ---
 # Query and analyze the incremental updates
 
-Microsoft Dataverse data can continuously change through creating, update, and deleting transactions. Therefore, Synapse Link for Dataverse provides incremental folders to help you query and analyze the incremental updates made to Dataverse data during a user-specified time interval. Customers with large datasets can:
+Microsoft Dataverse data can continuously change through create, update, and delete transactions. Synapse Link for Dataverse provides incremental folders to help you query and analyze the incremental updates made to Dataverse data during a user-specified time interval. Organizations with large datasets can analyze the incremental update data and:
 
 - Drop stale and stagnant data to save data processing costs and increase efficiency in Azure Synapse Analytics.  
 - Track data changes during a user-specified time period.
 
-When creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table will be stored under a separate *DataverseTableName* folder.
+When creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table is stored under a separate *DataverseTableName* folder.
 
-Timestamp and table folders are created only when there is a data update during the user-specified time interval.
+> [!NOTE]
+> Timestamp and table folders are created only when there is a data update during the user-specified time interval.
 
 ## Prerequisites
 
