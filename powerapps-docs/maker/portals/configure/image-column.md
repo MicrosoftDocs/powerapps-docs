@@ -59,7 +59,8 @@ Developers can design the website by using Liquid code to retrieve the records f
         {{ item.columnname.Value }}
     {% endfor %}
 ```
-
+| | |
+|-------|------------------------------|
 | Type  | Mime type of the image       |
 | Size  | Image size in bytes          |
 | Value | Image value in base64 string |
