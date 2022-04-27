@@ -49,11 +49,11 @@ On the design canvas, to change the appearance of a column, select a column. On 
           - Use the options in the toolbar to further format the content.
         > [!NOTE]
         > When you select the text element, the following capabilities of the rich text editor toolbar are not supported:
-           - Personalization. Use the Insert dynamic text editor to personalize content.
-           - Insert image. Use the image element to add an image to column.
-           - Tracking for links
-           - Inserting tables
-           - If you paste formatted content from other sources such as Word, the Font style and size of the text isn't detected.
+        > - Personalization. Use the Insert dynamic text editor to personalize content.
+        > - Insert image. Use the image element to add an image to column.
+        > - Tracking for links
+        > - Inserting tables
+        > - If you paste formatted content from other sources such as Word, the Font style and size of the text isn't detected.
                   
     - Image: To add an image to your template, select the image element and add it to the design canvas. An image placeholder appears on the canvas. On the **Edit Image** flyout, you can perform the following actions:
           - Upload an image or specify an image URL. 
