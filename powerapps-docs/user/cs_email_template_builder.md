@@ -54,7 +54,5 @@ To force app to display the default email template editor page, turn off the enh
 ### See also
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
-[Customize an email template using the template editor](cs-template-options.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
