@@ -47,7 +47,14 @@ On the design canvas, to change the appearance of a column, select a column. On 
     - Text:  To add content to your email template, select the text element and add it to the design canvas. When you add the text element, you'll see some placeholder text within the element. A floating toolbar appears above the text element. You can perform the following actions:
           - Enter the content of the email or insert dynamic text. 
           - Use the options in the toolbar to further format the content.
-          
+        > [!NOTE]
+        > When you select the text element, the following capabilities of the rich text editor toolbar are not supported:
+           - Personalization. Use the Insert dynamic text editor to personalize content.
+           - Insert image. Use the image element to add an image to column.
+           - Tracking for links
+           - Inserting tables
+           - If you paste formatted content from other sources such as Word, the Font style and size of the text isn't detected.
+                  
     - Image: To add an image to your template, select the image element and add it to the design canvas. An image placeholder appears on the canvas. On the **Edit Image** flyout, you can perform the following actions:
           - Upload an image or specify an image URL. 
           - Modify the image size and alignment.
@@ -59,16 +66,6 @@ On the design canvas, to change the appearance of a column, select a column. On 
     - Divider: Select this element to divide sections of the template with a line. When you add this element, the **Edit Divider** panel appears. You can change the appearance, color, width, alignment, and spacing of the divider line with the options in this panel.
 
 - General Styles: Use the options in this tab to change the width, font, font size, background and text color of the layout.
-
-### Limitations
-
-When you select the text element, the following features of the rich text editor toolbar are not supported: 
-
-1. The personalization option
-2. Adding images from the Image option
-3. Tracking option of the Link option
-4. Insert table
-5. On  copy paste of a formatted content in the rich text editor of the Text Element, Font style in the Font dropdown of the toolbar of the rich text editor is not auto detected
 
 
 ### See also
