@@ -111,7 +111,7 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 
 > [!NOTE]
 > - OnError is part of an experimental feature and is subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
-> - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
+> - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [Settings > Upcoming features > Experimental](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 Use **OnError** to take action after an error has been detected.  It provides a global opportunity to intercept an error banner before it is displayed to the end user.  It can also be used to log an error with the [**Trace** function](function-trace.md) or write to a database or web service.
