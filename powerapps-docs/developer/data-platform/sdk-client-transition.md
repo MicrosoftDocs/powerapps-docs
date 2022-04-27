@@ -19,7 +19,10 @@ search.app:
 
 # Transition apps to the next-generation Dataverse service client
 
-The Microsoft Power Platform team is in the process of transitioning our current Microsoft Dataverse SDK for .NET to the next-generation version of our APIs (internally called Dataverse SDK vNext). This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools#net-sdk-assemblies) to the next-generation version of our APIs (internally called Dataverse SDK vNext). This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+
+> [!NOTE]
+> All our existing developer documentation and sample code use the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Only this article that you are reading describes the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. More documentation and sample code updates are coming.
 
 ## Why the change?
 
@@ -49,15 +52,31 @@ Below is a quick summary of the impact to certain types of coding projects.
 
 ## What do you need to do?
 
-The good news is that the API signatures from the older service client to the new service client are the same. Application code should not need any changes. You should just have to update the application project to use the new Dataverse.Client NuGet packages and re-build.
+The good news is that the class member signatures from the older service client to the new service client are the same, except the client class names are slightly different. Application code should not need any significant changes.
 
-- .NET Framework based (online) application projects - remove the older [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages from your project, add the new [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package, and then rebuild.
+### .NET Framework based (online) application projects
 
-- .NET Core based (online) projects - simply add the Microsoft.PowerPlatform.Dataverse.Client NuGet package to your projects, add code to call the Dataverse SDK APIs, and build.
+To update your application projects, follow these steps.
 
-- Plug-ins or custom workflow activities - nothing really to do here unless you want to swap out the older CoreAssemblies (and related) NuGet packages and add the new Dataverse.Client package. You will still be building your project using .NET Framework 4.6.2.
+1. Remove the older [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages from your project.
+1. Add the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package to your project.
+1. Change every mention of the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class to [ServiceClient](https://review.docs.microsoft.com/en-us/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient&branch=smoke-test) in your code.
+1. Fix any namespace mismatch as the new `ServiceClient` class is now in the [Microsoft.PowerPlatform.Dataverse.Client](https://review.docs.microsoft.com/en-us/dotnet/api/microsoft.powerplatform.dataverse.client&branch=smoke-test) namespace.
 
-- On-premise clients - leave your application projects and code as is
+### .NET Core based (online) projects
+
+Simply add the [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package to your projects, add code to call the Dataverse SDK APIs, and build.
+
+### Plug-ins or custom workflow activities
+
+Nothing really for you to do here. Continue using the Microsoft.CrmSdk.CoreAssemblies (and related) NuGet packages with .NET Framework 4.6.2.
+
+### On-premise clients
+
+Leave your application projects and code as is. Continue using the Microsoft.CrmSdk.CoreAssemblies NuGet package and `CrmServiceClient`class. However, plan to update your projects from using any custom service clients to instead use the `CrmServiceClient` or `ServiceClient` in the near future. See the planned timeline for 2011 SOAP endpoint shutdown below.
+
+> [!NOTE]
+> If you are using custom authentication with `CrmServiceClient`, you can continue to use your custom authentication code with `ServiceClient`.
 
 ## Timeline
 
@@ -66,7 +85,7 @@ The following table lists some important dates to keep in mind.
 | Timeframe | Event |
 | --- | --- |
 |June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|Fall 2022|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (CrmServiceClient, DataverseServiceClient)|
+|Fall 2022|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (CrmServiceClient or ServiceClient)|
 |December 2022|Microsoft support for ADAL ends|
 
 ### See also
