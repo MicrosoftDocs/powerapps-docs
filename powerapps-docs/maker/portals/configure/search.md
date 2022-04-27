@@ -15,9 +15,14 @@ contributors:
     - Professor Kendrick
 ---
 
-# Portal Search Overview
+# Search
 
-Starting from Website version 9.4.4.xx portal search uses Dataverse search to deliver result from multiple tables and fields for new portals. Existing portals will continue to use Lucene .Net search. You can enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
+In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality.
+
+List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results.
+
+>[!IMPORTANT]
+> Global search uses an external search index that is based on Lucene.Net and is used to search within multiple tables and fields at once. Starting with Website version 9.4.4.xx, portal search uses Dataverse search to deliver result from multiple tables and fields for new portals. Existing portals will continue to use Lucene .Net search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
 
 ## Pre-requisite
 
@@ -39,34 +44,7 @@ Once the index is provisioned, it may take anywhere between an hour or more to c
 
 [Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse.  
 
-## Global Search
-
-Provides intelligent search by applying AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results
-
-## Tables searchable in portal global search
-
-> [!NOTE]
-> To get better search performance enable “Portal Search” view for only required tables and columns.
-
-## Related site settings
-
-| Name    | Default value     | Description       |
-|-----------------------|--------------------|-------------|
-| **Search/EnableDataverseSearch** | **True** | A Booleanvalue that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .Net based search.  <br /><br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. | 
-
-<!--old content starts here-->
-
-## Search
-
-In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality.
-
-List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results.
-
-Global search uses an external search index that is based on Lucene.Net and is used to search within multiple tables and fields at once.
-
 ## Global search
-
-Global search of portals allows you to search for records across multiple tables. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 
 Among the benefits of global search are its ability to:
 - Find matches to any word in the search term in any field in the table. Matches can include inflectional words like stream, streaming, or streamed.
@@ -75,12 +53,15 @@ Among the benefits of global search are its ability to:
     - Proximity to each other in the text.
 - Highlight matches in the search results.
 - Provide facet options that can be used to further filter search results.
+- Global search of portals allows you to search for records across multiple tables. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 
 In global search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, with matched works highlighted. 
 
 The following sections detail how global search works in Power Apps portals and describe the various configuration options available.
 
 ## Tables searchable in portal global search
+
+Provides intelligent search by applying AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
 
 By default, the following tables can be searched within a portal website provided the appropriate solution packages have been installed and search has been added to a portal. The columns that are indexed will consist of the columns found in the Search view, which can be customized.  Each table in the list has its default set of attributes indexed as listed here:
 - Knowledge Article
@@ -101,7 +82,8 @@ By default, the following tables can be searched within a portal website provide
 - Incident 
 
 > [!NOTE]
-> You can configure additional tables for search. For more information, read [configuring additional tables for search](search-additional-entities.md).
+> You can configure additional tables for search. For more information, read [configuring additional tables for search](search-additional-entities.md). <br>
+> To get better search performance enable “Portal Search” view for only required tables and columns.
 
 ## Columns searchable in global search
 
@@ -123,6 +105,7 @@ The following site settings are related to global search:
 | Name    | Default value     | Description       |
 |-----------------------|--------------------|-------------|
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br>If you're using out-of-the-box web templates and you turn off this setting, the search box will not be displayed in the header as well as on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
+| Search/EnableDataverseSearch | True | A Booleanvalue that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .Net based search.  <br /><br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. |
 | Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional tables on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
 | Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;<br>Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br>Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment". <br> **Note**: <ul> <li> Values in the filter dropdown will have the table's plural name instead of the key value defined here. </li> <li> When using multiple tables, the filter dropdown will have the name of the first table in the comma separated list. </li> </ul>  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
@@ -132,7 +115,7 @@ The following site settings are related to global search:
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
 | Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;<br>Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
-|||
+
 
 ## Related content snippets
 
@@ -320,3 +303,4 @@ Once this site setting is changed, the Case table will be removed from filters o
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
