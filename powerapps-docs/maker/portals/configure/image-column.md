@@ -61,7 +61,6 @@ Developers can design the website by using Liquid code to retrieve the records f
 ```
 
 | Type  | Mime type of the image       |
-|-------|------------------------------|
 | Size  | Image size in bytes          |
 | Value | Image value in base64 string |
 | Url   | Image url                    |
