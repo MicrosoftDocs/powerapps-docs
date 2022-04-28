@@ -50,10 +50,8 @@ To force app to display the default email template editor page, turn off the enh
 1. Select the **Enable the New Email Template Editor** option in the solution.
 1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the selected app is displayed. 
 1. Select **New app value** for the app, and select **No** for the specified app.
-   > ![Add a setting to a solution](media/enh_disable_app.png)
+   > ![Disable the variable](media/enh_disable_app.png)
 1. Select **Save** and **Publish All Customizations**.
-
-1. Select **Save**, and then select **Publish all customizations**.
 
 After you publish the customizations, the app uses the default email template editor.
 
