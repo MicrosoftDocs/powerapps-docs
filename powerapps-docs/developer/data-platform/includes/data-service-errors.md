@@ -1925,7 +1925,7 @@
 |0x8004700f<br />-2147192817|Name: **InvalidRelationshipType**<br />Message: The specified relationship type is not valid for this operation|
 |0x8004F989<br />-2147157623|Name: **InvalidRelationshipTypeForAccessory**<br />Message: An accessory relationship is always unidirectional and can't be changed.|
 |0x8004F988<br />-2147157624|Name: **InvalidRelationshipTypeForUpSell**<br />Message: An upsell relationship is always unidirectional and can't be changed.|
-|0x80048054<br />-2147188652|Name: **InvalidRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot ends with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot, cannot contain consecutive dots and cannot contain any of the following characters: ~ " # % & * : < > ? / \ { | }.|
+|0x80048054<br />-2147188652|Name: **InvalidRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot ends with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot, cannot contain consecutive dots and cannot contain any of the following characters: ~ " # % & * : < > ? / \ { \| }.|
 |0x80072530<br />-2147015376|Name: **InvalidRequestBody**<br />Message: Passed entity object cannot be null or empty.|
 |0x80044271<br />-2147204495|Name: **InvalidRequestDataFormat**<br />Message: The updated configuration includes invalid data.|
 |0x80044828<br />-2147203032|Name: **InvalidRequestParameter**<br />Message: Both name and value should be specified for request parameter.|
