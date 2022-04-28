@@ -149,8 +149,7 @@ The following screenshot shows a portion of the default theme setup.
   
 ## See also  
          
- [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568)
- [Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
+[Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
 
 
 
