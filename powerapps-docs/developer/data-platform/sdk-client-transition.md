@@ -19,7 +19,7 @@ search.app:
 
 # Transition apps to the next-generation Dataverse service client
 
-The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#net-sdk-assemblies) to the next-generation version of our APIs (internally called Dataverse SDK vNext). This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to the next-generation version of our APIs (internally called Dataverse SDK vNext). This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
 
 > [!NOTE]
 > All our existing developer documentation and sample code use the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Only this article that you are reading describes the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. More documentation and sample code updates are coming.
