@@ -30,11 +30,11 @@ Turn on the enhanced email template editing experience in apps across your organ
 
    > ![Add a setting to a solution](media/usr_soln_setting.png)
 1. On the **Add existing Setting Definition** pane, select the **Enable the New Email Template Editor** option and then select **Next**.
-   > ![Add a setting to a solution](media/usr_soln_email_setting.png)
+   > ![Add the enable email template editor option](media/usr_soln_email_setting.png)
 1. Select **Add** on the **Selected Setting Definition** to add the **Enable the New Email Template Editor** option to your solution. 
 1. Select the **Enable the New Email Template Editor** option. The **Edit Enable the New Email Template Editor** pane appears.
 1. Set the **Setting environment value** option to **Yes** on the **Edit Enable the New Email Template Editor** pane.
-   > ![Add a setting to a solution](media/enable-email-template-option.png)
+   > ![Set the variable to yes](media/enable-email-template-option.png)
 1. Select **Publish All Customizations**.
 
 ## Disable the enhanced email template for an app
