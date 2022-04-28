@@ -73,7 +73,7 @@ Nothing really for you to do here. Continue using the Microsoft.CrmSdk.CoreAssem
 
 ### On-premise clients
 
-Leave your application projects and code as is. Continue using the Microsoft.CrmSdk.CoreAssemblies NuGet package and `CrmServiceClient`class. However, plan to update your projects from using any custom service clients to instead use the `CrmServiceClient` or `ServiceClient` in the near future. See the planned timeline for 2011 SOAP endpoint shutdown below.
+Leave your application projects and code as is. Continue using the Microsoft.CrmSdk.CoreAssemblies NuGet package and `CrmServiceClient`class. However, plan to update your projects from using any custom service clients to instead use the `CrmServiceClient` or `ServiceClient` in the near future. See the planned [timeline](#timeline) for 2011 SOAP endpoint shutdown below.
 
 > [!NOTE]
 > If you are using custom authentication with `CrmServiceClient`, you can continue to use your custom authentication code with `ServiceClient`.
