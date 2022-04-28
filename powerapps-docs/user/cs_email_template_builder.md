@@ -38,7 +38,7 @@ Turn on the enhanced email template editing experience in apps across your organ
 1. Select **Publish All Customizations**.
 
 ## Disable the enhanced email template for an app
-<!-- Please replace "disable" with "turn off" throughout. -->
+
 
 To force app to display the default email template editor page, turn off the enhanced template editing experience in that app. First, you'll need to add the app to the solution to which you've added the enhanced email template editing experience.
 
@@ -57,7 +57,6 @@ To force app to display the default email template editor page, turn off the enh
 
 After you publish the customizations, the app uses the default email template editor.
 
-<!--The example didn't add anything useful. -->
 ### See also
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
