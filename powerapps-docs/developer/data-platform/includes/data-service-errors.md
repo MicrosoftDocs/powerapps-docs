@@ -1950,7 +1950,7 @@
 |0x80048052<br />-2147188654|Name: **InvalidSharePointSiteCollectionUrl**<br />Message: The URL must conform to the http or https schema.|
 |0x80044254<br />-2147204524|Name: **InvalidSimilarityRuleStateError**<br />Message: Invalid similarity rule state.|
 |0x8004024f<br />-2147220913|Name: **InvalidSingletonResults**<br />Message: Crm Internal Exception: Singleton Retrieve Query should not return more than 1 record.|
-|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { \| }./|
+|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { \| }.|
 |0x80072000<br />-2147016704|Name: **InvalidSolutionAwarenessDeclaration**<br />Message: The entity {0} cannot have its solution awareness setting updated.|
 |0x8007200E<br />-2147016690|Name: **InvalidSolutionComponentKey**<br />Message: The attribute {0} from key {1} and entity {2} should be exportable to be an export key.|
 |0x8004701B<br />-2147192805|Name: **InvalidSolutionConfigurationPage**<br />Message: The specified configuration page for this solution is invalid.|
