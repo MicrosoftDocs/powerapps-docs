@@ -22,8 +22,6 @@ contributors:
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions built on Microsoft Power Platform can leverage virtual tables as if they were native Dataverse tables. More information: [Get started with virtual tables](get-started-ve.md).
 
-In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
-
 In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the following connectors:
 - [SQL Server](/connectors/sql/) 
 - Microsoft Excel Online ([Business](/connectors/excelonlinebusiness/))
