@@ -54,11 +54,11 @@ You can use the design elements in the **Elements** tab in the Toolbox to custom
 - **Text**: Add text content to your template. Replace the placeholder text with your content. Use the floating toolbar to insert dynamic text or format the content.
     > [!NOTE]
     > When you select the text element, the following capabilities of the rich text editor toolbar aren't supported:
-         > - Personalization. Use the Insert dynamic text editor to personalize content.
-         > - Insert image. Use the image element to add an image to column.
-         > - Tracking for links
-         > - Inserting tables
-         > - Font style and size of the text isn't detected, if you paste formatted content from other sources.
+    >  - Personalization. Use the Insert dynamic text editor to personalize content.
+    >  - Insert image. Use the image element to add an image to column.
+    >  - Tracking for links
+    >  - Inserting tables
+    >  - Font style and size of the text isn't detected, if you paste formatted content from other sources.
 
 - **Image**: Add an image to your template. Select the image placeholder, and then select **Edit Image** and upload an image or specify an image URL. You can also modify the image's size and alignment.
 
