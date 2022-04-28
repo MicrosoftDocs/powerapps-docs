@@ -1,13 +1,12 @@
 ---
-title: How to enable the enhanced email template  in Power Apps
-description:Enable the enhancd email template option in Power Apps
+title: How to enable the enhanced email template in Power Apps
+description: Turn on the enhanced email template option in Power Apps.
 author: mgandham
 manager: shujoshi
-
 ms.topic: task
-ms.date: 4/20/2022
+ms.date: 4/25/2022
 ms.subservice: end-user
-ms.author: gandhamm 
+ms.author: gandhamm
 search.audienceType: 
   - enduser
 search.app: 
@@ -39,6 +38,7 @@ Turn on the enhanced email template editing experience in apps across your organ
 1. Select **Publish All Customizations**.
 
 ## Disable the enhanced email template for an app
+<!-- Please replace "disable" with "turn off" throughout. -->
 
 To force app to display the default email template editor page, turn off the enhanced template editing experience in that app. First, you'll need to add the app to the solution to which you've added the enhanced email template editing experience.
 
@@ -53,8 +53,14 @@ To force app to display the default email template editor page, turn off the enh
    > ![Add a setting to a solution](media/enh_disable_app.png)
 1. Select **Save** and **Publish All Customizations**.
 
+1. Select **Save**, and then select **Publish all customizations**.
+
+After you publish the customizations, the app uses the default email template editor.
+
+<!--The example didn't add anything useful. -->
 ### See also
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
+[Customize an email template using the template editor](cs-template-options.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
