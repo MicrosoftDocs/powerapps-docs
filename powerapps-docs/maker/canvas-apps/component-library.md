@@ -178,7 +178,7 @@ Sharing a component library works the same way you share a canvas app. When you 
 
     ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
 
-- If you're importing the app and the component library in an environment for the first time, ensure the app uses the latest version of the component included with the component library. Otherwise, the app won't receive updates after the import. The app will recognize and prompt for the updated version upon subsequent component library imports to the same environment.
+- If you're importing an app and a component library in an environment for the first time, ensure the app uses the latest version of the component included with the component library. Otherwise, the app won't receive updates after the import. The app will recognize and prompt for the updated version upon subsequent component library imports to the same environment.
 
 ## Next steps
 
