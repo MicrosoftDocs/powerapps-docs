@@ -431,8 +431,6 @@
       href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
-  - name: Transition apps to Dataverse ServiceClient
-    href: sdk-client-transition.md
   - name: Discover user organizations
     href: discovery-service.md
   - name: Tutorials 
@@ -443,6 +441,8 @@
       href: walkthrough-blazor-webassembly-single-tenant.md
     - name: "Tutorial: Register and configuring a SPA application with adal.js"
       href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+- name: Transition apps to Dataverse ServiceClient
+  href: sdk-client-transition.md
 - name: Best practices
   href: best-practices/index.md
 - name: Online Management API

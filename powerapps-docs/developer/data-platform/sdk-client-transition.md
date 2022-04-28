@@ -60,8 +60,8 @@ To update your application projects, follow these steps.
 
 1. Remove the older [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages from your project.
 1. Add the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package to your project.
-1. Change every mention of the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class to [ServiceClient](https://review.docs.microsoft.com/en-us/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient&branch=smoke-test) in your code.
-1. Fix any namespace mismatch as the new `ServiceClient` class is now in the [Microsoft.PowerPlatform.Dataverse.Client](https://review.docs.microsoft.com/en-us/dotnet/api/microsoft.powerplatform.dataverse.client&branch=smoke-test) namespace.
+1. Change every mention of the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class to `ServiceClient` in your code.
+1. Fix any namespace mismatch as the new `ServiceClient` class is now in the `Microsoft.PowerPlatform.Dataverse.Client` namespace.
 
 ### .NET Core based (online) projects
 
@@ -85,7 +85,7 @@ The following table lists some important dates to keep in mind.
 | Timeframe | Event |
 | --- | --- |
 |June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|Fall 2022|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (CrmServiceClient or ServiceClient)|
+|Fall 2022|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
 |December 2022|Microsoft support for ADAL ends|
 
 ### See also
