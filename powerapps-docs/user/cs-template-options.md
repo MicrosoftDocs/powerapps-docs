@@ -45,16 +45,17 @@ You have a few different ways to add items to your template.
 
 - Select an element in the Toolbox. An **add** icon appears on the canvas. Select the icon to add the element.
 
-:::image type="content" source="media/email_dsgn_options.png" alt-text="Screenshot of PLEASE DESCRIBE WHAT THIS SCREENSHOT IS SHOWING.":::
+- Select **Go to the parent** to identify the section or column in which the element is embedded.
 
-Select **Go to the parent** to identify the section or column in which the element is embedded.
-:::image type="content" source="media\add_template_optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
+  :::image type="content" source="media\add_template_optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
 
 You can use the design elements in the **Elements** tab in the Toolbox to customize your email template:
 
 - **Text**: Add text content to your template. Replace the placeholder text with your content. Use the floating toolbar to insert dynamic text or format the content.
-        > [!NOTE]
-        > When you select the text element, the following capabilities of the rich text editor toolbar aren't supported:
+    > [!NOTE]
+
+      > When you select the text element, the following capabilities of the rich text editor toolbar aren't supported:
+
         > - Personalization. Use the Insert dynamic text editor to personalize content.
         > - Insert image. Use the image element to add an image to column.
         > - Tracking for links
