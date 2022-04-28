@@ -1,14 +1,14 @@
 ---
-title: "How to create an email template  in model-driven apps | MicrosoftDocs"
-description: Learn how to create an email template.
+title: How to create an email template in model-driven apps
+description: Learn how to create an email template in a model-driven app.
 author: mduelae
 manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/20/2022
+ms.date: 04/25/2022
 ms.subservice: end-user
-ms.author: mkaur 
+ms.author: mkaur
 search.audienceType: 
   - enduser
 search.app: 
@@ -18,32 +18,29 @@ search.app:
 
 # Create email templates
 
-Email templates are a fast and easy way to send repetitive and recurring email to multiple customers. They can help save you time and give you a way to create consistent, professional, preformatted email messages that you can use when communicating with your customers. You can view, create, and edit any email templates you've created.
+Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers.
 
-When creating a template, you have the option to work with a blank or existing template.
+To create a template, select **New** on the **Email Templates** command bar. You can [start with a blank template](#start-with-a-blank-template) or [customize an existing template](#start-with-existing-templates).
 
-   ![Create an email template.](media\email-how-to-create-an-email-template-1a.png "Create an email template")
-
-When you select **New** from the **Email Templates** command bar, a drop-down list appears with options to either **Start with a blank template** or **Start with existing templates**.
+:::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
 ## Start with a blank template
 
-Starting with a blank template means that you build and add all the data to the template.
+When you start with a blank template, nothing is provided for you. You must add everything you want customers to see.
 
-If you select **Create an email template**, the following is displayed:
+First, you'll need to provide information about the template itself.
 
-   ![Start with a blank template option.](media\email-create-an-email-template-1a.png "Start  with a blank template option")
+:::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot of template information to provide.":::
 
-Legend 
-   1. **Template name**. Assign your email template a detailed name you want to save for future use.
-   2. **Permission level**. You can share the template you create with your **Organization** or as  **Individual** for personal use.
-   3. **Category**. The default for this field is set to **User**. Categories determine which dynamic text fields are available for use in your template.
-   4. **Language**. You can display your installed language packs in this field. **Language** also helps to categorize your templates. 
-   5. **Create**. Once an email is formatted, you can create it into a template.
+   1. **Template name**: Give your email template a detailed name to help you identify it later.
+   2. **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
+   3. **Category**: The default value is **User**. Categories determine which dynamic text fields are available for use in your template.
+   4. **Language**: Display installed language packs. **Language** also helps to categorize your templates.
+   5. **Create**: Opens one of two editors where you can build your template.
 
 When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs_email_template_builder.md):
 
-- If yes, you'll use the enhanced email template editor page.
+- If yes, you'll use the enhanced email template editor page in Power Apps.
 - If not, you'll use the default email template editor page.
 
 ### Enhanced email template editor overview
@@ -54,51 +51,32 @@ When you select **Create**, the editor page you see depends on whether your admi
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
 
-> [!NOTE]
-> Email templates created using the enhanced e-mail template experience will open in the enhanced email template editor form even if the admin disables this experience.
-
 ### Default email template editor overview
 
-   ![New Customer Template.](media\email-new-customer-template-1c.png "New Customer Template")
+:::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
 
-Legend 
-   1. **New Attachments**. Allows you to include attachments to your template. 
-   2. **Subject**. Allows you to change the subject line.
-   3. **Insert dynamic text**. Allows you to use dynamic text in both the Subject line and body of the email.
+   1. **Insert dynamic text**: Use dynamic text in the subject and body of the email.
+   2. **Subject**: Enter or change the email subject.
+   3. **New Attachment**: Add one or more attachments to your template, if needed.
 
-> [!NOTE]
-> Email templates created using the default email template experience will open in the default email template editor form even if the admin enables the enhanced email template editor experience. 
- 
 ## Start with existing templates
 
-Starting with an existing template means the template is automatically pre-populated with the pre-established data that you can customize.
+Start with an existing template to create an email template faster and with less effort. The template is pre-populated with data. All you need to do is customize it for your needs.
 
-#### Create a new email template overview
+:::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
 
-The following **Create a new email template** screen appears, which allows you to customize your template
+   1. **Search**: Search for the name of a template to start from. Search doesn't support regular expressions.
+   2. **Browse** out-of-the-box templates, global and entity-specific, listed in alphabetical order. Global templates are shown as the type User. If you've created custom email templates, they're also listed.
+   3. **Details**. Preview the templates so that you can pick the one that best meets your needs. You can modify it as needed later.
+   4. **Select**: Insert the selected template content into your email.
 
-  ![Start with existing templates.](media\email-start-with-existing-templates-1a.png "Start with existing templates")
-
-   Legend
-   1. **Search**. Allows you to search for templates. Search does not support regular expressions and it works on the template name only.
-   2. **Browse**. Allows you to browse through out-of-the-box email templates. A list of available out-of-the-box email templates (global and entity specific) will display in alphabetical order. Global templates are shown as the type User. If you've created a custom email template, it will also be displayed here. 
-   3. **Details**. Allows you to preview the email template.  When you select an email template, you can preview the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the template content as needed.
-   3. **Select**. Allows you to insert the template content into your email.
-
-      > [!Important] 
-      > When you begin working in the new environment, do not edit your templates in the old legacy web client; otherwise you will lose your inline images and strip out some of the advanced formatting and functionality.
+> [!Important]
+> If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
 
 ### Work with existing templates
 
-When you select an existing template, the following display appears:
+:::image type="content" source="media/email-template-copy-1a.png" alt-text="Screenshot of the email template editor with an existing template open for editing.":::
 
-   ![Creating email template copies.](media\email-template-copy-1a.png "Creating email template copies")
-   
-> [!NOTE]
-> If you select a template created using the enhanced email template editor, the Enhanced template editor page is displayed irrespective of the admin configuration.
-   
-You can do the following actions:
-
-- On the **Template** tab, specify the template details and the subject line. For the new template you created from the existing template, the **Name** displays **– Copy** at the end of the template name to identify it is a copy of an existing template.
-- On the **Editor** tab, design and customize an email template. For more information, see: [Customize an email template using the Editor](cs-template-options.md)
-- On the **Attachments** tab, include attachments to your template.
+- **Template** tab: Specify or change the template details and the email subject. The name includes **– Copy** at the end to identify this template is a copy of another one.
+- **Template editor** section: [Design and customize the email template](cs-template-options.md).
+- Select **New Attachment** to add attachments to your template if needed.
