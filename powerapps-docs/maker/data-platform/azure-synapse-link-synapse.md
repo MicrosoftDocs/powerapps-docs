@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 contributors:
-  - sama-zaki
+  - JasonHQX
 ---
 
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace

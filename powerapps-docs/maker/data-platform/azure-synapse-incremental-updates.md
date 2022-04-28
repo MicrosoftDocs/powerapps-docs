@@ -3,16 +3,16 @@ title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
 ms.date: 04/27/2022
-ms.reviewer: "Mattp123"
+ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sabinn-msft"
+author: "JasonHQX"
 ms.assetid: 
 ms.subservice: dataverse-maker
-ms.author: "matp"
+ms.author: "jasonhuang"
 manager: "kvivek"
 search.audienceType: 
   - maker

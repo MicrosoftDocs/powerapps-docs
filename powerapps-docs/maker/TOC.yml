@@ -2440,6 +2440,8 @@
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory
         href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access choice labels from Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-choice-labels.md
       - name: Access Dataverse choices with Power BI
         href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
