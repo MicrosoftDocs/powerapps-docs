@@ -1,12 +1,12 @@
 ---
 title: How to enable the enhanced email template in Power Apps
 description: Turn on the enhanced email template option in Power Apps.
-author: mgandham
+author: gandhamm
 manager: shujoshi
 ms.topic: task
 ms.date: 4/25/2022
 ms.subservice: end-user
-ms.author: gandhamm
+ms.author: mgandham
 search.audienceType: 
   - enduser
 search.app: 
