@@ -1,7 +1,7 @@
 ---
 title: "Data Map (ImportMap)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Data Map (ImportMap)  table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1269,44 +1269,51 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10085|Comment|A collaborative comment on a maker artifact|
 |10086|PDF Setting|PDF Settings to save enabled pdf entities|
 |10087|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10088|Service Configuration||
-|10089|SLA KPI||
-|10090|Knowledge Federated Article||
-|10091|Knowledge Federated Article Incident||
-|10092|Search provider||
-|10093|Knowledge Article Image||
-|10094|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10095|Knowledge Search Insight|Knowledge Search Insight|
-|10096|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10097|Knowledge Article Attachment||
-|10098|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10099|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10100|Knowledge Management Setting|Setup knowledge management for your organization.|
-|10101|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10102|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10104|Plugin Package||
-|10105|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10106|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10107|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10108|TeamMobileOfflineProfileMembership||
-|10109|UserMobileOfflineProfileMembership||
-|10110|OrganizationDataSyncSubscription||
-|10111|OrganizationDataSyncSubscriptionEntity||
-|10112|OrganizationDataSyncState|Information regarding data synchronization state|
-|10113|NonRelational Data Source||
-|10114|Notification|Notification to be provided to a user.|
-|10115|App Action||
-|10116|Rich Text Attachment|Image or file attached to a rich text field|
-|10117|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10118|PM Inferred Task||
-|10119|PM Recording||
-|10120|Analysis Component||
-|10121|Analysis Job||
-|10122|Analysis Result||
-|10123|Analysis Result Detail||
-|10124|Solution Health Rule||
-|10125|Solution Health Rule Argument||
-|10126|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10088|Activity record for the Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10089|Service Configuration||
+|10090|SLA KPI||
+|10091|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10092|Knowledge Federated Article||
+|10093|Knowledge Federated Article Incident||
+|10094|Search provider||
+|10095|Knowledge Article Image||
+|10096|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10097|Knowledge Search Insight|Knowledge Search Insight|
+|10098|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10099|Knowledge Article Attachment||
+|10100|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10101|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10102|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10103|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10105|Plugin Package||
+|10106|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10107|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10108|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10109|MobileOfflineProfileItemFilter||
+|10110|TeamMobileOfflineProfileMembership||
+|10111|UserMobileOfflineProfileMembership||
+|10112|OrganizationDataSyncSubscription||
+|10113|OrganizationDataSyncSubscriptionEntity||
+|10114|OrganizationDataSyncState|Information regarding data synchronization state|
+|10115|NonRelational Data Source||
+|10116|Notification|Notification to be provided to a user.|
+|10117|Insights Store Data Source||
+|10118|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10119|App Action||
+|10120|App Action Migration||
+|10121|App Action Rule||
+|10124|Rich Text Attachment|Image or file attached to a rich text field|
+|10125|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10126|PM Analysis History||
+|10127|PM Inferred Task||
+|10128|PM Recording||
+|10129|Analysis Component||
+|10130|Analysis Job||
+|10131|Analysis Result||
+|10132|Analysis Result Detail||
+|10133|Solution Health Rule||
+|10134|Solution Health Rule Argument||
+|10135|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
 
 
 <a name="onetomany"></a>
