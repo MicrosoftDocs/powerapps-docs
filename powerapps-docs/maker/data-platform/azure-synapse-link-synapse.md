@@ -132,7 +132,9 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 6. Navigate to Power Apps, and relink the Synapse workspace and data lake.
 
-## Access near real-time data and read-only snapshot data
+## Access near real-time data and read-only snapshot data (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription to ensure you can reliably consume updated data in the lake at any given time:
 
@@ -140,6 +142,8 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 - Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
 
 > [!NOTE]
+> This is a preview feature.
+>
 > For empty table data, only near real-time data is created.
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
