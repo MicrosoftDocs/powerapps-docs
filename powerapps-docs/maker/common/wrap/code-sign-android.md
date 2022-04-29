@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2022
+ms.date: 04/29/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -79,6 +79,19 @@ Parameters:
 - **openssl** - generates SHA1 key for Android.
 
 Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
+
+### Use keytool to create base-64 encoded SHA1
+
+If your signature has is not base64-encoded SHA1, you'll see the following error:
+
+"The signature hash must be base64-encoded SHA1."
+
+When this error appears, try to generate the signature hash using the following steps instead:
+
+1. Run `keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE` to list the certificate information in verbose mode.
+1. Copy the **SHA1** value for the certificate fingerprint from the output.
+1. Use a hexadecimal to base64 converter to convert the copied certificate fingerprint hex value into base64 value.
+1. Copy the generated base64 value as the **Signature hash** in the Azure portal while [registering the app](how-to.md#app-registration).
 
 ## Sign the APK package
 
