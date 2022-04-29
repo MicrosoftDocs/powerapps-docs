@@ -1,7 +1,7 @@
 ---
 title: "appaction table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the appaction table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -71,10 +71,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ContextEntity](#BKMK_ContextEntity)
 - [ContextValue](#BKMK_ContextValue)
 - [FontIcon](#BKMK_FontIcon)
+- [GroupTitle](#BKMK_GroupTitle)
 - [Hidden](#BKMK_Hidden)
 - [IconWebResourceId](#BKMK_IconWebResourceId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [isGroupTitleHidden](#BKMK_isGroupTitleHidden)
 - [Location](#BKMK_Location)
 - [name](#BKMK_name)
 - [OnClickEventFormulaComponentLibrary](#BKMK_OnClickEventFormulaComponentLibrary)
@@ -86,6 +88,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OnClickEventJavaScriptWebResourceId](#BKMK_OnClickEventJavaScriptWebResourceId)
 - [OnClickEventType](#BKMK_OnClickEventType)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [ParentAppActionId](#BKMK_ParentAppActionId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -96,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [VisibilityFormulaComponentLibraryId](#BKMK_VisibilityFormulaComponentLibraryId)
 - [VisibilityFormulaComponentName](#BKMK_VisibilityFormulaComponentName)
 - [VisibilityFormulaFunctionName](#BKMK_VisibilityFormulaFunctionName)
+- [VisibilityType](#BKMK_VisibilityType)
 
 
 ### <a name="BKMK_appactionId"></a> appactionId
@@ -138,7 +142,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|buttonaccessibilitytext|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -154,7 +158,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|buttonlabeltext|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -202,7 +206,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|buttontooltiptitle|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -294,7 +298,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|fonticon|
-|MaxLength|100|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_GroupTitle"></a> GroupTitle
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Group Title|
+|FormatName|Text|
+|IsLocalizable|True|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|grouptitle|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -370,6 +390,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_isGroupTitleHidden"></a> isGroupTitleHidden
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|isGroupTitleHidden|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isgrouptitlehidden|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### isGroupTitleHidden Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_Location"></a> Location
 
 |Property|Value|
@@ -409,7 +452,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|name|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|SystemRequired|
 |Type|String|
 
@@ -455,7 +498,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|onclickeventformulacomponentname|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -471,7 +514,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|onclickeventformulafunctionname|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -560,6 +603,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
+### <a name="BKMK_ParentAppActionId"></a> ParentAppActionId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for App Action associated with App Action.|
+|DisplayName|Parent AppAction|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentappactionid|
+|RequiredLevel|None|
+|Targets|appaction|
+|Type|Lookup|
+
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -638,6 +695,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Standard Button||
 |1|Dropdown Button||
 |2|Split Button||
+|3|Group||
 
 
 
@@ -715,7 +773,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|visibilityformulacomponentname|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
 
@@ -731,9 +789,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|visibilityformulafunctionname|
-|MaxLength|100|
+|MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_VisibilityType"></a> VisibilityType
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Visibility Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|visibilitytype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### VisibilityType Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Formula||
+|2|Classic Rules||
+
 
 <a name="read-only-attributes"></a>
 
@@ -766,6 +846,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
+- [ParentAppActionIdName](#BKMK_ParentAppActionIdName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -1206,6 +1287,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_ParentAppActionIdName"></a> ParentAppActionIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parentappactionidname|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -1280,6 +1377,7 @@ Listed by **SchemaName**.
 - [appaction_ProcessSession](#BKMK_appaction_ProcessSession)
 - [appaction_BulkDeleteFailures](#BKMK_appaction_BulkDeleteFailures)
 - [appaction_PrincipalObjectAttributeAccesses](#BKMK_appaction_PrincipalObjectAttributeAccesses)
+- [appaction_appaction](#BKMK_appaction_appaction)
 
 
 ### <a name="BKMK_appaction_SyncErrors"></a> appaction_SyncErrors
@@ -1383,6 +1481,21 @@ Same as the [appaction_PrincipalObjectAttributeAccesses](principalobjectattribut
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_appaction_appaction"></a> appaction_appaction
+
+Same as the [appaction_appaction](appaction.md#BKMK_appaction_appaction) many-to-one relationship for the [appaction](appaction.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|parentappactionid|
+|IsHierarchical|True|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|appaction_appaction|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1394,6 +1507,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_appaction_modifiedby](#BKMK_lk_appaction_modifiedby)
 - [lk_appaction_modifiedonbehalfby](#BKMK_lk_appaction_modifiedonbehalfby)
 - [organization_appaction](#BKMK_organization_appaction)
+- [appaction_appaction](#BKMK_appaction_appaction)
 - [appmodule_appaction_appmoduleid](#BKMK_appmodule_appaction_appmoduleid)
 - [canvasapp_appaction_onclickeventformulacomponentlibraryid](#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid)
 - [canvasapp_appaction_visibilityformulacomponentlibraryid](#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid)
@@ -1432,6 +1546,10 @@ See the [lk_appaction_modifiedonbehalfby](systemuser.md#BKMK_lk_appaction_modifi
 
 See the [organization_appaction](organization.md#BKMK_organization_appaction) one-to-many relationship for the [organization](organization.md) table/entity.
 
+### <a name="BKMK_appaction_appaction"></a> appaction_appaction
+
+See the [appaction_appaction](appaction.md#BKMK_appaction_appaction) one-to-many relationship for the [appaction](appaction.md) table/entity.
+
 ### <a name="BKMK_appmodule_appaction_appmoduleid"></a> appmodule_appaction_appmoduleid
 
 **Added by**: System Solution Solution
@@ -1467,8 +1585,38 @@ See the [webresource_appaction_iconwebresourceid](webresource.md#BKMK_webresourc
 **Added by**: System Solution Solution
 
 See the [webresource_appaction_onclickeventjavascriptwebresourceid](webresource.md#BKMK_webresource_appaction_onclickeventjavascriptwebresourceid) one-to-many relationship for the [webresource](webresource.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the appaction table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_appaction_appactionrule_classicrules"></a> appaction_appactionrule_classicrules
+
+IntersectEntityName: appaction_appactionrule_classicrules<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|appactionid|
+|IsCustomizable|False|
+|LogicalName|appaction|
+|NavigationPropertyName|appaction_appactionrule_classicrules|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|appactionrule|
+|IntersectAttribute|appactionruleid|
+|NavigationPropertyName|appaction_appactionrule_classicrules|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.appaction?text=appaction EntityType" />
