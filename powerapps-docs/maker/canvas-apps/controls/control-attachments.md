@@ -39,7 +39,7 @@ An **Attachments** control lets you open, add, and delete files from a list or a
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment. 1 MB is 1,000,000 bytes, not 1024 KiB.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment. 1 MB here is 1,000,000 bytes (10<sup>6</sup> B) or 1,000 KB.
 
 **OnAddFile** – Actions to perform when the user adds a new file attachment.
 
