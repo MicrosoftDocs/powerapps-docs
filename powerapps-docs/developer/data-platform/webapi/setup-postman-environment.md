@@ -40,15 +40,17 @@ If you build your own application, you should register your own Azure Active Dir
 1. Launch the Postman desktop application. 
 1. To create a new environment, select **Environments** on the left and select +.  
     ![Create New Enivronment](media/setup-postman-create-new-environment.png "Create New Environment")
-1. Enter a name for your environment. Then add the following key-value pairs into the editing space. <br>
-    | Variable name | Value  | Action|
-    |----|---|---|
-    |`url`|`https://<add your environment name, like 'myorg.crm'>.dynamics.com`| Use your own url |
-    |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`| Copy the value|
-    |`version`|`9.2`| Copy the value |
-    |`webapiurl`|`{{url}}/api/data/v{{version}}/`| Copy the value |
-    |`callback`|`https://localhost`| Copy the value |
-    |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`| Copy the value |
+1. Enter a name for your environment. Then add the following key-value pairs into the editing space.
+
+   | Variable name | Value | Action|
+   |----|---|---|
+   |`url`|`https://<add your environment name, like 'myorg.crm'>.dynamics.com`| Use your own url |
+   |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`| Copy the value|
+   | version`|`9.2`| Copy the value |
+   |`webapiurl`|`{{url}}/api/data/v{{version}}/`| Copy the value |
+   |`callback`|`https://localhost`| Copy the value |
+   |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`| Copy the value |
+
     > [!NOTE]
     > For [Dataverse search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
