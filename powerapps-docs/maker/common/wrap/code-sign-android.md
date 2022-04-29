@@ -82,7 +82,7 @@ Add the generated signature has in the **Redirect URI** while [registering the a
 
 ### Use keytool to create base-64 encoded SHA1
 
-If your signature has is not base64-encoded SHA1, you'll see the following error:
+If your signature hash is not base64-encoded SHA1, you'll see the following error:
 
 "The signature hash must be base64-encoded SHA1."
 
