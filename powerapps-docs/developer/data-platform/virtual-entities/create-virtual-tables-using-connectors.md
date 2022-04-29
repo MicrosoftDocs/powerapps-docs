@@ -1,12 +1,12 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/25/2022
+ms.date: 04/28/2022
 ms.reviewer: "jdaly"
-ms.topic: sample
+ms.topic: article
 author: "NHelgren" # GitHub ID
-ms.author: "jdaly"
-manager: "kvivek"
+ms.author: "nhelgren"
+manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
@@ -21,8 +21,6 @@ contributors:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions built on Microsoft Power Platform can leverage virtual tables as if they were native Dataverse tables. More information: [Get started with virtual tables](get-started-ve.md).
-
-In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the [SQL Server connector](/connectors/sql). We will continue to expand and support other tabular connectors as part of this provider in subsequent releases. 
 
 In this public preview release, we are introducing the virtual connector provider that supports creating virtual tables using the following connectors:
 - [SQL Server](/connectors/sql/) 
