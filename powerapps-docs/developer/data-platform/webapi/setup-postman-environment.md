@@ -71,7 +71,7 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     |Auth URL|`{{authurl}}`| Copy the value |  
     |Client ID|`{{clientid}}`| Copy the value |  
 1. Your configuration would appear something like below: 
-    ![Configure New Token Dialog.](media/setup-postman-configure-new-token.png "Configure New Token Dialog")<br>
+    ![Configure New Token Dialog.](media/setup-postman-configuration-new-token.png "Configure New Token Dialog")<br>
 1. Click **Get New Access Token**. When you do this, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 ![Authentication Completes](media/setup-postman-authentication-completes.png "Authentication Completes")
 1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Token** page appears. Click **Use Token**. ![Manage Access Token](media/setup-postman-manage-access-token.png "Manage Access Token")
