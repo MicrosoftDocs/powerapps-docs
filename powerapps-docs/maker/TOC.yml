@@ -1767,7 +1767,7 @@
           href: ./portals/configure/customize-content-snippets.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
-        - name: Configuring image column
+        - name: Configure image column (preview)
           href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md
