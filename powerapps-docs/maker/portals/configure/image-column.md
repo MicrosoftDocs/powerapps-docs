@@ -95,7 +95,7 @@ Developers can design the website by using Liquid code to retrieve the records f
 
 ## Web API
 
-The portals Web API can be used to perform, create, read, update, and delete operations on image columns across Microsoft Dataverse tables.
+The [portals Web API](../web-api-overview.md) can be used to perform, create, read, update, and delete operations on image columns across Dataverse tables.
 
 ## Retrieving image data
 
@@ -153,7 +153,7 @@ To upload the images, set the value of the image column to a byte array that con
 
 ## Configure Profile Image
 
-Profile picture serve as a visual of the person, so that he can be recognized visually. Now authenticated portal user can upload their image in the profile section. These images are saved in **Entity Image** column of the corresponding contact record in Microsoft Dataverse. Users can upload image size up to 10 MB. Portal maker can allow uploading profile picture for the authenticated users by updating the site setting.
+Profile picture serve as a visual of the person, so that he can be recognized visually. Now authenticated portal users can upload their image in the profile section. These images are saved in **Entity Image** column of the corresponding contact record in Dataverse. Users can upload image size up to 10 MB. A portal maker can allow uploading profile picture for the authenticated users by updating the site setting.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. Ensure that you're in the appropriate environment where your portal exists.
@@ -187,3 +187,4 @@ Profile picture serve as a visual of the person, so that he can be recognized vi
 1. Search for **Authenticated Users**, and then select **Add**:
 
     :::image type="content" source="media/image-column/add.png" alt-text="Add authenticated users":::
+
