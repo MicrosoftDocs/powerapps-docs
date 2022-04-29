@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -2228,6 +2228,7 @@ Listed by **SchemaName**.
 - [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
 - [email_sendermailboxid_mailbox](#BKMK_email_sendermailboxid_mailbox)
 - [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
+- [chat_mailbox_sendermailboxid](#BKMK_chat_mailbox_sendermailboxid)
 
 
 ### <a name="BKMK_systemuser_defaultmailbox_mailbox"></a> systemuser_defaultmailbox_mailbox
@@ -2395,6 +2396,23 @@ Same as the [mailbox_email_ReceivingMailboxId](email.md#BKMK_mailbox_email_Recei
 |ReferencedEntityNavigationPropertyName|mailbox_email_ReceivingMailboxId|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_chat_mailbox_sendermailboxid"></a> chat_mailbox_sendermailboxid
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_mailbox_sendermailboxid](chat.md#BKMK_chat_mailbox_sendermailboxid) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|sendermailboxid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_mailbox_sendermailboxid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

@@ -41,6 +41,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Use the Measure in MR control to take measurements 
+    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -51,7 +53,7 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: In-app notifications (preview)
+      - name: In-app notifications
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -719,6 +721,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: EndsWith
             href: ./canvas-apps/functions/function-startswith.md
+          - name: Error
+            href: ./canvas-apps/functions/function-iferror.md
           - name: Errors
             href: ./canvas-apps/functions/function-errors.md
           - name: exactin
@@ -1167,7 +1171,7 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component
+    - name: Create a component (preview)
       items:
         - name: Components overview
           href: ./canvas-apps/create-component.md
@@ -1442,6 +1446,8 @@
           href: ./model-driven-apps/commanding-designer-use-custom-pages-as-dialogs.md
         - name: Manage commands in solutions
           href: ./model-driven-apps/manage-commands-in-solutions.md
+        - name: Command scopes
+          href: ./model-driven-apps/commanding-scopes.md
         - name: Command designer limitations
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
@@ -1587,7 +1593,7 @@
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile (preview)
+  - name: In-app notifications in Power Apps mobile
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
@@ -1761,6 +1767,8 @@
           href: ./portals/configure/customize-content-snippets.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
+        - name: Configure image column (preview)
+          href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md
         - name: Configure polls
@@ -1936,9 +1944,7 @@
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
         - name: Configure progressive search counts
-          href: ./portals/configure/progressive-search.md
-        - name: Configure Dataverse search (preview)
-          href: ./portals/configure/dataverse-search.md          
+          href: ./portals/configure/progressive-search.md        
     - name: Configure document storage in portals
       items:
         - name: Configure notes
