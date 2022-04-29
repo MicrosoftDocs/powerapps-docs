@@ -37,8 +37,9 @@ You can use a Postman environment to save a set of variables that you use to con
 If you build your own application, you should register your own Azure Active Directory (Azure AD) application. To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 
-1. Launch the Postman desktop application.
-1. Select **Environments** on the left and select + to create a new environment.  ![Create New Enivronment](media/setup-postman-create-new-environment.png "Create New Environment")
+1. Launch the Postman desktop application. 
+1. To create a new environment, select **Environments** on the left and select +.  
+    ![Create New Enivronment](media/setup-postman-create-new-environment.png "Create New Environment")
 1. Enter a name for your environment. Then add the following key-value pairs into the editing space. <br>
     | Variable name | Value  | Action|
     |----|---|---|
