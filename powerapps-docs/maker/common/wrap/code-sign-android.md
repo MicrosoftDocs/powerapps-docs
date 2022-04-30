@@ -80,18 +80,18 @@ Parameters:
 
 Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
 
-### Use keytool to create base-64 encoded SHA1
+### Use keytool to create Base-64 encoded SHA1
 
-If your signature hash is not base64-encoded SHA1, you'll see the following error:
+If your signature hash is not Base64 encoded SHA1, you'll see the following error:
 
 "The signature hash must be base64-encoded SHA1."
 
 When this error appears, try to generate the signature hash using the following steps instead:
 
 1. Run `keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE` to list the certificate information in verbose mode.
-1. Copy the **SHA1** value for the certificate fingerprint from the output.
-1. Use a hexadecimal to base64 converter to convert the copied certificate fingerprint hex value into base64 value.
-1. Copy the generated base64 value as the **Signature hash** in the Azure portal while [registering the app](how-to.md#app-registration).
+1. Copy the **SHA1** value under the **Certificate fingerprints** section from the output. Ensure that you only copy the hexadecimal value.
+1. Use any available "Hexadecimal to Base64" converter to convert the copied certificate fingerprint hexadecimal value into Base64 encoded value.
+1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](how-to.md#app-registration).
 
 ## Sign the APK package
 
