@@ -80,9 +80,9 @@ Parameters:
 
 Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
 
-### Use keytool to create Base-64 encoded SHA1
+### Convert SHA1 hex to Base64-encoded signature hash manually
 
-If your signature hash is not Base64 encoded SHA1, you'll see the following error:
+You might see the following error if your signature hash is not correctly encoded or unacceptable in the Azure portal:
 
 "The signature hash must be base64-encoded SHA1."
 
