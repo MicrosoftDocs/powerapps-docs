@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 04/18/2022
+ms.date: 04/21/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -150,6 +150,8 @@ Other elements include:
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
 **[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
+
+**[Error](functions/function-iferror.md)** – Create a custom error or pass throguh an error.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
