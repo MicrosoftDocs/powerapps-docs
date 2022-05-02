@@ -149,7 +149,7 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **Dataverse** > *environmentName* > *sessionid*, and then expand **Tables**.
 
-All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName***_partitioned**.
+All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
 
 :::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
 
