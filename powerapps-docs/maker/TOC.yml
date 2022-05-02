@@ -2408,6 +2408,8 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Query and analyze incremental updates (preview)
+        href: ./data-platform/azure-synapse-incremental-updates.md
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
@@ -2436,6 +2438,8 @@
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory
         href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access choice labels from Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-choice-labels.md
       - name: Access Dataverse choices with Power BI
         href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
