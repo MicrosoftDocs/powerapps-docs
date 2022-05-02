@@ -31,10 +31,10 @@ You can use a Postman environment to save a set of variables that you use to con
 
 ## Connect with your Dataverse environment
 
-<b>This environment uses a client ID for an application that is registered for all Dataverse environments. </b> The following steps let you connect with your Dataverse instance without registering your own Azure AD applications.
+<b>This environment uses a client ID for an application that is registered for all Dataverse environments.</b> The following steps let you connect with your Dataverse instance without registering your own Azure AD applications.
 
 > [!NOTE]
-If you build your own application, you should register your own Azure Active Directory (Azure AD) application. To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
+> If you build your own application, you should register your own Azure Active Directory (Azure AD) application. To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 1. Launch the Postman desktop application. 
 1. To create a new environment, select **Environments** on the left and select +.  
