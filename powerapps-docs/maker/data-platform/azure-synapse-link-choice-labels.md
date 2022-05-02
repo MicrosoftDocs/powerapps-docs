@@ -28,7 +28,7 @@ Microsoft Dataverse provides rich metadata that can be used directly within Powe
 
 For more information about choice columns, go to [Create and edit global choices overview](create-edit-global-option-sets.md).
 
-After creating an Azure Synapse Link, the following five tables are created in a folder named **OptionsetMetadata** in Azure Synapse Analytics:
+After creating an Azure Synapse Link, the following five tables are created in a folder named **OptionsetMetadata** in Azure Data Lake Storage Gen2:
 - OptionsetMetadata
 - GlobalOptionsetMetadata
 - StateMetadata
@@ -58,7 +58,7 @@ More information: [Table relationships overview](relationships-overview.md).
 |IsUserLocalizedLabel   | Boolean    | False     | Return False by default.    |
 |LocalizedLabelLanguageCode   | Bigint     |1033     |  The language code of the choice label, such as 1033 for English (United States) or 1034 for Spanish (Spain).    |
 |LocalizedLabel     | String    | Public     | User-specified text label when the choice item is created.          |
-|GlobalOptionSetName (GlobalOptionsetMetadata only)   | String    | socialprofile_community    | *EntityName*_*OptionSetName*         |
+|GlobalOptionSetName (GlobalOptionsetMetadata only)   | String    | socialprofile_community    | a combination of table and choice name         |
 
 :::image type="content" source="media/azure-synapse-link-table-schema.png" alt-text="OptionsetMetadata and GlobalOptionsetMetadata table schema.":::
 
