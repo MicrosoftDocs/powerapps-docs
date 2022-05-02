@@ -134,6 +134,14 @@ Since this feature is experimental, we welcome your feedback. The following list
 1. This feature doesn't work with public Git repository. Use a private repo instead.
 1. This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
 1. Edits to the same property on the same control aren't merged. The last edit made will win.
+1. You cannot restore a canvas app to a previous cloud version using the in the inbuilt PowerApp restore functionality described [here](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/restore-an-app). To revert to a previous version of your app you will have to do it through git. Here are some helpful links - 
+	* https://git-scm.com/docs/git-revert
+	* https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/reverting-a-commit
+	* https://docs.microsoft.com/en-us/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line
+
+1. Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.  
+1. Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
+1. Clicking "Close" on the File menu may appear to delete everything in the app. This is a known issue, and nothing has actually been lost. Refreshing the page will make everything appear again.
 
 ## Feedback to the community forum
 
