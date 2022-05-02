@@ -19,8 +19,6 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors:
-  - 
 ---
 # Query and analyze the incremental updates (preview)
 

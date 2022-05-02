@@ -19,8 +19,6 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
-contributors:
-  - 
 ---
 # Access choice labels directly from Azure Synapse Link for Dataverse
 
