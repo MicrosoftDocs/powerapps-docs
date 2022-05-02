@@ -80,12 +80,13 @@ To consume Dataverse choice columns with serverless SQL pool.
 1. Apply a join SQL script to join the choice metadata with your Dataverse table and store the view in a new database.
 
 ### Example SQL script to join choice metadata
+Replace **\<DATABASE_NAME\>**,**<COLUMN_NAME>** and **<TABLE_NAME>** with the name of the database, column and table to replace numerical choice value to meaningful text label
 
 ```sql
-SELECT [LocalizedLabel] as [column-name] 
-FROM [database-name].[dbo].[table-name_partitioned] 
-LEFT JOIN [database-name].[dbo].[OptionsetMetadata] 
-ON ([database-name].[dbo].[OptionsetMetadata].[Option] = [database-name].[dbo].[table-name_partitioned].[column-name] AND [database-name].[dbo].[OptionsetMetadata].[OptionSetName] = column-name)
+SELECT [LocalizedLabel] as [<COLUMN_NAME>] 
+FROM [<DATABASE_NAME>].[dbo].[<TABLE_NAME>_partitioned] 
+LEFT JOIN [<DATABASE_NAME>].[dbo].[OptionsetMetadata] 
+ON ([<DATABASE_NAME>].[dbo].[OptionsetMetadata].[Option] = [<DATABASE_NAME>].[dbo].[<TABLE_NAME>_partitioned].[<COLUMN_NAME>] AND [<DATABASE_NAME>].[dbo].[OptionsetMetadata].[OptionSetName] = <COLUMN_NAME>)
 ```
 
 For more information about how to consume multiple option set values, you would have to use [Using Common Table Expressions](/previous-versions/sql/sql-server-2008-r2/ms190766(v=sql.105)?redirectedfrom=MSDN).
