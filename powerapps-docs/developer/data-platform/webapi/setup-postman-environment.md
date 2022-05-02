@@ -34,17 +34,15 @@ You can use a Postman environment to save a set of variables that you use to con
 > 
 > To save you time and get you started right away, we have provided a Client ID for an application that is registerd for all Dataverse environment, so you don't have to register your own Azure Active Directory (Azure AD) application.
 
-The following steps show you how to set up a Postman environment to connect with Dataverse API.
-
-To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
+The following steps show you how to set up a Postman environment to connect with Dataverse API. To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
 1. Launch the Postman desktop application. 
 1. To create a new environment, select **Environments** on the left and select +.  
 
    :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text=" media/setup-postman-create-new-environment.png ":::
-1. Enter a name for your environment. Then add the following key-value pairs into the editing space.
+1. Enter a name for your environment, MyNewEnvironment. Then add the following key-value pairs into the editing space.
 
-   | Variable name | Value | Action|
+   | VARIABLE | INITIAL VALUE | ACTION|
    |----|---|---|
    |`url`|`https://<add your environment name, like 'myorg.crm'>.dynamics.com`| Use your own url |
    |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`| Copy the value|
@@ -56,18 +54,17 @@ To register your own Azure AD application, see the steps described in [Walkthrou
    > [!NOTE]
    > For [Dataverse search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
-2. Your settings should appear something like below. Click **Save** to save your environment. 
-:::image type="content" source="media/setup-postman-create-new-environment-with-values.png" alt-text="media/setup-postman-create-new-environment-with-values.png":::
+1. Your settings should appear something like below. 
+:::image type="content" source="media/setup-postman-create-new-environment-with-values.png" alt-text="media/setup-postman-create-new-environment-with-values.png":::        
+1. Click **Save** to save your environment.
 
 ### Generate an access token to use with your environment
 
 To connect using **OAuth 2.0**, you must have an access token. Use the following steps to get a new access token:
 
-1. Make sure the new environment you created is selected.
+1. Make sure the new environment you created named MyNewEnvironment is selected.
 1. Select the **Authorization** tab. Then set the **Type** to **OAuth 2.0**, and set **Add authorization data to** to **Request Headers**.
 :::image type="content" source="media/setup-postman-oauth-request-headers.png" alt-text="setup-postman-oauth-request-headers.png":::
-
-1. Verify that you have selected the environment that you created.
 1. In the **Configure New Token** pane, set the following values: 
    
    | Name | Value | Action |
