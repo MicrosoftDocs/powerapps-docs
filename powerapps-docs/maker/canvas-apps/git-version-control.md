@@ -2,11 +2,10 @@
 title: Co-authoring in canvas apps (experimental)
 description: Learn how to enable co-authoring in Power Apps Studio for canvas apps (experimental).
 author: gregli-msft
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/01/2021
+ms.date: 05/02/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -130,18 +129,17 @@ Each save or synchronize that includes changes will result in a commit in Git. I
 
 Since this feature is experimental, we welcome your feedback. The following lists known limitations. We plan to remove most of these limitations in future versions.
 
-1. This feature isn't compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf.md). Don't use this feature with apps that make of use of code components.
-1. This feature doesn't work with public Git repository. Use a private repo instead.
-1. This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
-1. Edits to the same property on the same control aren't merged. The last edit made will win.
-1. You cannot restore a canvas app to a previous cloud version using the in the inbuilt PowerApp restore functionality described [here](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/restore-an-app). To revert to a previous version of your app you will have to do it through git. Here are some helpful links - 
-	* https://git-scm.com/docs/git-revert
-	* https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/reverting-a-commit
-	* https://docs.microsoft.com/en-us/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line
-
-1. Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.  
-1. Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
-1. Clicking "Close" on the File menu may appear to delete everything in the app. This is a known issue, and nothing has actually been lost. Refreshing the page will make everything appear again.
+- This feature isn't compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf.md). Don't use this feature with apps that make of use of code components.
+- This feature doesn't work with public Git repository. Use a private repo instead.
+- This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
+- Edits to the same property on the same control aren't merged. The last edit made will win.
+- You can't restore a canvas app to a previous version using the steps described in [Restore an app](restore-an-app.md) article. Instead, you'll have to use Git for restoring the app to a previous version. For more information, see the following resources:
+    - [git-revert](https://git-scm.com/docs/git-revert)
+    - [Reverting a commit](https://docs.github.com/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/reverting-a-commit)
+    - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line)
+- Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.  
+- Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
+- Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
 
 ## Feedback to the community forum
 
