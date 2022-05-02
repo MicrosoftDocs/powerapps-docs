@@ -37,6 +37,8 @@ When creating an Azure Synapse Link for Dataverse with your Azure Synapse Worksp
 > This is a preview feature.
 > 
 > Timestamp and table folders are created only when there is a data update during the user-specified time interval.
+> 
+> This feature can only be enabled while creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace.
 
 ## Prerequisites
 
@@ -70,7 +72,7 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
 1. Select the desired Azure Synapse Link, and select **Go to Azure Synapse Analytics workspace**.
 1. Expand **Lake Databases** from the left pane, select **dataverse**-*environmentName*-*sessionid*, and then expand **Tables**.  
 
-For each synced table, all stored records are merged into one complete table for efficient consumption.
+For each synced table, all stored records are merged into one complete table for efficient consumption. For more information about how to read incremental update in Azure Synapse Analytics workspace, go to [Read the incremental updates of Dataverse data](azure-synapse-link-incremental.md) 
 
 > [!NOTE]
 > The built-in SQL template is ready for a quick table view. Right-click the table, and then select **New SQL Script – Select TOP 100 rows**. A SQL script appears. Select **Run** to check the result.
