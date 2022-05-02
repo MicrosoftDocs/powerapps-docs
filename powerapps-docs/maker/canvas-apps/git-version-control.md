@@ -136,7 +136,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - You can't restore a canvas app to a previous version using the steps described in [Restore an app](restore-an-app.md) article. Instead, you'll have to use Git for restoring the app to a previous version. For more information, see the following resources:
     - [git-revert](https://git-scm.com/docs/git-revert)
     - [Reverting a commit](https://docs.github.com/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/reverting-a-commit)
-    - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line)
+    - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line&preserve-view=true)
 - Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.  
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
 - Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
