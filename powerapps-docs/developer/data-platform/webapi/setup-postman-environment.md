@@ -78,19 +78,20 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
    |Client ID|`{{clientid}}`| Copy the value |  
 
 1. Your settings should appear something like below: 
-    :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="media/setup-postman-configuration-new-token.png ":::
+    :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
+    
 1. Click **Get New Access Token**. When you do this, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="media/setup-postman-authentication-completes.png":::
+
 1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** page appears. Click **Use Token**. 
 :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="setup-postman-manage-access-tokenpage.png":::
+
 1. The newly generated token will automatically appear in the text box below the **Available Tokens** drop-down.
 :::image type="content" source="media/setup-postman-access-token-autopopulate.png" alt-text="media/setup-postman-access-token-autopopulate.png":::
 
    > [!NOTE]
    > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, you might need to delete the cookies cached by Postman. Click the **Clear cookies**, which can be found right above the **Get New Access Token** button to  remove the saved cookies.
-:::image type="content" source="media/setup-postman-clear-cookies.PNG" alt-text="media/setup-postman-clear-cookies.png":::
-
-
+   
 ## Test your connection
 
 Create a new Web API request to test the connection with your Dataverse instance. Use the [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
