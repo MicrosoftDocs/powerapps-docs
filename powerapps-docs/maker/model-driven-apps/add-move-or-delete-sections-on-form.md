@@ -4,7 +4,6 @@ description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
 ms.date: 08/25/2020
 ms.reviewer: "matp"
-
 ms.topic: "how-to"
 author: "Aneesmsft"
 ms.subservice: mda-maker
@@ -21,7 +20,11 @@ search.app:
 
 # Add, configure, move, or delete sections on a form
 
-Add, configure, move, or delete sections on a form using the form designer.
+A section on a form occupies the space available in a tab. Sections have several configurable properties including a label that can be displayed.  
+  
+Sections help you group similar components in an area of a form tab, such as the ACCOUNT INFORMATION, ADDRESS, and Timeline single column sections on the main account form Summary tab. Sections can have up to four columns.
+
+:::image type="content" source="media/form-sections.png" alt-text="Default sections on the account main form":::
 
 ## Add sections to a form
 
@@ -76,6 +79,7 @@ These are the properties available to configure a section when you create or edi
 |**Display options** | **Hide section** | When selected, the section is hidden by default and can be shown using code. |
 |**Display options** | **Hide on phone** |  The section can be hidden to render a condensed version of this form on phone screens. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
+|**Formatting** |  **Component label position** |  Determines the position for the component label. Select **Left** to display the label to the left of the value or **Top** to place the label above the value. |
 
 > [!NOTE]
 > We recommend limiting the length of section label text to about 50 characters. Section label text doesn't wrap and can truncate on devices with small screens.
