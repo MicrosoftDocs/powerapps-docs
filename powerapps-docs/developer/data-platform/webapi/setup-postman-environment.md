@@ -18,7 +18,7 @@ contributors:
 
 # Set up a Postman environment
 
-You can use Postman to connect to your Microsoft Dataverse instance and to compose Web API requests, send them, and view responses. Managing authentication challenges many people. This article describes how to configure a Postman environment to work for your Dataverse environments without you having to register your own Azure Active Directory (Azure AD) application. It also shows how to use a Postman environment to save a set of variables that you use to connect. These variable values can be accessed within Postman by using this syntax: `{{variablename}}`. For more information with Postman variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
+ Managing authentication challenges many people. This article describes how to configure a Postman environment to work for your Dataverse environments without you having to register your own Azure Active Directory (Azure AD) application. It also shows how to use a Postman environment to save a set of variables that you use to connect. These variable values can be accessed within Postman by using this syntax: `{{variablename}}`. For more information with Postman variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
 
 ## Prerequisites
 
