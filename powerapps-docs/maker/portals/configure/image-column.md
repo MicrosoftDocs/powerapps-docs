@@ -4,7 +4,7 @@ description: Learn how to configure an image column on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/03/2022
+ms.date: 05/04/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -29,7 +29,7 @@ An image column stores an image file in a column in a Dataverse table. Add an im
 
 - **If you configure your site using the Portal Management app:** While the feature is in preview, you'll need to set the value of the site setting **Control/EnableImagePreview** to **true** to add image controls to a form.
 
-    :::image type="content" source="media/image-column/image-preview.png" alt-text="Enable image preview.":::
+    :::image type="content" source="media/image-column/upload-image-preview.png" alt-text="Screenshot of the Control/EnableImagePreview site setting.":::
 
     >[!IMPORTANT]
     > This site setting is only required during the preview period.
@@ -180,13 +180,13 @@ First, you must create a site setting to allow authenticated users to upload a p
 
 1. In the left pane, select **Apps**, and then open the **Portal Management** app.
 
-    :::image type="content" source="media/image-column/site-settings.png" alt-text="Screenshot of the Apps list, with the Portal Management app highlighted.":::
+    :::image type="content" source="media/image-column/add-settings-site.png" alt-text="Screenshot of the Apps list, with the Portal Management app highlighted.":::
 
 1. In the left pane, select **Site Settings**.
 
 1. Create a setting called **Profile/ShowImage**, and set its value to **true**. (If the setting exists, set its value to **true**.)
 
-    :::image type="content" source="media/image-column/add-showimage-setting.png" alt-text="Screenshot of the Profile/ShowImage site setting.":::
+    :::image type="content" source="media/image-column/add-setting-showimage.png" alt-text="Screenshot of the Profile/ShowImage site setting.":::
 
 While the feature is in preview, also add or update the following site settings:
 
@@ -194,7 +194,7 @@ While the feature is in preview, also add or update the following site settings:
 
 - Set **Webapi/contact/fields** to **entityimage**.
 
-:::image type="content" source="media/image-column/add-webapi-settings.png" alt-text="Screenshot of the webapi site settings.":::
+:::image type="content" source="media/image-column/add-settings-webapi.png" alt-text="Screenshot of the webapi site settings.":::
 
 #### Create a table permission
 
@@ -202,7 +202,7 @@ Next, you must create a table permission to allow authenticated users to upload 
 
 1. In the left pane, under **Security**, select **Table Permissions**, and then select **New**.
 
-    :::image type="content" source="media/image-column/new-table-permission.png" alt-text="Screenshot of the Active Table Permissions view, with New highlighted.":::
+    :::image type="content" source="media/image-column/add-table-permission.png" alt-text="Screenshot of the Active Table Permissions view, with New highlighted.":::
 
 1. Set the permission details as follows:
 
@@ -216,7 +216,7 @@ Next, you must create a table permission to allow authenticated users to upload 
 
     - Under **Privileges**, select **Read**, **Write**, **Append**, and **Append To**.
 
-    :::image type="content" source="media/image-column/table-permission-details.png" alt-text="Screenshot of the details of a new table permission called Contact Profile Update Permission.":::
+    :::image type="content" source="media/image-column/add-table-permission-details.png" alt-text="Screenshot of the details of a new table permission called Contact Profile Update Permission.":::
 
 1. Select **Save & Close**.
 
@@ -226,4 +226,4 @@ Next, you must create a table permission to allow authenticated users to upload 
 
 1. Search for and select **Authenticated Users**, and then select **Add**.
 
-    :::image type="content" source="media/image-column/add-web-role.png" alt-text="Screenshot that shows Authenticated Users selected as a web role.":::
+    :::image type="content" source="media/image-column/add-auth-users-web-role.png" alt-text="Screenshot that shows Authenticated Users selected as a web role.":::
