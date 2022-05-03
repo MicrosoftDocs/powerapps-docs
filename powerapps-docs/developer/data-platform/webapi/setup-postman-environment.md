@@ -43,7 +43,8 @@ The following steps show you how to set up a Postman environment to connect with
 :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="media/setup-postman-powerapps-environment.png":::
 1. On the Developer resources page, retrieve the base url of the Web API endpoint.
 :::image type="content" source="media/setup-postman-developerresource.png" alt-text="media/setup-postman-developerresource.png":::
-1. Add the following key-value pairs into the editing space.
+1. Add the following key-value pairs into the editing space:
+
    | VARIABLE | INITIAL VALUE | ACTION |
    |----|---|---|
    |`url`| use the base url of your Web API endpoint | use the base url of your Web API endpoint|
