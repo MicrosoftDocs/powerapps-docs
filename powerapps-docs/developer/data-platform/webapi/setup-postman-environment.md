@@ -32,22 +32,20 @@ contributors:
 > 
 > To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environment, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
 
-The following steps show you how to set up a Postman environment to connect with Dataverse API. To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
-
 1. Launch the Postman desktop application. 
 1. To create a new environment, select **Environments** on the left and click +.
   
-   :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text=" media/setup-postman-create-new-environment.png ":::
+   :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
    
 1. Enter a name for your environment, for example, <b>MyNewEnvironment</b>. 
 1. Sign into Power Apps to get your organizational base url. 
 1. Select your Power Apps environment and then click the <b>Settings</b> button in the top-right corner. Then click <b>Developer resources</b>.
 
-    :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="media/setup-postman-powerapps-environment.png":::
+    :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="PowerApps environment":::
     
 1. On the Developer resources page, retrieve the base url of the Web API endpoint.
 
-    :::image type="content" source="media/setup-postman-developerresource.png" alt-text="media/setup-postman-developerresource.png":::
+    :::image type="content" source="media/setup-postman-developerresource.png" alt-text="Postman developer resources":::
     
 1. Add the following key-value pairs into the editing space:
 
@@ -61,7 +59,9 @@ The following steps show you how to set up a Postman environment to connect with
    |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`| Copy the value |
 
 1. Your settings should appear something like below:
-:::image type="content" source="media/setup-postman-create-new-environment-with-values.png" alt-text="media/setup-postman-create-new-environment-with-values.png":::        
+
+    :::image type="content" source="media/setup-postman-create-new-environment-with-values.png" alt-text="New environment with values":::     
+   
 1. Click **Save** to save your newly created environment named <b>MyNewEnvironment</b>.
 
 ### Generate an access token to use with your environment
@@ -70,15 +70,15 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
 
 1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected.
  
-    :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="media/setup-postman-preauthorization.png":::
+    :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="Create a new environment":::
     
 1. Click <b>+</b> right next to MyNewEnvironment. The following pane appears:
 
-    :::image type="content" source="media/setup-postman-untitledrequest.PNG" alt-text="media/setup-postman-untitledrequest":::
+    :::image type="content" source="media/setup-postman-untitledrequest.PNG" alt-text="Untitled request":::
     
 1. Select the **Authorization** tab. Then set the **Type** to **OAuth 2.0**, and set **Add authorization data to** to **Request Headers**.
 
-    :::image type="content" source="media/setup-postman-oauth-request-headers.png" alt-text="setup-postman-oauth-request-headers.png":::
+    :::image type="content" source="media/setup-postman-oauth-request-headers.png" alt-text="Auth request headers":::
     
 1. In the **Configure New Token** pane, set the following values: 
    
@@ -95,26 +95,30 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     
 1. Click **Get New Access Token**. When you do this, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 
-    :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="media/setup-postman-authentication-completes.png":::
+    :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
 1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** page appears. Click **Use Token**. 
-    :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="setup-postman-manage-access-tokenpage.png":::
+    :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="Access token page":::
 
 1. The newly generated token will automatically appear in the text box below the **Available Tokens** drop-down.
-    :::image type="content" source="media/setup-postman-access-token-autopopulate.png" alt-text="media/setup-postman-access-token-autopopulate.png":::
 
-   > [!NOTE]
-   > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, you might need to delete the cookies cached by Postman. Click the **Clear cookies**, which can be found right above the **Get New Access Token** button to  remove the saved cookies.
-   
-## Test your connection
+    :::image type="content" source="media/setup-postman-access-token-autopopulate.png" alt-text="Token autopopulate":::
 
-Create a new Web API request to test the connection with your Dataverse instance. Use the [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
+## Test your connection 
+
+The following shows how to test your connection using [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
 1. Select `GET` as the HTTP method and add `{{webapiurl}}WhoAmI` in the editing space.
 
-    :::image type="content" source="media/setup-postman-whoami.png" alt-text="media/setup-postman-whoami.png":::
-    
-2. Click **Send** to send this request.
-3. If your request is successful, you see the data from the `WhoAmI`.
+    :::image type="content" source="media/setup-postman-whoami-url.png" alt-text="Calling WhoAmI endpoint":::
+   
+1. Click **Send** to send this request.
+1. If your request is successful, you will see the data returning from the `WhoAmI` endpoint, like below:
+
+    :::image type="content" source="media/setup-postman-whoami.png" alt-text="Response from WhoAmI":::
+
+## Next step
+[Use Postman to perform operations with the Web API](use-postman-perform-operations.md)
+
 
 ## See also
 
