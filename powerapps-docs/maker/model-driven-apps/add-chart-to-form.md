@@ -32,9 +32,9 @@ A chart can be added to a form or an existing list to a chart can be updated. Fo
 1. Open the solution and then open the table. 
 1. Select the **Forms** tab, and then open the form where you want to add a chart.
 1. On the form canvas, select an existing subgrid or add one. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
-1. On the right properties pane for the subgrid, select the **Show Chart Only** option. When enabled, this option displays the view in a chart format.
-      > [!div class="mx-imgBorder"]
-      > ![Show chart only.](media/form-show-chart-only.png)
+1. On the right properties pane for the subgrid, select the **Show chart only** option. When enabled, this option displays the view in a chart format.
+      :::image type="content" source="media/sub-grid-show-chart.png" alt-text="Display a chart in the subgrid":::
+
 1. Configure the subgrid properties for the chart, such as the default chart to display and whether users can change the chart displayed. More information: [Configure a subgrid component](form-designer-add-configure-subgrid.md#configure-a-subgrid-component)
 1. **Save** and **Publish** the form to make the customization available to users.
 
