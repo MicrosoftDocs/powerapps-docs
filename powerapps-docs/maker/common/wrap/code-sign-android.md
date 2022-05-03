@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/29/2022
+ms.date: 03/05/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -30,7 +30,6 @@ In this article, you'll learn about how to code sign for Android. You'll need to
 
 You'll need the following information to get started:
 
-- Install [Java™ Platform, Standard Edition Development Kit (JDK™)](https://www.oracle.com/java/technologies/downloads/)
 - Install [Android Studio](https://developer.android.com/studio)
 - Install [OpenSSL](https://www.openssl.org/)
 
@@ -39,7 +38,7 @@ You'll need the following information to get started:
 > [!NOTE]
 > Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
 
-We'll use [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) from Java SDK to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
+We'll use **keytool.exe** (available after installing Android Studio, from the folder location "Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe") to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
 To generate a key, open a command prompt and run the following command:
 
@@ -53,8 +52,6 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **keysize** - the size of each key to be generated.
 - **validity** - validity of the key in number of days.
-
-More information: [Generate Keys](https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html)
 
 Example:
 
