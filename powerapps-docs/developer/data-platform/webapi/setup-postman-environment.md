@@ -27,10 +27,10 @@ contributors:
 
 <a name="bkmk_connectcds"></a> 
 
-## Connect with your Dataverse environmentf
+## Connect with your Dataverse environment
 > [!IMPORTANT]
 > 
-> To save you time and get you started right away, we have provided a Client ID for an application that is registerd for all Dataverse environment, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
+> To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environment, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
 
 The following steps show you how to set up a Postman environment to connect with Dataverse API. To register your own Azure AD application, see the steps described in [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).
 
