@@ -48,7 +48,12 @@ where:
 
 - **{3}** is the image ID
 
-<!-- Ask Nagesh to provide an example of an image URL and where it might be used. -->
+For example, if your portal is located at https://contososite, your code will look like this:
+
+``` 
+https://contososite.powerappsportals.com/Image/download.aspx?entity=contact&attribute=entityimage&id=cb059a4a-b1a6-ec11-9840-00224829604e
+```
+
 
 ## Liquid
 
