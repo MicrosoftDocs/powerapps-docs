@@ -48,7 +48,7 @@ where:
 
 - **{3}** is the image ID
 
-For example, if your portal is located at https://contososite.com, your code will look like this:
+For example, if your portal is located at https://contososite.powerappsportals.com, your code will look like this:
 
 ``` 
 https://contososite.powerappsportals.com/Image/download.aspx?entity=contact&attribute=entityimage&id=cb059a4a-b1a6-ec11-9840-00224829604e
