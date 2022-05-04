@@ -69,7 +69,7 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
 
 1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected. Click <b>+</b> right next to <b>MyNewEnvironment</b>. 
 
-    :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="Create a new environment":::
+    :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="Preauthorization":::
     
 1. The following pane appears. Select the **Authorization** tab. 
 
