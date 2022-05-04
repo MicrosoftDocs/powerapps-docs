@@ -166,7 +166,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 ## Other mixed reality controls
 
 - View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** control.
-- Measure distance, area, and volume with the **[Measure in MR](mixed-reality-component-measure-distance.md)** control.
+- Measure distance, area, and volume with the **[Measuring Camera](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** control
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

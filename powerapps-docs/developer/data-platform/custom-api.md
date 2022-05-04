@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 04/19/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -137,7 +137,7 @@ You may want to keep a Custom API private until you are sure that you will not n
 You can leave **Is Private** set to false in your development environment so you can see the output in the $metadata service document or generate classes for your own use. However, before you ship the Custom API in your managed solution, you should set **Is Private** to true.
 
 More information: 
-- [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document)
+- [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document)
 - [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
 - [Private Messages](org-service/use-messages.md#private-messages)
 
@@ -453,7 +453,7 @@ A: You cannot. Although these records have the common **Status** and **Status Re
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 
-A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`.
+A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `true` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `false`.
 
 More information:
 

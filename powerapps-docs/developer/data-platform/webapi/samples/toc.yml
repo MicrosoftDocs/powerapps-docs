@@ -10,6 +10,8 @@
       href: ../web-api-conditional-operations-sample.md
     - name: Functions and Actions
       href: ../web-api-functions-actions-sample.md
+    - name: AADUser table request examples
+      href: ../web-api-aaduser-samples.md
 - name: (C#) samples
   items:
     - name: CDSWebApiService class
