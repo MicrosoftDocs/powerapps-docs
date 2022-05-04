@@ -38,7 +38,7 @@ contributors:
    :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
    
 1. Enter a name for your environment, for example, <b>MyNewEnvironment</b>. 
-1. Sign into Power Apps to get your organizational base url. 
+1. Sign into Power Apps to get the base url of Web API. 
 1. Select your Power Apps environment and then click the <b>Settings</b> button in the top-right corner. Then click <b>Developer resources</b>.
 
     :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="PowerApps environment":::
@@ -68,15 +68,15 @@ contributors:
 
 To connect using **OAuth 2.0**, you must have an access token. Use the following steps to get a new access token:
 
-1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected.
- 
+1. Make sure the newly created environment <b>MyNewEnvironment</b> is selected. Click <b>+</b> right next to <b>MyNewEnvironment</b>. 
+
     :::image type="content" source="media/setup-postman-preuathorization.png" alt-text="Create a new environment":::
     
-1. Click <b>+</b> right next to MyNewEnvironment. The following pane appears:
+1. The following pane appears. Select the **Authorization** tab. 
 
     :::image type="content" source="media/setup-postman-untitledrequest.PNG" alt-text="Untitled request":::
     
-1. Select the **Authorization** tab. Then set the **Type** to **OAuth 2.0**, and set **Add authorization data to** to **Request Headers**.
+1. Set the **Type** to **OAuth 2.0** and set **Add authorization data to** to **Request Headers**.
 
     :::image type="content" source="media/setup-postman-oauth-request-headers.png" alt-text="Auth request headers":::
     
