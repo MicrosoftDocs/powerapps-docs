@@ -24,6 +24,8 @@ Virtual entity that represents AAD user
 
 **Added by**: Metadata Extension Solution
 
+> [!NOTE]
+> Your results with AAD User may differ depending on where it is being used. AAD User on Dataverse will provide the full list of users on the AAD for the organization. AAD User in Dataverse for Teams is limited to providing all AADUsers who are also a member of the Team.
 
 ## Messages
 
