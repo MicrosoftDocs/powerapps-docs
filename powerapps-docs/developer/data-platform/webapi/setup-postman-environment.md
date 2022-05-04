@@ -116,7 +116,7 @@ The following shows how to test your connection using [WhoAmI](xref:Microsoft.Dy
 
     :::image type="content" source="media/setup-postman-whoami.png" alt-text="Response from WhoAmI":::
 
-## Next step
+## Next steps
 [Use Postman to perform operations with the Web API](use-postman-perform-operations.md)
 
 
