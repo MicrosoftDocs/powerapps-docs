@@ -29,8 +29,7 @@ contributors:
 
 ## Connect with your Dataverse environment
 > [!IMPORTANT]
-> 
-> To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environment, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
+> To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
 
 1. Launch the Postman desktop application. 
 1. To create a new environment, select **Environments** on the left and click +.
@@ -38,20 +37,20 @@ contributors:
    :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
    
 1. Enter a name for your environment, for example, <b>MyNewEnvironment</b>. 
-1. Sign into Power Apps to get the base url of Web API. 
+1. Sign into Power Apps to get the base url of the Web API endpoint. 
 1. Select your Power Apps environment and then click the <b>Settings</b> button in the top-right corner. Then click <b>Developer resources</b>.
 
     :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="PowerApps environment":::
     
-1. On the Developer resources page, retrieve the base url of the Web API endpoint.
+1. In the Developer resources pane, retrieve the base url of the Web API endpoint.
 
     :::image type="content" source="media/setup-postman-developerresource.png" alt-text="Postman developer resources":::
     
-1. Add the following key-value pairs into the editing space:
+1. In Postman, add the following key-value pairs into the editing space and use initial value for current value.
 
    | VARIABLE | INITIAL VALUE | ACTION |
    |----|---|---|
-   |`url`| use the base url of your Web API endpoint | use the base url of your Web API endpoint|
+   |`url`| use the base url of the Web API endpoint | use the base url of the Web API endpoint|
    |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`| Copy the value|
    |`version`|`9.2`| Copy the value | 
    |`webapiurl`|`{{url}}/api/data/v{{version}}/`| Copy the value |
@@ -93,11 +92,11 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     
     :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
     
-1. Click **Get New Access Token**. When you do this, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
+1. Click **Get New Access Token**. If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman, and then click **Get New Access Token**. When you do this, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 
     :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
-1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** page appears. Click **Use Token**. 
+1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** pane appears. Click **Use Token**. 
     :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="Access token page":::
 
 1. The newly generated token will automatically appear in the text box below the **Available Tokens** drop-down.
@@ -117,8 +116,11 @@ The following shows how to test your connection using [WhoAmI](xref:Microsoft.Dy
     :::image type="content" source="media/setup-postman-whoami.png" alt-text="Response from WhoAmI":::
 
 ## Next steps
-[Use Postman to perform operations with the Web API](use-postman-perform-operations.md)
 
+Learn about using Postman to perform operations with the Web API.
+
+> [!div class="nextstepaction"]
+> [Service Documents](use-postman-perform-operations.md)<br/>
 
 ## See also
 
