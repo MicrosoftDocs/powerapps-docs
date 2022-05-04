@@ -302,7 +302,7 @@ be added to forms and views to see all associated accounts for each of the servi
 
 ## Known limitations
 
-The following is a list of known limitations for virtual tables created using the viertual connector provider.
+The following is a list of known limitations for virtual tables created using the virtual connector provider.
 
 ### General
 
