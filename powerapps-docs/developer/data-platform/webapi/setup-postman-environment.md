@@ -92,7 +92,7 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     
     :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
     
-1. Click **Get New Access Token**. If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman, and then click **Get New Access Token**. When you do this, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
+1. Click **Get New Access Token**. If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. Once you click **Get New Access Token**, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 
     :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
