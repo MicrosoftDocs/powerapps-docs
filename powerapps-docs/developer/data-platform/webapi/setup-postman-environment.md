@@ -1,7 +1,7 @@
 ---
 title: "Set up a Postman environment (Microsoft Dataverse for Apps)| MicrosoftDocs"
 description: "Learn how to set up and configure a Postman environment that connects with Microsoft Dataverse environments."
-ms.date: 04/03/2022
+ms.date: 05/04/2022
 author: divka78
 ms.author: dikamath
 manager: sunilg
@@ -93,7 +93,8 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     
     :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
 
-   > [!NOTE] If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. 
+   > [!NOTE]
+   > If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. 
     
 1. Click **Get New Access Token**. 
    
@@ -102,6 +103,7 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
 1. After the authentication dialogue automatically closes in a few seconds, the **Manage Access Tokens** pane appears. Click **Use Token**. 
+
     :::image type="content" source="media/setup-postman-manage-access-tokenpage.png" alt-text="Access token page":::
 
 1. The newly generated token will automatically appear in the text box below the **Available Tokens** drop-down.
@@ -111,6 +113,7 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
 ## Test your connection 
 
 The following shows how to test your connection using [WhoAmI](xref:Microsoft.Dynamics.CRM.WhoAmI):
+
 1. Select `GET` as the HTTP method and add `{{webapiurl}}WhoAmI` in the editing space.
 
     :::image type="content" source="media/setup-postman-whoami-url.png" alt-text="Calling WhoAmI endpoint":::
