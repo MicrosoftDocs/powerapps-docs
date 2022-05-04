@@ -15,9 +15,7 @@ contributors:
 
 # Configure an image column on portals (preview)
 
->[!NOTE]
-> This is a preview feature. Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-<!-- I believe this information about preview features is usually provided in an included file. If there's one that applies to this product, please use it instead of this statement. -->
+[!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 An image column stores an image file in a column in a Dataverse table. Add an image column to a form to upload, view, modify, and delete images. The form shows a thumbnail of the image if one is available.
 
