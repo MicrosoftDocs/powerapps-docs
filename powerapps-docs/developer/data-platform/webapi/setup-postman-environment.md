@@ -32,7 +32,7 @@ contributors:
 > To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
 
 1. Launch the Postman desktop application. 
-1. To create a new environment, select **Environments** on the left and click +.
+1. To create a new environment, select **Environments** on the left and click <b>+</b>.
   
    :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
    
