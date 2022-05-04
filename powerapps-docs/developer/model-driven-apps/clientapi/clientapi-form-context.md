@@ -71,11 +71,11 @@ Use the **data** and **ui** objects under the **formContext** object to programm
 Provides properties and methods to work with the data on a form, including table data and data in the business process flow control. Contains the following objects:
 
 
-| **Object**  | **Description**|
-|--|--|
+| Object   | Description|
+|----------|-------------------------------------------------------------------------------------------------------------------|
 |attributes|Collection of non-table data on the form. Items in this collection are of the same type as the column collection, but they are not columns of the form table. <br/>More information: [Collections](reference/collections.md)|
-|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](reference/formContext-data-entity.md)|
-|process|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](reference/formContext-data-process.md)|
+|entity    |Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](reference/formContext-data-entity.md)|
+|process   |Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](reference/formContext-data-process.md)|
 
 It also provides an **attributes** collection for accessing non-table bound control. See the **Collections in the formContext object model** section later in this topic.
 
@@ -85,11 +85,11 @@ More information: [formContext.data](reference/formContext-data.md)
 
 Provides methods to retrieve information about the user interface, in addition to collections for several sub components of the form or grid. Contains the following objects:
 
-| **Object**  | **Description**|
+| Object          | Description|
 |-----------------|----------------|
-|formSelector|Provides an items collection that provides capabilities to query the forms available for the current user. Use the navigate method to close the current form and open a different one.|
-|navigation|Does not contain any methods. Provides access to navigation items through the items collection. See the next section on collections for more information.|
-|process|Provides methods to interact with the business process flow control on a form.|
+|formSelector     |Provides an items collection that provides capabilities to query the forms available for the current user. Use the navigate method to close the current form and open a different one.|
+|navigation       |Does not contain any methods. Provides access to navigation items through the items collection. See the next section on collections for more information.|
+|process          |Provides methods to interact with the business process flow control on a form.|
 
 More information: [formContext.ui](reference/formContext-ui.md)
 
@@ -98,8 +98,8 @@ More information: [formContext.ui](reference/formContext-ui.md)
 The following table describes the collections in **Xrm** object model. For
 information about the methods available for collections in general, see [Collections (Client API reference)](reference/collections.md).
 
-|**Collection**| **Description**|
-|-----------------|----------------|
+|Collection                              | Description|
+|----------------------------------------|----------------|
 | [attributes](reference/attributes.md)  | Two objects contain a column collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-table bound columns.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each table column that is available on the form. Only those columns added to the form are available.| 
 | [controls](reference/controls.md)  | Three objects contain a controls collection:<br/><br/> - **formContext.ui.controls**: Provides access to each control present on the form.<br/><br/>- **formContext.data.entity.attribute.controls**: Because a column may have more than one control on the form, this collection provides access to each of them. This collection will contain only one item unless multiple controls for the column are added to the form.<br/><br/>- **formContext.ui.tabs.sections.controls**: This collection only contains the controls found in the section.|
 |**formContext.data.process.**[stages](reference/formContext-data-process/process/getStages.md) and **formContext.data.process**.[steps](reference/formContext-data-process/stage/getSteps.md)| Provides access to stages and steps collection in a business process flow. These also allow for adding and removing of items from the collection.|

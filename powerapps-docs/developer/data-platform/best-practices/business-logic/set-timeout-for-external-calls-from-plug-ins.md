@@ -56,10 +56,10 @@ using (HttpClient client = new HttpClient())
   client.DefaultRequestHeaders.ConnectionClose = true; //Set KeepAlive to false
   
 
-  HttpResponseMessage response =  client.GetAsync(webAddress).ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+  HttpResponseMessage response =  client.GetAsync(webAddress).GetAwaiter().GetResult(); //Make sure it is synchronous
   response.EnsureSuccessStatusCode();
 
-  string responseText = response.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+  string responseText = response.Content.ReadAsStringAsync().GetAwaiter().GetResult(); //Make sure it is synchronous
   tracingService.Trace(responseText);
   //Log success in the Plugin Trace Log:
   tracingService.Trace("HttpClientPlugin completed successfully.");

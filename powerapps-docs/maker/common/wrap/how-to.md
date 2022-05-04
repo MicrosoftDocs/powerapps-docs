@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/12/2022
+ms.date: 04/25/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -29,6 +29,7 @@ Earlier, you learned about the capabilities of wrap feature, how it works, and i
 - You'll need access to [Azure portal](https://portal.azure.com) to register your app, and configure the API permissions on the Microsoft Identity platform.
 - You'll need access to [Visual Studio App Center](https://appcenter.ms/) to add new organization and apps.
 - You'll need one or more canvas apps (saved in a solution) that you can package for mobile user distribution.
+- To use Android platform, ensure you [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [register the app](#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
 ## Add canvas app to solution
 
@@ -41,9 +42,26 @@ Create a new registration for your app in the organizational directory using the
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
 > [!IMPORTANT]
-> Wrap (preview) only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
+> - Wrap (preview) only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
+> - To ensure the **Redirect URI** matches the [required format](#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** > **+ Add a platform** to add the platform instead.
+> - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
+
+### Redirect URI format
+
+For iOS, the **Redirect URI** only requires the **Bundle ID**.
+
+Examples for iOS:
+- **Bundle ID**: `com.contoso.myapp`
+- **Redirect URI**: `msauth.com.contoso.myapp://auth`
+
+For Android, the **Redirect URI** requires the **Package name**, and the **Signature hash**. To create the signature hash, [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash).
+
+Examples for Android:
+
+- **Package name**: `com.contoso.myapp`
+- **Redirect URI**: `msauth://com.contoso.myapp/<generated signature hash>`
 
 ### Allow registered apps in your environment
 
@@ -54,14 +72,15 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 ```
 
 > [!NOTE]
-> - The Add-AdminAllowedThirdPartyApps cmdlet is available since version 2.0.144 of the Adminstrator PowerShell module. Please ensure you have at least this version installed. 
+> - This cmdlet is available in 2.0.144 or later versions of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**.
+> - You'll need global tenant administrator privileges to run this cmdlet. The cmdlet allows an administrator to designate which registered 3rd-party applications in Azure AD can invoke Power Platform connections.
 
 ## Configure API permissions
 
 [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app you registered earlier using the Azure portal:
 
 - **Microsoft APIs**&mdash;*Dynamics CRM*
-- **APIs my organization uses**&mdash;*PowerApps Service*
+- **APIs my organization uses**&mdash;*Azure API Connections* and *PowerApps Service*
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
@@ -108,7 +127,7 @@ In this step, you'll use App Center to create an app container for your mobile a
     1. Select **New API token**.
     1. Enter a description.
     1. Select **Full Access**.
-    1. Select **New API token**.
+    1. Select **Add new API token**.
         > [!NOTE]
         > Ensure you copy the token before closing the dialog box.
     1. Copy the token, and save it for canvas app wrap configuration [later](#app-center-api-token).
@@ -226,5 +245,5 @@ For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and 
 
 - [Wrap overview (preview)](overview.md)
 - [Code sign for iOS (preview)](code-sign-ios.md)
-- [Code sign for Android (preview)](code-sign-ios.md)
+- [Code sign for Android (preview)](code-sign-android.md)
 
