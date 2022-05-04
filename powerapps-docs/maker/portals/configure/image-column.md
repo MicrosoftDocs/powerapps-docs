@@ -14,16 +14,12 @@ contributors:
 ---
 
 # Configure an image column on portals (preview)
-<!-- I changed the title to conform to Microsoft Style Guide standards. Please update any references in related files. -->
 
 >[!NOTE]
 > This is a preview feature. Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 <!-- I believe this information about preview features is usually provided in an included file. If there's one that applies to this product, please use it instead of this statement. -->
 
-<!-- In all examples below, please make it very clear what text users need to provide exactly as given, and what text they need to replace with their own values. Italicized text usually indicates values that users must replace. -->
-
 An image column stores an image file in a column in a Dataverse table. Add an image column to a form to upload, view, modify, and delete images. The form shows a thumbnail of the image if one is available.
-<!-- We're trying to move away from animations that users can't control. It's an accessibility issue. Also, the animation didn't really show anything useful. Anyone reading this article will know how to upload a file. :) -->
 
 ## Prerequisites
 
@@ -38,8 +34,8 @@ An image column stores an image file in a column in a Dataverse table. Add an im
 
 ## Image URL
 
-An absolute URL to display the entity image in a client
-<!-- Please expand on this. Make it a complete sentence, and clarify where and how the image URL should be used. -->
+The image URL indicates the full URL of where the image is stored.  This can be used for development and troubleshooting.
+
 An image URL takes the following form:
 
  ```{0}/Image/download.aspx?entity={1}&attribute={2}&id={3}```
@@ -49,12 +45,12 @@ where:
 - **{0}** is the portal URL
 
 - **{1}** is the logical name of the entity
-<!-- Please clarify "logical" name. -->
 
 - **{2}** is the logical name of the column
 
 - **{3}** is the image ID
-<!-- Please provide an example of an image URL and where it might be used. -->
+
+<!-- Ask Nagesh to provide an example of an image URL and where it might be used. -->
 
 ## Liquid
 
@@ -83,7 +79,6 @@ where:
 
 > [!NOTE]
 > Make sure you have [set the appropriate permissions](#create-a-table-permission) on the contact table to read the record.
-<!-- I guessed at a link to information about what permissions need to be set and where. If I guessed incorrectly, please add the right source. Thanks! -->
 
 ```xml
     {% fetchxml contacts %}
