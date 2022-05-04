@@ -23,15 +23,15 @@ Canvas apps
 
 ## Properties
 
-| Name          | Type    | Description                                         |
-| ------------- | ------- | --------------------------------------------------- |
-| DefaultValue  | string  | Default value of the column.                       |
-| DisplayName   | string  | Display name of the column.                      |
-| IsEditable    | boolean | Determines whether the column is editable or not. |
-| LogicalName   | string  | Logical name of the column.                      |
-| MaxLength     | number  | Maximum length of the column.                    |
-| RequiredLevel | number  | Required level of the column.                    |
-| Type          | string  | Column data type.                                |
+| Name          | Type                              | Description                                       |
+| ------------- | --------------------------------- | ------------------------------------------------- |
+| DefaultValue  | string                            | Default value of the column.                      |
+| DisplayName   | string                            | Display name of the column.                       |
+| IsEditable    | boolean                           | Determines whether the column is editable or not. |
+| LogicalName   | string                            | Logical name of the column.                       |
+| MaxLength     | number                            | Maximum length of the column.                     |
+| RequiredLevel | number                            | Required level of the column.                     |
+| Type          | [AttributeType](AttributeType.md) | Column data type.                                 |
 
 ### Related topics
 
