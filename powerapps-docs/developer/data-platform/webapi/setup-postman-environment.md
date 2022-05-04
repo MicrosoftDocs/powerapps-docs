@@ -28,6 +28,7 @@ contributors:
 <a name="bkmk_connectcds"></a> 
 
 ## Connect with your Dataverse environment
+
 > [!IMPORTANT]
 > To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
 
@@ -37,12 +38,12 @@ contributors:
    :::image type="content" source="media/setup-postman-create-new-environment.png" alt-text="Create a new environment":::
    
 1. Enter a name for your environment, for example, <b>MyNewEnvironment</b>. 
-1. Sign into Power Apps to get the base url of the Web API endpoint. 
+1. Sign into [Power Apps](https://make.powerapps.com/) to get the base url of the Web API endpoint. 
 1. Select your Power Apps environment and then click the <b>Settings</b> button in the top-right corner. Then click <b>Developer resources</b>.
 
     :::image type="content" source="media/setup-postman-powerapps-environment.png" alt-text="PowerApps environment":::
     
-1. In the Developer resources pane, retrieve the base url of the Web API endpoint.
+1. In the **Developer resources** pane, retrieve the base url of the Web API endpoint.
 
     :::image type="content" source="media/setup-postman-developerresource.png" alt-text="Postman developer resources":::
     
@@ -50,7 +51,7 @@ contributors:
 
    | VARIABLE | INITIAL VALUE | ACTION |
    |----|---|---|
-   |`url`| use the base url of the Web API endpoint | use the base url of the Web API endpoint|
+   |`url`| `https://<your org name>.api.crm.dynamics.com` | Use the base url of the Web API endpoint|
    |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`| Copy the value|
    |`version`|`9.2`| Copy the value | 
    |`webapiurl`|`{{url}}/api/data/v{{version}}/`| Copy the value |
@@ -91,8 +92,12 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
 1. Your settings should appear something like below: 
     
     :::image type="content" source="media/setup-postman-configuration-new-token.png" alt-text="Set up Postman configuration":::
+
+   > [!NOTE] If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. 
     
-1. Click **Get New Access Token**. If you are configuring environments in Postman for multiple Dataverse instances using different user credentials, click **Clear cookies** to delete the cookies cached by Postman. Once you click **Get New Access Token**, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
+1. Click **Get New Access Token**. 
+   
+   Once you click **Get New Access Token**, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 
     :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
