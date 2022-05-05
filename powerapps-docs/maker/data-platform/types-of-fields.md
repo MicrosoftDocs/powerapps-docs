@@ -29,6 +29,8 @@ The following table includes the corresponding `AttributeTypeDisplayName` API ty
 |Power Apps data type |Solution Explorer type| API type|
 |--|--|--|
 |**Big Integer**|**Time Stamp**|`BigIntType`|
+|**Choice**|**Option Set**|`PicklistType`|
+|**Choices**|**MultiSelect Field**|`MultiSelectPicklistType`|
 |**Currency**|**Currency**|`MoneyType`|
 |**Customer**|**Customer**|`CustomerType`|
 |**Date and Time**|**Date and Time**<br />*Date and Time* Format|`DateTimeType`|
@@ -41,21 +43,19 @@ The following table includes the corresponding `AttributeTypeDisplayName` API ty
 |**Image**|**Image**|`ImageType`|
 |**Language**|**Whole Number**<br />*Language* Format|`IntegerType`|
 |**Lookup**|**Lookup**|`LookupType`|
-|**Choices**|**MultiSelect Field**|`MultiSelectPicklistType`|
 |**Multiline Text**|**Multiple Lines of Text**|`MemoType`|
-|**Choice**|**Option Set**|`PicklistType`|
 |**Owner**|**Owner**|`OwnerType`|
 |**Phone**|**Single Line of Text**<br />*Phone* Format|`StringType`|
-|**Status Reason**|**Status Reason**|`StatusType`|
 |**Status**|**Status**|`StateType`|
-|**Text Area**|**Single Line of Text**<br />*Text Area* Format|`StringType`|
+|**Status Reason**|**Status Reason**|`StatusType`|
 |**Text**|**Single Line of Text**<br />*Text* Format|`StringType`|
+|**Text Area**|**Single Line of Text**<br />*Text Area* Format|`StringType`|
 |**Ticker Symbol**|**Single Line of Text**<br />Ticker Symbol Format|`StringType`|
 |**Timezone**|**Whole Number**<br />*Time Zone* Format|`IntegerType`|
-|**Yes/No**|**Two Options**|`BooleanType`|
 |**Unique Identifier**|**Unique Identifier** or **Primary Key**|`UniqueidentifierType`|
 |**URL**|**Single Line of Text**<br />*URL* Format|`StringType`|
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
+|**Yes/No**|**Two Options**|`BooleanType`|
 
 For more descriptions for each type you can add or edit, see the article for the corresponding designer:
  - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
