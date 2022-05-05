@@ -6425,15 +6425,5 @@
       "redirect_url": "/powerapps/developer/component-framework/reference/linking",
       "redirect_document_id": "false"
     },
-    {
-      "source_path": "powerapps-docs/user/cs_email_template_builder.md",
-      "redirect_url": "/powerapps/user/customize-insert-email-template",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/user/cs-template-options.md",
-      "redirect_url": "/powerapps/user/email-template-create",
-      "redirect_document_id": "false"
-    }
   ]
 }
