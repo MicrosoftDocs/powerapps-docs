@@ -1,7 +1,7 @@
 ---
 title: Customize an email template using the enhanced template editor
 description: Create an email template using the enhanced email template editor
-author: mgandham
+author: gandhamm
 manager: shujoshi
 
 ms.topic: conceptual
