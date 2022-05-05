@@ -43,7 +43,8 @@ To force the app to display the default email template editor page, turn off the
 1. In [Power Apps](https://make.preview.powerapps.com/), select **Solutions**, and then select the solution to which you've added the enhanced email template editing experience.
 2. Select **Solutions**.
 1. On the **Solutions** page, select the Solution in which you've added the the email template selection option.
-1. Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the app for which you want to disable the enhanced insert email template selection page. The app is added to the solution. 
+1. Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. 
+2. Select the app for which you want to disable the enhanced insert email template selection page. The app is added to the solution. 
     ![Add an app to an existing solution](media/disable-add-app.png)
 1. Select the **Enable the New Email Template Editor** option in the solution.
 1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the selected app is displayed. 
