@@ -4,7 +4,7 @@ description: Learn about the details, properties and examples of the attachments
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/17/2022
+ms.date: 05/05/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -25,7 +25,7 @@ A control that allows users to download files to their device, as well as upload
 
 The attachment control has these limitations:
 
-1. The only supported data sources are lists and Dataverse tables.
+1. Attachment control only supports lists and Dataverse tables.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
@@ -35,7 +35,7 @@ The attachment control has these limitations:
 An **Attachments** control lets you open, add, and delete files from a list or a Dataverse table.
 
 ## Key properties
-**[Items](properties-core.md)** – The Attachment column of the list or Dataverse table. [Collections](../create-update-collection/md) and [Tables](../working-with-tables.md) are not supported.
+**[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
