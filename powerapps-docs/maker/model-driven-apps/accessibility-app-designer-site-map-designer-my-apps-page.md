@@ -7,7 +7,6 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/20/2019
-
 ms.topic: article
 applies_to: 
   - Dynamics 365 (online)
@@ -20,7 +19,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Shortcuts and accessibility in app designer, site map designer, and My Apps page
 
 Microsoft is committed to making its products and services easier for everyone. For more information, see, [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
@@ -36,16 +34,6 @@ Many users find that using an external keyboard with keyboard shortcuts for Powe
 For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen and are an essential alternative to using a mouse.
 
 This article itemizes the keyboard shortcuts for Power Apps.
-
-<!-- Commented out the following shortcuts while Power apps doesn't support them -->
-<!--
-### My Apps page
-  
-|**To**|**Shortcut Keys (Windows)**|**Shortcut Keys (Mac)**|
-|------------------|-|-|  
-|Create a New App.|Alt + N|Opt + N|  
-|Open the **More Actions** menu on the selected tile.|Alt + M|Opt + N|  
--->
 
 ### App designer and site map designer
 
@@ -92,14 +80,15 @@ This article itemizes the keyboard shortcuts for Power Apps.
 |Activate a command bar action, or confirm a component   add.|Enter|  
 |Close an alert, dialog box, or menu, or cancel.|Esc|  
   
-## Screen reader support
+## Screen readers
 
  People with disabilities may rely on the use of assistive technology (AT) such as screen readers or a variety of alternative input devices to interact with the app designer, site map designer, and My Apps page.  
   
- Here's the support matrix.  
+These popular screen readers running on the web browsers indicated here work with app designer and site map designer:
   
-|Browser|Jaws|Narrator|Voice Over|  
+|Browser|Jaws|Narrator|VoiceOver|  
 |-------------|----------|--------------|----------------|  
+| Microsoft Edge | Yes | Yes | Yes |
 |Google Chrome|Yes|No|No|  
 |Firefox|Yes|No|No|  
 |Safari|No|No|Yes|  
@@ -108,9 +97,10 @@ This article itemizes the keyboard shortcuts for Power Apps.
 
  For accessibility information about browsers, visit the following websites:  
   
-- [Windows accessibility features](https://www.microsoft.com/enable/products/ie9/default.aspx)  
-- [Firefox accessibility features](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we?redirectlocale=en-US&redirectslug=accessibility)  
-- [Safari accessibility features](https://www.apple.com/accessibility/)  
+- [Windows accessibility features](https://www.microsoft.com/enable/products/ie9/default.aspx)  <br />
+- [Accessibility features in Microsoft Edge](https://support.microsoft.com/microsoft-edge/accessibility-features-in-microsoft-edge-4c696192-338e-9465-b2cd-bd9b698ad19a) <br />
+- [Firefox accessibility features](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we?redirectlocale=en-US&redirectslug=accessibility)  <br />
+- [Safari accessibility features](https://www.apple.com/accessibility/)  <br />
 - [Google Chrome accessibility technical documentation](https://sites.google.com/a/chromium.org/dev/developers/design-documents/accessibility)
 
 ## See also
