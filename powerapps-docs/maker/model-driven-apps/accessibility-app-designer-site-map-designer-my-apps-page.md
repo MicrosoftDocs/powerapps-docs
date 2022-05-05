@@ -1,7 +1,7 @@
 ---
-title: Understand accessibility app designer, site map designer, and My Apps page in Power Apps | Microsoft Docs
-description: Know about accessibility in model-driven apps with app designer, site map designer, and My Apps page in Power Apps
-keywords: App designer; site map designer; my apps; Dynamics 365
+title: Understand accessibility with app designer and site map designer in Power Apps | Microsoft Docs
+description: Know about accessibility in model-driven apps with app designer and site map designer in Power Apps
+keywords: App designer; site map designer
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
@@ -19,7 +19,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Shortcuts and accessibility in app designer, site map designer, and My Apps page
+# Shortcuts and accessibility in app designer and site map designer
 
 Microsoft is committed to making its products and services easier for everyone. For more information, see, [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
 
@@ -64,7 +64,7 @@ This article itemizes the keyboard shortcuts for Power Apps.
 
 ## Keyboard navigation
 
- Moving around the app designer, site map designer, and My Apps page by using the keyboard is also supported. This enables people who don’t use a mouse or touchscreen to get around and complete actions.  
+ Moving around the app designer and site map designer by using the keyboard is also supported. This enables people who don’t use a mouse or touchscreen to get around and complete actions.  
   
 |To|Press|  
 |--------|-----------|  
@@ -82,7 +82,7 @@ This article itemizes the keyboard shortcuts for Power Apps.
   
 ## Screen readers
 
- People with disabilities may rely on the use of assistive technology (AT) such as screen readers or a variety of alternative input devices to interact with the app designer, site map designer, and My Apps page.  
+ People with disabilities may rely on the use of assistive technology (AT) such as screen readers or a variety of alternative input devices to interact with the app designer and site map designer.  
   
 These popular screen readers running on the web browsers indicated here work with app designer and site map designer:
   
