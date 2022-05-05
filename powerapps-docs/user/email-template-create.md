@@ -28,7 +28,7 @@ To create a template, select **New** on the **Email Templates** command bar. You
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see.
 
-First, you'll need to provide information about the template itself.
+ Specify the following information:
 
 :::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot of template information to provide.":::
 
@@ -40,7 +40,7 @@ First, you'll need to provide information about the template itself.
 
 When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs_email_template_builder.md):
 
-- If yes, you'll use the enhanced email template editor page in Power Apps.
+- If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the default email template editor page.
 
 ### Enhanced email template editor overview

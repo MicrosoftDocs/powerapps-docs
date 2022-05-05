@@ -4,7 +4,7 @@ description: Turn on the enhanced email template option in Power Apps.
 author: gandhamm
 manager: shujoshi
 ms.topic: task
-ms.date: 4/25/2022
+ms.date: 05/06/2022
 ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
@@ -16,13 +16,11 @@ search.app:
 
 # Enable the enhanced email template editor page
 
-Email templates are a fast and easy way to send repetitive and recurring email to multiple customers. They can help save you time and give you a way to create consistent, professional, preformatted email messages that you can use when communicating with your customers. 
-
 Turn on the enhanced email template editing experience in apps across your organization. If you need to, you can turn off the enhanced email template page for a specific app. Users of that app see the default email template editor page.
 
 ## Enable the enhanced email template editor across all apps
 
-1. In **Power Apps**, select the environment the environment that contains your solution.
+1. In [Power Apps](https://make.preview.powerapps.com/) select the environment the environment that contains your solution.
 2. Select **Solutions**, and then select the solution in which you want to turn on the enhanced template editing experience.
    > [!NOTE]
    > Don't select the default solution to configure the template.
@@ -42,7 +40,7 @@ Turn on the enhanced email template editing experience in apps across your organ
 
 To force app to display the default email template editor page, turn off the enhanced template editing experience in that app. First, you'll need to add the app to the solution to which you've added the enhanced email template editing experience.
 
-1. In Power Apps, select **Solutions**, and then select the solution to which you've added the enhanced email template editing experience.
+1. In [Power Apps](https://make.preview.powerapps.com/), select **Solutions**, and then select the solution to which you've added the enhanced email template editing experience.
 2. Select **Solutions**.
 1. On the **Solutions** page, select the Solution in which you've added the the email template selection option.
 1. Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the app for which you want to disable the enhanced insert email template selection page. The app is added to the solution. 
