@@ -25,7 +25,7 @@ A control that allows users to download files to their device, as well as upload
 
 The attachment control has these limitations:
 
-1. Attachment control only supports lists and Dataverse tables.
+1. The attachment control only supports lists and Dataverse tables as the data sources.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
