@@ -7,7 +7,7 @@ manager: shujoshi
 ms.topic: conceptual
 ms.date: 05/06/2022
 ms.subservice: end-user
-ms.author: gandhamm
+ms.author: mgandham
 search.audienceType: 
   - enduser
 search.app: 
