@@ -41,7 +41,7 @@ Specify the following information:
    4. **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    5. **Create**: Opens one of two editors where you can build your template.
 
-When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs_email_template_builder.md):
+When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs-email-template-builder.md):
 
 - If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the default email template editor page.
