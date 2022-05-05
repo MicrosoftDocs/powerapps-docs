@@ -117,7 +117,7 @@
         items:
         - name: Create email templates
           href: ../user/email-template-create.md
-        - name: Manage mail templates using the template editor
+        - name: Manage email templates using the template editor
           href: ../user/cs-template-options.md
         - name: Insert an email template
           href: ../user/insert-email-template.md
