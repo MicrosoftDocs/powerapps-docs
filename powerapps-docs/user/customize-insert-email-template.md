@@ -45,5 +45,9 @@ To disable the enhanced email template selection window and display the default 
 1. On the **Edit Enable the New Insert Template Dialog**, in the **Setting app value** section, specify **No** for the specified app.
 1. Select **Save** and **Publish All Customizations**.
 
+### See also
+
+[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
+[Understand the email experience](view-create-email.md)                                                    
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
