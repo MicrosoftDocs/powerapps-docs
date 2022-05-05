@@ -23,7 +23,7 @@ Use the **Editor** tab in the **Email Template** form to create customized email
 - Toolbox
 - Layout section types
 
-:::image type="content" source="media\email_designer_callout.png" alt-text="Screenshot of the email template editor page, with the canvas, toolbox, and layout section areas highlighted.":::
+:::image type="content" source="media\email-designer-callout.png" alt-text="Screenshot of the email template editor page, with the canvas, toolbox, and layout section areas highlighted.":::
 
 ## Manage an email template
 
@@ -37,7 +37,7 @@ You have a few different ways to add items to your template.
 
 You can select **Go to the parent** to identify the section or column in which the element is embedded.
 
-  :::image type="content" source="media\add_template_optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
+  :::image type="content" source="media\add-template-optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
 
 ### Add a layout section to the template
 
