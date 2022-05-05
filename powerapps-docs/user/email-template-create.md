@@ -83,3 +83,8 @@ Start with an existing template to create an email template faster and with less
 - **Template** tab: Specify or change the template details and the email subject. The name includes **– Copy** at the end to identify this template is a copy of another one.
 - **Template editor** section: [Design and customize the email template](cs-template-options.md).
 - Select **New Attachment** to add attachments to your template if needed.
+
+### See also
+
+[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
+[Understand the email experience](view-create-email.md)   
