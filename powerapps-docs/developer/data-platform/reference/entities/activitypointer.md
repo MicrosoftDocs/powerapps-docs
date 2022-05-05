@@ -1,7 +1,7 @@
 ---
 title: "Activity (ActivityPointer)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Activity (ActivityPointer)  table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1344,6 +1344,7 @@ Listed by **SchemaName**.
 - [ActivityPointer_AsyncOperations](#BKMK_ActivityPointer_AsyncOperations)
 - [ActivityPointer_BulkDeleteFailures](#BKMK_ActivityPointer_BulkDeleteFailures)
 - [activity_pointer_recurringappointmentmaster](#BKMK_activity_pointer_recurringappointmentmaster)
+- [activity_pointer_chat](#BKMK_activity_pointer_chat)
 
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
@@ -1597,6 +1598,23 @@ Same as the [activity_pointer_recurringappointmentmaster](recurringappointmentma
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|activity_pointer_recurringappointmentmaster|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_chat"></a> activity_pointer_chat
+
+**Added by**: Activities Patch Solution
+
+Same as the [activity_pointer_chat](chat.md#BKMK_activity_pointer_chat) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_chat|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

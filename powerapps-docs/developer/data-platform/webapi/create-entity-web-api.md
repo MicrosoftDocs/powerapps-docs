@@ -1,7 +1,7 @@
 ---
 title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
-ms.date: 04/06/2022
+ms.date: 04/19/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -60,7 +60,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-To create a new entity record you must identify the valid property names and types. For all system entities and attributes (table columns), you can find this information in the topic for that entity in the [About the Table Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document). More information: [Entity types](web-api-types-operations.md#entity-types)
+To create a new entity record you must identify the valid property names and types. For all system entities and attributes (table columns), you can find this information in the topic for that entity in the [About the Table Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
 
 <a name="bkmk_createWithDataReturned"></a>
 

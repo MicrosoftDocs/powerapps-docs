@@ -35,6 +35,8 @@ When you register a WebHook you must provide three items of information:
 |**Endpoint URL**|The URL to post execution context information to.|
 |**Authentication**|One of three authentication options. For any type of authentication, you must provide the keys that will identify the request as legitimate.|
 
+Registered WebHooks support only port 80 for HTTP and port 443 for HTTPS. 
+
 ## Authentication options
 
 The correct WebHook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use Webhooks with Microsoft Dataverse, the endpoint must allow one of the three authentication options described below:
