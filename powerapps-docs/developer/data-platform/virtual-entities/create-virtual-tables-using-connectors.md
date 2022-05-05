@@ -1,12 +1,12 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/25/2022
+ms.date: 04/28/2022
 ms.reviewer: "jdaly"
-ms.topic: sample
+ms.topic: article
 author: "NHelgren" # GitHub ID
-ms.author: "jdaly"
-manager: "kvivek"
+ms.author: "nhelgren"
+manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
@@ -97,8 +97,23 @@ Creating a virtual table with the virtual connector provider includes the follow
     > ![Virtual connector provider solution](../media/ve-select-virtual-connectors-solution.png "Virtual connector provider solution")
 
 ### Create the connection
-  
-1. Now, go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
+
+# [SQL Server](#tab/sql)
+Watch a 4 minute video showing how to create a virtual table with the SQL virtual connector provider. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG4l]
+# [Microsoft Excel Online (Business)](#tab/excel)
+Watch a 4 minute video showing how to create a virtual table with the Excel virtual connector provider. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WARf]
+# [Microsoft SharePoint](#tab/sharepoint)
+Watch a 4 minute video showing how to create a virtual table with the SharePoint virtual connector provider. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG4k]
+
+---
+
+1. Go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table. 
 1. In the left navigation pane, select **Data** > **Connections** then select **New connection**. 
 
    :::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
@@ -287,7 +302,7 @@ be added to forms and views to see all associated accounts for each of the servi
 
 ## Known limitations
 
-The following is a list of known limitations for virtual tables created using the viertual connector provider.
+The following is a list of known limitations for virtual tables created using the virtual connector provider.
 
 ### General
 

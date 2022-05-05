@@ -117,14 +117,12 @@
         items:
         - name: Create email templates
           href: ../user/email-template-create.md
-        - name: Customize an email template using the template editor
-          href: ../user/cs-template-options.md
         - name: Insert an email template
           href: ../user/insert-email-template.md
         - name: Convert an email to a template
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
-          href: ../user/email-signature.md  
+          href: ../user/email-signature.md
       - name: Configure the enhanced insert email template
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
@@ -723,6 +721,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: EndsWith
             href: ./canvas-apps/functions/function-startswith.md
+          - name: Error
+            href: ./canvas-apps/functions/function-iferror.md
           - name: Errors
             href: ./canvas-apps/functions/function-errors.md
           - name: exactin
@@ -1573,8 +1573,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Enable the enhanced email template editor
-      href: ../user/cs_email_template_builder.md  
   - name: App performance insights
     items:
     - name: Performance insights overview
@@ -1769,6 +1767,8 @@
           href: ./portals/configure/customize-content-snippets.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
+        - name: Configure image column (preview)
+          href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md
         - name: Configure polls
@@ -1944,9 +1944,7 @@
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
         - name: Configure progressive search counts
-          href: ./portals/configure/progressive-search.md
-        - name: Configure Dataverse search (preview)
-          href: ./portals/configure/dataverse-search.md          
+          href: ./portals/configure/progressive-search.md        
     - name: Configure document storage in portals
       items:
         - name: Configure notes
@@ -2410,6 +2408,8 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Query and analyze incremental updates (preview)
+        href: ./data-platform/azure-synapse-incremental-updates.md
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
@@ -2438,6 +2438,8 @@
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory
         href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access choice labels from Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-choice-labels.md
       - name: Access Dataverse choices with Power BI
         href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
