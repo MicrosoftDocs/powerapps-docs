@@ -425,6 +425,45 @@ Example:
   ```
   
 </td>
+	<tr>
+<td>
+  attachmentEntity
+</td>
+
+<td>
+
+  By setting this property and specifying a different table, you can avoid using the default table for files so that you can enforce additional security if needed. <br></br>
+  
+ 
+  
+  
+</td>
+<td>
+
+
+ ```
+  "attachmentEntity": {
+	"name": "<<name of the image table>>",
+	"fileAttributeName": "<<attribute name of the blob reference>>"
+}
+  ```
+Example:
+  ```
+  "attachmentEntity": {
+	"name": "msdyn_mystorageforcustomizedsecurity",
+	"fileAttributeName": "msdyn_customfilestorage"
+}
+  ```
+Default:
+  ```
+  "attachmentEntity": {
+	"name": "msdyn_richtextfiles",
+	"fileAttributeName": "msdyn_fileblob"
+}
+  ```
+</td>
+
+<tr>
 <tr>
 <td>
   imageEntity
@@ -432,7 +471,7 @@ Example:
 
 <td>
 
-  By setting this property, you can avoid using the default table for images so that you can enforce additional security if needed. <br></br>
+  By setting this property and specifying a different table, you can avoid using the default table for images so that you can enforce additional security if needed. <br></br>
   
  
   
@@ -448,6 +487,13 @@ Example:
 }
   ```
 Example:
+  ```
+  "imageEntity": {
+	"imageEntityName": "msdyn_mystorageforcustomizedsecurity",
+	"imageFileAttributeName": "msdyn_customimagestorage"
+}
+  ```
+Default:
   ```
   "imageEntity": {
 	"imageEntityName": "msdyn_richtextfiles",
