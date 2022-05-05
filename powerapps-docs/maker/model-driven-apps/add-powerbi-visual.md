@@ -4,7 +4,7 @@ description: "Learn how to add Power BI visuals into model-driven apps"
 ms.date: 06/25/2021
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-roryneary
+ms.author: matp
 ms.reviewer: matp
 ---
 
