@@ -71,6 +71,6 @@ Use the **General Styles** tab to change the layout's width, font, font size, ba
 ### See also
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
-[Enable the enhanced email template editor page](cs_email_template_builder.md)
+[Enable the enhanced email template editor page](cs-email-template-builder.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
