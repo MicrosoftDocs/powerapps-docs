@@ -38,7 +38,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
 
-**[BorderColor](properties-color-border.md)** – The color of a control's border.  Also affects the border of the options flyout.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
@@ -121,6 +121,9 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+> [!NOTE]
+> Flyout border properties controlled by FocusedBorder properties.
 
 ## Examples
 
