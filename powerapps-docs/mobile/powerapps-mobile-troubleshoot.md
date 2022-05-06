@@ -127,7 +127,7 @@ The Power Apps platform does not support accessing authenticated URLs, including
 If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again.
 
 
-## Flows created in a solution is not supported on Power Apps mobile
+## Flows created in a solution are not supported on Power Apps mobile
 
 The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
