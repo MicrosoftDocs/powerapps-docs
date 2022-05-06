@@ -60,13 +60,13 @@ conceptualContent:
     - title: Create apps and portals
       links:
         - text: Canvas apps
-          url: maker/canvas-apps/index.md
+          url: maker/canvas-apps/index.yml
           itemType: overview
         - text: Model-driven apps
-          url: maker/model-driven-apps/index.md
+          url: maker/model-driven-apps/index.yml
           itemType: overview
         - text: Portals
-          url: maker/portals/index.md
+          url: maker/portals/index.yml
           itemType: overview             
     
     - title: Work with data platform
@@ -78,7 +78,7 @@ conceptualContent:
           url: maker/data-platform/create-edit-metadata.md
           itemType: concept
       footerLink:
-        url: maker/data-platform/index.md
+        url: maker/data-platform/index.yml
         text: More
 
     - title: Integrate with Microsoft Teams
@@ -120,10 +120,10 @@ conceptualContent:
     - title: Power Apps for developers
       links:
         - text: Dataverse developer
-          url: developer/data-platform/index.md
+          url: developer/data-platform/index.yml
           itemType: reference
         - text: Model-driven apps developer
-          url: developer/model-driven-apps/index.md
+          url: developer/model-driven-apps/index.yml
           itemType: reference
         - text: Canvas apps developer
           url: maker/canvas-apps/dev-enterprise-intro.md
