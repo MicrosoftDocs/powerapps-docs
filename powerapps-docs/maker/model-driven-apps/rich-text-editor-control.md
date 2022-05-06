@@ -345,6 +345,50 @@ You can configure additional configuration settings that affect how your editor 
     <th>Description</th>
     <th>Default value</th>
   </tr>
+	
+	<tr>
+<td>
+  attachmentEntity
+</td>
+
+<td>
+
+  By setting this property and specifying a different table, you can avoid using the default table for files so that you can enforce additional security if needed. <br></br>
+   More information: [File columns (Microsoft Dataverse) - Power Apps](/power-apps/developer/data-platform/file-attributes)
+ 
+  
+  
+</td>
+<td>
+
+Syntax:
+ ```
+  "attachmentEntity": {
+	"name": "<<name of the image table>>",
+	"fileAttributeName": "<<attribute name of the blob reference>>"
+}
+  ```
+	
+Example:
+	
+  ```
+  "attachmentEntity": {
+	"name": "msdyn_mystorageforcustomizedsecurity",
+	"fileAttributeName": "msdyn_customfilestorage"
+}
+  ```
+	
+Default:
+	
+  ```
+  "attachmentEntity": {
+	"name": "msdyn_richtextfiles",
+	"fileAttributeName": "msdyn_fileblob"
+}
+  ```
+</td>
+
+</tr>
   <tr>
 <td>
   disableContentSanitization
@@ -388,7 +432,7 @@ You can configure additional configuration settings that affect how your editor 
 
   ```"disableImages": false```
 </td>
-
+	</tr>
 <tr>
 <td>
   externalPlugins
@@ -425,45 +469,7 @@ Example:
   ```
   
 </td>
-	<tr>
-<td>
-  attachmentEntity
-</td>
-
-<td>
-
-  By setting this property and specifying a different table, you can avoid using the default table for files so that you can enforce additional security if needed. <br></br>
-  
- 
-  
-  
-</td>
-<td>
-
-
- ```
-  "attachmentEntity": {
-	"name": "<<name of the image table>>",
-	"fileAttributeName": "<<attribute name of the blob reference>>"
-}
-  ```
-Example:
-  ```
-  "attachmentEntity": {
-	"name": "msdyn_mystorageforcustomizedsecurity",
-	"fileAttributeName": "msdyn_customfilestorage"
-}
-  ```
-Default:
-  ```
-  "attachmentEntity": {
-	"name": "msdyn_richtextfiles",
-	"fileAttributeName": "msdyn_fileblob"
-}
-  ```
-</td>
-
-<tr>
+	</tr>
 <tr>
 <td>
   imageEntity
@@ -472,6 +478,7 @@ Default:
 <td>
 
   By setting this property and specifying a different table, you can avoid using the default table for images so that you can enforce additional security if needed. <br></br>
+  More information: [Image columns (Microsoft Dataverse) - Power Apps](/power-apps/developer/data-platform/image-attributes)
   
  
   
@@ -479,21 +486,25 @@ Default:
 </td>
 <td>
 
-
+Syntax:
  ```
   "imageEntity": {
 	"imageEntityName": "<<name of the image table>>",
 	"imageFileAttributeName": "<<attribute name of the blob reference>>"
 }
   ```
+	
 Example:
+	
   ```
   "imageEntity": {
 	"imageEntityName": "msdyn_mystorageforcustomizedsecurity",
 	"imageFileAttributeName": "msdyn_customimagestorage"
 }
   ```
+	
 Default:
+	
   ```
   "imageEntity": {
 	"imageEntityName": "msdyn_richtextfiles",
