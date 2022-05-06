@@ -1,9 +1,10 @@
 ---
 title: "Understand the Client API object model in model-driven apps| MicrosoftDocs"
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+description: "The Client API object model for model-driven apps provides you objects and methods that you can use to apply custom business logic in model-driven apps using JavaScript."
+author: HemantGaur
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
@@ -14,6 +15,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Understand the Client API object model
 

@@ -61,7 +61,7 @@ Navigate( CustomPage2  )
 
 ### Navigate to the default view of the table
 
-To navigate to the default view of the table, passed table name as the first parameter.
+To navigate to the default view of the table, pass table name as the first parameter.
 
 ```powerappsfl
 Navigate( Accounts )
@@ -85,10 +85,32 @@ Navigate( Gallery1.Selected )
 
 ### Navigate to a specific form of a table (preview)
 
-To navigate to a specific form for the record, pass the page in the second parameter.
+To pass a Dataverse record to a specific form, pass the form name in the second parameter's Page attribute.
 
 ```powerappsfl
-Navigate( Gallery1.Selected, { Page: 'Accounts (Forms)'.Account  } )
+Navigate( 
+  AccountGallery.Selected, 
+  { Page: 'Accounts (Forms)'.Account  } )
+```
+
+### Navigate to a specific custom page with a record input (preview)
+
+To pass a Dataverse record to a specific custom page, pass the custom page name in the second parameter's Page attribute.
+
+```powerappsfl
+Navigate( 
+  AccountGallery.Selected, 
+  { Page: 'Account Record Page'  } )
+```
+
+In the target custom page, the record is retrieved using **Param** function to get the **etn** and **id** values. 
+
+Below is an example of loading the record into an **EditForm** control.
+
+```powerappsfl
+AccountEditForm.DataSource = Accounts
+AccountEditForm.Item = 
+  LookUp( Accounts, accountid = GUID( Param("id") ) )
 ```
 
 ### Navigate to the default form of the table in create mode 
@@ -167,6 +189,6 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 
 ### See also
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Model-driven app custom page overview](model-app-page-overview.md)

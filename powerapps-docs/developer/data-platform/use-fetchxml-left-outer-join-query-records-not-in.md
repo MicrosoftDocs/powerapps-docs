@@ -1,12 +1,10 @@
 ---
 title: "Use a left outer join in FetchXML to query for records 	&bdquo;not in&bdquo; (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how to use a left outer join in FetchXML to perform a query that filters on the join table and build a query to find records “not in” a set." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/25/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -15,6 +13,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Use a left outer join in FetchXML to query for records "not in"

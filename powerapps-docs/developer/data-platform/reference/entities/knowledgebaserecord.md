@@ -1,8 +1,8 @@
 ---
-title: "KnowledgeBaseRecord table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "KnowledgeBaseRecord table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeBaseRecord table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -521,11 +521,12 @@ Listed by **SchemaName**.
 - [KnowledgeBaseRecord_BulkDeleteFailures](#BKMK_KnowledgeBaseRecord_BulkDeleteFailures)
 - [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess)
 - [KnowledgeBaseRecord_SyncErrors](#BKMK_KnowledgeBaseRecord_SyncErrors)
+- [knowledgebaserecord_chats](#BKMK_knowledgebaserecord_chats)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_ActivityPointers"></a> KnowledgeBaseRecord_ActivityPointers
 
-Same as activitypointer table [KnowledgeBaseRecord_ActivityPointers](activitypointer.md#BKMK_KnowledgeBaseRecord_ActivityPointers) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_ActivityPointers](activitypointer.md#BKMK_KnowledgeBaseRecord_ActivityPointers) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -540,7 +541,7 @@ Same as activitypointer table [KnowledgeBaseRecord_ActivityPointers](activitypoi
 
 ### <a name="BKMK_KnowledgeBaseRecord_Appointments"></a> KnowledgeBaseRecord_Appointments
 
-Same as appointment table [KnowledgeBaseRecord_Appointments](appointment.md#BKMK_KnowledgeBaseRecord_Appointments) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Appointments](appointment.md#BKMK_KnowledgeBaseRecord_Appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -555,7 +556,7 @@ Same as appointment table [KnowledgeBaseRecord_Appointments](appointment.md#BKMK
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
 
-Same as email table [KnowledgeBaseRecord_Emails](email.md#BKMK_KnowledgeBaseRecord_Emails) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Emails](email.md#BKMK_KnowledgeBaseRecord_Emails) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -570,7 +571,7 @@ Same as email table [KnowledgeBaseRecord_Emails](email.md#BKMK_KnowledgeBaseReco
 
 ### <a name="BKMK_KnowledgeBaseRecord_Faxes"></a> KnowledgeBaseRecord_Faxes
 
-Same as fax table [KnowledgeBaseRecord_Faxes](fax.md#BKMK_KnowledgeBaseRecord_Faxes) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Faxes](fax.md#BKMK_KnowledgeBaseRecord_Faxes) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -585,7 +586,7 @@ Same as fax table [KnowledgeBaseRecord_Faxes](fax.md#BKMK_KnowledgeBaseRecord_Fa
 
 ### <a name="BKMK_KnowledgeBaseRecord_Letters"></a> KnowledgeBaseRecord_Letters
 
-Same as letter table [KnowledgeBaseRecord_Letters](letter.md#BKMK_KnowledgeBaseRecord_Letters) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Letters](letter.md#BKMK_KnowledgeBaseRecord_Letters) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -600,7 +601,7 @@ Same as letter table [KnowledgeBaseRecord_Letters](letter.md#BKMK_KnowledgeBaseR
 
 ### <a name="BKMK_KnowledgeBaseRecord_PhoneCalls"></a> KnowledgeBaseRecord_PhoneCalls
 
-Same as phonecall table [KnowledgeBaseRecord_PhoneCalls](phonecall.md#BKMK_KnowledgeBaseRecord_PhoneCalls) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_PhoneCalls](phonecall.md#BKMK_KnowledgeBaseRecord_PhoneCalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -615,7 +616,7 @@ Same as phonecall table [KnowledgeBaseRecord_PhoneCalls](phonecall.md#BKMK_Knowl
 
 ### <a name="BKMK_KnowledgeBaseRecord_Tasks"></a> KnowledgeBaseRecord_Tasks
 
-Same as task table [KnowledgeBaseRecord_Tasks](task.md#BKMK_KnowledgeBaseRecord_Tasks) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Tasks](task.md#BKMK_KnowledgeBaseRecord_Tasks) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -630,7 +631,7 @@ Same as task table [KnowledgeBaseRecord_Tasks](task.md#BKMK_KnowledgeBaseRecord_
 
 ### <a name="BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters"></a> KnowledgeBaseRecord_RecurringAppointmentMasters
 
-Same as recurringappointmentmaster table [KnowledgeBaseRecord_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -645,7 +646,7 @@ Same as recurringappointmentmaster table [KnowledgeBaseRecord_RecurringAppointme
 
 ### <a name="BKMK_KnowledgeBaseRecord_SocialActivities"></a> KnowledgeBaseRecord_SocialActivities
 
-Same as socialactivity table [KnowledgeBaseRecord_SocialActivities](socialactivity.md#BKMK_KnowledgeBaseRecord_SocialActivities) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_SocialActivities](socialactivity.md#BKMK_KnowledgeBaseRecord_SocialActivities) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -660,7 +661,7 @@ Same as socialactivity table [KnowledgeBaseRecord_SocialActivities](socialactivi
 
 ### <a name="BKMK_KnowledgeBaseRecord_connections1"></a> KnowledgeBaseRecord_connections1
 
-Same as connection table [KnowledgeBaseRecord_connections1](connection.md#BKMK_KnowledgeBaseRecord_connections1) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_connections1](connection.md#BKMK_KnowledgeBaseRecord_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -675,7 +676,7 @@ Same as connection table [KnowledgeBaseRecord_connections1](connection.md#BKMK_K
 
 ### <a name="BKMK_KnowledgeBaseRecord_connections2"></a> KnowledgeBaseRecord_connections2
 
-Same as connection table [KnowledgeBaseRecord_connections2](connection.md#BKMK_KnowledgeBaseRecord_connections2) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_connections2](connection.md#BKMK_KnowledgeBaseRecord_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -690,7 +691,7 @@ Same as connection table [KnowledgeBaseRecord_connections2](connection.md#BKMK_K
 
 ### <a name="BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord"></a> KnowledgeBaseRecord_DuplicateMatchingRecord
 
-Same as duplicaterecord table [KnowledgeBaseRecord_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -705,7 +706,7 @@ Same as duplicaterecord table [KnowledgeBaseRecord_DuplicateMatchingRecord](dupl
 
 ### <a name="BKMK_KnowledgeBaseRecord_DuplicateBaseRecord"></a> KnowledgeBaseRecord_DuplicateBaseRecord
 
-Same as duplicaterecord table [KnowledgeBaseRecord_DuplicateBaseRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_DuplicateBaseRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -720,7 +721,7 @@ Same as duplicaterecord table [KnowledgeBaseRecord_DuplicateBaseRecord](duplicat
 
 ### <a name="BKMK_KnowledgeBaseRecord_Annotations"></a> KnowledgeBaseRecord_Annotations
 
-Same as annotation table [KnowledgeBaseRecord_Annotations](annotation.md#BKMK_KnowledgeBaseRecord_Annotations) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Annotations](annotation.md#BKMK_KnowledgeBaseRecord_Annotations) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -735,7 +736,7 @@ Same as annotation table [KnowledgeBaseRecord_Annotations](annotation.md#BKMK_Kn
 
 ### <a name="BKMK_KnowledgeBaseRecord_AsyncOperations"></a> KnowledgeBaseRecord_AsyncOperations
 
-Same as asyncoperation table [KnowledgeBaseRecord_AsyncOperations](asyncoperation.md#BKMK_KnowledgeBaseRecord_AsyncOperations) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_AsyncOperations](asyncoperation.md#BKMK_KnowledgeBaseRecord_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -750,7 +751,7 @@ Same as asyncoperation table [KnowledgeBaseRecord_AsyncOperations](asyncoperatio
 
 ### <a name="BKMK_KnowledgeBaseRecord_ProcessSession"></a> KnowledgeBaseRecord_ProcessSession
 
-Same as processsession table [KnowledgeBaseRecord_ProcessSession](processsession.md#BKMK_KnowledgeBaseRecord_ProcessSession) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_ProcessSession](processsession.md#BKMK_KnowledgeBaseRecord_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -765,7 +766,7 @@ Same as processsession table [KnowledgeBaseRecord_ProcessSession](processsession
 
 ### <a name="BKMK_KnowledgeBaseRecord_BulkDeleteFailures"></a> KnowledgeBaseRecord_BulkDeleteFailures
 
-Same as bulkdeletefailure table [KnowledgeBaseRecord_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KnowledgeBaseRecord_BulkDeleteFailures) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KnowledgeBaseRecord_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -780,7 +781,7 @@ Same as bulkdeletefailure table [KnowledgeBaseRecord_BulkDeleteFailures](bulkdel
 
 ### <a name="BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess"></a> KnowledgeBaseRecord_PrincipalObjectAttributeAccess
 
-Same as principalobjectattributeaccess table [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -795,7 +796,7 @@ Same as principalobjectattributeaccess table [KnowledgeBaseRecord_PrincipalObjec
 
 ### <a name="BKMK_KnowledgeBaseRecord_SyncErrors"></a> KnowledgeBaseRecord_SyncErrors
 
-Same as syncerror table [KnowledgeBaseRecord_SyncErrors](syncerror.md#BKMK_KnowledgeBaseRecord_SyncErrors) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_SyncErrors](syncerror.md#BKMK_KnowledgeBaseRecord_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -806,6 +807,23 @@ Same as syncerror table [KnowledgeBaseRecord_SyncErrors](syncerror.md#BKMK_Knowl
 |ReferencedEntityNavigationPropertyName|KnowledgeBaseRecord_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_knowledgebaserecord_chats"></a> knowledgebaserecord_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [knowledgebaserecord_chats](chat.md#BKMK_knowledgebaserecord_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgebaserecord_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -823,27 +841,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_createdby"></a> lk_KnowledgeBaseRecord_createdby
 
-See systemuser Table [lk_KnowledgeBaseRecord_createdby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_createdby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_createdonbehalfby"></a> lk_KnowledgeBaseRecord_createdonbehalfby
 
-See systemuser Table [lk_KnowledgeBaseRecord_createdonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdonbehalfby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_createdonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_modifiedby"></a> lk_KnowledgeBaseRecord_modifiedby
 
-See systemuser Table [lk_KnowledgeBaseRecord_modifiedby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_modifiedby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_modifiedonbehalfby"></a> lk_KnowledgeBaseRecord_modifiedonbehalfby
 
-See systemuser Table [lk_KnowledgeBaseRecord_modifiedonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_modifiedonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_KnowledgeBaseRecord"></a> organization_KnowledgeBaseRecord
 
-See organization Table [organization_KnowledgeBaseRecord](organization.md#BKMK_organization_KnowledgeBaseRecord) One-To-Many relationship.
+See the [organization_KnowledgeBaseRecord](organization.md#BKMK_organization_KnowledgeBaseRecord) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_KnowledgeBaseRecord"></a> TransactionCurrency_KnowledgeBaseRecord
 
-See transactioncurrency Table [TransactionCurrency_KnowledgeBaseRecord](transactioncurrency.md#BKMK_TransactionCurrency_KnowledgeBaseRecord) One-To-Many relationship.
+See the [TransactionCurrency_KnowledgeBaseRecord](transactioncurrency.md#BKMK_TransactionCurrency_KnowledgeBaseRecord) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 

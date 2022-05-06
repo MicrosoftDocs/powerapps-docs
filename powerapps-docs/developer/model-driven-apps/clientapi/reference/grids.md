@@ -1,9 +1,10 @@
 ---
 title: "Grids and subgrids in model-driven apps for Dynamics 365| MicrosoftDocs"
+description: "Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/24/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -13,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Grids and subgrids in model-driven apps (Client API reference)
 
@@ -45,7 +48,11 @@ Grid context is the grid or subgrid instance on a form against which you want to
 >[!NOTE]
 >You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the model-driven apps page that is used to enable editable grids for a table or a read-only grid.
 
-## Methods
+## Objects
+
+Use the following objects to interact with grids. These objects form a hierarchy as shown in the following diagram:
+
+:::image type="content" source="../../media/ClientAPI-grid-object-Model.png" alt-text="The hierarchy of objects available in grids":::
 
 |Name|Description|Available for|
 |--|--|--|

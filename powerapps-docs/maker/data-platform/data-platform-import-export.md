@@ -2,7 +2,6 @@
 title: Import or export data from Microsoft Dataverse
 description: Bulk import and export data from Excel or CSV files into tables in Microsoft Dataverse by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
-
 ms.topic: how-to
 ms.component: cds
 ms.date: 02/06/2021
@@ -53,7 +52,7 @@ Copy data from your Excel or CSV file into the template that you created in the 
 #### Import the file
 
 1. On [powerapps.com](https://make.powerapps.com/), expand the **Data** section. Select **Tables** in the left navigation pane.  
-1. Select **Get Data** > **Get data from Excel**.
+1. Select **Data**, to the right of **Get Data** select **>**, and then select **Get data from Excel**.
 1. Select the tables where you want to import data, and then select **Next**.
 1. On the **Import data** page, select **Upload**, and choose your file. Follow the prompts to upload your file.
 1. After the file is uploaded and **Mapping status** indicates **Mapping was successful**, select **Import** from the top-right corner. Go to [Troubleshoot mapping errors with Excel](#troubleshoot-mapping-errors-with-excel) to navigate and fix any mapping errors.

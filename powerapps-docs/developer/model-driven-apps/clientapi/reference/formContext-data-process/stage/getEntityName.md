@@ -1,5 +1,5 @@
 ---
-title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "stage.getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Returns the logical name of the table associated with the stage.
 ms.author: jdaly
 author: adrianorth
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityName (Client API reference)
+# stage.getEntityName (Client API reference)
 
 [!INCLUDE[./includes/getEntityName-description.md](./includes/getEntityName-description.md)]
 

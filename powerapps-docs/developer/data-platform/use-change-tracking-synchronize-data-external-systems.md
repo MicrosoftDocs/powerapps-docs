@@ -1,24 +1,23 @@
 ---
 title: "Use change tracking to synchronize data with external systems (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/24/2021
+ms.date: 04/19/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "Peakerbl" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Use change tracking to synchronize data with external systems
-
-
 
 The change tracking feature in Microsoft Dataverse provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Previously, without this new feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in Dataverse. This article discusses how to retrieve changes for a table.  
 
@@ -29,7 +28,7 @@ The change tracking feature in Microsoft Dataverse provides a way to keep the da
  ```http 
  GET [Organization URI]/api/data/v9.0/$metadata?annotations=true
  ```
- Read more about metadata annotations on [Metadata annotations](webapi/web-api-types-operations.md#bkmk_metannot).
+ Read more about metadata annotations on [Metadata annotations](webapi/web-api-service-documents.md#metadata-annotations).
  
  For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](/power-platform/admin/enable-change-tracking-control-data-synchronization).  
   

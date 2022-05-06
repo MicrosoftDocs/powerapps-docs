@@ -72,6 +72,25 @@ Geospatial controls use the Microsoft Dataverse and Spatial Services connectors 
 
 Your admin should confirm that the Microsoft Dataverse and Spatial Services connectors are classified under the same data group, typically **Business**. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
+
+## Privacy and security considerations
+
+- Power Apps doesn’t link search queries to any user or tenant when shared with TomTom, and the shared search queries can’t be used to identify individuals or tenants.
+- Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
+- Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
+- Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
+- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
+
+    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
+    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
+    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No |
+    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No |
+    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
+    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
+    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
+    
+
 ### Next steps
 
 Add the controls to your apps:

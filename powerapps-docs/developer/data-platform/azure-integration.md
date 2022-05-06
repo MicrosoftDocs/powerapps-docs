@@ -2,19 +2,20 @@
 title: "Azure integration (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how Microsoft Dataverse can be configured to send data to the Azure cloud." 
 ms.custom: intro-internal
-ms.date: 03/17/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly"
+author: "jaredha"
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
-manager: "ryjones"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Azure integration
 
@@ -75,7 +76,7 @@ For more information about the asynchronous service see [Asynchronous service](a
 
 The service bus relays the request message data context between Dataverse and Azure Service Bus solution listener applications. The service bus also provides data security so that only authorized applications can access the posted Dynamics 365 data.  Authorization of Dataverse to post the data context to the service bus and for listener applications to read it is managed by  Azure Shared Access Signatures (SAS).  
 
- For more information about service bus, see [Service Bus](https://azure.microsoft.com/services/service-bus/). For more information about service bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/).  
+ For more information about service bus, see [Service Bus](https://azure.microsoft.com/services/service-bus/). For more information about service bus authorization, see [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization).  
   
 ### Microsoft Azure solution
 

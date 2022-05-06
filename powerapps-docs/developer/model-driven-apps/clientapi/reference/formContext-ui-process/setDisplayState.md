@@ -1,6 +1,6 @@
 ---
-title: "setDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setDisplayState method.
+title: "process.setDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the process.setDisplayState method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setDisplayState (Client API reference)
+# process.setDisplayState (Client API reference)
 
 
 

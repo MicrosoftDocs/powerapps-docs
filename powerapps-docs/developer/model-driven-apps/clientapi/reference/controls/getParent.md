@@ -1,6 +1,6 @@
 ---
-title: "getParent (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getParent method.
+title: "control.getParent (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.getParent method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getParent (Client API reference)
+# control.getParent (Client API reference)
 
 Returns a reference to the section object that contains the control. 
 

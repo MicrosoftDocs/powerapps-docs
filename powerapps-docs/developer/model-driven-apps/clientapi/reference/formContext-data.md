@@ -1,6 +1,6 @@
 ---
 title: "formContext.data (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "Provides properties and methods to work with the data on a form."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -15,6 +15,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.data (Client API reference)
 

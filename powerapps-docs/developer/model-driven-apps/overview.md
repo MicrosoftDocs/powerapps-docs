@@ -1,19 +1,12 @@
 ---
 title: Model-driven apps in Power Apps Developer Overview | Microsoft Docs
 description: "Learn how developers can add value to model-driven apps; tutorial; introduction for model-apps developer in Power Apps"
-services: ''
-author: Nkrb
+author: JimDaly
 manager: kvivek
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: overview
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/01/2019
+ms.date: 04/01/2022
 ms.subservice: mda-developer
-ms.author: nabuthuk
+ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 

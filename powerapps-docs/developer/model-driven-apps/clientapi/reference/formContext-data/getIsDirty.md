@@ -1,5 +1,5 @@
 ---
-title: "getIsDirty (Client API reference) in model-driven apps| MicrosoftDocs"
+title: data.getIsDirty (Client API reference)
 description: Gets a boolean value indicating whether any columns in the form have been modified.
 ms.author: jdaly
 author: adrianorth
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getIsDirty (Client API reference)
+# data.getIsDirty (Client API reference)
 
 [!INCLUDE[./includes/getIsDirty-description.md](./includes/getIsDirty-description.md)]
 

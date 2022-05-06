@@ -1,6 +1,6 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getEntityReference method.
+title: EventArgs.getEntityReference (Client API reference)
+description: Includes description and supported parameters for the EventArgs.getEntityReference method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityReference (Client API reference)
+# EventArgs.getEntityReference (Client API reference)
 
 Use this method to know information about a table being saved/updated. It returns table ID, and table name if success.
 

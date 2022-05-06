@@ -1,6 +1,6 @@
 ---
-title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setVisible method.
+title: "formItem.setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the formItem.setVisible method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -12,8 +12,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setVisible (Client API reference)
+# formItem.setVisible (Client API reference)
 
 [!INCLUDE[./includes/setVisible-description.md](./includes/setVisible-description.md)] 
 

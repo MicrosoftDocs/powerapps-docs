@@ -10,9 +10,11 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # getGlobalContext.userSettings (Client API reference)
@@ -145,7 +147,7 @@ Returns a promise which resolves with an object whose keys are the security role
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

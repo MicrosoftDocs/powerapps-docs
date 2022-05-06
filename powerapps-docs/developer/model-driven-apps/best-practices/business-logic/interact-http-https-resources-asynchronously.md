@@ -6,13 +6,7 @@ suite: powerapps
 documentationcenter: na
 author: jowells
 manager: austinj
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 02/20/2018
 ms.subservice: mda-developer
 ms.author: jowells

@@ -1,10 +1,10 @@
 ---
 title: "Navigating to and from a custom page in your model-driven app using client API" 
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: HemantGaur
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "how-to"
@@ -12,11 +12,14 @@ search.audienceType:
   - maker
   - developer
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
-# Navigating to and from a custom page using client API
+# Navigating to a custom page using client API
 
 This article provides examples of navigating from a model-driven app page to a custom page using [Client API](../client-scripting.md).
 
@@ -156,6 +159,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 ### Open from a grid primary field link as a full page with record ID
 
 This example uses the `recordId` parameter within the [navigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
+
+A more complete example of this can be found at [Override the default open behavior of data rows in an entity-bound grid](../override-default-open-behavior-grids.md).
 
 1. Create a web resource of type **JScript** and update the **name** parameter to be the logical page name. Add the following code to the web resource.
 

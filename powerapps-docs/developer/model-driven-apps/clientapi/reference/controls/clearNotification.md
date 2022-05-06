@@ -1,6 +1,6 @@
 ---
-title: "clearNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the clearNotification method.
+title: "control.clearNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.clearNotification method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# clearNotification (Client API reference)
+# control.clearNotification (Client API reference)
 
 Remove a message already displayed for a control.
 

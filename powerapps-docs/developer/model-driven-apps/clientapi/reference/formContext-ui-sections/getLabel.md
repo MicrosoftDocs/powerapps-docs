@@ -1,6 +1,6 @@
 ---
-title: "getLabel (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getLabel method.
+title: section.getLabel (Client API reference)
+description: Includes description and supported parameters for the section.getLabel method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getLabel (Client API reference)
+# section.getLabel (Client API reference)
 
 
 

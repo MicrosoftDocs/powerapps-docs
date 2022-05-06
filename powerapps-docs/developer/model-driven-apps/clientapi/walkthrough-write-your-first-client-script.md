@@ -1,9 +1,10 @@
 ---
 title: "Tutorial: Write your first client script in model-driven apps| MicrosoftDocs"
-ms.author: jdaly
+description: "This tutorial will help you write your first client script in model-driven apps."
 author: HemantGaur
-manager: kvivek
-ms.date: 03/12/2022
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: "Dynamics 365 (online)"
@@ -13,6 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Walkthrough: Write your first client script
 
