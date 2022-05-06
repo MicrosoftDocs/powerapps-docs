@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mduelae
-ms.date: 3/0/2022
+ms.date: 3/7/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -19,24 +19,26 @@ contributors:
 
 # View 3D content or images in mixed reality
 
-Use the **View in MR** control in a canvas app to see how a 3D model of an object fits in a real-world space. (To compare a 3D cube of a given size instead, use the [**View shape in MR**](mixed-reality-component-view-mr.md) control.)
+Use the **View in MR** control to place a 3D model of an object or an image in a real-world space. For instance, preview a painting on a wall before you hang it, or see whether a 3D virtual bookcase will fit where you intend it to go. 
+
+What if you don't have a 3D model of the object? Load an image of the object and set its dimensions to the object's size. The control applies the image as the face of a virtual cube of the desired size. Place this stand-in for the 3D model in your space.
 
 The **View in MR** control adds a button to your app. When a user selects the button, the app overlays a selected 3D model (in .glb, .stl, or .obj file formats) or image (in .jpg or .png file formats) on the device camera feed.
 
 :::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="A photo of a tablet screen that shows a 3D model of a forklift overlaid on a warehouse interior view.":::
 
-You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md) using the **View in MR** control.
+You can also take photos using the **View in MR** control and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 
 > [!IMPORTANT]
 > Your 3D content must be in the .glb, .stl, or .obj file formats.
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
-> Draco compression is not supported.
+> 3D content compressed with Draco compression Draco is not supported.
 
 > [!TIP]
 > Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) to minimize load times.
 
 > [!TIP]
-> The mixed-reality (MR) controls work best on LIDAR-enabled devices in well-lit environments with flat-textured surfaces.
+> The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
 > [!TIP]
 > The MR controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
@@ -105,8 +107,8 @@ Change the **View in MR** button's behavior and appearance using properties. Som
 | Disabled color | Sets the colors of the button label text, the button background, and the button border if **[DisplayMode](./controls/properties-core.md)** is **Disabled**. | Not applicable | Properties; Advanced: **DisabledContentColor**, **DisabledFillColor**, **DisabledBorderColor** |
 | Pressed color | Sets the colors of the button label text, the button background, and the button border when the user selects the button. | Not applicable | Properties; Advanced: **PressedContentColor**, **PressedFillColor**, **PressedBorderColor** |
 | Hover color | Sets the colors of the button label text, the button background, and the button border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverContentColor**, **HoverFillColor**, **HoverBorderColor** |
-| OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | Advanced |
-| OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | Advanced |
+| OnMixedRealitySelect | Behavior that is triggered when user selects the button to launch into the mixed reality experience. | Defined action | Advanced |
+| OnChange | Behavior that is triggered when any property on the button is changed. This is a common property across multiple controls. | Defined action | Advanced |
 | **[Tooltip](./controls/properties-core.md)** | Determines the text to display when the user hovers over the button. | String | Advanced |
 | ContentLanguage | Determines the display language of the button label, if it's different from the language used in the app. | String | Advanced |
 | **[DisplayMode](./controls/properties-core.md)** | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
@@ -122,7 +124,7 @@ Your app can make use of more properties when a user interacts with the **View i
 
 ## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 

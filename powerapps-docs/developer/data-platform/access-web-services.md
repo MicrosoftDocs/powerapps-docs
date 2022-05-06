@@ -2,11 +2,10 @@
 title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly"
+author: "divka78"
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
 manager: "kvivek"
@@ -15,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Access external web services
 

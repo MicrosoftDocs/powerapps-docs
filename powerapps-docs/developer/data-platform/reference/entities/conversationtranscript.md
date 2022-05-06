@@ -1,8 +1,8 @@
 ---
-title: "conversationtranscript table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "conversationtranscript table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the conversationtranscript table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -370,6 +370,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -675,12 +676,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -751,7 +770,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [conversationtranscript_SyncErrors](syncerror.md#BKMK_conversationtranscript_SyncErrors) Many-To-One relationship.
+Same as the [conversationtranscript_SyncErrors](syncerror.md#BKMK_conversationtranscript_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -768,7 +787,7 @@ Same as syncerror table [conversationtranscript_SyncErrors](syncerror.md#BKMK_co
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [conversationtranscript_DuplicateMatchingRecord](duplicaterecord.md#BKMK_conversationtranscript_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [conversationtranscript_DuplicateMatchingRecord](duplicaterecord.md#BKMK_conversationtranscript_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -785,7 +804,7 @@ Same as duplicaterecord table [conversationtranscript_DuplicateMatchingRecord](d
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [conversationtranscript_DuplicateBaseRecord](duplicaterecord.md#BKMK_conversationtranscript_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [conversationtranscript_DuplicateBaseRecord](duplicaterecord.md#BKMK_conversationtranscript_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -802,7 +821,7 @@ Same as duplicaterecord table [conversationtranscript_DuplicateBaseRecord](dupli
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [conversationtranscript_AsyncOperations](asyncoperation.md#BKMK_conversationtranscript_AsyncOperations) Many-To-One relationship.
+Same as the [conversationtranscript_AsyncOperations](asyncoperation.md#BKMK_conversationtranscript_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -819,7 +838,7 @@ Same as asyncoperation table [conversationtranscript_AsyncOperations](asyncopera
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [conversationtranscript_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_conversationtranscript_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [conversationtranscript_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_conversationtranscript_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -836,7 +855,7 @@ Same as mailboxtrackingfolder table [conversationtranscript_MailboxTrackingFolde
 
 **Added by**: System Solution Solution
 
-Same as processsession table [conversationtranscript_ProcessSession](processsession.md#BKMK_conversationtranscript_ProcessSession) Many-To-One relationship.
+Same as the [conversationtranscript_ProcessSession](processsession.md#BKMK_conversationtranscript_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -853,7 +872,7 @@ Same as processsession table [conversationtranscript_ProcessSession](processsess
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [conversationtranscript_BulkDeleteFailures](bulkdeletefailure.md#BKMK_conversationtranscript_BulkDeleteFailures) Many-To-One relationship.
+Same as the [conversationtranscript_BulkDeleteFailures](bulkdeletefailure.md#BKMK_conversationtranscript_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -870,7 +889,7 @@ Same as bulkdeletefailure table [conversationtranscript_BulkDeleteFailures](bulk
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [conversationtranscript_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_conversationtranscript_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [conversationtranscript_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_conversationtranscript_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -902,49 +921,49 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_conversationtranscript_createdby](systemuser.md#BKMK_lk_conversationtranscript_createdby) One-To-Many relationship.
+See the [lk_conversationtranscript_createdby](systemuser.md#BKMK_lk_conversationtranscript_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_conversationtranscript_createdonbehalfby"></a> lk_conversationtranscript_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_conversationtranscript_createdonbehalfby](systemuser.md#BKMK_lk_conversationtranscript_createdonbehalfby) One-To-Many relationship.
+See the [lk_conversationtranscript_createdonbehalfby](systemuser.md#BKMK_lk_conversationtranscript_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_conversationtranscript_modifiedby"></a> lk_conversationtranscript_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_conversationtranscript_modifiedby](systemuser.md#BKMK_lk_conversationtranscript_modifiedby) One-To-Many relationship.
+See the [lk_conversationtranscript_modifiedby](systemuser.md#BKMK_lk_conversationtranscript_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_conversationtranscript_modifiedonbehalfby"></a> lk_conversationtranscript_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_conversationtranscript_modifiedonbehalfby](systemuser.md#BKMK_lk_conversationtranscript_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_conversationtranscript_modifiedonbehalfby](systemuser.md#BKMK_lk_conversationtranscript_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_conversationtranscript"></a> user_conversationtranscript
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_conversationtranscript](systemuser.md#BKMK_user_conversationtranscript) One-To-Many relationship.
+See the [user_conversationtranscript](systemuser.md#BKMK_user_conversationtranscript) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_conversationtranscript"></a> team_conversationtranscript
 
 **Added by**: System Solution Solution
 
-See team Table [team_conversationtranscript](team.md#BKMK_team_conversationtranscript) One-To-Many relationship.
+See the [team_conversationtranscript](team.md#BKMK_team_conversationtranscript) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_conversationtranscript"></a> business_unit_conversationtranscript
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_conversationtranscript](businessunit.md#BKMK_business_unit_conversationtranscript) One-To-Many relationship.
+See the [business_unit_conversationtranscript](businessunit.md#BKMK_business_unit_conversationtranscript) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_bot_conversationtranscript"></a> bot_conversationtranscript
 
 **Added by**: Power Virtual Agents Solution
 
-See bot Table [bot_conversationtranscript](bot.md#BKMK_bot_conversationtranscript) One-To-Many relationship.
+See the [bot_conversationtranscript](bot.md#BKMK_bot_conversationtranscript) one-to-many relationship for the [bot](bot.md) table/entity.
 
 ### See also
 

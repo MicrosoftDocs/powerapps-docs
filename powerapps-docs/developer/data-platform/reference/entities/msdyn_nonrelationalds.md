@@ -1,8 +1,8 @@
 ---
-title: "msdyn_nonrelationalds table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_nonrelationalds table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_nonrelationalds table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"

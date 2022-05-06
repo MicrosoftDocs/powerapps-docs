@@ -2,21 +2,17 @@
 title: uses-feature | Microsoft Docs
 description: Indicates which feature their components want to use.
 keywords:
-ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 ---
 
 # uses-feature element
 
-Indicates which feature their components want to use.
+[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]
 
 ## Available for
 

@@ -1,8 +1,8 @@
 ---
-title: "ImportEntityMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ImportEntityMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportEntityMapping table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -408,10 +408,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -597,23 +597,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importentitymapping_createdonbehalfby"></a> lk_importentitymapping_createdonbehalfby
 
-See systemuser Table [lk_importentitymapping_createdonbehalfby](systemuser.md#BKMK_lk_importentitymapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_importentitymapping_createdonbehalfby](systemuser.md#BKMK_lk_importentitymapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importentitymapping_modifiedonbehalfby"></a> lk_importentitymapping_modifiedonbehalfby
 
-See systemuser Table [lk_importentitymapping_modifiedonbehalfby](systemuser.md#BKMK_lk_importentitymapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_importentitymapping_modifiedonbehalfby](systemuser.md#BKMK_lk_importentitymapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importentitymapping_createdby"></a> lk_importentitymapping_createdby
 
-See systemuser Table [lk_importentitymapping_createdby](systemuser.md#BKMK_lk_importentitymapping_createdby) One-To-Many relationship.
+See the [lk_importentitymapping_createdby](systemuser.md#BKMK_lk_importentitymapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ImportEntityMapping_ImportMap"></a> ImportEntityMapping_ImportMap
 
-See importmap Table [ImportEntityMapping_ImportMap](importmap.md#BKMK_ImportEntityMapping_ImportMap) One-To-Many relationship.
+See the [ImportEntityMapping_ImportMap](importmap.md#BKMK_ImportEntityMapping_ImportMap) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### <a name="BKMK_lk_importentitymapping_modifiedby"></a> lk_importentitymapping_modifiedby
 
-See systemuser Table [lk_importentitymapping_modifiedby](systemuser.md#BKMK_lk_importentitymapping_modifiedby) One-To-Many relationship.
+See the [lk_importentitymapping_modifiedby](systemuser.md#BKMK_lk_importentitymapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

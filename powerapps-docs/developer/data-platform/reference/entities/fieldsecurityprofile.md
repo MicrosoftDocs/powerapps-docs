@@ -1,8 +1,8 @@
 ---
-title: "FieldSecurityProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "FieldSecurityProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the FieldSecurityProfile table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -295,10 +295,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -506,7 +506,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_lk_fieldpermission_fieldsecurityprofileid"></a> lk_fieldpermission_fieldsecurityprofileid
 
-Same as fieldpermission table [lk_fieldpermission_fieldsecurityprofileid](fieldpermission.md#BKMK_lk_fieldpermission_fieldsecurityprofileid) Many-To-One relationship.
+Same as the [lk_fieldpermission_fieldsecurityprofileid](fieldpermission.md#BKMK_lk_fieldpermission_fieldsecurityprofileid) many-to-one relationship for the [fieldpermission](fieldpermission.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -521,7 +521,7 @@ Same as fieldpermission table [lk_fieldpermission_fieldsecurityprofileid](fieldp
 
 ### <a name="BKMK_FieldSecurityProfile_SyncErrors"></a> FieldSecurityProfile_SyncErrors
 
-Same as syncerror table [FieldSecurityProfile_SyncErrors](syncerror.md#BKMK_FieldSecurityProfile_SyncErrors) Many-To-One relationship.
+Same as the [FieldSecurityProfile_SyncErrors](syncerror.md#BKMK_FieldSecurityProfile_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -549,27 +549,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_fieldsecurityprofile_modifiedby"></a> lk_fieldsecurityprofile_modifiedby
 
-See systemuser Table [lk_fieldsecurityprofile_modifiedby](systemuser.md#BKMK_lk_fieldsecurityprofile_modifiedby) One-To-Many relationship.
+See the [lk_fieldsecurityprofile_modifiedby](systemuser.md#BKMK_lk_fieldsecurityprofile_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_fieldsecurityprofile_modifiedonbehalfby"></a> lk_fieldsecurityprofile_modifiedonbehalfby
 
-See systemuser Table [lk_fieldsecurityprofile_modifiedonbehalfby](systemuser.md#BKMK_lk_fieldsecurityprofile_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_fieldsecurityprofile_modifiedonbehalfby](systemuser.md#BKMK_lk_fieldsecurityprofile_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_fieldsecurityprofile_createdby"></a> lk_fieldsecurityprofile_createdby
 
-See systemuser Table [lk_fieldsecurityprofile_createdby](systemuser.md#BKMK_lk_fieldsecurityprofile_createdby) One-To-Many relationship.
+See the [lk_fieldsecurityprofile_createdby](systemuser.md#BKMK_lk_fieldsecurityprofile_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_fieldsecurityprofile_createdonbehalfby"></a> lk_fieldsecurityprofile_createdonbehalfby
 
-See systemuser Table [lk_fieldsecurityprofile_createdonbehalfby](systemuser.md#BKMK_lk_fieldsecurityprofile_createdonbehalfby) One-To-Many relationship.
+See the [lk_fieldsecurityprofile_createdonbehalfby](systemuser.md#BKMK_lk_fieldsecurityprofile_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_fieldsecurityprofile_organizationid"></a> lk_fieldsecurityprofile_organizationid
 
-See organization Table [lk_fieldsecurityprofile_organizationid](organization.md#BKMK_lk_fieldsecurityprofile_organizationid) One-To-Many relationship.
+See the [lk_fieldsecurityprofile_organizationid](organization.md#BKMK_lk_fieldsecurityprofile_organizationid) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_solution_fieldsecurityprofile"></a> solution_fieldsecurityprofile
 
-See solution Table [solution_fieldsecurityprofile](solution.md#BKMK_solution_fieldsecurityprofile) One-To-Many relationship.
+See the [solution_fieldsecurityprofile](solution.md#BKMK_solution_fieldsecurityprofile) one-to-many relationship for the [solution](solution.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -583,15 +583,15 @@ Relationship details provided where the FieldSecurityProfile table is the first 
 
 ### <a name="BKMK_systemuserprofiles_association"></a> systemuserprofiles_association
 
-See systemuser Table [systemuserprofiles_association](systemuser.md#BKMK_systemuserprofiles_association) Many-To-Many Relationship.
+See the [systemuserprofiles_association](systemuser.md#BKMK_systemuserprofiles_association) many-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_teamprofiles_association"></a> teamprofiles_association
 
-See team Table [teamprofiles_association](team.md#BKMK_teamprofiles_association) Many-To-Many Relationship.
+See the [teamprofiles_association](team.md#BKMK_teamprofiles_association) many-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_applicationuserprofile"></a> applicationuserprofile
 
-See applicationuser Table [applicationuserprofile](applicationuser.md#BKMK_applicationuserprofile) Many-To-Many Relationship.
+See the [applicationuserprofile](applicationuser.md#BKMK_applicationuserprofile) many-to-many relationship for the [applicationuser](applicationuser.md) table/entity.
 
 ### See also
 

@@ -1,19 +1,20 @@
 ---
 title: "Customize choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to work with global and local choices (option sets) in code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/10/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Customize choices
@@ -21,7 +22,10 @@ search.app:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Typically, you use *global* choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* choices which are defined only for a specific table column, you can reuse global choices. You will also see them used in request parameters in a manner similar to an enumeration.  
-  
+
+> [!NOTE]
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets.
+
 When you define a global choice by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>, 
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the 
 new `OptionMetadata` instance. When you define a choice, it will contain a choice value prefix specific to the 
@@ -52,6 +56,8 @@ Use the following message request classes with both global and local choices.
 - <xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest>  
 
 <a name="BKMK_RetrieveAGlobalOptionSet"></a>
+
+[!NOTE] Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets.
 
 ## Retrieve a global choice  
 

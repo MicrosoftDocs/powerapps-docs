@@ -30,7 +30,7 @@ You can use information at the data-source level, for example, to disable or hid
 Data sources vary in how much information they provide, including not providing any at all.  [Collections](../working-with-data-sources.md#collections) provide no information. If a piece of information isn't provided, a default is used, or *blank* is returned.
 
 > [!NOTE]
-> Currently, the DataSourceInfo function is not supported in SharePoint List.
+> Currently, the DataSourceInfo function is not supported in Microsoft Lists.
 
 ## Description
 ### Column information

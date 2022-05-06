@@ -1,6 +1,81 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/data-platform/change-color-scheme-add-logo-match-organizations-brand.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/create-themes-organization-branding",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/library.md",
+      "redirect_url": "../manifest-schema-reference",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/packaged_library.md",
+      "redirect_url": "../manifest-schema-reference",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md",
+      "redirect_url": "formcontext-ui#formcontextuifootersection-removed",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/getVisible.md",
+      "redirect_url": "../formcontext-ui#formcontextuifootersection-removed",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md",
+      "redirect_url": "../formcontext-ui#formcontextuifootersection-removed",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/sample-create-retrieve-outlook-filters.md",
+      "redirect_url": "../data-platform/org-service/samples/create-retrieve-outlook-filters",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/install-remove-sample-data.md",
+      "redirect_url": "../data-platform/sample-data",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/work-with-discovery-service.md",
+      "redirect_url": "../data-platform/org-service/samples/access-discovery-service",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/create-client-app.md",
+      "redirect_url": "../data-platform/connect-dataverse",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/on-premises-options.md",
+      "redirect_url": "../data-platform",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/customapi-table-columns.md",
+      "redirect_url": "custom-api-tables#custom-api-table-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/customapirequestparameter-table-columns.md",
+      "redirect_url": "custom-api-tables#customapirequestparameter-table-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/customapiresponseproperty-table-columns.md",
+      "redirect_url": "custom-api-tables#customapiresponseproperty-table-columns",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sample-meeting-capture.md",
+      "redirect_url": "open-and-run-a-sample-app",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/optimize-form-performance.md",
       "redirect_url": "design-performant-forms",
       "redirect_document_id": "false"
@@ -687,17 +762,17 @@
     },
     {
       "source_path": "powerapps-docs/admin-view-user-licenses.md",
-      "redirect_url": "/powerapps/administrator/admin-view-user-licenses",
+      "redirect_url": "/power-platform/admin/admin-view-user-licenses",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/app-analytics.md",
-      "redirect_url": "/powerapps/administrator/index",
+      "redirect_url": "/power-platform/admin/analytics-powerapps",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/create-database.md",
-      "redirect_url": "/powerapps/administrator/create-database",
+      "redirect_url": "/power-platform/admin/create-database",
       "redirect_document_id": "false"
     },
     {
@@ -1152,7 +1227,7 @@
     },
     {
       "source_path": "powerapps-docs/controls/control-text-input.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/controls/control-text-input",
+      "redirect_url": "/power-apps/maker/canvas-apps/controls/control-text-input",
       "redirect_document_id": "false"
     },
     {
@@ -1596,8 +1671,8 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/limits-and-config.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/limits-and-config",
+      "source_path": "powerapps-docs/maker/canvas-apps/limits-and-config.md",
+      "redirect_url": "/powerapps/limits-and-config",
       "redirect_document_id": "false"
     },
     {
@@ -3593,46 +3668,6 @@
     {
       "source_path": "powerapps-docs/developer/common-data-service/deployment-service/administer-deployment-using-deployment-web-service.md",
       "redirect_url": "../../data-platform/deployment-service/administer-deployment-using-deployment-web-service",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/cc-connect-plugin-registration-tool.md",
-      "redirect_url": "../../data-platform/includes/cc-connect-plugin-registration-tool",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/cc-d365ce-note-section.md",
-      "redirect_url": "../../data-platform/includes/cc-d365ce-note-section",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/cc-d365ce-note-topic.md",
-      "redirect_url": "../../data-platform/includes/cc-d365ce-note-topic",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/cc-discovery-service-description.md",
-      "redirect_url": "../../data-platform/includes/cc-discovery-service-description",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/cc-how-to-run-samples.md",
-      "redirect_url": "../../data-platform/includes/cc-how-to-run-samples",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/cc-legacy-update-messages.md",
-      "redirect_url": "../../data-platform/includes/cc-legacy-update-messages",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/data-service-errors.md",
-      "redirect_url": "../../data-platform/includes/data-service-errors",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/includes/synchronous-webhook-error.md",
-      "redirect_url": "../../data-platform/includes/synchronous-webhook-error",
       "redirect_document_id": false
     },
     {
@@ -6382,16 +6417,6 @@
     },
     {
       "source_path": "powerapps-docs/developer/component-framework/reference/linking/clear.md",
-      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/developer/component-framework/reference/linking/includes/clear-description.md",
-      "redirect_url": "/powerapps/developer/component-framework/reference/linking",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/developer/component-framework/reference/linking/includes/removeLinkedEntity-description.md",
       "redirect_url": "/powerapps/developer/component-framework/reference/linking",
       "redirect_document_id": "false"
     },

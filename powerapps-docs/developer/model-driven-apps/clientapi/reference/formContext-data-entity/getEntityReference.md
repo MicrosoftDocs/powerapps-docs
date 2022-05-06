@@ -1,21 +1,22 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
+title: entity.getEntityReference (Client API reference)
 description: Returns a lookup value that references a record.
-ms.date: 04/15/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1a66f93d-a47c-4316-91f1-dcf5d09f9d19
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityReference (Client API reference)
+# entity.getEntityReference (Client API reference)
 
 [!INCLUDE[./includes/getEntityReference-description.md](./includes/getEntityReference-description.md)]
 

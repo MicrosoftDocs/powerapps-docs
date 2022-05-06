@@ -2,15 +2,15 @@
 title: formatDateLongAbbreviated | Microsoft Docs
 description: Returns a formatted string that represents a date in the long form using abbreviation. Results pattern is based on culture. In USA it's "Abbreviated Day of week, Month dd, yyyy".
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: d91ba452-b57f-425c-bf64-cabf723a6249
 ---
 # formatDateLongAbbreviated
 

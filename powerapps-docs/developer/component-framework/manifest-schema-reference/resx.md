@@ -2,16 +2,12 @@
 title: Resx Element | Microsoft Docs
 description: The resx web resource is used to manage the localized strings you define.
 keywords:
-ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 ---
 
 # resx element
