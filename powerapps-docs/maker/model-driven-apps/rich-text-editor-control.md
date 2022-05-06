@@ -562,7 +562,7 @@ Example:
   ```
   "sanitizerAllowlist": {
 	"attributes": ["data-id-wrapper"],
-	"cssProperties": ["filter"],
+	"cssProperties": ["filter","list-style-type"],
 	"domains": ["([a-z0-9]+[.])*.youtube.com","www.randomsite.com"],
 	"protocols": ["file","ftp"],
 	"tags": ["input"]
