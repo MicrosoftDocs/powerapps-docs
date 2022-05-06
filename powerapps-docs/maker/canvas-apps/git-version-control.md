@@ -140,7 +140,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
 - Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
-- If you open a non git connected app **App A** from within a git connected app **App B** (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. To fix this, refresh your page.
+- If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
 
 ## Feedback to the community forum
 
