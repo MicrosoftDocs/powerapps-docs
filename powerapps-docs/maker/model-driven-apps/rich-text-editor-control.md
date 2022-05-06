@@ -43,15 +43,12 @@ Create a new text column and configure the control, or replace an existing text 
 
 ### Simple configuration
 
-To enable the rich text editor with default values on any new text column, you can set the **Format** option to **Rich text** using the following steps. More information on default values: [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
+To enable the rich text editor with default values on any new or existing text column, you can set the **Format** option to **Rich text** using the following steps. More information on default values: [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableColumnFormatUpdate=true&powerappsEntities.enableModernColumn=true). 
 
    > [!NOTE]
-   > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions (Microsoft Dataverse) - Power Apps](/power-platform/developer/data-platform/data-type-format-conversions)
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableModernColumn=true). 
-
-   > [!NOTE]
-   > The parameter in the URL is required to display the new **Format** option in the maker experience.
+   > The parameters in the URL are required to display the new **Format** option in the maker experience.
 1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.
@@ -111,6 +108,8 @@ The experience and capabilities of the rich text editor are controlled with conf
 > 
 > All properties are replaced **except** for extraPlugins which are merged. Merging extraPlugins allow the use of a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Then, only the necessary plugins can be activated by adding them to the extraPlugins values in the instance specific configuration.
 
+A rich text enabled column has a limited set of configuration which can be configured for read-only or disabled state. You can learn more about this configuration from the "readOnlySettings" property description. 
+
 ## Rich text editor properties
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
@@ -164,7 +163,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Sets the actual default font size and style.<br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".
+  Sets the actual default font size and style.<br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div", and can be changed to "p" or any alternate tag.
 </td>
 <td>
 
@@ -512,6 +511,38 @@ Default:
 }
   ```
 </td>
+</tr>
+
+<tr>
+<td>
+  readOnlySettings
+</td>
+
+<td>
+
+By setting this property, you can configure additional behaviors for the column when viewed in a read only or disabled state. 
+
+</td>
+<td>
+	
+Example:
+	
+  ```
+  "readOnlySettings": {
+	"imageEntityName": "msdyn_mystorageforcustomizedsecurity",
+	"imageFileAttributeName": "msdyn_customimagestorage"
+}
+  ```
+	
+Default:
+	
+  ```
+  "readOnlySettings": {
+}
+  ```
+  
+</td>
+</tr>
 
 <tr>
 <td>
@@ -534,7 +565,8 @@ Must be set to true to enable the following attributes:
   ```"showAsTabControl": false```
   
 </td>
-
+</tr>
+	
 <tr>
 <td>
   showFullScreenExpander
