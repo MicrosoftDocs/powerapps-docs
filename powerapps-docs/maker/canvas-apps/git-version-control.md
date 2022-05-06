@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/02/2022
+ms.date: 05/06/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -22,7 +22,6 @@ contributors:
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
->
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet. Check the experimental switch described in [Enable Git version control](#enable-git-version-control) to know if the feature is available in your tenant.
 > - This is an experimental feature. It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
@@ -34,7 +33,6 @@ You can now use Git version control to enable more than one person to edit a can
 Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and do other version control tasks.
 
 > [!NOTE]
->
 > - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
 
@@ -73,7 +71,7 @@ Follow these steps to connect your app to Git.
 
    :::image type="content" source="media/git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
 
-   - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **\_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.
+   - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **/_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.
    - **Branch**: The branch name to use.
    - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
 
@@ -143,7 +141,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
 - Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
-- If you open a non git connected app **App A** from within a git connected app **App B** (File -> Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. To fix this, refresh your page.
+- If you open a non git connected app **App A** from within a git connected app **App B** (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. To fix this, refresh your page.
 
 ## Feedback to the community forum
 
