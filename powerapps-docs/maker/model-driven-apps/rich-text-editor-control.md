@@ -394,11 +394,12 @@ Default:
 </td>
 
 <td>
+  By default, content sanitization will be disabled in order to allow successful copy and pasting of rich text content from external sources. When enabled the content sanitization will remove some of the custom attributes or tags. This configuration applies only to edit mode. Read only or disabled state rendering will always be sanitized.
 
 </td>
 <td>
 
-  ```"disableContentSanitization": false```
+  ```"disableContentSanitization": true```
 </td>
 
 </tr>
@@ -444,7 +445,7 @@ Default:
 </td>
 <td>
 
-No default value as this is how you can extend your functionality by adding additional plugins not originally provided.
+No default value as this is how you can extend your functionality by adding additional plugins not originally provided. The path value can be an absolute or relative URL.
 
 Example:
 ```
@@ -462,7 +463,7 @@ Example:
   "externalPlugins": [
     {
       "name": "EmbedMedia",
-      "path": "http://mydomain.crm.dynamics.com/WebResources/msdyncrm_/myplugins/embedmedia/"
+      "path": "/WebResources/msdyncrm_/myplugins/embedmedia/"
     }
   ]
   ```
