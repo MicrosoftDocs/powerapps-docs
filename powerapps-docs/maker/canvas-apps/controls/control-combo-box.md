@@ -98,6 +98,9 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
+> [!NOTE]
+> Flyout border properties controlled by Border properties.
+
 ## Examples
 
 ### Basic Combo box
