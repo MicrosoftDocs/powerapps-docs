@@ -50,7 +50,6 @@ Follow these steps to enable Git version control in your app.
    :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
    > [!TIP]
-   >
    > - This feature is being rolled out. If you don't see it in your tenant, it may not yet be deployed to your tenant yet. In that case, check again later.
    > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
