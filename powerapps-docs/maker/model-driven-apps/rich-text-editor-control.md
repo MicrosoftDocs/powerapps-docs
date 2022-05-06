@@ -529,8 +529,8 @@ Example:
 	
   ```
   "readOnlySettings": {
-	"imageEntityName": "msdyn_mystorageforcustomizedsecurity",
-	"imageFileAttributeName": "msdyn_customimagestorage"
+	"height:": 500,
+	"showFullScreenExpander": true
 }
   ```
 	
@@ -538,6 +538,45 @@ Default:
 	
   ```
   "readOnlySettings": {
+}
+  ```
+  
+</td>
+</tr>
+
+<tr>
+<td>
+  readOnlySettings
+</td>
+
+<td>
+
+By setting this property, you can allow additional content to be displayed. 
+
+</td>
+<td>
+	
+Example:
+	
+  ```
+  "sanitizerAllowlist": {
+	"attributes": ["data-id-wrapper"],
+	"cssProperties": ["filter"],
+	"domains": ["([a-z0-9]+[.])*.youtube.com","www.randomsite.com"],
+	"protocols": ["file","ftp"],
+	"tags": ["input"]
+}
+  ```
+	
+Default:
+	
+  ```
+  "sanitizerAllowlist": {
+	"attributes": [],
+	"cssProperties": [],
+	"domains": [],
+	"protocols": [],
+	"tags": []
 }
   ```
   
@@ -880,6 +919,10 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 		"toolbarLocation": "bottom",
 		"uploadRecordId": []
 	},
+	"attachmentEntity": {
+		"name": "msdyn_richtextfiles",
+		"fileAttributeName": "msdyn_fileblob"
+	},
 	"disableContentSanitization": true,
 	"disableDefaultImageProcessing": false,
 	"disableImages": false,
@@ -887,15 +930,8 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 		"imageEntityName": "msdyn_richtextfiles",
 		"imageFileAttributeName": "msdyn_imageblob"
 	},
-	"attachmentEntity": {
-		"name": "msdyn_richtextfiles",
-		"fileAttributeName": "msdyn_fileblob"
+	"readOnlySettings": {
 	},
-	"showAsTabControl": false,
-	"showFullScreenExpander": false,
-	"showHtml": false,
-	"showPreview": false,
-	"showPreviewHeaderWarning": false,
 	"sanitizerAllowlist": {
 		"attributes": [],
 		"cssProperties": [],
@@ -903,8 +939,11 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 		"protocols": [],
 		"tags": []
 	},
-	"readOnlySettings": {
-	}
+	"showAsTabControl": false,
+	"showFullScreenExpander": false,
+	"showHtml": false,
+	"showPreview": false,
+	"showPreviewHeaderWarning": false
 }
 ``` 
 ## Find the current setting for a rich text editor configuration
