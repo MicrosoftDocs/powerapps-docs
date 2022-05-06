@@ -5,7 +5,7 @@ author: ankitavish
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/06/2021
+ms.date: 06/05/2022
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
@@ -28,16 +28,18 @@ The contact us webpage can be viewed in Power Apps [portals Studio](portal-desig
 
 - A [basic form component](add-form.md) named **Simple contact us form**, which is linked to the Dataverse table Feedback and set to Insert mode.
 
-- An [iframe component](add-iframe.md) linked to Bing maps.
+- Earlier versions of the sample may have included an [iframe component](add-iframe.md) linked to a map url.
 
 > [!NOTE]
-> The Bing maps link doesn't have any functionality or geo-location enabled. It's provided as an example iframe component.
+> The maps link doesn't have any functionality or geo-location enabled. It's provided as an example of a iframe component.
 
 :::image type="content" source="media/contact-us-sample/contact-us-portalstudio.png" alt-text="Contact us page in portals Studio.":::
 
 ## Table permissions
 
-To allow portal users to be able to insert records into the feedback table, [table permissions](/configure/assign-entity-permissions.md) are configured to provide Create, Read, Write, and Delete permissions for the Administrator, Anonymous User, and Authenticated User [web roles](/configure/create-web-roles.md).
+To allow portal users to be able to insert records into the feedback table, [table permissions](configure/assign-entity-permissions.md) 
+
+are configured to provide Create, Read, Write, and Delete permissions for the Administrator, Anonymous User, and Authenticated User [web roles](configure/create-web-roles.md).
 
 :::image type="content" source="media/contact-us-sample/feedback-tablepermissions.png" alt-text="Feedback table permissions.":::
 
@@ -46,7 +48,7 @@ To allow portal users to be able to insert records into the feedback table, [tab
 
 ## Basic form metadata
 
-All the form fields that the **Contact us** form requires have been created using [basic form metadata](/configure/configure-basic-form-metadata.md). These settings can be viewed and modified using the [Portal Management app](/configure/configure-portal.md).
+All the form fields that the **Contact us** form requires have been created using [basic form metadata](configure/configure-basic-form-metadata.md). These settings can be viewed and modified using the [Portal Management app](configure/configure-portal.md).
 
 :::image type="content" source="media/contact-us-sample/basicform-metadata.png" alt-text="Basic form metadata.":::
 
