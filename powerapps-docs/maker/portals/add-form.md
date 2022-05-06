@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/20/2022
+ms.date: 04/06/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -73,6 +73,9 @@ To add a form component:
 
         > [!div class=mx-imgBorder]
         > ![Form properties.](media/form-props.png "Form properties")
+
+    > [!NOTE]
+    > By default, permissions are applied to components containing data. Making it visible to anyone, or only to specific roles, is done by managing table permissions.
 
 ### See also
 

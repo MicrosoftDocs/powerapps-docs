@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/20/2022
+ms.date: 05/06/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -62,6 +62,9 @@ To add list component:
 
     > [!div class=mx-imgBorder]
     > ![list properties.](media/list-props.png "List properties")
+
+    > [!NOTE]
+    > By default, permissions are applied to components containing data. Making it visible to anyone, or only to specific roles, is done by managing table permissions.
 
 ### See also
 
