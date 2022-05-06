@@ -1,21 +1,22 @@
 ---
-title: "setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setDisabled method.
-ms.date: 04/19/2021
-
+title: "control.setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.setDisabled method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 86383cb1-c4c8-4e82-9f60-1dc4588b519d
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setDisabled (Client API reference)
+# control.setDisabled (Client API reference)
 
 
 

@@ -1,15 +1,14 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 04/01/2021
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.custom: "intro-internal"
 ms.topic: "index-page"
-ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.subservice: pcf
-ms.author: "nabuthuk"
-author: Nkrb
 ---
 
 # Create your first component 
@@ -74,6 +73,12 @@ To create a new project:
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
+1. After npm install, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+   ```
+   npm run refreshTypes
+   ```
+ 
+   
 ## Implementing manifest
 
 The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. More information: [Manifest](manifest-schema-reference/manifest.md).

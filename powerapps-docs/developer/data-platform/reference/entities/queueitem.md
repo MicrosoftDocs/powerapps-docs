@@ -1,8 +1,8 @@
 ---
-title: "QueueItem table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "QueueItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -109,7 +109,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|objectid|
 |RequiredLevel|ApplicationRequired|
-|Targets|activitypointer,appointment,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
+|Targets|activitypointer,appointment,chat,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
 |Type|Lookup|
 
 
@@ -693,7 +693,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4216|Social Activity|For internal use only.|
 |4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10086|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10088|Activity record for the Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10101|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
 
 
 
@@ -906,7 +907,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_QueueItem_AsyncOperations"></a> QueueItem_AsyncOperations
 
-Same as asyncoperation table [QueueItem_AsyncOperations](asyncoperation.md#BKMK_QueueItem_AsyncOperations) Many-To-One relationship.
+Same as the [QueueItem_AsyncOperations](asyncoperation.md#BKMK_QueueItem_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -921,7 +922,7 @@ Same as asyncoperation table [QueueItem_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_QueueItem_SyncErrors"></a> QueueItem_SyncErrors
 
-Same as syncerror table [QueueItem_SyncErrors](syncerror.md#BKMK_QueueItem_SyncErrors) Many-To-One relationship.
+Same as the [QueueItem_SyncErrors](syncerror.md#BKMK_QueueItem_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -936,7 +937,7 @@ Same as syncerror table [QueueItem_SyncErrors](syncerror.md#BKMK_QueueItem_SyncE
 
 ### <a name="BKMK_QueueItem_BulkDeleteFailures"></a> QueueItem_BulkDeleteFailures
 
-Same as bulkdeletefailure table [QueueItem_BulkDeleteFailures](bulkdeletefailure.md#BKMK_QueueItem_BulkDeleteFailures) Many-To-One relationship.
+Same as the [QueueItem_BulkDeleteFailures](bulkdeletefailure.md#BKMK_QueueItem_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -951,7 +952,7 @@ Same as bulkdeletefailure table [QueueItem_BulkDeleteFailures](bulkdeletefailure
 
 ### <a name="BKMK_queueitem_principalobjectattributeaccess"></a> queueitem_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [queueitem_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queueitem_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [queueitem_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queueitem_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -966,7 +967,7 @@ Same as principalobjectattributeaccess table [queueitem_principalobjectattribute
 
 ### <a name="BKMK_QueueItem_ProcessSessions"></a> QueueItem_ProcessSessions
 
-Same as processsession table [QueueItem_ProcessSessions](processsession.md#BKMK_QueueItem_ProcessSessions) Many-To-One relationship.
+Same as the [QueueItem_ProcessSessions](processsession.md#BKMK_QueueItem_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1003,90 +1004,97 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [RecurringAppointmentMaster_QueueItem](#BKMK_RecurringAppointmentMaster_QueueItem)
 - [Letter_QueueItem](#BKMK_Letter_QueueItem)
 - [lk_queueitembase_modifiedby](#BKMK_lk_queueitembase_modifiedby)
+- [chat_QueueItems](#BKMK_chat_QueueItems)
 - [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
 
 
 ### <a name="BKMK_knowledgearticle_QueueItems"></a> knowledgearticle_QueueItems
 
-See knowledgearticle Table [knowledgearticle_QueueItems](knowledgearticle.md#BKMK_knowledgearticle_QueueItems) One-To-Many relationship.
+See the [knowledgearticle_QueueItems](knowledgearticle.md#BKMK_knowledgearticle_QueueItems) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_queueitem_createdonbehalfby"></a> lk_queueitem_createdonbehalfby
 
-See systemuser Table [lk_queueitem_createdonbehalfby](systemuser.md#BKMK_lk_queueitem_createdonbehalfby) One-To-Many relationship.
+See the [lk_queueitem_createdonbehalfby](systemuser.md#BKMK_lk_queueitem_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_queueitembase_workerid"></a> lk_queueitembase_workerid
 
-See systemuser Table [lk_queueitembase_workerid](systemuser.md#BKMK_lk_queueitembase_workerid) One-To-Many relationship.
+See the [lk_queueitembase_workerid](systemuser.md#BKMK_lk_queueitembase_workerid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ActivityPointer_QueueItem"></a> ActivityPointer_QueueItem
 
-See activitypointer Table [ActivityPointer_QueueItem](activitypointer.md#BKMK_ActivityPointer_QueueItem) One-To-Many relationship.
+See the [ActivityPointer_QueueItem](activitypointer.md#BKMK_ActivityPointer_QueueItem) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_queue_entries"></a> queue_entries
 
-See queue Table [queue_entries](queue.md#BKMK_queue_entries) One-To-Many relationship.
+See the [queue_entries](queue.md#BKMK_queue_entries) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_lk_queueitembase_createdby"></a> lk_queueitembase_createdby
 
-See systemuser Table [lk_queueitembase_createdby](systemuser.md#BKMK_lk_queueitembase_createdby) One-To-Many relationship.
+See the [lk_queueitembase_createdby](systemuser.md#BKMK_lk_queueitembase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_queueitems"></a> organization_queueitems
 
-See organization Table [organization_queueitems](organization.md#BKMK_organization_queueitems) One-To-Many relationship.
+See the [organization_queueitems](organization.md#BKMK_organization_queueitems) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_QueueItem"></a> TransactionCurrency_QueueItem
 
-See transactioncurrency Table [TransactionCurrency_QueueItem](transactioncurrency.md#BKMK_TransactionCurrency_QueueItem) One-To-Many relationship.
+See the [TransactionCurrency_QueueItem](transactioncurrency.md#BKMK_TransactionCurrency_QueueItem) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_Appointment_QueueItem"></a> Appointment_QueueItem
 
-See appointment Table [Appointment_QueueItem](appointment.md#BKMK_Appointment_QueueItem) One-To-Many relationship.
+See the [Appointment_QueueItem](appointment.md#BKMK_Appointment_QueueItem) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_Fax_QueueItem"></a> Fax_QueueItem
 
-See fax Table [Fax_QueueItem](fax.md#BKMK_Fax_QueueItem) One-To-Many relationship.
+See the [Fax_QueueItem](fax.md#BKMK_Fax_QueueItem) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_team_queueitembase_workerid"></a> team_queueitembase_workerid
 
-See team Table [team_queueitembase_workerid](team.md#BKMK_team_queueitembase_workerid) One-To-Many relationship.
+See the [team_queueitembase_workerid](team.md#BKMK_team_queueitembase_workerid) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_Email_QueueItem"></a> Email_QueueItem
 
-See email Table [Email_QueueItem](email.md#BKMK_Email_QueueItem) One-To-Many relationship.
+See the [Email_QueueItem](email.md#BKMK_Email_QueueItem) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_SocialActivity_QueueItem"></a> SocialActivity_QueueItem
 
-See socialactivity Table [SocialActivity_QueueItem](socialactivity.md#BKMK_SocialActivity_QueueItem) One-To-Many relationship.
+See the [SocialActivity_QueueItem](socialactivity.md#BKMK_SocialActivity_QueueItem) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_lk_queueitem_modifiedonbehalfby"></a> lk_queueitem_modifiedonbehalfby
 
-See systemuser Table [lk_queueitem_modifiedonbehalfby](systemuser.md#BKMK_lk_queueitem_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_queueitem_modifiedonbehalfby](systemuser.md#BKMK_lk_queueitem_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_PhoneCall_QueueItem"></a> PhoneCall_QueueItem
 
-See phonecall Table [PhoneCall_QueueItem](phonecall.md#BKMK_PhoneCall_QueueItem) One-To-Many relationship.
+See the [PhoneCall_QueueItem](phonecall.md#BKMK_PhoneCall_QueueItem) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_Task_QueueItem"></a> Task_QueueItem
 
-See task Table [Task_QueueItem](task.md#BKMK_Task_QueueItem) One-To-Many relationship.
+See the [Task_QueueItem](task.md#BKMK_Task_QueueItem) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_RecurringAppointmentMaster_QueueItem"></a> RecurringAppointmentMaster_QueueItem
 
-See recurringappointmentmaster Table [RecurringAppointmentMaster_QueueItem](recurringappointmentmaster.md#BKMK_RecurringAppointmentMaster_QueueItem) One-To-Many relationship.
+See the [RecurringAppointmentMaster_QueueItem](recurringappointmentmaster.md#BKMK_RecurringAppointmentMaster_QueueItem) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_Letter_QueueItem"></a> Letter_QueueItem
 
-See letter Table [Letter_QueueItem](letter.md#BKMK_Letter_QueueItem) One-To-Many relationship.
+See the [Letter_QueueItem](letter.md#BKMK_Letter_QueueItem) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_lk_queueitembase_modifiedby"></a> lk_queueitembase_modifiedby
 
-See systemuser Table [lk_queueitembase_modifiedby](systemuser.md#BKMK_lk_queueitembase_modifiedby) One-To-Many relationship.
+See the [lk_queueitembase_modifiedby](systemuser.md#BKMK_lk_queueitembase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_chat_QueueItems"></a> chat_QueueItems
+
+**Added by**: Activities Patch Solution
+
+See the [chat_QueueItems](chat.md#BKMK_chat_QueueItems) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### <a name="BKMK_msdyn_knowledgearticletemplate_QueueItems"></a> msdyn_knowledgearticletemplate_QueueItems
 
 **Added by**: Knowledge Management Features Solution
 
-See msdyn_knowledgearticletemplate Table [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) One-To-Many relationship.
+See the [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) one-to-many relationship for the [msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md) table/entity.
 
 ### See also
 

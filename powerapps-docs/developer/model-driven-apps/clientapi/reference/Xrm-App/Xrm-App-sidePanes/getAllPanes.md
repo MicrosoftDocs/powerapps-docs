@@ -1,26 +1,23 @@
 ---
 title: "getAllPanes (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getAllPanes method.
-ms.date: 08/31/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 04/04/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "aorth"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # getAllPanes (Client API reference)
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Returns a collection containing all active panes.
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
 
 ## Syntax
 

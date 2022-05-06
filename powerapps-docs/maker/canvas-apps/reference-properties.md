@@ -80,7 +80,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Map](geospatial-component-map.md)** - View the physical position of objects from a data source, or by inputting new physical locations.
 
-**[Measure in MR](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
+**[Measuring Camera](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
@@ -116,7 +116,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
 
-**[View in 3D](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
+**[3D object](mixed-reality-component-view-3d.md)** - Rotate and zoom into the model with simple gestures in 3D.
 
 **[View in MR](mixed-reality-component-view-mr.md)** - See how a particular item might fit within a specified space in mixed reality.
 

@@ -5,13 +5,14 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/15/2022
+ms.date: 03/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # About lists
@@ -28,7 +29,6 @@ The list contains relationships to webpages and various properties to control th
 
 > [!Note]
 > - A list must be associated with a webpage in a given website for the list to be viewable within the site.
-> - Multi-select option set is not supported in lists.
 
 The webpages associated with the list can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu. When creating your list, the first step is to choose the table for which you want to render a list on the portal. You'll then choose one or more model-driven app views to render.
 

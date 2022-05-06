@@ -1,8 +1,8 @@
 ---
-title: "activityfileattachment table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "activityfileattachment table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the activityfileattachment table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -334,6 +334,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentIdName](#BKMK_ParentIdName)
@@ -526,10 +527,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -695,12 +696,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -827,7 +844,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [activityfileattachment_SyncErrors](syncerror.md#BKMK_activityfileattachment_SyncErrors) Many-To-One relationship.
+Same as the [activityfileattachment_SyncErrors](syncerror.md#BKMK_activityfileattachment_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -844,7 +861,7 @@ Same as syncerror table [activityfileattachment_SyncErrors](syncerror.md#BKMK_ac
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [activityfileattachment_DuplicateMatchingRecord](duplicaterecord.md#BKMK_activityfileattachment_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [activityfileattachment_DuplicateMatchingRecord](duplicaterecord.md#BKMK_activityfileattachment_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -861,7 +878,7 @@ Same as duplicaterecord table [activityfileattachment_DuplicateMatchingRecord](d
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [activityfileattachment_DuplicateBaseRecord](duplicaterecord.md#BKMK_activityfileattachment_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [activityfileattachment_DuplicateBaseRecord](duplicaterecord.md#BKMK_activityfileattachment_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -878,7 +895,7 @@ Same as duplicaterecord table [activityfileattachment_DuplicateBaseRecord](dupli
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [activityfileattachment_AsyncOperations](asyncoperation.md#BKMK_activityfileattachment_AsyncOperations) Many-To-One relationship.
+Same as the [activityfileattachment_AsyncOperations](asyncoperation.md#BKMK_activityfileattachment_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -895,7 +912,7 @@ Same as asyncoperation table [activityfileattachment_AsyncOperations](asyncopera
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [activityfileattachment_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_activityfileattachment_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [activityfileattachment_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_activityfileattachment_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -912,7 +929,7 @@ Same as mailboxtrackingfolder table [activityfileattachment_MailboxTrackingFolde
 
 **Added by**: System Solution Solution
 
-Same as processsession table [activityfileattachment_ProcessSession](processsession.md#BKMK_activityfileattachment_ProcessSession) Many-To-One relationship.
+Same as the [activityfileattachment_ProcessSession](processsession.md#BKMK_activityfileattachment_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -929,7 +946,7 @@ Same as processsession table [activityfileattachment_ProcessSession](processsess
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [activityfileattachment_BulkDeleteFailures](bulkdeletefailure.md#BKMK_activityfileattachment_BulkDeleteFailures) Many-To-One relationship.
+Same as the [activityfileattachment_BulkDeleteFailures](bulkdeletefailure.md#BKMK_activityfileattachment_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -946,7 +963,7 @@ Same as bulkdeletefailure table [activityfileattachment_BulkDeleteFailures](bulk
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [activityfileattachment_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_activityfileattachment_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [activityfileattachment_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_activityfileattachment_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -979,55 +996,55 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_activityfileattachment_createdby](systemuser.md#BKMK_lk_activityfileattachment_createdby) One-To-Many relationship.
+See the [lk_activityfileattachment_createdby](systemuser.md#BKMK_lk_activityfileattachment_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_activityfileattachment_createdonbehalfby"></a> lk_activityfileattachment_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_activityfileattachment_createdonbehalfby](systemuser.md#BKMK_lk_activityfileattachment_createdonbehalfby) One-To-Many relationship.
+See the [lk_activityfileattachment_createdonbehalfby](systemuser.md#BKMK_lk_activityfileattachment_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_activityfileattachment_modifiedby"></a> lk_activityfileattachment_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_activityfileattachment_modifiedby](systemuser.md#BKMK_lk_activityfileattachment_modifiedby) One-To-Many relationship.
+See the [lk_activityfileattachment_modifiedby](systemuser.md#BKMK_lk_activityfileattachment_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_activityfileattachment_modifiedonbehalfby"></a> lk_activityfileattachment_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_activityfileattachment_modifiedonbehalfby](systemuser.md#BKMK_lk_activityfileattachment_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_activityfileattachment_modifiedonbehalfby](systemuser.md#BKMK_lk_activityfileattachment_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_activityfileattachment"></a> user_activityfileattachment
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_activityfileattachment](systemuser.md#BKMK_user_activityfileattachment) One-To-Many relationship.
+See the [user_activityfileattachment](systemuser.md#BKMK_user_activityfileattachment) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_activityfileattachment"></a> team_activityfileattachment
 
 **Added by**: System Solution Solution
 
-See team Table [team_activityfileattachment](team.md#BKMK_team_activityfileattachment) One-To-Many relationship.
+See the [team_activityfileattachment](team.md#BKMK_team_activityfileattachment) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_activityfileattachment"></a> business_unit_activityfileattachment
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_activityfileattachment](businessunit.md#BKMK_business_unit_activityfileattachment) One-To-Many relationship.
+See the [business_unit_activityfileattachment](businessunit.md#BKMK_business_unit_activityfileattachment) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_post_activity_file_attachment"></a> post_activity_file_attachment
 
 **Added by**: System Solution Solution
 
-See post Table [post_activity_file_attachment](post.md#BKMK_post_activity_file_attachment) One-To-Many relationship.
+See the [post_activity_file_attachment](post.md#BKMK_post_activity_file_attachment) one-to-many relationship for the [post](post.md) table/entity.
 
 ### <a name="BKMK_post_comment_activity_file_attachment"></a> post_comment_activity_file_attachment
 
 **Added by**: System Solution Solution
 
-See postcomment Table [post_comment_activity_file_attachment](postcomment.md#BKMK_post_comment_activity_file_attachment) One-To-Many relationship.
+See the [post_comment_activity_file_attachment](postcomment.md#BKMK_post_comment_activity_file_attachment) one-to-many relationship for the [postcomment](postcomment.md) table/entity.
 
 ### See also
 

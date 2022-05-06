@@ -5,26 +5,21 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 12/17/2021
+ms.date: 04/20/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
-# Configure Dataverse search in portals (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Configure Dataverse search in portals
 
 ## Overview
 
 [Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse. To enable Dataverse search, add the [site setting](configure-site-settings.md) **Search/EnableDataverseSearch** and set it to **true**. If this setting is set to **false** or doesn't exist at all, [Lucene.NET](search.md) search will be enabled instead.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 This walkthrough explains how to enable search for the **Order Products** table in the Northwind Traders sample database, which is available with Dataverse. For more information about sample databases, go to [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 
@@ -118,6 +113,9 @@ You can follow the walkthrough with a table of your choice by replacing **nwind\
     For this example, the **Global** access type is provided to the **nwind\_products** table.
 
     :::image type="content" source="media/dataverse-search/global-read-permission.png" alt-text="Configuring global read permission.":::
+
+    > [!NOTE]
+    > The **Global** access type will provide access to all records of the **nwind\_products** table to related contacts of the associated web role (**Authenticated Users** web role will apply to all logged in portal users). Consider your data security requirements and choose other access types to restrict access to data. Please refer to [Configure security using table permissions](entity-permissions-studio.md) for more details.
 
 1. Select **Save & Close**.
 

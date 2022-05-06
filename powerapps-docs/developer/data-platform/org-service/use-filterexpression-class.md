@@ -1,19 +1,20 @@
 ---
 title: "Use the FilterExpression class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the FilterExpression class to build a query that expresses multiple conditions" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/02/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Use the FilterExpression class
@@ -31,7 +32,7 @@ In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpr
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters>|Gets or sets a hierarchy of condition and logical filter expressions that filter the results of the query.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter>|Gets or sets a value that indicates whether the expression is part of a quick find query.|  
   
- The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class also includes several helper methods that make it easier to create queries. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> method adds a <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> to the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions> property for the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>, reducing the amount of code needed to construct the condition expression. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.AddFilter*>.<xref:Microsoft.Xrm.Sdk.Query.LogicalOperator> method adds a new filter to the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> property of the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class.  
+The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class also includes several helper methods that make it easier to create queries. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> method adds a <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> to the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions> property for the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>, reducing the amount of code needed to construct the condition expression. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.AddFilter*>.<xref:Microsoft.Xrm.Sdk.Query.LogicalOperator> method adds a new filter to the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters> property of the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class.  
   
 <a name="example"></a>   
 

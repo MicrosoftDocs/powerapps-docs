@@ -2,7 +2,7 @@
 title: "Productive main form design in model-driven apps | MicrosoftDocs"
 description: Learn how to design productive main forms for your model-driven apps.
 ms.custom: ""
-ms.date: 04/27/2021
+ms.date: 04/07/2022
 ms.reviewer: "Mattp123"
 
 ms.suite: ""
@@ -72,10 +72,9 @@ The following image shows the layout of a Unified Interface application.
 
 - The form header is part of the form. It includes the table and record name, the ability to switch to additional forms for the table, four read-only fields of the record, and the [tabs](model-driven-app-glossary.md#tab) included on the form. Forms only appear in the form selector if they've been enabled and added to the app. More information: [Create and design model-driven app forms](create-design-forms.md).
 - Form headers also have a mode where more than four fields can be added and provide a simple navigation to edit the fields in the header and any additional field you want a user to easily access from the form header. Additional tabs should be used to access information that isn't primary to the task at hand, or to focus the user on data or information that's specific to a given task but isn't primary to the job. Information that's necessary and is primary to working with data should be on the first tab and should not be hidden.
-- The form body is the area on the form that should be used to interact with data of the [record](model-driven-app-glossary.md#record) and any related records that are essential to completing a task. We recommend that the you limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs. [building forms based on specific business needs and roles](design-considerations-main-forms.md) should also be considered when designing your application.
+- The form body is the area on the form that should be used to interact with data of the [record](model-driven-app-glossary.md#record) and any related records that are essential to completing a task. We recommend that you limit the data to the top tasks that need to be done on the first tab and move secondary tasks to additional tabs. [building forms based on specific business needs and roles](design-considerations-main-forms.md) should also be considered when designing your application.
   
 If some data is rarely used you should consider building another form that can be accessed when a user needs to reference that data or information.
-- The form footer displays the form status and commands for saving and displaying the form in a new pop-out window. Only the form footer width can be customized.
 
 > [!IMPORTANT]
 > [Form footers are deprecated](/power-platform/important-changes-coming#form-footers-in-model-driven-apps-wont-be-supported-with-the-2021-release-wave-2) with the 2021 Release Wave 2 (August 2021 Preview / October 2021 GA). Remove any controls you have added out of the footer.
@@ -196,7 +195,7 @@ More information: [Create a model-driven app quick view form to view information
 
 There are many times when you need to build an experience that focuses the user on the task at hand without additional distraction that might cause inefficiency. This is especially important when you're working with tables and records that have global components, which are created and automatically added to forms regardless of the task you're trying to build. Although this provides a shareable and easy-to-build infrastructure that drives consistency across an app, it does at times provide unnecessary distraction.
 
-Form display options should be used when you want to lessen the number of actions, focus a user to complete a task, and reduce clutter by removing unnecessary components. Components that can be removed from a form include the command bar, the header body, the form tabs, and the form footer.
+Form display options should be used when you want to lessen the number of actions, focus a user to complete a task, and reduce clutter by removing unnecessary components. Components that can be removed from a form include the command bar, the header body, and the form tabs.
 
 All these types of options are only available via the client API and manual formxml updates. Manual formxml manipulation can cause issues importing solutions if done incorrectly. Remove global form components carefully when designing your form.
 
@@ -219,10 +218,6 @@ In this example, the header has been removed to promote a dense form that focuse
 In this example, the tabs have been removed. This can be helpful when you build a form that only has a single tab or you want to focus the user on the first tab of a form without the distractions of additional tabs that can lead to loss in productivity for a specific task. More information: [setTabNavigatorVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection/setTabNavigatorVisible.md)
 
 :::image type="content" source="media/form-no-tabs.png" alt-text="Form without tabs shown in an app.":::
-
-In some scenarios where you want more data density, and don't use or need the form footer, you can easily remove it to provide more data and information on the form. This can also help drive consistency as users move from dashboards and view pages where footers aren't included on the page. In this example, the form footer has been removed to reduce clutter and drive data density. More information: [setVisible (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection/setVisible.md)
-
-:::image type="content" source="media/form-no-footer.png" alt-text="Form without a footer shown in an app.":::
 
 ### Form display option to use the entire space of a tab
 
