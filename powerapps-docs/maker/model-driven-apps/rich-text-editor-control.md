@@ -330,6 +330,22 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 
 </tr>
+
+<tr>
+<td>
+  disallowedContent
+</td>
+
+<td>
+
+  Lets you disallow elements that you do not want to have in your content. You are able to disallow entire elements or by attributes, classes, and styles.  For more information about the CKEditor "disallowedContent" configuration, see [ Disallowed Content Rules](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules).
+</td>
+<td>
+
+  ```"disallowedContent": "form[action]; *[formaction]; script; *[on*]"```
+</td>
+
+</tr>
 </table>
 
 
