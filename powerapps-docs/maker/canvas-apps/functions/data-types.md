@@ -112,7 +112,7 @@ $"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}!"
 | John | Qunicy | Doe | `Welcome John Quincy Doe!` |
 | John | *blank* | Doe | `Welcome John Doe!` |
 | *blank* | *blank* | Doe | `Welcome Doe!` |
-| *blank* | *blank* | *blank* | `welcome Friend!` |
+| *blank* | *blank* | *blank* | `Welcome Friend!` |
 
 ### Newlines
 
