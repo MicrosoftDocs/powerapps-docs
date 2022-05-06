@@ -132,7 +132,7 @@ The following two images visually identify the two configuration sections. For t
 
 ### defaultSupportedProps
 
-You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
+You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses version 4.17.1 of CKEditor.
 
 
 <table>
