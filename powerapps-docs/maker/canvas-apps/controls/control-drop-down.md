@@ -2,11 +2,10 @@
 title: Drop down control in Power Apps
 description: Learn about the details, properties and examples of the drop down control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/09/2021
+ms.date: 05/06/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -123,7 +122,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 > [!NOTE]
-> Flyout border properties controlled by FocusedBorder properties.
+> Flyout border properties are controlled by **FocusedBorder** properties.
 
 ## Examples
 
