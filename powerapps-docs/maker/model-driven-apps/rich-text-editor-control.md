@@ -171,7 +171,8 @@ You can configure all of the CKEditor-supported properties under this property. 
   "stickyStyle": {
      "font-size": "9pt",
      "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
-}
+},
+"stickyStyles_defaultTag": "div"
   ```
 </td>
 </tr>
