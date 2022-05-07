@@ -1169,9 +1169,9 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Canvas components and component libraries
+    - name: Create a canvas component
       items:
-        - name: Components overview
+        - name: Canvas component overview
           href: ./canvas-apps/create-component.md
         - name: Component library
           href: ./canvas-apps/component-library.md
@@ -1179,6 +1179,8 @@
           href: ./canvas-apps/component-library-alm.md
         - name: Map input fields
           href: ./canvas-apps/map-component-input-fields.md
+        - name: Add multimedia to a component
+          href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
