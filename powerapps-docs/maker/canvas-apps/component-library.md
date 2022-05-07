@@ -181,13 +181,14 @@ Sharing a component library works the same way you share a canvas app. When you 
 - If you're importing an app and a component library in an environment for the first time, ensure the app uses the latest version of the component included with the component library. Otherwise, the app won't receive updates after the import. The app will recognize and prompt for the updated version upon subsequent component library imports to the same environment.
 - Code components are not supported with component libraries.
 
-## Next steps
-
-Learn [behavior formulas](component-behavior.md) for canvas apps.
-
 ### See also
 
-Canvas app [components overview](create-component.md) and working with components in an app.
-
+- [Canvas components](create-component.md)
+- [Component library application lifecycle management (ALM)](component-library-alm.md)
+- [Map input fields of a component](map-component-input-fields.md)
+- [Add multimedia to a component](component-multimedia.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

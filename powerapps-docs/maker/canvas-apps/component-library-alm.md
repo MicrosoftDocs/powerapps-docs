@@ -90,4 +90,14 @@ Dependencies are calculated based on the latest published state of an app. If yo
     - If you're consuming the solution, check that the canvas app has properly identified the component libraries as [solution dependencies](/power-platform/alm/solution-concepts-alm#solution-dependencies). If the solution doesn't properly identify the component libraries as solution dependencies, that means the app dependency to the component library link hasn't been created properly. In that case, check with the solution provider to resolve the issue.
     - If you're the solution publisher, check that the component libraries are saved with the library logical name in the solution, and that it's same as the one referenced in the component library .msapp package.
 
+### See also
+
+- [Canvas components](create-component.md)
+- [Component library](component-library.md)
+- [Map input fields of a component](map-component-input-fields.md)
+- [Add multimedia to a component](component-multimedia.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -125,3 +125,10 @@ When turning the setting on, ensure you save and reopen the app in Power Apps St
 
 - [Behavior formulas for components](component-behavior.md)
 - [Deprecated: Map component fields using dropdown option](important-changes-deprecations.md#map-component-fields-using-dropdown-option)
+- [Canvas components](create-component.md)
+- [Component library](component-library.md)
+- [Component library application lifecycle management (ALM)](component-library.md)
+- [Add multimedia to a component](component-multimedia.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)

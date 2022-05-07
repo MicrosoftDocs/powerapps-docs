@@ -4,7 +4,7 @@ description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 04/19/2022
+ms.date: 05/06/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -279,5 +279,14 @@ Once you save the app, you can reuse the components of this app using the same m
 
 Learn to use a [component library](component-library.md) to create a repository of reusable components.
 
+### See also
+
+- [Component library](component-library.md)
+- [Component library application lifecycle management (ALM)](component-library-alm.md)
+- [Map input fields of a component](map-component-input-fields.md)
+- [Add multimedia to a component](component-multimedia.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
