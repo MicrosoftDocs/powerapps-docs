@@ -1,5 +1,5 @@
 ---
-title: Create a canvas component (contains video)
+title: Canvas component overview (contains video)
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.subservice: canvas-developer
@@ -18,7 +18,7 @@ contributors:
 ms.custom: intro-internal
 ---
 
-# Create a canvas component
+# Canvas component overview
 
 > [!NOTE]
 > - This section explains canvas components that encompasses low-code UI extensibility capabilities. Professional developers can also use the [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) to build code components.
