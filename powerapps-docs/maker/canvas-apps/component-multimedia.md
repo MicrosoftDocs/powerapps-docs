@@ -4,7 +4,7 @@ description: Learn about how to add multimedia to a canvas component.
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 05/06/2022
+ms.date: 05/23/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:

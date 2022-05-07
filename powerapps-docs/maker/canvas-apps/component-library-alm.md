@@ -4,7 +4,7 @@ description: Learn about the application lifecycle management (ALM) with compone
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 04/21/2022
+ms.date: 05/23/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
