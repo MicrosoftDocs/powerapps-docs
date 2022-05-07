@@ -24,7 +24,7 @@ To add multimedia to a component, use the same steps that you'd follow when addi
 
 After adding multimedia files to a component inside the component library, the files will appear under the media pane as they do for canvas apps:
 
-:::image type="content" source="media/component-multimedia/add-multimedia.png" alt-text="Slider component using an input property named value.":::
+:::image type="content" source="media/component-multimedia/add-multimedia.png" alt-text="Example of Power Apps Studio with a library and multimedia added.":::
 
 Media resources in a component library are defined at the library level, and not tied to individual components. Importing any component from the component library will import all media resources from the library to the app. However, you can remove the unused media when app customization is complete. More information: [Remove unused media](add-images-pictures-audio-video.md#remove-unused-media)
 
@@ -51,6 +51,6 @@ After the import, you can insert a [slider](controls/control-slider.md) control,
 
 When you play this app, the slider movement in the app would then move the imported slider component:
 
-:::image type="content" source="media/component-multimedia/play-app.png" alt-text="Set component value to the slider's value.":::
+:::image type="content" source="media/component-multimedia/play-app.png" alt-text="App being played that will move slider inside component as slider control is moved":::
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
