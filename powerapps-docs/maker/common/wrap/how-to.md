@@ -127,7 +127,7 @@ In this step, you'll use App Center to create an app container for your mobile a
     1. Select **New API token**.
     1. Enter a description.
     1. Select **Full Access**.
-    1. Select **New API token**.
+    1. Select **Add new API token**.
         > [!NOTE]
         > Ensure you copy the token before closing the dialog box.
     1. Copy the token, and save it for canvas app wrap configuration [later](#app-center-api-token).
