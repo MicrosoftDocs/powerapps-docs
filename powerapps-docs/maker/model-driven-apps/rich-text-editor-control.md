@@ -76,7 +76,7 @@ The rich text editor control comes with a rich set of configuration options that
 
 To create and use advanced configuration for the rich text editor control, follow these steps:
 
-1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Additional sample rich text editor configurations](#additional-sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
+1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [More sample rich text editor configurations](#more-sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 1. Add the relative URL for the JavaScript web resource (for example */WebResources/contoso_toolbartoprte*) in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
 
@@ -115,7 +115,7 @@ A rich text-enabled column has a limited set of configuration that can be config
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see [defaultSupportProps](#defaultSupportProps). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for additional plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see [defaultSupportedProps](#defaultSupportedProps). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
@@ -293,7 +293,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  A comma-separated list of additional plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
+  A comma-separated list of other plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
 </td>
 <td>
 
@@ -353,7 +353,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 ### Individual configuration settings
 
-You can configure additional configuration settings that affect how your editor functions.
+You can configure other configuration settings that affect how your editor functions.
 
 
 <table>
@@ -370,7 +370,7 @@ You can configure additional configuration settings that affect how your editor 
 
 <td>
 
-  By setting this property and specifying a different table, you can avoid using the default table for files so that you can enforce additional security if needed. <br></br>
+  By setting this property and specifying a different table, you can avoid using the default table for files so that you can enforce more security if needed. <br></br>
    More information: [File columns (Microsoft Dataverse) - Power Apps](/power-apps/developer/data-platform/file-attributes)
  
   
@@ -463,7 +463,7 @@ Default:
 </td>
 <td>
 
-No default value as this is how you can extend your functionality by adding additional plugins not originally provided. The path value can be an absolute or relative URL.
+No default value as this is how you can extend your functionality by adding other plugins not originally provided. The path value can be an absolute or relative URL.
 
 Example:
 ```
@@ -495,7 +495,7 @@ Example:
 
 <td>
 
-  By setting this property and specifying a different table, you can avoid using the default table for images so that you can enforce additional security if needed. <br></br>
+  By setting this property and specifying a different table, you can avoid using the default table for images so that you can enforce more security if needed. <br></br>
   More information: [Image columns (Microsoft Dataverse) - Power Apps](/power-apps/developer/data-platform/image-attributes)
   
  
@@ -539,7 +539,7 @@ Default:
 
 <td>
 
-By setting this property, you can configure additional behaviors for the column when viewed in a read-only or disabled state. 
+By setting this property, you can configure other behaviors for the column when viewed in a read-only or disabled state. 
 
 </td>
 <td>
@@ -570,7 +570,7 @@ Default:
 
 <td>
 
-By setting this property, you can allow additional content to be displayed. 
+By setting this property, you can allow more content to be displayed. 
 
 </td>
 <td>
@@ -609,7 +609,7 @@ Default:
 
 <td>
 
-By setting this property, you can display additional commands above the editor window. 
+By setting this property, you can display more commands above the editor window. 
 
 Must be set to true to enable the following attributes:
 - showFullScreenExpander
@@ -743,7 +743,7 @@ The rich text editor control works best with HTML 5 content, although HTML 4 tag
  ```
 
 
-## Additional sample rich text editor configurations
+## More sample rich text editor configurations
 
 
 ### Add the full screen expander
