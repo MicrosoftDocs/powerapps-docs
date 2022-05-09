@@ -169,7 +169,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Sign the iOS Archive
 
-1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
+1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
 
 1. Open terminal, and change directory to the unzipped folder.
 
