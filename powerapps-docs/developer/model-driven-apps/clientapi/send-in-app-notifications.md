@@ -186,6 +186,8 @@ Below is the supported markdown.
 |Numbered list|`1. Green\r2. Orange\r3. Blue`|
 |Hyperlinks|`[Title](url)`|
 
+Newlines can be included with the body using `\n\n\n\n`.
+
 ### Changing the navigation target in a notification link
 
 You can control where a navigation link opens by setting the `navigationTarget` parameter. 

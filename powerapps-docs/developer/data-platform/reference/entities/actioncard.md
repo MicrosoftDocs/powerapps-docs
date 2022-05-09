@@ -1,7 +1,7 @@
 ---
 title: "ActionCard table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActionCard table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -363,7 +363,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,appointment,contact,email,fax,letter,phonecall,recurringappointmentmaster,task|
+|Targets|account,appointment,chat,contact,email,fax,letter,phonecall,recurringappointmentmaster,task|
 |Type|Lookup|
 
 
@@ -964,6 +964,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [appointment_actioncard](#BKMK_appointment_actioncard)
 - [fax_actioncard](#BKMK_fax_actioncard)
 - [lk_actioncardbase_modifiedonbehalfby](#BKMK_lk_actioncardbase_modifiedonbehalfby)
+- [chat_ActionCards](#BKMK_chat_ActionCards)
 
 
 ### <a name="BKMK_contact_actioncard"></a> contact_actioncard
@@ -1025,6 +1026,12 @@ See the [fax_actioncard](fax.md#BKMK_fax_actioncard) one-to-many relationship fo
 ### <a name="BKMK_lk_actioncardbase_modifiedonbehalfby"></a> lk_actioncardbase_modifiedonbehalfby
 
 See the [lk_actioncardbase_modifiedonbehalfby](systemuser.md#BKMK_lk_actioncardbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_chat_ActionCards"></a> chat_ActionCards
+
+**Added by**: Activities Patch Solution
+
+See the [chat_ActionCards](chat.md#BKMK_chat_ActionCards) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### See also
 

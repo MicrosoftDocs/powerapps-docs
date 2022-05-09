@@ -407,6 +407,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Location
 - Layout
 - ScreenSize
+- User
 
 ### See also
 
