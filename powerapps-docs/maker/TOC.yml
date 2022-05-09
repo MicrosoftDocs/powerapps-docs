@@ -51,7 +51,7 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: In-app notifications (preview)
+      - name: In-app notifications
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -1450,6 +1450,8 @@
           href: ./model-driven-apps/commanding-designer-use-custom-pages-as-dialogs.md
         - name: Manage commands in solutions
           href: ./model-driven-apps/manage-commands-in-solutions.md
+        - name: Command scopes
+          href: ./model-driven-apps/commanding-scopes.md
         - name: Command designer limitations
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
@@ -1595,7 +1597,7 @@
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile (preview)
+  - name: In-app notifications in Power Apps mobile
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
