@@ -36,7 +36,7 @@ For this tutorial you need install the following components:
 1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the Add to PATH option is select)
 1. [node.js](https://nodejs.org/en/download/) (LTS version is recommended)
 1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either the Visual Studio Code extension or the MSI installer)
-1. One of the following: (At minimum select the workload `.NET build tools`.)
+1. .NET Build tools by installing one of the following: (At minimum select the workload `.NET build tools`.)
    - Visual Studio 2022
       - [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). 
       - [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022).
@@ -381,8 +381,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    ```
 
    > [!NOTE]
-   > If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`. Add `MSBuild.exe/dotnet.exe` in Path environment variable or use `Developer Command Prompt for Visual Studio Code`, you must install either [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/) or [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022) (make sure to select the `.NET build tools` workload).
-
+   > If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`. Add `MSBuild.exe/dotnet.exe` in Path environment variable or use `Developer Command Prompt for Visual Studio Code`. As mentioned in [Prerequisites](#prerequisites), you must install .NET build tools.
    > [!TIP]
    > You will see the message *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Dataverse and run the solution checker.
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
