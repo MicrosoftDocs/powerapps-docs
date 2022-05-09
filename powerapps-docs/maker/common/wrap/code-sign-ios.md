@@ -177,7 +177,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="Folder structure.":::
 
-1. Open terminal, and change directory to the folder. In this example, **com_single_wrap**.
+1. Open terminal, and change directory to the folder. In this example, **com.single.wrap**.
 
 1. Enter `pwsh` to start PowerShell in the terminal.
 
@@ -185,7 +185,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
-1. After the script finishes, you'll see an .ipa  file created. In this example, **com_single_wrap.ipa**.
+1. After the script finishes, you'll see an .ipa  file created. In this example, **com.single.wrap.ipa**.
 
     :::image type="content" source="media/code-sign-ios/package.png" alt-text="IPA package.":::
 
