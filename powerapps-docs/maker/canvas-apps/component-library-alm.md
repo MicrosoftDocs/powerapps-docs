@@ -25,14 +25,14 @@ To use a component from a component library, you have to first import the compon
 > [!NOTE]
 > In this article, the term "import" refers to importing a component from a component library to an app, and shouldn't be confused with importing a solution into Dataverse.
 
-When a component from a component library is imported into a canvas app, that component's definition is copied into the definition of the canvas app. Once a component definition has been imported, the app is "self-contained" as far as that component definition is concerned. The app maker can choose to [edit the component](component-library.md#library-component-customization), and create  local instances of the component within the app. At this point there's no direct link to the component library from where the component originated. This self-containment characteristic also applies if the canvas app is then migrated to a different environment where the component library is not present.
+When a component from a component library is imported into a canvas app, that component's definition is copied into the definition of the canvas app. Once a component definition has been imported, the app is "self-contained" as far as that component definition is concerned. The app maker can choose to [edit the component](component-library.md#library-component-customization), and create  local instances of the component within the app. At this point there's no direct link to the component library from where the component originated. This self-containment characteristic also applies if the canvas app is then migrated to a different environment where the component library isn't present.
 You can continue to create instances of the imported component definition within the apps in the target environment, and the apps can still be published and played. No new updates will be prompted or received in the consuming app in this case.
 
 In order to maintain the relationship from the app to the component library, ensure that you use the component library to make any changes to the component, instead of editing the component within the consuming app.
 
 ## Canvas apps and component libraries solution support
 
-Consistent with the other solution object dependencies, if a canvas app uses a control from a component library, it'll have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution or install it as a pre-requisite. App to component library dependency is maintained in the target environment. At a later point when a component library with the updated component is imported using a solution into the target environment, existing apps will get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
+Consistent with the other solution object dependencies, if a canvas app uses a control from a component library, it will have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution or install it as a pre-requisite. App to component library dependency is maintained in the target environment. At a later point, when a component library with the updated component is imported using a solution into the target environment, existing apps will get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
 
 ### Creating and exporting component library in a solution
 
@@ -40,7 +40,7 @@ You can either create a component library directly from within the solution, or 
 
 :::image type="content" source="media/component-library-alm/new-add-existing-library-solution.png" alt-text="Add an existing component library to a solution, or a new one.":::
 
-When a component library is saved in an environment that has Dataverse available, component library is automatically added to the default solution. A unique logical name is generated for the component library with the **Default CDS Publisher** prefix. This is to ensure that the solution system is aware of its presence, and can link the dependencies from the apps that use the component library's logical name.
+When a component library is saved in an environment that has Dataverse available, component library is automatically added to the default solution. A unique logical name is generated for the component library with the **Default CDS Publisher** prefix. This behavior is to ensure that the solution system is aware of its presence, and can link the dependencies from the apps that use the component library's logical name.
 
 > [!NOTE]
 > Component libraries created before the rollout of the component library ALM feature need to be edited, published, and the editor must be closed explicitly before they're enabled for the ALM capabilities. You can check the component library ALM readiness by its presence in the default solution.
@@ -79,16 +79,18 @@ Dependencies are calculated based on the latest published state of an app. If yo
 
 ## Best practices and troubleshooting
 
-1. Limit the number of components in a library to 20 to get optimal performance. Plan and create multiple component libraries in advance as the number of components in them will likely grow over time. This approach will also reduce the solution payload as apps are moved across the environment.
+- Limit the number of components in a library to 20 to get optimal performance. Plan and create multiple component libraries in advance as the number of components in them will likely grow over time. This approach will also reduce the solution payload as apps are moved across the environment.
 
-1. There's a delay from when the component library is published to when it's available to the application, and can take up to 5 minutes.
+- There's a delay from when the component library is published to when it's available to the application, and can take up to 5 minutes.
 
-1. If the app is not able to receive the update from the library component in the target environment where the solution is installed, check the following:
+- If the app isn't able to receive the update from the library component in the target environment where the solution is installed, check using the below actions:
 
-    - Determine the component library logical name from the solution view. Use the default solution if library is not explicitly added to solution.
+    - Determine the component library logical name from the solution view. Use the default solution if library isn't explicitly added to solution.
     - Download app using the library component to local computer using **File** > **Save as** > **This computer**. Rename the downloaded file to have a .zip extension, and unzip the package. Open the **Properties.json** file, and then search for the keyword "LibraryDependencies". You should see a matching library logical name.
     - If you're consuming the solution, check that the canvas app has properly identified the component libraries as [solution dependencies](/power-platform/alm/solution-concepts-alm#solution-dependencies). If the solution doesn't properly identify the component libraries as solution dependencies, that means the app dependency to the component library link hasn't been created properly. In that case, check with the solution provider to resolve the issue.
     - If you're the solution publisher, check that the component libraries are saved with the library logical name in the solution, and that it's same as the one referenced in the component library .msapp package.
+
+- Solution export always exports the latest version of the component library. Hence, always update the apps with the latest component version before exporting them though solutions. This action ensures that the apps have the same component version as available in the latest version of the component library. Apps and library are considered to be synchronized with each other when they're moved to a target environment for the first time; and hence, you're not prompted for any update being available when editing the app.
 
 ### See also
 
