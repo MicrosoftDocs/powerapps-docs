@@ -41,6 +41,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Use the Measure in MR control to take measurements 
+    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
