@@ -169,15 +169,9 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Sign the iOS Archive
 
-1. Download the .zip app package created as a result of the [wrap project](how-to.md#create-a-wrap-project).
+1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
 
-1. Unzip the package.
-
-    For example, a sample build project **iOS-Archive.zip** file downloaded from the App Center shows a folder structure like below.
-
-    :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="Folder structure.":::
-
-1. Open terminal, and change directory to the folder. In this example, **com.single.wrap**.
+1. Open terminal, and change directory to the unzipped folder.
 
 1. Enter `pwsh` to start PowerShell in the terminal.
 
