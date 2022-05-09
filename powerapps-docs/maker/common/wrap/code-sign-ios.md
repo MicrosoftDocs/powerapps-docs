@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/07/2022
+ms.date: 05/09/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -181,7 +181,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. After the script finishes, you'll see an .ipa  file created. In this example, **com.single.wrap.ipa**.
 
-    :::image type="content" source="media/code-sign-ios/package.png" alt-text="IPA package.":::
+    :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
 1. Install the .ipa file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios).
 
