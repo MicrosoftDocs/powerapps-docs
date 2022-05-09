@@ -13,7 +13,7 @@ applies_to:
 author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
-ms.author: daemelia
+ms.author: kvivek
 manager: kvivek
 ms.reviewer: Mattp123
 ms.suite: 
@@ -25,7 +25,6 @@ search.app:
   - D365CE
 ---
 # Autonumber columns
-
 
 
 Autonumber columns are columns that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these columns to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.

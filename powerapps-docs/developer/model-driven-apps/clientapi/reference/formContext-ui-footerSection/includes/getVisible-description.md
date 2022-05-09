@@ -1,1 +1,0 @@
-Returns the footer section visibility.

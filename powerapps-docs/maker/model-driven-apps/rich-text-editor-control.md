@@ -45,10 +45,12 @@ Create a new text column and configure the control, or replace an existing text 
 
 To enable the rich text editor with default values on any new or existing text column, you can set the **Format** option to **Rich text** using the following steps. More information on default values: [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
 
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableColumnFormatUpdate=true&powerappsEntities.enableModernColumn=true). 
 
    > [!NOTE]
-   > The parameters in the URL are required to display the new **Format** option in the maker experience.
+   > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions](/powerapps/developer/data-platform/data-type-format-conversions)
+
 1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.

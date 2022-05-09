@@ -1,7 +1,7 @@
 ---
 title: "Create a Custom API using the plug-in registration tool (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API using the plug-in registration tool" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/13/2022
+ms.date: 04/19/2022
 ms.reviewer: "jdaly"
 ms.topic: "article"
 author: "marcelbf" # GitHub ID
@@ -120,7 +120,7 @@ In the list of **Request parameters** or **Response properties**, select this co
 
 ## Next steps
 
-If you haven't set the `IsPrivate` property for your Custom API, after you have created your Custom API you can retrieve the service definition from the [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) using a GET request, even from your browser. If the url for your environment is `https://yourorg.crm.dynamics.com`, you can type this URL in your browser address field to retrieve the $metadata: `https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata`.
+If you haven't set the `IsPrivate` property for your Custom API, after you have created your Custom API you can retrieve the service definition from the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) using a `GET` request, even from your browser. If the url for your environment is `https://yourorg.crm.dynamics.com`, you can type this URL in your browser address field to retrieve the $metadata: `https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata`.
 
 Search the result to find the name of the Custom API and you will find the Action or Function created together with any related ComplexType to represent the return value. For example:
 

@@ -1,20 +1,14 @@
 ---
 title: "Build Windows client applications using the XRM tools (Microsoft Dataverse)| Microsoft Docs"
 description: "XRM tooling is a set of APIs that provides support for building Windows client applications for Microsoft Dataverse"
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: get-started-article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: e2f22576-1705-4854-a804-a1ca232c0cfc
-caps.latest.revision: 33
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

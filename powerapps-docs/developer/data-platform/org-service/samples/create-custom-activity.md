@@ -1,25 +1,26 @@
 ---
 title: "Sample: Create a custom activity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create a custom activity" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/17/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Create a custom activity
 
 
 
-This sample demonstrates how to create a custom activity using [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest?view=dynamics-general-ce-9) and [CreateAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest?view=dynamics-general-ce-9). You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CustomActivity). 
+This sample demonstrates how to create a custom activity using [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) and [CreateAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest). You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CustomActivity). 
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

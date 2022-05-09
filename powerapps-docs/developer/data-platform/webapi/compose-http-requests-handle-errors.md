@@ -1,25 +1,18 @@
 ---
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API, and then learn how to identify and handle errors returned in the response"
-ms.custom: ""
-ms.date: 10/15/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 64a39182-25de-4d31-951c-852025a75811
-caps.latest.revision: 13
-author: "JimDaly" # GitHub ID
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
-manager: "sunilg"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Compose HTTP requests and handle errors
