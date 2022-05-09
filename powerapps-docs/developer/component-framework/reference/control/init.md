@@ -1,16 +1,16 @@
 ---
-title: "init | MicrosoftDocs"
+title: "StandardControl.init | MicrosoftDocs"
 description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/26/2022
 ms.reviewer: jdaly
 
 ms.topic: "reference"
 applies_to: ""
 ---
-# init
+# StandardControl.init
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
 

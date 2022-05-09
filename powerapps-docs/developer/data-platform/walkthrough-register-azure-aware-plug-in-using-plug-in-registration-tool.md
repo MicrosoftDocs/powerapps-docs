@@ -1,21 +1,21 @@
 ---
 title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration tool (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to register a service endpoint step using the Plug-in Registration tool for use with Azure-Dataverse integration."
-keywords: ""
-ms.date: 03/18/2021
-
+ms.date: 04/03/2022
+author: marcelbf
+ms.author: marcelbf
+manager: pemikkel
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
-author: JimDaly # GitHub ID - Brandon Simmons
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Register an Azure-aware plug-in using the Plug-in Registration tool
@@ -72,6 +72,9 @@ Follow the steps below to register a step for an event on the service endpoint.
 Dataverse will now post the current message containing the execution context to the Service Bus whenever an account is created. The post is performed asynchronously and is not executed immediately.  
   
 <a name="BKMK_Test"></a>
+
+> [!NOTE]
+> Registered service endpoints support only port 80 for HTTP and port 443 for HTTPS. 
 
 ## Test the endpoint registration
 
