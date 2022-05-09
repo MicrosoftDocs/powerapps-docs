@@ -115,7 +115,7 @@ A rich text-enabled column has a limited set of configuration that can be config
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see [defaultSupportedProps](#defaultSupportedProps). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about plug-ins: [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
@@ -131,7 +131,7 @@ The following two images visually identify the two configuration sections. For t
 
 :::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization.":::
 
-## defaultSupportedProps
+### defaultSupportedProps
 
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
 
@@ -351,7 +351,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </table>
 
 
-## Individual configuration settings
+### Individual configuration settings
 
 You can configure other configuration settings that affect how your editor functions.
 
