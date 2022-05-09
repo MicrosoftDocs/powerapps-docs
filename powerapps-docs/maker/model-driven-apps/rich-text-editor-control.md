@@ -76,7 +76,7 @@ The rich text editor control comes with a rich set of configuration options that
 
 To create and use advanced configuration for the rich text editor control, follow these steps:
 
-1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
+1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Additional sample rich text editor configurations](#additional-sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 1. Add the relative URL for the JavaScript web resource (for example */WebResources/contoso_toolbartoprte*) in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
 
@@ -106,10 +106,8 @@ The experience and capabilities of the rich text editor are controlled with conf
 1. The instance specific configuration file, if it exists, is loaded. See **Advanced configuration** for more information on instance level configuration.
    - The properties in this configuration _replace*_ the same named properties in either of the prior configuration files.  
 
-
-> [!NOTE] _replace*_
-> 
-> All properties are replaced **except** for extraPlugins, which are merged. Merging extraPlugins allows the use of a wide range of plugins in  RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Then, only the necessary plugins can be activated by adding them to the extraPlugins values in the instance specific configuration.
+   > [!NOTE]
+   > All properties are replaced **except** for extraPlugins, which are merged. Merging extraPlugins allows the use of a wide range of plugins in  RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Then, only the necessary plugins can be activated by adding them to the extraPlugins values in the instance specific configuration.
 
 A rich text-enabled column has a limited set of configuration that can be configured for read-only or disabled state. You can learn more about this configuration from the "readOnlySettings" property description. 
 
