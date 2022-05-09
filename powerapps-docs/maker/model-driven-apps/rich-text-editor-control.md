@@ -119,7 +119,7 @@ The `defaultSupportedProps` is a set of properties for the plug-ins, and include
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
-### Visualization of the rich text editor configuration file
+## Visualization of the rich text editor configuration file
 
 The following two images visually identify the two configuration sections. For the full configuration file, go to [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes).
 
@@ -131,7 +131,7 @@ The following two images visually identify the two configuration sections. For t
 
 :::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization.":::
 
-### defaultSupportedProps
+## defaultSupportedProps
 
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
 
@@ -351,7 +351,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </table>
 
 
-### Individual configuration settings
+## Individual configuration settings
 
 You can configure other configuration settings that affect how your editor functions.
 
