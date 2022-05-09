@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 03/28/2022
+ms.date: 05/09/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -21,7 +21,7 @@ search.app:
 ---
 # Add the rich text editor control to a model-driven app
 
-The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
+The rich text editor control provides the app user with a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control.
 
 Some of the format options available are:
 
@@ -59,7 +59,8 @@ To enable the rich text editor with default values on any new or existing text c
 
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
 1. On the form designer canvas, add or create a text column or select an existing text column, such as the custom multi-line text column used in this article.
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
@@ -77,11 +78,11 @@ To create and use advanced configuration for the rich text editor control, follo
 
 1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-1. Add the relative URL for the JavaScript web resource, for example */WebResources/contoso_toolbartoprte*, in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
+1. Add the relative URL for the JavaScript web resource (for example */WebResources/contoso_toolbartoprte*) in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
 
    > [!TIP]
    > - The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
-   > - Although you can use the absolute URL for the **Static value**, by using the relative URL the web resource will continue to work after it has been imported into another environment as a solution.
+   > - Although you can use the absolute URL for the **Static value**, by using the relative URL, the web resource will continue to work after it has been imported into another environment as a solution.
    > :::image type="content" source="media/web-resource-url.png" alt-text="URL for JavaScript web resource":::
 1. **Save**, and then **Publish** the form.
 
@@ -97,7 +98,7 @@ Consider the following when using the rich text editor:
 
 ## How configuration is applied to the rich text editor
 
-The experience and capabilities of the rich text editor are controlled with configuration. The default configuration for the rich text editor control has property and values that are intended to meet normal rich text needs but these can be adjusted. Configuration properties and values can be applied to a specific rich text editor control instance and there can be up to 3 levels of configuration applied to each rich text editor instance. The logic used for applying properties and values are as follows
+The experience and capabilities of the rich text editor are controlled with configuration. The default configuration for the rich text editor control has property and values that are intended to meet normal rich text needs but they can be adjusted. Configuration properties and values can be applied to a specific rich text editor control instance, and there can be up to three levels of configuration applied to each rich text editor instance. The logic used for applying properties and values are as follows:
 
 1. The non-editable global configuration file RTEGlobalConfiguration_Readonly.json is loaded.
 1. The editable global configuration file RTEGlobalConfiguration.json is loaded.
@@ -108,15 +109,15 @@ The experience and capabilities of the rich text editor are controlled with conf
 
 > [!NOTE] _replace*_
 > 
-> All properties are replaced **except** for extraPlugins which are merged. Merging extraPlugins allow the use of a wide range of plugins in the RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Then, only the necessary plugins can be activated by adding them to the extraPlugins values in the instance specific configuration.
+> All properties are replaced **except** for extraPlugins, which are merged. Merging extraPlugins allows the use of a wide range of plugins in  RTEGlobalConfiguration.json using externalPlugins and out-of-box provided plugins. Then, only the necessary plugins can be activated by adding them to the extraPlugins values in the instance specific configuration.
 
-A rich text enabled column has a limited set of configuration which can be configured for read-only or disabled state. You can learn more about this configuration from the "readOnlySettings" property description. 
+A rich text-enabled column has a limited set of configuration that can be configured for read-only or disabled state. You can learn more about this configuration from the "readOnlySettings" property description. 
 
 ## Rich text editor properties
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see defaultSupportProps. The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for additional plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. For more information, see [defaultSupportProps](#defaultSupportProps). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for additional plug-ins you add or create. For more information about plug-ins, see [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
@@ -134,7 +135,7 @@ The following two images visually identify the two configuration sections. For t
 
 ### defaultSupportedProps
 
-You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses version 4.17.1 of CKEditor.
+You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
 
 
 <table>
@@ -186,7 +187,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI. The default label is purely visual and is not functional, stickyStyle configuration applies the functional font and size.
+  Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI. The default label is only visual and isn't functional, and stickyStyle configuration applies the functional font and size.
 </td>
 <td>
 
@@ -202,7 +203,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Sets the default label that is displayed in the toolbar for font size. The default is 9. The default label is purely visual and is not functional, stickyStyle configuration applies the functional font and size.
+  Sets the default label that is displayed in the toolbar for font size. The default is 9. The default label is only visual and isn't functional, and stickyStyle configuration applies the functional font and size.
 </td>
 <td>
 
@@ -341,7 +342,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Lets you disallow elements that you do not want to have in your content. You are able to disallow entire elements or by attributes, classes, and styles.  For more information about the CKEditor "disallowedContent" configuration, see [ Disallowed Content Rules](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules).
+  Lets you disallow elements that you do not want to have in your content. You are able to disallow entire elements or by attributes, classes, and styles. For more information about the CKEditor "disallowedContent" configuration, see [ Disallowed Content Rules](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules).
 </td>
 <td>
 
@@ -413,7 +414,7 @@ Default:
 </td>
 
 <td>
-  By default, content sanitization will be disabled in order to allow successful copy and pasting of rich text content from external sources. When enabled the content sanitization will remove some of the custom attributes or tags. This configuration applies only to edit mode. Read only or disabled state rendering will always be sanitized.
+  By default, content sanitization is disabled to allow successful copying and pasting of rich text content from external sources. When enabled, the content sanitization will remove some of the custom attributes or tags. This configuration applies only to edit mode. Read-only or disabled state rendering will always be sanitized.
 
 </td>
 <td>
@@ -429,7 +430,7 @@ Default:
 
 <td>
 
-  By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true.
+  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To process images, set this property to true.
 </td>
 <td>
 
@@ -540,7 +541,7 @@ Default:
 
 <td>
 
-By setting this property, you can configure additional behaviors for the column when viewed in a read only or disabled state. 
+By setting this property, you can configure additional behaviors for the column when viewed in a read-only or disabled state. 
 
 </td>
 <td>
@@ -633,7 +634,7 @@ Must be set to true to enable the following attributes:
 
 <td>
 
-  This property adds the full screen expand/collapse functionality, which allows you to expand and use the editor in full screen mode. <br></br>
+  This property adds the full screen expand/collapse functionality, which allows you to expand and use the editor in full-screen mode. <br></br>
   
   Depends on showAsTabControl set to true.
   
@@ -724,7 +725,7 @@ Set your default font and size to match the Microsoft Windows defaults. This exa
  ```
  
  ### Make line breaks (Enter key) create a &lt;br&gt; instead of &lt;p&gt;
- The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpretting pasted content). Paragraph blocks are used in HTML to group information. In some cases when creating new or pasting information from Microsoft Word or other content editor, due to each browser interpreting the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you may prefer to use the &lt;br&gt; HTML tag instead of paragraph blocks.  The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
+ The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpretting pasted content). Paragraph blocks are used in HTML to group information. In some cases, when creating new or pasting information from Microsoft Word or other content editor, due to each browser interpreting the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you may prefer to use the &lt;br&gt; HTML tag instead of paragraph blocks. The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
  ```
 {
   "defaultSupportedProps": {
@@ -734,7 +735,7 @@ Set your default font and size to match the Microsoft Windows defaults. This exa
  ```
  
 ### All content pasted or created is HTML 5 compliant
-The rich text editor control works best with HTML 5 content, although HTML 4 tags and formatting can also be used successfully. In some cases the mixture of both HTML 4 and HTML 5 tags can create usability challenges when selecting and setting fonts and sizes. Use of "allowedContent" can ensure all your content is HTML 5.  This example allows  all supported HTML 5 tags. Any non-compliant tags are converted to their HTML 5 equivalent. 
+The rich text editor control works best with HTML 5 content, although HTML 4 tags and formatting can also be used successfully. In some cases the mixture of both HTML 4 and HTML 5 tags can create usability challenges when selecting and setting fonts and sizes. Use of "allowedContent" can ensure all your content is HTML 5. This example allows all supported HTML 5 tags. Any non-compliant tags are converted to their HTML 5 equivalent. 
  ```
 {
   "defaultSupportedProps": {
@@ -853,7 +854,7 @@ The rich text editor control works best with HTML 5 content, although HTML 4 tag
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
 
 
-### Create plain text surface that removes all html tag (except for the "br" tag)
+### Create a plain text surface that removes all html tags except for the "br" tag
 
  ```
 {
@@ -872,7 +873,7 @@ The rich text editor control works best with HTML 5 content, although HTML 4 tag
  
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
-### Remove the context menu so right-clicking will work with the default browser spell check
+### Remove the context menu so right-clicking will work with the default browser's spell check
 
 Enabling this functionality removes the contextual right-click editing capability.
 
@@ -969,7 +970,7 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 ## Find the current setting for a rich text editor configuration
 
 1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account row.
-2. Hold down **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
+2. Press **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
 3. In the inspection pane, select the **Console** tab, and then select the parent **Main.aspx** page in the drop-down list box on the command bar.
 
    :::image type="content" source="media/cke-select-parent-main.png" alt-text="Select the Console tab and then select the parent main.aspx page from the drop-down list box.":::
@@ -989,6 +990,7 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 The rich text editor toolbar provides features and functionality that allows you to work with rich text format in notes and email.    
 
 ### Formatting options
+
 The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
 
 |Icon | Name | Shortcut key | Description |
