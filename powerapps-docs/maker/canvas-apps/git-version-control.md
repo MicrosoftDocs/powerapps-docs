@@ -5,12 +5,12 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/02/2022
+ms.date: 05/06/2022
 ms.subservice: canvas-maker
 ms.author: gregli
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
 contributors:
   - tapanm-msft
@@ -23,7 +23,7 @@ contributors:
 
 > [!IMPORTANT]
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet. Check the experimental switch described in [Enable Git version control](#enable-git-version-control) to know if the feature is available in your tenant.
-> - This is an experimental feature.  It is disabled by default and must be [enabled](#enable-git-version-control) before use.
+> - This is an experimental feature. It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This feature is a first step towards the Microsoft Office style of co-authoring experience for canvas apps.
@@ -47,11 +47,11 @@ Follow these steps to enable Git version control in your app.
 1. Scroll down to **Show the Git version control setting** and turn it to **On**.
 1. You'll see a new **Git version control** item on the left-hand side of the settings pane.
 
-    :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
+   :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
-    > [!TIP]
-    > - This feature is being rolled out. If you don't see it in your tenant, it may not yet be deployed to your tenant yet. In that case, check again later.
-    > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
+   > [!TIP]
+   > - This feature is being rolled out. If you don't see it in your tenant, it may not yet be deployed to your tenant yet. In that case, check again later.
+   > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
 
@@ -64,26 +64,26 @@ Follow these steps to connect your app to Git.
 
 1. Select **Git version control**.
 
-    :::image type="content" source="media/git-version-control/connect-git.png" alt-text="Button to start a connection to git for this app.":::
+   :::image type="content" source="media/git-version-control/connect-git.png" alt-text="Button to start a connection to git for this app.":::
 
 1. Select **Connect**, and fill-in Git connection information for this app.
 
-    :::image type="content" source="media/git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
+   :::image type="content" source="media/git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
 
-    - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.  
-    - **Branch**: The branch name to use.
-    - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
+   - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **/_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.
+   - **Branch**: The branch name to use.
+   - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
 
-    You'll be prompted to create the branch or directory if it doesn't exist. If the branch and directory already contains a canvas app, the current app will be closed and the existing app will be loaded from Git.
+   You'll be prompted to create the branch or directory if it doesn't exist. If the branch and directory already contains a canvas app, the current app will be closed and the existing app will be loaded from Git.
 
-    Once connected, the connection information will be displayed.
+   Once connected, the connection information will be displayed.
 
 ## Authenticate with Git
 
-Power Apps requires you to use a personal access token instead of your version control provider account password.  
+Power Apps requires you to use a personal access token instead of your version control provider account password.
 
 > [!NOTE]
-> A personal access token is not the same as your password, either for Power Apps or for your Git provider.  You must create a personal access token to use this feature.
+> A personal access token is not the same as your password, either for Power Apps or for your Git provider. You must create a personal access token to use this feature.
 
 Different version control providers have different methods to generate personal access tokens. Follow below instructions to obtain personal access token.
 
@@ -134,13 +134,14 @@ Since this feature is experimental, we welcome your feedback. The following list
 - This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
 - Edits to the same property on the same control aren't merged. The last edit made will win.
 - You can't restore a canvas app to a previous version using the steps described in [Restore an app](restore-an-app.md) article. Instead, you'll have to use Git for restoring the app to a previous version. For more information, see the following resources:
-    - [git-revert](https://git-scm.com/docs/git-revert)
-    - [Reverting a commit](https://docs.github.com/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/reverting-a-commit)
-    - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line&preserve-view=true)
-- Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.  
+  - [git-revert](https://git-scm.com/docs/git-revert)
+  - [Reverting a commit](https://docs.github.com/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/reverting-a-commit)
+  - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line&preserve-view=true)
+- Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
 - Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
+- If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
 
 ## Feedback to the community forum
 
-**Let us know what you think!**  This feature is a first step in a long journey to enable a great team development experience. Visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) for updates and to provide feedback.
+**Let us know what you think!** This feature is a first step in a long journey to enable a great team development experience. Visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) for updates and to provide feedback.
