@@ -94,12 +94,12 @@ The **Properties** tab displays the following properties.
 
 ### Edit a column and view column names
 
-To view column names, such as schema name or to change additional column properties, such as required, searchable, description, and size, follow these steps:
-
-1. Select the column, and then in the right column properties pane select the information icon ![Information icon](../data-platform/media/data-platform-import-export/information-icon-inline.png) next to the column name.
+To view column names, such as schema name or to change additional column properties, such as required, searchable, description, and size, select the column, and then in the right column properties pane select the information icon ![Information icon](../data-platform/media/data-platform-import-export/information-icon-inline.png) next to the column name.
 
    :::image type="content" source="../data-platform/media/data-platform-import-export/column-actions-form-designer.png" alt-text="Select the column information icon.":::
-1. The display and unique names appear. Select **Edit table column** to display the **Edit Table Column** pane where you can make the changes you want.
+
+To edit the column data type format, required, and advanced options, follow these steps.
+1. On the column **Properties** tab, select **Edit table column** to display the **Edit Table Column** pane where you can make the changes you want.
 1. When you're finished making your changes, select **Done**.
 1. Select **Save** and then select **Publish** to make your changes available to app users.
 
