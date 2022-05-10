@@ -162,6 +162,7 @@ Before you import the solution into the target environment, make sure the unmodi
 
 - The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 - If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
+- Embedding a Power BI tile on a form is only supported without contextual filtering.
 
 ### Common issues
 

@@ -1,14 +1,17 @@
 ---
-title: How to create an email template in model-driven apps
-description: Learn how to create an email template in a model-driven app.
+title: "How to create an email template  in model-driven apps | MicrosoftDocs"
+description: Learn how to create an email template.
 author: mduelae
 manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/25/2022
+ms.date: 6/30/2021
 ms.subservice: end-user
 ms.author: mkaur
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
 search.audienceType: 
   - enduser
 search.app: 
@@ -28,7 +31,7 @@ To create a template, select **New** on the **Email Templates** command bar. You
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see.
 
-First, you'll need to provide information about the template itself.
+Specify the following information:
 
 :::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot of template information to provide.":::
 
@@ -38,9 +41,9 @@ First, you'll need to provide information about the template itself.
    4. **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    5. **Create**: Opens one of two editors where you can build your template.
 
-When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs_email_template_builder.md):
+When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs-email-template-builder.md):
 
-- If yes, you'll use the enhanced email template editor page in Power Apps.
+- If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the default email template editor page.
 
 ### Enhanced email template editor overview
@@ -80,3 +83,8 @@ Start with an existing template to create an email template faster and with less
 - **Template** tab: Specify or change the template details and the email subject. The name includes **– Copy** at the end to identify this template is a copy of another one.
 - **Template editor** section: [Design and customize the email template](cs-template-options.md).
 - Select **New Attachment** to add attachments to your template if needed.
+
+### See also
+
+[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
+[Understand the email experience](view-create-email.md)   

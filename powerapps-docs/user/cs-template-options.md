@@ -1,13 +1,13 @@
 ---
-title: Customize an email template using the template editor
+title: Customize an email template using the enhanced template editor
 description: Create an email template using the enhanced email template editor
-author: mgandham
+author: gandhamm
 manager: shujoshi
 
 ms.topic: conceptual
-ms.date: 4/25/2022
+ms.date: 05/06/2022
 ms.subservice: end-user
-ms.author: gandhamm
+ms.author: mgandham
 search.audienceType: 
   - enduser
 search.app: 
@@ -23,11 +23,21 @@ Use the **Editor** tab in the **Email Template** form to create customized email
 - Toolbox
 - Layout section types
 
-:::image type="content" source="media\email_designer_callout.png" alt-text="Screenshot of the email template editor page, with the canvas, toolbox, and layout section areas highlighted.":::
+:::image type="content" source="media\email-designer-callout.png" alt-text="Screenshot of the email template editor page, with the canvas, toolbox, and layout section areas highlighted.":::
 
 ## Manage an email template
 
-On the design canvas, you can drag, arrange, enter, and delete content. By default, the canvas contains one empty one-column layout section.
+On the design canvas, you can drag, arrange, enter, and delete content. By default, the canvas contains an empty one-column layout section.
+
+You have a few different ways to add items to your template.
+
+- Drag an element from the Toolbox to the canvas. The blue shade indicates that the element is in a suitable location and may be dropped.
+
+- Select an element in the **Toolbox** or the **Layout section types**. An **add** icon appears on the canvas. Select the icon to add the element.
+
+You can select **Go to the parent** to identify the section or column in which the element is embedded.
+
+  :::image type="content" source="media\add-template-optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
 
 ### Add a layout section to the template
 
@@ -38,16 +48,6 @@ To modify a layout, select it, and then select **Edit layout**. You can change a
 To change the appearance of a column, select it, and then select **Edit column**. You can change a column's spacing, style, background color, and image.
 
 ### Add an element to the template
-
-You have a few different ways to add items to your template.
-
-- Drag an element from the Toolbox to the canvas. The blue shade indicates that the element is in a suitable location and may be dropped.
-
-- Select an element in the Toolbox. An **add** icon appears on the canvas. Select the icon to add the element.
-
-- Select **Go to the parent** to identify the section or column in which the element is embedded.
-
-  :::image type="content" source="media\add_template_optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
 
 You can use the design elements in the **Elements** tab in the Toolbox to customize your email template:
 
@@ -71,6 +71,6 @@ Use the **General Styles** tab to change the layout's width, font, font size, ba
 ### See also
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
-[Enable the enhanced email template editor page](cs_email_template_builder.md)
+[Enable the enhanced email template editor page](cs-email-template-builder.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
