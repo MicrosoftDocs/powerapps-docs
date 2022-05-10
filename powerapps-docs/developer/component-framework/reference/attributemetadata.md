@@ -31,7 +31,7 @@ Canvas apps
 | LogicalName   | string                            | Logical name of the column.                       |
 | MaxLength     | number                            | Maximum length of the column.                     |
 | RequiredLevel | number                            | Required level of the column.                     |
-| Type          | [AttributeType](AttributeType.md) | Column data type.                                 |
+| Type          | [AttributeType](attributetype.md) | Column data type.                                 |
 
 ### Related topics
 
