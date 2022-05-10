@@ -3,7 +3,6 @@ title: "Delete a model-driven app | MicrosoftDocs"
 description: "Learn how to delete or remove a model-driven app from your Power Apps environment."
 keywords: ""
 ms.date: 02/14/2020
-
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -42,8 +41,8 @@ The process for removing an app is straightforward. However, it is worth noting 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. On the left navigation, select **Apps**.
-> [!note]
-> Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a model-driven app within a solution, open your solution.
+   > [!note]
+   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a model-driven app within a solution, open your solution.
 3. Select the app that you want to delete, and then select **Delete** on the command bar.
 4. In the confirmation message that appears there are two options.  
    - **Remove solution** will remove the app from the solution, but retain it within the environment.
@@ -51,7 +50,7 @@ The process for removing an app is straightforward. However, it is worth noting 
 
    If the component has dependencies, such as relationships, these must be removed before the app can be deleted. To see the dependencies of an app, select the app and then select **Show Dependencies** on the command bar.
 
-When an app is deleted, you should also delete the associated site map. If this is not deleted, the site map designer displays an error the first time there is an attempt to create another app with the same name. However, it is possible to ignore the error, and the error will not appear when trying to create the app again.
+5. When an app is deleted, you should also delete the associated site map. To delete the site map, follow the previous steps and select the site map component that has the same name as the app that was deleted. If the site map is'nt deleted, the site map designer displays an error the first time there is an attempt to create another app with the same name. However, it is possible to ignore the error, and the error will not appear when trying to create the app again. 
 
 ## Delete a model-driven app that was installed as part of a managed solution
 
