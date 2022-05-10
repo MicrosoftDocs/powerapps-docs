@@ -27,8 +27,6 @@ search.app:
 
 # Delete a model-driven app
 
-## Why apps need to be deleted
-
 Apps may need to be deleted for a variety of reasons. An app might have been prepared purely as a development training exercise, may no longer be used in the organization, or may have been superseded in some way.
 
 The process for removing an app is straightforward. However, it is worth noting that dependencies can be encountered when you delete components in Dataverse.  While deleting apps can be done at any time in an unmanaged solution, it is not possible to delete tables that are used in the apps until such time as the app has been removed. The same is true for other app components, such as table views.
@@ -43,14 +41,16 @@ The process for removing an app is straightforward. However, it is worth noting 
 2. On the left navigation, select **Apps**.
    > [!note]
    > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a model-driven app within a solution, open your solution.
-3. Select the app that you want to delete, and then select **Delete** on the command bar.
+3. Select the unmanaged model-driven app that you want to delete, and then select **Delete** on the command bar.
 4. In the confirmation message that appears there are two options.  
    - **Remove solution** will remove the app from the solution, but retain it within the environment.
    - **Delete from this environment** will delete it from both the solution and the environment.
 
    If the component has dependencies, such as relationships, these must be removed before the app can be deleted. To see the dependencies of an app, select the app and then select **Show Dependencies** on the command bar.
 
-5. When an app is deleted, you should also delete the associated site map. To delete the site map, follow the previous steps and select the site map component that has the same name as the app that was deleted. If the site map is'nt deleted, the site map designer displays an error the first time there is an attempt to create another app with the same name. However, it is possible to ignore the error, and the error will not appear when trying to create the app again. 
+5. When an app is deleted, you should also delete the associated site map. If you don't delete the site map, the site map designer displays an error the first time there is an attempt to create another app with the same name. However, it is possible to ignore the error, and the error will not appear when trying to create the app again.
+   1. On the left navigation pane, select **Solutions**, and then open the **Default Solution**.
+   1. On the left navigation pane, select **Site maps**, select the site map that has the same name of the app that was deleted earlier, and then select **Delete from this environment**.
 
 ## Delete a model-driven app that was installed as part of a managed solution
 
