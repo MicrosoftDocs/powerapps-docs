@@ -71,7 +71,7 @@ The following controls aren't supported by apps embedded in Teams:
 - [Address Input](geospatial-component-input-address.md)
 - [Camera](controls/control-camera.md) (in Teams Mobile)
 - [Map](geospatial-component-map.md)
-- [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
+- [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measuring Camera)
 - [Power BI tile control](controls/control-power-bi-tile.md)
 - [Web barcode scanner control](controls/control-barcodescanner.md)
 

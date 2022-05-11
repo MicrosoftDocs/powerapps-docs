@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/07/2022
+ms.date: 03/05/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -30,13 +30,15 @@ In this article, you'll learn about how to code sign for Android. You'll need to
 
 You'll need the following information to get started:
 
-- Install [Java™ Platform, Standard Edition Development Kit (JDK™)](https://www.oracle.com/java/technologies/downloads/)
 - Install [Android Studio](https://developer.android.com/studio)
 - Install [OpenSSL](https://www.openssl.org/)
 
 ## Generate keys
 
-We'll use [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) from Java SDK to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
+> [!NOTE]
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
+
+We'll use **keytool.exe** (available after installing Android Studio, from the folder location "Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe") to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
 To generate a key, open a command prompt and run the following command:
 
@@ -51,8 +53,6 @@ Parameters:
 - **keysize** - the size of each key to be generated.
 - **validity** - validity of the key in number of days.
 
-More information: [Generate Keys](https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html)
-
 Example:
 
 `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
@@ -60,6 +60,9 @@ Example:
 :::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
 
 ## Generate signature hash
+
+> [!NOTE]
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
 
 After generating the key, we'll use the **exportcert** command in **keytool** to export the keystore certificate.
 
@@ -72,9 +75,26 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **openssl** - generates SHA1 key for Android.
 
+Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
+
+### Convert SHA1 hex to Base64-encoded signature hash manually
+
+You might see the following error if your signature hash is not correctly encoded or unacceptable in the Azure portal:
+
+"The signature hash must be base64-encoded SHA1."
+
+When this error appears, try to generate the signature hash using the following steps instead:
+
+1. Run `keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE` to list the certificate information in verbose mode.
+1. Copy the **SHA1** value under the **Certificate fingerprints** section from the output. Ensure that you only copy the hexadecimal value.
+    <br> For example: `EF:11:45:3D:F1:72:D9:8C:43:32:CD:0A:49:C2:E4:75:2D:B3:2D:9F`
+1. Use any available "Hexadecimal to Base64" converter to convert the copied certificate fingerprint hexadecimal value into Base64 encoded value.
+    <br> Example of the Base64 encoded value: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
+1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](how-to.md#app-registration).
+
 ## Sign the APK package
 
-The next step is to sign the APK package using **apksigner** tool. The [apksigner tool](https://developer.android.com/studio/command-line/apksigner) allows you to sign APKs and ensure that the APK package signature will be verified successfully on all Android platforms supported by the APKs.
+To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature will be verified successfully on all Android platforms supported by the APKs.
 
 ### Find your apksigner
 
