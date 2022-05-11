@@ -5,7 +5,7 @@ author: alaug
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 03/11/2022
+ms.date: 05/11/2022
 ms.author: evlew
 ms.reviewer: tapanm
 contributors:
@@ -156,20 +156,13 @@ expires, you can purchase a plan. If you're already using Power Apps with Office
 No, we currently don't support signing up with a personal account. You can only sign up with your [work or school
 account](signup-for-powerapps.md#faq).
 
-### Can I delete my developer environment?
+### Can I reset or delete my developer environment?
 
-Users with the System Administrator security role in the environment, Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment.
+Resetting a developer environment isn't currently supported; however, it can be deleted. Users with the System Administrator security role in the environment, Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment. Creator of an environment is automatically assigned System Administrator role. Therefore, the creator of a developer environment can also delete it because of being a System Administrator.
 
-> [!NOTE]
-> Creator of an environment is automatically assigned System Administrator role. Therefore, the creator of a developer environment can also delete it because of being a System Administrator.
+However, when a user (who's developer plan is deleted) signs into the Power Apps maker portal again, a new developer environment will be created for that user as long as the user continues to have **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the environment.
 
-To learn about how to delete an environment, go to [Delete an environment](/power-platform/admin/delete-environment)
-
-### Can I reset my developer environment?
-
-Resetting a developer environment isn't currently supported; however, it can be deleted. A new developer environment will be created if the Developer Plan licensed user (whose environment is deleted) signs in to the Power Apps maker portal again. The user can then provision a Dataverse database in the environment. Currently, the only way to remove the Developer Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+To remove the Developer Plan capability from a user permanently, a tenant-level admin must explicitly block all "internal" consent plans in the tenant using PowerShell, or remove the **Microsoft Power Apps for Developer** license. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands), and [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
 No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps.
@@ -188,3 +181,5 @@ No. Dynamics 365 apps can't be installed in a developer environment. You'll see 
 "Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to “Yes”. Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
 
 If you want to explore Dynamics 365 apps, refer to the app-specific documentation for free trials, or to install them on existing environments.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
