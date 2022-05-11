@@ -74,7 +74,7 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ## Considerations and limitations for guest access
 
-- Guests can only be assigned the User role, and not the Co-owner role, for apps shared with them.
+- Guests can be assigned the User role or Co-owner role for apps shared with them. Guests cannot edit an app until more capabilities are introduced for [Azure B2B Maker support](https://docs.microsoft.com/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration?msclkid=1d92f1edd15411ec9627e3cb4c39bccb#power-apps-support-for-b2b-guest-maker-preview). 
 - Power Apps guest access uses Azure B2B.
 - Power Apps Mobile doesn't support authentication using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
