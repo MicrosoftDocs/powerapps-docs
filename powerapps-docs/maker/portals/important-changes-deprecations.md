@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2021
+ms.date: 05/11/22
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -14,6 +14,7 @@ contributors:
     - sandhangitmsft
     - dileepsinghmicrosoft
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
 # Important upcoming changes and deprecations in Power Apps portals
@@ -25,9 +26,13 @@ Makers, developers, and IT professionals can use this information to prepare for
 > [!IMPORTANT]
 > "Deprecated" means we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few months or years. After removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
 
+## OAuth 2.0 implicit grant flow within your portal 
+
+Starting June 2022 [Authorize end point](oauth-implicit-grant-flow#authorize-endpoint-details), [Token end point](oauth-implicit-grant-flow#token-endpoint-details) using Get call and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated for all new portals and  existing portals not using this feature. If you're already using this feature, you need to use the Token end point Post call to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features needs to migrate supported method by October 2022.   
+
 ## CDN for US Government
 
-Starting January 2022, Power Apps portals for US Government will begin using [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allow-list for the following CDN URLs:
+Starting January 2022, Power Apps portals for US Government will begin using [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allowlist for the following CDN URLs:
 
 | Power Apps portals version | CDN URL |
 | - | - |
@@ -44,7 +49,7 @@ Also, with the same release, lists on all portals (new or existing) that have [O
 > [!NOTE]
 > The changes described above also apply to portals [converted](admin/convert-portal.md) from trial to production.
 
-To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md), and web role setup instead.
+To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md), and web role set up instead.
 
 ## SameSite mode changes
 
