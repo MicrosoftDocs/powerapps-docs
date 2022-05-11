@@ -21,7 +21,7 @@ Provides information on what has changed in the `updateView` method. The informa
 | Array Values | Available for                | Description                              |
 | ------------ | ---------------------------- | ---------------------------------------- |
 | layout       | Model-driven and Canvas apps | Dimensions for the control were updated. |
-| dataset      | Model-driven apps            | Records were updated.                    |
+| dataset      | Model-driven and Canvas apps | Records were updated.                    |
 | records      | Canvas apps                  | Records were updated.                    |
 | columns      | Canvas apps                  | Columns were updated.                    |
 | sortorder    | Canvas apps                  | Sort order was updated.                  |
