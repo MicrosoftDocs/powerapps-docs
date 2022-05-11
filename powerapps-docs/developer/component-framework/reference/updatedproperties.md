@@ -16,9 +16,20 @@ ms.topic: "article"
 
 Provides information on what has changed in the `updateView` method. The information could be change in the property value, component or browser resize event.
 
-## Available for
+**Type**: `string[]`
 
-Model-driven and canvas apps
+| Array Values | Available for                | Description                              |
+| ------------ | ---------------------------- | ---------------------------------------- |
+| layout       | Model-driven and Canvas apps | Dimensions for the control were updated. |
+| dataset      | Model-driven apps            | Records were updated.                    |
+| records      | Canvas apps                  | Records were updated.                    |
+| columns      | Canvas apps                  | Columns were updated.                    |
+| sortorder    | Canvas apps                  | Sort order was updated.                  |
+| page         | Canvas apps                  | Pagination information was updated.      |
+| filter       | Canvas apps                  | Filtering was updated.                   |
+| commands     | Canvas apps                  | Commands were were updated.              |
+
+Additionally, use [loading attribute](../reference/dataset.md#loading) of the dataset that indicates whether the dataset is loading or not.
 
 ## Example
 
@@ -45,6 +56,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): void
 
 ### Related topics
 
+[Dataset loading attribute](../reference/dataset.md#loading)
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
 
