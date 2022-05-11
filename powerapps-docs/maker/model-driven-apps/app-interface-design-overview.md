@@ -62,7 +62,6 @@ The following table describes the resources in this section.
 |Working with forms|How to create or edit forms.|[Learn more](create-design-forms.md)|
 |Use custom pages with model-driven apps|How to understand and work with custom pages.|[Learn more](model-app-page-overview.md)|
 |Customize app commands|Discover how to customize the command bar menu located near the top of a model-driven app.|[Learn more](command-designer-overview.md)
-|Using the classic designers|Use the classic method of creating model-driven apps.|[Learn more](design-custom-business-apps-using-app-designer.md)
 
 ### See also
 
