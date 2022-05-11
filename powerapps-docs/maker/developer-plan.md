@@ -160,7 +160,7 @@ account](signup-for-powerapps.md#faq).
 
 Resetting a developer environment isn't currently supported; however, it can be deleted. Users with the System Administrator security role in the environment, Power Platform admins and tenant-level admins have the permissions needed to delete a developer environment. Creator of an environment is automatically assigned System Administrator role. Therefore, the creator of a developer environment can also delete it because of being a System Administrator.
 
-However, when a user (who's developer plan is deleted) signs into the Power Apps maker portal again, a new developer environment will be created for that user as long as the user continues to have **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the environment.
+A new developer environment will be created for a user who's developer plan is deleted when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new environment.
 
 To remove the Developer Plan capability from a user permanently, a tenant-level admin must explicitly block all "internal" consent plans in the tenant using PowerShell, or remove the **Microsoft Power Apps for Developer** license. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands), and [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
 
