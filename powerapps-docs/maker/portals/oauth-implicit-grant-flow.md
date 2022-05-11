@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/25/2021
+ms.date: 05/11/22
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,17 +13,31 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - dileepsinghmicrosoft
-    - nickdoelman    
+    - nickdoelman 
+    - ProfessorKendrick   
 ---
 
 # Use OAuth 2.0 implicit grant flow within your portal
 
-This feature allows a customer to make client-side calls to external APIs and secure them by using OAuth implicit grant flow. It provides an endpoint to obtain secure access tokens that will contain user identity information to be used by external APIs for authorization following OAuth 2.0 implicit grant flow. The identity information of a signed-in user is passed in a secured manner to the external AJAX calls. This will not only help developers to pass authentication context but will also help users to secure their APIs by using this mechanism.
+This feature allows a customer to make client-side calls to external APIs and secure them using OAuth implicit grant flow. It provides an endpoint to obtain secure access tokens that will contain user identity information to be used by external APIs for authorization following OAuth 2.0 implicit grant flow. The identity information of a signed-in user is passed in a secured manner to the external AJAX calls, which helps developers to pass authentication context and will also help users secure their APIs.
 
-> [!NOTE]
-> For security best practices, it is recommended to use [custom certificates](admin\manage-custom-certificates.md) for OAuth 2.0 implicit grant flow. Using implicit grant flow without a custom certificate will eventually not be supported.
+OAuth 2.0 implicit grant flow supports token endpoints that a client can call to get an ID token. Two endpoints are used for this purpose: [authorize](#authorize-endpoint-details) and [token](#token-endpoint-details).
 
-OAuth 2.0 implicit grant flow supports endpoints that a client can call to get an ID token. Two endpoints are used for this purpose: [authorize](#authorize-endpoint-details) and [token](#token-endpoint-details).
+## Custom certificates 
+
+Custom certificates provide another layer of security while using the OAuth 2.0 end point. Use the [Power Platform admin center](/admin/manage-custom-certificates) to upload the custom certificate. After uploading the custom certificate, you need to update site settings as below 
+
+1. Go to portal settings and select **Site Settings**. 
+
+1. To create a new setting, select **New**. 
+
+1. To edit an existing setting, select the site setting listed in the grid. 
+
+1. Specify values:
+    - **Name:** CustomCertificates/ImplicitGrantflow 
+    - **Website:** The associated website 
+    - **Value:** Copy the thumbprint of the uploaded custom certificate from the Manage custom certificate screen and paste it here. The value will indicate which certificate will be used for implicit grant flow. 
+1. Select **Save & Close**.
 
 ## Authorize endpoint details 
 
@@ -61,7 +75,7 @@ The error in authorize endpoint is returned as a JSON document with the followin
 - **Correlation ID**: A GUID that is used for debugging purposes. If you have enabled diagnostic logging, correlation ID would be present in server error logs.
 - **Timestamp**: Date and time when the error is generated.
 
-The error message is displayed in the default language of the signed-in user. If the user is not signed in, the sign-in page is displayed for the user to sign in. 
+The error message is displayed in the default language of the signed-in user. If the user isn't signed in, the sign-in page is displayed for the user to sign in. 
 For example, an error response looks as follows:
 
 ```
@@ -70,7 +84,7 @@ For example, an error response looks as follows:
 
 ## Token endpoint details
 
-You can also get a token by making a request to the `/token` endpoint. It is different from the authorization endpoint in the way that authorization endpoint handles the token logic in a separate page (redirect_uri), whereas the token endpoint handles the token logic on the same page. The URL for token endpoint is: `<portal_url>/_services/auth/token`. The token endpoint supports the following parameters:
+You can also get a token by making a request to the `/token` endpoint. It's different from the authorization endpoint in the way that authorization endpoint handles the token logic in a separate page (redirect_uri), whereas the token endpoint handles the token logic on the same page. The URL for token endpoint is: `<portal_url>/_services/auth/token`. The token endpoint supports the following parameters:
 
 | Parameter   | Required? | Description                             |
 |---------------|-----------|---------------------------------------|
@@ -78,7 +92,7 @@ You can also get a token by making a request to the `/token` endpoint. It is dif
 | redirect_uri      | No       | URL of the portal where authentication responses can be sent and received. It must be registered for the particular `client_id` used in the call and should be exactly the same value as registered.            |
 | state       | No        | A value included in the request that also is returned in the token response. It can be a string of any content that you want to use. Usually, a randomly generated, unique value is used to prevent cross-site-request forgery attacks.<br>The maximum length is 20 characters.              |
 | nonce   | No        | A string value sent by the client that is included in the resulting ID token as a claim. The client can then verify this value to mitigate token replay attacks. The maximum length is 20 characters.      |
-| response_type         | No        | This parameter supports only `token` as a value. This allows your app to immediately receive an access token from the authorize endpoint, without making a second request to the authorize endpoint.                               |
+| response_type         | No        | This parameter supports only `token` as a value, allowing your app to immediately receive an access token from the authorize endpoint without making a second request to the authorize endpoint.                               |
 |||
 
 > [!NOTE]
@@ -97,7 +111,7 @@ The error in a token endpoint is returned as a JSON document with the following 
 - **Correlation ID**: A GUID that is used for debugging purposes. If you have enabled diagnostic logging, correlation ID would be present in server error logs.
 - **Timestamp**: Date and time when the error is generated.
 
-The error message is displayed in the default language of the signed-in user. If the user is not signed in, a sign-in page is displayed for the user to sign in. 
+The error message is displayed in the default language of the signed-in user. If the user isn't signed in, a sign-in page is displayed for the user to sign in. 
 For example, an error response looks as follows:
 
 ```
@@ -106,13 +120,13 @@ For example, an error response looks as follows:
 
 ## Validate ID token
 
-Just getting an ID token is not sufficient to authenticate the user; you must also validate the token's signature and verify the claims in the token based on your app's requirements. The public token endpoint provides the public key of the portal, which can be used to validate the signature of the token provided by the portal. The URL for public token endpoint is: `<portal_url>/_services/auth/publickey`.
+Just getting an ID token isn't sufficient to authenticate the user; you must also validate the token's signature and verify the claims in the token based on your app's requirements. The public token endpoint provides the public key of the portal, which can be used to validate the signature of the token provided by the portal. The URL for public token endpoint is: `<portal_url>/_services/auth/publickey`.
 
 ## Turn implicit grant flow on or off
 
 By default, implicit grant flow is enabled. If you want to turn off implicit grant flow, set the value of the **Connector/ImplicitGrantFlowEnabled** site setting to **False**.
 
-If this site setting is not available in your portal, you must [create a new site setting](configure/configure-site-settings.md#manage-portal-site-settings) with the appropriate value.
+If this site setting isn't available in your portal, you must [create a new site setting](configure/configure-site-settings.md#manage-portal-site-settings) with the appropriate value.
 
 ## Configure token validity
 
@@ -140,7 +154,7 @@ This sample is an ASP.NET based project and is used to validate the ID token iss
 
 ### Authorize Endpoint sample
 
-This sample shows how authorize endpoint returns the ID token as a fragment in the Redirected URL. It also covers state validation supported in Implicit Grant. The sample can be found here: [Authorize Endpoint sample](https://github.com/microsoft/PowerApps-Samples/blob/master/portals/AuthorizeEndpoint.js).
+This sample shows how to authorize endpoint returns the ID token as a fragment in the Redirected URL. It also covers state validation supported in Implicit Grant. The sample can be found here: [Authorize Endpoint sample](https://github.com/microsoft/PowerApps-Samples/blob/master/portals/AuthorizeEndpoint.js).
 
 ### Token Endpoint sample
 
