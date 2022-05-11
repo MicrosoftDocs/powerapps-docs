@@ -51,9 +51,6 @@ These components determine how users interact with the app.
 |[View](model-driven-app-glossary.md#view)     | Views define how a list of rows for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
 |Custom page (preview) | A canvas based page which allows flexible layout, low-code Fx functions, and Power Apps connector data.  For more information, see [Model-driven app custom page overview (preview)](model-app-page-overview.md) | Canvas designer |
 
-> [!div class="mx-imgBorder"] 
-> ![App designer and form designer.](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")
-
 ## Logic components
 
 Determines the business processes, rules, and automation the app will have. Power Apps makers use a designer that is specific to the type of process or rule. 
