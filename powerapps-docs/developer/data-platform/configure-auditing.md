@@ -63,7 +63,9 @@ HTTP/1.1 200 OK
     "organizationid": "<organizationid value>"
 }
 ```
-More information: [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
+More information: 
+- <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
+- [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
 
 # [Organization Service](#tab/orgservice)
 
