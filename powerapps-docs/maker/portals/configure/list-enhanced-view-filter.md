@@ -25,7 +25,7 @@ You can use Table Permissions if you want to secure records.  If you want to fil
 
 ### Example View Filter Criteria
 
-The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user isn't logged in then no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
+The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user isn't logged in, no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
 
 ![Example view filter criteria.](media/entity-list-view-filter-criteria.png "Example view filter criteria")
 

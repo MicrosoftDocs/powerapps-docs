@@ -17,7 +17,7 @@ contributors:
 
 # Add custom JavaScript to a list
 
-The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]. If your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
+The Options tab on the form contains a text area where you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]. If your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
 ![Custom JavaScript example.](../media/custom-javascript-example.png "Custom JavaScript example")  
 

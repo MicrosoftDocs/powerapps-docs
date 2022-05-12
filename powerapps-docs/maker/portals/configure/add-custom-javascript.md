@@ -23,7 +23,7 @@ The custom block of JavaScript will be added to the bottom of the page just befo
 
 ## Form fields
 
-The HTML input ID of a table field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
+The HTML input ID of a table field is set to the logical name of the attribute. Selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
 
 ```JavaScript
 $(document).ready(function() {

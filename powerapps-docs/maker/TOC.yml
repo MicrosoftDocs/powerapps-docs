@@ -1719,6 +1719,29 @@
           items:
             - name: Work with lists
               href: ./portals/configure/entity-lists.md
+              items:
+              - name: List attributes and relationships
+                href: ./portals/configure/list-attributes-relationships.md
+              - name: Sort lists
+                href: ./portals/configure/sort-lists.md
+              - name: Add custom JavaScript
+                href: ./portals/configure/add-custom-javascript.md
+              - name: List configuration  
+                href: ./portals/configuration/list-configuration.md
+              - name: Securing lists
+                href: ./portals/configuration/securing-lists.md
+              - name: Add a view details page
+                href: ./portals/configure/list-view-details.md
+              - name: List filter configuration
+                href: ./portals/configure/list-filter-configuration.md
+              - name: List Map view
+                href: ./portals/configure/list-map-view.md
+              - name: List Calendar view 
+                href: ./portals/configure/list-calendar-view.md
+              - name: List OData feeds 
+                href: ./portals/configure/list-odata-feed.md
+              - name: Enhanced view filter for lists
+                href: ./portals/configure/list-filter-configuration.md
             - name: Work with basic forms
               items:
                 - name: Work with basic forms
