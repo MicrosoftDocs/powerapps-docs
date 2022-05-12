@@ -20,13 +20,13 @@ contributors:
 
 # Configure auditing 
 
-Auditing uses settings in the [Organization table](reference/entities/organization.md) as well as settings for each table and column to determine what kind of audit history data to capture. 
+Auditing uses settings in the [Organization table](../reference/entities/organization.md) as well as settings for each table and column to determine what kind of audit history data to capture. 
 
 Anyone can read this data, but you must have the System Administrator or System Customizer roles to change these settings.
 
 ## Configure organization settings
 
-The [Organization table](reference/entities/organization.md) contains properties that control how auditing is enabled for an environment. The organization table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The response from the WhoAmI message contains the `OrganizationId` value.
+The [Organization table](../reference/entities/organization.md) contains properties that control how auditing is enabled for an environment. The organization table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The response from the WhoAmI message contains the `OrganizationId` value.
 
 The following table describes the organization table columns that control auditing behavior.
 
@@ -65,7 +65,7 @@ HTTP/1.1 200 OK
 ```
 More information: 
 - <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
-- [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
+- [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 
 # [Organization Service](#tab/orgservice)
 
@@ -104,8 +104,8 @@ More information:
 Update the column properties in the table above to control how auditing works for the environment.
 
 You can set these column values using Web API or Organization Service. More information: 
-- [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md)
-- [Update and delete table rows using the Organization Service](org-service/entity-operations-update-delete.md)
+- [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
+- [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
 
 ## Configure tables and columns
 
@@ -165,7 +165,7 @@ GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=LogicalName,IsAud
 }
 ```
 
-More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 
 # [Organization Service](#tab/orgservice)
 
@@ -227,7 +227,7 @@ static void ShowTableAuditConfigurations(IOrganizationService svc)
 
 More information:
 
-- [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md)
+- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
 
 ---
 
@@ -268,7 +268,7 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/At
 }
 ```
 
-More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 
 # [Organization Service](#tab/orgservice)
 
@@ -353,7 +353,7 @@ response.EntityMetadata.ToList().ForEach(x =>
 }
 ```
 
-More information: [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md)
+More information: [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
 
 ---
 
@@ -364,14 +364,14 @@ If you want to change which tables or columns support auditing, you must update 
 For **tables** update the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value` property. 
 
 More information:
-- [Web API: Update table definitions](webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)
-- [Organization Service: Retrieve and update a table](org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)
+- [Web API: Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)
+- [Organization Service: Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)
 
 For **columns**, update the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value` property. 
 
 More information:
-- [Web API:  Update a column](webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
-- [Organization Service: Update a column](org-service/metadata-attributemetadata.md#update-a-column)
+- [Web API:  Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
+- [Organization Service: Update a column](../org-service/metadata-attributemetadata.md#update-a-column)
 
 > [!IMPORTANT]
 > After you change the value for columns you must publish customizations for the table.

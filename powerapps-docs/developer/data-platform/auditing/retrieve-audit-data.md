@@ -20,7 +20,7 @@ contributors:
 
 # Retrieve the history of audited data changes
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
 
 After auditing is enabled and data changes are made to those tables and columns being audited, you can proceed to obtain the data change history. Optionally, you can delete the audit records after you review the change history. Follow the sample code link at the end of this topic for more information.  
   
@@ -106,10 +106,10 @@ OData-Version: 4.0
 
 ### See also
 
- [Data management in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)<br />
- [Audit table data changes](/dynamics365/customer-engagement/developer/audit-entity-data-changes)<br />
- [Audit user access](audit-user-access.md) <br />
- [Sample: Audit table data changes](org-service/samples/audit-entity-data-changes.md)
+[Auditing overview](auditing-overview.md)<br />
+[Configure auditing](configure-auditing.md)<br />
+[Delete audit data](delete-audit-data.md)<br />
+[Sample: Audit table data changes](org-service/samples/audit-entity-data-changes.md)
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

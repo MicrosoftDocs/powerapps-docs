@@ -22,7 +22,7 @@ contributors:
 
 <!-- The purpose of the overview topic is to provide a single page view of capabilites without going into detail -->
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Dataverse auditing provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse auditing logs changes that are made to records and logs user access.
 
@@ -69,7 +69,7 @@ More information: [Configure tables and columns](configure-auditing.md#configure
 
 ## Retrieve audit history
 
-Audit history data is stored in the [Auditing (Audit) table](reference/entities/audit.md). This table doesn't include detail about individual column changes. You must use the following messages to retrieve detailed audit history data:
+Audit history data is stored in the [Auditing (Audit) table](../reference/entities/audit.md). This table doesn't include detail about individual column changes. You must use the following messages to retrieve detailed audit history data:
 
 |Message|Description|
 |---------|---------|
@@ -94,7 +94,7 @@ Dataverse provides the following messages to delete audit history data:
 |`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities|
 
 > [!NOTE]
-> You cannot directly delete records in the [Auditing (Audit) table](reference/entities/audit.md)
+> You cannot directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md)
 
 More information: [Delete audit data](delete-audit-data.md)
 
@@ -102,7 +102,7 @@ More information: [Delete audit data](delete-audit-data.md)
 
 ## Audit table
 
-Data for auditing events is in the [Auditing (Audit) table](reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> provides this data.
+Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> provides this data.
 
 The following table summarizes important columns in the audit table.
 
