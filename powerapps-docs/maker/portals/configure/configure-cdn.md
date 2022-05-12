@@ -29,49 +29,50 @@ When you enable CDN on your portal, the static contents like image, script, styl
 
 ## Enable Content Delivery Network for Production portal 
 
-CDN is available for production Power Apps portals. The steps below detail how to enable CDN 
+CDN is available for production Power Apps portals. The steps below detail how to enable CDN.
 
-1. Open the [<u>Power Platform Admin Center</u>](https://admin.powerplatform.microsoft.com/environments) 
+1. Open the [<u>Power Platform Admin Center</u>](https://admin.powerplatform.microsoft.com/environments).
 
-1. Navigate to **Environments**  
+1. Navigate to **Environments**.  
 
-1. Select Environment where Portal is created 
+1. Select the Environment where the portal is created. 
 
-1. Select on **Portals** inside **Resources** card 
+1. Select **Portals** on the **Resources** card. 
 
 ![A screenshot of a computer Description automatically generated](media/image2.gif)
 
-1. Select the Portal from the available list and select **Manage** 
+1. Select the portal from the available list and select **Manage**. 
 
 ![Graphical user interface  website Description automatically generated](media/image3.gif)
 
-1. Select the **Manage Content Delivery Network** item 
+1. Select the **Manage Content Delivery Network** item.
 
 ![Graphical user interface  text  application Description automatically generated](media/image4.gif)
 
-1. Turn on the **Content Delivery Network** switch to enable the feature 
+1. Turn on the **Content Delivery Network** switch to enable the feature. 
 
 ![Graphical user interface  text  application Description automatically generated](media/image5.gif)
 
-This process may take a few minutes to provision the Content Delivery Network.
+It may take a few minutes to provision the Content Delivery Network.
 
-Enable Content Delivery Network while converting trial to production 
+## Enable Content Delivery Network while converting trial to production 
 
-1. Open [<u>Portal admin center</u>](https://docs.microsoft.com/en-us/power-apps/maker/portals/admin/admin-overview) of trial portal 
+1. Open [<u>Portal admin center</u>](https://docs.microsoft.com/en-us/power-apps/maker/portals/admin/admin-overview) of trial portal. 
 
-1. Select the **Convert** button to initiate trial to prod conversion 
+1. Select the **Convert** button to initiate trial to prod conversion. 
 
-1. Select **Enable the Content Delivery Network** check box 
+1. Select **Enable the Content Delivery Network** check box. 
 
-1. Select **Confirm** button![Graphical user interface  application  Teams Description automatically generated](media/image6.png) 
+1. Select **Confirm** button.
+1. ![Graphical user interface  application  Teams Description automatically generated](media/image6.png) 
 
-##Disable Content Delivery Network 
+## Disable Content Delivery Network 
 
-1. Open the [<u>Power Platform Admin Center</u>](https://admin.powerplatform.microsoft.com/environments) 
+1. Open the [<u>Power Platform Admin Center</u>](https://admin.powerplatform.microsoft.com/environments). 
 
-1. Navigate to **Environments**  
+1. Navigate to **Environments**.  
 
-1. Select Environment where Portal is created 
+1. Select Environment where Portal is created. 
 
 1. Select on **Portals** inside **Resources** card 
 
