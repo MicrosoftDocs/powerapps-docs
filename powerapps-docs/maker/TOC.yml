@@ -1727,9 +1727,9 @@
               - name: Add custom JavaScript
                 href: ./portals/configure/add-custom-javascript.md
               - name: List configuration  
-                href: ./portals/configuration/list-configuration.md
+                href: ./portals/configure/list-configuration.md
               - name: Securing lists
-                href: ./portals/configuration/securing-lists.md
+                href: ./portals/configure/securing-lists.md
               - name: Add a view details page
                 href: ./portals/configure/list-view-details.md
               - name: List filter configuration
