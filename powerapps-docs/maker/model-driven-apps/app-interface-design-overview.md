@@ -2,7 +2,7 @@
 title: "Model-driven app interface design overview | MicrosoftDocs"
 description: "An overview of the elements that influence the app design interface"
 
-ms.date: 05/11/2022
+ms.date: 05/16/2022
 ms.reviewer: ""
 
 ms.suite: ""
@@ -14,7 +14,7 @@ author: "v-roryneary"
 ms.assetid: 
 caps.latest.revision: 1
 ms.subservice: 
-ms.author: v-roryneary
+ms.author: matp
 manager: ""
 tags: 
 search.audienceType: 

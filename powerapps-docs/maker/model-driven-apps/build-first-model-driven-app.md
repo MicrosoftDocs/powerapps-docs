@@ -5,7 +5,7 @@ ms.date: 05/16/2022
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-roryneary
+ms.author: matp
 ms.reviewer: matp
 contributors:
 - matp
