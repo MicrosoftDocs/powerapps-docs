@@ -92,10 +92,10 @@ using (var svc = new CrmServiceClient(conn))
 
 More information:
 
-- <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmI>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>
+- <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient?displayProperty=fullName>
+- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?displayProperty=fullName>
+- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?displayProperty=fullName>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve?displayProperty=fullName>
 
 ---
 
@@ -107,7 +107,7 @@ You can set these column values using Web API or Organization Service. More info
 
 ## Configure tables and columns
 
-Tables and columns each have a managed property named `IsAuditEnabled` that controls whether they are enabled for auditing.
+Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
 |Item |Web API | Organization Service|
 |---------|---------|---------|
@@ -116,10 +116,18 @@ Tables and columns each have a managed property named `IsAuditEnabled` that cont
 
 The `IsAuditEnabled` property is a managed property that is defined with the following types:
 
-
 |Web API  |Organization Service|
 |---------|---------|
-|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?displayProperty=fullName>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|
+|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?displayProperty=fullName>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?displayProperty=fullName>|
+
+A managed property has two important properties:
+
+|Property|Description|
+|---------|---------|
+|`Value`|Determines whether the setting is enabled.|
+|`CanBeChanged` |Determines whether the `Value` setting can be changed after the table or column is included in a managed solution.|
+
+The publisher of the solution that adds a table  may block people installing their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
 
 
