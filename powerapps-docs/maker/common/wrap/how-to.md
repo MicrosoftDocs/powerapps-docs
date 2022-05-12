@@ -83,7 +83,7 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 - **APIs my organization uses**&mdash;*Azure API Connections* and *PowerApps Service*
 
 > [!NOTE]
-> If you don't find the permissions for **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
+> If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
 > - Missing *Azure API Connections* permission: 
 >     ```powershell
 >     Connect-AzureAD -TenantId <your tenant ID>
