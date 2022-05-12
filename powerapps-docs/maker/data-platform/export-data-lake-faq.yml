@@ -59,6 +59,7 @@ sections:
         - Attachment
         - Annotation
         - String Map
+        - Calendar
    - question: Which Dataverse tables use Append only by default?
      answer: |
         All tables that do not have a createdOn field will be synced using Append only mode by default. This includes relationship tables as well as the ActivityParty table.
