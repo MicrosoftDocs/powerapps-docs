@@ -95,7 +95,7 @@ More information:
 - <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient?displayProperty=fullName>
 - <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?displayProperty=fullName>
 - <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?displayProperty=fullName>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve?displayProperty=fullName>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?displayProperty=fullName>
 
 ---
 
@@ -106,6 +106,8 @@ You can set these column values using Web API or Organization Service. More info
 - [Update and delete table rows using the Organization Service](org-service/entity-operations-update-delete.md)
 
 ## Configure tables and columns
+
+When auditing is configured for the organization any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can particpate in auditing are enabled. The primary control is at the table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
@@ -118,7 +120,7 @@ The `IsAuditEnabled` property is a managed property that is defined with the fol
 
 |Web API  |Organization Service|
 |---------|---------|
-|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?displayProperty=fullName>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?displayProperty=fullName>|
+|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?displayProperty=nameWithType>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?displayProperty=nameWithType>|
 
 A managed property has two important properties:
 
@@ -129,6 +131,8 @@ A managed property has two important properties:
 
 The publisher of the solution that adds a table  may block people installing their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
+### Detect which tables are enabled for auditing
 
+You can query the system to detect which tables currently support auditing and which ones can be changed.
 
-
+### Detect which Columns are enabled for auditing
