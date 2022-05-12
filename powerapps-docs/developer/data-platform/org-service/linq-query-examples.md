@@ -1072,7 +1072,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use LoadProperty to retrieve related rows
 
- The following sample shows how to [Relationship]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related rows.  
+ The following sample shows how to <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related rows.  
   
 ```csharp
 Contact benAndrews = svcContext.ContactSet.Where(c => c.FullName == "Ben Andrews").FirstOrDefault();
