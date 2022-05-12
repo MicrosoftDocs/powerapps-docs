@@ -66,17 +66,17 @@ Next, you add a new page to the model-driven app.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
-1. Select the **Account** table, and then select **Add**.
+1. Select table such as **Contact**, and then select **Add**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app.":::
 
-   The account form and view appear in the pages menu.
+   The contact form and view appear in the pages menu.
 
-1. Select **Account view**, and then select **Manage views**.
+1. Select **Contact view**, and then select **Add views**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
 
-1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**, and then select **Save**.
+1. Select the views that you want to add.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 
