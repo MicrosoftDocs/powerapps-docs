@@ -2,7 +2,7 @@
 title: "Transition client applications to the new Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the benefits of and the changes needed to transitions your client application to the next generation Dataverse web service client." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/26/2022
+ms.date: 05/12/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "phecke" # GitHub ID
@@ -19,7 +19,7 @@ search.app:
 
 # Transition apps to the next-generation Dataverse service client
 
-The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to the next-generation version of our APIs (internally called Dataverse SDK vNext). This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new service client that uses MSAL for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
 
 > [!NOTE]
 > All our existing developer documentation and sample code use the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Only this article that you are reading describes the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. More documentation and sample code updates are coming.
@@ -30,7 +30,7 @@ There are quite a few good reasons for the changes to the Dataverse SDK for .NET
 
 ### Cross-platform application support
 
-Navigate to [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) and select the **Frameworks** tab to see what build targets are supported.
+The new Dataverse service client supports .NET Core development. Navigate to [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) and select the **Frameworks** tab to see what build targets are supported.
 
 ### MSAL authentication
 
@@ -38,7 +38,7 @@ Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon
 
 ### Performance and functional benefits
 
-The new Dataverse service client includes automatic handling of request retries, caching of the authentication token, and more. With the older service client, you had to write code to manage these.
+The new Dataverse service client supports a smaller interface surface, inline authentication by instance, and ILogger. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
 
 ## What is impacted?
 
