@@ -107,7 +107,7 @@ You can set these column values using Web API or Organization Service. More info
 
 ## Configure tables and columns
 
-When auditing is configured for the organization any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can particpate in auditing are enabled. The primary control is at the table level.
+When auditing is configured for the organization any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can particpate in auditing are enabled. The primary control is at the organization and then table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
@@ -120,7 +120,7 @@ The `IsAuditEnabled` property is a managed property that is defined with the fol
 
 |Web API  |Organization Service|
 |---------|---------|
-|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?displayProperty=nameWithType>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?displayProperty=nameWithType>|
+|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?text=BooleanManagedProperty ComplexType>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?text=BooleanManagedProperty Class>|
 
 A managed property has two important properties:
 
