@@ -98,6 +98,8 @@ Dataverse provides the following messages to delete audit history data:
 
 More information: [Delete audit data](delete-audit-data.md)
 
+<!-- The below needs to be moved to retrieve audit data -->
+
 ## Audit table
 
 Data for auditing events is in the [Auditing (Audit) table](reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> provides this data.

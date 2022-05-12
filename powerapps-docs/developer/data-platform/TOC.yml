@@ -83,14 +83,14 @@
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
-    href: auditing-overview.md
+    href: auditing/auditing-overview.md
     items:
     - name: Configure auditing
-      href: configure-auditing.md
+      href: auditing/configure-auditing.md
     - name: Retrieve audit data
-      href: retrieve-audit-data.md
+      href: auditing/retrieve-audit-data.md
     - name: Delete audit data
-      href: delete-audit-data.md
+      href: auditing/delete-audit-data.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
