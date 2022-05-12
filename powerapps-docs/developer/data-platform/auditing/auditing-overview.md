@@ -210,6 +210,9 @@ However, you can enable audit of read operations from the Power Platform admin c
 ### See also
 
 [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
-[Configure tables and columns for auditing](configure-entities-attributes-auditing.md) 
+[Configure auditing](configure-auditing.md)<br />
+[Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
+[Delete audit data](delete-audit-data.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

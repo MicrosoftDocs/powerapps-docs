@@ -135,6 +135,299 @@ The publisher of the solution that adds a table  may block people installing the
 
 ### Detect which tables are enabled for auditing
 
-You can query the system to detect which tables currently support auditing and which ones can be changed.
+You can query the system to detect which tables currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
 
-### Detect which Columns are enabled for auditing
+# [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=LogicalName,IsAuditEnabled&$filter=IsAuditEnabled/Value eq true and IsPrivate eq false
+```
+
+**Response**
+
+```http
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions(LogicalName,IsAuditEnabled)",
+    "value": [
+        {
+            "LogicalName": "account",
+            "MetadataId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+            "IsAuditEnabled": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "canmodifyauditsettings"
+            }
+        },
+    < list truncated for brevity >
+    ]
+}
+```
+
+More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+
+# [Organization Service](#tab/orgservice)
+
+The following function displays the tables that can be enabled for auditing and those that cannot be enabled for auditing.
+
+```csharp
+static void ShowTableAuditConfigurations(IOrganizationService svc)
+{
+    //Define properties to return
+    MetadataPropertiesExpression EntityProperties =
+        new MetadataPropertiesExpression()
+        {
+            AllProperties = false
+        };
+    EntityProperties.PropertyNames
+        .AddRange(new string[] { "IsAuditEnabled" });
+
+    //Define filter to apply
+    MetadataFilterExpression EntityFilter =
+        new MetadataFilterExpression(LogicalOperator.And);
+    EntityFilter.Conditions
+        .Add(new MetadataConditionExpression(
+            "IsPrivate",
+            MetadataConditionOperator.Equals,
+            false));
+
+    RetrieveMetadataChangesRequest request =
+        new RetrieveMetadataChangesRequest()
+        {
+            Query = new EntityQueryExpression()
+            {
+                Criteria = EntityFilter,
+                Properties = EntityProperties
+            }
+        };
+
+    RetrieveMetadataChangesResponse response =
+        (RetrieveMetadataChangesResponse)svc.Execute(request);
+
+    Console.WriteLine("These tables can be enabled for auditing:");
+    response.EntityMetadata.ToList().ForEach(x =>
+    {
+        if (x.IsAuditEnabled.CanBeChanged && !x.IsAuditEnabled.Value)
+        {
+            Console.WriteLine($"{x.LogicalName}");
+        }
+    });
+
+    Console.WriteLine("\nThese tables cannot be enabled for auditing:");
+    response.EntityMetadata.ToList().ForEach(x =>
+    {
+        if (!x.IsAuditEnabled.CanBeChanged && !x.IsAuditEnabled.Value)
+        {
+            Console.WriteLine($"{x.LogicalName}");
+        }
+    });
+}
+```
+
+More information:
+
+- [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md)
+
+---
+
+### Detect which columns are enabled for auditing
+
+You can query the system to detect which table columns currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
+
+
+
+# [Web API](#tab/webapi)
+
+This example shows results for the `account` table.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes?$select=LogicalName,IsAuditEnabled&$filter=IsAuditEnabled/Value eq true
+```
+
+**Response**
+
+```http
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes(LogicalName,IsAuditEnabled)",
+    "value": [
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "emailaddress3",
+            "MetadataId": "97fb4aae-ea5d-427f-9b2b-9a6b9754286e",
+            "IsAuditEnabled": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "canmodifyauditsettings"
+            }
+        },
+    < list truncated for brevity >
+    ]
+}
+```
+
+More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+
+# [Organization Service](#tab/orgservice)
+
+This example show a function where the table `LogicalName` is passed as a parameter. It displays the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing.
+
+```csharp
+
+static void ShowColumnAuditConfigurations(
+IOrganizationService svc,
+string tableLogicalName)
+{
+
+//Define properties to return
+MetadataPropertiesExpression EntityProperties =
+    new MetadataPropertiesExpression()
+    {
+        AllProperties = false
+    };
+EntityProperties.PropertyNames
+    .AddRange(new string[] { "Attributes" });
+
+//Define filter to apply
+MetadataFilterExpression EntityFilter =
+    new MetadataFilterExpression(LogicalOperator.And);
+EntityFilter.Conditions.Add(
+    new MetadataConditionExpression(
+        "LogicalName",
+        MetadataConditionOperator.Equals,
+        tableLogicalName));
+
+//Define properties to return
+MetadataPropertiesExpression AttributeProperties =
+    new MetadataPropertiesExpression()
+    {
+        AllProperties = false
+    };
+AttributeProperties.PropertyNames
+    .AddRange(new string[] {
+        "LogicalName",
+        "IsAuditEnabled" });
+
+
+RetrieveMetadataChangesRequest request =
+    new RetrieveMetadataChangesRequest()
+    {
+        Query = new EntityQueryExpression()
+        {
+            Criteria = EntityFilter,
+            Properties = EntityProperties,
+            AttributeQuery = new AttributeQueryExpression
+            {
+                Criteria = null,
+                Properties = AttributeProperties
+            }
+
+        }
+    };
+
+RetrieveMetadataChangesResponse response =
+    (RetrieveMetadataChangesResponse)svc.Execute(request);
+
+response.EntityMetadata.ToList().ForEach(x =>
+{
+    Console.WriteLine("These columns can be enabled for auditing:");
+    x.Attributes.ToList().ForEach(y =>
+    {
+        if (y.IsAuditEnabled.CanBeChanged && !y.IsAuditEnabled.Value)
+        {
+            Console.WriteLine($"{y.LogicalName}");
+        }
+    });
+
+    Console.WriteLine("\nThese columns cannot be enabled for auditing:");
+    x.Attributes.ToList().ForEach(y =>
+    {
+        if (!y.IsAuditEnabled.CanBeChanged && !y.IsAuditEnabled.Value)
+        {
+            Console.WriteLine($"{y.LogicalName}");
+        }
+    });
+});
+}
+```
+
+More information: [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md)
+
+---
+
+## Enable or disable tables and columns for auditing
+
+If you want to change which tables or columns support auditing, you must update the respective `IsAuditEnabled` property.
+
+For **tables** update the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value` property. 
+
+More information:
+- [Web API: Update table definitions](webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)
+- [Organization Service: Retrieve and update a table](org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)
+
+For **columns**, update the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value` property. 
+
+More information:
+- [Web API:  Update a column](webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
+- [Organization Service: Update a column](org-service/metadata-attributemetadata.md#update-a-column)
+
+> [!IMPORTANT]
+> After you change the value for columns you must publish customizations for the table.
+> Changes will not take effect until the table customizations are published.
+
+### Publish changes for column changes
+
+Use the `PublishXml` message to publish customizations for the table.
+
+# [Web API](#tab/webapi)
+
+This example publishes the `account` table using the <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/PublishXml HTTP/1.1   
+Accept: application/json   
+OData-MaxVersion: 4.0   
+OData-Version: 4.0   
+
+{
+    "ParameterXml": "<importexportxml><entities><entity>account</entity></entities></importexportxml>"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 OK 
+```
+
+# [Organization Service](#tab/orgservice)
+
+This example publishes the `account` table using <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>.
+
+```csharp
+PublishXmlRequest request = new PublishXmlRequest()
+{ 
+    ParameterXml = "<importexportxml><entities><entity>account</entity></entities></importexportxml>"
+};
+svc.Execute(request);
+```
+More information: 
+ - <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+ - [Publish customizations](../../model-driven-apps/publish-customizations.md)
+ - [Publish request schema](../../model-driven-apps/publish-request-schema.md)
+
+---
+
+
+### See also
+
+[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
+[Auditing overview](auditing-overview.md)<br />
+[Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
+[Delete audit data](delete-audit-data.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
