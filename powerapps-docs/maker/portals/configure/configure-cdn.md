@@ -21,7 +21,7 @@ contributors:
 
 A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. CDNs' store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency. 
 
-![Diagram Description automatically generated](media/image1.jpeg) 
+:::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="A diagram of a content delivery network.":::
 
 When you enable CDN on your portal, the static contents like image, script, style sheet files used to design your portal website will be stored and served from the CDN server closest to your location.  
 > [!NOTE]
@@ -39,19 +39,19 @@ CDN is available for production Power Apps portals. The steps below detail how t
 
 1. Select **Portals** on the **Resources** card. 
 
-![A screenshot of a computer Description automatically generated](media/image2.gif)
+:::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
 1. Select the portal from the available list and select **Manage**. 
 
-![Graphical user interface  website Description automatically generated](media/image3.gif)
+:::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
 
 1. Select the **Manage Content Delivery Network** item.
 
-![Graphical user interface  text  application Description automatically generated](media/image4.gif)
+:::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
 
 1. Turn on the **Content Delivery Network** switch to enable the feature. 
 
-![Graphical user interface  text  application Description automatically generated](media/image5.gif)
+:::image type="content" source="media/configure-cdn/turn-on-cdn.png" alt-text="Toggle switch with Content Delivery Network feature enabled.":::
 
 It may take a few minutes to provision the Content Delivery Network.
 
@@ -64,7 +64,7 @@ It may take a few minutes to provision the Content Delivery Network.
 1. Select **Enable the Content Delivery Network** check box. 
 
 1. Select **Confirm** button.
-1. ![Graphical user interface  application  Teams Description automatically generated](media/image6.png) 
+    :::image type="content" source="media/configure-cdn/confirm-cdn.png" alt-text="Enable CDN converting trial to production.":::
 
 ## Disable Content Delivery Network 
 
@@ -76,15 +76,15 @@ It may take a few minutes to provision the Content Delivery Network.
 
 1. Select on **Portals** inside **Resources** card 
 
-![A screenshot of a computer Description automatically generated](media/image2.gif)
+:::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
 1. Select the Portal from the available list and select **Manage** 
 
-![Graphical user interface  website Description automatically generated](media/image3.gif)
+:::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
 
 1. Select the **Manage Content Delivery Network** item 
 
-![Graphical user interface  text  application Description automatically generated](media/image4.gif)
+:::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
 
 1. Turn off the **Content Delivery Network** switch to disable the feature 
 
@@ -102,9 +102,9 @@ Static website contents are in CDN servers across the geographical locations. Yo
 
 1. Select Environment where Portal is created 
 
-1. Select on **Portals** inside **Resources** card 
+1. Select **Portals** inside **Resources** card 
 
-![A screenshot of a computer Description automatically generated](media/image2.gif)
+:::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
 1. Select on **Purge Cache** button 
 
