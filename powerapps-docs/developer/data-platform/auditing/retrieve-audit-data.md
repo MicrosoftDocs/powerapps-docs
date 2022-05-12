@@ -22,7 +22,120 @@ contributors:
 
 [!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
 
-After auditing is enabled and data changes are made to those tables and columns being audited, you can proceed to obtain the data change history. Optionally, you can delete the audit records after you review the change history. Follow the sample code link at the end of this topic for more information.  
+After auditing is enabled and data changes are made to those tables and columns being audited, you can proceed to obtain the data change history.
+
+## Audit table
+
+Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only. 
+
+The following table summarizes important columns in the audit table.
+
+|SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
+|---------|---------|---------|
+|`Action`<br />`action`<br />Event|Choice|More than 70 options that represent the name of the message that caused the change. Each option has an integer and a localizable label value. For example:<br />0 = Unknown<br />1 = Create<br /> 2 = Update<br />3 = Delete<br />4 = Activate<br />5 = Deactivate<br />And so on... See [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) for the complete list. |
+|`AttributeMask`<br />`attributemask`<br />Changed Field|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
+|`AuditId`<br />`auditid`<br /> Record Id|Unique Identifier|The primary key for the audit table.|
+|`CallingUserId`<br />`callinguserid`<br />Calling User|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
+|`CreatedOn`<br />`createdon`<br />Changed Date|DateTime|When the audit record was created.|
+|`ObjectId`<br />`objectid`<br />Record|Lookup|The unique identifier for the record that was audited.|
+|`ObjectTypeCode`<br />`objecttypecode`<br />Entity|EntityName|The logical name of the entity referred to by the `objectid` column.|
+|`Operation`<br />`operation`<br />Operation|Choice|The operation that cased the audit. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
+|`UserId`<br />`userid`<br />Changed By|Lookup|The user who caused the change|
+
+<!-- |`RegardingObjectId`<br />`regardingobjectid`<br />Regarding |Lookup|         |
+|`TransactionId`<br />`transactionid`<br />Transaction Id|         |         |
+|`UserAdditionalInfo`<br />`useradditionalinfo`<br />User Info|         |         | 
+
+UserAdditionalInfo is the only column that can be updated?
+But the table doesn't support update
+-->
+
+### audit table relationships
+
+The audit table has only two Many-to-one relationships with the `systemuser` table:
+
+|Relationship|Audit Table Lookup|Description  |
+|---------|---------|---------|
+|`lk_audit_userid`|`userid`|Relates the user to all the audit records created because of changes they made.|
+|`lk_audit_callinguserid`|`callinguserid`|Relates the user to any of the audit records they created while impersonating another user.|
+
+You can use these relationships to filter audit data records created for a specific user.
+
+> [!NOTE]
+> The audit entity supports only one link entity in a query. Since only two relationships exist with the `systemuser` table, this means you can include data from either the `callinguserid` or `userid` columns, but not both at the same time.
+> You cannot build queries using QueryExpression or FetchXml that join audit data with tables other than the two formal relationships that exist with the `systemuser` table.
+
+<!-- Questions: 
+Why is the Audit TransactionId frequently an empty GUID (but not always)? Does it matter?
+Is UserAdditionalInfo ever not null?
+Is RegardingObjectId ever not null? -->
+
+### audit EntityType definition
+
+With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> resource to read data from the `audit` table. The following is the **EntityType** definition  Web API $metadata service document without annotations:
+
+```xml
+<EntityType Name="audit" BaseType="mscrm.crmbaseentity">
+  <Key>
+      <PropertyRef Name="auditid" />
+  </Key>
+  <Property Name="operation" Type="Edm.Int32" />
+  <Property Name="attributemask" Type="Edm.String" Unicode="false" />
+  <Property Name="action" Type="Edm.Int32" />
+  <Property Name="useradditionalinfo" Type="Edm.String" Unicode="false" />
+  <Property Name="createdon" Type="Edm.DateTimeOffset" />
+  <Property Name="objecttypecode" Type="Edm.String" Unicode="false" />
+  <Property Name="_callinguserid_value" Type="Edm.Guid" />
+  <Property Name="_regardingobjectid_value" Type="Edm.Guid" />
+  <Property Name="_objectid_value" Type="Edm.Guid" />
+  <Property Name="_userid_value" Type="Edm.Guid" />
+  <Property Name="transactionid" Type="Edm.Guid" />
+  <Property Name="auditid" Type="Edm.Guid" />
+  <NavigationProperty Name="callinguserid" Type="mscrm.systemuser" Nullable="false" Partner="lk_audit_callinguserid">
+      <ReferentialConstraint Property="_callinguserid_value" ReferencedProperty="systemuserid" />
+  </NavigationProperty>
+  <NavigationProperty Name="userid" Type="mscrm.systemuser" Nullable="false" Partner="lk_audit_userid">
+      <ReferentialConstraint Property="_userid_value" ReferencedProperty="systemuserid" />
+  </NavigationProperty>
+</EntityType>
+```
+
+More information: [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document)
+
+In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties. Lookup properties contain additional information when `GET` requests are sent using the `Prefer: odata.include-annotations="*"` request header. Using this preference will make sure that you get the `Microsoft.Dynamics.CRM.lookuplogicalname` and `OData.Community.Display.V1.FormattedValue` annotation values, but the `Microsoft.Dynamics.CRM.associatednavigationproperty` annotation values are not included with lookup properties in the `audit` EntityType.
+
+<!-- I think this is a bug. As noted above, for the _userid_value and _callinguserid_value lookup properties, there are associated navigation properties that could be returned. lk_audit_userid and lk_audit_callinguserid -->
+
+## Example: Find Contact records deleted by a user
+
+The following examples are queries that use audit table data to show how many contact records were deleted by a specific user.
+
+# [Web API](#tab/webapi)
+
+<!-- These are equivilent
+
+{{webapiurl}}systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/lk_audit_userid?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=action eq 3 and objecttypecode eq 'contact'
+
+{{webapiurl}}audits?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=action eq 3 and objecttypecode eq 'contact' and _userid_value eq '4026be43-6b69-e111-8f65-78e7d1620f5e' -->
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+```
+
+
+# [Query Expression](#tab/queryexpression)
+
+# [FetchXml](#tab/fetchxml)
+---
+
   
 ## Retrieve the change history
 
@@ -34,75 +147,7 @@ Refer to the sample link at the end of this topic for sample code that demonstra
 >
 > Going forward, [Audit](../reference/entities/audit.md) table records will be stored in Microsoft Dataverse's log storage. Linking audit records with other table records using FetchXML or <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will no longer be possible.
 
-## Delete the change history for a record
 
- Use the <xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest> message to delete all the audit change history records for a particular record. This lets you delete the audit change history for a record instead of deleting all the audit records for a date range, which is covered in the next section. To delete the audit change history for a record, you must have a security role with the **prvDeleteRecordChangeHistory** privilege or be a System Administrator.
-
-## Delete the change history for a date range
-
- You can delete `audit` records for a date range using the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request. Audit data records are deleted sequentially from the oldest to the newest. The functionality of this request is slightly different based on the edition of Microsoft SQL Server being used by your Dataverse server. Dataverse uses an enterprise edition of SQL Server.
-
- If your Dataverse server uses SQL Server standard edition, which does not support the database partitioning feature, the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request deletes all audit records created up to the end date specified in the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest.EndDate> property.
-
- If your Dataverse server uses an Enterprise edition of SQL Server that does support partitioning, the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request will delete all audit data in those partitions where the end date is before the date specified in the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest.EndDate> property. Any empty partitions are also deleted. However, neither the current (active) partition nor the `audit` records in that active partition can be deleted by using this request or any other request.
-
- New partitions are automatically created by the Dataverse platform on a quarterly basis each year. This functionality is non-configurable and cannot be changed. You can obtain the list of partitions using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest> request. If the end date of any partition is later than the current date, you cannot delete that partition or any `audit` records in it.
-
-## Delete audit data flexibly using BulkDelete
-
-You can delete audit records your organization no longer needs to retain to comply with internal and external auditing requirements using the [BulkDelete](xref:Microsoft.Dynamics.CRM.BulkDelete) action in the Web API or the [BulkDelete](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) message in the Organization Service. Deleting audit data using bulk delete will run in the background and allows you to define recurrence patterns, start time, and other parameters that help you to manage your bulk deletion jobs.
-
-### Basic audit bulk delete example
-
-This basic example deletes audit records of type 64 (User Access via Web) from the audit log. You can find the full list of audit actions in the [audit entity reference](../reference/entities/audit.md) and modify your bulk delete job according to your needs.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/BulkDelete HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-
-{
-  "QuerySet":
-      [
-        {
-          "EntityName": "audit",
-          "Criteria": {
-              "FilterOperator": "And",
-              "Conditions": [
-                  {
-                    "AttributeName": "action",
-                    "Operator": "Equal",
-                    "Values": [ {"Type": "System.String", "Value": "64"} ]
-                  }
-              ],
-              "Filters": []
-          }
-        }
-      ],
-      "JobName": "Bulk Delete of audit records with action = 64",
-      "SendEmailNotification": false,
-      "ToRecipients": [],
-      "CCRecipients": [],
-      "RecurrencePattern": "",
-      "StartDateTime": "2022-02-02T10:00:00.000Z"
-}
-```
-
-**Response**
-
-```HTTP
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.BulkDeleteResponse",
-  "JobId": "[Job Id]"
-}
-```
 
 ### See also
 

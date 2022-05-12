@@ -113,7 +113,9 @@ More information:
 
 ---
 
-Update the column properties in the table above to control how auditing works for the environment.
+### Change organization settings
+
+Update the column properties in the table above to change how auditing works for the environment.
 
 You can set these column values using Web API or Organization Service. More information: 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
@@ -286,7 +288,7 @@ More information: [Query table definitions using the Web API](../webapi/query-me
 
 # [Organization Service](#tab/orgservice)
 
-This function lists the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing for the table whee the table `LogicalName` value is passed as a parameter.
+This function lists the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing where the table `LogicalName` value is passed as a parameter.
 
 ```csharp
 
@@ -379,14 +381,14 @@ If you want to change which tables or columns support auditing, you must update 
 
 |API|Property|More information|
 |---------|---------|---------|
-|Web API|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|[Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|
+|Web API|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled.Value`|[Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|
 |Organization Service|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
 
 ### Columns
 
 |API|Property|More information|
 |---------|---------|---------|
-|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
+|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
 |Organization Service|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
 
 

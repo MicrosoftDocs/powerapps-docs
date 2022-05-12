@@ -83,8 +83,9 @@
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
-    href: auditing/auditing-overview.md
     items:
+    - name: Overview
+      href: auditing/auditing-overview.md
     - name: Configure auditing
       href: auditing/configure-auditing.md
     - name: Retrieve audit data
