@@ -30,9 +30,9 @@ After auditing is enabled and data changes are made to those tables and columns 
 Refer to the sample link at the end of this topic for sample code that demonstrates some of these change history message requests.
 
 > [!IMPORTANT]
-> Large column values, such as [Email.Description](reference/entities/email.md#BKMK_Description) or [Annotation](reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…".
+> Large column values, such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…".
 >
-> Going forward, [Audit](reference/entities/audit.md) table records will be stored in Microsoft Dataverse's log storage. Linking audit records with other table records using FetchXML or <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will no longer be possible.
+> Going forward, [Audit](../reference/entities/audit.md) table records will be stored in Microsoft Dataverse's log storage. Linking audit records with other table records using FetchXML or <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> will no longer be possible.
 
 ## Delete the change history for a record
 
@@ -54,7 +54,7 @@ You can delete audit records your organization no longer needs to retain to comp
 
 ### Basic audit bulk delete example
 
-This basic example deletes audit records of type 64 (User Access via Web) from the audit log. You can find the full list of audit actions in the [audit entity reference](reference/entities/audit.md) and modify your bulk delete job according to your needs.
+This basic example deletes audit records of type 64 (User Access via Web) from the audit log. You can find the full list of audit actions in the [audit entity reference](../reference/entities/audit.md) and modify your bulk delete job according to your needs.
 
 **Request**
 
@@ -109,7 +109,7 @@ OData-Version: 4.0
 [Auditing overview](auditing-overview.md)<br />
 [Configure auditing](configure-auditing.md)<br />
 [Delete audit data](delete-audit-data.md)<br />
-[Sample: Audit table data changes](org-service/samples/audit-entity-data-changes.md)
+[Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md)
 
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
