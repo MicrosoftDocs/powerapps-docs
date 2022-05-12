@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/25/2022
+ms.date: 05/12/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -83,16 +83,17 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 - **APIs my organization uses**&mdash;*Azure API Connections* and *PowerApps Service*
 
 > [!NOTE]
-> - If the *Azure API Connections* permission is missing under **APIs my organization uses**, run the following PowerShell commands and try again:
-> ```powershell
-> Connect-AzureAD -TenantId <your tenant ID>
-> New-AzureADServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
-> ```
-> - If the *PowerApps Service* permission is missing under **APIs my organization uses**, run the following PowerShell commands and try again:
-> ```powershell
-> Connect-AzureAD -TenantId <your tenant ID>
-> New-AzureADServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
-> ```
+> If you don't find the permissions for **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
+> - Missing *Azure API Connections* permission: 
+>     ```powershell
+>     Connect-AzureAD -TenantId <your tenant ID>
+>     New-AzureADServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+>     ```
+> - Missing *PowerApps Service* permission:
+>     ```powershell
+>     Connect-AzureAD -TenantId <your tenant ID>
+>     New-AzureADServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+>     ```
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
