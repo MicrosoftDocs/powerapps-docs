@@ -92,10 +92,10 @@ using (var svc = new CrmServiceClient(conn))
 
 More information:
 
-- <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient?displayProperty=fullName>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?displayProperty=fullName>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?displayProperty=fullName>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?displayProperty=fullName>
+- <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient?text=CrmServiceClient Class>
+- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?text=WhoAmIRequest Class>
+- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?text=WhoAmIResponse Class>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
 
 ---
 
@@ -113,8 +113,8 @@ Tables and columns each have a *managed property* named `IsAuditEnabled` that co
 
 |Item |Web API | Organization Service|
 |---------|---------|---------|
-|Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled>|
-|Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled>|
+|Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled Property>|
+|Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled Property>|
 
 The `IsAuditEnabled` property is a managed property that is defined with the following types:
 
