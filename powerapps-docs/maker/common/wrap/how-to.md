@@ -82,6 +82,18 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 - **Microsoft APIs**&mdash;*Dynamics CRM*
 - **APIs my organization uses**&mdash;*Azure API Connections* and *PowerApps Service*
 
+> [!NOTE]
+> - If the *Azure API Connections* permission is missing under **APIs my organization uses**, run the following PowerShell commands and try again:
+> ```powershell
+> Connect-AzureAD -TenantId <your tenant ID>
+> New-AzureADServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+> ```
+> - If the *PowerApps Service* permission is missing under **APIs my organization uses**, run the following PowerShell commands and try again:
+> ```powershell
+> Connect-AzureAD -TenantId <your tenant ID>
+> New-AzureADServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+> ```
+
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
 ## Create an App Center container for your mobile app
