@@ -20,16 +20,15 @@ contributors:
 
 # Configure auditing 
 
-Auditing uses settings in the [Organization table](../reference/entities/organization.md) as well as settings for each table and column to determine what kind of audit history data to capture. 
+Auditing uses settings in the [Organization table](../reference/entities/organization.md) as well in table and column definitions to determine what kind of audit history data to capture. 
 
-Anyone can read this data, but you must have the System Administrator or System Customizer roles to change these settings.
+Anyone can read this configuration data, but you must have the System Administrator or System Customizer roles to change these settings.
 
 ## Configure organization settings
 
-The [Organization table](../reference/entities/organization.md) contains properties that control how auditing is enabled for an environment. The organization table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The response from the WhoAmI message contains the `OrganizationId` value.
+The [Organization table](../reference/entities/organization.md) contains properties that control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
 
-The following table describes the organization table columns that control auditing behavior.
-
+The following table describes the `organization` table columns that control auditing behavior.
 
 |Schema Name<br />Logical Name |Type  |Description  |
 |---------|---------|---------|
@@ -45,7 +44,11 @@ You can retrieve these values using the following queries:
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/organizations(<organizationid value>)?$select=isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval
+GET [Organization URI]/api/data/v9.2/organizations(<organizationid value>)?$select=
+isauditenabled,
+auditretentionperiodv2,
+isuseraccessauditenabled,
+useraccessauditinginterval HTTP/1.1
 ```
 
 **Response**
@@ -54,13 +57,13 @@ GET [Organization URI]/api/data/v9.2/organizations(<organizationid value>)?$sele
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#organizations(isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval)/$entity",
-    "@odata.etag": "W/\"67037845\"",
-    "isauditenabled": true,
-    "auditretentionperiodv2": 30,
-    "isuseraccessauditenabled": true,
-    "useraccessauditinginterval": 4,
-    "organizationid": "<organizationid value>"
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval)/$entity",
+  "@odata.etag": "W/\"67037845\"",
+  "isauditenabled": true,
+  "auditretentionperiodv2": 30,
+  "isuseraccessauditenabled": true,
+  "useraccessauditinginterval": 4,
+  "organizationid": "<organizationid value>"
 }
 ```
 More information: 
@@ -69,10 +72,15 @@ More information:
 
 # [Organization Service](#tab/orgservice)
 
+This function uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method> with the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> and <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse> classes to get the `organizationid` value.
+
+Then it uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method> to return the data from the `organization` table.
+
 ```csharp
-using (var svc = new CrmServiceClient(conn))
+static void ShowAuditingConfig(IOrganizationService svc)
 {
-    WhoAmIResponse whoAmIResponse = (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
+    WhoAmIResponse whoAmIResponse = 
+        (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
 
     Entity organization = svc.Retrieve(
         entityName: "organization",
@@ -83,18 +91,22 @@ using (var svc = new CrmServiceClient(conn))
         "isuseraccessauditenabled",
         "useraccessauditinginterval"
         )
-      );
+        );
 
-    Console.WriteLine($"isauditenabled: {organization["isauditenabled"]}");
-    Console.WriteLine($"auditretentionperiodv2: {organization["auditretentionperiodv2"]}");
-    Console.WriteLine($"isuseraccessauditenabled: {organization["isuseraccessauditenabled"]}");
-    Console.WriteLine($"useraccessauditinginterval: {organization["useraccessauditinginterval"]}");
+    Console.WriteLine($"isauditenabled: " +
+        $"{organization["isauditenabled"]}");
+    Console.WriteLine($"auditretentionperiodv2: " +
+        $"{organization["auditretentionperiodv2"]}");
+    Console.WriteLine($"isuseraccessauditenabled: " +
+        $"{organization["isuseraccessauditenabled"]}");
+    Console.WriteLine($"useraccessauditinginterval: " +
+        $"{organization["useraccessauditinginterval"]}");
 }
 ```
 
 More information:
 
-- <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient?text=CrmServiceClient Class>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
 - <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?text=WhoAmIRequest Class>
 - <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?text=WhoAmIResponse Class>
 - <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
@@ -109,7 +121,7 @@ You can set these column values using Web API or Organization Service. More info
 
 ## Configure tables and columns
 
-When auditing is configured for the organization any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can particpate in auditing are enabled. The primary control is at the organization and then table level.
+When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can particpate in auditing are enabled. The primary control is at the organization and then table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
@@ -118,26 +130,28 @@ Tables and columns each have a *managed property* named `IsAuditEnabled` that co
 |Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled Property>|
 |Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled Property>|
 
-The `IsAuditEnabled` property is a managed property that is defined with the following types:
+The `IsAuditEnabled` property is a managed property that is defined by the following types:
 
 |Web API  |Organization Service|
 |---------|---------|
 |<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?text=BooleanManagedProperty ComplexType>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?text=BooleanManagedProperty Class>|
 
-A managed property has two important properties:
+A `BooleanManagedProperty` has two important properties:
 
 |Property|Description|
 |---------|---------|
 |`Value`|Determines whether the setting is enabled.|
 |`CanBeChanged` |Determines whether the `Value` setting can be changed after the table or column is included in a managed solution.|
 
-The publisher of the solution that adds a table  may block people installing their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+The publisher of the solution that adds a table  may block people who install their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ### Detect which tables are enabled for auditing
 
-You can query the system to detect which tables currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
+You can query the table definitions to detect which tables currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
 
 # [Web API](#tab/webapi)
+
+This query returns the `Logicalname` for all public tables that are enabled for auditing:
 
 **Request**
 
@@ -169,7 +183,7 @@ More information: [Query table definitions using the Web API](../webapi/query-me
 
 # [Organization Service](#tab/orgservice)
 
-The following function displays the tables that can be enabled for auditing and those that cannot be enabled for auditing.
+The following function lists the tables that can be enabled for auditing and those that cannot be enabled for auditing.
 
 ```csharp
 static void ShowTableAuditConfigurations(IOrganizationService svc)
@@ -233,13 +247,13 @@ More information:
 
 ### Detect which columns are enabled for auditing
 
-You can query the system to detect which table columns currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
+You can query the column definitions to detect which table columns currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
 
 
 
 # [Web API](#tab/webapi)
 
-This example shows results for the `account` table.
+This returns all the columns enabled for auditing for the `account` table.
 
 **Request**
 
@@ -272,7 +286,7 @@ More information: [Query table definitions using the Web API](../webapi/query-me
 
 # [Organization Service](#tab/orgservice)
 
-This example show a function where the table `LogicalName` is passed as a parameter. It displays the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing.
+This function lists the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing for the table whee the table `LogicalName` value is passed as a parameter.
 
 ```csharp
 
@@ -361,17 +375,20 @@ More information: [Retrieve and detect changes to table definitions](../org-serv
 
 If you want to change which tables or columns support auditing, you must update the respective `IsAuditEnabled` property.
 
-For **tables** update the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value` property. 
+### Tables
 
-More information:
-- [Web API: Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)
-- [Organization Service: Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)
+|API|Property|More information|
+|---------|---------|---------|
+|Web API|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|[Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|
+|Organization Service|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
 
-For **columns**, update the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value` property. 
+### Columns
 
-More information:
-- [Web API:  Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
-- [Organization Service: Update a column](../org-service/metadata-attributemetadata.md#update-a-column)
+|API|Property|More information|
+|---------|---------|---------|
+|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
+|Organization Service|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
+
 
 > [!IMPORTANT]
 > After you change the value for columns you must publish customizations for the table.
@@ -403,6 +420,8 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 OK 
 ```
+
+More information: [Use Web API actions](../webapi/use-web-api-actions.md)
 
 # [Organization Service](#tab/orgservice)
 

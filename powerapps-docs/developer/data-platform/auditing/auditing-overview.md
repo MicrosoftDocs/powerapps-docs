@@ -41,7 +41,7 @@ You can use Dataverse tables and APIs to:
 
 ## Organization settings
 
-The Organization table contains properties that control how auditing is enabled for an environment. The organization table has a single row. 
+The Organization table contains properties that control how auditing is enabled for an environment. 
 
 You can retrieve column values in this row to determine:
 
@@ -50,7 +50,7 @@ You can retrieve column values in this row to determine:
 - Whether user access logging is enabled.
 - The interval that controls how often user access is logged.
 
-If you have system administrator or system customizer roles, You can update these values to change the auditing behavior.
+If you have system administrator or system customizer roles, you can update these values to change the auditing behavior.
 
 More information: [Configure organization settings](configure-auditing.md#configure-organization-settings)
 
@@ -59,9 +59,9 @@ More information: [Configure organization settings](configure-auditing.md#config
 
 When auditing is enabled for the organization, those tables which are enabled for auditing will begin writing audit data when data changes.
 
-When auditing is enabled for a table, those columns which are enabled for auditing will be included in the audit data. By default all columns that support auditing are enabled but auditing is disabled at the table and organization level.
+When auditing is enabled for a table, those columns which are enabled for auditing will be included in the audit data. By default all columns that support auditing are enabled.
 
-You can use Dataverse APIs to query this data to determine which tables and columns are enabled for auditing.
+You can use Dataverse APIs to query this the table and column definitions to determine which tables and columns are enabled for auditing.
 
 If you have system administrator or system customizer roles, you can update these values to change the auditing behavior.
 
