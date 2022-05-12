@@ -1,6 +1,6 @@
 ---
-title: "Retrieve and delete the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Programmatically retrieve the audit change history or delete audit records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Retrieve the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes how to programmatically retrieve the audit change history." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/10/2022
 ms.reviewer: jdaly
 ms.topic: overview
@@ -18,7 +18,7 @@ contributors:
  - phecke
 ---
 
-# Retrieve and delete the history of audited data changes
+# Retrieve the history of audited data changes
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 

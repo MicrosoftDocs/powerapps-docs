@@ -52,7 +52,7 @@ You can retrieve column values in this row to determine:
 
 If you have system administrator or system customizer roles, You can update these values to change the auditing behavior.
 
-More information: TODO: link to section on this
+More information: [Configure organization settings](configure-auditing.md#configure-organization-settings)
 
 
 ## Table and column settings
@@ -65,7 +65,7 @@ You can use Dataverse APIs to query this data to determine which tables and colu
 
 If you have system administrator or system customizer roles, you can update these values to change the auditing behavior.
 
-More information: TODO: link to section on this
+More information: [Configure tables and columns](configure-auditing.md#configure-tables-and-columns)
 
 ## Retrieve audit history
 
@@ -77,7 +77,7 @@ Audit history data is stored in the [Auditing (Audit) table](reference/entities/
 |`RetrieveAuditDetails`|Retrieves the change history for all columns changed for a specific audit record.|
 |`RetrieveRecordChangeHistory`|Retrieves all attribute changes for an audited record.|
 
-More information: TODO: link to section on this
+More information: [Retrieve the history of audited data change](retrieve-audit-data.md)
 
 ## Delete audit data
 
@@ -96,7 +96,7 @@ Dataverse provides the following messages to delete audit history data:
 > [!NOTE]
 > You cannot directly delete records in the [Auditing (Audit) table](reference/entities/audit.md)
 
-More information: TODO: link to section on this
+More information: [Delete audit data](delete-audit-data.md)
 
 ## Audit table
 
