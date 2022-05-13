@@ -36,11 +36,11 @@ The following table summarizes important columns in the audit table.
 |`AttributeMask`<br />`attributemask`<br />Changed Field|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
 |`AuditId`<br />`auditid`<br /> Record Id|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />Calling User|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
-|`CreatedOn`<br />`createdon`<br />Changed Date|DateTime|When the audit record was created.|
+|`CreatedOn`<br />`createdon`<br />Changed Date|DateTime|When the audit record was created, which is when the user operation took place.|
 |`ObjectId`<br />`objectid`<br />Record|Lookup|The unique identifier for the record that was audited.|
 |`ObjectTypeCode`<br />`objecttypecode`<br />Entity|EntityName|The logical name of the entity referred to by the `objectid` column.|
 |`Operation`<br />`operation`<br />Operation|Choice|The operation that cased the audit. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
-|`UserId`<br />`userid`<br />Changed By|Lookup|The user who caused the change|
+|`UserId`<br />`userid`<br />Changed By|Lookup|The Id of the user who caused the change.|
 
 <!-- |`RegardingObjectId`<br />`regardingobjectid`<br />Regarding |Lookup|         |
 |`TransactionId`<br />`transactionid`<br />Transaction Id|         |         |
@@ -52,7 +52,7 @@ But the table doesn't support update
 
 ### audit table relationships
 
-The audit table has only two Many-to-one relationships with the `systemuser` table:
+The audit table has only two Many-to-One relationships with the `systemuser` table:
 
 |Relationship|Audit Table Lookup|Description  |
 |---------|---------|---------|
@@ -102,7 +102,9 @@ With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit
 
 More information: [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document)
 
-In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties. Lookup properties contain additional information when `GET` requests are sent using the `Prefer: odata.include-annotations="*"` request header. Using this preference will make sure that you get the `Microsoft.Dynamics.CRM.lookuplogicalname` and `OData.Community.Display.V1.FormattedValue` annotation values, but the `Microsoft.Dynamics.CRM.associatednavigationproperty` annotation values are not included with lookup properties in the `audit` EntityType.
+In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties. 
+
+Lookup properties contain additional information when `GET` requests are sent using the `Prefer: odata.include-annotations="*"` request header. Using this preference will make sure that you get the `Microsoft.Dynamics.CRM.lookuplogicalname` and `OData.Community.Display.V1.FormattedValue` annotation values, but the `Microsoft.Dynamics.CRM.associatednavigationproperty` annotation values are not included with lookup properties in the `audit` EntityType.
 
 <!-- I think this is a bug. As noted above, for the _userid_value and _callinguserid_value lookup properties, there are associated navigation properties that could be returned. lk_audit_userid and lk_audit_callinguserid -->
 
