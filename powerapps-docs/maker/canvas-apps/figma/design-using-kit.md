@@ -36,11 +36,21 @@ To create an app from a Figma design, you must start with the [Create apps from 
 
 ## Read the instructions
 
-Read the instructions from the **Read this first** and **Step 1: Getting started** pages. The instructions on these pages help you understand general guidelines about using this kit. You'll also learn more about the resources used by the kit, such as the font type, font size along with the supported and unsupported features/controls.
+Read the instructions from the **Read this first** and **Step 1: Getting started** pages inside the UI kit. The instructions on these pages help you understand general guidelines about using this kit. You'll also learn more about the resources used by the kit, such as the font type, font size along with the supported and unsupported features/controls.
 
 ## Design your app
 
-Follow the instructions in the **Step 2: Design your app** page to get started with using the kit to create your own app design.
+Follow the instructions in the **Step 2: Design your app** page inside the UI kit to get started with using the kit to create your own app design.
+
+## Do’s and Don’ts while designing
+
+The kit contains detailed guidance on how to use the components. However, here are some of the top do’s and don’ts to keep in mind while designing the app:
+
+- Do read each page carefully so that the design process and the conversion process go smoothly.
+- Do design only using the supported components from this kit.
+- Do use only the supported fonts listed in the kit.
+- Don’t change the component names.
+- Don’t change the component layers.
 
 ## More information
 
@@ -49,4 +59,3 @@ The kit also provides additional pages for more information as summarized below:
 - **Step 3: Convert into an app** - a visual representation of converting the app design into an app. To follow step-by-step instructions, see [Create a canvas app from Figma](create-app-from-figma.md).
 - **Step 4: Next steps** - explains the possible next steps you can take to further prepare your app for your business scenario. These steps include [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding additional [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
 - **Supported components** - lists information about supported and unsupported components. For more information, see [Components supported by the UI kit](supported-components.md).
- 
