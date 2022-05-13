@@ -1,6 +1,6 @@
 ---
-title: Components supported by the Canvas Apps from Figma UI Kit (preview)
-description: Learn about different components supported by the Canvas Apps from figma UI Kit.
+title: Components supported by the UI kit (preview)
+description: Learn about different components supported by the canvas apps from Figma UI kit.
 author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
@@ -16,7 +16,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Components supported by the Canvas Apps from Figma UI Kit (preview)
+# Components supported by the UI kit (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
