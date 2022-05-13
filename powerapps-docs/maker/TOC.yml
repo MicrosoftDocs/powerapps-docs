@@ -245,7 +245,7 @@
         items:
         - name: Overview
           href: ./canvas-apps/figma/overview.md
-        - name: Design your app using the Canvas Apps from Figma UI Kit
+        - name: Create apps from Figma UI kit
           href: ./canvas-apps/figma/design-using-toolkit.md
         - name: Components supported by the Canvas Apps from Figma UI Kit
           href: ./canvas-apps/figma/supported-components.md
