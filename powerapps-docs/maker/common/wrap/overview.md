@@ -36,7 +36,7 @@ The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as cus
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] To submit feedback, or report a problem with this feature, send an email to <pamobsup@microsoft.com>.
-> - This preview feature is initially available only in North America (NAM) environments.
+> - This preview feature is currently available only in North America (NAM) and United Kingdom (UK) environments.
 
 ## Overview
 
