@@ -17,7 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Transition apps to the next-generation Dataverse service client
+# Transition apps to Dataverse service client
 
 The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new service client that uses MSAL for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
 
