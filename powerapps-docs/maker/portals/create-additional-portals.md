@@ -24,7 +24,7 @@ The ability to create additional environments is determined by the template chos
 | [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals\* | No limits for language. Each portal can have 1 or more languages enabled. \*\*\* |
 | [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals\* | No limits for language. Each portal can have 1 or more languages enabled. \*\*\* |
 | [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self-service, Employee self-service portals | 50 portals\*\* | No limits for language. Each portal can have 1 or more languages enabled. \*\*\*
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal, Customer portal (Dynamics 365 Supply Chain Management) | one portal for each template | Limit of one portal template, but additional languages for each template can be enabled. \*\*\* |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal, [Customer portal for Dynamics 365 Supply Chain Management](/dynamics365/supply-chain/sales-marketing/customer-portal-overview) | one portal for each template | Limit of one portal template, but additional languages for each template can be enabled. \*\*\* |
 
 \* Requires Starter portal package version [9.3.2109.x or later](release-updates.md#starter-portal-package-updates)
 
