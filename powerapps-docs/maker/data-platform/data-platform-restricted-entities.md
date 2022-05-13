@@ -79,7 +79,7 @@ Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgeneratio
 [1] *Case table actions permitted with only Power Apps, Power Automate, or Power Virtual Agents license:*  
 Power Apps, Power Automate, or Power Virtual Agents licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Power Virtual Agents licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
 
-[2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case it is permitted with the Power Apps license.
+[2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case it is permitted with the Power Apps license.*
 
 > [!NOTE]
 > Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who have bought these licenses in the past.
