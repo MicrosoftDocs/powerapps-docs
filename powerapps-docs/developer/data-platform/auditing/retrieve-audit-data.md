@@ -22,7 +22,7 @@ contributors:
 
 [!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
 
-After auditing is enabled and data changes are made to those tables and columns being audited, you can proceed to obtain the data change history.
+After auditing is enabled and data changes are made to those tables and columns being audited, you can retrieve the data change history.
 
 ## Audit table
 
@@ -32,7 +32,7 @@ The following table summarizes important columns in the audit table.
 
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
-|`Action`<br />`action`<br />Event|Choice|More than 70 options that represent the name of the message that caused the change. Each option has an integer and a localizable label value. For example:<br />0 = Unknown<br />1 = Create<br /> 2 = Update<br />3 = Delete<br />4 = Activate<br />5 = Deactivate<br />And so on... See [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) for the complete list. |
+|`Action`<br />`action`<br />Event|Choice|More than 70 options that represent the name of the message that caused the change. Each option has an integer and a localizable label value. For example:<br />0 = Unknown<br />1 = Create<br /> 2 = Update<br />3 = Delete<br />4 = Activate<br />5 = Deactivate<br />And so on... See [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) for the complete list. <br /> More information: [Actions](#actions)|
 |`AttributeMask`<br />`attributemask`<br />Changed Field|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
 |`AuditId`<br />`auditid`<br /> Record Id|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />Calling User|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
@@ -42,13 +42,100 @@ The following table summarizes important columns in the audit table.
 |`Operation`<br />`operation`<br />Operation|Choice|The operation that cased the audit. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
 |`UserId`<br />`userid`<br />Changed By|Lookup|The Id of the user who caused the change.|
 
-<!-- |`RegardingObjectId`<br />`regardingobjectid`<br />Regarding |Lookup|         |
-|`TransactionId`<br />`transactionid`<br />Transaction Id|         |         |
-|`UserAdditionalInfo`<br />`useradditionalinfo`<br />User Info|         |         | 
+### Actions
 
-UserAdditionalInfo is the only column that can be updated?
-But the table doesn't support update
--->
+There are currently 17 optionsin the [Action Column](../reference/entities/audit.md#BKMK_Action) generally correspond to messages in the system. 
+You can use these to filter for specific operations. The following table includes the options:
+
+
+|Value  |Label  |Message  | Comment|
+|---------|---------|---------|
+|0|Unknown ||Not a known message|
+|1|Create |`Create`||
+|2|Update|`Update`||
+|3|Delete|`Delete`||
+|4|Activate|||
+|5|Deactivate|||
+|11|Cascade|||
+|12|Merge|`Merge`||
+|13|Assign|`Assign`||
+|14|Share|`GrantAccess`||
+|15|Retrieve|`Retrieve`||
+|16|Close|||
+|17|Cancel|||
+|18|Complete|||
+|20|Resolve|||
+|21|Reopen|||
+|22|Fulfill|||
+|23|Paid|||
+|24|Qualify|||
+|25|Disqualify|||
+|26|Submit|||
+|27|Reject|||
+|28|Approve|||
+|29|Invoice|||
+|30|Hold|||
+|31|Add Member|||
+|32|Remove Member|||
+|33|Associate Entities|`Associate`||
+|34|Disassociate Entities|`Disassociate`||
+|35|Add Members|||
+|36|Remove Members|||
+|37|Add Item|||
+|38|Remove Item|||
+|39|Add Substitute|||
+|40|Remove Substitute|||
+|41|Set State|`SetState`||
+|42|Renew|||
+|43|Revise|||
+|44|Win|||
+|45|Lose|||
+|46|Internal Processing|||
+|47|Reschedule|||
+|48|Modify Share|`ModifyAccess`||
+|49|Unshare|`RevokeAccess`||
+|50|Book|||
+|51|Generate Quote From Opportunity|||
+|52|Add To Queue|||
+|53|Assign Role To Team|||
+|54|Remove Role From Team|||
+|55|Assign Role To User|||
+|56|Remove Role From User|||
+|57|Add Privileges to Role|||
+|58|Remove Privileges From Role|||
+|59|Replace Privileges In Role|||
+|60|Import Mappings|||
+|61|Clone|||
+|62|Send Direct Email|||
+|63|Enabled for organization|||
+|64|User Access via Web|||
+|65|User Access via Web Services|||
+|100|Delete Entity|||
+|101|Delete Attribute|||
+|102|Audit Change at Entity Level|||
+|103|Audit Change at Attribute Level|||
+|104|Audit Change at Org Level|||
+|105|Entity Audit Started|||
+|106|Audit Enabled|||
+|107|Audit Enabled|||
+|108|Entity Audit Stopped|||
+|109|Attribute Audit Stopped|||
+|110|Audit Disabled|||
+|111|Audit Log Deletion|||
+|112|User Access Audit Started|||
+|113|User Access Audit Stopped|||
+
+There are some messages which are composites that contain a verb such as `AddMember`, `AddItem`, `Win`, `Close`, `Renew`, `Revise`  that is then appended to a table name and can apply to one or more tables. For example: `AddMemberList`, `AddItemCampaign`, `AddItemCampaignActivity`, `WinOpportunity`, `CloseIncident`, `CloseQuote`, `RenewContract`, `RenewEntitlement`, and `ReviseQuote`.
+
+In the .NET SDK you will find request and response class definitions for many of these within the <xref:Microsoft.Crm.Sdk.Messages?text=Microsoft.Crm.Sdk.Messages Namespace>, such as:
+
+ - <xref:Microsoft.Crm.Sdk.Messages.AddMemberListRequest?text=AddMemberListRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddMemberListResponse?text=AddMemberListResponse Class>
+ - <xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignRequest?text=AddItemCampaignRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignResponse?text=AddItemCampaignResponse Class>
+ - <xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignActivityRequest?text=AddItemCampaignActivityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignActivityResponse?text=AddItemCampaignActivityResponse Class>
+ - <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest?text=WinOpportunityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.WinOpportunityResponse?text=WinOpportunityResponse Class>
+ - <xref:Microsoft.Crm.Sdk.Messages.CloseIncidentRequest?text=CloseIncidentRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.CloseIncidentResponse?text=CloseIncidentResponse Class>
+
+These operations only occur when a solution containing the definition of these messages is installed. These messages are only found in the Dynamics 365 solutions such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
 
 ### audit table relationships
 

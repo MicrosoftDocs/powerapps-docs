@@ -20,13 +20,13 @@ contributors:
 
 # Configure auditing 
 
-Auditing uses settings in the [Organization table](../reference/entities/organization.md) as well in table and column definitions to determine what kind of audit history data to capture. 
+Auditing uses settings in the [Organization table](../reference/entities/organization.md) and table and column definitions to determine what kind of audit history data to capture. 
 
 Anyone can read this configuration data, but you must have the System Administrator or System Customizer roles to change these settings.
 
 ## Configure organization settings
 
-The [Organization table](../reference/entities/organization.md) contains properties that control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
+Properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
 
 The following table describes the `organization` table columns that control auditing behavior.
 
@@ -115,7 +115,7 @@ More information:
 
 ### Change organization settings
 
-Update the column properties in the table above to change how auditing works for the environment.
+Update the column properties in the table above to change how auditing works for the environment. You must have the System Administrator or System Customizer roles to change these settings.
 
 You can set these column values using Web API or Organization Service. More information: 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
@@ -149,7 +149,7 @@ The publisher of the solution that adds a table  may block people who install th
 
 ### Detect which tables are enabled for auditing
 
-You can query the table definitions to detect which tables currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
+Query the table definitions to detect which tables currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
 
 # [Web API](#tab/webapi)
 
@@ -181,7 +181,9 @@ GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=LogicalName,IsAud
 }
 ```
 
-More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+More information:
+ - [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+ - <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
 
 # [Organization Service](#tab/orgservice)
 
@@ -249,8 +251,7 @@ More information:
 
 ### Detect which columns are enabled for auditing
 
-You can query the column definitions to detect which table columns currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
-
+Query the column definitions to detect which table columns currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
 
 
 # [Web API](#tab/webapi)
