@@ -1,6 +1,6 @@
 ---
 title: Components supported by the Canvas Apps from Figma UI Kit (preview)
-description: An overview about creating app from Figma feature in Power Apps.
+description: Learn about different components supported by the Canvas Apps from figma UI Kit.
 author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
