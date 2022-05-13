@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/2/2022
+ms.date: 05/13/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -21,10 +21,10 @@ The ability to create additional environments is determined by the template chos
 
 | Environment type | Template | Limit | Additional information |
 | - | - | - | - |
-| [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. \*\*\* |
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals\* | No limits for language. For example, more than one or all portals can use same language. \*\*\* |
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self-service, Employee self-service portals | 50 portals\*\* | No limits for language.  For example, one or all portals can use the same language. \*\*\*
-| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal, Customer portal (Dynamics 365 SCM) | one portal for each language | For example, one English language portal for **Partner portal** template allowed (additional languages can be enabled). \*\*\* |
+| [Environment with Dataverse](portal-templates.md#environment-with-dataverse) | Dataverse starter portal | 50 portals\* | No limits for language. Each portal can have 1 or more languages enabled. \*\*\* |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Portal from blank | 50 portals\* | No limits for language. Each portal can have 1 or more languages enabled. \*\*\* |
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Community, Customer self-service, Employee self-service portals | 50 portals\*\* | No limits for language. Each portal can have 1 or more languages enabled. \*\*\*
+| [Environment with customer engagement apps](portal-templates.md#environment-with-customer-engagement-apps) | Partner portal, Customer portal (Dynamics 365 Supply Chain Management) | one portal for each template | Limit of one portal template, but additional languages for each template can be enabled. \*\*\* |
 
 \* Requires Starter portal package version [9.3.2109.x or later](release-updates.md#starter-portal-package-updates)
 
@@ -35,8 +35,6 @@ The ability to create additional environments is determined by the template chos
 To enable multiple [Modern Community](/dynamics365/customer-service/community-get-started) portals, see [Create new websites in Community](/dynamics365/customer-service/community-create-websites).
 
 Once you've reached the maximum number of a specific portal type for an environment, you'll see a message displayed indicating that the maximum number of portals has been reached.
-
-
 
 ## Create new environment
 
