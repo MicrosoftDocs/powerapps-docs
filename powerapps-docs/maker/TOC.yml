@@ -237,8 +237,20 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+    - name: 1 - Create an app from a design or a template
+      items:
+      - name: Create an app from a template
+        href: ./canvas-apps/get-started-test-drive.md
+      - name: Create an app from Figma (preview)
+        items:
+        - name: Overview
+          href: ./canvas-apps/figma/overview.md
+        - name: Design your app using the Canvas Apps from Figma UI Kit
+          href: ./canvas-apps/figma/design-using-toolkit.md
+        - name: Components supported by the Canvas Apps from Figma UI Kit
+          href: ./canvas-apps/figma/supported-components.md
+        - name: Create a canvas app from Figma
+          href: ./canvas-apps/figma/create-app-from-figma.md
     - name: 2 - Create an app using data
       items:
       - name: From Microsoft Dataverse
