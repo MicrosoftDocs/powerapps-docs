@@ -112,28 +112,175 @@ The following examples are queries that use audit table data to show how many co
 
 # [Web API](#tab/webapi)
 
-<!-- These are equivilent
+Both of the following queries return the same results.
 
-{{webapiurl}}systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/lk_audit_userid?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=action eq 3 and objecttypecode eq 'contact'
-
-{{webapiurl}}audits?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=action eq 3 and objecttypecode eq 'contact' and _userid_value eq '4026be43-6b69-e111-8f65-78e7d1620f5e' -->
+This one filters on the `_userid_value` property of the audit record.
 
 **Request**
 
 ```http
+GET [Organization URI]/api/data/v9.2/audits?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=operation eq 3 and objecttypecode eq 'contact' and _userid_value eq '<user id>' HTTP/1.1
 
+Prefer: odata.include-annotations="*" 
 ```
+
+This one accesses the collection of audit records for a specific user with the `lk_audit_userid` collection-valued navigation property from the `systemuser` table.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/systemusers(<user id>)/lk_audit_userid?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=operation eq 3 and objecttypecode eq 'contact' HTTP/1.1
+
+Prefer: odata.include-annotations="*" 
+```
+
 
 **Response**
 
 ```http
+HTTP/1.1 200 OK
+Preference-Applied: odata.include-annotations="*"
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#audits(_objectid_value,objecttypecode,createdon,_userid_value)",
+  "@Microsoft.Dynamics.CRM.totalrecordcount": -1,
+  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+  "value": [
+    {
+      "_objectid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "contact",
+      "_objectid_value": "0e76dc8a-41b5-ec11-983f-0022482bf046",
+      "objecttypecode@OData.Community.Display.V1.FormattedValue": "Contact",
+      "objecttypecode": "contact",
+      "createdon@OData.Community.Display.V1.FormattedValue": "5/12/2022 3:19 PM",
+      "createdon": "2022-05-12T22:19:12Z",
+      "_userid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
+      "_userid_value@OData.Community.Display.V1.FormattedValue": "FirstName LastName",
+      "_userid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e",
+      "transactionid": "00000000-0000-0000-0000-000000000000",
+      "attributemask": "47,45,42,298,96,260,93,50,201,28,25,107,32,90,261,262,178,121,61,55,71,35,296,289,108,177,120,69,117,265,243,174,46,80,95,246,287,59,30,102,3,208,202,282,73,74,21,78,67,128,54,51,183,254,210,236,19,126,53,268,124,38,184,34,234,31,231,10019,118,33,76,98,292,271,52,297,6,70,123,129,132,133,242,103,36,39,114,22,293,48,249,295,235,12,99,11,8,5,10162,97,181,306,245,57,18,200,49,106,109,110,16,24,43,122,175,44,27,139,259,125,233,127,134,284,180,130,56,14,286,92,247,94,270,179,113,206,288,283,17,101,209,294,263,15,176,10017,4,29,203,119,37,72,40,20,266,267,173,211,91,111,105,290,131,264,10026,116,104,23,26,41,10020,66,100,115,2"
+    },
+    < Other results truncated for brevity>
+  ]
+}
 
 ```
 
 
 # [Query Expression](#tab/queryexpression)
 
+```csharp
+/// <summary>
+/// Shows the number of contacts deleted by a user.
+/// </summary>
+/// <param name="svc">IOrganizationService to use</param>
+/// <param name="systemuserid">The user's id.</param>
+static void ShowNumberContactsDeletedByUserQE(
+    IOrganizationService svc,
+    Guid systemuserid)
+{
+    QueryExpression query =
+    new QueryExpression(entityName: "audit")
+    {
+        ColumnSet = new ColumnSet("objectid", "createdon")
+    };
+
+    query.Criteria.AddCondition(
+        attributeName: "userid",
+        conditionOperator: ConditionOperator.Equal,
+        values: systemuserid);
+
+    query.Criteria.AddCondition(
+        attributeName: "operation",
+        conditionOperator: ConditionOperator.Equal,
+        values: 3);
+
+    query.Criteria.AddCondition(
+        attributeName: "objecttypecode",
+        conditionOperator: ConditionOperator.Equal,
+        values: "contact");
+
+    EntityCollection records =
+        svc.RetrieveMultiple(query);
+
+    int count = records.Entities.Count();
+    Console.WriteLine(
+        $"User has deleted {count} contact records");
+}
+```
+
 # [FetchXml](#tab/fetchxml)
+
+```csharp
+/// <summary>
+/// Shows the number of contacts deleted by a user.
+/// </summary>
+/// <param name="svc">IOrganizationService to use</param>
+/// <param name="systemuserid">The user's id.</param>
+static void ShowNumberContactsDeletedByUserFetchXml(
+    IOrganizationService svc,
+    Guid systemuserid)
+{
+    string fetchXml = $@"<fetch>
+        <entity name='audit'>
+            <attribute name='objectid' />
+            <attribute name='createdon' />
+            <filter>
+                <condition attribute='userid' 
+                operator='eq' 
+                value='{systemuserid}' />
+                <condition attribute='operation' 
+                operator='eq' 
+                value='3' />
+                <condition attribute='objecttypecode' 
+                operator='eq' 
+                value='2' />
+            </filter>
+        </entity>
+    </fetch>";
+
+    FetchExpression query =
+        new FetchExpression(fetchXml);
+
+    EntityCollection records =
+        svc.RetrieveMultiple(query);
+
+    int count = records.Entities.Count();
+    Console.WriteLine(
+        $"User has deleted {count} contact records");
+}
+```
+> [!NOTE]
+> The following FetchXml also works. It uses the relationship to the `systemuser` table to provide the filter.
+
+```xml
+<fetch>
+   <entity name="systemuser">
+      <filter>
+         <condition attribute="systemuserid"
+            operator="eq"
+            value="<user id>" />
+      </filter>
+      <link-entity name="audit"
+         from="userid"
+         to="systemuserid"
+         alias="audit">
+         <attribute name="objectid"
+            alias="objectid" />
+         <attribute name="createdon"
+            alias="changeddate" />
+         <filter>
+            <condition attribute="operation"
+               operator="eq"
+               value="3" />
+            <condition attribute="objecttypecode"
+               operator="eq"
+               value="2" />
+         </filter>
+      </link-entity>
+   </entity>
+</fetch>
+```
+
 ---
 
   
