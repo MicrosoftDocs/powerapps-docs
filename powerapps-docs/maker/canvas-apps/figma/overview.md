@@ -50,5 +50,3 @@ Connect your app to [data](../add-data-connection.md), and customize further by 
 
 - [Create a canvas app from Figma (preview)](create-app-from-figma.md)
 - [Components supported by the Canvas Apps from Figma UI Kit (preview)](supported-components.md)
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
