@@ -44,9 +44,8 @@ The following table summarizes important columns in the audit table.
 
 ### Actions
 
-There are currently 17 optionsin the [Action Column](../reference/entities/audit.md#BKMK_Action) generally correspond to messages in the system. 
+There are currently 74 options in the [Action Column](../reference/entities/audit.md#BKMK_Action) generally correspond to messages in the system. 
 You can use these to filter for specific operations. The following table includes the options:
-
 
 |Value|Label|Message|Comment|
 |-----|-----|-------|-------|
@@ -125,7 +124,21 @@ You can use these to filter for specific operations. The following table include
 |112|User Access Audit Started|||
 |113|User Access Audit Stopped|||
 
-There are some messages which are composites that contain a verb such as `AddMember`, `AddItem`, `Win`, `Close`, `Renew`, `Revise`  that is then appended to a table name and can apply to one or more tables. For example: `AddMemberList`, `AddItemCampaign`, `AddItemCampaignActivity`, `WinOpportunity`, `CloseIncident`, `CloseQuote`, `RenewContract`, `RenewEntitlement`, and `ReviseQuote`.
+#### Compound Messages
+
+There are some messages which are composites that contain a verb that is then appended to a table name and can apply to one or more messages. For example: 
+
+|Verb|Table|Message|
+|---------|---------|---------|
+|Add Member|`List`|`AddMemberList`|
+|Add Item|`Campaign`|`AddItemCampaign`|
+|Add Item|`CampaignActivity`|`CampaignActivity`|
+|Win|`Opportunity`|`WinOpportunity`|
+|Close|`Incident`|`CloseIncident`|
+|Close|`Quote`|`CloseQuote`|
+|Renew|`Contract`|`RenewContract`|
+|Renew|`Entitlement`|`RenewEntitlement`|
+|Revise|`Quote`|`ReviseQuote`|
 
 In the .NET SDK you will find request and response class definitions for many of these within the <xref:Microsoft.Crm.Sdk.Messages?text=Microsoft.Crm.Sdk.Messages Namespace>, such as:
 
@@ -159,7 +172,7 @@ Is RegardingObjectId ever not null? -->
 
 ### audit EntityType definition
 
-With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> resource to read data from the `audit` table. The following is the **EntityType** definition  Web API $metadata service document without annotations:
+With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> resource to read data from the `audit` table. The following is the **EntityType** definition Web API $metadata service document without annotations:
 
 ```xml
 <EntityType Name="audit" BaseType="mscrm.crmbaseentity">
@@ -197,7 +210,7 @@ Lookup properties contain additional information when `GET` requests are sent us
 
 ## Example: Find Contact records deleted by a user
 
-The following examples are queries that use audit table data to show how many contact records were deleted by a specific user.
+The following examples are queries showing audit history for contact records deleted by a specific user.
 
 # [Web API](#tab/webapi)
 
@@ -255,7 +268,9 @@ Preference-Applied: odata.include-annotations="*"
 ```
 
 
-# [Query Expression](#tab/queryexpression)
+# [.NET SDK](#tab/sdk)
+
+This example uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression?text=QueryExpression Class>
 
 ```csharp
 /// <summary>
@@ -297,7 +312,7 @@ static void ShowNumberContactsDeletedByUserQE(
 }
 ```
 
-# [FetchXml](#tab/fetchxml)
+This example uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression?text=FetchExpression Class> with a query composed using FetchXml.
 
 ```csharp
 /// <summary>
