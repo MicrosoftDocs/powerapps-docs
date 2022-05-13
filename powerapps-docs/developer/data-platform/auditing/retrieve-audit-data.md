@@ -48,8 +48,8 @@ There are currently 17 optionsin the [Action Column](../reference/entities/audit
 You can use these to filter for specific operations. The following table includes the options:
 
 
-|Value  |Label  |Message  | Comment|
-|---------|---------|---------|
+|Value|Label|Message|Comment|
+|-----|-----|-------|-------|
 |0|Unknown ||Not a known message|
 |1|Create |`Create`||
 |2|Update|`Update`||
