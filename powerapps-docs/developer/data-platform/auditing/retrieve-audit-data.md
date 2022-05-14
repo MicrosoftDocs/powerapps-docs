@@ -28,11 +28,13 @@ After auditing is enabled and data changes are made to those tables and columns 
 
 Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only. 
 
+This is the data that is used for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Use the Audit Summary view](/power-platform/admin/manage-dataverse-auditing#use-the-audit-summary-view)
+
 The following table summarizes important columns in the audit table.
 
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
-|`Action`<br />`action`<br />Event|Choice|More than 70 options that represent the name of the message that caused the change. Each option has an integer and a localizable label value. For example:<br />0 = Unknown<br />1 = Create<br /> 2 = Update<br />3 = Delete<br />4 = Activate<br />5 = Deactivate<br />And so on... See [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) for the complete list. <br /> More information: [Actions](#actions)|
+|`Action`<br />`action`<br />Event|Choice|74 options that represent the name of the message that caused the change. More information: [Actions](#actions)|
 |`AttributeMask`<br />`attributemask`<br />Changed Field|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
 |`AuditId`<br />`auditid`<br /> Record Id|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />Calling User|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
@@ -42,14 +44,28 @@ The following table summarizes important columns in the audit table.
 |`Operation`<br />`operation`<br />Operation|Choice|The operation that cased the audit. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
 |`UserId`<br />`userid`<br />Changed By|Lookup|The Id of the user who caused the change.|
 
+
+
+<!-- Does the User Info column ever contain data? How does it get written there? 
+Not in a plug-in. Audit table doesn't support plug-in step registrations
+-->
+
 ### Actions
 
-There are currently 74 options in the [Action Column](../reference/entities/audit.md#BKMK_Action) generally correspond to messages in the system. 
+There are currently 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) generally correspond to messages in the system, with some exceptions.
+
 You can use these to filter for specific operations. The following table includes the options:
+
+<!-- 
+
+TODO: complete the table descriptions 
+Each one should have a corresponding Operation value
+
+-->
 
 |Value|Label|Message|Comment|
 |-----|-----|-------|-------|
-|0|Unknown ||Not a known message|
+|0|Unknown|None|Not a known message|
 |1|Create |`Create`||
 |2|Update|`Update`||
 |3|Delete|`Delete`||
@@ -60,7 +76,7 @@ You can use these to filter for specific operations. The following table include
 |13|Assign|`Assign`||
 |14|Share|`GrantAccess`||
 |15|Retrieve|`Retrieve`||
-|16|Close|||
+|16|Close|`CloseIncident`<br />`CloseQuote`|See [Compound Messages](#compound-messages)|
 |17|Cancel|||
 |18|Complete|||
 |20|Resolve|||
@@ -74,21 +90,21 @@ You can use these to filter for specific operations. The following table include
 |28|Approve|||
 |29|Invoice|||
 |30|Hold|||
-|31|Add Member|||
+|31|Add Member||See [Compound Messages](#compound-messages)|
 |32|Remove Member|||
 |33|Associate Entities|`Associate`||
 |34|Disassociate Entities|`Disassociate`||
 |35|Add Members|||
 |36|Remove Members|||
-|37|Add Item|||
+|37|Add Item||See [Compound Messages](#compound-messages)|
 |38|Remove Item|||
 |39|Add Substitute|||
 |40|Remove Substitute|||
 |41|Set State|`SetState`||
-|42|Renew|||
-|43|Revise|||
-|44|Win|||
-|45|Lose|||
+|42|Renew|`RenewContract`<br />`RenewEntitlement`|See [Compound Messages](#compound-messages)|
+|43|Revise||See [Compound Messages](#compound-messages)|
+|44|Win||See [Compound Messages](#compound-messages)|
+|45|Lose||See [Compound Messages](#compound-messages)|
 |46|Internal Processing|||
 |47|Reschedule|||
 |48|Modify Share|`ModifyAccess`||
@@ -107,22 +123,22 @@ You can use these to filter for specific operations. The following table include
 |61|Clone|||
 |62|Send Direct Email|||
 |63|Enabled for organization|||
-|64|User Access via Web|||
-|65|User Access via Web Services|||
+|64|User Access via Web|None|See [User Access Actions](#user-access-actions)|
+|65|User Access via Web Services|None|See [User Access Actions](#user-access-actions)|
 |100|Delete Entity|||
 |101|Delete Attribute|||
 |102|Audit Change at Entity Level|||
 |103|Audit Change at Attribute Level|||
 |104|Audit Change at Org Level|||
 |105|Entity Audit Started|||
-|106|Audit Enabled|||
+|106|Attribute Audit Started|||
 |107|Audit Enabled|||
 |108|Entity Audit Stopped|||
 |109|Attribute Audit Stopped|||
 |110|Audit Disabled|||
 |111|Audit Log Deletion|||
-|112|User Access Audit Started|||
-|113|User Access Audit Stopped|||
+|112|User Access Audit Started|None|See [User Access Actions](#user-access-actions)|
+|113|User Access Audit Stopped|None|See [User Access Actions](#user-access-actions)|
 
 #### Compound Messages
 
@@ -147,8 +163,23 @@ In the .NET SDK you will find request and response class definitions for many of
  - <xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignActivityRequest?text=AddItemCampaignActivityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignActivityResponse?text=AddItemCampaignActivityResponse Class>
  - <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest?text=WinOpportunityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.WinOpportunityResponse?text=WinOpportunityResponse Class>
  - <xref:Microsoft.Crm.Sdk.Messages.CloseIncidentRequest?text=CloseIncidentRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.CloseIncidentResponse?text=CloseIncidentResponse Class>
+ 
+In the Web API, you will find corresponding actions in the $metadata.
 
 These operations only occur when a solution containing the definition of these messages is installed. These messages are only found in the Dynamics 365 solutions such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
+
+#### User Access Actions
+
+The following action options are used to capture history of user access when user access auditing is enabled.
+
+|Value|Label|Description|
+|-----|-----|-------|
+|64|User Access via Web|TODO|
+|65|User Access via Web Services|TODO|
+|112|User Access Audit Started|TODO|
+|113|User Access Audit Stopped|TODO|
+
+<!-- TODO: include link to sample -->
 
 ### audit table relationships
 
@@ -270,7 +301,7 @@ Preference-Applied: odata.include-annotations="*"
 
 # [.NET SDK](#tab/sdk)
 
-This example uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression?text=QueryExpression Class>
+This example uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression?text=QueryExpression Class>.
 
 ```csharp
 /// <summary>
@@ -389,6 +420,103 @@ static void ShowNumberContactsDeletedByUserFetchXml(
 
   
 ## Retrieve the change history
+
+There are three messages you can use to retrieve data change history.
+
+|Web API  |.NET SDK  |Description |
+|---------|---------|---------|
+|<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>|Retrieve the full audit details from an Audit record.|
+|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieve all metadata changes to a specific attribute.|
+|<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>|Retrieve all attribute data changes for a specific entity.|
+
+
+### RetrieveAuditDetails Message
+
+
+
+### RetrieveAttributeChangeHistory Message
+
+
+
+### RetrieveRecordChangeHistory Message
+
+The `RetrieveRecordChangeHistory` message shows the history of data changes for a given record. This is the data displayed in model-driven apps when you select Related > Audit history. It shows the old values and the new values of the records.
+
+# [Web API](#tab/webapi)
+
+**Request**
+
+```http
+{{webapiurl}}RetrieveRecordChangeHistory(Target=@target,PagingInfo=@paginginfo)?
+@target={ '@odata.id':'accounts(611e7713-68d7-4622-b552-85060af450bc)'}
+&@paginginfo={
+   "PageNumber": 1,
+   "Count": 2,
+   "ReturnTotalRecordCount": true
+}
+```
+
+**Response**
+
+```http
+{
+    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse",
+    "AuditDetailCollection": {
+        "MoreRecords": true,
+        "PagingCookie": "<cookie page=\"1\"><cookieExtensions ContinuationToken=\"{&quot;pageNumber&quot;:2,&quot;continuationToken&quot;:&quot;[{\\&quot;compositeToken\\&quot;:{\\&quot;token\\&quot;:null,\\&quot;range\\&quot;:{\\&quot;min\\&quot;:\\&quot;38000000000000000000000000000000\\&quot;,\\&quot;max\\&quot;:\\&quot;38800000000000000000000000000000\\&quot;}},\\&quot;orderByItems\\&quot;:[{\\&quot;item\\&quot;:\\&quot;2022-05-13T22:06:27.8029732Z\\&quot;}],\\&quot;rid\\&quot;:\\&quot;CVoNAJIidnPOnT0AAAAICA==\\&quot;,\\&quot;skipCount\\&quot;:0,\\&quot;filter\\&quot;:null}]&quot;}\" /></cookie>",
+        "TotalRecordCount": 4,
+        "AuditDetails": [
+            {
+                "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
+                "InvalidNewValueAttributes": [],
+                "LocLabelLanguageCode": 0,
+                "DeletedAttributes": {
+                    "Count": 0,
+                    "Keys": [],
+                    "Values": []
+                },
+                "OldValue": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
+                    "description": "Setting Phone Number"
+                },
+                "NewValue": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
+                    "description": "Added using Flow because the account name changed to: Updated Account Name"
+                }
+            },
+            {
+                "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
+                "InvalidNewValueAttributes": [],
+                "LocLabelLanguageCode": 0,
+                "DeletedAttributes": {
+                    "Count": 0,
+                    "Keys": [],
+                    "Values": []
+                },
+                "OldValue": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
+                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "Jim Daly",
+                    "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
+                    "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
+                    "_ownerid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e"
+                },
+                "NewValue": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
+                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "crmue",
+                    "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
+                    "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "team",
+                    "_ownerid_value": "39e0dbe4-131b-e111-ba7e-78e7d1620f5e"
+                }
+            }
+        ]
+    }
+}
+```
+
+
+# [.NET SDK](#tab/sdk)
+---
+
 
  There are several messages requests that can be used to retrieve the audit change history. These requests are differentiated by the nature of what they retrieve.
 Refer to the sample link at the end of this topic for sample code that demonstrates some of these change history message requests.
