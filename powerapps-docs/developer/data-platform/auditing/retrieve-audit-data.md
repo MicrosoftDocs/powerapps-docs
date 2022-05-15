@@ -39,7 +39,7 @@ The following table summarizes important columns in the audit table.
 
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
-|`Action`<br />`action`<br />Event|Choice|74 options that represent the name of the message that caused the change. More information: [Actions](#actions)|
+|`Action`<br />`action`<br />Event|Choice|74 options that represent the name of the message that caused the change. More information: [Actions](#audit-actions)|
 |`AttributeMask`<br />`attributemask`<br />Changed Field|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
 |`AuditId`<br />`auditid`<br /> Record Id|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />Calling User|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
@@ -55,9 +55,9 @@ The following table summarizes important columns in the audit table.
 Not in a 3rd-party plug-in. Audit table doesn't support plug-in step registrations
 -->
 
-### Actions
+## Audit Actions
 
-There are currently 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) generally correspond to messages in the system, with some exceptions.
+There are currently 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which generally correspond to messages in the system, with some exceptions.
 
 You can use these to filter for specific operations. The following table includes the options:
 
@@ -427,23 +427,43 @@ static void ShowNumberContactsDeletedByUserFetchXml(
   
 ## Retrieve the change history
 
-There are three messages you can use to retrieve data change history.
+There are three messages you can use to retrieve data changes that are audited.
 
 |Web API  |.NET SDK  |Description |
 |---------|---------|---------|
-|<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>|Retrieve the full audit details from an Audit record.|
-|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieve all metadata changes to a specific attribute.|
-|<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>|Retrieve all attribute data changes for a specific entity.|
+|<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>|Retrieve the full audit details from an audit record.|
+|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieve all changes to a specific column.|
+|<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>|Retrieve all audited data changes for a specific record.|
 
+### AuditDetail types
+
+These messages provide additional details that depend on the type of action. These details are implemented using different types that are derived from a base AuditDetail type as shown in the following table:
+
+|Web API|.NET SDK|Description |
+|---------|---------|---------|
+|<xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AuditDetail?text=AuditDetail Class>|The base type for the derived classes. Provides access to the audit record.|
+|<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AttributeAuditDetail?text=AttributeAuditDetail Class>|Provides details when data changes occur for a record. Provides access to old values and new values. |
+|<xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail?text=RelationshipAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail?text=RelationshipAuditDetail Class>|Provides details when records are associated or disassociated using Many-to-Many relationship. Provides the name of the relationship and a list of the records that the operation changed.|
+|<xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail Class>|Provides details when the definitions of [Security Role (Role)](../reference/entities/role.md) records change. Provides information about the old and new role privileges associated to the role.|
+|<xref:Microsoft.Dynamics.CRM.ShareAuditDetail?text=ShareAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.ShareAuditDetail?text=ShareAuditDetail Class>|Provides details when a record is shared, unshared, or when the level of access to a shared record changes. |
+|<xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail?text=UserAccessAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail?text=UserAccessAuditDetail Class>|Provides details to track user access auditing. Provides details on the interval and access time.|
 
 ### RetrieveAuditDetails Message
 
+Use this message to retrieve the audit details for a specific record.
+
 # [Web API](#tab/webapi)
+
+<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table.
+
+When you include the `Prefer: odata.include-annotations="*"` request header you will get formatted values.
+
+The example below shows the <xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType> returned when the `parentaccountid` is set on an `account` record.
 
 **Request**
 
 ```http
-GET https://crmue.api.crm.dynamics.com/api/data/v9.2/audits(12869c65-d7d3-ec11-b656-281878f0eba9)/Microsoft.Dynamics.CRM.RetrieveAuditDetails HTTP/1.1
+GET [Organization URI]/api/data/v9.2/audits(12869c65-d7d3-ec11-b656-281878f0eba9)/Microsoft.Dynamics.CRM.RetrieveAuditDetails HTTP/1.1
 Prefer: odata.include-annotations="*" 
 ```
 
@@ -455,7 +475,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="*"
 
 {
-    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse",
     "AuditDetail": {
         "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
         "InvalidNewValueAttributes": [],
@@ -479,7 +499,19 @@ Preference-Applied: odata.include-annotations="*"
 }
 ```
 
+More information:
+
+- <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>
+- <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse?text=RetrieveAuditDetailsResponse ComplexType>
+- [Use Web API functions](../webapi/use-web-api-functions.md)
+- [Include formatted values](../webapi/query-data-web-api.md#include-formatted-values)
+
+
 # [.NET SDK](#tab/sdk)
+
+The following `ShowAuditDetail` static method will return audit details for any type of audit details that can be tracked by an audit record. 
+
+The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other samples on this page.
 
 ```csharp
 static void ShowAuditDetail(
@@ -627,20 +659,26 @@ static void DisplayAuditDetail(AuditDetail auditDetail)
             break;
     }
 }
-
-
 ```
+
+More information:
+
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsResponse?text=RetrieveAuditDetailsResponse Class>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
 
 ---
 
 ### RetrieveAttributeChangeHistory Message
+
+
 
 # [Web API](#tab/webapi)
 
 **Request**
 
 ```http
-GET https://crmue.api.crm.dynamics.com/api/data/v9.2/RetrieveAttributeChangeHistory(Target=@target,AttributeLogicalName=@attributeLogicalName,PagingInfo=@paginginfo)?
+GET [Organization URI]/api/data/v9.2/RetrieveAttributeChangeHistory(Target=@target,AttributeLogicalName=@attributeLogicalName,PagingInfo=@paginginfo)?
 @target={ '@odata.id':'accounts(611e7713-68d7-4622-b552-85060af450bc)'}
 &@attributeLogicalName='description'
 &@paginginfo={
@@ -656,7 +694,7 @@ GET https://crmue.api.crm.dynamics.com/api/data/v9.2/RetrieveAttributeChangeHist
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse",
     "AuditDetailCollection": {
         "MoreRecords": false,
         "PagingCookie": "",
@@ -769,7 +807,10 @@ static void ShowAttributeChangeHistory(IOrganizationService svc,
     });
 }
 ```
-
+More information:
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryResponse?text=RetrieveAttributeChangeHistoryResponse Class>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
 ---
 
 ### RetrieveRecordChangeHistory Message
@@ -844,7 +885,7 @@ From: .NET reference: https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.me
 
 ```http
 {
-    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse",
     "AuditDetailCollection": {
         "MoreRecords": true,
         "PagingCookie": "<cookie page=\"1\"><cookieExtensions ContinuationToken=\"{&quot;pageNumber&quot;:2,&quot;continuationToken&quot;:&quot;[{\\&quot;compositeToken\\&quot;:{\\&quot;token\\&quot;:null,\\&quot;range\\&quot;:{\\&quot;min\\&quot;:\\&quot;38000000000000000000000000000000\\&quot;,\\&quot;max\\&quot;:\\&quot;38800000000000000000000000000000\\&quot;}},\\&quot;orderByItems\\&quot;:[{\\&quot;item\\&quot;:\\&quot;2022-05-13T22:06:27.8029732Z\\&quot;}],\\&quot;rid\\&quot;:\\&quot;CVoNAJIidnPOnT0AAAAICA==\\&quot;,\\&quot;skipCount\\&quot;:0,\\&quot;filter\\&quot;:null}]&quot;}\" /></cookie>",
