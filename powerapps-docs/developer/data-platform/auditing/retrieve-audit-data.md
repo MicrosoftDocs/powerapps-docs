@@ -39,32 +39,25 @@ The following table summarizes important columns in the audit table.
 
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
-|`Action`<br />`action`<br />Event|Choice|74 options that represent the name of the message that caused the change. More information: [Actions](#audit-actions)|
-|`AttributeMask`<br />`attributemask`<br />Changed Field|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
-|`AuditId`<br />`auditid`<br /> Record Id|Unique Identifier|The primary key for the audit table.|
-|`CallingUserId`<br />`callinguserid`<br />Calling User|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
-|`CreatedOn`<br />`createdon`<br />Changed Date|DateTime|When the audit record was created, which is when the user operation took place.|
-|`ObjectId`<br />`objectid`<br />Record|Lookup|The unique identifier for the record that was audited.|
-|`ObjectTypeCode`<br />`objecttypecode`<br />Entity|EntityName|The logical name of the entity referred to by the `objectid` column.|
-|`Operation`<br />`operation`<br />Operation|Choice|The operation that caused the audit record. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
-|`UserId`<br />`userid`<br />Changed By|Lookup|The Id of the user who caused the change.|
-
-
-
-<!-- Does the User Info column ever contain data? How does it get written there? 
-Not in a 3rd-party plug-in. Audit table doesn't support plug-in step registrations
--->
+|`Action`<br />`action`<br />**Event**|Choice|74 options that represent the name of the message that caused the change. More information: [Actions](#audit-actions)|
+|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo|May contain a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. |
+|`AuditId`<br />`auditid`<br /> **Record Id**|Unique Identifier|The primary key for the audit table.|
+|`CallingUserId`<br />`callinguserid`<br />**Calling User**|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
+|`CreatedOn`<br />`createdon`<br />**Changed Date**|DateTime|When the audit record was created, which is when the user operation took place.|
+|`ObjectId`<br />`objectid`<br />**Record**|Lookup|The unique identifier for the record that was audited.|
+|`ObjectTypeCode`<br />`objecttypecode`<br />**Entity**|EntityName|The logical name of the table referred to by the `objectid` column.|
+|`Operation`<br />`operation`<br />**Operation**|Choice|The operation that caused the audit record. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
+|`UserId`<br />`userid`<br />**Changed By**|Lookup|The Id of the user who caused the change.|
 
 ## Audit Actions
 
-There are currently 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which generally correspond to messages in the system, with some exceptions.
+There are currently 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which generally correspond to events in the system.
 
-You can use these to filter for specific operations. The following table includes the options:
+You can use these to filter for specific events. The following table includes the options:
 
 <!-- 
 
 TODO: complete the table descriptions 
-Each one should have a corresponding Operation value
 
 -->
 
@@ -81,7 +74,7 @@ Each one should have a corresponding Operation value
 |13|Assign|`Assign`||
 |14|Share|`GrantAccess`||
 |15|Retrieve|`Retrieve`||
-|16|Close|`CloseIncident`<br />`CloseQuote`|See [Message groups](#message-groups)|
+|16|Close|`CloseIncident`<br />`CloseQuote`|See [Event groups](#event-groups)|
 |17|Cancel|||
 |18|Complete|||
 |20|Resolve|||
@@ -95,21 +88,21 @@ Each one should have a corresponding Operation value
 |28|Approve|||
 |29|Invoice|||
 |30|Hold|||
-|31|Add Member||See [Message groups](#message-groups)|
+|31|Add Member||See [Event groups](#event-groups)|
 |32|Remove Member|||
 |33|Associate Entities|`Associate`||
 |34|Disassociate Entities|`Disassociate`||
 |35|Add Members|||
 |36|Remove Members|||
-|37|Add Item||See [Message groups](#message-groups)|
+|37|Add Item||See [Event groups](#event-groups)|
 |38|Remove Item|||
 |39|Add Substitute|||
 |40|Remove Substitute|||
 |41|Set State|`SetState`||
-|42|Renew|`RenewContract`<br />`RenewEntitlement`|See [Message groups](#message-groups)|
-|43|Revise||See [Message groups](#message-groups)|
-|44|Win||See [Message groups](#message-groups)|
-|45|Lose||See [Message groups](#message-groups)|
+|42|Renew|`RenewContract`<br />`RenewEntitlement`|See [Event groups](#event-groups)|
+|43|Revise||See [Event groups](#event-groups)|
+|44|Win||See [Event groups](#event-groups)|
+|45|Lose||See [Event groups](#event-groups)|
 |46|Internal Processing|||
 |47|Reschedule|||
 |48|Modify Share|`ModifyAccess`||
@@ -128,8 +121,8 @@ Each one should have a corresponding Operation value
 |61|Clone|||
 |62|Send Direct Email|||
 |63|Enabled for organization|||
-|64|User Access via Web|None|See [User Access Actions](#user-access-actions)|
-|65|User Access via Web Services|None|See [User Access Actions](#user-access-actions)|
+|64|User Access via Web|None|See [User Access Events](#user-access-events)|
+|65|User Access via Web Services|None|See [User Access Events](#user-access-events)|
 |100|Delete Entity||User deleted a table.|
 |101|Delete Attribute||User deleted a column.|
 |102|Audit Change at Entity Level||User changed a table definition to enable or disable auditing.|
@@ -142,14 +135,14 @@ Each one should have a corresponding Operation value
 |109|Attribute Audit Stopped|||
 |110|Audit Disabled|||
 |111|Audit Log Deletion|||
-|112|User Access Audit Started|None|See [User Access Actions](#user-access-actions)|
-|113|User Access Audit Stopped|None|See [User Access Actions](#user-access-actions)|
+|112|User Access Audit Started|None|See [User Access Events](#user-access-events)|
+|113|User Access Audit Stopped|None|See [User Access Events](#user-access-events)|
 
-#### Message groups
+#### Event groups
 
 There are some action options that can represent more than one message. Some messages have a common verb that is appended with a table name. In this way some action options can represent more than one message. You need to filter on the `objecttypecode` to differentiate the specific message. For example:
 
-|Value|Label|Table|Message|
+|Value|Event Label|Table|Message|
 |---------|---------|---------|---------|
 |31|Add Member|`List`|`AddMemberList`|
 |37|Add Item|`Campaign`|`AddItemCampaign`|
@@ -171,7 +164,7 @@ In the .NET SDK you will find request and response class definitions for many of
  
 In the Web API, you will find corresponding actions in the Web API $metadata service document when a solution containing the definition of these messages is installed. These messages are only found in the Dynamics 365 solutions such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
 
-#### User Access Actions
+#### User Access Events
 
 The following `action` options are used to capture history of user access when user access auditing is enabled.
 
@@ -306,7 +299,7 @@ Preference-Applied: odata.include-annotations="*"
 
 There are two static methods below that show the number of deleted contact records for the specified user.
 
-The following one uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression?text=QueryExpression Class>.
+`ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
 
 ```csharp
 /// <summary>
@@ -348,13 +341,13 @@ static void ShowNumberContactsDeletedByUserQE(
 }
 ```
 
-The following one uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression?text=FetchExpression Class> with a query composed using FetchXml.
+`ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
 
 ```csharp
 /// <summary>
 /// Shows the number of contacts deleted by a user.
 /// </summary>
-/// <param name="svc">IOrganizationService to use</param>
+/// <param name="svc">IOrganizationService instance to use</param>
 /// <param name="systemuserid">The user's id.</param>
 static void ShowNumberContactsDeletedByUserFetchXml(
     IOrganizationService svc,
@@ -424,7 +417,6 @@ static void ShowNumberContactsDeletedByUserFetchXml(
 
 ---
 
-  
 ## Retrieve the change history
 
 There are three messages you can use to retrieve data changes that are audited.
@@ -450,6 +442,7 @@ These messages provide additional details that depend on the type of action. The
 
 > [!IMPORTANT]
 > Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…".
+>
 > Because the data is truncated, you cannot use the audit data to restore changes for these column values.
 
 
@@ -741,7 +734,7 @@ HTTP/1.1 200 OK
 More information:
 - <xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>
 - <xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse?text=RetrieveAttributeChangeHistoryResponse ComplexType>
-- 
+- <xref:Microsoft.Dynamics.CRM.AuditDetailCollection?text=AuditDetailCollection ComplexType>
 
 > [!NOTE]
 > The <xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType> returned currently does not include the `AuditRecord` property so there is no data about who made the change and when it was made.
@@ -750,7 +743,7 @@ More information:
 
 The `ShowAttributeChangeHistory` static method below will return the first 20 audited changes for specified column in the specified record.
 
-This method depends on the `DisplayAuditDetail` method included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
+This method depends on the `DisplayAuditDetail` static method included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
 
 ```csharp
 /// <summary>
@@ -820,7 +813,7 @@ The `RetrieveRecordChangeHistory` message shows the history of data changes for 
 
 Use the `PagingInfo` parameter to control the number of records to return and move forward or backward through the pages. For subsequent requests, set the `PagingInfo.PagingCookie` property to the value returned by the `AuditDetailCollection.PagingCookie`
 
-This commonly seen as the `AttributeAuditDetail` data displayed in model-driven apps when you select **Related** > **Audit history**. It shows the old values and the new values of the records, but it will also return `RelationshipAuditDetail` and `ShareAuditDetail` types.
+The results of this message are commonly seen as the `AttributeAuditDetail` data displayed in model-driven apps when you select **Related** > **Audit history**. It shows the old values and the new values of the records, but it will also return `RelationshipAuditDetail` and `ShareAuditDetail` types.
 
 This message can also be used to with the `systemuser` and `role` tables to return `RolePrivilegeAuditDetail` and `UserAccessAuditDetail` types.
 
@@ -828,10 +821,6 @@ Calling user must have the `prvReadRecordAuditHistory` privilege to use this mes
 
 
 # [Web API](#tab/webapi)
-
-<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function> is an unbound function. The `Target` parameter is a reference to a table row.
-
-This function returns an <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse ComplexType> where the `AuditDetailCollection` property is an <xref:Microsoft.Dynamics.CRM.AuditDetailCollection?text=AuditDetailCollection ComplexType>. The `AuditDetailCollection.AuditDetails` property contains the collection of <xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType> with data about the changes that occurred.
 
 The following example returns just the first two of four changes for an account record.
 
@@ -917,7 +906,7 @@ More information:
 
 This `ShowRetrieveRecordChangeHistory` static method executes the `RetrieveRecordChangeHistory` message for a specified record and processes the response.
 
-For each Audit record, it displays the properties and uses the `DisplayAuditDetail` method defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example to display the details.
+For each audit record, it displays the properties and uses the `DisplayAuditDetail` method defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example to display the details.
 
 ```csharp
 /// <summary>
@@ -972,17 +961,13 @@ More information:
 
 ---
 
-> [!IMPORTANT]
-> Large column values, such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…".
-
-
-
 ### See also
 
 [Auditing overview](auditing-overview.md)<br />
 [Configure auditing](configure-auditing.md)<br />
 [Delete audit data](delete-audit-data.md)<br />
-[Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md)
+[Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md)<br />
+[Sample: Audit user access](../org-service/samples/audit-user-access.md)
 
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
