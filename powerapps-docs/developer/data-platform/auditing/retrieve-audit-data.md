@@ -24,11 +24,16 @@ contributors:
 
 After auditing is enabled and data changes are made to those tables and columns being audited, you can retrieve the data change history.
 
+> [!NOTE]
+> Audit data is not available using the Dataverse TDS (SQL) endpoint. More information: [Use SQL to query data](../dataverse-sql-query.md)
+
 ## Audit table
 
-Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only. 
+Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only.
 
-This is the data that is used for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Use the Audit Summary view](/power-platform/admin/manage-dataverse-auditing#use-the-audit-summary-view)
+This is the data that is used for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Administrators Guide: Use the Audit Summary view](/power-platform/admin/manage-dataverse-auditing#use-the-audit-summary-view)
+
+Calling user must have the `prvReadAuditSummary` privilege to retrieve data from this table.
 
 The following table summarizes important columns in the audit table.
 
@@ -41,13 +46,13 @@ The following table summarizes important columns in the audit table.
 |`CreatedOn`<br />`createdon`<br />Changed Date|DateTime|When the audit record was created, which is when the user operation took place.|
 |`ObjectId`<br />`objectid`<br />Record|Lookup|The unique identifier for the record that was audited.|
 |`ObjectTypeCode`<br />`objecttypecode`<br />Entity|EntityName|The logical name of the entity referred to by the `objectid` column.|
-|`Operation`<br />`operation`<br />Operation|Choice|The operation that cased the audit. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
+|`Operation`<br />`operation`<br />Operation|Choice|The operation that caused the audit record. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
 |`UserId`<br />`userid`<br />Changed By|Lookup|The Id of the user who caused the change.|
 
 
 
 <!-- Does the User Info column ever contain data? How does it get written there? 
-Not in a plug-in. Audit table doesn't support plug-in step registrations
+Not in a 3rd-party plug-in. Audit table doesn't support plug-in step registrations
 -->
 
 ### Actions
@@ -76,7 +81,7 @@ Each one should have a corresponding Operation value
 |13|Assign|`Assign`||
 |14|Share|`GrantAccess`||
 |15|Retrieve|`Retrieve`||
-|16|Close|`CloseIncident`<br />`CloseQuote`|See [Compound Messages](#compound-messages)|
+|16|Close|`CloseIncident`<br />`CloseQuote`|See [Message groups](#message-groups)|
 |17|Cancel|||
 |18|Complete|||
 |20|Resolve|||
@@ -90,21 +95,21 @@ Each one should have a corresponding Operation value
 |28|Approve|||
 |29|Invoice|||
 |30|Hold|||
-|31|Add Member||See [Compound Messages](#compound-messages)|
+|31|Add Member||See [Message groups](#message-groups)|
 |32|Remove Member|||
 |33|Associate Entities|`Associate`||
 |34|Disassociate Entities|`Disassociate`||
 |35|Add Members|||
 |36|Remove Members|||
-|37|Add Item||See [Compound Messages](#compound-messages)|
+|37|Add Item||See [Message groups](#message-groups)|
 |38|Remove Item|||
 |39|Add Substitute|||
 |40|Remove Substitute|||
 |41|Set State|`SetState`||
-|42|Renew|`RenewContract`<br />`RenewEntitlement`|See [Compound Messages](#compound-messages)|
-|43|Revise||See [Compound Messages](#compound-messages)|
-|44|Win||See [Compound Messages](#compound-messages)|
-|45|Lose||See [Compound Messages](#compound-messages)|
+|42|Renew|`RenewContract`<br />`RenewEntitlement`|See [Message groups](#message-groups)|
+|43|Revise||See [Message groups](#message-groups)|
+|44|Win||See [Message groups](#message-groups)|
+|45|Lose||See [Message groups](#message-groups)|
 |46|Internal Processing|||
 |47|Reschedule|||
 |48|Modify Share|`ModifyAccess`||
@@ -125,10 +130,10 @@ Each one should have a corresponding Operation value
 |63|Enabled for organization|||
 |64|User Access via Web|None|See [User Access Actions](#user-access-actions)|
 |65|User Access via Web Services|None|See [User Access Actions](#user-access-actions)|
-|100|Delete Entity|||
-|101|Delete Attribute|||
-|102|Audit Change at Entity Level|||
-|103|Audit Change at Attribute Level|||
+|100|Delete Entity||User deleted a table.|
+|101|Delete Attribute||User deleted a column.|
+|102|Audit Change at Entity Level||User changed a table definition to enable or disable auditing.|
+|103|Audit Change at Attribute Level||User changed a column definition to enable or disable auditing.|
 |104|Audit Change at Org Level|||
 |105|Entity Audit Started|||
 |106|Attribute Audit Started|||
@@ -140,21 +145,21 @@ Each one should have a corresponding Operation value
 |112|User Access Audit Started|None|See [User Access Actions](#user-access-actions)|
 |113|User Access Audit Stopped|None|See [User Access Actions](#user-access-actions)|
 
-#### Compound Messages
+#### Message groups
 
-There are some messages which are composites that contain a verb that is then appended to a table name and can apply to one or more messages. For example: 
+There are some action options that can represent more than one message. Some messages have a common verb that is appended with a table name. In this way some action options can represent more than one message. You need to filter on the `objecttypecode` to differentiate the specific message. For example:
 
-|Verb|Table|Message|
-|---------|---------|---------|
-|Add Member|`List`|`AddMemberList`|
-|Add Item|`Campaign`|`AddItemCampaign`|
-|Add Item|`CampaignActivity`|`CampaignActivity`|
-|Win|`Opportunity`|`WinOpportunity`|
-|Close|`Incident`|`CloseIncident`|
-|Close|`Quote`|`CloseQuote`|
-|Renew|`Contract`|`RenewContract`|
-|Renew|`Entitlement`|`RenewEntitlement`|
-|Revise|`Quote`|`ReviseQuote`|
+|Value|Label|Table|Message|
+|---------|---------|---------|---------|
+|31|Add Member|`List`|`AddMemberList`|
+|37|Add Item|`Campaign`|`AddItemCampaign`|
+|37|Add Item|`CampaignActivity`|`CampaignActivity`|
+|44|Win|`Opportunity`|`WinOpportunity`|
+|16|Close|`Incident`|`CloseIncident`|
+|16|Close|`Quote`|`CloseQuote`|
+|42|Renew|`Contract`|`RenewContract`|
+|42|Renew|`Entitlement`|`RenewEntitlement`|
+|43|Revise|`Quote`|`ReviseQuote`|
 
 In the .NET SDK you will find request and response class definitions for many of these within the <xref:Microsoft.Crm.Sdk.Messages?text=Microsoft.Crm.Sdk.Messages Namespace>, such as:
 
@@ -164,22 +169,20 @@ In the .NET SDK you will find request and response class definitions for many of
  - <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest?text=WinOpportunityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.WinOpportunityResponse?text=WinOpportunityResponse Class>
  - <xref:Microsoft.Crm.Sdk.Messages.CloseIncidentRequest?text=CloseIncidentRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.CloseIncidentResponse?text=CloseIncidentResponse Class>
  
-In the Web API, you will find corresponding actions in the $metadata.
-
-These operations only occur when a solution containing the definition of these messages is installed. These messages are only found in the Dynamics 365 solutions such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
+In the Web API, you will find corresponding actions in the Web API $metadata service document when a solution containing the definition of these messages is installed. These messages are only found in the Dynamics 365 solutions such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
 
 #### User Access Actions
 
-The following action options are used to capture history of user access when user access auditing is enabled.
+The following `action` options are used to capture history of user access when user access auditing is enabled.
 
 |Value|Label|Description|
 |-----|-----|-------|
-|64|User Access via Web|TODO|
-|65|User Access via Web Services|TODO|
-|112|User Access Audit Started|TODO|
-|113|User Access Audit Stopped|TODO|
+|64|User Access via Web|User is accessing Dataverse using a model-driven app.|
+|65|User Access via Web Services|User is accessing Dataverse using web services using a client other than a model-driven app.|
+|112|User Access Audit Started|User access audit began.|
+|113|User Access Audit Stopped|User access audit ended.|
 
-<!-- TODO: include link to sample -->
+For a .NET SDK sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
 
 ### audit table relationships
 
@@ -233,7 +236,7 @@ With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit
 
 More information: [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document)
 
-In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties. 
+In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties.
 
 Lookup properties contain additional information when `GET` requests are sent using the `Prefer: odata.include-annotations="*"` request header. Using this preference will make sure that you get the `Microsoft.Dynamics.CRM.lookuplogicalname` and `OData.Community.Display.V1.FormattedValue` annotation values, but the `Microsoft.Dynamics.CRM.associatednavigationproperty` annotation values are not included with lookup properties in the `audit` EntityType.
 
@@ -247,7 +250,7 @@ The following examples are queries showing audit history for contact records del
 
 Both of the following queries return the same results.
 
-This one filters on the `_userid_value` property of the audit record.
+This one filters on the `_userid_value` property of the audit record where the value matches `<user id>`.
 
 **Request**
 
@@ -257,7 +260,7 @@ GET [Organization URI]/api/data/v9.2/audits?$select=_objectid_value,objecttypeco
 Prefer: odata.include-annotations="*" 
 ```
 
-This one accesses the collection of audit records for a specific user with the `lk_audit_userid` collection-valued navigation property from the `systemuser` table.
+This one accesses the collection of audit records for a specific user with the `lk_audit_userid` collection-valued navigation property from the `systemuser` table where the `systemuserid` value matches `<user id>`
 
 **Request**
 
@@ -300,6 +303,8 @@ Preference-Applied: odata.include-annotations="*"
 
 
 # [.NET SDK](#tab/sdk)
+
+There are two static methods below that show the number of deleted contact records for the specified user.
 
 This example uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression?text=QueryExpression Class>.
 
@@ -385,7 +390,7 @@ static void ShowNumberContactsDeletedByUserFetchXml(
 }
 ```
 > [!NOTE]
-> The following FetchXml also works. It uses the relationship to the `systemuser` table to provide the filter.
+> The following FetchXml also works. It uses the relationship to the `systemuser` table to provide the filter and the systemuserid matches `<user id>`.
 
 ```xml
 <fetch>
@@ -440,9 +445,65 @@ There are three messages you can use to retrieve data change history.
 
 ### RetrieveRecordChangeHistory Message
 
-The `RetrieveRecordChangeHistory` message shows the history of data changes for a given record. This is the data displayed in model-driven apps when you select Related > Audit history. It shows the old values and the new values of the records.
+The `RetrieveRecordChangeHistory` message shows the history of data changes for a given record indicated by the `Target` parameter. This is the data displayed in model-driven apps when you select **Related** > **Audit history**. It shows the old values and the new values of the records.
+
+Calling user must have the `prvReadRecordAuditHistory` privilege to use this message.
+
+The message supports paging through the optional `PagingInfo` parameter to define how many records to return and what page of records to return.
+
 
 # [Web API](#tab/webapi)
+
+<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function> is an unbound function, and the `Target` parameter is a reference to a table row.  More information: [Use Web API functions](../webapi/use-web-api-functions.md)
+
+This function returns an <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse ComplexType> where the `AuditDetailCollection` property is an <xref:Microsoft.Dynamics.CRM.AuditDetailCollection?text=AuditDetailCollection ComplexType>. The `AuditDetailCollection.AuditDetails` property contains the collection of <xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType> with data about the changes that occurred.
+
+AuditDetail is base complex type with five derived complex types:
+
+|Complex Type  |Description  |
+|---------|---------|
+|<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|When data change to record.|
+|<xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail?text=RelationshipAuditDetail ComplexType>|         |
+|<xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail ComplexType>|         |
+|<xref:Microsoft.Dynamics.CRM.ShareAuditDetail?text=ShareAuditDetail ComplexType>|         |
+|<xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail?text=UserAccessAuditDetail ComplexType>|When one of the [User Access Actions](#user-access-actions) Occurs|
+
+
+
+
+
+
+
+
+
+
+Use the <xref:Microsoft.Dynamics.CRM.PagingInfo?text=PagingInfo ComplexType> to specify the initial page to return and the number of 
+<xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType> records to return.
+
+For subsequent requests, set the `PagingInfo.PagingCookie` property to the value of the `AuditDetailCollection.PagingCookie` property that was returned.
+
+The following example returns just the first two of four changes for an account record.
+
+<!-- Question:
+What do these AttributeAuditDetail properties for?
+
+Descriptions are not clear.
+Why doesn't it have some way to link to an auditRecord?
+Web API reference doesn't show derived complex types such as this.
+You have to go to https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/attributeauditdetail?view=dataverse-latest to see this type Base Type is AuditDetail.
+
+From: .NET reference: https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.attributeauditdetail?view=dataverse-sdk-latest#properties
+
+"InvalidNewValueAttributes": [], Gets a collection of attempted attribute changes that are not valid.
+"LocLabelLanguageCode": 0, Gets or sets the language code for the label.
+"DeletedAttributes": {
+                    "Count": 0,
+                    "Keys": [],
+                    "Values": []
+                }, 	Gets a list of deleted attributes.
+
+ -->
+
 
 **Request**
 
@@ -477,11 +538,11 @@ The `RetrieveRecordChangeHistory` message shows the history of data changes for 
                 },
                 "OldValue": {
                     "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "description": "Setting Phone Number"
+                    "description": "Old description value"
                 },
                 "NewValue": {
                     "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "description": "Added using Flow because the account name changed to: Updated Account Name"
+                    "description": "New description value"
                 }
             },
             {
@@ -495,14 +556,14 @@ The `RetrieveRecordChangeHistory` message shows the history of data changes for 
                 },
                 "OldValue": {
                     "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "Jim Daly",
+                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "FirstName LastName",
                     "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
                     "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
                     "_ownerid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e"
                 },
                 "NewValue": {
                     "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "crmue",
+                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "TeamName",
                     "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
                     "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "team",
                     "_ownerid_value": "39e0dbe4-131b-e111-ba7e-78e7d1620f5e"
@@ -515,6 +576,175 @@ The `RetrieveRecordChangeHistory` message shows the history of data changes for 
 
 
 # [.NET SDK](#tab/sdk)
+
+This function processes the results of the <xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse Class> instance returned by sending an <xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class> using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>.
+
+This function requires a reference to a specific record.
+
+
+```csharp
+/// <summary>
+/// Shows the results of the RetrieveRecordChangeHistory message
+/// </summary>
+/// <param name="svc">The IOrganizationService instance to use</param>
+/// <param name="record">A reference to a record of a table enabled for auditing</param>
+static void ShowRetrieveRecordChangeHistory(
+    IOrganizationService svc, 
+    EntityReference record)
+{
+    var req = new RetrieveRecordChangeHistoryRequest
+    {
+        Target = record,
+        PagingInfo = new PagingInfo
+        {
+            PageNumber = 1,
+            Count = 20,
+            ReturnTotalRecordCount = true
+        }
+    };
+
+    var resp = (RetrieveRecordChangeHistoryResponse)svc.Execute(req);
+    var auditDetailCollection = resp.AuditDetailCollection;
+
+    int recordsReturned = auditDetailCollection.AuditDetails.Count;
+    int totalRecords = auditDetailCollection.TotalRecordCount;
+    Console.WriteLine($"Retrieved {recordsReturned} of {totalRecords} auditdetail records.");
+
+    auditDetailCollection.AuditDetails.ToList().ForEach(x =>
+    {
+
+        Entity auditRecord = x.AuditRecord;
+
+        Console.WriteLine($"Change Date: {auditRecord.FormattedValues["createdon"]}");
+        Console.WriteLine($"Change By: {((EntityReference)auditRecord["userid"]).Name}");
+        Console.WriteLine($"Action: {auditRecord.FormattedValues["action"]}");
+        Console.WriteLine($"Operation: {auditRecord.FormattedValues["operation"]}");
+
+        switch (x)
+        {
+
+            case AttributeAuditDetail aad:
+
+                Entity oldRecord = aad.OldValue;
+                Entity newRecord = aad.NewValue;
+                List<string> oldKeys = new List<string>();
+
+                //Look for changed or deleted values that are included in the OldValue collection
+                oldRecord.Attributes.Keys.ToList().ForEach(k =>
+                {
+                    if (oldRecord.FormattedValues.Keys.Contains(k))
+                    {
+                        if (newRecord.FormattedValues.Contains(k))
+                        {
+                            Console.WriteLine(
+                                $"\tChange:{k}:{oldRecord.FormattedValues[k]} => " +
+                                $"{newRecord.FormattedValues[k]}");
+                        }
+                        else {
+
+                            Console.WriteLine($"\tDeleted:{k}:" +
+                                $"{oldRecord.FormattedValues[k]}");
+                        }
+                                
+                    }
+                    else
+                    {
+                        if (newRecord.Attributes.Keys.Contains(k)) {
+
+                            Console.WriteLine($"\tChange:{k}:{oldRecord[k]} => " +
+                                $"{newRecord[k]}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\tDeleted:{k}:{oldRecord[k]}");
+                        }                                
+                    }
+
+                    oldKeys.Add(k); //Add to list so we don't check again
+                });
+
+                //Look for New values that are only in the NewValues collection
+                newRecord.Attributes.Keys.ToList().ForEach(k =>
+                {
+                    if (!oldKeys.Contains(k))//Exclude any keys for changed or deleted values
+                    {
+                        if (newRecord.FormattedValues.Keys.Contains(k))
+                        {
+                            Console.WriteLine($"\tNew Value:{k} => " +
+                                $"{newRecord.FormattedValues[k]}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\tNew Value:{k}:{newRecord[k]}");
+                        }
+                    }
+                });
+
+                break;
+            case ShareAuditDetail sad:
+                Console.WriteLine($"\tUser: {sad.Principal.Name}");
+                Console.WriteLine($"\tOld Privileges: {sad.OldPrivileges}");
+                Console.WriteLine($"\tNew Privileges: {sad.NewPrivileges}");
+
+                break;
+            case RelationshipAuditDetail rad: //Applies to operations on N:N relationships
+                Console.WriteLine($"\tRelationship Name :{rad.RelationshipName }");
+                Console.WriteLine($"\tRecords:");
+                rad.TargetRecords.ToList().ForEach(y => {
+                    Console.WriteLine($"\tTarget Record :{y.Name}");
+                });
+
+                break;
+            case RolePrivilegeAuditDetail rpad: //Only applies to role record
+
+                List<string> newRolePrivileges = new List<string>();
+                rpad.NewRolePrivileges.ToList().ForEach(y =>
+                {
+                    if (y != null) {
+                        newRolePrivileges.Add(
+                        $"\t\tPrivilege Id:{y.PrivilegeId} Depth:{y.Depth}\n");
+                    }
+                            
+                });
+
+                List<string> oldRolePrivileges = new List<string>();
+                rpad.OldRolePrivileges.ToList().ForEach(y =>
+                {
+                    if (y != null) {
+                        oldRolePrivileges.Add(
+                        $"\t\tPrivilege Id:{(y.PrivilegeId)} Depth:{y.Depth}\n");
+                    }
+                            
+                });
+
+                List<string> invalidNewPrivileges = new List<string>();
+                rpad.InvalidNewPrivileges.ToList().ForEach(y =>
+                {
+                    if (y != null)
+                    {
+                        invalidNewPrivileges.Add(
+                        $"\t\tGuid:{y}\n");
+                    }
+                            
+                });
+
+                Console.WriteLine($"\tNew Role Privileges:\n{string.Join(string.Empty,newRolePrivileges.ToArray())}");
+                Console.WriteLine($"\tOld Role Privileges:\n{string.Join(string.Empty, oldRolePrivileges.ToArray())}");
+                Console.WriteLine($"\tInvalid New Privileges:\n{string.Join(string.Empty, invalidNewPrivileges.ToArray())}");;
+
+                break;
+            case UserAccessAuditDetail uaad: //Only applies for systemuser record
+                Console.WriteLine($"\tAccess Time:{uaad.AccessTime}");
+                Console.WriteLine($"\tInterval:{uaad.Interval}");
+
+                break;
+        }
+
+        Console.WriteLine();
+    });
+}
+```
+
 ---
 
 

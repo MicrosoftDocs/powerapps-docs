@@ -26,15 +26,15 @@ Anyone can read this configuration data, but you must have the System Administra
 
 ## Configure organization settings
 
-Properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column value is the primary key. You can get this value by querying the row directly or you may already have it by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
+Properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. You can get the key value by querying the row directly or you may already have it cached by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
 
 The following table describes the `organization` table columns that control auditing behavior.
 
 |Schema Name<br />Logical Name |Type  |Description  |
 |---------|---------|---------|
 |`IsAuditEnabled`<br />`isauditenabled`|Boolean|Whether auditing is enabled for the environment.|
-|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`|Integer|The number of days to retain audit log records. The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
-|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`|Boolean|Whether user access logging is enabled. Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: TODO topic about User Access Auditing](/power-platform/admin/audit-data-user-activity)|
+|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
+|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: TODO topic about User Access Auditing](/power-platform/admin/audit-data-user-activity)|
 |`UserAccessAuditingInterval`<br />`useraccessauditinginterval`|Integer|The interval how often user access is logged in hours. Default value is 4.|
 
 You can retrieve these values using the following queries:
