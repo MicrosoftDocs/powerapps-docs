@@ -42,7 +42,7 @@ App properties define important details about the app, like its title. You defin
     |**App name**|Enter a unique and meaningful name for the app.|  
     |**Description**|Type a short description of what the app is.|  
     | **Icon** | Customize app icon using web resources. |
-    | App tile preview| Preview the app tile image with the app icon. |
+    | **App tile preview** | Preview the app tile image with the app icon. |
 
 3. Save the app.  
 

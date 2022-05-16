@@ -71,7 +71,7 @@ Next, you add a new page to the model-driven app.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
 
-1. Select the views that you want to add to the app.
+1. Select the views that you want to add to the app. Save and publish to see selected views in preview.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 
