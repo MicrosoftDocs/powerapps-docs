@@ -41,6 +41,8 @@ App properties define important details about the app, like its title. You defin
     |--------------|-----------------|
     |**App name**|Enter a unique and meaningful name for the app.|  
     |**Description**|Type a short description of what the app is.|  
+    | **Icon** | Customize app icon using web resources. |
+    | App tile preview| Preview the app tile image with the app icon. |
 
 3. Save the app.  
 
@@ -50,10 +52,10 @@ The following app properties can't be edited in the app designer:
 
 - Unique Name
 - App Url Suffix
+- Manage App
+- Enable Mobile Offline
+- Mobile Offline Profiles
 
-> [!TIP]
-> Select **Switch to classic** to use the [classic designer to change the app design properties](manage-app-properties.md) that aren't currently available in the modern app designer.
-  
 ## Next steps
 
 [Create or edit an app](create-edit-app.md)

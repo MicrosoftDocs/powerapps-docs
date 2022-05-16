@@ -50,8 +50,6 @@ We recommend creating your model-driven app from a solution. A solution is a pac
 
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create.":::
-
 ## Add pages to your app
 
 Next, you add a new page to the model-driven app. 

@@ -47,10 +47,6 @@ We recommend creating your model-driven app from a solution. A solution is a pac
 
 1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
 
-1. Select **Modern app designer**, and then select **Create**
-
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app.":::
-
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 
    :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create.":::
