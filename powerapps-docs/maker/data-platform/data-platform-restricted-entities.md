@@ -31,6 +31,9 @@ If an app or flow only reads information from a table, a Dynamics 365 app licens
 
 The following table lists the restricted tables and the associated Dynamics 365 license requirements for users who create, update, or delete data stored within these tables. 
 
+> [!NOTE]
+> Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who have bought these licenses in the past.
+
 |Table  |Logical name  |License required  |
 |---------|---------|---------|
 Actual |msdyn_actual |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
@@ -80,8 +83,6 @@ Power Apps, Power Automate, or Power Virtual Agents licensed users can ‘create
 
 [2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case creating, reading, updating, and deleting work orders is permitted with the Power Apps license. Users cannot complete/close work orders or act in a manner similar to that of performing or completing service.*
 
-> [!NOTE]
-> Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who have bought these licenses in the past.
 
 ## Licensing
 For more information on Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
