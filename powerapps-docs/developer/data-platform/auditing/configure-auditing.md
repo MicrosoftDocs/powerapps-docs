@@ -20,13 +20,13 @@ contributors:
 
 # Configure auditing 
 
-Auditing uses settings in the [Organization table](../reference/entities/organization.md) and table and column definitions to determine what kind of audit history data to capture. 
+Auditing uses settings in the [Organization table](../reference/entities/organization.md) and definitions of individual tables and columns to determine what kind of audit history data to capture. 
 
 Anyone can read this configuration data, but you must have the System Administrator or System Customizer roles to change these settings.
 
 ## Configure organization settings
 
-Properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. You can get the key value by querying the row directly or you may already have it cached by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
+Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. You can get the key value by querying the row directly or you may already have it cached by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
 
 The following table describes the `organization` table columns that control auditing behavior.
 
@@ -44,7 +44,7 @@ You can retrieve these values using the following queries:
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/organizations(<organizationid value>)?$select=
+GET [Organization URI]/api/data/v9.2/organizations?$select=
 isauditenabled,
 auditretentionperiodv2,
 isuseraccessauditenabled,
@@ -62,13 +62,17 @@ If-None-Match: null
 HTTP/1.1 200 OK
 
 {
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval)/$entity",
-  "@odata.etag": "W/\"67037845\"",
-  "isauditenabled": true,
-  "auditretentionperiodv2": 30,
-  "isuseraccessauditenabled": true,
-  "useraccessauditinginterval": 4,
-  "organizationid": "<organizationid value>"
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval)",
+    "value": [
+        {
+            "@odata.etag": "W/\"67404512\"",
+            "isauditenabled": true,
+            "auditretentionperiodv2": 30,
+            "isuseraccessauditenabled": true,
+            "useraccessauditinginterval": 4,
+            "organizationid": "<organizationid value>"
+        }
+    ]
 }
 ```
 More information: 
@@ -96,7 +100,7 @@ static void ShowAuditingConfig(IOrganizationService svc)
         "isuseraccessauditenabled",
         "useraccessauditinginterval"
         )
-        );
+    );
 
     Console.WriteLine($"isauditenabled: " +
         $"{organization["isauditenabled"]}");
@@ -197,7 +201,7 @@ More information:
 
 # [Organization Service](#tab/orgservice)
 
-The following function lists the tables that can be enabled for auditing and those that cannot be enabled for auditing.
+The `ShowTableAuditConfigurations` static method lists the tables that can be enabled for auditing and those that cannot be enabled for auditing.
 
 ```csharp
 static void ShowTableAuditConfigurations(IOrganizationService svc)
@@ -304,7 +308,7 @@ More information: [Query table definitions using the Web API](../webapi/query-me
 
 # [Organization Service](#tab/orgservice)
 
-This function lists the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing where the table `LogicalName` value is passed as a parameter.
+This `ShowColumnAuditConfigurations` static method lists the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing where the table `LogicalName` value is passed as a parameter.
 
 ```csharp
 
