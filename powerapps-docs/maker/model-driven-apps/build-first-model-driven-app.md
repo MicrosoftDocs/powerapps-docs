@@ -1,7 +1,7 @@
 ---
 title: "Build your first modern model-driven app"
 description: "Learn how to build your first model driven app"
-ms.date: 05/16/2022
+ms.date: 05/19/2022
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -47,10 +47,6 @@ We recommend creating your model-driven app from a solution. A solution is a pac
    Now that you have a solution and have added the account table to it, you're ready to create a model-driven app.
 
 1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
-
-1. Select **Modern app designer**, and then select **Create**.
-
-   :::image type="content" source="media/create-a-model-driven-app/select-modern-app-designer.png" alt-text="Use the modern app designer to create a model-driven app.":::
 
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 

@@ -2,7 +2,7 @@
 title: "Manage model-driven app properties in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the properties for your app"
 keywords: ""
-ms.date: 02/05/2019
+ms.date: 05/19/2022
 
 ms.custom: 
 ms.topic: how-to
@@ -26,9 +26,7 @@ search.app:
   - D365CE
 ---
 
-# Manage model-driven app properties in the app designer (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Manage model-driven app properties in the app designer
 
 App properties define important details about the app, like its title. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
   
@@ -50,13 +48,8 @@ App properties define important details about the app, like its title. You defin
 
 The following app properties can't be edited in the app designer:
 
-- Icon
 - Unique Name
 - App Url Suffix
-- Manage App
-- Welcome page of the app
-- Enable Mobile Offline
-- Mobile Offline Profiles
 
 > [!TIP]
 > Select **Switch to classic** to use the [classic designer to change the app design properties](manage-app-properties.md) that aren't currently available in the modern app designer.

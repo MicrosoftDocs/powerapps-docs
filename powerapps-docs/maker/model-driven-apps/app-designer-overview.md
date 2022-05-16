@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 10/26/2021
+ms.date: 05/19/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,15 +22,9 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Overview of the model-driven app designer (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Overview of the model-driven app designer
 
 The new model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
-
-> [!IMPORTANT]
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - More information: [Preview features: Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
 
@@ -55,6 +49,7 @@ The app designer interface has the following areas:
    - **Pages**. Displays the components in your app. From the page area you can choose to add or remove forms, views, and dashboards for each table.
    - **Navigation**. Displays a navigation structure  of your app that is formed using areas, groups, and subareas. You can add or remove groups and subareas to the navigation.
    - **Data**. Provides a view of all available tables that are currently used within your app and a view of all tables that are available in your environment.
+   - **Automation**. Displays business process flows that are a part of this app. You can add, remove, or create new business process flows to the app.
 
 4. Property pane – Displays properties of the selected component and also allows you to make changes.
 
@@ -79,10 +74,8 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
-## Known limitations
+## Known limitation
 
-- Business process flows can't be added to a model-driven app.
-- The app’s icon can't be changed.
 - The app’s URL can’t be specified.
 
 > [!TIP]
