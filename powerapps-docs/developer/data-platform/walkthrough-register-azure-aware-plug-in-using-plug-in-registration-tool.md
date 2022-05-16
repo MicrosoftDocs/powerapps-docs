@@ -73,6 +73,9 @@ Dataverse will now post the current message containing the execution context to 
   
 <a name="BKMK_Test"></a>
 
+> [!NOTE]
+> Registered service endpoints support only port 80 for HTTP and port 443 for HTTPS. 
+
 ## Test the endpoint registration
 
 After you register the endpoint you can test it. A listener must be running or a queue available on the target endpoint for the Service Bus post from the plug-in to happen.  

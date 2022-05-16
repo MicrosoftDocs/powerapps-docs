@@ -155,9 +155,7 @@ When a table relationship uses Reparent or Share, and the cascading behavior is 
 Inherited access rights cleanup is a system job that cleans up the legacy inherited access rights that remain after the cascading behavior is changed from **Cascade All** to **Cascade None**. This cleanup will not affect any user that was directly granted access to a table, but will remove access from anyone who received access through inheritance only.
 
 > [!NOTE]
-> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess?view=dynamics-ce-odata-9&preserve-view=true)
-
-<!-- Automatic triggering to come later-- remove above alert at that time. The cleanup is automatically triggered when you switch Reparent or Share cascading behaviors from All to None. No action is required. -->
+> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess)
 
 This is how inherited access rights cleanup works:
 

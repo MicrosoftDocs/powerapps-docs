@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -103,6 +103,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ClientFeatureSet](#BKMK_ClientFeatureSet)
 - [ContentSecurityPolicyConfiguration](#BKMK_ContentSecurityPolicyConfiguration)
 - [ContentSecurityPolicyConfigurationForCanvas](#BKMK_ContentSecurityPolicyConfigurationForCanvas)
+- [ContentSecurityPolicyReportUri](#BKMK_ContentSecurityPolicyReportUri)
 - [ContractPrefix](#BKMK_ContractPrefix)
 - [CopresenceRefreshRate](#BKMK_CopresenceRefreshRate)
 - [CortanaProactiveExperienceEnabled](#BKMK_CortanaProactiveExperienceEnabled)
@@ -150,6 +151,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableMicrosoftFlowIntegration](#BKMK_EnableMicrosoftFlowIntegration)
 - [EnablePricingOnCreate](#BKMK_EnablePricingOnCreate)
 - [EnableSmartMatching](#BKMK_EnableSmartMatching)
+- [EnableUnifiedClientCDN](#BKMK_EnableUnifiedClientCDN)
 - [EnableUnifiedInterfaceShellRefresh](#BKMK_EnableUnifiedInterfaceShellRefresh)
 - [EnforceReadOnlyPlugins](#BKMK_EnforceReadOnlyPlugins)
 - [EntityImage](#BKMK_EntityImage)
@@ -1445,13 +1447,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|CSP Policy configuration for Canvas apps.|
+|Description|Content Security Policy configuration for Canvas apps.|
 |DisplayName|Content Security Policy Configuration for Canvas apps|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|contentsecuritypolicyconfigurationforcanvas|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_ContentSecurityPolicyReportUri"></a> ContentSecurityPolicyReportUri
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Content Security Policy Report Uri.|
+|DisplayName|Content Security Policy Report Uri|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentsecuritypolicyreporturi|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
@@ -2345,6 +2365,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### EnableSmartMatching Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_EnableUnifiedClientCDN"></a> EnableUnifiedClientCDN
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Leave empty to use default setting. Set to on/off to enable/disable CDN for UCI.|
+|DisplayName|Enable UCI CDN for organization|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enableunifiedclientcdn|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableUnifiedClientCDN Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -8515,7 +8560,10 @@ Listed by **SchemaName**.
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncstate](#BKMK_organization_organizationdatasyncstate)
+- [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
 - [organization_appaction](#BKMK_organization_appaction)
+- [organization_appactionmigration](#BKMK_organization_appactionmigration)
+- [organization_appactionrule](#BKMK_organization_appactionrule)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 
 
@@ -10013,6 +10061,23 @@ Same as the [organization_organizationdatasyncstate](organizationdatasyncstate.m
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_msdyn_insightsstorevirtualentity"></a> organization_msdyn_insightsstorevirtualentity
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_insightsstorevirtualentity](msdyn_insightsstorevirtualentity.md#BKMK_organization_msdyn_insightsstorevirtualentity) many-to-one relationship for the [msdyn_insightsstorevirtualentity](msdyn_insightsstorevirtualentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_insightsstorevirtualentity|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_insightsstorevirtualentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_appaction"></a> organization_appaction
 
 **Added by**: Active Solution Solution
@@ -10024,8 +10089,42 @@ Same as the [organization_appaction](appaction.md#BKMK_organization_appaction) m
 |ReferencingEntity|appaction|
 |ReferencingAttribute|organizationid|
 |IsHierarchical|False|
-|IsCustomizable|True|
+|IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_appaction|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_appactionmigration"></a> organization_appactionmigration
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_appactionmigration](appactionmigration.md#BKMK_organization_appactionmigration) many-to-one relationship for the [appactionmigration](appactionmigration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appactionmigration|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_appactionmigration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_appactionrule"></a> organization_appactionrule
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_appactionrule](appactionrule.md#BKMK_organization_appactionrule) many-to-one relationship for the [appactionrule](appactionrule.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appactionrule|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_appactionrule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

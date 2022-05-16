@@ -1,7 +1,7 @@
 ---
 title: "flowmachinegroup table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachinegroup table/entity."
-ms.date: 03/29/2022
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -82,6 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [trytoreusewindowssession](#BKMK_trytoreusewindowssession)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -357,6 +358,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_trytoreusewindowssession"></a> trytoreusewindowssession
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether we will try to reuse non unlocked Windows sessions. Default value is No.|
+|DisplayName|Try to reuse non unlocked Windows sessions.|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|trytoreusewindowssession|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### trytoreusewindowssession Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
