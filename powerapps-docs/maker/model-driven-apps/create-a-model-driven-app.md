@@ -1,7 +1,7 @@
 ---
 title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 05/16/2022
+ms.date: 05/19/2022
 
 ms.subservice: mda-maker
 ms.topic: tutorial
