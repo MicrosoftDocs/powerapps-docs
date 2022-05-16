@@ -24,6 +24,10 @@
   href: annualfiscalcalendar.md
 - name: appaction
   href: appaction.md
+- name: appactionmigration
+  href: appactionmigration.md
+- name: appactionrule
+  href: appactionrule.md
 - name: AppConfig
   href: appconfig.md
 - name: AppConfigInstance
@@ -72,6 +76,8 @@
   href: catalogassignment.md
 - name: Category
   href: category.md
+- name: chat
+  href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
 - name: Connection
@@ -224,6 +230,8 @@
   href: mobileofflineprofileitem.md
 - name: MobileOfflineProfileItemAssociation
   href: mobileofflineprofileitemassociation.md
+- name: mobileofflineprofileitemfilter
+  href: mobileofflineprofileitemfilter.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
 - name: msdyn_AIBDataset
@@ -272,6 +280,8 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_datalakeds
+  href: msdyn_datalakeds.md
 - name: msdyn_entityrefreshhistory
   href: msdyn_entityrefreshhistory.md
 - name: msdyn_federatedarticle
@@ -280,6 +290,8 @@
   href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
+- name: msdyn_InsightsStoreVirtualEntity
+  href: msdyn_insightsstorevirtualentity.md
 - name: msdyn_kalanguagesetting
   href: msdyn_kalanguagesetting.md
 - name: msdyn_kbattachment
@@ -306,6 +318,8 @@
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
+- name: msdyn_pmanalysishistory
+  href: msdyn_pmanalysishistory.md
 - name: msdyn_pminferredtask
   href: msdyn_pminferredtask.md
 - name: msdyn_pmrecording
