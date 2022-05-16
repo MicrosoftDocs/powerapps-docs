@@ -66,5 +66,5 @@ The kit also provides additional pages for more information as summarized below:
 ### See also
 
 - [Components supported by the UI Kit (preview)](supported-components.md)
-- [Troubleshoot common errors](common-errors.md)
+- [Troubleshoot common errors](common-errors.yml)
 

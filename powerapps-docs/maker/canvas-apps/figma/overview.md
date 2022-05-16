@@ -49,4 +49,4 @@ Connect your app to [data](../add-data-connection.md), and customize further by 
 
 - [Create a canvas app from Figma (preview)](create-app-from-figma.md)
 - [Components supported by the UI Kit (preview)](supported-components.md)
-- [Troubleshoot common errors](common-errors.md)
+- [Troubleshoot common errors](common-errors.yml)
