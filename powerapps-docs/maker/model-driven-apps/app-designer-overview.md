@@ -70,7 +70,7 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
 1. **Enable Areas**. Disabled by default. When selected, new areas can be added to the app. For apps with existing multiple areas, this setting is enabled by default. You can't disable this setting while the app has multiple areas.
 1. **Enable web resources**. Disabled by default. When selected, web resources can be added to the app as a type of subarea. More information: [Add a web resource to an app (preview)](create-edit-web-resources.md#add-a-web-resource-to-an-app-preview).
-1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea. More information: [Add a URL to an app (preview)](app-navigation.md#add-a-url-to-an-app-preview)
+1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea. More information: [Add a URL to an app](app-navigation.md#add-a-url-to-an-app)
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
