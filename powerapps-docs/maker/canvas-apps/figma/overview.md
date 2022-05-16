@@ -28,7 +28,7 @@ The ability to create apps from [Figma](https://www.figma.com/) design files dir
 
 Designers can create designs in Figma using the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981), just like they do with any other UI kits. Once designs are created, developers or designers can use the link to the design file in Power Apps and create an app in a few minutes. The design frames are automatically converted into the screens in Power Apps. Once the app screens are ready, you can extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding additional [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
 
-:::image type="content" source="media/overview.png" alt-text="Overview of creating app from Figma.":::
+:::image type="content" source="media/overview-light.png" alt-text="Overview of creating app from Figma." lightbox="media/overview.png":::
 
 ## Design your app
 
