@@ -1,0 +1,28 @@
+### YamlMime:FAQ
+metadata:
+  title: Troubleshoot common errors when creating app from Figma (preview) | Microsoft Docs
+  description: Common errors and resolutions when creating canvas apps from a Figma design file.
+  author: tapanm-msft
+  ms.topic: faq
+  ms.custom: 
+  ms.date: 05/24/2022
+  ms.author: kaagar
+  ms.reviewer: tapanm-msft
+  contributors:
+    - tapanm-msft
+title: Troubleshoot common errors
+summary: |
+  This article lists common errors and resolutions that you may encounter when creating apps from Figma (preview).
+
+sections:
+  - name: General
+    questions:
+      - question: |
+          Placeholder error 1
+        answer: |
+          Placeholder resolution 1
+
+      - question: |
+          Placeholder error 2
+        answer: |
+          Placeholder resolution 2
