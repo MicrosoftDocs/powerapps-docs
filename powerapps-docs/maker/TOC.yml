@@ -251,8 +251,9 @@
           href: ./canvas-apps/figma/supported-components.md
         - name: Create a canvas app from Figma
           href: ./canvas-apps/figma/create-app-from-figma.md
-        - name: Troubleshoot common errors when creating app from Figma
+        - name: Common errors
           href: ./canvas-apps/figma/common-errors.yml
+          displayName: Troubleshoot common errors when creating app from Figma
     - name: 2 - Create an app using data
       items:
       - name: From Microsoft Dataverse

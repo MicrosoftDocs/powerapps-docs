@@ -58,4 +58,5 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
 ### See also
 
-[Troubleshoot common errors](common-errors.yml)
+- [Troubleshoot common errors](common-errors.yml)
+- [Components supported by the UI Kit (preview)](supported-components.md)

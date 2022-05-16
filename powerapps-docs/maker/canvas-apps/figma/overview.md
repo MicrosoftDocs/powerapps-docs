@@ -42,11 +42,11 @@ After you've finalized the desired app design, use the quick and easy steps to p
 
 Connect your app to [data](../add-data-connection.md), and customize further by [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md)
 
-## Next steps
-
-[Design your app using the Canvas Apps from Figma UI Kit (preview)](design-using-kit.md)
+> [!div class="nextstepaction"]
+> [Next step: Design your app using the UI kit (preview) ](design-using-kit.md)
 
 ### See also
 
 - [Create a canvas app from Figma (preview)](create-app-from-figma.md)
-- [Components supported by the Canvas Apps from Figma UI Kit (preview)](supported-components.md)
+- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Troubleshoot common errors](common-errors.md)

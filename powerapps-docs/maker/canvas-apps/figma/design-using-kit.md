@@ -59,3 +59,12 @@ The kit also provides additional pages for more information as summarized below:
 - **Step 3: Convert into an app** - a visual representation of converting the app design into an app. To follow step-by-step instructions, see [Create a canvas app from Figma](create-app-from-figma.md).
 - **Step 4: Next steps** - explains the possible next steps you can take to further prepare your app for your business scenario. These steps include [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
 - **Supported components** - lists information about supported and unsupported components. For more information, see [Components supported by the UI kit](supported-components.md).
+
+> [!div class="nextstepaction"]
+> [Next step: Create a canvas app from Figma (preview)](create-app-from-figma.md)
+
+### See also
+
+- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Troubleshoot common errors](common-errors.md)
+

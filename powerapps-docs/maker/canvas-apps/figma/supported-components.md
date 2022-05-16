@@ -568,4 +568,4 @@ Images and rectangles will render as-is when the design is converted into an app
 
 ### See also
 
-[Create a canvas app from Figma (preview)](create-app-from-figma.md)
+- [Create a canvas app from Figma (preview)](create-app-from-figma.md)
