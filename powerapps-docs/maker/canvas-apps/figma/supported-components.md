@@ -31,7 +31,7 @@ For the latest information about the supported controls, and to see examples, yo
 
 A [screen](../add-screen-context-variables.md) in canvas apps is the foundational base where you can place other controls such as data cards, labels, text inputs, and buttons. 
 
-Screen inside the UI kit are available in two forms. **Phone**, and **Tablet**.
+The screens inside the UI kit are available in two forms. **Phone**, and **Tablet**.
 
 ### Form screen
 
