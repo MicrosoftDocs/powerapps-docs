@@ -49,6 +49,11 @@ isauditenabled,
 auditretentionperiodv2,
 isuseraccessauditenabled,
 useraccessauditinginterval HTTP/1.1
+
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 ```
 
 **Response**
@@ -159,6 +164,11 @@ This query returns the `Logicalname` for all public tables that are enabled for 
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=LogicalName,IsAuditEnabled&$filter=IsAuditEnabled/Value eq true and IsPrivate eq false
+
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 ```
 
 **Response**
@@ -262,6 +272,11 @@ This returns all the columns enabled for auditing for the `account` table.
 
 ```http
 GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes?$select=LogicalName,IsAuditEnabled&$filter=IsAuditEnabled/Value eq true
+
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 ```
 
 **Response**
@@ -408,10 +423,12 @@ This example publishes the `account` table using the <xref:Microsoft.Dynamics.CR
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/PublishXml HTTP/1.1   
-Accept: application/json   
-OData-MaxVersion: 4.0   
-OData-Version: 4.0   
+POST [Organization URI]/api/data/v9.2/PublishXml HTTP/1.1
+
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 
 {
     "ParameterXml": "<importexportxml><entities><entity>account</entity></entities></importexportxml>"

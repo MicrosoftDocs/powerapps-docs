@@ -250,6 +250,10 @@ The following one filters on the `_userid_value` property of the audit record wh
 ```http
 GET [Organization URI]/api/data/v9.2/audits?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=operation eq 3 and objecttypecode eq 'contact' and _userid_value eq '<user id>' HTTP/1.1
 
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 Prefer: odata.include-annotations="*" 
 ```
 
@@ -260,6 +264,10 @@ The following one accesses the collection of audit records for a specific user w
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<user id>)/lk_audit_userid?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=operation eq 3 and objecttypecode eq 'contact' HTTP/1.1
 
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 Prefer: odata.include-annotations="*" 
 ```
 
@@ -462,6 +470,11 @@ The example below shows the <xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?te
 
 ```http
 GET [Organization URI]/api/data/v9.2/audits(12869c65-d7d3-ec11-b656-281878f0eba9)/Microsoft.Dynamics.CRM.RetrieveAuditDetails HTTP/1.1
+
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 Prefer: odata.include-annotations="*" 
 ```
 
@@ -695,6 +708,11 @@ GET [Organization URI]/api/data/v9.2/RetrieveAttributeChangeHistory(Target=@targ
    "Count": 1,
    "ReturnTotalRecordCount": true
 }
+
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 ```
 
 **Response**
@@ -827,18 +845,24 @@ The following example returns just the first two of four changes for an account 
 **Request**
 
 ```http
-{{webapiurl}}RetrieveRecordChangeHistory(Target=@target,PagingInfo=@paginginfo)?
+GET [Organization URI]/api/data/v9.2/RetrieveRecordChangeHistory(Target=@target,PagingInfo=@paginginfo)?
 @target={ '@odata.id':'accounts(611e7713-68d7-4622-b552-85060af450bc)'}
 &@paginginfo={
    "PageNumber": 1,
    "Count": 2,
    "ReturnTotalRecordCount": true
 }
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 ```
 
 **Response**
 
 ```http
+HTTP/1.1 200 OK
+
 {
     "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse",
     "AuditDetailCollection": {
