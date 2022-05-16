@@ -1,7 +1,7 @@
 ---
 title: "Debug plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to debug plug-ins using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 05/10/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -64,7 +64,7 @@ Before you will be able to use this service, you must enable tracing in your Mic
 
 While debugging, you can easily query the trace logs for a given plug-in class using the Web API in your browser. If your assembly is named `BasicPlugin.FollowUpPlugin`, you can use this query in your browser address field:
 
-`GET <your org uri>/api/data/v9.0/plugintracelogs?$select=messageblock&$filter=typename eq 'BasicPlugin.FollowUpPlugin'`
+`GET <your org uri>/api/data/v9.0/plugintracelogs?$select=messageblock&$filter=startswith(typename,'BasicPlugin.FollowUpPlugin')`
 
 The JSON results will be returned to your browser like so:
 
