@@ -570,8 +570,6 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
 ```  
   
 ### See also  
- [Retrieve data with queries](/dynamics365/customer-engagement/developer/retrieve-data-queries-sdk-assemblies)   
  [Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)   
- [Build queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
