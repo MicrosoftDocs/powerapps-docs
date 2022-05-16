@@ -20,5 +20,42 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
+In this article, you'll learn about creating canvas apps using your existing Figma design. [Figma](https://www.figma.com/) is a graphics editor and a design tool that you can use to create prototypes for your intended software design. After the design has been finalized, use this feature to generate apps directly from the layout and design that you defined in your Figma file.
 
+## Prerequisites
 
+- You must have access to a Figma design file that you want to use and create an app from.
+- The Figma file must be designed using the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981).
+
+> [!TIP]
+> If you're using the UI kit for the first time, familiarize yourself with the feature [overview](overview.md), the [UI kit](design-using-kit.md) capabilities, and it's [components](supported-components.md).
+
+## Create an app
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Under **Start from**, select **Figma (preview)**.
+
+    :::image type="content" source="media/maker-figma.png" alt-text="Select Figma preview from available options.":::
+
+1. Enter an app name.
+
+1. Enter the Figma file URL.
+
+1. Enter the Figma personal access token. More information: [Generate a personal access token in Figma](https://www.figma.com/developers/api#access-tokens)
+
+    :::image type="content" source="media/create-app.png" alt-text="Create app dialog box with app name, Figma URL and personal access token created.":::
+
+1. Select **Create**.
+
+    App is created for you and opened using Power Apps Studio for you to further customize the app.
+
+    :::image type="content" source="media/studio.png" alt-text="Created app opened inside Power Apps Studio.":::
+
+1. Extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md) as necessary.
+
+1. [Save, publish](../save-publish-app.md), and [share](../share-app.md) the app.
+
+### See also
+
+[Troubleshoot common errors](common-errors.yml)
