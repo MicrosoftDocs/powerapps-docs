@@ -1,5 +1,5 @@
 ---
-title: "entity.getIsDirty (Client API reference) in model-driven apps| MicrosoftDocs"
+title: entity.getIsDirty (Client API reference)
 description: Gets a boolean value indicating whether any attributes of the entity have been modified.
 ms.author: jdaly
 author: adrianorth

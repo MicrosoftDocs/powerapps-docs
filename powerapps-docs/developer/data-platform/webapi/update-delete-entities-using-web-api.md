@@ -1,25 +1,18 @@
 ---
 title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
-ms.custom: ""
-ms.date: 05/03/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 694889fd-2b85-43a0-97bc-1e760695db31
-caps.latest.revision: 17
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Update and delete table rows using the Web API
