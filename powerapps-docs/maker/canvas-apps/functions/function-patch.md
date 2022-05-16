@@ -21,7 +21,7 @@ contributors:
 
 Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
 
-Use the **Patch** function to modify records in complex situations. Such as, when you do updates that require no user interaction or use forms that span multiple screens.
+Use the **Patch** function to modify records in complex situations, such as when you do updates that require no user interaction or use forms that span multiple screens.
 
 To update records in a data source more easily for simple changes, use the **Edit form** control instead. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
 
