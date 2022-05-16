@@ -160,6 +160,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 This example uses the `recordId` parameter within the [navigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
 
+A more complete example of this can be found at [Override the default open behavior of data rows in an entity-bound grid](../override-default-open-behavior-grids.md).
+
 1. Create a web resource of type **JScript** and update the **name** parameter to be the logical page name. Add the following code to the web resource.
 
     ```javascript

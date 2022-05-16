@@ -81,14 +81,12 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 
 ## Known limitations
 
-- You can’t add the following model-driven app components:
-   - Business process flows
-   - Charts
-- You can’t change the app’s icon.
-- You can’t specify the app’s URL.
+- Business process flows can't be added to a model-driven app.
+- The app’s icon can't be changed.
+- The app’s URL can’t be specified.
 
 > [!TIP]
-> Select **Switch to classic** to use the classic designer to complete the app design tasks that aren't currently available in the designer.
+> Select **Switch to classic** to use the classic designer to complete the app design tasks that aren't currently available in the modern designer.
 
 ## Next steps
 

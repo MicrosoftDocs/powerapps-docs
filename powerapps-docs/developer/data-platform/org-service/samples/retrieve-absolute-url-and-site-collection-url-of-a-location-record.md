@@ -18,7 +18,7 @@ contributors:
 ---
 # Sample: Retrieve absolute URL and site collection URL of a location record
 
-This sample shows how to retrieve the absolute URL and the site collection URL of a SharePoint Server location record using the [RetrieveAbsoluteAndSiteCollectionUrlRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveabsoluteandsitecollectionurlrequest?view=dynamics-general-ce-9) message.
+This sample shows how to retrieve the absolute URL and the site collection URL of a SharePoint Server location record using the [RetrieveAbsoluteAndSiteCollectionUrlRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveabsoluteandsitecollectionurlrequest) message.
 
 ## How to run this sample
 

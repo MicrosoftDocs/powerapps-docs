@@ -1,12 +1,12 @@
 ---
 title: "Client API Reference for model-driven apps | MicrosoftDocs"
 description: "The topic provides client API reference for model-driven apps."
-ms.date: 03/23/2022
-ms.topic: "conceptual"
-author: "JimDaly"
-ms.subservice: mda-developer
-ms.author: "jdaly"
-manager: "kvivek"
+ms.date: 04/06/2022
+author: JimDaly
+ms.author: jdaly
+ms.reviewer: jdaly
+manager: kvivek
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 

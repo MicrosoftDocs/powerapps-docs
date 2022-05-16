@@ -8,7 +8,6 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 01/03/2022
-
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -241,9 +240,9 @@ No. Although they're related. A connection represents a credential or authentica
 
 ### Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?
 
-Generally no. Shared connections such as SQL Server with SQL authentication store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
+Generally no. Shared connections with SQL Server store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
 
-Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons SQL Server with SQL authentication, which is a shared connection, will not use data source environment variables but SQL Server with Azure Active Directory (AAD) authentication, which is a personal connection will. 
+Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons authentication with SQL Server, which is a shared connection, will not use data source environment variables. 
 
 ### Can my automated ALM pipeline use different values files for different environments?
 

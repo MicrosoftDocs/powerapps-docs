@@ -2,9 +2,8 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 08/17/2021
+ms.date: 04/27/2022
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -21,12 +20,10 @@ search.app:
   - PowerApps
   - D365CE
 contributors:
-  - sama-zaki
+  - JasonHQX
 ---
 
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
-
-
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 
@@ -135,13 +132,26 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 6. Navigate to Power Apps, and relink the Synapse workspace and data lake.
 
-## View your data in Azure Synapse Analytics
+## Access near real-time data and read-only snapshot data (preview)
 
-1. Select the desired Azure Synapse Link and select the **Go to Azure Synapse Analytics workspace** from the top panel.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-2. Expand **Databases**, and then select dataverse-*environmentName*-*organizationUniqueName* and expand **Tables**.
+After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription to ensure you can reliably consume updated data in the lake at any given time:
 
-All of the exported Dataverse tables will be listed and available for analysis.
+- Near real-time data: Provides a copy of data synchronized from Dataverse via Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
+- Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
+
+> [!NOTE]
+> This is a preview feature.
+>
+> For empty table data, only near real-time data is created.
+
+1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
+1. Expand **Lake Databases** from the left panel, select **Dataverse** > *environmentName* > *sessionid*, and then expand **Tables**.
+
+All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
+
+:::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
 
 ### What's next?
 
