@@ -33,3 +33,9 @@ With an Intune-enabled mobile app, IT administrators can:
 - See reports and track app usage.
 - Limit sharing of corporate data among apps by restricting data leakage through cut, copy, paste, and save-as.
 - Provide encryption at rest.
+
+## Get started
+
+Intune is a separate Microsoft product that is not included with Power Apps mobile. Refer to the documentation on [What is Microsoft Intune app management?](/intune/apps/app-management) and [Adding and assigning an app with Intune](/intune/apps/quickstart-add-assign-app) to get started.
+
+A configuration can be set up through the [Device Management portal](https://devicemanagement.microsoft.com/). Each supported platform (iOS, Android, and Windows) requires a separate configuration.
