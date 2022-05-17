@@ -110,7 +110,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control will only display the first tab of the form it uses if multiple tabs are included in that form.  
 
-- Using the same form for different form component controls isn't supported.
+- Using the same form for different form component controls on a single form isn't supported.
 
 - The form that you use with a form component must be included in your app. If it isn't, or if the current user does not have access to the form, it will fallback to the top-most main form that is included in the app and available to the user (based on form order). More information: [Add a component](add-edit-app-components.md#add-a-component).
 
