@@ -1185,8 +1185,6 @@
           href: ./canvas-apps/map-component-input-fields.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
-    - name: Embed canvas apps in your applications
-      href: ./canvas-apps/embedding-sdk.md
   - name: Performance and optimization
     items:
     - name: Understand canvas app execution phases and data flow
