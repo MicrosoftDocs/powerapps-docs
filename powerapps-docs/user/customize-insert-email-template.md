@@ -40,11 +40,11 @@ To configure the enhanced email template for apps across the organization, perfo
 
 To disable the enhanced email template selection window and display the default email template for an app, perform the following steps:
 
-1. Go to [Power Apps](https://make.preview.powerapps.com/) instance.
+1. Go to Power Apps instance.
 2. Select **Solutions**.
 1. Select the solution created for the email template selection option.
 1. Go to **Add Existing** > **App** > **Model-driven app** and select the app.
-   > ![Add a model driven app](media/new_email_template_addapp.png)
+   > ![Add a model driven app](media/new_email_template_addcsw.png)
 1. Select the **Enable the new Insert Template Dialog** option.
 1. On the **Edit Enable the New Insert Template Dialog**, in the **Setting app value** section, specify **No** for the specified app.
    > ![Set the environment variable to No for an app](media/new_email_template_deloptn.png)
