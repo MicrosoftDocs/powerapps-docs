@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: overview
 
-ms.date: 04/26/2021
+ms.date: 5/18/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -13,6 +13,7 @@ contributors:
     - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - ProfessorKendrick
 ---
 
 # Overview of authentication in Power Apps portals

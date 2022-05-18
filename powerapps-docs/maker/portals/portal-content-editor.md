@@ -4,7 +4,7 @@ description: Learn how to use the inline editor on a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
-ms.date: 04/21/2021
+ms.date: 5/18/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -13,6 +13,7 @@ searchScope:
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ms.custom: intro-internal
 ---
 
