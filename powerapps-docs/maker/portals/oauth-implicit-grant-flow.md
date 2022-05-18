@@ -27,7 +27,7 @@ OAuth 2.0 implicit grant flow supports token endpoints that a client can call to
 
 Custom certificates provide another layer of security while using the OAuth 2.0 end point. Use the [Power Platform admin center](/admin/manage-custom-certificates) to upload the custom certificate. After uploading the custom certificate, you need to update site settings as below 
 
-1. Go to [portal settings](manage-existing-portals#settings) and select **Site Settings**. 
+1. Go to [portal settings](manage-existing-portals.md#settings) and select **Site Settings**. 
 
 1. To create a new setting, select **New**. 
 
