@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/03/2021
+ms.date: 04/21/2022
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -106,6 +106,68 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 
     > [!div class="mx-imgBorder"]
     > ![Form-specific confirmation dialog box.](media/object-app/confirm-native-custom.png)
+
+## OnError property
+
+> [!NOTE]
+> - OnError is part of an experimental feature and is subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
+> - The behavior that this article describes is available only when the *Formula-level error management* experimental feature in [Settings > Upcoming features > Experimental](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
+> - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+
+Use **OnError** to take action after an error has been detected.  It provides a global opportunity to intercept an error banner before it is displayed to the end user.  It can also be used to log an error with the [**Trace** function](function-trace.md) or write to a database or web service.
+
+The result of every formula evaluation is checked for an error.  If it is an error, **OnError** will be evaluated with the same **FirstError** and **AllErrors** scope variables that would have been present if the entire formula was wrapped in an [**IfError** function](function-iferror.md).  
+
+If **OnError** is empty, a default error banner is shown with the **FirstError.Message** of the error.  Defining an **OnError** formula overrides this behavior enabling the maker to handle the error reporting as they see fit.  The default behavior can be requested in the **OnError** by rethrowing the error with the [**Error** function](function-iferror.md).  This is useful if some errors are to be filtered out or handled in a different manner, while others are to be passed through.
+
+**OnError** can't replace an error in calculations the way that **IfError** can. At the point that **OnError** is invoked, the error has already happened and it has already been processed through formula calculations.  \**OnError** controls error reporting only.
+
+**OnError** formulas are evaluated concurrently and it's possible that their evaluation may overlap with the processing of other errors. For example, if you set a global variable at the top of an **OnError** and read it later on in the same formula, the value may have changed. Use the [**With** function](function-with.md) to create a named value that is local to the formula.
+
+Although each error is processed individually by **OnError**, the default error banner may not appear for each error individually. To avoid having too many error banners displayed at the same time, the same error will not trigger a new error banner if it has recently been shown.
+
+### Example
+
+Consider a **Label** control and **Slider** control that are bound together through the formula:
+
+```powerapps-dot
+Label1.Text = 1/Slider1.Value
+```
+
+:::image type="content" source="media/object-app/onerror-noerror.png" alt-text="Label and slider control bound through the formula Label1.Text = 1/Slider1.Value.":::
+
+The slider defaults to 50. If the slider is moved to 0, **Label1** will show no value and an error banner is shown:
+
+:::image type="content" source="media/object-app/onerror-div0.png" alt-text="Slider control moved to 0, resulting in a division by zero error, and an error banner.":::
+
+Let's look at what happened in detail:
+
+1. User moved the slide to the left and the **Slide1.Value** property changed to 0.
+1. **Label1.Text** was automatically re-evaluated.  Division by zero occurred, generating an error.
+1. There is no **IfError** in this formula. The division by zero error is returned by the formula evaluation.  
+1. **Label1.Text** can't show anything for this error, so it shows a *blank* state.
+1. **OnError** is invoked. Since there is no handler, the standard error banner is displayed wth error information.
+
+If required, we could also modify the formula to `Label1.Text = IfError( 1/Slider1.Value, 0 )`.  This would result in no error or error banner. We can't change the value of an error from **OnError** since at that point the error has already happened, it is only a question of how it will be reported.
+
+If we add an **OnError** handler, it will have no impact before step 5, but it can impact how the error is reported:
+
+```powerapps-dot
+Trace( $"Error {FirstError.Message} in {FirstError.Source}" )
+```
+
+:::image type="content" source="media/object-app/onerror-trace-formula.png" alt-text="App.OnError formula set to generate a Trace.":::
+
+With this in place, from the app user's perspective, there won't be any error. But the error will be added to Monitor's trace, complete with the source of the error information from **FirstError**:
+
+:::image type="content" source="media/object-app/onerror-trace.png" alt-text="Slider control moved to 0, resulting in a division by zero error, but no erorr banner.":::
+
+If we also wanted to have the same default error banner displayed in addition to the trace, we can rethrow the error with the **Error** function after the **Trace** call just as it did if the **Trace** was not there:
+
+```powerapps-dot
+Trace( $"Error {FirstError.Message} in {FirstError.Source}" );
+Error( FirstError )
+```
 
 ## OnStart property
 

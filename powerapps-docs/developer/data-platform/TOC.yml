@@ -304,6 +304,8 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Azure AD user tables
+      href: aaduser-entity.md
   - name: Template tables
     href: upload-manage-document-templates.md
 - name: Work with table definitions using code
@@ -497,15 +499,13 @@
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
   - name: Organization Service
-    href: /dotnet/api/?view=dynamics-general-ce-9
+    href: /dotnet/api/microsoft.crm.sdk
   - name: XRM Tooling
-    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Table
-    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
+    href: /dotnet/api/microsoft.xrm.tooling.connector  
   - name: Workflow
-    href: /dotnet/api/?view=dynamics-workflow-ce-9 
+    href: /dotnet/api/microsoft.xrm.sdk.workflow 
   - name: Package Deployer
-    href: /dotnet/api/?view=dynamics-deployer-ce-9
+    href: /dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
   - name: FetchXML schema

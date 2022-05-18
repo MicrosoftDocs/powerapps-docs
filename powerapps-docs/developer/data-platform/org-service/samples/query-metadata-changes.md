@@ -19,7 +19,7 @@ contributors:
 
 # Query and detect table definitions changes
 
-This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery).
+This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -29,7 +29,7 @@ This sample shows how to retrieve and detect changes in table definitions using 
 
 ## What this sample does
 
-The `RetrieveMetadataChangeRequest` message is intended to be used in a scenario where it contains the data  that is needed to retrieve a collection of table definitions records that satisfy the specified criteria. The [RetrieveMetadataChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesresponse?view=dynamics-general-ce-9) returns a timestamp value that can be used with this request at a later time to return information about how table definitions have changed since the last request.
+The `RetrieveMetadataChangeRequest` message is intended to be used in a scenario where it contains the data  that is needed to retrieve a collection of table definitions records that satisfy the specified criteria. The [RetrieveMetadataChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesresponse) returns a timestamp value that can be used with this request at a later time to return information about how table definitions have changed since the last request.
 
 ## How this sample works
 

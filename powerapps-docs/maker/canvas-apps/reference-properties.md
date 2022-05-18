@@ -80,7 +80,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Map](geospatial-component-map.md)** - View the physical position of objects from a data source, or by inputting new physical locations.
 
-**[Measure in MR](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
+**[Measuring Camera](mixed-reality-component-measure-distance.md)** - Measure distance, area, and volume in mixed reality.
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
