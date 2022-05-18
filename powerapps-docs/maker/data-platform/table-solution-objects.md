@@ -2,7 +2,7 @@
 title: "View and edit tables representing solution objects | MicrosoftDocs"
 description: "Learn about tables in Dataverse that represent the structure and instances of solution objects."
 ms.custom: ""
-ms.date: 05/18/2021
+ms.date: 05/18/2022
 ms.reviewer: "matp"
 ms.topic: "conceptual"
 author: "si-matthews"
