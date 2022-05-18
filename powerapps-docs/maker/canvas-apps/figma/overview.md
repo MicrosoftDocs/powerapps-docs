@@ -16,13 +16,13 @@ contributors:
   - tapanm-msft
 ---
 
-# Overview of creating app from Figma (preview)
+# Overview of creating apps from Figma (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
-The ability to create apps from [Figma](https://www.figma.com/) design files directly helps bridge the gap between design and development, and accelerates the app development process. It allows developers and designers to collaborate effectively to deliver great end user experiences with low cost and effort.  
+The ability to create apps from [Figma](https://www.figma.com/) design files directly helps bridge the gap between design and development by accelerating the app UI development process. It allows developers and designers to collaborate effectively and efficiently to deliver great end user experiences with low cost and effort.
 
-Designers can create designs in Figma using the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981), just like they do with any other UI kits. Once designs are created, developers or designers can use the link to the design file in Power Apps and create an app in a few minutes. The design frames are automatically converted into the screens in Power Apps. Once the app screens are ready, you can extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
+Designers can create designs in Figma using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981), which provides supported components for Power Apps and includes detailed instructions for how to use the kit. Once the designs are created, simply provide the link to the Figma design file and Power Apps will generate a new canvas app based on those designs. The design frames are automatically converted into screens in Power Apps. Once the app UI is ready, you can extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
 
 :::image type="content" source="media/overview.png" alt-text="Overview of creating an app from Figma." lightbox="media/overview.png":::
 
@@ -30,17 +30,17 @@ Designers can create designs in Figma using the [Create apps from Figma UI kit](
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
-## Design your app
+## Design your app in Figma
 
-[Design](design-using-kit.md) your app in Figma using the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981). Use the components [supported](supported-components.md) by the kit while designing the app screens and controls.
+[Design](design-using-kit.md) your app in Figma using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981). Use the Power Apps components [supported](supported-components.md) in the kit when designing your app.
 
-## Create app from your design
+## Create an app from your design
 
-After you've finalized the desired app design, use the quick and easy steps to provide the Figma file details and an access token to [create a canvas app from the Figma design](create-app-from-figma.md).
+After you've finalized the app design, follow the quick and easy steps to [create a canvas app from the Figma design](create-app-from-figma.md).
 
-## Extend your app with data
+## Continue building your app
 
-Connect your app to [data](../add-data-connection.md), and customize further by [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md)
+Continue building your app in Power Apps Studio by adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md). You can also extend your app by connecting it to [data](../add-data-connection.md), or customize it further by [adding app logic](../working-with-formulas.md).
 
 > [!div class="nextstepaction"]
 > [Next step: Design your app using the UI kit (preview) ](design-using-kit.md)
