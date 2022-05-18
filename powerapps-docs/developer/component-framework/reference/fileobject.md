@@ -2,20 +2,19 @@
 title: FileObject | Microsoft Docs
 description: Provides access to all the properties of a file.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-
+ms.date: 03/26/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 8907f07a-ad45-47e4-a503-8eaae9bba5f7
 ---
 
 # FileObject
 
-Provides access to all the properties of a file.
+[!INCLUDE [fileobject-description](includes/fileobject-description.md)]
 
 ## Available for
 

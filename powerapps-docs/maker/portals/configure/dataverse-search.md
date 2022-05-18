@@ -5,26 +5,21 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 02/17/2022
+ms.date: 04/20/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
-# Configure Dataverse search in portals (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Configure Dataverse search in portals
 
 ## Overview
 
 [Dataverse search](../../../user/relevance-search-benefits.md) delivers fast and comprehensive search results sorted by relevance in portals. Dataverse search is the same search service used in model-driven apps and other Microsoft Power Platform services built on Microsoft Dataverse. To enable Dataverse search, add the [site setting](configure-site-settings.md) **Search/EnableDataverseSearch** and set it to **true**. If this setting is set to **false** or doesn't exist at all, [Lucene.NET](search.md) search will be enabled instead.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 This walkthrough explains how to enable search for the **Order Products** table in the Northwind Traders sample database, which is available with Dataverse. For more information about sample databases, go to [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
 

@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 contributors:
   - alaug
-  - josephshum
+  - msftsamperl
   - tapanm-msft
 ---
 # Embed a canvas app as personal app in Teams

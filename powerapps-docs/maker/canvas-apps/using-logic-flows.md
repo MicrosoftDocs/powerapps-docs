@@ -19,7 +19,7 @@ contributors:
 ---
 # Start a flow in a canvas app
 
-You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close Power Apps.
+You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a list created using Microsoft Lists, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close Power Apps.
 
 > [!NOTE]
 > When a user runs a flow from within an app, that user must have permission to perform the tasks that are specified in the flow. Otherwise, the flow will fail.
@@ -36,7 +36,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 ## Create a flow
 
-In this section, you'll create a flow using Power Automate that creates an item in a SharePoint list using the input value for the list column from an app created using Power Apps. You'll create the app that uses this flow in the next section.
+In this section, you'll create a flow using Power Automate that creates an item in a list using the input value for the list column from an app created using Power Apps. You'll create the app that uses this flow in the next section.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -80,7 +80,7 @@ In this section, you'll create a flow using Power Automate that creates an item 
 
 ## Add a flow to an app
 
-In this section, you'll learn about creating an app using Power Apps that uses the flow created in the earlier section. The app uses text entered in a text box when the button is selected to trigger the flow to create an item in the selected SharePoint list.
+In this section, you'll learn about creating an app using Power Apps that uses the flow created in the earlier section. The app uses text entered in a text box when the button is selected to trigger the flow to create an item in the selected list.
 
 1. Create a [blank canvas app](create-blank-app.md) with a name such as **AppWithFlow**.
 
@@ -133,7 +133,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
     In this formula, **FlowInApp** is the name of the flow you added using Power Automate. The **.Run** specifies the flow to execute. The flow executes with **TextInput1** text input control added to this canvas, with the value entered in this text box (**.Text**). 
 
-    In other words, when this button is selected, the app will run the flow with the value from the text input control, passing the text value to the flow to execute. And the flow will create the SharePoint list item with this text input value along with rest of the selection inside the flow configuration.
+    In other words, when this button is selected, the app will run the flow with the value from the text input control, passing the text value to the flow to execute. And the flow will create the list item with this text input value along with rest of the selection inside the flow configuration.
 
     ![OnSelect formula for the button.](./media/using-logic-flows/onselect-button.png "OnSelect formula for the button")
 
@@ -142,7 +142,7 @@ In this section, you'll learn about creating an app using Power Apps that uses t
 
 ## Test the flow
 
-Now that you have both the flow, and the app created, you'll run the app and verify the creation of an item inside the selected SharePoint list.
+Now that you have both the flow, and the app created, you'll run the app and verify the creation of an item inside the selected list.
 
 1. In [Power Apps](https://make.powerapps.com), select **Apps**, and then, select the **AppWithFlow** app.
 
@@ -152,11 +152,11 @@ Now that you have both the flow, and the app created, you'll run the app and ver
 
     ![Run the app.](./media/using-logic-flows/run-app.png "Run the app")
 
-1. Verify that the item is created in your SharePoint list.
+1. Verify that the item is created in your list.
 
-    ![Check SharePoint list.](./media/using-logic-flows/check-sharepoint-list.png "Check SharePoint list")
+    ![Check list.](./media/using-logic-flows/check-sharepoint-list.png "Check list")
 
-Now that you've created a sample app that runs a flow and adds item inside a SharePoint list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
+Now that you've created a sample app that runs a flow and adds item inside a list, you can create more complex applications that interact with Power Automate and manipulate data inside various data sources.
 
 ### See also
 

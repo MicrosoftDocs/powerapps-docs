@@ -1,8 +1,8 @@
 ---
-title: "TranslationProcess table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TranslationProcess table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TranslationProcess table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -677,7 +677,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_TranslationProcess_ProcessSessions"></a> TranslationProcess_ProcessSessions
 
-Same as processsession table [TranslationProcess_ProcessSessions](processsession.md#BKMK_TranslationProcess_ProcessSessions) Many-To-One relationship.
+Same as the [TranslationProcess_ProcessSessions](processsession.md#BKMK_TranslationProcess_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -692,7 +692,7 @@ Same as processsession table [TranslationProcess_ProcessSessions](processsession
 
 ### <a name="BKMK_lk_translationprocess_workflowlogs"></a> lk_translationprocess_workflowlogs
 
-Same as workflowlog table [lk_translationprocess_workflowlogs](workflowlog.md#BKMK_lk_translationprocess_workflowlogs) Many-To-One relationship.
+Same as the [lk_translationprocess_workflowlogs](workflowlog.md#BKMK_lk_translationprocess_workflowlogs) many-to-one relationship for the [workflowlog](workflowlog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -707,7 +707,7 @@ Same as workflowlog table [lk_translationprocess_workflowlogs](workflowlog.md#BK
 
 ### <a name="BKMK_TranslationProcess_SyncErrors"></a> TranslationProcess_SyncErrors
 
-Same as syncerror table [TranslationProcess_SyncErrors](syncerror.md#BKMK_TranslationProcess_SyncErrors) Many-To-One relationship.
+Same as the [TranslationProcess_SyncErrors](syncerror.md#BKMK_TranslationProcess_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -738,39 +738,39 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_translationprocess_modifiedby"></a> lk_translationprocess_modifiedby
 
-See systemuser Table [lk_translationprocess_modifiedby](systemuser.md#BKMK_lk_translationprocess_modifiedby) One-To-Many relationship.
+See the [lk_translationprocess_modifiedby](systemuser.md#BKMK_lk_translationprocess_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_translationprocess"></a> transactioncurrency_translationprocess
 
-See transactioncurrency Table [transactioncurrency_translationprocess](transactioncurrency.md#BKMK_transactioncurrency_translationprocess) One-To-Many relationship.
+See the [transactioncurrency_translationprocess](transactioncurrency.md#BKMK_transactioncurrency_translationprocess) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_knowledgearticleid"></a> lk_translationprocess_knowledgearticleid
 
-See knowledgearticle Table [lk_translationprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_translationprocess_knowledgearticleid) One-To-Many relationship.
+See the [lk_translationprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_translationprocess_knowledgearticleid) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_createdonbehalfby"></a> lk_translationprocess_createdonbehalfby
 
-See systemuser Table [lk_translationprocess_createdonbehalfby](systemuser.md#BKMK_lk_translationprocess_createdonbehalfby) One-To-Many relationship.
+See the [lk_translationprocess_createdonbehalfby](systemuser.md#BKMK_lk_translationprocess_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_processid"></a> lk_translationprocess_processid
 
-See workflow Table [lk_translationprocess_processid](workflow.md#BKMK_lk_translationprocess_processid) One-To-Many relationship.
+See the [lk_translationprocess_processid](workflow.md#BKMK_lk_translationprocess_processid) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_modifiedonbehalfby"></a> lk_translationprocess_modifiedonbehalfby
 
-See systemuser Table [lk_translationprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_translationprocess_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_translationprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_translationprocess_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_activestageid"></a> lk_translationprocess_activestageid
 
-See processstage Table [lk_translationprocess_activestageid](processstage.md#BKMK_lk_translationprocess_activestageid) One-To-Many relationship.
+See the [lk_translationprocess_activestageid](processstage.md#BKMK_lk_translationprocess_activestageid) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_organization_translationprocess"></a> organization_translationprocess
 
-See organization Table [organization_translationprocess](organization.md#BKMK_organization_translationprocess) One-To-Many relationship.
+See the [organization_translationprocess](organization.md#BKMK_organization_translationprocess) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_createdby"></a> lk_translationprocess_createdby
 
-See systemuser Table [lk_translationprocess_createdby](systemuser.md#BKMK_lk_translationprocess_createdby) One-To-Many relationship.
+See the [lk_translationprocess_createdby](systemuser.md#BKMK_lk_translationprocess_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

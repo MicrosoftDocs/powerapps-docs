@@ -5,13 +5,14 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 05/06/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add list
@@ -22,22 +23,22 @@ Lists use [Dataverse views](/powerapps/maker/model-driven-apps/create-and-edit-v
 
 To add list component:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select the page on which you want to add the component.
+1. Select the page on which you want to add the component.
 
-3.  Select an editable element on the canvas.
+1. Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
+1. Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
-5.  Under **Portal components**, select **List**.
+1. Under **Portal components**, select **List**.
 
-6.  In the properties pane on the right side of the screen, select one of the following options:
+1. In the properties pane on the right side of the screen, select one of the following options:
 
     - **Create new**: Create a new list.
     - **Use existing**: Use an existing list.
 
-7.  Enter information or make selection:
+1. Enter information or make selection:
 
     - **Name**: Name of the list.
 
@@ -59,11 +60,11 @@ To add list component:
 
     - **Permissions**: Table permissions to be considered for the form. [Configure table permissions](configure/entity-permissions-studio.md) to make the form available to anyone, or any specific roles.  
 
-        > [!NOTE]
-        > If one or more forms/lists have no permissions configured, you'll see this warning: "One or more lists or forms on your site have no set permissions. Permissions must be enabled for all data components by April 2022 or they will be set by the system."
-
     > [!div class=mx-imgBorder]
     > ![list properties.](media/list-props.png "List properties")
+
+    > [!NOTE]
+    > By default, permissions are applied to components containing data. Making it visible to anyone, or only to specific roles, is done by managing table permissions.
 
 ### See also
 

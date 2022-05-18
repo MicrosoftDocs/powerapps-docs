@@ -1,26 +1,25 @@
 ---
 title: "Perform operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse Web API provides a RESTful web service interface that you can use to interact with data in Dataverse using a wide variety of programming languages. Read about the operations that can be performed using the Web API"
-ms.custom: ""
-ms.date: 04/22/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
-caps.latest.revision: 12
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "shujoshi"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Perform operations using the Web API
 
 The Web API provides a RESTful web service interface that you can use to interact with data in Microsoft Dataverse using a wide variety of programming languages and libraries.
+
+> [!TIP]
+> Before you start, you may find it valuable to review the topics under [Web API types and operations](web-api-types-operations.md) to understand the OData service documents which provide important information about what you can do with the Web API.
 
 > [!NOTE]
 > Information under this section is also applicable to the Dynamics 365 Customer Engagement (on-premises) users.

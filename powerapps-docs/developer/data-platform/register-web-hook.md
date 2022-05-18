@@ -1,20 +1,20 @@
 ---
 title: "Register a WebHook (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a WebHook using the Plug-in Registration tool." 
-ms.custom: ""
-ms.date: 03/18/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "jaredha" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Register a WebHook
 
@@ -34,6 +34,8 @@ When you register a WebHook you must provide three items of information:
 |**Name**|A unique name describing the WebHook.|
 |**Endpoint URL**|The URL to post execution context information to.|
 |**Authentication**|One of three authentication options. For any type of authentication, you must provide the keys that will identify the request as legitimate.|
+
+Registered WebHooks support only port 80 for HTTP and port 443 for HTTPS. 
 
 ## Authentication options
 

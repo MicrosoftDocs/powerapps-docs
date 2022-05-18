@@ -1,29 +1,32 @@
 ---
 title: "Form OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the OnLoad event.
-ms.date: 12/16/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: fb13c0a1-0e00-4592-8e58-3c2412141fbd
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Form OnLoad event
 
-This event occurs whenever form data is loaded, specifically:
+This event occurs whenever the form is loaded, specifically:
 
 - On initial page load.
-- When the page data is explicitly refreshed using formContext.data.[refresh](../formContext-data/refresh.md) method.
-- When the data is refreshed on a page on saving a record, if there are any changes.
+- After a new record is first saved (created). 
  
-Use the formContext.data.[addOnLoad](../formContext-data/addOnLoad.md) and formContext.data.[removeOnLoad](../formContext-data/removeOnLoad.md) methods to manage event handlers for this event. 
+Use the formContext.ui.[addOnLoad](../formContext-ui/addOnLoad.md) and formContext.ui.[removeOnLoad](../formContext-ui/removeOnLoad.md) methods to manage event handlers for this event. 
+
+> [!NOTE] 
+> Controls in a form may not be ready when a form's `OnLoad` event occurs. Use the `OnLoad` event of the control to wait for it to be ready. More information: [Add or remove event handler function to event using UI](../../events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-ui)
 
 ## Asynchronous OnLoad event handler support
 

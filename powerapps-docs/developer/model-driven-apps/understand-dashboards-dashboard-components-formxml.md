@@ -1,20 +1,20 @@
 ---
 title: "Understand dashboards: Dashboard components and FormXML (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Dashboards are one of the different types of forms in Mode-driven Apps. You can use the SystemForm.Type or UserForm.Type to determine whether the form is a dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/15/2021
-ms.reviewer: ""
-
+ms.date: 04/01/2022
+ms.reviewer: "jdaly"
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
+author: mspilde # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.author: mspilde # MSFT alias of Microsoft employees only
+manager: evchaki # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Understand dashboards: Dashboard components and FormXML
 
@@ -46,6 +46,9 @@ The definition of the form content and presentation is stored in the FormXML. Mo
 <a name="DashboardComponentsandFormXML"></a>   
 ## Dashboard components and FormXML elements  
  The dashboard components are displayed in model-driven apps based on the values specified in the FormXML. The following image shows an example of a dashboard. Each dashboard can include multiple tabs. Tabs are a vertical stack separating the body of the dashboard, and can be expanded or collapsed. A tab can contain multiple sections. Sections enable for grouping and layout of dashboard components. 
+ 
+> [!NOTE]
+> Tab and section names are not displayed on a dashboard page.
 
  ![Dashboard components layout.](media/crm-v5s-dashboards-components.png "Dashboard components layout") 
 

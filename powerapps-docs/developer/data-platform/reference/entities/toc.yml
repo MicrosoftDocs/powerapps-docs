@@ -1,5 +1,7 @@
 - name: "About Table/Entity Reference"
   href: ../about-entity-reference.md
+- name: aaduser
+  href: aaduser.md
 - name: Account
   href: account.md
 - name: ACIViewMapper
@@ -22,6 +24,10 @@
   href: annualfiscalcalendar.md
 - name: appaction
   href: appaction.md
+- name: appactionmigration
+  href: appactionmigration.md
+- name: appactionrule
+  href: appactionrule.md
 - name: AppConfig
   href: appconfig.md
 - name: AppConfigInstance
@@ -70,6 +76,8 @@
   href: catalogassignment.md
 - name: Category
   href: category.md
+- name: chat
+  href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
 - name: Connection
@@ -108,6 +116,8 @@
   href: datalakeworkspacepermission.md
 - name: DataPerformance
   href: dataperformance.md
+- name: DataProcessingConfiguration
+  href: dataprocessingconfiguration.md
 - name: Dependency
   href: dependency.md
 - name: DisplayString
@@ -220,6 +230,8 @@
   href: mobileofflineprofileitem.md
 - name: MobileOfflineProfileItemAssociation
   href: mobileofflineprofileitemassociation.md
+- name: mobileofflineprofileitemfilter
+  href: mobileofflineprofileitemfilter.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
 - name: msdyn_AIBDataset
@@ -230,6 +242,8 @@
   href: msdyn_aibdatasetrecord.md
 - name: msdyn_AIBDatasetsContainer
   href: msdyn_aibdatasetscontainer.md
+- name: msdyn_AIBFeedbackLoop
+  href: msdyn_aibfeedbackloop.md
 - name: msdyn_AIBFile
   href: msdyn_aibfile.md
 - name: msdyn_AIBFileAttachedData
@@ -264,12 +278,20 @@
   href: msdyn_componentlayerdatasource.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
+- name: msdyn_dataflowrefreshhistory
+  href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_datalakeds
+  href: msdyn_datalakeds.md
+- name: msdyn_entityrefreshhistory
+  href: msdyn_entityrefreshhistory.md
 - name: msdyn_federatedarticle
   href: msdyn_federatedarticle.md
 - name: msdyn_federatedarticleincident
   href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
+- name: msdyn_InsightsStoreVirtualEntity
+  href: msdyn_insightsstorevirtualentity.md
 - name: msdyn_kalanguagesetting
   href: msdyn_kalanguagesetting.md
 - name: msdyn_kbattachment
@@ -284,6 +306,8 @@
   href: msdyn_knowledgearticletemplate.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
+- name: msdyn_knowledgemanagementsetting
+  href: msdyn_knowledgemanagementsetting.md
 - name: msdyn_knowledgepersonalfilter
   href: msdyn_knowledgepersonalfilter.md
 - name: msdyn_knowledgesearchfilter
@@ -294,6 +318,8 @@
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
+- name: msdyn_pmanalysishistory
+  href: msdyn_pmanalysishistory.md
 - name: msdyn_pminferredtask
   href: msdyn_pminferredtask.md
 - name: msdyn_pmrecording
@@ -334,6 +360,8 @@
   href: officegraphdocument.md
 - name: Organization
   href: organization.md
+- name: organizationdatasyncstate
+  href: organizationdatasyncstate.md
 - name: organizationdatasyncsubscription
   href: organizationdatasyncsubscription.md
 - name: organizationdatasyncsubscriptionentity
@@ -350,7 +378,7 @@
   href: picklistmapping.md
 - name: PluginAssembly
   href: pluginassembly.md
-- name: pluginpackage
+- name: PluginPackage
   href: pluginpackage.md
 - name: PluginTraceLog
   href: plugintracelog.md
@@ -436,6 +464,8 @@
   href: serviceplan.md
 - name: ServicePlanMapping
   href: serviceplanmapping.md
+- name: SharedLinkSetting
+  href: sharedlinksetting.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -470,6 +500,18 @@
   href: stagesolutionupload.md
 - name: Subject
   href: subject.md
+- name: synapsedatabase
+  href: synapsedatabase.md
+- name: synapselinkexternaltablestate
+  href: synapselinkexternaltablestate.md
+- name: synapselinkprofile
+  href: synapselinkprofile.md
+- name: synapselinkprofileentity
+  href: synapselinkprofileentity.md
+- name: synapselinkprofileentitystate
+  href: synapselinkprofileentitystate.md
+- name: synapselinkschedule
+  href: synapselinkschedule.md
 - name: SyncError
   href: syncerror.md
 - name: SystemForm
