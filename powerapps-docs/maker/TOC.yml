@@ -2193,6 +2193,8 @@
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
       href: ./data-platform/virtual-entity-odata-provider-requirements.md
+    - name: View and edit tables representing solution objects
+      href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
       href: ./data-platform/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer

@@ -111,22 +111,9 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 
 A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
-## Tables representing solution objects
-
-Some standard tables in Dataverse represent the structure and instances of solution objects. If you are not familiar with solutions, go to [Solutions overview](solutions-overview.md).
-
-For example, the [Custom API](/power-apps/developer/data-platform/custom-api) table has columns that represent the properties of an API, such as **Name** and **Binding Type**, with each row of data in the table representing a particular API instance.
-
-:::image type="content" source="media/table-soln-objects.png" alt-text="A website built using Power Pages.":::
-
-table-soln-objects.png
-
-When viewing these tables directly in Power Apps ([make.powerapps.com](https://make.powerapps.com)), you will see a warning that the data is read only. This ensures the instances of these objects are not changed.
-
-To update data in such tables, you must navigate to the objects themselves in solution. In our example of Custom API, you can open a solution that contains the Custom API object or add the Custom API object to a new solution and then customize the attributes.
-
 ### See also
-[Create or edit tables](./data-platform-create-entity.md)
+[Create tables](./data-platform-create-entity.md)<br/>
+[Edit tables](./edit-entities.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
