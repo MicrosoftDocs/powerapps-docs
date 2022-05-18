@@ -28,7 +28,7 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
-Starting June 2022 [Authorize end point](oauth-implicit-grant-flow#authorize-endpoint-details), [Token end point](oauth-implicit-grant-flow#token-endpoint-details) using Get call and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated for all new portals and  existing portals not using this feature. If you're already using this feature, you need to use the Token end point Post call to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features needs to migrate supported method by October 2022.   
+Starting June 2022 [Authorize endpoint details](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint details](oauth-implicit-grant-flow.md#token-endpoint-details) using Get call and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated for all new portals and  existing portals not using this feature. If you're already using this feature, you need to use the Token end point Post call to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features needs to migrate supported method by October 2022.   
 
 ## CDN for US Government
 
