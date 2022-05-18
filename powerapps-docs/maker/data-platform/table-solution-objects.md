@@ -16,13 +16,13 @@ search.app:
 ---
 # View and edit tables representing solution objects
 
-Some standard tables in Dataverse represent the structure and instances of solution objects. If you are not familiar with solutions, go to [Solutions overview](solutions-overview.md).
+Some standard tables in Dataverse represent the structure and instances of solution objects. If you aren't familiar with solutions, go to [Solutions overview](solutions-overview.md).
 
 For example, the **Custom API** table has columns that represent the properties of an API, such as **Name** and **Binding Type**, with each row of data in the table representing a particular API instance. For more information about Custom API table, go to [Custom API table columns](../../developer/data-platform/custom-api-tables#custom-api-table-columns)
 
 :::image type="content" source="media/table-soln-objects.png" alt-text="Custom API table in Dataverse":::
 
-When viewing these tables in Power Apps ([make.powerapps.com](https://make.powerapps.com)), you will see a warning stating that the data in the table is read only. This ensures the instances of these objects are not changed.
+When viewing these tables in Power Apps ([make.powerapps.com](https://make.powerapps.com)), you'll see a warning stating that the data in the table is read only. This ensures the instances of these objects aren't changed.
 
 To update data in such tables, you must navigate to the respective objects in the solution. In our example of Custom API, you can open a solution that contains the Custom API object or add the Custom API object to a new solution and then customize the data as required.
 
