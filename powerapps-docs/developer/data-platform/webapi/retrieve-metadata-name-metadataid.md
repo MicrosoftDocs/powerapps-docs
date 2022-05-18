@@ -1,24 +1,18 @@
 ---
 title: "Retrieve table definitions by name or MetadataId (Microsoft Dataverse) | Microsoft Docs"
 description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and additional system table columns."
-ms.custom: ""
-ms.date: 04/22/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 80bcdd8e-7c4f-4fd5-8708-00345f5d0408
-caps.latest.revision: 8
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: NHelgren
+ms.author: nhelgren
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Retrieve table definitions by name or MetadataId
 

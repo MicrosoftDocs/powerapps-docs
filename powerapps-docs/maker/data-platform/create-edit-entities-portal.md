@@ -4,7 +4,7 @@ description: "Understand how to create and edit tables using Power Apps portal"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -64,20 +64,20 @@ While [viewing tables](#view-tables), in the menu bar select **New table**. This
 
 Enter data for the following columns
 
-|Field|Description|
+||Description|
 |--|--|
 |**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
 |**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved.|
-|**Primary Name**|This is the only column visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the column.
-|**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of rows.
+|**Primary Name**|This is the only column visible at this point. Edit it if you want to change the **Display Name**or **Name** of the column.|
+|**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of rows. |
 |**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved.|
 
 Select **Enable Attachments** to append notes and files to rows for this table.
 
 Select **More settings**. These settings are optional for a table.
 
-|Field|Description|
+||Description|
 |--|--|
 |**Description**|Provide a meaningful description of the purpose of the table.|
 |**table type and ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a row.|

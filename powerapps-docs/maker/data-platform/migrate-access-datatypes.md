@@ -2,7 +2,7 @@
 title: Data types and sizes for Access data migration to Dataverse  | Microsoft Docs
 description: Data types and sizes supported for Microsoft Access data migration to Microsoft Dataverse 
 author: NHelgren
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - model
@@ -16,9 +16,7 @@ search.app:
   - PowerApps
 contributors:
 ---
-# Data types and sizes for Access data migration to Dataverse (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Data types and sizes for Access data migration to Dataverse
 
 When you migrate from Microsoft Access to Microsoft Dataverse or Microsoft Dataverse for Teams, you should be aware of a few differences in the data types. These differences include supported types, data type names, and column capacity.
 
@@ -32,7 +30,7 @@ This validation is done to prevent data loss. If a table has columns that exceed
 Users can choose to either cancel the migration completely, or to continue to migrate all supported content and keep the unsupported content in an Access table.
 
 > [!NOTE]
-> [Join the Microsoft Access beta to start your migration](https://aka.ms/AccessAndPowerPlatform)
+> [Learn how to prepare MS Access for Migration](https://aka.ms/AccessAndPowerPlatform)
 
 ## Access data types supported by Dataverse
 

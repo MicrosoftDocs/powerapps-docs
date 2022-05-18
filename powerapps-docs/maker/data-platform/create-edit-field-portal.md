@@ -1,17 +1,10 @@
 ---
-title: "Create and edit columns for Microsoft Dataverse using Power Apps | MicrosoftDocs"
+title: "Create and edit columns in Dataverse using Power Apps | MicrosoftDocs"
 description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "how-to"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
@@ -22,13 +15,11 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit columns for Microsoft Dataverse
+# Create and edit columns in Dataverse using Power Apps
 
+Power Apps [(make.powerapps.com)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns in Dataverse.
 
-
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns with the Dataverse.
-
-The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+Power Apps enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit columns for Dataverse](create-edit-fields.md)
 - [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)
 

@@ -2,16 +2,12 @@
 title: Property Set Element | Microsoft Docs
 description: Defines an inner configuration within a dataset manifest node to allow you to explicitly configure a column of your dataset against a column of a given type from the table against which the dataset is configured.
 keywords:
-ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 ---
 
 # property-set element

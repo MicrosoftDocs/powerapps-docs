@@ -1,8 +1,8 @@
 ---
-title: Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items
+title: Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete items in a list created using Microsoft Lists
 description: This article explains how to create an app with SharePoint form functionality from scratch.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -19,9 +19,9 @@ contributors:
   - wimcoor
   - emcoope-msft
 ---
-# Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items
+# Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete items in a list created using Microsoft Lists
 
-In this scenario article, you'll learn how to create an app with SharePoint form functionality from scratch. The app will demonstrate how to view, edit, add, and delete SharePoint list items using a canvas app without visiting a SharePoint site. 
+In this scenario article, you'll learn how to create an app with SharePoint form functionality from scratch. The app will demonstrate how to view, edit, add, and delete list items using a canvas app without visiting a SharePoint site. 
 
 > [!NOTE]
 > For more details about different scenarios working with SharePoint forms and additional examples, go to [SharePoint scenarios overview](scenarios-intro.md).
@@ -29,18 +29,18 @@ In this scenario article, you'll learn how to create an app with SharePoint form
 ## Prerequisites
 
 - You must have access to a SharePoint site to create a list and list items.
-- You must be knowledgeable about [creating](https://support.microsoft.com/en-us/office/create-a-list-in-sharepoint-0d397414-d95f-41eb-addd-5e6eff41b083) and [setting up](https://support.microsoft.com/en-us/office/training-create-and-set-up-a-list-1ddc1f5a-a908-478b-bb6d-608f34b71f94) SharePoint lists.
+- You must be knowledgeable about [creating](https://support.microsoft.com/en-us/office/create-a-list-in-sharepoint-0d397414-d95f-41eb-addd-5e6eff41b083) and [setting up](https://support.microsoft.com/en-us/office/training-create-and-set-up-a-list-1ddc1f5a-a908-478b-bb6d-608f34b71f94) lists.
 
 ## Scenario details
 
-The purpose of this scenario is to demonstrate how to create a canvas app from scratch to work with a SharePoint list. At the end of this example demo, you'll be able to do the following tasks from inside the canvas app without the need to access the SharePoint list or its item:
+The purpose of this scenario is to demonstrate how to create a canvas app from scratch to work with a list. At the end of this example demo, you'll be able to do the following tasks from inside the canvas app without the need to access the list or its item:
 
-- View all items from the SharePoint list.
-- Search for items in a SharePoint list based on text value of a specific column.
-- Select a SharePoint list item.
-- Edit a SharePoint list item.
-- Create a new SharePoint list item.
-- Delete a SharePoint list item.
+- View all items from the list.
+- Search for items in a list based on text value of a specific column.
+- Select a list item.
+- Edit a list item.
+- Create a new list item.
+- Delete a list item.
 
 The scenario is a basic illustration of the canvas app capabilities when integrated with SharePoint. To enhance the layout with improved design or additional screens, go to the following articles:
 
@@ -49,17 +49,17 @@ The scenario is a basic illustration of the canvas app capabilities when integra
 - [Understand forms, layouts, and cards](../working-with-forms.md)
 
 > [!IMPORTANT]
-> The example in this scenario creates a sample app to view, edit, add, and delete SharePoint list items. You can change the approach to customize the app differently based on your choices or business objective. When you customize your app with custom names for controls, be sure to use the correct control names in the formula when following the steps in this example.
+> The example in this scenario creates a sample app to view, edit, add, and delete list items. You can change the approach to customize the app differently based on your choices or business objective. When you customize your app with custom names for controls, be sure to use the correct control names in the formula when following the steps in this example.
 
 ## Example
 
-This scenario example walks you through the steps to create an app and connect it to a SharePoint list to view, edit, add, and delete SharePoint list items.
+This scenario example walks you through the steps to create an app and connect it to a list to view, edit, add, and delete list items.
 
-## Step 1 – Create a SharePoint list
+## Step 1 – Create a list using Microsoft Lists
 
-Create a SharePoint list with columns and list items. In this scenario, we've used a list with the following columns and list items:
+Create a list with columns and list items. In this scenario, we've used a list with the following columns and list items:
 
-  ![SharePoint list structure.](./media/scenarios-sharepoint-form-from-scratch/sharepoint-list.png "SharePoint list structure")
+  ![List structure.](./media/scenarios-sharepoint-form-from-scratch/sharepoint-list.png "List structure")
 
 > [!NOTE]
 > Both columns are *Single line of text*.
@@ -90,15 +90,15 @@ Create a [blank canvas app](../create-blank-app.md).
 
     ![Select SharePoint site.](./media/scenarios-sharepoint-form-from-scratch/select-sharepoint-site.png "Select SharePoint site")
 
-1. Select the SharePoint list that you created. This scenario uses a list named *Shapes*.
+1. Select the list that you created. This scenario uses a list named *Shapes*.
 
-    ![Select SharePoint list.](./media/scenarios-sharepoint-form-from-scratch/select-sharepoint-list.png "Select SharePoint list")
+    ![Select list.](./media/scenarios-sharepoint-form-from-scratch/select-sharepoint-list.png "Select list")
 
 1. Select **Connect**. The data source is added to the app.
 
     ![Data source added.](./media/scenarios-sharepoint-form-from-scratch/data-source-added.png "Data source added")
 
-## Step 4 – Add data table to view SharePoint list items
+## Step 4 – Add data table to view list items
 
 1. Select **+** (insert) from the left pane.
 
@@ -132,7 +132,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
     ![Insert list box control.](./media/scenarios-sharepoint-form-from-scratch/insert-list-box.png "Insert list box control")
 
-1. From the right side of the Studio screen, set the **Items** property of the list box control to the **Shapes** SharePoint list for this example.
+1. From the right side of the Studio screen, set the **Items** property of the list box control to the **Shapes** list for this example.
 
     ![List box items.](./media/scenarios-sharepoint-form-from-scratch/items-listbox.png "List box items")
 
@@ -151,7 +151,7 @@ Create a [blank canvas app](../create-blank-app.md).
     The formula contains following functions:
 
     - [Filter()](../functions/function-filter-lookup.md) – Used in this formula to filter items in the list box based on the defined parameters. `[@Shapes]` in this function defines which data source to filter.
-    - [StartsWith()](../functions/function-startswith.md) – Used in this formula to filter the SharePoint list items based on the **Shape** column that start with the characters entered in the *TextInput1* control added earlier.
+    - [StartsWith()](../functions/function-startswith.md) – Used in this formula to filter the list items based on the **Shape** column that start with the characters entered in the *TextInput1* control added earlier.
 
 ## Step 6 – Add the capability to edit item
 
@@ -214,7 +214,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
     The formula contains following functions:
 
-    - [SubmitForm()](../functions/function-form.md) – Used in this formula to submit the edit form and save the values to SharePoint list.
+    - [SubmitForm()](../functions/function-form.md) – Used in this formula to submit the edit form and save the values to list.
     - [Set()](../functions/function-set.md) – Resets the *TextSelected* variable back to *o* so that a new item can be selected from the list box.
 
 1. Insert **Text label** control.
@@ -245,7 +245,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
     ![OnSelect property for Add button.](./media/scenarios-sharepoint-form-from-scratch/add-button-onselect.png "OnSelect property for Add button")
 
-    The [NewForm()](../functions/function-form.md) function clears the edit form control added on the form named *Form1* so that you can add a new SharePoint list item.
+    The [NewForm()](../functions/function-form.md) function clears the edit form control added on the form named *Form1* so that you can add a new list item.
 
 ## Step 8 – Add the capability to delete item
 
@@ -266,7 +266,7 @@ Create a [blank canvas app](../create-blank-app.md).
 
     The formula contains following functions:
 
-    - [Remove()](../functions/function-remove-removeif.md) – Used in this formula to delete the selected SharePoint list item.
+    - [Remove()](../functions/function-remove-removeif.md) – Used in this formula to delete the selected list item.
     - [If()](../functions/function-if.md) – Checks first if the value of the variable *TextSelected* is *1* or not. If it is, the **Delete** button deletes the item selected from the list box. If not, the **Delete** button deletes the item selected from the data table control.
     - [Set()](../functions/function-set.md) – Resets the *TextSelected* variable back to *o* so that a new item can be selected from the list box.
 

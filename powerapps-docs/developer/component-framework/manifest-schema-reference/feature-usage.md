@@ -3,15 +3,12 @@ title: feature-usage | Microsoft Docs
 description: The feature-usage element acts as a wrapper around the uses-feature elements, which themselves allow developers to declare which features their component wants to use.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+ms.topic: "reference"
 ---
 
 # feature-usage element
@@ -32,7 +29,7 @@ Model-driven apps
 
 |Element|Description|Available for|
 |--|--|-----|
-|[uses-feature](uses-feature.md)|Indicates which feature their components want to use.|Model-driven apps|
+|[uses-feature](uses-feature.md)|[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]|Model-driven apps|
 
 
 ## Example

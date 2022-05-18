@@ -4,7 +4,7 @@ description: "Monitor can help you debug and diagnose problems with custom pages
 ms.custom: ""
 ms.date: 07/22/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.suite: ""
 ms.tgt_pltfrm: ""

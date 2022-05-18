@@ -2,7 +2,7 @@
 title: Invite contacts to your portals
 description: Learn how to create and configure invitations in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

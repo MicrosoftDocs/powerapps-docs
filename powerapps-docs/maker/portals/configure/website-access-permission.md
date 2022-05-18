@@ -2,7 +2,7 @@
 title: Create website access permissions
 description: Learn how to create and associate website access permissions to elements in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

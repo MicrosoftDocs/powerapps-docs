@@ -4,7 +4,7 @@ description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -46,7 +46,7 @@ There are two designers you can use to create or edit columns:
 > You can also create columns in your environment using the following:
 > - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](./add-data-power-query.md).
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
 > - A developer can use [Metadata services](/powerapps/developer/data-platform/use-web-services#metadata-services) to write a program to create and update columns.
 
 Information in this topic will help you choose which designer you can use. 

@@ -2,10 +2,10 @@
 title: Important upcoming changes and deprecations in Power Apps portals
 description: Learn about the important changes including deprecation coming soon to Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2021
+ms.date: 05/16/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -58,9 +58,6 @@ With this change, we're adding a new website setting to control the **SameSite**
 | HTTP/SameSite/{CookieName} | Specific cookie. | None <br> Lax <br> Strict |
 
 Default value for all existing and newly provisioned portals is **None**.
-
-> [!IMPORTANT]
-> Starting October 2021, all newly provisioned portals will have **Strict** as the Default value instead of **None**.
 
 To learn how to configure site settings for portals, go to [Configure site settings for portals](configure/configure-site-settings.md)
 

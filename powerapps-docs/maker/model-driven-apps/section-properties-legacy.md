@@ -11,7 +11,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/23/2020
-ms.service: powerapps
+
 ms.topic: how-to
 ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
 search.audienceType: 
@@ -22,13 +22,14 @@ search.app:
 ---
 # Model-driven app form section properties (classic)
 
-
-
 A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line might be shown below the label.  
   
 Sections can have up to four columns and includes options for displaying how labels for columns in the section are displayed.  
   
 Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
+
+> [!NOTE]
+> For the modern experience when working with sections on a form, see [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)
 
 ## Section properties in classic form designer
 

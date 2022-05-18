@@ -1,7 +1,7 @@
 ---
-title: "Note (Annotation) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Note (Annotation) table/entity."
-ms.date: 10/05/2021
+title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Note (Annotation) table/entity reference
+# Note (Annotation)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -159,10 +159,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -224,7 +224,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
+|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
 |Type|Lookup|
 
 
@@ -356,6 +356,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [Prefix](#BKMK_Prefix)
@@ -554,10 +555,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -706,12 +707,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the note.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -802,7 +819,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Annotation_SyncErrors"></a> Annotation_SyncErrors
 
-Same as syncerror table [Annotation_SyncErrors](syncerror.md#BKMK_Annotation_SyncErrors) Many-To-One relationship.
+Same as the [Annotation_SyncErrors](syncerror.md#BKMK_Annotation_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -817,7 +834,7 @@ Same as syncerror table [Annotation_SyncErrors](syncerror.md#BKMK_Annotation_Syn
 
 ### <a name="BKMK_Annotation_AsyncOperations"></a> Annotation_AsyncOperations
 
-Same as asyncoperation table [Annotation_AsyncOperations](asyncoperation.md#BKMK_Annotation_AsyncOperations) Many-To-One relationship.
+Same as the [Annotation_AsyncOperations](asyncoperation.md#BKMK_Annotation_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -832,7 +849,7 @@ Same as asyncoperation table [Annotation_AsyncOperations](asyncoperation.md#BKMK
 
 ### <a name="BKMK_Annotation_BulkDeleteFailures"></a> Annotation_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Annotation_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Annotation_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Annotation_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Annotation_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -847,7 +864,7 @@ Same as bulkdeletefailure table [Annotation_BulkDeleteFailures](bulkdeletefailur
 
 ### <a name="BKMK_Annotation_ProcessSessions"></a> Annotation_ProcessSessions
 
-Same as processsession table [Annotation_ProcessSessions](processsession.md#BKMK_Annotation_ProcessSessions) Many-To-One relationship.
+Same as the [Annotation_ProcessSessions](processsession.md#BKMK_Annotation_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -895,133 +912,140 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
+- [chat_Annotations](#BKMK_chat_Annotations)
 
 
 ### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
 
-See knowledgearticle Table [knowledgearticle_Annotations](knowledgearticle.md#BKMK_knowledgearticle_Annotations) One-To-Many relationship.
+See the [knowledgearticle_Annotations](knowledgearticle.md#BKMK_knowledgearticle_Annotations) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_KnowledgeBaseRecord_Annotations"></a> KnowledgeBaseRecord_Annotations
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_Annotations](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Annotations) One-To-Many relationship.
+See the [KnowledgeBaseRecord_Annotations](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Annotations) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_lk_annotationbase_modifiedonbehalfby"></a> lk_annotationbase_modifiedonbehalfby
 
-See systemuser Table [lk_annotationbase_modifiedonbehalfby](systemuser.md#BKMK_lk_annotationbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_annotationbase_modifiedonbehalfby](systemuser.md#BKMK_lk_annotationbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Mailbox_Annotation"></a> Mailbox_Annotation
 
-See mailbox Table [Mailbox_Annotation](mailbox.md#BKMK_Mailbox_Annotation) One-To-Many relationship.
+See the [Mailbox_Annotation](mailbox.md#BKMK_Mailbox_Annotation) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_team_annotations"></a> team_annotations
 
-See team Table [team_annotations](team.md#BKMK_team_annotations) One-To-Many relationship.
+See the [team_annotations](team.md#BKMK_team_annotations) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_annotation_owning_user"></a> annotation_owning_user
 
-See systemuser Table [annotation_owning_user](systemuser.md#BKMK_annotation_owning_user) One-To-Many relationship.
+See the [annotation_owning_user](systemuser.md#BKMK_annotation_owning_user) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_PhoneCall_Annotation"></a> PhoneCall_Annotation
 
-See phonecall Table [PhoneCall_Annotation](phonecall.md#BKMK_PhoneCall_Annotation) One-To-Many relationship.
+See the [PhoneCall_Annotation](phonecall.md#BKMK_PhoneCall_Annotation) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_Contact_Annotation"></a> Contact_Annotation
 
-See contact Table [Contact_Annotation](contact.md#BKMK_Contact_Annotation) One-To-Many relationship.
+See the [Contact_Annotation](contact.md#BKMK_Contact_Annotation) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_SocialActivity_Annotation"></a> SocialActivity_Annotation
 
-See socialactivity Table [SocialActivity_Annotation](socialactivity.md#BKMK_SocialActivity_Annotation) One-To-Many relationship.
+See the [SocialActivity_Annotation](socialactivity.md#BKMK_SocialActivity_Annotation) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_sla_Annotation"></a> sla_Annotation
 
-See sla Table [sla_Annotation](sla.md#BKMK_sla_Annotation) One-To-Many relationship.
+See the [sla_Annotation](sla.md#BKMK_sla_Annotation) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_Calendar_Annotation"></a> Calendar_Annotation
 
-See calendar Table [Calendar_Annotation](calendar.md#BKMK_Calendar_Annotation) One-To-Many relationship.
+See the [Calendar_Annotation](calendar.md#BKMK_Calendar_Annotation) one-to-many relationship for the [calendar](calendar.md) table/entity.
 
 ### <a name="BKMK_Email_Annotation"></a> Email_Annotation
 
-See email Table [Email_Annotation](email.md#BKMK_Email_Annotation) One-To-Many relationship.
+See the [Email_Annotation](email.md#BKMK_Email_Annotation) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_Task_Annotation"></a> Task_Annotation
 
-See task Table [Task_Annotation](task.md#BKMK_Task_Annotation) One-To-Many relationship.
+See the [Task_Annotation](task.md#BKMK_Task_Annotation) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_lk_annotationbase_createdby"></a> lk_annotationbase_createdby
 
-See systemuser Table [lk_annotationbase_createdby](systemuser.md#BKMK_lk_annotationbase_createdby) One-To-Many relationship.
+See the [lk_annotationbase_createdby](systemuser.md#BKMK_lk_annotationbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_EmailServerProfile_Annotation"></a> EmailServerProfile_Annotation
 
-See emailserverprofile Table [EmailServerProfile_Annotation](emailserverprofile.md#BKMK_EmailServerProfile_Annotation) One-To-Many relationship.
+See the [EmailServerProfile_Annotation](emailserverprofile.md#BKMK_EmailServerProfile_Annotation) one-to-many relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 ### <a name="BKMK_Account_Annotation"></a> Account_Annotation
 
-See account Table [Account_Annotation](account.md#BKMK_Account_Annotation) One-To-Many relationship.
+See the [Account_Annotation](account.md#BKMK_Account_Annotation) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_RecurringAppointmentMaster_Annotation"></a> RecurringAppointmentMaster_Annotation
 
-See recurringappointmentmaster Table [RecurringAppointmentMaster_Annotation](recurringappointmentmaster.md#BKMK_RecurringAppointmentMaster_Annotation) One-To-Many relationship.
+See the [RecurringAppointmentMaster_Annotation](recurringappointmentmaster.md#BKMK_RecurringAppointmentMaster_Annotation) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_business_unit_annotations"></a> business_unit_annotations
 
-See businessunit Table [business_unit_annotations](businessunit.md#BKMK_business_unit_annotations) One-To-Many relationship.
+See the [business_unit_annotations](businessunit.md#BKMK_business_unit_annotations) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_annotationbase_modifiedby"></a> lk_annotationbase_modifiedby
 
-See systemuser Table [lk_annotationbase_modifiedby](systemuser.md#BKMK_lk_annotationbase_modifiedby) One-To-Many relationship.
+See the [lk_annotationbase_modifiedby](systemuser.md#BKMK_lk_annotationbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Letter_Annotation"></a> Letter_Annotation
 
-See letter Table [Letter_Annotation](letter.md#BKMK_Letter_Annotation) One-To-Many relationship.
+See the [Letter_Annotation](letter.md#BKMK_Letter_Annotation) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_Fax_Annotation"></a> Fax_Annotation
 
-See fax Table [Fax_Annotation](fax.md#BKMK_Fax_Annotation) One-To-Many relationship.
+See the [Fax_Annotation](fax.md#BKMK_Fax_Annotation) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_Workflow_Annotation"></a> Workflow_Annotation
 
-See workflow Table [Workflow_Annotation](workflow.md#BKMK_Workflow_Annotation) One-To-Many relationship.
+See the [Workflow_Annotation](workflow.md#BKMK_Workflow_Annotation) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_Appointment_Annotation"></a> Appointment_Annotation
 
-See appointment Table [Appointment_Annotation](appointment.md#BKMK_Appointment_Annotation) One-To-Many relationship.
+See the [Appointment_Annotation](appointment.md#BKMK_Appointment_Annotation) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_lk_annotationbase_createdonbehalfby"></a> lk_annotationbase_createdonbehalfby
 
-See systemuser Table [lk_annotationbase_createdonbehalfby](systemuser.md#BKMK_lk_annotationbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_annotationbase_createdonbehalfby](systemuser.md#BKMK_lk_annotationbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Goal_Annotation"></a> Goal_Annotation
 
-See goal Table [Goal_Annotation](goal.md#BKMK_Goal_Annotation) One-To-Many relationship.
+See the [Goal_Annotation](goal.md#BKMK_Goal_Annotation) one-to-many relationship for the [goal](goal.md) table/entity.
 
 ### <a name="BKMK_KbArticle_Annotation"></a> KbArticle_Annotation
 
-See kbarticle Table [KbArticle_Annotation](kbarticle.md#BKMK_KbArticle_Annotation) One-To-Many relationship.
+See the [KbArticle_Annotation](kbarticle.md#BKMK_KbArticle_Annotation) one-to-many relationship for the [kbarticle](kbarticle.md) table/entity.
 
 ### <a name="BKMK_DuplicateRule_Annotation"></a> DuplicateRule_Annotation
 
-See duplicaterule Table [DuplicateRule_Annotation](duplicaterule.md#BKMK_DuplicateRule_Annotation) One-To-Many relationship.
+See the [DuplicateRule_Annotation](duplicaterule.md#BKMK_DuplicateRule_Annotation) one-to-many relationship for the [duplicaterule](duplicaterule.md) table/entity.
 
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
 
 **Added by**: AISolution Solution
 
-See msdyn_aimodel Table [msdyn_aimodel_Annotations](msdyn_aimodel.md#BKMK_msdyn_aimodel_Annotations) One-To-Many relationship.
+See the [msdyn_aimodel_Annotations](msdyn_aimodel.md#BKMK_msdyn_aimodel_Annotations) one-to-many relationship for the [msdyn_aimodel](msdyn_aimodel.md) table/entity.
 
 ### <a name="BKMK_msdyn_aifptrainingdocument_Annotations"></a> msdyn_aifptrainingdocument_Annotations
 
 **Added by**: AI Solution deprecated templates Solution
 
-See msdyn_aifptrainingdocument Table [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_Annotations) One-To-Many relationship.
+See the [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_Annotations) one-to-many relationship for the [msdyn_aifptrainingdocument](msdyn_aifptrainingdocument.md) table/entity.
 
 ### <a name="BKMK_msdyn_aiodimage_Annotations"></a> msdyn_aiodimage_Annotations
 
 **Added by**: AI Solution deprecated templates Solution
 
-See msdyn_aiodimage Table [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) One-To-Many relationship.
+See the [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) one-to-many relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
+
+### <a name="BKMK_chat_Annotations"></a> chat_Annotations
+
+**Added by**: Activities Patch Solution
+
+See the [chat_Annotations](chat.md#BKMK_chat_Annotations) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### See also
 

@@ -2,15 +2,14 @@
 title: SortStatus | Microsoft Docs
 description: Current sort status of a dataset column.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 12/06/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 09f6d0a7-a95a-421e-a413-281d1d0d0e19
 ---
 
 # SortStatus

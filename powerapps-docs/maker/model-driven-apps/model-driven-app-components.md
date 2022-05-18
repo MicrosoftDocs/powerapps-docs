@@ -8,7 +8,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 05/26/2020
-ms.service: powerapps
+
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -34,7 +34,7 @@ Data components are either designed at a table level within an environment, or w
 |---------|---------|---------|
 |[Table](model-driven-app-glossary.md#table)     |A container for records with properties that you track, such as a contact or account. Many standard tables are available. You can customize a non-system standard table (production table) or create a custom table from scratch.     | Power Apps table designer        |
 |[Relationship](model-driven-app-glossary.md#relationship)     | Table relationships define how tables can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships. For example, adding a lookup column to a table creates a new 1:N relationship between the two tables and lets you put that lookup column on a form.   | Power Apps table designer        |
-|[Column](model-driven-app-glossary.md#column)     | A property that is associated with an table. A column is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another table). Columns typically are used with forms, views, and searches.        | Power Apps table designer   |
+|[Column](model-driven-app-glossary.md#column)     | A property that is associated with a table. A column is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another table). Columns typically are used with forms, views, and searches.        | Power Apps table designer   |
 |Choice column     | This is a special type of column, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this column displays a control for the user to select an option.  There are two kinds of choices; choices, where the user can only select one option, and multi-select choices, which allow more than one selection.  | Power Apps option set designer     |
 
 More information: [Define data for your model-driven app](define-data-model-driven-app.md) 
@@ -47,7 +47,7 @@ These components determine how users interact with the app.
 |---------|---------|---------|
 |App     | Determines the application fundamentals such as components, properties, client type, and URL for your app.      | App designer   |
 |[Site map](model-driven-app-glossary.md#site-map)     | Specifies the navigation for your app.        | Site map designer        |
-|[Form](model-driven-app-glossary.md#form)     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns that where user's input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
+|[Form](model-driven-app-glossary.md#form)     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns where users input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
 |[View](model-driven-app-glossary.md#view)     | Views define how a list of rows for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
 |Custom page (preview) | A canvas based page which allows flexible layout, low-code Fx functions, and Power Apps connector data.  For more information, see [Model-driven app custom page overview (preview)](model-app-page-overview.md) | Canvas designer |
 

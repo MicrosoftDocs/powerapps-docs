@@ -1,27 +1,23 @@
 ---
 title: "getSelectedPane (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getSelectedPane method.
-ms.date: 08/31/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 04/04/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "aorth"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # getSelectedPane (Client API reference)
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Returns the currently selected pane.
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../../../includes/cc-preview-features-definition.md)]
-
 
 ## Syntax
 

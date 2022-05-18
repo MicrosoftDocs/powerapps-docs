@@ -1,8 +1,8 @@
 ---
-title: How to link SharePoint lists using a lookup column in Power Apps
-description: Learn about how to link SharePoint lists using lookup columns in Power Apps.
+title: How to link lists from Microsoft Lists using a lookup column in Power Apps
+description: Learn about how to link lists from Microsoft Lists using lookup columns in Power Apps.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -18,9 +18,9 @@ contributors:
   - navjotm
   - wimcoor
 ---
-# How to link SharePoint lists using a lookup column in Power Apps
+# How to link lists from Microsoft Lists using a lookup column in Power Apps
 
-This tutorial shows how you can connect two SharePoint lists with a lookup column in a canvas app.
+This tutorial shows how you can connect two lists with a lookup column in a canvas app.
 
 ## Overview
 
@@ -33,7 +33,7 @@ In this tutorial, you build an app that uses these kinds of lookup column.
 
 ### Why use a lookup column
 
-Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup column are the primary way such business data comes together.
+Data in an enterprise is large and complex. Data in one list often relates to data in another list. Lookup column are the primary way such business data comes together.
 
 For example, you might have an **Orders** list which has a lookup column that links to a **Customers** list, to show which customer placed the order. The lookup column in the **Orders** list lets you get other data from the **Customers** list as well. You might also use a lookup column to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
 
@@ -48,7 +48,7 @@ Examples include data like Customer Status Code, Product Availability, State Cod
 
 ## Create the lists in SharePoint
 
-In this tutorial, you link two SharePoint custom lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
+In this tutorial, you link two lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
 ### The lookup column used in this example
 

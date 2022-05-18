@@ -3,12 +3,12 @@ metadata:
   title: Frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
-  ms.service: powerapps
   ms.search.keywords: 
   ms.date: 02/10/2021
   ms.author: sabinn
   ms.reviewer: 
-  contributors: sama-zaki
+  contributors: JasonHQX
+  ms.topic: faq
 title: Azure Synapse Link for Dataverse FAQ
 summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake.
 sections:
@@ -16,8 +16,7 @@ sections:
   questions:
    - question: Does adding multiple Microsoft Dataverse tables simultaneously to the lake impact performance?
      answer: |
-        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenarios: 
-        - Initial sync: When the tables are first added, there is a fixed set of tables which are synched for initial data at a time. We recommend adding no more than 5 tables at a time to new or existing profile. Adding more than the recommend number of tables doesn't expedite the sync since only the fixed set of tables are processed at a given time.  
+        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenario: 
         - Delta sync: After the initial sync of tables are completed, any change in Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
    - question: How can I access my table relationships?
      answer: |
@@ -60,6 +59,7 @@ sections:
         - Attachment
         - Annotation
         - String Map
+        - Calendar
    - question: Which Dataverse tables use Append only by default?
      answer: |
         All tables that do not have a createdOn field will be synced using Append only mode by default. This includes relationship tables as well as the ActivityParty table.
@@ -69,7 +69,10 @@ sections:
         - Move the Azure resources to the same region as the Dataverse environment.
         - Move the Dataverse environment to the same region as the Azure resources by contacting [Microsoft customer support](/power-platform/admin/get-help-support).
         - Enable **Read Access - Geo Redundant Storage (RA-GRS)** on the Azure Data Lake to replicate Azure data to a near by region. More information: [Read access to data in the secondary region](/azure/storage/common/storage-redundancy#read-access-to-data-in-the-secondary-region)
-        - Use Azure Synapse pipelines or Azure Data Factory to copy data from Azure resources in one region to Azure resources in another. 
+        - Use Azure Synapse pipelines or Azure Data Factory to copy data from Azure resources in one region to Azure resources in another.
+   - question: Why do I see the error message - cannot bulk load because the file is incomplete or could not be read?
+     answer: |
+        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data-preview)
 additionalContent: |
 
   ## See also

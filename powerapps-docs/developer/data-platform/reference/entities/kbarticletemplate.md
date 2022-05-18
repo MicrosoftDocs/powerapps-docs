@@ -1,7 +1,7 @@
 ---
-title: "Article Template (KbArticleTemplate) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Article Template (KbArticleTemplate) table/entity."
-ms.date: 10/05/2021
+title: "Article Template (KbArticleTemplate)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Article Template (KbArticleTemplate)  table/entity."
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Article Template (KbArticleTemplate) table/entity reference
+# Article Template (KbArticleTemplate)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -151,10 +151,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Active|
-|0|Inactive|
+|1|Active||
+|0|Inactive||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -425,10 +425,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -652,7 +652,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_kb_article_template_kb_articles"></a> kb_article_template_kb_articles
 
-Same as kbarticle table [kb_article_template_kb_articles](kbarticle.md#BKMK_kb_article_template_kb_articles) Many-To-One relationship.
+Same as the [kb_article_template_kb_articles](kbarticle.md#BKMK_kb_article_template_kb_articles) many-to-one relationship for the [kbarticle](kbarticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -667,7 +667,7 @@ Same as kbarticle table [kb_article_template_kb_articles](kbarticle.md#BKMK_kb_a
 
 ### <a name="BKMK_KbArticleTemplate_SyncErrors"></a> KbArticleTemplate_SyncErrors
 
-Same as syncerror table [KbArticleTemplate_SyncErrors](syncerror.md#BKMK_KbArticleTemplate_SyncErrors) Many-To-One relationship.
+Same as the [KbArticleTemplate_SyncErrors](syncerror.md#BKMK_KbArticleTemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -682,7 +682,7 @@ Same as syncerror table [KbArticleTemplate_SyncErrors](syncerror.md#BKMK_KbArtic
 
 ### <a name="BKMK_KbArticleTemplate_AsyncOperations"></a> KbArticleTemplate_AsyncOperations
 
-Same as asyncoperation table [KbArticleTemplate_AsyncOperations](asyncoperation.md#BKMK_KbArticleTemplate_AsyncOperations) Many-To-One relationship.
+Same as the [KbArticleTemplate_AsyncOperations](asyncoperation.md#BKMK_KbArticleTemplate_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -697,7 +697,7 @@ Same as asyncoperation table [KbArticleTemplate_AsyncOperations](asyncoperation.
 
 ### <a name="BKMK_KbArticleTemplate_BulkDeleteFailures"></a> KbArticleTemplate_BulkDeleteFailures
 
-Same as bulkdeletefailure table [KbArticleTemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KbArticleTemplate_BulkDeleteFailures) Many-To-One relationship.
+Same as the [KbArticleTemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KbArticleTemplate_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -712,7 +712,7 @@ Same as bulkdeletefailure table [KbArticleTemplate_BulkDeleteFailures](bulkdelet
 
 ### <a name="BKMK_KbArticleTemplate_ProcessSessions"></a> KbArticleTemplate_ProcessSessions
 
-Same as processsession table [KbArticleTemplate_ProcessSessions](processsession.md#BKMK_KbArticleTemplate_ProcessSessions) Many-To-One relationship.
+Same as the [KbArticleTemplate_ProcessSessions](processsession.md#BKMK_KbArticleTemplate_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -739,23 +739,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_kbarticletemplate_createdonbehalfby"></a> lk_kbarticletemplate_createdonbehalfby
 
-See systemuser Table [lk_kbarticletemplate_createdonbehalfby](systemuser.md#BKMK_lk_kbarticletemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_kbarticletemplate_createdonbehalfby](systemuser.md#BKMK_lk_kbarticletemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_kb_article_templates"></a> organization_kb_article_templates
 
-See organization Table [organization_kb_article_templates](organization.md#BKMK_organization_kb_article_templates) One-To-Many relationship.
+See the [organization_kb_article_templates](organization.md#BKMK_organization_kb_article_templates) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticletemplate_modifiedonbehalfby"></a> lk_kbarticletemplate_modifiedonbehalfby
 
-See systemuser Table [lk_kbarticletemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_kbarticletemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_kbarticletemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_kbarticletemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticletemplatebase_modifiedby"></a> lk_kbarticletemplatebase_modifiedby
 
-See systemuser Table [lk_kbarticletemplatebase_modifiedby](systemuser.md#BKMK_lk_kbarticletemplatebase_modifiedby) One-To-Many relationship.
+See the [lk_kbarticletemplatebase_modifiedby](systemuser.md#BKMK_lk_kbarticletemplatebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticletemplatebase_createdby"></a> lk_kbarticletemplatebase_createdby
 
-See systemuser Table [lk_kbarticletemplatebase_createdby](systemuser.md#BKMK_lk_kbarticletemplatebase_createdby) One-To-Many relationship.
+See the [lk_kbarticletemplatebase_createdby](systemuser.md#BKMK_lk_kbarticletemplatebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

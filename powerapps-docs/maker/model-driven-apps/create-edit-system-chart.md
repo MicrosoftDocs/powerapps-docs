@@ -3,7 +3,7 @@ title: "Create or edit a model-driven app system chart in Power Apps | Microsoft
 description: "Learn how to create a system chart for a model-driven app"
 ms.custom: ""
 ms.date: 07/08/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -90,7 +90,7 @@ Use your chart:
 
 ## Known chart creation issues
 
-In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error. The calculated columns causing this are using another calculated column, a related table column, or a local column on the table.
+In the chart designer, adding an order by on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using another calculated column, a related table column, or a local column on the table.
 
 ## Next steps
 

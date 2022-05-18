@@ -4,7 +4,7 @@ description: "Learn about common elements and characteristics, calculated column
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -71,7 +71,7 @@ search.app:
  Calculated column values are available in the retrieve plug-in pipeline. Post image of a table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity images](understand-the-data-context.md#entity-images)
   
 ### Limitations  
- You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
+ You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)  
   
  Only columns from an immediate parent table can be used in a calculated column.  
   

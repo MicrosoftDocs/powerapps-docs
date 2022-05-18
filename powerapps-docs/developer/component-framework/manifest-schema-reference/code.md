@@ -3,19 +3,18 @@ title: Code Element | Microsoft Docs
 description: Refers to the path where the resource files are located.
 keywords:
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.date: 03/26/2022
+ms.reviewer: jdaly
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "reference"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 ---
 
 # code element

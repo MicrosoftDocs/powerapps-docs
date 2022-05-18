@@ -1,7 +1,7 @@
 ---
-title: "Notification (appnotification) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Notification (appnotification) table/entity."
-ms.date: 10/05/2021
+title: "Notification (appnotification)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Notification (appnotification)  table/entity."
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Notification (appnotification) table/entity reference
+# Notification (appnotification)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -34,6 +34,7 @@ Notification to be provided to a user.
 |Retrieve|GET [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appnotifications<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/appnotifications(*appnotificationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
@@ -371,6 +372,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -674,12 +676,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -750,49 +770,49 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appnotification_createdby](systemuser.md#BKMK_lk_appnotification_createdby) One-To-Many relationship.
+See the [lk_appnotification_createdby](systemuser.md#BKMK_lk_appnotification_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appnotification_createdonbehalfby"></a> lk_appnotification_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appnotification_createdonbehalfby](systemuser.md#BKMK_lk_appnotification_createdonbehalfby) One-To-Many relationship.
+See the [lk_appnotification_createdonbehalfby](systemuser.md#BKMK_lk_appnotification_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appnotification_modifiedby"></a> lk_appnotification_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appnotification_modifiedby](systemuser.md#BKMK_lk_appnotification_modifiedby) One-To-Many relationship.
+See the [lk_appnotification_modifiedby](systemuser.md#BKMK_lk_appnotification_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appnotification_modifiedonbehalfby"></a> lk_appnotification_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_appnotification_modifiedonbehalfby](systemuser.md#BKMK_lk_appnotification_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appnotification_modifiedonbehalfby](systemuser.md#BKMK_lk_appnotification_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_appnotification"></a> user_appnotification
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_appnotification](systemuser.md#BKMK_user_appnotification) One-To-Many relationship.
+See the [user_appnotification](systemuser.md#BKMK_user_appnotification) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_appnotification"></a> team_appnotification
 
 **Added by**: System Solution Solution
 
-See team Table [team_appnotification](team.md#BKMK_team_appnotification) One-To-Many relationship.
+See the [team_appnotification](team.md#BKMK_team_appnotification) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_appnotification"></a> business_unit_appnotification
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_appnotification](businessunit.md#BKMK_business_unit_appnotification) One-To-Many relationship.
+See the [business_unit_appnotification](businessunit.md#BKMK_business_unit_appnotification) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_appmodule_appnotification_app"></a> appmodule_appnotification_app
 
 **Added by**: System Solution Solution
 
-See appmodule Table [appmodule_appnotification_app](appmodule.md#BKMK_appmodule_appnotification_app) One-To-Many relationship.
+See the [appmodule_appnotification_app](appmodule.md#BKMK_appmodule_appnotification_app) one-to-many relationship for the [appmodule](appmodule.md) table/entity.
 
 ### See also
 

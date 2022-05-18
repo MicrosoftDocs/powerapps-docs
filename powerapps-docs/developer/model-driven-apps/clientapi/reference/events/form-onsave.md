@@ -1,19 +1,20 @@
 ---
 title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the form OnSave event.
-ms.date: 12/16/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Form OnSave event (Client API reference) in model-driven apps
 
@@ -70,7 +71,7 @@ To use async onSave handlers you will need to enable it through an app setting:
 4. Select the app and then select **...** (ellipses). Select **Open in preview**.
 5. Select **Settings** from the command bar.
 6. When the dialog opens, select **Features**.
-7. Turn on **Async onload handler**.
+7. Turn on **Async onSave handler**.
 8. Select **Save**.
 
     ![Async OnSave app setting](../../../media/async_onSave_app_settings.png "Async OnSave app setting")

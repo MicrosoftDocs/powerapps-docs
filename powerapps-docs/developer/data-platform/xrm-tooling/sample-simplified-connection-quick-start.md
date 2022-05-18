@@ -1,24 +1,22 @@
 ---
 title: "Sample: Simplified connection quick start (Developer Guide for Microsoft Dataverse) | MicrosoftDocs"
 description: "This sample shows you how to connect to the Microsoft Dataverse web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on a table. "
-ms.custom: 
-ms.date: 04/12/2021
-author: Nkrb
-ms.service: powerapps
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.date: 04/01/2022
+author: MattB-msft
 ms.topic: sample
+ms.author: mbarbour
+ms.reviewer: jdaly
+manager: jstrauss
 applies_to: 
   - Microsoft Dataverse (online)
-ms.assetid: a4fb3634-948e-4bac-a32f-f626c78d83a0
-caps.latest.revision: 29
-ms.author: nabuthuk
-manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - D365CE
   - PowerApps
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Sample: Simplified connection quick start using Microsoft Dataverse
 

@@ -1,7 +1,7 @@
 ---
-title: "Position table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Position table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Position table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -601,7 +601,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_position_AsyncOperations"></a> position_AsyncOperations
 
-Same as asyncoperation table [position_AsyncOperations](asyncoperation.md#BKMK_position_AsyncOperations) Many-To-One relationship.
+Same as the [position_AsyncOperations](asyncoperation.md#BKMK_position_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -616,7 +616,7 @@ Same as asyncoperation table [position_AsyncOperations](asyncoperation.md#BKMK_p
 
 ### <a name="BKMK_position_ProcessSession"></a> position_ProcessSession
 
-Same as processsession table [position_ProcessSession](processsession.md#BKMK_position_ProcessSession) Many-To-One relationship.
+Same as the [position_ProcessSession](processsession.md#BKMK_position_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -631,7 +631,7 @@ Same as processsession table [position_ProcessSession](processsession.md#BKMK_po
 
 ### <a name="BKMK_position_users"></a> position_users
 
-Same as systemuser table [position_users](systemuser.md#BKMK_position_users) Many-To-One relationship.
+Same as the [position_users](systemuser.md#BKMK_position_users) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -646,7 +646,7 @@ Same as systemuser table [position_users](systemuser.md#BKMK_position_users) Man
 
 ### <a name="BKMK_position_parent_position"></a> position_parent_position
 
-Same as position table [position_parent_position](position.md#BKMK_position_parent_position) Many-To-One relationship.
+Same as the [position_parent_position](position.md#BKMK_position_parent_position) many-to-one relationship for the [position](position.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -661,7 +661,7 @@ Same as position table [position_parent_position](position.md#BKMK_position_pare
 
 ### <a name="BKMK_Position_SyncErrors"></a> Position_SyncErrors
 
-Same as syncerror table [Position_SyncErrors](syncerror.md#BKMK_Position_SyncErrors) Many-To-One relationship.
+Same as the [Position_SyncErrors](syncerror.md#BKMK_Position_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -676,7 +676,7 @@ Same as syncerror table [Position_SyncErrors](syncerror.md#BKMK_Position_SyncErr
 
 ### <a name="BKMK_position_connection2"></a> position_connection2
 
-Same as connection table [position_connection2](connection.md#BKMK_position_connection2) Many-To-One relationship.
+Same as the [position_connection2](connection.md#BKMK_position_connection2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -691,7 +691,7 @@ Same as connection table [position_connection2](connection.md#BKMK_position_conn
 
 ### <a name="BKMK_position_principalobjectattributeaccess"></a> position_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [position_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_position_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [position_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_position_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -706,7 +706,7 @@ Same as principalobjectattributeaccess table [position_principalobjectattributea
 
 ### <a name="BKMK_position_connection1"></a> position_connection1
 
-Same as connection table [position_connection1](connection.md#BKMK_position_connection1) Many-To-One relationship.
+Same as the [position_connection1](connection.md#BKMK_position_connection1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -735,31 +735,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_position_createdby"></a> lk_position_createdby
 
-See systemuser Table [lk_position_createdby](systemuser.md#BKMK_lk_position_createdby) One-To-Many relationship.
+See the [lk_position_createdby](systemuser.md#BKMK_lk_position_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_position_createdonbehalfby"></a> lk_position_createdonbehalfby
 
-See systemuser Table [lk_position_createdonbehalfby](systemuser.md#BKMK_lk_position_createdonbehalfby) One-To-Many relationship.
+See the [lk_position_createdonbehalfby](systemuser.md#BKMK_lk_position_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_position_modifiedby"></a> lk_position_modifiedby
 
-See systemuser Table [lk_position_modifiedby](systemuser.md#BKMK_lk_position_modifiedby) One-To-Many relationship.
+See the [lk_position_modifiedby](systemuser.md#BKMK_lk_position_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_position_modifiedonbehalfby"></a> lk_position_modifiedonbehalfby
 
-See systemuser Table [lk_position_modifiedonbehalfby](systemuser.md#BKMK_lk_position_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_position_modifiedonbehalfby](systemuser.md#BKMK_lk_position_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_position"></a> organization_position
 
-See organization Table [organization_position](organization.md#BKMK_organization_position) One-To-Many relationship.
+See the [organization_position](organization.md#BKMK_organization_position) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_position_parent_position"></a> position_parent_position
 
-See position Table [position_parent_position](position.md#BKMK_position_parent_position) One-To-Many relationship.
+See the [position_parent_position](position.md#BKMK_position_parent_position) one-to-many relationship for the [position](position.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_position"></a> transactioncurrency_position
 
-See transactioncurrency Table [transactioncurrency_position](transactioncurrency.md#BKMK_transactioncurrency_position) One-To-Many relationship.
+See the [transactioncurrency_position](transactioncurrency.md#BKMK_transactioncurrency_position) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 

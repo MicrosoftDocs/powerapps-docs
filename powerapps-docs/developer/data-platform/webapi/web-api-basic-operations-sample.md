@@ -1,25 +1,18 @@
 ---
 title: "Web API basic operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "Code samples that demonstrate how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. The samples are coded using client-side JavaScript and also C#."
-ms.custom: ""
-ms.date: 06/15/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: f006f88c-74cb-4fde-90e5-e1faf2051673
-caps.latest.revision: 25
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Basic Operations Sample

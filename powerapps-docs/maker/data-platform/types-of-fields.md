@@ -3,7 +3,6 @@ title: "Column data types in Microsoft Dataverse (contains video) | MicrosoftDoc
 description: "Understand the different column data types available for your app"
 keywords: ""
 ms.date: 08/13/2021
-ms.service: powerapps
 ms.custom: 
 ms.topic: article
 author: "Mattp123"
@@ -30,6 +29,8 @@ The following table includes the corresponding `AttributeTypeDisplayName` API ty
 |Power Apps data type |Solution Explorer type| API type|
 |--|--|--|
 |**Big Integer**|**Time Stamp**|`BigIntType`|
+|**Choice**|**Option Set**|`PicklistType`|
+|**Choices**|**MultiSelect Field**|`MultiSelectPicklistType`|
 |**Currency**|**Currency**|`MoneyType`|
 |**Customer**|**Customer**|`CustomerType`|
 |**Date and Time**|**Date and Time**<br />*Date and Time* Format|`DateTimeType`|
@@ -42,21 +43,19 @@ The following table includes the corresponding `AttributeTypeDisplayName` API ty
 |**Image**|**Image**|`ImageType`|
 |**Language**|**Whole Number**<br />*Language* Format|`IntegerType`|
 |**Lookup**|**Lookup**|`LookupType`|
-|**Choices**|**MultiSelect Field**|`MultiSelectPicklistType`|
 |**Multiline Text**|**Multiple Lines of Text**|`MemoType`|
-|**Choice**|**Option Set**|`PicklistType`|
 |**Owner**|**Owner**|`OwnerType`|
 |**Phone**|**Single Line of Text**<br />*Phone* Format|`StringType`|
-|**Status Reason**|**Status Reason**|`StatusType`|
 |**Status**|**Status**|`StateType`|
-|**Text Area**|**Single Line of Text**<br />*Text Area* Format|`StringType`|
+|**Status Reason**|**Status Reason**|`StatusType`|
 |**Text**|**Single Line of Text**<br />*Text* Format|`StringType`|
+|**Text Area**|**Single Line of Text**<br />*Text Area* Format|`StringType`|
 |**Ticker Symbol**|**Single Line of Text**<br />Ticker Symbol Format|`StringType`|
 |**Timezone**|**Whole Number**<br />*Time Zone* Format|`IntegerType`|
-|**Yes/No**|**Two Options**|`BooleanType`|
 |**Unique Identifier**|**Unique Identifier** or **Primary Key**|`UniqueidentifierType`|
 |**URL**|**Single Line of Text**<br />*URL* Format|`StringType`|
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
+|**Yes/No**|**Two Options**|`BooleanType`|
 
 For more descriptions for each type you can add or edit, see the article for the corresponding designer:
  - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
@@ -70,7 +69,7 @@ There are some columns used by the system that you cannot add using the designer
 
 |Type|Description|
 |--|--|
-|**Big Integer** or **Time Stamp**|Used by the system to capture a version number manage updates to a table.|
+|**Time Stamp**| A Big Integer type used by the system to capture a version number for managing updates to a table.|
 |**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.<br />**Note**: This attribute can be added using solution explorer designer.|
 |**Owner**|A system lookup column that references the user or team that is assigned a user or team owned table row.|
 |**Status Reason**|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options. <br /><br /> You can also include custom state transitions to control which status options are available for certain tables. More information: [Define status reason transitions for custom tables](define-status-reason-transitions.md)|
@@ -132,9 +131,12 @@ Decimal numbers are stored in the database exactly as specified. Floating point 
 Use decimals when you need to provide reports that require very accurate calculations, or if you typically use queries that look for values that are equal or not equal to another value.  
   
 Use floating point numbers when you store data that represents fractions or values that you will typically query comparing to another value using greater than or less than operators. In most cases, the difference between decimal and float isn’t noticeable. Unless you require the most accurate possible calculations, floating point numbers should work for you.  
-  
-<a name="BKMK_UsingCurrencyFields"></a>
- 
+
+Big Integers (or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It is used to store very large numbers that exceed the capabilities of Whole Number and Decimal.  Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
+
+> [!NOTE]
+> BigInt is currently only available for use through API. This includes column creation, data creation, and data management.
+
 ## Using currency columns
 
 Currency columns allow for an organization to configure multiple currencies that can be used for rows in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to a table that has no other currency columns, two additional columns are added:  
@@ -210,7 +212,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
    - **Primary Image**. Image columns that are set as the primary image are displayed in the upper right corner of the form. You can have only one primary image for each table.
    - **Enable column security**. Use to control access for specific columns. More information: [Field-level security to control access](/power-platform/admin/field-level-security)
    - **Enable auditing**. Enables the logging of changes that are made to table records and user access so you can review the activity later. More information: [Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)
-   - **Sortable in interactive experience dashboard**. Specifies the the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-he-interactive-dashboards)
+   - **Sortable in interactive experience dashboard**. Specifies the the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-the-interactive-dashboards)
    - **Maximum image size**. Default value is 10,240 KB. The minimum size is 1 KB and the maximum is 30,720 KB.
 
 1. Select **Save table**.
@@ -227,7 +229,7 @@ The image column in this example is the primary image so the image also appears 
 Users can select **Open** to display the image full size in a new browser tab or select **Delete** to remove the image from the record and Dataverse.
 
 More information for developers working with image data:
-- [table metadata > table images](/powerapps/developer/data-platform/table-metadata#table-images)
+- [table metadata > table images](/powerapps/developer/data-platform/entity-metadata#entity-images)
 - [Image attributes](../../developer/data-platform/image-attributes.md)
 
 ## File columns

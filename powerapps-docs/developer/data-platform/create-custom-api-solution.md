@@ -2,14 +2,13 @@
 title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 04/29/2022
+ms.reviewer: "jdaly"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -21,7 +20,7 @@ search.app:
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
 > - [Create and use Custom APIs](custom-api.md)
-> - [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
+> - [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
 
 
 While you can create Custom APIs through a designer or with code, you can also define them by working with files within a solution. This may be the preferred option for solution publishers who apply the recommended best practices for Application Lifecycle Management (ALM).
@@ -106,7 +105,7 @@ Within the folder, the data representing the Custom API is found within an XML f
     </customapi>
     ```
 
-  See the information in [CustomAPI Table Columns](customapi-table-columns.md) to set the values of the elements.
+  See the information in [Custom API table columns](custom-api-tables.md#custom-api-table-columns) to set the values of the elements.
       
   > [!NOTE]
   > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
@@ -148,7 +147,7 @@ Any definitions of request parameters for the Custom API are included in a folde
   </customapirequestparameter>
   ```
 
-See the information in [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md) to set the values of the elements.
+See the information in [CustomAPIRequestParameter Table Columns](custom-api-tables.md#customapirequestparameter-table-columns) to set the values of the elements.
 
 ## Step 5: Add any Custom API Response Properties
 
@@ -213,6 +212,34 @@ Open the solution you created and verify that the Custom API and the associated 
 
 At this point, you can test your API using the steps describe in [Test your Custom API](create-custom-api-maker-portal.md#test-your-custom-api)
 
+## Update a Custom API in a solution
+
+After you ship a solution that contains a Custom API you may want to make some changes to the Custom API in your unmanaged solution. You can add new parameters or response properties and make changes to those columns that support being updated, such as the `displayname` and `description`.
+
+> [!IMPORTANT]
+> You cannot introduce a change to a Custom API in a solution that modifies any of the properties that cannot be changed after they are saved. When you install a newer version of a solution that contains a definition of a Custom API, it will attempt to update the Custom API, Custom API Request Parameters, and Custom API Response properties. A solution update is the same as trying to update the Custom API using any other method.
+>
+> The following are properties in the solution files that cannot be changed after a Custom API is created:
+> - Custom API properties:
+>    - `allowedcustomprocessingsteptype`
+>    - `bindingtype`
+>    - `boundentitylogicalname`
+>    - `isfunction`
+>    - `uniquename`
+>    - `workflowsdkstepenabled`
+> - Custom API RequestParameter properties:
+>    - `isoptional`
+>    - `logicalentityname`
+>    - `type`
+>    - `uniquename`
+> - Custom API Response Property properties:
+>    - `logicalentityname`
+>    - `type`
+>    - `uniquename`
+>
+>  More information: [CustomAPI tables](custom-api-tables.md)
+
+
 
 ## Providing Localized Labels with the solution
 
@@ -239,7 +266,9 @@ As an alternative to using the process described in [Localized Label values](cus
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br />
-[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br />
+[CustomAPI tables](custom-api-tables.md)<br />
+[Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br/>
+[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create your own messages](custom-actions.md)<br />
 

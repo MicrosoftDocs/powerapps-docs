@@ -1,26 +1,22 @@
 ---
 title: "Remove unsupported code that uses reflection in custom workflow activities | MicrosoftDocs"
 description: "You must remove the code snippet mentioned in this topic if you find it in custom workflow activities"
-services: ''
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: ryjones
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 08/15/2019
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Remove unsupported code that uses reflection in custom workflow activities
 
@@ -67,7 +63,7 @@ The underlying issue about supporting strong types has been fixed, but this code
 
 ## Additional information
 
-Currently reflection is not allowed. This code references an internal assembly that was included in a white list so that internal code could reflect on it. This is why it does not currently throw an error. But when general restrictions are lifted in the future, this will cause the workflow activity to break.
+Currently reflection is not allowed. This code references an internal assembly that was included in an allowlist so that internal code could reflect on it. This is why it does not currently throw an error. But when general restrictions are lifted in the future, this will cause the workflow activity to break.
 
 In order to provide greater capabilities within custom workflow activities without breaking people's business logic, we need everyone to review their code base and remove references like this.
 

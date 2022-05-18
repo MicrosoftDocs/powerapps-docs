@@ -2,7 +2,7 @@
 title: Overview of building canvas apps
 description: Get an introduction to designing and building canvas apps in Power Apps so that users can manage line-of-business data in a browser or on mobile devices.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - canvas
@@ -47,7 +47,7 @@ After you've gained some experience generating an app automatically and customiz
 ## Share and run an app
 When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app and whether they can also customize and share it with additional people in the organization.
 
-Run your own apps (and any apps shared with you) on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
+Run your own apps (and any apps shared with you) on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/mobile/run-powerapps-on-mobile).
 
 ## Learn more
 - Ready to convert your ideas into an app? Start with [Planning a Power Apps project](../../guidance/planning/introduction.md).

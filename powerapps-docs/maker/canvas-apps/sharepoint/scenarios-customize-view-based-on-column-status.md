@@ -1,8 +1,8 @@
 ---
-title: Customize an app screen based on column status inside a SharePoint list
-description: This article explains how to customize an app screen based on column status inside a SharePoint list.
+title: Customize an app screen based on column status inside a list created using Microsoft Lists
+description: This article explains how to customize an app screen based on column status inside a list created using Microsoft Lists.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -19,9 +19,9 @@ contributors:
   - wimcoor
   - emcoope-msft
 ---
-# Customize an app screen based on column status inside a SharePoint list
+# Customize an app screen based on column status inside a list created using Microsoft Lists
 
-In this scenario article, you'll learn how to customize an app screen based on column status inside a SharePoint list. You can customize forms for supported lists or libraries, and you can also create apps for lists or libraries.
+In this scenario article, you'll learn how to customize an app screen based on column status inside a list. You can customize forms for supported lists or libraries, and you can also create apps for lists or libraries.
 
 Limiting access to SharePoint objects can be achieved using fine-grained permissions inside SharePoint. However, it can become difficult to scan through all items in your app screen, especially when using different devices. 
 
@@ -31,13 +31,13 @@ This method allows you to create multiple screens to show different SharePoint o
 
 ## Prerequisites
 
-- You must have created an app using a SharePoint connector that connects to a SharePoint list.
+- You must have created an app using a SharePoint connector that connects to a list.
 - You need two user accounts with access to the app and SharePoint site hosting the lists.
-- You need to be knowledgeable about how to configure SharePoint lists and list/item permissions.
+- You need to be knowledgeable about how to configure lists and list/item permissions.
 
 ## Scenario details
 
-You can use the function [filter](../functions/function-filter-lookup.md) for a specific column from SharePoint and apply the filter with a particular condition. With this approach, you can set up multiple screens with filtered SharePoint list items.
+You can use the function [filter](../functions/function-filter-lookup.md) for a specific column from SharePoint and apply the filter with a particular condition. With this approach, you can set up multiple screens with filtered list items.
 
 For example, you created a list named Issue Tracking, based on the out-of-the-box SharePoint app template **Issue Tracking**. And you want to create an app that only shows **Active** issues on the app screen. 
 
@@ -53,7 +53,7 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
 1. Share the list with a user—for example, Kenny Smith.
 
-1. Select **Integrate** -> **Power Apps** -> **Create an app** from the SharePoint list page.
+1. Select **Integrate** -> **Power Apps** -> **Create an app** from the list page.
 
     ![Create an app.](./media/scenarios-customize-view-based-on-column-status/create-app.png "Create an app")
 

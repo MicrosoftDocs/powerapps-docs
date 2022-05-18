@@ -2,7 +2,7 @@
 title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -207,11 +207,11 @@ Check the service tier of Azure SQL Database. A lower tier will have some limita
 
 ## Performance considerations for the SharePoint connector
 
-You can use the [SharePoint connector](connections/connection-sharepoint-online.md) to create apps by using data from SharePoint lists. You can also create canvas apps directly from the SharePoint list view. Let's take a look at the common performance problems and resolutions for using a SharePoint data source with canvas apps.
+You can use the [SharePoint connector](connections/connection-sharepoint-online.md) to create apps by using data from Microsoft Lists. You can also create canvas apps directly from the list view. Let's take a look at the common performance problems and resolutions for using a SharePoint data source with canvas apps.
 
 ### Too many dynamic lookup columns
 
-SharePoint supports various data types, including dynamic lookups such as **Person**, **Group**, and **Calculated**. If a SharePoint list defines too many dynamic columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
+SharePoint supports various data types, including dynamic lookups such as **Person**, **Group**, and **Calculated**. If a list defines too many dynamic columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
 
 Don't overuse the dynamic lookup columns in SharePoint. This overuse can result in avoidable and extra overhead on the SharePoint side for manipulation of data. Instead, you can use static columns to keep email aliases or people's names, for example.
 
@@ -219,7 +219,7 @@ Don't overuse the dynamic lookup columns in SharePoint. This overuse can result 
 
 The size of an image and an attached file can contribute to a slow response while retrieving to the client.
 
-Review your SharePoint list, and ensure that only necessary columns have been defined. The number of columns in the list affects the performance of the data requests. This is because the matched records, or the records up to the defined data row limits, are retrieved and transmitted back to the client with all the columns defined in the list&mdash;even if the app doesn't use all of them.
+Review your list, and ensure that only necessary columns have been defined. The number of columns in the list affects the performance of the data requests. This is because the matched records, or the records up to the defined data row limits, are retrieved and transmitted back to the client with all the columns defined in the list&mdash;even if the app doesn't use all of them.
 
 To query only the columns used by the app, enable the explicit column selection feature, as [described earlier in this article](#too-many-columns-retrieved).
 
@@ -229,9 +229,9 @@ If you have a large list with hundreds of thousands of records, consider partiti
 
 For instance, your data might be stored in different lists on a yearly or monthly basis. In such a case, you can design the app to let a user select a time window and retrieve the data within that range.
 
-Within a controlled environment, the performance benchmark has proven that the performance of OData requests against SharePoint lists is highly related to the number of columns in the list and the number of rows being retrieved (limited by the [data row limit for non-delegable queries](delegation-overview.md#changing-the-limit)). Having fewer columns and a lower data row limit setting can make a canvas app perform better.
+Within a controlled environment, the performance benchmark has proven that the performance of OData requests against Microsoft Lists or SharePoint is highly related to the number of columns in the list and the number of rows being retrieved (limited by the [data row limit for non-delegable queries](delegation-overview.md#changing-the-limit)). Having fewer columns and a lower data row limit setting can make a canvas app perform better.
 
-In the real world, though, apps are designed to meet certain business requirements. It might not be quick or simple to reduce the data row limit or the number of columns in a SharePoint list. However, we recommend that you monitor the OData requests at the client side and tune the data row limit for non-delegable queries and the number of columns in the list.
+In the real world, though, apps are designed to meet certain business requirements. It might not be quick or simple to reduce the data row limit or the number of columns in a list. However, we recommend that you monitor the OData requests at the client side and tune the data row limit for non-delegable queries and the number of columns in the list.
 
 ## Performance considerations for using Dataverse as the data source
 

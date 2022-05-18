@@ -1,11 +1,10 @@
 ---
 title: Connect to Dynamics 365 from Power Apps
 description: Learn about how to create an app for managing data in Dynamics 365.
-author: JimDaly
-ms.service: powerapps
+author: NHelgren
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/22/2020
+ms.date: 04/03/2022
 ms.subservice: canvas-maker
 ms.author: matp
 ms.reviewer: tapanm

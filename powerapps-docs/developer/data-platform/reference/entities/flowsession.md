@@ -1,7 +1,7 @@
 ---
-title: "flowsession table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "flowsession table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowsession table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Context](#BKMK_Context)
 - [CorrelationId](#BKMK_CorrelationId)
 - [ErrorCode](#BKMK_ErrorCode)
+- [ErrorDetails](#BKMK_ErrorDetails)
 - [ErrorMessage](#BKMK_ErrorMessage)
 - [flowsessionId](#BKMK_flowsessionId)
 - [Gateway](#BKMK_Gateway)
@@ -150,6 +151,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|1000|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_ErrorDetails"></a> ErrorDetails
+
+|Property|Value|
+|--------|-----|
+|Description|Details of the failure in flow session execution.|
+|DisplayName|ErrorDetails|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|errordetails|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ErrorMessage"></a> ErrorMessage
@@ -481,6 +498,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -838,12 +856,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -944,7 +980,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [flowsession_SyncErrors](syncerror.md#BKMK_flowsession_SyncErrors) Many-To-One relationship.
+Same as the [flowsession_SyncErrors](syncerror.md#BKMK_flowsession_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -961,7 +997,7 @@ Same as syncerror table [flowsession_SyncErrors](syncerror.md#BKMK_flowsession_S
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [flowsession_AsyncOperations](asyncoperation.md#BKMK_flowsession_AsyncOperations) Many-To-One relationship.
+Same as the [flowsession_AsyncOperations](asyncoperation.md#BKMK_flowsession_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -978,7 +1014,7 @@ Same as asyncoperation table [flowsession_AsyncOperations](asyncoperation.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [flowsession_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_flowsession_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [flowsession_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_flowsession_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -995,7 +1031,7 @@ Same as mailboxtrackingfolder table [flowsession_MailboxTrackingFolders](mailbox
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [flowsession_BulkDeleteFailures](bulkdeletefailure.md#BKMK_flowsession_BulkDeleteFailures) Many-To-One relationship.
+Same as the [flowsession_BulkDeleteFailures](bulkdeletefailure.md#BKMK_flowsession_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1012,7 +1048,7 @@ Same as bulkdeletefailure table [flowsession_BulkDeleteFailures](bulkdeletefailu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [flowsession_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_flowsession_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [flowsession_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_flowsession_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1027,7 +1063,7 @@ Same as principalobjectattributeaccess table [flowsession_PrincipalObjectAttribu
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 
-Same as workflowbinary table [flowsession_workflowbinary_FlowSessionId](workflowbinary.md#BKMK_flowsession_workflowbinary_FlowSessionId) Many-To-One relationship.
+Same as the [flowsession_workflowbinary_FlowSessionId](workflowbinary.md#BKMK_flowsession_workflowbinary_FlowSessionId) many-to-one relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1061,57 +1097,57 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_createdby](systemuser.md#BKMK_lk_flowsession_createdby) One-To-Many relationship.
+See the [lk_flowsession_createdby](systemuser.md#BKMK_lk_flowsession_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_flowsession_createdonbehalfby"></a> lk_flowsession_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_createdonbehalfby](systemuser.md#BKMK_lk_flowsession_createdonbehalfby) One-To-Many relationship.
+See the [lk_flowsession_createdonbehalfby](systemuser.md#BKMK_lk_flowsession_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_flowsession_modifiedby"></a> lk_flowsession_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_modifiedby](systemuser.md#BKMK_lk_flowsession_modifiedby) One-To-Many relationship.
+See the [lk_flowsession_modifiedby](systemuser.md#BKMK_lk_flowsession_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_flowsession_modifiedonbehalfby"></a> lk_flowsession_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_modifiedonbehalfby](systemuser.md#BKMK_lk_flowsession_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_flowsession_modifiedonbehalfby](systemuser.md#BKMK_lk_flowsession_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_flowsession"></a> user_flowsession
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_flowsession](systemuser.md#BKMK_user_flowsession) One-To-Many relationship.
+See the [user_flowsession](systemuser.md#BKMK_user_flowsession) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_flowsession"></a> team_flowsession
 
 **Added by**: System Solution Solution
 
-See team Table [team_flowsession](team.md#BKMK_team_flowsession) One-To-Many relationship.
+See the [team_flowsession](team.md#BKMK_team_flowsession) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_flowsession"></a> business_unit_flowsession
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_flowsession](businessunit.md#BKMK_business_unit_flowsession) One-To-Many relationship.
+See the [business_unit_flowsession](businessunit.md#BKMK_business_unit_flowsession) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
 **Added by**: System Solution Solution
 
-See workflow Table [regardingobjectid_process](workflow.md#BKMK_regardingobjectid_process) One-To-Many relationship.
+See the [regardingobjectid_process](workflow.md#BKMK_regardingobjectid_process) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_flowmachine_flowsession_MachineId"></a> flowmachine_flowsession_MachineId
 
-See flowmachine Table [flowmachine_flowsession_MachineId](flowmachine.md#BKMK_flowmachine_flowsession_MachineId) One-To-Many relationship.
+See the [flowmachine_flowsession_MachineId](flowmachine.md#BKMK_flowmachine_flowsession_MachineId) one-to-many relationship for the [flowmachine](flowmachine.md) table/entity.
 
 ### <a name="BKMK_flowmachinegroup_flowsession_MachineGroupId"></a> flowmachinegroup_flowsession_MachineGroupId
 
-See flowmachinegroup Table [flowmachinegroup_flowsession_MachineGroupId](flowmachinegroup.md#BKMK_flowmachinegroup_flowsession_MachineGroupId) One-To-Many relationship.
+See the [flowmachinegroup_flowsession_MachineGroupId](flowmachinegroup.md#BKMK_flowmachinegroup_flowsession_MachineGroupId) one-to-many relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
 
 ### See also
 

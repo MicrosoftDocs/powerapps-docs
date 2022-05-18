@@ -3,7 +3,7 @@ title: "Track your progress with dashboards and charts in model-driven apps| Mic
 description: How to use charts in Power Apps.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
@@ -87,11 +87,11 @@ Legend:
  
 5. On the **Add Component** dialog box, select your options. 
  
-      |  |  |
-      | --- | --- |
-      | **Row Type** |Select a row.  |
-      | **View** |Select a view for the row.  |
-      | **Chart** |Select the type of chart that you want use. |
+      |              |Options                                   |
+      |--------------|--------------------------------------------|
+      | **Row Type** |Select a row.                               |
+      | **View**     |Select a view for the row.                  |
+      | **Chart**    |Select the type of chart that you want use. |
 
 
       > [!div class="mx-imgBorder"]

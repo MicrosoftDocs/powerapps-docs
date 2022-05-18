@@ -3,12 +3,14 @@ title: Microsoft Power Platform CLI paportal command| Microsoft Docs
 description: "Includes descriptions and supported parameters for the paportal command."
 keywords: Microsoft Power Platform CLI, code components, component framework, CLI
 ms.subservice: dataverse-developer
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 09/15/2021
-ms.service: "powerapps"
-ms.topic: "article"
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: reference
+contributors: 
+  - JimDaly
 ---
 
 # Paportal

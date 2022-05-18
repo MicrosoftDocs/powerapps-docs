@@ -7,7 +7,6 @@ ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
 ms.date: 07/26/2021
-ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: conceptual
 search.audienceType: 
@@ -21,7 +20,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Unlike classic commands, modern commands are treated the same as other solution components and support core solution behaviors.
+Unlike classic commands, modern commands are treated the same as other solution components and support core solution behaviors. You can also edit existing modern commands from within a solution.
 
 <!-- > [!div class="mx-imgBorder"]
 > ![Core solution actions](media/commanddesigner-core-solution-actions.png "Core solution actions")  -->

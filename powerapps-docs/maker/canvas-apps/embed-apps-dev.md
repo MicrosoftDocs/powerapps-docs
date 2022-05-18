@@ -2,7 +2,7 @@
 title: Integrate canvas apps into websites and other services
 description: Learn about how to embed canvas apps in websites and other services.
 author: gregli-msft
-ms.service: powerapps
+
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
@@ -38,7 +38,7 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 For GCC users
 
 ```
-https://apps.gov.powerapps.us/play[AppID]?source=iframe
+https://apps.gov.powerapps.us/play/[AppID]?source=iframe
 ```
 
 > [!IMPORTANT]

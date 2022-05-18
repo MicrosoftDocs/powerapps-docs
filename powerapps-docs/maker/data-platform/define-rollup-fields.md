@@ -2,9 +2,8 @@
 title: "Define rollup columns with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup columns"
 ms.custom: ""
-ms.date: 01/23/2020
+ms.date: 05/05/2022
 ms.reviewer: ""
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -25,8 +24,6 @@ search.app:
   - D365CE
 ---
 # Define rollup columns that aggregate values
-
-
 
 Rollup columns help users obtain insights into data by monitoring key business metrics. A rollup column contains an aggregate value computed over the rows related to a specified row. This includes regular tables and activity tables such as emails and appointments.
 
@@ -78,10 +75,11 @@ The rollups are calculated by scheduled system jobs that run asynchronously in t
 
 To view rollup jobs:
 
-1. While viewing the **Common Data Services Default Solution** edit the URL, removing everything after `dynamics.com` and refresh the page.
-2. In the **Settings** area, select **System** > **System Jobs**.<br />![Navigate to system jobs.](media/navigate-system-jobs.png)
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select the environment you want.
+1. Select **Settings** (gear) > **Advanced settings**.
+1. Select  **Settings** > **System Jobs**.<br />![Navigate to system jobs.](media/navigate-system-jobs.png)
 1. In the  view selector, choose **Recurring System Jobs**.
-2. To quickly find a relevant job, you can filter by the System Job type: **Mass Calculate Rollup Field** or **Calculate Rollup Field**.
+1. To quickly find a relevant job, you can filter by the System Job type: **Mass Calculate Rollup Field** or **Calculate Rollup Field**.
  
 ### Mass Calculate Rollup Field
 

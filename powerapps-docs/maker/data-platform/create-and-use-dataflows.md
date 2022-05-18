@@ -4,7 +4,7 @@ description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
 ms.date: 12/05/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -208,8 +208,8 @@ issues. This section provides troubleshooting tips when issues occur.
 -   **JSON File connector.** Currently you can connect to a JSON file using
     basic authentication only. For example, a URL similar to *https://XXXXX.blob.core.windows.net/path/file.json?sv=2019-01-01&si=something&sr=c&sig=123456abcdefg* is currently not supported.
 
--   **Azure SQL Data Warehouse.** Dataflows do not currently support Azure
-    Active Directory authentication for Azure SQL Data Warehouse. Use
+-   **Azure Synapse Analytics.** Dataflows do not currently support Azure
+    Active Directory authentication for Azure Synapse Analytics. Use
     basic authentication for this scenario.
 
 ## Next steps

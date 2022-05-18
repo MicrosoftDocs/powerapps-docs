@@ -1,7 +1,7 @@
 ---
-title: "ColumnMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ColumnMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ColumnMapping table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -420,10 +420,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -606,7 +606,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_PickListMapping_ColumnMapping"></a> PickListMapping_ColumnMapping
 
-Same as picklistmapping table [PickListMapping_ColumnMapping](picklistmapping.md#BKMK_PickListMapping_ColumnMapping) Many-To-One relationship.
+Same as the [PickListMapping_ColumnMapping](picklistmapping.md#BKMK_PickListMapping_ColumnMapping) many-to-one relationship for the [picklistmapping](picklistmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -621,7 +621,7 @@ Same as picklistmapping table [PickListMapping_ColumnMapping](picklistmapping.md
 
 ### <a name="BKMK_LookUpMapping_ColumnMapping"></a> LookUpMapping_ColumnMapping
 
-Same as lookupmapping table [LookUpMapping_ColumnMapping](lookupmapping.md#BKMK_LookUpMapping_ColumnMapping) Many-To-One relationship.
+Same as the [LookUpMapping_ColumnMapping](lookupmapping.md#BKMK_LookUpMapping_ColumnMapping) many-to-one relationship for the [lookupmapping](lookupmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -648,23 +648,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_columnmapping_createdonbehalfby"></a> lk_columnmapping_createdonbehalfby
 
-See systemuser Table [lk_columnmapping_createdonbehalfby](systemuser.md#BKMK_lk_columnmapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_columnmapping_createdonbehalfby](systemuser.md#BKMK_lk_columnmapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_columnmapping_createdby"></a> lk_columnmapping_createdby
 
-See systemuser Table [lk_columnmapping_createdby](systemuser.md#BKMK_lk_columnmapping_createdby) One-To-Many relationship.
+See the [lk_columnmapping_createdby](systemuser.md#BKMK_lk_columnmapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ColumnMapping_ImportMap"></a> ColumnMapping_ImportMap
 
-See importmap Table [ColumnMapping_ImportMap](importmap.md#BKMK_ColumnMapping_ImportMap) One-To-Many relationship.
+See the [ColumnMapping_ImportMap](importmap.md#BKMK_ColumnMapping_ImportMap) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### <a name="BKMK_lk_columnmapping_modifiedonbehalfby"></a> lk_columnmapping_modifiedonbehalfby
 
-See systemuser Table [lk_columnmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_columnmapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_columnmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_columnmapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_columnmapping_modifiedby"></a> lk_columnmapping_modifiedby
 
-See systemuser Table [lk_columnmapping_modifiedby](systemuser.md#BKMK_lk_columnmapping_modifiedby) One-To-Many relationship.
+See the [lk_columnmapping_modifiedby](systemuser.md#BKMK_lk_columnmapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

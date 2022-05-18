@@ -2,10 +2,9 @@
 title: Behavior formulas for components (preview)
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: hemantgaur
-ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2020
+ms.date: 04/19/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:

@@ -3,7 +3,7 @@ title: What's new in Power Apps | Microsoft Docs
 description: Find information about the new features that have been recently released, features that will be releasing in the next few months, and known limitations.
 author: KumarVivek
 manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
@@ -40,7 +40,6 @@ For information about new features being released over the next few months that 
 
 ## Known limitations
 
-For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+For information about known limitations, see [Common issues and resolutions](/powerapps/maker/canvas-apps/common-issues-and-resolutions).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
-

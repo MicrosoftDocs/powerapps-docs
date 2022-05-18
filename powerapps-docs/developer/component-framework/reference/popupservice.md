@@ -2,15 +2,14 @@
 title: PopupService | Microsoft Docs
 description: Provides properties and methods to create and manage popups.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 8f8d46c1-cc61-48c3-8e15-71f36e1cada1
 ---
 
 # PopupService

@@ -11,8 +11,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: matp
-ms.date: 07/27/2020
-ms.service: powerapps
+ms.date: 05/04/2022
 ms.topic: how-to
 ms.assetid: 
 search.audienceType: 
@@ -23,14 +22,24 @@ search.app:
 ---
 # Add a chart to a form
 
-
-
 A chart can be added to a form or an existing list to a chart can be updated. For example, the Child Accounts filtered sub-grid can be changed to display a chart instead of a list on the account main form.
 
 > [!div class="mx-imgBorder"]
 > ![Account main form child accounts grid.](media/main-form-child-accts-chart.png)
 
-1. Sign into Power Apps, select **Solutions**
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**.
+1. Open the solution and then open the table. 
+1. Select the **Forms** tab, and then open the form where you want to add a chart.
+1. On the form canvas, select an existing subgrid or add one. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+1. On the right properties pane for the subgrid, select the **Show chart only** option. When enabled, this option displays the view in a chart format.
+      :::image type="content" source="media/sub-grid-show-chart.png" alt-text="Display a chart in the subgrid":::
+
+1. Configure the subgrid properties for the chart, such as the default chart to display and whether users can change the chart displayed. More information: [Configure a subgrid component](form-designer-add-configure-subgrid.md#configure-a-subgrid-component)
+1. **Save** and **Publish** the form to make the customization available to users.
+
+## Add a chart to a form (classic)
+
+1. Sign into Power Apps, select **Solutions**.
 1. Open the solution with the required table and open this table. Then select the **Forms** tab.
 1. Open the required form. In the form designer select **Switch to classic** from the command bar.
 1. Add a sub-grid to the form, or to change an existing list in a sub-grid, double-click a sub-grid on the form.

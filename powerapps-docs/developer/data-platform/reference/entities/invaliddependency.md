@@ -1,7 +1,7 @@
 ---
-title: "InvalidDependency table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "InvalidDependency table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the InvalidDependency table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -256,10 +256,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Ancestor|
-|0|Descendent|
+|1|Ancestor||
+|0|Descendent||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 

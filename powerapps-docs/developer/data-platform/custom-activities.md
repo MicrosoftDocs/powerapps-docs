@@ -4,7 +4,7 @@ description: "Custom activities support the communication needs of a business su
 ms.custom: ""
 ms.date: 03/25/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

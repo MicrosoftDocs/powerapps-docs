@@ -1,13 +1,13 @@
 ---
 title: "Code components application lifecycle management | MicrosoftDocs"
 description: "Learn about the considerations and strategies for working with specific aspects of ALM from the perspective of code components in Microsoft Dataverse."
-ms.date: 09/08/2021
-ms.service: "powerapps"
 ms.topic: "article"
-ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.subservice: pcf
-ms.author: "nabuthuk"
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 contributors:
   - v-scottdurow
 ---
@@ -216,8 +216,8 @@ More information: [Package and distribute extensions using solutions](/powerapps
 
 In addition to manually building and deploying your code component solutions, you can also build and package your code components using automated build pipelines.
 
-- If you're using **Azure DevOps**, you can use the [Microsoft Power Platform Build Tool for Azure DevOps](https://aka.ms/buildtoolsdoc).
-- If you're using **GitHub**, you can use the [Power Platform GitHub Actions](https://aka.ms/PowerActionsDocs).
+- If you're using **Azure DevOps**, you can use the [Microsoft Power Platform Build Tool for Azure DevOps](/power-platform/alm/devops-build-tools).
+- If you're using **GitHub**, you can use the [Power Platform GitHub Actions](/power-platform/alm/devops-github-actions).
 
 Some advantages to using automated build pipelines are:
 
@@ -290,7 +290,7 @@ It's recommended that the MAJOR and MINOR version of the code component's versio
 
 A [Dataverse solution has four parts](/powerapps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates) and it can be thought of in the following structure: `MAJOR.MINOR.BUILD.REVISION`.
 
-If you're using **AzureDevOps**, you can set your build pipeline versioning using the `Build` and `Rev` environment variables ([Run (build) number - Azure Pipelines](/azure/devops/pipelines/process/run-number?view=azure-devops&tabs=yaml)), and use PowerShell script similar to the approach described in the article [Use PowerShell scripts to customize pipelines](/azure/devops/pipelines/scripts/powershell?view=azure-devops&tabs=yaml#example-powershell-script-version-assemblies).
+If you're using **AzureDevOps**, you can set your build pipeline versioning using the `Build` and `Rev` environment variables ([Run (build) number - Azure Pipelines](/azure/devops/pipelines/process/run-number)), and use PowerShell script similar to the approach described in the article [Use PowerShell scripts to customize pipelines](/azure/devops/pipelines/scripts/powershell#example-powershell-script-version-assemblies).
 
 | Semantic version part | ControlManifest.Input.xml version part<br />`MAJOR.MINOR.PATCH` | Solution.xml version part<br />`MAJOR.MINOR.BUILD.REVISION` | AzureDevOps Build Version                                                                        |
 | --------------------- | --------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |

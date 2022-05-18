@@ -1,7 +1,7 @@
 ---
-title: "msdyn_solutioncomponentcountsummary table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_solutioncomponentcountsummary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_solutioncomponentcountsummary table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -61,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_componentlogicalname](#BKMK_msdyn_componentlogicalname)
 - [msdyn_componenttype](#BKMK_msdyn_componenttype)
 - [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_primaryentityname](#BKMK_msdyn_primaryentityname)
 - [msdyn_solutioncomponentcountsummaryId](#BKMK_msdyn_solutioncomponentcountsummaryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
 - [msdyn_subtype](#BKMK_msdyn_subtype)
@@ -113,6 +114,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_name|
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_primaryentityname"></a> msdyn_primaryentityname
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Primary Entity Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_primaryentityname|
+|MaxLength|100|
+|RequiredLevel|None|
 |Type|String|
 
 

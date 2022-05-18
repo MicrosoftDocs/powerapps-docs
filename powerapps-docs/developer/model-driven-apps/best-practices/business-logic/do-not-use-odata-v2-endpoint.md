@@ -1,26 +1,21 @@
 ---
 title: "Do not use the OData v2.0 endpoint | MicrosoftDocs"
 description: "Describes the requirement to upgrade code to use Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint."
-services: ''
 suite: powerapps
-documentationcenter: na
-author: JimDaly
+author: divka78
+ms.author: dikamath
 manager: sunilg
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 11/10/2021
 ms.subservice: mda-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Do not use the OData v2.0 endpoint
 

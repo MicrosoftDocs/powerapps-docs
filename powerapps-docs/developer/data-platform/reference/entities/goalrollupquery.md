@@ -1,7 +1,7 @@
 ---
-title: "Rollup Query (GoalRollupQuery) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Rollup Query (GoalRollupQuery) table/entity."
-ms.date: 10/05/2021
+title: "Rollup Query (GoalRollupQuery)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Rollup Query (GoalRollupQuery)  table/entity."
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Rollup Query (GoalRollupQuery) table/entity reference
+# Rollup Query (GoalRollupQuery)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -291,6 +291,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -516,12 +517,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the record.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -590,7 +607,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_goalrollupquery_actualint"></a> goalrollupquery_actualint
 
-Same as goal table [goalrollupquery_actualint](goal.md#BKMK_goalrollupquery_actualint) Many-To-One relationship.
+Same as the [goalrollupquery_actualint](goal.md#BKMK_goalrollupquery_actualint) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -605,7 +622,7 @@ Same as goal table [goalrollupquery_actualint](goal.md#BKMK_goalrollupquery_actu
 
 ### <a name="BKMK_goal_rollupquery_actualmoney"></a> goal_rollupquery_actualmoney
 
-Same as goal table [goal_rollupquery_actualmoney](goal.md#BKMK_goal_rollupquery_actualmoney) Many-To-One relationship.
+Same as the [goal_rollupquery_actualmoney](goal.md#BKMK_goal_rollupquery_actualmoney) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -620,7 +637,7 @@ Same as goal table [goal_rollupquery_actualmoney](goal.md#BKMK_goal_rollupquery_
 
 ### <a name="BKMK_goal_rollupquery_actualdecimal"></a> goal_rollupquery_actualdecimal
 
-Same as goal table [goal_rollupquery_actualdecimal](goal.md#BKMK_goal_rollupquery_actualdecimal) Many-To-One relationship.
+Same as the [goal_rollupquery_actualdecimal](goal.md#BKMK_goal_rollupquery_actualdecimal) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -635,7 +652,7 @@ Same as goal table [goal_rollupquery_actualdecimal](goal.md#BKMK_goal_rollupquer
 
 ### <a name="BKMK_goal_rollupquery_customint"></a> goal_rollupquery_customint
 
-Same as goal table [goal_rollupquery_customint](goal.md#BKMK_goal_rollupquery_customint) Many-To-One relationship.
+Same as the [goal_rollupquery_customint](goal.md#BKMK_goal_rollupquery_customint) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -650,7 +667,7 @@ Same as goal table [goal_rollupquery_customint](goal.md#BKMK_goal_rollupquery_cu
 
 ### <a name="BKMK_goal_rollupquery_custommoney"></a> goal_rollupquery_custommoney
 
-Same as goal table [goal_rollupquery_custommoney](goal.md#BKMK_goal_rollupquery_custommoney) Many-To-One relationship.
+Same as the [goal_rollupquery_custommoney](goal.md#BKMK_goal_rollupquery_custommoney) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -665,7 +682,7 @@ Same as goal table [goal_rollupquery_custommoney](goal.md#BKMK_goal_rollupquery_
 
 ### <a name="BKMK_goal_rollupquery_customdecimal"></a> goal_rollupquery_customdecimal
 
-Same as goal table [goal_rollupquery_customdecimal](goal.md#BKMK_goal_rollupquery_customdecimal) Many-To-One relationship.
+Same as the [goal_rollupquery_customdecimal](goal.md#BKMK_goal_rollupquery_customdecimal) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -680,7 +697,7 @@ Same as goal table [goal_rollupquery_customdecimal](goal.md#BKMK_goal_rollupquer
 
 ### <a name="BKMK_goal_rollupquery_inprogressint"></a> goal_rollupquery_inprogressint
 
-Same as goal table [goal_rollupquery_inprogressint](goal.md#BKMK_goal_rollupquery_inprogressint) Many-To-One relationship.
+Same as the [goal_rollupquery_inprogressint](goal.md#BKMK_goal_rollupquery_inprogressint) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -695,7 +712,7 @@ Same as goal table [goal_rollupquery_inprogressint](goal.md#BKMK_goal_rollupquer
 
 ### <a name="BKMK_goal_rollupquery_inprogressmoney"></a> goal_rollupquery_inprogressmoney
 
-Same as goal table [goal_rollupquery_inprogressmoney](goal.md#BKMK_goal_rollupquery_inprogressmoney) Many-To-One relationship.
+Same as the [goal_rollupquery_inprogressmoney](goal.md#BKMK_goal_rollupquery_inprogressmoney) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -710,7 +727,7 @@ Same as goal table [goal_rollupquery_inprogressmoney](goal.md#BKMK_goal_rollupqu
 
 ### <a name="BKMK_goal_rollupquery_inprogressdecimal"></a> goal_rollupquery_inprogressdecimal
 
-Same as goal table [goal_rollupquery_inprogressdecimal](goal.md#BKMK_goal_rollupquery_inprogressdecimal) Many-To-One relationship.
+Same as the [goal_rollupquery_inprogressdecimal](goal.md#BKMK_goal_rollupquery_inprogressdecimal) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -725,7 +742,7 @@ Same as goal table [goal_rollupquery_inprogressdecimal](goal.md#BKMK_goal_rollup
 
 ### <a name="BKMK_GoalRollupQuery_SyncErrors"></a> GoalRollupQuery_SyncErrors
 
-Same as syncerror table [GoalRollupQuery_SyncErrors](syncerror.md#BKMK_GoalRollupQuery_SyncErrors) Many-To-One relationship.
+Same as the [GoalRollupQuery_SyncErrors](syncerror.md#BKMK_GoalRollupQuery_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -740,7 +757,7 @@ Same as syncerror table [GoalRollupQuery_SyncErrors](syncerror.md#BKMK_GoalRollu
 
 ### <a name="BKMK_goalrollupquery_AsyncOperations"></a> goalrollupquery_AsyncOperations
 
-Same as asyncoperation table [goalrollupquery_AsyncOperations](asyncoperation.md#BKMK_goalrollupquery_AsyncOperations) Many-To-One relationship.
+Same as the [goalrollupquery_AsyncOperations](asyncoperation.md#BKMK_goalrollupquery_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -755,7 +772,7 @@ Same as asyncoperation table [goalrollupquery_AsyncOperations](asyncoperation.md
 
 ### <a name="BKMK_GoalRollupQuery_DuplicateMatchingRecord"></a> GoalRollupQuery_DuplicateMatchingRecord
 
-Same as duplicaterecord table [GoalRollupQuery_DuplicateMatchingRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [GoalRollupQuery_DuplicateMatchingRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -770,7 +787,7 @@ Same as duplicaterecord table [GoalRollupQuery_DuplicateMatchingRecord](duplicat
 
 ### <a name="BKMK_GoalRollupQuery_DuplicateBaseRecord"></a> GoalRollupQuery_DuplicateBaseRecord
 
-Same as duplicaterecord table [GoalRollupQuery_DuplicateBaseRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [GoalRollupQuery_DuplicateBaseRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -785,7 +802,7 @@ Same as duplicaterecord table [GoalRollupQuery_DuplicateBaseRecord](duplicaterec
 
 ### <a name="BKMK_goalrollupquery_ProcessSessions"></a> goalrollupquery_ProcessSessions
 
-Same as processsession table [goalrollupquery_ProcessSessions](processsession.md#BKMK_goalrollupquery_ProcessSessions) Many-To-One relationship.
+Same as the [goalrollupquery_ProcessSessions](processsession.md#BKMK_goalrollupquery_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -813,27 +830,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_team_goalrollupquery"></a> team_goalrollupquery
 
-See team Table [team_goalrollupquery](team.md#BKMK_team_goalrollupquery) One-To-Many relationship.
+See the [team_goalrollupquery](team.md#BKMK_team_goalrollupquery) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_goalrollupquery_createdby"></a> lk_goalrollupquery_createdby
 
-See systemuser Table [lk_goalrollupquery_createdby](systemuser.md#BKMK_lk_goalrollupquery_createdby) One-To-Many relationship.
+See the [lk_goalrollupquery_createdby](systemuser.md#BKMK_lk_goalrollupquery_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_goalrollupquery_createdonbehalfby"></a> lk_goalrollupquery_createdonbehalfby
 
-See systemuser Table [lk_goalrollupquery_createdonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_createdonbehalfby) One-To-Many relationship.
+See the [lk_goalrollupquery_createdonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_goalrollupquery_modifiedby"></a> lk_goalrollupquery_modifiedby
 
-See systemuser Table [lk_goalrollupquery_modifiedby](systemuser.md#BKMK_lk_goalrollupquery_modifiedby) One-To-Many relationship.
+See the [lk_goalrollupquery_modifiedby](systemuser.md#BKMK_lk_goalrollupquery_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_goalrollupquery_modifiedonbehalfby"></a> lk_goalrollupquery_modifiedonbehalfby
 
-See systemuser Table [lk_goalrollupquery_modifiedonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_goalrollupquery_modifiedonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_goalrollupquery"></a> business_unit_goalrollupquery
 
-See businessunit Table [business_unit_goalrollupquery](businessunit.md#BKMK_business_unit_goalrollupquery) One-To-Many relationship.
+See the [business_unit_goalrollupquery](businessunit.md#BKMK_business_unit_goalrollupquery) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

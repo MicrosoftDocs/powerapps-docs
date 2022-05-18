@@ -4,7 +4,7 @@ description: "Describes deprecation of the WS-Trust security protocol and the co
 ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
@@ -58,6 +58,9 @@ using (OrganizationServiceProxy organizationServiceProxy =
 There are very straight forward ways to modify your application’s code to use
 the recommended connection interface for authentication with Dataverse.
 
+> [!IMPORTANT]
+> Keep your applications up to date with our latest client SDK API changes by downloading and using the latest available NuGet packages whenever possible.
+
 - If your code uses an [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy) instance:
 
   If you are passing the `OrganizationServiceProxy` instance around to various methods, or returning the instance from a method, replace all occurrences of the type `OrganizationServiceProxy` with the [IOrganizationService](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) interface. This interface exposes all the core methods used to communicate with Dataverse.
@@ -72,8 +75,6 @@ the recommended connection interface for authentication with Dataverse.
 
     Similarly, you could also be using a `CrmServiceClient` constructor and pass in `AuthType.Office365`.
 
-    You have two options for dealing with this.<p/>
-
     - Switch over to using an OAuth based connection string. Such connection string looks like this:
 
         `connectionString = "AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;
@@ -83,8 +84,6 @@ the recommended connection interface for authentication with Dataverse.
         This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office365 behavior worked.
 
         The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to [create your own application registration](walkthrough-register-app-azure-active-directory.md) in Azure Active Directory (Azure AD) for applications running in your tenant. Use your Username, Password, and Dataverse environment URL values in the connection string along with the RedirectUri and AppId you obtain from your Azure app registration.<p/>
-
-    - When we announce it, update to the latest [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package that includes auto redirect support. This library will redirect an authentication type of "Office365" to "OAuth" and use the example AppId and Redirect URI automatically. This capability is planned for the 9.2.x version of the Microsoft.CrmSdk.XrmTooling.CoreAssembly package.
 
 - If you are accessing the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
 

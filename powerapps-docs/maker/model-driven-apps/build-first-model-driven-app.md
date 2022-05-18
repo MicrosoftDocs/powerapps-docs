@@ -2,17 +2,13 @@
 title: "Build your first modern model-driven app"
 description: "Learn how to build your first model driven app"
 ms.date: 07/05/2021
-ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
 ms.author: v-roryneary
 ms.reviewer: matp
 ---
-
 # Build your first model-driven app
-
-
 
 In this tutorial, you create a model-driven app by using one of the standard tables that is available in Microsoft Dataverse, the account table.
 
@@ -49,9 +45,9 @@ We recommend creating your model-driven app from a solution. A solution is a pac
 
 1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
 
-1. Select **Modern app designer**, and then select **Create**
+1. Select **Modern app designer**, and then select **Create**.
 
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app.":::
+   :::image type="content" source="media/create-a-model-driven-app/select-modern-app-designer.png" alt-text="Use the modern app designer to create a model-driven app.":::
 
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 

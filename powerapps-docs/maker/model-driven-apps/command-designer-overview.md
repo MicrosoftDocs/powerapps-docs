@@ -1,13 +1,12 @@
 ---
 title: "Command designer overview | MicrosoftDocs"
 description: "Overview of modern commanding, command designer, and Power Fx"
-Keywords: command bar, command designer
+Keywords: command bar, command designer, ribbon, action bar, Power Fx command, command component, button
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
-ms.service: powerapps
+ms.date: 04/21/2022
 ms.subservice: mda-maker
 ms.topic: overview
 search.audienceType: 
@@ -20,45 +19,19 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Command bars are at the core of every model-driven app and appear in many different locations. Commands are arranged in relation to other commands and are associated with a command bar location. The group of commands associated with a specific location make up a command bar.
+Commands drive core application behavior for model-driven apps. They are the buttons users interact with when playing apps and the resulting actions performed when a button is selected. Each command is positioned in relation to other commands and bound to a command bar location within the app.
 
 ![Command bar](media/CommandDesigner-location.png "Command bar")
+
+At a high level, command customization fits into the following categories. Various capabilities exist within each category and are covered in more depth throughout modern commanding documentation:  
+
+- **Display**. How the button appears and where it's located in an app. For example, the button's label, icon, and accessibility labels as well as the command bar location and position within a command bar.
+- **Action**. The logic that is executed when a button is selected. For example, creating and updating data or interacting with various controls and pages inside the app.
+- **Visibility**. Logical conditions that specify when a button is visible or hidden to a user. For example, you may want the button visible for some users and hidden for others. Or perhaps the button should only be visible when certain criteria of the data records are satisfied.
 
 > [!IMPORTANT]
 > - This is a preview feature, and may not be available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
- 
- ## Classic commanding deficiencies
-
-Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as [use custom pages to converge canvas and model-driven apps](model-app-page-overview.md), it was vital to reinvent and rebuild the command infrastructure.
-
-Classic commands had several key gaps including:
-  - No low code designer. This results in many forced XML hacks that often caused breaking changes.
-  - Different apps couldn’t use a different set of commands for common tables.
-  - Lack of granular level scopes could impact performance due to processing unused logic on the client.
-  - The legacy solution implementation was designed for the now deprecated web client. It has been highly problematic and has an overly complex structure that’s no longer needed in the Unified Interface.
-  - “Ribbon” concepts that are no longer relevant: Tabs, Groups, Scaling, MaxSize, TabCommands, CustomActions, and HideCustomActions.
-  - Classic “Ribbons” and commands lacked proper application lifecycle management (ALM) support and management within solutions.
-  - Legacy code wasn’t capable of handling app separation, solution segmentation, solution patches, or promote and delete concept (solution upgrade).
-  - Missing all core solution behaviors like add/remove, managed properties, dependencies, and so on.
-  - Had a different, unconventional mechanism for localization.
-  - Too flexible. Every custom action, button, group, command action, or rule, at every level can be overridden, making it hard for users to understand what has been modified.
-    
-## Modern commanding key improvements
-
-Modern commanding largely addresses the above gaps and provides a modern infrastructure that will continue to scale.
-  
-- New infrastructure, combines benefits of canvas and model-driven apps.
-- Low-code designer.
-- Power Fx support for visibility and actions.
-- JavaScript remains supported.
-- Better ALM support.
-- Better app level control – commands are applied to individual apps.
-- Simple, flat data model.
-- Many workarounds used today are no longer needed.
-- Classic commands remain supported. Apps can run both classic and modern commands side-by-side.
-- No forced customer migration.
-- Arrange modern commands amongst existing classic commands.
 
 ## Command bar locations
 
@@ -78,9 +51,69 @@ Modern commanding largely addresses the above gaps and provides a modern infrast
     > [!div class="mx-imgBorder"]
     > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
     
--	**Quick actions**. There isn't a specialized entry point from the command designer because quick actions are edited from the main grid of the table.
+-	**Quick actions**. Quick actions are associated with the main grid location. To add or edit commands for both quick actions and main grid locations, select the desired table from within modern app designer, then edit the command bar and choose the main grid location. The first five commands, determined by order, will also be shown as quick actions when playing the app.
     > [!div class="mx-imgBorder"]
     > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
+
+> [!NOTE]
+> - Less frequently customized command bar locations are not supported in command designer. See the [Global command bar and other ribbons](../../developer/model-driven-apps/ribbons-available.md) sections for more information on customizing commands for these locations.
+
+## Types of commands
+
+- **Command**. Standard button. Performs an action when selected. Can also be nested in groups within dropdowns and split buttons. Note these were called flyouts in classic commanding.
+- **Dropdown**. Creates a menu where you can organize commands within a group.
+- **Group**. Add titles to groups of commands nested within dropdowns and split buttons.
+- **Split button**. Similar to a dropdown, but has a primary command. When the split button is selected, the action from the primary command is executed. If the expand chevron is selected, the primary command will not be executed. Instead a list will expand to show additional groups, flyouts, and commands.
+
+> [!div class="mx-imgBorder"]
+> ![Command types](media/CommandDesigner-commandTypes.jpg "Command types")
+
+## Key differences between classic and modern commands
+
+Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as use custom pages to converge canvas and model-driven apps, it was vital to reinvent and rebuild the command infrastructure.
+
+Modern commanding offers many new capabilities and is much simpler to use. <!--However, when preview was announced many important parity gaps needed to be addressed. Many of those gaps have since been closed while certain differences do remain. Also note that many perceived gaps were intentionally left behind as they were identified to be not relevant with modern apps commanding design.-->
+
+|Capability|Classic |Modern|
+|:----|:----|:----|
+|Supported in model-driven app runtime|Yes|Yes, Additionally supports Power Fx runtime.|
+|Customized using |Hand editing XML within solution files or using 3rd party tools. Required time consuming solution export and import operations.|Command designer as well as Dataverse API support.|
+|Supports Power Fx.|No|Yes. For actions and visibility.|
+|Time required to customize|Slow, error prone.|Fast|
+|Reliability and performance|Easy to make mistakes. Bad customization and lack of scoping often impact app performance|Inline error handling prevents mistakes. Power Fx optimized for better runtime performance. |
+|Sharing|Standard Dataverse role-based security.|Non-Power Fx commands use standard Dataverse role based security. Power Fx commands currently require the command component library to be shared in addition to having an appropriate security role.|
+|Solution and ALM behaviors|Inconsistent and problematic solution layering, no presence in solution interface. Many standard solution behaviors not supported such as patches, segmentation, solution upgrade, managed properties, and many more.|Standard solution layering centrally managed for multiple solution object types within Dataverse. Present in solution interface. All standard solution behaviors supported.|
+|Localization|Non-standard|Standardized using export & import translations for the entire solution.|
+|Data model|Complex. Optimized for classic ribbons and contain many properties that are no longer needed.|Simple, optimized for today’s model-driven app command bars.|
+|Use JavaScript|Yes|Yes. Now simpler. Note: The same JavaScript can be used for classic and modern commands.|
+|Customize out of the box commands|Yes|Commands become editable in command designer once migrated to the modern framework.  |
+|App specific commands|No|Yes. Using modern command designer ensures commands are only visible within the selected app.|
+|Table specific commands that will display in all apps containing the table|Yes|Yes. Requires modifying the `appaction` definition within the solution file.|
+|Global commands that will display for all tables & apps for the specified command bar location|Yes|Yes. Requires modifying the `appaction` definition within the solution file.|
+|Create split buttons, flyouts, and groups|Yes|Yes|
+|Dynamically populate a flyout with code|Yes|No. We recommend creating commands declaratively.|
+|Customize global application header commands|Yes|No|
+|Customize commands for other / uncommon or obsolete command bar locations|Yes|No|
+|Run a modern flow or workflow|Using JavaScript|Using JavaScript. Also supported using a custom page.|
+
+### Classic versus modern visibility rule comparison
+
+Classic visibility rules often had a specific rule for each scenario. With Power Fx, a declarative function replaces many classic rules. And it’s much simpler to use.
+
+Note classic visibility rules will also be supported soon within modern commands. However, support for classic rules was needed for reliably migrating classic commands to modern commanding and  classic rules customization within command designer isn't supported. We recommend you use Power Fx going forward.
+
+|Use case|Classic Rule|Classic options|Power Fx visible property|
+|:----|:----|:----|:----|
+|Show / hide based on data value(s)|CustomRule|Use JavaScript |!IsBlank(Self.Selected.Item.Email)|
+|Show/hide based on table permission|EntityPrivilegeRule|Multiple|DataSourceInfo()|
+|Show/hide based on record permission|RecordPrivilegeRule|Multiple|RecordInfo()|
+|Reference the control context for primary and related tables|EntityRule|PrimaryEntity. SelectedEntity|Self.Selected|
+|Reference the control context|EntityRule|Form. HomePageGrid. SubGridStandard. SubGridAssociated|Self.Selected|
+|Table metadata properties|EntityPropertyRule| |DataSourceInfo()|
+|Show / hide based on form state. For example, show for the create form|FormStateRule|Create. Existing. ReadOnly. Disabled. BulkEdit|Self.Selected.State = FormMode.New|
+|Show when > 1 records are selected in a grid|SelectionCountRule| |CountRows(Self.Selected.Items) > 1|
+|Show / hide for a related table in a polymorphic lookup. For example, check whether the lookup is a user OR a team|CustomRule|PrimaryEntityTypeCode|IsType(), AsType|
+|Reference environment properties (Org)|CustomRule|OrgName. OrgLcid. UserLcid|Not currently available|
 
 ## Frequently asked questions
 
@@ -92,6 +125,7 @@ Modern commanding largely addresses the above gaps and provides a modern infrast
   - Yes, you’ll receive updates weekly as we continuously ship improvements, new features, and fix bugs.
 
 ### See also
+
 [Customize the command bar using command designer](use-command-designer.md) <br />
 [Manage commands in solutions](manage-commands-in-solutions.md) <br />
 [Modern commanding known limitations](command-designer-limitations.md)

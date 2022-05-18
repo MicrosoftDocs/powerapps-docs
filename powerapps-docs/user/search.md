@@ -3,7 +3,7 @@ title: "Search options in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to to use the different search option
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/27/2020

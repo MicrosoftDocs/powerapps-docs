@@ -2,7 +2,7 @@
 title: Create a canvas app with data from Microsoft Dataverse (contains video)
 description: Learn about how to automatically create a canvas app to manage data in Microsoft Dataverse.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: quickstart
 ms.custom: 
   - canvas
@@ -40,7 +40,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
     :::image type="content" source="media/data-platform-create-app/start-from-data.png" alt-text="Start from Dataverse.":::
 
-1. If this is you first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
+1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
 1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
 

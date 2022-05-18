@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 10/26/2021
-ms.service: powerapps
+
 ms.topic: article
 applies_to: 
   - PowerApps
@@ -29,7 +29,7 @@ At a fundamental level, model-driven app making consists of the following stages
 
 |Stage|Purpose|
 |-----|-------|
-|Modeling business data|To ensure that the data constructed in the correct way to address the business problem.
+|Modeling business data|To ensure that the data is constructed in the correct way to address the business problem.
 |Defining business processes|To help users to update the tables and complete their work efficiently and accurately.
 |Composing the app|To create the app and select the tables, and elements of tables relevant to the app.
 |Configuring security roles|To ensure that app users can only interact with data relevant to their roles.

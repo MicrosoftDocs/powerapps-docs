@@ -2,7 +2,7 @@
 title: Create a canvas app from scratch based on Excel data
 description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
   - canvas
@@ -212,7 +212,7 @@ For more information about these and other functions, see the [formula reference
 
     `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, any changes that the user made is this screen are saved, and the view screen opens.
+    When the user selects this icon, any changes that the user made in this screen are saved, and the view screen opens.
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 

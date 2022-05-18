@@ -2,11 +2,11 @@
 title: Understand delegation in a canvas app
 description: Learn about how to use delegation to process large data sets efficiently in a canvas app.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/25/2021
+ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -54,7 +54,9 @@ These lists will change over time. We're working to support more functions and o
 Within the **Filter** and **LookUp** functions, you can use these with columns of the table to select the appropriate records:
 
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
-* **[In](functions/operators.md)**
+* **[In](functions/operators.md)** 
+    > [!NOTE]
+    > [In](functions/operators.md) is only delegated for columns on the base data source. For instance, if the data source is **Accounts** table then `Filter(Accounts, Name in ["name1", "name2"])` delegates to the data source for evaluation. However, `Filter(Accounts, PrimaryContact.Fullname in ["name1", "name2"])` does not delegate since **Fullname** column is on a different table (**PrimaryContact**) than **Accounts**. The expression is evaluated locally.
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**

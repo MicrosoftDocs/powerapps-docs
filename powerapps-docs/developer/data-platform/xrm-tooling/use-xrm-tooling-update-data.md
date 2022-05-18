@@ -1,20 +1,14 @@
 ---
 title: "Use XRM tooling to update data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to update data on Microsoft Dataverse"
-ms.custom: ""
-ms.date: 04/12/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 8ec3d4ca-d836-4e7e-b2bf-9d9f806bd145
-caps.latest.revision: 14
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

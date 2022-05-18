@@ -1,19 +1,18 @@
 ---
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
-ms.custom: intro-internal
-ms.date: 10/19/2021
-ms.service: powerapps
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-ms.reviewer: "pehecke"
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Quick Start: Web API sample (C#)

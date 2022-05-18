@@ -1,15 +1,13 @@
 ---
 title: "Behavior and format of the date and time column (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The DateTimeAttributeMetadata class is used to define and manage columns of type DateTime in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 03/29/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -22,7 +20,7 @@ If you have users and offices around the world, it is important to properly repr
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can also use the customization area in Dataverse to define the behavior and format of the date and time columns. More information: [Behavior and format of the date and time column](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
+You can also use the customization area in Dataverse to define the behavior and format of the date and time columns. More information: [Behavior and format of the Date and Time column](../../maker/data-platform/behavior-format-date-time-field.md).  
   
 > [!NOTE]
 >  All date and time columns in Dataverse support values as early as 1/1/1753 12:00 AM.  
@@ -35,7 +33,7 @@ You can also use the customization area in Dataverse to define the behavior and 
   
 |Member name and value|Description|  
 |---------------------------|-----------------|  
-|`UserLocal`|-   Stores the date and time value as UTC value in the system.<br />-   The retrieve operation returns the UTC value.<br />-   The update operation converts the UTC value to the current user’s time zone value, and then stores the updated value as is or as the equivalent UTC value depending on the kind ([DateTimeKind](https://msdn.microsoft.com/library/shx7s921.aspx)) of the value specified for update. If the specified value is of UTC kind, it’s stored as is. Otherwise, the UTC-equivalent value is stored.<br />-   Retrieving the formatted value converts from UTC to the user’s current time zone based on the time zone and locale setting of the user.<br />-   For the Web API, the column is exposed as DateTimeOffset.<br />-   This behavior is used for system columns like `CreatedOn` and `ModifiedOn`, and cannot be changed. You should use this behavior for custom columns where you want to store date and time values with the time zone information.|  
+|`UserLocal`|-   Stores the date and time value as UTC value in the system.<br />-   The retrieve operation returns the UTC value.<br />-   The update operation converts the UTC value to the current user’s time zone value, and then stores the updated value as is or as the equivalent UTC value depending on the kind ([DateTimeKind](/dotnet/api/system.datetimekind)) of the value specified for update. If the specified value is of UTC kind, it’s stored as is. Otherwise, the UTC-equivalent value is stored.<br />-   Retrieving the formatted value converts from UTC to the user’s current time zone based on the time zone and locale setting of the user.<br />-   For the Web API, the column is exposed as DateTimeOffset.<br />-   This behavior is used for system columns like `CreatedOn` and `ModifiedOn`, and cannot be changed. You should use this behavior for custom columns where you want to store date and time values with the time zone information.|  
 |`DateOnly`|-   Stores the actual date value with no time value.<br />-   Retrieving the formatted value displays the date value.<br />-   For the Web API, the column is exposed as Date.<br />-   This behavior should be used for custom columns that store birthdays and anniversaries, where the time information is not required.|  
 |`TimeZoneIndependent`|-   Stores the actual date and time values in the system regardless of the user time zone.<br />-   For the retrieve and update operations, no time zone conversion is performed, and actual date and time values are returned and updated respectively in the system regardless of the user time zone.<br />-   Retrieving the formatted value displays the date and time value (without any time zone conversion) based on the format as specified by the current user’s time zone and locale setting.<br />-   For the Web API, the column is exposed as DateTimeOffset.<br />-   This behavior should be used for columns that store information such as check in and check out time for hotels.|  
   
@@ -67,7 +65,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
  In the sample code, you can also set the value of the `DateTimeBehavior` property by directly specifying the string value: `DateTimeBehavior = "UserLocal"`  
   
- If you do not specify the behavior while creating a date and time column, the column is created with the `UserLocal` behavior by default. For the complete sample code, see [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior).  
+ If you do not specify the behavior while creating a date and time column, the column is created with the `UserLocal` behavior by default. 
   
 > [!IMPORTANT]
 >  -   Once you create a date and time column with behavior set to `DateOnly` or `TimeZoneIndependent`, you cannot change the behavior of the column. More information: [Change the behavior of a DateTime column](behavior-format-date-time-attribute.md#ChangeBehavior)  
@@ -95,7 +93,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
 -   Next X Hours  
   
- More information: [Date and time query operators in FetchXML](/dynamics365/customer-engagement/developer/org-service/fiscal-date-older-datetime-query-operators-fetchxml)  
+ More information: [Fiscal date and older than datetime query operators in FetchXML](use-fetchxml-fiscal-date-older-datetime-query-operators.md)  
   
 <a name="ChangeBehavior"></a>
    
@@ -136,7 +134,7 @@ If you choose to include the offset calculation, you cannot have the Z, a UTC in
 >   
 >  At the minimum, after changing the behavior of a date and time column, you should open each business rule, workflow, calculated column, and rollup column record that is dependent on the changed date and time column, review the information, and save the record to ensure that the latest column behavior and value is used.  
 >   
->  After changing the data and time behavior of a calculated or rollup column, open the calculated or rollup column definition editor, and save the column definition to ensure that the column is still valid after the behavior change. System customizers can open the column definition editor for calculated or rollup column by clicking **Edit** next to **Field Type** in the customization area in Dataverse. More information: [Define calculated column](/dynamics365/customer-engagement/customize/define-calculated-fields) and [Define rollup column](/dynamics365/customer-engagement/developer/customize/define-rollup-fields)  
+>  After changing the data and time behavior of a calculated or rollup column, open the calculated or rollup column definition editor, and save the column definition to ensure that the column is still valid after the behavior change. System customizers can open the column definition editor for calculated or rollup column by clicking **Edit** next to **Field Type** in the customization area in Dataverse. More information: [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md) and [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)  
   
 -   The behavior of the `CreatedOn` and `ModifiedOn` column for the out-of-box and custom tables is set to `UserLocal` by default, and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False`, which implies that you cannot change the behavior of these columns. Although users can change the value of the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property of these columns for custom tables, but they still can’t change the behavior of the columns.  
   
@@ -210,8 +208,7 @@ _serviceProxy.Execute(pxReq);
 Console.WriteLine("Published customizations to the Account .\n");
  
 ``` 
-  
- For the complete sample code, see [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior).  
+ 
   
 <a name="Convert"></a>   
 
@@ -265,9 +262,7 @@ ConvertDateAndTimeBehaviorRequest request = new ConvertDateAndTimeBehaviorReques
 // Execute the request
 ConvertDateAndTimeBehaviorResponse response = (ConvertDateAndTimeBehaviorResponse)_serviceProxy.Execute(request);
 
-```
-  
- For the complete sample code, see [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior)  
+``` 
  
  ## Best practices for using time zone
 
@@ -298,12 +293,11 @@ To resolve this, a user can either:
   
 ### See also  
 
- [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
- [Behavior and format of the date and time column](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
- [Customize column definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
- <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
- <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 
- [Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)
+ [Behavior and format of the Date and Time column](../../maker/data-platform/behavior-format-date-time-field.md)<br />
+ [Columns overview](../../maker/data-platform/fields-overview.md)<br />
+ <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest><br />
+ <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata><br />
+ [Blog: Does how you submit date and time data matter?](https://powerapps.microsoft.com/en-us/blog/does-how-you-submit-date-and-time-data-matter/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

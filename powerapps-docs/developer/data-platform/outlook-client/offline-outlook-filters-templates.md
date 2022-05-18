@@ -4,7 +4,7 @@ description: "Data that should be synchronized between the Microsoft Dataverse a
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "sriharibs-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -58,7 +58,7 @@ You can reset the filters for a user to the default by using the <xref:Microsoft
 
 [Extend Dynamics 365 for Outlook](extend-dynamics-365-outlook.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md)<br />
-[Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br /> 
+[Sample: Create and retrieve Outlook filters](../org-service/samples/create-retrieve-outlook-filters.md)<br /> 
 <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest><br />
 <xref:Microsoft.Crm.Sdk.Messages.ResetUserFiltersRequest>
 

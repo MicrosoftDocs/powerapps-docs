@@ -2,7 +2,7 @@
 title: Dataverse entity tags
 description: Learn about Power Apps entity tags available in portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/10/2021

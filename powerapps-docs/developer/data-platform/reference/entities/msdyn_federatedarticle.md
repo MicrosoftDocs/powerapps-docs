@@ -1,7 +1,7 @@
 ---
-title: "msdyn_federatedarticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_federatedarticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_federatedarticle table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -318,6 +318,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -621,12 +622,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -698,7 +717,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_federatedarticle_SyncErrors](syncerror.md#BKMK_msdyn_federatedarticle_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_SyncErrors](syncerror.md#BKMK_msdyn_federatedarticle_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -715,7 +734,7 @@ Same as syncerror table [msdyn_federatedarticle_SyncErrors](syncerror.md#BKMK_ms
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_federatedarticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_federatedarticle_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_federatedarticle_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -732,7 +751,7 @@ Same as duplicaterecord table [msdyn_federatedarticle_DuplicateMatchingRecord](d
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_federatedarticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_federatedarticle_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_federatedarticle_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -749,7 +768,7 @@ Same as duplicaterecord table [msdyn_federatedarticle_DuplicateBaseRecord](dupli
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_federatedarticle_AsyncOperations](asyncoperation.md#BKMK_msdyn_federatedarticle_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_AsyncOperations](asyncoperation.md#BKMK_msdyn_federatedarticle_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -766,7 +785,7 @@ Same as asyncoperation table [msdyn_federatedarticle_AsyncOperations](asyncopera
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_federatedarticle_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_federatedarticle_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_federatedarticle_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -783,7 +802,7 @@ Same as mailboxtrackingfolder table [msdyn_federatedarticle_MailboxTrackingFolde
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_federatedarticle_ProcessSession](processsession.md#BKMK_msdyn_federatedarticle_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_ProcessSession](processsession.md#BKMK_msdyn_federatedarticle_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -800,7 +819,7 @@ Same as processsession table [msdyn_federatedarticle_ProcessSession](processsess
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_federatedarticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_federatedarticle_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_federatedarticle_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -817,7 +836,7 @@ Same as bulkdeletefailure table [msdyn_federatedarticle_BulkDeleteFailures](bulk
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_federatedarticle_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_federatedarticle_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_federatedarticle_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -832,7 +851,7 @@ Same as principalobjectattributeaccess table [msdyn_federatedarticle_PrincipalOb
 
 ### <a name="BKMK_msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId"></a> msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId
 
-Same as msdyn_federatedarticleincident table [msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId](msdyn_federatedarticleincident.md#BKMK_msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId) Many-To-One relationship.
+Same as the [msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId](msdyn_federatedarticleincident.md#BKMK_msdyn_federatedarticle_msdyn_federatedarticleincident_federatedarticleId) many-to-one relationship for the [msdyn_federatedarticleincident](msdyn_federatedarticleincident.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -864,47 +883,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_federatedarticle_createdby](systemuser.md#BKMK_lk_msdyn_federatedarticle_createdby) One-To-Many relationship.
+See the [lk_msdyn_federatedarticle_createdby](systemuser.md#BKMK_lk_msdyn_federatedarticle_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_federatedarticle_createdonbehalfby"></a> lk_msdyn_federatedarticle_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_federatedarticle_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticle_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_federatedarticle_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticle_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_federatedarticle_modifiedby"></a> lk_msdyn_federatedarticle_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_federatedarticle_modifiedby](systemuser.md#BKMK_lk_msdyn_federatedarticle_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_federatedarticle_modifiedby](systemuser.md#BKMK_lk_msdyn_federatedarticle_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_federatedarticle_modifiedonbehalfby"></a> lk_msdyn_federatedarticle_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_federatedarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticle_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_federatedarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_federatedarticle_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_federatedarticle"></a> user_msdyn_federatedarticle
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_federatedarticle](systemuser.md#BKMK_user_msdyn_federatedarticle) One-To-Many relationship.
+See the [user_msdyn_federatedarticle](systemuser.md#BKMK_user_msdyn_federatedarticle) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_federatedarticle"></a> team_msdyn_federatedarticle
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_federatedarticle](team.md#BKMK_team_msdyn_federatedarticle) One-To-Many relationship.
+See the [team_msdyn_federatedarticle](team.md#BKMK_team_msdyn_federatedarticle) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_federatedarticle"></a> business_unit_msdyn_federatedarticle
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_federatedarticle](businessunit.md#BKMK_business_unit_msdyn_federatedarticle) One-To-Many relationship.
+See the [business_unit_msdyn_federatedarticle](businessunit.md#BKMK_business_unit_msdyn_federatedarticle) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_IK_msdyn_kmfederatedsearchconfig_msdyn_federatedarticle_searchproviderid"></a> IK_msdyn_kmfederatedsearchconfig_msdyn_federatedarticle_searchproviderid
 
-See msdyn_kmfederatedsearchconfig Table [IK_msdyn_kmfederatedsearchconfig_msdyn_federatedarticle_searchproviderid](msdyn_kmfederatedsearchconfig.md#BKMK_IK_msdyn_kmfederatedsearchconfig_msdyn_federatedarticle_searchproviderid) One-To-Many relationship.
+See the [IK_msdyn_kmfederatedsearchconfig_msdyn_federatedarticle_searchproviderid](msdyn_kmfederatedsearchconfig.md#BKMK_IK_msdyn_kmfederatedsearchconfig_msdyn_federatedarticle_searchproviderid) one-to-many relationship for the [msdyn_kmfederatedsearchconfig](msdyn_kmfederatedsearchconfig.md) table/entity.
 
 ### See also
 

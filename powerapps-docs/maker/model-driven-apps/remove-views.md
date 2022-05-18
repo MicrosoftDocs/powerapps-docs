@@ -4,7 +4,7 @@ description: "Learn how to delete or deactivate a view"
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -39,7 +39,7 @@ The views that are required in an organization may change over time, and it is g
 Depending on the type of view, you can either delete it or deactivate it. Deactivated views can be reactivated, while the deletion of a view is permanent.
 
 - Custom public views can both be deleted and deactivated, including public views that the system created.
-- [System views](create-edit-views.md#system-views) can't be  delete or deactivated. This includes public views created by the system.
+- [System views](create-edit-views.md#system-views) can't be  deleted or deactivated. This includes public views created by the system.
 
 ## Delete a view
 

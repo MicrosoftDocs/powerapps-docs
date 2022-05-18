@@ -4,7 +4,7 @@ description: "Learn about the advance configuration options and concepts in Azur
 ms.custom: ""
 ms.date: 07/07/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

@@ -11,7 +11,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/18/2020
-ms.service: powerapps
+
 ms.topic: how-to
 ms.assetid: 1b7e6a0c-18a9-47e2-aa7d-0cffb8c93b19
 search.audienceType: 
@@ -43,7 +43,8 @@ To view IFrame properties, follow these steps.
 
 
 > [!NOTE]
-> Forms are not designed to be displayed within an iFrame.  
+> * Forms are not designed to be displayed within an iFrame.
+> * Authentication inside an iFrame, either through a redirection or popups, isn't supported on mobile.
   
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  

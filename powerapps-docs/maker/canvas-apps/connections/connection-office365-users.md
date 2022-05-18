@@ -2,11 +2,10 @@
 title: Connect to Office 365 Users connection from Power Apps
 description: See how to connect to Office 365 Users, step through some examples, and see all the functions.
 author: lancedMicrosoft
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/07/2020
+ms.date: 03/17/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -138,17 +137,30 @@ If you create a contact and select that contact in the browse screen of the app,
 > The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users
-1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
-2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
 
-    `Office365Users.SearchUserV2({searchTerm: SearchTerm.Text})`
+1. Add a **Text input** control (**Insert** menu > **Text input**).
 
-    The gallery shows users whose name contains the search text you entered.
+1. Select **Insert** > **Vertical gallery**.
 
-    With the gallery selected, the right-hand pane shows options for that gallery.
-3. In the second list, select **Mail**. In the third list, select **DisplayName**.
+1. Change layout of the vertical gallery to **Title, subtitle, and body**.
 
-    The second and third labels in the gallery are updated.
+1. Select the arrow icon from first row inside the gallery, and delete it.
+
+1. Update the vertical gallery formula to the following.
+
+    ```powerapps-dot
+    Office365Users.SearchUserV2({searchTerm:TextInput1.Text,top:5}).value
+    ```
+
+    In the formula above, the search term references text entered in the text input control ("TextInput1" in this example); and the search results are limited to top 5.
+
+1. Update vertical gallery fields to show **DisplayName** in gallery title, **JobTitle** in subtitle, and **Department** in body.
+
+    :::image type="content" source="media/connection-office365-users/gallery.png" alt-text="Gallery fields selected.":::
+
+1. Play the app, and enter text inside the text input box. As you enter text, the results change based on the input string changes.
+
+    :::image type="content" source="media/connection-office365-users/search.png" alt-text="Example of search.":::
 
 ## View the available functions
 This connection includes the following functions:

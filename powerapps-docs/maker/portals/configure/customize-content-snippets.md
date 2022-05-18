@@ -2,7 +2,7 @@
 title: Customize content by using content snippets
 description: Learn how to customize content by using content snippets.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021

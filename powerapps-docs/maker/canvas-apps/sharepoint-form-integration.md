@@ -2,7 +2,7 @@
 title: Understand SharePoint forms integration
 description: Learn about integration of SharePoint forms with Power Apps, and how to customize those forms.
 author: NickWaggoner
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -20,9 +20,9 @@ contributors:
   - lancedMicrosoft
 ---
 # Understand SharePoint forms integration
-You can now easily [customize any SharePoint list form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them.
+You can now easily [customize any Microsoft Lists or SharePoint library form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them.
 
-If you've customized a form for a SharePoint list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
+If you've customized a form for a list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
 
 ## Understand the default generated form
 
@@ -88,7 +88,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 
 The **SharePointIntegration** control has the following properties:
 
-**Selected** - The selected item from the SharePoint list.
+**Selected** - The selected item from the list.
 
 **OnNew** - Actions to perform when a user selects the **New** button or opens the **Create item** form in SharePoint.
 
@@ -100,7 +100,7 @@ The **SharePointIntegration** control has the following properties:
 
 **OnCancel** - Actions to perform when a user selects the **Cancel** button in SharePoint.
 
-**SelectedListItemID** - Item ID for the selected item in a SharePoint list.
+**SelectedListItemID** - Item ID for the selected item in a list.
 
 **Data Source** - The list that contains the record that the form will show, edit, or create. If you change this property, the **Selected** and **SelectedItemID** properties may stop working.
 

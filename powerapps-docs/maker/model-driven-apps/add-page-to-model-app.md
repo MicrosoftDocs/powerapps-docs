@@ -3,7 +3,7 @@ title: "Add a custom page to your model-driven app"
 description: " Learn how to add a custom page to a model-driven app"
 ms.date: 06/29/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "How-to"
 author: "aorth"
@@ -173,6 +173,6 @@ After saving changes to a custom page in the canvas designer, the custom page mu
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Code components for custom page designer](../../developer/component-framework/component-framework-for-canvas-apps.md)

@@ -9,7 +9,7 @@ manager: kvivek
 ms.custom: ""
 ms.date: 06/01/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -31,7 +31,7 @@ search.app:
 
 ## Introducing interactive dashboards
 
-Interactive experience dashboards can be a **one-stop workplace** for app users, such as service reps, to see workload information and take action. They're fully configurable, security-role based, and deliver workload information across multiple streams in **real time**. Interactive dashboard users don't need to page through the application looking for a particular row; they can act on a it **directly** from the dashboard.
+Interactive experience dashboards can be a **one-stop workplace** for app users, such as service reps, to see workload information and take action. They're fully configurable, security-role based, and deliver workload information across multiple streams in **real time**. Interactive dashboard users don't need to page through the application looking for a particular row; they can act on it **directly** from the dashboard.
 
 ## Dashboard types
 
@@ -103,7 +103,7 @@ Interactive experience dashboards can be a **one-stop workplace** for app users,
   
 <a name="BKMK_Enable"></a>
 
-## Configure filter columns, and security roles for he interactive dashboards
+## Configure filter columns, and security roles for the interactive dashboards
 
  When interactive dashboards are configured, the first task is to enable filter columns and security roles, so that interactive dashboards can be configured for them. Notice that interactive dashboards are enabled for all tables and custom tables by default.
   
@@ -256,7 +256,7 @@ The following illustration is an example of a fully configured chart panel and s
   
 ### Create a table-specific dashboard
 
-A table-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but this is performed in the different place in the UI and there are other minor differences.
+A table-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but this is performed in a different place in the UI and there are other minor differences.
 
 For example, instead of selecting a table, some columns in the table-specific dashboard are preset to the table relevant to the dashboard.  
 
@@ -319,7 +319,7 @@ When the **Modify List Value** dialog box opens, enter the hexadecimal color cod
   
  ![Enter the hexadecimal color code.](media/modify-color.png "Enter the hexadecimal color code")  
 
-Similarly, if the **Priority** column is ued to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
+Similarly, if the **Priority** column is used to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
 
  ![Modify the dashboard color.](media/priority-color-modify.png "Change dashboard color for case priority")  
   

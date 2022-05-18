@@ -1,14 +1,13 @@
 ---
 title: StandardControl | MicrosoftDocs
 description: Provides properties and methods to initiate, update, destroy and perform various actions to build a component.
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 0b589cb1-fe63-4152-a9ad-7bde9d75de62
-ms.author: "nabuthuk"
-author: Nkrb
 ---
 
 # StandardControl

@@ -1,25 +1,20 @@
 ---
 title: Tenant page of ISV Studio | Microsoft Docs
 description: Learn about the Tenant page capabilities provided by the ISV Studio portal.
-services: ''
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
+ms.reviewer: jdaly
+manager: jstrauss
 suite: powerapps
-documentationcenter: na
-author: "nkrb" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.reviewer: nabuthuk
-ms.workload: na
-ms.date: 01/11/2021
 ms.subservice: dataverse-developer
-ms.author: nabuthuk
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+contributors: 
+  - JimDaly
 ---
 
 # The Tenant page

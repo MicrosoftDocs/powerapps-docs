@@ -2,7 +2,7 @@
 title: Use Liquid template tag for code components
 description: Learn how to use the Liquid template tag for code components, and walk through a tutorial to configure Power Apps portals to add the component to a webpage.
 author: GitanjaliSingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/02/2022

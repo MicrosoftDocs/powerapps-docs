@@ -4,7 +4,7 @@ description: "Overview of model-driven forms in Power Apps"
 ms.custom: intro-internal
 ms.date: 09/03/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -40,7 +40,7 @@ In an unmanaged solution, it is possible to edit the properties, including colum
 
 ### Forms inside managed solutions
 
-In managed solution, typically in a production environment, it is not possible by default to create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms for that table.
+In a managed solution, typically in a production environment, it is not possible by default to create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms for that table.
 
 [Learn more about solutions](../../maker/data-platform/solutions-overview.md)
 

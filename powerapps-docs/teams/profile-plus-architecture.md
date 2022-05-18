@@ -2,16 +2,16 @@
 title: Understand Profile+ sample apps architecture (preview) | Microsoft Docs
 description: Learn about the architecture of the Profile Plus sample apps.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/01/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
-    - josephshum
+    - msftsamperl
     - joel-lindstrom
 ---
 

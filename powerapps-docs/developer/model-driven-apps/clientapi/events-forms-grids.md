@@ -1,19 +1,21 @@
 ---
 title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
 description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
-ms.date: 04/15/2021
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: evchaki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 9fb38429-55ef-45ce-a3a3-e649e1be89d0
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Events in forms and grids in model-driven apps
 

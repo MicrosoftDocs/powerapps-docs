@@ -1,26 +1,22 @@
 ---
 title: "Verify certification dependencies for plug-ins making outbound calls | MicrosoftDocs"
 description: "Ensure that any certificates that your code depends on for outbound calls has a valid chain of certificates."
-services: ''
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: ryjones
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/04/2021
 ms.subservice: dataverse-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Verify certification dependencies for plug-ins making outbound calls
 

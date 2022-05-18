@@ -2,7 +2,7 @@
 title: Add custom certificates
 description: When extending portals functionality using a client-side API call with OAuth 2.0 implicit grant flow, configure custom certificates for added security.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/25/2021

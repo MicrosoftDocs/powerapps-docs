@@ -1,7 +1,7 @@
 ---
-title: "ImportJob table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ImportJob table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportJob table/entity."
-ms.date: 10/05/2021
+ms.date: 04/28/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -503,23 +503,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importjobbase_modifiedonbehalfby"></a> lk_importjobbase_modifiedonbehalfby
 
-See systemuser Table [lk_importjobbase_modifiedonbehalfby](systemuser.md#BKMK_lk_importjobbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_importjobbase_modifiedonbehalfby](systemuser.md#BKMK_lk_importjobbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importjobbase_createdonbehalfby"></a> lk_importjobbase_createdonbehalfby
 
-See systemuser Table [lk_importjobbase_createdonbehalfby](systemuser.md#BKMK_lk_importjobbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_importjobbase_createdonbehalfby](systemuser.md#BKMK_lk_importjobbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importjobbase_modifiedby"></a> lk_importjobbase_modifiedby
 
-See systemuser Table [lk_importjobbase_modifiedby](systemuser.md#BKMK_lk_importjobbase_modifiedby) One-To-Many relationship.
+See the [lk_importjobbase_modifiedby](systemuser.md#BKMK_lk_importjobbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importjobbase_createdby"></a> lk_importjobbase_createdby
 
-See systemuser Table [lk_importjobbase_createdby](systemuser.md#BKMK_lk_importjobbase_createdby) One-To-Many relationship.
+See the [lk_importjobbase_createdby](systemuser.md#BKMK_lk_importjobbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_importjob"></a> organization_importjob
 
-See organization Table [organization_importjob](organization.md#BKMK_organization_importjob) One-To-Many relationship.
+See the [organization_importjob](organization.md#BKMK_organization_importjob) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

@@ -7,7 +7,7 @@ metadata:
   title: Power Apps model-driven apps documentation
   description: Provides access to highlighted areas within the Power Apps model-driven apps documentation
   services: service
-  ms.service: powerapps 
+  
   ms.subservice: subservice
   ms.topic: landing-page 
   ms.collection: collection
@@ -33,7 +33,7 @@ landingContent:
           - text: Sample model-driven apps
             url: overview-model-driven-samples.md
           - text: Licensing guide
-            url: https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus
+            url: /power-platform/admin/pricing-billing-skus
          
   # Card
   - title: Create
@@ -73,7 +73,7 @@ landingContent:
           - text: Business rules
             url: ../data-platform/data-platform-create-business-rule.md
           - text: Business process flows
-            url: https://docs.microsoft.com/en-us/power-automate/business-process-flows-overview
+            url: /power-automate/business-process-flows-overview
           - text: Embedding canvas apps
             url: embed-canvas-app-in-form.md
           - text: Advanced app making and customization
@@ -99,7 +99,7 @@ landingContent:
       - linkListType: deploy
         links:
           - text: Use a model-driven app
-            url: https://docs.microsoft.com/en-us/powerapps/user/use-model-driven-apps     
+            url: /powerapps/user/use-model-driven-apps
           - text: Share an app
             url: share-model-driven-app.md
           - text: Distribute an app
@@ -113,7 +113,7 @@ landingContent:
       - linkListType: how-to-guide
         links:      
           - text: Developer guide
-            url: https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/
+            url: /powerapps/developer/model-driven-apps/
           - text: Customize table forms using code
             url: ../../developer/model-driven-apps/customize-entity-forms.md
           - text: Apply data visualizations using code
@@ -147,8 +147,8 @@ landingContent:
       - linkListType: concept
         links:
           - text: Environments
-            url: https://docs.microsoft.com/en-us/power-platform/admin/environments-overview  
+            url: /power-platform/admin/environments-overview
           - text: Solutions
-            url: https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm
+            url: /power-platform/alm/solution-concepts-alm
           - text: Dataverse
-            url: https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro
+            url: /powerapps/maker/data-platform/data-platform-intro
