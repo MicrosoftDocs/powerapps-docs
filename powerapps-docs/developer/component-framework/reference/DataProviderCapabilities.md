@@ -5,7 +5,7 @@ keywords:
 ms.author: jdaly
 author: noazarur-microsoft
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 03/26/2022
 ms.reviewer: jdaly
 ms.subservice: "pcf"
 ms.topic: "reference"
@@ -13,7 +13,7 @@ ms.topic: "reference"
 
 # DataProviderCapabilities
 
-Provides access to all the properties of a file.
+[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)]
 
 ## Available for
 

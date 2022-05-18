@@ -1,26 +1,22 @@
 ---
 title: The Home page of ISV Studio | Microsoft Docs
 description: Learn about the home page capabilities provided by the ISV Studio portal.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: "phecke" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-
-ms.devlang: na
-ms.topic: article
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
 ms.reviewer: pehecke
-ms.workload: na
-ms.date: 02/10/2022
+manager: jstrauss
+suite: powerapps
+ms.topic: article
 ms.subservice: dataverse-developer
-ms.author: prkoduku
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 
 # The Home page
