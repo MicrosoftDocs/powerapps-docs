@@ -18,7 +18,7 @@ search.app:
 
 Some standard tables in Dataverse represent the structure and instances of solution objects. If you aren't familiar with solutions, go to [Solutions overview](solutions-overview.md).
 
-For example, the **Custom API** table has columns that represent the properties of an API, such as **Name** and **Binding Type**, with each row of data in the table representing a particular API instance. For more information about Custom API table, go to [Custom API table columns](../../developer/data-platform/custom-api-tables#custom-api-table-columns)
+For example, the **Custom API** table has columns that represent the properties of an API, such as **Name** and **Binding Type**, with each row of data in the table representing a particular API instance. For more information about Custom API table, go to [Custom API table columns](../../developer/data-platform/custom-api-tables.md#custom-api-table-columns)
 
 :::image type="content" source="media/table-soln-objects.png" alt-text="Custom API table in Dataverse":::
 
@@ -32,6 +32,6 @@ To update data in such tables, you must navigate to the respective objects in th
 [Create a table](data-platform-create-entity.md)<br/>
 [Edit a table](edit-entities.md)<br/>
 [Create a solution](create-solution.md)<br/>
-[Create and use Custom APIs]((../../developer/data-platform/custom-api.md))
+[Create and use Custom APIs](../../developer/data-platform/custom-api.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
