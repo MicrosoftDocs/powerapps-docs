@@ -33,7 +33,7 @@ To configure the enhanced email template for apps across the organization, perfo
   > ![Add the email template dialog option](media/new_email_template_option.png)
 1. Select **Add** on the **Selected Setting Definition**. The **Enable the New Insert Template Dialog** option is added to your solution. Select **Edit**.
 1. Set the **Setting environment value** option to **Yes** on the **Edit Enable the New Insert Template Dialog**.
-  > ![Set the environment variable](media/new_email_template_envvar.png)
+  > ![Set the option to yes across the apps ](media/new_email_template_envvar.png)
 1. Select **Publish All Customizations**.
 
 ## Disable the enhanced email template for an app
@@ -48,7 +48,7 @@ To disable the enhanced email template selection window and display the default 
   > ![Add the model driven app to an existing solution](media/new_email_template_addcsw.png)
 1. Select the **Enable the new Insert Template Dialog** option.
 1. On the **Edit Enable the New Insert Template Dialog**, in the **Setting app value** section, specify **No** for the specified app.
-  > ![Set the environment variable to NO](media/new_email_template_deloptn.png)
+  > ![Set the environment variable to No for an app](media/new_email_template_deloptn.png)
 1. Select **Save** and **Publish All Customizations**.
 
 ### See also
