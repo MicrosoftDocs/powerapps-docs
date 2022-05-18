@@ -45,7 +45,7 @@ To disable the enhanced email template selection window and display the default 
 1. Select the solution created for the email template selection option.
 1. Go to **Add Existing** > **App** > **Model-driven app** and select the app.
   > ![Add a model driven app](media/new_email_template_addapp.png)
-  > ![Add the model driven app to the existing solution](media/new_email_template_addcsw.png)
+  > ![Add the model driven app to an existing solution](media/new_email_template_addcsw.png)
 1. Select the **Enable the new Insert Template Dialog** option.
 1. On the **Edit Enable the New Insert Template Dialog**, in the **Setting app value** section, specify **No** for the specified app.
   > ![Set the environment variable to NO](media/new_email_template_deloptn.png)
