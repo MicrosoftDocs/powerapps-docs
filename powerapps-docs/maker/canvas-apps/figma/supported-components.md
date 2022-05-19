@@ -166,330 +166,152 @@ Vertical and horizontal [data cards](../working-with-cards.md) are components th
    :::column-end:::
 :::row-end:::
 
-## component sizes, states and types
+## Component sizes, states and types
 
-### Buttons
+### Button sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/button-size.png" alt-text="Button size.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/button-states.png" alt-text="Button states.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/button-size.png" alt-text="Button size.":::
+
+### Button states
+
+:::image type="content" source="media/button-states.png" alt-text="Button states.":::
 
 - If you want an outlined button with a stroke, set the stroke to Center in Figma since Power Apps only converts centered strokes.
 
-### Labels
+### Labels sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/label-size.png" alt-text="Label size.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/label-size.png" alt-text="Label size.":::
 
 > [!NOTE]
 > Use only one font and font size within a text label. If you want to use more than one font or font size within a text label, then make separate labels with those variations. Also, ensure that the text for the label doesn't extend beyond the bounding box, or it won't convert properly.
 
-### Text inputs
+### Text input sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/text-input-size.png" alt-text="Text input sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/text-input-state.png" alt-text="Text input states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/text-input-type.png" alt-text="Text input types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/text-input-size.png" alt-text="Text input sizes.":::
 
-### Combo boxes
+### Text input states
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/combo-box-sizes.png" alt-text="Combo box sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/combo-box-states.png" alt-text="Combo box states.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/text-input-state.png" alt-text="Text input states.":::
 
-### Drop downs
+### Text input types
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/drop-downs-sizes.png" alt-text="Drop downs sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/drop-downs-states.png" alt-text="Drop downs states.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/text-input-type.png" alt-text="Text input types.":::
 
-### Check boxes
+### Combo box sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/check-box-size.png" alt-text="Check box sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/check-box-state.png" alt-text="Check box states.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/combo-box-sizes.png" alt-text="Combo box sizes.":::
 
-### Radio buttons
+### Combo box states
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/radio-button-size.png" alt-text="Radio button sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/radio-button-state.png" alt-text="Radio button states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/radio-button-type.png" alt-text="Radio button types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/combo-box-states.png" alt-text="Combo box states.":::
+
+### Drop down sizes
+
+:::image type="content" source="media/drop-downs-sizes.png" alt-text="Drop downs sizes.":::
+
+### Drop down states
+
+:::image type="content" source="media/drop-downs-states.png" alt-text="Drop downs states.":::
+
+### Check box sizes
+
+:::image type="content" source="media/check-box-size.png" alt-text="Check box sizes.":::
+
+### Check box states
+
+:::image type="content" source="media/check-box-state.png" alt-text="Check box states.":::
+
+### Radio button sizes
+
+:::image type="content" source="media/radio-button-size.png" alt-text="Radio button sizes.":::
+
+### Radio button states
+
+:::image type="content" source="media/radio-button-state.png" alt-text="Radio button states.":::
+
+### Radio button types
+
+:::image type="content" source="media/radio-button-type.png" alt-text="Radio button types.":::
 
 - Keep all radio buttons and text the same color. When converting into an app, Power Apps will use the color of the first radio button for all the remaining buttons. It won't recognize any other colors you may have used.
 
-### Toggles
+### Toggle sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/toggle-size.png" alt-text="Toggle sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/toggles-state.png" alt-text="Toggle states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/toggle-type.png" alt-text="Toggle types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/toggle-size.png" alt-text="Toggle sizes.":::
 
-### Date pickers
+### Toggle states
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/date-picker-size.png" alt-text="Date picker sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/date-picker-state.png" alt-text="Date picker states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/date-picker-type.png" alt-text="Date picker types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/toggles-state.png" alt-text="Toggle states.":::
 
-### Slider
+### Toggle types
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/slider-size.png" alt-text="Slider sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/slider-state.png" alt-text="Slider states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/slider-type.png" alt-text="Slider types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/toggle-type.png" alt-text="Toggle types.":::
 
-### Ratings
+### Date picker sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rating-size.png" alt-text="Ratings sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rating-state.png" alt-text="Ratings states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rating-type.png" alt-text="Ratings types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/date-picker-size.png" alt-text="Date picker sizes.":::
+
+### Date picker states
+
+:::image type="content" source="media/date-picker-state.png" alt-text="Date picker states.":::
+
+### Date picker types
+
+:::image type="content" source="media/date-picker-type.png" alt-text="Date picker types.":::
+
+### Slider sizes
+
+:::image type="content" source="media/slider-size.png" alt-text="Slider sizes.":::
+
+### Slider states
+
+:::image type="content" source="media/slider-state.png" alt-text="Slider states.":::
+
+### Slider types
+
+:::image type="content" source="media/slider-type.png" alt-text="Slider types.":::
+
+### Rating sizes
+
+:::image type="content" source="media/rating-size.png" alt-text="Ratings sizes.":::
+
+### Rating states
+
+:::image type="content" source="media/rating-state.png" alt-text="Ratings states.":::
+
+### Rating types
+
+:::image type="content" source="media/rating-type.png" alt-text="Ratings types.":::
 
 - Keep all stars the same color while designing in Figma. When converting into an app, Power Apps will use the color of the first star for all the remaining stars. It won't recognize any other colors you may have used.
 
-### List boxes
+### List box sizes
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/list-box-size.png" alt-text="List box sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/list-box-state.png" alt-text="List box states.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Types
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/list-box-type.png" alt-text="List box types.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/list-box-size.png" alt-text="List box sizes.":::
 
-### Rich text
+### List box states
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rich-text-size.png" alt-text="Rich text box sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rich-text-state.png" alt-text="Rich text states.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/list-box-state.png" alt-text="List box states.":::
 
-### Timer
+### List box types
 
-:::row:::
-   :::column span="":::
-      Sizes
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/timer-size.png" alt-text="Timer sizes.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      States
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/timer-state.png" alt-text="Timer states.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/list-box-type.png" alt-text="List box types.":::
+
+### Rich text sizes
+
+:::image type="content" source="media/rich-text-size.png" alt-text="Rich text box sizes.":::
+
+### Rich text states
+
+:::image type="content" source="media/rich-text-state.png" alt-text="Rich text states.":::
+
+### Timer sizes
+
+:::image type="content" source="media/timer-size.png" alt-text="Timer sizes.":::
+
+### Timer states
+
+:::image type="content" source="media/timer-state.png" alt-text="Timer states.":::
 
 ## Content to ignore
 
