@@ -78,4 +78,4 @@ Continue building your app in Power Apps Studio by adding more [screens](../buil
 
 - [Create a canvas app from Figma (preview)](create-app-from-figma.md)
 - [Components supported by the UI Kit (preview)](supported-components.md)
-- [Troubleshoot common errors](common-errors.yml)
+- [Troubleshoot common errors](common-errors.md)
