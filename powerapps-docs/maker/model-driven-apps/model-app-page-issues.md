@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page" 
 ms.custom: ""
-ms.date: 09/02/2021
+ms.date: 05/26/2022
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: "article"
@@ -18,10 +18,6 @@ search.app:
 # Known issues with custom pages in a model-driven app
 
 The custom page is a new page type within model-driven apps. Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
-
-> [!IMPORTANT]
-> - The base functionality of custom pages has moved to general availability in all regions.  However there are some specific or new capabilities that are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## Maker-related issues
 

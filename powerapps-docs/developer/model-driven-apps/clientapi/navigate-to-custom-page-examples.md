@@ -4,7 +4,7 @@ description: "This article provides examples of navigating from a model-driven a
 author: HemantGaur
 ms.author: hemantg
 manager: evchaki
-ms.date: 04/01/2022
+ms.date: 05/26/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "how-to"
@@ -26,9 +26,7 @@ This article provides examples of navigating from a model-driven app page to a c
 This article outlines the steps to use client API to open a custom page as a full-page, dialog, or pane.  It provides examples of **custom** as a `pageType` value in [navigateTo (Client API reference)](reference/xrm-navigation/navigateto.md).
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](../../../maker/model-driven-apps/model-app-page-issues.md).
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](../../../maker/model-driven-apps/model-app-page-issues.md).
 
 ## Navigating from a model page to a custom page
 

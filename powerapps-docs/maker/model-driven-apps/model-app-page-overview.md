@@ -1,7 +1,7 @@
 ---
 title: "Converge model-driven and canvas apps using the custom page"
 description: "Add a custom page to use canvas as a page in your model-driven app" 
-ms.date: 06/20/2021
+ms.date: 05/26/2022
 ms.reviewer: "matp"
 
 ms.subservice: mda-maker
@@ -21,9 +21,7 @@ The custom page is a new page type within a model-driven app, which brings the p
 This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element, which allows one maker to edit one custom page at a time. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 | Capability | Status | Notes |
 | -- | -- | -- |
@@ -33,10 +31,10 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 | Modern controls in custom pages | General Availability | [List of supported controls](design-page-for-model-app.md#supported-controls-in-a-custom-page)
 | Code components in custom pages | General Availability |
 | Monitor support for custom pages | General Availability |
-| Authoring custom pages | Public Preview | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
-| Canvas components in custom pages | Public Preview |
-| Custom page in Teams model-driven app | Public Preview |
-| Custom page in mobile online | Public Preview | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
+| Authoring custom pages | General Availability | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
+| Canvas components in custom pages | General Availability |
+| Custom page in Teams model-driven app | General Availability |
+| Custom page in mobile online | General Availability | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
 
 ## Examples of custom pages
 
