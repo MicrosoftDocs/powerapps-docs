@@ -24,7 +24,6 @@ Virtual entity that represents AAD user
 
 **Added by**: Metadata Extension Solution
 
-
 ## Messages
 
 |Message|Web API Operation|SDK Assembly|
