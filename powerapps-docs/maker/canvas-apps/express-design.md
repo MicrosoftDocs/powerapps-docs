@@ -21,8 +21,6 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-## Overview
-
 Express design is a new way to quickly get started with Power Apps by instantly transforming your visual design into an app. With **Express design**, makers can quickly turn existing design artifacts&mdash;including paper forms, whiteboard sketches, or Figma files, into a working app.
 
 If you have a design but are struggling with the nitty gritty UI adjustments and data set up work  for your app, then try out Express design. Power Apps will do the heavy lifting for you by identifying the UI elements from your design and convert that into Power Apps controls.

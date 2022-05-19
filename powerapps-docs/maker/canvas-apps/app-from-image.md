@@ -21,15 +21,13 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-
-## Overview
-
 Generally, app making journey begins with a "design" phase. And often the design will end up in the format of a paper sketch, PPT, pdf or even a screenshot of a legacy app which inspired you. Creating an app from such designs takes time. The **Image to app** capability in Power Apps allows you to create apps from your design images faster, easier, and through a simple interface. This feature makes app creation possible for designers, users, administrators, and makers all alike.
 
 All you need to do is ensure the image adheres to the required guidelines. And an app is generated for you with the controls identified from the design image you provided. Furthermore, it can help you create your own table in Microsoft Dataverse by extracting fields from the picture you upload so you don't need to manually add columns one by one.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 

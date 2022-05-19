@@ -22,7 +22,7 @@ sections:
       - question: |
           Error: Invalid link. Copy a specific page link or frame link, and not a link to just the file.
 
-          :::image type="content" source="media/error-invalid-link.png" alt-text="Error: Invalid link. Copy a specific page link or frame link, and not a link to just the file.":::
+          :::image type="content" source="media/error-invalid-link.png" alt-text="Invalid link. Copy a specific page link or frame link, and not a link to just the file.":::
 
         answer: |
           This error appears when you enter the link to a Figma file instead of the link to a specific page or a frame within the Figma file. Sometimes, the link may also have a missing "node-id".
@@ -32,7 +32,7 @@ sections:
       - question: |
           Error: Access denied. Check the information you entered and try again.
 
-          :::image type="content" source="media/error-invalid-token.png" alt-text="Error: Access denied. Check the information you entered and try again.":::
+          :::image type="content" source="media/error-invalid-token.png" alt-text="Access denied. Check the information you entered and try again.":::
 
         answer: |
           This error appears when you provide an invalid token while creating app from Figma. To learn about how to generate a personal access token in Figma, see [Access tokens](https://www.figma.com/developers/api#access-tokens).
