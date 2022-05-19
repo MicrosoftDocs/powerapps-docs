@@ -128,7 +128,7 @@ Static files are cached based on the file extensions stored in Web files table o
 
 1. Update/Add **ContentDeliveryNetwork/FileExtensions** with list of file extensions to be cached. 
 
-    :::image type="content" source="media/configure-cdn/cdn-files.png" alt-text="":::
+    :::image type="content" source="media/configure-cdn/cdn-files.png" alt-text="List of files to be cached.":::
 
 
 
