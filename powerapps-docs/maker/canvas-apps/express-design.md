@@ -35,12 +35,16 @@ Express design currently supports design artifacts in the form of an image or a 
 
 If you have some rough ideas that you put on paper, a presentation or some legacy apps/tools that you want to modernize, try **Image to app** by taking a picture or a screenshot of your design, and follow the steps in the [Create an app from an image](app-from-image.md) article to create your app.Data setup is available in the wizard, but optional.
 
+:::image type="content" source="media/express-design/app-from-image.png" alt-text="Create an app from an image.":::
+
 > [!div class="nextstepaction"]
 > [Create an app from an image (preview)](app-from-image.md)
 
 ### Figma to app
 
 If you’re a designer or you're working with them, you can try **Figma to app** by using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) to first design your app in Figma, then upload the Figma URL to Power Apps to convert it into a pixel-perfect app. For more information, see [Create an app from Figma](figma/overview.md). After generating the app, yYou can then connect your app to your business data.
+
+:::image type="content" source="media/express-design/app-from-figma.png" alt-text="Create an app from a Figma page or a frame.":::
 
 > [!div class="nextstepaction"]
 > [Create an app from Figma (preview)](figma/overview.md)
