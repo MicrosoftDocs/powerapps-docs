@@ -57,7 +57,7 @@ It may take a few minutes to provision the Content Delivery Network.
 
 ## Enable Content Delivery Network while converting trial to production 
 
-1. Open [<u>Portal admin center</u>](https://docs.microsoft.com/en-us/power-apps/maker/portals/admin/admin-overview) of trial portal. 
+1. Open [Power Apps portals admin center](../admin/admin-overview.md) of trial portal. 
 
 1. Select the **Convert** button to initiate trial to prod conversion. 
 
