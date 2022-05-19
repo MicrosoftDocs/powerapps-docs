@@ -10,7 +10,7 @@ metadata:
   ms.reviewer: tapanm-msft
   contributors:
     - tapanm-msft
-title: Troubleshoot common errors
+title: Troubleshoot common errors when creating app from Figma (preview)
 summary: |
   [This article is pre-release documentation and is subject to change.]
 
@@ -20,11 +20,29 @@ sections:
   - name: General
     questions:
       - question: |
-          Placeholder error 1
+          Error: Invalid link. Copy a specific page link or frame link, and not a link to just the file.
+
+          :::image type="content" source="media/error-invalid-link.png" alt-text="Error: Invalid link. Copy a specific page link or frame link, and not a link to just the file.":::
+
         answer: |
-          Placeholder resolution 1
+          This error appears when you enter the link to a Figma file instead of the link to a specific page or a frame within the Figma file. Sometimes, the link may also have a missing "node-id".
+          To get the Figma page or frame URL with "node-id", ensure you select any frame inside Figma. Verify the URL in the address bar shows `?node-id=<node ID>` before you copy and paste it in the app from Figma screen inside Power Apps.
+          For more information about creating links to a page or a frame, see [Copy links to Files, Pages, and Frames](https://help.figma.com/hc/articles/360045942953-Add-links-to-text).
 
       - question: |
-          Placeholder error 2
+          Error: Access denied. Check the information you entered and try again.
+
+          :::image type="content" source="media/error-invalid-token.png" alt-text="Error: Access denied. Check the information you entered and try again.":::
+
         answer: |
-          Placeholder resolution 2
+          This error appears when you provide an invalid token while creating app from Figma. To learn about how to generate a personal access token in Figma, see [Access tokens](https://www.figma.com/developers/api#access-tokens).
+
+      - question: |
+          App creation fails because of invalid structure.
+        answer: |
+          The app creation will fail if the Figma page or frame you provided doesn't have a valid structure with a list of components all within a frame. When this happens, ensure that you follow the **Detach instance** step before using the frame to generate the app.
+
+          :::image type="content" source="media/error-detach-screen.png" alt-text="App creation fails - detach the screen from its main component by selecting Detach instance.":::
+
+          Also ensure the components added to the page inside Figma are contained within a frame, and they're from the list of supported components that the UI kit provided.
+

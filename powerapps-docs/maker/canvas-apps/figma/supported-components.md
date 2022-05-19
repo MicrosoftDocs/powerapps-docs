@@ -33,6 +33,9 @@ A scrollable section is a section on a screen. If content extends beyond the sec
 
 The scrollable section inside the UI kit are available in two different formats: **Phone**, and **Tablet**.
 
+> [!NOTE]
+> If you want to add additional scrollable sections in a frame, ensure that you review the differences and keep all data cards within a form, and there aren't any data cards within a scrollable container.
+
 ### Form
 
 Use a Form section when you want to have users fill out fields and submit data.
