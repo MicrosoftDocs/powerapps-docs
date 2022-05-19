@@ -1200,8 +1200,6 @@
           href: ./canvas-apps/map-component-input-fields.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
-    - name: Embed canvas apps in your applications
-      href: ./canvas-apps/embedding-sdk.md
   - name: Performance and optimization
     items:
     - name: Understand canvas app execution phases and data flow
@@ -1608,6 +1606,8 @@
   items:
   - name: Get started with Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
+  - name: Manage your mobile app with Microsoft Intune
+    href: ../mobile/intune.md
   - name: Use model-driven apps on Power Apps mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Use Dataverse search on Power Apps mobile  
@@ -2070,7 +2070,7 @@
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
-          - name: Use the Visual Studio Code extension for portals (Preview)
+          - name: Use the Visual Studio Code extension for portals
             href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
@@ -2208,13 +2208,13 @@
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
       href: ./data-platform/virtual-entity-odata-provider-requirements.md
-    - name: Define alternate keys using Power Apps portal
+    - name: Define alternate keys using Power Apps
       href: ./data-platform/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using Power Apps portal
+      - name: How to create tables using Power Apps
         href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
