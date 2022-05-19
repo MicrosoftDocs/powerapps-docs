@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/16/2022
+ms.date: 05/19/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -32,14 +32,14 @@ Starting June 2022 [Authorize endpoint details](oauth-implicit-grant-flow.md#aut
 
 ## List oData Feed 
 
-Starting June 2022, oData feeds to interact with data via RESTtful webservice will be deprecated. We recommend you migrate portal Web API by April 2023. 
+Starting June 2022, [oData feeds](configure/entity-lists.md#list-odata-feeds) to interact with data via RESTtful webservice will be deprecated. We recommend you migrate portal [Web API](web-api-overview.md) by April 2023. 
 
 > [!Important] 
 > Starting October 2022, all newly provisioned portals will not able to use list oData features. 
 
 ## Portal content editor
 
-Starting June 2022, portal content editor tool to design your website is deprecated. We recommend using Power Apps portals Studio to edit the portal.
+Starting June 2022, [portal content editor](portal-content-editor.md) tool to design your website is deprecated. We recommend using [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
 
 ## Portals search using Lucene .Net search 
 
