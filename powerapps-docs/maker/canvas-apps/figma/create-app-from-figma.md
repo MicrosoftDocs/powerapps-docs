@@ -20,7 +20,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-In this article, you'll learn about creating canvas apps using your existing Figma design. [Figma](https://www.figma.com/) is a graphics editor and a design tool that you can use to create prototypes for your intended software design. After the design has been finalized, use this feature to generate apps directly from the layout and design that you defined in your Figma file.
+In this article, you'll learn about creating canvas apps using your existing Figma design. [Figma](https://www.figma.com/) is a graphics editor and a design tool that you can use to create prototypes for your intended software design. After the design has been finalized, use the **Figma to app** feature to generate apps directly from the layout and design that you defined in your Figma file.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
 1. Enter an app name.
 
-1. Enter the Figma file URL.
+1. Enter the Figma file URL. More information: [Share files and prototypes](https://help.figma.com/hc/articles/360040531773-Share-or-embed-files-and-prototypes)
 
 1. Enter the Figma personal access token. More information: [Generate a personal access token in Figma](https://www.figma.com/developers/api#access-tokens)
 
