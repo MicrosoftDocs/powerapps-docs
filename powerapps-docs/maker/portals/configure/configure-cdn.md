@@ -23,7 +23,7 @@ A content delivery network (CDN) is a distributed network of servers that can ef
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="A diagram of a content delivery network.":::
 
-When you enable CDN on your portal, the static contents like image, script, style sheet files used to design your portal website will be stored and served from the CDN server closest to your location.  
+When you enable CDN on your portal, static content like images, scripts, and style sheet files used to design your portal website will be stored and served from the CDN server closest to your location.  
 > [!NOTE]
 >  You need to be a Portal Administrator to enable the CDN. This feature is available for Power Apps portal.  If you're using the Add-on license then you can't enable CDN. Trial portals aren't supported for CDN. You can't enable the CDN for portals configured with custom domain during preview. 
 
@@ -88,7 +88,7 @@ It may take a few minutes to provision the Content Delivery Network.
 
 1. Turn off the **Content Delivery Network** switch to disable the feature 
 
-![Graphical user interface  text  application  email Description automatically generated](media/image7.gif)
+:::image type="content" source="media/configure-cdn/disable-cdn.png" alt-text="Disable Content Delivery Network switch.":::
 
 It may take a few minutes for the process to disable the Content Delivery Network
 
@@ -106,23 +106,23 @@ Static website contents are in CDN servers across the geographical locations. Yo
 
 :::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
-1. Select on **Purge Cache** button 
+1. Select the **Purge Cache** button 
 
-![Graphical user interface  application Description automatically generated](media/image8.gif)
+:::image type="content" source="media/configure-cdn/purge-cache.png" alt-text="The purge cache button.":::
 
 ## Cache Configuration 
 
 Static files are cached based on the file extensions stored in Web files table of Portal Management app. By default, CDN will cache the file with extensions *'css', 'js', 'png', 'svg', 'jpg', 'ico', 'woff2', 'gif', 'ttf', 'woff', 'eot', 'otf', 'tts', 'jpeg', '7z', 'mp3', 'mp4'* in the edge server. A maker can override the default list by updating the site settings. 
 
-1. Open [<u>Power Apps</u>](https://make.powerapps.com/) home page 
+1. Open [<u>Power Apps</u>](https://make.powerapps.com/) home page. 
 
-1. Select the appropriate Environment where Portals website is provisioned 
+1. Select the appropriate Environment where Portals website is provisioned. 
 
-1. Navigate to the Apps section 
+1. Navigate to the Apps section. 
 
 ![Graphical user interface Description automatically generated](media/image9.png)
 
-1. Select on **Portal Management** App 
+1. Select the **Portal Management** App. 
 
 1. Navigate to Site Settings  
 
