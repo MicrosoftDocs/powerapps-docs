@@ -1,6 +1,6 @@
 ---
 title: Design your app using the UI kit (preview)
-description: Learn about the various components that the "Canvas apps from Figma UI kit" supports.
+description: Learn about the various components that the "Create Apps from Figma UI Kit" supports.
 author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
@@ -36,7 +36,7 @@ To create an app from a Figma design, you must start with the [Create apps from 
 
 ## Read the instructions
 
-Read the instructions from the **Read this first** and **Step 1: Getting started** pages inside the UI kit. The instructions on these pages help you understand general guidelines about using this kit. You'll also learn more about the resources used by the kit, such as the font type, font size along with the supported and unsupported features/controls.
+Read the instructions from the **Read this first** and **Step 1: Getting started** pages inside the UI kit. The instructions on these pages help you understand general guidelines about using this kit. You'll also learn more about the resources used by the kit, such as the font styles, component guidelines, supported components, and more.
 
 ## Design your app
 
@@ -58,7 +58,7 @@ The kit also provides additional pages for more information as summarized below:
 
 - **Step 3: Convert into an app** - a visual representation of converting the app design into an app. To follow step-by-step instructions, see [Create a canvas app from Figma](create-app-from-figma.md).
 - **Step 4: Next steps** - explains the possible next steps you can take to further prepare your app for your business scenario. These steps include [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
-- **Supported components** - lists information about supported and unsupported components. For more information, see [Components supported by the UI kit](supported-components.md).
+- **Supported components** - lists information about supported components. For more information, see [Components supported by the UI kit](supported-components.md).
 
 > [!div class="nextstepaction"]
 > [Next step: Create a canvas app from Figma (preview)](create-app-from-figma.md)

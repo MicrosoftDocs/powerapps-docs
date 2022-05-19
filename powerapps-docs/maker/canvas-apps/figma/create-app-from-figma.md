@@ -42,7 +42,7 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
 1. Enter the Figma file URL. More information: [Share files and prototypes](https://help.figma.com/hc/articles/360040531773-Share-or-embed-files-and-prototypes)
 
-1. Enter the Figma personal access token. More information: [Generate a personal access token in Figma](https://www.figma.com/developers/api#access-tokens)
+1. Enter the Figma personal access token. More information: [Create a new personal access token](https://help.figma.com/hc/articles/360052378433-Bubble-and-Figma)
 
     :::image type="content" source="media/create-app.png" alt-text="Create app dialog box with app name, Figma URL and personal access token created.":::
 

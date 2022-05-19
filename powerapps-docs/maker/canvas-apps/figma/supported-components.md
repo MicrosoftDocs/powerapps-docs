@@ -1,6 +1,6 @@
 ---
-title: Controls supported by the UI kit (preview)
-description: Learn about different controls supported by the canvas apps from Figma UI kit.
+title: Components supported by the UI kit (preview)
+description: Learn about different components supported by the Create Apps from Figma UI Kit.
 author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
@@ -16,26 +16,28 @@ contributors:
   - tapanm-msft
 ---
 
-# Controls supported by the UI kit (preview)
+# Components supported by the UI kit (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
-The [canvas apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981) supports certain controls. In this article, you'll learn about these controls.
+The [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) supports certain components. In this article, you'll learn about these components.
 
-For the latest information about the supported controls, and to see examples, you can also see the **Supported components** page inside the [canvas apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981).
+For the latest information about the supported components and to view detailed examples, you can visit the **Supported components** page inside the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981).
 
 > [!IMPORTANT]
-> Don't rename controls, or change layers. Otherwise, the controls won't convert property in Power Apps.
+> Don't rename components or change layers. Otherwise, the components won't convert property in Power Apps.
 
-## Screens
+## Scrollable sections
 
-A [screen](../add-screen-context-variables.md) in canvas apps is the foundational base where you can place other controls such as data cards, labels, text inputs, and buttons. 
+A scrollable section is a section on a screen. If content extends beyond the section, it'll still be accessible when the user scrolls.
 
-The screens inside the UI kit are available in two forms. **Phone**, and **Tablet**.
+The scrollable section inside the UI kit are available in two different formats: **Phone**, and **Tablet**.
 
-### Form screen
+### Form
 
-Use the form screen to fill out fields, edit or submit data to data sources such as Microsoft Dataverse, or SharePoint.
+Use a Form section when you want to have users fill out fields and submit data.
+
+In Power Apps, this section will be scrollable.
 
 :::row:::
    :::column span="":::
@@ -46,44 +48,32 @@ Use the form screen to fill out fields, edit or submit data to data sources such
    :::column-end:::
 :::row-end:::
 
-- Form screens are scrollable.
-- Only use vertical or horizontal data cards on form screens.
-- Don't mix vertical and vertical data cards on the same form.
+- Place only vertical or horizontal data card components in form section.
+- Don't mix and match vertical and horizontal data cards.
+- Don't use base components in form frames.
 
-### Scrollable screen
+### Container (vertical)
 
-Use the scrollable screen when you want the content on the app to scroll and when you're not using a form. For example, a screen with lengthy explanatory content used to only display information without a form.
+Use the Container (vertical) sections when you want the content to scroll. For example, if you need a section of lengthy explanatory content.
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/screen-phone-scrollable.png" alt-text="Scrollable screen in the phone layout format.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/screen-tablet-scrollable.png" alt-text="Scrollable screen in the tablet layout format.":::
-   :::column-end:::
-:::row-end:::
-
-- Only use vertical or horizontal data cards on form screens.
-- Don't add a form inside a scrollable screen.
-
-### Non-scrollable screen
-
-Use the non-scrollable screen when you want content on a screen, but you don't need that content to scroll. For example, when the content won't exceed a certain length.
+> [!TIP]
+> You can also add a small form inside a Container (vertical) section.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="media/screen-phone-nonscrollable.png" alt-text="Non-scrollable screen in the phone layout format.":::
+      :::image type="content" source="media/container-vertical-phone.png" alt-text="Vertical container in the phone layout format.":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="media/screen-tablet-nonscrollable.png" alt-text="Non-scrollable screen in the tablet layout format.":::
+      :::image type="content" source="media/container-vertical-tablet.png" alt-text="Vertical container in the tablet layout format.":::
    :::column-end:::
 :::row-end:::
 
-- Don't add horizontal or vertical data cards on a non-scrollable screen.
+- Use base components and forms in container frames.
+- Don't place vertical or horizontal card components in Container (vertical) section.
 
 ## Vertical and horizontal data cards
 
-Vertical and horizontal data cards are controls that vertically arrange themselves automatically on a form or a scrollable screen.
+Vertical and horizontal [data cards](../working-with-cards.md) are components that arrange themselves automatically on a form.
 
 ### Headers and dividers
 
@@ -173,12 +163,9 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
    :::column-end:::
 :::row-end:::
 
-## Control sizes, states and types
+## component sizes, states and types
 
 ### Buttons
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
 
 :::row:::
    :::column span="":::
@@ -201,9 +188,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ### Labels
 
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
-
 :::row:::
    :::column span="":::
       Sizes
@@ -213,10 +197,10 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
    :::column-end:::
 :::row-end:::
 
-### Text inputs
-
 > [!NOTE]
-> These controls can only be used on non-scrollable screens.
+> Use only one font and font size within a text label. If you want to use more than one font or font size within a text label, then make separate labels with those variations. Also, ensure that the text for the label doesn't extend beyond the bounding box, or it won't convert properly.
+
+### Text inputs
 
 :::row:::
    :::column span="":::
@@ -245,9 +229,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ### Combo boxes
 
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
-
 :::row:::
    :::column span="":::
       Sizes
@@ -266,9 +247,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 :::row-end:::
 
 ### Drop downs
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
 
 :::row:::
    :::column span="":::
@@ -289,9 +267,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ### Check boxes
 
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
-
 :::row:::
    :::column span="":::
       Sizes
@@ -310,9 +285,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 :::row-end:::
 
 ### Radio buttons
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
 
 :::row:::
    :::column span="":::
@@ -339,12 +311,9 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
    :::column-end:::
 :::row-end:::
 
-- Keep all radio buttons and text with the same color. When converting into the app, Power Apps will use color of the first radio button for all remaining buttons. It won't recognize any other colors you may have used.
+- Keep all radio buttons and text the same color. When converting into an app, Power Apps will use the color of the first radio button for all the remaining buttons. It won't recognize any other colors you may have used.
 
 ### Toggles
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
 
 :::row:::
    :::column span="":::
@@ -371,10 +340,7 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
    :::column-end:::
 :::row-end:::
 
-### Date picker
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
+### Date pickers
 
 :::row:::
    :::column span="":::
@@ -403,9 +369,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ### Slider
 
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
-
 :::row:::
    :::column span="":::
       Sizes
@@ -433,9 +396,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ### Ratings
 
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
-
 :::row:::
    :::column span="":::
       Sizes
@@ -461,12 +421,9 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
    :::column-end:::
 :::row-end:::
 
-- Keep all stars with the same color. When converting into the app, Power Apps will use color of the first star for all remaining stars. It won't recognize any other colors you may have used.
+- Keep all stars the same color while designing in Figma. When converting into an app, Power Apps will use the color of the first star for all the remaining stars. It won't recognize any other colors you may have used.
 
 ### List boxes
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
 
 :::row:::
    :::column span="":::
@@ -495,9 +452,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ### Rich text
 
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
-
 :::row:::
    :::column span="":::
       Sizes
@@ -516,9 +470,6 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 :::row-end:::
 
 ### Timer
-
-> [!NOTE]
-> These controls can only be used on non-scrollable screens.
 
 :::row:::
    :::column span="":::
@@ -539,7 +490,7 @@ Vertical and horizontal data cards are controls that vertically arrange themselv
 
 ## Content to ignore
 
-Use these controls to make notes, comments, or miscellaneous content that doesn't need to render in the final app. The content will then be ignored when you convert the design in Power Apps.
+Use these components to make notes, comments, or miscellaneous content that doesn't need to render in the final app. The content will then be ignored when you convert the design in Power Apps.
 
 :::image type="content" source="media/ignore-content.png" alt-text="Content to ignore.":::
 
@@ -564,7 +515,7 @@ Images and rectangles will render as-is when the design is converted into an app
    :::column-end:::
 :::row-end:::
 
-- Only use rectangles with squared corners with corner radius set to zero since Power Apps can only convert rectangles with squared corners.
+- Only use rectangles with squared corners since Power Apps can only convert rectangles with squared corners. In Figma, this means the corner radius must be set to zero.
 
 ### See also
 
