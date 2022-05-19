@@ -144,6 +144,6 @@ A portal administrator can disable the CDN at any given point to stop the servic
 CDN is powered by [<u>Azure Front Door</u>](azure/frontdoor/standard-premium/overview) service to provide fast, reliable, and modern cloud Content Delivery Network.   
 
 > [!NOTE] 
-> For more information about other Azure service offerings, see the  [<u>Microsoft Azure Trust Center</u>](https://azure.microsoft.com/support/trust-center/),  [<u>Microsoft Azure Front Door</u>](https://docs.microsoft.com/en-us/azure/frontdoor/standard-premium/overview) 
+> For more information about other Azure service offerings, see the  [<u>Microsoft Azure Trust Center</u>](https://azure.microsoft.com/support/trust-center/),  [<u>Microsoft Azure Front Door</u>](azure/frontdoor/standard-premium/overview) 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
