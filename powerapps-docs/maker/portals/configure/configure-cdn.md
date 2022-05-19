@@ -120,15 +120,17 @@ Static files are cached based on the file extensions stored in Web files table o
 
 1. Navigate to the Apps section. 
 
-![Graphical user interface Description automatically generated](media/image9.png)
+    :::image type="content" source="media/configure-cdn/apps-section.png" alt-text="The apps section.":::
 
 1. Select the **Portal Management** App. 
 
 1. Navigate to Site Settings  
 
-1. Update/Add **ContentDeliveryNetwork/FileExtensions** with list of file extensions to be cached 
+1. Update/Add **ContentDeliveryNetwork/FileExtensions** with list of file extensions to be cached. 
 
-![](media/image10.png)![Graphical user interface  text  application  email Description automatically generated](media/image11.png)
+    :::image type="content" source="media/configure-cdn/cdn-files.png" alt-text="":::
+
+
 
 ## Privacy notice 
 
