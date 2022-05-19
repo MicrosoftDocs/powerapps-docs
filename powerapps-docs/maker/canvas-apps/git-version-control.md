@@ -133,7 +133,6 @@ Each save or synchronize that includes changes will result in a commit in Git. I
 Since this feature is experimental, we welcome your feedback. The following lists known limitations. We plan to remove most of these limitations in future versions.
 
 - This feature isn't compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf.md). Don't use this feature with apps that make of use of code components.
-- This feature doesn't work with public Git repository. Use a private repo instead.
 - This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
 - Edits to the same property on the same control aren't merged. The last edit made will win.
 - You can't restore a canvas app to a previous version using the steps described in [Restore an app](restore-an-app.md) article. Instead, you'll have to use Git for restoring the app to a previous version. For more information, see the following resources:
