@@ -27,11 +27,9 @@ If you have a design but are struggling with the nitty gritty UI adjustments and
 
 You can add data connection either during the app creation steps, or after the app is generated and connect to your business data from a wide variety of Microsoft and third-party data sources. After your new canvas app is generated in Power Apps Studio, you can continue to build and edit it.
 
-## Get started with Express design
-
 Express design currently supports design artifacts in the form of an image or a Figma design file.
 
-### Image to app
+## Image to app
 
 If you have some rough ideas that you put on paper, a presentation or some legacy apps/tools that you want to modernize, try **Image to app** by taking a picture or a screenshot of your design, and follow the steps in the [Create an app from an image](app-from-image.md) article to create your app.Data setup is available in the wizard, but optional.
 
@@ -40,7 +38,7 @@ If you have some rough ideas that you put on paper, a presentation or some legac
 > [!div class="nextstepaction"]
 > [Create an app from an image (preview)](app-from-image.md)
 
-### Figma to app
+## Figma to app
 
 If you’re a designer or you're working with them, you can try **Figma to app** by using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) to first design your app in Figma, then upload the Figma URL to Power Apps to convert it into a pixel-perfect app. For more information, see [Create an app from Figma](figma/overview.md). After generating the app, yYou can then connect your app to your business data.
 
