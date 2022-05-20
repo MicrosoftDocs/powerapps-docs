@@ -323,22 +323,13 @@ Use these components to make notes, comments, or miscellaneous content that does
 
 Images and rectangles will render as-is when the design is converted into an app.
 
-:::row:::
-   :::column span="":::
-      Images
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/images.png" alt-text="Images.":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Rectangles
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rectangles.png" alt-text="Rectangles.":::
-   :::column-end:::
-:::row-end:::
+### Images
+
+:::image type="content" source="media/images.png" alt-text="Images.":::
+
+### Rectangles
+
+:::image type="content" source="media/rectangles.png" alt-text="Rectangles.":::
 
 - Only use rectangles with squared corners since Power Apps can only convert rectangles with squared corners. In Figma, this means the corner radius must be set to zero.
 
