@@ -21,16 +21,14 @@ searchScope:
 
 # Use deep links with Power Apps mobile
 
-Deep links let users move from one application to another on computers and mobile devices. Simple examples include a mobile app deep-linking to Facebook to sign in, an email address deep-linking to a mail app to compose a message, or a website deep-linking to an app store to download a related mobile app. Because multiple apps might be needed to complete onsite work, an organization can allow technicians to create deep links from Field Service (Dynamics 365) app to other apps and vice versa.
+Deep links let users move from one application to another on computers and mobile devices. Simple examples include a mobile app deep-linking to Facebook to sign in, an email address deep-linking to a mail app to compose a message, or a website deep-linking to an app store to download a related mobile app. 
 
-> [!Note]
-> You can also deep-link within the Field Service (Dynamics 365) app to enable quick navigation to different parts of the app. For example, you can deep-link from a PCF control to a form on a different table (such as **Booking** or **Customer Asset**).
 
-## Open an entity record or entity list view in the Field Service (Dynamics 365) mobile app
+## Open an entity record or entity list view in Power Apps mobile
 
-You can open an `entityrecord` or an `entitylist` view in the Field Service (Dynamics 365) app by using deep-link URLs from other apps. When you follow the link from an external app, the target element opens in the Field Service (Dynamics 365) app for phones or tablets.
+You can open an `entityrecord` or an `entitylist` view in Power Apps mobile by using deep-link URLs from other apps. When you follow the link from an external app, the target element opens in Power Apps mobile
 
-If you're already signed in to your instance in the app, the target record is displayed when you follow the link from an external app. Otherwise, you're prompted to sign in to your instance in the mobile app; after you're signed in, the target element is displayed. You must have the Field Service (Dynamics 365) app for phones or tablets installed on your mobile device to use this feature.
+If you're already signed in to your instance in the app, the target record is displayed when you follow the link from an external app. Otherwise, you're prompted to sign in to your instance in the mobile app; after you're signed in, the target element is displayed. You must have Power Apps mobiles installed on your mobile device to use this feature.
 
 ## Query string parameters for the URL
 
