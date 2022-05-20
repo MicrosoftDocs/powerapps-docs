@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/embedding-sdk.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/dev-enterprise-intro",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/change-color-scheme-add-logo-match-organizations-brand.md",
+      "redirect_url": "/power-apps/maker/model-driven-apps/create-themes-organization-branding",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/library.md",
+      "redirect_url": "../manifest-schema-reference",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/packaged_library.md",
+      "redirect_url": "../manifest-schema-reference",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md",
       "redirect_url": "formcontext-ui#formcontextuifootersection-removed",
       "redirect_document_id": "false"

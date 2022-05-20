@@ -16,14 +16,13 @@ search.app:
   - PowerApps
 contributors:
 ---
-# System tables and columns in Dataverse and Dataverse for Teams (preview)
+# System tables and columns in Dataverse and Dataverse for Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Both Dataverse and Dataverse for Teams have several tables and columns that need to be present for data types and features to work properly. These are part of the default organizations and cannot be removed. When migrating from Access to Dataverse, you'll see columns added to tables after the migration and additional linked tables added in Access to support the columns. This document provides an overview of the tables and columns that will be added.
 
 > [!NOTE]
-> [Join the Microsoft Access beta to start your migration](https://aka.ms/AccessAndPowerPlatform)
+> [Learn how to prepare MS Access for migration.](https://aka.ms/AccessAndPowerPlatform)
 
 ## Tables
 

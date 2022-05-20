@@ -23,12 +23,12 @@ contributors:
 
 This sample shows how to create and retrieve table relationships. The following methods are used to create and retrieve the relationships:
 
-- [CreateOneToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.createonetomanyrequest?view=dynamics-general-ce-9)
-- [CreateManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmanytomanyrequest?view=dynamics-general-ce-9)
-- [CanBeReferencedRequest](/dotnet/api/microsoft.xrm.sdk.messages.canbereferencedrequest?view=dynamics-general-ce-9)
-- [CanBeReferencingRequest](/dotnet/api/microsoft.xrm.sdk.messages.canbereferencingrequest?view=dynamics-general-ce-9)
-- [CanManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.canmanytomanyrequest?view=dynamics-general-ce-9)
-- [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest?view=dynamics-general-ce-9)
+- [CreateOneToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.createonetomanyrequest)
+- [CreateManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmanytomanyrequest)
+- [CanBeReferencedRequest](/dotnet/api/microsoft.xrm.sdk.messages.canbereferencedrequest)
+- [CanBeReferencingRequest](/dotnet/api/microsoft.xrm.sdk.messages.canbereferencingrequest)
+- [CanManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.canmanytomanyrequest)
+- [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest)
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateRetrieveEntityRelationships).
 

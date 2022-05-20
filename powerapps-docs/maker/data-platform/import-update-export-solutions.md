@@ -30,7 +30,7 @@ You can manually import solutions using the steps in this article. You must impo
 
 When you import an **unmanaged** solution:
 - You add all the components of that solution into your environment and can't delete the components by deleting the solution. Deleting the unmanaged solution deletes only the solution container.
-- That contains components you have already customized, your customizations will be overwritten by the customizations in the imported unmanaged solution. You can’t undo this.
+- That contains customized components, the existing customizations to the component will be overwritten after the unmanaged solution import. You can’t undo this.
 
 To import a solution:
 
