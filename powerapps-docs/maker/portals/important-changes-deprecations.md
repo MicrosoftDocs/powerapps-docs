@@ -28,11 +28,11 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
-Starting June 2022 [Authorize endpoint details](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint details](oauth-implicit-grant-flow.md#token-endpoint-details) using Get call and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated for all new portals and  existing portals not using this feature. If you're already using this feature, you need to use the Token end point Post call to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features needs to migrate supported method by October 2022.   
+Starting June 2022 [Authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals using this feature. If you're already using this feature, you need to use the Token endpoint POST request to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features need to migrate supported method by October 2022.   
 
-## List oData Feed 
+## List OData Feed 
 
-Starting June 2022, [oData feeds](configure/entity-lists.md#list-odata-feeds) to interact with data via RESTtful webservice will be deprecated. We recommend you migrate portal [Web API](web-api-overview.md) by April 2023. 
+Starting June 2022, [OData feeds](configure/entity-lists.md#list-odata-feeds) to interact with data via RESTtful webservice will be deprecated. We recommend you migrate portal [Web API](web-api-overview.md) by April 2023. 
 
 > [!Important] 
 > Starting October 2022, all newly provisioned portals will not able to use list oData features. 
@@ -44,9 +44,6 @@ Starting June 2022, [portal content editor](portal-content-editor.md) tool to de
 ## Portals search using Lucene .Net search 
 
 Starting 9.4.4.xx, all newly created portals uses the [Dataverse search](configure/search.md) as the default search provider. Existing portals will continue to use Lucene .Net as a search provider. You can switch to Dataverse search as a search provider using site settings Search/EnableDataverseSearch to true. Dataverse search provides the all search capability provided by Lucene .Net along with additional intelligence search capability. 
-
-> [!Important]
-> Lucene .Net search will no longer be available after April 2023. All existing customers must migrate to Dataverse search.
 
 ## CDN for US Government
 
