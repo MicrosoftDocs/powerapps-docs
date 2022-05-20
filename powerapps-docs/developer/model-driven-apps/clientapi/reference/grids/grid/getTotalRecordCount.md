@@ -1,19 +1,20 @@
 ---
 title: "getTotalRecordCount (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getTotalRecordCount method.
-ms.date: 09/22/2021
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 8305f0cb-9959-4429-a721-a864ade4cd35
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # getTotalRecordCount (Client API reference)

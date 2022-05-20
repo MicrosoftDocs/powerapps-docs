@@ -1,8 +1,8 @@
 ---
-title: "ACIViewMapper table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ACIViewMapper table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ACIViewMapper table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -464,23 +464,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_ACIViewMapper_modifiedby"></a> lk_ACIViewMapper_modifiedby
 
-See systemuser Table [lk_ACIViewMapper_modifiedby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedby) One-To-Many relationship.
+See the [lk_ACIViewMapper_modifiedby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_aciviewmapper"></a> organization_aciviewmapper
 
-See organization Table [organization_aciviewmapper](organization.md#BKMK_organization_aciviewmapper) One-To-Many relationship.
+See the [organization_aciviewmapper](organization.md#BKMK_organization_aciviewmapper) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_ACIViewMapper_modifiedonbehalfby"></a> lk_ACIViewMapper_modifiedonbehalfby
 
-See systemuser Table [lk_ACIViewMapper_modifiedonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_ACIViewMapper_modifiedonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ACIViewMapper_createdonbehalfby"></a> lk_ACIViewMapper_createdonbehalfby
 
-See systemuser Table [lk_ACIViewMapper_createdonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_createdonbehalfby) One-To-Many relationship.
+See the [lk_ACIViewMapper_createdonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ACIViewMapper_createdby"></a> lk_ACIViewMapper_createdby
 
-See systemuser Table [lk_ACIViewMapper_createdby](systemuser.md#BKMK_lk_ACIViewMapper_createdby) One-To-Many relationship.
+See the [lk_ACIViewMapper_createdby](systemuser.md#BKMK_lk_ACIViewMapper_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

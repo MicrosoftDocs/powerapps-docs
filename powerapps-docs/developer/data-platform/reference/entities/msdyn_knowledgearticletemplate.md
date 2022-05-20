@@ -1,8 +1,8 @@
 ---
-title: "msdyn_knowledgearticletemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_knowledgearticletemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_knowledgearticletemplate table/entity."
-ms.date: 10/05/2021
-
+ms.date: 04/28/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -150,10 +150,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -410,6 +410,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -713,12 +714,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -791,7 +810,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_knowledgearticletemplate_SyncErrors](syncerror.md#BKMK_msdyn_knowledgearticletemplate_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_SyncErrors](syncerror.md#BKMK_msdyn_knowledgearticletemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -808,7 +827,7 @@ Same as syncerror table [msdyn_knowledgearticletemplate_SyncErrors](syncerror.md
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_knowledgearticletemplate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -825,7 +844,7 @@ Same as duplicaterecord table [msdyn_knowledgearticletemplate_DuplicateMatchingR
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_knowledgearticletemplate_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgearticletemplate_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -842,7 +861,7 @@ Same as duplicaterecord table [msdyn_knowledgearticletemplate_DuplicateBaseRecor
 
 **Added by**: System Solution Solution
 
-Same as sharepointdocumentlocation table [msdyn_knowledgearticletemplate_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_SharePointDocumentLocations](sharepointdocumentlocation.md#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -859,7 +878,7 @@ Same as sharepointdocumentlocation table [msdyn_knowledgearticletemplate_SharePo
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_knowledgearticletemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgearticletemplate_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgearticletemplate_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -876,7 +895,7 @@ Same as asyncoperation table [msdyn_knowledgearticletemplate_AsyncOperations](as
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_knowledgearticletemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgearticletemplate_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgearticletemplate_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -893,7 +912,7 @@ Same as mailboxtrackingfolder table [msdyn_knowledgearticletemplate_MailboxTrack
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_knowledgearticletemplate_ProcessSession](processsession.md#BKMK_msdyn_knowledgearticletemplate_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_ProcessSession](processsession.md#BKMK_msdyn_knowledgearticletemplate_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -910,7 +929,7 @@ Same as processsession table [msdyn_knowledgearticletemplate_ProcessSession](pro
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_knowledgearticletemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgearticletemplate_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgearticletemplate_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -927,7 +946,7 @@ Same as bulkdeletefailure table [msdyn_knowledgearticletemplate_BulkDeleteFailur
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgearticletemplate_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -944,7 +963,7 @@ Same as principalobjectattributeaccess table [msdyn_knowledgearticletemplate_Pri
 
 **Added by**: System Solution Solution
 
-Same as queueitem table [msdyn_knowledgearticletemplate_QueueItems](queueitem.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) Many-To-One relationship.
+Same as the [msdyn_knowledgearticletemplate_QueueItems](queueitem.md#BKMK_msdyn_knowledgearticletemplate_QueueItems) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -976,49 +995,49 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgearticletemplate_createdby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdby) One-To-Many relationship.
+See the [lk_msdyn_knowledgearticletemplate_createdby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby"></a> lk_msdyn_knowledgearticletemplate_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgearticletemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_knowledgearticletemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgearticletemplate_modifiedby"></a> lk_msdyn_knowledgearticletemplate_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgearticletemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_knowledgearticletemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby"></a> lk_msdyn_knowledgearticletemplate_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgearticletemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_knowledgearticletemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_knowledgearticletemplate"></a> user_msdyn_knowledgearticletemplate
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_knowledgearticletemplate](systemuser.md#BKMK_user_msdyn_knowledgearticletemplate) One-To-Many relationship.
+See the [user_msdyn_knowledgearticletemplate](systemuser.md#BKMK_user_msdyn_knowledgearticletemplate) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_knowledgearticletemplate"></a> team_msdyn_knowledgearticletemplate
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_knowledgearticletemplate](team.md#BKMK_team_msdyn_knowledgearticletemplate) One-To-Many relationship.
+See the [team_msdyn_knowledgearticletemplate](team.md#BKMK_team_msdyn_knowledgearticletemplate) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_knowledgearticletemplate"></a> business_unit_msdyn_knowledgearticletemplate
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_knowledgearticletemplate](businessunit.md#BKMK_business_unit_msdyn_knowledgearticletemplate) One-To-Many relationship.
+See the [business_unit_msdyn_knowledgearticletemplate](businessunit.md#BKMK_business_unit_msdyn_knowledgearticletemplate) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_msdyn_subject_knowledgearticletemplate_subjectid"></a> msdyn_subject_knowledgearticletemplate_subjectid
 
 **Added by**: System Solution Solution
 
-See subject Table [msdyn_subject_knowledgearticletemplate_subjectid](subject.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) One-To-Many relationship.
+See the [msdyn_subject_knowledgearticletemplate_subjectid](subject.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) one-to-many relationship for the [subject](subject.md) table/entity.
 
 ### See also
 

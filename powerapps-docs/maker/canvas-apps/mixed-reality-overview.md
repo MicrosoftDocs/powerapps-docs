@@ -31,7 +31,7 @@ You can use MR controls to:
 
 [Build your own controls](../../developer/component-framework/custom-controls-overview.md) or use prebuilt controls for MR applications:
 
-- [View in 3D](mixed-reality-component-view-3d.md)
+- [3D object](mixed-reality-component-view-3d.md)
 - [View in mixed reality](mixed-reality-component-view-mr.md)
 - [Measure in mixed reality](mixed-reality-component-measure-distance.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
@@ -65,10 +65,11 @@ iPhones and iPads with specific hardware can run MR apps using the ARKit framewo
 
 Start installing the controls in your apps:
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** control.
+- View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+- Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 ### See also
 

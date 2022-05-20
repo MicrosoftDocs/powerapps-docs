@@ -1,15 +1,13 @@
 ---
 title: "Sample: Pass multiple values to a  web resource through the data parameter (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The sample represents a technique to pass the additional values within a single parameter and then process them within your web resource." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
-
-ms.topic: "article"
-author: "KumarVivek" # GitHub ID
+author: JimDaly
+ms.author: jdaly
+manager: kvivek
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: sample
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -24,7 +22,8 @@ An (HTML) web resource page can only accept a single custom parameter called `da
   
  The page here represents a technique to pass the additional values within a single parameter and then process them within your web resource. 
   
-## Sample HTML web resource  
+## Sample HTML web resource
+
  The HTML code below represents a webpage (HTML) web resource that includes a script that defines three functions:  
   
 - **getDataParam**: Called from the `body.onload` event, this function retrieves any query string parameters passed to the page and locates one named `data`.  
@@ -32,7 +31,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
 - **parseDataValue**: Receives the data parameter from `getDataParam` and builds a DHTML table to display any values passed within the `data` parameter.  
   
   > [!NOTE]
-  >  All characters included in the query string will be encoded using the [encodeURIComponent method](https://msdn.microsoft.com/library/xh9be5xc\(v=VS.85\).aspx). This function uses the JavaScript [decodeURIComponent method](https://msdn.microsoft.com/library/91b80x6x\(VS.85\).aspx) to decode the values passed.  
+  >  All characters included in the query string will be encoded using the [encodeURIComponent function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). This function uses the JavaScript [decodeURIComponent function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent) to decode the values passed.  
   
 - **noParams**: Displays a message when no parameters are passed to the page.  
   
@@ -192,7 +191,8 @@ An (HTML) web resource page can only accept a single custom parameter called `da
     |second|Second Value|  
     |third|Third Value|  
   
-### How it works  
+### How it works
+
  To access the values embedded within the data query string parameter value, in your webpage web resource you can extract the value of the data parameter and then use code to split the string into an array so you can access each name value pair individually.  
   
  When the page loads the `getDataParam` function is called. This function simply identifies the data parameter and passes the value to the `ParseDataValue` function. If no data parameter is found the `noParams` function will add a message to the page in place of the table.  
@@ -201,9 +201,9 @@ An (HTML) web resource page can only accept a single custom parameter called `da
   
 ### See also  
 
- [Web Resources](web-resources.md)   
- [Sample: Import Files as Web Resources](sample-import-files-web-resources.md)   
- [Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
+ [Web Resources](web-resources.md)<br />
+ [Sample: Import Files as Web Resources](sample-import-files-web-resources.md)<br />
+ [Web Page (HTML) Web Resources](webpage-html-web-resources.md)<br />
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -17,9 +17,7 @@ search.app:
   - PowerApps
 contributors:
 ---
-# Migrate Microsoft Access data to Microsoft Dataverse (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Migrate Microsoft Access data to Microsoft Dataverse
 
 Microsoft Access users can now choose to migrate their data into Dataverse or Dataverse for Teams to make use of Azure cloud security and Microsoft Power Platform functionality. Migrating Access data to Dataverse provides many new opportunities for interaction and management of data.  
 
@@ -29,7 +27,7 @@ Watch this short video about migrating Access data to Dataverse.
 Migration is handled in Access using the export feature, and the migration tool that streamlines the process.
 
 > [!NOTE]
-> [Join the Microsoft Access beta to start your migration](https://aka.ms/AccessAndPowerPlatform)
+> [Learn how to prepare MS Access for Migration](https://aka.ms/AccessAndPowerPlatform)
 
 Once migrated, Access users can continue using their existing desktop client to manage their data. They're also able to use Power Platform to manage their data. Plus, they can:
 
@@ -97,7 +95,7 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 |Long Text  |  Multiline Text    |  Supported for migration       |
 |Number: Single   | Float        |  Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)           |
 |Number: Double     |  Float       | Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)            |
-|Large Number      |  BitInt       | Currently not supported for migration        |
+|Large Number      |  Big Integer (BigInt)       | Supported for migration, usable through Dataverse API, Power Apps UI does not currently support this       |
 |Number: Decimal      | Decimal         | Supported for migration         |
 |Yes/No      | Yes/No         |  Supported for migration        |
 |Int      | Whole Number         |  Supported for migration       |

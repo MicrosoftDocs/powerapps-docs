@@ -1,20 +1,21 @@
 ---
 title: "formContext.ui.headerSection item (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with header sections in model-driven apps using client API."
-ms.date: 10/09/2020
-
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 661d084d-744b-44b0-be82-abde6f6e7e90
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.headerSection item (Client API reference)
 
