@@ -1859,7 +1859,9 @@
         - name: Manage SSL certificates
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
-          href: ./portals/admin/manage-custom-certificates.md              
+          href: ./portals/admin/manage-custom-certificates.md  
+        - name: Content Delivery Network
+          href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
