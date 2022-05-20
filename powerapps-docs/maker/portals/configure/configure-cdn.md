@@ -17,8 +17,6 @@ contributors:
 
 # Content Delivery Network 
 
-## Set up content delivery network in portal
-
 A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. CDNs' store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency. 
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="A diagram of a content delivery network.":::
@@ -39,19 +37,19 @@ CDN is available for production Power Apps portals. The steps below detail how t
 
 1. Select **Portals** on the **Resources** card. 
 
-:::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
+    :::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
 1. Select the portal from the available list and select **Manage**. 
 
-:::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
+    :::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
 
 1. Select the **Manage Content Delivery Network** item.
 
-:::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
+    :::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
 
 1. Turn on the **Content Delivery Network** switch to enable the feature. 
 
-:::image type="content" source="media/configure-cdn/turn-on-cdn.png" alt-text="Toggle switch with Content Delivery Network feature enabled.":::
+    :::image type="content" source="media/configure-cdn/turn-on-cdn.png" alt-text="Toggle switch with Content Delivery Network feature enabled.":::
 
 It may take a few minutes to provision the Content Delivery Network.
 
@@ -76,19 +74,19 @@ It may take a few minutes to provision the Content Delivery Network.
 
 1. Select on **Portals** inside **Resources** card 
 
-:::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
+    :::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
 1. Select the Portal from the available list and select **Manage** 
 
-:::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
+    :::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
 
 1. Select the **Manage Content Delivery Network** item 
 
-:::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
+    :::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
 
 1. Turn off the **Content Delivery Network** switch to disable the feature 
 
-:::image type="content" source="media/configure-cdn/disable-cdn.png" alt-text="Disable Content Delivery Network switch.":::
+    :::image type="content" source="media/configure-cdn/disable-cdn.png" alt-text="Disable Content Delivery Network switch.":::
 
 It may take a few minutes for the process to disable the Content Delivery Network
 
@@ -104,11 +102,11 @@ Static website contents are in CDN servers across the geographical locations. Yo
 
 1. Select **Portals** inside **Resources** card 
 
-:::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
+    :::image type="content" source="media/configure-cdn/resources-card-portals.png" alt-text="The portals option on the resources card.":::
 
 1. Select the **Purge Cache** button 
 
-:::image type="content" source="media/configure-cdn/purge-cache.png" alt-text="The purge cache button.":::
+    :::image type="content" source="media/configure-cdn/purge-cache.png" alt-text="The purge cache button.":::
 
 ## Cache Configuration 
 
@@ -122,7 +120,7 @@ Static files are cached based on the file extensions stored in Web files table o
 
     :::image type="content" source="media/configure-cdn/apps-section.png" alt-text="The apps section.":::
 
-1. Select the **Portal Management** App. 
+1. Select the **Portal Management** app. 
 
 1. Navigate to Site Settings  
 
