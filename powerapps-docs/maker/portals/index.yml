@@ -33,9 +33,7 @@ landingContent:
           - text: Configure the rich text editor control on portals
             url: component-rte-tutorial.md                 
           - text: Configure column permissions for portals
-            url: configure/column-permissions.md                 
-          - text: Configure choices column for portals
-            url: configure/choices-column.md                       
+            url: configure/column-permissions.md                                     
        - linkListType: reference
          links:
           - text: Latest released version of portals
