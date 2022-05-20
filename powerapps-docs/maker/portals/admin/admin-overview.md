@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 
-ms.date: 04/21/2021
+ms.date: 05/24/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -17,6 +17,9 @@ contributors:
 # Power Apps portals admin center
 
 The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
+
+> [!NOTE]
+> The Power Apps portals admin center is also used to configure admin options for Power Pages. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Open Power Apps portals admin center
 

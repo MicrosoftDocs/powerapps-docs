@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/24/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -19,6 +19,9 @@ contributors:
 Power Apps portals is licensed by using **per login** and **per page view** capacity add-ons for external users. This capacity must be allocated to a Microsoft Power Platform environment by an administrator. More information: [Licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals)
 
 Administrators can download portal sign-in and page view reports from the [Power Platform admin center](https://admin.powerplatform.com). These reports show the number of sign-ins ("logins") and page views for Power Apps portals across all environments for a tenant.
+
+> [!NOTE]
+> You can also view capacity consumption reports for Power Pages sites. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Download the reports
 
