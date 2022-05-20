@@ -42,14 +42,7 @@ Use a Form section when you want to have users fill out fields and submit data.
 
 In Power Apps, this section will be scrollable.
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/screen-phone-form.png" alt-text="Form screen in the phone layout format.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/screen-tablet-form.png" alt-text="Form screen in the tablet layout format.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/form.png" alt-text="Form screen in the tablet and phone layout formats.":::
 
 - Place only vertical or horizontal data card components in form section.
 - Don't mix and match vertical and horizontal data cards.
@@ -62,14 +55,7 @@ Use the Container (vertical) sections when you want the content to scroll. For e
 > [!TIP]
 > You can also add a small form inside a Container (vertical) section.
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/container-vertical-phone.png" alt-text="Vertical container in the phone layout format.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/container-vertical-tablet.png" alt-text="Vertical container in the tablet layout format.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/container.png" alt-text="Vertical container in the tablet and phone layout formats.":::
 
 - Use base components and forms in container frames.
 - Don't place vertical or horizontal card components in Container (vertical) section.
