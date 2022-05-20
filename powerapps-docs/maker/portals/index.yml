@@ -24,6 +24,8 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Content Delivery Network
+            url: configure/configure-cdn.md
           - text: Configure Dataverse search in portals
             url: configure/search.md  
           - text: Configuring an image column on portals (preview)
