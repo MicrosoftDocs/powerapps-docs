@@ -28,7 +28,7 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
-Starting June 2022 [Authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals using this feature. If you're already using this feature, you need to use the Token endpoint POST request to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features need to migrate supported method by October 2022.   
+Starting June 2022 [Authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals using this feature. If you're already using this feature, you need to use the Token endpoint POST request to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features need to migrate to the supported method by October 2022.   
 
 ## List OData Feed 
 
