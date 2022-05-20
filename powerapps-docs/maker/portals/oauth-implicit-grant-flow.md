@@ -78,7 +78,7 @@ For example, an error response looks as follows:
 
 ## Authorize endpoint details 
 
-> [!NOTE}
+> [!NOTE]
 > Authorize endpoint is deprecated. Use Token endpoint POST request to get ID token.]
 
 The URL for authorize endpoint is: `<portal_url>/_services/auth/authorize`. The authorize endpoint supports the following parameters:
