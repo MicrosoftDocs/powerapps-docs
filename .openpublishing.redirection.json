@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/embedding-sdk.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/dev-enterprise-intro",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/data-platform/change-color-scheme-add-logo-match-organizations-brand.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/create-themes-organization-branding",
       "redirect_document_id": "false"
@@ -6423,16 +6428,6 @@
     {
       "source_path": "powerapps-docs/developer/component-framework/reference/linking/removeLinkedEntity.md",
       "redirect_url": "/powerapps/developer/component-framework/reference/linking",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/user/cs_email_template_builder.md",
-      "redirect_url": "/powerapps/user/customize-insert-email-template",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/user/cs-template-options.md",
-      "redirect_url": "/powerapps/user/email-template-create",
       "redirect_document_id": "false"
     }
   ]

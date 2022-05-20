@@ -8,7 +8,7 @@ editor: ''
 tags: ''
 ms.topic: conceptual
 ms.component: model
-ms.date: 07/19/2021
+ms.date: 05/19/2022
 ms.author: matp
 search.audienceType: 
   - maker
@@ -18,8 +18,6 @@ search.app:
 ---
 
 # App navigation in model-driven apps
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 In a model-driven app, there are the three main app runtime navigation components.
 
@@ -88,9 +86,7 @@ To create a new subarea, complete the following steps:
 1. To save your app navigation changes select **Save**.
 1. To publish the changes and make them available to other users, select **Publish**.
 
-### Add a URL to an app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+### Add a URL to an app
 
 A URL is a type of subarea in the app navigation. When the user selects the subarea, the URL opens in a new tab in the web browser.
 

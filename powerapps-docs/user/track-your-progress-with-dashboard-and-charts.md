@@ -87,11 +87,11 @@ Legend:
  
 5. On the **Add Component** dialog box, select your options. 
  
-      |  |  |
-      | --- | --- |
-      | **Row Type** |Select a row.  |
-      | **View** |Select a view for the row.  |
-      | **Chart** |Select the type of chart that you want use. |
+      |              |Options                                   |
+      |--------------|--------------------------------------------|
+      | **Row Type** |Select a row.                               |
+      | **View**     |Select a view for the row.                  |
+      | **Chart**    |Select the type of chart that you want use. |
 
 
       > [!div class="mx-imgBorder"]
