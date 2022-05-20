@@ -30,7 +30,7 @@ This error appears when you enter the link to a Figma file instead of the link t
 
 To get the Figma page or frame URL with "node-id", ensure you select any frame inside Figma before copying the URL from the address bar. You can also find a link to the page with "node-id" by selecting the page you want to convert > right-click on the page name > select **Copy link to page**.
 
-:::image type="content" source="media/copy-link-page.png" alt-text="Invalid link. Copy a specific page link or frame link, and not a link to just the file.":::
+:::image type="content" source="media/copy-link-page.png" alt-text="Copy link to page option inside Figma.":::
 
 Ensure the URL contains `?node-id=<node ID>` when you paste the copied link in the app from Figma screen inside Power Apps.
 

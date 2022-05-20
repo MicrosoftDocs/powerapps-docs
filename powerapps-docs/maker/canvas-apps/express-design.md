@@ -25,7 +25,7 @@ Express design is a new way to quickly get started with Power Apps by instantly 
 
 If you have a design but are struggling with the nitty gritty UI adjustments and data set up work  for your app, then try out Express design. Power Apps will do the heavy lifting for you by identifying the UI elements from your design and convert that into Power Apps controls.
 
-:::image type="content" source="media/express-design/express-design-overview.png" alt-text="Create an app from an image.":::
+:::image type="content" source="media/express-design/express-design-overview.png" alt-text="Express design overview.":::
 
 You can add data connection either during the app creation steps, or after the app is generated and connect to your business data from a wide variety of Microsoft and third-party data sources. After your new canvas app is generated in Power Apps Studio, you can continue to build and edit it.
 
