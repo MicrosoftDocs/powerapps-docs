@@ -28,9 +28,13 @@ In this article, learn about common errors that you may see when creating apps f
 
 This error appears when you enter the link to a Figma file instead of the link to a specific page or a frame within the Figma file. Sometimes, the link may also have a missing "node-id".
 
-To get the Figma page or frame URL with "node-id", ensure you select any frame inside Figma. Verify the URL in the address bar shows `?node-id=<node ID>` before you copy and paste it in the app from Figma screen inside Power Apps.
+To get the Figma page or frame URL with "node-id", ensure you select any frame inside Figma before copying the URL from the address bar. You can also find a link to the page with "node-id" by selecting the page you want to convert > right-click on the page name > select **Copy link to page**.
 
-For more information about creating links to a page or a frame, see [Copy links to Files, Pages, and Frames](https://help.figma.com/hc/articles/360045942953-Add-links-to-text).
+:::image type="content" source="media/copy-link-page.png" alt-text="Invalid link. Copy a specific page link or frame link, and not a link to just the file.":::
+
+Ensure the URL contains `?node-id=<node ID>` when you paste the copied link in the app from Figma screen inside Power Apps.
+
+For more information about creating links to a page or a frame, see [Copy links to Files, Pages, and Frames](https://help.figma.com/hc/articles/360045942953-Add-links-to-text) and [Copy link to page](https://help.figma.com/hc/articles/360055904133-Maker-and-Figma#In_Figma).
 
 ## Error: Access denied. Check the information you entered and try again
 
