@@ -66,91 +66,35 @@ Vertical and horizontal [data cards](../working-with-cards.md) are components th
 
 ### Headers and dividers
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/headers-dividers-horizontal.png" alt-text="Horizontal headers and dividers.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/headers-dividers-vertical.png" alt-text="Vertical headers and dividers.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/headers-dividers-horizontal.png" alt-text="Horizontal headers and dividers.":::
 
 ### Text input, drop down, and combo box
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/textinput-dropdown-combo-horizontal.png" alt-text="Horizontal text input, drop down, and combo box.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/textinput-dropdown-combo-vertical.png" alt-text="Vertical text input, drop down, and combo box.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/textinput-dropdown-combo-horizontal.png" alt-text="Horizontal text input, drop down, and combo box.":::
 
 ### Toggle, check box, and radio
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/toggle-checkbox-radio-horizontal.png" alt-text="Horizontal toggle, check box, and radio.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/toggle-checkbox-radio-vertical.png" alt-text="Vertical toggle, check box, and radio.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/toggle-checkbox-radio-horizontal.png" alt-text="Horizontal toggle, check box, and radio.":::
 
 ### Slider, rating
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/slider-rating-horizontal.png" alt-text="Horizontal slider, rating.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/slider-rating-vertical.png" alt-text="Vertical slider, rating.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/slider-rating-horizontal.png" alt-text="Horizontal slider, rating.":::
 
 ### Date picker
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/date-picker-horizontal.png" alt-text="Horizontal date picker.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/date-picker-vertical.png" alt-text="Vertical date picker.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/date-picker-horizontal.png" alt-text="Horizontal date picker.":::
 
 ### List box
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/list-box-horizontal.png" alt-text="Horizontal list box.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/list-box-vertical.png" alt-text="Vertical list box.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/list-box-horizontal.png" alt-text="Horizontal list box.":::
 
 ### Rich text
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/rich-text-horizontal.png" alt-text="Horizontal rich text.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/rich-text-vertical.png" alt-text="Vertical rich text.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/rich-text-horizontal.png" alt-text="Horizontal rich text.":::
 
 ### Timer
 
-:::row:::
-   :::column span="":::
-      :::image type="content" source="media/timer-horizontal.png" alt-text="Horizontal timer.":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="media/timer-vertical.png" alt-text="Vertical timer.":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="media/timer-horizontal.png" alt-text="Horizontal timer.":::
 
 ## Component sizes, states and types
 
