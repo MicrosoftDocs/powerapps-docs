@@ -1,7 +1,7 @@
 ---
 title: "Configure auditing (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Explains how to configure programatically configure auditing settins for the organization, tables and columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/10/2022
+ms.date: 05/21/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
@@ -18,9 +18,9 @@ contributors:
  - phecke
 ---
 
-# Configure auditing 
+# Configure auditing
 
-Auditing uses settings in the [Organization table](../reference/entities/organization.md) and definitions of individual tables and columns to determine what kind of audit history data to capture. 
+Auditing uses settings in the [Organization table](../reference/entities/organization.md) and definitions of individual tables and columns to determine what kind of audit history data to capture.
 
 Anyone can read this configuration data, but you must have the System Administrator or System Customizer roles to change these settings.
 
@@ -30,12 +30,14 @@ Four properties in the [Organization table](../reference/entities/organization.m
 
 The following table describes the `organization` table columns that control auditing behavior.
 
-|Schema Name<br />Logical Name |Type  |Description  |
+|Schema Name<br />Logical Name<br />Display Name|Type  |Description  |
 |---------|---------|---------|
-|`IsAuditEnabled`<br />`isauditenabled`|Boolean|Whether auditing is enabled for the environment.|
-|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
-|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: TODO topic about User Access Auditing](/power-platform/admin/audit-data-user-activity)|
-|`UserAccessAuditingInterval`<br />`useraccessauditinginterval`|Integer|The interval how often user access is logged in hours. Default value is 4.|
+|`IsAuditEnabled`<br />`isauditenabled`<br />**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment.|
+|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
+|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: TODO topic about User Access Auditing](/power-platform/admin/audit-data-user-activity)|
+|`UserAccessAuditingInterval`<br />`useraccessauditinginterval`<br />**User Authentication Auditing Interval**|Integer|The interval how often user access is logged in hours. Default value is 4.|
+
+### Retrieve organization settings
 
 You can retrieve these values using the following queries:
 
@@ -75,17 +77,19 @@ HTTP/1.1 200 OK
     ]
 }
 ```
-More information: 
+
+More information:
+
 - <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
 - [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 
 # [Organization Service](#tab/orgservice)
 
-This function uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method> with the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> and <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse> classes to get the `organizationid` value.
-
-Then it uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method> to return the data from the `organization` table.
-
 ```csharp
+/// <summary>
+/// Shows Auditing Configuration properties
+/// </summary>
+/// <param name="svc">The IOrganizationService instance to use.</param>
 static void ShowAuditingConfig(IOrganizationService svc)
 {
     WhoAmIResponse whoAmIResponse = 
@@ -126,13 +130,14 @@ More information:
 
 Update the column properties in the table above to change how auditing works for the environment. You must have the System Administrator or System Customizer roles to change these settings.
 
-You can set these column values using Web API or Organization Service. More information: 
+You can set these column values using Web API or Organization Service. More information:
+
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
 - [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
 
 ## Configure tables and columns
 
-When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can particpate in auditing are enabled. The primary control is at the organization and then table level.
+When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can participate in auditing are enabled. The primary control is at the organization and then table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
@@ -155,6 +160,9 @@ A `BooleanManagedProperty` has two important properties:
 |`CanBeChanged` |Determines whether the `Value` setting can be changed after the table or column is included in a managed solution.|
 
 The publisher of the solution that adds a table  may block people who install their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+
+> [!NOTE]
+> At the time of this writing, the `IsAuditEnabled` property is exposed in the designer like a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. The `CanBeChanged` property can only be read or set programmatically.
 
 ### Detect which tables are enabled for auditing
 
@@ -196,14 +204,19 @@ If-None-Match: null
 ```
 
 More information:
- - [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
- - <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
+
+- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+- <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
+- [Private tables](../entities.md#private-tables)
 
 # [Organization Service](#tab/orgservice)
 
-The `ShowTableAuditConfigurations` static method lists the tables that can be enabled for auditing and those that cannot be enabled for auditing.
-
 ```csharp
+/// <summary>
+/// Lists the tables that can be enabled for auditing and 
+/// the tables that cannot be enabled for auditing.
+/// </summary>
+/// <param name="svc">The IOrganizationService instance to use.</param>
 static void ShowTableAuditConfigurations(IOrganizationService svc)
 {
     //Define properties to return
@@ -260,6 +273,7 @@ static void ShowTableAuditConfigurations(IOrganizationService svc)
 More information:
 
 - [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+- [Private tables](../entities.md#private-tables)
 
 ---
 
@@ -308,10 +322,13 @@ More information: [Query table definitions using the Web API](../webapi/query-me
 
 # [Organization Service](#tab/orgservice)
 
-This `ShowColumnAuditConfigurations` static method lists the columns of a table that can be enabled for auditing and those that cannot be enabled for auditing where the table `LogicalName` value is passed as a parameter.
-
 ```csharp
-
+/// <summary>
+/// Lists the columns of a table that can be enabled for auditing and 
+/// the columns that cannot be enabled for auditing.
+/// </summary>
+/// <param name="svc">The IOrganizationService instance to use.</param>
+/// <param name="tableLogicalName">The logical name of the table.</param>
 static void ShowColumnAuditConfigurations(
 IOrganizationService svc,
 string tableLogicalName)
@@ -395,7 +412,7 @@ More information: [Retrieve and detect changes to table definitions](../org-serv
 
 ## Enable or disable tables and columns for auditing
 
-If you want to change which tables or columns support auditing, you must update the respective `IsAuditEnabled` property.
+If you want to change which tables or columns support auditing, you must update the respective `IsAuditEnabled.Value` property.
 
 ### Tables
 
@@ -422,7 +439,7 @@ Use the `PublishXml` message to publish customizations for the table.
 
 # [Web API](#tab/webapi)
 
-This example publishes the `account` table using the <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>.
+This example publishes the `account` table.
 
 **Request**
 
@@ -445,21 +462,31 @@ If-None-Match: null
 HTTP/1.1 204 OK 
 ```
 
-More information: [Use Web API actions](../webapi/use-web-api-actions.md)
+More information:
+
+- [Use Web API actions](../webapi/use-web-api-actions.md)
+- <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>
 
 # [Organization Service](#tab/orgservice)
 
-This example publishes the `account` table using <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>.
+This example publishes the `account` table.
 
 ```csharp
 PublishXmlRequest request = new PublishXmlRequest()
-{ 
-    ParameterXml = "<importexportxml><entities><entity>account</entity></entities></importexportxml>"
+{
+    ParameterXml = @"<importexportxml>
+                        <entities>
+                            <entity>account</entity>
+                        </entities>
+                    </importexportxml>"
 };
 svc.Execute(request);
 ```
-More information: 
+
+More information:
+
  - <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+ - <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>
  - [Publish customizations](../../model-driven-apps/publish-customizations.md)
  - [Publish request schema](../../model-driven-apps/publish-request-schema.md)
 

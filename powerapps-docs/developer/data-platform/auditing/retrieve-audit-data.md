@@ -1,7 +1,7 @@
 ---
 title: "Retrieve the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to programmatically retrieve the audit change history." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/10/2022
+ms.date: 05/21/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
@@ -146,7 +146,7 @@ There are some action options that can represent more than one message. Some mes
 |---------|---------|---------|---------|
 |31|Add Member|`List`|`AddMemberList`|
 |37|Add Item|`Campaign`|`AddItemCampaign`|
-|37|Add Item|`CampaignActivity`|`CampaignActivity`|
+|37|Add Item|`CampaignActivity`|`AddItemCampaignActivity`|
 |44|Win|`Opportunity`|`WinOpportunity`|
 |16|Close|`Incident`|`CloseIncident`|
 |16|Close|`Quote`|`CloseQuote`|
@@ -432,7 +432,7 @@ There are three messages you can use to retrieve data changes that are audited.
 |Web API  |.NET SDK  |Description |
 |---------|---------|---------|
 |<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>|Retrieve the full audit details from an audit record.|
-|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieve all changes to a specific column.|
+|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieves the change history for an single column of an audited record.|
 |<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>|Retrieve all audited data changes for a specific record.|
 
 ### AuditDetail types
