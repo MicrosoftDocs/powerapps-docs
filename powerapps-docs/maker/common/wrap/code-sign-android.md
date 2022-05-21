@@ -1,11 +1,11 @@
 ﻿---
-title: Code sign for Android (preview)
+title: Code sign for Android
 description: Learn about how to code sign for Android for Power Apps wrap.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/05/2022
+ms.date: 05/31/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -17,9 +17,7 @@ contributors:
   - larryk78
 ---
 
-# Code sign for Android (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Code sign for Android
 
 In this article, you'll learn about how to code sign for Android. You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
@@ -126,6 +124,6 @@ You can now host the package on a distribution service such as [App Center](how-
 
 ### See also
 
-- [Wrap overview (preview)](overview.md)
+- [Wrap overview](overview.md)
 - [Manually Signing the APK - Xamarin](/xamarin/android/deploy-test/signing/manually-signing-the-apk)
-- [Code sign on iOS (preview)](code-sign-ios.md)
+- [Code sign on iOS](code-sign-ios.md)

@@ -1153,9 +1153,9 @@
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
-  - name: Create native mobile apps (preview)
+  - name: Create native mobile apps
     items:
-      - name: Overview of wrap (preview)
+      - name: Overview of wrap
         href: ./common/wrap/overview.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
