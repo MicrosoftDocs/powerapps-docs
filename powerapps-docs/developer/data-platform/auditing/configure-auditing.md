@@ -30,11 +30,11 @@ Four properties in the [Organization table](../reference/entities/organization.m
 
 The following table describes the `organization` table columns that control auditing behavior.
 
-|Schema Name<br />Logical Name<br />Display Name|Type  |Description  |
+|Schema Name<br />Logical Name<br />Display Name|Type|Description  |
 |---------|---------|---------|
 |`IsAuditEnabled`<br />`isauditenabled`<br />**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment.|
 |`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
-|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: TODO topic about User Access Auditing](/power-platform/admin/audit-data-user-activity)|
+|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)|
 |`UserAccessAuditingInterval`<br />`useraccessauditinginterval`<br />**User Authentication Auditing Interval**|Integer|The interval how often user access is logged in hours. Default value is 4.|
 
 ### Retrieve organization settings
@@ -83,7 +83,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
 - [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 
-# [Organization Service](#tab/orgservice)
+# [.NET SDK](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -209,7 +209,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
 - [Private tables](../entities.md#private-tables)
 
-# [Organization Service](#tab/orgservice)
+# [.NET SDK](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -320,7 +320,7 @@ If-None-Match: null
 
 More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 
-# [Organization Service](#tab/orgservice)
+# [.NET SDK](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -467,7 +467,7 @@ More information:
 - [Use Web API actions](../webapi/use-web-api-actions.md)
 - <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>
 
-# [Organization Service](#tab/orgservice)
+# [.NET SDK](#tab/sdk)
 
 This example publishes the `account` table.
 

@@ -40,7 +40,7 @@ The following table summarizes important columns in the audit table.
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
 |`Action`<br />`action`<br />**Event**|Choice|74 options that represent the event that caused the change. More information: [Actions](#audit-actions)|
-|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action. Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve the change history](#retrieve-the-change-history) |
+|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve the change history](#retrieve-the-change-history) |
 |`AuditId`<br />`auditid`<br /> **Record Id**|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />**Calling User**|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
 |`CreatedOn`<br />`createdon`<br />**Changed Date**|DateTime|When the audit record was created, which is when the user operation took place.|
@@ -48,6 +48,8 @@ The following table summarizes important columns in the audit table.
 |`ObjectTypeCode`<br />`objecttypecode`<br />**Entity**|EntityName|The logical name of the table referred to by the `objectid` column.|
 |`Operation`<br />`operation`<br />**Operation**|Choice|The operation that caused the audit record. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
 |`UserId`<br />`userid`<br />**Changed By**|Lookup|The Id of the user who caused the change.|
+
+
 
 ## Audit Actions
 
@@ -229,6 +231,9 @@ With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit
 
 More information: [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document)
 
+> [!NOTE]
+> The [ChangeData Column](../reference/entities/audit.md#BKMK_ChangeData) is not included in the Web API <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType>. Rather than try to use this data, use the messages to retrieve change history. More information: [Retrieve the change history](#retrieve-the-change-history).
+
 In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties.
 
 Lookup properties contain additional information when `GET` requests are sent using the `Prefer: odata.include-annotations="*"` request header. Using this preference will make sure that you get the `Microsoft.Dynamics.CRM.lookuplogicalname` and `OData.Community.Display.V1.FormattedValue` annotation values, but the `Microsoft.Dynamics.CRM.associatednavigationproperty` annotation values are not included with lookup properties in the `audit` EntityType.
@@ -301,7 +306,6 @@ Preference-Applied: odata.include-annotations="*"
 }
 
 ```
-
 
 # [.NET SDK](#tab/sdk)
 

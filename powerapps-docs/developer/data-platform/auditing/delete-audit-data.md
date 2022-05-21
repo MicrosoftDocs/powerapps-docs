@@ -34,7 +34,7 @@ Dataverse provides the following messages to delete audit history data:
 |`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
 
 > [!NOTE]
-> You cannot directly delete records in the [Auditing (Audit) table](reference/entities/audit.md)
+> You cannot directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md)
 
 ## Delete the change history for a record
 
