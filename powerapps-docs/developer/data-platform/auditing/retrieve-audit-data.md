@@ -33,7 +33,7 @@ Data for auditing events is in the [Auditing (Audit) table](../reference/entitie
 
 The audit table provides the data for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Administrators Guide: Use the Audit Summary view](/power-platform/admin/manage-dataverse-auditing#use-the-audit-summary-view)
 
-Calling user must have the `prvReadAuditSummary` privilege to retrieve data from this table.
+Calling user must have the `prvReadAuditSummary` privilege to retrieve data from this table. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
 
 The following table summarizes important columns in the audit table.
 
@@ -434,6 +434,8 @@ There are three messages you can use to retrieve data changes that are audited.
 |<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>|Retrieve the full audit details from an audit record.|
 |<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieves the change history for an single column of an audited record.|
 |<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>|Retrieve all audited data changes for a specific record.|
+
+To use these messages you must have the `prvReadRecordAuditHistory` privilege. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
 
 ### AuditDetail types
 

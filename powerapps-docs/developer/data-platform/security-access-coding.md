@@ -1,10 +1,8 @@
 ---
 title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/08/2021
+ms.date: 05/21/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -172,12 +170,109 @@ following query to retrieve these.
 
 Use these messages to retrieve privileges by privilege ID or name. They include privileges that the user might have from teams.
 
-| Message | Web API function,<br/> SDK API class |
+| Message | Web API function<br/>SDK request class |
 | --- | --- |
-| RetrieveUserPrivilegeByPrivilegeId | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest> |
-| RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
-| RetrieveUserSetOfPrivilegesByIds | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds>,<br/>RetrieveUserSetOfPrivilegesByIdsRequest |
-| RetrieveUserSetOfPrivilegesByNames | <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames>,<br/>RetrieveUserSetOfPrivilegesByNamesRequest |
+|`RetrieveUserPrivilegeByPrivilegeId`| <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId?text=RetrieveUserPrivilegeByPrivilegeId Function><br/><xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest?text=RetrieveUserPrivilegeByPrivilegeIdRequest Class> |
+|`RetrieveUserPrivilegeByPrivilegeName`| <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName?text=RetrieveUserPrivilegeByPrivilegeName Function><br/><xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest?text=RetrieveUserPrivilegeByPrivilegeNameRequest Class> |
+|`RetrieveUserSetOfPrivilegesByIds`| <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds?text=RetrieveUserSetOfPrivilegesByIds Function>|
+|`RetrieveUserSetOfPrivilegesByNames`| <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames?text=RetrieveUserSetOfPrivilegesByNames Function>|
+
+<!-- As of 2022-5-21 there are no SDK request classes for RetrieveUserSetOfPrivilegesByIds or RetrieveUserSetOfPrivilegesByNames -->
+
+### Example: Check whether a user has a privilege
+
+The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName` message.
+
+# [Web API](#tab/webapi)
+
+This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/systemusers(00000000-0000-0000-0000-000000000001)/Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName(PrivilegeName='prvReadAuditSummary') HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Prefer: odata.include-annotations="*"
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+
+{
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse",
+    "RolePrivileges": [
+        {
+            "Depth": "Global",
+            "PrivilegeId": "c2cbe3db-62c8-4661-9ac5-7691c83242f5",
+            "BusinessUnitId": "38e0dbe4-131b-e111-ba7e-78e7d1620f5e",
+            "PrivilegeName": "prvReadAuditSummary"
+        }
+    ]
+}
+```
+
+More information:
+
+- [Use Web API functions](webapi/use-web-api-functions.md)
+- [Bound functions](webapi/use-web-api-functions.md#bound-functions)
+- <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName?text=RetrieveUserPrivilegeByPrivilegeName Function>
+
+# [.NET SDK](#tab/sdk)
+
+```csharp
+/// <summary>
+/// Returns whether specified user has a named privilege
+/// </summary>
+/// <param name="svc">The IOrganizationService instance to use.</param>
+/// <param name="systemUserId">The Id of the user.</param>
+/// <param name="privilegeName">The name of the privilege.</param>
+/// <returns></returns>
+static bool HasPrivilege(IOrganizationService svc,
+Guid systemUserId,
+string privilegeName)
+{
+    var req = new
+        RetrieveUserPrivilegeByPrivilegeNameRequest
+    {
+        PrivilegeName = privilegeName,
+        UserId = systemUserId
+    };
+    try
+    {
+        var resp =
+            (RetrieveUserPrivilegeByPrivilegeNameResponse)svc
+            .Execute(req);
+        if (resp.RolePrivileges.Length > 0)
+        {
+            return true;
+        }
+    }
+    catch (System.ServiceModel.FaultException)
+    {
+        //Invalid userid or privilege name
+        throw;
+    }
+    catch (Exception)
+    {
+        throw;
+    }
+    return false;
+}
+```
+
+More information:
+
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse Class>
+
+---
 
 ## Retrieve privileges for a security role
 
