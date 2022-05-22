@@ -49,126 +49,53 @@ The following table summarizes important columns in the audit table.
 |`Operation`<br />`operation`<br />**Operation**|Choice|The operation that caused the audit record. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
 |`UserId`<br />`userid`<br />**Changed By**|Lookup|The Id of the user who caused the change.|
 
-
-
 ## Audit Actions
 
-There are currently 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which generally correspond to events in the system.
+At the time this topic was written there were 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which correspond to events in the system. You can use these to filter for specific events.
 
-You can use these to filter for specific events. The following table includes the options:
+The following groups categorize these events.
 
-<!-- 
+### Table row operations
 
-TODO: complete the table descriptions 
+These events capture changes to a record.
 
--->
-
-|Value|Label|Message|Comment|
+|Value|Label|Message|Description|
 |-----|-----|-------|-------|
-|0|Unknown|None|Not a known message|
-|1|Create |`Create`||
-|2|Update|`Update`||
-|3|Delete|`Delete`||
-|4|Activate|||
-|5|Deactivate|||
-|11|Cascade|||
-|12|Merge|`Merge`||
-|13|Assign|`Assign`||
-|14|Share|`GrantAccess`||
-|15|Retrieve|`Retrieve`||
-|16|Close|`CloseIncident`<br />`CloseQuote`|See [Event groups](#event-groups)|
-|17|Cancel|||
-|18|Complete|||
-|20|Resolve|||
-|21|Reopen|||
-|22|Fulfill|||
-|23|Paid|||
-|24|Qualify|||
-|25|Disqualify|||
-|26|Submit|||
-|27|Reject|||
-|28|Approve|||
-|29|Invoice|||
-|30|Hold|||
-|31|Add Member||See [Event groups](#event-groups)|
-|32|Remove Member|||
+|1|Create |`Create`|A record is created.|
+|2|Update|`Update`|A record is updated.|
+|3|Delete|`Delete`|A record is deleted.|
+|12|Merge|`Merge`|A record is merged with another.|
+|13|Assign|`Assign`|The `ownerid` column value for a user-owned table record is changed.|
+|41|Set State|`SetState`|The `statecode` column value for a record is changed.|
+
+These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+
+### Record Sharing Changes
+
+These events capture changes to record access when a record is shared.
+
+|Value|Label|Message|Description|
+|-----|-----|-------|-------|
+|14|Share|`GrantAccess`|A user is granted privileges to a record.|
+|48|Modify Share|`ModifyAccess`|The privileges granted to a user changes.|
+|49|Unshare|`RevokeAccess`|A user's access to a record is removed.|
+
+These events will return an `ShareAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+
+### Changes to Many-to-Many relationships
+
+These events capture changes when data changes for Many-to-Many relationships.
+
+|Value|Label|Message|Description|
+|-----|-----|-------|-------|
 |33|Associate Entities|`Associate`||
 |34|Disassociate Entities|`Disassociate`||
-|35|Add Members|||
-|36|Remove Members|||
-|37|Add Item||See [Event groups](#event-groups)|
-|38|Remove Item|||
-|39|Add Substitute|||
-|40|Remove Substitute|||
-|41|Set State|`SetState`||
-|42|Renew|`RenewContract`<br />`RenewEntitlement`|See [Event groups](#event-groups)|
-|43|Revise||See [Event groups](#event-groups)|
-|44|Win||See [Event groups](#event-groups)|
-|45|Lose||See [Event groups](#event-groups)|
-|46|Internal Processing|||
-|47|Reschedule|||
-|48|Modify Share|`ModifyAccess`||
-|49|Unshare|`RevokeAccess`||
-|50|Book|||
-|51|Generate Quote From Opportunity|||
-|52|Add To Queue|||
-|53|Assign Role To Team|||
-|54|Remove Role From Team|||
-|55|Assign Role To User|||
-|56|Remove Role From User|||
-|57|Add Privileges to Role|||
-|58|Remove Privileges From Role|||
-|59|Replace Privileges In Role|||
-|60|Import Mappings|||
-|61|Clone|||
-|62|Send Direct Email|||
-|63|Enabled for organization|||
-|64|User Access via Web|None|See [User Access Events](#user-access-events)|
-|65|User Access via Web Services|None|See [User Access Events](#user-access-events)|
-|100|Delete Entity||User deleted a table.|
-|101|Delete Attribute||User deleted a column.|
-|102|Audit Change at Entity Level||User changed a table definition to enable or disable auditing.|
-|103|Audit Change at Attribute Level||User changed a column definition to enable or disable auditing.|
-|104|Audit Change at Org Level|||
-|105|Entity Audit Started|||
-|106|Attribute Audit Started|||
-|107|Audit Enabled|||
-|108|Entity Audit Stopped|||
-|109|Attribute Audit Stopped|||
-|110|Audit Disabled|||
-|111|Audit Log Deletion|||
-|112|User Access Audit Started|None|See [User Access Events](#user-access-events)|
-|113|User Access Audit Stopped|None|See [User Access Events](#user-access-events)|
 
-#### Event groups
+These events will return an `RelationshipAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
-There are some action options that can represent more than one message. Some messages have a common verb that is appended with a table name. In this way some action options can represent more than one message. You need to filter on the `objecttypecode` to differentiate the specific message. For example:
+### User Access Events
 
-|Value|Event Label|Table|Message|
-|---------|---------|---------|---------|
-|31|Add Member|`List`|`AddMemberList`|
-|37|Add Item|`Campaign`|`AddItemCampaign`|
-|37|Add Item|`CampaignActivity`|`AddItemCampaignActivity`|
-|44|Win|`Opportunity`|`WinOpportunity`|
-|16|Close|`Incident`|`CloseIncident`|
-|16|Close|`Quote`|`CloseQuote`|
-|42|Renew|`Contract`|`RenewContract`|
-|42|Renew|`Entitlement`|`RenewEntitlement`|
-|43|Revise|`Quote`|`ReviseQuote`|
-
-In the .NET SDK you will find request and response class definitions for many of these within the <xref:Microsoft.Crm.Sdk.Messages?text=Microsoft.Crm.Sdk.Messages Namespace>, such as:
-
- - <xref:Microsoft.Crm.Sdk.Messages.AddMemberListRequest?text=AddMemberListRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddMemberListResponse?text=AddMemberListResponse Class>
- - <xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignRequest?text=AddItemCampaignRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignResponse?text=AddItemCampaignResponse Class>
- - <xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignActivityRequest?text=AddItemCampaignActivityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.AddItemCampaignActivityResponse?text=AddItemCampaignActivityResponse Class>
- - <xref:Microsoft.Crm.Sdk.Messages.WinOpportunityRequest?text=WinOpportunityRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.WinOpportunityResponse?text=WinOpportunityResponse Class>
- - <xref:Microsoft.Crm.Sdk.Messages.CloseIncidentRequest?text=CloseIncidentRequest Class>/<xref:Microsoft.Crm.Sdk.Messages.CloseIncidentResponse?text=CloseIncidentResponse Class>
- 
-In the Web API, you will find corresponding actions in the Web API $metadata service document when a solution containing the definition of these messages is installed. These messages are only found in the Dynamics 365 solutions such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
-
-#### User Access Events
-
-The following `action` options are used to capture history of user access when user access auditing is enabled.
+These options are used to capture history of user access when user access auditing is enabled. The audit record for these events will have the `operation` column value of 4.
 
 |Value|Label|Description|
 |-----|-----|-------|
@@ -177,7 +104,66 @@ The following `action` options are used to capture history of user access when u
 |112|User Access Audit Started|User access audit began.|
 |113|User Access Audit Stopped|User access audit ended.|
 
+These events will return an `UserAccessAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+
 For a .NET SDK sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
+
+### Metadata change events
+
+These events capture changes to table and column definitions as well as changes to the organization table.
+
+|Value|Label|Description|
+|-----|-----|-------|
+|100|Delete Entity|User deleted a table.|
+|101|Delete Attribute|User deleted a column.|
+|102|Audit Change at Entity Level|User changed a table definition to enable or disable auditing.|
+|103|Audit Change at Attribute Level|User changed a column definition to enable or disable auditing.|
+|104|Audit Change at Org Level|A change was made to organization settings.|
+
+These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+
+### Audit change events
+
+These events capture changes to audit settings.
+
+|Value|Label|Description|
+|-----|-----|-------|
+|105|Entity Audit Started|A table was enabled for auditing.|
+|106|Attribute Audit Started|A column was enabled for auditing.|
+|107|Audit Enabled|Auditing was enabled for the organization.|
+|108|Entity Audit Stopped|A table was disabled for auditing.|
+|109|Attribute Audit Stopped|Auditing was disabled for |
+|110|Audit Disabled|A column was disabled for auditing.|
+|111|Audit Log Deletion|An audit log was deleted.|
+
+These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+
+### Changes to Security Role privileges
+
+|Value|Label|Message|Description|
+|-----|-----|-------|-------|
+|57|Add Privileges to Role|`AddPrivilegesRole`|Privileges added to a role.|
+|58|Remove Privileges From Role|`RemovePrivilegeRole`|Privileges removed from a role.|
+|59|Replace Privileges In Role|`ReplacePrivilegesRole`|Privileges for a role are replaced.|
+
+These events will return an `RolePrivilegeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+
+### Other Actions
+
+The remaining action options will generally refer to auditable operations that apply to specific solutions, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
+
+The labels for these messages should align to an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table, such as `CloseOpportunity` and `CloseQuote`.
+
+<!-- 
+
+These may need their own category.
+
+|53|Assign Role To Team|||
+|54|Remove Role From Team|||
+|55|Assign Role To User|||
+|56|Remove Role From User|||
+
+-->
 
 ### audit table relationships
 
@@ -439,7 +425,7 @@ There are three messages you can use to retrieve data changes that are audited.
 |<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieves the change history for an single column of an audited record.|
 |<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>|Retrieve all audited data changes for a specific record.|
 
-To use these messages you must have the `prvReadRecordAuditHistory` privilege. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
+To use these messages you must have the `prvReadRecordAuditHistory` and `prvReadAuditSummary` privileges. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
 
 ### AuditDetail types
 

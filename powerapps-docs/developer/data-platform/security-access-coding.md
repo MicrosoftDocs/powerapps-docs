@@ -185,7 +185,7 @@ The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName
 
 # [Web API](#tab/webapi)
 
-This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege.
+This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType>`.RolePrivileges` collection contains data, the user has the privilege.
 
 **Request**
 
@@ -223,6 +223,7 @@ More information:
 - [Use Web API functions](webapi/use-web-api-functions.md)
 - [Bound functions](webapi/use-web-api-functions.md#bound-functions)
 - <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName?text=RetrieveUserPrivilegeByPrivilegeName Function>
+- <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType>
 
 # [.NET SDK](#tab/sdk)
 
