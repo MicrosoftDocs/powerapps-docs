@@ -23,7 +23,7 @@ contributors:
 
 The app making journey typically involves a design phase to plan out what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or even an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
 
-With the **Image to app** feature, you can now create an app from a visual design and connect it to data through a few simple steps in the guided interface. This feature makes it easy for makers of all skill levels to jump-start the app development process.
+With the **Image to app** feature, you can now create an app from a visual design and connect it to data through a few simple steps in the guided interface. This feature makes it easy for makers of all skill levels to jumpstart the app development process.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -65,7 +65,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
     | - | - |
     | :::image type="content" source="media/app-from-image/hand-drawn-good.png" alt-text="Example hand drawn image with acceptable quality."::: | :::image type="content" source="media/app-from-image/hand-drawn-bad.png" alt-text="Example hand drawn image with unacceptable quality."::: |
 
-1. Based on the dimensions of your image, the format (Tablet or Phone) will be automatically selected for you. For the best results, it is highly recommended that you keep the suggested format. Using the suggested formats will ensure the closest match between your input image and the final app. Select **Next**.
+1. Based on the dimensions of your image, the format (Tablet or Phone) will be automatically selected for you. For the best results, we recommend that you keep the suggested format. Using the suggested formats will ensure the closest match between your input image and the final app. Select **Next**.
 
     :::image type="content" source="media/app-from-image/choose-image.png" alt-text="Provide image name, image type, and layout.":::
 
@@ -82,7 +82,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
     After you've reviewed the tags and ensured that each component is correctly tagged, select **Next**.
 
-1. The next step is to set up data. For the best experience, it is highly recommended to connect your app to a data source by selecting **Create a new table in Dataverse**. If you choose this option and select **Next**, you'll be guided in the next stage to add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
+1. The next step is to set up data. For the best experience, we recommended that you connect your app to a data source by selecting **Create a new table in Dataverse**. If you choose this option and select **Next**, you'll be guided in the next stage to add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
 
     If you don't want to create a new table in Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app will be created as-is, which means that the components you tagged in the previous step will be generated directly. They won't be placed into a form component, and your app won't be connected to data.
 
@@ -125,7 +125,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
     1. [Add a new screen](add-screen-context-variables.md) named **Screen2** to your app and a gallery to display the records. Set the data source of the gallery to your new Dataverse table.
     1. On the screen that contains your form, [add a button](add-list-box-drop-down-list-radio-button.md) (if you don't have one already) to submit the form data. Set the [formula](working-with-formulas.md) for the **OnSelect** property to `SubmitForm(Form1)`.
     1. Select the form, then select the Advanced tab on the right-side of the screen and set the property **OnSuccess** to `Navigate(Screen2)`. This way, after the form data is successfully submitted, the app will navigate to the screen that contains the gallery to display the records.
-    1. Select **Play** on top-right side of the screen to preview your app. Fill in the form, and submit the form. You'll see your new record show up in the gallery screen.
+    1. Select **Play** on top-right side of the screen to preview your app. Fill in the form, and submit the form. Your new record will appear in the gallery screen.
 
 1. [Save and publish](save-publish-app.md) the app.
 
