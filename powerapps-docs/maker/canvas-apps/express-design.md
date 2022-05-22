@@ -21,19 +21,17 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Express design is a new way to quickly get started with Power Apps by instantly transforming your visual design into an app. With **Express design**, makers can quickly turn existing design artifacts&mdash;including paper forms, whiteboard sketches, or Figma files, into a working app.
+Express design is a new way to quickly get started with Power Apps by instantly transforming your visual design into an app. With **Express design**, makers can quickly turn existing design artifacts—including paper forms, whiteboard sketches, or Figma files—directly into a working app.
 
-If you have a design but are struggling with the nitty gritty UI adjustments and data set up work  for your app, then try out Express design. Power Apps will do the heavy lifting for you by identifying the UI elements from your design and convert that into Power Apps controls.
+Whether it’s handling the detailed adjustments required to generate pixel-perfect UI, or creating a new data source and setting the formulas to connect it to your app, Express design does the heavy lifting so you can jumpstart the app development process and build with ease and confidence.
 
 :::image type="content" source="media/express-design/express-design-overview.png" alt-text="Express design overview.":::
-
-You can add data connection either during the app creation steps, or after the app is generated and connect to your business data from a wide variety of Microsoft and third-party data sources. After your new canvas app is generated in Power Apps Studio, you can continue to build and edit it.
 
 Express design currently supports design artifacts in the form of an image or a Figma design file.
 
 ## Image to app
 
-If you have some rough ideas that you put on paper, a presentation or some legacy apps/tools that you want to modernize, try **Image to app** by taking a picture or a screenshot of your design, and follow the steps in the [Create an app from an image](app-from-image.md) article to create your app.Data setup is available in the wizard, but optional.
+If you have a wireframe or a visual design that you want to convert into an app, you can use **Image to app** to quickly generate an app and connect it to data. Upload an image of your design and follow the steps in the guided interface to tag the components and set up your data. For more information, see [Create an app from an image](app-from-image.md).
 
 :::image type="content" source="media/express-design/app-from-image.png" alt-text="Create an app from an image.":::
 
@@ -42,7 +40,7 @@ If you have some rough ideas that you put on paper, a presentation or some legac
 
 ## Figma to app
 
-If you’re a designer or you're working with them, you can try **Figma to app** by using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) to first design your app in Figma, then upload the Figma URL to Power Apps to convert it into a pixel-perfect app. For more information, see [Create an app from Figma](figma/overview.md). After generating the app, yYou can then connect your app to your business data.
+If you’re looking to generate a pixel-perfect app with exact styles that match your designs, you can use the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) to design your app in Figma. Then, use Figma to app to convert your design file into app UI. From here, you can continue building in Power Apps Studio to add more advanced functionality, such as connecting to data. For more information, see [Create an app from Figma](figma/overview.md).
 
 :::image type="content" source="media/express-design/app-from-figma.png" alt-text="Create an app from a Figma page or a frame.":::
 

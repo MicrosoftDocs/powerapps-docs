@@ -21,18 +21,22 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Generally, app making journey begins with a "design" phase. And often the design will end up in the format of a paper sketch, PPT, pdf or even a screenshot of a legacy app which inspired you. Creating an app from such designs takes time. The **Image to app** capability in Power Apps allows you to create apps from your design images faster, easier, and through a simple interface. This feature makes app creation possible for designers, users, administrators, and makers all alike.
+The app making journey typically involves a design phase to plan out what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or even an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
 
-All you need to do is ensure the image adheres to the required guidelines. And an app is generated for you with the controls identified from the design image you provided. Furthermore, it can help you create your own table in Microsoft Dataverse by extracting fields from the picture you upload so you don't need to manually add columns one by one.
+With the **Image to app** feature, you can now create an app from a visual design and connect it to data through a few simple steps in the guided interface. This feature makes it easy for makers of all skill levels to jump-start the app development process.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
+> [!NOTE]
+> - The styling of the components in the app, such as font and colors will be based on the **Office Blue** theme in Power Apps.
+> If you want the exact design styles to be preserved when you create your app, consider creating a [canvas app from Figma](figma/overview.md).
+
 ## Prerequisites
 
 - A Power Apps license. If you don't have a license for Power Apps, you can [sign-up for free](../signup-for-powerapps.md).
-- If you're using your own image, the image file extension must be .jpg or .png. Also, the image must contain a clearly legible one-page form with a light background color.
+- If you're using your own image, the image file extension must be .jpg or .png. Also, the image must contain a clearly legible one-page form with a light background color. For best results, edit your image so that it has a white background and high contrast.
 
 ## Create an app
 
@@ -46,7 +50,7 @@ All you need to do is ensure the image adheres to the required guidelines. And a
 
     :::image type="content" source="media/app-from-image/select-image.png" alt-text="Select Image (preview) from the available cards.":::
 
-1. Review the acceptable and unacceptable sample input images. Use **Next** to view the next screens. Also, be sure to review the tips on the right-hand side of the screen. Once done, select **Next** button on the bottom-right side of the screen.
+1. Review the examples of recommended images and tips. For the best experience, make sure your image adheres to these recommendations. Once you’re done, select the **Next** button.
 
 1. Enter a name for the app.
 
@@ -55,64 +59,84 @@ All you need to do is ensure the image adheres to the required guidelines. And a
     > [!NOTE]
     > When using your own image, ensure the image meets the image requirements mentioned in the prerequisites.
 
-1. Layout will be automatcially picked for you based on the size of the image, but you should feel free to change if recommended doesn't fit your needs.
+    For example, here are two sample images with acceptable and unacceptable qualities:
+
+    | Acceptable quality | Unacceptable quality |
+    | - | - |
+    | :::image type="content" source="media/app-from-image/hand-drawn-good.png" alt-text="Example hand drawn image with acceptable quality."::: | :::image type="content" source="media/app-from-image/hand-drawn-bad.png" alt-text="Example hand drawn image with unacceptable quality."::: |
+
+1. Based on the dimensions of your image, the format (Tablet or Phone) will be automatically selected for you. For the best results, it is highly recommended that you keep the suggested format. Using the suggested formats will ensure the closest match between your input image and the final app. Select **Next**.
 
     :::image type="content" source="media/app-from-image/choose-image.png" alt-text="Provide image name, image type, and layout.":::
 
-1. Select **Next**.
+1. Your image will be automatically tagged based on the components that were identified. For example, in the following sample image, the box that says “Enter your first name” was identified as a **Text input** control.
 
-1. Depending on the supplied image, components of the app are created and available for you to change as required. For example, in the following sample image, the input below the **First Name** is used as an **Text input** control. You can select it, and edit the tag with a different type of control if necessary.
+    You can draw a new tag by selecting and dragging to select the region that encompasses the component. Then, choose the type of component that you want to associate the new tag with.
 
-    You can also select on empty space and draw a new tag. Once drawn, choose a type of control that you want to associate the tag with.
+    To make edits to an existing tag or to delete it, select the tag. You can then assign a different component for that tag, or adjust the dimensions of the tag by dragging the corners to change the size. If you'd like to remove the tag, select **Delete tag**.
 
     :::image type="content" source="media/app-from-image/design-components.png" alt-text="Design components for the app by selecting tags or creating a new tag and then choosing the tag control.":::
 
     > [!TIP]
-    > Select the **Guidance** tab on the right-side of the screen to see details about different tags, and controls they correlate to.
+    > Select the **Guidance** tab on the right-side of the screen to learn more about the different types of components and how to accurately tag each one.
 
-1. Select to create the Dataverse tables, or skip creating the tables and just create the app based on the design (without the app connected to any table).
+    After you've reviewed the tags and ensured that each component is correctly tagged, select **Next**.
+
+1. The next step is to set up data. For the best experience, it is highly recommended to connect your app to a data source by selecting **Create a new table in Dataverse**. If you choose this option and select **Next**, you'll be guided in the next stage to add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
+
+    If you don't want to create a new table in Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app will be created as-is, which means that the components you tagged in the previous step will be generated directly. They won't be placed into a form component, and your app won't be connected to data.
 
     :::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to create a new table, or continue without creating a table now.":::
 
     If you choose to skip the table creation, select **Create** and the app will be created for you. Later, you can add [data connections](connections-list.md) to your app to connect the app with your data.
 
     > [!NOTE]
-    > - The option to create a new table will be disabled if you don't have Dataverse in your environment, or if you don't have the required permissions to create a Dataverse table.
-    > - Skip creating a new table if you want to use an existing table from Dataverse, or want to use any other data source.
+    > The option to create a new table will be disabled if you don't have Dataverse in your environment, or if you don't have the required permissions to create a Dataverse table.
 
-1. If you chose to create the table in Dataverse, you can now edit the table and column details. Select a tag to change the column properties such as **Display Name**, **Name**, and **Data type**.
+1. If you chose to create a new table in Dataverse, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields that were identified in your image.
+
+    Select a tag to modify the column properties, such as **Display Name**, **Name**, and **Data type**. To remove an existing column, select the tag and then select **Delete column**.
 
     :::image type="content" source="media/app-from-image/design-table.png" alt-text="Design the table, change columns and their properties.":::
 
-    > [!NOTE]
-    >You can also select the **Table properties** option on the right-side of the screen to update the new table's name, schema name, and change the primary column.
+    You can add a data column by drawing a new tag and setting the properties. When tagging columns, most of the time you'll draw a tag around two things: a label, and something the user will enter data into, like a text input.
+
+    > [!TIP]
+    > Select **Table properties** on the right-side of the screen to view and edit the properties for your new table, including the properties of the columns.
 
     Upon selecting **Next**, you'll be able to review the table and column structure.
 
     :::image type="content" source="media/app-from-image/review-table.png" alt-text="Review and confirm the table and column schema structure.":::
 
-    Once you've completed the review, select **Create** to create the app.
+    Once you've completed the review, select **Create** to create the app. The app creation might take a minute or two.
 
-1. The app gets created, and Power Apps Studio opens so you can start customizing the app further.
+1. Once the app is created, your new app will open up in Power Apps Studio so you can continue building and customizing your app.
 
     :::image type="content" source="media/app-from-image/app-created.png" alt-text="The app has been created and opened in Power Apps Studio for you to customize.":::
 
-    If you chose to create a new table, you'll also see the table added as the data source from the data pane on the left-side of the studio.
+    If you chose to create a new table in Dataverse, your form will be automatically connected to your new table.
 
     :::image type="content" source="media/app-from-image/data-source.png" alt-text="The table has been created and added to the app.":::
 
-1. If necessary, customize the app by [adding and configuring more controls](add-configure-controls.md). Once done, [save and publish](save-publish-app.md) the app, and share with other [users](share-app.md) and [guests](share-app-guests.md).
+1. You can continue to build and customize your app by adding more components or modifying the style properties.
+
+    Here are some common next steps to take your app to the next level:
+
+    1. [Add a new screen](add-screen-context-variables.md) named **Screen2** to your app and a gallery to display the records. Set the data source of the gallery to your new Dataverse table.
+    1. On the screen that contains your form, [add a button](add-list-box-drop-down-list-radio-button.md) (if you don't have one already) to submit the form data. Set the [formula](working-with-formulas.md) for the **OnSelect** property to `SubmitForm(Form1)`.
+    1. Select the form, then select the Advanced tab on the right-side of the screen and set the property **OnSuccess** to `Navigate(Screen2)`. This way, after the form data is successfully submitted, the app will navigate to the screen that contains the gallery to display the records.
+    1. Select **Play** on top-right side of the screen to preview your app. Fill in the form, and submit the form. You'll see your new record show up in the gallery screen.
+
+1. [Save and publish](save-publish-app.md) the app.
 
 ## Limitations
 
-- Only images with the file extension of .jpg or .png are supported. If you have a design image with another file extension, save the image file with .jpg/.png file extension to use with this feature.
+- Supported components: [Button](controls/control-button.md), [Check box](controls/control-check-box.md), [Data cards](working-with-cards.md), [Date picker](controls/control-date-picker.md), [Drop down](controls/control-drop-down.md), [Edit form](controls/control-form-detail.md), [Label](controls/control-text-box.md), [Radio](controls/control-radio.md), [Rating](controls/control-rating.md), [Slider](controls/control-slider.md), [Text input](controls/control-text-input.md), [Toggle](controls/control-toggle.md)
 - Only canvas apps are supported.
-- Supported controls:  [Button](controls/control-button.md), [Check box](controls/control-check-box.md), [Combo box](controls/control-combo-box.md), [Data cards](working-with-cards.md), [Date picker](controls/control-date-picker.md), [Edit form](controls/control-form-detail.md), [Label](controls/control-text-box.md), [Radio](controls/control-radio.md), [Rating](controls/control-rating.md), [Slider](controls/control-slider.md), [Text input](controls/control-text-input.md), [Toggle](controls/control-toggle.md)
-- Supported data types: Date, Decimal, Email, Number, Phone, Text, URL
+- Only images with the file extension of .jpg or .png are supported. If you have a design image with another file extension, save the image file with .jpg or .png file extension in order to use it with this feature.
+- You can upload only one image at a time to create an app.
 - Complex forms, forms with colored backgrounds, multi-page forms, and forms with underlined input boxes aren't supported.
-- Each time, you can upload only one image to create an app.
-- Limited support for [Power Fx](formula-reference.md). For example, depending on the supplied image that has a button, the corresponding Power Fx formula may or may not get generated.
-- App styling conversion won't be exactly pixel-perfect as an image. Instead, default themes including font size and color are used while creating the app.
+- Support for styles is limited. The styling of the components in the app, such as font and colors will be based on the **Office Blue** theme in Power Apps.
 - Support for responsiveness is limited. More information: [Building responsive canvas apps](build-responsive-apps.md)
 
 ### See also
