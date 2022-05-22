@@ -21,7 +21,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-The app making journey typically involves a design phase to plan out what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or even an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
+The app making journey typically involve a design phase to plan out what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or even an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
 
 With the **Image to app** feature, you can now create an app from a visual design and connect it to data through a few simple steps in the guided interface. This feature makes it easy for makers of all skill levels to jumpstart the app development process.
 
