@@ -29,9 +29,9 @@ For the latest information about the supported components and to view detailed e
 
 ## Scrollable sections
 
-A scrollable section is a section on a screen. If content extends beyond the section, it'll still be accessible when the user scrolls.
+A scrollable section is a section on a screen. If content extends beyond the section, it will still be accessible when the user scrolls.
 
-The scrollable section inside the UI kit are available in two different formats: **Phone**, and **Tablet**.
+The scrollable sections inside the UI kit are available in two different formats: **Phone**, and **Tablet**.
 
 > [!NOTE]
 > If you want to add additional scrollable sections in a frame, ensure that you review the differences and keep all data cards within a form, and there aren't any data cards within a scrollable container.
