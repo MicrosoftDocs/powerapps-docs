@@ -31,7 +31,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
 > [!NOTE]
 > - The styling of the components in the app, such as font and colors will be based on the **Office Blue** theme in Power Apps.
-> If you want the exact design styles to be preserved when you create your app, consider creating a [canvas app from Figma](figma/overview.md).
+> - If you want the exact design styles to be preserved when you create your app, consider creating a [canvas app from Figma](figma/overview.md).
 
 ## Prerequisites
 
