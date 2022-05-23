@@ -40,7 +40,7 @@ The following table summarizes important columns in the audit table.
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
 |`Action`<br />`action`<br />**Event**|Choice|74 options that represent the event that caused the change. More information: [Actions](#audit-actions)|
-|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve the change history](#retrieve-the-change-history) |
+|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history) |
 |`AuditId`<br />`auditid`<br /> **Record Id**|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />**Calling User**|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
 |`CreatedOn`<br />`createdon`<br />**Changed Date**|DateTime|When the audit record was created, which is when the user operation took place.|
@@ -49,13 +49,13 @@ The following table summarizes important columns in the audit table.
 |`Operation`<br />`operation`<br />**Operation**|Choice|The operation that caused the audit record. One of 4 values:<br />1 = Create<br />2 = Update<br />3 = Delete<br />4 = Access<br />|
 |`UserId`<br />`userid`<br />**Changed By**|Lookup|The Id of the user who caused the change.|
 
-## Audit Actions
+### Audit Actions
 
 At the time this topic was written there were 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which correspond to events in the system. You can use these to filter for specific events.
 
 The following groups categorize these events.
 
-### Table row operations
+#### Table row operations
 
 These events capture changes to a record.
 
@@ -70,7 +70,7 @@ These events capture changes to a record.
 
 These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
-### Record Sharing Changes
+#### Record Sharing Changes
 
 These events capture changes to record access when a record is shared.
 
@@ -82,18 +82,18 @@ These events capture changes to record access when a record is shared.
 
 These events will return an `ShareAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
-### Changes to Many-to-Many relationships
+#### Changes to Many-to-Many relationships
 
 These events capture changes when data changes for Many-to-Many relationships.
 
 |Value|Label|Message|Description|
 |-----|-----|-------|-------|
-|33|Associate Entities|`Associate`||
-|34|Disassociate Entities|`Disassociate`||
+|33|Associate Entities|`Associate`|One or more records are associated to another.|
+|34|Disassociate Entities|`Disassociate`|One or more records are disassociated from another.|
 
 These events will return an `RelationshipAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
-### User Access Events
+#### User Access Events
 
 These options are used to capture history of user access when user access auditing is enabled. The audit record for these events will have the `operation` column value of 4.
 
@@ -108,7 +108,7 @@ These events will return an `UserAccessAuditDetail` type. More information: [Aud
 
 For a .NET SDK sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
 
-### Metadata change events
+#### Metadata change events
 
 These events capture changes to table and column definitions as well as changes to the organization table.
 
@@ -122,7 +122,7 @@ These events capture changes to table and column definitions as well as changes 
 
 These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
-### Audit change events
+#### Audit change events
 
 These events capture changes to audit settings.
 
@@ -138,7 +138,7 @@ These events capture changes to audit settings.
 
 These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
-### Changes to Security Role privileges
+#### Changes to Security Role privileges
 
 |Value|Label|Message|Description|
 |-----|-----|-------|-------|
@@ -147,12 +147,6 @@ These events will return an `AttributeAuditDetail` type. More information: [Audi
 |59|Replace Privileges In Role|`ReplacePrivilegesRole`|Privileges for a role are replaced.|
 
 These events will return an `RolePrivilegeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
-
-### Other Actions
-
-The remaining action options will generally refer to auditable operations that apply to specific solutions, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
-
-The labels for these messages should align to an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table, such as `CloseOpportunity` and `CloseQuote`.
 
 <!-- 
 
@@ -164,6 +158,12 @@ These may need their own category.
 |56|Remove Role From User|||
 
 -->
+
+#### Other Actions
+
+The remaining action options will generally refer to auditable operations that apply to specific solutions, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
+
+The labels for these actions should align to an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table. For example, option with value 10 and label **Close** should correspond to the `CloseIncident` and `CloseQuote` messages.
 
 ### audit table relationships
 
@@ -183,7 +183,9 @@ You can use these relationships to filter audit data records created for a speci
 <!-- Questions: 
 Why is the Audit TransactionId frequently an empty GUID (but not always)? Does it matter?
 Is UserAdditionalInfo ever not null?
-Is RegardingObjectId ever not null? -->
+Is RegardingObjectId ever not null? 
+
+-->
 
 ### audit EntityType definition
 
@@ -218,15 +220,16 @@ With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit
 More information: [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document)
 
 > [!NOTE]
-> The [ChangeData Column](../reference/entities/audit.md#BKMK_ChangeData) is not included in the Web API <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType>. Rather than try to use this data, use the messages to retrieve change history. More information: [Retrieve the change history](#retrieve-the-change-history).
+> The [ChangeData Column](../reference/entities/audit.md#BKMK_ChangeData) is not included in the Web API <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType>. Rather than try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history).
 
-In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. You must depend on the corresponding [Lookup properties](../webapi/web-api-properties.md#lookup-properties): `_callinguserid_value` and `_userid_value` to access data for these navigation properties.
+<!-- 
+In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. 
 
-Lookup properties contain additional information when `GET` requests are sent using the `Prefer: odata.include-annotations="*"` request header. Using this preference will make sure that you get the `Microsoft.Dynamics.CRM.lookuplogicalname` and `OData.Community.Display.V1.FormattedValue` annotation values, but the `Microsoft.Dynamics.CRM.associatednavigationproperty` annotation values are not included with lookup properties in the `audit` EntityType.
+This is a bug. 
 
-<!-- I think this is a bug. As noted above, for the _userid_value and _callinguserid_value lookup properties, there are associated navigation properties that could be returned. lk_audit_userid and lk_audit_callinguserid -->
+ -->
 
-## Example: Find Contact records deleted by a user
+### Example: Find Contact records deleted by a user
 
 The following examples are queries showing audit history for contact records deleted by a specific user.
 
@@ -283,9 +286,7 @@ Preference-Applied: odata.include-annotations="*"
       "createdon": "2022-05-12T22:19:12Z",
       "_userid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
       "_userid_value@OData.Community.Display.V1.FormattedValue": "FirstName LastName",
-      "_userid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e",
-      "transactionid": "00000000-0000-0000-0000-000000000000",
-      "attributemask": "47,45,42,298,96,260,93,50,201,28,25,107,32,90,261,262,178,121,61,55,71,35,296,289,108,177,120,69,117,265,243,174,46,80,95,246,287,59,30,102,3,208,202,282,73,74,21,78,67,128,54,51,183,254,210,236,19,126,53,268,124,38,184,34,234,31,231,10019,118,33,76,98,292,271,52,297,6,70,123,129,132,133,242,103,36,39,114,22,293,48,249,295,235,12,99,11,8,5,10162,97,181,306,245,57,18,200,49,106,109,110,16,24,43,122,175,44,27,139,259,125,233,127,134,284,180,130,56,14,286,92,247,94,270,179,113,206,288,283,17,101,209,294,263,15,176,10017,4,29,203,119,37,72,40,20,266,267,173,211,91,111,105,290,131,264,10026,116,104,23,26,41,10020,66,100,115,2"
+      "_userid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e"
     },
     < Other results truncated for brevity>
   ]
@@ -295,9 +296,11 @@ Preference-Applied: odata.include-annotations="*"
 
 # [.NET SDK](#tab/sdk)
 
-There are two static methods below that show the number of deleted contact records for the specified user.
+There are two static methods below that show the number of deleted contact records for the specified user. These queries use aggregation so they are not limited to 5,000 results. But they are limited to the higher 50,000 record limit for aggregation.
 
 `ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
+
+<!-- TODO Add a topic to QE docs about aggregation -->
 
 ```csharp
 /// <summary>
@@ -309,10 +312,20 @@ static void ShowNumberContactsDeletedByUserQE(
     IOrganizationService svc,
     Guid systemuserid)
 {
-    QueryExpression query =
+    var columnSet = new ColumnSet("auditid");
+
+    //Adding Attribute expression to use aggregation
+    columnSet
+        .AttributeExpressions
+        .Add(new XrmAttributeExpression(
+            attributeName: "auditid",
+            aggregateType: XrmAggregateType.Count,
+            alias: "count"));
+
+    var query =
     new QueryExpression(entityName: "audit")
     {
-        ColumnSet = new ColumnSet("objectid", "createdon")
+        ColumnSet = columnSet
     };
 
     query.Criteria.AddCondition(
@@ -333,11 +346,17 @@ static void ShowNumberContactsDeletedByUserQE(
     EntityCollection records =
         svc.RetrieveMultiple(query);
 
-    int count = records.Entities.Count();
+    int number = (int)
+        ((AliasedValue)records
+        .Entities[0]["count"])
+        .Value;
+
     Console.WriteLine(
-        $"User has deleted {count} contact records");
+        $"User has deleted {number} contact records");
 }
 ```
+
+More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
 
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
 
@@ -348,74 +367,60 @@ static void ShowNumberContactsDeletedByUserQE(
 /// <param name="svc">IOrganizationService instance to use</param>
 /// <param name="systemuserid">The user's id.</param>
 static void ShowNumberContactsDeletedByUserFetchXml(
-    IOrganizationService svc,
-    Guid systemuserid)
+IOrganizationService svc,
+Guid systemuserid)
 {
-    string fetchXml = $@"<fetch>
-        <entity name='audit'>
-            <attribute name='objectid' />
-            <attribute name='createdon' />
-            <filter>
-                <condition attribute='userid' 
-                operator='eq' 
-                value='{systemuserid}' />
-                <condition attribute='operation' 
-                operator='eq' 
-                value='3' />
-                <condition attribute='objecttypecode' 
-                operator='eq' 
-                value='2' />
-            </filter>
-        </entity>
-    </fetch>";
+    string fetchXml = $@"<fetch 
+    distinct='false' 
+    mapping='logical' 
+    aggregate='true'>
+<entity name='audit'>
+    <attribute name='auditid' 
+        aggregate='count' 
+        alias='count' />
+    <filter>
+        <condition attribute='userid' 
+            operator='eq' 
+            value='{systemuserid}' />
+        <condition attribute='operation' 
+            operator='eq' 
+            value='3' />
+        <condition attribute='objecttypecode' 
+            operator='eq' 
+            value='2' />
+    </filter>
+</entity>
+</fetch>";
 
-    FetchExpression query =
-        new FetchExpression(fetchXml);
+    int number;
 
-    EntityCollection records =
-        svc.RetrieveMultiple(query);
+    try
+    {
+        EntityCollection records =
+        svc.RetrieveMultiple(new FetchExpression(fetchXml));
 
-    int count = records.Entities.Count();
+        number = (int)
+            ((AliasedValue)records
+            .Entities[0]["count"])
+            .Value;
+    }
+    catch (Exception)
+    {
+        throw;
+    }
     Console.WriteLine(
-        $"User has deleted {count} contact records");
+        $"User has deleted {number} contact records");
 }
 ```
 
-> [!NOTE]
-> The following FetchXml also works. It uses the relationship to the `systemuser` table to provide the filter and the systemuserid matches `<user id>`.
+More information:
 
-```xml
-<fetch>
-   <entity name="systemuser">
-      <filter>
-         <condition attribute="systemuserid"
-            operator="eq"
-            value="<user id>" />
-      </filter>
-      <link-entity name="audit"
-         from="userid"
-         to="systemuserid"
-         alias="audit">
-         <attribute name="objectid"
-            alias="objectid" />
-         <attribute name="createdon"
-            alias="changeddate" />
-         <filter>
-            <condition attribute="operation"
-               operator="eq"
-               value="3" />
-            <condition attribute="objecttypecode"
-               operator="eq"
-               value="2" />
-         </filter>
-      </link-entity>
-   </entity>
-</fetch>
-```
+- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
 
 ---
 
-## Retrieve the change history
+## Retrieve audit change history
 
 There are three messages you can use to retrieve data changes that are audited.
 
