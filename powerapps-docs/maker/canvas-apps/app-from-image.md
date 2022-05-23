@@ -36,7 +36,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 ## Prerequisites
 
 - A Power Apps license. If you don't have a license for Power Apps, you can [sign-up for free](../signup-for-powerapps.md).
-- If you're using your own image, the image file extension must be .jpg or .png. Also, the image must contain a clearly legible one-page form with a light background color. For best results, edit your image so that it has a white background and high contrast.
+- If you're using your own image, the image file extension must be .jpg or .png. Also, the image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
 
 ## Create an app
 
