@@ -84,6 +84,48 @@ The address and parameters are URL encoded before being passed to replace certai
 
 When launching a webpage, a [query string](https://en.wikipedia.org/wiki/Query_string) of parameters can be included at the end of the URL address.  Any additional parameters provided to **Launch** will be added to the end of the query string. Query strings don't work when launching a canvas app.
 
+### Reserved Parameters
+
+The below keywords are reserved by Microsoft and should not be used as a custom parameter in the Param() function.
+
+* tenantId
+* source
+* disablepreviewredirect
+* locale
+* enableonbehalfof
+* authmode
+* hidenavbar
+* sdkversion
+* iframecontainerid
+* hint
+* screencolor
+* skipappmetadata
+* channelid
+* channeltype
+* hideappsplash
+* packageproperties
+* skipiframecreation
+* groupid
+* correlationid
+* standaloneconsent
+* theme
+* hostclienttype
+* isfullscreen
+* teamtype
+* userteamrole
+* teamid
+* site
+* embedderorigin
+* hostmode
+* ispreviewmode
+* skiplaunchappcache
+* appmetadataversion
+* delegatelaunchurl
+* amp%3Bhidenavbar
+* amp%3Bauthmode
+* amp%3Blocale
+* amp%3Benableonbehalfof
+
 ### Target
 
 Use the *LaunchTarget* argument to specify the target browser window in which to open the webpage or app.  Use one of the following **LaunchTarget** enum values or provide a custom window *name*.
