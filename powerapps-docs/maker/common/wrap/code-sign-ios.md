@@ -81,7 +81,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 ### Create Certificate Signing Request (CSR)
 
-1. On your Mac PC, go to the **Applications** folder > **Utilities** > open **Keychain Access**.
+1. On your Mac, go to the **Applications** folder > **Utilities** > open **Keychain Access**.
 
 1. Select **Keychain Access** > **Certificate Assistant** > **Request a Certificate from a Certificate Authority**.
 
@@ -91,7 +91,7 @@ To create a distribution certificate, create a new certificate signing request f
     1. In the **User Email Address** field, enter your Apple ID email address to identify with this certificate.
     1. In the **Common Name** field, enter your name.
     1. In the **Request** group, select **Saved to disk**.
-    1. Save the file to your Mac PC.
+    1. Save the file to your Mac.
 
 ## Create the distribution certificate
 
@@ -111,7 +111,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/upload-cert.png" alt-text="Upload the certificate.":::
 
-1. Select **Continue**, and download the certificate to your Mac PC.
+1. Select **Continue**, and download the certificate to your Mac.
 
 1. Double-click the downloaded .cer file to install to Keychain Access.
 
