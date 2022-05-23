@@ -30,7 +30,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
-> - The styling of the components in the app, such as font and colors will be based on the **Office Blue** theme in Power Apps.
+> - The styling of the components in the app, such as fonts and colors, will be based on the **Office Blue** theme in Power Apps.
 > - If you want the exact design styles to be preserved when you create your app, consider creating a [canvas app from Figma](figma/overview.md).
 
 ## Prerequisites
@@ -102,7 +102,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
     You can add a data column by drawing a new tag and setting the properties. When tagging columns, most of the time you'll draw a tag around two things: a label, and something the user will enter data into, like a text input.
 
     > [!TIP]
-    > Select **Table properties** on the right-side of the screen to view and edit the properties for your new table, including the properties of the columns.
+    > Select **Table properties** on the right-side of the screen to view and edit the properties for your new table.
 
     Upon selecting **Next**, you'll be able to review the table and column structure.
 
