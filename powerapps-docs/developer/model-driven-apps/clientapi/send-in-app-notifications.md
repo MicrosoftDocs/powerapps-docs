@@ -28,23 +28,19 @@ Each notification row is meant for a single user, identified by the **Owner** co
 
 This topic outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md).
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
-
 ## Enable the in-app notification feature
 
-To use the in-app notification feature, you need to enable the **In-app notifications (Preview)** setting.  This setting is stored within the model-driven app.
+To use the in-app notification feature, you need to enable the **In-app notifications** setting.  This setting is stored within the model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Open the solution that contains the model-driven app.  
 
-1. Select the model-driven app and click **Edit in preview** under the **Edit** split menu to open using the modern app designer
+1. Select the model-driven app and click **Edit** split menu to open using the modern app designer
 
 1. Open **Settings** and switch to **Upcoming**
 
-1. Enable "In-app notifications (Preview)"
+1. Enable "In-app notifications"
 
     > [!div class="mx-imgBorder"]
     > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
