@@ -208,11 +208,15 @@ With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit
   <Property Name="_userid_value" Type="Edm.Guid" />
   <Property Name="transactionid" Type="Edm.Guid" />
   <Property Name="auditid" Type="Edm.Guid" />
-  <NavigationProperty Name="callinguserid" Type="mscrm.systemuser" Nullable="false" Partner="lk_audit_callinguserid">
-      <ReferentialConstraint Property="_callinguserid_value" ReferencedProperty="systemuserid" />
+  <NavigationProperty Name="callinguserid" Type="mscrm.systemuser" 
+    Nullable="false" Partner="lk_audit_callinguserid">
+      <ReferentialConstraint Property="_callinguserid_value" 
+        ReferencedProperty="systemuserid" />
   </NavigationProperty>
-  <NavigationProperty Name="userid" Type="mscrm.systemuser" Nullable="false" Partner="lk_audit_userid">
-      <ReferentialConstraint Property="_userid_value" ReferencedProperty="systemuserid" />
+  <NavigationProperty Name="userid" Type="mscrm.systemuser" 
+    Nullable="false" Partner="lk_audit_userid">
+      <ReferentialConstraint Property="_userid_value" 
+        ReferencedProperty="systemuserid" />
   </NavigationProperty>
 </EntityType>
 ```

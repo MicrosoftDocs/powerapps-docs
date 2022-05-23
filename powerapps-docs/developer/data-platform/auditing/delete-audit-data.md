@@ -29,16 +29,16 @@ Dataverse provides the following messages to delete audit history data:
 
 |Message|Description|
 |---------|---------|
-|`DeleteRecordChangeHistory`|Deletes all the audit change history records for a particular record|
-|`DeleteAuditData`|Deletes all audit data records up until a specified end date.|
+|`DeleteRecordChangeHistory`|Deletes all the audit change history records for a particular record.|
 |`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
+|`DeleteAuditData`|For customers using customer managed encryption keys or on-premises Dynamics 365, deletes all audit data records up until a specified end date.|
 
 > [!NOTE]
 > You cannot directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md)
 
 ## Delete the change history for a record
 
-Use the `DeleteRecordChangeHistoryRequest` message to delete all the audit change history records for a particular record. This lets you delete the audit change history for a record instead of deleting all the audit records for a date range. To delete the audit change history for a record, you must have the System Administrator security role or a security role with the `prvDeleteRecordChangeHistory` privilege.
+Use the `DeleteRecordChangeHistoryRequest` message to delete all the audit change history records for a particular record. This lets you delete the audit change history for a record instead of deleting all the audit records for a date range. To delete the audit change history for a record, you must have the System Administrator security role or a security role with the `prvDeleteRecordChangeHistory` privilege. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
 
 ### DeleteRecordChangeHistoryRequest Message
 
@@ -94,13 +94,16 @@ This `ShowDeleteRecordChangeHistory` static method deletes the audited data chan
 /// </summary>
 /// <param name="svc">The IOrganizationService instance to use.</param>
 /// <param name="target">The specified record.</param>
-static void ShowDeleteRecordChangeHistory(IOrganizationService svc, EntityReference target) {
-
-    DeleteRecordChangeHistoryRequest req = new DeleteRecordChangeHistoryRequest { 
+static void ShowDeleteRecordChangeHistory(
+IOrganizationService svc, 
+EntityReference target) 
+{
+    var req = new DeleteRecordChangeHistoryRequest { 
         Target = target
     };
 
-    DeleteRecordChangeHistoryResponse resp = (DeleteRecordChangeHistoryResponse)svc.Execute(req);
+    var resp = (DeleteRecordChangeHistoryResponse)
+svc.Execute(req);
 
     Console.WriteLine($"Audit records deleted:{resp.DeletedEntriesCount}");
 }
@@ -114,6 +117,78 @@ More information:
 - <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
 
 ---
+
+## Delete audit data flexibly using BulkDelete
+
+You can delete audit records your organization no longer needs to retain to comply with internal and external auditing requirements using the `BulkDelete` message. Deleting audit data using bulk delete will run in the background and allows you to define recurrence patterns, start time, and other parameters that help you to manage your bulk deletion jobs.
+
+### BulkDelete Message
+
+# [Web API](#tab/webapi)
+
+The following example deletes audit records of type 64 (User Access via Web) from the audit log. You can find the full list of audit actions in [Audit Actions](retrieve-audit-data.md#audit-actions) and modify your bulk delete job according to your needs.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/BulkDelete HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+
+{
+  "QuerySet":
+      [
+        {
+          "EntityName": "audit",
+          "Criteria": {
+              "FilterOperator": "And",
+              "Conditions": [
+                  {
+                    "AttributeName": "action",
+                    "Operator": "Equal",
+                    "Values": [ {"Type": "System.String", "Value": "64"} ]
+                  }
+              ],
+              "Filters": []
+          }
+        }
+      ],
+      "JobName": "Bulk Delete of audit records with action = 64",
+      "SendEmailNotification": false,
+      "ToRecipients": [],
+      "CCRecipients": [],
+      "RecurrencePattern": "",
+      "StartDateTime": "2022-02-02T10:00:00.000Z"
+}
+```
+
+**Response**
+
+```HTTP
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.BulkDeleteResponse",
+  "JobId": "[Job Id]"
+}
+```
+
+More information:
+
+# [.NET SDK](#tab/sdk)
+
+This `MethodName` static method
+
+```csharp
+```
+
+More information:
+
+---
+
 
 ## Delete the change history for a date range
 
@@ -190,77 +265,6 @@ static void ShowDeleteAuditData(IOrganizationService svc, DateTime endDate) {
         throw ex;
     }
 }
-```
-
-More information:
-
----
-
-## Delete audit data flexibly using BulkDelete
-
-You can delete audit records your organization no longer needs to retain to comply with internal and external auditing requirements using the `BulkDelete` message. Deleting audit data using bulk delete will run in the background and allows you to define recurrence patterns, start time, and other parameters that help you to manage your bulk deletion jobs.
-
-### BulkDelete Message
-
-# [Web API](#tab/webapi)
-
-The following example deletes audit records of type 64 (User Access via Web) from the audit log. You can find the full list of audit actions in [Audit Actions](retrieve-audit-data.md#audit-actions) and modify your bulk delete job according to your needs.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/BulkDelete HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-
-{
-  "QuerySet":
-      [
-        {
-          "EntityName": "audit",
-          "Criteria": {
-              "FilterOperator": "And",
-              "Conditions": [
-                  {
-                    "AttributeName": "action",
-                    "Operator": "Equal",
-                    "Values": [ {"Type": "System.String", "Value": "64"} ]
-                  }
-              ],
-              "Filters": []
-          }
-        }
-      ],
-      "JobName": "Bulk Delete of audit records with action = 64",
-      "SendEmailNotification": false,
-      "ToRecipients": [],
-      "CCRecipients": [],
-      "RecurrencePattern": "",
-      "StartDateTime": "2022-02-02T10:00:00.000Z"
-}
-```
-
-**Response**
-
-```HTTP
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.BulkDeleteResponse",
-  "JobId": "[Job Id]"
-}
-```
-
-More information:
-
-# [.NET SDK](#tab/sdk)
-
-This `MethodName` static method
-
-```csharp
 ```
 
 More information:
