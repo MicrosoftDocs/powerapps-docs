@@ -19,7 +19,7 @@ contributors:
 
 # Use the marker detection with mixed reality controls
 
-Use physical markers to improve the precision and persistence of media placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View Shape in MR](./mixed-reality-component-view-shape.md) controls. This article will get you started with enabling marker detection and adding markers to your space.
+Use physical markers to improve the precision and persistence of media placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View Shape in MR](./mixed-reality-component-view-shape.md) controls. The topics covers how to enable marker detection and how to add markers to your space.
 
 ## Prerequisites
 In addition to the standard device compatibility requirements outlined in [add mixed reality controls to your canvas app](./mixed-reality-overview.md) marker detection requires physical markers to be present in your space.
@@ -28,21 +28,21 @@ To create a marker either print out the image below or display it on a monitor o
 
 :::image type="content" source="./media/augmented-marker-detection/mixed-reality-marker.png" alt-text="Image used for marker detection in mixed reality experiences.":::
 
-## Enabling marker detection
-Marker detection can be enabled for both the View in MR and View Shape in MR controls by setting the **EnableMarkerDetection** property to true via either the properties panel or the formula bar.
+## Enable marker detection
+Marker detection can be enabled for both the **View in MR** and **View Shape in MR** controls by setting the **EnableMarkerDetection** property to true in the properties panel or the formula bar.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
 
 ## Using marker detection on device
-Upon entering the mixed reality experience users will be prompted to point their device at a physical marker in their space. To quickly acquire tracking make sure the marker is fully in frame and about 2-5 feet from the device.
+When you enter the mixed reality experience, you will be prompted to point the device at a physical marker in your space. To quickly acquire tracking make sure the marker is fully in frame and about 2-5 feet from the device.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-point-device.png" alt-text="A screenshot of the mixed reality placement experience showing optimal framing of the marker for detection.":::
 
-Once the marker is detected the loaded media will be automatically aligned and placed directly on top of the marker. Once placed users can manipulate the media's position or rotation by either using on screen gestures or by physically moving the marker.
+Once the marker is detected the loaded media will be automatically aligned and placed directly on top of the marker. Once placed you can manipulate the media's position or rotation by either using on screen gestures or by physically moving the marker.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-placement.gif" alt-text="An animated image showing marker detection for placement and positioning.":::
 
-If no marker is present or detection is taking longer than expected users can toggle marker detection off by pressing the highlighted marker detection button.
+If no marker is present or detection is taking longer than expected, you can toggle marker detection off by selecting the highlighted marker detection button.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-fallback.gif" alt-text="An animated image showing how to disable marker detection during the mixed reality experience.":::
 
