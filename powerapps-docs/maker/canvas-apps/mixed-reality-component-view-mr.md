@@ -87,7 +87,7 @@ Change the **View in MR** button's behavior and appearance using properties. Som
 | Object depth | Sets the depth of the model. | Integer | Properties; Advanced: **ObjectDepth** |
 | Unit of measurement | Sets the measurement unit used for the model's width, height, and depth. | Drop-down selection | Properties; Advanced: **Units** |
 | Enable Shadows | Determines whether shadows are used to enhance the 3D effect when the model is shown. | Boolean | Properties; Advanced: **EnableShadows** |
-| Enable Marker Detection | Determines whether marker detection will be used to determine model position and rotation. See [Use the marker detection with mixed reality controls](./mixed-reality-marker-detection.md) | Boolean | Properties; Advanced: **EnableMarkerDetection** |
+| Enable Marker Detection | Determines whether marker detection will be used to determine model position and rotation. See [Use marker detection with mixed reality controls](./mixed-reality-marker-detection.md) | Boolean | Properties; Advanced: **EnableMarkerDetection** |
 | Visible | Shows or hides the button. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
  Position | Places the upper-left corner of the button at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
 | Size | Determines the size of the button using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
@@ -132,6 +132,6 @@ Your app can make use of more properties when a user interacts with the **View i
 ### See also
 
 - [Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
-- [Use the marker detection with mixed reality controls](./mixed-reality-marker-detection.md)
+- [Use marker detection with mixed reality controls](./mixed-reality-marker-detection.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
