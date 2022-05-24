@@ -1,7 +1,7 @@
 ---
 title: "Relationship Entity (Relationship)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Relationship Entity (Relationship)  table/entity."
-ms.date: 04/28/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -106,11 +106,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [CascadeArchive](#BKMK_CascadeArchive)
 - [ComponentState](#BKMK_ComponentState)
 - [IsRelationshipAttributeDenormalized](#BKMK_IsRelationshipAttributeDenormalized)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_CascadeArchive"></a> CascadeArchive
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Cascade archive setting|
+|DisplayName|Cascade archive setting|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|cascadearchive|
+|MaxValue||
+|MinValue||
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_ComponentState"></a> ComponentState

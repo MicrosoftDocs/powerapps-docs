@@ -3,7 +3,7 @@ title: "Export ribbon definitions (model-driven apps) | Microsoft Docs" # Intent
 description: "Learn about exporting the ribbon definitions." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

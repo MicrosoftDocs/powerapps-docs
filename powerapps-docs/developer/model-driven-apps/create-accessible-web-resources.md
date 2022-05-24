@@ -3,7 +3,7 @@ title: "Create accessible web resources (model-driven apps) | Microsoft Docs" # 
 description: "The topic introduces general guidance and links to more resources that will help you design web resource user interface elements that are accessible to people with disabilities." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

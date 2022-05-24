@@ -3,7 +3,7 @@ title: "Define ribbon commands (model-driven apps) | Microsoft Docs" # Intent an
 description: "A Ribbon command creates a reusable definition that can be referenced by ribbon control elements." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
