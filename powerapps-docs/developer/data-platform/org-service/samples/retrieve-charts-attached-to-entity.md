@@ -4,7 +4,7 @@ description: "This sample showcases how to retrieve charts attached to a table "
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde
-manager: evchaki
+manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType: 

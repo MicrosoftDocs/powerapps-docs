@@ -1,6 +1,6 @@
 ---
 title: "Create a Custom API in Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Create a Custom API definition using Power Apps (make.powerapps.com)"
 ms.custom: ""
 ms.date: 04/19/2022
 ms.reviewer: "jdaly"
@@ -17,19 +17,13 @@ search.app:
 ---
 # Create a Custom API in Power Apps
 
-> [!NOTE]
-> There is now a better experience for creating Custom API. You can use a designer within the Plug-in registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
+When creating a Custom API, you must use a solution. If you are not familiar with solutions, first read [Create a solution](../../maker/data-platform/create-solution.md).
 
+Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the publisher.
 
 > [!IMPORTANT]
-> Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing record and re-create the Custom API.
->
-> Please review the information about the columns that cannot be changed here: [CustomAPI tables](custom-api-tables.md)
-
-When creating a Custom API it is expected that you will use a solution. Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the publisher:
-
-> [!NOTE]
-> This topic assumes you are familar with solutions. If you are not, see [Create a solution](../../maker/data-platform/create-solution.md)
+> - There is now a better experience for creating Custom API. You can use a designer within the Plug-in registration tool. More information: [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
+> - Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing record and re-create the Custom API. Review the information about the columns that cannot be changed here: [CustomAPI tables](custom-api-tables.md)
 
 ## Create a Custom API record
 

@@ -1,12 +1,15 @@
 ---
 title: "Build your first modern model-driven app"
 description: "Learn how to build your first model driven app"
-ms.date: 07/05/2021
+ms.date: 05/19/2022
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-roryneary
+ms.author: matp
 ms.reviewer: matp
+contributors:
+- matp
+- jessicaszelo
 ---
 # Build your first model-driven app
 
@@ -45,13 +48,7 @@ We recommend creating your model-driven app from a solution. A solution is a pac
 
 1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
 
-1. Select **Modern app designer**, and then select **Create**.
-
-   :::image type="content" source="media/create-a-model-driven-app/select-modern-app-designer.png" alt-text="Use the modern app designer to create a model-driven app.":::
-
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
-
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create.":::
 
 ## Add pages to your app
 
@@ -64,17 +61,17 @@ Next, you add a new page to the model-driven app.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
-1. Select the **Account** table, and then select **Add**.
+1. Select a table, such as **Contact**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app.":::
 
-   The account form and view appear in the pages menu.
+   The contact form and view appear in the pages menu.
 
-1. Select **Account view**, and then select **Manage views**.
+1. Select **Contact view**, and then select **Add view**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
 
-1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**, and then select **Save**.
+1. Select the views that you want to add to the app. Save and publish to see selected views in preview.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 
@@ -92,9 +89,7 @@ After publishing the app, it's ready for you to run or share with others.
 
    :::image type="content" source="media/create-a-model-driven-app/run-your-app-on-desktop-1.png" alt-text="Select Apps.":::
 
-1. Select the app from the app list. The app opens in your browser.  The chart will be visible based on toggling the show hide chart option.
-
-   ![Run the app on a desktop](media/create-a-model-driven-app/run-your-app-on-desktop-2.png "Running the app on a desktop")
+1. Select the app from the app list. The app opens in your browser. If you want to show the chart, use the button **Show Chart**.
 
 ## Run your app on mobile
 

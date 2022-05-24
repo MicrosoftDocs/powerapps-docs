@@ -3,7 +3,7 @@ title: "Export, prepare to edit, and import the ribbon(model-driven apps) | Micr
 description: "Learn about exporting the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
