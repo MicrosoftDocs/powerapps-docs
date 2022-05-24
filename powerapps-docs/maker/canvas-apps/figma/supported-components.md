@@ -33,9 +33,6 @@ A scrollable section is a section on a screen. If content extends beyond the sec
 
 The scrollable sections inside the UI kit are available in two different formats: **Phone**, and **Tablet**.
 
-> [!NOTE]
-> If you want to add additional scrollable sections in a frame, ensure that you review the differences and keep all data cards within a form, and there aren't any data cards within a scrollable container.
-
 ### Form
 
 Use a Form section when you want to have users fill out fields and submit data.
@@ -63,6 +60,9 @@ Use the Container (vertical) sections when you want the content to scroll. For e
 ## Vertical and horizontal data cards
 
 Vertical and horizontal [data cards](../working-with-cards.md) are components that arrange themselves automatically on a form.
+
+> [!NOTE]
+> Ensure all data cards are placed directly inside a form component. Data cards can't be used outside of a form.
 
 ### Headers and dividers
 

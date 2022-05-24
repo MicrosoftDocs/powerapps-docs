@@ -31,7 +31,7 @@ Express design currently supports design artifacts in the form of an image or a 
 
 ## Image to app
 
-If you have a wireframe or a visual design that you want to convert into an app, you can use **Image to app** to quickly generate an app and connect it to data. Upload an image of your design and follow the steps in the guided interface to tag the components and set up your data. For more information, see [Create an app from an image](app-from-image.md).
+If you have a wireframe or a visual design that you want to convert into an app, you can use **Image to app** to quickly generate an app and connect it to data. Upload an image of your design and follow the steps in the guided interface to tag the components and set up your data. For more information, see [Create an app from an image (preview)](app-from-image.md).
 
 :::image type="content" source="media/express-design/app-from-image.png" alt-text="Create an app from an image.":::
 
@@ -40,7 +40,7 @@ If you have a wireframe or a visual design that you want to convert into an app,
 
 ## Figma to app
 
-If you’re looking to generate a pixel-perfect app with exact styles that match your designs, you can use the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) to design your app in Figma. Then, use Figma to app to convert your design file into app UI. From here, you can continue building in Power Apps Studio to add more advanced functionality, such as connecting to data. For more information, see [Create an app from Figma](figma/overview.md).
+If you’re looking to generate a pixel-perfect app with exact styles that match your designs, you can use the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) to design your app in Figma. Then, use the **Figma to app** feature to convert your design file into app UI. From here, you can continue building in Power Apps Studio to add more advanced functionality, such as connecting to data. For more information, see [Create an app from Figma (preview)](figma/overview.md).
 
 :::image type="content" source="media/express-design/app-from-figma.png" alt-text="Create an app from a Figma page or a frame.":::
 
@@ -49,5 +49,5 @@ If you’re looking to generate a pixel-perfect app with exact styles that match
 
 ### See also
 
-- [Create an app from an image](app-from-image.md)
-- [Create an app from Figma](figma/overview.md)
+- [Create an app from an image (preview)](app-from-image.md)
+- [Create an app from Figma (preview)](figma/overview.md)

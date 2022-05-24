@@ -25,10 +25,10 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 ## Prerequisites
 
 - You must have access to a Figma design file that you want to use and create an app from.
-- The Figma file must be designed using the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981).
+- The Figma file must be designed using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981).
 
 > [!TIP]
-> If you're using the UI kit for the first time, familiarize yourself with the feature [overview](overview.md), the [UI kit](design-using-kit.md) capabilities, and it's [components](supported-components.md).
+> If you're using the UI kit for the first time, familiarize yourself with the feature [overview](overview.md), the [UI kit](design-using-kit.md) capabilities, and its [components](supported-components.md).
 
 ## Create an app
 
@@ -46,13 +46,16 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
     :::image type="content" source="media/create-app.png" alt-text="Create app dialog box with app name, Figma URL and personal access token created.":::
 
+    > [!NOTE]
+    > Power Apps uses your personal access token to connect to your Figma page or frame with **Can view** (read-only) access, and doesn't make any changes inside Figma.
+
 1. Select **Create**.
 
-    App is created for you and opened using Power Apps Studio for you to further customize the app.
+    Once the app is created, your new app will open up in Power Apps Studio so you can continue building and customizing your app.
 
     :::image type="content" source="media/studio.png" alt-text="Created app opened inside Power Apps Studio.":::
 
-1. Extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md) as necessary.
+1. Extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), and adding more [screens](../add-screen-context-variables.md) and [controls](../add-configure-controls.md) as necessary.
 
 1. [Save, publish](../save-publish-app.md), and [share](../share-app.md) the app.
 

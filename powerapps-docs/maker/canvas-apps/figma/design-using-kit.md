@@ -20,7 +20,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-To create an app from a Figma design, you must start with the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981). The UI kit consists of components, sample apps, and several additional resources such as:
+To create an app from a Figma design, you must start with the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981). The UI kit consists of components, sample apps, and several additional resources such as:
 
 - Information about what’s supported and what isn’t.
 - Step-by-step instructions on how to design your app in Figma so that it can be converted in Power Apps.
@@ -29,7 +29,7 @@ To create an app from a Figma design, you must start with the [Create apps from 
 
 ## Get the UI kit
 
-1. Go to the [Create apps from Figma UI kit](https://go.microsoft.com/fwlink/?linkid=2193981) page.
+1. Go to the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981) page.
 1. If necessary, sign in with your Figma credentials.
 1. Select **Duplicate**, and then choose the Figma team you're a member of. For more information about duplicating projects in Figma, see [Figma: Duplicate files or projects](https://help.figma.com/hc/articles/360038511533-Duplicate-files).
 1. If necessary, select the down arrow next to the file name, and move the file out of your drafts.
@@ -57,7 +57,7 @@ The kit contains detailed guidance on how to use the components. However, here a
 The kit also provides additional pages for more information as summarized below:
 
 - **Step 3: Convert into an app** - a visual representation of converting the app design into an app. To follow step-by-step instructions, see [Create a canvas app from Figma](create-app-from-figma.md).
-- **Step 4: Next steps** - explains the possible next steps you can take to further prepare your app for your business scenario. These steps include [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../build-responsive-apps.md) and [controls](../add-configure-controls.md).
+- **Step 4: Next steps** - explains the possible next steps you can take to further prepare your app for your business scenario. These steps include [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), adding more [screens](../add-screen-context-variables.md) and [controls](../add-configure-controls.md).
 - **Supported components** - lists information about supported components. For more information, see [Components supported by the UI kit](supported-components.md).
 
 > [!div class="nextstepaction"]
