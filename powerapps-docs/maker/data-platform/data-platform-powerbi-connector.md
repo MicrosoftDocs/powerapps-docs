@@ -75,7 +75,7 @@ To use Power BI with Dataverse, you need the following items:
 
 After loading the tables by using a connector, you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas.
 
-:::image type="content" source="./media/data-platform-cds-powerbi-connector/CreateReport7.png" alt-text="Power BI Desktop visualization." lightbox="./media/data-platform-cds-powerbi-connector/CreateReport7.png:::
+:::image type="content" source="./media/data-platform-cds-powerbi-connector/CreateReport7.png" alt-text="Power BI Desktop visualization." lightbox="./media/data-platform-cds-powerbi-connector/CreateReport7.png":::
 
 ## Special column types
 
