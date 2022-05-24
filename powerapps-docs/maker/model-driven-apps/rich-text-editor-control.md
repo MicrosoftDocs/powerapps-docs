@@ -1054,11 +1054,11 @@ The following table outlines a list of accessibility shortcuts available when us
 | Base commands | Esc | Cancel operation. |
 | | | |
 	
-## Offline experience
+# Offline experience
 
 The rich text editor control is available when working offline with a basic configuration. All configuration added through creation or modification of a web resource file will not be available while offline.  
 
-	### Formatting options for offline
+	## Formatting options for offline
 
 The following table describes the different formatting features and functionality options that are available in the rich text editor when used offline. 
 
@@ -1081,8 +1081,6 @@ The following table describes the different formatting features and functionalit
 |![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Accessibility help.](media/accessibility-help.png "Accessibility help")| Accessibility help | Alt+0 | Display list of accessibility shortcuts available when using the rich text editor control. |
-|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
 | | | | |
 
 
