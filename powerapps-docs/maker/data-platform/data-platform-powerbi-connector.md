@@ -5,7 +5,7 @@ author: Mattp123
 manager: kvivek
 ms.component: cds
 ms.topic: how-to
-ms.date: 04/26/2021
+ms.date: 05/24/2022
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -33,44 +33,50 @@ To use Power BI with Dataverse, you need the following items:
 > [!NOTE]
 > Most proxy servers don’t handle the Tabular Data Stream (TDS) protocol data used by the Dataverse connector for Power BI.
 
-## Find your Dataverse environment URL
-
-1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Session details**.
-
-   :::image type="content" source="media/session-details.png" alt-text="Session details.":::
-1. In the **Power Apps session details** dialog box, select **Copy Details**.
-1. Paste the session details somewhere such as Notepad so that you can copy only the **Instance url**. The instance URL is the unique URL for your environment. The URL will be in the format: `https://yourenvironmentid.crm.dynamics.com/`. **Make sure you remove *https://* and the trailing */* from the URL before pasting it to connect to your environment.** Keep this somewhere handy so you can use it when creating your Power BI reports.
-
 ## Connect to Dataverse using the connector
+
+# [Dataverse connector](#tab/Dataverse)
 
 1. Open **Power BI Desktop**. Select **File** > **Get Data** > **Power Platform**.
 
-1. Select one of the following connectors, and then select **Connect**.
+1. Select the **Dataverse**, and then select  **Connect**.
 
-   * **Dataverse**: This connector is the most recent version and uses the tabular data stream (TDS) protocol.
-   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
-
-1. In the dialog box that appears, paste in your Dataverse environment URL into the **Environment domain** box, in the format *org.crm.dynamics.com*. Don't include the *https://* or ending */*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
+1. In the list of Dataverse environments, expand the environment you want, select the tables you want, and then select **Load**.
    
-   If you selected the **Dataverse** connector, select from the following **Data Connectivity** mode options: 
+1. Select from the following **Data Connectivity** mode options: 
    * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
    * **DirectQuery**: Connects directly to the data in Dataverse.  Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance).
 
-   Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
+1. Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
 
-   > [!IMPORTANT]
-   > To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*.
+> [!IMPORTANT]
+> To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*.
+
+# [Common Data Service (Legacy)](#tab/Legacy)
+
+1. Open **Power BI Desktop**. Select **File** > **Get Data** > **Power Platform**.
+
+1. Select the **Common Data Service (Legacy)** connector, and then select **Connect**.
+
+   > [!NOTE]
+   > This is the earlier version of the Dataverse connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.
+
+1. In the dialog box that appears, paste in your complete Dataverse environment URL into the **Environment domain** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
+
+1. Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**
 
 1. The **Navigator** displays all tables available for your environment, such as the account and contact tables. Select the **account** table to see a preview of your data in the right pane. Select **Load**.
-
     > [!div class="mx-imgBorder"] 
     > ![Load account table rows.](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table rows")
 
-1. Your table is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
+---
+
+## Build reports using Dataverse tables
+
+After loading the tables, you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI Desktop visualization.](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
-
 
 ## Special column types
 
@@ -111,6 +117,14 @@ While some relationships may be automatically created, you can still review and 
 * The lookup column on the table will contain the GUID of the row in the related table.
 * The related table will have a column in the format "[tableName]ID" that contains the GUID, for example `Accountid` or `MyCustomtableid`
 * Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup column, and the ID column on the related table.
+
+## Find your Dataverse environment URL
+
+1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Session details**.
+
+   :::image type="content" source="media/session-details.png" alt-text="Session details.":::
+1. In the **Power Apps session details** dialog box, select **Copy Details**.
+1. Paste the session details somewhere such as Notepad so that you can copy only the **Instance url**. The instance URL is the unique URL for your environment. The URL will be in the format: `https://yourenvironmentid.crm.dynamics.com/`. Keep this somewhere handy so you can use it when creating your Power BI reports.
 
 ## Troubleshooting 
 
