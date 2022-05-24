@@ -213,10 +213,7 @@ With the connection reference and the virtual table data source setup, an **Enti
  
 #### View the Entity Catalog
   
-- Select **Data** -> **Tables** and select the entity catalog that was created. Selecting the Data tab will show all available tables or lists.
-  - SQL: All tables in the database that are eligible are shown
-  - SharePoint: All lists in the site are shown
-  - Excel: All tables in the Excel file are shown
+- Select Data -> Tables and select the entity catalog that was created. 
 - Select **Advanced Find** and use the Look for: column. The catalog will include a prefix Entity Catalog for followed by the connection reference (example: Entity Catalog for Adventure Works DB). Find the Entity Catalog for your respective data connection and select the Results button to see all the external data source tables. 
 
   :::image type="content" source="../media/ve-advance-find-table-catalog.png" alt-text="Advanced find table catalog":::
@@ -224,28 +221,48 @@ With the connection reference and the virtual table data source setup, an **Enti
   >[!Note]
   > Bulk creation of virtual tables is not supported currently. Even though the Entity Catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
 
-1. **Create a virtual table** by clicking the record from the entity catalog. In the provided form set the **Create or Refresh Entity** column to **Yes**.
-1. Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use. 
+1.	To create a virtual table, a model driven app must be built for the entity catalog. Select the entity catalog table.
 
-:::image type="content" source="media/ve-select-primary-key-primary-field.png" alt-text="Select the primary key and primary field":::   
+2.	Click Create an app in the top navigation.
++++Add new screen+++
 
-  Save the record to create the virtual table. Your Virtual Table is now created with a “Custom Entity” prefix. 
-  Once the virtual table is created, you can either:
-  - Select the newly created table in the Data -> Tables list and view the records by clicking the Data tab. Changing the view to All will show all the columns.
-   
-      :::image type="content" source="media/ve-view-records-using-power-apps.png" alt-text="View records using power apps":::
+3.	Name the app and click Create
++++Add new screen+++
 
-  - Use **Advanced Find** and select the virtual table to retrieve all the records.
+The app will automatically be generated using the entity catalog table. 
 
-      :::image type="content" source="../media/ve-advance-find-virtual-table.png" alt-text="Advanced find virtual table":::
+4.	Once the app is completed, you can click Publish to complete the app and use it later, or you can click Play to create your virtual table now without publishing the app. 
++++Add new screen+++
+
+All eligible data sets from your data source will be provided in the app view.
+-	SQL: All tables in the database that are eligible are shown
+-	SharePoint: All lists in the site are shown
+-	Excel: All tables in the Excel file are shown
+
+5.	Select the data set you wish to use from the entity catalog, and click Edit in the navigation bar.
++++Add new screen+++
+
+Wait for the form to fully load before editing. When loaded the form will look like this:
++++Add new screen+++
+
+6.	In the provided form set the Create or Refresh Entity column to Yes.
+
+7.	Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use.
++++Add new screen+++
+
+8.	Save the record to create the virtual table. 
+
+> [!Note] 
+> After the save completes, the form will “reset” with all fields shown as blank, this is normal. 
+
+Return to the Maker portal’s home page and select Data, your virtual table is now created with a “Custom Entity” prefix. It may take a few moments for the creation to complete.
++++Add new screen+++
 
 > [!IMPORTANT] 
 > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
 > - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
 > - All columns in the external data are automatically mapped to Dataverse types that are support by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
 > - Virtual Tables require there to be at least one string field to use as the Primary Name column.
-
-Review the [SQL Server Connector documentation](/connectors/sql/) for the full list of [datatype mappings supported by SQL Server Connector](/connectors/sql/#power-apps-data-type-mappings).
 
 Once you have created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows.
 
