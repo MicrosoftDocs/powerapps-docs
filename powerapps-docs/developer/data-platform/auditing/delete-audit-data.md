@@ -120,7 +120,7 @@ More information:
 
 ---
 
-## Delete audit data flexibly using BulkDelete
+## Use BulkDelete to delete audit data
 
 You can delete audit records your organization no longer needs to retain to comply with internal and external auditing requirements using the `BulkDelete` message. Deleting audit data using bulk delete will run in the background and allows you to define recurrence patterns, start time, and other parameters that help you to manage your bulk deletion jobs.
 
@@ -250,7 +250,10 @@ More information:
 
 ## Delete the change history for a date range
 
-You can delete `audit` records for a date range using the `DeleteAuditData` message. Audit data records are deleted sequentially from the oldest to the newest.
+If you use customer managed encryption keys or Dynamics 365 on-premises you can delete `audit` records for a date range using the `DeleteAuditData` message. Audit data records are deleted sequentially from the oldest to the newest.
+
+> [!NOTE]
+> If you are not using customer managed encryption keys or Dynamics 365 on-premises you should use Bulk Delete. See [Use BulkDelete to delete audit data](#use-bulkdelete-to-delete-audit-data)
 
 The `DeleteAuditData` message will delete all audit data in those partitions where the end date is before the date specified in the `EndDate` property. Any empty partitions are also deleted. However, neither the current (active) partition nor the `audit` records in that active partition can be deleted by using this request or any other request.
 
@@ -259,75 +262,7 @@ The `DeleteAuditData` message will delete all audit data in those partitions whe
 
 New partitions are automatically created by the Dataverse platform on a quarterly basis each year. This functionality is non-configurable and cannot be changed. You can obtain the list of partitions using the `RetrieveAuditPartitionList` message. If the end date of any partition is later than the current date, you cannot delete that partition or any `audit` records in it.
 
-### DeleteAuditData Message
 
-# [Web API](#tab/webapi)
-
-<!-- The following example doesn't work in my environment.
-
-According to {{webapiurl}}RetrieveAuditPartitionList
-I don't have any partitions. -->
-
-**Request**
-
-```http
-POST https://crmue.api.crm.dynamics.com/api/data/v9.2/DeleteAuditData HTTP/1.1
-
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0
-If-None-Match: null
-
-{
-    "EndDate": "2021-04-09T00:00:00Z"
-}
-
-```
-
-**Response**
-
-```http
-HTTP/1.1 400 Bad Request
-
-OData-Version: 4.0
-
-{"error":{"code":"0x80040203","message":"There are no partitions ending before the given date"}}
-```
-
-More information:
-
-# [.NET SDK](#tab/sdk)
-
-This `MethodName` static method
-
-```csharp
-/// <summary>
-/// Shows the results of the DeleteAuditData messages
-/// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
-/// <param name="endDate">The date to delete audit records before.</param>
-static void ShowDeleteAuditData(IOrganizationService svc, DateTime endDate) {
-
-    DeleteAuditDataRequest req = new DeleteAuditDataRequest { 
-        EndDate = endDate
-    };
-
-    try
-    {
-        DeleteAuditDataResponse resp = (DeleteAuditDataResponse)svc.Execute(req);
-        Console.WriteLine($"Partitions Deleted: {resp.PartitionsDeleted}");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error: {ex.Message}");
-        throw ex;
-    }
-}
-```
-
-More information:
-
----
 
 ### See also
 
