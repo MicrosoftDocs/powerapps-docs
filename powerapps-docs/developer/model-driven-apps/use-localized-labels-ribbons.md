@@ -4,7 +4,7 @@ description: "Learn about using localized labels with ribbons." # 115-145 charac
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -19,7 +19,7 @@ contributors:
 ---
 # Use localized labels with ribbons
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/use-localized-labels-ribbons -->
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 Although Ribbon elements that display text allow for direct entry of text, it is a best practice to use localized labels to define text displayed in the ribbon. This enables multi-language capabilities and better management of shared text.  
   
