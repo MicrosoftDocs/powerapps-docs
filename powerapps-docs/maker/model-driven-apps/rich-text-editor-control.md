@@ -313,7 +313,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```"removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders,uploadfile,,image,elementspath,stickystyles,confighelper"```
+  ```"removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders"```
 </td>
 </tr>
 
