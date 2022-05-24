@@ -4,7 +4,7 @@ description: "A Ribbon command creates a reusable definition that can be referen
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -20,7 +20,7 @@ contributors:
 
 # Define ribbon commands
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-commands -->
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 A *Ribbon* command creates a reusable definition that can be referenced by ribbon control elements.  
   

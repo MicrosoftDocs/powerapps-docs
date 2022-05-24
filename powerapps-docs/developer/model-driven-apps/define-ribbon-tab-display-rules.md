@@ -4,7 +4,7 @@ description: "Learn about defining ribbon tab displays rules." # 115-145 charact
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -19,6 +19,8 @@ contributors:
 ---
 
 # Define ribbon tab display rules
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 Tab display rules control whether a specific tab is displayed for a ribbon or not.  
   
