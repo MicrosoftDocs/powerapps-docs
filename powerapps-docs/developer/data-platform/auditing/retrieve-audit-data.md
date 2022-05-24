@@ -55,7 +55,7 @@ At the time this topic was written there were 74 options in the [Action Choices/
 
 The following groups categorize these events.
 
-#### Table row operations
+#### Table row events
 
 These events capture changes to a record.
 
@@ -66,9 +66,9 @@ These events capture changes to a record.
 |3|Delete|`Delete`|A record is deleted.|
 |12|Merge|`Merge`|A record is merged with another.|
 |13|Assign|`Assign`|The `ownerid` column value for a user-owned table record is changed.|
-|41|Set State|`SetState`|The `statecode` column value for a record is changed.|[Security Role change events](#security-role-change-events)
+|41|Set State|`SetState`|The `statecode` column value for a record is changed.|
 
-#### Record Sharing Changes
+#### Record Sharing events
 
 These events capture changes to record access when a record is shared.
 
@@ -78,7 +78,7 @@ These events capture changes to record access when a record is shared.
 |48|Modify Share|`ModifyAccess`|The privileges granted to a user changes.|
 |49|Unshare|`RevokeAccess`|A user's access to a record is removed.|
 
-#### Changes to Many-to-Many relationships
+#### Many-to-Many relationship events
 
 These events capture changes when data changes for Many-to-Many relationships.
 
@@ -430,10 +430,10 @@ These messages provide additional details that depend on the type of action. The
 |Web API|.NET SDK|Description |
 |---------|---------|---------|
 |<xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AuditDetail?text=AuditDetail Class>|The base type for the derived classes. Provides access to the audit record.|
-|<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AttributeAuditDetail?text=AttributeAuditDetail Class>|Provides details when data changes occur for a record. Provides access to old values and new values. <br /> Returned by the following types of actions: <br />- [Table row operations](#table-row-operations)<br />- [Metadata change events](#metadata-change-events)<br />- [Audit change events](#audit-change-events)|
-|<xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail?text=RelationshipAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail?text=RelationshipAuditDetail Class>|Provides details when records are associated or disassociated using Many-to-Many relationship. Provides the name of the relationship and a list of the records that the operation changed.<br /> Returned by [Changes to Many-to-Many relationships](#changes-to-many-to-many-relationships)|
+|<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AttributeAuditDetail?text=AttributeAuditDetail Class>|Provides details when data changes occur for a record. Provides access to old values and new values. <br /> Returned by the following types of actions: <br />- [Table row events](#table-row-events)<br />- [Metadata change events](#metadata-change-events)<br />- [Audit change events](#audit-change-events)|
+|<xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail?text=RelationshipAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail?text=RelationshipAuditDetail Class>|Provides details when records are associated or disassociated using Many-to-Many relationship. Provides the name of the relationship and a list of the records that the operation changed.<br /> Returned by [Many-to-Many relationship events](#many-to-many-relationship-events)|
 |<xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail Class>|Provides details when the definitions of [Security Role (Role)](../reference/entities/role.md) records change. Provides information about the old and new role privileges associated to the role.<br />Returned by [Security Role change events](#security-role-change-events)|
-|<xref:Microsoft.Dynamics.CRM.ShareAuditDetail?text=ShareAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.ShareAuditDetail?text=ShareAuditDetail Class>|Provides details when a record is shared, unshared, or when the level of access to a shared record changes. |
+|<xref:Microsoft.Dynamics.CRM.ShareAuditDetail?text=ShareAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.ShareAuditDetail?text=ShareAuditDetail Class>|Provides details when a record is shared, unshared, or when the level of access to a shared record changes. <br /> Returned by [Record Sharing events](#record-sharing-events)|
 |<xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail?text=UserAccessAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail?text=UserAccessAuditDetail Class>|Provides details to track user access auditing. Provides details on the interval and access time. <br /> Returned by [User Access Events](#user-access-events)|
 
 > [!IMPORTANT]
@@ -474,27 +474,27 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="*"
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse",
-    "AuditDetail": {
-        "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
-        "InvalidNewValueAttributes": [],
-        "LocLabelLanguageCode": 0,
-        "DeletedAttributes": {
-            "Count": 0,
-            "Keys": [],
-            "Values": []
-        },
-        "OldValue": {
-            "@odata.type": "#Microsoft.Dynamics.CRM.account"
-        },
-        "NewValue": {
-            "@odata.type": "#Microsoft.Dynamics.CRM.account",
-            "_parentaccountid_value@OData.Community.Display.V1.FormattedValue": "A. Datum Corporation",
-            "_parentaccountid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "parentaccountid",
-            "_parentaccountid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "account",
-            "_parentaccountid_value": "d249d106-38b5-ec11-983f-002248296cd0"
-        }
-    }
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse",
+ "AuditDetail": {
+  "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
+  "InvalidNewValueAttributes": [],
+  "LocLabelLanguageCode": 0,
+  "DeletedAttributes": {
+   "Count": 0,
+   "Keys": [],
+   "Values": []
+  },
+  "OldValue": {
+   "@odata.type": "#Microsoft.Dynamics.CRM.account"
+  },
+  "NewValue": {
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "_parentaccountid_value@OData.Community.Display.V1.FormattedValue": "A. Datum Corporation",
+   "_parentaccountid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "parentaccountid",
+   "_parentaccountid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "account",
+   "_parentaccountid_value": "d249d106-38b5-ec11-983f-002248296cd0"
+  }
+ }
 }
 ```
 
@@ -709,32 +709,33 @@ If-None-Match: null
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse",
-    "AuditDetailCollection": {
-        "MoreRecords": true,
-        "PagingCookie": "<cookie page=\"1\"><cookieExtensions ContinuationToken=\"{&quot;pageNumber&quot;:2,&quot;continuationToken&quot;:&quot;[{\\&quot;compositeToken\\&quot;:{\\&quot;token\\&quot;:null,\\&quot;range\\&quot;:{\\&quot;min\\&quot;:\\&quot;3A800000000000000000000000000000\\&quot;,\\&quot;max\\&quot;:\\&quot;3B000000000000000000000000000000\\&quot;}},\\&quot;orderByItems\\&quot;:[{\\&quot;item\\&quot;:\\&quot;2022-05-13T22:06:46.6175613Z\\&quot;}],\\&quot;rid\\&quot;:\\&quot;CVoNAJIidnNsmz0AAADwAw==\\&quot;,\\&quot;skipCount\\&quot;:0,\\&quot;filter\\&quot;:null}]&quot;}\" /></cookie>",,
-        "TotalRecordCount": 3,
-        "AuditDetails": [
-            {
-                "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
-                "InvalidNewValueAttributes": [],
-                "LocLabelLanguageCode": 0,
-                "DeletedAttributes": {
-                    "Count": 0,
-                    "Keys": [],
-                    "Values": []
-                },
-                "OldValue": {
-                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "description": "Old description value"
-                },
-                "NewValue": {
-                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "description": "New description value"
-                }
-            }
-        ]
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse",
+ "AuditDetailCollection": {
+  "MoreRecords": true,
+  "PagingCookie": "<cookie page=\"1\"><cookieExtensions ContinuationToken=\"{&quot;pageNumber&quot;:2,&quot;continuationToken&quot;:&quot;[{\\&quot;compositeToken\\&quot;:{\\&quot;token\\&quot;:null,\\&quot;range\\&quot;:{\\&quot;min\\&quot;:\\&quot;3A800000000000000000000000000000\\&quot;,\\&quot;max\\&quot;:\\&quot;3B000000000000000000000000000000\\&quot;}},\\&quot;orderByItems\\&quot;:[{\\&quot;item\\&quot;:\\&quot;2022-05-13T22:06:46.6175613Z\\&quot;}],\\&quot;rid\\&quot;:\\&quot;CVoNAJIidnNsmz0AAADwAw==\\&quot;,\\&quot;skipCount\\&quot;:0,\\&quot;filter\\&quot;:null}]&quot;}\" /></cookie>",
+  ,
+  "TotalRecordCount": 3,
+  "AuditDetails": [
+   {
+    "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
+    "InvalidNewValueAttributes": [],
+    "LocLabelLanguageCode": 0,
+    "DeletedAttributes": {
+     "Count": 0,
+     "Keys": [],
+     "Values": []
+    },
+    "OldValue": {
+     "@odata.type": "#Microsoft.Dynamics.CRM.account",
+     "description": "Old description value"
+    },
+    "NewValue": {
+     "@odata.type": "#Microsoft.Dynamics.CRM.account",
+     "description": "New description value"
     }
+   }
+  ]
+ }
 }
 ```
 More information:
