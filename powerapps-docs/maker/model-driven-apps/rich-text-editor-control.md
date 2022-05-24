@@ -1063,7 +1063,7 @@ The rich text editor control is available when working offline with a basic conf
 	
 ## Plugins available for offline
 
-The following are the plugins available by the rich text editor while offline.
+The following plugins are available to the rich text editor while offline.
 ```
 ajax,autogrow,basicstyles,bidi,blockquote,button,confighelper,contextmenu,dialog,dialogui,editorplaceholder,enterkey,entities,fakeobjects,floatingspace,floatpanel,format,horizontalrule,htmlwriter,indent,indentblock,indentlist,justify,lineutils,list,listblock,maximize,menu,menubutton,notification,notificationaggregator,panel,panelbutton,popup,preview,removeformat,resize,richcombo,selectall,showborders,sourcearea,specialchar,stylescombo,tab,textmatch,textwatcher,toolbar,undo,widgetselection,wysiwygarea,xml
 ```
