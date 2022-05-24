@@ -3,7 +3,7 @@ title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" 
 description: "Microsoft Dataverse displays commands in different ways depending on the table and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
