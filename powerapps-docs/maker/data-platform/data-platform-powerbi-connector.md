@@ -33,7 +33,7 @@ To use Power BI with Dataverse, you need the following items:
 > [!NOTE]
 > Most proxy servers don’t handle the Tabular Data Stream (TDS) protocol data used by the Dataverse connector for Power BI.
 
-## Connect to Dataverse using the connector
+## Connect to Dataverse using a connector
 
 # [Dataverse connector](#tab/Dataverse)
 
@@ -43,7 +43,7 @@ To use Power BI with Dataverse, you need the following items:
 
 1. In the list of Dataverse environments, expand the environment you want, select the tables you want, and then select **Load**.
    
-1. Select from the following **Data Connectivity** mode options: 
+1. Select from the following **Data Connectivity** mode options:
    * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
    * **DirectQuery**: Connects directly to the data in Dataverse.  Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance).
 
@@ -61,11 +61,11 @@ To use Power BI with Dataverse, you need the following items:
    > [!NOTE]
    > This is the earlier version of the Dataverse connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.
 
-1. In the dialog box that appears, paste in your complete Dataverse environment URL into the **Environment domain** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
+1. In the dialog box that appears, paste in your complete Dataverse environment URL into the **Server Url** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
 
 1. Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**
 
-1. The **Navigator** displays all tables available for your environment, such as the account and contact tables. Select the **account** table to see a preview of your data in the right pane. Select **Load**.
+1. The **Navigator** displays all tables available for your environment, such as the account and contact tables. Expand **Entities** to view and select the tables you want. For example, select the **account** table to see a preview of your data in the right pane. Select **Load**.
     > [!div class="mx-imgBorder"] 
     > ![Load account table rows.](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table rows")
 
@@ -73,10 +73,10 @@ To use Power BI with Dataverse, you need the following items:
 
 ## Build reports using Dataverse tables
 
-After loading the tables, you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
+After loading the tables by using a connector, you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI Desktop visualization.](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
+   > [!div class="mx-imgBorder"] 
+   > ![Power BI Desktop visualization.](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
 
 ## Special column types
 
