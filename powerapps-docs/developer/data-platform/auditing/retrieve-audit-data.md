@@ -66,9 +66,7 @@ These events capture changes to a record.
 |3|Delete|`Delete`|A record is deleted.|
 |12|Merge|`Merge`|A record is merged with another.|
 |13|Assign|`Assign`|The `ownerid` column value for a user-owned table record is changed.|
-|41|Set State|`SetState`|The `statecode` column value for a record is changed.|
-
-These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
+|41|Set State|`SetState`|The `statecode` column value for a record is changed.|[Security Role change events](#security-role-change-events)
 
 #### Record Sharing Changes
 
@@ -80,8 +78,6 @@ These events capture changes to record access when a record is shared.
 |48|Modify Share|`ModifyAccess`|The privileges granted to a user changes.|
 |49|Unshare|`RevokeAccess`|A user's access to a record is removed.|
 
-These events will return an `ShareAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
-
 #### Changes to Many-to-Many relationships
 
 These events capture changes when data changes for Many-to-Many relationships.
@@ -90,8 +86,6 @@ These events capture changes when data changes for Many-to-Many relationships.
 |-----|-----|-------|-------|
 |33|Associate Entities|`Associate`|One or more records are associated to another.|
 |34|Disassociate Entities|`Disassociate`|One or more records are disassociated from another.|
-
-These events will return an `RelationshipAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
 #### User Access Events
 
@@ -103,8 +97,6 @@ These options are used to capture history of user access when user access auditi
 |65|User Access via Web Services|User is accessing Dataverse using web services using a client other than a model-driven app.|
 |112|User Access Audit Started|User access audit began.|
 |113|User Access Audit Stopped|User access audit ended.|
-
-These events will return an `UserAccessAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
 For a .NET SDK sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
 
@@ -120,8 +112,6 @@ These events capture changes to table and column definitions as well as changes 
 |103|Audit Change at Attribute Level|User changed a column definition to enable or disable auditing.|
 |104|Audit Change at Org Level|A change was made to organization settings.|
 
-These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
-
 #### Audit change events
 
 These events capture changes to audit settings.
@@ -136,17 +126,13 @@ These events capture changes to audit settings.
 |110|Audit Disabled|A column was disabled for auditing.|
 |111|Audit Log Deletion|An audit log was deleted.|
 
-These events will return an `AttributeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
-
-#### Changes to Security Role privileges
+#### Security Role change events
 
 |Value|Label|Message|Description|
 |-----|-----|-------|-------|
 |57|Add Privileges to Role|`AddPrivilegesRole`|Privileges added to a role.|
 |58|Remove Privileges From Role|`RemovePrivilegeRole`|Privileges removed from a role.|
 |59|Replace Privileges In Role|`ReplacePrivilegesRole`|Privileges for a role are replaced.|
-
-These events will return an `RolePrivilegeAuditDetail` type. More information: [AuditDetail types](#auditdetail-types)
 
 <!-- 
 
@@ -163,7 +149,7 @@ These may need their own category.
 
 The remaining action options will generally refer to auditable operations that apply to specific solutions, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
 
-The labels for these actions should align to an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table. For example, option with value 10 and label **Close** should correspond to the `CloseIncident` and `CloseQuote` messages.
+The labels for these actions should align to an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table. For example, option with value 10 and label **Close** should correspond to the `CloseIncident` or `CloseQuote` messages.
 
 ### audit table relationships
 
@@ -304,7 +290,7 @@ There are two static methods below that show the number of deleted contact recor
 
 `ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
 
-<!-- TODO Add a topic to QE docs about aggregation -->
+
 
 ```csharp
 /// <summary>
@@ -361,6 +347,7 @@ static void ShowNumberContactsDeletedByUserQE(
 ```
 
 More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+<!-- TODO Add a topic to QE docs about aggregation -->
 
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
 
@@ -443,11 +430,11 @@ These messages provide additional details that depend on the type of action. The
 |Web API|.NET SDK|Description |
 |---------|---------|---------|
 |<xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AuditDetail?text=AuditDetail Class>|The base type for the derived classes. Provides access to the audit record.|
-|<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AttributeAuditDetail?text=AttributeAuditDetail Class>|Provides details when data changes occur for a record. Provides access to old values and new values. |
-|<xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail?text=RelationshipAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail?text=RelationshipAuditDetail Class>|Provides details when records are associated or disassociated using Many-to-Many relationship. Provides the name of the relationship and a list of the records that the operation changed.|
-|<xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail Class>|Provides details when the definitions of [Security Role (Role)](../reference/entities/role.md) records change. Provides information about the old and new role privileges associated to the role.|
+|<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AttributeAuditDetail?text=AttributeAuditDetail Class>|Provides details when data changes occur for a record. Provides access to old values and new values. <br /> Returned by the following types of actions: <br />- [Table row operations](#table-row-operations)<br />- [Metadata change events](#metadata-change-events)<br />- [Audit change events](#audit-change-events)|
+|<xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail?text=RelationshipAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail?text=RelationshipAuditDetail Class>|Provides details when records are associated or disassociated using Many-to-Many relationship. Provides the name of the relationship and a list of the records that the operation changed.<br /> Returned by [Changes to Many-to-Many relationships](#changes-to-many-to-many-relationships)|
+|<xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail?text=RolePrivilegeAuditDetail Class>|Provides details when the definitions of [Security Role (Role)](../reference/entities/role.md) records change. Provides information about the old and new role privileges associated to the role.<br />Returned by [Security Role change events](#security-role-change-events)|
 |<xref:Microsoft.Dynamics.CRM.ShareAuditDetail?text=ShareAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.ShareAuditDetail?text=ShareAuditDetail Class>|Provides details when a record is shared, unshared, or when the level of access to a shared record changes. |
-|<xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail?text=UserAccessAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail?text=UserAccessAuditDetail Class>|Provides details to track user access auditing. Provides details on the interval and access time.|
+|<xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail?text=UserAccessAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail?text=UserAccessAuditDetail Class>|Provides details to track user access auditing. Provides details on the interval and access time. <br /> Returned by [User Access Events](#user-access-events)|
 
 > [!IMPORTANT]
 > Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…".
@@ -762,7 +749,7 @@ More information:
 
 The `ShowAttributeChangeHistory` static method below will return the first 20 audited changes for specified column in the specified record.
 
-This method depends on the `DisplayAuditDetail` static method included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
+This method depends on the example `DisplayAuditDetail` static method included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
 
 ```csharp
 /// <summary>
@@ -836,8 +823,6 @@ The results of this message are commonly seen as the `AttributeAuditDetail` data
 
 This message can also be used to with the `systemuser` and `role` tables to return `RolePrivilegeAuditDetail` and `UserAccessAuditDetail` types.
 
-Calling user must have the `prvReadRecordAuditHistory` privilege to use this message.
-
 
 # [Web API](#tab/webapi)
 
@@ -865,63 +850,65 @@ If-None-Match: null
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse",
-    "AuditDetailCollection": {
-        "MoreRecords": true,
-        "PagingCookie": "<cookie page=\"1\"><cookieExtensions ContinuationToken=\"{&quot;pageNumber&quot;:2,&quot;continuationToken&quot;:&quot;[{\\&quot;compositeToken\\&quot;:{\\&quot;token\\&quot;:null,\\&quot;range\\&quot;:{\\&quot;min\\&quot;:\\&quot;38000000000000000000000000000000\\&quot;,\\&quot;max\\&quot;:\\&quot;38800000000000000000000000000000\\&quot;}},\\&quot;orderByItems\\&quot;:[{\\&quot;item\\&quot;:\\&quot;2022-05-13T22:06:27.8029732Z\\&quot;}],\\&quot;rid\\&quot;:\\&quot;CVoNAJIidnPOnT0AAAAICA==\\&quot;,\\&quot;skipCount\\&quot;:0,\\&quot;filter\\&quot;:null}]&quot;}\" /></cookie>",
-        "TotalRecordCount": 4,
-        "AuditDetails": [
-            {
-                "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
-                "InvalidNewValueAttributes": [],
-                "LocLabelLanguageCode": 0,
-                "DeletedAttributes": {
-                    "Count": 0,
-                    "Keys": [],
-                    "Values": []
-                },
-                "OldValue": {
-                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "description": "Old description value"
-                },
-                "NewValue": {
-                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "description": "New description value"
-                }
-            },
-            {
-                "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
-                "InvalidNewValueAttributes": [],
-                "LocLabelLanguageCode": 0,
-                "DeletedAttributes": {
-                    "Count": 0,
-                    "Keys": [],
-                    "Values": []
-                },
-                "OldValue": {
-                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "FirstName LastName",
-                    "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
-                    "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
-                    "_ownerid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e"
-                },
-                "NewValue": {
-                    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-                    "_ownerid_value@OData.Community.Display.V1.FormattedValue": "TeamName",
-                    "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
-                    "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "team",
-                    "_ownerid_value": "39e0dbe4-131b-e111-ba7e-78e7d1620f5e"
-                }
-            }
-        ]
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse",
+ "AuditDetailCollection": {
+  "MoreRecords": true,
+  "PagingCookie": "<cookie page=\"1\"><cookieExtensions ContinuationToken=\"{&quot;pageNumber&quot;:2,&quot;continuationToken&quot;:&quot;[{\\&quot;compositeToken\\&quot;:{\\&quot;token\\&quot;:null,\\&quot;range\\&quot;:{\\&quot;min\\&quot;:\\&quot;38000000000000000000000000000000\\&quot;,\\&quot;max\\&quot;:\\&quot;38800000000000000000000000000000\\&quot;}},\\&quot;orderByItems\\&quot;:[{\\&quot;item\\&quot;:\\&quot;2022-05-13T22:06:27.8029732Z\\&quot;}],\\&quot;rid\\&quot;:\\&quot;CVoNAJIidnPOnT0AAAAICA==\\&quot;,\\&quot;skipCount\\&quot;:0,\\&quot;filter\\&quot;:null}]&quot;}\" /></cookie>",
+  "TotalRecordCount": 4,
+  "AuditDetails": [
+   {
+    "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
+    "InvalidNewValueAttributes": [],
+    "LocLabelLanguageCode": 0,
+    "DeletedAttributes": {
+     "Count": 0,
+     "Keys": [],
+     "Values": []
+    },
+    "OldValue": {
+     "@odata.type": "#Microsoft.Dynamics.CRM.account",
+     "description": "Old description value"
+    },
+    "NewValue": {
+     "@odata.type": "#Microsoft.Dynamics.CRM.account",
+     "description": "New description value"
     }
+   },
+   {
+    "@odata.type": "#Microsoft.Dynamics.CRM.AttributeAuditDetail",
+    "InvalidNewValueAttributes": [],
+    "LocLabelLanguageCode": 0,
+    "DeletedAttributes": {
+     "Count": 0,
+     "Keys": [],
+     "Values": []
+    },
+    "OldValue": {
+     "@odata.type": "#Microsoft.Dynamics.CRM.account",
+     "_ownerid_value@OData.Community.Display.V1.FormattedValue": "FirstName LastName",
+     "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
+     "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
+     "_ownerid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e"
+    },
+    "NewValue": {
+     "@odata.type": "#Microsoft.Dynamics.CRM.account",
+     "_ownerid_value@OData.Community.Display.V1.FormattedValue": "TeamName",
+     "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
+     "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "team",
+     "_ownerid_value": "39e0dbe4-131b-e111-ba7e-78e7d1620f5e"
+    }
+   }
+  ]
+ }
 }
 ```
 
 More information:
+
 - <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>
 - <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse ComplexType>
-- <xref:Microsoft.Dynamics.CRM.AuditDetailCollection?text=AuditDetailCollection ComplexType>
+- <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse ComplexType>
+- <xref:Microsoft.Dynamics.CRM.PagingInfo?text=PagingInfo ComplexType>
 - [Use Web API functions](../webapi/use-web-api-functions.md)
 
 > [!NOTE]
@@ -931,7 +918,7 @@ More information:
 
 This `ShowRetrieveRecordChangeHistory` static method executes the `RetrieveRecordChangeHistory` message for a specified record and processes the response.
 
-For each audit record, it displays the properties and uses the `DisplayAuditDetail` method defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example to display the details.
+For each audit record, it displays the properties and uses the example `DisplayAuditDetail` static method defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) on this page to display the details.
 
 ```csharp
 /// <summary>
@@ -982,6 +969,7 @@ More information:
 
 - <xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>
 - <xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse Class>
+- <xref:Microsoft.Xrm.Sdk.Query.PagingInfo?text=PagingInfo Class>
 - <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
 
 ---
