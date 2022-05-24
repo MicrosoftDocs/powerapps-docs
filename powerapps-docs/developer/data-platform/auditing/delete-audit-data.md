@@ -88,11 +88,10 @@ More information:
 
 # [.NET SDK](#tab/sdk)
 
-This `ShowDeleteRecordChangeHistory` static method deletes the audited data changes the record specified by the `target` parameter and shows the number of records that are deleted.
-
 ```csharp
 /// <summary>
-/// Deletes record change history for a specific record
+/// Deletes record change history for a specific record and shows
+/// how many records were deleted.
 /// </summary>
 /// <param name="svc">The IOrganizationService instance to use.</param>
 /// <param name="target">The specified record.</param>
@@ -105,7 +104,7 @@ EntityReference target)
     };
 
     var resp = (DeleteRecordChangeHistoryResponse)
-svc.Execute(req);
+               svc.Execute(req);
 
     Console.WriteLine($"Audit records deleted:{resp.DeletedEntriesCount}");
 }
@@ -128,7 +127,7 @@ You can delete audit records your organization no longer needs to retain to comp
 
 # [Web API](#tab/webapi)
 
-The following example deletes audit records with an action value of 64 (User Access via Web) from the audit log. You can find the full list of audit actions in [Audit Actions](retrieve-audit-data.md#audit-actions) and modify your bulk delete job according to your needs.
+The following example deletes audit records with an action value of 64 (User Access via Web) from the audit log. You can modify your bulk delete job according to your needs.
 
 **Request**
 
@@ -183,6 +182,11 @@ OData-Version: 4.0
 ```
 
 More information:
+
+- <xref:Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action>
+- <xref:Microsoft.Dynamics.CRM.BulkDeleteResponse?text=BulkDeleteResponse ComplexType>
+- <xref:Microsoft.Dynamics.CRM.QueryExpression?text=QueryExpression ComplexType>
+
 
 # [.NET SDK](#tab/sdk)
 
