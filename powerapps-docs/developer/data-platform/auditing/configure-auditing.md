@@ -24,6 +24,8 @@ Auditing uses settings in the [Organization table](../reference/entities/organiz
 
 Anyone can read this configuration data, but you must have the System Administrator or System Customizer roles to change these settings.
 
+Changes made to audit configuration are included in the auditing history. More information: [Audit change events](retrieve-audit-data.md#audit-change-events)
+
 ## Configure organization settings
 
 Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. You can get the key value by querying the row directly or you may already have it cached by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.

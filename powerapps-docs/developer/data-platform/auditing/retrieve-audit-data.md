@@ -40,7 +40,7 @@ The following table summarizes important columns in the audit table.
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
 |`Action`<br />`action`<br />**Event**|Choice|74 options that represent the event that caused the change. More information: [Actions](#audit-actions)|
-|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history) |
+|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br /><br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history) |
 |`AuditId`<br />`auditid`<br /> **Record Id**|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />**Calling User**|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
 |`CreatedOn`<br />`createdon`<br />**Changed Date**|DateTime|When the audit record was created, which is when the user operation took place.|
@@ -86,6 +86,11 @@ These events capture changes when data changes for Many-to-Many relationships.
 |-----|-----|-------|-------|
 |33|Associate Entities|`Associate`|One or more records are associated to another.|
 |34|Disassociate Entities|`Disassociate`|One or more records are disassociated from another.|
+|53|Assign Role To Team|`Associate`|A security role is assigned to a team.|
+|54|Remove Role From Team|`Disassociate`|A security role is removed from a team.|
+|55|Assign Role To User|`Associate`|A security role is assigned to a user.|
+|56|Remove Role From User|`Disassociate`|A security role is removed from a user.|
+
 
 #### User Access Events
 
@@ -133,17 +138,6 @@ These events capture changes to audit settings.
 |57|Add Privileges to Role|`AddPrivilegesRole`|Privileges added to a role.|
 |58|Remove Privileges From Role|`RemovePrivilegeRole`|Privileges removed from a role.|
 |59|Replace Privileges In Role|`ReplacePrivilegesRole`|Privileges for a role are replaced.|
-
-<!-- 
-
-These may need their own category.
-
-|53|Assign Role To Team|||
-|54|Remove Role From Team|||
-|55|Assign Role To User|||
-|56|Remove Role From User|||
-
--->
 
 #### Other Actions
 
