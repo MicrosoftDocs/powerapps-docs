@@ -1,5 +1,5 @@
 ---
-title: Configure a site with Content Delivery Network
+title: Configure a site with Content Delivery Network (preview)
 description: Configure a site with Content Delivery Network
 author: nageshbhat-msft
 
@@ -15,7 +15,9 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Content Delivery Network 
+# Content Delivery Network (preview) 
+
+Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. CDNs' store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency. 
 
