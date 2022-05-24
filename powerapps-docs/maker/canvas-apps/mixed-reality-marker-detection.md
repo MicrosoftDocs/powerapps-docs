@@ -19,12 +19,12 @@ contributors:
 
 # Use marker detection with mixed reality controls
 
-Use physical markers to improve the precision and persistence of media that's placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View Shape in MR](./mixed-reality-component-view-shape.md) controls. The topics covers how to enable marker detection and how to add markers to your space.
+Use physical markers to improve the precision and persistence of media that's placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View Shape in MR](./mixed-reality-component-view-shape.md) controls. The topic covers how to enable marker detection and how to add markers to your space.
 
 ## Prerequisites
 In addition to the standard device compatibility requirements outlined in [add mixed reality controls to your canvas app](./mixed-reality-overview.md) marker detection requires physical markers to be present in your space.
 
-To create a marker print out the image below or display the image on a monitor or tablet. For best results the marker should be printed in portrait orientation on standard A4 or 8.5" x 11" letter paper. Ensure that the marker is fully visible and not cut off on either the top or bottom. The marker should be approximately 20 x 20 cm for optimal tracking speed and accuracy.
+To create a marker, print out the image below or display the image on a monitor or tablet. For the best results the marker should be printed in portrait orientation on standard A4 or 8.5" x 11" letter paper. Ensure that the marker is fully visible and not cut off on either the top or bottom. The marker should be approximately 20 x 20 cm for optimal tracking speed and accuracy.
 
 :::image type="content" source="./media/augmented-marker-detection/mixed-reality-marker.png" alt-text="Image used for marker detection in mixed reality experiences.":::
 
@@ -40,7 +40,7 @@ When you enter the mixed reality experience, you will be prompted to point your 
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-point-device.png" alt-text="A screenshot of the mixed reality placement experience showing optimal framing of the marker for detection.":::
 
-Once the marker is detected the loaded media is automatically aligned and placed directly on top of the marker. You can manipulate the media's position or rotate it by using the on screen gestures or by physically moving the marker.
+Once the marker is detected the loaded media is automatically aligned and placed directly on top of the marker. You can manipulate the media's position or rotate it by using the on-screen gestures or by physically moving the marker.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-placement.gif" alt-text="An animated image showing marker detection for placement and positioning.":::
 
