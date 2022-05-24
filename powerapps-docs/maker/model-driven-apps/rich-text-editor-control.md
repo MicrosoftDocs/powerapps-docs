@@ -1052,6 +1052,11 @@ The following table outlines a list of accessibility shortcuts available when us
 | Base commands | Alt+0 | Accessibility help. |
 | Base commands | Esc | Cancel operation. |
 | | | |
+	
+## Offline experience
+
+The rich text editor control is available when working offline with the default configuration file RTEGlobalConfiguration_Readonly.json. Use of the default configuration means an configuration added through creation or modification of any other web resource files will not be available while offline.
+
 
 ## Frequently asked questions
 
