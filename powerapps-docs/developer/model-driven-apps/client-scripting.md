@@ -4,7 +4,7 @@ description: Learn how developers can use JavaScript in client-side scripts to a
 suite: powerapps
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.custom: "intro-internal"

@@ -1,14 +1,14 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 04/26/2022
+ms.date: 05/23/2022
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
-ms.topic: "article"
-author: HemantGaur
-ms.author: hemantg
-manager: rycu
+ms.topic: article
+author: adrianorth
+ms.author: aorth 
+manager: lwelicki
 search.audienceType: 
   - maker
   - developer
@@ -244,19 +244,19 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "Congratulations",
-	  "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
-	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+     "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+     "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000001, // success
     "data": JSON.stringify({
-	 "actions": [
-	  {
+    "actions": [
+     {
         "title": "View cases",
         "data": {
-		"url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039"
-		}		
-	  }
-	 ]
-	})
+      "url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039"
+      }      
+     }
+    ]
+   })
 }
 Xrm.WebApi.createRecord("appnotification", notificationRecord).
   then(
@@ -284,27 +284,27 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "Upcoming Service Reminder",
-	  "body": "This is to inform you that you have an upcoming service request for your vehicle.",
-	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+     "body": "This is to inform you that you have an upcoming service request for your vehicle.",
+     "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000000, // info
     "data": JSON.stringify({
-	   "actions": [
-	    {
+      "actions": [
+       {
         "title": "Coho Winery",
         "data": {
-		    "url": "?pagetype=entityrecord&etn=account&id=b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
-		    "navigationTarget": "dialog"
-		       }		
-	    },
-	    {
-	      "title": "Service Appointment",
+          "url": "?pagetype=entityrecord&etn=account&id=b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+          "navigationTarget": "dialog"
+             }      
+       },
+       {
+         "title": "Service Appointment",
         "data": {
-		    "url": "?pagetype=entityrecord&etn=appointment&id=96db3cf0-e605-ec11-94ef-000d3a36469a",
-		    "navigationTarget": "dialog"
-	        }
-	    }
-	 ]
-	})
+          "url": "?pagetype=entityrecord&etn=appointment&id=96db3cf0-e605-ec11-94ef-000d3a36469a",
+          "navigationTarget": "dialog"
+           }
+       }
+    ]
+   })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
@@ -332,12 +332,12 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "SLA critical",
-	"body": "Records assigned to you is critically past SLA.",
-	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+   "body": "Records assigned to you is critically past SLA.",
+   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000002, // failure
     "data": JSON.stringify({
-	 "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
-	 })
+    "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
+    })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
@@ -361,12 +361,12 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "SLA Missed",
-	"body": "Records assigned to you is critically past SLA.",
-	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+   "body": "Records assigned to you is critically past SLA.",
+   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000003, // warning
     "data": JSON.stringify({
-	 "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
-	 })
+    "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
+    })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
 then(
@@ -421,21 +421,21 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "Complete overhaul required (sample)",
-	"body": "Maria Campbell mentioned you in a post.",
-	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+   "body": "Maria Campbell mentioned you in a post.",
+   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000004, // mention
     "data": JSON.stringify({
-	 "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
-	 "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_",
-	  "actions": [
-	   {
-	     "title": "View record",
-		 "data": {
-		 "url": "?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8"
-		 }
-	   }
-	  ]
-	 })
+    "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
+    "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_",
+     "actions": [
+      {
+        "title": "View record",
+       "data": {
+       "url": "?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8"
+       }
+      }
+     ]
+    })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(

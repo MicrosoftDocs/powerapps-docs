@@ -3,7 +3,7 @@ title: "Create a visualization (chart) (model-driven apps) | Microsoft Docs" # I
 description: "The topic shows how to create a chart visualization and a web resource visualization." # 115-145 characters including spaces. This abstract displays in the search result."
 author: mspilde
 ms.author: mspilde
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

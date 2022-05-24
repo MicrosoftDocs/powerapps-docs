@@ -3,7 +3,7 @@ title: "Query and edit an organization theme(model-driven apps) | Microsoft Docs
 description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: hemantg
 author: HemantGaur
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
