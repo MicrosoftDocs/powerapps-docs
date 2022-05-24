@@ -1,5 +1,5 @@
 ---
-title: Use the marker detection with mixed reality controls
+title: Use marker detection with mixed reality controls
 description: How to use the marker detection feature of the view in MR and view shape in MR mixed-reality controls in a canvas app.
 author: mduelae
 ms.service: powerapps
@@ -17,7 +17,7 @@ contributors:
   - altran
 ---
 
-# Use the marker detection with mixed reality controls
+# Use marker detection with mixed reality controls
 
 Use physical markers to improve the precision and persistence of media that's placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View Shape in MR](./mixed-reality-component-view-shape.md) controls. The topics covers how to enable marker detection and how to add markers to your space.
 
@@ -34,7 +34,7 @@ To enable marker detection for the **View in MR** and **View Shape in MR** contr
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
 
-## Use the marker detection on device
+## Use marker detection on device
 
 When you enter the mixed reality experience, you will be prompted to point your device at a physical marker in your space. To quickly acquire tracking make sure the marker is fully in frame and about 2-5 feet from the device.
 
