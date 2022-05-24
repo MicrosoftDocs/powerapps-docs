@@ -989,7 +989,7 @@ The rich text editor toolbar provides features and functionality that allows you
 
 ### Formatting options
 
-The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
+The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use. 
 
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
@@ -1020,10 +1020,11 @@ The following table describes the different formatting features and functionalit
 |![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Accessibility help.](media/accessibility-help.png "Accessibility help")| Accessibility help | Alt+0 | Display list of accessibility shortcuts available when using the rich text editor control. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
+|![Accessibility help.](media/accessibility-help.png "Accessibility help")| Accessibility help | Alt+0 | Display list of accessibility shortcuts available when using the rich text editor control. |
 | | | | |
+
 
 > [!Tip]
 > You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
@@ -1055,7 +1056,34 @@ The following table outlines a list of accessibility shortcuts available when us
 	
 ## Offline experience
 
-The rich text editor control is available when working offline with a basic configuration. All configuration added through creation or modification of a web resource file will not be available while offline.  The basic configuration for offline <insert configuration here>
+The rich text editor control is available when working offline with a basic configuration. All configuration added through creation or modification of a web resource file will not be available while offline.  
+
+	### Formatting options for offline
+
+The following table describes the different formatting features and functionality options that are available in the rich text editor when used offline. 
+
+|Icon | Name | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|-----------------------------|
+|![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
+|![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
+|![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
+|![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
+|![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
+|![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
+|![Increase Indent.](media/increase-indent.png "Increase Indent")| Increase Indent |  | Move your paragraph farther away from the margin. |
+|![Block Quote.](media/block-quote.png "Block Quote")| Block Quote |  | Apply a block-level quotation format in your content. |
+|![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
+|![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
+|![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
+|![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
+|![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
+|![Right to Left.](media/right-to-left.png "Right to Left")| Right to Left |  | Change the text to right-to-left for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. The default setting is left-to-right. |
+|![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
+|![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
+|![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
+|![Accessibility help.](media/accessibility-help.png "Accessibility help")| Accessibility help | Alt+0 | Display list of accessibility shortcuts available when using the rich text editor control. |
+|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
+| | | | |
 
 
 ## Frequently asked questions
