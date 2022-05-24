@@ -348,6 +348,42 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 
 </tr>
+
+
+<tr>
+<td>
+  linkTargets
+</td>
+
+<td>
+
+  Allows you to configure which link target options are available for users when they create links.
+</td>
+<td>
+Link targets
+	
+- notSet : No target set for the document in the anchor tag
+	
+- frame : Opens the document in the specified frame
+	
+- popupWindow : Opens the document in a popup window
+	
+- _blank : Opens the document in a new window or tab
+	
+- _top : Opens the document in the full body of the window
+	
+- _self : Opens the document in the same window or tab where the link is activated
+	
+- _parent : Opens the document in the parent frame
+
+	<br>
+	
+Example:
+```"linkTargets": ["notSet", "_blank"]```
+
+</td>
+
+</tr>
 </table>
 
 
