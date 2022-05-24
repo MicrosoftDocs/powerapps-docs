@@ -1055,7 +1055,7 @@ The following table outlines a list of accessibility shortcuts available when us
 	
 ## Offline experience
 
-The rich text editor control is available when working offline with the default configuration file RTEGlobalConfiguration_Readonly.json. Use of the default configuration means an configuration added through creation or modification of any other web resource files will not be available while offline.
+The rich text editor control is available when working offline with a basic configuration. All configuration added through creation or modification of a web resource file will not be available while offline.  The basic configuration for offline <insert configuration here>
 
 
 ## Frequently asked questions
