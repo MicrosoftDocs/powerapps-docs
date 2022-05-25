@@ -39,7 +39,7 @@ To use Power BI with Dataverse, you need the following items:
 
 1. Open **Power BI Desktop**. Select **File** > **Get Data** > **Power Platform**.
 
-1. Select the **Dataverse**, and then select  **Connect**.
+1. Select the **Dataverse** connector, and then select  **Connect**.
 
 1. In the list of Dataverse environments, expand the environment you want, select the tables you want, and then select **Load**.
    
