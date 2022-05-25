@@ -746,37 +746,42 @@ The following are common configurations for the rich text editor. These sample c
 
 ### Set the default font to Calibri with font-size 11pt
 Set your default font and size to match the Microsoft Windows defaults. This example shows which settings you use to implement this change in your experience.
+
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
-    "font_defaultLabel": "Calibri",
-    "fontSize_defaultLabel": "11",
+
+    "font_defaultLabel": "Calibri"
+    
+    "fontSize_defaultLabel": "11"
+    
     "stickyStyle": {
       "font-size": "11pt",
       "font-family": "Calibri/Calibri, Helvetica, sans-serif;"
     }
-  }
-}
+
  ```
  
  ### Make line breaks (Enter key) create a &lt;br&gt; instead of &lt;p&gt;
  The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpretting pasted content). Paragraph blocks are used in HTML to group information. In some cases, when creating new or pasting information from Microsoft Word or other content editor, due to how each browser interprets the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you might want to use the &lt;br&gt; HTML tag instead of paragraph blocks. The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
+ 
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
+
     "enterMode": 2
-  } 
-}
+
  ```
  
 ### All content pasted or created is HTML 5 compliant
 The rich text editor control works best with HTML 5 content, although HTML 4 tags and formatting can also be used successfully. In some cases, the mixture of both HTML 4 and HTML 5 tags can create usability challenges when selecting and setting fonts and sizes. Use of "allowedContent" can ensure all your content is HTML 5. This example allows all supported HTML 5 tags. Any non-compliant tags are converted to their HTML 5 equivalent. 
+
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
+
     "allowedContent": "a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};"
-  } 
-}
+
  ```
 
 
@@ -785,105 +790,119 @@ The rich text editor control works best with HTML 5 content, although HTML 4 tag
 
 ### Add the full screen expander
 
+Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [Individual configuration settings](#individual-configuration-settings))
  ```
-{
-  "showAsTabControl": true,
+ 
+  "showAsTabControl": true
+  
   "showFullScreenExpander": true
-}
+  
  ```
 
 :::image type="content" source="media/cke-screen-expander.png" alt-text="Screen expander control.":::
 
 ### Add the HTML source view tab
 
+Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [Individual configuration settings](#individual-configuration-settings))
  ```
-{
-  "showAsTabControl": true,
+
+  "showAsTabControl": true
+  
   "showHtml": true
-}
+
  ```
 
 :::image type="content" source="media/cke-html-source.png" alt-text="HTML tab control.":::
 
 ### Add a simple toolbar with font size, bold, italic, underline, and highlight
 
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
+
     "toolbar": [ { "items": [ "FontSize", "Bold", "Italic", "Underline", "BGColor" ] } ]
-  }
-}
+
  ```
 
 :::image type="content" source="media/cke-simple-editor.png" alt-text="Controls for a simple editor.":::
 
 ### Remove the toolbar to make a rich text rendering surface
 
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
+
     "toolbar": []
-  }
-}
+
  ```
 
 :::image type="content" source="media/cke-no-toolbar.png" alt-text="No toolbar.":::
 
 ### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
 
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
-    "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;",
-    "font_defaultLabel": "Brush Script MT",
-    "fontSize_sizes": "8/8px;12/12px;20/20px;32/32px",
-    "fontSize_defaultLabel": "20",
+
+    "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;"
+    
+    "font_defaultLabel": "Brush Script MT"
+    
+    "fontSize_sizes": "8/8px;12/12px;20/20px;32/32px"
+    
+    "fontSize_defaultLabel": "20"
+    
     "stickyStyle": {
       "font-size": "20px",
       "font-family": "'Brush Script MT', cursive"
     }
-  }
-}
+
  ```
 
 :::image type="content" source="media/cke-default-font.png" alt-text="Set a new default font.":::
 
 ### Position the toolbar at the top of the rich text editor
 
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
+
     "toolbarLocation": "top"
-  }
-}
+
  ```
 
 :::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor.":::
 
 ### Start the editor at 30-px height and then autogrow to fit content
 
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
-    "autoGrow_onStartup": false,
-    "autoGrow_maxHeight": 0,
-    "autoGrow_minHeight": 30,
+
+    "autoGrow_onStartup": false
+    
+    "autoGrow_maxHeight": 0
+    
+    "autoGrow_minHeight": 30
+    
     "height": 30
-  }
-}
+
  ```
 
 :::image type="content" source="media/cke-autogrow.png" alt-text="Typing into the rich text area will increase it to fit the content.":::
 
 ### Fix the height of the editor at 500 px
 
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
-    "removePlugins": [ "autogrow" ],
+
+    "removePlugins": [ "autogrow" ]
+    
     "height": 500
-  }
-}
+
  ```
 
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
@@ -891,19 +910,33 @@ The rich text editor control works best with HTML 5 content, although HTML 4 tag
 
 ### Create a plain text surface that removes all html tags except for the "br" tag
 
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
-    "enterMode": 2,
-    "shiftEnterMode": 2,
-    "allowedContent": "*",
-    "disallowedContent": "*",
-    "forcePasteAsPlainText": true,
-    "toolbar": [],
+
+    "enterMode": 2
+    
+    "shiftEnterMode": 2
+    
+    "allowedContent": "*"
+    
+    "disallowedContent": "*"
+    
+    "forcePasteAsPlainText": true
+    
+    "toolbar": []
+    
     "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"
-  },
+
+ ```
+ 
+ 
+Set this ```Individual configuration settings``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [Individual configuration settings](#individual-configuration-settings))
+ ```
+
   "disableImages": true
-}
+
  ```
  
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
@@ -912,12 +945,12 @@ The rich text editor control works best with HTML 5 content, although HTML 4 tag
 
 Enabling this functionality removes the contextual right-click editing capability.
 
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+(More information: [defaultSupportedProps](#defaultsupportedprops))
  ```
-{
-  "defaultSupportedProps": {
+
     "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"
-  }
-}
+
  ```
 
 :::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
