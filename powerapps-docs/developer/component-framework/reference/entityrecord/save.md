@@ -19,7 +19,7 @@ ms.topic: "article"
 
 ## Available for
 
-Model-driven and Canvas apps
+Model-driven and limited support for Canvas apps
 
 ## Syntax
 
