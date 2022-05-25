@@ -61,7 +61,7 @@ When your administrator enables the [modern advanced find experience](/power-pla
 If your administrator has not enabled the modern advanced find experience, you can find the rows you want by using the legacy Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives. 
 
 > [!NOTE]
->  To use the Modern advanced find in model-driven apps, see [Create and manage personal views on a grid page ](grid-filters-advanced.md).
+>  To use the modern advanced find in model-driven apps, see [Create and manage personal views on a grid page ](grid-filters-advanced.md).
   
 1. On the command bar, select **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button").
   
