@@ -176,6 +176,11 @@ If your administrator has turn on [modern advanced find](/power-platform/admin/s
 
 :::image type="content" source="./media/manage-share-views.png" alt-text="A screenshot of the view selector, showing the option to manage and share views.":::
 
+
+:::image type="content" source="./media/edit-delete-views.png" alt-text="A screenshot of the view selector, showing the option to share, edit, or delete a view.":::
+
+
+
 ### Change the order of views in the view selector
 
 By default, the view selector lists views in two groups, personal views and system views, each ordered alphabetically. You can change the sort order within groups, or remove the grouping entirely and order the entire list alphabetically.
