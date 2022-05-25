@@ -1,6 +1,6 @@
 ---
-title: "Configure the enhanced insert email template selection window | MicrosoftDocs"
-description: "Configure the email template selection window at the org level or app."
+title: "Use the Insert dynamic text option | MicrosoftDocs"
+description: "Personalize emails using the Insert dynamic text option"
 ms.custom: ""
 author: gandhamm
 manager: shujoshi
@@ -16,7 +16,7 @@ search.app:
 ---
 
 
-# Introduction
+# Personalize content with Insert dynamic text
 
 Dynamic text enables you to personalize content. Insert dynamic text placeholders in an email template to automatically replace the recepients' personal details when a message is sent. For example, rather than using a generic greeting like “Dear customer,” you can use dynamic text (“Dear ``{{FirstName}}``”) that is replaced with the customer name (“Dear John”) upon sending the message.
 
@@ -44,4 +44,6 @@ If you must insert custom fields in the templates, use the following syntax:
 |Option Set |{!EntityLogicalName:FieldLogicalName/@name;} |
 |Two options |{!EntityLogicalName:FieldLogicalName/@name;} |
 
-For example, if you want to add a custom  field, Value in dollars, to the template, you can insert this syntax: ``{{!EntityLogicalName:Value in dollars;}}`` in the editor.
+For example, if you want to add a custom  field, Customer id, that is linked to the Record type user to the template, you can insert this syntax: ``{{!User:Customerid;}}`` in the editor.
+
+So when the email is sent out, the dynamic text is replaced with the user's customer  id.

@@ -37,7 +37,7 @@ Specify the following information:
 
    1. **Template name**: Give your email template a detailed name to help you identify it later.
    2. **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
-   3. **Category**: The default value is **User**. Categories determine which dynamic text fields are available for use in your template.
+   3. **Category**: The default value is **User**. Categories determine which [dynamic text](email_dynamic_text.md) fields are available for use in your template.
    4. **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    5. **Create**: Opens one of two editors where you can build your template.
 
@@ -58,7 +58,7 @@ When you select **Create**, the editor page you see depends on whether your admi
 
 :::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
 
-   1. **Insert dynamic text**: Use dynamic text in the subject and body of the email.
+   1. **Insert dynamic text**: Use [dynamic text](email_dynamic_text.md) in the subject and body of the email.
    2. **Subject**: Enter or change the email subject.
    3. **New Attachment**: Add one or more attachments to your template, if needed.
 
@@ -86,5 +86,6 @@ Start with an existing template to create an email template faster and with less
 
 ### See also
 
+[Personalize content with Insert dynamic text](email_dynamic_text.md)
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)   

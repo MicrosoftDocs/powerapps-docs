@@ -51,7 +51,7 @@ To change the appearance of a column, select it, and then select **Edit column**
 
 You can use the design elements in the **Elements** tab in the Toolbox to customize your email template:
 
-- **Text**: Add text content to your template. Replace the placeholder text with your content. Use the floating toolbar to insert dynamic text or format the content.
+- **Text**: Add text content to your template. Replace the placeholder text with your content. Use the floating toolbar to insert [dynamic text](email_dynamic_text.md) or format the content.
     > [!NOTE]
     > When you select the text element, the following capabilities of the rich text editor toolbar aren't supported:
     >  - Personalization. Use the Insert dynamic text editor to personalize content.
@@ -69,6 +69,8 @@ You can use the design elements in the **Elements** tab in the Toolbox to custom
 Use the **General Styles** tab to change the layout's width, font, font size, background, and text color.
 
 ### See also
+
+[Personalize content with Insert dynamic text](email_dynamic_text.md)
 
 [How to create an email template  in model-driven apps](email-template-create.md)  
 [Enable the enhanced email template editor page](cs-email-template-builder.md)
