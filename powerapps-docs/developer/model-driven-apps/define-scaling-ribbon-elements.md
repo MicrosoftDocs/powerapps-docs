@@ -4,7 +4,7 @@ description: "Learn about defining scaling for ribbon elements." # 115-145 chara
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -19,6 +19,8 @@ contributors:
 ---
 
 # Define scaling for ribbon elements
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 For application ribbons and updated form ribbons there is no scaling. Scaling only applies to forms for tables that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
   

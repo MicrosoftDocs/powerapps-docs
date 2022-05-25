@@ -4,7 +4,7 @@ description: "Learn about defining custom actions to modify the ribbon." # 115-1
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -19,6 +19,8 @@ contributors:
 ---
 
 # Define custom actions to modify the ribbon
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 The default, an application command bar or ribbon is defined by Microsoft Dataverse metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
   
