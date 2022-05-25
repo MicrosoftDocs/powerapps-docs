@@ -74,18 +74,21 @@ The following list explains what you'll need before you can start using wrap fea
 
 ### Permissions and access requirements
 
-- Access to [Microsoft App Center](https://appcenter.ms/)
-- Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
-- Access to [Power Platform admin center](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) to enable wrap setting
 - Access to one or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project
+- Access to [Power Platform admin center](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) to [install the wrap feature](how-to.md#prerequisites)
+- Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
+- Access to [Microsoft App Center](https://appcenter.ms/)
 
 ### Software and device requirements
 
-- Mac PC with iOS version 14 or higher for [code signing with iOS](code-sign-ios.md)
-- Windows PC with Windows 11 with latest updates for [code signing with Android](code-sign-android.md)
-- To run the mobile app package:
+- Mac device for [code signing with iOS](code-sign-ios.md)
+- Windows PC for [code signing with Android](code-sign-android.md)
+- To run the wrapped mobile app:
     - Android device with version 10 or higher
     - iOS device with version 14 or higher
+
+> [!NOTE]
+> Developing apps for the iOS platform requires an [Apple Developer Program](https://developer.apple.com/) account.
 
 ## Understand wrap terminology
 
