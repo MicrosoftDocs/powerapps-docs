@@ -48,7 +48,7 @@ Virtual Tables include the following components:
 
 Virtual connector provider streamlines the creation experience by automating some of the creation process for you. When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically generates an Entity Catalog with a list of all the available tables by retrieving table definitions (metadata) from the external data source.
 
-The **Entity Catalog** does not persist any information and always represents the external data source’s current state. You can select tables from the **Entity Catalog** to create virtual tables. If you're working with multiple external data sources, an **Entity Catalog** is generated for each external source.
+The **Entity Catalog** does not persist any information and always represents the external data source's current state. You can select tables from the **Entity Catalog** to create virtual tables. If you're working with multiple external data sources, an **Entity Catalog** is generated for each external source.
 
 The underlying data source is key for allowing the provider to establish an authenticated remote connection to the external data. It uses a connection reference that stores pertinent details regarding the external source. The information stored in the connection reference is specific to the connector type and the connection it refers to. 
 
@@ -221,48 +221,48 @@ With the connection reference and the virtual table data source setup, an **Enti
   >[!Note]
   > Bulk creation of virtual tables is not supported currently. Even though the Entity Catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
 
-1.	To create a virtual table, a model driven app must be built for the entity catalog. Select the entity catalog table.
+1.   To create a virtual table, a model driven app must be built for the entity catalog. Select the entity catalog table.
 
-2.	Click Create an app in the top navigation.
+2.   Click Create an app in the top navigation.
 
-:::image type="content" source="../media/entity-catalog-table-selected-table-view.jpg" alt-text="Entity catalog with a table selected, table view":::
+:::image type="content" source="media/entity-catalog-table-selected-table-view.jpg" alt-text="Entity catalog with a table selected, table view":::
 
-3.	Name the app and click Create
+3.   Name the app and click Create
 
-:::image type="content" source="../media/Create-an-app-screen.jpg" alt-text="Create a Model Driven app screen":::
+:::image type="content" source="media/Create-an-app-screen.jpg" alt-text="Create a Model Driven app screen":::
 
 The app will automatically be generated using the entity catalog table. 
 
-4.	Once the app is completed, you can click Publish to complete the app and use it later, or you can click Play to create your virtual table now without publishing the app. 
+4.   Once the app is completed, you can click Publish to complete the app and use it later, or you can click Play to create your virtual table now without publishing the app. 
 
-:::image type="content" source="../media/completed-model-driven-app.jpg" alt-text="Completed model driven app":::
+:::image type="content" source="media/completed-model-driven-app.jpg" alt-text="Completed model driven app":::
 
 All eligible data sets from your data source will be provided in the app view.
--	SQL: All tables in the database that are eligible are shown
--	SharePoint: All lists in the site are shown
--	Excel: All tables in the Excel file are shown
+-   SQL: All tables in the database that are eligible are shown
+-   SharePoint: All lists in the site are shown
+-   Excel: All tables in the Excel file are shown
 
-5.	Select the data set you wish to use from the entity catalog, and click Edit in the navigation bar.
+5.   Select the data set you wish to use from the entity catalog, and click Edit in the navigation bar.
 
-:::image type="content" source="../media/model-driven-app-entity-catalog-view.jpg" alt-text="Model Driven app Entity Catalog view with a data set selected":::
+:::image type="content" source="media/model-driven-app-entity-catalog-view.jpg" alt-text="Model Driven app Entity Catalog view with a data set selected":::
 
 Wait for the form to fully load before editing. When loaded the form will look like this:
 
-:::image type="content" source="../media/edit-form-for-entity-catalog-model-driven-app.jpg" alt-text="Entity Catalog edit form all fields blank":::
+:::image type="content" source="media/edit-form-for-entity-catalog-model-driven-app.jpg" alt-text="Entity Catalog edit form all fields blank":::
 
-6.	In the provided form set the Create or Refresh Entity column to Yes.
+6.   In the provided form set the Create or Refresh Entity column to Yes.
 
-7.	Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use.
+7.   Select the Primary Key and Primary Field of the virtual entity by using the dropdowns to find the columns you wish to use.
 
-:::image type="content" source="../media/edit-form-entity-catalog-fields-completed.jpg" alt-text="Entity Catalog edit form all fields completed":::
+:::image type="content" source="media/edit-form-entity-catalog-fields-completed.jpg" alt-text="Entity Catalog edit form all fields completed":::
 
-8.	Save the record to create the virtual table. 
+8.   Save the record to create the virtual table. 
 
 > [!Note] 
-> After the save completes, the form will “reset” with all fields shown as blank, this is normal. 
+> After the save completes, the form will "reset" with all fields shown as blank, this is normal. 
 
-Return to the Maker portal’s home page and select Data, your virtual table is now created with a “Custom Entity” prefix. It may take a few moments for the creation to complete.
-:::image type="content" source="../media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
+Return to the Maker portal's home page and select Data, your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
+:::image type="content" source="media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
 
 > [!IMPORTANT] 
 > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
@@ -356,7 +356,7 @@ The following are limitations for each data source.
 - Specific Excel Connector Limitations: [Excel Online (Business) connector reference](/connectors/excelonlinebusiness/).
 
 # [Microsoft SharePoint](#tab/sharepoint)
-You currently cannot select an “All” view for SharePoint columns on a Virtual Table. This is a known bug and is being fixed.
+You currently cannot select an "All" view for SharePoint columns on a Virtual Table. This is a known bug and is being fixed.
 
 ---
 
