@@ -362,23 +362,24 @@ You can configure all of the CKEditor-supported properties under this property. 
 <td>
 Link targets
 	
-- notSet : No target set for the document in the anchor tag
+- ```notSet``` : No target set for the document in the anchor tag
 	
-- frame : Opens the document in the specified frame
+- ```frame``` : Opens the document in the specified frame
 	
-- popupWindow : Opens the document in a popup window
+- ```popupWindow``` : Opens the document in a popup window
 	
-- _blank : Opens the document in a new window or tab
+- ```_blank``` : Opens the document in a new window or tab
 	
-- _top : Opens the document in the full body of the window
+- ```_top``` : Opens the document in the full body of the window
 	
-- _self : Opens the document in the same window or tab where the link is activated
+- ```_self``` : Opens the document in the same window or tab where the link is activated
 	
-- _parent : Opens the document in the parent frame
+- ```_parent``` : Opens the document in the parent frame
 
-	<br>
+<br><br>
 	
 Example:
+	
 ```"linkTargets": ["notSet", "_blank"]```
 
 </td>
@@ -399,7 +400,7 @@ You can configure other configuration settings that affect how your editor funct
     <th>Default value</th>
   </tr>
 	
-	<tr>
+<tr>
 <td>
   attachmentEntity
 </td>
