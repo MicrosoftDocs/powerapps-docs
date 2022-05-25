@@ -127,6 +127,17 @@ Before you can share a personal view, it must be saved.
    > [!div class="mx-imgBorder"] 
    > ![Share the view.](media/saved_views_5.png "Select share to share the view")
 
+## Delete a personal view
 
+1. On the command bar, select the **Advanced Find** button.
+2. On the Advanced Find tab, select **Saved Views**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Saved view button.](media/saved_views_1.png "Saved view button")
+   
+3. From the list of saved views, select the view that you want to delete and then select **Delete Saved View**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Delete a saved view.](media/delete-saved-view.png "Delete a saved view")
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
