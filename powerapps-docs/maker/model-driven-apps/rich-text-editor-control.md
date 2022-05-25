@@ -125,10 +125,14 @@ The following two images visually identify the two configuration sections. For t
 
 **defaultSupportedProps**
 
+
+More information: [defaultSupportedProps](#defaultsupportedprops)
 :::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualization.":::
 
 **Individual configuration settings**
 
+
+More information: [Individual configuration settings](#individual-configuration-settings)
 :::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization.":::
 
 ### defaultSupportedProps
@@ -748,7 +752,7 @@ The following are common configurations for the rich text editor. These sample c
 Set your default font and size to match the Microsoft Windows defaults. This example shows which settings you use to implement this change in your experience.
 
 Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "font_defaultLabel": "Calibri"
@@ -766,7 +770,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
  The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpretting pasted content). Paragraph blocks are used in HTML to group information. In some cases, when creating new or pasting information from Microsoft Word or other content editor, due to how each browser interprets the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you might want to use the &lt;br&gt; HTML tag instead of paragraph blocks. The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
  
 Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "enterMode": 2
@@ -777,7 +781,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 The rich text editor control works best with HTML 5 content, although HTML 4 tags and formatting can also be used successfully. In some cases, the mixture of both HTML 4 and HTML 5 tags can create usability challenges when selecting and setting fonts and sizes. Use of "allowedContent" can ensure all your content is HTML 5. This example allows all supported HTML 5 tags. Any non-compliant tags are converted to their HTML 5 equivalent. 
 
 Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "allowedContent": "a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};"
@@ -791,7 +795,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 ### Add the full screen expander
 
 Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [Individual configuration settings](#individual-configuration-settings))
+(More information: [Individual configuration settings](#visualization-of-the-rich-text-editor-configuration-file))
  ```
  
   "showAsTabControl": true
@@ -805,7 +809,7 @@ Set these ```Individual configuration settings``` properties in your configurati
 ### Add the HTML source view tab
 
 Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [Individual configuration settings](#individual-configuration-settings))
+(More information: [Individual configuration settings](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
   "showAsTabControl": true
@@ -819,7 +823,7 @@ Set these ```Individual configuration settings``` properties in your configurati
 ### Add a simple toolbar with font size, bold, italic, underline, and highlight
 
 Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "toolbar": [ { "items": [ "FontSize", "Bold", "Italic", "Underline", "BGColor" ] } ]
@@ -831,7 +835,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 ### Remove the toolbar to make a rich text rendering surface
 
 Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "toolbar": []
@@ -843,7 +847,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 ### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
 
 Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;"
@@ -866,7 +870,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
 ### Position the toolbar at the top of the rich text editor
 
 Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "toolbarLocation": "top"
@@ -878,7 +882,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 ### Start the editor at 30-px height and then autogrow to fit content
 
 Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "autoGrow_onStartup": false
@@ -896,7 +900,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
 ### Fix the height of the editor at 500 px
 
 Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "removePlugins": [ "autogrow" ]
@@ -911,7 +915,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
 ### Create a plain text surface that removes all html tags except for the "br" tag
 
 Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "enterMode": 2
@@ -932,7 +936,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
  
  
 Set this ```Individual configuration settings``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [Individual configuration settings](#individual-configuration-settings))
+(More information: [Individual configuration settings](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
   "disableImages": true
@@ -946,7 +950,7 @@ Set this ```Individual configuration settings``` property in your configuration 
 Enabling this functionality removes the contextual right-click editing capability.
 
 Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
-(More information: [defaultSupportedProps](#defaultsupportedprops))
+(More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
     "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"
