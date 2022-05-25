@@ -174,11 +174,13 @@ If your administrator has turned on [modern advanced find](/power-platform/admin
 
 If your administrator has turn on [modern advanced find](/power-platform/admin/settings-features), you can share, hide, rename, and delete views.
 
-:::image type="content" source="./media/manage-share-views.png" alt-text="A screenshot of the view selector, showing the option to manage and share views.":::
+1. In the view selector, select **Manage and share views**.
 
+    :::image type="content" source="./media/manage-share-views.png" alt-text="A screenshot of the view selector, showing the option to manage and share views.":::
 
-:::image type="content" source="./media/edit-delete-views.png" alt-text="A screenshot of the view selector, showing the option to share, edit, or delete a view.":::
+2. Select View commands (…) and then choose you option.
 
+    :::image type="content" source="./media/edit-delete-views.png" alt-text="A screenshot of the view selector, showing the option to share, edit, or delete a view.":::
 
 
 ### Change the order of views in the view selector
