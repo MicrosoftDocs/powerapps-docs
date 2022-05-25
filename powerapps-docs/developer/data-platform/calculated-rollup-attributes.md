@@ -185,7 +185,7 @@ search.app:
 ```  
   
 ### See also  
- [Video: Rollup and calculated columns in Dataverse](https://youtu.be/RoahCH1p3T8)   
+   
  [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
  [Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
  [Define rollup columns](../../maker/data-platform/define-rollup-fields.md)
