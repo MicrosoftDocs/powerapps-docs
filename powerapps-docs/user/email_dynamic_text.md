@@ -22,9 +22,9 @@ Dynamic text enables you to personalize email content. Insert dynamic text place
 
 ## Insert dynamic text
 
-You can insert dynamic fields for existing email templates or newly created email templates. Select **Insert dynamic text** in the email template editor to add dynamic text to your template.
+You can insert dynamic fields in the existing email templates or newly created email templates. Select **Insert dynamic text** in the email template editor to add dynamic text to your template.
 
-On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Category** you specify when creating the email template.
+On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Category** you specify when you are creating the email template.
 
 ## Insert custom fields
 
