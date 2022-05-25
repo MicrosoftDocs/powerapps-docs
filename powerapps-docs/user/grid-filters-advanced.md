@@ -178,7 +178,7 @@ If your administrator has turn on [modern advanced find](/power-platform/admin/s
 
     :::image type="content" source="./media/manage-share-views.png" alt-text="A screenshot of the view selector, showing the option to manage and share views.":::
 
-2. Select View commands (…) and then choose you option.
+2. Select View commands (…) and then choose your option.
 
     :::image type="content" source="./media/edit-delete-views.png" alt-text="A screenshot of the view selector, showing the option to share, edit, or delete a view.":::
 
