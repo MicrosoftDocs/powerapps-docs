@@ -1,5 +1,5 @@
 ---
-title: "process.getId (Client API reference) in model-driven apps| MicrosoftDocs"
+title: process.getId (Client API reference)
 description: Includes description and supported parameters for the process.getId method.
 ms.author: jdaly
 author: adrianorth

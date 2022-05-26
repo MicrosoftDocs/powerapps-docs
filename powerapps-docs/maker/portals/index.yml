@@ -24,16 +24,16 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
+          - text: Power Pages (preview)
+            url: /power-pages/introduction          
+          - text: Content Delivery Network (preview)
+            url: configure/configure-cdn.md
+          - text: Configure Dataverse search in portals
+            url: configure/search.md  
+          - text: Configuring an image column on portals (preview)
+            url: configure/image-column.md
           - text: Configure the rich text editor control on portals
-            url: component-rte-tutorial.md                 
-          - text: Configure column permissions for portals
-            url: configure/column-permissions.md             
-          - text: Configure Dataverse search in portals (preview)
-            url: configure/dataverse-search.md         
-          - text: Configure choices column for portals
-            url: configure/choices-column.md         
-          - text: Portals as Progressive Web Apps
-            url: progressive-web-apps.md                 
+            url: component-rte-tutorial.md                                                  
        - linkListType: reference
          links:
           - text: Latest released version of portals

@@ -41,6 +41,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Use the Measure in MR control to take measurements 
+    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -51,7 +53,7 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: In-app notifications (preview)
+      - name: In-app notifications
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -115,13 +117,15 @@
         items:
         - name: Create email templates
           href: ../user/email-template-create.md
+        - name: Customize an email template using the template editor
+          href: ../user/cs-template-options.md
         - name: Insert an email template
           href: ../user/insert-email-template.md
         - name: Convert an email to a template
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md
-      - name: Configure the enhanced insert email template
+      - name: Enable the enhanced insert email template
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
@@ -233,8 +237,29 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+    - name: 1 - Create an app from a design or a template
+      items:
+      - name: Create an app from a template
+        href: ./canvas-apps/get-started-test-drive.md
+      - name: Create an app from a design (preview)
+        items:
+        - name: Express design overview
+          href: ./canvas-apps/express-design.md
+        - name: Create an app from an image
+          href: ./canvas-apps/app-from-image.md
+        - name: Create an app from Figma
+          items:
+          - name: Overview
+            href: ./canvas-apps/figma/overview.md
+          - name: Design apps using the UI kit
+            href: ./canvas-apps/figma/design-using-kit.md
+          - name: Components supported by the UI kit
+            href: ./canvas-apps/figma/supported-components.md
+          - name: Create a canvas app from Figma
+            href: ./canvas-apps/figma/create-app-from-figma.md
+          - name: Troubleshoot common errors
+            href: ./canvas-apps/figma/common-errors.md
+            displayName: Troubleshoot common errors when creating app from Figma
     - name: 2 - Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -411,6 +436,8 @@
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
                 href: ./canvas-apps/mixed-reality-cgtrader.md
+              - name: Use the Markup in MR control in Power Apps (preview)
+                href: ./canvas-apps/markup-in-mixed-reality.md
           - name: "Add geospatial controls"
             items:
             - name: Geospatial controls
@@ -497,7 +524,7 @@
               href: ./canvas-apps/controls/control-list-box.md
             - name: Map
               href: ./canvas-apps/geospatial-component-map.md
-            - name: Measure in MR
+            - name: Measuring Camera
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
             - name: Microphone
               href: ./canvas-apps/controls/control-microphone.md
@@ -719,6 +746,8 @@
             href: ./canvas-apps/functions/function-encode-decode.md
           - name: EndsWith
             href: ./canvas-apps/functions/function-startswith.md
+          - name: Error
+            href: ./canvas-apps/functions/function-iferror.md
           - name: Errors
             href: ./canvas-apps/functions/function-errors.md
           - name: exactin
@@ -753,6 +782,8 @@
             href: ./canvas-apps/functions/function-iferror.md
           - name: in
             href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+          - name: Index
+            href: ./canvas-apps/functions/function-first-last.md
           - name: Int
             href: ./canvas-apps/functions/function-round.md
           - name: IsBlank
@@ -849,6 +880,8 @@
             href: ./canvas-apps/functions/function-trig.md
           - name: Rand
             href: ./canvas-apps/functions/function-rand.md
+          - name: RandBetween
+            href: ./canvas-apps/functions/function-rand.md            
           - name: ReadNFC
             href: ./canvas-apps/functions/function-readnfc.md
           - name: RecordInfo
@@ -1047,7 +1080,7 @@
       href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
     - name: Create an app with address input and map controls
       href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measure in MR control
+    - name: Create an app using the Measuring Camera control
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
     - name: Create a canvas app with deep link to a specific screen
       href: ./canvas-apps/how-to/deep-linking.md
@@ -1143,7 +1176,7 @@
       href: ./canvas-apps/application-insights.md
   - name: Create native mobile apps (preview)
     items:
-      - name: Wrap (preview) overview
+      - name: Overview of wrap (preview)
         href: ./common/wrap/overview.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
@@ -1173,8 +1206,6 @@
           href: ./canvas-apps/map-component-input-fields.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
-    - name: Embed canvas apps in your applications
-      href: ./canvas-apps/embedding-sdk.md
   - name: Performance and optimization
     items:
     - name: Understand canvas app execution phases and data flow
@@ -1198,7 +1229,9 @@
     - name: What are model-driven apps?
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
-      href: ./model-driven-apps/app-value-proposition.md            
+      href: ./model-driven-apps/app-value-proposition.md
+    - name: Build an app in three steps (preview)
+      href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Meet the model-driven designers
@@ -1226,10 +1259,10 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Use the modern app designer (preview)
+      - name: Use the modern app designer
         href: 
         items: 
-        - name: App designer overview (preview)
+        - name: App designer overview
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
@@ -1344,7 +1377,9 @@
           - name: Add and configure quick view component
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
-            href: ./model-driven-apps/form-designer-add-configure-lookup.md      
+            href: ./model-driven-apps/form-designer-add-configure-lookup.md
+          - name: Add a chart to a form
+            href: ./model-driven-apps/add-chart-to-form.md                 
         - name: Design effective forms
           href: 
           items:
@@ -1436,6 +1471,8 @@
           href: ./model-driven-apps/commanding-designer-use-custom-pages-as-dialogs.md
         - name: Manage commands in solutions
           href: ./model-driven-apps/manage-commands-in-solutions.md
+        - name: Command scopes
+          href: ./model-driven-apps/commanding-scopes.md
         - name: Command designer limitations
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
@@ -1480,8 +1517,6 @@
             href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
-          - name: How to add a chart to a form
-            href: ./model-driven-apps/add-chart-to-form.md
           - name: How to configure Bing maps in a form
             href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to configure event handlers in a form
@@ -1561,6 +1596,8 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
+    - name: Enable the enhanced email template editor page
+      href: ../user/cs-email-template-builder.md
   - name: App performance insights
     items:
     - name: Performance insights overview
@@ -1575,13 +1612,15 @@
   items:
   - name: Get started with Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
+  - name: Manage your mobile app with Microsoft Intune
+    href: ../mobile/intune.md
   - name: Use model-driven apps on Power Apps mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Use Dataverse search on Power Apps mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile (preview)
+  - name: In-app notifications in Power Apps mobile
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
@@ -1755,6 +1794,8 @@
           href: ./portals/configure/customize-content-snippets.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
+        - name: Configure image column (preview)
+          href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md
         - name: Configure polls
@@ -1818,7 +1859,9 @@
         - name: Manage SSL certificates
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
-          href: ./portals/admin/manage-custom-certificates.md              
+          href: ./portals/admin/manage-custom-certificates.md  
+        - name: Content Delivery Network (preview)
+          href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
@@ -1930,9 +1973,7 @@
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
         - name: Configure progressive search counts
-          href: ./portals/configure/progressive-search.md
-        - name: Configure Dataverse search (preview)
-          href: ./portals/configure/dataverse-search.md          
+          href: ./portals/configure/progressive-search.md        
     - name: Configure document storage in portals
       items:
         - name: Configure notes
@@ -2037,7 +2078,7 @@
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
-          - name: Use the Visual Studio Code extension for portals (Preview)
+          - name: Use the Visual Studio Code extension for portals
             href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
@@ -2107,8 +2148,6 @@
           href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
-    - name: Supported web browsers
-      href: ./portals/supported-web-browsers.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
@@ -2177,13 +2216,15 @@
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
       href: ./data-platform/virtual-entity-odata-provider-requirements.md
-    - name: Define alternate keys using Power Apps portal
+    - name: View and edit tables representing solution objects
+      href: ./data-platform/table-solution-objects.md
+    - name: Define alternate keys using Power Apps
       href: ./data-platform/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using Power Apps portal
+      - name: How to create tables using Power Apps
         href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
@@ -2398,6 +2439,8 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Query and analyze incremental updates (preview)
+        href: ./data-platform/azure-synapse-incremental-updates.md
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
@@ -2426,6 +2469,8 @@
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory
         href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access choice labels from Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-choice-labels.md
       - name: Access Dataverse choices with Power BI
         href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse

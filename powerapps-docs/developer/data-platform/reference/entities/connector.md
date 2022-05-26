@@ -1,7 +1,7 @@
 ---
 title: "connector table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connector table/entity."
-ms.date: 03/29/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -65,6 +65,7 @@ Connector Entity to support Solutioning Integration
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [Capabilities](#BKMK_Capabilities)
 - [ConnectionParameters](#BKMK_ConnectionParameters)
 - [connectorId](#BKMK_connectorId)
 - [ConnectorInternalId](#BKMK_ConnectorInternalId)
@@ -86,6 +87,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_Capabilities"></a> Capabilities
+
+|Property|Value|
+|--------|-----|
+|Description|Capability of a connector, i.e. "gateway" means the connector can connect to on-prem gateway|
+|DisplayName|capabilities|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|capabilities|
+|RequiredLevel|None|
+|Type|MultiSelectPicklist|
+
+#### Capabilities Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|118690000|composite||
+|118690001|tabular||
+|118690002|blob||
+|118690003|gateway||
+|118690004|cloud||
+|118690005|actions||
+
 
 
 ### <a name="BKMK_ConnectionParameters"></a> ConnectionParameters
