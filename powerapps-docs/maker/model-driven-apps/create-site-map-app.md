@@ -274,6 +274,69 @@ The following sections provide instructions describing how to work with Groups, 
 |Site map for the Dynamics 365 - custom app | Legacy web app and Dynamics 365 for Outlook |  
 |Model-driven apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Legacy web app and Unified Interface|  
 
+## Replace the legacy app with new model-driven app using the web client sitemap
+
+During the transition from web client to Unified Interface, a legacy app was provided which uses the web client sitemap.  With the web client removed, we are deprecating the legacy app and makers may need to provide a replacement model-driven app for users.  In a future release the legacy app will be removed.
+
+The legacy app name is defaulted to "Dynamics 365 - custom", but could have been renamed within the environment setting of Power Platform Admin Center.
+
+> [!div class="mx-imgBorder"]
+> ![Legacy app in app switcher](media/create-site-map-app/legacy-app-in-app-switcher.png "Legacy app in app switcher")
+
+When the legacy app is run, a warning message is shown indicating that not all app features are supported. 
+
+> [!div class="mx-imgBorder"]
+> ![Legacy app warning message](media/create-site-map-app/legacy-app-warning-message.png "Legacy app warning message")
+
+To create a model-driven app with the same sitemap items as the legacy app, the classic app designer can reuse the existing sitemap within a new app. 
+
+1. Open [make.powerapps.com](https://make.powerapps.com/)
+
+1. On the left navigation pane, select Solutions and then open or create a new solution
+
+1. Select **New > App > Model-driven app**.
+
+1. Select **Classic app designer**, and then select **Create**. 
+
+1. Enter the app name. The unique name and description can also be provided but are not required.
+
+1. Select the three dots on the top naviagetion bar and then press "Switch to classic" which will open the classic solution explorer
+
+     > [!div class="mx-imgBorder"]
+     > ![Create app from existing solution sitemap](media/create-site-map-app/solution-explorer-app-threeDots.png "Switch to classic")
+
+1. Click New > Model-driven App
+
+1. In the Create a New App dialog
+   - Enter the app name. The unique name and description can also be provided but are not required
+   - Check **Use existing solution to create the App** and then select **Next**
+   - Under "Select Solution" select **Default Solution** 
+   - Under "Select Sitemap" select **Site Map** and then select **Done**.
+
+     > [!div class="mx-imgBorder"]
+     > ![Create app from existing solution sitemap](media/create-site-map-app/create-app-from-existing-solution-sitemap.png "Create app from existing solution sitemap")
+
+1. Select **Publish** 
+
+1. Close the classic app designer and open the solution containing the new model-driven app
+
+1. Select the new model-driven app and select **Share**.
+
+     > [!div class="mx-imgBorder"]
+     > ![Solution explorer opening model-driven app share](media/create-site-map-app/solution-explorer-app-share.png "Solution explorer opening model-driven app share")
+
+1. Add people and assign security roles to allow them to use the app.
+
+After the new model-driven app is available.  The "Dynamics 365 - custom" app should be hidden for non-admins in all environments.
+
+1. Open [Power Platform App Center](https://admin.powerplatform.microsoft.com/) and select the environment to hide the legacy app.
+
+1. Select **Settings > Product > Behavior**
+
+1. Set **Show legacy app to everyone, not just admins** to **Off**
+
+1. Scroll to the bottom of the page and select **Save**
+
 ### Next steps
  [Create or edit an app](create-edit-app.md)
  [Add or edit app components](add-edit-app-components.md)
