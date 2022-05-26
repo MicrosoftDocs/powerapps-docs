@@ -6429,6 +6429,11 @@
       "source_path": "powerapps-docs/developer/component-framework/reference/linking/removeLinkedEntity.md",
       "redirect_url": "/powerapps/developer/component-framework/reference/linking",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/supported-web-browsers.md",
+      "redirect_url": "power-apps/limits-and-config.md",
+      "redirect_document_id": "false"
     }
   ]
 }
