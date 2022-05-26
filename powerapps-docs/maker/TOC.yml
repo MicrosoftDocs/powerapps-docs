@@ -237,8 +237,29 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+    - name: 1 - Create an app from a design or a template
+      items:
+      - name: Create an app from a template
+        href: ./canvas-apps/get-started-test-drive.md
+      - name: Create an app from a design (preview)
+        items:
+        - name: Express design overview
+          href: ./canvas-apps/express-design.md
+        - name: Create an app from an image
+          href: ./canvas-apps/app-from-image.md
+        - name: Create an app from Figma
+          items:
+          - name: Overview
+            href: ./canvas-apps/figma/overview.md
+          - name: Design apps using the UI kit
+            href: ./canvas-apps/figma/design-using-kit.md
+          - name: Components supported by the UI kit
+            href: ./canvas-apps/figma/supported-components.md
+          - name: Create a canvas app from Figma
+            href: ./canvas-apps/figma/create-app-from-figma.md
+          - name: Troubleshoot common errors
+            href: ./canvas-apps/figma/common-errors.md
+            displayName: Troubleshoot common errors when creating app from Figma
     - name: 2 - Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -1240,10 +1261,10 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Use the modern app designer (preview)
+      - name: Use the modern app designer
         href: 
         items: 
-        - name: App designer overview (preview)
+        - name: App designer overview
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
@@ -1841,7 +1862,7 @@
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md  
-        - name: Content Delivery Network
+        - name: Content Delivery Network (preview)
           href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:

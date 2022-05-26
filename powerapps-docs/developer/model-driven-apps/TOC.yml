@@ -600,7 +600,7 @@
     - name: formContext.ui.tabs
       href: clientapi/reference/formcontext-ui-tabs.md
       items:
-      - name: addtabStateChange
+      - name: addTabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
       - name: getContentType
         href: clientapi/reference/formContext-ui-tabs/getContentType.md
