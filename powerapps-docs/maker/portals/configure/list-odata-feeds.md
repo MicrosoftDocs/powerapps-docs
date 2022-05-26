@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/04/2022
+ms.date: 05/26/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # List OData feeds
+
+> [!NOTE]
+> This feature has been deprecated. Alternatively, use the [portals Web API](../web-api-overview.md) to interact with the data.
 
 On the **OData Feed** tab, you can enable the list to render as an OData formatted data feed.
 
