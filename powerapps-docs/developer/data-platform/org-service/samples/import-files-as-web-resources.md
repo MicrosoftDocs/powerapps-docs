@@ -4,7 +4,7 @@ description: "This sample shows how to import files as web resources" # 115-145 
 ms.date: 04/03/2022
 author: adrianorth
 ms.author: aorth
-manager: evchaki
+manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType: 

@@ -4,7 +4,7 @@ description: Learn how developers use web resources within model-driven apps.
 suite: powerapps
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

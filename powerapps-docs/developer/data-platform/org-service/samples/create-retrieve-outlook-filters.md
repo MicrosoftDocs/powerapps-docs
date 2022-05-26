@@ -4,7 +4,7 @@ description: "This sample showcases how to create and retrieve outlook filters."
 ms.date: 04/03/2022
 author: sriharibs-msft
 ms.author: srihas
-manager: evchaki
+manager: lwelicki
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType: 
