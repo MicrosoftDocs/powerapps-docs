@@ -31,11 +31,6 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 
 1. Select **New** > **App** > **Model-driven app**.
 
-1. Select **Modern app designer**, and then select **Create**.
-
-   > [!div class="mx-imgBorder"]
-   > ![New model-driven app design prompt](media/add-page-to-model-app/solution-explorer-new-model-app-designer-prompt.png "New model-driven app design prompt")
-
 1. Enter a **Name** for your app, and then select **Create**. More information: [Create a model-driven app that has an account table page](create-a-model-driven-app.md)
 
    > [!div class="mx-imgBorder"]
