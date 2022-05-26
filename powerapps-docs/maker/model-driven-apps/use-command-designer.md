@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
+ms.date: 05/26/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -15,16 +15,9 @@ search.app:
   - D365CE
 ---
 
-# Customize the command bar using command designer (preview)
+# Customize the command bar using command designer
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This topic guides you through creating and editing modern commands using the command designer and Power Fx.
-
-  > [!IMPORTANT]
-  > - This is a preview feature, and may not be available in all regions.
-  > - This is a new infrastructure that stores metadata separately from classic commands. However, classic and modern commands can run side-by-side.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+This article guides you through creating and editing modern commands using the command designer and Power Fx.
   
 ## Open the app designer
 
@@ -54,10 +47,7 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
-1. Select the model-driven app, and then select **...** > **Edit** > **Edit in preview** to open the modern app designer.
-
-   > [!div class="mx-imgBorder"]
-   > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
+1. Select the model-driven app, and then select **...** > **Edit** to open the modern app designer.
 
 ## Create or edit modern commands
 
@@ -114,12 +104,12 @@ The first time command designer is opened for an app, a prompt to either use **J
 
 You can use Power Fx for both actions (what happens when the command button is selected) as well as visibility (logic to control when the button is visible). Power Fx is not supported in classic commands.
 
-You’ll notice the model-driven app command has a formula bar experience that is similar to canvas apps. For working with **Dataverse** data you can use Power Fx formulas just as you would in canvas apps. More information: [Using Power Fx with commands (preview)](commanding-use-powerfx.md)
+You’ll notice the model-driven app command has a formula bar experience that is similar to canvas apps. For working with **Dataverse** data you can use Power Fx formulas just as you would in canvas apps. More information: [Using Power Fx with commands](commanding-use-powerfx.md)
   > [!NOTE]
   > - Dataverse is currently the only data source supported with commands in model-driven apps.
   > - You can't currently add additional tables as data sources directly from the command designer. However, you may **open the command component library in canvas studio and add additional tables as data sources** and then use them within the command designer. 
   > - Not all functions available within canvas apps are supported currently for model-driven app commands. Additionally, we've introduced some new functions specific to model-driven app commands.
-  > - For more limitations with modern commands, see [Modern commanding known limitations (preview)](command-designer-limitations.md).
+  > - For more limitations with modern commands, see [Modern commanding known limitations](command-designer-limitations.md).
   
 ## Use JavaScript for actions
   

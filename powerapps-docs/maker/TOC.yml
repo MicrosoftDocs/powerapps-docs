@@ -1460,7 +1460,7 @@
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
-      - name: Customize app commands (preview)
+      - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
         items:
         - name: Use command designer
