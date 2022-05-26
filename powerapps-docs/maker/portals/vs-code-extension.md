@@ -1,11 +1,11 @@
 ---
-title: Use the Visual Studio Code extension (preview)
+title: Use the Visual Studio Code extension 
 description: Learn about how to use the Visual Studio Code extension for portals and integrate with Microsoft Power Platform CLI for CI/CD.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/01/2021
+ms.date: 05/18/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -14,9 +14,7 @@ contributors:
     - nickdoelman
 ---
 
-# Use the Visual Studio Code extension (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Use the Visual Studio Code extension
 
 ## Overview
 
@@ -31,10 +29,6 @@ VS Code allows you to extend your capability through
 extensions can add more features to the overall experience. With the release of
 this feature, you can now use the VS Code extension to work with Power Apps
 portals.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ### VS Code extension for portals
 
@@ -64,21 +58,21 @@ Power Apps portals plug-in for VS Code.
 
 To install the VS Code extension:
 
-1.  Open Visual Studio Code.
+1. Open Visual Studio Code.
 
-2.  Select ![Extensions icon.](media/vs-code-extension/extensions-symbol.png "Extensions icon") (Extensions) from the left pane.
+1. Select ![Extensions icon.](media/vs-code-extension/extensions-symbol.png "Extensions icon") (Extensions) from the left pane.
 
     ![Select extensions.](media/vs-code-extension/extensions.png "Select extensions")
 
-3.  Select ![Settings icon.](media/vs-code-extension/settings-symbol.png "Settings icon") from the top-right on the extensions pane.
+1. Select ![Settings icon.](media/vs-code-extension/settings-symbol.png "Settings icon") from the top-right on the extensions pane.
 
-4.  Search for and select **Power Platform Tools**.
+1. Search for and select **Power Platform Tools**.
 
     ![Select Power Platform Tools.](media/vs-code-extension/vs-code-extension.png "Select Power Platform Tools")
 
-5.  Select **Install**.
+1. Select **Install**.
 
-6.  Verify the extension is installed successfully from the status messages.
+1. Verify the extension is installed successfully from the status messages.
 
 ## Download portals content
 
@@ -111,17 +105,17 @@ portals-specific file icon theme.
 
 To enable a portals-specific file-icon theme:
 
-1.  Open VS Code.
+1. Open Visual Studio Code.
 
-2.  Go to **File** > **Preferences** > **File Icon Theme**
+1. Go to **File** > **Preferences** > **File Icon Theme**
 
-3.  Select the theme for Power Apps Portals Icons.
+1. Select the theme for Power Apps portals Icons.
 
     ![Select the theme for Power Apps portals icons.](media/vs-code-extension/select-theme-icons.png "Select the theme for Power Apps Portals Icons")
 
 ## Live preview
 
-The VS Code extension enables a live preview option to view the portals content page
+The Visual Studio Code extension enables a live preview option to view the portals content page
 inside the Visual Studio Code interface during the development
 experience.
 
