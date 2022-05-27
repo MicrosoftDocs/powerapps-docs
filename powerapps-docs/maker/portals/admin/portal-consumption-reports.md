@@ -45,6 +45,8 @@ The individual reports contain data for a duration of 30 days preceding the date
 
 1. After the generated report becomes available, select the **Download** tab.
 
+    :::image type="content" source="media/portal-consumption-reports/download-report.png" alt-text="Download report.":::
+
 1. Select **Save**, and then select **Open**.
 
 ## Analyze reports
