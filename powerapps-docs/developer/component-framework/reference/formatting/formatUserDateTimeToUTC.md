@@ -1,6 +1,6 @@
 ---
 title: formatUserDateTimeToUTC | Microsoft Docs
-description: Returns a formatted string that represents the datetime value after being formatted.
+description: Returns a formatted string that represents the UTC datetime value after being formatted.
 ms.author: noazarur
 author: noazarur-microsoft
 manager: lwelicki
