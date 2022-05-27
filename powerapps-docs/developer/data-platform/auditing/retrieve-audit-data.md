@@ -895,7 +895,6 @@ More information:
 
 - <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function>
 - <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse ComplexType>
-- <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse ComplexType>
 - <xref:Microsoft.Dynamics.CRM.PagingInfo?text=PagingInfo ComplexType>
 - [Use Web API functions](../webapi/use-web-api-functions.md)
 
