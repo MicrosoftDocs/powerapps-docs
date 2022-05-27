@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/12/2022
+ms.date: 05/27/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -38,7 +38,7 @@ When creating or editing a webpage, you can specify a list in the lookup field p
 
 - [List attributes and relationships](list-attributes-relationionships.md)
 - [Sort lists](sort-lists.md)
-- [Add custom Javascript](add-custom-javascript.md)
+- [Add custom Javascript](add-custom-javascript-list.md)
 - [List configuration](list-configuration.md)
 - [Securing lists](securing-lists.md)
 - [Adding a view details page](list-view-details.md)

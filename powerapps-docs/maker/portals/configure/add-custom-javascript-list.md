@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/04/2022
+ms.date: 05/27/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -17,7 +17,7 @@ contributors:
 
 # Add custom JavaScript to a list
 
-The Options tab on the form contains a text area where you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]. If your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
+The **Options** tab on the list configuration in the [Portal Management app](configure-portal.md) contains a text area where you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]. If your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
 ![Custom JavaScript example.](../media/custom-javascript-example.png "Custom JavaScript example")  
 
@@ -47,9 +47,7 @@ $(document).ready(function (){
 
 ### See also
 
+- [Work with lists](entity-lists.md)
 - [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
-
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

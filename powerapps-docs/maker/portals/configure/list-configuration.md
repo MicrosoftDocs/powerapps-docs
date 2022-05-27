@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/04/2022
+ms.date: 05/27/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -19,7 +19,7 @@ contributors:
 
 You can easily enable and configure actions (create, edit, delete, and so on) for records in a list. It's also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
-These settings are found on the **Options** tab in the **Grid Configuration** section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see more settings.
+These settings are found on the **Options** tab in the **Grid Configuration** section of the list configuration in the [Portal Management app](configure-portal.md). By default, only **Basic Settings** are shown. Select **Advanced Settings** to see more settings.
 
 :::image type="content" source="media/lists/configure-entitylist.png" alt-text="Configure a list."::: 
 
@@ -205,9 +205,10 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 
 ### See also
 
+- [Work with lists](entity-lists.md)
 - [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

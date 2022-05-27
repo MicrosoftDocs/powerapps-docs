@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/04/2022
+ms.date: 05/27/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -16,6 +16,8 @@ contributors:
 ---
 
 # List attributes and relationships
+
+The following are attributes when configuring a **list** component.
 
 |              Name              |                                                                                                                                                                                        Description                                                                                                                                                                                         |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -35,12 +37,13 @@ contributors:
 |         Search Enabled         | An optional Boolean value indicating whether search should be enabled. A text box will be rendered to allow users to do a quick search for records. Use the asterisk (\*) wildcard character to search on partial text. The search appends Or condition filters for each column of the primary table in the view to the view's existing predefined filter conditions to query and return the resulting records. <br> **Note**: This option doesn't search within related table columns. |
 |    Search Placeholder Text     |                                                                                                                                                      An optional string used as the label displayed in the text box on initial load.                                                                                                                                                       |
 |      Search Tooltip Text       |                                                                                                                                             An optional string used as the tooltip displayed when the user points to the **Search** text box.                                                                                                                                              |
-|                                |                                                                                                                                                                                                                                                                                                                                                                                            |
+
+
 ### See also
 
+- [Work with lists](entity-lists.md)
 - [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
