@@ -160,12 +160,6 @@ You can use these relationships to filter audit data records created for a speci
 > The audit entity supports only one link entity in a query. Since only two relationships exist with the `systemuser` table, this means you can include data from either the `callinguserid` or `userid` columns, but not both at the same time.
 > You cannot build queries using QueryExpression or FetchXml that join audit data with tables other than the two formal relationships that exist with the `systemuser` table.
 
-<!-- Questions: 
-Why is the Audit TransactionId frequently an empty GUID (but not always)? Does it matter?
-Is UserAdditionalInfo ever not null?
-Is RegardingObjectId ever not null? 
-
--->
 
 ### audit EntityType definition
 
@@ -206,12 +200,6 @@ More information: [CSDL $metadata document](../webapi/web-api-service-documents.
 > [!NOTE]
 > The [ChangeData Column](../reference/entities/audit.md#BKMK_ChangeData) is not included in the Web API <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType>. Rather than try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history).
 
-<!-- 
-In the Web API, the `callinguserid` and `userid` single-valued navigation properties will always return `null` when using `$expand`. 
-
-This is a bug. 
-
- -->
 
 ### Example: Find Contact records deleted by a user
 
@@ -341,7 +329,6 @@ static void ShowNumberContactsDeletedByUserQE(
 ```
 
 More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
-<!-- TODO Add a topic to QE docs about aggregation -->
 
 `ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
 
