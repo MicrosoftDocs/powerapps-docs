@@ -26,6 +26,14 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 > [!NOTE]
 > The keyboard shortcuts described here refer to the United States keyboard layout. Keys on other keyboard layouts might not correspond exactly to the keys on a US keyboard. 
 
+## Global shortcuts 
+
+|Type | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|
+| General | F2 | Activates the flyout. |
+| Landmark | Ctrl+F6 | Navigates you through the landmarks of a page in clock wise order. Remembers the last selected item in each landmark and will navigate to that last item. |
+| Landmark | Ctrl+F6+Shift | Navigates you through the landmarks of a page in counter clock wise order. Remembers the last selected item in each landmark and will navigate to that last item. |
+
 ## Form shortcuts
 
 
