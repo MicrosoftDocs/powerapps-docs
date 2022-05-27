@@ -53,7 +53,7 @@ The following example uses the <xref:Microsoft.Dynamics.CRM.RetrieveRecordChange
 **Request**
 
 ```http
-POST https://crmue.api.crm.dynamics.com/api/data/v9.2/DeleteRecordChangeHistory HTTP/1.1
+POST [Organization URI]/api/data/v9.2/DeleteRecordChangeHistory HTTP/1.1
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -74,7 +74,7 @@ HTTP/1.1 200 OK
 OData-Version: 4.0
 
 {
- "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse",
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse",
  "DeletedEntriesCount": 4
 }
 ```
