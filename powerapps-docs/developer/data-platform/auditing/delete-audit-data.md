@@ -86,7 +86,7 @@ More information:
  - <xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse?text=DeleteRecordChangeHistoryResponse ComplexType>
 
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -188,7 +188,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.QueryExpression?text=QueryExpression ComplexType>
 
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>

@@ -103,7 +103,7 @@ These options are used to capture history of user access when user access auditi
 |112|User Access Audit Started|User access audit began.|
 |113|User Access Audit Stopped|User access audit ended.|
 
-For a .NET SDK sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
+For a SDK for .NET sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
 
 #### Metadata change events
 
@@ -278,7 +278,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ```
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 There are two static methods below that show the number of deleted contact records for the specified user. These queries use aggregation so they are not limited to 5,000 results. But they are limited to the higher 50,000 record limit for aggregation.
 
@@ -409,7 +409,7 @@ More information:
 
 There are three messages you can use to retrieve data changes that are audited.
 
-|Web API  |.NET SDK  |Description |
+|Web API  |SDK for .NET  |Description |
 |---------|---------|---------|
 |<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest?text=RetrieveAuditDetailsRequest Class>|Retrieve the full audit details from an audit record.|
 |<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest?text=RetrieveAttributeChangeHistoryRequest Class>|Retrieves the change history for an single column of an audited record.|
@@ -421,7 +421,7 @@ To use these messages you must have the `prvReadRecordAuditHistory` and `prvRead
 
 These messages provide additional details that depend on the type of action. These details are implemented using different types that are derived from a base `AuditDetail` type as shown in the following table:
 
-|Web API|.NET SDK|Description |
+|Web API|SDK for .NET|Description |
 |---------|---------|---------|
 |<xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AuditDetail?text=AuditDetail Class>|The base type for the derived classes. Provides access to the audit record.|
 |<xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.AttributeAuditDetail?text=AttributeAuditDetail Class>|Provides details when data changes occur for a record. Provides access to old values and new values. <br /> Returned by the following types of actions: <br />- [Table row events](#table-row-events)<br />- [Metadata change events](#metadata-change-events)<br />- [Audit change events](#audit-change-events)|
@@ -500,7 +500,7 @@ More information:
 - [Include formatted values](../webapi/query-data-web-api.md#include-formatted-values)
 
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 The following `ShowAuditDetail` static method will return audit details for any type of audit details that can be tracked by an audit record. 
 
@@ -532,7 +532,7 @@ static void ShowAuditDetail(
 
 #### DisplayAuditDetail method
 
-The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other .NET SDK samples on this page.
+The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other SDK for .NET samples on this page.
 
 ```csharp
 /// <summary>
@@ -746,7 +746,7 @@ More information:
 > [!NOTE]
 > The <xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType> returned currently does not include the `AuditRecord` property so there is no data about who made the change and when it was made.
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 The `ShowAttributeChangeHistory` static method below will return the first 20 audited changes for specified column in the specified record.
 
@@ -915,7 +915,7 @@ More information:
 > [!NOTE]
 > The <xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType> values returned currently do not include the `AuditRecord` property so there is no data about who made the change and when it was made.
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 This `ShowRetrieveRecordChangeHistory` static method executes the `RetrieveRecordChangeHistory` message for a specified record and processes the response.
 

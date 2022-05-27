@@ -85,7 +85,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
 - [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -132,7 +132,7 @@ More information:
 
 Update the column properties in the table above to change how auditing works for the environment. You must have the System Administrator or System Customizer roles to change these settings.
 
-You can set these column values using Web API or Organization Service. More information:
+You can set these column values using Web API or Dataverse SDK for .NET. More information:
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
 - [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
@@ -143,14 +143,14 @@ When auditing is configured for the organization, any tables configured for audi
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
-|Item |Web API | Organization Service|
+|Item |Web API | SDK for .NET|
 |---------|---------|---------|
 |Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled Property>|
 |Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled Property>|
 
 The `IsAuditEnabled` property is a managed property that is defined by the following types:
 
-|Web API  |Organization Service|
+|Web API  |SDK for .NET|
 |---------|---------|
 |<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?text=BooleanManagedProperty ComplexType>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?text=BooleanManagedProperty Class>|
 
@@ -211,7 +211,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
 - [Private tables](../entities.md#private-tables)
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -322,7 +322,7 @@ If-None-Match: null
 
 More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -421,14 +421,14 @@ If you want to change which tables or columns support auditing, you must update 
 |API|Property|More information|
 |---------|---------|---------|
 |Web API|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled.Value`|[Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|
-|Organization Service|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
+|SDK for .NET|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
 
 ### Columns
 
 |API|Property|More information|
 |---------|---------|---------|
 |Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
-|Organization Service|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
+|SDK for .NET|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
 
 
 > [!IMPORTANT]
@@ -469,7 +469,7 @@ More information:
 - [Use Web API actions](../webapi/use-web-api-actions.md)
 - <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>
 
-# [.NET SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 This example publishes the `account` table.
 
