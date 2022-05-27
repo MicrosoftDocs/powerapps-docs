@@ -19,7 +19,7 @@ ms.topic: "article"
 
 ## Available for
 
-Limited support for Canvas apps
+Canvas apps
 
 ## Syntax
 
