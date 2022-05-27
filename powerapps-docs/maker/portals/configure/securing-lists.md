@@ -23,9 +23,9 @@ Table permissions are enabled by default. If you un-select the checkbox for **En
 
 *Table permissions should be enabled for this record or anyone on the internet can view the data.*
 
-Securing your list will ensure that users only see the records they have permissions for when accessing the page. 
+Securing your list will ensure that users only see the records they have permissions for. 
 
-This is accomplished by adding a relationship between the table and either the *contact* or *account* table whereby only portal users that have a relationship to these records will be able to access the data using the table permission type of *Account* or *Contact*, and the setting up appropriate privileges and associating [web roles](create-web-roles.md) to the table permission.
+Securing data related to specific users (or their related accounts) is accomplished by adding a relationship between the table and either the *contact* or *account* table whereby only portal users that have a relationship to these records will be able to access the data using the table permission type of *Account* or *Contact*, and the setting up appropriate privileges and associating [web roles](create-web-roles.md) to the table permission.
 
 Good website design requires that if a user's role doesn't have permissions for the table (that is, there will never be a situation where they should see any records), they shouldn't have access to the page at all. Ideally, the page should also be protected by using [Page permissions](webpage-access-control.md).
 

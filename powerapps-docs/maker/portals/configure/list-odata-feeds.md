@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/26/2022
+ms.date: 05/27/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -32,9 +32,9 @@ When enabled, a table can be published to an OData feed. The OData protocol is a
 
 ### See also
 
+- [Work with lists](entity-lists.md)
 - [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

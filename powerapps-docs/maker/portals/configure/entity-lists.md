@@ -42,7 +42,7 @@ When creating or editing a webpage, you can specify a list in the lookup field p
 - [List configuration](list-configuration.md)
 - [Securing lists](securing-lists.md)
 - [Adding a view details page](list-view-details.md)
-- [List filter configuration](list-configuration.md)
+- [List filter configuration](list-filter-configuration.md)
 - [List map view](list-map-view.md)
 - [List calendar view](list-calendar-view.md)
 - [List OData feeds](list-odata-feeds.md)
