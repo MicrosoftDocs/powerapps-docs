@@ -50,7 +50,7 @@ You can retrieve column values to determine:
 
 If you have system administrator or system customizer roles, you can update these values to change the auditing behavior.
 
-More information: [Configure organization settings](configure-auditing.md#configure-organization-settings)
+More information: [Configure organization settings](configure.md#configure-organization-settings)
 
 ## Table and column settings
 
@@ -62,7 +62,7 @@ You can use Dataverse APIs to query this the table and column definitions to det
 
 If you have system administrator or system customizer roles, you can update these values to change the auditing behavior.
 
-More information: [Configure tables and columns](configure-auditing.md#configure-tables-and-columns)
+More information: [Configure tables and columns](configure.md#configure-tables-and-columns)
 
 ## Retrieve audit history
 
@@ -99,7 +99,7 @@ More information: [Delete audit data](delete-audit-data.md)
 ### See also
 
 [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
-[Configure auditing](configure-auditing.md)<br />
+[Configure auditing](configure.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
 [Delete audit data](delete-audit-data.md)
 

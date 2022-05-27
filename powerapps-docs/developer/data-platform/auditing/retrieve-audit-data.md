@@ -971,8 +971,8 @@ More information:
 
 ### See also
 
-[Auditing overview](auditing-overview.md)<br />
-[Configure auditing](configure-auditing.md)<br />
+[Auditing overview](overview.md)<br />
+[Configure auditing](configure.md)<br />
 [Delete audit data](delete-audit-data.md)<br />
 [Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md)<br />
 [Sample: Audit user access](../org-service/samples/audit-user-access.md)

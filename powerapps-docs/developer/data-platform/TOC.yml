@@ -85,9 +85,9 @@
   - name: Audit data changes
     items:
     - name: Overview
-      href: auditing/auditing-overview.md
+      href: auditing/overview.md
     - name: Configure auditing
-      href: auditing/configure-auditing.md
+      href: auditing/configure.md
     - name: Retrieve audit data
       href: auditing/retrieve-audit-data.md
     - name: Delete audit data

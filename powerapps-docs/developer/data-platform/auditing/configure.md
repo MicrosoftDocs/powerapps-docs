@@ -498,7 +498,7 @@ More information:
 ### See also
 
 [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
-[Auditing overview](auditing-overview.md)<br />
+[Auditing overview](overview.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
 [Delete audit data](delete-audit-data.md)
 

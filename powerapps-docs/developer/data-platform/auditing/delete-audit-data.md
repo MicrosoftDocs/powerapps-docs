@@ -267,8 +267,8 @@ New partitions are automatically created by the Dataverse platform on a quarterl
 
 ### See also
 
-[Auditing overview](auditing-overview.md)<br />
-[Configure auditing](configure-auditing.md)<br />
+[Auditing overview](overview.md)<br />
+[Configure auditing](configure.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)
 
 
