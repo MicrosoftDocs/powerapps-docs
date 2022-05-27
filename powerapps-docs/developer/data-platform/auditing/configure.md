@@ -435,7 +435,7 @@ If you want to change which tables or columns support auditing, you must update 
 > After you change the value for columns you must publish customizations for the table.
 > Changes will not take effect until the table customizations are published.
 
-### Publish changes for column changes
+### Publish column changes
 
 Use the `PublishXml` message to publish customizations for the table.
 

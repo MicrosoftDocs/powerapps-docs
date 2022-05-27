@@ -54,11 +54,11 @@ More information: [Configure organization settings](configure.md#configure-organ
 
 ## Table and column settings
 
-When auditing is enabled for the organization, those tables which are enabled for auditing will begin writing audit data when data changes.
+When auditing is enabled for the organization, the tables that are enabled for auditing will begin writing audit data when data changes.
 
-When auditing is enabled for a table, those columns which are enabled for auditing will be included in the audit data. By default all columns that support auditing are enabled.
+When auditing is enabled for a table, the columns that are enabled for auditing will be included in the audit data. By default all columns that support auditing are enabled.
 
-You can use Dataverse APIs to query this the table and column definitions to determine which tables and columns are enabled for auditing.
+You can use Dataverse APIs to query the table and column definitions to determine which tables and columns are enabled for auditing.
 
 If you have system administrator or system customizer roles, you can update these values to change the auditing behavior.
 

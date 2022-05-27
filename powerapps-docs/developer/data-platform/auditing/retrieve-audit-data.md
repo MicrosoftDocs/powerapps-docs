@@ -825,6 +825,8 @@ The results of this message are commonly seen as the `AttributeAuditDetail` data
 This message can also be used to with the `systemuser` and `role` tables to return `RolePrivilegeAuditDetail` and `UserAccessAuditDetail` types.
 
 
+
+
 # [Web API](#tab/webapi)
 
 The following example returns just the first two of four changes for an account record.
@@ -917,6 +919,8 @@ More information:
 
 # [SDK for .NET](#tab/sdk)
 
+For a full sample, see [Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md).
+
 This `ShowRetrieveRecordChangeHistory` static method executes the `RetrieveRecordChangeHistory` message for a specified record and processes the response.
 
 For each audit record, it displays the properties and uses the example [DisplayAuditDetail method](#displayauditdetail-method) defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) on this page to display the details.
@@ -968,6 +972,7 @@ static void ShowRetrieveRecordChangeHistory(
 
 More information:
 
+- [Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md).
 - <xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest?text=RetrieveRecordChangeHistoryRequest Class>
 - <xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryResponse?text=RetrieveRecordChangeHistoryResponse Class>
 - <xref:Microsoft.Xrm.Sdk.Query.PagingInfo?text=PagingInfo Class>
