@@ -1,15 +1,16 @@
 ---
 title: "Debug code components | MicrosoftDocs"
 description: "How to debug a code component using Fiddler and Native debugging"
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 ms.subservice: pcf
 contributors:
-  - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 # Debug code components
