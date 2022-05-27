@@ -177,7 +177,11 @@ This query returns the `Logicalname` for all public tables that are enabled for 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=LogicalName,IsAuditEnabled&$filter=IsAuditEnabled/Value eq true and IsPrivate eq false
+GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=
+LogicalName,
+IsAuditEnabled
+&$filter=IsAuditEnabled/Value eq true 
+and IsPrivate eq false
 
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -291,7 +295,10 @@ This returns all the columns enabled for auditing for the `account` table.
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes?$select=LogicalName,IsAuditEnabled&$filter=IsAuditEnabled/Value eq true
+GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes?$select=
+LogicalName,
+IsAuditEnabled
+&$filter=IsAuditEnabled/Value eq true
 
 Accept: application/json  
 OData-MaxVersion: 4.0  
