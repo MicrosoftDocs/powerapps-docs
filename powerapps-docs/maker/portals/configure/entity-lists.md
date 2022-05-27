@@ -25,7 +25,9 @@ The data can also be filtered by the current portal user, the current portal use
 
 ## Add a list to your portal
 
-The list contains relationships to webpages and various properties to control the initialization of the list of records within the portal. The relationship to the webpage allows dynamic retrieval of the list definition for a given page node within the website. To view existing Table views or to create new Table views, go to **Portals** > **Lists**.
+The list contains relationships to webpages and various properties to control the initialization of the list of records within the portal. The relationship to the webpage allows dynamic retrieval of the list definition for a given page node within the website. To view existing table views or to create new Table views, go to **Portals** > **Lists**.
+
+Lists can also be added to a page using the [portals Studio](../add-list.md).
 
 > [!Note]
 > - A list must be associated with a webpage in a given website for the list to be viewable within the site.
