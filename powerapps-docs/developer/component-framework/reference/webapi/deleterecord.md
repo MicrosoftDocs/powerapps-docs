@@ -18,7 +18,7 @@ contributors:
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps & portals.
 
 ## Syntax
 

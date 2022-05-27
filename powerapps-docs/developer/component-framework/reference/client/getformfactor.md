@@ -22,7 +22,7 @@ contributors:
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Return Value
 

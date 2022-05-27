@@ -18,7 +18,7 @@ contributors:
 
 ## Available for 
 
-Model-driven apps & portals.
+Model-driven apps, canvas apps, & portals.
 
 ## Methods
 
