@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AIConfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AIConfiguration table/entity."
-ms.date: 04/28/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -85,6 +85,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_lasttrainorrundate](#BKMK_msdyn_lasttrainorrundate)
 - [msdyn_MajorIterationNumber](#BKMK_msdyn_MajorIterationNumber)
 - [msdyn_MinorIterationNumber](#BKMK_msdyn_MinorIterationNumber)
+- [msdyn_ModelAction](#BKMK_msdyn_ModelAction)
 - [msdyn_ModelData](#BKMK_msdyn_ModelData)
 - [msdyn_modelglobalexplainability](#BKMK_msdyn_modelglobalexplainability)
 - [msdyn_ModelPerformance](#BKMK_msdyn_ModelPerformance)
@@ -305,6 +306,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_ModelAction"></a> msdyn_ModelAction
+
+|Property|Value|
+|--------|-----|
+|Description|Model Action|
+|DisplayName|ModelAction|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_modelaction|
+|MaxLength|5000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_ModelData"></a> msdyn_ModelData

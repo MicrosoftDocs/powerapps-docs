@@ -109,7 +109,6 @@ Intended platforms for the app that you want to go through the build process for
 
 - **iOS** creates IPA package
 - **Android** creates APK package
-- **Google Play Store** creates AAB package
 
 ### Application (client) ID
 

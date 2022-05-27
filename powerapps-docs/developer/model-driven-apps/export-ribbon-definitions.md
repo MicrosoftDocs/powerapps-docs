@@ -3,8 +3,8 @@ title: "Export ribbon definitions (model-driven apps) | Microsoft Docs" # Intent
 description: "Learn about exporting the ribbon definitions." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
-ms.date: 04/01/2022
+manager: lwelicki
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -18,6 +18,8 @@ contributors:
   - caburk
 ---
 # Export ribbon definitions
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 To effectively define changes to the default RibbonXml, you must be able to reference the RibbonXml data that defines those ribbons.  
   

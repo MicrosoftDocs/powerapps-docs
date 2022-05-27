@@ -4,7 +4,7 @@ description: "IFRAME and web resource controls embed content from another locati
 ms.custom: ""
 ms.author: jdaly
 author: HemantGaur
-manager: evchaki
+manager: lwelicki
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "article"

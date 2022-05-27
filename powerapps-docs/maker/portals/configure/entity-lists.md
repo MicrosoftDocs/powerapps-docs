@@ -34,4 +34,16 @@ The webpages associated with the list can be viewed by selecting the **Web Pages
 
 When creating or editing a webpage, you can specify a list in the lookup field provided on the Web Page form. The page template typically will be the Page template, but can be one of several other templates designed for content because the master templates contain the necessary logic to determine whether a list should be rendered.
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+## See Also
+
+- [List attributes and relationships](list-attributes-relationionships.md)
+- [Sort lists](sort-lists.md)
+- [Add custom Javascript](add-custom-javascript.md)
+- [List configuration](list-configuration.md)
+- [Securing lists](securing-lists.md)
+- [Adding a view details page](list-view-details.md)
+- [List filter configuration](list-configuration.md)
+- [List map view](list-map-view.md)
+- [List calendar view](list-calendar-view.md)
+- [List OData feeds](list-odata-feeds.md)
+- [Enhanced view filter for lists](list-enhanced-view-filter.md)

@@ -3,7 +3,7 @@ title: "Sample dashboards (model-driven apps) | Microsoft Docs" # Intent and pro
 description: "The topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the SystemForm.FormXml for an organization-owned dashboard or UserForm.FormXml for a user-owned dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
 author: mspilde
 ms.author: mspilde
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.topic: "article"
 ms.subservice: mda-developer

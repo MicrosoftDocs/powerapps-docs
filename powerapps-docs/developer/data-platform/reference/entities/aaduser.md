@@ -1,7 +1,7 @@
 ---
 title: "aaduser table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the aaduser table/entity."
-ms.date: 04/28/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,6 +23,7 @@ search.app:
 Virtual entity that represents AAD user
 
 **Added by**: Metadata Extension Solution
+
 
 ## Messages
 

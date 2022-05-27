@@ -3,8 +3,8 @@ title: "Export, prepare to edit, and import the ribbon(model-driven apps) | Micr
 description: "Learn about exporting the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
-ms.date: 04/01/2022
+manager: lwelicki
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -18,6 +18,8 @@ contributors:
   - caburk
 ---
 # Export, prepare to edit, and import the ribbon
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 To edit the ribbon, you must perform the following steps:  
   

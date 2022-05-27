@@ -3,7 +3,7 @@ title: "Configure a form to accept custom querystring parameters (model-driven a
 description: "Learn about configuring a form to accept custom querystring parameters. Use these parameters to set default values when you create a new record in the application." # 115-145 characters including spaces. This abstract displays in the search result."
 ms.author: jdaly
 author: HemantGaur
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
