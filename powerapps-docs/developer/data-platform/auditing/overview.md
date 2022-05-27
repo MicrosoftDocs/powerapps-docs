@@ -92,7 +92,7 @@ Dataverse provides the following messages to delete audit history data:
 |---------|---------|
 |`DeleteRecordChangeHistory`|Deletes all the audit change history records for a particular record.|
 |`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
-|`DeleteAuditData`|For customers using customer managed encryption keys or on-premises Dynamics 365, deletes all audit data records up until a specified end date.|
+|`DeleteAuditData`|For customers using customer managed encryption keys this message deletes all audit data records up until a specified end date.|
 
 More information: [Delete audit data](delete-audit-data.md)
   

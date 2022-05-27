@@ -31,7 +31,7 @@ Dataverse provides the following messages to delete audit history data:
 |---------|---------|
 |`DeleteRecordChangeHistory`|Deletes all the audit change history records for a particular record.|
 |`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
-|`DeleteAuditData`|For customers using customer managed encryption keys or on-premises Dynamics 365, this message deletes all audit data records up until a specified end date.|
+|`DeleteAuditData`|For customers using customer managed encryption keys this message deletes all audit data records up until a specified end date.|
 
 > [!NOTE]
 > You cannot directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md)
@@ -253,15 +253,12 @@ More information:
 
 ## Delete the change history for a date range
 
-If you use customer managed encryption keys or Dynamics 365 on-premises you can delete `audit` records for a date range using the `DeleteAuditData` message. Audit data records are deleted sequentially from the oldest to the newest.
+If you use customer managed encryption keys you can delete `audit` records for a date range using the `DeleteAuditData` message. Audit data records are deleted sequentially from the oldest to the newest.
 
 > [!NOTE]
-> Even if you are using customer managed encryption keys or Dynamics 365 on-premises you should consider using Bulk Delete rather than `DeleteAuditData` message. See [Use BulkDelete to delete audit data](#use-bulkdelete-to-delete-audit-data)
+> Even if you are using customer managed encryption keys you should consider using Bulk Delete rather than `DeleteAuditData` message. See [Use BulkDelete to delete audit data](#use-bulkdelete-to-delete-audit-data)
 
 The `DeleteAuditData` message will delete all audit data in those partitions where the end date is before the date specified in the `EndDate` property. Any empty partitions are also deleted. However, neither the current (active) partition nor the `audit` records in that active partition can be deleted by using this request or any other request.
-
-> [!NOTE]
-> Behavior for Dynamics 365 on-premises may be different depending on which version of SQL Server is used. The Dataverse behavior is based on the Enterprise edition of SQL server. The on-premises behavior is different when SQL Server standard edition is used because that version doesn't support the database partitioning feature. In that case the `DeleteAuditData` message deletes all audit records created up to the end date specified in the `EndDate` property.
 
 New partitions are automatically created by the Dataverse platform on a quarterly basis each year. This functionality is non-configurable and cannot be changed. You can obtain the list of partitions using the `RetrieveAuditPartitionList` message. If the end date of any partition is later than the current date, you cannot delete that partition or any `audit` records in it.
 
