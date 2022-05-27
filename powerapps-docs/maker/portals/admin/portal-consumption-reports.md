@@ -36,28 +36,20 @@ The individual reports contain data for a duration of 30 days preceding the date
 
     ![Add-ons.](media/portal-consumption-reports/summary-add-ons.png "Add-ons")
 
-1. Select the **Portal Logins** or **Portal Views** report.
+1. Select **New**.
+    :::image type="content" source="media/portal-consumption-reports/new-report.png" alt-text="Request a report from the admin center.":::
 
-1. Select a **Target Date**. The report will include data for the 30 days preceding this date.
+1. Select the **Portals Logins** or **Portals Views** report.
 
 1. Select **Submit**.
 
-    ![Confirmation for the request.](media/portal-consumption-reports/confirmation.png "Confirmation for the request")
-
-    A notification appears that acknowledges your download request.
-
-1. After the generated report becomes available, select **Download** in the notification that appears.
-
-    ![Notification that the report is ready to download.](media/portal-consumption-reports/download-notification.png "Notification that the report is ready to download")
-
-    > [!TIP]
-    > To quickly regenerate the report for the selected report type and target date, select **Regenerate report** in the notification.
+1. After the generated report becomes available, select the **Download** tab.
 
 1. Select **Save**, and then select **Open**.
 
 ## Analyze reports
 
-The report contains capacity consumption of all available portals across all environments for the tenant, organized by date. You can filter on different columns in the report&mdash;such as portal ID, environment ID, or date range&mdash;for additional analysis.
+The report contains capacity consumption of all available portals across all environments for the tenant, organized by date. You can filter on different columns in the report&mdash;such as portal ID, environment ID, or date range&mdash;for more analysis.
 
 The following table describes the columns in the downloaded report.
 
