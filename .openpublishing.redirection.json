@@ -6432,7 +6432,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/portals/supported-web-browsers.md",
-      "redirect_url": "power-apps/limits-and-config.md",
+      "redirect_url": "/power-apps/limits-and-config",
       "redirect_document_id": "false"
     }
   ]
