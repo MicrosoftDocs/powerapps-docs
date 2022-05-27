@@ -504,8 +504,6 @@ More information:
 
 The following `ShowAuditDetail` static method will return audit details for any type of audit details that can be tracked by an audit record. 
 
-The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other .NET SDK samples on this page.
-
 ```csharp
 /// <summary>
 /// Returns audit details for the specified audit record
@@ -529,6 +527,14 @@ static void ShowAuditDetail(
     DisplayAuditDetail(resp.AuditDetail);
 }
 
+
+```
+
+#### DisplayAuditDetail method
+
+The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other .NET SDK samples on this page.
+
+```csharp
 /// <summary>
 /// Displays properties of the different classes derived from AuditDetail
 /// </summary>
@@ -744,7 +750,7 @@ More information:
 
 The `ShowAttributeChangeHistory` static method below will return the first 20 audited changes for specified column in the specified record.
 
-This method depends on the example `DisplayAuditDetail` static method included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
+This method depends on the example [DisplayAuditDetail method](#displayauditdetail-method) included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
 
 ```csharp
 /// <summary>
@@ -913,7 +919,7 @@ More information:
 
 This `ShowRetrieveRecordChangeHistory` static method executes the `RetrieveRecordChangeHistory` message for a specified record and processes the response.
 
-For each audit record, it displays the properties and uses the example `DisplayAuditDetail` static method defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) on this page to display the details.
+For each audit record, it displays the properties and uses the example [DisplayAuditDetail method](#displayauditdetail-method) defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) on this page to display the details.
 
 ```csharp
 /// <summary>
