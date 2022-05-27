@@ -13,7 +13,6 @@ contributors:
 
 # Mode
 
-
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
 ## Available for 
@@ -30,25 +29,25 @@ Height in pixels allocated to the component.
 
 ### allocatedWidth
 
-Width in pixels allocated to the component. This property is supported in both model-driven and canvas apps.
+Width in pixels allocated to the component.
 
 **Type**: `number`
 
 ### isControlDisabled
 
-Whether the component is disabled. This property is supported in both model-driven and canvas apps.
+Whether the component is disabled.
 
 **Type**: `string`
 
 ### isVisible
 
-Whether the component is visible on the page. This property is supported in both model-driven and canvas apps.
+Whether the component is visible on the page.
 
 **Type**: `boolean`
 
 ### label
 
-The defined component label. This property is supported in both model-driven and canvas apps.
+The defined component label.
 
 **Type**: `string`
 
