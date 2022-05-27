@@ -1762,7 +1762,7 @@
               - name: List OData feeds 
                 href: portals/configure/list-odata-feeds.md
               - name: Enhanced view filter for lists
-                href: portals/configure/list-filter-configuration.md
+                href: portals/configure/list-enhanced-view-filter.md
             - name: Work with basic forms
               items:
                 - name: Work with basic forms
