@@ -1,16 +1,15 @@
 ---
 title: AttributeType | Microsoft Docs
 description: Provides all the information about AttributeType.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 05/18/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite:
-ms.tgt_pltfrm:
-ms.topic: article
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # AttributeType
