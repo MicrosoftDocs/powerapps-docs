@@ -20,8 +20,6 @@ contributors:
 
 # Auditing overview
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
 Dataverse auditing provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse auditing logs changes that are made to records and logs user access. Developers can use the tables and APIs that support the auditing feature to create client applications or programmatically interact with auditing data.
 
 > [!IMPORTANT]

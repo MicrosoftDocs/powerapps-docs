@@ -20,8 +20,6 @@ contributors:
 
 # Retrieve the history of audited data changes
 
-[!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
-
 After auditing is enabled and data changes are made to those tables and columns being audited, you can retrieve the data change history.
 
 > [!NOTE]
