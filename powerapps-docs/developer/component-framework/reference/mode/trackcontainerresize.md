@@ -1,17 +1,16 @@
 ---
 title: TrackContainerResize | Microsoft Docs
 description: Determines the container sizing if the component needs to react.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
 contributors:
-    - v-scottdurow
-
-
-ms.topic: "article"
+ - JimDaly
+ - v-scottdurow
 ---
 
 # trackContainerResize
@@ -47,7 +46,7 @@ If the  of `allocatedWidth` and `allocatedHeight` change after the first `update
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Syntax
 
