@@ -1,15 +1,15 @@
 ---
 title: Linking | Microsoft Docs
 description: Provides properties and methods to determine which table is linked and to get all the tables linked.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Linking

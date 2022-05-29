@@ -1,13 +1,15 @@
 ---
 title: uses-feature | Microsoft Docs
 description: Indicates which feature their components want to use.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/26/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # uses-feature element
@@ -43,8 +45,8 @@ The table below shows the relationship of these settings to what happens in the 
 
 |Manifest|If Host supports|If Host doesn't support|
 |----|----|-----|
-|`uses-feature name="device.captureImage" required=”true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
-|`uses-feature name="device.captureImage" required=”false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
+|`uses-feature name="device.captureImage" required="true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
+|`uses-feature name="device.captureImage" required="false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
 |(none)|`Context.device.captureImage == null` |`Context.device.captureImage == null` |
 
 ### Related topics

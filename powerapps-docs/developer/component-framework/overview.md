@@ -4,16 +4,13 @@ description: "Use the Power Apps component framework to create code components t
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 04/01/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.custom:
-  - "dyn365-a11y"
-  - "dyn365-developer"
 ms.topic: overview
 ms.subservice: pcf
-contributors: 
-  - JimDaly
+contributors:
+ - JimDaly
 ---
 
 # Power Apps component framework overview
