@@ -1259,10 +1259,10 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Use the modern app designer (preview)
+      - name: Use the modern app designer
         href: 
         items: 
-        - name: App designer overview (preview)
+        - name: App designer overview
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
