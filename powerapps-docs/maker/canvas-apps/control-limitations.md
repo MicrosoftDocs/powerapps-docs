@@ -32,6 +32,8 @@ In this article, learn about the general limitations of the controls used in can
    - On Android, the camera control isn't supported in Teams Mobile.
    - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
 
+- [Container control](controls/control-container.md) - see [Container control limitations](controls/control-container.md#limitations).
+
 - [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
 - [Gallery control](controls/control-gallery.md) - see [Gallery control limitations](controls/control-gallery.md#limitations).
