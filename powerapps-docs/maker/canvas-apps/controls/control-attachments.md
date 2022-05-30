@@ -21,6 +21,9 @@ contributors:
 
 A control that allows users to download files to their device, as well as upload and delete files from a list created using Microsoft Lists, or a Microsoft Dataverse table.
 
+## Description
+An **Attachments** control lets you open, add, and delete files from a list or a Dataverse table.
+
 ## Limitations
 
 The attachment control has these limitations:
@@ -30,9 +33,6 @@ The attachment control has these limitations:
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
 1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
-
-## Description
-An **Attachments** control lets you open, add, and delete files from a list or a Dataverse table.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
