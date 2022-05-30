@@ -76,8 +76,5 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 > [!NOTE]
 > When the toolbar is focused, **Tab** and **Shift+Tab** keys will navigate between toolbar groups. But you can't cycle back from the last group to the first group and vice versa.
 
-## Limitations
-
-Rich text editor can't be used within a gallery.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
