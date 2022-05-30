@@ -9,7 +9,7 @@ ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
- - JimDaly
+  - JimDaly
 ---
 
 # save
@@ -18,7 +18,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas (experimental) apps
+Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
 
 ## Syntax
 

@@ -9,7 +9,7 @@ ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
- - JimDaly
+  - JimDaly
 ---
 
 # setValue
@@ -18,7 +18,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas (experimental) apps
+Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
 
 ## Syntax
 
@@ -26,10 +26,10 @@ Model-driven and canvas (experimental) apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------- |
 | `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+| `value`        | `string  | Date     | number              | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
 
 ## Return Value
 
