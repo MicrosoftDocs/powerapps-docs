@@ -38,13 +38,13 @@ Predefined templates for showing images and text in a gallery are available, and
 - If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
 
 - The following controls are not supported within a gallery:
-    - [Barcode](control-new-barcode-scanner.md)
     - [Display form](control-form-detail.md)
     - [Edit form](control-form-detail.md)
     - [PDF viewer](control-pdf-viewer.md)
     - [Power BI tile](control-power-bi-tile.md)
     - [Rich text editor](control-richtexteditor.md)
-    - [Sscrollable screen (Fluid grid)](../add-scrolling-screen.md)
+    - [Scrollable screen (Fluid grid)](../add-scrolling-screen.md)
+    - [Web barcode scanner](control-barcodescanner.md)
 
 - You can only add one gallery inside another gallery.
 
