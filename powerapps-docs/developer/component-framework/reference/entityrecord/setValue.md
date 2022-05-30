@@ -35,7 +35,7 @@ Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/workin
 
 Type: `Promise`
 
-# Limitations
+## Limitations
 
 Canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
 
