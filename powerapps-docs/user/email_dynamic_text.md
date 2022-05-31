@@ -18,7 +18,7 @@ search.app:
 
 # Personalize emails with dynamic text
 
-Dynamic text enables you to personalize email content. **Insert dynamic text** option allows you to update an email with the dynamic value of an entity. For example, rather than using a generic greeting like “Dear customer,” you can use the dynamic text, (“Dear ``{!Case:Customer;}``”). On sending the message, the dynamic text is replaced with the customer's name (“Dear John”).
+Dynamic text enables you to personalize email content. The **Insert dynamic text** option allows you to update an email with the dynamic value of an entity. For example, rather than using a generic greeting like “Dear customer,” you can use the dynamic text, (“Dear ``{!Case:Customer;}``”). On sending the message, the dynamic text is replaced with the customer's name (“Dear John”).
 
 ## Insert dynamic text
 
