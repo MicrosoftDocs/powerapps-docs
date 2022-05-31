@@ -42,7 +42,7 @@ Whether the result set can be paged backwards.
 
 ### lastPageNumber
 
-Last page number. 
+Last page number.
 
 **Type**: `number`
 
@@ -73,6 +73,10 @@ Total number of results on the server for the current query.
 | [loadPreviousPage](paging/loadpreviouspage.md) | [!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)] |
 | [reset](paging/reset.md)                       | [!INCLUDE [reset-description](paging/includes/reset-description.md)]                       |
 | [setPageSize](paging/setpagesize.md)           | [!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]           |
+
+## Limitations
+
+For Canvas Apps `totalResultCount` is working in 500 divisible stages. When entity has total amount of records more then 500 (and let assume that page size is 100), for page range: from `firstPage`: 1 to `lastPage`: 5, `totalResultCount` will be showing 500. Then for a `lastPage`: 6, `totalResultCount`: will show 1000 in case there are more then 1000 records, or will show specific number that indicates total records for the entity.
 
 ### Related topics
 
