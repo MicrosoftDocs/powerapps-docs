@@ -82,5 +82,6 @@ For Canvas Apps `totalResultCount` is working in 500 divisible stages. When enti
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+[Data source delegation limitations](/powerapps-docs/maker/canvas-apps/delegation-overview#changing-the-limit)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
