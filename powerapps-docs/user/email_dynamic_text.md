@@ -18,7 +18,7 @@ search.app:
 
 # Personalize emails with dynamic text
 
-Dynamic text enables you to personalize email content. Add a dynamic text placeholder to an email template for the app to retrieve and populate the current value of the specified entity. For example, rather than using a generic greeting like “Dear customer,” you can use dynamic text (“Dear ``{!Case:Customer;}``”). On sending the message, the dynamic text is replaced with the customer's name (“Dear John”).
+Dynamic text enables you to personalize email content. Inserting a dynamic text placeholder in an email template enables you to populate the current value of the entity. For example, rather than using a generic greeting like “Dear customer,” you can use dynamic text (“Dear ``{!Case:Customer;}``”). On sending the message, the dynamic text is replaced with the customer's name (“Dear John”).
 
 ## Insert dynamic text
 
