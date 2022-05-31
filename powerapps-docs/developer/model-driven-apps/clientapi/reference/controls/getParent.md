@@ -30,7 +30,7 @@ All
 
 ## Return Value
 
-**Type**: [formContext.ui section](../formContext-ui-sections.md) object
+**Type**: [formContext.ui section](../formContext-ui-tab-sections.md) object
 
 
 
