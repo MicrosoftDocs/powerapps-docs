@@ -29,6 +29,11 @@ To create a marker, print out the image below or display the image on a monitor 
 
 :::image type="content" source="./media/augmented-marker-detection/mixed-reality-marker-1.png" alt-text="Image used for marker detection in mixed reality experiences" lightbox="./media/augmented-marker-detection/mixed-reality-marker-1.png":::
 
+
+
+
+[ ![Image used for marker detection in mixed reality experiences.](media/./media/augmented-marker-detection/mixed-reality-marker-1.png) ](./media/augmented-marker-detection/mixed-reality-marker-1.png#lightbox)
+
 ## Enable marker detection
 
 To enable marker detection for the **View in MR** and **View Shape in MR** controls set the **Enable Marker Detection** property to **On** in the properties panel or the formula bar.
