@@ -112,7 +112,8 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create or edit tables](./data-platform-create-entity.md)
+[Create tables](./data-platform-create-entity.md)<br/>
+[Edit tables](./edit-entities.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,13 +1,15 @@
 ---
 title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
 description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 04/21/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Common issues and workarounds

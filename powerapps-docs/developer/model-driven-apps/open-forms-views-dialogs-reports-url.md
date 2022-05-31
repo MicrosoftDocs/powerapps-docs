@@ -3,7 +3,7 @@ title: "Open apps, forms, views, dialogs, and reports with a URL (model-driven a
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: jdaly
 author: HemantGaur
-manager: evchaki
+manager: lwelicki
 ms.date: 04/06/2022
 ms.reviewer: jdaly
 ms.topic: "article"
