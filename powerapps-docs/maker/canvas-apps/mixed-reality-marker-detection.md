@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anuitz
-ms.date: 05/23/2022
+ms.date: 05/31/2022
 ms.subservice: canvas-maker
 ms.author: altran
 search.audienceType: 
@@ -28,6 +28,10 @@ To create a marker, print out the image below or display the image on a monitor 
 
 
 [ ![Image used for marker detection in mixed reality experiences.](./media/augmented-marker-detection/mixed-reality-marker.png) ](./media/augmented-marker-detection/mixed-reality-marker-1.png#lightbox)
+
+## test 2
+
+:::image type="content" source="./media/augmented-marker-detection/mixed-reality-marker.png" alt-text="Image used for marker detection in mixed reality experiences." lightbox="./media/augmented-marker-detection/mixed-reality-marker-1.png":::
 
 
 ## Enable marker detection
