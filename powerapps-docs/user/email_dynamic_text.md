@@ -18,17 +18,19 @@ search.app:
 
 # Personalize emails with dynamic text
 
-Dynamic text enables you to personalize email content. Insert dynamic text placeholders in an email template to automatically replace the recepients' personal details when a message is sent. For example, rather than using a generic greeting like “Dear customer,” you can use dynamic text (“Dear ``{{FirstName}}``”) that is replaced with the customer name (“Dear John”) upon sending the message.
+Dynamic text enables you to personalize email content. Add a dynamic text placeholder to an email template for the app to retrieve and populate the current value of the specified entity. For example, rather than using a generic greeting like “Dear customer,” you can use dynamic text (“Dear ``{!Case:Customer;}``”). On sending the message, the dynamic text is replaced with the customer's name (“Dear John”).
 
 ## Insert dynamic text
 
 You can insert dynamic fields in the existing email templates or newly created email templates. Select **Insert dynamic text** in the email template editor to add dynamic text to your template.
 
-On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Category** you specify when you are creating the email template.
+On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Record type**. 
 
-## Insert custom fields
+The **Category** you specify when you are creating the email template determines the options available in **Record type**.
 
-If you must insert custom fields in the templates, use the following syntax:
+## Insert dynamic values from custom entities
+
+If you must insert fields from custom entities in the templates, use the following syntax:
 
 |Field Type  |Syntax  |
 |----------|-----------|
