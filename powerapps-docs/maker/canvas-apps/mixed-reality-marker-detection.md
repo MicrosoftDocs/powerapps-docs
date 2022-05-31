@@ -36,7 +36,7 @@ To create a marker, print out the image below or display the image on a monitor 
 
 ## Enable marker detection
 
-To enable marker detection for the **View in MR** and **View Shape in MR** controls set the **Enable Marker Detection** property to **On** in the properties panel or the formula bar.
+To enable marker detection for the **View in MR** and **View Shape in MR** controls set the **Enable marker detection** property to **On** in the properties panel or the formula bar.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
 
