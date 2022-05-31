@@ -19,12 +19,12 @@ contributors:
 
 To secure a list, you must configure [table permissions](entity-permissions-studio.md) for the table for which records are being displayed.
 
-Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all [lists](configure/securing-lists.md) irrespective of the **Enable Table Permissions** setting.
+Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all lists irrespective of the **Enable Table Permissions** setting.
 
 > [!NOTE]
-> The changes described above also apply to portals [converted](admin/convert-portal.md) from trial to production.
+> The changes described above also apply to portals [converted](../admin/convert-portal.md) from trial to production.
 
-To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md), and relate to the **Anonymous Users** web role or a custom web role with **Anonymous Users Role** option.
+To configure anonymous access explicitly, use proper [table permissions](entity-permissions-studio.md), and relate to the **Anonymous Users** web role or a custom web role with **Anonymous Users Role** option.
 
 Securing your list will ensure that users only see the records they have permissions for. 
 
