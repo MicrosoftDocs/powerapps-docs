@@ -27,9 +27,7 @@ In addition to the standard device compatibility requirements outlined in [add m
 To create a marker, print out the image below or display the image on a monitor or tablet. For the best results the marker should be printed in portrait orientation on standard A4 or 8.5" x 11" letter paper. Ensure that the marker is fully visible and not cut off on either the top or bottom. The marker should be approximately 20 x 20 cm for optimal tracking speed and accuracy.
 
 
-
 [ ![Image used for marker detection in mixed reality experiences.](./media/augmented-marker-detection/mixed-reality-marker.png) ](./media/augmented-marker-detection/mixed-reality-marker-1.png#lightbox)
-
 
 
 ## Enable marker detection
