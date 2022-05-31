@@ -93,9 +93,7 @@ This example shows an inner join between EntityMap and AttributeMap where the En
 ```  
 
 > [!IMPORTANT]
-> A FetchXML query has a limit of a maximum of 10 allowed link tables.
->
-> The `in` operator of a FetchXML query is limited to 2000 values.
+> A FetchXML query has a limit of a maximum of 15 allowed link tables.
 
 ## Execute the FetchXML query
 
