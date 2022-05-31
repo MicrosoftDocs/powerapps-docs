@@ -26,7 +26,7 @@ You can insert dynamic fields in the existing email templates or newly created e
 
 On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Record type**. 
 
-The **Category** you specify when you are creating the email template determines the options available in **Record type**.
+The **Record type** options are determined by the **Category** you specify when you are creating the email template.
 
 ## Insert dynamic values from custom entities
 
