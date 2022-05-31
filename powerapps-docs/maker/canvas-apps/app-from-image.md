@@ -57,7 +57,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 1. Upload your own image. If you don't have an image ready, you can also use one of the available sample images.
 
     > [!NOTE]
-    > When using your own image, ensure the image meets the image requirements mentioned in the prerequisites.
+    > When using your own image, ensure the image meets the image requirements mentioned in [Image requirements](#Image-requirements).
 
     For example, here are two sample images with acceptable and unacceptable qualities:
 
@@ -129,11 +129,17 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
 1. [Save and publish](save-publish-app.md) the app.
 
+## Image requirements
+- The image you upload should be with the file extension of .jpg or .png. If you have a design image with another file extension, save the image file with .jpg or .png file extension in order to use it with this feature.
+- Image size should be less than 4MB
+- If you're using screenshots or digital sketches, please try to alter background to light, pure-color if white is not avaiable.
+- If you're taking a picture, use higher contrast or make it brighter. Make sure the part you want to tag is clear and bright.
+- If you're using hand-drawn images, try to use **white** sketch pad with no lines on it.
+
 ## Limitations
 
 - Supported components: [Button](controls/control-button.md), [Check box](controls/control-check-box.md), [Data cards](working-with-cards.md), [Date picker](controls/control-date-picker.md), [Drop down](controls/control-drop-down.md), [Edit form](controls/control-form-detail.md), [Label](controls/control-text-box.md), [Radio](controls/control-radio.md), [Rating](controls/control-rating.md), [Slider](controls/control-slider.md), [Text input](controls/control-text-input.md), [Toggle](controls/control-toggle.md)
 - Only canvas apps are supported.
-- Only images with the file extension of .jpg or .png are supported. If you have a design image with another file extension, save the image file with .jpg or .png file extension in order to use it with this feature.
 - You can upload only one image at a time to create an app.
 - Complex forms, forms with colored backgrounds, multi-page forms, and forms with underlined input boxes aren't supported.
 - Support for styles is limited. The styling of the components in the app, such as fonts and colors will be based on the **Office Blue** theme in Power Apps.
