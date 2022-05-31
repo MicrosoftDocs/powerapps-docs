@@ -46,7 +46,7 @@ When you enter the mixed reality experience, you will be prompted to point your 
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-point-device.png" alt-text="A screenshot of the mixed reality placement experience showing optimal framing of the marker for detection.":::
 
-Once the marker is detected the loaded media is automatically aligned and placed directly on top of the marker. You can manipulate the media's position or rotate it by using the on-screen gestures or by physically moving the marker.
+Once the marker is detected the loaded media will be automatically aligned and placed directly on top of the marker. You can manipulate the media's position or rotate it by using the on-screen gestures or by physically moving the marker.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-placement.gif" alt-text="An animated image showing marker detection for placement and positioning.":::
 
