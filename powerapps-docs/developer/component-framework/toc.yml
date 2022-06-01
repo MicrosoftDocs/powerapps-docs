@@ -112,6 +112,8 @@ items:
       items:
       - name: AttributeMetadata
         href: reference/attributemetadata.md
+      - name: AttributeType
+        href: reference/attributetype.md
       - name: Client
         href: reference/client.md
         items:
@@ -350,7 +352,7 @@ items:
         - name: init
           href: reference/react-control/init.md
         - name: updateView
-          href: reference/react-control/updateview.md        
+          href: reference/react-control/updateview.md
       - name: RetrieveMultipleResponse
         href: reference/retrievemultipleresponse.md
       - name: Resources

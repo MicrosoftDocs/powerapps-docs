@@ -1,15 +1,16 @@
 ---
 title: "Code components application lifecycle management | MicrosoftDocs"
 description: "Learn about the considerations and strategies for working with specific aspects of ALM from the perspective of code components in Microsoft Dataverse."
-ms.topic: "article"
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: article
+ms.subservice: pcf
 contributors:
-  - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 # Code components application lifecycle management (ALM)
@@ -140,7 +141,7 @@ Once a solution that contains a code component is unpacked using `SolutionPackag
 │   └── prefix_namespace.ControlName
 │       ├── bundle.js *
 │       └── css
-│       	└── ControlName.css *
+│          └── ControlName.css *
 │       ├── ControlManifest.xml *
 │       └── ControlManifest.xml.data.xml
 ├── Entities

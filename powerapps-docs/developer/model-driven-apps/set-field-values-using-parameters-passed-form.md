@@ -3,7 +3,7 @@ title: "Set column values using parameters passed to a form (model-driven apps) 
 description: "You can set default values for new records created by users by specifying values in the URL that is used to open the form." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: jdaly
 author: HemantGaur
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

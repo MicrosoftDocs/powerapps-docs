@@ -28,7 +28,7 @@ contributors:
 
 ## Return Value
 
-**Type**: [formContext.ui.section](../formContext-ui-sections.md)
+**Type**: [formContext.ui.section](../formContext-ui-tab-sections.md)
 
 ### Related topics
 

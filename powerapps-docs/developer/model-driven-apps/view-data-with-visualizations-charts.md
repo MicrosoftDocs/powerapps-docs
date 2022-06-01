@@ -3,7 +3,7 @@ title: "View data with visualizations (charts)  (model-driven apps) | Microsoft 
 description: "Visualizations let you see your business data graphically. A visualization is attached to a table in Microsoft Dataverse. You can attach multiple visualizations to a table, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
 author: mspilde
 ms.author: mspilde
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer

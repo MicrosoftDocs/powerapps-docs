@@ -1,15 +1,15 @@
 ---
 title: openAlertDialog | Microsoft Docs
 description: Displays an alert dialog containing a message and a button.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # openAlertDialog
@@ -43,15 +43,15 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 ```TypeScript
 context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel : "Yes",}).then(
-		function success()
-		{
-			document.getElementById("openAlertDialogButton")!.innerHTML = "Alert dialog closed";
-		},
-		function()
-		{
-			document.getElementById("openAlertDialogButton")!.innerHTML = "Error in Alert Dialog";
-		}
-	);
+      function success()
+      {
+         document.getElementById("openAlertDialogButton")!.innerHTML = "Alert dialog closed";
+      },
+      function()
+      {
+         document.getElementById("openAlertDialogButton")!.innerHTML = "Error in Alert Dialog";
+      }
+   );
 ```
 
 ### Related topics
