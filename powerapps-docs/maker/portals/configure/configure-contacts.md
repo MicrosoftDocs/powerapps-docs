@@ -49,7 +49,18 @@ For more information about federated authentication options, see [set authentica
 ## Change password for a contact from the Portal Management app
 
 > [!NOTE]
-> You will need to be assigned the **System Administrator** [security role](/power-platform/admin/database-security) to perform these steps.
+> You will need to be assigned the **System Administrator**  to perform these steps.
+
+### Pre-requisites
+
+In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
+
+| Schema name | Display name | Table | Privileges |
+| - | - | - | - |
+| adx_identity_logonenabled | Login Enabled | contact | Read, Update, Create |
+| adx_identity_passwordhash | Password Hash | contact | Read, Update, Create |
+| adx_identity_username | User Name | contact | Read, Update, Create |
+| sharepointemailaddress | SharePoint Email Address | user | Update, Create |
 
 1. Open the [Portal Management app](configure-portal.md).
 
@@ -71,6 +82,10 @@ For more information about federated authentication options, see [set authentica
 1. After making the changes, select **Done**.
 
     :::image type="content" source="media/configure-contacts/change-password-done.png" alt-text="Password changed for the contact.":::
+
+### Deprecation of business process flow
+
+Earlier versions of the change password process utilized a task flow which has been deprecated. In Dataverse security roles, the **Change Password for Portals Contact** privilege under the **Business Process Flows** tab no longer requires any options selected.
 
 ### See also
 [Invite contacts to your portals](invite-contacts.md)  
