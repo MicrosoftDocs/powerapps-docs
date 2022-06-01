@@ -48,11 +48,6 @@ For more information about federated authentication options, see [set authentica
 
 ## Change password for a contact from the Portal Management app
 
-> [!NOTE]
-> You will need to be assigned the **System Administrator**  to perform these steps.
-
-### Pre-requisites
-
 In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
 
 | Schema name | Display name | Table | Privileges |
