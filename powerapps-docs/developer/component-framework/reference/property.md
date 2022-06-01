@@ -1,14 +1,14 @@
 ---
 title: Property | Microsoft Docs
 description: Interface for context.parameters.<property_key>
-keywords:
 ms.author: noazarur
 author: noazarur-microsoft
-manager: evchaki
-ms.date: 04/22/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "article"
-contributor:
+ms.topic: reference
+ms.subservice: pcf
+contributors:
  - JimDaly
 ---
 

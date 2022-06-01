@@ -1,19 +1,15 @@
 ---
 title: getClient | Microsoft Docs
 description: Returns a value to indicate which client the script is executing in.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # getClient
 
@@ -25,7 +21,7 @@ applies_to:
 
 ## Available for 
 
-Model-driven and canvas apps 
+Model-driven apps, canvas apps, & portals.
 
 
 
