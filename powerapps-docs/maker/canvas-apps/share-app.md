@@ -2,11 +2,10 @@
 title: Share a canvas app with your organization
 description: Learn about how to share canvas apps by giving other users in your organization the permissions to run or modify it.
 author: alaug
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/27/2022
+ms.date: 06/30/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -16,6 +15,7 @@ search.app:
 contributors:
   - tapanm-msft
   - alaug
+  - msftsamperl
 ---
 # Share a canvas app with your organization
 
@@ -96,10 +96,12 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     If you sent an email invitation, users can also run the app by selecting the link in the invitation email:
 
-    - If a user selects the link on a mobile device, the app opens in Power Apps Mobile.
-    - If a user selects the link on a desktop computer, the app opens in a browser.
+    - If a user selects the **Open the app** link on a mobile device, the app opens in Power Apps Mobile.
+    - If a user selects the **Open the app** link on a desktop computer, the app opens in a browser.
+    - If a user selects the **Microsoft Teams** link, the app opens in Microsoft Teams.
 
-    Co-owners who receive an invitation get another link that opens the app for editing in Power Apps Studio.
+    If you selected **Co-owner** while sharing, the recipients will see a link for **Power Apps Studio** that will open the app for editing using Power Apps Studio.
+
 <!--markdownlint-disable MD036-->
 **To change permissions for a user or a security group**
 
