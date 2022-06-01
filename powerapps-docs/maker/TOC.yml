@@ -1208,7 +1208,7 @@
           href: ./canvas-apps/map-component-input-fields.md
         - name: Add multimedia to a component
           href: ./canvas-apps/component-multimedia.md
-        - name: Behavior formulas
+        - name: Behavior formulas (preview)
           href: ./canvas-apps/component-behavior.md
   - name: Performance and optimization
     items:
