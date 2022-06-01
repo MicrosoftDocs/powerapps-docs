@@ -17,14 +17,32 @@ contributors:
 
 # Configure a contact for use on a portal
 
-After filling out the basic information for a contact, or having a user fill out the sign-up form in a portal, go to the web authentication tab on the portal contact form to configure a contact by using local authentication. 
+> [!IMPORTANT]
+> - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 
-For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). To configure a contact for portals by using local authentication, follow these instructions:  
+1. Open the [Portal Management app](configure-portal.md).
 
-1. Enter a **username**.
-1. On the command ribbon, go to **More Commands** &gt; **Change Password**.
+1. In the **Security** section, select **Contacts**.
 
-Complete the change password workflow, and the necessary fields will be automatically configured. When you've done this, your contact will be configured for your portals.
+1. Create a new contact or select an existing contact.
+
+1. Choose the **Contact - Portal Contact** form.
+
+1. Select the **Web Authentication** tab.
+
+1. Enter a **Username**.
+
+    :::image type="content" source="media/configure-contacts/contact-form.png" alt-text="Configure contact to provide access to portal.":::
+
+1. Select **Save**.
+
+1. On the command ribbon, choose **Change Password**.
+
+1. Complete the [change password steps](#change-password-for-a-contact-from-the-portal-management-app), and the necessary fields will be automatically configured. The contact will then be configured to access the portal.
+
+A portal user can also [register directly](set-authentication-identity.md#sign-up-by-using-a-local-identity-or-external-identity) on the portal, or be sent an [invitation](invite-contacts.md) to register. 
+
+For more information about federated authentication options, see [set authentication identity for a portal](set-authentication-identity.md). 
 
 ## Change password for a contact from the Portal Management app
 
