@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 04/28/2022
+ms.date: 06/01/2022
 ms.reviewer: "jdaly"
 ms.topic: article
 author: "NHelgren" # GitHub ID
@@ -101,15 +101,17 @@ Creating a virtual table with the virtual connector provider includes the follow
 # [SQL Server](#tab/sql)
 Watch a 4 minute video showing how to create a virtual table with the SQL virtual connector provider. 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG4l]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XLkU]
+
 # [Microsoft Excel Online (Business)](#tab/excel)
 Watch a 4 minute video showing how to create a virtual table with the Excel virtual connector provider. 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WARf]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
+
 # [Microsoft SharePoint](#tab/sharepoint)
 Watch a 4 minute video showing how to create a virtual table with the SharePoint virtual connector provider. 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG4k]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcIk]
 
 ---
 
