@@ -4,7 +4,7 @@ description: Learn about how to map input fields of a component to the table or 
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 05/23/2022
+ms.date: 06/01/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
