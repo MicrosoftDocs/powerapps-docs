@@ -57,7 +57,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 1. Upload your own image. If you don't have an image ready, you can also use one of the available sample images.
 
     > [!NOTE]
-    > When using your own image, ensure the image meets the image requirements mentioned in [Image requirements](#Image-requirements).
+    > When using your own image, ensure the image meets the image requirements mentioned in [Image requirements](#image-requirements).
 
     For example, here are two sample images with acceptable and unacceptable qualities:
 
