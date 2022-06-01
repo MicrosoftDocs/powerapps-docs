@@ -237,8 +237,29 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+    - name: 1 - Create an app from a design or a template
+      items:
+      - name: Create an app from a template
+        href: ./canvas-apps/get-started-test-drive.md
+      - name: Create an app from a design (preview)
+        items:
+        - name: Express design overview
+          href: ./canvas-apps/express-design.md
+        - name: Create an app from an image
+          href: ./canvas-apps/app-from-image.md
+        - name: Create an app from Figma
+          items:
+          - name: Overview
+            href: ./canvas-apps/figma/overview.md
+          - name: Design apps using the UI kit
+            href: ./canvas-apps/figma/design-using-kit.md
+          - name: Components supported by the UI kit
+            href: ./canvas-apps/figma/supported-components.md
+          - name: Create a canvas app from Figma
+            href: ./canvas-apps/figma/create-app-from-figma.md
+          - name: Troubleshoot common errors
+            href: ./canvas-apps/figma/common-errors.md
+            displayName: Troubleshoot common errors when creating app from Figma
     - name: 2 - Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -1153,9 +1174,9 @@
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
-  - name: Create native mobile apps (preview)
+  - name: Create native mobile apps
     items:
-      - name: Overview of wrap (preview)
+      - name: Overview of wrap
         href: ./common/wrap/overview.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
@@ -1175,14 +1196,18 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component (preview)
+    - name: Create a canvas component
       items:
-        - name: Components overview
+        - name: Canvas component overview
           href: ./canvas-apps/create-component.md
         - name: Component library
           href: ./canvas-apps/component-library.md
+        - name: Component library ALM
+          href: ./canvas-apps/component-library-alm.md
         - name: Map input fields
           href: ./canvas-apps/map-component-input-fields.md
+        - name: Add multimedia to a component
+          href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
   - name: Performance and optimization
@@ -1238,10 +1263,10 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Use the modern app designer (preview)
+      - name: Use the modern app designer
         href: 
         items: 
-        - name: App designer overview (preview)
+        - name: App designer overview
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
@@ -1439,7 +1464,7 @@
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
-      - name: Customize app commands (preview)
+      - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
         items:
         - name: Use command designer
@@ -1838,7 +1863,9 @@
         - name: Manage SSL certificates
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
-          href: ./portals/admin/manage-custom-certificates.md              
+          href: ./portals/admin/manage-custom-certificates.md  
+        - name: Content Delivery Network (preview)
+          href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
@@ -2193,6 +2220,8 @@
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
       href: ./data-platform/virtual-entity-odata-provider-requirements.md
+    - name: View and edit tables representing solution objects
+      href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
       href: ./data-platform/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer

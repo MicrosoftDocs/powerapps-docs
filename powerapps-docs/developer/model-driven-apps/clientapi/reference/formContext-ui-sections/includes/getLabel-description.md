@@ -1,1 +1,0 @@
-Returns the label for the section.

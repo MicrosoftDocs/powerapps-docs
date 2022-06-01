@@ -3,8 +3,8 @@ title: "Define ribbon display rules (model-driven apps) | Microsoft Docs" # Inte
 description: "Learn about defining specific rules to control when the ribbon elements will display during the configuration of ribbon elements. " # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
-ms.date: 04/01/2022
+manager: lwelicki
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -19,6 +19,8 @@ contributors:
 ---
 
 # Define ribbon display rules
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 When configuring ribbon elements, you can define specific rules to control when the ribbon elements will display.  
 

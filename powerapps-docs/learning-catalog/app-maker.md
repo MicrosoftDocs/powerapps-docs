@@ -36,7 +36,7 @@ The following catalog is organized from core knowledge to specific domains, and 
 | [Use the UI and controls in a canvas app in Power Apps](/learn/paths/ui-controls-canvas-app-powerapps/) | The app user experience often defines the success of your app. This learning path will focus on how to provide the best app navigation, and build the best UI using themes, icons, images, personalization, different form factors, and controls. | Free, self-paced online learning path | 2 hr 58 min |
 | [Work with data in a Power Apps canvas app](/learn/paths/work-with-data-in-a-canvas-app/) | Do you need to connect an app to access data? Then this learning path is for you. It will focus on how to connect to data sources. It also will show you how to use filtering, conditions, and other functions to shape your data and write data to your data source. | Free, self-paced online learning path | 2 hr 44 min |
 | [AIAD App in a day](https://aka.ms/appinaday) | Full instructor and attendee package to learn Power Apps | Instructor Led Training | Workday |
-| [Formula reference for Power Apps](../maker/canvas-apps/formula-reference.md) | Glossarry | Free | Reference |
+| [Formula reference for Power Apps](../maker/canvas-apps/formula-reference.md) | Glossary | Free | Reference |
 
 ## Flow Creation<a name="flow-creation"></a>
 
