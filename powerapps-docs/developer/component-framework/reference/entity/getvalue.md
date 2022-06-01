@@ -1,25 +1,21 @@
 ---
 title: getValue | Microsoft Docs
-description: 
-keywords:
-ms.author: jdaly
+description: Returns the value of the specified column name.
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getValue
 
-getvalue-description.md
-
 [!INCLUDE [cc_applies_to_update_9_0_0](../../../../includes/cc_applies_to_update_9_0_0.md)]
-
-[!INCLUDE[./includes/getvalue-description.md](./includes/getvalue-description.md)]
+[!INCLUDE [getvalue-description](includes/getvalue-description.md)]
 
 ## Syntax
 

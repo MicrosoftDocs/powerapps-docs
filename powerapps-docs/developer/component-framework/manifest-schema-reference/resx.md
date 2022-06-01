@@ -1,13 +1,15 @@
 ---
 title: Resx Element | Microsoft Docs
 description: The resx web resource is used to manage the localized strings you define.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/26/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # resx element
@@ -36,7 +38,7 @@ Model-driven and canvas apps
 ```xml
 <resources>
       <code path="TS_LocalizationAPI.js" order="1" />
-	    <css path="css/TS_LocalizationAPI.css" order="1" />
+       <css path="css/TS_LocalizationAPI.css" order="1" />
       <resx path="strings/TSLocalizationAPI.1033.resx" version="1.0.0" />
       <resx path="strings/TSLocalizationAPI.1035.resx" version="1.0.0" />
       <resx path="strings/TSLocalizationAPI.3082.resx" version="1.0.0" />
