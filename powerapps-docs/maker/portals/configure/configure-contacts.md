@@ -38,7 +38,7 @@ The following instructions will outline how to provide access to a portal for a 
 
 1. Select **Save**.
 
-1. On the command ribbon, choose **Change Password**.
+1. On the command bar, choose **Change Password**.
 
 1. Complete the [change password steps](#change-password-for-a-contact-from-the-portal-management-app), and the necessary fields will be automatically configured. The contact will then be configured to access the portal.
 
@@ -48,7 +48,9 @@ For more information about federated authentication options, see [set authentica
 
 ## Change password for a contact from the Portal Management app
 
-In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
+In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). 
+
+Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
 
 | Schema name | Display name | Table | Privileges |
 | - | - | - | - |
@@ -56,6 +58,8 @@ In order to perform the following steps, you will need to be assigned either the
 | adx_identity_passwordhash | Password Hash | contact | Read, Update, Create |
 | adx_identity_username | User Name | contact | Read, Update, Create |
 | sharepointemailaddress | SharePoint Email Address | user | Update, Create |
+
+Add the user or team that will need to perform these steps to the field security profile.
 
 1. Open the [Portal Management app](configure-portal.md).
 
