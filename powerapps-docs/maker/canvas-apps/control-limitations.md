@@ -2,11 +2,10 @@
 title: Limitations of controls in canvas apps
 description: Learn about the limitations of controls in canvas apps.
 author: navjotm
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 

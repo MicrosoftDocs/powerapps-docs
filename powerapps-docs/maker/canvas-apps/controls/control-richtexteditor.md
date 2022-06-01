@@ -5,7 +5,7 @@ author: chmoncay
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/12/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 

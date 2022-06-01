@@ -2,10 +2,9 @@
 title: Container control in Power Apps
 description: Learn about the details, properties and examples of the container control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.component: canvas
-ms.date: 02/12/2021
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm-msft
@@ -65,7 +64,7 @@ When editing an app, you can select controls and group them using Ctrl + G or th
 
 In contrast, containers are actual controls with their own properties like **Width** and **BorderColor**. Containers affect app layout and help screen reader users understand the structure of the app.
 
-While you can put any controls in a group, you should only put logically-related controls in a container. For example, [controls in a tile should be placed in containers](../accessible-apps-structure.md#logical-control-order).
+While you can add any controls in a group, you should only add logically-related controls in a container. For example, [controls in a tile should be placed in containers](../accessible-apps-structure.md#logical-control-order).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

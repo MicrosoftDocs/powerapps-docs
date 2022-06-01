@@ -4,7 +4,7 @@ description: Learn about the details, properties and examples of the attachments
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.date: 05/05/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm

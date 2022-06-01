@@ -5,7 +5,7 @@ author: chmoncay
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/14/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
@@ -36,7 +36,6 @@ Predefined templates for showing images and text in a gallery are available, and
 ## Limitations
 
 - If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
-
 - The following controls are not supported within a gallery:
     - [Display form](control-form-detail.md)
     - [Edit form](control-form-detail.md)
@@ -45,7 +44,6 @@ Predefined templates for showing images and text in a gallery are available, and
     - [Rich text editor](control-richtexteditor.md)
     - [Scrollable screen (Fluid grid)](../add-scrolling-screen.md)
     - [Web barcode scanner](control-barcodescanner.md)
-
 - You can only add one gallery inside another gallery.
 
 ## Key properties
