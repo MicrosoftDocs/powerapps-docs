@@ -1,7 +1,7 @@
 ---
 title: "WebResource table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the WebResource table/entity."
-ms.date: 03/29/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -849,6 +849,16 @@ See the [webresource_modifiedby](systemuser.md#BKMK_webresource_modifiedby) one-
 ### <a name="BKMK_webresource_organization"></a> webresource_organization
 
 See the [webresource_organization](organization.md#BKMK_webresource_organization) one-to-many relationship for the [organization](organization.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the WebResource table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_appactionrule_webresource_scripts"></a> appactionrule_webresource_scripts
+
+See the [appactionrule_webresource_scripts](appactionrule.md#BKMK_appactionrule_webresource_scripts) many-to-many relationship for the [appactionrule](appactionrule.md) table/entity.
 
 ### See also
 

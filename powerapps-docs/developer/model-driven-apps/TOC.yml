@@ -77,7 +77,7 @@
     href: troubleshoot-forms.md
   - name: Navigating to and from a custom page
     href: clientapi/navigate-to-custom-page-examples.md
-  - name: Send in-app notifications using client API (preview)
+  - name: Send in-app notifications
     href: clientapi/send-in-app-notifications.md
   - name: Creating side panes using client API
     href: clientapi/create-app-side-panes.md
@@ -600,7 +600,7 @@
     - name: formContext.ui.tabs
       href: clientapi/reference/formcontext-ui-tabs.md
       items:
-      - name: addtabStateChange
+      - name: addTabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
       - name: getContentType
         href: clientapi/reference/formContext-ui-tabs/getContentType.md
@@ -626,21 +626,21 @@
         href: clientapi/reference/formcontext-ui-tabs/setLabel.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-tabs/setVisible.md
-    - name: formContext.ui.sections
-      href: clientapi/reference/formcontext-ui-sections.md
+    - name: formContext.ui Tab sections
+      href: clientapi/reference/formContext-ui-tab-sections.md
       items:
       - name: getLabel
-        href: clientapi/reference/formcontext-ui-sections/getLabel.md
+        href: clientapi/reference/formContext-ui-tab-sections/getLabel.md
       - name: getName
-        href: clientapi/reference/formcontext-ui-sections/getName.md
+        href: clientapi/reference/formContext-ui-tab-sections/getName.md
       - name: getParent
-        href: clientapi/reference/formcontext-ui-sections/getParent.md
+        href: clientapi/reference/formContext-ui-tab-sections/getParent.md
       - name: getVisible
-        href: clientapi/reference/formcontext-ui-sections/getVisible.md
+        href: clientapi/reference/formContext-ui-tab-sections/getVisible.md
       - name: setLabel
-        href: clientapi/reference/formcontext-ui-sections/setLabel.md
+        href: clientapi/reference/formContext-ui-tab-sections/setLabel.md
       - name: setVisible
-        href: clientapi/reference/formcontext-ui-sections/setVisible.md
+        href: clientapi/reference/formContext-ui-tab-sections/setVisible.md
     - name: Grids and subgrids
       href: clientapi/reference/grids.md
       items:

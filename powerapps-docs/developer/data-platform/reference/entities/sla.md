@@ -1,7 +1,7 @@
 ---
 title: "SLA table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLA table/entity."
-ms.date: 03/29/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1144,98 +1144,110 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10022|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
 |10023|Custom API Response Property|Entity that defines a response property for a custom API |
 |10024|ProvisionLanguageForUser||
-|10025|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
-|10026|Data Lake Folder Permission||
-|10027|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
-|10028|Data Lake Workspace Permission||
-|10029|Data Processing configuration||
-|10030|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
-|10031|Synapse Link External Table State|Synapse Link external table states|
-|10032|Synapse Link Profile|Synapse Link Profile|
-|10033|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
-|10034|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
-|10035|Synapse Link Schedule|Synapse link schedules|
-|10036|DataflowRefreshHistory||
-|10037|EntityRefreshHistory||
-|10038|Shared Link Setting|Shared Link Setting|
-|10039|CascadeGrantRevokeAccessRecordsTracker||
-|10040|CascadeGrantRevokeAccessVersionTracker||
-|10041|RevokeInheritedAccessRecordsTracker||
-|10042|Model-Driven App Element|Associates a model-driven app with its components.|
-|10043|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10044|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10045|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10046|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10047|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10048|Setting Definition|Contains Setting Definitions|
-|10049|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10050|Service Plan Mapping|Service Plan Mapping|
-|10052|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10055|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10056|Flow Machine||
-|10057|Flow Machine Group||
-|10058|ProcessStageParameter||
-|10059|Workflow Binary||
-|10060|Connection Reference||
-|10061|AI Builder Feedback Loop||
-|10062|AI Form Processing Document||
-|10063|AI Object Detection Image||
-|10064|AI Object Detection Label||
-|10065|AI Object Detection Bounding Box||
-|10066|AI Object Detection Image Mapping||
-|10068|AI Builder Dataset||
-|10069|AI Builder Dataset File||
-|10070|AI Builder Dataset Record||
-|10071|AI Builder Datasets Container||
-|10072|AI Builder File||
-|10073|AI Builder File Attached Data||
-|10074|Help Page||
-|10075|Tour||
-|10076|BotContent||
-|10077|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10078|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10079|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10085|Comment|A collaborative comment on a maker artifact|
-|10086|PDF Setting|PDF Settings to save enabled pdf entities|
-|10087|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10088|Service Configuration||
-|10089|SLA KPI||
-|10090|Knowledge Federated Article||
-|10091|Knowledge Federated Article Incident||
-|10092|Search provider||
-|10093|Knowledge Article Image||
-|10094|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10095|Knowledge Search Insight|Knowledge Search Insight|
-|10096|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10097|Knowledge Article Attachment||
-|10098|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10099|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10100|Knowledge Management Setting|Setup knowledge management for your organization.|
-|10101|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10102|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10104|Plugin Package||
-|10105|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10106|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10107|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10108|TeamMobileOfflineProfileMembership||
-|10109|UserMobileOfflineProfileMembership||
-|10110|OrganizationDataSyncSubscription||
-|10111|OrganizationDataSyncSubscriptionEntity||
-|10112|OrganizationDataSyncState|Information regarding data synchronization state|
-|10113|NonRelational Data Source||
-|10114|Notification|Notification to be provided to a user.|
-|10115|App Action||
-|10116|Rich Text Attachment|Image or file attached to a rich text field|
-|10117|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10118|PM Inferred Task||
-|10119|PM Recording||
-|10120|Analysis Component||
-|10121|Analysis Job||
-|10122|Analysis Result||
-|10123|Analysis Result Detail||
-|10124|Solution Health Rule||
-|10125|Solution Health Rule Argument||
-|10126|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10025|Shared Object|A record that is being shared in a real time collaboration session.|
+|10026|Shared Workspace|References a container that stores real-time collaboration data.|
+|10027|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
+|10028|Data Lake Folder Permission||
+|10029|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
+|10030|Data Lake Workspace Permission||
+|10031|Data Processing configuration||
+|10032|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
+|10033|Synapse Link External Table State|Synapse Link external table states|
+|10034|Synapse Link Profile|Synapse Link Profile|
+|10035|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
+|10036|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
+|10037|Synapse Link Schedule|Synapse link schedules|
+|10038|DataflowRefreshHistory||
+|10039|EntityRefreshHistory||
+|10040|Shared Link Setting|Shared Link Setting|
+|10041|CascadeGrantRevokeAccessRecordsTracker||
+|10042|CascadeGrantRevokeAccessVersionTracker||
+|10043|RevokeInheritedAccessRecordsTracker||
+|10044|Model-Driven App Element|Associates a model-driven app with its components.|
+|10045|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10046|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10047|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10048|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10049|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10050|Setting Definition|Contains Setting Definitions|
+|10051|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10052|Service Plan Mapping|Service Plan Mapping|
+|10054|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10057|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10058|Flow Machine||
+|10059|Flow Machine Group||
+|10060|ProcessStageParameter||
+|10061|Workflow Binary||
+|10062|Connection Reference||
+|10063|AI Builder Feedback Loop||
+|10064|AI Form Processing Document||
+|10065|AI Object Detection Image||
+|10066|AI Object Detection Label||
+|10067|AI Object Detection Bounding Box||
+|10068|AI Object Detection Image Mapping||
+|10070|AI Builder Dataset||
+|10071|AI Builder Dataset File||
+|10072|AI Builder Dataset Record||
+|10073|AI Builder Datasets Container||
+|10074|AI Builder File||
+|10075|AI Builder File Attached Data||
+|10076|Help Page||
+|10077|Tour||
+|10078|BotContent||
+|10079|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10080|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10081|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10087|Comment|A collaborative comment on a maker artifact|
+|10088|PDF Setting|PDF Settings to save enabled pdf entities|
+|10089|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10090|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10091|Service Configuration||
+|10092|SLA KPI||
+|10093|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10094|Knowledge Federated Article||
+|10095|Knowledge Federated Article Incident||
+|10096|Search provider||
+|10097|Knowledge Article Image||
+|10098|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10099|Knowledge Search Insight|Knowledge Search Insight|
+|10100|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10101|Knowledge Article Attachment||
+|10102|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10103|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10104|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10105|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10107|Plugin Package||
+|10108|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10109|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10110|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10111|MobileOfflineProfileItemFilter||
+|10112|TeamMobileOfflineProfileMembership||
+|10113|UserMobileOfflineProfileMembership||
+|10114|OrganizationDataSyncSubscription||
+|10115|OrganizationDataSyncSubscriptionEntity||
+|10116|OrganizationDataSyncState|Information regarding data synchronization state|
+|10117|NonRelational Data Source||
+|10118|Notification|Notification to be provided to a user.|
+|10119|Insights Store Data Source||
+|10120|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10121|App Action||
+|10122|App Action Migration||
+|10123|App Action Rule||
+|10126|Rich Text Attachment|Image or file attached to a rich text field|
+|10127|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10128|PM Analysis History||
+|10129|PM Inferred Task||
+|10130|PM Recording||
+|10131|PM Template||
+|10132|Analysis Component||
+|10133|Analysis Job||
+|10134|Analysis Result||
+|10135|Analysis Result Detail||
+|10136|Solution Health Rule||
+|10137|Solution Health Rule Argument||
+|10138|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10219|Flow Machine Image||
+|10220|Flow Machine Image Version||
 
 
 
@@ -1417,6 +1429,8 @@ Listed by **SchemaName**.
 - [slabase_ProcessSessions](#BKMK_slabase_ProcessSessions)
 - [sla_phonecall](#BKMK_sla_phonecall)
 - [manualsla_email](#BKMK_manualsla_email)
+- [chat_sla_slaid](#BKMK_chat_sla_slaid)
+- [chat_sla_slainvokedid](#BKMK_chat_sla_slainvokedid)
 
 
 ### <a name="BKMK_sla_socialactivity"></a> sla_socialactivity
@@ -1806,6 +1820,40 @@ Same as the [manualsla_email](email.md#BKMK_manualsla_email) many-to-one relatio
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|manualsla_email|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_chat_sla_slaid"></a> chat_sla_slaid
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_sla_slaid](chat.md#BKMK_chat_sla_slaid) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_chat_sla_slainvokedid"></a> chat_sla_slainvokedid
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_sla_slainvokedid](chat.md#BKMK_chat_sla_slainvokedid) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>

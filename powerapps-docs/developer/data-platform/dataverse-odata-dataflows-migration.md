@@ -97,15 +97,14 @@ In the **target** environment, create a new dataflow with the OData connector.
     > ![Confirm the column values are correct.](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
 
-    | Column | Description |
-    |--|--|
-    | URL | Provide the Service Root URL in the URL column of the connection settings. |
-    | Connection | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before. |
-    | Connection name | Optionally, rename the connection name, but a value is automatically populated. |  |
-    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service. |
-    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
-
-    > [!IMPORTANT] 
+    | Column                   | Description                                                                                                                          |
+    |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+    | URL                      | Provide the Service Root URL in the URL column of the connection settings.                                                           |
+    | Connection               | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before.               |
+    | Connection name          | Optionally, rename the connection name, but a value is automatically populated.                                                      |
+    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
+    | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
+   > [!IMPORTANT] 
     > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.

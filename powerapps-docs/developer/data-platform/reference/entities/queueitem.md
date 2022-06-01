@@ -1,7 +1,7 @@
 ---
 title: "QueueItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 03/29/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -109,7 +109,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|objectid|
 |RequiredLevel|ApplicationRequired|
-|Targets|activitypointer,appointment,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
+|Targets|activitypointer,appointment,chat,email,fax,knowledgearticle,letter,msdyn_knowledgearticletemplate,phonecall,recurringappointmentmaster,socialactivity,task|
 |Type|Lookup|
 
 
@@ -693,7 +693,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4216|Social Activity|For internal use only.|
 |4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10099|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10090|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10103|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
 
 
 
@@ -1003,6 +1004,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [RecurringAppointmentMaster_QueueItem](#BKMK_RecurringAppointmentMaster_QueueItem)
 - [Letter_QueueItem](#BKMK_Letter_QueueItem)
 - [lk_queueitembase_modifiedby](#BKMK_lk_queueitembase_modifiedby)
+- [chat_QueueItems](#BKMK_chat_QueueItems)
 - [msdyn_knowledgearticletemplate_QueueItems](#BKMK_msdyn_knowledgearticletemplate_QueueItems)
 
 
@@ -1081,6 +1083,12 @@ See the [Letter_QueueItem](letter.md#BKMK_Letter_QueueItem) one-to-many relation
 ### <a name="BKMK_lk_queueitembase_modifiedby"></a> lk_queueitembase_modifiedby
 
 See the [lk_queueitembase_modifiedby](systemuser.md#BKMK_lk_queueitembase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_chat_QueueItems"></a> chat_QueueItems
+
+**Added by**: Activities Patch Solution
+
+See the [chat_QueueItems](chat.md#BKMK_chat_QueueItems) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### <a name="BKMK_msdyn_knowledgearticletemplate_QueueItems"></a> msdyn_knowledgearticletemplate_QueueItems
 

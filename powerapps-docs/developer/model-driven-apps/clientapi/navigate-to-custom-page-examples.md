@@ -3,7 +3,7 @@ title: "Navigating to and from a custom page in your model-driven app using clie
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
@@ -159,6 +159,8 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 ### Open from a grid primary field link as a full page with record ID
 
 This example uses the `recordId` parameter within the [navigateTo](reference/Xrm-Navigation/navigateTo.md) function to provide the custom page with the record to use.  The `Param` function within the custom page retrieves the value and uses the Lookup function to retrieve the record.
+
+A more complete example of this can be found at [Override the default open behavior of data rows in an entity-bound grid](../override-default-open-behavior-grids.md).
 
 1. Create a web resource of type **JScript** and update the **name** parameter to be the logical page name. Add the following code to the web resource.
 
