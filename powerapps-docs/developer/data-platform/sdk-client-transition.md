@@ -52,7 +52,7 @@ Below is a quick summary of the impact to certain types of coding projects.
 
 ## What do you need to do?
 
-The good news is that the class member signatures from the older service client to the new service client are the same, except the client class names are slightly different. Application code should not need any significant changes.
+The good news is that the class member signatures of `ServiceClient` and `CrmServiceClient` are the same, except for the class names themselves being slightly different. Application code should not need any significant changes.
 
 ### .NET Framework based (online) application projects
 
@@ -60,7 +60,7 @@ To update your application projects, follow these steps.
 
 1. Remove the older [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages from your project.
 1. Add the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package to your project.
-1. Change every mention of the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class to `ServiceClient` in your code.
+1. Change every mention of the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class to [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) in your code.
 1. Fix any namespace mismatch as the new `ServiceClient` class is now in the `Microsoft.PowerPlatform.Dataverse.Client` namespace.
 
 ### .NET Core based (online) projects
