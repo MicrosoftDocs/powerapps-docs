@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 04/14/2022
+ms.date: 05/26/2022
 ms.subservice: mda-maker
 ms.topic: article
 search.audienceType: 
@@ -16,9 +16,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Scopes for modern commands (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Scopes for modern commands
 
 Commands have one of three scopes. The scope determines whether a command (`schemaname = appaction`) will render for a table within a single app, for a table across all apps, or for all tables and all apps.
 
