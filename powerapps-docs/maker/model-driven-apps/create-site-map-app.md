@@ -49,7 +49,7 @@ This hierarchical structure is important to enable a good user experience, and t
 
 ## Viewing an app from within the app designer
 
-The same app viewed from within the site map designer shows the corresponding areas, groups and tables.  In this case you are viewing tables within the accounts **Group** and groups within the accounts **Area**.  You can also notice there is another area called **Tasks** that also exists within the app designer.
+The same app viewed from within the site map designer shows the corresponding areas, groups and tables.  In this case you're viewing tables within the accounts **Group** and groups within the accounts **Area**.  You can also notice there's another area called **Tasks** that also exists within the app designer.
 
 :::image type="content" source="media/site-map-designer-demo.png" alt-text="Viewing an app from withing the site map designer":::
 
@@ -69,7 +69,7 @@ In this tutorial several site map tasks are carried out such as creating a new s
   
 The site map designer also lets an app designer define the area, subarea, or group titles in the languages supported by the environment.  
   
-A default site map is created automatically as part of the a model driven app creation process. This can be edited by using the site map designer.
+A default site map is created automatically as part of the model-driven app creation process. This can be edited by using the site map designer.
   
 ## Create a site map for an app  
   
@@ -114,7 +114,7 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
   
      From the **Components** tab, drag the **Area** tile to the empty box on the canvas. An empty box is visible you move the tile the correct place on the canvas.  
   
-2.  Select the area that has just been added. The **Properties** tab highlighted in the pane to the right of the canvas.  
+2.  Select the area that has been added. The **Properties** tab highlighted in the pane to the right of the canvas.  
   
 3.  Add or edit the area properties.  
   
@@ -124,15 +124,15 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
   
     - **Icon**: A default application icon is selected. Select a different icon for the area from the list of web resources available in the solution.  
   
-    - **ID**: A unique ID is automatically generated, but different one can be entered if required. It is best practice to use the provided ID because if the ID entered is not unique, users might get an error when they're using the app, or app designers may get an error when importing a solution that contains this site map.  
+    - **ID**: A unique ID is automatically generated, but different one can be entered if necessary. It's best practice to use the provided ID because if the ID entered isn't unique, users might get an error when they're using the app, or app designers may get an error when importing a solution that contains this site map.  
   
     - **Show Groups**: Select this check box to show groups of subareas in the navigation pane.  
   
      Under **Advanced**, do the following:  
   
-    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Titles can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one title per language.  
+    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Titles can be created, edited, or deleted for as many languages as your organization uses. However, it's only possible to have one title per language.  
   
-    - **More Description**: If an organization uses multiple languages, select a language for the description, enter the description, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one description per language.  
+    - **More Description**: If an organization uses multiple languages, select a language for the description, enter the description, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it's only possible to have one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the area.  
   
@@ -158,13 +158,13 @@ The following sections provide instructions describing how to work with Groups, 
   
     - **Title**: Enter the title for the group in the base language of the organization.  
   
-    - **ID**: A unique ID is automatically generated. Enter a different one if necessary. We recommend using the automatic ID because if the ID entered is not unique, there might be an error when importing a solution containing this site map.  
+    - **ID**: A unique ID is automatically generated. Enter a different one if necessary. We recommend using the automatic ID because if the ID entered isn't unique, there might be an error when importing a solution containing this site map.  
   
      Under **Advanced**, do the following:  
   
-    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title for the group, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Titles can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one title per language.  
+    - **More Titles**: If your organization uses multiple languages, select a language (Locale) for the title, enter the title for the group, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Titles can be created, edited, or deleted for as many languages as your organization uses. However, it's only possible to have one title per language.  
   
-    - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the group, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one description per language.  
+    - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the group, and then select **Add** ![Add button in the site map designer.](media/add-icon-sitemap-designer.png "Add button in the site map designer"). Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it's only possible to have one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the group.  
 
@@ -179,7 +179,7 @@ The following sections provide instructions describing how to work with Groups, 
   
      From the **Components** tab, drag the **Subarea** tile to an empty box under the **Group** section in the canvas. An empty box is visible the tile is moved to the correct place in the canvas.  
   
-2.  Select the subarea that has just been added.  
+2.  Select the subarea that has been added.  
   
 3.  On the **Properties** tab, add or edit the subarea properties:  
   
@@ -194,7 +194,7 @@ The following sections provide instructions describing how to work with Groups, 
       > [!IMPORTANT]
       > Site map subarea URLs that link to an .aspx page aren’t supported.
  
-    - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This column is disabled if **Dashboard** has not been selected in the **Type** drop-down list.  
+    - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This column is disabled if **Dashboard** hasn't been selected in the **Type** drop-down list.  
   
     - **Title**: Enter the title for the subarea in the base language of the organization.  
   
@@ -208,9 +208,9 @@ The following sections provide instructions describing how to work with Groups, 
  
     - **Privileges**: This defines whether a subarea is displayed based on privileges available in any security roles that are assigned to the user. Select the name of the table to check privileges for, and then select the check boxes to assign privileges.
   
-    - **More Titles**: If your organization uses multiple languages, select a language for the title, enter the title for the subarea, and then select **Add**. Titles can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one title per language.  
+    - **More Titles**: If your organization uses multiple languages, select a language for the title, enter the title for the subarea, and then select **Add**. Titles can be created, edited, or deleted for as many languages as your organization uses. However, it's only possible to have one title per language.  
   
-    - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the subarea, and then select **Add**. Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it is only possible to have one description per language.  
+    - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the subarea, and then select **Add**. Descriptions can be created, edited, or deleted for as many languages as your organization uses. However, it's only possible to have one description per language.  
   
     - **SKUs**: Select the versions of Dynamics 365 that display this subarea.  
   
@@ -218,7 +218,7 @@ The following sections provide instructions describing how to work with Groups, 
   
     - **Outlook Shortcut**: Select the icon to display in Dynamics 365 for Outlook.  
   
-    - **Offline Availability**: Select this check box to make this subarea available to users when they are offline in Dynamics 365 for Outlook.  
+    - **Offline Availability**: Select this check box to make this subarea available to users when they're offline in Dynamics 365 for Outlook.  
 <a name="bkmk_OrganizeSite"></a>  
 ## Organize areas, groups, and subareas
 
@@ -277,7 +277,7 @@ The following table explains the clients supported for different site maps.
 
 ## Replace the legacy app with a model-driven app
 
-During the transition from web client to Unified Interface, a legacy app was provided which uses the web client site map. With the web client removed, we are deprecating the legacy app. Subsequently, makers might want to provide a replacement model-driven app for users. In a future release the legacy app will be removed.
+During the transition from web client to Unified Interface, a legacy app was provided which uses the web client site map. With the web client removed, we're deprecating the legacy app. Subsequently, makers might want to provide a replacement model-driven app for users. In a future release, the legacy app will be removed.
 
 By default, the legacy app name is "Dynamics 365 - custom", but could have been renamed within the environment.
 
