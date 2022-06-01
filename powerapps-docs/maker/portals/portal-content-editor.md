@@ -23,7 +23,7 @@ Users with suitable permissions can add, modify, or delete webpages and their co
 
 Users that have been assigned the **Administrator** [web role](configure/create-web-roles.md) will have access to the portal content editor for the entire site.
 
-To provide portal content editor access to individual pages and users, configure [page permissions](/configure/webpage-access-control.md#manage-page-permissions-with-the-portal-management-app) for the specific page, selecting the [grant change](configure/webpage-access-control#grant-change) access type. Associate the page permission rule to a web role assigned to the user.
+To provide portal content editor access to individual pages and users, configure [page permissions](/configure/webpage-access-control.md#manage-page-permissions-with-the-portal-management-app) for the specific page, selecting the [grant change](configure/webpage-access-control.md#grant-change) access type. Associate the page permission rule to a web role assigned to the user.
 
 > [!IMPORTANT]
 > This feature is deprecated.  We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
