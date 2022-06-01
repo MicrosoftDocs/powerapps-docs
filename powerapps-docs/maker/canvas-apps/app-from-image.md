@@ -32,6 +32,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 > [!NOTE]
 > - The styling of the components in the app, such as fonts and colors, will be based on the **Office Blue** theme in Power Apps.
 > - If you want the exact design styles to be preserved when you create your app, consider creating a [canvas app from Figma](figma/overview.md).
+> - Power Apps doesn't persist the image that you upload. The uploaded image is only processed in-memory to generate the app.
 
 ## Prerequisites
 
@@ -135,6 +136,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 - Image size must be less than 4 MB.
 - If you're using screenshots or digital sketches, alter the background to light, pure-color if white is not available.
 - If you're taking a picture, use higher contrast or make it brighter. Make sure the part you want to tag is clear and bright.
+- If you're taking a picture using a camera or phone, use higher contrast to favor light backgrounds. You can use any available photo editing apps to edit the picture contrast.
 - If you're using hand-drawn images, try to use **white** sketch pad without any lines on it.
 
 ## Limitations
