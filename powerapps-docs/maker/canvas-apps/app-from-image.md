@@ -4,7 +4,7 @@ description: Learn about how to use your own designs saved in image formats and 
 author: norliu
 ms.topic: article
 ms.custom: canvas
-ms.date: 05/24/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: norliu
 ms.reviewer: tapanm
@@ -130,11 +130,12 @@ With the **Image to app** feature, you can now create an app from a visual desig
 1. [Save and publish](save-publish-app.md) the app.
 
 ## Image requirements
-- The image you upload should be with the file extension of .jpg or .png. If you have a design image with another file extension, save the image file with .jpg or .png file extension in order to use it with this feature.
-- Image size should be less than 4MB
-- If you're using screenshots or digital sketches, please try to alter background to light, pure-color if white is not avaiable.
+
+- The image you want to upload must have the file extension of .jpg or .png. If you have a design image with another file extension, save the image file with .jpg or .png file extension in order to use it with this feature.
+- Image size must be less than 4 MB.
+- If you're using screenshots or digital sketches, alter the background to light, pure-color if white is not available.
 - If you're taking a picture, use higher contrast or make it brighter. Make sure the part you want to tag is clear and bright.
-- If you're using hand-drawn images, try to use **white** sketch pad with no lines on it.
+- If you're using hand-drawn images, try to use **white** sketch pad without any lines on it.
 
 ## Limitations
 
