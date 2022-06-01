@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
+ms.date: 05/26/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -14,9 +14,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Using Power Fx with commands (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Using Power Fx with commands
 
 This article covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
 
@@ -24,10 +22,6 @@ This article covers aspects of Power Fx that are specific to commanding. Many ot
 - Imperative functions that work with data are supported.
 - Imperative functions for simple `Confirm` and `Notify` are supported.
 - For a list of functions not supported, go to [Functions not supported](#functions-not-supported).
-
-> [!IMPORTANT]
-> - This is a preview feature, and may not be available in all regions.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
 > Publishing Power Fx commands may take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.

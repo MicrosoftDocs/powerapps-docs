@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 04/21/2022
+ms.date: 05/26/2022
 ms.subservice: mda-maker
 ms.topic: overview
 search.audienceType: 
@@ -15,9 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Modern commanding overview (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Modern commanding overview
 
 Commands drive core application behavior for model-driven apps. They are the buttons users interact with when playing apps and the resulting actions performed when a button is selected. Each command is positioned in relation to other commands and bound to a command bar location within the app.
 
@@ -29,25 +27,11 @@ At a high level, command customization fits into the following categories. Vario
 - **Action**. The logic that is executed when a button is selected. For example, creating and updating data or interacting with various controls and pages inside the app.
 - **Visibility**. Logical conditions that specify when a button is visible or hidden to a user. For example, you may want the button visible for some users and hidden for others. Or perhaps the button should only be visible when certain criteria of the data records are satisfied.
 
-> [!IMPORTANT]
-> - This is a preview feature, and may not be available in all regions.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-
 ## Command bar locations
 
 -	**Main grid**. This command bar is displayed when using the left-hand navigation of an app to view a full page list of records in this table.
     > [!div class="mx-imgBorder"]
-    > ![Command bar on main grid](media/commanddesigner-home-grid-location.png "Command bar on main grid")
-    
-- **Main form**. This command bar is displayed on the table’s main forms. This appears at the top of the form and is not the same as the associated view or subgrid view that will appear in different areas of the form.
-    > [!div class="mx-imgBorder"]
-    > ![Main form](media/CommandDesigner-main-form-location.png "Main form")
-    
-- **Subgrid view**. This command bar is displayed on forms of other tables that render this table’s data within a subgrid. For example, the account main form has a subgrid control that lists contact records related to the account record. To edit the below command bar, edit the command bar for the contact table then subgrid view.
-    > [!div class="mx-imgBorder"]
-    > ![Subgrid view](media/CommandDesigner-subrid-location.png "Subgrid view")
-
-- **Associated view**. This command bar is displayed on the form of a parent table when viewing related data in this table. For example, from the main form of an account record select the **Related** tab then select a related table like contacts.
+    > ![Command bar on main grid](media/commanddesigner-home-grid-locatioaccount record select the **Related** tab then select a related table like contacts.
     > [!div class="mx-imgBorder"]
     > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
     
@@ -56,7 +40,7 @@ At a high level, command customization fits into the following categories. Vario
     > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
 
 > [!NOTE]
-> - Less frequently customized command bar locations are not supported in command designer. See the [Global command bar and other ribbons](../../developer/model-driven-apps/ribbons-available.md) sections for more information on customizing commands for these locations.
+> Less frequently customized command bar locations are not supported in command designer. See the [Global command bar and other ribbons](../../developer/model-driven-apps/ribbons-available.md) sections for more information on customizing commands for these locations.
 
 ## Types of commands
 
@@ -72,7 +56,7 @@ At a high level, command customization fits into the following categories. Vario
 
 Classic commands (formerly known as the ribbon) were not customizable using low code. With code, command customizations were difficult, tedious, and error prone. In order to scale commanding to low code as well as use custom pages to converge canvas and model-driven apps, it was vital to reinvent and rebuild the command infrastructure.
 
-Modern commanding offers many new capabilities and is much simpler to use. <!--However, when preview was announced many important parity gaps needed to be addressed. Many of those gaps have since been closed while certain differences do remain. Also note that many perceived gaps were intentionally left behind as they were identified to be not relevant with modern apps commanding design.-->
+Modern commanding offers many new capabilities and is much simpler to use. 
 
 |Capability|Classic |Modern|
 |:----|:----|:----|
@@ -121,8 +105,6 @@ Note classic visibility rules will also be supported soon within modern commands
   - There are several reasons. Sometimes there is visibility logic that will hide the command when running the app. Other times these commands are dynamically injected via custom JavaScript during runtime and are not configurable. 
 - *Why do I see duplicate commands in the designer?*
   - This was a common pattern used with classic commands. Both commands would not show up in runtime as they were controlled by visibility rules. The command designer will show all commands, regardless of their visibility rules. 
-- *Will I receive updates during preview?*
-  - Yes, you’ll receive updates weekly as we continuously ship improvements, new features, and fix bugs.
 
 ### See also
 
