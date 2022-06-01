@@ -1,8 +1,8 @@
 ---
-title: "Transition client applications to the new Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the benefits of and the changes needed to transitions your client application to the next generation Dataverse web service client." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Transition client applications to Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the benefits of and the changes needed to transitions your client application to use Dataverse ServiceClient class for web service connections." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/12/2022
+ms.date: 06/01/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "phecke" # GitHub ID
@@ -17,9 +17,9 @@ search.app:
   - D365CE
 ---
 
-# Transition apps to Dataverse service client
+# Transition apps to Dataverse ServiceClient
 
-The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new service client that uses MSAL for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+The Microsoft Power Platform team is in the process of transitioning our current [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new web service client that uses MSAL for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
 
 > [!NOTE]
 > All our existing developer documentation and sample code use the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Only this article that you are reading describes the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. More documentation and sample code updates are coming.
@@ -30,15 +30,15 @@ There are quite a few good reasons for the changes to the Dataverse SDK for .NET
 
 ### Cross-platform application support
 
-The new Dataverse service client supports .NET Core development. Navigate to [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) and select the **Frameworks** tab to see what build targets are supported.
+The new Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class supports .NET Core development. Navigate to [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) and select the **Frameworks** tab to see what build targets are supported.
 
 ### MSAL authentication
 
-Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new client APIs use MSAL while our older client APIs use ADAL.
+Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API use MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
 
 ### Performance and functional benefits
 
-The new Dataverse service client supports a smaller interface surface, inline authentication by instance, and ILogger. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
+The Dataverse `ServiceClient` class supports a smaller interface surface, inline authentication by instance, and `ILogger`. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
 
 ## What is impacted?
 
@@ -69,7 +69,7 @@ Simply add the [Dataverse.Client](https://www.nuget.org/packages/Microsoft.Power
 
 ### Plug-ins or custom workflow activities
 
-Nothing really for you to do here. Continue using the Microsoft.CrmSdk.CoreAssemblies (and related) NuGet packages with .NET Framework 4.6.2.
+Nothing really for you to do here. Continue using the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages with .NET Framework 4.6.2.
 
 ### On-premise clients
 
@@ -90,6 +90,7 @@ The following table lists some important dates to keep in mind.
 
 ### See also
 
+[ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient)  
 [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)  
 [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)  
 
