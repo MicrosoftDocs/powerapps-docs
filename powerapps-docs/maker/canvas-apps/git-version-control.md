@@ -35,6 +35,7 @@ Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https
 > [!NOTE]
 > - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
+> - Once git version control is enabled, your app's autosave will be disabled. You will have to manually save or sync your changes.
 
 ## Enable Git version control
 
@@ -54,9 +55,6 @@ Follow these steps to enable Git version control in your app.
    > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
-
-> [!NOTE]
-> Once connected, the app can't be disconnected from Git currently. The option to disconnect is coming soon.
 
 Follow these steps to connect your app to Git.
 
