@@ -1,16 +1,15 @@
 ---
 title: Context | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Context
@@ -19,7 +18,7 @@ ms.topic: "article"
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Properties
 
@@ -60,7 +59,7 @@ Model-driven and canvas apps
 
 ### parameters
 
-The data provided to the component. Structure defined by the component’s manifest, corresponding to parameter and dataset nodes.
+The data provided to the component. Structure defined by the component's manifest, corresponding to parameter and dataset nodes.
 
 **Type**: `TInputs`
 

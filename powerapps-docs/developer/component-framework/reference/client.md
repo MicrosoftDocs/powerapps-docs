@@ -1,16 +1,15 @@
 ---
 title: Client | Microsoft Docs
 description: Provides access to the methods to determine which client is being used, whether the client is connected to server, and what kind of device is being used.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Client
@@ -23,7 +22,7 @@ ms.topic: "article"
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Properties
 

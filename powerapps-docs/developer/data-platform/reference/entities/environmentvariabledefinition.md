@@ -1,7 +1,7 @@
 ---
 title: "EnvironmentVariableDefinition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EnvironmentVariableDefinition table/entity."
-ms.date: 04/28/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -36,10 +36,10 @@ Contains information about the settable variable: its type, default value, and e
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAllCompositeDataSources|<xref href="Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?text=RetrieveAllCompositeDataSources Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAllCompositeDataSourcesRequest>|
-|RetrieveCompositeDataSource|<xref href="Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?text=RetrieveCompositeDataSource Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveCompositeDataSourceRequest>|
-|RetrieveEnvironmentVariables|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?text=RetrieveEnvironmentVariables Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveEnvironmentVariablesRequest>|
-|RetrieveEnvironmentVariableValue|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?text=RetrieveEnvironmentVariableValue Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveEnvironmentVariableValueRequest>|
+|RetrieveAllCompositeDataSources|<xref href="Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?text=RetrieveAllCompositeDataSources Function" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest>|
+|RetrieveCompositeDataSource|<xref href="Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?text=RetrieveCompositeDataSource Function" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest>|
+|RetrieveEnvironmentVariables|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?text=RetrieveEnvironmentVariables Function" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest>|
+|RetrieveEnvironmentVariableValue|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?text=RetrieveEnvironmentVariableValue Function" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|

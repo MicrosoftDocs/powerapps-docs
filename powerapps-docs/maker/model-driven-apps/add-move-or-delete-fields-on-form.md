@@ -2,9 +2,8 @@
 title: "Add, configure, move, or delete columns on a form | MicrosoftDocs"
 description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
-ms.date: 02/03/2022
+ms.date: 05/10/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,8 +23,9 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-
 # Add, move, configure, or delete columns on a form
+
+Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app. For information about the different column types, see [Types of columns](../data-platform/types-of-fields.md).
 
 Add, configure, move, or delete columns using the form designer.
 
@@ -84,7 +84,7 @@ The **Properties** tab displays the following properties.
 |**Display options** | **Hide** | When selected, the column is hidden by default and can be shown using code. |
 |**Display options** | **Lock** |  Lock this column so it can't be removed. |
 |**Display options** | **Read-only** | When selected, the column value is not editable. |
-|**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
+|**Formatting** | **Form field width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
 | **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
 
 > [!NOTE]
@@ -94,12 +94,12 @@ The **Properties** tab displays the following properties.
 
 ### Edit a column and view column names
 
-To view column names, such as schema name or to change additional column properties, such as required, searchable, description, and size, follow these steps:
-
-1. Select the column, and then in the right column properties pane select the information icon ![Information icon](../data-platform/media/data-platform-import-export/information-icon-inline.png) next to the column name.
+To view column names, such as schema name or to change additional column properties, such as required, searchable, description, and size, select the column, and then in the right column properties pane select the information icon ![Information icon](../data-platform/media/data-platform-import-export/information-icon-inline.png) next to the column name.
 
    :::image type="content" source="../data-platform/media/data-platform-import-export/column-actions-form-designer.png" alt-text="Select the column information icon.":::
-1. The display and unique names appear. Select **Edit table column** to display the **Edit Table Column** pane where you can make the changes you want.
+
+To edit the column data type format, required, and advanced options, follow these steps.
+1. On the column **Properties** tab, select **Edit table column** to display the **Edit Table Column** pane where you can make the changes you want.
 1. When you're finished making your changes, select **Done**.
 1. Select **Save** and then select **Publish** to make your changes available to app users.
 
@@ -151,22 +151,22 @@ You can move a column on a form using drag and drop or cut and paste actions.
      >   -  If you delete a column by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
      >   -  You can't delete a column that is locked or is required and not present anywhere else on the form. 
 
-## Create a new column on the table when editing a form
+## Create a new column on the table when editing a form (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Create new columns from the form designer. When a column is created on a table, it isn't limited to the current form and is available for use in other forms and views for the table.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - You can use the modern form designer to create any available column type.
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. On the command bar, select **Add column**, or in the left pane, select **Columns**. The **Columns** pane is open by default when the form designer is opened.
-3. In the **Columns** pane, select **+ New column**.
-4. In the **New column** dialog, provide the **Display name** and **Name** for the column.
-5. In the **New column** dialog, select the **Data type** and configure any other required properties of the column.
-
-     > [!NOTE]
-     >   -  Some column types are not available when you create a column from within the form designer. If a column type you want is not available, you can follow the steps outlined in [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
-
-6. Select **Done** to create a new column on the table. The column appears in the **Columns** pane.
-7. If you want to add the newly created column to the form, follow the steps outlined in the [**Add columns to a form**](add-move-or-delete-fields-on-form.md#add-columns-to-a-form) section.
-
-     > [!NOTE]
-     >  When a column is created on the table, it is not limited to the current form and will be available for use in other places.
+1. On the left navigation pane, select the **Table columns** pane, and then select **New table column**.
+1. In the **New column** pane, provide the **Display name** for the column.
+1. Select the **Data type** and configure any other required properties of the column.
+1. Select **Save** to create a new column on the table. The column appears in the **Table columns** pane.
+1. If you want to add the newly created column to the form, follow the steps outlined in the [**Add columns to a form**](add-move-or-delete-fields-on-form.md#add-columns-to-a-form) section.
 
 ### See also
 

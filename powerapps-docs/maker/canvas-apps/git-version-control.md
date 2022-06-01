@@ -35,6 +35,7 @@ Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https
 > [!NOTE]
 > - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
+> - Once git version control is enabled, your app's autosave will be disabled. You will have to manually save or sync your changes.
 
 ## Enable Git version control
 
@@ -54,9 +55,6 @@ Follow these steps to enable Git version control in your app.
    > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
-
-> [!NOTE]
-> Once connected, the app can't be disconnected from Git currently. The option to disconnect is coming soon.
 
 Follow these steps to connect your app to Git.
 
@@ -130,7 +128,6 @@ Each save or synchronize that includes changes will result in a commit in Git. I
 Since this feature is experimental, we welcome your feedback. The following lists known limitations. We plan to remove most of these limitations in future versions.
 
 - This feature isn't compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf.md). Don't use this feature with apps that make of use of code components.
-- This feature doesn't work with public Git repository. Use a private repo instead.
 - This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
 - Edits to the same property on the same control aren't merged. The last edit made will win.
 - You can't restore a canvas app to a previous version using the steps described in [Restore an app](restore-an-app.md) article. Instead, you'll have to use Git for restoring the app to a previous version. For more information, see the following resources:
