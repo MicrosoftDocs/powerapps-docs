@@ -1,15 +1,15 @@
 ---
 title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
-description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
-keywords:
-ms.author: jdaly
+description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Common issues and workarounds
@@ -152,5 +152,12 @@ Currently there is an issue with canvas app datasets bound to code components. W
 
 No workaround as of now. A fix for this issue is being deployed.
 
+## Authentication for third party services fails in Canvas
+
+PCF authentication for third parties is not supported.
+
+**Workaround**
+
+Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: "MobileOfflineProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfile table/entity."
-ms.date: 03/29/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -629,6 +629,7 @@ Listed by **SchemaName**.
 - [DefaultMobileOfflineProfile_Organization](#BKMK_DefaultMobileOfflineProfile_Organization)
 - [MobileOfflineProfile_MobileOfflineProfileItem](#BKMK_MobileOfflineProfile_MobileOfflineProfileItem)
 - [MobileOfflineProfile_SystemUser](#BKMK_MobileOfflineProfile_SystemUser)
+- [mobileofflineprofile_mobileofflineprofile](#BKMK_mobileofflineprofile_mobileofflineprofile)
 
 
 ### <a name="BKMK_DefaultMobileOfflineProfile_Organization"></a> DefaultMobileOfflineProfile_Organization
@@ -674,6 +675,23 @@ Same as the [MobileOfflineProfile_SystemUser](systemuser.md#BKMK_MobileOfflinePr
 |ReferencedEntityNavigationPropertyName|MobileOfflineProfile_SystemUser|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mobileofflineprofile_mobileofflineprofile"></a> mobileofflineprofile_mobileofflineprofile
+
+**Added by**: MobileOfflineDirectDeviceSync Solution
+
+Same as the [mobileofflineprofile_mobileofflineprofile](mobileofflineprofileitemfilter.md#BKMK_mobileofflineprofile_mobileofflineprofile) many-to-one relationship for the [mobileofflineprofileitemfilter](mobileofflineprofileitemfilter.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|mobileofflineprofileitemfilter|
+|ReferencingAttribute|mobileofflineprofileid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|mobileofflineprofile_mobileofflineprofile|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

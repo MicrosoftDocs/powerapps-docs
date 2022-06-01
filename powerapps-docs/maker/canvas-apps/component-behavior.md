@@ -2,10 +2,9 @@
 title: Behavior formulas for components (preview)
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: hemantgaur
-
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2020
+ms.date: 06/01/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -21,9 +20,16 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances.
 
 For example, set a component's **OnReset** property to one or more formulas that do initialization and clear input. Reset values when the **Reset** function runs on the component instances.
+
+> [!NOTE]
+> The capability of using **OnReset** property for behavior formulas inside components is generally available. All other custom behavior properties for canvas components are still in preview.
 
 ## OnReset
 
@@ -63,8 +69,11 @@ To do so, check **Raise OnReset when value changes** of the default input prope
 
 ### See also
 
-- [Canvas app components overview](create-component.md)
-- [Canvas app components library](component-library.md)
-
+- [Canvas components](create-component.md)
+- [Component library](component-library.md)
+- [Component library application lifecycle management (ALM)](component-library.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

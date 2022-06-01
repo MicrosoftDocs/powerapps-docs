@@ -4,7 +4,7 @@ description: Learn about the details, properties and examples of the attachments
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/17/2022
+ms.date: 05/05/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -28,18 +28,18 @@ An **Attachments** control lets you open, add, and delete files from a list or a
 
 The attachment control has these limitations:
 
-1. Attachments are supported with lists and Dataverse tables.
+1. The attachment control only supports lists and Dataverse tables as the data sources.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
 1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
 
 ## Key properties
-**[Items](properties-core.md)** – The source describing the files that can be downloaded.
+**[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment. 1 MB here is 1,000,000 bytes (10<sup>6</sup> B) or 1,000 KB.
 
 **OnAddFile** – Actions to perform when the user adds a new file attachment.
 

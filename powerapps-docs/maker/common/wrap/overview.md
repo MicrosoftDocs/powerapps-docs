@@ -1,11 +1,11 @@
 ﻿---
-title: Overview of Wrap (preview)
+title: Overview of wrap
 description: Learn about the wrap functionality in Power Apps.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/07/2022
+ms.date: 05/31/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -17,9 +17,7 @@ contributors:
   - larryk78
 ---
 
-# Overview of Wrap (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Overview of wrap
 
 The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps, for native distribution to mobile users.
 
@@ -33,12 +31,7 @@ The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as cus
 - **Multiple canvas apps support**&mdash;bundle multiple apps in a single mobile app
 - **Enterprise governance with Microsoft Intune**&mdash;protect your data with app management
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] To submit feedback, or report a problem with this feature, send an email to <pamobsup@microsoft.com>.
-> - This preview feature is initially available only in North America (NAM) environments.
-
-## Overview
+## Understand wrap process
 
 The **wrap** feature in Power Apps lets you *wrap* your canvas apps as custom-branded Android and iOS apps for distribution to mobile users through Intune or other native distribution channels.
 
@@ -75,6 +68,28 @@ Wrap supports customization of the mobile app bootstrap experience to match the 
 
 Branding customization options are available when you're building your wrap project. More information: [Configure appearance in the wrap project](how-to.md#appearance)
 
+## System requirements
+
+The following list explains what you'll need before you can start using wrap feature to publish one or more canvas apps as a mobile app package.
+
+### Permissions and access requirements
+
+- Access to one or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project
+- Access to [Power Platform admin center](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) to [install the wrap feature](how-to.md#prerequisites)
+- Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
+- Access to [Microsoft App Center](https://appcenter.ms/)
+
+### Software and device requirements
+
+- Mac device for [code signing with iOS](code-sign-ios.md)
+- Windows PC for [code signing with Android](code-sign-android.md)
+- To run the wrapped mobile app:
+    - Android device with version 10 or higher
+    - iOS device with version 14 or higher
+
+> [!NOTE]
+> Developing apps for the iOS platform requires an [Apple Developer Program](https://developer.apple.com/) account.
+
 ## Understand wrap terminology
 
 Wrap involves multiple components across Power Apps, App Center, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
@@ -109,7 +124,6 @@ Intended platforms for the app that you want to go through the build process for
 
 - **iOS** creates IPA package
 - **Android** creates APK package
-- **Google Play Store** creates AAB package
 
 ### Application (client) ID
 
@@ -145,10 +159,10 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 ## Next steps
 
-[Wrap canvas apps as a native mobile app (preview)](how-to.md)
+[Wrap canvas apps as a native mobile app](how-to.md)
 
 ### See also
 
-- [Code sign on iOS (preview)](code-sign-ios.md)
-- [Code sign on Android (preview)](code-sign-Android.md)
+- [Code sign on iOS](code-sign-ios.md)
+- [Code sign on Android](code-sign-Android.md)
 - [Frequently Asked Questions](faq.yml)

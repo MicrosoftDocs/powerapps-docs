@@ -24,6 +24,10 @@
   href: annualfiscalcalendar.md
 - name: appaction
   href: appaction.md
+- name: appactionmigration
+  href: appactionmigration.md
+- name: appactionrule
+  href: appactionrule.md
 - name: AppConfig
   href: appconfig.md
 - name: AppConfigInstance
@@ -72,6 +76,8 @@
   href: catalogassignment.md
 - name: Category
   href: category.md
+- name: chat
+  href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
 - name: Connection
@@ -166,6 +172,10 @@
   href: flowmachine.md
 - name: flowmachinegroup
   href: flowmachinegroup.md
+- name: flowmachineimage
+  href: flowmachineimage.md
+- name: flowmachineimageversion
+  href: flowmachineimageversion.md
 - name: flowsession
   href: flowsession.md
 - name: Goal
@@ -224,6 +234,8 @@
   href: mobileofflineprofileitem.md
 - name: MobileOfflineProfileItemAssociation
   href: mobileofflineprofileitemassociation.md
+- name: mobileofflineprofileitemfilter
+  href: mobileofflineprofileitemfilter.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
 - name: msdyn_AIBDataset
@@ -272,6 +284,8 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_datalakeds
+  href: msdyn_datalakeds.md
 - name: msdyn_entityrefreshhistory
   href: msdyn_entityrefreshhistory.md
 - name: msdyn_federatedarticle
@@ -280,6 +294,8 @@
   href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
+- name: msdyn_InsightsStoreVirtualEntity
+  href: msdyn_insightsstorevirtualentity.md
 - name: msdyn_kalanguagesetting
   href: msdyn_kalanguagesetting.md
 - name: msdyn_kbattachment
@@ -306,10 +322,14 @@
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
+- name: msdyn_pmanalysishistory
+  href: msdyn_pmanalysishistory.md
 - name: msdyn_pminferredtask
   href: msdyn_pminferredtask.md
 - name: msdyn_pmrecording
   href: msdyn_pmrecording.md
+- name: msdyn_pmtemplate
+  href: msdyn_pmtemplate.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
 - name: msdyn_serviceconfiguration
@@ -452,6 +472,10 @@
   href: serviceplanmapping.md
 - name: SharedLinkSetting
   href: sharedlinksetting.md
+- name: sharedobject
+  href: sharedobject.md
+- name: sharedworkspace
+  href: sharedworkspace.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite

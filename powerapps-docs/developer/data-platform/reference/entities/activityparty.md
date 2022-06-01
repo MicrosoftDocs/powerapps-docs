@@ -1,7 +1,7 @@
 ---
 title: "ActivityParty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActivityParty table/entity."
-ms.date: 03/29/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -526,6 +526,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [email_activity_parties](#BKMK_email_activity_parties)
 - [fax_activity_parties](#BKMK_fax_activity_parties)
 - [activitypointer_activity_parties](#BKMK_activitypointer_activity_parties)
+- [chat_activity_parties](#BKMK_chat_activity_parties)
 
 
 ### <a name="BKMK_account_activity_parties"></a> account_activity_parties
@@ -583,6 +584,12 @@ See the [fax_activity_parties](fax.md#BKMK_fax_activity_parties) one-to-many rel
 ### <a name="BKMK_activitypointer_activity_parties"></a> activitypointer_activity_parties
 
 See the [activitypointer_activity_parties](activitypointer.md#BKMK_activitypointer_activity_parties) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
+
+### <a name="BKMK_chat_activity_parties"></a> chat_activity_parties
+
+**Added by**: Activities Patch Solution
+
+See the [chat_activity_parties](chat.md#BKMK_chat_activity_parties) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### See also
 
