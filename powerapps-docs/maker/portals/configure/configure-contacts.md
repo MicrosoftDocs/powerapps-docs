@@ -29,7 +29,7 @@ Complete the change password workflow, and the necessary fields will be automati
 ## Change password for a contact from the Portal Management app
 
 > [!NOTE]
-> You will need to be assigned the **System Administrator** security role to perform these steps.
+> You will need to be assigned the **System Administrator** [security role](/power-platform/admin/database-security) to perform these steps.
 
 1. Open the [Portal Management app](configure-portal.md).
 
