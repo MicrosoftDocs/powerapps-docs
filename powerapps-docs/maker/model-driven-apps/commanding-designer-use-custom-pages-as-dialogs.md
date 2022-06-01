@@ -6,8 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
-
+ms.date: 05/26/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -15,13 +14,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Open custom pages as dialogs and use cloud flows (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Open custom pages as dialogs and use cloud flows
 
 This sample demonstrates how you can build simple custom pages that open as dialogs when a command is clicked. You may also call a cloud flow from the custom page dialog. 
 
 ## Prerequisites
+
 - [Add a custom page to your model-driven app](add-page-to-model-app.md)
 - Optionally [trigger a cloud flow from the custom page](../../maker/canvas-apps/using-logic-flows.md)
 

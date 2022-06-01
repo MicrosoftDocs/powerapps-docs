@@ -1,6 +1,41 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-sections.md",
+      "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formContext-ui-tab-sections",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getLabel.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getLabel",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getName.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getName",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getParent.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getParent",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getVisible.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getVisible",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/setLabel.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/setLabel",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/setVisible.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/setVisible",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/embedding-sdk.md",
       "redirect_url": "/power-apps/maker/canvas-apps/dev-enterprise-intro",
       "redirect_document_id": "false"
@@ -6432,7 +6467,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/portals/supported-web-browsers.md",
-      "redirect_url": "power-apps/limits-and-config.md",
+      "redirect_url": "/power-apps/limits-and-config",
       "redirect_document_id": "false"
     }
   ]
