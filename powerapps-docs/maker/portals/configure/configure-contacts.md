@@ -17,6 +17,8 @@ contributors:
 
 # Configure a contact for use on a portal
 
+The following instructions will outline how to provide access to a portal for a new or existing contact in Microsoft Dataverse.
+
 > [!IMPORTANT]
 > - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 
