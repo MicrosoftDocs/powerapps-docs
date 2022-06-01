@@ -29,7 +29,7 @@ Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that 
 For example, set a component's **OnReset** property to one or more formulas that do initialization and clear input. Reset values when the **Reset** function runs on the component instances.
 
 > [!NOTE]
-> The capability of using **OnReset** property for behavior formulas inside components is generally available. All other custom behavior properties for canvas components are still in preview.
+> To use behavior formulas inside components, you can only use the **OnReset** property (available by default for all components) in a production environment currently. Creating custom behavioral properties is currently in preview.
 
 ## OnReset
 
