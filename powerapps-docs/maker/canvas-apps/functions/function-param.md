@@ -2,11 +2,10 @@
 title: Launch and Param functions in Power Apps
 description: Reference information including syntax and examples for the Launch and Param functions in Power Apps.
 author: gregli-msft
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 05/25/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -127,6 +126,142 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 **Param**( *ParameterName* )
 
 * *ParameterName* - Required.  The name of the parameter passed to the app.
+
+### Reserved parameters
+
+The following keywords are reserved for internal use, and shouldn't be used as a custom parameter in the **Param()** function:
+
+:::row:::
+   :::column span="":::
+      amp%3Bauthmode
+   :::column-end:::
+   :::column span="":::
+      amp%3Benableonbehalfof
+   :::column-end:::
+   :::column span="":::
+      amp%3Bhidenavbar
+   :::column-end:::
+   :::column span="":::
+      amp%3Blocale
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      appmetadataversion
+   :::column-end:::
+   :::column span="":::
+      authmode
+   :::column-end:::
+   :::column span="":::
+      channeltype
+   :::column-end:::
+   :::column span="":::
+      correlationid
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      delegatelaunchurl
+   :::column-end:::
+   :::column span="":::
+      delegatelaunchurl
+   :::column-end:::
+   :::column span="":::
+      disablepreviewredirect
+   :::column-end:::
+   :::column span="":::
+      embedderorigin
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      enableonbehalfof
+   :::column-end:::
+   :::column span="":::
+      groupid
+   :::column-end:::
+   :::column span="":::
+      hideappsplash
+   :::column-end:::
+   :::column span="":::
+      hidenavbar
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      hint
+   :::column-end:::
+   :::column span="":::
+      hostclienttype
+   :::column-end:::
+   :::column span="":::
+      hostmode
+   :::column-end:::
+   :::column span="":::
+      iframecontainerid
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      isfullscreen
+   :::column-end:::
+   :::column span="":::
+      ispreviewmode
+   :::column-end:::
+   :::column span="":::
+      locale
+   :::column-end:::
+   :::column span="":::
+      packageproperties
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      screencolor
+   :::column-end:::
+   :::column span="":::
+      sdkversion
+   :::column-end:::
+   :::column span="":::
+      site
+   :::column-end:::
+   :::column span="":::
+      skipappmetadata
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      skipiframecreation
+   :::column-end:::
+   :::column span="":::
+      skiplaunchappcache
+   :::column-end:::
+   :::column span="":::
+      source
+   :::column-end:::
+   :::column span="":::
+      standaloneconsent
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      teamid
+   :::column-end:::
+   :::column span="":::
+      teamtype
+   :::column-end:::
+   :::column span="":::
+      tenantId
+   :::column-end:::
+   :::column span="":::
+      theme
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      userteamrole
+   :::column-end:::
+:::row-end:::
 
 ## Examples
 

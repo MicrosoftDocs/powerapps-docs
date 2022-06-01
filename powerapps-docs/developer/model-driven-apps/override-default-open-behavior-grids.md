@@ -4,7 +4,7 @@ description: "Provides information on how to override the default open behavior 
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -19,6 +19,8 @@ contributors:
 ---
 
 # Override the default open behavior of data rows in an entity-bound grid
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 By default, performing any of the following actions in a data row in an entity-bound grid opens the table record:
 

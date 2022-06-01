@@ -4,7 +4,7 @@ description: "Learn about exporting the ribbon definitions." # 115-145 character
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -18,6 +18,8 @@ contributors:
   - caburk
 ---
 # Export ribbon definitions
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 To effectively define changes to the default RibbonXml, you must be able to reference the RibbonXml data that defines those ribbons.  
   

@@ -1,16 +1,16 @@
 ---
 title: "Create a model-driven app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a dataset code component, deploy it, and configure it inside a model-driven app using Visual Studio Code."
-ms.custom: "intro-internal"
-ms.topic: "index-page"
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: tutorial
+ms.subservice: pcf
 contributors:
-    - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 # Tutorial: Creating a model-driven app dataset component

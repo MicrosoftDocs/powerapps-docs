@@ -4,7 +4,7 @@ description: "Learn about defining specific rules to control when the ribbon ele
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -19,6 +19,8 @@ contributors:
 ---
 
 # Define ribbon enable rules
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 When configuring ribbon elements, you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
 
