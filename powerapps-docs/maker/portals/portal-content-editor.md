@@ -4,7 +4,7 @@ description: Learn how to use the inline editor on a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
-ms.date: 06/01/2022
+ms.date: 06/02/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -21,6 +21,8 @@ ms.custom: intro-internal
 
 > [!IMPORTANT]
 > This feature is deprecated.  We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
+>
+> **This feature will be removed by April 2023.**
 
 Users with suitable permissions can add, modify, or delete webpages and their content using the **portal content editor**. 
 
