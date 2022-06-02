@@ -31,7 +31,18 @@ To create a marker, print out the image below or display the image on a monitor 
 
 ## Enable marker detection
 
-To enable marker detection for the **View in MR** and **View Shape in MR** controls set the **Enable marker detection** property to **On** in the properties panel or the formula bar.
+Enable marker detection for the **View in MR** and **View Shape in MR** controls.
+
+With an app open for editing in [Power Apps
+Studio](https://create.powerapps.com/):
+
+1. Open the **Insert** tab.
+
+2. Expand **Mixed reality**.
+
+3. Select **View Shape in MR** or **Markup in MR** control.
+
+4. On the **Properties** tab set the the **Enable marker detection** property to **On** in the properties panel or the formula bar.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
 
