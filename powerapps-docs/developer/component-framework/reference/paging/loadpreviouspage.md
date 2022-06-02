@@ -16,6 +16,10 @@ contributors:
 
 [!INCLUDE [loadpreviouspage-description](includes/loadpreviouspage-description.md)]
 
+> [!NOTE]
+> `loadPreviousPage` does not support parallel execution.
+> Executing `loadPreviousPage` will trigger `updateView` on the control.
+
 ## Available for
 
 Model-driven and canvas apps

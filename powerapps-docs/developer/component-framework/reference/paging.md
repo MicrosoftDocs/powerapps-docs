@@ -42,7 +42,7 @@ Whether the result set can be paged backwards.
 
 ### lastPageNumber
 
-Last page number. 
+Last page number.
 
 **Type**: `number`
 
@@ -73,6 +73,10 @@ Total number of results on the server for the current query.
 | [loadPreviousPage](paging/loadpreviouspage.md) | [!INCLUDE [loadpreviouspage-description](paging/includes/loadpreviouspage-description.md)] |
 | [reset](paging/reset.md)                       | [!INCLUDE [reset-description](paging/includes/reset-description.md)]                       |
 | [setPageSize](paging/setpagesize.md)           | [!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]           |
+
+> [!NOTE]
+> `loadExactPage`, `loadNextPage`, `loadPreviousPage` do not support parallel execution.
+> Executing any of them will trigger `updateView` on the control.
 
 ### Related topics
 
