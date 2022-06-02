@@ -1,8 +1,8 @@
 ---
-title: "SdkMessageProcessingStepImage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SdkMessageProcessingStepImage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStepImage table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -418,10 +418,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -614,27 +614,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_sdkmessageprocessingstepimage_createdonbehalfby"></a> lk_sdkmessageprocessingstepimage_createdonbehalfby
 
-See systemuser Table [lk_sdkmessageprocessingstepimage_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstepimage_createdonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessageprocessingstepimage_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstepimage_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessageprocessingstepimage_modifiedonbehalfby"></a> lk_sdkmessageprocessingstepimage_modifiedonbehalfby
 
-See systemuser Table [lk_sdkmessageprocessingstepimage_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstepimage_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessageprocessingstepimage_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstepimage_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage"></a> sdkmessageprocessingstepid_sdkmessageprocessingstepimage
 
-See sdkmessageprocessingstep Table [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](sdkmessageprocessingstep.md#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage) One-To-Many relationship.
+See the [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](sdkmessageprocessingstep.md#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage) one-to-many relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 ### <a name="BKMK_createdby_sdkmessageprocessingstepimage"></a> createdby_sdkmessageprocessingstepimage
 
-See systemuser Table [createdby_sdkmessageprocessingstepimage](systemuser.md#BKMK_createdby_sdkmessageprocessingstepimage) One-To-Many relationship.
+See the [createdby_sdkmessageprocessingstepimage](systemuser.md#BKMK_createdby_sdkmessageprocessingstepimage) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sdkmessageprocessingstepimage"></a> organization_sdkmessageprocessingstepimage
 
-See organization Table [organization_sdkmessageprocessingstepimage](organization.md#BKMK_organization_sdkmessageprocessingstepimage) One-To-Many relationship.
+See the [organization_sdkmessageprocessingstepimage](organization.md#BKMK_organization_sdkmessageprocessingstepimage) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_modifiedby_sdkmessageprocessingstepimage"></a> modifiedby_sdkmessageprocessingstepimage
 
-See systemuser Table [modifiedby_sdkmessageprocessingstepimage](systemuser.md#BKMK_modifiedby_sdkmessageprocessingstepimage) One-To-Many relationship.
+See the [modifiedby_sdkmessageprocessingstepimage](systemuser.md#BKMK_modifiedby_sdkmessageprocessingstepimage) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

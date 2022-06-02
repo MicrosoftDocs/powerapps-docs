@@ -147,11 +147,11 @@ By understanding how Power Apps generates an app, you can build one yourself tha
 To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern.
 
 > [!NOTE]
-> If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+> If you use a list created using Microsoft Lists, a SharePoint library, or an Excel table that contains column names with spaces as your data source, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
-To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
+To follow the rest of this topic exactly, create a list named "Ice Cream" that contains this data:
 
-![Ice cream SharePoint list.](./media/working-with-forms/sharepointlist-icecream.png)
+![Ice cream list.](./media/working-with-forms/sharepointlist-icecream.png)
 
 * Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
   

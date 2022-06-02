@@ -1,17 +1,15 @@
 ---
 title: DateFormattingInfo | Microsoft Docs
 description: Provides the date formatting information for the current user.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 4e7d43fb-b6b7-4f1d-89e3-0b8157c9d2d9
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # DateFormattingInfo

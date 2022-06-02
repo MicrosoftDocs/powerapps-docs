@@ -1,8 +1,8 @@
 ---
-title: "SLAItem table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SLAItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLAItem table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -65,6 +65,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Description](#BKMK_Description)
 - [FailureAfter](#BKMK_FailureAfter)
 - [msdyn_AdvancedPauseConfiguration](#BKMK_msdyn_AdvancedPauseConfiguration)
+- [msdyn_CustomTimeCalculation](#BKMK_msdyn_CustomTimeCalculation)
+- [msdyn_CustomTimeCalculationWorkflowId](#BKMK_msdyn_CustomTimeCalculationWorkflowId)
 - [msdyn_PauseConfigurationXml](#BKMK_msdyn_PauseConfigurationXml)
 - [msdyn_slakpiid](#BKMK_msdyn_slakpiid)
 - [Name](#BKMK_Name)
@@ -137,10 +139,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -263,11 +265,52 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_msdyn_CustomTimeCalculation"></a> msdyn_CustomTimeCalculation
+
+**Added by**: Service Level Agreement (SLA) Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Custom Time Calculation Flag|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_customtimecalculation|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_CustomTimeCalculation Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_msdyn_CustomTimeCalculationWorkflowId"></a> msdyn_CustomTimeCalculationWorkflowId
+
+**Added by**: Service Level Agreement (SLA) Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Custom Time Calculation Workflow associated with SLA Item.|
+|DisplayName|Custom Time Calculation Workflow|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_customtimecalculationworkflowid|
+|RequiredLevel|None|
+|Targets|workflow|
+|Type|Lookup|
 
 
 ### <a name="BKMK_msdyn_PauseConfigurationXml"></a> msdyn_PauseConfigurationXml
@@ -510,6 +553,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_customtimecalculationworkflowidName](#BKMK_msdyn_customtimecalculationworkflowidName)
 - [msdyn_slakpiidName](#BKMK_msdyn_slakpiidName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -702,10 +746,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -811,6 +855,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_customtimecalculationworkflowidName"></a> msdyn_customtimecalculationworkflowidName
+
+**Added by**: Service Level Agreement (SLA) Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_customtimecalculationworkflowidname|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
@@ -974,7 +1036,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SLAItem_SyncErrors"></a> SLAItem_SyncErrors
 
-Same as syncerror table [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncErrors) Many-To-One relationship.
+Same as the [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -991,7 +1053,7 @@ Same as syncerror table [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncError
 
 **Added by**: Service Level Agreement (SLA) Extension Solution
 
-Same as slakpiinstance table [msdyn_slaitem_slakpiinstance](slakpiinstance.md#BKMK_msdyn_slaitem_slakpiinstance) Many-To-One relationship.
+Same as the [msdyn_slaitem_slakpiinstance](slakpiinstance.md#BKMK_msdyn_slaitem_slakpiinstance) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1018,45 +1080,50 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [slaitembase_workflowid](#BKMK_slaitembase_workflowid)
 - [calendar_slaitem](#BKMK_calendar_slaitem)
 - [msdyn_msdyn_slakpi_slaitem](#BKMK_msdyn_msdyn_slakpi_slaitem)
+- [msdyn_workflow_slaitem_customtimecalculationworkflowid](#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid)
 
 
 ### <a name="BKMK_lk_slaitembase_createdby"></a> lk_slaitembase_createdby
 
-See systemuser Table [lk_slaitembase_createdby](systemuser.md#BKMK_lk_slaitembase_createdby) One-To-Many relationship.
+See the [lk_slaitembase_createdby](systemuser.md#BKMK_lk_slaitembase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_slaitembase_modifiedonbehalfby"></a> lk_slaitembase_modifiedonbehalfby
 
-See systemuser Table [lk_slaitembase_modifiedonbehalfby](systemuser.md#BKMK_lk_slaitembase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_slaitembase_modifiedonbehalfby](systemuser.md#BKMK_lk_slaitembase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_slaitembase_createdonbehalfby"></a> lk_slaitembase_createdonbehalfby
 
-See systemuser Table [lk_slaitembase_createdonbehalfby](systemuser.md#BKMK_lk_slaitembase_createdonbehalfby) One-To-Many relationship.
+See the [lk_slaitembase_createdonbehalfby](systemuser.md#BKMK_lk_slaitembase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_SLAItem"></a> TransactionCurrency_SLAItem
 
-See transactioncurrency Table [TransactionCurrency_SLAItem](transactioncurrency.md#BKMK_TransactionCurrency_SLAItem) One-To-Many relationship.
+See the [TransactionCurrency_SLAItem](transactioncurrency.md#BKMK_TransactionCurrency_SLAItem) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_sla_slaitem_slaId"></a> sla_slaitem_slaId
 
-See sla Table [sla_slaitem_slaId](sla.md#BKMK_sla_slaitem_slaId) One-To-Many relationship.
+See the [sla_slaitem_slaId](sla.md#BKMK_sla_slaitem_slaId) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_lk_slaitembase_modifiedby"></a> lk_slaitembase_modifiedby
 
-See systemuser Table [lk_slaitembase_modifiedby](systemuser.md#BKMK_lk_slaitembase_modifiedby) One-To-Many relationship.
+See the [lk_slaitembase_modifiedby](systemuser.md#BKMK_lk_slaitembase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_slaitembase_workflowid"></a> slaitembase_workflowid
 
-See workflow Table [slaitembase_workflowid](workflow.md#BKMK_slaitembase_workflowid) One-To-Many relationship.
+See the [slaitembase_workflowid](workflow.md#BKMK_slaitembase_workflowid) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem
 
-See calendar Table [calendar_slaitem](calendar.md#BKMK_calendar_slaitem) One-To-Many relationship.
+See the [calendar_slaitem](calendar.md#BKMK_calendar_slaitem) one-to-many relationship for the [calendar](calendar.md) table/entity.
 
 ### <a name="BKMK_msdyn_msdyn_slakpi_slaitem"></a> msdyn_msdyn_slakpi_slaitem
 
 **Added by**: Service Level Agreement (SLA) Extension Solution
 
-See msdyn_slakpi Table [msdyn_msdyn_slakpi_slaitem](msdyn_slakpi.md#BKMK_msdyn_msdyn_slakpi_slaitem) One-To-Many relationship.
+See the [msdyn_msdyn_slakpi_slaitem](msdyn_slakpi.md#BKMK_msdyn_msdyn_slakpi_slaitem) one-to-many relationship for the [msdyn_slakpi](msdyn_slakpi.md) table/entity.
+
+### <a name="BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid"></a> msdyn_workflow_slaitem_customtimecalculationworkflowid
+
+See the [msdyn_workflow_slaitem_customtimecalculationworkflowid](workflow.md#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 

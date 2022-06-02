@@ -1,17 +1,15 @@
 ---
 title: DataSet in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # DataSet
@@ -101,7 +99,7 @@ The column filtering for the current query. This is supported in both model-driv
 
 **Type**: [Filtering](filtering.md)
 
-### linking 
+### linking
 
 Defines the linked table information. This is supported only in model-driven apps.
 
@@ -144,7 +142,7 @@ The sorting status for the current query. This is supported in both model-driven
 > Sorting feature is only available to Dataverse data source.
 > Also, if sorting is re-configured it will reset the filter `context.parameters.[dataset_property_name].filtering`
 
-**Type**: `[SortStatus](sortstatus.md)[]`
+**Type**: [SortStatus](sortstatus.md)[]
 
 ## Methods
 

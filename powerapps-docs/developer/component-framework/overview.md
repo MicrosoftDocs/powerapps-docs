@@ -2,18 +2,15 @@
 title: "Power Apps component framework overview in Microsoft Dataverse(contains video) | Microsoft Docs"
 description: "Use the Power Apps component framework to create code components to provide an enhanced experiences for people to view and work with data in forms, views, and dashboards."
 keywords: "Component Framework, code components, Power Apps controls"
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.custom:
-  - "dyn365-a11y"
-  - "dyn365-developer"
 ms.topic: overview
-ms.assetid: 7923e36d-3640-49f7-9f2f-c97358a632db
 ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Power Apps component framework overview

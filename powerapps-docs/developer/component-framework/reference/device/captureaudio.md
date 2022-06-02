@@ -1,17 +1,15 @@
 ---
 title: CaptureAudio | Microsoft Docs
 description: Invokes the device microphone to record audio.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 3e6a82ab-dbb2-4a60-acc2-c4f1012a8630
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # captureAudio

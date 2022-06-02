@@ -1,8 +1,8 @@
 ---
-title: "TransformationMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TransformationMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TransformationMapping table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -392,10 +392,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -588,7 +588,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_TransformationParameterMapping_TransformationMapping"></a> TransformationParameterMapping_TransformationMapping
 
-Same as transformationparametermapping table [TransformationParameterMapping_TransformationMapping](transformationparametermapping.md#BKMK_TransformationParameterMapping_TransformationMapping) Many-To-One relationship.
+Same as the [TransformationParameterMapping_TransformationMapping](transformationparametermapping.md#BKMK_TransformationParameterMapping_TransformationMapping) many-to-one relationship for the [transformationparametermapping](transformationparametermapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -615,23 +615,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_transformationmapping_modifiedonbehalfby"></a> lk_transformationmapping_modifiedonbehalfby
 
-See systemuser Table [lk_transformationmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_transformationmapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_transformationmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_transformationmapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_transformationmapping_createdonbehalfby"></a> lk_transformationmapping_createdonbehalfby
 
-See systemuser Table [lk_transformationmapping_createdonbehalfby](systemuser.md#BKMK_lk_transformationmapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_transformationmapping_createdonbehalfby](systemuser.md#BKMK_lk_transformationmapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_transformationmapping_modifiedby"></a> lk_transformationmapping_modifiedby
 
-See systemuser Table [lk_transformationmapping_modifiedby](systemuser.md#BKMK_lk_transformationmapping_modifiedby) One-To-Many relationship.
+See the [lk_transformationmapping_modifiedby](systemuser.md#BKMK_lk_transformationmapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_transformationmapping_createdby"></a> lk_transformationmapping_createdby
 
-See systemuser Table [lk_transformationmapping_createdby](systemuser.md#BKMK_lk_transformationmapping_createdby) One-To-Many relationship.
+See the [lk_transformationmapping_createdby](systemuser.md#BKMK_lk_transformationmapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransformationMapping_ImportMap"></a> TransformationMapping_ImportMap
 
-See importmap Table [TransformationMapping_ImportMap](importmap.md#BKMK_TransformationMapping_ImportMap) One-To-Many relationship.
+See the [TransformationMapping_ImportMap](importmap.md#BKMK_TransformationMapping_ImportMap) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### See also
 

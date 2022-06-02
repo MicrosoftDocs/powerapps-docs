@@ -1,20 +1,23 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-
+description: "Explains the client api execution context"
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 1fcbf0fd-4e47-4352-a555-9315f7e57331
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Client API execution context
 

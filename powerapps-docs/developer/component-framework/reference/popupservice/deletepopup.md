@@ -1,17 +1,15 @@
 ---
 title: deletePopup | Microsoft Docs
 description: Removes the referenced popup from the popup service and unregister the service.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 89029a0b-5e03-4314-95fe-253b4d8d6da1
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # deletePopup

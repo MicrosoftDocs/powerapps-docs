@@ -1,20 +1,15 @@
 ---
 title: CSS Element | Microsoft Docs
 description: CSS describes how code components are to be displayed on UI.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
+contributors:
+ - JimDaly
 ---
 
 # css element
@@ -43,7 +38,7 @@ Model-driven and canvas apps
 ```xml
 <resources>
   <code path="TS_LocalizationAPI.js" order="1" />
-	<css path="css/TS_LocalizationAPI.css" order="1" />
+   <css path="css/TS_LocalizationAPI.css" order="1" />
  </resources>
 ```
 

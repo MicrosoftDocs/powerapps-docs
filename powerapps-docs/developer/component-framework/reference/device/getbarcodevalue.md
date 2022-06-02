@@ -1,18 +1,15 @@
 ---
 title: getBarcodeValue | Microsoft Docs
 description: Invokes the device camera to scan the barcode information, such as product number.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getBarcodeValue

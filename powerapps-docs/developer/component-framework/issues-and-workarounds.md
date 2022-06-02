@@ -1,17 +1,15 @@
 ---
 title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
-description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: article
 ms.subservice: pcf
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+contributors:
+ - JimDaly
 ---
 
 # Common issues and workarounds
@@ -54,7 +52,7 @@ Update the component version (minor or patch) in the component manifest file (fo
    "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
    ```
 
-## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source <Feed Url> when the build fails for authorization issues. 
+## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source &lt;Feed Url&gt; when the build fails for authorization issues.
 
    **Workaround**
 
@@ -154,5 +152,12 @@ Currently there is an issue with canvas app datasets bound to code components. W
 
 No workaround as of now. A fix for this issue is being deployed.
 
+## Authentication for third party services fails in Canvas
+
+PCF authentication for third parties is not supported.
+
+**Workaround**
+
+Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

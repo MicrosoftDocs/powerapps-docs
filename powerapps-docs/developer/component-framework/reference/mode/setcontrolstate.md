@@ -1,20 +1,15 @@
 ---
 title: setControlState | Microsoft Docs
 description: Set component state so that it will be stored in one session.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to:
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # setControlState
@@ -27,7 +22,7 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Parameters
 

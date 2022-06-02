@@ -1,17 +1,15 @@
 ---
 title: FormatCurrency | Microsoft Docs
 description: Returns a formatted string that represents the currency value after being formatted.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 87e433e6-573f-414f-b49d-1213f2bd8cf4
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # formatCurrency

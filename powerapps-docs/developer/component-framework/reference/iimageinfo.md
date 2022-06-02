@@ -1,17 +1,15 @@
 ---
 title: ImageInfo | Microsoft Docs
-description: 
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+description: The structure returned by getCellImageInfo and propagated down to the component to display conditional images.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 16691acb-a58c-4ca6-b6a8-58c76c9db1ca
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # ImageInfo

@@ -1,13 +1,11 @@
 ---
 title: " Navigation API component| Microsoft Docs" 
 description: "This sample component explores the various methods available as part of the Power Apps component framework navigation API." 
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
 ms.author: jdaly
-ms.reviewer: jdaly
+author: noazarur-microsoft
 manager: kvivek
-
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
 ---
 

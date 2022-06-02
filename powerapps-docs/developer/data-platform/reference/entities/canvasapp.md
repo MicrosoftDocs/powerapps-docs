@@ -1,8 +1,8 @@
 ---
-title: "CanvasApp table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CanvasApp table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CanvasApp table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -99,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Publisher](#BKMK_Publisher)
 - [Status](#BKMK_Status)
 - [Tags](#BKMK_Tags)
+- [UniqueCanvasAppId](#BKMK_UniqueCanvasAppId)
 
 
 ### <a name="BKMK_AADCreatedById"></a> AADCreatedById
@@ -165,10 +166,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -284,10 +285,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -307,10 +308,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -542,10 +543,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -580,10 +581,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -603,10 +604,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -626,10 +627,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -770,6 +771,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
+
+### <a name="BKMK_UniqueCanvasAppId"></a> UniqueCanvasAppId
+
+**Added by**: Canvas App Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The globally unique canvas app id|
+|DisplayName|Unique CanvasApp Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|uniquecanvasappid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
 <a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
@@ -904,10 +923,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1144,7 +1163,7 @@ Listed by **SchemaName**.
 
 **Added by**: Power Apps Actions Solution
 
-Same as appaction table [canvasapp_appaction_onclickeventformulacomponentlibraryid](appaction.md#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid) Many-To-One relationship.
+Same as the [canvasapp_appaction_onclickeventformulacomponentlibraryid](appaction.md#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid) many-to-one relationship for the [appaction](appaction.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1161,7 +1180,7 @@ Same as appaction table [canvasapp_appaction_onclickeventformulacomponentlibrary
 
 **Added by**: Power Apps Actions Solution
 
-Same as appaction table [canvasapp_appaction_visibilityformulacomponentlibraryid](appaction.md#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid) Many-To-One relationship.
+Same as the [canvasapp_appaction_visibilityformulacomponentlibraryid](appaction.md#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid) many-to-one relationship for the [appaction](appaction.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1185,11 +1204,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_businessunit_canvasapp"></a> businessunit_canvasapp
 
-See businessunit Table [businessunit_canvasapp](businessunit.md#BKMK_businessunit_canvasapp) One-To-Many relationship.
+See the [businessunit_canvasapp](businessunit.md#BKMK_businessunit_canvasapp) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_FK_CanvasApp_Solution"></a> FK_CanvasApp_Solution
 
-See solution Table [FK_CanvasApp_Solution](solution.md#BKMK_FK_CanvasApp_Solution) One-To-Many relationship.
+See the [FK_CanvasApp_Solution](solution.md#BKMK_FK_CanvasApp_Solution) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### See also
 

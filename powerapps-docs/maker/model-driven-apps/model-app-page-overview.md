@@ -78,12 +78,12 @@ In most cases, we recommend that you use custom pages instead of embedded canvas
 
 Existing standalone canvas apps aren't supported for use as a custom page and the expected app structure is different. A standalone canvas app often has many screens with global access to all controls and variables. The custom page is expected to typically be a single screen with loose coupling to provide performance and co-development capabilities.
 
-To migrate an existing standalone canvas app, first start by identify a mapping of screens to separate custom pages. For each separate custom page complete the following steps:
+To migrate an existing standalone canvas app, first start by identifying a mapping of screens to separate custom pages. For each separate custom page complete the following steps:
 
 1. Create a blank custom page from the model-driven app designer. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
 1. Add a canvas app data source for data used by the screen.
-1. Copy the screen from the canvas app in the original canvas app designer.
-1. Paste the screen into the new custom page in the model-driven app designer.
+1. Copy the screen from the original canvas app in the canvas designer.
+1. Paste the screen into the blank custom page in the canvas designer.
 1. Change the navigate calls to use the custom page name instead of the screen name.
 1. Add the custom page into the model-driven app designer site map.
 

@@ -1,8 +1,8 @@
 ---
-title: "Plug-in Trace Log (PluginTraceLog) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Plug-in Trace Log (PluginTraceLog) table/entity."
-ms.date: 10/05/2021
-
+title: "Plug-in Trace Log (PluginTraceLog)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Plug-in Trace Log (PluginTraceLog)  table/entity."
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Plug-in Trace Log (PluginTraceLog) table/entity reference
+# Plug-in Trace Log (PluginTraceLog)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -268,10 +268,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -552,11 +552,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_plugintracelogbase_createdonbehalfby"></a> lk_plugintracelogbase_createdonbehalfby
 
-See systemuser Table [lk_plugintracelogbase_createdonbehalfby](systemuser.md#BKMK_lk_plugintracelogbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_plugintracelogbase_createdonbehalfby](systemuser.md#BKMK_lk_plugintracelogbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_plugintracelog"></a> createdby_plugintracelog
 
-See systemuser Table [createdby_plugintracelog](systemuser.md#BKMK_createdby_plugintracelog) One-To-Many relationship.
+See the [createdby_plugintracelog](systemuser.md#BKMK_createdby_plugintracelog) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
