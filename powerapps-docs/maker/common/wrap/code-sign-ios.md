@@ -1,11 +1,11 @@
 ﻿---
-title: Code sign for iOS (preview)
+title: Code sign for iOS
 description: Learn about how to code sign for iOS for Power Apps wrap.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/09/2022
+ms.date: 05/31/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -17,9 +17,7 @@ contributors:
   - larryk78
 ---
 
-# Code sign for iOS (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Code sign for iOS
 
 In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
@@ -187,5 +185,5 @@ To create a distribution certificate, create a new certificate signing request f
 
 ### See also
 
-- [Wrap overview (preview)](overview.md)
-- [Code sign on Android (preview)](code-sign-android.md)
+- [Wrap overview](overview.md)
+- [Code sign on Android](code-sign-android.md)
