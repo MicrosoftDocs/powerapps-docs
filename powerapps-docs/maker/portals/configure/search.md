@@ -23,6 +23,8 @@ List search functionality in the portal uses FetchXML in the backend to search t
 
 >[!IMPORTANT]
 > Starting with website version 9.4.4.xx, portal search uses Dataverse search to deliver results from multiple tables and fields for new portals. Lucene .NET search is deprecated; however, existing portals use Lucene .NET search will not be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
+>
+> **All the existing customers who are using Lucene .Net search need to migrate to Dataverse search by October 2023.**
 
 ## Pre-requisite
 
