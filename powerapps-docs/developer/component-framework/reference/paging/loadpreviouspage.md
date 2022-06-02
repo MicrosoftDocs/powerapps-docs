@@ -18,7 +18,7 @@ contributors:
 
 > [!NOTE]
 > `loadPreviousPage` does not support parallel execution.
-> Executing `loadPreviousPage` will trigger `updateView` on the control.
+> Executing `loadPreviousPage` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 

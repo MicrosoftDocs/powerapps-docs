@@ -18,7 +18,7 @@ contributors:
 
 > [!NOTE]
 > `refresh` does not support parallel execution.
-> Executing `refresh` will trigger `updateView` on the control.
+> Executing `refresh` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 

@@ -76,7 +76,7 @@ Total number of results on the server for the current query.
 
 > [!NOTE]
 > `loadExactPage`, `loadNextPage`, `loadPreviousPage` do not support parallel execution.
-> Executing any of them will trigger `updateView` on the control.
+> Executing any of them will trigger `updateView` on the control with newly fetched results.
 
 ### Related topics
 

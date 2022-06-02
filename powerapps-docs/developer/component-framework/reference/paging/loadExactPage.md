@@ -18,7 +18,7 @@ contributors:
 
 > [!NOTE]
 > `loadExactPage` does not support parallel execution.
-> Executing `loadExactPage` will trigger `updateView` on the control.
+> Executing `loadExactPage` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 
