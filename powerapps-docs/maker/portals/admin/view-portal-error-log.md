@@ -5,18 +5,22 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/02/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # View portal error logs
 
 As a portal administrator or developer, you can use Power Apps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
+
+> [!NOTE]
+> Power Apps portal error logs are also used for Power Pages. More information: [What is Power Pages](/power-pages/introduction).
 
 > [!TIP]
 > To learn about the roles required to perform tasks in this article, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
