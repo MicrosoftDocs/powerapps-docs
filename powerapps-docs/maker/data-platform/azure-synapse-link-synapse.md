@@ -136,7 +136,7 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription to ensure you can reliably consume updated data in the lake at any given time:
+After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
 
 - Near real-time data: Provides a copy of data synchronized from Dataverse via Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
 - Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  

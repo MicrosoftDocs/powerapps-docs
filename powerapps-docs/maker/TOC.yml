@@ -1174,9 +1174,9 @@
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
-  - name: Create native mobile apps (preview)
+  - name: Create native mobile apps
     items:
-      - name: Overview of wrap (preview)
+      - name: Overview of wrap
         href: ./common/wrap/overview.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
@@ -1196,15 +1196,19 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component (preview)
+    - name: Create a canvas component
       items:
-        - name: Components overview
+        - name: Canvas component overview
           href: ./canvas-apps/create-component.md
         - name: Component library
           href: ./canvas-apps/component-library.md
+        - name: Component library ALM
+          href: ./canvas-apps/component-library-alm.md
         - name: Map input fields
           href: ./canvas-apps/map-component-input-fields.md
-        - name: Behavior formulas
+        - name: Add multimedia to a component
+          href: ./canvas-apps/component-multimedia.md
+        - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
   - name: Performance and optimization
     items:
@@ -1274,7 +1278,7 @@
           href: ./model-driven-apps/create-remove-pages.md
         - name: Manage app properties
           href: ./model-driven-apps/app-properties.md         
-        - name: Use custom pages within model-driven apps (preview)
+        - name: Use custom pages within model-driven apps
           items:
           - name: Custom pages overview
             href: ./model-driven-apps/model-app-page-overview.md
@@ -1460,7 +1464,7 @@
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
-      - name: Customize app commands (preview)
+      - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
         items:
         - name: Use command designer
