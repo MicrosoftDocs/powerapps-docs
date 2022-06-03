@@ -19,12 +19,9 @@ contributors:
 
 Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-A *content delivery network*<!--note from editor: Don't abbreviate content delivery network, via Cloud Style Guide, https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=27510 Please double-check that I've made it lowercase in the right places.--> is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
+A *content delivery network* is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
 
-<!--note from editor: The alt text needs to tell a low-vision reader what the diagram is meant to convey. (Diagrams almost always need better alt text than screenshots, so they often take the "complex" image markup.) I've put some placeholder text below, please make it good.-->
-:::image type="complex" source="media/configure-cdn/cdn-diagram.png" alt-text="A diagram of a content delivery network.":::
-Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.
-:::image-end:::
+:::image type="complex" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.:::
 
 When you enable Azure Content Delivery Network on your portal, static content&mdash;like images, scripts, and style sheet files used to design your portal website&mdash;are stored and served from the Content Delivery Network server closest to your location.  
 
@@ -78,7 +75,7 @@ It might take a few minutes to provision Content Delivery Network.
 
 1. Select the environment where the portal was created. 
 
-1. On the **Resources** card, select **Portals**. <!--note from editor: You don't need to duplicate images in a procedure.-->
+1. On the **Resources** card, select **Portals**. 
 
 1. Select the portal from the available list, and then select **Manage** 
 
@@ -101,7 +98,6 @@ Static website contents are stored on Content Delivery Network servers across ge
 1. Select the environment where the portal was created.
 
 1. On the **Resources** card, select **Portals**. 
-<!--note from editor: You definitely don't want the same image three times.-->
 
 1. Select **Purge Cache**.
 
@@ -109,11 +105,11 @@ Static website contents are stored on Content Delivery Network servers across ge
 
 ## Cache configuration 
 
-Static files are cached based on the file name extensions<!--note from editor: Not "file extension," via WSG: https://styleguides.azurewebsites.net/Styleguide/Read?id=2700&topicid=33723--> stored in the **Web files** table in the Portal Management app. By default, Content Delivery Network caches files that have the extensions *css, js, png, svg, jpg, ico, woff2, gif, ttf, woff, eot, otf, tts, jpeg, 7z, mp3,* and *mp4* on the edge server. A maker can override the default list by updating the site settings. 
+Static files are cached based on the file name extensions stored in the **Web files** table in the Portal Management app. By default, Content Delivery Network caches files that have the extensions *css, js, png, svg, jpg, ico, woff2, gif, ttf, woff, eot, otf, tts, jpeg, 7z, mp3,* and *mp4* on the edge server. A maker can override the default list by updating the site settings. 
 
 1. Open the [Power Apps](https://make.powerapps.com/) home page. 
 
-1. Select the environment where the portal was created.<!--note from editor: Edit okay? Or was there a reason this step was worded differently from the others?--> 
+1. Select the environment where the portal was created.
 
 1. On the left pane, select **Apps**. 
 
@@ -121,7 +117,7 @@ Static files are cached based on the file name extensions<!--note from editor: N
 
 1. Select the **Portal Management** app. 
 
-1. Go to **Site Settings**.<!--note from editor: I assume this is a UI string?--> 
+1. Go to **Site Settings**.
 
 1. In the **ContentDeliveryNetwork/FileExtensions** site setting, update or add to the list of file name extensions you want to be cached. 
 
@@ -139,6 +135,6 @@ A portal administrator can disable Content Delivery Network at any given point t
 Content Delivery Network is powered by [Azure Front Door](/azure/frontdoor/standard-premium/overview) to provide a fast, reliable, and modern cloud content delivery network.
 
 > [!NOTE] 
-> For more information about other Azure service offerings, go to the  [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/).<!--note from editor: Deleted the link to Azure Front Door because it's given in the preceding sentence.-->
+> For more information about other Azure service offerings, go to the  [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
