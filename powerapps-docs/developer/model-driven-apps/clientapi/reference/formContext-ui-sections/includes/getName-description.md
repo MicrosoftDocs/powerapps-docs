@@ -1,1 +1,0 @@
-Returns the name of the section.

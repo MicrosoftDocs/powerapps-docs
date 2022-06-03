@@ -7,7 +7,7 @@ ms.topic: article
 author: HemantGaur # GitHub ID
 ms.subservice: mda-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: evchaki # MSFT alias of manager or PM counterpart
+manager: lwelicki # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
   - developer

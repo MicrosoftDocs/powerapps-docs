@@ -3,8 +3,8 @@ title: "Pass data from a page as a parameter to Ribbon actions (model-driven app
 description: "The topic describes options for using the <CrmParameter> element to retrieve these values. " # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
-ms.date: 04/01/2022
+manager: lwelicki
+ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -18,6 +18,8 @@ contributors:
   - caburk
 ---
 # Pass data from a page as a parameter to ribbon actions
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 When you define an action in a ribbon, you frequently have to pass data from the page to either a JavaScript function or a URL. This article describes options for using the [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)) element to retrieve these values.
 

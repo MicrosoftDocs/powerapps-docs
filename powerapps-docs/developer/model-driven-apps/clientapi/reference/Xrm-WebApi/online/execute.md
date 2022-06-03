@@ -102,7 +102,7 @@ On success, returns a promise object with the values specified earlier in the de
 
 ### Execute an action
 
-The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The request object is created based on the action definition here: [Unbound actions](../../../../../data-platform/webapi/use-web-api-actions.md#unbound-actions)
+The following example demonstrates how to execute the `WinOpportunity` action found in the Dynamics 365 for Sales solution. The request object is created based on the action definition here: [Unbound actions](../../../../../data-platform/webapi/use-web-api-actions.md#unbound-actions)
 
 ```JavaScript
 var Sdk = window.Sdk || {};
