@@ -1,7 +1,7 @@
 ---
 title: "Delete audit data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Explains how to configure programatically delete audit data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/21/2022
+ms.date: 06/03/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
