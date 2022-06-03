@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 04/28/2022
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -262,6 +262,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsRichTextNotesEnabled](#BKMK_IsRichTextNotesEnabled)
+- [IsRpaAutoscaleEnabled](#BKMK_IsRpaAutoscaleEnabled)
+- [IsRpaUnattendedEnabled](#BKMK_IsRpaUnattendedEnabled)
 - [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
 - [IsSharingInOrgAllowed](#BKMK_IsSharingInOrgAllowed)
 - [IsSOPIntegrationEnabled](#BKMK_IsSOPIntegrationEnabled)
@@ -4735,6 +4737,56 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_IsRpaAutoscaleEnabled"></a> IsRpaAutoscaleEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Autoscale feature for RPA is enabled in this organization.|
+|DisplayName|Enable RPA Autoscale feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaautoscaleenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaAutoscaleEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_IsRpaUnattendedEnabled"></a> IsRpaUnattendedEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Unattended runs feature for RPA is enabled in this organization.|
+|DisplayName|Enable RPA Unattended feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaunattendedenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaUnattendedEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
 ### <a name="BKMK_IsSalesAssistantEnabled"></a> IsSalesAssistantEnabled
 
 |Property|Value|
@@ -8540,6 +8592,8 @@ Listed by **SchemaName**.
 - [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 - [organization_catalog](#BKMK_organization_catalog)
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
+- [organization_sharedobject](#BKMK_organization_sharedobject)
+- [organization_sharedworkspace](#BKMK_organization_sharedworkspace)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
@@ -9717,6 +9771,40 @@ Same as the [organization_catalogassignment](catalogassignment.md#BKMK_organizat
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_catalogassignment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_sharedobject"></a> organization_sharedobject
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedobject](sharedobject.md#BKMK_organization_sharedobject) many-to-one relationship for the [sharedobject](sharedobject.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedobject|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedobject|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_sharedworkspace"></a> organization_sharedworkspace
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedworkspace](sharedworkspace.md#BKMK_organization_sharedworkspace) many-to-one relationship for the [sharedworkspace](sharedworkspace.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedworkspace|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedworkspace|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

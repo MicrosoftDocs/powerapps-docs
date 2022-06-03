@@ -3,7 +3,7 @@ title: "String (RESX) web resources (model-driven apps) | Microsoft Docs" # Inte
 description: "Learn about using string web resources to make localized strings available for use" # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

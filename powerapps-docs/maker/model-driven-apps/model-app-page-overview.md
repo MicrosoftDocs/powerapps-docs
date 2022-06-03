@@ -80,8 +80,8 @@ To migrate an existing standalone canvas app, first start by identifying a mappi
 
 1. Create a blank custom page from the model-driven app designer. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
 1. Add a canvas app data source for data used by the screen.
-1. Copy the screen from the canvas app in the original canvas app designer.
-1. Paste the screen into the new custom page in the model-driven app designer.
+1. Copy the screen from the original canvas app in the canvas designer.
+1. Paste the screen into the blank custom page in the canvas designer.
 1. Change the navigate calls to use the custom page name instead of the screen name.
 1. Add the custom page into the model-driven app designer site map.
 
