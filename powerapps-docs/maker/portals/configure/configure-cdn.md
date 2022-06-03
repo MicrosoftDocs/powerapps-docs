@@ -21,7 +21,7 @@ Preview features aren't meant for production use and may have restricted functio
 
 A *content delivery network* is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
 
-:::image type="complex" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.:::
+:::image type="complex" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.":::
 
 When you enable Azure Content Delivery Network on your portal, static content&mdash;like images, scripts, and style sheet files used to design your portal website&mdash;are stored and served from the Content Delivery Network server closest to your location.  
 
