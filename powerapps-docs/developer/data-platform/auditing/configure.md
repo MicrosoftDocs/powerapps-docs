@@ -164,7 +164,7 @@ A `BooleanManagedProperty` has two important properties:
 The publisher of the solution that adds a table  may block people who install their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
 > [!NOTE]
-> At the time of this writing, the `IsAuditEnabled` property is exposed in the designer like a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. The `CanBeChanged` property can only be read or set programmatically.
+> The `IsAuditEnabled` property is exposed in the designer as a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. The `CanBeChanged` property can only be read or set programmatically.
 
 ### Detect which tables are enabled for auditing
 

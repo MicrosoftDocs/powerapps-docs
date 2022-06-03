@@ -37,7 +37,7 @@ The following table summarizes important columns in the audit table.
 
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
-|`Action`<br />`action`<br />**Event**|Choice|74 options that represent the event that caused the change. More information: [Actions](#audit-actions)|
+|`Action`<br />`action`<br />**Event**|Choice|Options that represent the event that caused the change. More information: [Actions](#audit-actions)|
 |`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br /><br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history) |
 |`AuditId`<br />`auditid`<br /> **Record Id**|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />**Calling User**|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
