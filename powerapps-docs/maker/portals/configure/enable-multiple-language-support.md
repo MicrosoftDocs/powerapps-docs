@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/18/2022
+ms.date: 06/03/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -133,4 +133,3 @@ To avoid choosing the language from the drop down each time, Portal users can se
 > [!Note]
 > You will need to configure [table permissions](assign-entity-permissions.md) on the portal language table (adx_portallanguage) to allow read and append access linked to the default authenticated user web role to allow for users to choose their default language.
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
