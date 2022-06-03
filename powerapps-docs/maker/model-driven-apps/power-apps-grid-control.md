@@ -85,7 +85,6 @@ To work around this, you can display a custom card by configuring the table to u
 
 ### UI limitations and differences from the read-only grid control
 
-- Users can’t drag the mouse across multiple records to select a range of records. To work around this limitation, use Shift+click to select a range of records.
 - The grid does not currently support any theme customizations
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column does not show online status and a people card for the user.
