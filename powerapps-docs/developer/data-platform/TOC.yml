@@ -83,14 +83,15 @@
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
-    href: auditing-overview.md
     items:
-    - name: Configure entities and attributes for auditing
-      href: configure-entities-attributes-auditing.md
-    - name: Retrieve and delete the history of audited data changes
-      href: retrieve-and-delete-the-history-of-audited-data-changes.md
-    - name: Audit user access
-      href: audit-user-access.md
+    - name: Overview
+      href: auditing/overview.md
+    - name: Configure auditing
+      href: auditing/configure.md
+    - name: Retrieve audit data
+      href: auditing/retrieve-audit-data.md
+    - name: Delete audit data
+      href: auditing/delete-audit-data.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
