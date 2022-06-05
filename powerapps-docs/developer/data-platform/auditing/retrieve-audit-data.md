@@ -728,9 +728,6 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse?text=RetrieveAttributeChangeHistoryResponse ComplexType>
 - <xref:Microsoft.Dynamics.CRM.AuditDetailCollection?text=AuditDetailCollection ComplexType>
 
-> [!NOTE]
-> The <xref:Microsoft.Dynamics.CRM.AttributeAuditDetail?text=AttributeAuditDetail ComplexType> returned currently does not include the `AuditRecord` property so there is no data about who made the change and when it was made.
-
 # [SDK for .NET](#tab/sdk)
 
 The `ShowAttributeChangeHistory` static method below will return the first 20 audited changes for specified column in the specified record.
