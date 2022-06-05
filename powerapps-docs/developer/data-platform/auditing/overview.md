@@ -1,7 +1,7 @@
 ---
 title: "Auditing overview (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically use the auditing capability of Microsoft Dataverse to record data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+ms.date: 06/05/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
@@ -23,7 +23,7 @@ contributors:
 Dataverse auditing provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse auditing logs changes that are made to records and logs user access. Developers can use the tables and APIs that support the auditing feature to create client applications or programmatically interact with auditing data.
 
 > [!IMPORTANT]
-> For a complete description of the auditing concepts, capabilities, how it is exposed in apps, and tasks for administrators, see [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing).
+> For a complete description of the auditing concepts, capabilities, how it is exposed in apps, and tasks for administrators, see [Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity).
 >
 > This content for developers expects that you are already familiar with the documentation for administrators. The Dataverse tables and APIs provide the functionality to support the clients used by administrators and apps.
 
@@ -96,7 +96,7 @@ More information: [Delete audit data](delete-audit-data.md)
   
 ### See also
 
-[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
+[Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)<br />
 [Configure auditing](configure.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
 [Delete audit data](delete-audit-data.md)
