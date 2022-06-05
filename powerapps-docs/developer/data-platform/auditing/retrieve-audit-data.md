@@ -29,7 +29,7 @@ After auditing is enabled and data changes are made to those tables and columns 
 
 Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only.
 
-The audit table provides the data for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Administrators Guide: Use the Audit Summary view](/power-platform/admin/manage-dataverse-auditing#use-the-audit-summary-view)
+The audit table provides the data for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Administrators Guide: View audit logging details](/power-platform/admin/audit-data-user-activity#view-audit-logging-details)
 
 Calling user must have the `prvReadAuditSummary` privilege to retrieve data from this table. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
 
@@ -970,7 +970,7 @@ More information:
 [Configure auditing](configure.md)<br />
 [Delete audit data](delete-audit-data.md)<br />
 [Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md)<br />
-[Sample: Audit user access](../org-service/samples/audit-user-access.md)
-
+[Sample: Audit user access](../org-service/samples/audit-user-access.md)<br />
+[Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

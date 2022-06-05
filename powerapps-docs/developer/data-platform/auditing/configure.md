@@ -504,7 +504,8 @@ More information:
 
 ### See also
 
-[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
+[Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)<br />
+[Administrators Guide: System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)<br />
 [Auditing overview](overview.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
 [Delete audit data](delete-audit-data.md)
