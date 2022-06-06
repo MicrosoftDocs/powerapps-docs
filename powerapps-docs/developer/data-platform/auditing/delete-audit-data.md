@@ -266,7 +266,7 @@ New partitions are automatically created by the Dataverse platform on a quarterl
 
 [Auditing overview](overview.md)<br />
 [Configure auditing](configure.md)<br />
-[Retrieve the history of audited data changes](retrieve-audit-data.md)
-
+[Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
+[Administrators Guide: Recover database space by deleting audit logs](/power-platform/admin/recover-database-space-deleting-audit-logs)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
