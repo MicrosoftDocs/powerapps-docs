@@ -21,6 +21,9 @@ In Power Apps portals, you can search for records across multiple tables by usin
 
 List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results.
 
+> [!NOTE] 
+> You can also search in Power Pages. More information: [What is Power Pages](/power-pages/introduction).
+
 >[!IMPORTANT]
 > Global search uses an external search index that is based on Lucene.Net and is used to search within multiple tables and fields at once. Starting with Website version 9.4.4.xx, portal search uses Dataverse search to deliver result from multiple tables and fields for new portals. Existing portals will continue to use Lucene .Net search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
 
