@@ -1,0 +1,1 @@
+Returns a value that indicates whether the section is currently visible.

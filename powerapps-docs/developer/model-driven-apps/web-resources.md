@@ -3,7 +3,7 @@ title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: overview

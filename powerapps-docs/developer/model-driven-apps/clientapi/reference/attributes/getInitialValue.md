@@ -25,7 +25,7 @@ Returns a value that represents the value set for a **Yes/No**, **Choice** or **
 
 ## Column types supported
 
-Tes/No, Choice, Choices 
+Yes/No, Choice, Choices 
 
 ## Syntax
 

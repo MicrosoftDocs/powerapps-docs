@@ -100,7 +100,7 @@ To create that effect, you'd need to update the **Height** property of the **Upp
 | **Upper** | **X**        | `0`                 |
 | **Upper** | **Y**        | `0`                 |
 | **Upper** | **Width**    | `Parent.Width`      |
-| **Upper** | **Height**   | `Parent.Height / 2` |
+| **Upper** | **Height**   | `Parent.Height / 3` |
 | **Lower** | **X**        | `0`                       |
 | **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
 | **Lower** | **Width**    | `Parent.Width`            |

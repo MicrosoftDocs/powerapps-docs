@@ -172,6 +172,10 @@
   href: flowmachine.md
 - name: flowmachinegroup
   href: flowmachinegroup.md
+- name: flowmachineimage
+  href: flowmachineimage.md
+- name: flowmachineimageversion
+  href: flowmachineimageversion.md
 - name: flowsession
   href: flowsession.md
 - name: Goal
@@ -324,6 +328,8 @@
   href: msdyn_pminferredtask.md
 - name: msdyn_pmrecording
   href: msdyn_pmrecording.md
+- name: msdyn_pmtemplate
+  href: msdyn_pmtemplate.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
 - name: msdyn_serviceconfiguration
@@ -466,6 +472,10 @@
   href: serviceplanmapping.md
 - name: SharedLinkSetting
   href: sharedlinksetting.md
+- name: sharedobject
+  href: sharedobject.md
+- name: sharedworkspace
+  href: sharedworkspace.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite

@@ -536,6 +536,9 @@ Once the specific fields are configured, a list calendar view will appear on the
 
 ## List OData feeds
 
+> [!NOTE]
+> This feature has been deprecated. Alternatively, use the [portals Web API](../web-api-overview.md) to interact with the data.
+
 On the **OData Feed** tab, you can enable the list to render as an OData formatted data feed.
 
 When enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
