@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 4/26/2022
+/ms.date: 4/26/2022/
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
