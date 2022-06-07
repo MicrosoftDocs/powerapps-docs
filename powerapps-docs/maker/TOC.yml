@@ -1280,7 +1280,7 @@
           href: ./model-driven-apps/create-remove-pages.md
         - name: Manage app properties
           href: ./model-driven-apps/app-properties.md         
-        - name: Use custom pages within model-driven apps (preview)
+        - name: Use custom pages within model-driven apps
           items:
           - name: Custom pages overview
             href: ./model-driven-apps/model-app-page-overview.md

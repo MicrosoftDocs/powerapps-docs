@@ -83,14 +83,15 @@
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
-    href: auditing-overview.md
     items:
-    - name: Configure entities and attributes for auditing
-      href: configure-entities-attributes-auditing.md
-    - name: Retrieve and delete the history of audited data changes
-      href: retrieve-and-delete-the-history-of-audited-data-changes.md
-    - name: Audit user access
-      href: audit-user-access.md
+    - name: Overview
+      href: auditing/overview.md
+    - name: Configure auditing
+      href: auditing/configure.md
+    - name: Retrieve audit data
+      href: auditing/retrieve-audit-data.md
+    - name: Delete audit data
+      href: auditing/delete-audit-data.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
@@ -408,7 +409,7 @@
       href: isv-app-usage-analytics.md
     - name: Install failures analytics
       href: isv-install-failure-analytics.md
-- name: Create client applications
+- name: Create applications
   href: connect-dataverse.md
   items:
   - name: Authenticate apps and services with Microsoft Dataverse
@@ -420,25 +421,29 @@
       href: authenticate-oauth.md
     - name: Use of Office365 (WS-Trust) authentication
       href: authenticate-office365-deprecation.md
-  - name: "Tutorial: Register an app with Azure Active Directory"
-    href: walkthrough-register-app-azure-active-directory.md
-  - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
-    href: walkthrough-blazor-webassembly-single-tenant.md
-  - name: Build web applications using Server-to-Server (S2S) authentication
-    href: build-web-applications-server-server-s2s-authentication.md
-    items:
-    - name: Use Multi-Tenant Server-to-server authentication
-      href: use-multi-tenant-server-server-authentication.md
-    - name: Use Single-Tenant Server-to-server authentication
-      href: use-single-tenant-server-server-authentication.md
-  - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
-    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
-  - name: "Tutorial: Register and configuring a SPA application with adal.js"
-    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+    - name: Build web applications using Server-to-Server (S2S) authentication
+      href: build-web-applications-server-server-s2s-authentication.md
+      items:
+      - name: Use Multi-Tenant Server-to-server authentication
+        href: use-multi-tenant-server-server-authentication.md
+      - name: Use Single-Tenant Server-to-server authentication
+        href: use-single-tenant-server-server-authentication.md
+    - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
+      href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+  - name: Tutorials 
+    items:
+    - name: "Tutorial: Register an app with Azure Active Directory"
+      href: walkthrough-register-app-azure-active-directory.md
+    - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
+      href: walkthrough-blazor-webassembly-single-tenant.md
+    - name: "Tutorial: Register and configuring a SPA application with adal.js"
+      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+- name: Transition apps to Dataverse ServiceClient
+  href: sdk-client-transition.md
 - name: Best practices
   href: best-practices/index.md
 - name: Online Management API
