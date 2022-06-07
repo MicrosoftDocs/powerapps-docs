@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 04/19/2022
+ms.date: 06/03/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -416,7 +416,7 @@ The following example specifies that related tasks should be returned in ascendi
 > [!NOTE]
 > - Nested `$expand` options can only be applied to single-valued navigation properties.
 >
-> - Each request can include a maximum of 10 `$expand` options. There is no limit on the depth of nested `$expand` options, but the limit of 10 total `$expand` options applies to these as well.
+> - Each request can include a maximum of 15 `$expand` options. There is no limit on the depth of nested `$expand` options, but the limit of 15 total `$expand` options applies to these as well.
 >
 > - This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, and `$levels` aren’t supported for the Web API.
 

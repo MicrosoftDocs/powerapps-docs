@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/audit-user-access.md",
+      "redirect_url": "../data-platform/auditing/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/retrieve-and-delete-the-history-of-audited-data-changes.md",
+      "redirect_url": "../data-platform/auditing/retrieve-audit-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/configure-entities-attributes-auditing.md",
+      "redirect_url": "../data-platform/auditing/auditing",
+      "redirect_document_id": false
+     },
+     {
+      "source_path": "powerapps-docs/developer/data-platform/auditing-overview.md",
+      "redirect_url": "../data-platform/auditing/overview",
+      "redirect_document_id": false
+     }, 
+     {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-sections.md",
       "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formContext-ui-tab-sections",
       "redirect_document_id": "false"
