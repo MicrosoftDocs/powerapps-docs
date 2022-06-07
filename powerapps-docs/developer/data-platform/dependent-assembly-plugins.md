@@ -39,16 +39,119 @@ You will still be able to register plug-in assemblies individually, but using `P
 
 ## Limitations
 
-[Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
+The following limitations apply to dependent assembly plug-ins.
+
+- [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
+- Will not work for on-premises environments
+
+## Prerequisites
+
+To use this feature, you should use these tools and applications.
+
+|Tool/App|Instructions |
+|---------|---------|
+|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the stand-alone version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the stand-alone version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](powerapps-cli.md)|
+|**Plug-in Registration tool (PRT)**|You should use version X.X.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
+|**Visual Studio**|We recommend Visual Studio 2019 or newer|
 
 ## Create a Visual Studio project
 
 Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
+1. Create a folder for your plug-in project. The name of this folder will determin the name of the Visual Studio .NET Framework Class library project for your plug-in.
+1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
+
+You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
+
+Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the promect in the bin\Debug or bin\Release folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
+
+> [!NOTE]
+> It is no longer required to sign the assemblies when using dependent assemblies.
+
+
 ## Add a dependent assembly using NuGet
+
+You can add a NuGet Package to your Visual Studio project as you normally do. After you build the project, you should find the assembly in the NuGet package.
+
+You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
 
 ## Add another dependent file or assembly
 
-## Register your plug-in package
+To include another file or assembly that will be available in the runtime for your plug-in.
 
-## Update your plug-in package
+1. Add the file to your Visual Studio project.
+1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
+
+:::image type="content" source="media/add-dependent-file-or-assembly.png" alt-text="Adding a file to the Visual Studio project.":::
+
+If you view the csproj file, you will find that an `ItemGroup` like following will be added by Visual Studio:
+
+```xml
+<ItemGroup>
+  <None Update="strings.localized.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup> 
+```
+
+The file will be included with the NuGet package. You can verify by using NuGet Package Explorer.
+
+## Use the Plug-in Registration tool
+
+You can use the Plug-in Registration tool (PRT) to perform the following tasks:
+
+1. View list of available pluginpackages.
+1. Register a NuGet package as a pluginpackage.
+1. Update a pluginpackage.
+1. Delete pluginpackages.
+
+### View list of available pluginpackages
+
+PRT has a new **Display by Package** view to list any plug-in packages previously imported:
+
+:::image type="content" source="media/prt-display-by-package-view.png" alt-text="View a list of plug-in packages using the plug-in registration tool.":::
+
+### Register a NuGet package as a pluginpackage
+
+PRT has a new command to select a NuGet package to import/register as a plug-in package.
+
+:::image type="content" source="media/prt-register-new-package-command.png" alt-text="Command to register a plug-in package using the plug-in registration tool.":::
+
+This will open a dialog to select the plug-in package.
+
+You have the option to select an existing solution or create a new one.
+
+:::image type="content" source="media/prt-import-new-plugin-package-dialog.png" alt-text="Dialog to import a new plug-in package.":::
+
+From the **Display by Package** view, you can select the assembly and register steps.
+
+:::image type="content" source="media/prt-new-plug-in package-view.png" alt-text="Showing a newly uploaded plug-in package in the Display by Package view.":::
+
+The assembly is also available within the **Display by Assembly** view.
+
+:::image type="content" source="media/prt-show-pluginpackage-assembly-display-by-assembly-view.png" alt-text="Showing the pluginpackage assembly in the Display by Assembly view.":::
+
+### Update a pluginpackage
+
+While viewing the list of pluginpackages using the **Display by Package** view, select the pluginpackage and click the **Update** command.
+
+:::image type="content" source="media/prt-pluginpackage-update-command.png" alt-text="Showing the Update command while a pluginpackage is selected.":::
+
+This opens a dialog to allow you to select the NuGet Package with changes.
+
+:::image type="content" source="media/prt-update-pluginpackage-dialog.png" alt-text="The update Plugin Package dialog.":::
+
+### Delete pluginpackages
+
+While viewing the list of pluginpackages using the **Display by Package** view, select the pluginpackage and click the **Unregister** command.
+
+:::image type="content" source="media/prt-pluginpackage-unregister-command.png" alt-text="Showing the Unregister command while a plugin package is selected.":::
+
+> [!IMPORTANT]
+> Unregistering a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
+
+### See also
+
+[Use plug-ins to extend business processes](plug-ins.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
