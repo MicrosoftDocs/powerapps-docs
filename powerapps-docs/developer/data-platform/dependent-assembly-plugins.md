@@ -42,7 +42,7 @@ You will still be able to register plug-in assemblies individually, but using `P
 The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
-- Will not work for on-premises environments
+- On-premises environments are not supported.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ You will find a Visual Studio .NET Framework class library project created based
 Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the promect in the bin\Debug or bin\Release folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
 
 > [!NOTE]
-> It is no longer required to sign the assemblies when using dependent assemblies.
+> It is no longer required to sign the assemblies when using dependent assemblies. But in .NET, signed assemblies cannot use resources contained within unsigned assemblies, so you may still want to sign your assemblies.
 
 
 ## Add a dependent assembly using NuGet
@@ -100,18 +100,18 @@ The file will be included with the NuGet package. You can verify by using NuGet 
 
 You can use the Plug-in Registration tool (PRT) to perform the following tasks:
 
-1. View list of available pluginpackages.
-1. Register a NuGet package as a pluginpackage.
-1. Update a pluginpackage.
-1. Delete pluginpackages.
+1. View list of available plugin packages.
+1. Register a NuGet package as a plugin package.
+1. Update a plugin package.
+1. Delete plugin packages.
 
-### View list of available pluginpackages
+### View list of available plugin packages
 
 PRT has a new **Display by Package** view to list any plug-in packages previously imported:
-
+<!-- TODO: Update all screenshots -->
 :::image type="content" source="media/prt-display-by-package-view.png" alt-text="View a list of plug-in packages using the plug-in registration tool.":::
 
-### Register a NuGet package as a pluginpackage
+### Register a NuGet package as a plugin package
 
 PRT has a new command to select a NuGet package to import/register as a plug-in package.
 
@@ -131,7 +131,7 @@ The assembly is also available within the **Display by Assembly** view.
 
 :::image type="content" source="media/prt-show-pluginpackage-assembly-display-by-assembly-view.png" alt-text="Showing the pluginpackage assembly in the Display by Assembly view.":::
 
-### Update a pluginpackage
+### Update a plugin package
 
 While viewing the list of pluginpackages using the **Display by Package** view, select the pluginpackage and click the **Update** command.
 
@@ -141,7 +141,14 @@ This opens a dialog to allow you to select the NuGet Package with changes.
 
 :::image type="content" source="media/prt-update-pluginpackage-dialog.png" alt-text="The update Plugin Package dialog.":::
 
-### Delete pluginpackages
+> [!IMPORTANT]
+> If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assembies or plugin types that you want to remove with your update.
+>
+> The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
+<!-- Impact for 1P teams b/c they work in solutions the whole removal cannot be done in one solution upgrade, they will need to wait until their next release to actuall remove the unused assembly or type. -->
+
+
+### Delete plugin packages
 
 While viewing the list of pluginpackages using the **Display by Package** view, select the pluginpackage and click the **Unregister** command.
 
@@ -150,6 +157,11 @@ While viewing the list of pluginpackages using the **Display by Package** view, 
 > [!IMPORTANT]
 > Unregistering a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
 
+
+## Design notes
+
+<!-- Think David J/ Andrew should provide this: This section should describe the details of the design so that advanced users can understand what they can or cannot do.
+Assuming that this is all built using MS technologies, we can have links to any concepts -->
 ### See also
 
 [Use plug-ins to extend business processes](plug-ins.md)
