@@ -24,7 +24,7 @@ As an administrator, you can configure your portal to meet GDPR standards. For e
 GDPR allows you to obtain consent from portal users about the use of their personal data, identify minor users, and get parental consent for minors.
 
 > [!NOTE] 
-> General Data Protection Regulations are also used for Power Pages. More information: [What is Power Pages](/power-pages/introduction).
+> General Data Protection Regulations are also used in Power Pages. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Audit logging
 
