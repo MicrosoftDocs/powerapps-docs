@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2022
+ms.date: 06/0/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -21,7 +21,7 @@ contributors:
 Microsoft is committed to make products and services accessible to everyone. For more information about accessibility in general, go to the [Microsoft Accessibility](https://www.microsoft.com/accessibility) website.
 
 > [!NOTE]
-> Power Apps portals is also committed to accessibility for all. More information: [What is Power Pages](/power-pages/introduction).
+> Power Pages is also committed to accessibility for all. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Accessibility standards
 
