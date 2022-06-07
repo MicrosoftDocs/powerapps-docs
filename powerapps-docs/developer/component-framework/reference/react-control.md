@@ -1,13 +1,15 @@
 ---
 title: ReactControl | MicrosoftDocs
 description: Provides properties and methods to initiate, update, destroy and perform various actions to build a component using a ReactControl.
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/26/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # ReactControl (Preview)

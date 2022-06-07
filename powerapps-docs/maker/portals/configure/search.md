@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-/ms.date: 4/26/2022/
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -25,7 +25,7 @@ List search functionality in the portal uses FetchXML in the backend to search t
 > You can also search in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 >[!IMPORTANT]
-> Global search uses an external search index that is based on Lucene.Net and is used to search within multiple tables and fields at once. Starting with Website version 9.4.4.xx, portal search uses Dataverse search to deliver result from multiple tables and fields for new portals. Existing portals will continue to use Lucene .Net search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
+> Starting with website version 9.4.4.xx, portal search uses Dataverse search to deliver results from multiple tables and fields for new portals. Lucene .NET search is deprecated; however, existing portals use Lucene .NET search will not be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
 
 ## Pre-requisite
 
@@ -50,6 +50,7 @@ Once the index is provisioned, it may take anywhere between an hour or more to c
 ## Global search
 
 Benefits of global search include its ability to:
+
 - Find matches to any word in the search term in any field in the table. Matches can include inflectional words like stream, streaming, or streamed.
 - Return results from all searchable tables in a single list sorted by relevance, based on factors such as:
     - Number of words matched.
@@ -86,7 +87,7 @@ By default, the following tables can be searched within a portal website provide
 - Incident 
 
 > [!NOTE]
-> You can configure additional tables for search. For more information, read [configuring additional tables for search](search-additional-entities.md). <br>
+> You can configure additional tables for search. For more information, read [configuring additional tables for search](search-additional-entities.md). <br />
 > To get better search performance enable “Portal Search” view for only required tables and columns.
 
 ## Columns searchable in global search
@@ -199,7 +200,7 @@ As part of portal global search, various special characters and syntaxes are sup
     > [!NOTE]
     > Boolean operators must be written in uppercase.
 
-    - **OR**: The OR operator is the default conjunction operator. This means that if there is no Boolean operator between two terms, the OR operator is used. The OR operator links two terms and finds a matching record if either of the terms exists in a record. This is equivalent to a union using sets. The symbol || can be used in place of the word OR. For example, the search query "Smart TV" (excluding quotation marks) will search for all records with the word Smart or TV in them. This query can also be written as "Smart OR TV", "Smart || TV".
+    - **OR**: The OR operator is the default conjunction operator. If there isn't a Boolean operator between two terms, the OR operator is used. The OR operator links two terms and finds a matching record if either of the terms exists in a record. This is equivalent to a union using sets. The symbol || can be used in place of the word OR. For example, the search query "Smart TV" (excluding quotation marks) will search for all records with the word Smart or TV in them. This query can also be written as "Smart OR TV", "Smart || TV".
 
     - **AND:** The AND operator matches records where both terms exist anywhere in the text of a single document. This is equivalent to an intersection using sets. The symbol && can be used in place of the word AND. For example, the search query "Smart AND TV" (excluding quotation marks) will search for all records with the words Smart and TV in them. This query can also be written as "Smart && TV".
 
@@ -209,7 +210,7 @@ As part of portal global search, various special characters and syntaxes are sup
 
     - **Minus (–) symbol**: The minus (-) symbol, also known as the prohibit operator, excludes documents that contain the term after the "-" symbol. For example, the search query "Smart - TV" will search for all records where the word Smart is present, and the word TV must not be present.
 
-- **Grouping**: Portal global search supports using parentheses to group clauses to form sub queries. This can be useful if you want to control the Boolean logic for a query. For example, if you want to search for all records where either one of the terms "HD" or "Smart" is present but the word TV is always present, then the query can be written as "(HD or Smart) AND TV" (excluding quotation marks).
+- **Grouping**: Portal global search supports using parentheses to group clauses to form sub queries. This can be useful if you want to control the Boolean logic for a query. For example, if you want to search for all records where either one of the terms "HD" or "Smart" is present but the word TV is always present, the query can be written as "(HD or Smart) AND TV" (excluding quotation marks).
 
 ## Liquid search tag
 
@@ -283,6 +284,7 @@ To block the Case table from getting indexed, you must rename the view of the Ca
 After performing the actions described in Step 1, the Case table would be stopped from getting indexed. To remove the case table from UI surface areas, you must modify the site setting associated with portal global search. The following site setting must be modified:
 
 search/filters: This will remove case table from filters on the Search page and the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
+
 
 You must delete `Help Desk:incident;` from the value of this site setting so that the Incident table is removed from filters that come next to the search box in the UI.
 

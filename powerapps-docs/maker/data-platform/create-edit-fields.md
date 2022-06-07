@@ -61,7 +61,7 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
    - More information: [Define status reason transitions for the Case or custom tables](define-status-reason-transitions.md)
 - Edit multiple columns at once.
 - Enable Auditing. 
-   - More information: [Auditing overview](../../developer/data-platform/auditing-overview.md)
+   - More information: [Auditing overview](../../developer/data-platform/auditing/overview.md)
 - Enable Column Level Security. 
    - More information: [Column security tables](../../developer/data-platform/field-security-entities.md)
 - Select whether the column appears in global filter in interactive experience. 

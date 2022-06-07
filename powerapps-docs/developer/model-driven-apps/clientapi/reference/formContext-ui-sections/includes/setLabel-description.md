@@ -1,1 +1,0 @@
-Sets the label of the section.
