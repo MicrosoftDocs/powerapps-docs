@@ -26,7 +26,8 @@ Use the invitation feature of portals to invite contacts to your portal through 
 - Automatically execute a workflow upon invite redemption
 - Automatically assign the invited contact(s) to a Web Role(s) upon redemption
 - 
-- > [!NOTE] 
+
+> [!NOTE] 
 > You can also invite contacts in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 Invitation redemption can be accomplished using any of our many authentication options. For documentation regarding portal authentication, see [Set authentication identity for a portal](set-authentication-identity.md) and choose the model applicable to your portal version and configuration. The user will adopt any settings provided by the administrator upon redemption. An Invite Redemption Activity will be created for the Invite and Contact.
