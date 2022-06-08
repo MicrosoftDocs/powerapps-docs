@@ -199,6 +199,11 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
  > [!div class="mx-imgBorder"] 
  > ![Solution with tables.](media/solution-segmentation-solution-entities-admin.png "Solution with tables.")
 
+### Limitations
+- Solution size is limited to 32MB
+- Number of solutions is limited by Dataverse capacity
+- Number of objects in a solution is limited by Dataverse capacity
+
 ### See also
  [Use solutions](./solutions-overview.md) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
