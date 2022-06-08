@@ -5,31 +5,35 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 06/08/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Invite contacts to your portals
 
-Use the invitation feature of portals to invite contacts to your portal through automated email(s) created in your Microsoft Dataverse. The people you invite receive an email, fully customizable by you, with a link to your portal and an invitation code. This code can be used to gain special access configured by you. With this feature you have the ability to:
+Use the invitation feature of portals to invite contacts to your portal through automated email(s) created in your Microsoft Dataverse. The people you invite receive an email, fully customizable by you, with a link to your portal and an invitation code. This code can be used to gain special access configured by you. With this feature, you have the ability to:
 
 - Send Single or Group Invitations
--   Specify an expiry date if desired
--   Specify a user or portal contact as the inviter if desired
--   Automatically assign the invited contact(s) to an account upon invite redemption
--   Automatically execute a workflow upon invite redemption
--   Automatically assign the invited contact(s) to a Web Role(s) upon redemption
+- Specify an expiry date if desired
+- Specify a user or portal contact as the inviter if desired
+- Automatically assign the invited contact(s) to an account upon invite redemption
+- Automatically execute a workflow upon invite redemption
+- Automatically assign the invited contact(s) to a Web Role(s) upon redemption
+- 
+- > [!NOTE] 
+> You can also invite contacts in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 Invitation redemption can be accomplished using any of our many authentication options. For documentation regarding portal authentication, see [Set authentication identity for a portal](set-authentication-identity.md) and choose the model applicable to your portal version and configuration. The user will adopt any settings provided by the administrator upon redemption. An Invite Redemption Activity will be created for the Invite and Contact.
 
 Invitations are sent via the **Send Invitation** workflow. By default, the workflow creates an email with a generic message and sends it to the invited Contact's primary email address. The email addresses in the CC and BCC fields are ignored to ensure secure communication. The **Send Invitation** workflow contains an email template that will need to be edited to contain a specific message for your portal and the correct hyperlink to your portal's **Invite Redemption Page**.
 
-To edit the **Send Invitation** workflow email template, locate it and deactivate it. After it is deactivated, edit the email template to send the message you want and provide a link to the **Invite Redemption Page** of your portal.
+To edit the **Send Invitation** workflow email template, locate it and deactivate it. After it's deactivated, edit the email template to send the message you want and provide a link to the **Invite Redemption Page** of your portal.
 
 > [!NOTE]
 > The invitation is sent only to the primary email (emailaddress1) of the contact. The invitation will not be sent to the secondary email (emailaddress2) or alternate email (emailaddress3) of the contact record.
