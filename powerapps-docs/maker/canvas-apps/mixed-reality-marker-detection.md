@@ -17,7 +17,7 @@ contributors:
   - altran
 ---
 
-# Use marker detection with mixed reality controls
+# Use marker detection with mixed reality controls (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
