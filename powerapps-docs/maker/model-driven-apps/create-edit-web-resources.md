@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app web resources in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
-ms.date: 03/10/2022
+ms.date: 06/08/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -29,8 +29,6 @@ Web resources are typically used by developers to extend an app using files that
 
 > [!TIP]
 > For an in-depth discussion of web resources, see [Developer Documentation: Web resources for model-driven apps](../../developer/model-driven-apps/web-resources.md).
-   
-<a name="BKMK_WhatAreWebResources"></a>
 
 ## What are web resources?  
 
@@ -48,31 +46,12 @@ Because web resources are data in the system and are solution aware, you can mov
 
 Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you are working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
 
-## View and add web resources for a solution
+## Add a web resource to a solution
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
-2. Open an unmanaged solution, on the command bar select **Add existing**, point to **More**, and then select **Web resource**. 
+1. Open an unmanaged solution, on the command bar select **Add existing**, point to **More**, and then select **Web resource**. 
    The list of web resources available are displayed. 
-3. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**. To close the list without adding a web resource select **Cancel**.
-
-## Add a web resource to an app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-You can add a web resource as a subarea type in a model-driven app. Web resources are files you can use to extend a model-driven app. The web resource subarea can be HTML code or an HTML file, such as .htm or .html. When the user selects the subarea, the HTML is displayed in the app.
-
-:::image type="content" source="media/subarea-web-res-html.png" alt-text="Subarea HTML file web resource example":::
-
-> [!NOTE]
-> By default, web resource subareas are disabled. To enable, go to [Navigation pane options](app-designer-overview.md#navigation-pane-options).
-
-1. In the model-driven app designer, select **Navigation** > **Add** > **Subarea**.
-1. In the subarea properties, enter the following information:
-   - **Content type**: **Web resource**.
-   - **URL**: Select an HTML web resource file name from the list to add the web resource's URL. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-   - **Title**: Enter the title that will appear on the subarea in the app.
-
-1. Select **Save**, and then select **Publish**.
+1. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**.
 
 ## Create or edit a web resource for a solution
 
@@ -96,6 +75,35 @@ You can add a web resource as a subarea type in a model-driven app. Web resource
 
    > [!NOTE]
    > Changes to a web resource will not be visible in the application until you publish it.
+
+## Add a web resource to a model-driven app form
+
+1. Open the form where you want to add a web resource for editing.
+1. Select the **Components** pane, expand Display, and then select the web resource type you want:
+   -	HTML Web resource. A webpage (HTML) you can use to create user interface elements for client extensions. More information: <Link to Create a web resource above>
+  -	Image web resource. Use image web resources to make images available for use in model-driven apps. Supported image formats are: PNG, JPG, GIF, ICO, and  SVG (vector format). More information: <Link to Create a web resource above>
+
+1. Select the web resource from the list and then select Add. Alternatively, select **New web resource** to create the web resource you want. 
+
+## Add a web resource to an app (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+You can add a web resource as a subarea type in a model-driven app. Web resources are files you can use to extend a model-driven app. The web resource subarea can be HTML code or an HTML file, such as .htm or .html. When the user selects the subarea, the HTML is displayed in the app.
+
+:::image type="content" source="media/subarea-web-res-html.png" alt-text="Subarea HTML file web resource example":::
+
+> [!NOTE]
+> By default, web resource subareas are disabled. To enable, go to [Navigation pane options](app-designer-overview.md#navigation-pane-options).
+
+1. In the model-driven app designer, select **Navigation** > **Add** > **Subarea**.
+1. In the subarea properties, enter the following information:
+   - **Content type**: **Web resource**.
+   - **URL**: Select an HTML web resource file name from the list to add the web resource's URL. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+   - **Title**: Enter the title that will appear on the subarea in the app.
+
+1. Select **Save**, and then select **Publish**.
+
 
 ## Edit a web resource using the classic solution explorer
 
@@ -129,9 +137,6 @@ We recommend that you use an external editor to edit text files and then save th
 ### Create and edit a web resource on a form using solution explorer
 
 Add or edit web resources on a form to make it more appealing or useful to users. 
-
-> [!NOTE]
-> You can’t include a web resource in a form header or footer.  
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
