@@ -52,3 +52,11 @@ If you must insert fields from custom entities in the templates, use the followi
 For example, if you want to add a custom  field, Customer id, that is linked to the Record type user to the template, you can insert this syntax: ``{{!User:Customerid;}}`` in the editor.
 
  When the email is sent out, the dynamic text is replaced with the user's customer id.
+
+### See also
+
+[How to create an email template  in model-driven apps](email-template-create.md)  
+[Enable the enhanced email template editor page](cs_email_template_builder.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
