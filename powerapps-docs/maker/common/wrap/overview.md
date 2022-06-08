@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/8//2022
+ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
