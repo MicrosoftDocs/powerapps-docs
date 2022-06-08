@@ -2,16 +2,13 @@
 title: Create, edit, and distribute opportunities
 description: Learn how you can use opportunities to notify your partners of sales prospects that they can follow up on.
 author: nickdoelman
-
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-author: ndoelman
-author: ndoelman
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Create, edit, and distribute opportunities

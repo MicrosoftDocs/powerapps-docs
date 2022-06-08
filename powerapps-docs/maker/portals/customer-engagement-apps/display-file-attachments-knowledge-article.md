@@ -2,16 +2,13 @@
 title: Display file attachments with knowledge articles
 description: Learn how to display file attachments with knowledge articles on a portal.
 author: nickdoelman
-
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/01/2021
 ms.subservice: portals
-author: ndoelman
-author: ndoelman
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Display file attachments with knowledge articles

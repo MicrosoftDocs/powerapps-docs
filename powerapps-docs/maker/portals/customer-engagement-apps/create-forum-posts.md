@@ -2,16 +2,13 @@
 title: Create forum posts on the portal
 description: Learn how to create forum posts on a portal.
 author: nickdoelman
-
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-author: ndoelman
-author: ndoelman
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Create forum posts on the portal

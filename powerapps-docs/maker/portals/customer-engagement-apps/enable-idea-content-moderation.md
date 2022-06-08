@@ -2,16 +2,13 @@
 title: Enable content moderation on ideas
 description: Learn how to enable content moderation for ideas on a portal.
 author: nickdoelman
-
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-author: ndoelman
-author: ndoelman
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Enable content moderation on ideas

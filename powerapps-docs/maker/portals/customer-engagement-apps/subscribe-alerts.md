@@ -2,16 +2,13 @@
 title: Subscribe to alerts
 description: Learn how to create and manage alerts in a portal.
 author: nickdoelman
-
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-author: ndoelman
-author: ndoelman
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Subscribe to alerts
