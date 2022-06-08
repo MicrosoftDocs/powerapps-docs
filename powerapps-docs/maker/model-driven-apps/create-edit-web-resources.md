@@ -122,7 +122,7 @@ You can add a web resource as a subarea type in a model-driven app. Web resource
 |**Upload File**|Select the **Choose File** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|After you save the web resource, the URL to the web resource will be displayed here. Select this link to view the web resource in your browser.|  
   
-4. After you have added your changes, select **Save** and then select **Publish**.  
+1. After you have added your changes, select **Save** and then select **Publish**.  
 
 ### Use the text editor appropriately
 
