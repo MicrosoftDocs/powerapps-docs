@@ -5,7 +5,7 @@ author: nabha
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/08/2022
+ms.date: 06/08/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -47,7 +47,10 @@ For more information about CSP, see [Content Security Policy Reference](https://
 
 Enabling nonce (number used once) will block the execution of all inline scripts except those specified within the inline script. A unique cryptographic nonce is generated and added to each script specified in the CSP header. The Nonce in portals supports inline scripts and inline event handlers only.
 
+For more information about nonce, see [Using a nonce with CSP](https://content-security-policy.com/nonce/).
+
 To enable Nonce in Portals, add the **script-src 'nonce';** value to the **HTTP/Content-Security-Policy** site settings.
 
 > [!NOTE]
-> unsafe-eval will be auto-injected when **nonce** is enabled. To disable unsafe-eval auto injection, add/update site setting **HTTP/Content-Security-Policy/Inject-unsafe-eval** to **false**.
+> unsafe-eval will be auto injected to support auto generated eval validation when **nonce** is enabled. To disable unsafe-eval auto injection, add/update site setting **HTTP/Content-Security-Policy/Inject-unsafe-eval** to **false**.
+
