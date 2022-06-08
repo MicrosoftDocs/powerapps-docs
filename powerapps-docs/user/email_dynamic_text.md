@@ -24,13 +24,16 @@ Dynamic text enables you to personalize email content. The **Insert dynamic text
 
 You can insert dynamic fields in the existing email templates or newly created email templates. Select **Insert dynamic text** in the email template editor to add dynamic text to your template.
 
+:::image type="content" source="media/email_dyn_text.png" alt-text="Screenshot of the insert dynamic text option in the email editor.":::
+
 On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Record type**. 
 
 The **Record type** options are determined by the **Category** you specify when you are creating the email template.
 
-## Insert dynamic values from custom entities
+## Insert custom fields
 
 If you must insert fields from custom entities in the templates, use the following syntax:
+
 
 |Field Type  |Syntax  |
 |----------|-----------|
@@ -48,4 +51,4 @@ If you must insert fields from custom entities in the templates, use the followi
 
 For example, if you want to add a custom  field, Customer id, that is linked to the Record type user to the template, you can insert this syntax: ``{{!User:Customerid;}}`` in the editor.
 
-So when the email is sent out, the dynamic text is replaced with the user's customer  id.
+ When the email is sent out, the dynamic text is replaced with the user's customer id.
