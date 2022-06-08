@@ -145,7 +145,7 @@ Virtual tables have these restrictions.
 - Column metadata properties that validate on update don’t apply to virtual tables. For example, a Whole Number column on a virtual table column may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual table.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
 - Virtual tables don't support change tracking and cannot be synchronized by using a Dataverse feature, such as the Data Export Service or Azure Synapse Link for Dataverse.
 - Virtual tables that use the included OData v4 data provider are enabled on outbound port 443.
-- Virtual tables don't support business process flows, users will see a message "unexpected error" when they try to activate a business process flow that uses a virtual table. More information: [Unexpected error received when a user activates a business process flow](#unexpected-error-received-when-a-user-activates-a-business-process-flow)
+- Business process flows are not supported with virtual tables. More information: [Unexpected error received when a user activates a business process flow](#unexpected-error-received-when-a-user-activates-a-business-process-flow)
 
 ## Unexpected error received when a user activates a business process flow
 
