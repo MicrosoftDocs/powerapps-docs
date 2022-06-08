@@ -71,7 +71,7 @@ Part of the name of any web resource you create is the solution publisher prefix
 |**Description**|A description of the web resource.|  
 |**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
 
-4. After you have added your changes, select **Save** and then select **Publish**.  After you save the web resource, the **URL** to the web resource is displayed in the web resource definition. Select this link to view the web resource in your browser.
+1. After you have added your changes, select **Save** and then select **Publish**.  After you save the web resource, the **URL** to the web resource is displayed in the web resource definition. Select this link to view the web resource in your browser.
 
    > [!NOTE]
    > Changes to a web resource will not be visible in the application until you publish it.
@@ -79,11 +79,12 @@ Part of the name of any web resource you create is the solution publisher prefix
 ## Add a web resource to a model-driven app form
 
 1. Open the form where you want to add a web resource for editing.
-1. Select the **Components** pane, expand Display, and then select the web resource type you want:
-   -	HTML Web resource. A webpage (HTML) you can use to create user interface elements for client extensions. More information: <Link to Create a web resource above>
-  -	Image web resource. Use image web resources to make images available for use in model-driven apps. Supported image formats are: PNG, JPG, GIF, ICO, and  SVG (vector format). More information: <Link to Create a web resource above>
+1. Select the **Components** pane, expand **Display**, and then select the web resource type you want:
+   - **HTML Web resource**. A webpage (HTML) you can use to create user interface elements for client extensions. More information: [Webpage (HTML) web resources](../../developer/model-driven-apps/webpage-html-web-resources.md)
+  
+   - **Image web resource**. Use image web resources to make images available for use in model-driven apps. Supported image formats are: PNG, JPG, GIF, ICO, and  SVG (vector format). More information: [Image web resources](../../developer/model-driven-apps/image-web-resources.md)
 
-1. Select the web resource from the list and then select Add. Alternatively, select **New web resource** to create the web resource you want. 
+1. Select the web resource from the list and then select **Add**. Alternatively, select **New web resource** to create the web resource you want. More information: [Create or edit a web resource for a solution](#create-or-edit-a-web-resource-for-a-solution)
 
 ## Add a web resource to an app (preview)
 
@@ -103,7 +104,6 @@ You can add a web resource as a subarea type in a model-driven app. Web resource
    - **Title**: Enter the title that will appear on the subarea in the app.
 
 1. Select **Save**, and then select **Publish**.
-
 
 ## Edit a web resource using the classic solution explorer
 
