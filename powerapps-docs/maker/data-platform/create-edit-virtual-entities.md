@@ -149,7 +149,7 @@ Virtual tables have these restrictions.
 
 ## Unexpected error received when a user activates a business process flow
 
-When a user attempts to publish a business process flow, they may receive an "unexpected error" message. Viewing the log file the following log entry is displayed.
+When a user attempts to activate a business process flow, they may receive an "unexpected error" message. Viewing the log file the following log entry is displayed.
 
 ErrorCode: 0x80040216
 Message: System.Web.HttpUnhandledException: Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: Business process flow cannot be enabled for Virtual Entity
