@@ -21,7 +21,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-You can now use the Search pane to locate objects across your app like media files, variables, collections, data sources and more. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what is being used by your app where, along with being able to go right to results to make necessary updates.
+You can now use the Search pane to locate objects across your app like media files, variables, collections, data sources and more. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what is being used by your app where, along with being able to go right to results to make necessary updates. In addition, you can use the replace capability to update one or more instances of text, variables, collections, and formula references.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -59,8 +59,10 @@ To enable the Search pane on existing apps:
 
 You can open the Search pane using the Search icon, or shortcut keys. To use the shortcut keys, press **Ctrl+F** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+F** to open the Search pane.
 
+You can also open the Search pane directly to the Replace functionality by pressing **Ctrl+H** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+H** will open the Search pane directly to the Replace functionality.
+
 > [!NOTE]
-> Pressing **Ctrl+F** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
+> Pressing **Ctrl+F** or **Ctrl+H** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
 
 ## Filter search results
 
@@ -86,7 +88,7 @@ You can use more search options to further refine search. These options are avai
 
 - **Match Whole Word** - returns search results for exact matches of the entire sequence of characters.
 
-    In the below example, "Snow" returns only two results although "Snow" appears within names many times across all app objects.
+    In the below example, "Snow" returns only a few results although "Snow" appears within names many times across all app objects.
 
     :::image type="content" source="media/search/match-whole-words.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
 
@@ -175,6 +177,66 @@ If you make changes within the app, you'll need to refresh the results pane to s
 Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign on the right hand side of the input area.
 
 :::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+## Replace
+
+You can replace one or more instances of certain types of search results, including variable and collection names and any formula text including strings and other formula references.
+
+Once you perform a search, the replace pivot shows the list of search results which are eligible for replacing.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+### Work with replaceable results
+
+All replaceable results are selected by default. You can refine the list of results to replace by deselecting individual results or entire categories by selecting the checkbox beside the result or category heading. 
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+You can also filter the result list to only show selected categories of results.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+As you refine the list of results to replace, the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected, the button reads, "Replace all" with the total count of all replaceable items.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+If you've selected results from the list, the button is updated to read, "Replace selected" with the total count of selected items.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+You can also interact with individual results in the results list directly to perform replacements by selecting the ellipsis to the right of each individual result in the result list.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+### Replacing Variables results
+
+Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details backstage to review the usage before making the replacement.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+### Replacing Collections results
+
+Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details backstage prior to making the replacement.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+### Replacing Screens results
+
+The Screens category shows individual replaceable results following the structure in the Tree View, allowing you to replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, allowing you to choose to pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+### Completing the replacement and undoing replacements
+
+Once you have refined your selection to the items you'd like to replace, selecting the button prompts you to confirm the operation.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+Confirming the operation performs the replacement and a notification indicates whether the replacement was successful. The replacement operation may fail if a control name is already in use or unsupported characters are included.
+
+:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+
+After the replacement is complete, you can undo the replacement by using the undo button or by selecting **Ctrl+Z**.
 
 ## Limitations
 
