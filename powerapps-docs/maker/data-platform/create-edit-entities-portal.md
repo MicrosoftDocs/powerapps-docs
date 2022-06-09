@@ -141,11 +141,10 @@ The table designer lets you make extensive changes to a table including editing 
 ## Delete a table
 
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
-  
-> [!IMPORTANT]
->  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
-  
-> [!NOTE]
+
+> [!WARNING]
+>  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated records that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
+> 
 > The only way to recover data from a table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
 
 While [viewing tables](#view-tables), select the table, and then select **Delete** from the menu.
