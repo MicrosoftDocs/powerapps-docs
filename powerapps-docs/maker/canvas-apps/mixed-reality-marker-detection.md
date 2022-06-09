@@ -49,7 +49,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.co
 
 4. On the **Properties** tab, set the **Enable marker detection** property to **On** in the properties panel or the formula bar.
 
-:::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
+   :::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
 
 ## Use marker detection on device
 
