@@ -1,6 +1,41 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/extend-customer-engagement-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/extend-dynamics-365-outlook.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/extend-customer-engagement-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/walkthrough-configure-assembly-security-offline-plugin.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/walkthrough-configure-assembly-security-offline-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/offline-use-services.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/supported-messages-entities-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/offline-outlook-filters-templates.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/offline-outlook-filters-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/sample-outlook-methods.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/sample-outlook-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-outlook-filters.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/sample-create-retrieve-outlook-filters",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/best-practices/business-logic/remove-unsupported-code-using-reflection-workflow-activities.md",
       "redirect_url": "../data-platform/best-practices/business-logic/",
       "redirect_document_id": false
