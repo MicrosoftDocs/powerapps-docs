@@ -133,8 +133,7 @@ View and create table record data for the table. Select the number of columns, s
 
 ## Table designer
 
-From the table hub, select **Edit** to open the [Table designer](#table-designer).
-The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing properties, or creating a model-driven app based on the table.
+From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing properties, or creating a model-driven app based on the table.
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
 
