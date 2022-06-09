@@ -44,11 +44,11 @@ You can also select select a column heading from the table view, and then select
 
 ## Create a table
 
-While [viewing tables](#view-tables), in the menu bar select **New table**. This opens the **New table** panel.
+While [viewing tables](#view-tables), on the menu bar select **New table**. This opens the **New table** panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
-Enter data for the following columns
+Enter data for the following columns.
 
 ||Description|
 |--|--|
@@ -131,10 +131,9 @@ View and create table record data for the table. Select the number of columns, s
 
 :::image type="content" source="media/select-columns-to-display.png" alt-text="Select additional columns to display in the columns and data view":::
 
-Select **Edit** to open the [Table designer](#table-designer).
-
 ## Table designer
 
+From the table hub select **Edit** to open the [Table designer](#table-designer).
 The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing properties, or creating a model-driven app based on the table.
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
