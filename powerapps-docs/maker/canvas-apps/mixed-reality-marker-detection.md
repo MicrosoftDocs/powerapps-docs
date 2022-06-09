@@ -1,6 +1,6 @@
 ---
 title: Use marker detection with mixed-reality controls
-description: How to use the marker detection feature of the View in MR and View Shape in MR mixed-reality controls in a canvas app.
+description: How to use the marker detection feature of the View in MR and View shape in MR mixed-reality controls in a canvas app.
 author: mduelae
 ms.service: powerapps
 ms.topic: conceptual
@@ -25,7 +25,7 @@ contributors:
 >This is a preview feature.
 >[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Use physical markers to improve the precision and persistence of media that's placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View Shape in MR](./mixed-reality-component-view-shape.md) controls. This topic covers how to enable marker detection and how to add markers to your space.
+Use physical markers to improve the precision and persistence of media that's placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View shape in MR](./mixed-reality-component-view-shape.md) controls. This topic covers how to enable marker detection and how to add markers to your space.
 
 ## Prerequisites
 In addition to the standard device compatibility requirements outlined in [add mixed reality controls to your canvas app](./mixed-reality-overview.md), marker detection requires physical markers to be present in your space.
@@ -37,7 +37,7 @@ To create a marker, print out the image below or display the image on a monitor 
 
 ## Enable marker detection
 
-Enable marker detection for the **View in MR** and **View Shape in MR** controls.
+Enable marker detection for the **View in MR** and **View shape in MR** controls.
 
 With an app open for editing in [Power Apps Studio](https://create.powerapps.com/):
 
@@ -45,7 +45,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.co
 
 2. Expand **Mixed reality**.
 
-3. Select the **View Shape in MR** or **Markup in MR** control.
+3. Select the **View shape in MR** or **Markup in MR** control.
 
 4. On the **Properties** tab, set the **Enable marker detection** property to **On** in the properties panel or the formula bar.
 
