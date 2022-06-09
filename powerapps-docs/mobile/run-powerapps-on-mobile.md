@@ -35,36 +35,16 @@ Legend:
 > Since canvas apps can essentially be anything, there isn’t other help topics on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
 
-
-
-| **Install** | **Use QR code** |
-|-------------------------|-------------------------|
-| [![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8)  | ![Download Power Apps from the Apple App Store using QR code.](media/qr-code-ios.png "Download Power Apps from the Apple App Store using QR code")  |
-| [![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps) | ![Download Power Apps from Google Play using QR code.](media/qr-code-android.png "Download Power Apps from Google Play using QR code") |
-| [![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) | ![Download Power Apps from Windows Store using QR code.](media/qr-code-windows.png "Download Power Apps from Windows Store using QR code") |
-
-
-
-
-## test
-
-[![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) 
-
-[![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps)
-
-[![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29)
-
 ## Install Power Apps mobile app
 
 To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=).  Also, make sure you have access to a model-driven app or canvas app that you created or that someone else created and shared with you. 
 
-Choose the download link for your device:
 
-- For iOS (iPad or iPhone), go to the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8).
-
-- For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
-
-- For Windows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
+| **Choose the download link for your device** | **Or, scan the QR code** |
+|-------------------------|-------------------------|
+| [![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8)  | ![Download Power Apps from the Apple App Store using the QR code.](media/qr-code-ios.png "Download Power Apps from the Apple App Store using the QR code")  |
+| [![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps) | ![Download Power Apps from Google Play using the QR code.](media/qr-code-android.png "Download Power Apps from Google Play using the QR code") |
+| [![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) | ![Download Power Apps from Windows Store using QR the code.](media/qr-code-windows.png "Download Power Apps from Windows Store using the QR code") |
 
 ## Required privileges
 
