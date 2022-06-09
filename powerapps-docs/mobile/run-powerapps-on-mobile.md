@@ -31,9 +31,6 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-> [!NOTE]
-> Since canvas apps can essentially be anything, there isn’t other help topics on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or Power Apps admin.
-
 
 ## Install Power Apps mobile app
 
