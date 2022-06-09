@@ -30,7 +30,6 @@ Dynamics 365 for Outlook lets users interact with data while they're offline and
 ## In This Section
 
 [Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />  
-[Sample: Use Outlook Methods](sample-outlook-methods.md)<br />
   
 ## Related Sections
 

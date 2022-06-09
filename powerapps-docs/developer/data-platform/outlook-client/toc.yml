@@ -3,8 +3,6 @@ items:
   href: extend-dynamics-365-outlook.md
   items:
   - name: Offline and Outlook filters and templates
-    href: offline-outlook-filters-templates.md
-  - name: "Sample: Use Dynamics 365 for Outlook methods"
-    href: sample-outlook-methods.md       
+    href: offline-outlook-filters-templates.md     
   - name: Offline use of web services
     href: offline-use-services.md
