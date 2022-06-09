@@ -24,7 +24,7 @@ search.app:
 ---
 # Create and edit tables using Power Apps
 
-[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Microsoft Dataverse.
+[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view, create, and edit tables for Microsoft Dataverse.
 
 ## View tables
 
@@ -44,7 +44,7 @@ You can also select select a column heading from the table view, and then select
 
 ## Create a table
 
-While [viewing tables](#view-tables), in the menu bar select **New table**. This opens the New table panel.
+While [viewing tables](#view-tables), in the menu bar select **New table**. This opens the **New table** panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
@@ -67,7 +67,7 @@ Select **Advanced options** to display additional properties that are optional f
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
 |**Type**  | Select the type of table. Use standard for most tables. Activity tables are a special kind of table that can only be owned by a user or team, but can’t be owned by an organization. Virtual tables require the table be populated with data from an external source.  |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
-| **Choose a table image**  | You can choose whether to display data in the image field as the image for the record by setting this field to [None] or Default Image.  |
+| **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps designers. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
 |**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
 |**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  |
