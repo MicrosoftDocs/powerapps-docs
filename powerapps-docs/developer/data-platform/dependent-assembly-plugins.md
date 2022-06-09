@@ -23,9 +23,9 @@ contributors:
 
 It is frequently valuable to include another assembly within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly.  
 
-Today, without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, it was never supported by Dataverse and it didn't always work. ILMerge is no longer being maintained.
+Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, it was never supported by Dataverse and it didn't always work. ILMerge is no longer being maintained.
 
-With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md).
+With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. Unlike ILMerge, you can also include other file resources, such as JSON files containing localized strings. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
 
 When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PlugPackage` and changes to the related plugin assemblies will be managed on the server.
 
@@ -35,7 +35,7 @@ You will still be able to register plug-in assemblies individually, but using `P
 
 ## Send feedback
 
-<!-- Need to provide people with a way to send feedback. Ideas site? -->
+If you have questions or issues with this feature you can contact technical support. If you have suggestions pleas post them on the [Power Apps Ideas](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas) site.
 
 ## Limitations
 
@@ -52,7 +52,7 @@ To use this feature, you should use these tools and applications.
 |---------|---------|
 |**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the stand-alone version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the stand-alone version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](powerapps-cli.md)|
 |**Plug-in Registration tool (PRT)**|You should use version X.X.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
-|**Visual Studio**|We recommend Visual Studio 2019 or newer|
+|**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ## Create a Visual Studio project
 
@@ -63,7 +63,7 @@ Use the PAC CLI `pac plugin init` command to create a Visual Studio project that
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
 
-Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the promect in the bin\Debug or bin\Release folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
+Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the promect in the `bin\Debug` or `bin\Release` folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
 
 > [!NOTE]
 > It is no longer required to sign the assemblies when using dependent assemblies. But in .NET, signed assemblies cannot use resources contained within unsigned assemblies, so you may still want to sign your assemblies.
@@ -162,8 +162,13 @@ While viewing the list of pluginpackages using the **Display by Package** view, 
 
 <!-- Think David J/ Andrew should provide this: This section should describe the details of the design so that advanced users can understand what they can or cannot do.
 Assuming that this is all built using MS technologies, we can have links to any concepts -->
+
+## FAQ
+
+ <!-- Need Amol/Divya to provide FAQ to add here -->
 ### See also
 
-[Use plug-ins to extend business processes](plug-ins.md)
+[Use plug-ins to extend business processes](plug-ins.md)<br />
+[PAC CLI pac plugin init](cli/reference/plugin-command.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
