@@ -22,8 +22,6 @@
         href: business-logic/manage-plug-ins-single-solution.md
       - name: Optimize custom assembly development
         href: business-logic/optimize-assembly-development.md
-      - name: Remove unsupported code that uses reflection in custom workflow activities
-        href: business-logic/remove-unsupported-code-using-reflection-workflow-activities.md
       - name: Set KeepAlive to false when interacting with external hosts in a plug-in
         href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
       - name: Set Timeout when making external calls in a plug-in
