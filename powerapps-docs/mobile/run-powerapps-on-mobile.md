@@ -35,6 +35,14 @@ Legend:
 > Since canvas apps can essentially be anything, there isn’t other help topics on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
 
+
+## test
+
+![Power Apps mobile user interface with model-driven and canvas apps.](media/app-store-icon.png "Power Apps mobile user interface with model-driven and canvas apps")
+
+![Power Apps mobile user interface with model-driven and canvas apps.](media/play-store-android-icon.png "Power Apps mobile user interface with model-driven and canvas apps")
+
+
 ## Install Power Apps mobile app
 
 To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=).  Also, make sure you have access to a model-driven app or canvas app that you created or that someone else created and shared with you. 
