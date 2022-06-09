@@ -36,6 +36,16 @@ Legend:
 
 
 
+
+| **Install** | **Use QR code** |
+|-------------------------|-------------------------|
+| [![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8)  | ![Download Power Apps from the Apple App Store using QR code.](media/qr-code-ios.png "Download Power Apps from the Apple App Store using QR code")  |
+| [![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps) | ![Download Power Apps from Google Play using QR code.](media/qr-code-android "Download Power Apps from Google Play using QR code") |
+| [![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) | ![Download Power Apps from Windows Store using QR code.](media/qr-code-windows.png "Download Power Apps from Windows Store using QR code") |
+
+
+
+
 ## test
 
 [![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) 
@@ -76,8 +86,6 @@ The table below outlines which mobile app you can use to run your app.
 | [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
-
-
 
 
 ## Sign in
