@@ -46,6 +46,7 @@ search.app:
 <td><p>OData system query options or FetchXML query to retrieve your data. </p> 
 <ul>
 <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
+<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
 <li>To specify a FetchXML query, use the <code>fetchXml</code> column to specify the query.</li>
 </ul>
 <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
