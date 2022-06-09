@@ -34,9 +34,9 @@ You can filter the tables you see using the following tabs:
 
  |View|Description|
  |--|--|
- |**Recommended**|Shows only the standard tables |
- |**Custom**|Shows only custom tables|
- |**All**| Shows all the tables|
+ |**Recommended**|Displays only the standard tables. Standard tables are tables included with Power Apps or Dynamics 365 apps. |
+ |**Custom**|Shows only custom tables. Custom tables are created by you and other app makers. |
+ |**All**| Shows all the tables. |
 
 :::image type="content" source="media/view-entities-portal.png" alt-text="View tables in Power Apps":::
 
@@ -58,7 +58,7 @@ Enter data for the following columns
 
 Select **Enable Attachments** to append notes and files to rows for this table.
 
-Select the **Primary column** tab to edit it if you want to change the **Display Name**or **Name** of the primary column.
+Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
 
 Select **Advanced options** to display additional properties that are optional for a table.
 
@@ -86,11 +86,6 @@ Select **Advanced options** to display additional properties that are optional f
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
 Select **Save** to continue, this will close the **New table** panel and display the table hub.
-
-<!--The **Primary Name** column of the table is displayed in the list of columns. Select the **Primary Name** column to edit it if you want to change the **Display Name**or **Name** of the column. The default values are shown below:
-
-> [!div class="mx-imgBorder"] 
-> ![Primary Name panel.](media/primary-name-panel.png)  -->
 
 ## Edit a table
 
