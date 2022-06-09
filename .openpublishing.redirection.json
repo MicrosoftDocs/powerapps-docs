@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/component-framework/control-implementation-library.md",
+      "redirect_url": "custom-controls-overview#component-implementation",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/outlook-client.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/developer/extend-customer-engagement-outlook",
       "redirect_document_id": false
