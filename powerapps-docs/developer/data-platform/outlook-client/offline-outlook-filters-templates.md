@@ -48,9 +48,9 @@ By default, there are unlimited settings for both system filters and user filter
 
 ## Instantiate a template
 
-You can instantiate one or more filters per user. To do this manually, use the <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest> to instantiate a filter, creating a user query record. Each user query record contains a reference back to the filter. If you update the filter, you can call instantiate again to refresh or override the user’s changes to the filter (user query record).  
+You can instantiate one or more filters per user. To do this manually, use the <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest> to instantiate a filter, creating a user query record. Each user query record contains a reference back to the filter. If you update the filter, you can call instantiate again to refresh or override the user's changes to the filter (user query record).  
   
-## Reset a user’s filters to the default
+## Reset a user's filters to the default
 
 You can reset the filters for a user to the default by using the <xref:Microsoft.Crm.Sdk.Messages.ResetUserFiltersRequest>.  
   
@@ -58,7 +58,6 @@ You can reset the filters for a user to the default by using the <xref:Microsoft
 
 [Extend Dynamics 365 for Outlook](extend-dynamics-365-outlook.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md)<br />
-[Sample: Create and retrieve Outlook filters](../org-service/samples/create-retrieve-outlook-filters.md)<br /> 
 <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest><br />
 <xref:Microsoft.Crm.Sdk.Messages.ResetUserFiltersRequest>
 
