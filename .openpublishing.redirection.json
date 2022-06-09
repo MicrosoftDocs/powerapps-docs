@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/walkthrough-configure-assembly-security-offline-plugin.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/walkthrough-configure-assembly-security-offline-plugin",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/outlook-client/offline-use-services.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/developer/supported-messages-entities-plugin",
       "redirect_document_id": false
