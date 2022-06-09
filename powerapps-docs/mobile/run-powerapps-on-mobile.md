@@ -24,10 +24,6 @@ ms.custom: intro-internal
 
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
-> [!NOTE]
-> If you're on a Windows device, you can install [Power Apps for Windows](windows-app-install.md).
-
-
 ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
 
 Legend:
@@ -35,7 +31,29 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-Since canvas apps can essentially be anything, there isn’t other help topics on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+> [!NOTE]
+> Since canvas apps can essentially be anything, there isn’t other help topics on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+
+
+## Install Power Apps mobile app
+
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=).  Also, make sure you have access to a model-driven app or canvas app that you created or that someone else created and shared with you. 
+
+Choose the download link for your device:
+
+- For iOS (iPad or iPhone), go to the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8).
+
+- For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
+
+- For Windows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
+
+## Required privileges
+
+For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
+
+## Supported devices 
+
+For more information, see [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app).
 
 ## Other mobile apps
 
@@ -50,25 +68,7 @@ The table below outlines which mobile app you can use to run your app.
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
-## Required privileges
 
-For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
-
-## Supported devices 
-
-For more information, see [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app).
-
-## Install Power Apps mobile app
-
-To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=).  Also, make sure you have access to a model-driven app or canvas app that you created or that someone else created and shared with you. 
-
-Choose the download link for your device:
-
-- For iOS (iPad or iPhone), go to the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8).
-
-- For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
-
-- For Windows, see [Install Power Apps for Windows (preview)](windows-app-install.md).
 
 
 ## Sign in
