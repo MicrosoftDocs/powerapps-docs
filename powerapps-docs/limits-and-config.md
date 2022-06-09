@@ -154,6 +154,18 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
+## Proxies
+
+Power Apps does not support running with a proxy enabled. If you encounter issues with loading your app while a proxy is enabled, please try disabling the proxy and see if the issue is resolved.
+
+
+Common issues:
+1. Some proxies will modify Power Apps requests by removing headers (i.e. CORS or auth headers). Power Apps relies on these headers to properly load apps.
+
+Known proxies that cause issues:
+1. Zscaler
+2. Blue Coat
+
 ## Data types size limits
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](maker/canvas-apps/functions/data-types.md#text-hyperlink-image-and-media).
