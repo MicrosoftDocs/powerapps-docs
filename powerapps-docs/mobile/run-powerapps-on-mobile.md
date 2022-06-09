@@ -47,10 +47,6 @@ To follow this procedure, if you're not signed up for Power Apps, [sign up for f
 | <br> [![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) <br><br> ![Download Power Apps from Windows Store using QR the code.](media/qr-code-windows.png "Download Power Apps from Windows Store using the QR code")| 
 
 
-
-
-
-
 ## Required privileges
 
 For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
@@ -80,7 +76,6 @@ Open Power Apps on your mobile device, and sign in by using your Azure Active Di
 If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device. If you run into issues signing in, see [Troubleshoot issues for Power Apps mobile app](powerapps-mobile-troubleshoot.md).
 
 ![Sign in to Power Apps.](media/powerapps_mobile_app_signin_screen.png "Sign in to Power Apps")
-
 
 
 ## Find the app
