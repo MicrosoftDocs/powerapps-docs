@@ -46,6 +46,8 @@ To follow this procedure, if you're not signed up for Power Apps, [sign up for f
 |<br> [![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps) <br><br> ![Download Power Apps from Google Play using the QR code.](media/qr-code-android.png "Download Power Apps from Google Play using the QR code") 
 | <br> [![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) <br><br> ![Download Power Apps from Windows Store using QR the code.](media/qr-code-windows.png "Download Power Apps from Windows Store using the QR code")| 
 
+> [!NOTE]
+> Power Apps for Windows is in preview. For more information see, [Power Apps for Windows (preview)](windows-app-install.md).
 
 ## Required privileges
 
