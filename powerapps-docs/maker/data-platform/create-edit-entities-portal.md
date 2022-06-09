@@ -108,11 +108,15 @@ Displays a few common properties for the table. Select **Properties** on the com
 
 ### Schema
 
+From the **Schema** area select from the following table components to open the area where you can view, open, existing components or create a new one.
+
 - Columns. More information: [Create and edit columns](create-edit-fields.md)
 - Relationships. See [Create and edit relationships between tables](create-edit-entity-relationships.md)
 - Keys. More information: [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)
 
 ### Data experiences
+
+From the **Data experiences** area select from the following table components to open the area where you can view, open, existing components or create a new one.
 
 - Forms. More information: [Create and design forms](../model-driven-apps/create-design-forms.md)
 - Views. More information: [Create or edit a view](../model-driven-apps/create-edit-views.md)
@@ -120,6 +124,9 @@ Displays a few common properties for the table. Select **Properties** on the com
 - Dashboards. More information: [Create or edit dashboards](../model-driven-apps/create-edit-dashboards.md)
 
 ### Customizations
+
+From the **Customizations** area select from the following table components to open the area where you can view, open, existing components or create a new one.
+
 - Business rules. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 - Commands. More information: [Customize the command bar using command designer](../model-driven-apps/use-command-designer.md)
 
