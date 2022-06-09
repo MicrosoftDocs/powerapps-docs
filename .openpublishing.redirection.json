@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/extend-dynamics-365-outlook.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/extend-customer-engagement-outlook",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/outlook-client/walkthrough-configure-assembly-security-offline-plugin.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/developer/walkthrough-configure-assembly-security-offline-plugin",
       "redirect_document_id": false
