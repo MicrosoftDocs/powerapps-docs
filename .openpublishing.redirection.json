@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "powerapps-docs\developer\data-platform\org-service\samples\create-retrieve-outlook-filters.md",
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-outlook-filters.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/sample-create-retrieve-outlook-filters",
       "redirect_document_id": false
     },
