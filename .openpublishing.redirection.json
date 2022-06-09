@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/best-practices/business-logic/remove-unsupported-code-using-reflection-workflow-activities.md",
+      "redirect_url": "../data-platform/best-practices/business-logic/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/audit-user-access.md",
       "redirect_url": "../data-platform/auditing/overview",
       "redirect_document_id": false
