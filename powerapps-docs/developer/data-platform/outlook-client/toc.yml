@@ -1,6 +1,3 @@
 items:
 - name: Extend Outlook Client
   href: extend-dynamics-365-outlook.md
-  items:   
-  - name: Offline use of web services
-    href: offline-use-services.md
