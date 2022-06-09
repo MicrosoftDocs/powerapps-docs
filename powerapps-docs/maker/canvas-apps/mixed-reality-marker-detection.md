@@ -48,7 +48,7 @@ Studio](https://create.powerapps.com/):
 
 3. Select **View Shape in MR** or **Markup in MR** control.
 
-4. On the **Properties** tab set the the **Enable marker detection** property to **On** in the properties panel or the formula bar.
+4. On the **Properties** tab set the **Enable marker detection** property to **On** in the properties panel or the formula bar.
 
 :::image type="content" source="./media/augmented-marker-detection/marker-detection-properties.png" alt-text="A screenshot of the properties panel with the marker detection toggle highlighted.":::
 
