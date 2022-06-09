@@ -132,7 +132,17 @@ From the **Customizations** area select from the following table components to o
 
 ### Table columns and data
 
-View the record data in the table.
+View and create table record data for the table. Select the number of columns, such as **+17 more**, to select columns to display in the columns and data view.
+
+:::image type="content" source="media/select-columns-to-display.png" alt-text="Select additional columns to display in the columns and data view":::
+
+Select **Edit** to open the [Table designer](#table-designer).
+
+## Table designer
+
+The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing properties, or creating a model-driven app based on the table.
+
+:::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
 
 ## Delete a table
 
