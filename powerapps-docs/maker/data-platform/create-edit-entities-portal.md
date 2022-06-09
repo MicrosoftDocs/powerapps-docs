@@ -1,10 +1,9 @@
 ---
-title: "Create and edit tables using Power Apps portal | MicrosoftDocs"
+title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 ms.custom: ""
-ms.date: 05/30/2018
+ms.date: 06/09/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -23,44 +22,31 @@ search.app:
   - PowerApps
   - D365CE
 ---
+# Create and edit tables using Power Apps
 
-# Create and edit tables using Power Apps portal
-
-
-
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Microsoft Dataverse.
-
-The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
-- [Create and edit tables in Dataverse](./data-platform-create-entity.md)
-- [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
+[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Microsoft Dataverse.
 
 ## View tables
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**.
+Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Data** > **Tables**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![View tables.](media/view-entities-portal.png)
-
-   You can filter the tables you see using the following views in a list: 
-
-   > [!div class="mx-imgBorder"] 
-	 > ![table views.](media/entity-views-portal.png) 
+You can filter the tables you see using the following tabs:
 
  |View|Description|
  |--|--|
- |**All**| Shows all the tables|
- |**Managed**| Shows only managed and standard tables|
+ |**Recommended**|Shows only the standard tables |
  |**Custom**|Shows only custom tables|
- |**Default**|Shows only the standard tables |
+ |**All**| Shows all the tables|
 
-You can also select **Group** to group tables by the **Tags** applied to them.
+:::image type="content" source="media/view-entities-portal.png" alt-text="View tables in Power Apps":::
+
+You can also select select a column heading from the table view, and then select **Filter by** to display tables by a certain property, such as **Type**, **Managed**, or **Tags**.
 
 ## Create a table
 
-While [viewing tables](#view-tables), in the menu bar select **New table**. This will open the New table panel.
+While [viewing tables](#view-tables), in the menu bar select **New table**. This opens the New table panel.
 
-> [!div class="mx-imgBorder"] 
-> ![New table Panel.](media/new-entity-panel.png)
+:::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
 Enter data for the following columns
 
@@ -68,82 +54,78 @@ Enter data for the following columns
 |--|--|
 |**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
-|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved.|
-|**Primary Name**|This is the only column visible at this point. Edit it if you want to change the **Display Name**or **Name** of the column.|
-|**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of rows. |
-|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved.|
+|**Description**|Provide a meaningful description of the purpose of the table.|
 
 Select **Enable Attachments** to append notes and files to rows for this table.
 
-Select **More settings**. These settings are optional for a table.
+Select the **Primary column** tab to edit it if you want to change the **Display Name**or **Name** of the primary column.
+
+Select **Advanced options** to display additional properties that are optional for a table.
 
 ||Description|
 |--|--|
-|**Description**|Provide a meaningful description of the purpose of the table.|
-|**table type and ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a row.|
-|**Collaboration**|Enable features to help users to more easily work together on this table.|
-|**Create and Update Settings**|You can enable quick create forms, giving your app a streamlined data entry experience. Duplicate detection lets you set duplicate detection policies and create duplicate detection rules. Change tracking provides a way to keep data synchronized in a performant way.|
-|**Dynamics 365 for Outlook**|Configure how this table appears in Outlook.|
+| **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
+|**Type**  | Select the type of table. Use standard for most tables. Activity tables are a special kind of table that can only be owned by a user or team, but can’t be owned by an organization. Virtual tables require the table be populated with data from an external source.  |
+|**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
+| **Choose a table image**  | You can choose whether to display data in the image field as the image for the record by setting this field to [None] or Default Image.  |
+| **Color** | Set a color to be used for the table in model-driven apps.  |
+|**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
+|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  |
+| **Provide custom help**  | When selected, set a **Help URL** to control what page users will see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
+| **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
+| **Leverage quick create form if available**  |After you have created and published a Quick Create Form for this table, people will have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don’t support quick create forms, the main form will be used when the custom table icon is selected.  |
+|**Creating a new activity**  | Associate activities to records for this table.  |
+| **Doing a mail merge**  | App users can use this table with mail merge.   |
+|**Setting up SharePoint document management**   | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint.  |
+| **Can have connections**  | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled.  |
+| **Can have a contact email**  | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn’t already exist for this table, a new one will be created when you enable sending email.  |
+| **Have an access team**| Create team templates for this table.  |
+| **Can be linked to feedback**  | Let app users write feedback for any table record, or rate table records within a defined rating range. More information: [Configure a table for feedback/ratings](configure-entity-feedback.md)  |
+|**Appear in search results**   | Enable so that table records can be included in search results when using an app.  |
+|**Can be taken offline** | Whether data in this table will be available while the Power Apps application is not connected to the network.  |
+|**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
-Select **Create** to continue, this will close the **New table** panel and display the list of columns.
+Select **Save** to continue, this will close the **New table** panel and display the table hub.
 
-The **Primary Name** column of the table is displayed in the list of columns. Select the **Primary Name** column to edit it if you want to change the **Display Name**or **Name** of the column. The default values are shown below:
+<!--The **Primary Name** column of the table is displayed in the list of columns. Select the **Primary Name** column to edit it if you want to change the **Display Name**or **Name** of the column. The default values are shown below:
 
 > [!div class="mx-imgBorder"] 
-> ![Primary Name panel.](media/primary-name-panel.png)
+> ![Primary Name panel.](media/primary-name-panel.png)  -->
 
 ## Edit a table
 
-While [viewing tables](#view-tables), select the table you want to edit.
+While [viewing tables](#view-tables), select the table you want to edit, and then select **Properties** from the command bar if you want to edit the table properties.
 
-Select **Settings** from the menu if you want to edit the **Display name**, **Plural display name** or **Description** for the table.
+:::image type="content" source="media/entity-settings-portal.png" alt-text="Edit table properties":::
 
-> [!div class="mx-imgBorder"] 
-> ![table Settings.](media/entity-settings-portal.png)
+To edit form components, open the table to display the table hub. The table hub includes the following areas. Select a component to edit it.
 
-For other items choose from the tabs.
+:::image type="content" source="media/table-hub.png" alt-text="Table hub" lightbox="media/table-hub.png":::
 
-### Fields
+### Table properties
 
-See [Create and edit columns](create-edit-fields.md)
+Displays a few common properties for the table. Select **Properties** on the command bar to edit the table properties.
 
-### Relationships
+### Schema
 
-See [Create and edit relationships between tables](create-edit-entity-relationships.md)
+- Columns. More information: [Create and edit columns](create-edit-fields.md)
+- Relationships. See [Create and edit relationships between tables](create-edit-entity-relationships.md)
+- Keys. More information: [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)
 
-### Business rules
+### Data experiences
 
-See [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+- Forms. More information: [Create and design forms](../model-driven-apps/create-design-forms.md)
+- Views. More information: [Create or edit a view](../model-driven-apps/create-edit-views.md)
+- Charts. More information: [Create a system chart](../model-driven-apps/create-edit-system-chart.md)
+- Dashboards. More information: [Create or edit dashboards](../model-driven-apps/create-edit-dashboards.md)
 
-### Views
+### Customizations
+- Business rules. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+- Commands. More information: [Customize the command bar using command designer](../model-driven-apps/use-command-designer.md)
 
-See [Create or edit a view](../model-driven-apps/create-edit-views.md)
+### Table columns and data
 
-### Forms
-
-See [Create and design forms](../model-driven-apps/create-design-forms.md)
-
-### Dashboards
-
-See [Create or edit dashboards](../model-driven-apps/create-edit-dashboards.md)
-
-### Charts
-
-See [Create a system chart](../model-driven-apps/create-edit-system-chart.md)
-
-### Keys
-
-See [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)
-
-### Data
-
-View the data in the table.
-Use the **Select view** menu to choose from available views for the table or to show all columns.
-
-> [!div class="mx-imgBorder"] 
-> ![Select view.](media/entity-data-select-view.png)
-
-Use the **Next Page** and **Previous Page** commands at the bottom of the form to see more data.
+View the record data in the table.
 
 ## Delete a table
 
@@ -155,10 +137,7 @@ As someone with the system administrator security role, you can delete custom ta
 > [!NOTE]
 > The only way to recover data from a table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
 
-While [viewing tables](#view-tables), select the table and select **Delete table** from the menu.
-
-> [!div class="mx-imgBorder"] 
-> ![Delete a table using the Power Apps portal.](media/delete-entity-powerapps-portal.png)
+While [viewing tables](#view-tables), select the table, and then select **Delete** from the menu.
 
 If the table has dependencies that prevent it from being deleted you will see an error message. To identify and remove any dependencies, you will need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
 
