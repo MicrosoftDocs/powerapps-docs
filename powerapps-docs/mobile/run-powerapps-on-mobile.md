@@ -38,9 +38,9 @@ Legend:
 
 ## test
 
-![Power Apps mobile user interface with model-driven and canvas apps.](media/app-store-icon.png "Power Apps mobile user interface with model-driven and canvas apps")
+[![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8)
 
-![Power Apps mobile user interface with model-driven and canvas apps.](media/play-store-android-icon.png "Power Apps mobile user interface with model-driven and canvas apps")
+[![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps)
 
 
 ## Install Power Apps mobile app
