@@ -2208,12 +2208,10 @@
       href: ./data-platform/create-edit-metadata.md
     - name: Types of tables
       href: ./data-platform/types-of-entities.md    
-    - name: "Create a table"
-      href: ./data-platform/data-platform-create-entity.md
+    - name: "Create or edit a table"
+      href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
-    - name: Edit a table
-      href: ./data-platform/edit-entities.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
@@ -2228,8 +2226,6 @@
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using Power Apps
-        href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
       - name: How to open table data in Excel
