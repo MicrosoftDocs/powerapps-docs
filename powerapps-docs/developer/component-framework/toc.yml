@@ -127,6 +127,8 @@ items:
           href: reference/client/isoffline.md
       - name: Column
         href: reference/column.md
+      - name: ColumnInfo
+        href: reference/columninfo.md
       - name: ConditionExpression
         href: reference/conditionexpression.md
       - name: Context
