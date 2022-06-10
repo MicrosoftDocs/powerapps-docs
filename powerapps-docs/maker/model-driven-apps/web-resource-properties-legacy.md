@@ -23,7 +23,7 @@ search.app:
 
 This article describes how to use the form designer to view and edit web resources on a form. Form enabled web resources are image or HTML files.
 
-## Access web resource properties
+## View and edit a web resource on a form
 
 Open a main form and select the area of the form that has the web resource. The web resource properties are displayed on the right properties pane.
 

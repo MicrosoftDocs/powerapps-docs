@@ -84,7 +84,7 @@ Part of the name of any web resource you create is the solution publisher prefix
   
    - **Image web resource**. Use image web resources to make images available for use in model-driven apps. Supported image formats are: PNG, JPG, GIF, ICO, and  SVG (vector format). More information: [Image web resources](../../developer/model-driven-apps/image-web-resources.md)
 
-1. Select the web resource from the list and then select **Add**. Alternatively, select **New web resource** to create the web resource you want. More information: [Create or edit a web resource for a solution](#create-or-edit-a-web-resource-for-a-solution)
+1. Select the web resource from the list and then select **Add**. Alternatively, select **New web resource** to create the web resource you want. More information: [Web resource properties for model-driven app forms](web-resource-properties-legacy.md)
 
 ## Add a web resource to an app (preview)
 
