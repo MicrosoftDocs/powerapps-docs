@@ -1,8 +1,8 @@
 {
   "redirections": [
     {
-      "source_path": "powerapps-docs/developer/data-platform/online-management-api.md",
-      "redirect_url": "online-management-api/overview",
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/html.md",
+      "redirect_url": "../",
       "redirect_document_id": false
     },
     {
