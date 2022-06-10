@@ -47,7 +47,7 @@ Choose the download link for your device or scan the QR code to download Power A
 
 ## Required privileges and supported devices
 
-Review the following privileges and supported devices to run model-driven apps on Power Apps Mobile app:
+Review the following privileges and supported devices to run Power Apps Mobile app:
 
 - [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges)
 - [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)
