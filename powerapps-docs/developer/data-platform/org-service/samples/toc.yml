@@ -244,6 +244,8 @@
     href: specify-queue-item-work-early-bound.md
 - name: Reports
   items:
+  - name: Download report definition
+    href: download-report-definition.md
   - name: Get report history limit
     href: get-report-history-limit.md
   - name: Make report available or unavailable to organization
