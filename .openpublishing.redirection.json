@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/detect-duplicate-data.md",
+      "redirect_url": "manage-duplicate-detection-create-update",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/test-null-value.md",
       "redirect_url": "entity-operations-query-data",
       "redirect_document_id": false
