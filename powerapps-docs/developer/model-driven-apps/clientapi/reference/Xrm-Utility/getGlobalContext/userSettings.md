@@ -21,9 +21,26 @@ contributors:
 
 Returns information about the current user settings.
 
-`var userSettings = Xrm.Utility.getGlobalContext().userSettings`
+`const userSettings = Xrm.Utility.getGlobalContext().userSettings`
 
-The **userSettings** object provides following properties and a method.
+The **userSettings** object provides the following properties and methods.
+
+* [dateFormattingInfo](#dateformattinginfo)
+* [defaultDashboardId](#defaultdashboardid)
+* [isGuidedHelpEnabled](#isguidedhelpenabled)
+* [isHighContrastEnabled](#ishighcontrastenabled)
+* [isRTL](#isrtl)
+* [languageId](#languageid)
+* [roles](#roles)
+* [securityRolePrivileges](#securityroleprivileges)
+* [getSecurityRolePrivilegesInfo](#getsecurityroleprivilegesinfo)
+* [securityRoles](#securityroles)
+* [transactionCurrency](#transactioncurrency)
+* [transactionCurrencyId](#transactioncurrencyid)
+* [userId](#userid)
+* [userName](#username)
+* [getTimeZoneOffsetMinutes](#gettimezoneoffsetminutes-method)
+
 
 ## dateFormattingInfo
 
@@ -145,7 +162,7 @@ Returns a promise which resolves with an object whose keys are the security role
 
 `userSettings.getSecurityRolePrivilegesInfo().then(successCallback, errorCallback);`
 
-## Parameters
+### Parameters
 
 <table>
 <tr>
