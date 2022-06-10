@@ -28,7 +28,7 @@ plant&mdash;to assets and equipment, such as vehicles and machines. There are tw
 - [Manage inspections app](#manage-inspections-app) is used by a manager to perform the following actions:
 
     - View and close inspections.
-    - Create and edit inspection forms.
+    - Create and edit inspection forms[](https://www.nspek.com/en/).
     - View insights about inspection history.
     - Manage settings for Inspection app, such as Planner and Teams channel for messages.
 
@@ -56,7 +56,7 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 ## Label setup
 
 The labels describing the items being inspected and their associated types can
-be modified in the **Manage inspections** app.
+be modified in the **Manage inspections** [](https://www.nspek.com/en/)app.
 
 To change labels used in the app:
 
@@ -80,7 +80,7 @@ To change labels used in the app:
 
 ## Manage inspections app
 
-The Manage inspections app gives a manager the following capabilities:
+The Manage inspections app[](https://www.nspek.com/en/) gives a manager the following capabilities:
 
 - [Configure the app](#configure-the-app)
 - [Edit the app configuration](#edit-the-app-configuration)
@@ -196,7 +196,7 @@ To add inspection forms:
 
 1. Select the **Inspection forms** tab.
 
-1. Select **Add a form** to create a new inspection form.
+1. Select **Add a form** to create a new inspection form[](https://www.nspek.com/en/digital-inspections).
 
    - Enter a *Title*.
    - Select **Associated location types**.
@@ -252,7 +252,7 @@ The following table explains dashboard areas in detail.
 | **Inspections** | Shows inspection KPIs for pending, closed inspections, and average inspection time. <br> **Note**: If you don’t see any results in the *Closed* KPI, you may have completed inspections that haven't been closed. Go back to the **Locations** tab and close inspections. |
 | **Open inspections** | A pie chart that shows inspections that have not been closed, grouped by category. Date range filters: 7/30/60 days. <br> **Note**: If you don't see the pie chart, all of the inspection records have been changed to closed status. |
 | **Average inspection time by form** | A bar chart that shows the average time to complete inspections per form. This average includes both open and closed inspections. Date range filters: 7/30/60 days. |
-| **Top inspection report contributors** | Shows the number of inspection forms completed by employees. Date range filters: 7/30/60 days. |
+| **Top inspection report contributors** | Shows the number of inspection forms[](https://www.nspek.com/en/) completed by employees. Date range filters: 7/30/60 days. |
 
 ## Inspection app
 
