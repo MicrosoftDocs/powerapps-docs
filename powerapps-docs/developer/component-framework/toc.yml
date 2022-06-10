@@ -395,6 +395,9 @@ items:
         href: reference/updatedproperties.md
       - name: UserSettings
         href: reference/usersettings.md
+        items:
+          - name: getTimeZoneOffsetMinutes
+            href: reference/usersettings/gettimezoneoffsetminutes.md
       - name: Utility
         href: reference/utility.md
         items:
