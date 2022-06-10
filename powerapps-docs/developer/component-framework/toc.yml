@@ -269,6 +269,8 @@ items:
           href: reference/formatting/formatutcdatetimetouserdate.md
         - name: getWeekOfYear
           href: reference/formatting/getweekofyear.md
+        - name: parseDateFromInput
+          href: reference/formatting/parsedatefrominput.md
       - name: ICommand
         href: reference/icommand.md
       - name: Linking
