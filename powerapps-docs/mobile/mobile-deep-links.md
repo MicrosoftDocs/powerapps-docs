@@ -44,21 +44,24 @@ Deep links for Power Apps mobile should start with the following:
 | &lt;app-id&gt;       | Opens the correct app module                                                 |
 | tenantId             | Connects to the correct tenant                                               |
 | forceOfflineDataSync | Ensures that data sync is triggered so that all the latest data is available |
+| isShortcut           | TBD                                                                          |
+| openApp              | TBD                                                                          |
+| restartApp           | TBD                                                                          |
 
 If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters.
 
 | **Parameter**                       | **Description**                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------|
-| etn=&lt;entity-logical-name&gt; | Designates which entity to go to                                                                 |
+| etn=&lt;entity-logical-name&gt; | Designates which table to go to                                                                 |
 | pagetype=entityrecord           | Indicates that the target is a form    |
 | extraqs=&lt;form-id&gt;         | Designates which form to open for the `entityrecord`; if not specified, the default form will open. The `extraqs` parameter can also be used to default field values.        |
-| id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the create form for the entity will open |
+| id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the create form for the table will open |
 
 If the link goes to an `entitylist` view, add the following parameters.
 
 | **Parameter**                                                | **Description**                                                     |
 |--------------------------------------------------------------|---------------------------------------------------------------------|
-| etn=&lt;entity-logical-name&gt;                              | Designates which entity to go to                              |
+| etn=&lt;entity-logical-name&gt;                              | Designates which table to go to                              |
 | pagetype=entitylist                                          | Indicates that we're going to a view                               |
 | viewid=&lt;view-id&gt;                                       | Designates which view to open                                       |
 | Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Designates whether we're going to a system view or a personal view |
