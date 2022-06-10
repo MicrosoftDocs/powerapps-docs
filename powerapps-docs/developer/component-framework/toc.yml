@@ -370,6 +370,8 @@ items:
           href: reference/resources/getresource.md
         - name: getString
           href: reference/resources/getstring.md
+      - name: SecurityPrivilegesMetadata
+        href: reference/securityprivilegesmetadata.md
       - name: SecurityValues
         href: reference/securityvalues.md
       - name: SortStatus
