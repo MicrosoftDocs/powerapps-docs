@@ -325,6 +325,8 @@ items:
           href: reference/paging/reset.md
         - name: setPageSize
           href: reference/paging/setpagesize.md
+      - name: PickFileOptions
+        href: reference/pickfileoptions.md
       - name: Popup
         href: reference/popup.md
       - name: PopupService
