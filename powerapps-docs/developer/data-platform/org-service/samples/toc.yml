@@ -224,6 +224,26 @@
     href: web-access-plugin.md
   - name: IsSystemAdmin Custom API
     href: issystemadmin-customapi-sample-plugin.md
+- name: Query Data
+  items:
+  - name: Query data using LINQ
+    href: query-using-linq.md
+  - name: Use QueryExpression with a paging cookie
+    href: use-queryexpression-with-a-paging-cookie.md
+  - name: Retrieve multiple with the QueryExpression class
+    href: retrieve-multiple-queryexpression-class.md
+  - name: Retrieve multiple with the QueryByAttribute class
+    href: retrieve-multiple-querybyattribute-class.md
+  - name: Convert queries between Fetch and QueryExpression
+    href: convert-queries-fetch-queryexpression.md
+  - name: Retrieve records from an intersect table
+    href: retrieve-records-intersect-table.md
+  - name: Validate and execute a saved query
+    href: validate-execute-saved-query.md
+  - name: Use aggregation in FetchXML
+    href: use-aggregation-fetchxml.md
+  - name: Use FetchXML with a paging cookie
+    href: use-fetchxml-paging-cookie.md
 - name: Queues
   items:
   - name: Add a record to a queue
@@ -278,26 +298,10 @@
   items:       
   - name: Retrieve time zone information
     href: retrieve-time-zone-information.md
-- name: Query Data
-  items:
-  - name: Query data using LINQ
-    href: query-using-linq.md
-  - name: Use QueryExpression with a paging cookie
-    href: use-queryexpression-with-a-paging-cookie.md
-  - name: Retrieve multiple with the QueryExpression class
-    href: retrieve-multiple-queryexpression-class.md
-  - name: Retrieve multiple with the QueryByAttribute class
-    href: retrieve-multiple-querybyattribute-class.md
-  - name: Convert queries between Fetch and QueryExpression
-    href: convert-queries-fetch-queryexpression.md
-  - name: Retrieve records from an intersect table
-    href: retrieve-records-intersect-table.md
-  - name: Validate and execute a saved query
-    href: validate-execute-saved-query.md
-  - name: Use aggregation in FetchXML
-    href: use-aggregation-fetchxml.md
-  - name: Use FetchXML with a paging cookie
-    href: use-fetchxml-paging-cookie.md
+- name: Views
+  items: 
+  - name: Work with views
+    href: work-with-views.md
 - name: Web resources
   items:
   - name: Import files as web resources
