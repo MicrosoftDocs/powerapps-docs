@@ -41,7 +41,7 @@ In the example below notice the module that relates to a given lesson within the
   
 > [!NOTE]
 > - Data in quick view form controls can't be edited and they do not support form scripts. 
-> - Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles can't be assigned to quick view forms and they can't be activated or deactivated. Subgrids inside quick view forms will also not display a command bar.
+> - Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles can't be assigned to quick view forms and they can't be activated or deactivated.
   
 <a name="BKMK_CreateQFV"></a>
 
