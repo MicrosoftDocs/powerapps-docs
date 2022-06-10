@@ -17,13 +17,16 @@ contributors:
 
 # Content Delivery Network (preview) 
 
-Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
 A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. CDNs' store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency. 
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="A diagram of a content delivery network.":::
 
+> [!NOTE]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+
 When you enable CDN on your portal, static content like images, scripts, and style sheet files used to design your portal website will be stored and served from the CDN server closest to your location.  
+
 > [!NOTE]
 > You need to be a Portal Administrator to enable the CDN. This feature is available for Power Apps portal.  If you're using the Add-on license then you can't enable CDN. Trial portals aren't supported for CDN. You can't enable the CDN for portals configured with custom domain during preview. 
 
