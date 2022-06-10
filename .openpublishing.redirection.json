@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/mode.md",
+      "redirect_url": "../",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/html.md",
       "redirect_url": "../",
       "redirect_document_id": false
