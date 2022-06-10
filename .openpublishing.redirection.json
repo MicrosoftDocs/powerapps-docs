@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/client-scripting-best-practices.md",
+      "redirect_url": "/power-apps/developer/model-driven-apps/best-practices/business-logic/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/detect-duplicate-data.md",
       "redirect_url": "manage-duplicate-detection-create-update",
       "redirect_document_id": false
