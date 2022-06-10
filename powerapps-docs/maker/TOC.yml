@@ -93,7 +93,7 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
-      - name: Create and join a Teams meeting from an appointment (preview)
+      - name: Create and join a Teams meeting from an appointment
         href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
