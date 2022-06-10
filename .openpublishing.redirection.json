@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api.md",
+      "redirect_url": "online-management-api/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/component-framework/reference/entity/getvalue.md",
       "redirect_url": "../../entityrecord/getvalue",
       "redirect_document_id": false
