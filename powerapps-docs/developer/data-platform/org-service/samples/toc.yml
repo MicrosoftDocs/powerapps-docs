@@ -214,10 +214,6 @@
     href: export-import-data-map.md
   - name: Import data using complex data map
     href: import-data-complex-data-map.md
-- name: Outlook
-  items:
-  - name: Create and retrieve Outlook filters
-    href: create-retrieve-outlook-filters.md
 - name: Plug-ins
   items:
   - name: Create a basic plug-in
