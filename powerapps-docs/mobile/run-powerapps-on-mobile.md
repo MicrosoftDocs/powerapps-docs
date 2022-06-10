@@ -1,6 +1,6 @@
 ---
-title: Run canvas app and model-driven apps on Power Apps mobile | Microsoft Docs
-description: Learn how to run canvas and model-driven apps on a mobile device.
+title: Run canvas apps or model-driven apps on Power Apps mobile | Microsoft Docs
+description: Learn how to install and run a canvas or model-driven app on a mobile device.
 author: mduelae
 
 ms.component: pa-user
@@ -20,23 +20,10 @@ searchScope:
 ms.custom: intro-internal
 ---
 
-#  Get started with Power Apps mobile
+#  Install Power Apps mobile 
 
-When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
+If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=). Then choose the download link or scan a QR code to download the Power Apps mobile app.
 
-![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
-
-Legend:
-
-1. **Model-driven apps**
-2. **Canvas apps**
-
-
-## Install Power Apps mobile app
-
-To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=). Also, make sure you have access to a model-driven app or a canvas app that you created or that someone else created and shared with you. 
-
-Choose the download link for your device or scan the QR code to download Power Apps mobile.
 
 |[![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) |[![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|[![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29)|  
 |----------------------------------|---------------------------|----------------|  
@@ -44,6 +31,7 @@ Choose the download link for your device or scan the QR code to download Power A
  
 > [!NOTE]
 > Power Apps for Windows is in preview. For more information see, [Power Apps for Windows (preview)](windows-app-install.md).
+
 
 ## Required privileges and supported devices
 
@@ -68,21 +56,31 @@ The table below outlines which mobile app you can use to run your app.
 
 ## Sign in
 
+
 Open Power Apps on your mobile device, and sign in by using your Azure Active Directory credentials.
 
 If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device. If you run into issues signing in, see [Troubleshoot issues for Power Apps mobile app](powerapps-mobile-troubleshoot.md).
 
 ![Sign in to Power Apps.](media/powerapps_mobile_app_signin_screen.png "Sign in to Power Apps")
-
-
+  
+  
 ## Find the app
+  
+When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on Power Apps mobile. 
+
+![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
+
+Legend:
+
+1. **Model-driven apps**
+2. **Canvas apps**  
+
 
 The apps that you used recently will show on the default screen when you sign in to Power Apps mobile.
-
+  
 The **Home** is the default screen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. 
 
 ![Default Home screen.](media/default-home-screen.png "Default Home screen")
-
 
 
 ## Filter apps 
