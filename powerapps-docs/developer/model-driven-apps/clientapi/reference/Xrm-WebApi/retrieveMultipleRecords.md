@@ -27,59 +27,65 @@ contributors:
 
 ## Parameters
 
-<table style="width:100%">
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>The table logical name of the records you want to retrieve. For example: "account".</td>
-</tr>
-<tr>
-<td>options</td>
-<td>String</td>
-<td>No</td>
-<td><p>OData system query options or FetchXML query to retrieve your data. </p> 
-<ul>
-<li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
-<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
-<li>To specify a FetchXML query, use the <code>fetchXml</code> column to specify the query.</li>
-</ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
-<p>When you specify a FetchXML query for the <code>options</code> parameter, the query should not be encoded.
-<p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
-</tr>
-<tr>
-<td>maxPageSize</td>
-<td>Number</td>
-<td>No</td>
-<td><p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
-<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> column in the returned promise object will contain a link to retrieve records. </td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
-<ul>
-<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as <code>key: value</code> pairs. The Id of the table record is retrieved by default.</li>
-<li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this returns the URL to return the next page of records.</li>
-<li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
+<table>
+ <tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td>entityLogicalName</td>
+  <td>String</td>
+  <td>Yes</td>
+  <td>The table logical name of the records you want to retrieve. For example: "account".</td>
+ </tr>
+ <tr>
+  <td>options</td>
+  <td>String</td>
+  <td>No</td>
+  <td>
+   <p>OData system query options or FetchXML query to retrieve your data. </p>
+   <ul>
+    <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
+    <li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
+    <li>To specify a FetchXML query, use the `fetchXml` column to specify the query.</li>
+   </ul>
+   <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+   <p>You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
+   <p>When you specify an OData query string for the `options` parameter, the query <b>should be encoded</b> for special characters.
+   <p>When you specify a FetchXML query for the `options` parameter, the query <b>should not be encoded</b>.
+   <p>See examples later in this topic to see how you can define the `options` parameter for various retrieve multiple scenarios.
+  </td>
+ </tr>
+ <tr>
+  <td>maxPageSize</td>
+  <td>Number</td>
+  <td>No</td>
+  <td>
+   <p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p>
+   <p>If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.
+  </td>
+ </tr>
+ <tr>
+  <td>successCallback</td>
+  <td>Function</td>
+  <td>No</td>
+  <td>
+   <p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
+   <ul>
+    <li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as `key: value` pairs. The Id of the table record is retrieved by default.</li>
+    <li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this returns the URL to return the next page of records.</li>
+    <li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
+   </ul>
+  </td>
+ </tr>
+ <tr>
+  <td>errorCallback</td>
+  <td>Function</td>
+  <td>No</td>
+  <td>A function to call when the operation fails.</td>
+ </tr>
 </table>
 
 ## Return Value
