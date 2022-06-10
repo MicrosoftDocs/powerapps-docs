@@ -50,7 +50,7 @@ While [viewing tables](#view-tables), on the menu bar select **New table**. This
 
 Enter data for the following properties.
 
-||Description|
+|Property |Description|
 |--|--|
 |**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
@@ -62,7 +62,7 @@ Select the **Primary column** tab if you want to change the **Display Name** or 
 
 Select **Advanced options** to display additional properties that are optional for a table.
 
-||Description|
+|Property |Description|
 |--|--|
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
 |**Type**  | Select the type of table. Use standard for most tables. Activity tables are a special table that can only be owned by a user or team, but can’t be owned by an organization. Virtual tables require the table be populated with data from an external source.  |
@@ -154,8 +154,6 @@ If the table has dependencies that prevent it from being deleted you'll see an e
 
 ### See also
 
-[Create and edit tables in Dataverse](./data-platform-create-entity.md)<br />
-[Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
-
+[Create a custom table using code](../../developer/data-platform/org-service/create-custom-entity.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
