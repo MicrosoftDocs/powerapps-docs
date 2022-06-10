@@ -30,7 +30,7 @@ search.app:
 
 Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Data** > **Tables**.
 
-You can filter the tables you see using the following tabs:
+Filter the tables that are displayed using the following tabs:
 
  |View|Description|
  |--|--|
@@ -48,7 +48,7 @@ While [viewing tables](#view-tables), on the menu bar select **New table**. This
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
-Enter data for the following columns.
+Enter data for the following properties.
 
 ||Description|
 |--|--|
@@ -56,7 +56,7 @@ Enter data for the following columns.
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
 |**Description**|Provide a meaningful description of the purpose of the table.|
 
-Select **Enable Attachments** to append notes and files to rows for this table.
+Select **Enable Attachments** to append notes and files to records for this table.
 
 Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
 
@@ -82,7 +82,7 @@ Select **Advanced options** to display additional properties that are optional f
 | **Have an access team**| Create team templates for this table.  |
 | **Can be linked to feedback**  | Let app users write feedback for any table record, or rate table records within a defined rating range. More information: [Configure a table for feedback/ratings](configure-entity-feedback.md)  |
 |**Appear in search results**   | Enable so that table records can be included in search results when using an app.  |
-|**Can be taken offline** | Whether data in this table will be available while the Power Apps application isn't connected to the network.  |
+|**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network.  |
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
 Select **Save** to continue, this will close the **New table** panel and display the table hub.
@@ -103,7 +103,7 @@ Displays a few common properties for the table. Select **Properties** on the com
 
 ### Schema
 
-From the **Schema** area select from the following table components to open the area where you can view, open, existing components or create a new one.
+From the **Schema** area select from the following table components to open the area where you can view and open existing components or create a new one.
 
 - Columns. More information: [Create and edit columns](create-edit-fields.md)
 - Relationships. See [Create and edit relationships between tables](create-edit-entity-relationships.md)
@@ -111,7 +111,7 @@ From the **Schema** area select from the following table components to open the 
 
 ### Data experiences
 
-From the **Data experiences** area select from the following table components to open the area where you can view, open, existing components or create a new one.
+From the **Data experiences** area select from the following table components to open the area where you can view and open existing components or create a new one.
 
 - Forms. More information: [Create and design forms](../model-driven-apps/create-design-forms.md)
 - Views. More information: [Create or edit a view](../model-driven-apps/create-edit-views.md)
@@ -120,7 +120,7 @@ From the **Data experiences** area select from the following table components to
 
 ### Customizations
 
-From the **Customizations** area select from the following table components to open the area where you can view, open, existing components or create a new one.
+From the **Customizations** area select from the following table components to open the area where you can view and open existing components or create a new one.
 
 - Business rules. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 - Commands. More information: [Customize the command bar using command designer](../model-driven-apps/use-command-designer.md)
@@ -133,7 +133,7 @@ View and create table record data for the table. Select the number of columns, s
 
 ## Table designer
 
-From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing properties, or creating a model-driven app based on the table.
+From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing table properties, or creating a model-driven app based on the table.
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
 
