@@ -27,7 +27,11 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
 |**iOS** <br>[![Download Power Apps from the Apple App Store.](media/app-store-icon.png "Download Power Apps from the Apple App Store")](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) |**Android** <br> [![Download Power Apps from Google Play.](media/play-store-android-icon.png "Download Power Apps from Google Play")](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|**Windows** <br>[![Download Power Apps from Windows Store.](media/windows-store-icon.png "Download Power Apps from Windows Store")](https://www.microsoft.com/store/apps/9MVC8P1Q3B29)|  
 |----------------------------------|---------------------------|----------------|  
-|![Download Power Apps from the Apple App Store using the QR code.](media/qr-code-ios.png "Download Power Apps from the Apple App Store using the QR code") | ![Download Power Apps from Google Play using the QR code.](media/qr-code-android.png "Download Power Apps from Google Play using the QR code")|![Download Power Apps from Windows Store using QR the code.](media/qr-code-windows.png "Download Power Apps from Windows Store using the QR code")| 
+|![Download Power Apps from the Apple App Store using the QR code.](media/qr-code-ios.png "Download Power Apps from the Apple App Store using the QR code") | ![Download Power Apps from Google Play using the QR code.](media/qr-code-android.png "Download Power Apps from Google Play using the QR code")|![Download Power Apps from Windows Store using QR the code.](media/qr-code-windows.png "Download Power Apps from Windows Store using the QR code")|
+
+
+
+
  
 > [!NOTE]
 > Power Apps for Windows is in preview. For more information see, [Power Apps for Windows (preview)](windows-app-install.md).
