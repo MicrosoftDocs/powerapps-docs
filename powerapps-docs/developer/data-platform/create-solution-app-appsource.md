@@ -23,8 +23,6 @@ Create a managed solution to include all the components for your app. You might 
 - [Plan for solution development](/dynamics365/customer-engagement/developer/plan-solution-development) 
 - [Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 ## Display name and description of your solution
 
 While creating a solution to package your app components, make sure you provide appropriate values in the **Display Name** and **Description** columns for your new solution that you want to be displayed to your customers.
