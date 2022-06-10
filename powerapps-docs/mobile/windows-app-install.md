@@ -1,6 +1,6 @@
 ---
-title: Install Power Apps for Windows (preview) | Microsoft Docs
-description: Install Power Apps for Windows (preview).
+title: Install Power Apps for Windows | Microsoft Docs
+description: Install Power Apps for Windows.
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
@@ -19,21 +19,15 @@ searchScope:
   - "Power Apps"
 ---
 
-# Install Power Apps for Windows (preview) 
+# Install Power Apps for Windows
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Install Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](/powerapps/powerapps-overview).
 
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
-
 ## Install the app
 
-1. Go to the Microsoft Store and install [Power Apps (Preview)](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) for Windows.  
+1. Go to the Microsoft Store and install [Power Apps](https://www.microsoft.com/store/apps/9MVC8P1Q3B29) for Windows.  
 2. When the app is installed, open it and [sign in](windows-app-use.md). 
 > [!IMPORTANT]
 > If you run into issues during the installation or the app closes without warning, follow the steps in the next section to install the latest version of WebView2 Runtime, and retry installing Power Apps for Windows.
