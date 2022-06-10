@@ -85,7 +85,7 @@ Select **Advanced options** to display additional properties that are optional f
 |**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network.  |
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
-Select **Save** to continue, this will close the **New table** panel and display the table hub.
+Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
 ## Edit a table
 
@@ -93,15 +93,17 @@ While [viewing tables](#view-tables), select the table you want to edit, and the
 
 :::image type="content" source="media/entity-settings-portal.png" alt-text="Edit table properties":::
 
+### Edit table components using the table hub
+
 To edit form components, open the table to display the table hub. The table hub displays the table components described in the following sections.
 
 :::image type="content" source="media/table-hub.png" alt-text="Table hub" lightbox="media/table-hub.png":::
 
-### Table properties
+#### Table properties
 
 Displays a few common properties for the table. Select **Properties** on the command bar to edit the table properties.
 
-### Schema
+#### Schema
 
 From the **Schema** area select from the following table components to open the area where you can view and open existing components or create a new one.
 
@@ -109,7 +111,7 @@ From the **Schema** area select from the following table components to open the 
 - Relationships. See [Create and edit relationships between tables](create-edit-entity-relationships.md)
 - Keys. More information: [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)
 
-### Data experiences
+#### Data experiences
 
 From the **Data experiences** area select from the following table components to open the area where you can view and open existing components or create a new one.
 
@@ -118,20 +120,20 @@ From the **Data experiences** area select from the following table components to
 - Charts. More information: [Create a system chart](../model-driven-apps/create-edit-system-chart.md)
 - Dashboards. More information: [Create or edit dashboards](../model-driven-apps/create-edit-dashboards.md)
 
-### Customizations
+#### Customizations
 
 From the **Customizations** area select from the following table components to open the area where you can view and open existing components or create a new one.
 
 - Business rules. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 - Commands. More information: [Customize the command bar using command designer](../model-driven-apps/use-command-designer.md)
 
-### Table columns and data
+#### Table columns and data
 
 View and create table record data for the table. Select the number of columns, such as **+17 more**, to select columns to display in the columns and data view.
 
 :::image type="content" source="media/select-columns-to-display.png" alt-text="Select additional columns to display in the columns and data view":::
 
-## Table designer
+#### Table designer
 
 From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing table properties, or creating a model-driven app based on the table.
 
