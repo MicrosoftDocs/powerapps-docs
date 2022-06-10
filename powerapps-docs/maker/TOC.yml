@@ -1614,7 +1614,7 @@
     href: ./model-driven-apps/model-driven-app-glossary.md    
 - name: Power Apps mobile  
   items:
-  - name: Get started with Power Apps mobile
+  - name: Install Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
