@@ -212,6 +212,8 @@ items:
           href: reference/entityrecord/isvalid.md
         - name: save
           href: reference/entityrecord/save.md
+        - name: setValue
+          href: reference/entityrecord/setvalue.md
       - name: EntityMetadata
         href: reference/entitymetadata.md
       - name: EntityReference
