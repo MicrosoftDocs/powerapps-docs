@@ -8,8 +8,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -18,7 +17,7 @@ search.app:
 ---
 # Next steps: Submit your app on Partner Center
 
-Your app is ready for submission after completing steps 1-5. 
+Your app is ready for submission after completing steps 1-4. 
 
 If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](/azure/marketplace/dynamics-365-customer-engage-offer-setup) on Partner Center to submit your app.
 
