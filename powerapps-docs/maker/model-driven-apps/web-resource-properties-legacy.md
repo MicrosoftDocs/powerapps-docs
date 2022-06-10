@@ -49,16 +49,16 @@ These properties define the web resource to use and how it should behave. After 
 |**Component width** |When the section containing the web resource has more than one column you can set the column to occupy up to the number of columns that the section has.|
 |**Component height** | You can control the height of the web resource by specifying a number of rows or select **Use all available vertical space** to allow the web resource height to expand to available space.        |
 |**Scrolling**  | An HTML web resource is added to the form using an IFRAME.<br /><br /> - **As Necessary**: Show scrollbars when the size of the web resource is larger than the available.<br />- **Always**: Always show scrollbars.<br />- **Never**:  Never show scrollbars.        |
-|**Display border**  | Displays a border around the web resource.    |
+|**Display border**  | Displays a border around the HTML web resource.    |
 |**Vertical alignment**  | Image web resources can be aligned **Middle**, **Top**, or **Bottom**.  |
 | **Horizontal alignment**  | Image web resources can be aligned **Center**, **Left**, or **Right**.   |
-| **Size**  | Select from **Use available space**, **Use available area**, **Original image size**, or **Specific size** (specify **Height** and **Width** in pixels).  |
+| **Size**  | For image web resources select from **Use available space**, **Use available area**, **Original image size**, or **Specific size** (specify **Height** and **Width** in pixels).  |
 
 ### Dependencies
 
 |Property |Description  |
 |---------|---------|
-|**Table column dependencies** | A web resource may interact with columns in the form using script. If a column is removed from the form the script in the web resource may break. Add any columns referenced by scripts in the web resource to this property so that they can't be removed accidentally.    |
+|**Table column dependencies** | An HTML web resource may interact with columns in the form using script. If a column is removed from the form the script in the web resource may break. Add any columns referenced by scripts in the web resource to this property so that they can't be removed accidentally.    |
 
 ### Advanced
 
