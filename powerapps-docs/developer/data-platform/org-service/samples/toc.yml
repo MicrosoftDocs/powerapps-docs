@@ -252,6 +252,10 @@
     href: make-report-available-to-organization.md
   - name: Publish a report
     href: publish-report.md
+- name: Rollup
+  items:
+  - name: Rollup records related to a specific record
+    href: rollup-records-related-to-specificed-record.md
 - name: SharePoint
   items:    
   - name: Retrieve absolute URL and site collection URL of a location record
