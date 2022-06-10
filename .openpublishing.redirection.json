@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/customization-support.md",
+      "redirect_url": "supported-customizations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/connect-microsoft-office-365.md",
       "redirect_url": "authentication#microsoft-365",
       "redirect_document_id": false
