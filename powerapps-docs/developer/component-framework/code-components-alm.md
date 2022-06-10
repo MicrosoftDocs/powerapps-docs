@@ -32,7 +32,7 @@ This article describes considerations and strategies for working with specific a
 When developing code components, you would follow the steps below:
 
 1. Create code component project (`pcfproj`) from a template using `pac pcf init`. More information: [Create and build a code component](create-custom-controls-using-pcf.md).
-2. Implement code component logic. More information: [Component implementation](control-implementation-library.md).
+2. Implement code component logic. More information: [Component implementation](custom-controls-overview.md#component-implementation).
 3. Debug the code component using the local test harness. More information: [Debug code components](debugging-custom-controls.md).
 4. Create a solution project (`cdsproj`) and add the code component project as a reference. More information: [Package a code component](import-custom-controls.md).
 5. Build the code component in **release** mode for distribution and deployment.

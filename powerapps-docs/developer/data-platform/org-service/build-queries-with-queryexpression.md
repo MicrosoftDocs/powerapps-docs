@@ -29,7 +29,7 @@ In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpre
 Query expressions are used in methods that retrieve more than one row, such as the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method, in messages that perform an operation on a result set specified by a query expression, such as <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> and when the ID for a specific record is not known.  
 
 > [!WARNING]
->  Don’t retrieve all columns in a query because of the negative effect on performance. This is particularly true if the query is used as a parameter to an update request. In an update, if all columns are included this sets all field values, even if they are unchanged, and often triggers cascaded updates to child records.
+>  Don't retrieve all columns in a query because of the negative effect on performance. This is particularly true if the query is used as a parameter to an update request. In an update, if all columns are included this sets all field values, even if they are unchanged, and often triggers cascaded updates to child records.
 
 To save a query so you can re-use it, you can convert it to FetchXML by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and save it as a saved query. More information: [Saved queries](../saved-queries.md) 
  
@@ -53,7 +53,6 @@ In Model-driven apps, there is a Quick Find feature. If a user provides search c
 [Using the ConditionExpression Class](use-conditionexpression-class.md)<br />
 [Using the FilterExpression Class](use-filterexpression-class.md)<br />
 [Use a left outer join in QueryExpression to query for records "not in"](use-left-outer-join-queryexpression-query-records-not-in.md)<br />
-[Testing for a Null Value](test-null-value.md)<br />
 [Page Large Result Sets with Query Expression and FetchXML](page-large-result-sets-with-queryexpression.md)<br />
 [Sample: Retrieve With One-To-Many Relationship](/dynamics365/customer-engagement/developer/org-service/sample-retrieve-with-one-to-many-relationship)<br />
 [Sample: Retrieve Multiple with Query By Attribute](samples/retrieve-multiple-querybyattribute-class.md)<br />
