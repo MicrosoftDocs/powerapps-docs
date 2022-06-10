@@ -1,17 +1,14 @@
 ---
 title: Manage forum access permissions
 description: Learn about managing forum access permissions in portals.
-author: sbmjais
-
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Manage forum access permissions
