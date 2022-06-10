@@ -17,6 +17,8 @@ contributors:
 
 # Content Delivery Network (preview) 
 
+[This topic is pre-release documentation and is subject to change.]
+
 A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. CDNs' store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency. 
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="A diagram of a content delivery network.":::
