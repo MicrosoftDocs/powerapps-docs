@@ -1,6 +1,6 @@
 ---
-title: Use Power Apps for Windows (preview) | Microsoft Docs
-description: Use Power Apps for Windows (preview).
+title: Use Power Apps for Windows | Microsoft Docs
+description: Use Power Apps for Windows.
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
@@ -19,9 +19,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use Power Apps for Windows (preview) 
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+# Use Power Apps for Windows 
 
 This topic covers how to sign in and run your apps on Power Apps for Windows.
 
