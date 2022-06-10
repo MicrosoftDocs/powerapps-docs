@@ -2,15 +2,14 @@
 title: DataSet Grid component for canvas apps | Microsoft Docs
 description: This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation.
 keywords:
-ms.author: nabuthuk
-author: Nkrb
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 6/08/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 ---
 
 # Implementing dataset component for canvas apps
@@ -20,13 +19,12 @@ This sample shows how to create a dataset component for canvas apps. The dataset
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 
-
 > [!div class="mx-imgBorder"]
-> ![Data set grid control](../media/data-set-grid-control-canvas.png)
+> ![Data set grid control.](../media/data-set-grid-control-canvas.png)
 
 ## Available for 
 
-Model-driven and canvas apps.
+Canvas apps.
 
 ## Code
 
@@ -58,7 +56,7 @@ The `context.parameters.[dataset_property_name].paging` method provides paging f
 Property-set is used to access individual column values for particular columns in the record. For example, map control can use the longitude and latitude in the data-set to show the location pings in the map. In this sample component, two property sets are defined in the manifest, `samplePropertySet` and `samplePropertySet2`. Users will see two empty columns when the component is added to canvas app before any column names is configured. For a property-set, the corresponding columns are added in the beginning and order will be 0. 
 
 > [!div class="mx-imgBorder"]
-> ![Property Set Configuration](../media/property-set-configuration.png)
+> ![Property Set Configuration.](../media/property-set-configuration.png)
 
 ### Sizing
 

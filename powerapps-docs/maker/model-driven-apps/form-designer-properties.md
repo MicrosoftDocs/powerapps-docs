@@ -4,7 +4,7 @@ description: Manage component properties using the form designer.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -26,16 +27,16 @@ search.app:
 
 # Properties available in the form designer
 
-Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or the tree view. 
+Located on the right-pane of the model-driven form designer, the property pane lets an app maker quickly view and update the properties of any element selected from the preview or the tree view.
 
 > [!div class="mx-imgBorder"] 
-> ![Form designer property pane](media/form-designer-property-pane.png "Form designer property pane")
+> ![Form designer property pane.](media/form-designer-property-pane.png "Form designer property pane")
 
 ## Form properties
 
 |Name  |Description  |
 |---------|---------|
-|**Title**     | Enter a name that will be meaningful to people. This name will be shown to people when they use the form. If they can use multiple forms configured for the table they will use this name to differentiate between available forms. <br /> This property is required.        |
+|**Title**     | Enter a name that will be meaningful to people. This name will be shown to people when they use the form. If they can use multiple forms configured for the table, they will use this name to differentiate between available forms. <br /> This property is required.        |
 |**Description**     |  Enter a description that explains how this form is different from other main forms. This description is only shown in the list of forms for a table in the solution explorer.        |
 |**Max Width**     | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /> This property is required.       |
 |**Show image**      | Show the tables’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of this form. <br /> See Enable or disable table options for more information about table options.         |
@@ -76,7 +77,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 |**Display options**     |  **Lock column**   |  Lock this column to keep it from being removed.     |
 |**Display options**     |  **Hide column**     | When selected, column is hidden by default and can be shown using code.      |
 |**Display options**     |  **Hide on phone**    | For a condensed version of this form on phone screens, columns can be hidden.         |
-|**Formatting**     | **Column width**      |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has.       |
+|**Formatting**     | **Column width**      |  Columns, or Dataverse fields, exist within sections and sections can be divided into columns. When the section containing the record columns has more than one column, the number of section columns that the record column can occupy can be set with the maximum being the total number of section columns specified in the section properties.       |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
@@ -86,7 +87,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit columns](../data-platform/create-edit-field-portal.md)  

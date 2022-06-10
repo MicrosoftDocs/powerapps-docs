@@ -3,7 +3,7 @@ title: "Query throttling (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about how the server can throttle a query to reduce system performance impact and what you can do about it."
 ms.custom: ""
 ms.date: 04/29/2021
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -12,6 +12,7 @@ applies_to:
 ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
 caps.latest.revision: 78
 author: "pnghub"
+ms.subservice: dataverse-developer
 ms.author: "gned"
 ms.reviewer: "pehecke"
 manager: "mayadumesh"

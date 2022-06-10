@@ -4,7 +4,7 @@ description: "Learn how to export table data to an Azure Synapse Analytics and A
 ms.custom: intro-internal
 ms.date: 05/26/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ contributors:
 
 # What is Azure Synapse Link for Dataverse?
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Azure Synapse Link for Dataverse enables you to get near real-time insights over your data in Microsoft Dataverse. With a tight seamless integration between Dataverse and Azure Synapse Analytics, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your data.
 
@@ -39,7 +40,7 @@ Using Azure Synapse Link, continuously export data from:
 
 The Azure Synapse Link for Dataverse is a service designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments.
 
-![Azure Synapse Link overview](media/azure-synapse-link-overview.png "Azure Synapse Link overview")
+![Azure Synapse Link overview.](media/azure-synapse-link-overview.png "Azure Synapse Link overview")
 
 The Azure Synapse Link for Dataverse provides these features:
 
@@ -57,7 +58,7 @@ Both standard and custom tables can be exported. Notice that the change tracking
 All create, update, and delete operations are exported from Dataverse to the data lake. For example, when a user deletes an Account table row in Dataverse, the transaction is replicated in the destination location.
 
 > [!div class="mx-imgBorder"] 
-> ![Azure Synapse Link GIF](media/azure-synapse-link-gif.gif "Azure Synapse Link GIF")
+> ![Azure Synapse Link GIF.](media/azure-synapse-link-gif.gif "Azure Synapse Link GIF")
 
 ## Rapidly analyze your Dataverse data in Azure Synapse Analytics
 

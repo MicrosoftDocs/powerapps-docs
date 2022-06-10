@@ -4,7 +4,7 @@ description: Learn how to create a lookup for a form
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -25,9 +26,19 @@ search.app:
 ---
 
 # Configure a lookup component on a form  
-A lookup column can be used to link to a row in another table. A lookup component is automatically used when a lookup column is added to a form. Makers can configure a lookup component using the form designer.
+
+Lookups help a user choose records from a **related** table. A lookup component is automatically added when a lookup column is added to a form.
+
+For example, using a lookup component, you can open an account record that relates to a sales invoice record.
+
+:::image type="content" source="../../user/media/automatically-populate-matching-records.png" alt-text="Using a lookup column":::
+
+[Learn more about the lookup field user experience](../../user/lookup-field.md)
 
 ## Configure a lookup component
+
+Makers configure a lookup component using the form designer.
+
 These are the properties available to configure when using a lookup component on a form using the form designer.
 
 |Area  |Name  |Description  |
@@ -38,6 +49,10 @@ These are the properties available to configure when using a lookup component on
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
 
+Options for a lookup component as they appear in the form designer. 
+
+:::image type="content" source="../../maker/model-driven-apps/media/configure-lookup-component.png" alt-text="Advanced Settings":::
+
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
@@ -46,7 +61,7 @@ These are the properties available to configure when using a lookup component on
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit columns](../data-platform/create-edit-field-portal.md)  

@@ -3,10 +3,11 @@ title: "Use Dynamics 365 App for Outlook | MicrosoftDocs"
 description: "Use Dynamics 365 App for Outlook with Power Apps and Microsoft Dataverse."
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 5/21/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -24,7 +25,7 @@ Use Dynamics 365 App for Outlook to manage your app data while using Outlook on 
 When Dynamics 365 App for Outlook is installed, in the Outlook ribbon select **Dynamics 365** to open the **Dynamics 365** pane next to a selected Outlook email message, or when you're composing an email message or setting up a meeting or appointment.
 
    > [!div class="mx-imgBorder"] 
-   > ![Dynamics 365 App for Outlook](media/outlookapp.png "Dynamics 365 App for Outlook")
+   > ![Dynamics 365 App for Outlook.](media/outlookapp.png "Dynamics 365 App for Outlook")
 
 ## What Dynamics 365 App for Outlook offers?
 

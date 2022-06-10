@@ -1,18 +1,19 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 04/19/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # retrieveMultipleRecords (Client API reference)
 
@@ -87,6 +88,39 @@ For a successful OData query retrieveMultipleRecords operation, returns a promis
 
 For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
 
+## Unsupported Attribute Types for OData query options in Mobile Offline
+The following [Column types](../../../../data-platform/entity-attribute-metadata.md#column-types) are not supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (e.g. `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
+
+- MultiSelectPicklist
+- File
+- Image
+- ManagedProperty
+- CalendarRules
+- PartyList
+- Virtual
+
+## Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML
+The following operations are supported for all attribute types when working with FetchXML:
+- Equals (`eq`)
+- Not Equals (`neq`)
+- Null (`null`)
+- Not Null (`not-null`)
+
+The following table lists additional operations supported for each attribute type:
+
+
+|Attribute Type|Supported Operations|
+|---------|---------|
+|BigInt, Decimal, Double, Integer|Greater Than (`gt`)<br />Greater Than or Equals (`gte`)<br />Less Than (`lt`)<br />Less Than or Equals (`lte`)|
+|Boolean, Customer|In (`in`)<br />Not In (`not-in`)|
+|EntityName, Picklist, State, Status|Like (`like`)<br />Not Like (`not-like`)<br />Begins With (`begins-with`)<br />Not Begin With (`not-begin-with`)<br />Ends With (`ends-with`)<br />Not End With (`not-end-with`)<br />In (`in`)<br />Not In (`not-in`)|
+|Guid, Lookup|In (`in`)<br />Not In (`not-in`)<br />Equals User Id (`eq-userid`)<br />Not Equals User Id (`ne-userid`)|
+|Money|Greater Than (`gt`)<br />Greater Than or Equals (`gte`)<br />Less Than (`lt`)<br />Less Than or Equals (`lte`)<br />In (`in`)<br />Not In (`not-in`)|
+|Owner|In (`in`)<br />Not In (`not-in`)<br />Equals User Id (`eq-userid`)<br />Not Equals User Id (`ne-userid`)<br />Equals User Or Team (`eq-useroruserteams`)<br />|
+|String|Like (`like`)<br />Not Like (`not-like`)<br />Begins With (`begins-with`)<br />Not Begin With (`not-begin-with`)<br />Ends With (`ends-with`)<br />Not End With (`not-end-with`)|
+|DateTime|On Or After (`on-or-after`)<br />On (`on`)<br />On Or Before (`on-or-before`)<br />Today (`today`)<br />Tomorrow (`tomorrow`)<br />Yesterday (`yesterday`)<br />Next 7 Days (`next-seven-days`)<br />Last 7 Days (`last-seven-days`)<br />Next Week (`next-week`)<br />Last Week (`last-week`)<br />This Week (`this-week`)<br />Next Month (`next-month`)<br />Last Month (`last-month`)<br />This Month (`this-month`)<br />Next Year (`next-year`)<br />Last Year (`last-year`)<br />This Year (`this-year`)<br />Last X Days (`last-x-days`)<br />Next X Days (`next-x-days`)<br />Last X Weeks (`last-x-weeks`)<br />Next X Weeks (`next-x-weeks`)<br />Last X Months (`last-x-months`)<br />Next X Months (`next-x-months`)<br />Last X Years (`last-x-years`)<br />Next X Years (`next-x-years`)<br />Greater Than (`gt`)<br />Greater Than Or Equal (`gte`)<br />Less Than (`lt`)<br />Less Than Or Equal (`lte`)<br />|
+
+
 ## Examples
 
 Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
@@ -115,8 +149,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 This example queries the `account` entity using fetchXML.
 
 ```JavaScript
-var fetchXml = "<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
-fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+var fetchXml = "?fetchXml=<fetch mapping='logical'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 
 Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {
@@ -136,7 +169,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
 ### Retrieve or filter by lookup properties
 For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options are not supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null is not supported in offline mode.
 
-More information: [Lookup properties](../../../../data-platform/webapi/web-api-types-operations.md#bkmk_lookupProperties)
+More information: [Lookup properties](../../../../data-platform/webapi/web-api-properties.md#lookup-properties)
 
 Here are code examples for both the scenarios:
 
@@ -252,8 +285,7 @@ The following example demonstrates the use of the `count` parameter of the Fetch
 > The FetchXML paging cookie is only returned for online `retrieveMultipleRecords` operations.  ([Xrm.WebApi.online](online.md)). It is not supported offline.
 
 ```JavaScript
-var fetchXml = "<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
-fetchXml = "?fetchXml=" + encodeURIComponent(fetchXml);
+var fetchXml = "?fetchXml=<fetch mapping='logical' count='3'><entity name='account'><attribute name='accountid'/><attribute name='name'/></entity></fetch>";
 
 Xrm.WebApi.online.retrieveMultipleRecords("account", fetchXml).then(
     function success(result) {
@@ -377,8 +409,7 @@ function retrieveAllRecords(entityName, fetchXml, page, count, pagingCookie) {
 
 function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
   var fetchXml =
-    "?fetchXml=" +
-    encodeURIComponent(CreateXml(fetchXml, pagingCookie, pageNumber, count));
+    "?fetchXml=" + CreateXml(fetchXml, pagingCookie, pageNumber, count);
 
   return Xrm.WebApi.online.retrieveMultipleRecords(entityName, fetchXml).then(
     function success(result) {

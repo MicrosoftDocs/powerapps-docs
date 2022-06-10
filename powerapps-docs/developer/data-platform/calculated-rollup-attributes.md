@@ -4,9 +4,10 @@ description: "Learn about common elements and characteristics, calculated column
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -19,9 +20,7 @@ search.app:
 
 *Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-  
- [Video: Rollup and Calculated columns in Microsoft Dataverse](https://youtu.be/RoahCH1p3T8)  
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)] 
   
 <a name="BKMK_CommonElements"></a>   
 
@@ -72,11 +71,11 @@ search.app:
  Calculated column values are available in the retrieve plug-in pipeline. Post image of a table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity images](understand-the-data-context.md#entity-images)
   
 ### Limitations  
- You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
+ You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)  
   
  Only columns from an immediate parent table can be used in a calculated column.  
   
- Saved queries, charts, and visualizations can have a maximum of 10 unique calculated columns.  
+ Saved queries, charts, and visualizations can have a maximum of 50 unique calculated columns.  
   
  Calculated columns can reference other calculated columns in their formula, but they can’t reference themselves.  
   
@@ -186,7 +185,7 @@ search.app:
 ```  
   
 ### See also  
- [Video: Rollup and calculated columns in Dataverse](https://youtu.be/RoahCH1p3T8)   
+   
  [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
  [Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
  [Define rollup columns](../../maker/data-platform/define-rollup-fields.md)

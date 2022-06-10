@@ -3,10 +3,11 @@ title: "Frequently Asked Questions about activities and the timeline wall| Micro
 description: Frequently Asked Questions about Activities and the Timeline Wall  
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/22/2021
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""

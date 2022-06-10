@@ -4,7 +4,7 @@ description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
 ms.date: 04/27/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 2f3f6053-0b9e-41e7-bd94-2239351e9f4b
 caps.latest.revision: 41
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 ---
 # Types of tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 
@@ -70,7 +71,7 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 2. On the left nav, select **Data** to expand it and then select **Tables**.  
 
    > [!div class="mx-imgBorder"]
-   >![Go to Tables in maker portal](media/maker-data-tables.png "Go to Tables in maker portal")
+   >![Go to Tables in maker portal.](media/maker-data-tables.png "Go to Tables in maker portal")
    
   
 3. Select a table.
@@ -78,12 +79,12 @@ Enable activities to add activities to a table and use the Regarding lookup for 
 4. On the command bar, select **Settings**. 
 
    > [!div class="mx-imgBorder"]
-   >![Select settings](media/maker-row-settings.png "Select setting")
+   >![Select settings.](media/maker-row-settings.png "Select setting")
 
 5. Expand **Collaboration**, and select **Enable for activities** and then choose **Done**. 
 
    > [!div class="mx-imgBorder"]
-   >![Communication and collaboration activity enabled](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
+   >![Communication and collaboration activity enabled.](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
    
    > [!IMPORTANT]
    > Once enabled this setting can't be disabled. If prompted, select **Okay** to confirm.
@@ -111,7 +112,8 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create or edit tables](./data-platform-create-entity.md)
+[Create tables](./data-platform-create-entity.md)<br/>
+[Edit tables](./edit-entities.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

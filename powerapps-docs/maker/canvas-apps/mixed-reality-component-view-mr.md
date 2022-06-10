@@ -1,173 +1,136 @@
 ---
-title: Use the View in MR component in Power Apps (Preview)
+title: Use the View in MR control in Power Apps
 description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
-author: iaanw
-manager: shellyha
-ms.service: powerapps
+author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 5/20/2021
-ms.author: iawilt
+ms.reviewer: mduelae
+ms.date: 3/7/2022
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mduelae
+  - anuitz
 ---
 
-# View 3D content or images in the real word
+# View 3D content or images in mixed reality
 
-You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
+Use the **View in MR** control to place a 3D model of an object or an image in a real-world space. For instance, preview a painting on a wall before you hang it, or see whether a 3D virtual bookcase will fit where you intend it to go. 
 
-The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
+What if you don't have a 3D model of the object? Load an image of the object and set its dimensions to the object's size. The control applies the image as the face of a virtual cube of the desired size. Place this stand-in for the 3D model in your space.
 
-:::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="Photo showing a 3D model of a forklift being overlaid onto the real world through a mobile device.":::
+The **View in MR** control adds a button to your app. When a user selects the button, the app overlays a selected 3D model (in .glb, .stl, or .obj file formats) or image (in .jpg or .png file formats) on the device camera feed.
 
-You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
+:::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="A photo of a tablet screen that shows a 3D model of a forklift overlaid on a warehouse interior view.":::
+
+You can also take photos using the **View in MR** control and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 
 > [!IMPORTANT]
-> Your 3D content must be in the .glb file format.  
+> Your 3D content must be in the .glb, .stl, or .obj file formats.
 > You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
-
-
-> [!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.  
->
-> LIDAR-enabled devices will also result in better tracking.
+> 3D content compressed with Draco compression Draco is not supported.
 
 > [!TIP]
-> The MR components in Power Apps leverage Babylon and Babylon React Native. As a result of this shared MR platform, 3D content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps. 
+> Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) to minimize load times.
 
-## Use the component
+> [!TIP]
+> The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
 
-Insert the component into your app as you normally would for any other button control or component.
+> [!TIP]
+> The MR controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
 
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
+## Add a **View in MR** button to an app screen
 
-1. Open the **Insert** tab.
-2. Expand **Mixed reality**.
-3. Select the component **View in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+With your app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
-   :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="Insert the View in MR component into the app.":::
+1. Open the **Insert** tab and expand **Mixed Reality**.
+2. Select **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
-You can modify the component with several properties.
+The control is a button that's labeled with an icon of a cube and the text *View in MR*. Change the label and hide the icon if you like in the **Text** and **Display type** properties.
+
+   :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="A screenshot of the Insert tab in Power Apps Studio, showing where to find the View in MR control.":::
+
+### How objects are scaled if you resize them
+
+If you don't specify dimensions when you place a model, the **View in MR** control follows the dimensions given in the object file. You can resize the model by entering a value other than 0 in one or more of the control's width, height, and depth properties (**Object width**, **Object height**, and **Object depth**). How the model is scaled depends on how many dimensions you change.
+
+- If all dimensions are *0* (the default), the model's size is left as it's set in the object file.  
+
+- If one dimension is set, the model is scaled equally based on the changed dimension, similar to setting "keep aspect ratio" when you resize an image.
+
+- If two dimensions are set, the model scales to the two given dimensions and an average of the first two.  
+  For example, say you have a model that is 12 m high, 6 m wide, and 3 m deep. You set the **View in MR** control's properties as follows: **Object height**: **24**, **Object width**: **9**, **Object depth**: **0** (unchanged). The height increases by a factor of 2, and the width increases by a factor of 1.5. The increase in height and width is averaged to find the factor by which the depth should be increased: 2 + 1.5 = 3.5 / 2 = 1.75. The final dimensions of the model are **Object height** 24, **Object width** 9, and **Object depth** 5.25 (3 x 1.75).  
+
+- If all three dimensions are set, the model's size is changed to what you specified.
+
+> [!NOTE]
+> If the measurements don't adhere to the original aspect ratio, the model could be squashed or distorted when it's viewed in MR.
 
 ### Properties
 
-The following properties are on the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
+Change the **View in MR** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
-![Properties on the View in MR pane](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
+:::image type="content" source="./media/augmented-view-mr/augmented-view-mr-properties.png" alt-text="A screenshot of a View in MR button under construction in Microsoft Power Apps Studio, shown alongside its properties.":::
 
-Some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
+| Property | Description | Type | Location |
+| - | - | - | - |
+| Text | Sets the button label text. | String | Properties; Advanced: **Text** |
+| Alternative text | Specifies the text to be displayed if the model can't load or if the user hovers over the model. | String | Properties; Advanced: **AltText** |
+| Display type | Determines whether the button label shows an icon of a cube, text, or both. | Drop-down selection | Properties; Advanced: **DisplayType** |
+| [**Source**](mixed-reality-component-view-3d-store.md) | Identifies the data source (.glb, .stl, or .obj file) to display. | Not applicable | Properties; Advanced: **Source** |
+ Object width | Sets the width of the model. | Integer | Properties; Advanced: **ObjectWidth** |
+| Object height | Sets the height of the model. | Integer | Properties; Advanced: **ObjectHeight** |
+| Object depth | Sets the depth of the model. | Integer | Properties; Advanced: **ObjectDepth** |
+| Unit of measurement | Sets the measurement unit used for the model's width, height, and depth. | Drop-down selection | Properties; Advanced: **Units** |
+| Enable Shadows | Determines whether shadows are used to enhance the 3D effect when the model is shown. | Boolean | Properties; Advanced: **EnableShadows** |
+| Visible | Shows or hides the button. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
+ Position | Places the upper-left corner of the button at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
+| Size | Determines the size of the button using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
+| Padding top | Sets the distance between the button label text and the top of the button. | Floating point number | Properties; Advanced: **[PaddingTop](./controls/properties-size-location.md)** |
+| Padding bottom | Sets the distance between the button label text and the bottom of the button. | Floating point number | Properties; Advanced: **[PaddingBottom](./controls/properties-size-location.md)** |
+| Padding left | Sets the distance between the button label text and the left edge of the button. | Floating point number | Properties; Advanced: **[PaddingLeft](./controls/properties-size-location.md)** |
+| Padding right | Sets the distance between the button label text and the right edge of the button. | Floating point number | Properties; Advanced: **[PaddingRight](./controls/properties-size-location.md)** |
+| Font | Sets the name of the family of fonts used for the button label text. | Dropdown list | Properties; Advanced: **[Font](./controls/properties-text.md)** |
+| Font size | Sets the size of the button label text. | Floating point number | Properties; Advanced: **[FontSize](./controls/properties-text.md)** |
+| Font weight | Sets the weight of the button label text, either *Bold*, *Lighter*, *Normal*, or *Semibold*. | Dropdown list | Properties; Advanced: **[FontWeight](./controls/properties-text.md)** |
+| Text alignment | Sets the horizontal alignment of the label text in the button, either *Center*, *Justify*, *Left*, or *Right*. | Not applicable | Properties; Advanced: **[TextAlignment](./controls/properties-text.md)** |
+| Vertical alignment | Sets the vertical alignment of the label text in the button, either *Bottom*, *Middle*, or *Top*. | Dropdown list | Properties; Advanced: **[VerticalAlign](./controls/properties-text.md)** |
+| Font style | Sets the style of the button label text, either *Italic*, *Underline*, *Strikethrough*, or none. | Not applicable | Properties; Advanced: **Italic**, **Underline**, **Strikethrough** |
+| Border radius | Determines the corner radius of the button border. | Floating point number | Properties; Advanced: **BorderRadius** |
+| **[Color](./controls/properties-color-border.md)** | Sets the colors of the button label text and the button background. | Not applicable | Properties; Advanced: **FillColor**, **TextColor** |
+| Border | Determines the style, width, and color of the button border. | Not applicable | Properties; Advanced: **[BorderStyle](./controls/properties-color-border.md)**, **[BorderThickness](./controls/properties-color-border.md)**, **[BorderFillColor](./controls/properties-color-border.md)** |
+| Disabled | Turns off the button but leaves it visible. | Boolean | Properties; Advanced: **Disabled** |
+| Disabled color | Sets the colors of the button label text, the button background, and the button border if **[DisplayMode](./controls/properties-core.md)** is **Disabled**. | Not applicable | Properties; Advanced: **DisabledContentColor**, **DisabledFillColor**, **DisabledBorderColor** |
+| Pressed color | Sets the colors of the button label text, the button background, and the button border when the user selects the button. | Not applicable | Properties; Advanced: **PressedContentColor**, **PressedFillColor**, **PressedBorderColor** |
+| Hover color | Sets the colors of the button label text, the button background, and the button border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverContentColor**, **HoverFillColor**, **HoverBorderColor** |
+| OnMixedRealitySelect | Behavior that is triggered when user selects the button to launch into the mixed reality experience. | Defined action | Advanced |
+| OnChange | Behavior that is triggered when any property on the button is changed. This is a common property across multiple controls. | Defined action | Advanced |
+| **[Tooltip](./controls/properties-core.md)** | Determines the text to display when the user hovers over the button. | String | Advanced |
+| ContentLanguage | Determines the display language of the button label, if it's different from the language used in the app. | String | Advanced |
+| **[DisplayMode](./controls/properties-core.md)** | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
+| **[TabIndex](./controls/properties-accessibility.md)** | Specifies the order the button is selected if the user navigates the app using the Tab key. | Integer | Properties; Advanced: **TabIndex** |
 
-Property | Description | Type | Location
-- | - | - | -
-Text | Label for the button. | String | Properties (also in **Advanced**)
-Alternative text | Text to be displayed if the component can't load, or if the app user hovers on the component. | String | **Properties** (also in **Advanced** as **AltText**)
-Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [how to define where the 3D content is stored](mixed-reality-component-view-3d-store.md). | Not applicable | **Properties** (also in **Advanced**)
-Object width | Width of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
-Object height | Height of the displayed image or 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
-Object depth | The three-dimensional depth of the 3D content. See also [How object scaling is handled](#how-object-scaling-is-handled). | Integer | **Properties** (also in **Advanced**)
-Units | The unit used for the object width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
-Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
-OnMixedRealitySelect | Behavior that is triggered when exiting the MR experience with new results. | Defined action | **Advanced**
-OnChange | Behavior that is triggered when any property on the button is changed. | Defined action | **Advanced**
+### Output properties
 
-### How object scaling is handled
+Your app can make use of more properties when a user interacts with the **View in MR** control. These are known as output properties. You can use these properties in other controls or to customize the app experience.
 
-When you insert a model with the **View in MR** component, it will follow the model's inherent dimensions. Alternatively, you can specify some or all of the dimensions - these dimensions are labelled as the **Object width**, **Object height**, and **Object depth** properties.
-
-If you want to change the size of the model, we apply certain scaling techniques depending on how many dimensions you change:
-
-- If no dimensions are set, we assume the model is already at its intended scale and leave it as is.  
-
-- If one dimension is set, and the others are left at the default `0`, we scale the whole object equally based on the set dimension.  
-  This behavior is similar to using a setting such as "keep aspect ratio" when resizing an image.  
-
-- If two dimensions are set, we force the model to match the given dimensions and average the scale for the third dimension.  
-  - For example, say you had a model with an **Object height** of `12`, an **Object width** of `6`, and an **Object depth** of `3`.  
-  You set **Object height** to `24`, and **Object width** to `9`, but leave **Object depth** unchanged.  
-  The height has increased by a factor of 2, but the width has increased by a factor of 1.5 - we average these two measurements to come to 1.75 and then scale the depth by that amount.  
-  The final scaled model would have an **Object height** of `24`, **Object width** of `9`, and **Object depth** of `5.25`.  
-
-- If all three dimensions are set, we match the size of the model to what you specify.
-
-> [!NOTE]
-> If the measurements don't adhere to the original aspect ratio, you could end up with a squashed or distorted model when you view it in MR.
-
-
-### Additional properties
-
-**[BorderColor](./controls/properties-color-border.md)** – The color of a control's border.
-
-**[BorderStyle](./controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
-
-**[BorderThickness](./controls/properties-color-border.md)** – The thickness of a control's border.
-
-**[Color](./controls/properties-color-border.md)** – The color of text in a control.
-
-**[DisplayMode](./controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
-
-**[DisabledBorderColor](./controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
-
-**[DisabledColor](./controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
-
-**[DisabledFill](./controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
-
-**[FillColor](./controls/properties-color-border.md)** – The background color of a control.
-
-**[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
-
-**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
-
-**[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
-
-**[FontWeight](./controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
-
-**[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
-
-**[HoverBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
-
-**[HoverColor](./controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
-
-**[HoverFill](./controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
-
-**[PaddingBottom](./controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
-
-**[PaddingLeft](./controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
-
-**[PaddingRight](./controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
-
-**[PaddingTop](./controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
-
-**[PressedBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
-
-**[PressedColor](./controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
-
-**[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
-
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
-
-**[TextAlignment](./controls/properties-text.md)** – The alignment of the text: **Center**, **Left**, **Right**, or Justify.
-
-**[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
-
-**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**.
-
-**[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
-
-**[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
-
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
-
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
+| Property | Description | Type |
+| - | - | - |
+| Photos | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable |
 
 ## Other mixed reality controls
 
-- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+- Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
+### See also
+
+[Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

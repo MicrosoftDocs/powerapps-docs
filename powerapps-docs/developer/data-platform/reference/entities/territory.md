@@ -1,13 +1,13 @@
 ---
-title: "Territory table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Territory table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Territory table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -436,8 +436,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -681,7 +681,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [Territory_SyncErrors](syncerror.md#BKMK_Territory_SyncErrors) Many-To-One relationship.
+Same as the [Territory_SyncErrors](syncerror.md#BKMK_Territory_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -698,7 +698,7 @@ Same as syncerror table [Territory_SyncErrors](syncerror.md#BKMK_Territory_SyncE
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [Territory_AsyncOperations](asyncoperation.md#BKMK_Territory_AsyncOperations) Many-To-One relationship.
+Same as the [Territory_AsyncOperations](asyncoperation.md#BKMK_Territory_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -715,7 +715,7 @@ Same as asyncoperation table [Territory_AsyncOperations](asyncoperation.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [territory_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_territory_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [territory_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_territory_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -732,7 +732,7 @@ Same as mailboxtrackingfolder table [territory_MailboxTrackingFolders](mailboxtr
 
 **Added by**: System Solution Solution
 
-Same as processsession table [Territory_ProcessSessions](processsession.md#BKMK_Territory_ProcessSessions) Many-To-One relationship.
+Same as the [Territory_ProcessSessions](processsession.md#BKMK_Territory_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -749,7 +749,7 @@ Same as processsession table [Territory_ProcessSessions](processsession.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [Territory_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Territory_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Territory_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Territory_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -766,7 +766,7 @@ Same as bulkdeletefailure table [Territory_BulkDeleteFailures](bulkdeletefailure
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [territory_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_territory_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [territory_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_territory_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -783,7 +783,7 @@ Same as principalobjectattributeaccess table [territory_principalobjectattribute
 
 **Added by**: System Solution Solution
 
-Same as connection table [territory_connections1](connection.md#BKMK_territory_connections1) Many-To-One relationship.
+Same as the [territory_connections1](connection.md#BKMK_territory_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -800,7 +800,7 @@ Same as connection table [territory_connections1](connection.md#BKMK_territory_c
 
 **Added by**: System Solution Solution
 
-Same as connection table [territory_connections2](connection.md#BKMK_territory_connections2) Many-To-One relationship.
+Same as the [territory_connections2](connection.md#BKMK_territory_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -815,7 +815,7 @@ Same as connection table [territory_connections2](connection.md#BKMK_territory_c
 
 ### <a name="BKMK_territory_system_users"></a> territory_system_users
 
-Same as systemuser table [territory_system_users](systemuser.md#BKMK_territory_system_users) Many-To-One relationship.
+Same as the [territory_system_users](systemuser.md#BKMK_territory_system_users) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -832,7 +832,7 @@ Same as systemuser table [territory_system_users](systemuser.md#BKMK_territory_s
 
 **Added by**: Second Patch for Application Common Solution
 
-Same as territory table [territory_parent_territory](territory.md#BKMK_territory_parent_territory) Many-To-One relationship.
+Same as the [territory_parent_territory](territory.md#BKMK_territory_parent_territory) many-to-one relationship for the [territory](territory.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -864,47 +864,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_territorybase_createdby](systemuser.md#BKMK_lk_territorybase_createdby) One-To-Many relationship.
+See the [lk_territorybase_createdby](systemuser.md#BKMK_lk_territorybase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_territory_createdonbehalfby"></a> lk_territory_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_territory_createdonbehalfby](systemuser.md#BKMK_lk_territory_createdonbehalfby) One-To-Many relationship.
+See the [lk_territory_createdonbehalfby](systemuser.md#BKMK_lk_territory_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_territorybase_modifiedby"></a> lk_territorybase_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_territorybase_modifiedby](systemuser.md#BKMK_lk_territorybase_modifiedby) One-To-Many relationship.
+See the [lk_territorybase_modifiedby](systemuser.md#BKMK_lk_territorybase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_territory_modifiedonbehalfby"></a> lk_territory_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_territory_modifiedonbehalfby](systemuser.md#BKMK_lk_territory_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_territory_modifiedonbehalfby](systemuser.md#BKMK_lk_territory_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_territories"></a> organization_territories
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_territories](organization.md#BKMK_organization_territories) One-To-Many relationship.
+See the [organization_territories](organization.md#BKMK_organization_territories) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Territory"></a> TransactionCurrency_Territory
 
 **Added by**: System Solution Solution
 
-See transactioncurrency Table [TransactionCurrency_Territory](transactioncurrency.md#BKMK_TransactionCurrency_Territory) One-To-Many relationship.
+See the [TransactionCurrency_Territory](transactioncurrency.md#BKMK_TransactionCurrency_Territory) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_system_user_territories"></a> system_user_territories
 
 **Added by**: System Solution Solution
 
-See systemuser Table [system_user_territories](systemuser.md#BKMK_system_user_territories) One-To-Many relationship.
+See the [system_user_territories](systemuser.md#BKMK_system_user_territories) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_territory_parent_territory"></a> territory_parent_territory
 
-See territory Table [territory_parent_territory](territory.md#BKMK_territory_parent_territory) One-To-Many relationship.
+See the [territory_parent_territory](territory.md#BKMK_territory_parent_territory) one-to-many relationship for the [territory](territory.md) table/entity.
 
 ### See also
 

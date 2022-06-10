@@ -1,16 +1,17 @@
 ---
 title: Understand Inspection sample apps architecture
 description: Learn about the architecture of the Inspection sample apps.
-author: navjotm
-ms.service: powerapps
+author: msftsamperl
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2021
-ms.author: namarwah
+ms.date: 12/01/2021
+ms.subservice: teams
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
     - tapanm-msft
-    - navjotm
+    - msftsamperl
     - joel-lindstrom
 ---
 
@@ -34,7 +35,7 @@ You'll also need to know about how to [install](use-sample-apps-from-teams-store
 
 The following diagram explains the data model used by the Inspection sample app.
 
-![Inspection sample app data model](media/inspection-architecture/data-model.png "Inspection sample app data model")
+![Inspection sample app data model.](media/inspection-architecture/data-model.png "Inspection sample app data model")
 
 | Table name | Description |
 | - | - |
@@ -53,15 +54,14 @@ The following diagram explains the data model used by the Inspection sample app.
 
 The following diagram shows how users interact with systems and data in the Inspection app.
 
-![Inspection sample app architecture model](media/inspection-architecture/architecture-model.png "Inspection sample app architecture model")
+![Inspection sample app architecture model.](media/inspection-architecture/architecture-model.png "Inspection sample app architecture model")
 
 ### Connectors
 
-The following connectors are used in the Issue Reporting app:
+The following connectors are used in the Inspection app:
 
-- **Microsoft Dataverse** - Used to read and write data in Dataverse.
+- **Microsoft Teams** - Used to post messages on channels for notifications.
 - **Office 365 Users** - Used to read Microsoft 365 user profile data.
-- **Location** - Used to capture the user's location for Planner tasks.
 - **Microsoft Planner** - Used to create tasks.
 
 ### Collections

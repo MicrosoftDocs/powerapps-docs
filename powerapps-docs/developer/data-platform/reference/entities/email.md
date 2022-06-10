@@ -1,13 +1,13 @@
 ---
-title: "Email table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -428,11 +428,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DeliveryPriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -450,12 +450,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DeliveryReceiptRequested Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -489,12 +489,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DirectionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Outgoing|
-|0|Incoming|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Outgoing||
+|0|Incoming||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -543,11 +543,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EmailReminderType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|If I do not receive a reply by|
-|1|If the email is not opened by|
-|2|Remind me anyways at|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|If I do not receive a reply by||
+|1|If the email is not opened by||
+|2|Remind me anyways at||
 
 
 
@@ -596,12 +596,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FollowEmailUserPreference Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -650,12 +650,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -673,12 +673,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -788,11 +788,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Notifications Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|The message was saved as a Microsoft Dynamics 365 email record, but not all the attachments could be saved with it. An attachment cannot be saved if it is blocked or if its file type is invalid.|
-|2|Truncated body.|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|The message was saved as a Microsoft Dynamics 365 email record, but not all the attachments could be saved with it. An attachment cannot be saved if it is blocked or if its file type is invalid.||
+|2|Truncated body.||
 
 
 
@@ -885,11 +885,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -920,12 +920,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReadReceiptRequested Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1368,6 +1368,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentActivityIdName](#BKMK_ParentActivityIdName)
@@ -1435,12 +1436,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Compressed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Compressed|
-|0|Not compressed|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Compressed||
+|0|Not compressed||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1492,16 +1493,16 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### CorrelationMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Skipped|
-|2|XHeader|
-|3|InReplyTo|
-|4|TrackingToken|
-|5|ConversationIndex|
-|6|SmartMatching|
-|7|CustomCorrelation|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Skipped||
+|2|XHeader||
+|3|InReplyTo||
+|4|TrackingToken||
+|5|ConversationIndex||
+|6|SmartMatching||
+|7|CustomCorrelation||
 
 
 
@@ -1626,12 +1627,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### EmailReminderStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|NotSet|
-|1|ReminderSet|
-|2|ReminderExpired|
-|3|ReminderInvalid|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|NotSet||
+|1|ReminderSet||
+|2|ReminderExpired||
+|3|ReminderInvalid||
 
 
 
@@ -1688,8 +1689,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -1724,12 +1725,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsEmailFollowed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1747,12 +1748,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsEmailReminderSet Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1770,12 +1771,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1956,12 +1957,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the email activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -2328,7 +2345,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_email_actioncard"></a> email_actioncard
 
-Same as actioncard table [email_actioncard](actioncard.md#BKMK_email_actioncard) Many-To-One relationship.
+Same as the [email_actioncard](actioncard.md#BKMK_email_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2343,7 +2360,7 @@ Same as actioncard table [email_actioncard](actioncard.md#BKMK_email_actioncard)
 
 ### <a name="BKMK_email_activity_parties"></a> email_activity_parties
 
-Same as activityparty table [email_activity_parties](activityparty.md#BKMK_email_activity_parties) Many-To-One relationship.
+Same as the [email_activity_parties](activityparty.md#BKMK_email_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2358,7 +2375,7 @@ Same as activityparty table [email_activity_parties](activityparty.md#BKMK_email
 
 ### <a name="BKMK_Email_DuplicateMatchingRecord"></a> Email_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Email_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Email_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Email_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Email_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2373,7 +2390,7 @@ Same as duplicaterecord table [Email_DuplicateMatchingRecord](duplicaterecord.md
 
 ### <a name="BKMK_Email_SyncErrors"></a> Email_SyncErrors
 
-Same as syncerror table [Email_SyncErrors](syncerror.md#BKMK_Email_SyncErrors) Many-To-One relationship.
+Same as the [Email_SyncErrors](syncerror.md#BKMK_Email_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2388,7 +2405,7 @@ Same as syncerror table [Email_SyncErrors](syncerror.md#BKMK_Email_SyncErrors) M
 
 ### <a name="BKMK_Email_DuplicateBaseRecord"></a> Email_DuplicateBaseRecord
 
-Same as duplicaterecord table [Email_DuplicateBaseRecord](duplicaterecord.md#BKMK_Email_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Email_DuplicateBaseRecord](duplicaterecord.md#BKMK_Email_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2403,7 +2420,7 @@ Same as duplicaterecord table [Email_DuplicateBaseRecord](duplicaterecord.md#BKM
 
 ### <a name="BKMK_Email_AsyncOperations"></a> Email_AsyncOperations
 
-Same as asyncoperation table [Email_AsyncOperations](asyncoperation.md#BKMK_Email_AsyncOperations) Many-To-One relationship.
+Same as the [Email_AsyncOperations](asyncoperation.md#BKMK_Email_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2418,7 +2435,7 @@ Same as asyncoperation table [Email_AsyncOperations](asyncoperation.md#BKMK_Emai
 
 ### <a name="BKMK_Email_ProcessSessions"></a> Email_ProcessSessions
 
-Same as processsession table [Email_ProcessSessions](processsession.md#BKMK_Email_ProcessSessions) Many-To-One relationship.
+Same as the [Email_ProcessSessions](processsession.md#BKMK_Email_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2433,7 +2450,7 @@ Same as processsession table [Email_ProcessSessions](processsession.md#BKMK_Emai
 
 ### <a name="BKMK_slakpiinstance_email"></a> slakpiinstance_email
 
-Same as slakpiinstance table [slakpiinstance_email](slakpiinstance.md#BKMK_slakpiinstance_email) Many-To-One relationship.
+Same as the [slakpiinstance_email](slakpiinstance.md#BKMK_slakpiinstance_email) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2448,7 +2465,7 @@ Same as slakpiinstance table [slakpiinstance_email](slakpiinstance.md#BKMK_slakp
 
 ### <a name="BKMK_Email_Annotation"></a> Email_Annotation
 
-Same as annotation table [Email_Annotation](annotation.md#BKMK_Email_Annotation) Many-To-One relationship.
+Same as the [Email_Annotation](annotation.md#BKMK_Email_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2463,7 +2480,7 @@ Same as annotation table [Email_Annotation](annotation.md#BKMK_Email_Annotation)
 
 ### <a name="BKMK_email_activity_mime_attachment"></a> email_activity_mime_attachment
 
-Same as activitymimeattachment table [email_activity_mime_attachment](activitymimeattachment.md#BKMK_email_activity_mime_attachment) Many-To-One relationship.
+Same as the [email_activity_mime_attachment](activitymimeattachment.md#BKMK_email_activity_mime_attachment) many-to-one relationship for the [activitymimeattachment](activitymimeattachment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2478,7 +2495,7 @@ Same as activitymimeattachment table [email_activity_mime_attachment](activitymi
 
 ### <a name="BKMK_email_email_parentactivityid"></a> email_email_parentactivityid
 
-Same as email table [email_email_parentactivityid](email.md#BKMK_email_email_parentactivityid) Many-To-One relationship.
+Same as the [email_email_parentactivityid](email.md#BKMK_email_email_parentactivityid) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2493,7 +2510,7 @@ Same as email table [email_email_parentactivityid](email.md#BKMK_email_email_par
 
 ### <a name="BKMK_email_principalobjectattributeaccess"></a> email_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [email_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_email_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [email_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_email_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2508,7 +2525,7 @@ Same as principalobjectattributeaccess table [email_principalobjectattributeacce
 
 ### <a name="BKMK_Email_BulkDeleteFailures"></a> Email_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Email_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Email_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Email_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Email_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2523,7 +2540,7 @@ Same as bulkdeletefailure table [Email_BulkDeleteFailures](bulkdeletefailure.md#
 
 ### <a name="BKMK_email_connections1"></a> email_connections1
 
-Same as connection table [email_connections1](connection.md#BKMK_email_connections1) Many-To-One relationship.
+Same as the [email_connections1](connection.md#BKMK_email_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2538,7 +2555,7 @@ Same as connection table [email_connections1](connection.md#BKMK_email_connectio
 
 ### <a name="BKMK_email_connections2"></a> email_connections2
 
-Same as connection table [email_connections2](connection.md#BKMK_email_connections2) Many-To-One relationship.
+Same as the [email_connections2](connection.md#BKMK_email_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2553,7 +2570,7 @@ Same as connection table [email_connections2](connection.md#BKMK_email_connectio
 
 ### <a name="BKMK_Email_QueueItem"></a> Email_QueueItem
 
-Same as queueitem table [Email_QueueItem](queueitem.md#BKMK_Email_QueueItem) Many-To-One relationship.
+Same as the [Email_QueueItem](queueitem.md#BKMK_Email_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2570,7 +2587,7 @@ Same as queueitem table [Email_QueueItem](queueitem.md#BKMK_Email_QueueItem) Man
 
 **Added by**: msft_ActivitiesInfra_Extensions Solution
 
-Same as email table [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) Many-To-One relationship.
+Same as the [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2621,119 +2638,119 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_Emails](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Emails) One-To-Many relationship.
+See the [KnowledgeBaseRecord_Emails](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Emails) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_lk_email_modifiedby"></a> lk_email_modifiedby
 
-See systemuser Table [lk_email_modifiedby](systemuser.md#BKMK_lk_email_modifiedby) One-To-Many relationship.
+See the [lk_email_modifiedby](systemuser.md#BKMK_lk_email_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_Email_SendersAccount"></a> Account_Email_SendersAccount
 
-See account Table [Account_Email_SendersAccount](account.md#BKMK_Account_Email_SendersAccount) One-To-Many relationship.
+See the [Account_Email_SendersAccount](account.md#BKMK_Account_Email_SendersAccount) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_Email_EmailTemplate"></a> Email_EmailTemplate
 
-See template Table [Email_EmailTemplate](template.md#BKMK_Email_EmailTemplate) One-To-Many relationship.
+See the [Email_EmailTemplate](template.md#BKMK_Email_EmailTemplate) one-to-many relationship for the [template](template.md) table/entity.
 
 ### <a name="BKMK_Queue_Email_EmailSender"></a> Queue_Email_EmailSender
 
-See queue Table [Queue_Email_EmailSender](queue.md#BKMK_Queue_Email_EmailSender) One-To-Many relationship.
+See the [Queue_Email_EmailSender](queue.md#BKMK_Queue_Email_EmailSender) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_Contact_Email_EmailSender"></a> Contact_Email_EmailSender
 
-See contact Table [Contact_Email_EmailSender](contact.md#BKMK_Contact_Email_EmailSender) One-To-Many relationship.
+See the [Contact_Email_EmailSender](contact.md#BKMK_Contact_Email_EmailSender) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_Account_Email_EmailSender"></a> Account_Email_EmailSender
 
-See account Table [Account_Email_EmailSender](account.md#BKMK_Account_Email_EmailSender) One-To-Many relationship.
+See the [Account_Email_EmailSender](account.md#BKMK_Account_Email_EmailSender) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Email"></a> TransactionCurrency_Email
 
-See transactioncurrency Table [TransactionCurrency_Email](transactioncurrency.md#BKMK_TransactionCurrency_Email) One-To-Many relationship.
+See the [TransactionCurrency_Email](transactioncurrency.md#BKMK_TransactionCurrency_Email) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_Contact_Emails"></a> Contact_Emails
 
-See contact Table [Contact_Emails](contact.md#BKMK_Contact_Emails) One-To-Many relationship.
+See the [Contact_Emails](contact.md#BKMK_Contact_Emails) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_user_email"></a> user_email
 
-See systemuser Table [user_email](systemuser.md#BKMK_user_email) One-To-Many relationship.
+See the [user_email](systemuser.md#BKMK_user_email) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_SystemUser_Email_EmailSender"></a> SystemUser_Email_EmailSender
 
-See systemuser Table [SystemUser_Email_EmailSender](systemuser.md#BKMK_SystemUser_Email_EmailSender) One-To-Many relationship.
+See the [SystemUser_Email_EmailSender](systemuser.md#BKMK_SystemUser_Email_EmailSender) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_AsyncOperation_Emails"></a> AsyncOperation_Emails
 
-See asyncoperation Table [AsyncOperation_Emails](asyncoperation.md#BKMK_AsyncOperation_Emails) One-To-Many relationship.
+See the [AsyncOperation_Emails](asyncoperation.md#BKMK_AsyncOperation_Emails) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 ### <a name="BKMK_lk_email_createdonbehalfby"></a> lk_email_createdonbehalfby
 
-See systemuser Table [lk_email_createdonbehalfby](systemuser.md#BKMK_lk_email_createdonbehalfby) One-To-Many relationship.
+See the [lk_email_createdonbehalfby](systemuser.md#BKMK_lk_email_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Emails"></a> KnowledgeArticle_Emails
 
-See knowledgearticle Table [KnowledgeArticle_Emails](knowledgearticle.md#BKMK_KnowledgeArticle_Emails) One-To-Many relationship.
+See the [KnowledgeArticle_Emails](knowledgearticle.md#BKMK_KnowledgeArticle_Emails) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_email_sendermailboxid_mailbox"></a> email_sendermailboxid_mailbox
 
-See mailbox Table [email_sendermailboxid_mailbox](mailbox.md#BKMK_email_sendermailboxid_mailbox) One-To-Many relationship.
+See the [email_sendermailboxid_mailbox](mailbox.md#BKMK_email_sendermailboxid_mailbox) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_email"></a> activity_pointer_email
 
-See activitypointer Table [activity_pointer_email](activitypointer.md#BKMK_activity_pointer_email) One-To-Many relationship.
+See the [activity_pointer_email](activitypointer.md#BKMK_activity_pointer_email) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_lk_email_modifiedonbehalfby"></a> lk_email_modifiedonbehalfby
 
-See systemuser Table [lk_email_modifiedonbehalfby](systemuser.md#BKMK_lk_email_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_email_modifiedonbehalfby](systemuser.md#BKMK_lk_email_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_email"></a> team_email
 
-See team Table [team_email](team.md#BKMK_team_email) One-To-Many relationship.
+See the [team_email](team.md#BKMK_team_email) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_manualsla_email"></a> manualsla_email
 
-See sla Table [manualsla_email](sla.md#BKMK_manualsla_email) One-To-Many relationship.
+See the [manualsla_email](sla.md#BKMK_manualsla_email) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_business_unit_email_activities"></a> business_unit_email_activities
 
-See businessunit Table [business_unit_email_activities](businessunit.md#BKMK_business_unit_email_activities) One-To-Many relationship.
+See the [business_unit_email_activities](businessunit.md#BKMK_business_unit_email_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_Account_Emails"></a> Account_Emails
 
-See account Table [Account_Emails](account.md#BKMK_Account_Emails) One-To-Many relationship.
+See the [Account_Emails](account.md#BKMK_Account_Emails) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_email_email_parentactivityid"></a> email_email_parentactivityid
 
-See email Table [email_email_parentactivityid](email.md#BKMK_email_email_parentactivityid) One-To-Many relationship.
+See the [email_email_parentactivityid](email.md#BKMK_email_email_parentactivityid) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_processstage_emails"></a> processstage_emails
 
-See processstage Table [processstage_emails](processstage.md#BKMK_processstage_emails) One-To-Many relationship.
+See the [processstage_emails](processstage.md#BKMK_processstage_emails) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_sla_email"></a> sla_email
 
-See sla Table [sla_email](sla.md#BKMK_sla_email) One-To-Many relationship.
+See the [sla_email](sla.md#BKMK_sla_email) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_lk_email_createdby"></a> lk_email_createdby
 
-See systemuser Table [lk_email_createdby](systemuser.md#BKMK_lk_email_createdby) One-To-Many relationship.
+See the [lk_email_createdby](systemuser.md#BKMK_lk_email_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_email_email_CorrelatedActivityId"></a> email_email_CorrelatedActivityId
 
-See email Table [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) One-To-Many relationship.
+See the [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_mailbox_email_ReceivingMailboxId"></a> mailbox_email_ReceivingMailboxId
 
-See mailbox Table [mailbox_email_ReceivingMailboxId](mailbox.md#BKMK_mailbox_email_ReceivingMailboxId) One-To-Many relationship.
+See the [mailbox_email_ReceivingMailboxId](mailbox.md#BKMK_mailbox_email_ReceivingMailboxId) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_email_acceptingentity_queue"></a> email_acceptingentity_queue
 
-See queue Table [email_acceptingentity_queue](queue.md#BKMK_email_acceptingentity_queue) One-To-Many relationship.
+See the [email_acceptingentity_queue](queue.md#BKMK_email_acceptingentity_queue) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_email_acceptingentity_systemuser"></a> email_acceptingentity_systemuser
 
-See systemuser Table [email_acceptingentity_systemuser](systemuser.md#BKMK_email_acceptingentity_systemuser) One-To-Many relationship.
+See the [email_acceptingentity_systemuser](systemuser.md#BKMK_email_acceptingentity_systemuser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

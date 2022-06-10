@@ -1,13 +1,12 @@
 ---
 title: " IFRAME component| Microsoft Docs" 
 description: "This sample describes how to bind a code component to different columns on the form and use the value of these columns as input properties to the component." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 6/08/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
 ---
 # Implementing a IFRAME component
 
@@ -16,7 +15,7 @@ This sample describes how to bind a code component to different columns on the f
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![IFRAME component](../media/iframe-control.png "IFRAME component")
+> ![IFRAME component.](../media/iframe-control.png "IFRAME component")
 
 ## Available for 
 

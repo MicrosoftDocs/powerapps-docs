@@ -1,23 +1,25 @@
 ---
 title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about synchronizing Dataverse data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/24/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "Peakerbl" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Data Synchronization
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Sometimes you’ll need to synchronize and integrate Microsoft Dataverse data with data that is stored in other systems. The common data integration patterns include taking data from an external system and pushing it into Dataverse, taking data from Dataverse and synchronizing it to some external data store, or updating Dataverse with external data. You can now use several new capabilities to make it easier to write code to achieve these scenarios.  
 
@@ -36,14 +38,14 @@ Sometimes you’ll need to synchronize and integrate Microsoft Dataverse data wi
 
 |   Before    |        Description  |
 |----------------------|----------------------------|
-| ![Update using specialized messages](media/before-carina-dynamics-crm-2015.png "Update using specialized messages") | For each record:<br /><br /> 1.  Query Dataverse to see if the account exists. If it exists, get its account ID (for example, ABC123)<br />2.  Query the contacts to verify that the contact exists. If it exists, get the email ID of the contact (for example, contact@company.com).<br />3.  Query to get or set the region ID (for example, NW).<br />4.  Query to get the user ID to set the owner (for example, user@mycompany.com)<br />5.  Update the account.<br />6.  Set the state of the account by calling the `SetState` API.<br />7.  Assign the owner by calling the `Assign` API. |
+| ![Update using specialized messages.](media/before-carina-dynamics-crm-2015.png "Update using specialized messages") | For each record:<br /><br /> 1.  Query Dataverse to see if the account exists. If it exists, get its account ID (for example, ABC123)<br />2.  Query the contacts to verify that the contact exists. If it exists, get the email ID of the contact (for example, contact@company.com).<br />3.  Query to get or set the region ID (for example, NW).<br />4.  Query to get the user ID to set the owner (for example, user@mycompany.com)<br />5.  Update the account.<br />6.  Set the state of the account by calling the `SetState` API.<br />7.  Assign the owner by calling the `Assign` API. |
 
  Now, with the new features, it just takes one call to the server to perform the same operations as previously shown.  
 
 
 |After  |     Description   |
 |-----------------------|------------------------------|
-| ![Update using UpdateRequest](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
+| ![Update using UpdateRequest.](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
 
 ## In This Section  
  [Define alternate keys for the table](define-alternate-keys-entity.md)<br />

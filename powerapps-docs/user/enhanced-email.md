@@ -3,10 +3,11 @@ title: "Send email using the enhanced email experience in model-driven apps| Mic
 description: Use the enhanced email experience to compose an email without leaving the context of what you are working on.
 author: mduelae
 manager: annbe
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/09/2020
+ms.subservice: end-user
 ms.author: shujoshi
 ms.custom: ""
 ms.reviewer: ""
@@ -43,7 +44,7 @@ Compose an email using the enhanced experience:
    A new email pop-up window opens. 
 
    > [!div class="mx-imgBorder"]
-   > ![Enhanced email pop-up window](media/enhanced-email-pop-up.png "Enhanced email pop-up window")
+   > ![Enhanced email pop-up window.](media/enhanced-email-pop-up.png "Enhanced email pop-up window")
 
    The **From** and **To** columns are automatically populated based on the user and the account and contact of the original row.
 

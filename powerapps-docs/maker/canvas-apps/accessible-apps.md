@@ -2,11 +2,10 @@
 title: Create accessible canvas apps
 description: How to make canvas apps accessible for people with disabilities
 author: chmoncay
-ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/18/2021
+ms.date: 03/24/2022
+ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
@@ -16,6 +15,9 @@ contributors:
   - chmoncay
   - tahoon-ms
   - tapanm-msft
+ms.custom:
+  - intro-internal
+  - canvas
 ---
 # Create accessible canvas apps
 
@@ -31,20 +33,23 @@ Common sense and uncomplicated design helps apps be more accessible to all users
 - If customizing colors, ensure the contrast ratio of text to background is 4.5:1 or greater.  Software tools that assist this process are readily available.
 - Ensure layout follows a logical flow when read top-bottom, left to right.
 
-## Keyboard support
+## Keyboard
+
 When testing your app's accessibility, ensure the app can be used with the keyboard only, the accessibility modes on iOS and Android, and keyboard-based screen readers.
 
 For keyboard navigation (with or without the screen reader), ensure that a logical order is followed when using the TAB key to navigate to input fields by setting each control's **[TabIndex](controls/properties-accessibility.md)** property:
 - Label, Image, Icon, Shape controls - if they represent interactive elements (i.e.buttons) set TabIndex to 0; if they are decorative elements or text, set TabIndex to -1.
 - Avoid setting tab index higher than zero.
 
-## Screen reader support
-The following software combinations are the supported recommendations for consuming Power Apps with a screen reader:
+## Screen readers
 
-- **Windows**: Microsoft Edge / Narrator
-- **macOS**: Safari / VoiceOver
-- **Android**: Power Apps app / Talkback
-- **iOS**: Power Apps app / VoiceOver
+The following screen readers have been verified to work with Power Apps:
+
+- **JAWS**: Microsoft Edge
+- **Narrator**: Microsoft Edge
+- **NVDA**: Google Chrome, Firefox
+- **TalkBack**: Google Chrome, [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
+- **VoiceOver**: [Power Apps mobile](../../mobile/run-powerapps-on-mobile.md), Safari (macOS, iOS, iPadOS)
 
 To ensure a satisfying experience with the screen reader it is recommended to:
 

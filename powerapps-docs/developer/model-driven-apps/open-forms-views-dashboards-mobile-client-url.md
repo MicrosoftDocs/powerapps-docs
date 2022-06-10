@@ -1,25 +1,26 @@
 ---
 title: "Open forms, views, and dashboards in Dynamics 365 mobile client with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the new application handler for Dynamics 365 mobile clients to directly link to Dynamics 365 forms, views, and dashboards from external applications so that when you click on the link in an external application, the target element opens in Dynamics 365 for phones or Dynamics 365 for tablets." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+ms.author: hemantg
+author: HemantGaur
+manager: kvivek
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Open forms, views, and dashboards in mobile client with a URL
 
 Use the new application handler for mobile clients to directly link to forms, views, and dashboards from external applications so that when you click on the link in an external application, the target element opens in Dynamics 365 for phones or Dynamics 365 for tablets. You can also open an empty form for creating a table record.  
   
-If you are already signed in to your instance in Dynamics 365 for phones or Dynamics 365 for tablets, the target record is displayed in the mobile client when you click the link in external application. Otherwise, you’re prompted to sign in to your instance in the mobile client, and upon doing so, the target element is displayed. You must have Dynamics 365 for phones or Dynamics 365 for tablets installed on your mobile device to use this feature.  
+If you are already signed in and have a model-driven app opened in Dynamics 365 for phones or Dynamics 365 for tablets, the target record is displayed in the mobile client when you click the link in external application. Otherwise, a login screen or the application list is displayed and link opening is cancelled. You must have Dynamics 365 for phones or Dynamics 365 for tablets installed on your mobile device to use this feature.  
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   

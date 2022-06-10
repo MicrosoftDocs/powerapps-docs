@@ -1,20 +1,15 @@
 ---
 title: Code Element | Microsoft Docs
 description: Refers to the path where the resource files are located.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # code element
@@ -42,7 +37,7 @@ Model-driven and canvas apps
 
 ```XML
 <code path="TS_IncrementControl.js" order="1" />
-	    <css path="css/TS_IncrementControl.css" order="1" />
+       <css path="css/TS_IncrementControl.css" order="1" />
       <resx path="strings/TSIncrementControl.1033.resx" version="1.0.0" />
 ```
 

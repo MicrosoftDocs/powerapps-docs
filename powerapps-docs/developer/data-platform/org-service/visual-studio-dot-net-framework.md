@@ -2,18 +2,20 @@
 title: "Visual Studio and the .NET Framework (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about managed code development tools and requirements."
 ms.custom: intro-internal
-ms.date: 07/03/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 04/03/2022
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.reviewer: pehecke
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Visual Studio and the .NET Framework

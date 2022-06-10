@@ -2,11 +2,12 @@
 title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2021
+ms.date: 01/31/2022
+ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
@@ -15,6 +16,7 @@ search.app:
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
+  - melzoghbi
 ---
 
 # Common canvas app performance issues and resolutions
@@ -41,11 +43,11 @@ We recommend that you select only the columns that are necessary for the app. Ad
 
 For example, if you use Dataverse as the data source for your app, make sure you've enabled the [explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict data retrieval to only the columns used in the app.
 
-To turn on the explicit column selection feature on the canvas app, go to **File** > **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
+To turn on the explicit column selection feature on the canvas app, go to **Settings** > **Upcoming features** > **Preview**, and then turn on the **Explicit column selection** toggle.
 
 ## Unsupported or legacy browsers
 
-Users who use unsupported or legacy browsers, such as Internet Explorer 11, might experience performance issues. Ensure that users only use [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps) for running canvas apps.
+Users who use unsupported or legacy browsers, might experience performance issues. Ensure that users only use [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps) for running canvas apps.
 
 ## Slow performance because of geographical distance
 
@@ -87,6 +89,9 @@ Optimize the formula in an **OnStart** event. For example, you can move some fun
 
 More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
 
+> [!TIP]
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
+
 ## Memory pressure at the client side
 
 It's important to check the memory consumption of a canvas app because most of the time, the app runs on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes ("hangs") on certain devices.
@@ -99,7 +104,7 @@ If client-heavy operations like **JOIN** or **Group By** happened at the client 
 
 Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
-![An example of memory pressure for an app as seen from the developer tools of a browser](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
+![An example of memory pressure for an app as seen from the developer tools of a browser.](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
 
 ## Performance considerations for the SQL Server connector
 
@@ -202,11 +207,11 @@ Check the service tier of Azure SQL Database. A lower tier will have some limita
 
 ## Performance considerations for the SharePoint connector
 
-You can use the [SharePoint connector](connections/connection-sharepoint-online.md) to create apps by using data from SharePoint lists. You can also create canvas apps directly from the SharePoint list view. Let's take a look at the common performance problems and resolutions for using a SharePoint data source with canvas apps.
+You can use the [SharePoint connector](connections/connection-sharepoint-online.md) to create apps by using data from Microsoft Lists. You can also create canvas apps directly from the list view. Let's take a look at the common performance problems and resolutions for using a SharePoint data source with canvas apps.
 
 ### Too many dynamic lookup columns
 
-SharePoint supports various data types, including dynamic lookups such as **Person**, **Group**, and **Calculated**. If a SharePoint list defines too many dynamic columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
+SharePoint supports various data types, including dynamic lookups such as **Person**, **Group**, and **Calculated**. If a list defines too many dynamic columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
 
 Don't overuse the dynamic lookup columns in SharePoint. This overuse can result in avoidable and extra overhead on the SharePoint side for manipulation of data. Instead, you can use static columns to keep email aliases or people's names, for example.
 
@@ -214,7 +219,7 @@ Don't overuse the dynamic lookup columns in SharePoint. This overuse can result 
 
 The size of an image and an attached file can contribute to a slow response while retrieving to the client.
 
-Review your SharePoint list, and ensure that only necessary columns have been defined. The number of columns in the list affects the performance of the data requests. This is because the matched records, or the records up to the defined data row limits, are retrieved and transmitted back to the client with all the columns defined in the list&mdash;even if the app doesn't use all of them.
+Review your list, and ensure that only necessary columns have been defined. The number of columns in the list affects the performance of the data requests. This is because the matched records, or the records up to the defined data row limits, are retrieved and transmitted back to the client with all the columns defined in the list&mdash;even if the app doesn't use all of them.
 
 To query only the columns used by the app, enable the explicit column selection feature, as [described earlier in this article](#too-many-columns-retrieved).
 
@@ -224,9 +229,9 @@ If you have a large list with hundreds of thousands of records, consider partiti
 
 For instance, your data might be stored in different lists on a yearly or monthly basis. In such a case, you can design the app to let a user select a time window and retrieve the data within that range.
 
-Within a controlled environment, the performance benchmark has proven that the performance of OData requests against SharePoint lists is highly related to the number of columns in the list and the number of rows being retrieved (limited by the [data row limit for non-delegable queries](delegation-overview.md#changing-the-limit)). Having fewer columns and a lower data row limit setting can make a canvas app perform better.
+Within a controlled environment, the performance benchmark has proven that the performance of OData requests against Microsoft Lists or SharePoint is highly related to the number of columns in the list and the number of rows being retrieved (limited by the [data row limit for non-delegable queries](delegation-overview.md#changing-the-limit)). Having fewer columns and a lower data row limit setting can make a canvas app perform better.
 
-In the real world, though, apps are designed to meet certain business requirements. It might not be quick or simple to reduce the data row limit or the number of columns in a SharePoint list. However, we recommend that you monitor the OData requests at the client side and tune the data row limit for non-delegable queries and the number of columns in the list.
+In the real world, though, apps are designed to meet certain business requirements. It might not be quick or simple to reduce the data row limit or the number of columns in a list. However, we recommend that you monitor the OData requests at the client side and tune the data row limit for non-delegable queries and the number of columns in the list.
 
 ## Performance considerations for using Dataverse as the data source
 
@@ -237,7 +242,7 @@ When you use Microsoft Dataverse as the data source, data requests go to the env
 
 A canvas app connected to Dataverse might perform slowly if it runs client-heavy scripting such as **Filter By** or **JOIN** client-side instead of server-side.
 
-Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join tables and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
+Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join tables and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#how-to-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
 ## Performance considerations for the Excel connector
 

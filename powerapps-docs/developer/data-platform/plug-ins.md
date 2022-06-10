@@ -2,11 +2,11 @@
 title: "Use plug-ins to extend business processes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how plug-ins provide a way to respond to a data processing event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 03/15/2021
+ms.date: 03/22/2022
 ms.reviewer: "phecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Use plug-ins to extend business processes
 
@@ -41,7 +43,7 @@ People frequently compare workflows and plug-ins as the choices to apply custom 
 
 - Custom Actions are a type of process similar to workflows that allow for creating re-usable messages that can be called from other workflows or from the web service endpoints.
 
-- Azure Service Bus integration and WebHooks can be used to push data to external systems where logic can be applied using many different resources.
+- Azure Service Bus integration and Webhooks can be used to push data to external systems where logic can be applied using many different resources.
 
 - Power Automate provides many capabilities that previously were performed using plug-ins.
 

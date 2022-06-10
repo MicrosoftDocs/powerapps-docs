@@ -2,15 +2,16 @@
 title: Model-driven sample apps
 description: Understand how to get, customize, and remove model-driven sample apps.
 documentationcenter: na
-ms.custom: intro-internal
+
 author: caburke
 reviewer: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: overview
 ms.component: model
 ms.date: 06/24/2021
+ms.subservice: mda-maker
 ms.author: caburk
 search.audienceType: 
   - maker
@@ -21,19 +22,19 @@ search.app:
 
 # Model-driven sample apps
 
-In [powerapps.com](https://powerapps.com), use a sample app to explore design possibilities and discover concepts that you can apply as you develop your own apps. Each sample app uses fictitious data to showcase a real-world scenario. 
+In [Power Apps](https://make.powerapps.com), use a sample app to explore design possibilities and discover concepts that you can apply as you develop your own apps. Each sample app uses fictitious data to showcase a real-world scenario. 
 
 <!-- Be sure to check out documentation specific to each sample app for more details. -->
 
-> [!div class="mx-imgBorder"] 
-> ![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
+> [!div class="mx-imgBorder"]
+> ![Fundraiser Sample App.](media/overview-model-driven-samples/fundraiser-app1.png "Fundraiser sample app")
 
 ## Get sample apps
 
 The availability of sample apps depends on how an environment database was provisioned.
 
 > [!IMPORTANT]
-> In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database by an administrator that has the Environment Admin role. 
+> In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database by an administrator that has the Environment Admin role.
 
 To install the sample apps and data, create a trial environment and database, and then be sure to select **Deploy sample apps and data**.
 
@@ -50,7 +51,7 @@ After you provision an environment with a database that include sample apps, the
 ### Asset Checkout
 Asset Checkout provides self-service capabilities to reserve the tools and equipment your teams need to do their jobs, while accurately calculating available inventory and much more.
 
-![Asset checkout sample app](media/overview-model-driven-samples/asset-checkout.png)
+![Asset checkout sample app.](media/overview-model-driven-samples/asset-checkout.png)
 
 #### Solution components included in this sample app
 
@@ -71,7 +72,7 @@ Asset Checkout provides self-service capabilities to reserve the tools and equip
 
 Start a companywide innovation challenge. Ideas are submitted, reviewed, voted on, and the best ideas get funded for new projects.
 
-![Innovation Challenge sample app](media/overview-model-driven-samples/innovation-challenge.png)
+![Innovation Challenge sample app.](media/overview-model-driven-samples/innovation-challenge.png)
 
 #### Solution components included in this app
 
@@ -102,7 +103,7 @@ Start a companywide innovation challenge. Ideas are submitted, reviewed, voted o
 
 Fundraiser provides employees the opportunity to donate time and money towards causes they're passionate about. Start a fundraiser for your favorite cause, set goals, and track performance towards goals.
 
-![Fundrasier sample app](media/overview-model-driven-samples/fundraiser.png)
+![Fundrasier sample app.](media/overview-model-driven-samples/fundraiser.png)
 
 #### Solution components included in this app
 
@@ -133,22 +134,26 @@ Fundraiser provides employees the opportunity to donate time and money towards c
 
 ## Remove sample apps and data
 
-- Deleting a sample app requires deleting the corresponding  [managed solution](/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
+- Deleting a sample app requires deleting the corresponding  [managed solution](/dynamics365/customer-engagement/developer/uninstall-delete-solution).
 - Deleting the solution also deletes any sample data specific to the custom tables for the app.
 - If customizations were made to the sample app, there may be [dependencies](/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
-### Delete a solution
+## Delete a solution
 
 To delete a solution, follow the steps in this topic: [Delete a model-driven app](delete-model-driven-app.md#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution)
-
 
 ## Install or uninstall Sample Data
 
 To remove sample data, follow the steps in this topic: [Add or remove sample data](/power-platform/admin/add-remove-sample-data)
 
+## Next Steps
 
+[Learn about the model-driven app design tools](model-driven-designers.md)
 
+[Building a simple model-driven app](build-first-model-driven-app.md) is a great way to start.  You may wish to [Create a solution](../../maker/data-platform/create-solution.md) before you do so.
 
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 
+[Understand model-driven app components](model-driven-app-components.md) will help you to understand some of the elements that make up a model-driven app.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

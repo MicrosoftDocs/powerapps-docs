@@ -1,19 +1,21 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/11/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID Temp owner
+author: "divka78" # GitHub ID Temp owner
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Work with data using code in Microsoft Dataverse
 
@@ -25,7 +27,7 @@ Dataverse has [tables](entities.md) that are used to model and manage business d
 
 Dataverse provides two web services that you can use to interact with data: data service, and Organization service. Choose the one that best matches the requirement and your skills. Use the Web API when coding for the data service and the SDK API when coding for the Organization service.
 
-![Flow diagram to choose web service](media/whentousewebapi.png)
+![Flow diagram to choose web service.](media/whentousewebapi.png)
 
 ### Web API
 

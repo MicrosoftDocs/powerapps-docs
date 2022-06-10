@@ -6,7 +6,7 @@ manager: writer's manager's MSFT alias
 
 ms.author: PM's or writer's MSFT alias 
 ms.reviewer: writer's MSFT alias 
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: Delete all but one of these (canvas, model, cds, admin, user)
 ms.date: 04/26/2018 (change this to today's date when you update the topic)
@@ -34,6 +34,6 @@ Intro to a numbered list
 
     Explanation of first step
 
-    ![Here's a graphic](media/template/sample-apps.png)
+    ![Here's a graphic.](media/template/sample-apps.png)
 
 1. Second step

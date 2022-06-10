@@ -1,23 +1,22 @@
 ---
 title: "Sample: Create, retrieve, update, and delete (late bound) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound table class." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Late-bound table operations
-
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 
 This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound class. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/LateBoundEntityOperations).
@@ -40,8 +39,8 @@ Checks for the current version of the org.
 
 1. Instantiates the account object.
 1. Creates an account record.
-1. Retrieves the account and its attributes.
-1. Updates the postal1 code attribute and set the postal2 code to null.
+1. Retrieves the account and its columns.
+1. Updates the postal1 code column and set the postal2 code to null.
 1. Update the account. 
 1. Prompts to delete the account records created.
 

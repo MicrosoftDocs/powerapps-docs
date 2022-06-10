@@ -2,11 +2,12 @@
 title: Common sources of slow performance for a canvas app
 description: Learn about the common sources of slow performance for a canvas app.
 author: JinManAhn-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2021
+ms.date: 01/31/2022
+ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
@@ -15,6 +16,7 @@ search.app:
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
+  - wimcoor
 ---
 
 # Common sources of slow performance for a canvas app
@@ -48,8 +50,6 @@ When these problems occur, tune the back-end data source to avoid slowing the ap
 
 Canvas apps can be used on different devices, browsers, and locations with varying network conditions. As the Power Apps client is executed, be sure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
-If some users are using legacy, unsupported, or deprecated browsers like Internet Explorer 11, their experience might be affected.
-
 ## Geographical location of the on-premises data gateway and environment
 
 Users can access canvas apps globally. However, we recommend that you locate the data source near most of your users. For example, when your app accesses your on-premises data source, the location of on-premises data gateway should be close to the data source to minimize any extra overhead between the data gateway and the data source.
@@ -63,6 +63,10 @@ If an app exceeds the connector's throttling limits, the app is subject to a tem
 Makers can select from several data sources available for Power Apps by using different [connectors](connections-list.md). Although there are many options to choose a data source from, choosing the right data source and connector is important from many perspectives&mdash;architecture, performance, maintenance, and scalability.
 
 Connector-specific limits are available in [Power Apps connectors documentation](/connectors/connector-reference/connector-reference-powerapps-connectors), and might vary in comparison to other connectors.
+
+## Debug published app setting enabled
+
+Apps published with the setting [Debug published app](../monitor-canvasapps.md#setting-debug-published-app) enabled perform significantly slower. Publish your app with this setting disabled as soon as you no longer need to view source expressions when debugging your published app.  
 
 ## Next steps
 

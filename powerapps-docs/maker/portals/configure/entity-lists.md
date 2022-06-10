@@ -2,15 +2,17 @@
 title: About lists
 description: Learn how to add and configure lists to render a list of records on a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/04/2021
+ms.date: 03/07/2022
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # About lists
@@ -27,7 +29,6 @@ The list contains relationships to webpages and various properties to control th
 
 > [!Note]
 > - A list must be associated with a webpage in a given website for the list to be viewable within the site.
-> - Multi-select option set is not supported in lists.
 
 The webpages associated with the list can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu. When creating your list, the first step is to choose the table for which you want to render a list on the portal. You'll then choose one or more model-driven app views to render.
 
@@ -54,12 +55,15 @@ When creating or editing a webpage, you can specify a list in the lookup field p
 |    Search Placeholder Text     |                                                                                                                                                      An optional string used as the label displayed in the text box on initial load.                                                                                                                                                       |
 |      Search Tooltip Text       |                                                                                                                                             An optional string used as the tooltip displayed when the user points to the **Search** text box.                                                                                                                                              |
 |                                |                                                                                                                                                                                                                                                                                                                                                                                            |
+## Sort lists
+
+A portal user can select a column header on the list to sort the data if the column is part of the table used to configure the Dataverse view used for the list. To enable sorting by columns displayed on the list from related tables, add a [site setting](configure-site-settings.md) named **Site/EnableSortingOnLinkedEntities** set to **true**.
 
 ## Add custom Javascript
 
 The Options tab on the form contains a text area that you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]; if your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
-![Custom JavaScript example](../media/custom-javascript-example.png "Custom JavaScript example")  
+![Custom JavaScript example.](../media/custom-javascript-example.png "Custom JavaScript example")  
 
 The list gets its data asynchronously, and when it is complete it will trigger an event `loaded` that your custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)] can listen for and do something with items in the grid. The following code is a trivial example:
 ```
@@ -86,11 +90,11 @@ $(document).ready(function (){
 ```
 ## List configuration
 
-You can easily enable and configure actions (Create, Edit, Delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
+You can easily enable and configure actions (create, edit, delete, and so on) for records in a list. It is also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
-These settings are found in the Configuration section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
+These settings are found on the **Options** tab in the **Grid Configuration** section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure a list](../media/configure-entitylist.png "Configure a list")  
+:::image type="content" source="media/lists/configure-entitylist.png" alt-text="Configure a list."::: 
 
 **Attributes**
 
@@ -274,7 +278,12 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 
 ## Securing lists
 
-To secure a list, you must configure Table Permissions for the table for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
+>[!NOTE]
+> This method of securing lists would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
+
+To secure a list, you must configure Table Permissions for the table for which records are being displayed and also select the checkbox for **Enable Table Permissions** setting. If you don't, you'll see the following warning:
+
+"Table permissions should be enabled for this record or anyone on the internet can view the data.".
 
 The act of securing a list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
@@ -288,37 +297,40 @@ If the **EntityList/ShowRecordLevelActions** site setting is set to **false** an
 
 ## Adding a view details page
 
-By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
+By setting the **Web Page for Details View** lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or editable, depending on the configuration of the associated form or page.
 
-This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or Advanced form.
+This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or advanced form.
 
-The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
+The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named query string parameter with the ID of the record. The name of the query string parameter depends on the **ID Query String Parameter Name** value specified on the list. The final thing to note is that the targeted details webpage must also be aware of the name of this query string parameter to get the ID of the record that it needs to query and load its data.
 
-![Add view details page](../media/add-view-details-page.png "Add view details page")  
+> [!NOTE]
+> The **Web Page for Details view** is a default setting configured for a list. The hyperlink on the grid will navigate to the default web page if the list is not configured using the **View** or **Edit** action settings in the **Grid Configuration** section on the **Options** tab. If either of the **View** or **Edit** action settings are configured with target type as a basic form, clicking the hyperlink in the list grid will open a dialog.
 
-**Using a basic form to display details**
+![Add view details page.](../media/add-view-details-page.png "Add view details page")  
+
+### Using a basic form to display details
 
 To create a basic form please refer the instructions found on the [basic form](entity-forms.md) page.
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the basic form.
 
-The Record ID Parameter Name on Basic Form must match the ID Query String Parameter Name on List.
+The **Record ID Parameter Name** on the basic form must match the **ID Query String Parameter Name** on the list.
 
-The Mode can be either Edit or ReadOnly, depending on your needs.
+The **Mode** can be either *Edit* or *ReadOnly*, depending on your needs.
 
-**Using advanced form to display details**
+### Using advanced form to display details
 
-The following are the important settings to be aware of for ensuring that the record from the list is loaded in the Advanced form.
+The following are the important settings to be aware of for ensuring that the record from the list is loaded in the advanced form.
 
-The Primary Key Query String Parameter Name on Advanced Form Step must match the ID Query String Parameter Name on List.
+The **Primary Key Query String Parameter Name** on the advanced form step must match the **ID Query String Parameter Name** on the list.
 
-The Mode can be either Edit or ReadOnly, depending on your needs.
+The **Mode** can be either *Edit* or *ReadOnly*, depending on your needs.
 
-**Using a details page for the Create function**
+### Using a details page for creating a new record
 
-You can use a custom page, basic form, or Advanced form in the same fashion for the Create function. This is an alternative to defining a Create action on the form. You cannot define both a Create action *and* a custom page for Create: defining a custom action takes precedence.
+You can use a custom page, basic form, or advanced form in the same fashion for creating a new record. This is an alternative to defining a **Create** action on the list on the **Grid Configuration** section under the **Options** tab. You cannot define both a **Create** action *and* a custom page for create: defining a **Create** action takes precedence.
 
-If you assign a webpage to the Create Lookup on the list and do not specify a Create action by using Configuration, a Create button will be rendered on the list; this button will link the user to the custom page you have designated for Create.
+If you assign a webpage to the **Web Page for Create** lookup on the list and do not specify a **Create** action in the **Grid Configuration** section, a create button will be rendered on the list; this button will link the user to the custom page you have designated.
 
 ## List filter configuration
 
@@ -330,7 +342,7 @@ In the **Metadata Filter** section, select the **Enabled** check box. This will 
 
 You can define how the Filter area on the list will be rendered by using the Orientation setting. The default, Horizontal, renders the Filter area above the list. Vertical orientation renders the Filter area as a box to the left of the list.
 
-![Metadata filter settings](../media/metadata-filter-settings.png "Metadata filter settings")  
+![Metadata filter settings.](../media/metadata-filter-settings.png "Metadata filter settings")  
 
 **Filter types**
 
@@ -350,7 +362,7 @@ The Text filter adds a text box to the list Filter area that is tied to an attri
 
 To add a Text filter, select **+Text Filter**.
 
-![Add a text filter](../media/add-text-filter.png "Add a Text filter")  
+![Add a text filter.](../media/add-text-filter.png "Add a Text filter")  
 
 The Text filter uses the following attributes:
 
@@ -363,7 +375,7 @@ The Text filter uses the following attributes:
 
 The Attribute Filter Set adds a series of options to filter the list by, tied to a single attribute of the list's selected table type. When a user applies the filter, the list only displays those records that exactly match at least one of the selected options.
 
-![Attribute filter settings](../media/set-attribute-filter.png "Attribute filter settings")
+![Attribute filter settings.](../media/set-attribute-filter.png "Attribute filter settings")
 
 The Attribute Filter Set uses the following attributes:
 
@@ -389,7 +401,7 @@ Options have the following attributes:
 
 The Lookup Set adds a series of options to filter the list by, tied to a related table to the list's selected table type. When a user applies the filter, the list only displays those records that exactly match at least one of the selected related records.
 
-![Lookup set](../media/lookup-set.png "Lookup Set")  
+![Lookup set.](../media/lookup-set.png "Lookup Set")  
 
 The Lookup Set uses the following attributes:
 
@@ -414,7 +426,7 @@ Options have the following attributes:
 
 The Range Filter Set adds a series of options, each with one or two conditions, to the Filter area. When a user applies the filter, the list only displays those records that exactly match all conditions on at least one of the selected options.
 
-![Range filter settings](../media/set-range-filter.png "Range filter settings")  
+![Range filter settings.](../media/set-range-filter.png "Range filter settings")  
 
 The Range Filter Set uses the following attributes:
 
@@ -442,7 +454,7 @@ Options have the following attributes:
 
 The Dynamic Picklist Set adds a series of options to filter by that represent all the values of a specified Picklist field. This is different from selecting a Picklist in the Attribute Filter Set. In the Attribute Filter Set, you must specify a set of options that will be made available to the user to filter by; in the Dynamic Picklist Set, you need only specify the Picklist field and the entire set of options will be provided automatically. If you need greater control, we recommend that you use the Attribute Filter Set.
 
-![Dynamic picklist settings](../media/set-dynamic-picklist.png "Dynamic picklist settings")  
+![Dynamic picklist settings.](../media/set-dynamic-picklist.png "Dynamic picklist settings")  
 
 The Dynamic Picklist Set uses the following options:
 
@@ -457,7 +469,7 @@ The Dynamic Lookup Set adds a dynamic series of options to filter the list by, t
 
 This is different from a Lookup Set. In the Lookup Set, you must manually specify the related tables to filter by. In the Dynamic Lookup Set, you need only specify the relationship on which to filter, and a list of options will be generated based on the specified view of related tables.
 
-![Dynamic lookup settings](../media/set-dynamic-lookup.png "Dynamic lookup settings")  
+![Dynamic lookup settings.](../media/set-dynamic-lookup.png "Dynamic lookup settings")  
 
 The Dynamic Lookup Set uses the following options:
 
@@ -473,7 +485,7 @@ The Dynamic Lookup Set uses the following options:
 
 The range filter can create either a simple text box filter like the Text filter or a set of options like the other filter types. It allows you to manually create virtually any type of filter for the list by using FetchXML.
 
-![FetchXML filter settings](../media/set-fetchxml-filter.png "FetchXML filter settings")
+![FetchXML filter settings.](../media/set-fetchxml-filter.png "FetchXML filter settings")
 
 The FetchXML filter uses only one attribute:
 
@@ -483,7 +495,9 @@ The FetchXML filter uses only one attribute:
 
 ## List Map view
 
-With lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
+On the **Map View** tab, you can enable the list to render as a map view of the data.
+
+The map view is powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
 
 > [!NOTE] 
 > - This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
@@ -491,20 +505,53 @@ With lists, it is possible to enable and configure a Map view of the data, power
 
 ## List Calendar view
 
-Use the List Calendar view to render a list as a calendar, with each individual record configured to act as a single event.
+On the **Calendar View** tab, you can enable the list to render as a calendar view, with each individual record configured to act as a single event.
 
-To display records by using a calendar, those records need to include at a minimum a date field. For events to have exact start and end times, the appropriate fields need to be in place, and so on. Assuming these fields are configured, a List Calendar view will appear on the portal.
+The following field mappings can be configured to display list records as dated events on the calendar. The records need to include at minimum a date field.
+
+> [!Tip]
+> See [date and time](behavior-format-date-time-field.md#date-and-time) field behaviors for information on formatting date and time fields on portals.
+
+| Entity Field Mappings | Details |
+| - | - |
+| Start Date Field Name | A datetime column representing the start date of a calendar event. |
+| End Date Field Name | A datetime column representing the end date of a calendar event. |
+| Summary Field Name | A text column that will show the summary of a calendar event. |
+| Description Field Name | A text column that will display a description of the calendar event. |
+| Organizer Field Name | A text or lookup column that will display the organizer of the calendar event. |
+| Location Field Name | A text column describing the location of the calendar event.|
+| Is All Day Field Name | A yes/no column indicating if the calendar event is all day. |
+
+| Setting | Details |
+| - | - |
+| Initial View | Initial view of the calendar; year, month, week, or day. Default value is month. |
+| Initial Date | The initial start date when the calendar is rendered. Default (blank) will the be the current date. |
+| Time Zone Display Mode | The time zone the calendar will be displayed in. No option selected will display the events based on how the date column was configured in Dataverse. The *User Local Time Zone* will display events in the calendar using the time zone of the user viewing the portal. *Specific Time Zone* will display the calendar events with a specified time zone. |
+| Display Time Zone | If the **Time Zone Display Mode** is set to *Specific Time Zone* this value will determine the time zone the calendar events are displayed. |
+| Style | The setting displays the calendar in either a *Full Calendar* format or as an *Event List* |
+
+Once the specific fields are configured, a list calendar view will appear on the portal page.
+
+:::image type="content" source="media/lists/calendar-list.png" alt-text="List displayed as a calendar on a web page.":::
 
 ## List OData feeds
 
-If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
+> [!NOTE]
+> This feature has been deprecated. Alternatively, use the [portals Web API](../web-api-overview.md) to interact with the data.
 
-> [!CAUTION]
-> Use caution when enabling OData feeds without table permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled.
+On the **OData Feed** tab, you can enable the list to render as an OData formatted data feed.
+
+When enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
+
+> [!NOTE]
+> Lists that have OData feeds enabled require appropriate [table permissions](entity-permissions-studio.md) setup for the feed on these lists to work. Hence, you must enable table permissions on a list that has OData feeds enabled.
+> - Latest portal solutions will show the following error, and won't allow you to save the list without enabling table permissions:
+> <br> "Table permissions must be enabled from the General tab because the OData feed is enabled."
+> - Older portal solutions don't show the above message. However, for the lists with OData feeds enabled, table permissions are always considered enabled even if you save the list without selecting **Enable Table Permissions** setting explicitly.
 
 ## Enhanced view filter for lists
 
-You can use Table Permissions if you want to secure records, but if you want to simply provide a filter as part of the set of filter options that is relevant to the current portal user, you can use the List feature. This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
+You can use Table Permissions if you want to secure records, but if you want to simply filter records based on the current portal user’s context, you can configure a filter on the underlying model-driven view definition used by the List using the [Dataverse view designer](../../model-driven-apps/create-edit-view-filters.md). This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
 
 - The control will find all condition elements where uitype="contact" and set the value to the actual value of the current portal user's contact ID.
 - The control will find all condition elements where uitype="account" and set the value to the actual value of the current portal user's parent account ID.
@@ -514,7 +561,7 @@ You can use Table Permissions if you want to secure records, but if you want to 
 
 The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user is not logged in then no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
 
-![Example view filter criteria](media/entity-list-view-filter-criteria.png "Example view filter criteria")
+![Example view filter criteria.](media/entity-list-view-filter-criteria.png "Example view filter criteria")
 
 > [!NOTE]
 > If you are filtering by current portal user's contact or parent account then it is recommended that you associate a [Web Page Access Control Rule](webpage-access-control.md) to the Web Page to force the user to sign in. You would create a [Web Role](create-web-roles.md) with "Authenticated Users Role" checked. Create a Web Page Access Control Rule with "Restrict Read" right and associate the Web Role. This will force users to be signed in to view the page and therefore allow the data to be filled accordingly.

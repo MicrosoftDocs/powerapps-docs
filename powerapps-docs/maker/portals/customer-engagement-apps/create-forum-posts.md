@@ -1,16 +1,14 @@
 ---
 title: Create forum posts on the portal
 description: Learn how to create forum posts on a portal.
-author: sbmjais
-ms.service: powerapps
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
-ms.author: shjais
-ms.reviewer: shjais
+ms.subservice: portals
+ms.author: ndoelman
 contributors:
-    - tapanm-msft
-    - shjais
+    - nickdoelman
 ---
 
 # Create forum posts on the portal
@@ -29,7 +27,7 @@ The forum post editor will appear automatically when a user has successfully sig
 
 4. Select **Post this reply**.
 
-    ![Create a forum post](media/create-forum-post.png "Create a forum post") 
+    ![Create a forum post.](media/create-forum-post.png "Create a forum post") 
 
 ### Attribute relationships
 

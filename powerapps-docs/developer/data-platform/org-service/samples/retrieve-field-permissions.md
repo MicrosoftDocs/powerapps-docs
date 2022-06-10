@@ -1,24 +1,23 @@
 ---
-title: "Sample: Retrieve field permissions(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Retrieve field permissions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve secured columns for a user" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
+
 # Sample: Retrieve field permissions
-
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
-
 
 This sample shows how to retrieve secured columns for a user according to the steps outlined in [Field security tables](/dynamics365/customer-engagement/developer/field-security-entities). You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveFieldPermission).
 
@@ -53,7 +52,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `FieldSecurityProfile` method creates field security profile.
 1. The `AssociateRequest` method adds team and user to the profile.
 1. The `CreateEntityRequest` method creates a new custom activity table for the sample.
-1. The `RolePrivilege` method adds privileges for the new custom entity.
+1. The `RolePrivilege` method adds privileges for the new custom table.
 1. The `AddPrivilegeRoleRequest` method creates and execute the `RolePrivilege` method.
 1. The `FieldPermission` method creates field permission object for identity.
 

@@ -2,17 +2,20 @@
 title: Horizontal container control in Power Apps
 description: Learn about the details, properties and examples of the horizontal container control in Power Apps.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 10/30/2020
+ms.reviewer: tapanm
+ms.date: 01/27/2022
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Horizontal container control in Power Apps
 
@@ -75,14 +78,12 @@ Horizontal container control determines the position of the child components so 
 
 ## Example
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
-1. On the **Blank app** tile, select **Tablet layout**.
+1. Create a [blank canvas app](../create-blank-app.md) with **Tablet** layout.
 1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
 1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Insert containers](../media/create-responsive-layout/insert-containers.png "Insert containers")
+   > ![Insert containers.](../media/create-responsive-layout/insert-containers.png "Insert containers")
 
 1. Set the following properties to occupy the full available space of the screen:
    1. X = 0

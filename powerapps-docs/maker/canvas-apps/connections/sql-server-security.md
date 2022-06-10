@@ -2,11 +2,12 @@
 title: Use Microsoft SQL Server securely with Power Apps
 description: Understand how to use SQL Server securely with Power Apps.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/29/2021
+ms.date: 01/28/2022
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -23,7 +24,7 @@ There are different ways to [connect](../connections-list.md#security-and-types-
 connect to SQL Server with a security approach that matches requirements for your app.
 
 > [!IMPORTANT]
-> This article also applies to other relational databases such as Oracle.
+> This article applies to all relational databases, and implicit connections.
 
 ## Difference between explicit and implicit connections
 
@@ -76,11 +77,11 @@ Use services such as Azure Active Directory instead of relying on the filters de
 
 The following illustrations explain how the security patterns within the apps differ between client-side and server-side security models.
 
-![Client-side security pattern in an app](media/sql-server-security/client-security.png "Client-side security pattern in an app")
+![Client-side security pattern in an app.](media/sql-server-security/client-security.png "Client-side security pattern in an app")
 
 In a client security app pattern, [1] the user only authenticates to the application on the client side. Then [2] the application requests information of the service, and [3] the service returns the information solely based on the data request.
 
-![Server-side security pattern in an app](media/sql-server-security/server-security.png "Server-side security pattern in an app")
+![Server-side security pattern in an app.](media/sql-server-security/server-security.png "Server-side security pattern in an app")
 
 In a server-side security pattern, [1] the user first authenticates to the service so the user is known to the service. Then, [2] when a call is made from the application, the service [3] uses the known identity of the current user to filter the data appropriately and [4] returns the data.
 

@@ -1,20 +1,21 @@
 ---
 title: "Work with Microsoft Dataverse event data in your Azure Event Hub solution (Dataverse) | Microsoft Docs"
 description: "Learn about working with event data in your Azure Event Hub solution."
-keywords: ""
-ms.date: 03/17/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: a3732c49-7f47-d87c-5062-585ef28ab511
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: pehecke
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Work with Microsoft Dataverse event data in your Azure Event Hub solution

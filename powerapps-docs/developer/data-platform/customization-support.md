@@ -3,7 +3,7 @@ title: "Microsoft Dataverse app building practices | MicrosoftDocs"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,6 +14,7 @@ applies_to:
 ms.assetid: e9810433-224b-4bde-851a-e581cf5fb8a4
 caps.latest.revision: 21
 author: "Mattp123"
+ms.subservice: dataverse-developer
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 
 # Microsoft Dataverse supported and unsupported app building practices
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 <!--
 The way your organization works is unique. Some organizations have well-defined business processes that they apply using Power Apps apps. Others aren’t happy with their current business processes and use Power Apps to apply new data and processes to their business. Whatever situation you find yourself in, you’ll find a lot of customization capabilities in Power Apps so that it can work for your organization.  

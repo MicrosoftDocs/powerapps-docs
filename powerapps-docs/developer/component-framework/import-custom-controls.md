@@ -1,14 +1,15 @@
 ---
-title: Import components into model-driven apps in MIcrosoft Dataverse | Microsoft Docs
+title: Import components into model-driven apps in Microsoft Dataverse | Microsoft Docs
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
-keywords:
-ms.author: nabuthuk
-manager: kvivek
-ms.date: 04/01/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.topic: "article"
-author: Nkrb
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Package a code component
@@ -117,7 +118,10 @@ To create a solution project based on an existing solution in Dataverse, run the
    > [!NOTE]
    > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
 
-More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
+More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest)
+
+> [!NOTE]
+> Manually publish the customizations if you are importing unmanaged solution.
 
 ## Create a plug-in project and add a reference to it in your solution 
 

@@ -1,14 +1,15 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.custom: intro-internal
+
 ms.date: 06/22/2021
 ms.reviewer: ""
-ms.service: powerapps
-ms.topic: "article"
+
+ms.topic: overview
 author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -20,11 +21,14 @@ search.app:
    
 # Solutions overview  
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, tables, processes, web resources, choices, flows, and more.
 
-Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
+Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. 
+
+> [!NOTE]
+> For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
 
 This section will focus on the **manual** tasks that app makers need to perform while working with solutions in Power Apps.
 
@@ -65,40 +69,40 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
 
     > [!div class="mx-imgBorder"]
-    > ![Solutions area](media/solutions-area-tasks.png)
+    > ![Solutions area.](media/solutions-area-tasks.png)
 
 From the **Solutions** area, select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
-> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")   
+> ![Demo solution with all components.](media/solution-all-items-list.PNG "Demo solution with all components")   
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
 > [!div class="mx-imgBorder"]  
-> ![Load more components](media/load-more.PNG "Load more components")  
+> ![Load more components.](media/load-more.PNG "Load more components")  
 
  ## Search and filter in a solution
   You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
-> ![Search component](media/solution-search-box.png "Search component")  
+> ![Search component.](media/solution-search-box.png "Search component")  
  
  Or filter all items in the list by the component type.
   
 > [!div class="mx-imgBorder"]  
-> ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
+> ![Filter component by type.](media/solution-filter.PNG "Filter component by type")  
  
 
  ## Contextual commands
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
-> ![Component specific commands](media/component-commands.png "Component specific commands")  
+> ![Component specific commands.](media/component-commands.png "Component specific commands")  
  
  When you don't select any component, the command bar will show actions applied to the solution itself. 
  
 > [!div class="mx-imgBorder"]  
-> ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
+> ![Solution specific commands.](media/solution-commands.PNG "Solution specific commands")  
  
 With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-solution-components)
  
@@ -112,10 +116,7 @@ Some components may require certain Dataverse privileges for users to run the co
 
 ### Flows
 
-To use or run a flow from a canvas app that is included in a solution, you must be assigned a Dataverse security role with the following minimum permissions:
-
-- Read privilege on the **Solution** table.
-- Read privilege on the **Process** table.
+To use or run a flow from a canvas app that is included in a solution, you must have permissions to that flow through someone sharing ownership or run permissions. When an app in a solution is shared with a set of users, the flows must also be explictly shared.
 
 More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
@@ -123,19 +124,21 @@ More information: [Security roles and privileges](/power-platform/admin/security
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
-- Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
+- Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked. 
+   - Workaround for this limitation: Remove the trigger, replace with another trigger like recurrence, save the flow, add it into a solution, and then change the trigger as needed.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
-- Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- Flows created from solutions will not be displayed in the**Shared with me** list. They must be accessed through a solution. 
 - The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
 - The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
-- You can’t add an instant flow into a solution when the following are true:
-   - The flow was created outside of a solution.
-   - The flow trigger is set to manual.
-- Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
-- Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
+- Flows in solutions don't support delegated authentication. For example, access to a flow cannot be automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
-- [Copy and paste of flow actions](/business-applications-release-notes/april19/microsoft-flow/copy-paste-actions) is currently not supported when creating flows in a solution.
-
+- Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
+- Flows using [connectors](/connectors/connector-reference/) that are 'indexed' cannot be added into solutions. Indexing isn't supported for solution cloud flows yet. Indexing enables the quick retrieval of those flows to display in a menu or list. Indexed connectors include Power Automate instant (button) flows, Power Apps, Teams, SharePoint, Dynamics 365 Customer Voice, Microsoft Forms, legacy Dataverse connector, Dynamics 365, Excel Online, Microsoft Project, Azure IOT Central V2, and Project Online. 
+   - Workarounds for this limitation: 
+      - Edit the flow to remove the indexed connector triggers/actions, add it into a solution, and then change it back.
+      - Create a new flow in a solution. 
+- Flows triggered from Microsoft 365 applications such as Excel cannot see/show cloud flows in solutions since they use indexing.
+      
 For details about customizing the individual components in a solution, see the following topics:  
   
 -   For table, table relationships, column and message customizations, see [Metadata](create-edit-metadata.md).  

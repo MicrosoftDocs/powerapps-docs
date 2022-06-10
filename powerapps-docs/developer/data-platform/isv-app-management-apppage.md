@@ -1,24 +1,20 @@
 ---
 title: App page of ISV Studio | Microsoft Docs
 description: Learn about the App page capabilities provided by the ISV Studio portal.
-services: ''
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
+ms.reviewer: jdaly
+manager: jstrauss
 suite: powerapps
-documentationcenter: na
-author: "nkrb" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.reviewer: nabuthuk
-ms.workload: na
-ms.date: 01/11/2021
-ms.author: nabuthuk
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+contributors: 
+  - JimDaly
 ---
 
 # The App page
@@ -28,7 +24,7 @@ After the user selects an app, the user is navigated to the app's detail page, w
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![App detail page](media/isv-portal-apppage-appname.png)
+> ![App detail page.](media/isv-portal-apppage-appname.png)
 
 The app detail page contains the following graphs and metrics.
 
@@ -41,7 +37,7 @@ When hovering over the graph, the following information is shown:
 Install Count: Number of app installations happened on a particular date.
 
 > [!div class="mx-imgBorder"]
-> ![Package installs by environment type](media/isv-portal-apppage-graph1.png)
+> ![Package installs by environment type.](media/isv-portal-apppage-graph1.png)
 
 ## Installs by geo
 
@@ -54,7 +50,7 @@ When hovering over the graph, the following information is shown:
 
 
 > [!div class="mx-imgBorder"]
-> ![Package install attempts by tenant (last 28 days)](media/isv-portal-apppage-graph2.png)
+> ![Package install attempts by tenant (last 28 days).](media/isv-portal-apppage-graph2.png)
 
 ## Installs by environment
 
@@ -66,7 +62,7 @@ When hovering over the graph, the following information is shown:
 2. Install Count
 
 > [!div class="mx-imgBorder"]
-> ![Package installs by location of tenants](media/isv-portal-apppage-graph3.png)
+> ![Package installs by location of tenants.](media/isv-portal-apppage-graph3.png)
 
 ## Installs by tenant
 
@@ -81,7 +77,7 @@ When hovering over any item of the graph, the following information is shown:
 1. Environment
 
 > [!div class="mx-imgBorder"]
-> ![Package and version installs by tenant](media/isv-portal-apppage-graph4.png)
+> ![Package and version installs by tenant.](media/isv-portal-apppage-graph4.png)
 
 ## Filtering the app page
 

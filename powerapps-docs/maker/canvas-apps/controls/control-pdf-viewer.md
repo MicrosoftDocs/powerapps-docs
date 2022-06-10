@@ -2,17 +2,19 @@
 title: PDF viewer control (experimental) in Power Apps
 description: Learn about the details, properties and examples of the PDF viewer control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/10/2020
+ms.date: 03/17/2022
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
 # PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.
@@ -21,13 +23,16 @@ An experimental control that shows the content of a PDF file.
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
+
+1. The PDF viewer control only supports PDF files that conform to the PDF32000 specification.
+
 1. The security architecture of Power Apps requires the PDF Viewer to support only HTTPS links, not HTTP.  
 
-2. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
+1. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 
-3. The server that hosts the document must not require authentication.
+1. The server that hosts the document must not require authentication.
 
-4. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
+1. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
 
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
 
@@ -63,9 +68,9 @@ App users can work around these limitations by opening PDF documents in an exter
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**OnStateChange** – How an app responds when the state of the control changes.
+**OnStateChange** – Actions to perform when the state of the control changes.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

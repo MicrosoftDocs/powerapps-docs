@@ -2,17 +2,19 @@
 title: Data types in Power Apps
 description: Learn about the different data types in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 02/07/2020
+ms.reviewer: tapanm
+ms.date: 04/18/2022
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Data types in Power Apps
 
@@ -66,25 +68,93 @@ Notify( "Jane said ""Hello, World!""" )
 
 results in a banner when the button is pressed, where the first and last double quotes are omitted (as they delimit the text string) and the repeated double quotes around **Hello, World!** are replaced with a single double quote:
 
-![pop up notification with the message Jane said "Hello, World"](media/data-types/literal-string.png)
+![pop up notification with the message Jane said "Hello, World."](media/data-types/literal-string.png)
 
-Single quotation marks are not used for [identifier names](operators.md#identifier-names) that contain special characters and have no significance within a text string.  
+
+Single quotation marks are used for [identifier names](operators.md#identifier-names) that contain special characters and have no special significance within a text string.  
+
+### String interpolation
+
+Use string interpolation to embed formulas within a text string.  This is often easier to work with and visualize the output than using the [**Concatenate**](function-concatenate.md) function or [**&**](operators.md) operator.  
+
+Prefix the text string with a dollar sign **$** and enclose the formula to be embedded with curly braces **{ }**.  To include a curly brace in the text string, use repeated curly braces: **{{** or **}}**.  String interpolation can be used anywhere a standard text string can be used.
+
+For example, consider this formula with global variables **Apples** set to 3 and **Bananas** set to 4:
+
+```powerapps-dot
+$"We have {Apples} apples, {Bananas} bananas, yielding {Apples+Bananas} fruit total." 
+```
+
+This formula returns the text string **We have 3 apples, 4 bananas, yielding 7 fruit total.**  The variables **Apples** and **Bananas** are inserted in the text replacing the curly braces, along with the result of the mathematical formula **Apples+Bananas**.  Spaces and other characters around the curly braces are preserved as they are.
+
+Embedded formulas can include any functions or operators.  All that is requires is that the result of the formula can be coerced to a text string.  For example, this formula will insert **NickName** if it's supplied, or the **FirstName** if not, in a greeting:
+
+```powerapps-dot
+$"Welcome {Coalesce( NickName, FirstName )}, it's great to meet you!" )
+```
+
+If **NickName** is set to "Joe", then this formula produces the text string **Welcome Joe, it's great to meet you!**.  But if **NickName** is *blank* and **FirstName** is "Joseph", then this formula produces **Dear Joseph, great to meet you!** instead.
+
+String interpolation can include standard text strings in the embedded formula.  For example, if neither **NickName** nor **FirstName** were supplied, we could still provide **"Friend"** as a substitute:
+
+```powerapps-dot
+$"Welcome {Coalesce( NickName, FirstName, "Friend" )}!"  
+```
+
+String interpolations can even be nested.  Consider this example where **First**, **Middle**, and **Last** names are combined into a greeting.  Even if one or two of these values are *blank*, the correct number of spaces will be between the name parts.  If none of the parts are provided, the inner string interpolation will collapse to an empty string, and be replaced by the [**Coalesce**](function-isblank-isempty.md) function by "Friend".  
+
+```powerapps-dot
+$"Welcome {Coalesce( Trim( $"{First} {Middle} {Last}"}), "Friend" )}!"
+```
+
+| First | Middle | Last | Result |
+|-------|--------|------|--------|
+| John | Qunicy | Doe | `Welcome John Quincy Doe!` |
+| John | *blank* | Doe | `Welcome John Doe!` |
+| *blank* | *blank* | Doe | `Welcome Doe!` |
+| *blank* | *blank* | *blank* | `Welcome Friend!` |
+
+### Newlines
+
+Embedded text strings can contain newlines. For example, consider setting the **Text** property of a [**Label**](../controls/control-text-box.md) control to the following:
+
+```powerapps-dot
+"Line 1
+Line 2
+Line 3" 
+```
+
+The above formula results in three lines shown in the label control:
+
+:::image type="content" source="media/data-types/text-string-literal-newlines.png" alt-text="Embedded text string and label control showing three lines with Line 1, Line 2, and Line 3.":::
+
+Newlines are also supported with string interpolation, as shown below:
+
+```powerapps-dot
+$"Line {1}
+Line {1+1}
+Line {1+1+1}" 
+```
+
+The above formula results in the same output:
+
+:::image type="content" source="media/data-types/string-interpolation-newlines.png" alt-text="String interpolation formula and label control showing three lines with Line 1, Line 2, and Line 3.":::
 
 ### Image and Media resources
 
 Through the **File** menu, you can add image, video, and audio files as app resources. The name of the imported file becomes the resource name in the app. In this graphic, the Northwind Traders logo, which is named **nwindlogo**, has been added to an app:
 
-![Northwind resource](media/data-types/nwind-resource.png "Northwind resource")
+![Northwind resource.](media/data-types/nwind-resource.png "Northwind resource")
 
 To use this resource in an app, specify it in the **Image** property of an [**Image**](../controls/control-image.md) control:
 
-![Northwind image](media/data-types/nwind-image.png "Northwind image")
+![Northwind image.](media/data-types/nwind-image.png "Northwind image")
 
 ### URIs for images and other media
 
 You can dig a little deeper into that last example by setting the **Text** property of a [**Label**](../controls/control-text-box.md) control to **nwindlogo**. The label shows a text string:
 
-![Northwind text](media/data-types/nwind-text.png "Northwind text")
+![Northwind text.](media/data-types/nwind-text.png "Northwind text")
 
 Canvas apps reference each image or other media file, whether it's in the cloud or added as an app resource, by a URI text string.
 
@@ -96,7 +166,7 @@ For example, the **Image** property of an image control accepts not only app res
 
 That URI displays a scaled-up version of two purple diamonds:
 
-![Double diamonds](media/data-types/double-diamonds.png "Double diamonds")
+![Double diamonds.](media/data-types/double-diamonds.png "Double diamonds")
 
 You can show the most recent image captured in a [**Camera**](../controls/control-camera.md) control if you set the **Image** property of an image control to the **Photo** property of the camera control. The app holds the image in memory, and the **Photo** property of the camera control returns a URI reference to the image. For example, you might take a picture, and the camera's **Photo** property could return **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**.
 
@@ -206,7 +276,7 @@ Choices and two-option data types provide a two or more choices for an app user 
 
 Both of these data types show their labels in a text-string context. For example, a label control shows one of the order-status options if the control's **Text** property is set to a formula that references that choice. Option labels might be localized for app users in different locations.
 
-When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in an choice is transmitted and stored as a number, and an option in a two-option data type is transmitted and stored as a boolean value.
+When an app user selects an option and saves that change, the app transmits the data to the database, which stores that data in a representation that's independent of language. An option in a choice is transmitted and stored as a number, and an option in a two-option data type is transmitted and stored as a boolean value.
 
 The labels are for display purposes only. You can't perform direct comparisons with the labels because they're specific to a language. Instead, each choice has an enumeration that works with the underlying number or boolean value. For example, you can't use this formula:
 

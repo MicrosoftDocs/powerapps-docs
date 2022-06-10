@@ -3,10 +3,11 @@ title: Manage custom columns in a table | Microsoft Docs
 description: Walkthrough of how to create, read, update, and delete custom columns in a table in Microsoft Dataverse.
 author: lancedMicrosoft
 manager: kfile
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018
+ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -16,7 +17,7 @@ search.app:
 ---
 
 # Manage custom columns in a table
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/data-platform/entity-attribute-metadata.md).
 
@@ -26,7 +27,7 @@ You can create and update one or more custom columns in any table. When you crea
 ## Create a column
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
-    ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "table List")
+    ![Table Details.](./media/data-platform-cds-create-entity/entitylist.png "table List")
 
 2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
@@ -38,14 +39,14 @@ You can create and update one or more custom columns in any table. When you crea
     > The **Display name** columns can be updated at anytime to display differently in your apps, the **Name** column cannot be changed after your table has been saved as this could result in breaking an existing app.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Column panel](./media/data-platform-cds-create-entity/newfieldpanel.png "New Column Panel")
+    > ![New Column panel.](./media/data-platform-cds-create-entity/newfieldpanel.png "New Column Panel")
 
 5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/data-platform/entity-attribute-metadata.md).
 
     If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different columns will be presented. If you're creating a column of type Choice or Multi Select Option Set, you can select **New Option Set** and create a new Choice while creating your column. For more information, see [Create Option set](custom-picklists.md)
 
     > [!div class="mx-imgBorder"] 
-    > ![New date and time column](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New date and time column")
+    > ![New date and time column.](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New date and time column")
 
 
 7. Under **Required**, select the check box if you want to recommended this column as required in your apps. This does not provide hard enforcement through all connections to the Microsoft Dataverse. If you need to ensure the column is populated, create a [Business Rule](data-platform-create-business-rule.md)

@@ -1,14 +1,13 @@
 ---
 title: "FetchXML schema (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The FetchXML query language is one available method to create data queries against the Microsoft Dataverse database." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/18/2021
+ms.date: 05/16/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.subservice: dataverse-developer
+ms.author: "mayadu" # MSFT alias of Microsoft employees only
+manager: "jamesol" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -568,9 +567,9 @@ Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E
 </xs:schema>
 ```  
   
-### See also  
- [Retrieve data with queries](/dynamics365/customer-engagement/developer/retrieve-data-queries-sdk-assemblies)   
- [Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)   
- [Build queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)
+### See also
+[Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
+[Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)<br />
+ 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

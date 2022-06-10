@@ -1,17 +1,20 @@
 ---
-title: Develop offline-capable canvas apps
+title: Develop offline-capable canvas apps (contains video)
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
-ms.service: powerapps
+ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/28/2021
+ms.date: 03/02/2022
 ms.author: mustlaz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - mustlaz
 ---
 
 # Develop offline-capable canvas apps
@@ -23,9 +26,14 @@ Mobile users often need to be productive even when they have limited or no conne
 - Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
 
 > [!NOTE]
-> Offline capability for canvas apps is only available while running the apps using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/). Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
+> - Offline capability for canvas apps is only available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
+> - Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
+> - Canvas apps in Teams are limited to 1 MB of data through the LoadData and SaveData functions&mdash;useful for a small number of text strings, numbers, and dates. Use of images or other media is inappropriate for this limit. More information: [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md)
 
 This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
+
+Watch this video to learn how to create offline enabled canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAka]
 
 ## Limitations
 
@@ -41,11 +49,11 @@ For updates on offline capabilities, return to this topic, and subscribe to the 
 
 When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Microsoft Dataverse. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
-![Power Apps app with connectors](./media/offline-apps/online-app.png)
+![Power Apps app with connectors.](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 
-In Power Apps, you can filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to SharePoint lists to SQL databases and Dataverse. Because of this consistency, you can easily retarget an app to use a different data source. More importantly for offline scenarios, you can use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
+In Power Apps, you can filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app to lists created using Microsoft Lists to SQL databases and Dataverse. Because of this consistency, you can easily retarget an app to use a different data source. More importantly for offline scenarios, you can use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
 
 ## Build an offline app
 
@@ -66,8 +74,7 @@ At a high level, the app performs these tasks:
 
 ### Step 1: Add Twitter to a blank phone app
 
-1. In Power Apps Studio, select **File** > **New**.
-1. On the **Blank app** tile, select **Phone layout**.
+1. Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
 1. On the **View** tab, select **Data sources**.
 1. In the **Data** pane, select **Add data source**.
 1. Select **New Connection** > **Twitter** > **Create**.
@@ -88,12 +95,12 @@ At a high level, the app performs these tasks:
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Formula to load tweets](./media/offline-apps/load-tweets.png)
+    > ![Formula to load tweets.](./media/offline-apps/load-tweets.png)
 
 1. In the **Tree view** pane, select the ellipsis menu for the **App** object, and then select **Run OnStart** to run that formula.
 
     > [!div class="mx-imgBorder"]
-    > ![Run formula to load tweets](./media/offline-apps/load-tweets-run.png)
+    > ![Run formula to load tweets.](./media/offline-apps/load-tweets-run.png)
 
     > [!NOTE]
     > The **LoadData** and **SaveData** functions might show an error in Power Apps Studio because browsers don't support them. However, they'll perform normally after you deploy this app to a device.
@@ -118,7 +125,7 @@ This formula checks whether the device is online:
 1. Make the text in the last label bold so that the gallery resembles this example.
 
     > [!div class="mx-imgBorder"]
-    > ![Gallery showing sample tweets](./media/offline-apps/tweet-gallery.png)
+    > ![Gallery showing sample tweets.](./media/offline-apps/tweet-gallery.png)
 
 ### Step 4: Show connection status
 
@@ -137,7 +144,7 @@ This formula determines whether the device is online. If it is, the label shows 
 1. Set the text-input box's **Default** property to `""`.
 
     > [!div class="mx-imgBorder"]
-    > ![Gallery over status info and text-input box](./media/offline-apps/status-input.png)
+    > ![Gallery over status info and text-input box.](./media/offline-apps/status-input.png)
 
 ### Step 6: Add a button to post the tweet
 
@@ -170,7 +177,7 @@ This formula determines whether the device is online. If it is, the label shows 
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Run formula to load tweets with uncommented line](./media/offline-apps/load-tweets-save.png)
+    > ![Run formula to load tweets with uncommented line.](./media/offline-apps/load-tweets-save.png)
 
 This formula determines whether the device is online:
 
@@ -184,7 +191,7 @@ Then the formula resets the text in the text-input box.
 1. On the right side of the button, add a **Timer** control.
 
     > [!div class="mx-imgBorder"]
-    > ![Final apps](./media/offline-apps/final-app.png)
+    > ![Final apps.](./media/offline-apps/final-app.png)
 
 1. Set the timer's **Duration** property to **300000**.
 

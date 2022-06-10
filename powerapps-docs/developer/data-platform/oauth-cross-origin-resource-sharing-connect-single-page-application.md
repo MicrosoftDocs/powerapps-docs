@@ -4,7 +4,7 @@ description: "Learn how to use OAuth with Cross-Origin Resource Sharing (CORS) t
 ms.custom: ""
 ms.date: 03/24/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -13,6 +13,7 @@ applies_to:
 ms.assetid: oauth-cross-origin-resource-sharing-connect-single-page-application
 caps.latest.revision: 11
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 search.audienceType: 
   - developer

@@ -2,16 +2,21 @@
 title: Dataverse for Teams vs. Dataverse | Microsoft Docs
 description: Explains the differences between Dataverse for Teams and Dataverse.
 author: mmercuri
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 03/19/2021
+ms.date: 01/18/2022
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
+  - hemantgaur
+  - tapanm-msft
 ---
 # How are Dataverse for Teams and Dataverse different?
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be [upgraded](/power-platform/admin/about-teams-environment#upgrade-process) to Dataverse.
 
@@ -29,7 +34,7 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 |Managed data lake      |  No       | Yes        |
 |File and image support     | Yes        |  Yes       |
 |Find, filter, sort     |   Yes      |  Yes       |
-|Advanced and relevance search      |   No      | Yes        |
+|Advanced and Dataverse search      |   No      | Yes        |
 |Mobile offline     |  No       |  Yes       |
 
 Note that most of the standard tables that are provided with a Dataverse environment won't be present as part of Dataverse for Teams.
@@ -45,6 +50,7 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |      |   Paginated reports (SQL Server Reporting Services)   |  No    |  Yes     |
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
+|      |  Power Apps component framework       |   No      |  Yes       |
 
 ## Environments
 

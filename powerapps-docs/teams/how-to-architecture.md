@@ -2,19 +2,20 @@
 title: Understand How to app sample app architecture | Microsoft Docs
 description: Learn about the architecture of the How to app sample app.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
-ms.author: v-ljoel
+ms.subservice: teams
+ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
-    - navjotm
+    - msftsamperl
     - tapanm-msft
     - joel-lindstrom
 ---
 
-# Understand How to app sample app architecture (Preview)
+# Understand How to app sample app architecture (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -30,14 +31,10 @@ To understand and use information in this article, you'll need to know about dif
 - [Add and configure a canvas-app control in Power Apps](../maker/canvas-apps/add-configure-controls.md)
 - [Add a screen to a canvas app and navigate between screens](../maker/canvas-apps/add-screen-context-variables.md)
 
-> [!IMPORTANT]
-> This is a preview feature.
-> Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
 ## Data model
 The following diagram shows the tables, columns, and relationships in the How to app solution:
 
-![How to app sample app data model](media/how-to-architecture/data-model.png "How to app sample app data model")
+![How to app sample app data model.](media/how-to-architecture/data-model.png "How to app sample app data model")
 
 ## Tables
 
@@ -54,7 +51,7 @@ The following diagram shows the tables, columns, and relationships in the How to
 ## Architecture model
 The following diagram illustrates the way that people, systems, and data interact in the How to app solution
 
-![How to app sample app architecture model](media/how-to-architecture/architecture-model.png "How to app sample app architecture model")
+![How to app sample app architecture model.](media/how-to-architecture/architecture-model.png "How to app sample app architecture model")
 
 ### Connectors
 
@@ -240,7 +237,7 @@ The following variables are used on the My checkout screen:
 
 ### See also
 
-- [Use How to sample app (Preview)](how-to.md)
+- [Use How to sample app (preview)](how-to.md)
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

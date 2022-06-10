@@ -2,16 +2,17 @@
 title:  What are Power Apps portals?
 description: "Design and build websites using Power Apps that allow external users to interact with the data stored in the Microsoft Dataverse."
 author: sandhangitmsft
-ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
+
+ms.topic: overview
+
 ms.date: 06/11/2021
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 searchScope:
   - "Power Apps"
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -29,7 +30,7 @@ One of the major changes introduced to portals after October 1, 2019 is the lice
 
 You can check the type of a portal from the [Power Apps portals admin center](./admin/admin-overview.md):
 
-![Power Apps portals type](./media/power-apps-portals-type.png)
+![Power Apps portals type.](./media/power-apps-portals-type.png)
 
 Additional differences between Power Apps portals with capacity-based licenses and add-on licenses include:
 

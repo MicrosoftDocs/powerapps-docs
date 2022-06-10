@@ -2,21 +2,24 @@
 title: Connect to Twitter from Power Apps
 description: See how to connect to Twitter, step through some examples, and see all the functions.
 author: lancedMicrosoft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/28/2020
+ms.date: 01/27/2022
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to Twitter from Power Apps
 
-![Twitter](./media/connection-twitter/twittericon.png)
+![Twitter.](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
 
@@ -27,18 +30,23 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Twitter
-1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
-   ![Open a blank app](./media/connection-twitter/blank-app.png)
-2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
-3. Select **New connection**, and then select **Twitter**:  
+1. Start by creating a [blank canvas app](../create-blank-app.md).
 
-    ![Add connection](./media/connection-twitter/addconnection.png)
+1. In the left-hand pane, select **Data** > **Add data**.
 
-    ![Connect to Twitter](./media/connection-twitter/add-twitter.png)
-4. Select **Connect**, enter your Twitter sign in credentials, and then select **Authorize app**.
-5. Select **Add Data Source**. Your connection appears under **Data sources**:  
-    ![Close the Options pane](./media/connection-twitter/twitterdatasource.png)
+1. Select **New connection**, and then select **Twitter**:  
+
+    :::image type="content" source="media/connection-twitter/addconnection.png" alt-text="Add connection.":::
+
+1. Select from the default shared application, or choose to bring your own application (along with Consumer Key/Consumer Secret).
+
+1. Select **Connect**.
+
+1. Choose , enter your Twitter sign in credentials, and then select **Authorize app**.
+
+1. Select **Add Data Source**. Your connection appears under **Data sources**:  
+    ![Close the Options pane.](./media/connection-twitter/twitterdatasource.png)
 
 The Twitter connection has been created, and added to your app. Now, it's ready to be used.
 
@@ -80,7 +88,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
-   * To show the another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
 
        `Twitter.Followers( *TwitterHandle* )`
 
@@ -168,7 +176,7 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
 2. Add a button, and then set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
     `Twitter.Tweet("",{tweetText: MyTweet.Text})`
     <br> Example: `Twitter.Tweet("",{tweetText:"Sample tweet!"})`
-3. Press F5, or select the Preview button (![Preview button](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
+3. Press F5, or select the Preview button (![Preview button.](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
 4. Press Esc to return to the default workspace.
 
 ## View the available functions

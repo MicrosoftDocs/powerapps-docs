@@ -1,20 +1,23 @@
 ---
-title: Create a canvas app with data from Microsoft Dataverse
+title: Create a canvas app with data from Microsoft Dataverse (contains video)
 description: Learn about how to automatically create a canvas app to manage data in Microsoft Dataverse.
 author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: quickstart
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 05/24/2021
+ms.date: 01/27/2022
+ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Create a canvas app with data from Microsoft Dataverse
 
@@ -22,19 +25,24 @@ In Power Apps, create a canvas app based on a list of sample accounts in [Datave
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
+Watch this short video that shows you how to create a canvas app quickly using Dataverse tables.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWIUJy]
+
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](/power-platform/admin/working-with-environments) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](/power-platform/admin/create-environment) that meets this requirement.
 
 ## Create an app
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, [switch environments](/power-platform/admin/working-with-environments).
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
 
-1. Under **Start from data**, and select **Microsoft Dataverse**.
+1. Under **Start from**, select **Dataverse**.
 
-    ![Start from data - Microsoft Dataverse](media/data-platform-create-app/start-from-data.png "Start from data - Microsoft Dataverse")
+    :::image type="content" source="media/data-platform-create-app/start-from-data.png" alt-text="Start from Dataverse.":::
 
-1. If this is you first time, you're prompted to create a connection to Microsoft Dataverse. Select **Create** this connection. Otherwise, under **Choose a table**, select **Accounts**, and then select **Connect**.
+1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
+
+1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
 
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
@@ -42,12 +50,10 @@ Your app opens to the browse screen, which shows a list of accounts in a control
 
 By default, the gallery shows an email address, a city, and an account name. As you'll see in [Next steps](data-platform-create-app.md#next-steps), you can customize the gallery to change how the data appears and even show other types of data.
 
-![Browse screen](./media/data-platform-create-app/browse-screen.png)
+![Browse screen.](./media/data-platform-create-app/browse-screen.png)
 
 ## Save the app
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
-
-1. Near the upper-left corner, select the **File** menu.
 
 1. Select **Settings**.
 

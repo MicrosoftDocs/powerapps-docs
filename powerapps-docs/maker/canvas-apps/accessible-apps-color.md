@@ -2,11 +2,12 @@
 title: Accessible colors for canvas apps
 description: Color-contrast guidelines for canvas apps in Power Apps
 author: tahoon-ms
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 05/19/2021
+ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType: 
   - maker

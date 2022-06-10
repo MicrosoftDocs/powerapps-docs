@@ -1,13 +1,12 @@
 ---
 title: " Table grid component| Microsoft Docs" 
 description: "This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
 ---
 
 # Implementing table grid component
@@ -18,7 +17,7 @@ The component header columns and internal record values are bound to the existin
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"]
-> ![Table Grid component](../media/table-grid-control.png "Table Grid component")
+> ![Table Grid component.](../media/table-grid-control.png "Table Grid component")
 
 ## Available for 
 

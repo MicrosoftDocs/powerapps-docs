@@ -3,10 +3,11 @@ title: Delete a table | Microsoft Docs
 description: Step-by-step instructions for how to delete a custom table and clear all data in Power Apps
 author: lancedMicrosoft
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 06/29/2020
+ms.subservice: dataverse-maker
 ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 
 # Delete a table
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete a table that has dependencies](#delete-a-table-that-has-dependencies)
 
@@ -27,7 +28,7 @@ You can delete custom tables, but you can't delete standard tables. Notice that 
 ## Delete a custom table
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** in the left navigation pane, open the solution that contains the custom table you want to delete, and then select it.
 
-    ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "Table List")
+    ![Table Details.](./media/data-platform-cds-create-entity/entitylist.png "Table List")
 
 2. On the command bar select **Remove**, and then select from the following choices:  
    - **Remove from this solution**. Removes the table from the solution. You can still access the table from the Default Solution. 

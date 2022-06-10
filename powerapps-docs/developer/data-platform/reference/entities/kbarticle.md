@@ -1,13 +1,13 @@
 ---
-title: "KbArticle table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the KbArticle table/entity."
-ms.date: 05/20/2021
+title: "Article (KbArticle)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Article (KbArticle)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# KbArticle table/entity reference
+# Article (KbArticle)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -535,8 +535,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -776,7 +776,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_KbArticle_SharepointDocumentLocation"></a> KbArticle_SharepointDocumentLocation
 
-Same as sharepointdocumentlocation table [KbArticle_SharepointDocumentLocation](sharepointdocumentlocation.md#BKMK_KbArticle_SharepointDocumentLocation) Many-To-One relationship.
+Same as the [KbArticle_SharepointDocumentLocation](sharepointdocumentlocation.md#BKMK_KbArticle_SharepointDocumentLocation) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -791,7 +791,7 @@ Same as sharepointdocumentlocation table [KbArticle_SharepointDocumentLocation](
 
 ### <a name="BKMK_kbarticle_principalobjectattributeaccess"></a> kbarticle_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [kbarticle_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_kbarticle_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [kbarticle_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_kbarticle_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -806,7 +806,7 @@ Same as principalobjectattributeaccess table [kbarticle_principalobjectattribute
 
 ### <a name="BKMK_KbArticle_DuplicateBaseRecord"></a> KbArticle_DuplicateBaseRecord
 
-Same as duplicaterecord table [KbArticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [KbArticle_DuplicateBaseRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -821,7 +821,7 @@ Same as duplicaterecord table [KbArticle_DuplicateBaseRecord](duplicaterecord.md
 
 ### <a name="BKMK_KbArticle_DuplicateMatchingRecord"></a> KbArticle_DuplicateMatchingRecord
 
-Same as duplicaterecord table [KbArticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [KbArticle_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KbArticle_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -836,7 +836,7 @@ Same as duplicaterecord table [KbArticle_DuplicateMatchingRecord](duplicaterecor
 
 ### <a name="BKMK_KbArticle_Annotation"></a> KbArticle_Annotation
 
-Same as annotation table [KbArticle_Annotation](annotation.md#BKMK_KbArticle_Annotation) Many-To-One relationship.
+Same as the [KbArticle_Annotation](annotation.md#BKMK_KbArticle_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -851,7 +851,7 @@ Same as annotation table [KbArticle_Annotation](annotation.md#BKMK_KbArticle_Ann
 
 ### <a name="BKMK_kbarticle_comments"></a> kbarticle_comments
 
-Same as kbarticlecomment table [kbarticle_comments](kbarticlecomment.md#BKMK_kbarticle_comments) Many-To-One relationship.
+Same as the [kbarticle_comments](kbarticlecomment.md#BKMK_kbarticle_comments) many-to-one relationship for the [kbarticlecomment](kbarticlecomment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -866,7 +866,7 @@ Same as kbarticlecomment table [kbarticle_comments](kbarticlecomment.md#BKMK_kba
 
 ### <a name="BKMK_KbArticle_SyncErrors"></a> KbArticle_SyncErrors
 
-Same as syncerror table [KbArticle_SyncErrors](syncerror.md#BKMK_KbArticle_SyncErrors) Many-To-One relationship.
+Same as the [KbArticle_SyncErrors](syncerror.md#BKMK_KbArticle_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -881,7 +881,7 @@ Same as syncerror table [KbArticle_SyncErrors](syncerror.md#BKMK_KbArticle_SyncE
 
 ### <a name="BKMK_KbArticle_AsyncOperations"></a> KbArticle_AsyncOperations
 
-Same as asyncoperation table [KbArticle_AsyncOperations](asyncoperation.md#BKMK_KbArticle_AsyncOperations) Many-To-One relationship.
+Same as the [KbArticle_AsyncOperations](asyncoperation.md#BKMK_KbArticle_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -896,7 +896,7 @@ Same as asyncoperation table [KbArticle_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_KbArticle_ProcessSessions"></a> KbArticle_ProcessSessions
 
-Same as processsession table [KbArticle_ProcessSessions](processsession.md#BKMK_KbArticle_ProcessSessions) Many-To-One relationship.
+Same as the [KbArticle_ProcessSessions](processsession.md#BKMK_KbArticle_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -911,7 +911,7 @@ Same as processsession table [KbArticle_ProcessSessions](processsession.md#BKMK_
 
 ### <a name="BKMK_KbArticle_BulkDeleteFailures"></a> KbArticle_BulkDeleteFailures
 
-Same as bulkdeletefailure table [KbArticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KbArticle_BulkDeleteFailures) Many-To-One relationship.
+Same as the [KbArticle_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KbArticle_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -941,35 +941,35 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_subject_kb_articles"></a> subject_kb_articles
 
-See subject Table [subject_kb_articles](subject.md#BKMK_subject_kb_articles) One-To-Many relationship.
+See the [subject_kb_articles](subject.md#BKMK_subject_kb_articles) one-to-many relationship for the [subject](subject.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticle_modifiedonbehalfby"></a> lk_kbarticle_modifiedonbehalfby
 
-See systemuser Table [lk_kbarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_kbarticle_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_kbarticle_modifiedonbehalfby](systemuser.md#BKMK_lk_kbarticle_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_kb_article_template_kb_articles"></a> kb_article_template_kb_articles
 
-See kbarticletemplate Table [kb_article_template_kb_articles](kbarticletemplate.md#BKMK_kb_article_template_kb_articles) One-To-Many relationship.
+See the [kb_article_template_kb_articles](kbarticletemplate.md#BKMK_kb_article_template_kb_articles) one-to-many relationship for the [kbarticletemplate](kbarticletemplate.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticlebase_modifiedby"></a> lk_kbarticlebase_modifiedby
 
-See systemuser Table [lk_kbarticlebase_modifiedby](systemuser.md#BKMK_lk_kbarticlebase_modifiedby) One-To-Many relationship.
+See the [lk_kbarticlebase_modifiedby](systemuser.md#BKMK_lk_kbarticlebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_kb_articles"></a> organization_kb_articles
 
-See organization Table [organization_kb_articles](organization.md#BKMK_organization_kb_articles) One-To-Many relationship.
+See the [organization_kb_articles](organization.md#BKMK_organization_kb_articles) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticle_createdonbehalfby"></a> lk_kbarticle_createdonbehalfby
 
-See systemuser Table [lk_kbarticle_createdonbehalfby](systemuser.md#BKMK_lk_kbarticle_createdonbehalfby) One-To-Many relationship.
+See the [lk_kbarticle_createdonbehalfby](systemuser.md#BKMK_lk_kbarticle_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_KbArticle"></a> TransactionCurrency_KbArticle
 
-See transactioncurrency Table [TransactionCurrency_KbArticle](transactioncurrency.md#BKMK_TransactionCurrency_KbArticle) One-To-Many relationship.
+See the [TransactionCurrency_KbArticle](transactioncurrency.md#BKMK_TransactionCurrency_KbArticle) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_kbarticlebase_createdby"></a> lk_kbarticlebase_createdby
 
-See systemuser Table [lk_kbarticlebase_createdby](systemuser.md#BKMK_lk_kbarticlebase_createdby) One-To-Many relationship.
+See the [lk_kbarticlebase_createdby](systemuser.md#BKMK_lk_kbarticlebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

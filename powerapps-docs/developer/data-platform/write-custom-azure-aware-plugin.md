@@ -1,15 +1,13 @@
 ---
 title: "Write a custom Azure-aware plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write plug-in code that can post a message or the execution context of the current database transaction to the Azure Service Bus."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: article
-ms.assetid: 93d0442e-5fc9-c43c-c8c1-a433687f3d0a
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
@@ -21,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Writing a plug-in that works with Azure is similar to writing any other Dynamics 365 Microsoft Dataverse plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the current transaction's execution context to the Azure Service Bus.  
+Writing a plug-in that works with Azure is similar to writing any other Dataverse plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the current transaction's execution context to the Azure Service Bus.  
   
 <a name="bkmk_design"></a>
 

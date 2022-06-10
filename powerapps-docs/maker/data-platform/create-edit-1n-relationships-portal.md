@@ -4,7 +4,7 @@ description: "Learn how to create one-to-many or many-to-one table relationships
 ms.custom: ""
 ms.date: 08/27/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -23,7 +24,7 @@ search.app:
 ---
 # Create and edit One-to-many or Many-to-one table relationships using Power Apps portal
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Microsoft Dataverse.
 
@@ -43,13 +44,13 @@ The portal enables configuring the most common options, but certain options can 
  |**Custom**|Shows only custom relationships for the table|
  |**Default**|Shows only the standard relationships for the table|
 
-![Account table relationships](media/view-account-relationships-portal.png)
+![Account table relationships.](media/view-account-relationships-portal.png)
 
 ## Create relationships
 
 While [viewing table relationships](#view-table-relationships), in the command bar, select **Add relationship** and choose either **Many-to-one** or **One-to-many**.
 
-![Select type of relationship](media/add-relationship-menu-portal.png)
+![Select type of relationship.](media/add-relationship-menu-portal.png)
 
 > [!NOTE]
 > For information about **Many-to-many** relationships see [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
@@ -99,7 +100,7 @@ The only columns you can edit are **Lookup column display name** and **Lookup co
 
 While [viewing table relationships](#view-table-relationships), select the relationship you want to delete.
 
-![Delete table relationship](media/delete-entity-relationship-portal.png)
+![Delete table relationship.](media/delete-entity-relationship-portal.png)
 
 You can use the **Delete relationship** command from the command bar or from the row context menu when you click the ellipses (**...**).
 

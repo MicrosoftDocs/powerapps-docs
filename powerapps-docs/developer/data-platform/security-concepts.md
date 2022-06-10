@@ -4,9 +4,10 @@ description: "A brief summary of security concepts."
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
 manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 

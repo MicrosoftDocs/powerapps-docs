@@ -1,13 +1,13 @@
 ---
-title: "msdyn_kmpersonalizationsetting table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_kmpersonalizationsetting table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_kmpersonalizationsetting table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -571,7 +571,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_kmpersonalizationsetting_SyncErrors](syncerror.md#BKMK_msdyn_kmpersonalizationsetting_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_kmpersonalizationsetting_SyncErrors](syncerror.md#BKMK_msdyn_kmpersonalizationsetting_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -588,7 +588,7 @@ Same as syncerror table [msdyn_kmpersonalizationsetting_SyncErrors](syncerror.md
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_kmpersonalizationsetting_AsyncOperations](asyncoperation.md#BKMK_msdyn_kmpersonalizationsetting_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_kmpersonalizationsetting_AsyncOperations](asyncoperation.md#BKMK_msdyn_kmpersonalizationsetting_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -605,7 +605,7 @@ Same as asyncoperation table [msdyn_kmpersonalizationsetting_AsyncOperations](as
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_kmpersonalizationsetting_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_kmpersonalizationsetting_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_kmpersonalizationsetting_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_kmpersonalizationsetting_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -622,7 +622,7 @@ Same as mailboxtrackingfolder table [msdyn_kmpersonalizationsetting_MailboxTrack
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_kmpersonalizationsetting_ProcessSession](processsession.md#BKMK_msdyn_kmpersonalizationsetting_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_kmpersonalizationsetting_ProcessSession](processsession.md#BKMK_msdyn_kmpersonalizationsetting_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -639,7 +639,7 @@ Same as processsession table [msdyn_kmpersonalizationsetting_ProcessSession](pro
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_kmpersonalizationsetting_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_kmpersonalizationsetting_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_kmpersonalizationsetting_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_kmpersonalizationsetting_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -656,7 +656,7 @@ Same as bulkdeletefailure table [msdyn_kmpersonalizationsetting_BulkDeleteFailur
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_kmpersonalizationsetting_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_kmpersonalizationsetting_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_kmpersonalizationsetting_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_kmpersonalizationsetting_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -685,33 +685,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_kmpersonalizationsetting_createdby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_createdby) One-To-Many relationship.
+See the [lk_msdyn_kmpersonalizationsetting_createdby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_kmpersonalizationsetting_createdonbehalfby"></a> lk_msdyn_kmpersonalizationsetting_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_kmpersonalizationsetting_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_kmpersonalizationsetting_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_kmpersonalizationsetting_modifiedby"></a> lk_msdyn_kmpersonalizationsetting_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_kmpersonalizationsetting_modifiedby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_kmpersonalizationsetting_modifiedby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_kmpersonalizationsetting_modifiedonbehalfby"></a> lk_msdyn_kmpersonalizationsetting_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_kmpersonalizationsetting_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_kmpersonalizationsetting_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_kmpersonalizationsetting_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_msdyn_kmpersonalizationsetting"></a> organization_msdyn_kmpersonalizationsetting
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_msdyn_kmpersonalizationsetting](organization.md#BKMK_organization_msdyn_kmpersonalizationsetting) One-To-Many relationship.
+See the [organization_msdyn_kmpersonalizationsetting](organization.md#BKMK_organization_msdyn_kmpersonalizationsetting) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.msdyn_kmpersonalizationsetting?text=msdyn_kmpersonalizationsetting EntityType" />

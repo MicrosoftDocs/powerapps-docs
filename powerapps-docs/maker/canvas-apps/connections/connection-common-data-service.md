@@ -2,17 +2,19 @@
 title: Connect to Microsoft Dataverse
 description: Learn how to connect to Microsoft Dataverse and use it for building apps in Power Apps.
 author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/10/2021
+ms.date: 04/15/2022
+ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 
 # Connect to Microsoft Dataverse
@@ -23,17 +25,22 @@ You can securely store your business data in Dataverse and build rich apps in Po
 
 By default, the app connects to the current environment for Dataverse tables. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an ALM process for moving from Development to Test to Production.
 
-When you add a data from Dataverse, you can change the environment and then select one or more tables. By default, the app connects to data in the current environment.
+When you add data from Dataverse, you can change the environment and then select one or more tables. By default, the app connects to data in the current environment.
 
-![Default environment](media/connection-common-data-service/common-data-service-connection-change-environment.png)
+![Default environment.](media/connection-common-data-service/common-data-service-connection-change-environment.png)
 
-If you select **Change**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
+If you select **Change environment**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
 
-![Other environments](media/connection-common-data-service/common-data-service-connection-select-environment.png)
+![Other environments.](media/connection-common-data-service/common-data-service-connection-select-environment.png)
 
 The name of the selected environment appears under the tables list.
 
-![New environments](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
+![New environments.](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
+
+
+## Visibility and access
+
+When you select **Change environment**, you're presented with a list of environments. Though you might see an environment in the list, the security role(s) in the environment govern what you can do in that environment. For example, if you don't have read privileges, you won't be able to see the tables and records in the environment.
 
 ## Power Apps data type mappings
 
@@ -66,13 +73,12 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
 | Sum, Min, Max, Avg                                              | Yes [5]        | \-           | \-         | No               | \-       |
 
-1.  Numeric with arithmetic expressions (for example, Filter(table, field + 10
-    \> 100) ) aren't delegable. Language and TimeZone aren't delegable.
+1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable.
 
 2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
     Left, Mid, Right, Upper, Lower, Replace, Substitute, etc.
 
-3.  DateTime is generally delegatable except for DateTime functions Now() and
+3.  DateTime is delegable except for DateTime functions Now() and
     Today().
 
 4.  Supports comparisons. For example, Filter(TableName, MyCol = Blank()).
@@ -84,11 +90,7 @@ Dataverse for processing (rather than processing locally within Power Apps).
 > [!NOTE]
 > Choices, Guids, and Aggregate functions for Dataverse are supported only with
 the new version of the connector. Depending on the version of Power Apps that
-you're using, enable this connector with either the Preview switch titled:
-> - **Relational data, choices, and other new features for Dataverse**  
-> or this Experimental switch:
-> - **Use the Dataverse connector**  
-> To find these switches, open the **File menu**, and then select **App settings** \> **Advanced settings**.
+you're using, enable this connector with either the **Preview** switch titled **Relational data, choices, and other new features for Dataverse** or **Experimental** switch **Use the Dataverse connector**. To find these switches, select **Settings** > **Upcoming features** > **Preview** or **Experimental**.
 
 ## Dataverse and the improved data source experience
 

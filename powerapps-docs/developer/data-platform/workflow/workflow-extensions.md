@@ -1,18 +1,18 @@
 ---
 title: "Workflow Extensions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to add custom workflow activities to the workflow designer." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/17/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Workflow extensions
 
@@ -292,7 +292,7 @@ For custom workflow activities you must specify the following properties to cont
 |`Name`|The name of the menu represented|
 |`WorkflowActivityGroupName`|The name of the submenu added to the main menu in the Dataverse process designer.|
 
-![Set descriptive properties](media/create-workflow-activity-set-properties.png)
+![Set descriptive properties.](media/create-workflow-activity-set-properties.png)
 
 > [!NOTE]
 > These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
@@ -307,10 +307,10 @@ The following example shows using the tracing service to write the following mes
 protected override void Execute(CodeActivityContext context)
 {
 //Create the tracing service
-ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+ITracingService tracingService = context.GetExtension<ITracingService>();
 
 //Use the tracing service
-tracingService.Trace("{0} {1} {2}.","Add","your","message");
+tracingService.Trace("{0} {1} {2}.", "Add", "your", "message");
 ...
 ```
 
@@ -331,7 +331,7 @@ When you register an assembly containing custom workflow activities the version 
 
 You will find a section at the bottom that looks like this:
 
-```
+```csharp
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
@@ -370,7 +370,7 @@ If you make changes that include significant changes to public classes or method
 
     You will find a **Version** selector in the process designer that you can use to choose which version of the assembly should be used.
 
-    ![Workflow set version](media/workflow-set-version.png)
+    ![Workflow set version.](media/workflow-set-version.png)
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
 

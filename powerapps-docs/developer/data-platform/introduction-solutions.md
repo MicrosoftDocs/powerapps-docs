@@ -8,13 +8,14 @@ author: "shmcarth" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.reviewer: "pehecke"
 ms.custom: intro-internal
 ms.workload: na
 ms.date: 03/17/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - developer

@@ -1,14 +1,13 @@
 ---
 title: "Sample: Import files as web resources(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The sample provides a simplified example of importing files as web resources." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
-ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+author: JimDaly
+ms.author: jdaly
+manager: kvivek
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: sample
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 

@@ -1,13 +1,13 @@
 ---
-title: "AppConfigMaster table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "AppConfigMaster table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the AppConfigMaster table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -458,7 +458,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_appconfigmaster_appconfiginstance"></a> appconfigmaster_appconfiginstance
 
-Same as appconfiginstance table [appconfigmaster_appconfiginstance](appconfiginstance.md#BKMK_appconfigmaster_appconfiginstance) Many-To-One relationship.
+Same as the [appconfigmaster_appconfiginstance](appconfiginstance.md#BKMK_appconfigmaster_appconfiginstance) many-to-one relationship for the [appconfiginstance](appconfiginstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -485,23 +485,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_appconfigmaster_modifiedby"></a> lk_appconfigmaster_modifiedby
 
-See systemuser Table [lk_appconfigmaster_modifiedby](systemuser.md#BKMK_lk_appconfigmaster_modifiedby) One-To-Many relationship.
+See the [lk_appconfigmaster_modifiedby](systemuser.md#BKMK_lk_appconfigmaster_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfigmaster_createdonbehalfby"></a> lk_appconfigmaster_createdonbehalfby
 
-See systemuser Table [lk_appconfigmaster_createdonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_createdonbehalfby) One-To-Many relationship.
+See the [lk_appconfigmaster_createdonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfigmaster_createdby"></a> lk_appconfigmaster_createdby
 
-See systemuser Table [lk_appconfigmaster_createdby](systemuser.md#BKMK_lk_appconfigmaster_createdby) One-To-Many relationship.
+See the [lk_appconfigmaster_createdby](systemuser.md#BKMK_lk_appconfigmaster_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfigmaster_modifiedonbehalfby"></a> lk_appconfigmaster_modifiedonbehalfby
 
-See systemuser Table [lk_appconfigmaster_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appconfigmaster_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfigmaster_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_appconfigmaster"></a> organization_appconfigmaster
 
-See organization Table [organization_appconfigmaster](organization.md#BKMK_organization_appconfigmaster) One-To-Many relationship.
+See the [organization_appconfigmaster](organization.md#BKMK_organization_appconfigmaster) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

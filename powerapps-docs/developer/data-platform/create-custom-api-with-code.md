@@ -2,13 +2,14 @@
 title: "Create a Custom API with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 03/21/2022
+ms.reviewer: "jdaly"
+
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -20,7 +21,7 @@ search.app:
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
 > - [Create and use Custom APIs](custom-api.md)
-> - [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
+> - [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)
 >
 > You should also understand how to create Microsoft Dataverse records, using either the Web API or Organization Service. For more information see:
 > - [Create an entity record using the Web API](webapi/create-entity-web-api.md)
@@ -28,18 +29,15 @@ search.app:
 
 Because Custom API data is saved in tables, you can programmatically create new APIs using either the Web API or the Organization Service.
 
-The tables in [Create and use Custom APIs](custom-api.md) describe all the properties you can set using code. For the following code examples, please refer to the following tables:
+The tables in [Custom API tables](custom-api-tables.md) describe all the properties you can set using code.
 
-- [CustomAPI Table Columns](customapi-table-columns.md)
-- [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
-- [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 
 ## Create a Custom API using the Web API
 
 This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
-This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `3926874e-387b-4045-94b2-a5cafe44b06f`.
+This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
 
 **Request**
 
@@ -89,7 +87,7 @@ Content-Type: application/json
                 }
         }
     ],
-    "PluginTypeId@odata.bind": "plugintypes(3926874e-387b-4045-94b2-a5cafe44b06f)"
+    "PluginTypeId@odata.bind": "plugintypes(00000000-0000-0000-0000-000000000001)"
 }
 ```
 
@@ -111,7 +109,7 @@ This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with 
 
 This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 
-This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `3926874e-387b-4045-94b2-a5cafe44b06f`.
+This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
 
 ```csharp
 string conn = $@"
@@ -127,7 +125,7 @@ string conn = $@"
 var service = new CrmServiceClient(conn);
 
 //The plug-in type
-var pluginType = new EntityReference("plugintype", new Guid("3926874e-387b-4045-94b2-a5cafe44b06f"));
+var pluginType = new EntityReference("plugintype", new Guid("00000000-0000-0000-0000-000000000001"));
 var solutionUniqueName = "CustomAPIExample";
 
 //The custom API
@@ -182,7 +180,9 @@ Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br/>
-[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br/>
+[CustomAPI tables](custom-api-tables.md)<br/>
+[Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br/>
+[Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br/>
 [Create a Custom API with solution files](create-custom-api-solution.md)<br/>
 
 

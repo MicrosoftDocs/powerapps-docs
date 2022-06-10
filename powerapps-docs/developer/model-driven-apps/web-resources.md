@@ -1,19 +1,21 @@
 ---
 title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/15/2021
-ms.reviewer: ""
-ms.service: powerapps
-ms.custom: "intro-internal"
-ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: overview
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Web resources in model-driven apps
 
@@ -21,10 +23,10 @@ Web resources are *virtual files* that are stored in the Microsoft Dataverse dat
 
 > [!NOTE]
 > IFRAMEing content that is behind an authentication boundary is not supported through web resources or Power Apps component framework. Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this is not supported in mobile or tablet applications.
-The specific scenario of embedding a form within an IFRAME, embedded in another form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>Use of [Power Apps component framework](../component-framework/overview.md) is encouraged to build reusable and more tighter external IFRAME based integrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
+The specific scenario of embedding a form within an IFRAME, embedded in another form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>In general, use of [Power Apps component framework](../component-framework/overview.md) and [custom pages](../../maker/model-driven-apps/model-app-page-overview.md) is encouraged to build configurable, reusable and more tighter external ntegrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
 
 
-<a name="BKMK_CapabilitiesOfWebResources"></a>   
+<a name="BKMK_CapabilitiesOfWebResources"></a>
 
 ## Capabilities of web resources  
 

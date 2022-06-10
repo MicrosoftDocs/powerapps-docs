@@ -1,13 +1,13 @@
 ---
-title: "msdyn_odatav4ds table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_odatav4ds table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_odatav4ds table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -128,12 +128,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter10header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -151,12 +151,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter1header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -174,12 +174,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter2header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -197,12 +197,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter3header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -220,12 +220,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter4header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -243,12 +243,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter5header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -266,12 +266,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter6header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -289,12 +289,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter7header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -312,12 +312,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter8header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -335,12 +335,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_isparameter9header Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Header|
-|0|Query String|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Header||
+|0|Query String||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -388,12 +388,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_paginationmode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Server-side Paging|
-|0|Client-side Paging|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Server-side Paging||
+|0|Client-side Paging||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -411,10 +411,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_paginationtype Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Client-side Paging|
-|1|Server-side Paging|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Client-side Paging||
+|1|Server-side Paging||
 
 
 
@@ -752,12 +752,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_returninlinecount Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 

@@ -1,13 +1,12 @@
 ---
 title: " Increment component| Microsoft Docs" 
 description: "This sample component shows how to bind data with Power Apps component framework and error handling." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 6/08/2021
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
 ---
 
 # Implementing increment component
@@ -19,7 +18,7 @@ This sample component shows how to bind data with Power Apps component framework
 To implement this component, the first thing you need to define the [Manifest](../manifest-schema-reference/manifest.md) file, and then implement the custom logic in TypeScript. 
 
 > [!div class="mx-imgBorder"]
-> ![Increment component](../media/increment-control.png "Increment component")
+> ![Increment component.](../media/increment-control.png "Increment component")
 
 ## Available for 
 

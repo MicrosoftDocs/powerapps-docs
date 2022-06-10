@@ -1,18 +1,21 @@
 ---
 title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
 description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
-ms.date: 04/15/2021
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 9fb38429-55ef-45ce-a3a3-e649e1be89d0
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Events in forms and grids in model-driven apps
 
@@ -28,7 +31,7 @@ You can associate event handlers to only some events using the UI. For events th
 
 Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and columns.
 
-![Event Handler section in Form Properties](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
+![Event Handler section in Form Properties.](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
 
 ### [Unified Interface](#tab/add-event-handlers-unified-interface)
 
@@ -39,17 +42,27 @@ To add or remove event handler functions to events in the new Unified Interface:
 1. From the list of tables, select the table where you want to add the event handlers.
 1. Select **Forms** tab from the command bar and then select the form where you want to add.
 
-    ![Select form from list](../media/select-form-from-list.png "Select form from list")
+    ![Select form from list.](../media/select-form-from-list.png "Select form from list")
 
 1. Select **Events** tab. You'll notice that both the **On Save** and **On Load** event handlers.
 
-    ![Form event handlers](../media/form-event-handlers.png "Form event handlers")
+    ![Form event handlers.](../media/form-event-handlers.png "Form event handlers")
 
 1. If you wish to add the event handler for the on change event, select the column and then select **Event** tab.
 
-     ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
+     ![Onchange handler.](../media/onchange-event-handler.png "Onchange handler")
 
 ---
+
+### Bulk edit forms
+
+By default, events handlers aren't called when a form is in bulk edit mode. 
+
+To enable an event handler in bulk edit mode, modify the Form XML by finding the relevant `event` element and creating/setting the `BehaviorInBulkEditForm` attribute to `Enabled`.
+
+For more information on Form XML customization, see [When to edit the customizations file](../when-edit-customization-file.md), [Customize forms](../customize-entity-forms.md), and the [Form XML schema](../form-xml-schema.md).
+
+To determine when an event handler is called on a form in bulk edit mode use [`getFormType`](reference/formContext-ui/getFormType.md) method.
 
 ## Add or remove event handler function to event using code
 

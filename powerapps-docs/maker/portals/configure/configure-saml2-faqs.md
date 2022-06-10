@@ -2,14 +2,15 @@
 title: FAQs for using SAML 2.0 in portals
 description: Learn about Frequently Asked Questions when using SAML 2.0 providers for authentication in Power Apps portals.
 author: dileepsinghmicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
+ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
 ---

@@ -1,19 +1,20 @@
 ---
 title: "Use editable grids in model-driven apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Editable grid is a custom control that provides rich inline editing capabilities on web and mobile clients (Dynamics 365 for phones and Dynamics 365 for tablets) including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/15/2021
-ms.reviewer: ""
-ms.service: powerapps
+ms.author: hemantg
+author: HemantGaur
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "Nkrb" # GitHub ID
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Use editable grids
 
@@ -32,13 +33,13 @@ You can enable editable grids at the table level to use in the main grid, or at 
   
 2. In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
   
-     ![Add Editable Grids custom control](../../maker/model-driven-apps/media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
+     ![Add Editable Grids custom control.](../../maker/model-driven-apps/media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
 3. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
 4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  
   
-     ![Editable Grid row with form factor selection](../../maker/model-driven-apps/media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
+     ![Editable Grid row with form factor selection.](../../maker/model-driven-apps/media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")    
 
    > [!NOTE]
    >  At runtime, users can toggle between editable grids and read-only grids. 
