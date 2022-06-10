@@ -27,7 +27,9 @@ You must be a member of Partner Center to publish apps on AppSource.
 
 ### See also 
 
-[Publish your apps on AppSource](publish-app-appsource.md)
+[Microsoft commercial marketplace](/azure/marketplace/overview)<br/>
+[Create a commercial marketplace account in Partner Center](/azure/marketplace/create-account)
+
   
 
 
