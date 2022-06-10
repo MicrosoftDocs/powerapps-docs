@@ -37,7 +37,7 @@ These properties define the web resource to use and how it should behave. After 
 |--|--|
 |**Label**| Is the friendly name and is automatically generated based on the **Name** column value. Specify localizable text for the web resource control that will be added to the form.|
 |**Name**| Specify a name for the web resource control that will be added to the form. This value uniquely identifies the control in the form.|
-|**Web resource**| Select the web resource to display additional web resource properties. <br />If you are using **Custom parameter data** enter it here. This is usually configuration data that will be passed to the HTML web resource as a `data` query string parameter. Scripts associated with the HTML page can access this data and use it to change the behavior of the page. <br />Select **Edit web resource** to make changes such as load a different HTML or image file.<br /><img src="media/additional-web-resource-props.png" width="300" height="450"/> |
+|**Web resource**| Select the web resource to display additional web resource properties. <br />If you are using **Custom parameter data** enter it here. This is usually configuration data that will be passed to the HTML web resource as a `data` query string parameter. Scripts associated with the HTML page can access this data and use it to change the behavior of the page. <br />Select **Edit web resource** to make changes such as load a different HTML or image file.<br /><img src="media/additional-web-resource-props.png" alt="Additional web resource properties" width="300" height="450"/> |
 | **Hide label**  | Select this option if you don't want the label displayed on the form.  |
 |**Hide on phone**|Select this option when you don't want this web resource to be visible in mobile apps.|
 |**Hide**|While this is enabled the web resource won't be visible when the form loads. If you have a business rule or form script that will show the web resource as needed, check this property. More information: [Show or hide form elements](visibility-options-legacy.md)|
@@ -46,10 +46,10 @@ These properties define the web resource to use and how it should behave. After 
 
 |Property |Description  |
 |---------|---------|
-|**Component width** |When the section containing the web resource has more than one column you can set the column to occupy up to the number of columns that the section has.|  |
+|**Component width** |When the section containing the web resource has more than one column you can set the column to occupy up to the number of columns that the section has.|
 |**Component height** | You can control the height of the web resource by specifying a number of rows or select **Use all available vertical space** to allow the web resource height to expand to available space.        |
 |**Scrolling**  | An HTML web resource is added to the form using an IFRAME.<br /><br /> - **As Necessary**: Show scrollbars when the size of the web resource is larger than the available.<br />- **Always**: Always show scrollbars.<br />- **Never**:  Never show scrollbars.        |
-|**Display border**  | Displays a border around the web resource.        |
+|**Display border**  | Displays a border around the web resource.    |
 
 ### Dependencies
 
