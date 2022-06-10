@@ -77,6 +77,7 @@ contributors:
 ## Return Value
 
 On success, returns a promise containing a JSON object with the retrieved columns and their values.
+If the requested record does not exist, returns an error.
 
 ## Examples
 
