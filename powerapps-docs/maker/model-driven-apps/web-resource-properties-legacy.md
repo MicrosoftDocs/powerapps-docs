@@ -50,6 +50,9 @@ These properties define the web resource to use and how it should behave. After 
 |**Component height** | You can control the height of the web resource by specifying a number of rows or select **Use all available vertical space** to allow the web resource height to expand to available space.        |
 |**Scrolling**  | An HTML web resource is added to the form using an IFRAME.<br /><br /> - **As Necessary**: Show scrollbars when the size of the web resource is larger than the available.<br />- **Always**: Always show scrollbars.<br />- **Never**:  Never show scrollbars.        |
 |**Display border**  | Displays a border around the web resource.    |
+|**Vertical alignment**  | Image web resources can be aligned **Middle**, **Top**, or **Bottom**.  |
+| **Horizontal alignment**  | Image web resources can be aligned **Center**, **Left**, or **Right**.   |
+| **Size**  | Select from **Use available space**, **Use available area**, **Original image size**, or **Specific size** (specify **Height** and **Width** in pixels).  |
 
 ### Dependencies
 
