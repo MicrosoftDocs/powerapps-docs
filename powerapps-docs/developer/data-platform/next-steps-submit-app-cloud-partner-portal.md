@@ -20,7 +20,7 @@ search.app:
 
 Your app is ready for submission after completing steps 1-5. 
 
-If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](/azure/marketplace/partner-center-portal/offer-creation-checklist) on Partner Center to submit your app.
+If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](/azure/marketplace/dynamics-365-customer-engage-offer-setup) on Partner Center to submit your app.
 
 All apps that are submitted to be listed on AppSource go through a certification process. For information about the checks done in the certification process, see [Appendix: App certification checklist](appendix-app-certification-checklist.md).
 
