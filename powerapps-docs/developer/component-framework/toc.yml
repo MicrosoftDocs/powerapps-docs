@@ -436,6 +436,8 @@ items:
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
+      - name: types
+        href: manifest-schema-reference/types.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
   - name: Resources
