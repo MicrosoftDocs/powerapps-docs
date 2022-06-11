@@ -61,6 +61,9 @@ The search endpoint has service protection limits that are different from the Da
 
 ### See also
 
+[Dataverse Search query](query.md)<br />
+[Dataverse Search suggest](suggest.md)<br />
+[Dataverse Search autocomplete](autocomplete.md)
 
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
