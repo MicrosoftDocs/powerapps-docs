@@ -2,10 +2,9 @@
   href: ../work-with-data.md
 - name: Search for Dataverse records
   href: overview.md
-  items:
-  - name: Query
-    href: query.md
-  - name: Suggest
-    href: suggest.md
-  - name: Autocomplete
-    href: autocomplete.md
+- name: Query
+  href: query.md
+- name: Suggest
+  href: suggest.md
+- name: Autocomplete
+  href: autocomplete.md
