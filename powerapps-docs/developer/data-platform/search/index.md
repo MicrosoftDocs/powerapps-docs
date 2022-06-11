@@ -43,11 +43,11 @@ Developers can use the search APIs to search for records using three methods:
 
 Search provides three verbs to support a user interface that enables searching for data.
 
-|Search Endpoint|Web API Action|SDK for .NET message |Description|
-|---------|---------|---------|---------|
-|`/api/search/v1.0/query`|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action>|`searchquery`| Returns a search results page.|
-|`/api/search/v1.0/suggest`|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action>|`searchsuggest`| Provide suggestions as the user enters text into a form field. |
-|`/api/search/v1.0/autocomplete`|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action>|`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.|
+|Search Endpoint<br />Web API Action<br />SDK for .NET message|Description|
+|---------|---------|
+|`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page.|
+|`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. |
+|`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.|
 
 The Web API and Dataverse SDK for .NET expose the native Search verbs Web API Actions or as organization service `messages`. These actions and messages use the native search endpoint on the server and return the results.
 
