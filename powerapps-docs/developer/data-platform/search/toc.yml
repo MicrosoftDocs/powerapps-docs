@@ -1,7 +1,7 @@
 - name: Work with data using code
   href: ../work-with-data.md
 - name: Search for Dataverse records
-  href: index.md
+  href: overview.md
   items:
   - name: Query
     href: query.md
