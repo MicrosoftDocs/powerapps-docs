@@ -1,0 +1,10 @@
+items:
+- name: Search for Dataverse records
+  href: index.md
+  items:
+  - name: Query
+    href: query.md
+  - name: Suggest
+    href: suggest.md
+  - name: Autocomplete
+    href: autocomplete.md

@@ -1,5 +1,5 @@
 ---
-title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
+title: "Search for records by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
 manager: kvivek
@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
-# Search for tables and rows by using Dataverse search
+# Search for records by using Dataverse search
 
 
 

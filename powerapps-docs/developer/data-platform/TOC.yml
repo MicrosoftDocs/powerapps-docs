@@ -31,6 +31,8 @@
     href: ./webapi/overview.md
   - name: Use Organization Service
     href: ./org-service/overview.md
+  - name: Use Dataverse Search
+    href: ./search/index.md
   - name: Create your own messages
     href: custom-actions.md
     items:    
