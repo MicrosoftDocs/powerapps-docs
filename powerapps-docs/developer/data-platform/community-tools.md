@@ -44,11 +44,11 @@ The following is a selected list of community tools distributed via the XrmToolB
 |[SQL 4 CDS](https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/)|SQL 4 CDS allows you to use standard SQL syntax to query and manipulate your data and metadata in Dataverse|
 |[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update and get 360° View of Dataverse Custom APIs|
 
-## Chrome Extensions
+## Browser Extensions
 
 ### Chromium Metadata Browser
 
-Here is another tool, [Chromium Metadata Browser](https://community.dynamicslabs.io/feed/metadata-browser), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge and Google Chrome browsers. 
+Here is another tool, [Chromium Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge and Google Chrome browsers. 
 
 ### Level up for Dynamics 365/Power Apps
 
