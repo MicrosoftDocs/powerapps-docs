@@ -71,7 +71,6 @@ Start with an existing template to create an email template faster and with less
 
 > [!NOTE]
 > When you choose an existing template to create a template, irrespective of the [enhanced email template editor option](cs-email-template-builder.md) setting, the app displays the newly created email template in the following template editors:
-
 >  - Enhanced email template page: If the selected email template was created with the Enhanced email template experience.
 >  - Default email template page: If the selected template was created with the default email template experience
 
