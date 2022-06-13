@@ -75,8 +75,6 @@ Irrespective of the [enhanced email template editor option](cs-email-template-bu
 - Enhanced email template page: The email template was created in the Enhanced email template page.
 - Default email template page: The email template was created in the default email template page. 
 
-> [!NOTE]
-> You can't convert email templates created in either of the template editors into each other.
 
 :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
 
