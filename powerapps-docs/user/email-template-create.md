@@ -25,7 +25,7 @@ Email templates are a fast and easy way to send consistent, professional, prefor
 
 To create a template, select **New** on the **Email Templates** command bar. You can either start with a blank template or customize an existing template.  
 - If you select **Start with a blank template** and the enhanced email template editor option is enabled, the email template is displayed in the enhanced email editor.
-- If you select **Start with an existing template**, the editor in which the newly-created template is displayed is based on the editor used to create the existing template. This is irrespective of the enhanced email template editor option setting.
+- If you select **Start with an existing template** and choose an existing template to create a new email template, the editor in which the newly-created template is displayed depends on the editor in which the existing template was created. This is irrespective of the enhanced email template editor option setting.
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
