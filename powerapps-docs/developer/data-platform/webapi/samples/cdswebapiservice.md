@@ -163,7 +163,7 @@ Patch is frequently used to Update or Upsert table rows.
 More information:
 
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
-- [Upsert a table](../update-delete-entities-using-web-api.md#upsert-a-table)
+- [Upsert a table](../update-delete-entities-using-web-api.md#bkmk_upsert)
 
 ## PatchAsync
 
