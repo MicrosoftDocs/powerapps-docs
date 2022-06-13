@@ -43,7 +43,7 @@ When you start with a blank template, nothing is provided for you. You must add 
    - **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    - **Create**: Opens one of two editors where you can build your template.
  
-   :::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot that shows blank template page."::: 
+    :::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot that shows blank template page."::: 
  
 3. Select **Create**. The template editor is displayed.
 
@@ -62,11 +62,11 @@ Start with an existing template to create an email template faster and with less
    - **Browse** out-of-the-box templates, global and entity-specific, listed in alphabetical order. Global templates are shown as the type User. If you've created custom email templates, they're also listed.
    - **Details**. Preview the templates so that you can pick the one that best meets your needs. You can modify it as needed later.
   
-   :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
+    :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
   
 3. The template editor page is displayed.
 
-When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in the following template editors:
+When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the the following template editors:
   - Enhanced email template: If the selected email template was created with the enhanced email template.
   - Default email template: If the selected template was created with the default email template.
 
