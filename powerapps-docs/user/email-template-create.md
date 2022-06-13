@@ -26,6 +26,9 @@ Email templates are a fast and easy way to send consistent, professional, prefor
 To create a template, select **New** on the **Email Templates** command bar. You can [start with a blank template](#start-with-a-blank-template) or [customize an existing template](#start-with-existing-templates).
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
+> [!NOTE]
+> - If you're starting with a blank template, the Enhanced email editor is displayed, if your administrator has turned on the [enhanced email template editor option](cs-email-template-builder.md). See: [Start with a blank template](#start-with-a-blank-template)
+> - If you're starting with an existing template, the newly created template is displayed based on the editor used to create the existing template, irrespective of the  [enhanced email template editor option](cs-email-template-builder.md) setting. See: [Start with an existing template](#start-with-existing-templates)
 
 ## Start with a blank template
 
@@ -66,10 +69,11 @@ When you select **Create**, the editor page you see depends on whether your admi
 
 Start with an existing template to create an email template faster and with less effort. The template is pre-populated with data. All you need to do is customize it for your needs.
 
-Irrespective of the [enhanced email template editor option](cs-email-template-builder.md) setting, when you choose an existing email template, the app displays the template editor page as follows:
+> [!NOTE]
+> When you choose an existing template to create a template, irrespective of the [enhanced email template editor option](cs-email-template-builder.md) setting, the app displays the newly created email template in the following template editors:
 
-- Enhanced email template page: The email template was created in the Enhanced email template page.
-- Default email template page: The email template was created in the default email template page. 
+>  - Enhanced email template page: If the selected email template was created with the Enhanced email template experience.
+>  - Default email template page: If the selected template was created with the default email template experience
 
 
 :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
