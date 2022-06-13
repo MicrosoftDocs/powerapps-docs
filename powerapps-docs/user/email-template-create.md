@@ -46,6 +46,10 @@ When you select **Create**, the editor page you see depends on whether your admi
 - If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the default email template editor page.
 
+> [!NOTE]
+> Email templates created in the default email template editor will open in the default email template editor page, even if the enhanced email template editor option is enabled.
+> Email templates created in the enhanced email template editor will open in the enhanced email template editor page, even if the enhanced email template editor option is disabled.
+
 ### Enhanced email template editor overview
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
@@ -65,6 +69,14 @@ When you select **Create**, the editor page you see depends on whether your admi
 ## Start with existing templates
 
 Start with an existing template to create an email template faster and with less effort. The template is pre-populated with data. All you need to do is customize it for your needs.
+
+Irrespective of the [enhanced email template editor option](cs-email-template-builder.md) setting, when you choose an existing email template, the app displays the template editor page as follows:
+
+- Enhanced email template page: The email template was created in the Enhanced email template page.
+- Default email template page: The email template was created in the default email template page. 
+
+> [!NOTE]
+> You can't convert email templates created in either of the template editors into each other.
 
 :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
 
