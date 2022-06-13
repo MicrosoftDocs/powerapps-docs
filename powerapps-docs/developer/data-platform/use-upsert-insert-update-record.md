@@ -1,13 +1,13 @@
 ---
-title: "Use Upsert to insert or update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "UpsertRequest(Update or Insert) message helps you simplify various data integration scenarios where you do not know if a record already exists in Microsoft Dataverse. In such cases you won't know if you should call an UpdateRequest or a CreateRequest operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. UpsertRequest message helps you solve that issue" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Upsert to Create or Update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "When loading data into Dataverse from an external system, you may not know if a record already exists in Dataverse and should be updated, or whether you must create a new record. Upsert is a combination of Update or Insert which enables the server to detect whether a record exists or not and apply the appropriate Update or Create operation in Dataverse. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 06/12/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: divka78 # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: dikamath # MSFT alias of Microsoft employees only
+manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -17,7 +17,7 @@ contributors:
   - PHecke
   - JimDaly
 ---
-# Use Upsert to insert or update a record
+# Use Upsert to Create or Update a record
 
 You can reduce the complexity involved with data integration scenarios by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> message. When loading data into Microsoft Dataverse from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Dataverse. In such cases you won't know if you should call an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can reduce this complexity and load data into Dataverse more efficiently by using the `Upsert` message with the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> class. 
   
@@ -135,7 +135,7 @@ public static void ProcessUpsert(CrmServiceClient service, String Filename)
 
 [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)   
 [Define alternate keys for a table](define-alternate-keys-entity.md)   
-[Using alternate keys](use-alternate-key-create-record.md)
+[Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -77,7 +77,7 @@ With these features, it just takes one call to the server to perform the same op
 ## In This Section
 
  [Define alternate keys for the table](define-alternate-keys-entity.md)<br />
- [Using alternate keys](use-alternate-key-create-record.md)<br />
+ [Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
  [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)<br />
  [Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)<br />
  [Sample: Insert or update a record using Upsert](/dynamics365/customer-engagement/developer/sample-insert-update-record-upsert)<br />

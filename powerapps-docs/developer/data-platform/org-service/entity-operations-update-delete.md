@@ -26,7 +26,7 @@ This topic will include examples using both late-bound and early-bound programmi
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
 > [!IMPORTANT]
-> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven’t actually changed.
+> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven't actually changed.
 >
 > You should create a new `Entity` instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the table row.
 
@@ -246,7 +246,7 @@ svc.Update(exampleAccount);
 
 More information: 
 - [Work with alternate keys](../define-alternate-keys-entity.md)
-- [Use an alternate key to create a row](../use-alternate-key-create-record.md)
+- [Use an alternate key to reference a record](../use-alternate-key-reference-record.md)
 
 ## Update and delete documents in storage partitions
 

@@ -222,7 +222,7 @@ account["primarycontactid"] = new EntityReference("contact", "sample_username", 
 
 More information: 
 - [Define alternate keys to reference rows](../../../maker/data-platform/define-alternate-keys-reference-records.md)
-- [Use an alternate key to create a row](../use-alternate-key-create-record.md)
+- [Use an alternate key to reference a record](../use-alternate-key-reference-record.md)
 - [Work with alternate keys](../define-alternate-keys-entity.md)
 
 ## Check for duplicate records
