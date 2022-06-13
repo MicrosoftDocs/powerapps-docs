@@ -5,7 +5,7 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/10/2022
+ms.date: 06/13/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -33,7 +33,9 @@ When you enable CDN on your portal, static content like images, scripts, and sty
 > You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
-> You need to be a Portal Administrator to enable the CDN. This feature is available for Power Apps portal.  If you're using the Add-on license then you can't enable CDN. Trial portals aren't supported for CDN. You can't enable the CDN for portals configured with custom domain during preview. 
+>
+> - You need to be a Portal Administrator to enable the CDN. This feature is available for Power Apps portal.  If you're using the Add-on license then you can't enable CDN. Trial portals aren't supported for CDN. You can't enable the CDN for portals configured with custom domain during preview. 
+> - Using a [custom domain name](../admin/add-custom-domain.md) on a site is currently not supported to use CDN.
 
 ## Enable Content Delivery Network for Production portal 
 
@@ -154,4 +156,4 @@ CDN is powered by [<u>Azure Front Door</u>](/azure/frontdoor/standard-premium/ov
 > [!NOTE] 
 > For more information about other Azure service offerings, see the  [<u>Microsoft Azure Trust Center</u>](https://azure.microsoft.com/support/trust-center/),  [<u>Microsoft Azure Front Door</u>](/azure/frontdoor/standard-premium/overview) 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
