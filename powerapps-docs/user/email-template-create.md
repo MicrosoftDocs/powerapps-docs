@@ -29,7 +29,7 @@ You can create email templates by using one of the following options:
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
 More information:
-- [enhanced email template editor option](cs-email-template-builder.md) 
+- [Enhanced email template editor option](cs-email-template-builder.md) 
 - [Start with existing templates](#start-with-existing-templates)
 
 
