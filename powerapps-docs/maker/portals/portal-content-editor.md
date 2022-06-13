@@ -4,7 +4,7 @@ description: Learn how to use the inline editor on a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
-ms.date: 5/18/2022
+ms.date: 06/02/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -19,12 +19,18 @@ ms.custom: intro-internal
 
 # Get started with the portal content editor
 
-Users with suitable permissions can add, modify, or delete webpages and their content using the **portal content editor**. The portal content editor appears by default when you sign in to the portal with the administrative permissions to edit the content.
-
-This document assumes that you have permission to perform these tasks. If you do not, ask your portal administrator to arrange this for you. The permissions can be assigned to individual pages, so be sure to specify which pages you will need to edit.
-
 > [!IMPORTANT]
 > This feature is deprecated.  We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
+>
+> **This feature will be removed by April 2023.**
+
+Users with suitable permissions can add, modify, or delete webpages and their content using the **portal content editor**. 
+
+Users that have been assigned the **Administrator** [web role](configure/create-web-roles.md) will have access to the portal content editor for the entire site.
+
+To provide portal content editor access to individual pages and users, configure [page permissions](/configure/webpage-access-control.md#manage-page-permissions-with-the-portal-management-app) for the specific page, selecting the [grant change](configure/webpage-access-control.md#grant-change) access type. Associate the page permission rule to a web role assigned to the user.
+
+
 
 ## Use the portal content editor toolbar
 
@@ -37,7 +43,6 @@ Sign in first. This will enable content editing for users with this permission. 
 | Delete         | Deletes the current page.                                                                                 |
 | New            | Opens a menu where one can chose to create a child page, file, event, forum or shortcut.                  |
 | Children       | Opens a dialog containing child records for the current page where one can reorder, edit, or delete them. |
-||
 
 ## Edit the header and footer
 

@@ -4,7 +4,7 @@ description: Learn about the application lifecycle management (ALM) with compone
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/01/2022
+ms.date: 06/10/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -85,6 +85,8 @@ Dependencies are calculated based on the latest published state of an app. If yo
 
 - If the app isn't able to receive the update from the library component in the target environment where the solution is installed, check using the below actions:
 
+
+    - Changes made to a component library in a target environment reside at the top layer of a component. Subsequently, these customizations define the runtime behavior of the component. To remove these unmanaged customizations, see [Remove an unmanaged layer](../data-platform/solution-layers.md#remove-an-unmanaged-layer).
     - Determine the component library logical name from the solution view. Use the default solution if library isn't explicitly added to solution.
     - Download app using the library component to local computer using **File** > **Save as** > **This computer**. Rename the downloaded file to have a .zip extension, and unzip the package. Open the **Properties.json** file, and then search for the keyword "LibraryDependencies". You should see a matching library logical name.
     - If you're consuming the solution, check that the canvas app has properly identified the component libraries as [solution dependencies](/power-platform/alm/solution-concepts-alm#solution-dependencies). If the solution doesn't properly identify the component libraries as solution dependencies, that means the app dependency to the component library link hasn't been created properly. In that case, check with the solution provider to resolve the issue.

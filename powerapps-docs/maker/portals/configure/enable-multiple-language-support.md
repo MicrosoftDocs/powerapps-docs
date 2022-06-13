@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/03/2022
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -17,7 +17,10 @@ contributors:
 
 # Enable multiple-language portal support
 
-Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
+Business isn't confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
+
+> [!NOTE] 
+> You can also enable multiple-language support in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 :::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
@@ -112,21 +115,21 @@ The table below shows all the languages currently available out of the box. This
 > [!Note]
 > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
 
-Knowledge articles will only be displayed if they have been translated into the language the user sets the portal to be displayed in. However, forums and blogs allow for more control over how they are presented in other languages. Specifying a language for a forum or blog is optional. If a language is not specified, the forum or blog will be displayed in the primary language of the organization. If you want the forum or blog specific to a language, you must create it and assign the language to it.
+Knowledge articles will only be displayed if they've been translated into the language the user sets the portal to be displayed in. However, forums and blogs allow for more control over how they're presented in other languages. Specifying a language for a forum or blog is optional. If a language isn't specified, the forum or blog will be displayed in the primary language of the organization. If you want the forum or blog specific to a language, you must create it and assign the language to it.
 
-Web link sets are the navigation links at the top of the portal. In the **Portal Management** app go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links are created for the newly activated language.
+Web link sets are the navigation links at the top of the portal. In the Portal Management app, go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links is created for the newly activated language.
 
 :::image type="content" source="media/multi-language/active-weblink-new-language.png" alt-text="Active web link for new language":::
 
 ## View portal in a different language
 
-Once the languages have been enabled, by default, users will see a drop-down on portal pages which will allow them to switch the currently viewed content to different enabled portal languages.
+Once the languages have been enabled, by default, users will see a drop-down on portal pages, which will allow them to switch the currently viewed content to different enabled portal languages.
 
 :::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
 ## Configure user's default language
 
-To avoid choosing the language from the drop down each time, Portal users can set the default language by entering it in the **Preferred Language field** within the user profile section.  
+To avoid choosing the language from the drop-down each time, Portal users can set the default language by entering it in the **Preferred Language field** within the user profile section.  
 
 :::image type="content" source="media/multi-language/preferred-language.png" alt-text="Preferred language":::
 
