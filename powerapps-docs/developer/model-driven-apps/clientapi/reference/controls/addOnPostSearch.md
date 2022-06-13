@@ -27,7 +27,7 @@ knowledge base search control
 ## Syntax
 
 ```JavaScript
-var kbSearchControl = formContext.getControl("<name>";
+var kbSearchControl = formContext.getControl("<name>");
 kbSearchControl.addOnPostSearch(myFunction);
 ```
 

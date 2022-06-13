@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/28/2022
+ms.date: 06/10/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -16,7 +16,7 @@ contributors:
   - tapanm-msft
   - lancedmicrosoft
   - alaug
-  - wimcoor
+  - amchern
 ---
 # System requirements, limits, and configuration values for Power Apps
 
@@ -46,8 +46,6 @@ This article contains information on supported device platforms, web browser req
 
 ## Supported operating systems for browsers running Power Apps
 
-<!-- Applies to model-driven apps, canvas apps, and Power Apps portals. -->
-
 | **Operating system** | **Supported versions** |  **App type**  |
 | --- | --- | ---|
 | Windows |Windows 10 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
@@ -64,35 +62,6 @@ For classic web application system requirements, go to [Web application requirem
 > [!NOTE]
 > Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](maker/canvas-apps/use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
-<!--
-## Supported browsers for Power Apps Studio
-
-| **Browser** | **Supported Versions** |
-| --- | --- |
-| Microsoft Edge|Latest three major releases|
-| Google Chrome|Latest three major releases|
-
-### Supported platforms for browsers running Power Apps Studio
-
-| **Operating Systems** | **Supported Versions** |
-| --- | --- |
-| Windows |Windows 8.1 or later|
-| macOS|10.13 or later|
-
-## Supported browsers for Power Apps portals Studio
-
-| **Browser** | **Supported Versions** |
-| --- | --- |
-| Microsoft Edge|Latest three major releases|
-| Google Chrome|Latest three major releases|
-
-### Supported platforms for browsers running Power Apps portals Studio
-
-| **Browser**                     | **Operating system**           |
-|---------------------------------|--------------------------------|
-| Google Chrome (latest version)<br>(recommended)                    | <ul><li>Windows 7 SP1, 8.1, and 10</li><li>macOS</li></ul>      |
-| Microsoft Edge (latest version)<br> (recommended)                    | Windows 10                     |
--->
 ## Request limits
 
 These limits apply to each single outgoing request:
@@ -154,6 +123,10 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
+## Proxies
+
+Power Apps does not support running with a proxy enabled. Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app. Hence, if your app has any problems while loading when proxy is enabled, disable the proxy and then try again.
+
 ## Data types size limits
 
 For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](maker/canvas-apps/functions/data-types.md#text-hyperlink-image-and-media).
@@ -163,5 +136,3 @@ For Microsoft Dataverse data type size limits, you can find information on colum
 ## Power Apps per app plan
 
 Information is now available in the [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
-
-
