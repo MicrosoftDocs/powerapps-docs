@@ -5,18 +5,22 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/29/2021
+ms.date: 06/08/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Tutorial: Use Microsoft Power Platform CLI with portals
 
 In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
+
+> [!NOTE] 
+> You can also use Power Platform CLI with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
 > This tutorial focuses on the required Microsoft Power Platform CLI commands for

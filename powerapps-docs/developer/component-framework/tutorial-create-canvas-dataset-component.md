@@ -66,7 +66,7 @@ You can download the complete sample from [here](https://github.com/microsoft/Po
    > [!div class="mx-imgBorder"] 
    > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
-The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
+The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
 
 ### Install Microsoft Fluent UI
 
