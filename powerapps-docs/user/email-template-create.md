@@ -38,9 +38,8 @@ More information:
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see. 
 
 1. On the **Email Templates** command bar, select **New**, and then select **Start with a blank template**.
-2. Enter the following details:
-:::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot that shows blank template page.":::
 
+3. Enter the following details:
    - **Template name**: Give your email template a detailed name to help you identify it later.
    - **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
    - **Category**: The default value is **User**. Categories determine which dynamic text fields are available for use in your template.
@@ -48,6 +47,8 @@ When you start with a blank template, nothing is provided for you. You must add 
    - **Create**: Opens one of two editors where you can build your template.
    
 3. Select **Create**. The template editor is displayed.
+
+:::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot that shows blank template page.":::
 
 The editor page you see depends on whether your administrator has turned on the enhanced email template editor option:
 
@@ -60,13 +61,13 @@ Start with an existing template to create an email template faster and with less
 
 1. On the **Email Templates** command bar, select **New**, and then select **Start with existing templates**.
 2. Enter the following details:
-:::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
-
    - **Search**: Search for the name of a template to start from. Search doesn't support regular expressions.
    - **Browse** out-of-the-box templates, global and entity-specific, listed in alphabetical order. Global templates are shown as the type User. If you've created custom email templates, they're also listed.
    - **Details**. Preview the templates so that you can pick the one that best meets your needs. You can modify it as needed later.
    - **Select**: Insert the selected template content into your email.
 3. The template editor page is displayed.
+
+:::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
 
 When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in the following template editors:
   - Enhanced email template: If the selected email template was created with the enhanced email template.
