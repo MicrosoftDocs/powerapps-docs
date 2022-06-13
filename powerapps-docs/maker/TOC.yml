@@ -93,7 +93,7 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
-      - name: Create and join a Teams meeting from an appointment (preview)
+      - name: Create and join a Teams meeting from an appointment
         href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
@@ -1208,7 +1208,7 @@
           href: ./canvas-apps/map-component-input-fields.md
         - name: Add multimedia to a component
           href: ./canvas-apps/component-multimedia.md
-        - name: Behavior formulas
+        - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
   - name: Performance and optimization
     items:
@@ -1278,7 +1278,7 @@
           href: ./model-driven-apps/create-remove-pages.md
         - name: Manage app properties
           href: ./model-driven-apps/app-properties.md         
-        - name: Use custom pages within model-driven apps (preview)
+        - name: Use custom pages within model-driven apps
           items:
           - name: Custom pages overview
             href: ./model-driven-apps/model-app-page-overview.md
@@ -1614,7 +1614,7 @@
     href: ./model-driven-apps/model-driven-app-glossary.md    
 - name: Power Apps mobile  
   items:
-  - name: Get started with Power Apps mobile
+  - name: Install Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
@@ -2208,12 +2208,10 @@
       href: ./data-platform/create-edit-metadata.md
     - name: Types of tables
       href: ./data-platform/types-of-entities.md    
-    - name: "Create a table"
-      href: ./data-platform/data-platform-create-entity.md
+    - name: "Create or edit a table"
+      href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
-    - name: Edit a table
-      href: ./data-platform/edit-entities.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
@@ -2228,8 +2226,6 @@
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using Power Apps
-        href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
       - name: How to open table data in Excel
@@ -2751,9 +2747,9 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
-  - name: Migrate Access data to Dataverse for Teams (preview)
+  - name: Migrate Access data to Dataverse for Teams
     href: ../teams/migrate-access-to-dvft.md
-- name: Access migration (preview)
+- name: Access migration
   href: ./data-platform/migrate-access-to-dataverse.md
   items:
   - name: Data types and sizes for Access migration
