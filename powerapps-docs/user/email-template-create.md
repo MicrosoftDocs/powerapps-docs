@@ -46,10 +46,6 @@ When you select **Create**, the editor page you see depends on whether your admi
 - If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the default email template editor page.
 
-> [!NOTE]
-> Email templates created in the default email template editor will open in the default email template editor page, even if the enhanced email template editor option is enabled.
-> Email templates created in the enhanced email template editor will open in the enhanced email template editor page, even if the enhanced email template editor option is disabled.
-
 ### Enhanced email template editor overview
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
