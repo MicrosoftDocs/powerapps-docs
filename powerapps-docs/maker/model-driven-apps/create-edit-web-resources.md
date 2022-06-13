@@ -60,16 +60,16 @@ Part of the name of any web resource you create is the solution publisher prefix
 1. To edit an existing web resource that is part of the unmanaged solution, select it to display the **Edit web resource** pane. To create a new one, on the command bar select **New**, point to **More**, and then select **Web resource**.
 1. Complete the fields on the right web resource pane to create or edit the web resource:
 
-    :::image type="content" source="media/new-web-resource-form.png" alt-text="Create a web resource":::
+   :::image type="content" source="media/new-web-resource-form.png" alt-text="Create a web resource":::
   
-|Column|Description|  
-|-----------|-----------------|  
-|**Upload file**|Select the **Upload file** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
-|**Display Name**|The name displayed if you view a list of web resources.|  
-|**Name**|*Required*. This is the unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
-|**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
-|**Description**|A description of the web resource.|  
-|**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
+   |Column|Description|  
+   |-----------|-----------------|  
+   |**Upload file**|Select the **Upload file** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
+   |**Display Name**|The name displayed if you view a list of web resources.|  
+   |**Name**|*Required*. This is the unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
+   |**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
+   |**Description**|A description of the web resource.|  
+   |**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
 
 1. After you have added your changes, select **Save** and then select **Publish**.  After you save the web resource, the **URL** to the web resource is displayed in the web resource definition. Select this link to view the web resource in your browser.
 
