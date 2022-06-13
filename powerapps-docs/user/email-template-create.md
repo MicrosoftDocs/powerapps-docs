@@ -39,8 +39,7 @@ When you start with a blank template, nothing is provided for you. You must add 
 
 1. On the **Email Templates** command bar, select **New**, and then select **Start with a blank template**.
 2. Enter the following details:
-
-:::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot of template information to provide.":::
+:::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot that shows blank template page.":::
 
    - **Template name**: Give your email template a detailed name to help you identify it later.
    - **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
