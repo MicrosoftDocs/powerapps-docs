@@ -1,7 +1,7 @@
 ---
 title: "Use Upsert to insert or update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "UpsertRequest(Update or Insert) message helps you simplify various data integration scenarios where you do not know if a record already exists in Microsoft Dataverse. In such cases you won’t know if you should call an UpdateRequest or a CreateRequest operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. UpsertRequest message helps you solve that issue" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/08/2022
+ms.date: 06/12/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -19,21 +19,26 @@ contributors:
 ---
 # Use Upsert to insert or update a record
 
-
-
 You can reduce the complexity involved with data integration scenarios by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> message. When loading data into Microsoft Dataverse from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Dataverse. In such cases you won’t know if you should call an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can now reduce this complexity and load data into Dataverse more efficiently by using the new <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> (Update or Insert) message.  
   
 <a name="BKMK_UsingUpsert"></a>   
 
 ## Using Upsert
 
- It is best to use <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> only when you aren’t sure if the record exists. That is, when you aren’t sure if you should call a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> operation. There is a performance decrease in using <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> versus using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>. If you are sure the record doesn’t exist, use <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>.  
+It is best to use <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> only when you aren’t sure if the record exists. That is, when you aren’t sure if you should call a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> operation. There is a performance decrease in using <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> versus using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>. If you are sure the record doesn’t exist, use <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>.  
   
- The <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> includes a property named <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target>. This property contains the entity instance that will be used in an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. It also includes all the columns required by the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> for the target entity so that the record can be created if it doesn’t exist.  
+The <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> includes a property named <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target>. This property contains the entity instance that will be used in an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. It also includes all the attributes required by the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> for the target entity so that the record can be created if it doesn’t exist.  
+
+Upsert is intended to be used to synchronize data from an external system. Unless the external system maintains a reference to the Dataverse primary key values, the Dataverse table will typically have alternate keys defined that store values that uniquely identify records in the external system and apply a unique constraint. When you define <xref:Microsoft.Xrm.Sdk.Entity> instances to use as the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target> parameter, you will need to set the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes> property with the alternate key values that uniquely identify the record instead of the primary key value. The <xref:Microsoft.Xrm.Sdk.Entity> class has two constructors that you can use to specify the key attributes.
+
+If there is a single key attribute, you can use the [Entity(String, String, Object)](/dotnet/api/microsoft.xrm.sdk.entity.-ctor?view=dataverse-sdk-latest#microsoft-xrm-sdk-entity-ctor(system-string-system-string-system-object) constructor to specify a `keyName` and `keyValue`. This is shown in the sample below.
+
+If there are multiple key attributes, define them using a <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> class and set them using the <xref:<xref:Microsoft.Xrm.Sdk.Entity(String,KeyAttributeCollection)?displayProperty=nameWithType>> [Entity(String, KeyAttributeCollection)](/dotnet/api/microsoft.xrm.sdk.entity.-ctor?view=dataverse-sdk-latest#microsoft-xrm-sdk-entity-ctor(system-string-microsoft-xrm-sdk-keyattributecollection) constructor.
+
   
- You can inspect <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> to determine if the record was created. <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> will be true if the record didn’t exist and was created. It will be false if the record already existed and was updated. <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target> will be an `EntityReference` to the record that was found to exist or to the record that was created.  
+After sending the request, you can inspect <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> to determine if the record was created. <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> will be true if the record didn’t exist and was created. It will be false if the record already existed and was updated. <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target> will be an `EntityReference` to the record that was found to exist or to the record that was created.  
   
- To understand how <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> works, see the following section.  
+To understand how <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> works, see the following section.  
   
 <a name="BKMK_upsert"></a>
 
@@ -49,7 +54,9 @@ You can reduce the complexity involved with data integration scenarios by using 
   
    1.  Set the ID property of the target entity with the ID of the found record.  
   
-   2.  Call Update.  
+   2.  Remove any attributes from the Attributes collection that match the alternate keys set in the target.
+  
+   3. Call Update.  
   
    3.  Set the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> to `false`.  
   
