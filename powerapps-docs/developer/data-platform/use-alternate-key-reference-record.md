@@ -1,13 +1,13 @@
 ---
 title: "Use an alternate key to reference a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Alternate keys can be used to create instances of Entity and EntityReference classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.date: 06/13/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: divka78 # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: dikamath # MSFT alias of Microsoft employees only
+manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -17,12 +17,42 @@ contributors:
   - PHecke
   - JimDaly
 ---
-
 # Use an alternate key to reference a record
 
+You will use alternate keys with data integration scenarios to perform data operations where you don't know the primary key value of a Dataverse record. You can only use alternate keys for tables where they are defined. Most Dataverse tables will not have alternate keys unless they have been customized to include them.
+
+To understand how to define and identify alternate keys for a table, see the following topics:
+
+- [Using Power Apps: Define alternate keys to reference rows](../../maker/data-platform/define-alternate-keys-reference-records.md)
+- [Using Code: Work with alternate keys](define-alternate-keys-entity.md)
+
+You can use alternate keys using either the Datverse Web API or the Dataverse SDK for .NET.
+
+# [Web API](#tab/webapi)
+
+When using the Web API you must include the alternate key values in the URL that you use to reference a record. Without an alternate key, you simply include the GUID primary key value after the entity set name. 
+
+For example, to reference an `account` record with the `accountid` primary key value of `00000000-0000-0000-0000-000000000001`, you can use an absolute or relative URL like this: `/accounts(00000000-0000-0000-0000-000000000001)`
+
+But if the `account` entity has been configured with an alternate key, for example on the `accountnumber` column, then you must include the name of the column in the URL referencing the unique value in that column like this `/accounts(accountnumber='ABC123')`
+
+An alternate key may include more than one column in the definition. The combination of values in both columns guarantees uniqueness. To refer to a record that has multiple columns as part of the key, you continue the pattern for a single column, but separate the key/value pairs with a comma. For example, if the `contact` table has an alternate key using both the `firstname` and `emailaddress1` columns, you can refer to that record like this: `/contacts(firstname='Joe',emailaddress1='abc@example.com')`.
+
+When an alternate key is defined for a lookup column, you must use the name of the corresponding [Lookup Property](webapi/web-api-properties.md#lookup-properties). A lookup property follows the following naming convention: `_<name of single-valued navigation property>_value`. So if the primarycontactid lookup column on the account table is defined as an alternate key, you can reference the account record with this URL: `/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000002)`
+
+More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
+
+# [SDK for .NET](#tab/sdk)
+
+SDK
+
+---
 
 
-You can use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This article discusses the usage patterns and possible exceptions that might be thrown when using alternate keys. To understand how to define alternate keys for a table, see [Define alternate keys for a table](define-alternate-keys-entity.md).  
+
+You can use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This article discusses the usage patterns and possible exceptions that might be thrown when using alternate keys.
+
+
 
 > [!NOTE]
 > You can also update records using alternate keys. More information: [Update with Alternate Key](org-service/entity-operations-update-delete.md#update-with-alternate-key)
