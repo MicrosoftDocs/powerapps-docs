@@ -32,7 +32,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
 1. Expand **Entities**, in the list of tables, open the table you want, select the **Controls** tab, and then select **Add Control**.
 1. In the **Add Control** dialog box, select **Power Apps Read-only Grid**, and then select **Add**.
-   :::image type="content" source="media/add-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
+   :::image type="content" source="media/add-power-apps-grid-control.png" alt-text="Add the Power Apps read-only grid control to a table":::
 
 ### Configure the Power Apps read-only grid control
 
