@@ -23,7 +23,7 @@ search.app:
 
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
 You can create email templates by using one of the following options:  
-- **Start with a blank template**: Create a template from the scratch. The editor that's displayed depends on wether the [enhanced email template editor option](cs-email-template-builder.md) is enabled.
+- **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
 - **Start with an existing template** : Create a template by choosing an existing template. The editor that's displayed depends on the editor in which the existing template was created.
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
@@ -37,8 +37,8 @@ More information:
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see. 
 
-To create a template, select **New** on the **Email Templates** command bar, and specify the following information:Specify the following information:
-
+1. On the **Email Templates** command bar, select **New**, and then select **Start with a blank template**.
+2. Enter the following details:
 :::image type="content" source="media/email-create-an-email-template-1a.png" alt-text="Screenshot of template information to provide.":::
 
    1. **Template name**: Give your email template a detailed name to help you identify it later.
@@ -47,7 +47,9 @@ To create a template, select **New** on the **Email Templates** command bar, and
    4. **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    5. **Create**: Opens one of two editors where you can build your template.
    
-When you select **Create**, the editor page you see depends on whether your administrator has turned on the [enhanced email template editor option](cs-email-template-builder.md):
+3. Select **Create**. The template editor is displayed.
+
+The editor page you see depends on whether your administrator has turned on the enhanced email template editor option:
 
 - If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the default email template editor page. 
@@ -56,16 +58,19 @@ When you select **Create**, the editor page you see depends on whether your admi
 
 Start with an existing template to create an email template faster and with less effort. The template is pre-populated with data. All you need to do is customize it for your needs.
 
- When you create a template from an existing template, irrespective of the [enhanced email template editor option](cs-email-template-builder.md) setting, the app displays the newly-created email template in the following template editors:
-  - Enhanced email template: If the selected email template was created with the enhanced email template.
-  - Default email template: If the selected template was created with the default email template.
-
+1. On the **Email Templates** command bar, select **New**, and then select **Start with existing templates**.
+2. Enter the following details:
 :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
 
    1. **Search**: Search for the name of a template to start from. Search doesn't support regular expressions.
    2. **Browse** out-of-the-box templates, global and entity-specific, listed in alphabetical order. Global templates are shown as the type User. If you've created custom email templates, they're also listed.
    3. **Details**. Preview the templates so that you can pick the one that best meets your needs. You can modify it as needed later.
    4. **Select**: Insert the selected template content into your email.
+3. The template editor page is displayed.
+
+When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in the following template editors:
+  - Enhanced email template: If the selected email template was created with the enhanced email template.
+  - Default email template: If the selected template was created with the default email template.
 
 > [!Important]
 > If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
