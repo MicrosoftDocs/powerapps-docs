@@ -4,13 +4,12 @@ description: Learn how Microsoft Dataverse provides multiple ways to integrate w
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "powerapps"
-author: "mmercuri"
+author: "matp"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
@@ -20,7 +19,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Work with any type of app 
 
 Microsoft Dataverse provides multiple ways to integrate in any type of app (mobile, web, desktop), device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
