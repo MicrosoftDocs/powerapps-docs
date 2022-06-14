@@ -87,7 +87,12 @@ Let's say that a table has 1022 records in it. Your page size is 100. The follow
 |3|500|
 |4|500|
 |5|500|
-|6|1022|
+|6|1000|
+|7|1000|
+|8|1000|
+|9|1000|
+|10|1000|
+|11|1022|
 
 
 > [!NOTE]
