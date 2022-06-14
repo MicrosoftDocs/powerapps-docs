@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+ms.date: 06/14/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -29,13 +29,13 @@ With dependent assemblies, rather than register an individual .NET assembly, you
 
 When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PlugPackage` and changes to the related plugin assemblies will be managed on the server.
 
-At runtime, the contents of the NuGet package is copied from the `PluginPackage` row and extracted to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
+At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
 You will still be able to register plug-in assemblies individually, but using `PluginPackage` will become the recommended approach. Even if your current plug-in project doesn't require access to a dependent assembly, if you start with a project configured to support dependent assemblies you will be able to add a dependent assembly later. There is no work planned to convert existing plug-in assembly projects to use `PluginPackage`.
 
 ## Send feedback
 
-If you have questions or issues with this feature you can contact technical support. If you have suggestions pleas post them on the [Power Apps Ideas](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas) site.
+If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas) site.
 
 ## Limitations
 
@@ -50,7 +50,7 @@ To use this feature, you should use these tools and applications.
 
 |Tool/App|Instructions |
 |---------|---------|
-|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the stand-alone version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the stand-alone version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](powerapps-cli.md)|
+|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the stand-alone version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the stand-alone version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
 |**Plug-in Registration tool (PRT)**|You should use version X.X.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
