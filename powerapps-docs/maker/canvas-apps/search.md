@@ -190,51 +190,51 @@ Once you perform a search, the replace pivot shows the list of search results wh
 
 All replaceable results are selected by default. You can refine the list of results to replace by deselecting individual results or entire categories by selecting the checkbox beside the result or category heading. 
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/work-with-search-results-1.png" alt-text="Refine the list of results to replace.":::
 
 You can also filter the result list to only show selected categories of results.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/work-with-search-results-2.png" alt-text="Filter the result list to only show selected categories of results.":::
 
 As you refine the list of results to replace, the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected, the button reads, "Replace all" with the total count of all replaceable items.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/work-with-search-results-3.png" alt-text="Results showing total replacements found.":::
 
 If you've selected results from the list, the button is updated to read, "Replace selected" with the total count of selected items.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/work-with-search-results-4.png" alt-text="Replace selected button showing total number of replace items.":::
 
 You can also interact with individual results in the results list directly to perform replacements by selecting the ellipsis to the right of each individual result in the result list.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/work-with-search-results-5.png" alt-text="Select ellipsis to replace individual result.":::
 
 ### Replacing Variables results
 
 Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details backstage to review the usage before making the replacement.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/variables.png" alt-text="Screen showing replacing variables results.":::
 
 ### Replacing Collections results
 
 Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details backstage prior to making the replacement.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/collections.png" alt-text="Screen showing replace collections results.":::
 
 ### Replacing Screens results
 
 The Screens category shows individual replaceable results following the structure in the Tree View, allowing you to replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, allowing you to choose to pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/replace-screens.png" alt-text="Replaceing Screens results.":::
 
 ### Completing the replacement and undoing replacements
 
 Once you have refined your selection to the items you'd like to replace, selecting the button prompts you to confirm the operation.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/search-replace.png" alt-text="Select Replace to confirm to replace and undo replacements.":::
 
 Confirming the operation performs the replacement and a notification indicates whether the replacement was successful. The replacement operation may fail if a control name is already in use or unsupported characters are included.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/search-replace-confirm.png" alt-text="Confirmation of replacements.":::
 
 After the replacement is complete, you can undo the replacement by using the undo button or by selecting **Ctrl+Z**.
 
