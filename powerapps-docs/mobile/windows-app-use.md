@@ -183,7 +183,7 @@ To see get the session ID, select the More button (...) > **Settings** and then 
 
 ## Limitations and known issues
 - The following is not supported:
-  - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md) and [location](../maker/canvas-apps/functions/signals.md#location)
+  - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md).
   - [Push notifications](power-apps-mobile-notification.md)
   - Pinning an app on Windows desktop
   - [Mixed reality controls](../maker/canvas-apps/mixed-reality-overview.md)
