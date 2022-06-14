@@ -114,18 +114,8 @@ Legend:
 
 8. **User Information**: See the current user that's signed in, sign out of the app, or reconfigure the app**.**
 
-### Go back, row set navigation, open a new window
+9. **Go back**: Use the back button for form, view, and dashboard pages on the command bar to go back to the previous page.
 
-Use the buttons on the command bar to navigation forms, views, and dashboard pages.
-
-> [!div class="mx-imgBorder"] 
->![Command bar navigation.](media/pam-windows-image7.png)
-
-Legend
-
-1. **Go back**: Use the back button for form, view, and dashboard pages on the command bar to go back to the previous page.
-
-2. **Open Record Set**: Navigate through multiple rows by using preset views and queries. The row-focused navigation improves productivity by allowing users to jump from row to row in the list and easily navigate back without losing their working list. The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the table.
 
 ### Create and edit rows
 
