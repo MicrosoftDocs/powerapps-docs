@@ -464,7 +464,7 @@
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
     - name: Microsoft Power Platform CLI
-      href: /power-platform/developer/cli/power-platform-cli
+      href: /power-platform/developer/cli/introduction
     - name: Power Platform Tools for Visual Studio
       href: ./tools/devtools-install.md
   - name: Community Tools
