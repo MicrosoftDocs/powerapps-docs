@@ -175,6 +175,9 @@ function EnableRule() {
 ### Value Rule
 Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
 
+ > [!NOTE]
+ >  On a form, a `ValueRule` requires the specified column to be part of the form for it to work. On a grid or subgrid, the column must be one of the grid columns.
+
 ### Show On Quick Action Rule
 
 Uses the `<EnableRule>` element. Use this rule to make the command appear only as quick action.

@@ -9,7 +9,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "powerapps"
-author: "mmercuri"
+author: "matp"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
@@ -19,10 +19,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Work with any data
-
-
 
 Microsoft Dataverse provides an abstraction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Dataverse exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
 

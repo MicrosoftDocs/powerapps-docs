@@ -78,6 +78,10 @@ Total number of results on the server for the current query.
 
 For Canvas Apps `totalResultCount` is working in 500 divisible stages. When entity has total amount of records more than 500 (and let assume that page size is 100), for page range: from `firstPage`: 1 to `lastPage`: 5, `totalResultCount` will be showing 500. Then for a `lastPage`: 6, `totalResultCount`: will show 1000 in case there are more than 1000 records or will show specific number that indicates total records for the entity.
 
+> [!NOTE]
+> `loadExactPage`, `loadNextPage`, `loadPreviousPage` do not support parallel execution.
+> Executing any of them will trigger `updateView` on the control with newly fetched results.
+
 ### Related topics
 
 [Power Apps component framework API reference](../reference/index.md)<br/>

@@ -32,7 +32,7 @@ A `SavedQuery` view is different from a `UserQuery`. A user query, called a Save
  
 ## Types of views  
 
- The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` parameter. Note that there are other valid values for the `QueryType` parameter not listed here because this table is also used to store Office Outlook filters and templates. More information: [Offline and Outlook filters and templates](../data-platform/outlook-client/offline-outlook-filters-templates.md). 
+ The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` parameter.
   
  When views are defined for a specific table, the `SavedQuery.ReturnedTypeCode` parameter returns the table logical name.  
   
@@ -274,7 +274,7 @@ System.String layoutXml =
 </grid>";  
 ```  
   
- The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade language packs](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699674(v=crm.8)). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+ The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user's Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade language packs](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699674(v=crm.8)). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
   
  Assuming you will most likely be adding custom icons for a choice type of column as it has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid breaking the code due to changes in the localized label string. Also, in your JavaScript function, specify just the name of an image web resource that you want to use as an icon for a value in the column. The image should be of 16x16 pixels size; larger images will be automatically scaled down to 16x16 pixels size.  
   
