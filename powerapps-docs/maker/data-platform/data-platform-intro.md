@@ -22,7 +22,7 @@ searchScope:
 
 Dataverse lets you securely store and manage data that's used by business applications. Data within Dataverse is stored within a set of tables. A *table* is a set of rows (formerly referred to as records) and columns (formerly referred to as fields/attributes). Each column in the table is designed to store a certain type of data, for example, name, age, salary, and so on. Dataverse includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data by using Power Query. App makers can then use Power Apps to build rich applications that use this data.
 
-![Diagram showing overview of Microsoft Power Platform.](./media/data-platform-cds-intro/platform.png "Dataverse in Microsoft Power Platform")
+:::image type="content" source="media/data-platform-cds-intro/platform.png" alt-text="Diagram with overview of Microsoft Power Platform.":::
 
 For information about purchasing a plan to use Dataverse, go to [Pricing info](/power-platform/admin/pricing-billing-skus).
 
@@ -96,6 +96,7 @@ Tables within Dataverse can take advantage of rich server-side logic and validat
 - **Business logic with code** supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](../../developer/data-platform/apply-business-logic-with-code.md)
 
 ## Security
+
 Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Dataverse environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities
