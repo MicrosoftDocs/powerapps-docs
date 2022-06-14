@@ -20,10 +20,8 @@ contributors:
 In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
 > [!NOTE] 
-> You can also use Power Platform CLI with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
-
-> [!NOTE]
-> This tutorial focuses on the required Microsoft Power Platform CLI commands for
+> - You can also use Power Platform CLI with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+> - This tutorial focuses on the required Microsoft Power Platform CLI commands for
 Power Apps portals use. For more information about commands used in Power Platform
 CLI, read [Common
 commands](/power-platform/developer/cli/introduction#common-commands).
