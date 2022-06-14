@@ -76,7 +76,19 @@ Total number of results on the server for the current query.
 
 ## Limitations
 
-For Canvas Apps `totalResultCount` is working in 500 divisible stages. When entity has total amount of records more than 500 (and let assume that page size is 100), for page range: from `firstPage`: 1 to `lastPage`: 5, `totalResultCount` will be showing 500. Then for a `lastPage`: 6, `totalResultCount`: will show 1000 in case there are more than 1000 records or will show specific number that indicates total records for the entity.
+For Canvas Apps `totalResultCount` will not always show the total number of records a table has. Because of [delegation](../../../maker/canvas-apps/delegation-overview.md), it will return a value divisible by 500 until the last set of records is reached.
+
+Let's say that a table has 1022 records in it. Your page size is 100. The following table shows the `totalResultCount` value you can expect for each page:
+
+|Page  |Value  |
+|----|----|
+|1|500|
+|2|500|
+|3|500|
+|4|500|
+|5|500|
+|6|1022|
+
 
 > [!NOTE]
 > `loadExactPage`, `loadNextPage`, `loadPreviousPage` do not support parallel execution.
