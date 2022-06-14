@@ -43,6 +43,8 @@ Starting June 2022, [OData feeds](configure/entity-lists.md#list-odata-feeds) to
 
 Starting June 2022, portal content editor tool to design your website is deprecated. We recommend using Power Apps portals Studio to edit the portal.
 
+**This feature will be removed by April 2023**
+
 ## Portals search using Lucene .NET search 
 
 Starting with website version 9.4.4.xx, portal search uses Dataverse search as a default search provider for all new portals. Lucene .NET search is deprecated; however, existing portals using Lucene .NET search won't be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
