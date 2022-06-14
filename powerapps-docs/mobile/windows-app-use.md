@@ -4,7 +4,7 @@ description: Use Power Apps for Windows.
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/16/2022
+ms.date: 06/14/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -169,6 +169,10 @@ Note, the Quick create option is only available for rows that are enabled by you
 With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](../user/relevance-search.md).
 
 ![Search bar at the top](media/pam-windows-image13.png)
+
+## Notifications 
+
+Notifications on Power Apps for Windows work the same as when you run a model-driven app in a browser. For more information, see [In-app notifications in model-driven apps](../user/notifications).
 
 ## Set up mobile offline
 
