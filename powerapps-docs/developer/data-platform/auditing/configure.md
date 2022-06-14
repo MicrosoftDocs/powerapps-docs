@@ -1,7 +1,7 @@
 ---
 title: "Configure auditing (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Explains how to configure programatically configure auditing settins for the organization, tables and columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+ms.date: 06/13/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
@@ -139,7 +139,7 @@ You can set these column values using Web API or Dataverse SDK for .NET. More in
 
 ## Configure tables and columns
 
-When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can participate in auditing are enabled. The primary control is at the organization and then table level.
+When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. The primary control is at the organization and then table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
