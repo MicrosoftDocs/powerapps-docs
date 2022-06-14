@@ -133,9 +133,9 @@ The assembly is also available within the **Display by Assembly** view.
 
 ### Update a plugin package
 
-While viewing the list of pluginpackages using the **Display by Package** view, select the pluginpackage and click the **Update** command.
+While viewing the list of plugin packages using the **Display by Package** view, select the plugin package and click the **Update** command.
 
-:::image type="content" source="media/prt-pluginpackage-update-command.png" alt-text="Showing the Update command while a pluginpackage is selected.":::
+:::image type="content" source="media/prt-pluginpackage-update-command.png" alt-text="Showing the Update command while a plugin package is selected.":::
 
 This opens a dialog to allow you to select the NuGet Package with changes.
 
@@ -150,13 +150,16 @@ This opens a dialog to allow you to select the NuGet Package with changes.
 
 ### Delete plugin packages
 
-While viewing the list of pluginpackages using the **Display by Package** view, select the pluginpackage and click the **Unregister** command.
+While viewing the list of plugin packages using the **Display by Package** view, select the plugin package and click the **Unregister** command.
 
 :::image type="content" source="media/prt-pluginpackage-unregister-command.png" alt-text="Showing the Unregister command while a plugin package is selected.":::
 
 > [!IMPORTANT]
 > Unregistering a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
 
+## Limitations
+
+A plugin package is limited to 16 MB in size or 50 assemblies.
 
 ## Design notes
 
