@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/24/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -24,6 +24,9 @@ A Power Apps portal consists of solutions from different packages in an environm
 > [!IMPORTANT]
 > - Updating packages might take some time. While the upgrade is in progress, you might see some instability in your portal; hence, we recommend that you update packages during off-peak hours.
 > - Solutions in a package are upgraded for an environment. Hence, the selected package will be upgraded for all portals in the environment using the package.
+
+> [!NOTE]
+> You can also update solution packages for Power Pages sites. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Required permissions
 
