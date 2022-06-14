@@ -25,7 +25,7 @@ searchScope:
 Install Power Apps for Windows to run model-driven app or canvas app on your Windows device. For more information on Power Apps, see [What is Power Apps](/powerapps/powerapps-overview).
 
 > [!IMPORTANT]
-> Power Apps for Windows 8 will be deprecated and replaced with the Windows app covered in this topic. For more information, see [Power Apps for Windows will be deprecated and replaced with a new app](/power-platform/important-changes-coming.md#power-apps-for-windows-will-be-deprecated-and-replaced-with-a-new-app).
+> Power Apps for Windows 8 will be deprecated and replaced with the Windows app covered in this topic. For more information, see [Power Apps for Windows will be deprecated and replaced with a new app](/power-platform/important-changes-coming#power-apps-for-windows-will-be-deprecated-and-replaced-with-a-new-app).
 
 
 ## Install the app
