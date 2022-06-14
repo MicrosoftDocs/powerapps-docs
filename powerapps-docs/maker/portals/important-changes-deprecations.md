@@ -47,6 +47,8 @@ Starting June 2022, portal content editor tool to design your website is depreca
 
 Starting with website version 9.4.4.xx, portal search uses Dataverse search as a default search provider for all new portals. Lucene .NET search is deprecated; however, existing portals using Lucene .NET search won't be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
 
+**All existing customers using Lucene .NET search must migrate to Dataverse search by October 2023.**
+
 ## CDN for US Government
 
 Starting January 2022, Power Apps portals for US Government will begin using [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) for [default JavaScript and CSS files](faq.yml#do-portals-use-any-static-content-from-cdns--content-delivery-network--that-i-need-to-allow-list-). Depending on the US Government deployment, configure the allowlist for the following CDN URLs:
