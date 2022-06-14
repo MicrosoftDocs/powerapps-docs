@@ -160,13 +160,14 @@ PCF authentication for third parties is not supported.
 
 Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
 
-## Control loads forever
+## Control cannot finish loading
 
-Whenever refresh is called, it will reset the page number to 1, and then fetch the first page of records under the current filtering and sorting criteria. When the updated data is received by the client, updateView will be called to update the display. If putting refresh in updateView without guarded by a condition, it will create an infinite loop. The control will be forever loading, and will not be able to fetch records beyond the first page.
+If you use [refresh](./reference/dataset/refresh.md) in `updateView` you must include a guarding condition, otherwise it will create an infinite loop. Whenever `refresh` is called, it will reset the page number to 1, and then fetch the first page of records under the current filtering and sorting criteria. When the updated data is received by the client, `updateView` will be called to update the display.  The result is that the control cannot finish loading and will not be able to fetch records beyond the first page.
 
-## Paging not working properly (same page is loaded)
+## Same page is loaded rather than the expected one
 
 [refresh](./reference/dataset/refresh.md), [loadExactPage](./reference/paging/loadExactPage.md), [loadNextPage](./reference/paging/loadnextpage.md), [loadPreviousPage](./reference/paging/loadpreviouspage.md) do not support parallel execution.
+
 When these functions are called, the results for the requested page will not be available immediately in the next line. Instead they will trigger `updateView` on the control with newly fetched results.
 
 
