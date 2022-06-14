@@ -32,7 +32,7 @@ If you're not signed up for Power Apps, [sign up for free](https://make.powerapp
 
  
 > [!NOTE]
-> Power Apps for Windows is in preview. For more information see, [Power Apps for Windows (preview)](windows-app-install.md).
+>  For more information on Power Apps for Windows, see [Power Apps for Windows](windows-app-install.md).
 
 
 
@@ -51,7 +51,7 @@ The table below outlines which mobile app you can use to run your app.
 | **Mobile App** | **Apps you can run** |
 |-------------------------|-------------------------|
 | [Power Apps mobile](run-powerapps-on-mobile.md) (covered in this topic) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamis 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
-| [Power Apps for Windows (preview)](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
+| [Power Apps for Windows](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
 | [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |

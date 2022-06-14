@@ -1630,7 +1630,7 @@
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-  - name: 'Mobile offline'
+  - name: Mobile offline
     items:
     - name: Mobile offline overview (preview)
       href: ../mobile/mobile-offline-overview.md
@@ -1640,11 +1640,11 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
-  - name: 'Power Apps for Windows (preview)'
+  - name: Power Apps for Windows 
     items:
-    - name: Install Power Apps for Windows (preview)
+    - name: Install Power Apps for Windows 
       href: ../mobile/windows-app-install.md
-    - name: Use Power Apps for Windows (preview)
+    - name: Use Power Apps for Windows 
       href: ../mobile/windows-app-use.md
 - name: Portals
   items:
