@@ -584,7 +584,7 @@ By setting this property, you can configure other behaviors for the column when 
 
 </td>
 <td>
-	
+
 Example:
 	
   ```
@@ -600,7 +600,6 @@ Default:
   "readOnlySettings": {
 }
   ```
-  
 </td>
 </tr>
 
@@ -615,10 +614,9 @@ By setting this property, you can allow more content to be displayed.
 
 </td>
 <td>
-	
+
 Example:
-	
-  ```
+ ```
   "sanitizerAllowlist": {
 	"attributes": ["data-id-wrapper"],
 	"cssProperties": ["filter","list-style-type"],

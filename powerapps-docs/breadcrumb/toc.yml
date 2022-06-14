@@ -25,7 +25,7 @@
         tocHref: /power-apps/developer/data-platform/
         topicHref: /power-apps/maker/index
         items: 
-        - name: Microsoft Dataverse
+        - name: Dataverse
           tocHref: /power-apps/developer/data-platform/
           topicHref: /power-apps/maker/data-platform/index          
           items:

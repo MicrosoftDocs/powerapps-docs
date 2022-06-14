@@ -1,15 +1,16 @@
 ---
 title: "Code components application lifecycle management | MicrosoftDocs"
 description: "Learn about the considerations and strategies for working with specific aspects of ALM from the perspective of code components in Microsoft Dataverse."
-ms.topic: "article"
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: article
+ms.subservice: pcf
 contributors:
-  - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 # Code components application lifecycle management (ALM)
@@ -31,7 +32,7 @@ This article describes considerations and strategies for working with specific a
 When developing code components, you would follow the steps below:
 
 1. Create code component project (`pcfproj`) from a template using `pac pcf init`. More information: [Create and build a code component](create-custom-controls-using-pcf.md).
-2. Implement code component logic. More information: [Component implementation](control-implementation-library.md).
+2. Implement code component logic. More information: [Component implementation](custom-controls-overview.md#component-implementation).
 3. Debug the code component using the local test harness. More information: [Debug code components](debugging-custom-controls.md).
 4. Create a solution project (`cdsproj`) and add the code component project as a reference. More information: [Package a code component](import-custom-controls.md).
 5. Build the code component in **release** mode for distribution and deployment.
@@ -140,7 +141,7 @@ Once a solution that contains a code component is unpacked using `SolutionPackag
 │   └── prefix_namespace.ControlName
 │       ├── bundle.js *
 │       └── css
-│       	└── ControlName.css *
+│          └── ControlName.css *
 │       ├── ControlManifest.xml *
 │       └── ControlManifest.xml.data.xml
 ├── Entities

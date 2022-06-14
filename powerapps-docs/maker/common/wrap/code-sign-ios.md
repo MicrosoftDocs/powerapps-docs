@@ -1,11 +1,11 @@
 ﻿---
-title: Code sign for iOS (preview)
+title: Code sign for iOS
 description: Learn about how to code sign for iOS for Power Apps wrap.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/09/2022
+ms.date: 06/06/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -17,9 +17,7 @@ contributors:
   - larryk78
 ---
 
-# Code sign for iOS (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Code sign for iOS
 
 In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
@@ -81,7 +79,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 ### Create Certificate Signing Request (CSR)
 
-1. On your Mac PC, go to the **Applications** folder > **Utilities** > open **Keychain Access**.
+1. On your Mac, go to the **Applications** folder > **Utilities** > open **Keychain Access**.
 
 1. Select **Keychain Access** > **Certificate Assistant** > **Request a Certificate from a Certificate Authority**.
 
@@ -91,7 +89,7 @@ To create a distribution certificate, create a new certificate signing request f
     1. In the **User Email Address** field, enter your Apple ID email address to identify with this certificate.
     1. In the **Common Name** field, enter your name.
     1. In the **Request** group, select **Saved to disk**.
-    1. Save the file to your Mac PC.
+    1. Save the file to your Mac.
 
 ## Create the distribution certificate
 
@@ -111,7 +109,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/upload-cert.png" alt-text="Upload the certificate.":::
 
-1. Select **Continue**, and download the certificate to your Mac PC.
+1. Select **Continue**, and download the certificate to your Mac.
 
 1. Double-click the downloaded .cer file to install to Keychain Access.
 
@@ -183,9 +181,9 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
-1. Install the .ipa file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios).
+1. Install the .ipa file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 ### See also
 
-- [Wrap overview (preview)](overview.md)
-- [Code sign on Android (preview)](code-sign-android.md)
+- [Wrap overview](overview.md)
+- [Code sign on Android](code-sign-android.md)

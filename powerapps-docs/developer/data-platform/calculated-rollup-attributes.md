@@ -27,16 +27,16 @@ search.app:
 ## Common elements and characteristics  
  Calculated and rollup columns share some common elements and characteristics, for example:  
   
-- They’re read-only.  
+- They're read-only.  
   
-- They’re not specific to the user. The calculation is performed using a system user account, so the values may be based on records that the user doesn’t otherwise have privileges to view, such as columns that have field-level security enabled.  
+- They're not specific to the user. The calculation is performed using a system user account, so the values may be based on records that the user doesn't otherwise have privileges to view, such as columns that have field-level security enabled.  
   
   All columns that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> have a <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SourceType> property that can contain the values shown in the following table.  
   
 |                 Value                 |                                    Description                                     |
 |---------------------------------------|------------------------------------------------------------------------------------|
 | Null |       Not a valid type of column to be a calculated or rollup column.        |
-|                   0                   | Simple column. The column isn’t defined as a calculated or rollup column. |
+|                   0                   | Simple column. The column isn't defined as a calculated or rollup column. |
 |                   1                   |                                Calculated column                                |
 |                   2                   |                                  Rollup column                                  |
   
@@ -71,17 +71,17 @@ search.app:
  Calculated column values are available in the retrieve plug-in pipeline. Post image of a table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity images](understand-the-data-context.md#entity-images)
   
 ### Limitations  
- You can’t use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)  
+ You can't use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)  
   
  Only columns from an immediate parent table can be used in a calculated column.  
   
  Saved queries, charts, and visualizations can have a maximum of 50 unique calculated columns.  
   
- Calculated columns can reference other calculated columns in their formula, but they can’t reference themselves.  
+ Calculated columns can reference other calculated columns in their formula, but they can't reference themselves.  
   
- Calculated columns don’t have values when a user with Dynamics 365 for Outlook is offline.  
+ Calculated columns don't have values when a user with Dynamics 365 for Outlook is offline.  
   
- `MaxValue` and `MinValue` column definitions properties can’t be set on calculated columns  
+ `MaxValue` and `MinValue` column definitions properties can't be set on calculated columns  
   
 <a name="BKMK_Rollup"></a>   
 
@@ -95,7 +95,7 @@ search.app:
 >   
 >  If you want to trigger the creation of a new **Mass Calculated Rollup Fields** job programmatically, retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for the rollup column using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest> and use <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest> to update the column without making any actual changes.  
   
- The **Mass Calculated Rollup Fields** job will occur immediately when a solution containing a rollup column is imported. This assumes that you are installing a solution during a time that won’t adversely impact users.  
+ The **Mass Calculated Rollup Fields** job will occur immediately when a solution containing a rollup column is imported. This assumes that you are installing a solution during a time that won't adversely impact users.  
   
  Each rollup column for a table will also include two supporting columns for the rollup column:  
   
@@ -127,22 +127,22 @@ search.app:
 |<xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldRequest>|`Target`: <xref:Microsoft.Xrm.Sdk.EntityReference> for the record.<br /><br /> `FieldName`: String representing the logical name of the column.|  
 |<xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldResponse>|`Entity`: <xref:Microsoft.Xrm.Sdk.Entity> containing the rollup column and the supporting *\<attribute SchemaName>*`_Date` and *\<attribute SchemaName>*`_State` columns.|  
   
- This message is a synchronous operation for just the column identified in the request. If the value of that record is included as part of other rollup columns, the values of those columns won’t take the possible value change caused by calling this method into consideration until the regularly scheduled asynchronous jobs that perform those calculations occur.  
+ This message is a synchronous operation for just the column identified in the request. If the value of that record is included as part of other rollup columns, the values of those columns won't take the possible value change caused by calling this method into consideration until the regularly scheduled asynchronous jobs that perform those calculations occur.  
   
 ### Limitations  
- Rollup columns can’t be used as a workflow event or wait condition. These columns don’t raise the event to trigger workflows.  
+ Rollup columns can't be used as a workflow event or wait condition. These columns don't raise the event to trigger workflows.  
   
- The ModifiedBy and ModifiedOn columns for the table aren’t updated when the rollup column is updated.  
+ The ModifiedBy and ModifiedOn columns for the table aren't updated when the rollup column is updated.  
   
  A maximum of 100 rollup columns can be defined within an organization. Each table can have no more than 10 rollup column.  
   
- A rollup column formula can’t reference another rollup column.  
+ A rollup column formula can't reference another rollup column.  
   
- A rollup column formula can’t reference complex calculated column. Only calculated column that reference simple columns in the same record can be used with rollups.  
+ A rollup column formula can't reference complex calculated column. Only calculated column that reference simple columns in the same record can be used with rollups.  
   
- A rollup column formula can’t include records in many-to-many (N:N) relationships. It can only include records in one-to-many (1:N) relationships.  
+ A rollup column formula can't include records in many-to-many (N:N) relationships. It can only include records in one-to-many (1:N) relationships.  
   
- Rollup column formulas can’t use one-to-many (1:N) relationships with the `ActivityPointer` or `ActivityParty` table.  
+ Rollup column formulas can't use one-to-many (1:N) relationships with the `ActivityPointer` or `ActivityParty` table.  
   
 <a name="BKMK_SourceTypeMasks"></a>   
 
@@ -185,10 +185,12 @@ search.app:
 ```  
   
 ### See also  
- [Video: Rollup and calculated columns in Dataverse](https://youtu.be/RoahCH1p3T8)   
- [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
- [Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
- [Define rollup columns](../../maker/data-platform/define-rollup-fields.md)
+   
+[Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)<br />
+[Define calculated columns](../../maker/data-platform/define-calculated-fields.md)<br />
+[Define rollup columns](../../maker/data-platform/define-rollup-fields.md)<br />
+[Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)
+
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
