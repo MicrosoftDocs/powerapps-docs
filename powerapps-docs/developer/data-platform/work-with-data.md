@@ -25,7 +25,7 @@ Dataverse has [tables](entities.md) that are used to model and manage business d
 
 ## Use web services to work with data
 
-Dataverse provides two web services that you can use to interact with data: Web API, and Organization service, and one that you can use to search for data in Dataverse. Choose the one that best matches the requirement and your skills. [Search for Dataverse records](search/overview.md)
+Dataverse provides two web services that you can use to interact with data: Web API, and Organization service, and one that you can use to search for data in Dataverse. Choose the one that best matches the requirement and your skills.
 
 ![Flow diagram to choose web service.](media/whentousewebapi.png)
 
