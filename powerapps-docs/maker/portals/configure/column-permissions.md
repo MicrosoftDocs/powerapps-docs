@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/01/2022
+ms.date: 06/14/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -69,20 +69,20 @@ In this example, we have a contact table with the columns **JobTitle** and **Sal
 
 The following table shows the result of applying different column and table permissions to the contact table and the additional columns.
 
-| **Table permission** | **Site  setting**<br><em>**Webapi/contact/enabled**</em> | **Site setting**<br><em>**Webapi/contact/fields**</em> | **Column permission** | **Scenario** |
-|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| Contact (Create, Read, Update) | TRUE |  |  | The user won't have any permissions to the columns. |
-| Contact (Create, Read, Update) | FALSE |  |  | The user won't have any permissions to the columns. |
-| Contact (&lt;none&gt;) | TRUE | * | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
-| Contact (Create, Read, Update) | TRUE | * |  | The user will have Create, Read, and Update permissions on all contact table columns. |
-| Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user won't have any permissions to the columns. |
-| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | The user will have Read on JobTitle and Create, Read, and Update on all the other columns. |
-| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** Read</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br></ul> | The user will have Create, Read, and Update on JobTitle and only Read on all the other columns. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary |  | The user will have Create, Read, and Update on JobTitle and Salary. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; | The user will have Create, Read, and Update on JobTitle and Salary, no permission on other columns. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> | The user will have Create, Read, and Update on JobTitle and Salary. |
-| Contact (Create, Read, Update) | TRUE | JobTitle | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> | The user will have Create, Read, and Update on JobTitle and no permission on Salary. |
-| Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Read</li></br></ul> | The user will have Create, Read, and Update on JobTitle and Read on Salary. |
+| **Scenario** | **Table permission** | **Site  setting**<br><em>**Webapi/contact/enabled**</em> | **Site setting**<br><em>**Webapi/contact/fields**</em> | **Column permission** | 
+|-|-|-|-|-|
+| Users to not have any permissions to the columns. | Contact (Create, Read, Update) | TRUE |  |  |  
+| Users to not have any permissions to the columns. | Contact (Create, Read, Update) | FALSE |  |  | 
+| Users to not have any permissions to the columns. | Contact (&lt;none&gt;) | TRUE | * | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |
+| Users to have Create, Read, and Update permissions on all *contact* table columns. | Contact (Create, Read, Update) | TRUE | * |  |
+| Users to not have any permissions to the columns. | Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |
+| Users to have Read on *JobTitle* and Create, Read, and Update on all the other columns.  | Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | |
+| The user will have Create, Read, and Update on *JobTitle* and only Read on all the other columns.| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** Read</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br></ul>  |
+| User to have Create, Read, and Update on *JobTitle* and *Salary*.| Contact (Create, Read, Update) | TRUE | JobTitle, Salary |  |  
+| User to have Create, Read, and Update on *JobTitle* and *Salary*, no permission on other columns. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |  
+| User to have Create, Read, and Update on *JobTitle* and *Salary*. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> |
+| User to have Create, Read, and Update on *JobTitle* and no permission on *Salary*.| Contact (Create, Read, Update) | TRUE | JobTitle | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul>  |
+| The user will have Create, Read, and Update on *JobTitle* and Read on *Salary*. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Read</li></br></ul> |
 
 ### See also
 
