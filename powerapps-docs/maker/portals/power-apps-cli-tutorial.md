@@ -26,7 +26,7 @@ In this tutorial example, you’ll see how to get started with Microsoft Power P
 > This tutorial focuses on the required Microsoft Power Platform CLI commands for
 Power Apps portals use. For more information about commands used in Power Platform
 CLI, read [Common
-commands](../../developer/data-platform/powerapps-cli.md#common-commands).
+commands](/power-platform/developer/cli/introduction#common-commands).
 
 ## Download and install Visual Studio Code
 
