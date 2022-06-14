@@ -4,7 +4,7 @@ description: Provides properties and methods to work with paging.
 ms.author: noazarur
 author: noazarur-microsoft
 manager: lwelicki
-ms.date: 05/27/2022
+ms.date: 06/14/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -64,6 +64,25 @@ Total number of results on the server for the current query.
 
 **Type**: `number`
 
+> [!NOTE]
+> For Canvas Apps `totalResultCount` will not always show the total number of records a table has. Because of [delegation](../../../maker/canvas-apps/delegation-overview.md), it will return a value divisible by 500 until the last set of records is reached.
+>
+>Let's say that a table has 1022 records in it. Your page size is 100. The following table shows the `totalResultCount` value you can expect for each page:
+>
+>|Page  |Value  |
+>|----|----|
+>|1|500|
+>|2|500|
+>|3|500|
+>|4|500|
+>|5|500|
+>|6|1000|
+>|7|1000|
+>|8|1000|
+>|9|1000|
+>|10|1000|
+>|11|1022|
+
 ## Methods
 
 | Method                                         | Description                                                                                |
@@ -75,25 +94,6 @@ Total number of results on the server for the current query.
 | [setPageSize](paging/setpagesize.md)           | [!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]           |
 
 ## Limitations
-
-For Canvas Apps `totalResultCount` will not always show the total number of records a table has. Because of [delegation](../../../maker/canvas-apps/delegation-overview.md), it will return a value divisible by 500 until the last set of records is reached.
-
-Let's say that a table has 1022 records in it. Your page size is 100. The following table shows the `totalResultCount` value you can expect for each page:
-
-|Page  |Value  |
-|----|----|
-|1|500|
-|2|500|
-|3|500|
-|4|500|
-|5|500|
-|6|1000|
-|7|1000|
-|8|1000|
-|9|1000|
-|10|1000|
-|11|1022|
-
 
 > [!NOTE]
 > `loadExactPage`, `loadNextPage`, `loadPreviousPage` do not support parallel execution.
