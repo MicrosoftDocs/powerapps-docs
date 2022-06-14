@@ -34,7 +34,7 @@ Starting June 2022 [Authorize endpoint](oauth-implicit-grant-flow.md#authorize-e
 
 ## List OData Feed 
 
-Starting June 2022, [OData feeds](configure/entity-lists.md#list-odata-feeds) to interact with data via RESTtful webservice will be deprecated. We recommend you migrate portal [Web API](web-api-overview.md) by April 2023. 
+Starting June 2022, [OData feeds](configure/list-odata-feeds.md) to interact with data via RESTful web service will be deprecated. We recommend you migrate to the portal [Web API](web-api-overview.md) by April 2023. 
 
 > [!Important] 
 > Starting October 2022, all newly provisioned portals will not able to use list oData features. 
@@ -63,9 +63,9 @@ Starting January 2022, Power Apps portals for US Government will begin using [Az
 
 ## Table permission changes for forms and lists on new portals
 
-Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all [forms](configure/entity-forms.md#secure-your-forms) and [lists](configure/entity-lists.md#securing-lists) irrespective of the **Enable Table Permissions** setting.
+Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all [forms](configure/entity-forms.md#secure-your-forms) and [lists](configure/securing-lists.md)irrespective of the **Enable Table Permissions** setting.
 
-Also, with the same release, lists on all portals (new or existing) that have [OData feeds](configure/entity-lists.md#list-odata-feeds) enabled will require appropriate [table permissions](configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+Also, with the same release, lists on all portals (new or existing) that have [List OData feeds](configure/list-odata-feeds.md) enabled will require appropriate [table permissions](configure/entity-permissions-studio.md) setup for the feed on these lists to work.
 
 > [!NOTE]
 > The changes described above also apply to portals [converted](admin/convert-portal.md) from trial to production.
@@ -80,8 +80,8 @@ With this change, we're adding a new website setting to control the **SameSite**
 
 | Site Setting Name | Scope | Possible value |
 | - | - | - |
-| HTTP/SameSite/Default | Global, for all cookies. | None <br> Lax <br> Strict |
-| HTTP/SameSite/{CookieName} | Specific cookie. | None <br> Lax <br> Strict |
+| HTTP/SameSite/Default | Global, for all cookies. | None <br /> Lax <br /> Strict |
+| HTTP/SameSite/{CookieName} | Specific cookie. | None <br /> Lax <br /> Strict |
 
 Default value for all existing and newly provisioned portals is **None**.
 
