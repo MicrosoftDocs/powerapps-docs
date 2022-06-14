@@ -1128,19 +1128,18 @@ The following table outlines a list of accessibility shortcuts available when us
 
 	
 	
-	
-# Offline experience
+## Offline experience
 
 The rich text editor control is available when working offline with a basic configuration. The following is a list of supported plugins and formatting options when working offline. All configuration added through web resource files are not available while offline.
 	
-## Plugins available for offline
+### Plugins available for offline
 
 The following plugins are available to the rich text editor while offline.
 ```
 ajax,autogrow,basicstyles,bidi,blockquote,button,confighelper,contextmenu,dialog,dialogui,editorplaceholder,enterkey,entities,fakeobjects,floatingspace,floatpanel,format,horizontalrule,htmlwriter,indent,indentblock,indentlist,justify,lineutils,list,listblock,maximize,menu,menubutton,notification,notificationaggregator,panel,panelbutton,popup,preview,removeformat,resize,richcombo,selectall,showborders,sourcearea,specialchar,stylescombo,tab,textmatch,textwatcher,toolbar,undo,widgetselection,wysiwygarea,xml
 ```
 
-## Formatting options for offline
+### Formatting options for offline
 
 The following table describes the different formatting features and functionality options that are available in the rich text editor while offline. 
 
