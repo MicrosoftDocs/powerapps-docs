@@ -1,14 +1,13 @@
 ---
 title: Embed an app in Teams  | Microsoft Docs
 description: You can embed an app created in Power Apps in Microsoft Teams to share it.
-author: matthewbolanos
-
+author: msftsamperl
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 07/14/2021
+ms.date: 04/20/2022
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -32,19 +31,17 @@ You can share an app you've created by embedding it directly into Microsoft Team
 - You need a valid [Power Apps license](/power-platform/admin/pricing-billing-skus).
 - To embed an app into Teams, you need an existing app [created using Power Apps](../maker/canvas-apps/data-platform-create-app.md).
 
-## Download the app
+## Add to Teams
 
-1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
-
-    ![Show list of apps.](media/embed-teams-app/file-apps2.png "Show list of apps")
+1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps**.
 
 1. Select **More actions** (...) for the app you want to share in Teams, and then select **Add to Teams**.
 
-    ![Add to Teams.](media/embed-teams-app/add-to-teams.png "Add to Teams")
+    :::image type="content" source="media/embed-teams-app/add-to-teams-option.png" alt-text="Add to Teams.":::
 
     **Add to Teams** panel opens on the right-side of the screen.
 
-    ![Add to Teams panel.](media/embed-teams-app/download-app.png "Add to Teams panel")
+    :::image type="content" source="media/embed-teams-app/add-to-teams-review.png" alt-text="Add to Teams - review options.":::
 
 1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in Power Apps Studio to add.
 
@@ -52,20 +49,38 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
     ![Add additional details.](media/embed-teams-app/additional-settings-embed.png "Add additional details")
 
-1. Select **Download app**. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
+1. Select **Add to Teams** and you'll be asked to open Teams.
 
-1. Save the downloaded file.
+    :::image type="content" source="media/embed-teams-app/add-to-teams-button.png" alt-text="Add to Teams button.":::
 
-## Add the app as a personal app
+    > [!TIP]
+    > If you want, you can also choose **Download app** to download the app, and then use the steps described in [Upload your app in Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) article to upload the app to Teams.
 
-1. To add the app as a personal app or as a tab to any channel or conversation, select **Apps** in the left navigation and then select **Upload a custom app**.
+1. Select **Open Microsoft Teams** to open Teams app, or select **Cancel** followed by **Use the web app instead** to open Teams web.
 
-    > [!NOTE]
-    > The **Upload a custom app** only appears if your Teams administrator has created a [custom app policy](/microsoftteams/teams-app-setup-policies) and turned on **Allow uploading of custom apps**.
+1. Select **Add**. You can also choose to add the app to a specific team using **Add to team**, or a specific chat using **Add to chat**.
 
-    ![Add app as tab.](media/embed-teams-app/upload-custom-app.png "Upload a custom app")
+    :::image type="content" source="media/embed-teams-app/add-to-teams-in-teams.png" alt-text="Add app to Teams, a team, or a chat.":::
 
-2. Select **Add** to add the app as a personal app or select **Add to team** to add the app as a tab within an existing channel or conversation.
+    The app is now added to Teams.
+
+    > [!TIP]
+    > You can also [pin the app](install-personal-app.md#pin-power-apps-to-teams) for easy access.
+
+## Add to Teams using the web player
+
+You can also add canvas apps to Teams using the web player. There are two ways to run a canvas app using the web player.
+
+1. Go to [Power Apps](https://make.powerapps.com) > **Apps** > select the app to launch in a new browser tab.
+1. [Edit the app](../maker/canvas-apps/edit-app.md) > select ![Play the app.](media/embed-teams-app/play.png) or press **F5** to play the app.
+
+After the app is open using the web player, choose the **Add to Teams** button from the top-right side of the screen.
+
+:::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams using web player.":::
+
+When prompted, select **Open Microsoft Teams** to open Teams app, or select **Cancel** followed by **Use the web app instead** to open Teams web. And then, select **Add** to add the app to Teams.
+
+You can also choose to add the app to a specific team using **Add to team**, or a specific chat using **Add to chat**.
 
 ## Publish the app to the Teams catalog
 
@@ -124,18 +139,18 @@ The following context variables from Teams are supported:
 
 You can optionally preload your app within Teams to increase performance.
 
-1. Sign in to [make.powerapps.com](https://make.powerapps.com), and then select **Apps** in the menu.
+1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
 
 2. Select **More actions** (...) for the app you want to share in Teams, and then select **Settings**.
 
 3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load whenever embedded in Teams.
 
-    ![Preload app for enhanced performance.](media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
+    :::image type="content" source="media/embed-teams-app/preload-app.png" alt-text="Preload app for enhanced performance.":::
 
 4. For the changes to take effect, remove and add your app into Teams again.
 
-> [!NOTE]
-> This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This behavior ensures that your app data won't be available to unauthenticated users. Information in the compiled app includes&mdash;a collection of JavaScript files containing text authored in app controls, media assets (such as images), the app name, and the environment URL the app resides in.  
+    > [!NOTE]
+    > This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This behavior ensures that your app data won't be available to unauthenticated users. Information in the compiled app includes&mdash;a collection of JavaScript files containing text authored in app controls, media assets (such as images), the app name, and the environment URL the app resides in.  
 
 ### See also
 
