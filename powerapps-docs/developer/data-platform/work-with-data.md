@@ -23,9 +23,11 @@ contributors:
 
 Dataverse has [tables](entities.md) that are used to model and manage business data. You can use the stock provided tables or define your own custom tables to store data.
 
+Dataverse also has APIs known as *messages*. Messages define a set of input parameters and output properties to encapsulate logic that executes on the server. Each message has a name. If you come from a SQL database background, you can think of these like SQL stored procedures. You can use messages that Dataverse provides or you can create your own messages.
+
 ## Use web services to work with data
 
-Dataverse provides two web services that you can use to interact with data: Web API, and Organization service, and one that you can use to search for data in Dataverse. Choose the one that best matches the requirement and your skills.
+Dataverse provides two web services that you can use to interact with data: Web API, and Organization service, and one that you can use to search for data in Dataverse using it's native endpoint or Web API and the Organization service. Choose the one that best matches the requirement and your skills.
 
 ![Flow diagram to choose web service.](media/whentousewebapi.png)
 
@@ -47,6 +49,8 @@ More information: [Use the Dataverse Organization service](org-service/overview.
 ### Search
 
 Dataverse search delivers fast and comprehensive search results across multiple tables, in a single list, sorted by relevance. It also provides capabilities to support suggestions and autocompletion experiences in apps.
+
+Search has a native endpoint and there are Dataverse messages that you can use from the Web API or Organization service.
 
 More information: [Search for Dataverse records](search/overview.md)
 
