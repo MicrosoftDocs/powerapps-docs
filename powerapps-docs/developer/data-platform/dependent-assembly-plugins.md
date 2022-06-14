@@ -108,7 +108,7 @@ You can use the Plug-in Registration tool (PRT) to perform the following tasks:
 ### View list of available plugin packages
 
 PRT has a new **Display by Package** view to list any plug-in packages previously imported:
-<!-- TODO: Update all screenshots -->
+
 :::image type="content" source="media/prt-display-by-package-view.png" alt-text="View a list of plug-in packages using the plug-in registration tool.":::
 
 ### Register a NuGet package as a plugin package
@@ -124,7 +124,7 @@ You have the option to select an existing solution or create a new one.
 :::image type="content" source="media/prt-import-new-plugin-package-dialog.png" alt-text="Dialog to import a new plug-in package.":::
 
 From the **Display by Package** view, you can select the assembly and register steps.
-
+<!-- TODO Add screenshots from here -->
 :::image type="content" source="media/prt-new-plug-in package-view.png" alt-text="Showing a newly uploaded plug-in package in the Display by Package view.":::
 
 The assembly is also available within the **Display by Assembly** view.
