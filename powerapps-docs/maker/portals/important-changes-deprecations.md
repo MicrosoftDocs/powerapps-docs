@@ -45,9 +45,7 @@ Starting June 2022, portal content editor tool to design your website is depreca
 
 ## Portals search using Lucene .NET search 
 
-Starting 9.4.4.xx, all newly created portals uses the [Dataverse search](configure/search.md) as the default search provider. Existing portals will continue to use Lucene .NET as a search provider. You can switch to Dataverse search as a search provider using site settings Search/EnableDataverseSearch to true. Dataverse search provides the all search capability provided by Lucene .NET along with other intelligence search capability. 
-
-**All the existing customers who are using Lucene .NET search need to migrate to Dataverse search by October 2023.**
+Starting with website version 9.4.4.xx, portal search uses Dataverse search as a default search provider for all new portals. Lucene .NET search is deprecated; however, existing portals using Lucene .NET search won't be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
 
 ## CDN for US Government
 
