@@ -162,7 +162,7 @@ With Dataverse search, the search box is always available at the top of every pa
 
 ## Notifications 
 
-Notifications on Power Apps for Windows work the same as when you run a model-driven app in a browser. For more information, see [In-app notifications in model-driven apps](../user/notifications.md).
+Notifications on Power Apps for Windows work the same as when you run a model-driven app on the web. For more information, see [In-app notifications in model-driven apps](../user/notifications.md).
 
 ## Set up mobile offline
 
