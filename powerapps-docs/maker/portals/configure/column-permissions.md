@@ -71,17 +71,17 @@ The following table shows the result of applying different column and table perm
 
 | **Scenario** | **Table permission** | **Site  setting**<br><em>**Webapi/contact/enabled**</em> | **Site setting**<br><em>**Webapi/contact/fields**</em> | **Column permission** | 
 |-|-|-|-|-|
-| Users to not have any permissions to the columns. | Contact (Create, Read, Update) | TRUE |  |  |  
-| Users to not have any permissions to the columns. | Contact (Create, Read, Update) | FALSE |  |  | 
-| Users to not have any permissions to the columns. | Contact (&lt;none&gt;) | TRUE | * | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |
-| Users to have Create, Read, and Update permissions on all *contact* table columns. | Contact (Create, Read, Update) | TRUE | * |  |
-| Users to not have any permissions to the columns. | Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |
-| Users to have Read on *JobTitle* and Create, Read, and Update on all the other columns.  | Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | |
+| The user won't have any permissions to the columns. | Contact (Create, Read, Update) | TRUE |  |  |  
+| The user won't have any permissions to the columns. | Contact (Create, Read, Update) | FALSE |  |  | 
+| The user won't have any permissions to the columns. | Contact (&lt;none&gt;) | TRUE | * | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |
+| The user will have Create, Read, and Update permissions on all *contact* table columns. | Contact (Create, Read, Update) | TRUE | * |  |
+| The user won't have any permissions to the columns. | Contact (Create, Read, Update) | TRUE |  | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |
+| The user will have Read on *JobTitle* and Create, Read, and Update on all the other columns. | Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Read</li></br></ul> | |
 | The user will have Create, Read, and Update on *JobTitle* and only Read on all the other columns.| Contact (Create, Read, Update) | TRUE | * | **All Column Permissions:** Read</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br></ul>  |
-| User to have Create, Read, and Update on *JobTitle* and *Salary*.| Contact (Create, Read, Update) | TRUE | JobTitle, Salary |  |  
-| User to have Create, Read, and Update on *JobTitle* and *Salary*, no permission on other columns. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |  
-| User to have Create, Read, and Update on *JobTitle* and *Salary*. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> |
-| User to have Create, Read, and Update on *JobTitle* and no permission on *Salary*.| Contact (Create, Read, Update) | TRUE | JobTitle | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul>  |
+| The user will have Create, Read, and Update on *JobTitle* and *Salary.* | Contact (Create, Read, Update) | TRUE | JobTitle, Salary |  |  
+| The user will have Create, Read, and Update on *JobTitle* and *Salary*, no permission on other columns. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** Create, Read, Update</br>**Column Permissions:** &lt;none&gt; |  
+| The user will have Create, Read, and Update on *JobTitle* and *Salary*. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul> |
+| The user will have Create, Read, and Update on *JobTitle* and no permission on *Salary*.| Contact (Create, Read, Update) | TRUE | JobTitle | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Create, Read, Update</li></br></ul>  |
 | The user will have Create, Read, and Update on *JobTitle* and Read on *Salary*. | Contact (Create, Read, Update) | TRUE | JobTitle, Salary | **All Column Permissions:** &lt;none&gt;</br>**Column Permissions:**</br><ul></br><li>**JobTitle:** Create, Read, Update</li></br><li>**Salary:** Read</li></br></ul> |
 
 ### See also
@@ -90,4 +90,3 @@ The following table shows the result of applying different column and table perm
 [Create web roles for portals](create-web-roles.md)</br>
 [Portals Web API overview](../web-api-overview.md)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
