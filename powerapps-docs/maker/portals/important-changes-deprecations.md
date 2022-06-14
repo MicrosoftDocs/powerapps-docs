@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/26/2022
+ms.date: 06/13/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -28,7 +28,9 @@ Makers, developers, and IT professionals can use this information to prepare for
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
-Starting June 2022 [Authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals using this feature. If you're already using this feature, you need to use the Token endpoint POST request to get secure access token to authorize the external APIs. All the existing customers who are using this deprecated features need to migrate to the supported method by October 2022.   
+Starting June 2022 [Authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [Token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals not using this feature. If you're already using this feature, you need to use the Token endpoint POST request to get secure access token to authorize the external APIs. 
+
+**All the existing customers who are using this deprecated features need to migrate to the supported method by October 2022.**   
 
 ## List OData Feed 
 
@@ -39,11 +41,15 @@ Starting June 2022, [OData feeds](configure/list-odata-feeds.md) to interact wit
 
 ## Portal content editor
 
-Starting June 2022, [portal content editor](portal-content-editor.md) tool to design your website is deprecated. We recommend using [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
+Starting June 2022, portal content editor tool to design your website is deprecated. We recommend using Power Apps portals Studio to edit the portal.
 
-## Portals search using Lucene .Net search 
+**This feature will be removed by April 2023**
 
-Starting 9.4.4.xx, all newly created portals uses the [Dataverse search](configure/search.md) as the default search provider. Existing portals will continue to use Lucene .Net as a search provider. You can switch to Dataverse search as a search provider using site settings Search/EnableDataverseSearch to true. Dataverse search provides the all search capability provided by Lucene .Net along with additional intelligence search capability. 
+## Portals search using Lucene .NET search 
+
+Starting with website version 9.4.4.xx, portal search uses Dataverse search as a default search provider for all new portals. Lucene .NET search is deprecated; however, existing portals using Lucene .NET search won't be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
+
+**All existing customers using Lucene .NET search must migrate to Dataverse search by October 2023.**
 
 ## CDN for US Government
 
