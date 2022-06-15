@@ -118,7 +118,7 @@ As shown below, you're taken to the definition of the global or context variable
 
 Search result:
 
-:::image type="content" source="media/search/variables.png" alt-text="Global and context variables available in search result.":::
+:::image type="content" source="media/search/variables-1.png" alt-text="Global and context variables available in search result.":::
 
 Depending on the selected global or context variable, you're taken to the backstage for the selected type of variable.
 
@@ -128,7 +128,7 @@ Global variable selected:
 
 Context variable selected:
 
-:::image type="content" source="media/search/local-variable.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
+:::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
 
 ### Collections
 
