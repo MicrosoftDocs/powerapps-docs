@@ -1,26 +1,20 @@
 ---
 title: Column definitions | Microsoft Docs
 description: Learn about column definitions use in Microsoft Dataverse.
-services: ""
 suite: powerapps
-documentationcenter: na
-author: "mayadumesh" # GitHub ID
-manager: kvivek
-editor: ""
-tags: ""
-
-ms.devlang: na
+author: NHelgren # GitHub ID
+manager: sunilg
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 06/12/2021
+ms.date: 06/15/2022
 ms.subservice: dataverse-developer
-ms.author: jdaly
+ms.author: nhelgren
 search.audienceType:
   - developer
 search.app:
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Column definitions
@@ -28,8 +22,6 @@ search.app:
 Tables include a collection of columns that represent the data that can be included within each record. Developers need to understand the different types of columns and how to work with them.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
-More information: [Introduction to table columns](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
 
 ## Columns names
 
@@ -46,19 +38,19 @@ You cannot change the names of a column after it is created.
 
 Each column also has two properties that can display localized values. These are the values that are used to refer to the columns in an app.
 
-| Name          | Description                                                                                                                                                                                                                                                                                |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `DisplayName` | Typically, the same as the schema name, but can include spaces. i.e. **Account Number**                                                                                                                                                                                                    |
+| Name|Description|
+|-----|-----|
+| `DisplayName` | Typically, the same as the schema name, but can include spaces. i.e. **Account Number**|
 | `Description` | A short sentence describing the column or providing guidance to the user. i.e. _Type an ID number or code for the account to quickly search and identify the account in system views._<br />In model-driven apps, this information will appear when users hover over the column in a form. |
 
-These are the localizable values that are used to refer to the columns in an app. These values can be changed at any time. To add or edit localized values see [Microsoft Dataverse Customization Guide: Translate customized table and column text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the columns in an app. These values can be changed at any time. To add or edit localized values see [Translate customized table, form, and column text into other languages](../../maker/data-platform/export-customized-entity-field-text-translation.md).
 
 ## Column types
 
 The `AttributeTypeName` property describes the type of a column. This property contains a value of type `AttributeTypeDisplayName` which provides a label for each the different types of columns that exist.
 
 > [!NOTE]
-> Don't be confused by the [AttributeType](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetype#Microsoft_Xrm_Sdk_Metadata_AttributeMetadata_AttributeType) property. The values in this older property are mostly aligned with [AttributeTypeName](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetypename#Microsoft_Xrm_Sdk_Metadata_AttributeMetadata_AttributeTypeName) except that it shows `ImageAttributeMetadata` and `MultiSelectPicklistAttributeMetadata` as `Virtual`. Refer to the `AttributeTypeName` property rather than the `AttributeType` property.
+> Don't be confused by the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> property. The values in this older property are mostly aligned with <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeTypeName> except that it shows `ImageAttributeMetadata` and `MultiSelectPicklistAttributeMetadata` as `Virtual`. Refer to the `AttributeTypeName` property rather than the `AttributeType` property.
 
 In the following table:
 
@@ -135,9 +127,9 @@ Calculated and rollup columns free the user from having to manually perform calc
 
 More information:
 
-- [Dataverse Customization Guide: Define rollup columns that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
-- [Dataverse Customization Guide: Calculated and rollup columns](/dynamics365/customer-engagement/customize/define-calculated-fields)
-- [Calculated and rollup columns](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
+- [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
+- [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
+- [Calculated and rollup columns](calculated-rollup-attributes.md)
 
 ## Column format
 
@@ -187,12 +179,12 @@ Use the `Format` property control how the value is to be displayed in a model-dr
 | DateAndTime | Display the full date and time |
 | DateOnly    | Display just the date.         |
 
-More information: [Behavior and format of the date and time columns](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute)
+More information: [Behavior and format of the Date and Time column](../../maker/data-platform/behavior-format-date-time-field.md)
 
 ## Auto-number columns
 
 You can add an auto-number column for any table. Currently, you can add the column programmatically. There is no user interface to add this type of column.
-More information: [Create auto-number columns](/dynamics365/customer-engagement/developer/create-auto-number-attributes)
+More information: [Create autonumber columns](create-auto-number-attributes.md)
 
 ## Choice
 
@@ -208,38 +200,39 @@ Each of the columns with options inherit from [EnumAttributeMetadata](/dotnet/ap
 
 With the organization service you can use the following messages to retrieve information about choice:
 
-| Request Class                                                                                           | Description                                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest)     | Retrieves data about all _global_ choice                                                                                                                                                                          |
-| [RetrieveAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveattributerequest)             | Retrieves data about a column including any _local_ choice                                                                                                                                                        |
-| [RetrieveMetadataChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) | Retrieves metadata based on a query that can include _local_ choice<br />More information: [Retrieve and detect changes to metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata) |
-| [RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest)             | Retrieves data about a _global_ choice.                                                                                                                                                                           |
+| Request Class|Description |
+|-----|-----|
+|[RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest)| Retrieves data about all _global_ choice|
+|[RetrieveAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveattributerequest)| Retrieves data about a column including any choice|
+|[RetrieveMetadataChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) | Retrieves metadata based on a query that can include choice<br />More information: [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md) |
+|[RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest)| Retrieves data about a _global_ choice.|
 
 More information:
 
-- [Sample: Dump column choices table definitions to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
-- [Dataverse Developer Guide : Customize global choice](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+- [Create and edit global choices overview](../../maker/data-platform/create-edit-global-option-sets.md)
+- [Sample: Dump choices/picklist information to a file](org-service/samples/dump-picklist-information.md)
+- [Customize choices](org-service/metadata-option-sets.md)
 
 #### Use the Web API to retrieve choice values
 
-The Web API provides a RESTful style for querying choice values. You can retrieve local or global choice by retrieving the column within a table. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the choice included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
+The Web API provides a RESTful style for querying choice values. You can retrieve local or global choice by retrieving the column within a table. The following example returns the <xref:Microsoft.Dynamics.CRM.OptionSetMetadata> for the choice included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
 
 `GET <organization url>/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet`
 
-With the Web API you can also use the [RetrieveMetadataChanges Function](/dynamics365/customer-engagement/web-api/retrievemetadatachanges).
+With the Web API you can also use the <xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function>.
 
-More information: [Query table definitions using the Web API > Querying EntityMetadata column](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+More information: [Query table definitions using the Web API > Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
 
 ## Column mapping
 
 When you create a new table record in the context of an existing table record, you can automatically transfer certain values from the existing table record as default values for the new table record. This streamlines data entry for people using model-driven apps. Application users see the mapped values and can edit them before saving the entity.
 
-For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) or Web API [InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom)) to get the entity data with the configured default values set.
+For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest?displayProperty=nameWithType> or Web API <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function>) to get the entity data with the configured default values set.
 
 More information
 
-- [Dataverse Customization Guide: Map table columns](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
-- [Dataverse Developer Guide Customize table and column mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
+- [Map table columns](../../maker/data-platform/map-entity-fields.md)
+- [Customize table and column mappings](customize-entity-attribute-mappings.md)
 
 ### See also
 
