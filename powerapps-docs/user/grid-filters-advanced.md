@@ -107,6 +107,9 @@ The following options are available when you add conditions in the filter editor
 
 To undo changes to the view filter at any time, select **Reset to default**.
 
+> [!TIP]
+> If you have the security privilege **Enable Download Fetch XML**, found under Miscellaneous Privileges section of the **Customization** tab within the security role definition page, you can download the FetchXML expression for a view. Contact your administrator if you need this capability.
+
 ## Sort the data
 
 Select a column heading, and then select how the view should sort data in the column. You can sort on one column at a time.
@@ -238,6 +241,6 @@ To restore a hidden view:
 - **Assign**: Assigns ownership of the view to another user or team in your organization. This option appears only on personal views that you own.
 - **Delete**: Deletes the view. If you delete a personal view, the view is deleted for everyone who has access to it. This option appears only on personal views you have *Delete* permission to.
 - **Deactivate/Activate**: Deactivates or activates the view. If you deactivate or activate a personal view, the view becomes inactive or active for everyone who has access to it. This option appears only on personal views you have *Write* permission to.
-<!-- It's not clear to me how a deactivated list is different from a hidden list. Can you please elaborate? -->
+- **Download Fetch XML**: Download the FetchXML expression for the view. This capability is enabled by an administrator with the security privilege **Enable Download Fetch XML**, found under Miscellaneous Privileges section of the **Customization** tab within the security role definition page.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
