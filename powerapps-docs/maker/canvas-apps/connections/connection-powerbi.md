@@ -30,7 +30,7 @@ This topic shows you how to use the Power BI connection in an app, and lists the
 ## Prerequisites
 * [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 * Add the Power BI [connection](../add-manage-connections.md)
-* Create an app from a [template](https://powerapps.microsoft.com/tutorials/get-started-test-drive/), from [data](https://powerapps.microsoft.com/tutorials/get-started-create-from-data/), or from [scratch](https://powerapps.microsoft.com/tutorials/get-started-create-from-blank/)
+* Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
 
 ## Use the Power BI connection in your app
 ### List the alerts that you've set up in the Power BI service
