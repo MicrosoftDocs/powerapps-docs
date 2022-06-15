@@ -53,7 +53,7 @@ To enable the Search pane on existing apps:
 
     The Search pane is enabled:
 
-    :::image type="content" source="media/search/search-pane.png" alt-text="Search pane visible inside Power Apps Studio.":::
+    :::image type="content" source="media/search/search-pane-1.png" alt-text="Search pane visible inside Power Apps Studio.":::
 
 ## Open the Search pane
 
@@ -72,7 +72,7 @@ To use filter option and select the required categories, use the filter option n
 
 The following example shows the search results filtered for the search term "Snow" with the selected categories of **Variables** and **Collections**:
 
-:::image type="content" source="media/search/filter.png" alt-text="Filter option selected on the Search pane.":::
+:::image type="content" source="media/search/filter-1.png" alt-text="Filter option selected on the Search pane.":::
 
 ## Refine your search
 
@@ -84,19 +84,19 @@ You can use more search options to further refine search. These options are avai
 
     In the below example, instances of "Snow" (upper case) will appear as a match, but "snow" (lower case) wouldn't.
 
-    :::image type="content" source="media/search/match-case.png" alt-text="An example of matching the case for search results with results for upper case keyword.":::
+    :::image type="content" source="media/search/match-case-1.png" alt-text="An example of matching the case for search results with results for upper case keyword.":::
 
 - **Match Whole Word** - returns search results for exact matches of the entire sequence of characters.
 
     In the below example, "Snow" returns only a few results although "Snow" appears within names many times across all app objects.
 
-    :::image type="content" source="media/search/match-whole-words.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
+    :::image type="content" source="media/search/match-whole-words-1.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
 
 - **Use regular expression (RegEx)** - returns search results for matches conforming to the [regular expression](/deployedge/edge-learnmore-regex) specified within the input area.
 
     In the below example, using the Regular Expression search capability with `Snowboarding( Mountain | Dashboard)` formula returns matches for "Snowboarding" when it appears together with either "Mountain" or "Dashboard".
 
-    :::image type="content" source="media/search/regex.png" alt-text="An example of matching regular expression syntax while searching for text.":::
+    :::image type="content" source="media/search/regex-1.png" alt-text="An example of matching regular expression syntax while searching for text.":::
 
 ## Work with search results
 
@@ -170,13 +170,13 @@ Selecting a result under the **Screen** header selects the appropriate control o
 
 If you make changes within the app, you'll need to refresh the results pane to see the change reflected in your search results.
 
-:::image type="content" source="media/search/refresh.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
+:::image type="content" source="media/search/refresh-1.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
 
 ## Clear the search term
 
 Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign on the right hand side of the input area.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/clear-search-term.png" alt-text="Clear the search terms.":::
 
 ## Replace
 
@@ -184,7 +184,7 @@ You can replace one or more instances of certain types of search results, includ
 
 Once you perform a search, the replace pivot shows the list of search results which are eligible for replacing.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/eligible-replace.png" alt-text="List of search results which are eligible for replacing.":::
 
 ### Work with replaceable results
 
