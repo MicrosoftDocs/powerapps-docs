@@ -62,7 +62,7 @@ By combining conditions and actions, the following actions are possible with bus
 
 3.  On the command bar, select **New business rule**.
 
-## View, edit or create a business rule for a form in form designer
+## View, edit or create a business rule in form designer
 
 1. On form designer left navigation pane, select **Business rules**.
 
