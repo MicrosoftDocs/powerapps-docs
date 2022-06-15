@@ -66,10 +66,10 @@ By combining conditions and actions, the following actions are possible with bus
 
 1. On form designer left navigation pane, select **Business rules**.
 
-1. By default, only active business rules for the form are displayed. Select **...** > **Edit** to open the business rule designer to make changes to a rule. To create a business rule, select **New business rule**.
-
-> [!TIP]
-> To modify an existing business rule, you must deactivate it before you can modify it.
+1. Select from these options: 
+   - By default, only active business rules for the form are displayed. Clear **Show only active business rules** to view deactivated business rules for the form.
+   - Select **...** > **Edit** to open the business rule designer to make changes to a rule. 
+   - To create a business rule, select **New business rule**.
 
 ## Set the business rule properties
 
@@ -116,6 +116,9 @@ Enter or select the following properties from the business rule command bar.
        Just that form
     :::column-end:::
     :::row-end:::
+
+> [!NOTE]
+> To modify an existing business rule, you must deactivate it before you can modify it.
 
 ## Build the business rule
 
