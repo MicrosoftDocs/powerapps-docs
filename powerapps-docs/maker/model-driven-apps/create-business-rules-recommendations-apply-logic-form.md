@@ -2,9 +2,8 @@
 title: "Create model-driven app business rules and recommendations | MicrosoftDocs"
 description: Learn how to create a business rule for a specific form in Power Apps
 ms.custom: ""
-ms.date: 03/30/2020
+ms.date: 06/15/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,16 +25,12 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create business rules and recommendations to apply logic in a model-driven app form
-
-
-
-## Business rules introduction
+# Create business rules to apply logic in a model-driven app form
 
 Very often it is necessary to add in business logic to ensure that columns in a model-driven app are shown, hidden, or set with the correct values.
 
 This article shows how to create [business rules](model-driven-app-glossary.md#business-rule) and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to main and quick create forms. Business rules work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
- 
+
 By combining conditions and actions, the following actions are possible with business rules:  
   
 -   Set column values  
@@ -57,20 +52,26 @@ By combining conditions and actions, the following actions are possible with bus
 >
 > Business rules don’t work with multi-select choices.
   
-## Create a business rule or business recommendation
+## Create a business rule or business recommendation in Power Apps
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table required, and then select the **Business rules** tab.
+2.  Expand **Data**, select **Tables**, select the table required, and then under the **Customizations** area, select **Business rules**.
    > [!note]
-   > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution, and then open the table. Then, select the **Business rules** tab.
+   > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution, and then open the table. Then, under the **Customizations** area, select **Business rules**.
 
-3.  On the command bar, select **Add business rule**.
+3.  On the command bar, select **New business rule**.
 
       The Business Rule designer window opens with a single condition already created. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
 
       :::image type="content" source="media/business-rules-design-window.png" alt-text="Sample model-driven app":::
   
+## View or add a business rule for a form in form designer
+
+1. On form designer left navigation pane, select **Business rules**.
+
+1. By default, only active business rules for the form are displayed. Select **...** > **Edit** to open the business rule designer to make changes to a rule. To create a business rule, select **New business rule**.
+
 > [!TIP]
 > To modify an existing business rule, you must deactivate it before you can modify it.
 
@@ -78,7 +79,7 @@ By combining conditions and actions, the following actions are possible with bus
 
 1.  Optionally, add a description in the description box in the upper-left corner of the window.  
   
-2.  The scope of the business rule tells us forms for which this business rule will be applied.  Set the scope, according to the following:  
+2.  The scope of the business rule determines which forms the business rule will be applied. Set the scope, according to the following:  
   
     :::row:::
      :::row-end:::
