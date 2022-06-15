@@ -180,15 +180,15 @@ Search terms and results are kept until you no longer need them. To clear the se
 
 ## Replace
 
-You can replace one or more instances of certain types of search results, including variable and collection names and any formula text including strings and other formula references.
+You can replace one or more instances of certain types of search results including variable names, collection names, any formula text including strings, and other formula references.
 
-Once you perform a search, the replace pivot shows the list of search results which are eligible for replacing.
+Once you perform a search, the replace pivot shows the list of search results which can be replaced.
 
 :::image type="content" source="media/search/eligible-replace.png" alt-text="List of search results which are eligible for replacing.":::
 
-### Work with replaceable results
+### Replace results
 
-All replaceable results are selected by default. You can refine the list of results to replace by deselecting individual results or entire categories by selecting the checkbox beside the result or category heading. 
+All results that can be replaced are selected by default. You can refine the list of results to replace by deselecting individual results or entire categories by selecting the checkbox next to the result or category heading. 
 
 :::image type="content" source="media/search/work-with-search-results-1.png" alt-text="Refine the list of results to replace.":::
 
@@ -196,7 +196,7 @@ You can also filter the result list to only show selected categories of results.
 
 :::image type="content" source="media/search/work-with-search-results-2.png" alt-text="Filter the result list to only show selected categories of results.":::
 
-As you refine the list of results to replace, the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected, the button reads, "Replace all" with the total count of all replaceable items.
+As you refine the list of results to replace, the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected, the button reads, **Replace all** with the total count of all replaceable items.
 
 :::image type="content" source="media/search/work-with-search-results-3.png" alt-text="Results showing total replacements found.":::
 
