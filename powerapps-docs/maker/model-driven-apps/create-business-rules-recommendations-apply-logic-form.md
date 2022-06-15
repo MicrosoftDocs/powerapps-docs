@@ -80,7 +80,7 @@ When the business rule designer window opens for a new rule, a single condition 
 Enter or select the following properties from the business rule command bar.
 1. **Business rule name**: By default, the rule is named *New business rule*. We recommend you enter a meaningful name for the business rule.
 1. **Description**: Optionally, add a description.  
-1. **Scope**: The scope of the business rule determines which forms the business rule will be applied to. Set the scope, according to the following:  
+1. **Scope**: The scope of the business rule determines which forms the business rule will be applied. You set the scope, according to the following:  
   
     :::row:::
      :::row-end:::
