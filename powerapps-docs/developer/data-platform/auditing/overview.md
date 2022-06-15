@@ -23,7 +23,7 @@ contributors:
 Dataverse auditing provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse auditing logs changes that are made to records and logs user access. Developers can use the tables and APIs that support the auditing feature to create client applications or programmatically interact with auditing data.
 
 > [!IMPORTANT]
-> For a complete description of the auditing concepts, capabilities, how it is exposed in apps, and tasks for administrators, see [Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity).
+> For a complete description of the auditing concepts, capabilities, how it is exposed in apps, and tasks for administrators, see [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing).
 >
 > This content for developers expects that you are already familiar with the documentation for administrators. The Dataverse tables and APIs provide the functionality to support the clients used by administrators and apps.
 
@@ -96,7 +96,7 @@ More information: [Delete audit data](delete-audit-data.md)
   
 ### See also
 
-[Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)<br />
+[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
 [Configure auditing](configure.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
 [Delete audit data](delete-audit-data.md)
