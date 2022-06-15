@@ -1,6 +1,6 @@
 ---
-title: iFrame properties for model-driven app Main forms in Power Apps | MicrosoftDocs
-description: Understand the iFrame properties for Main forms
+title: Add an iframe to a model-driven app main form in Power Apps | MicrosoftDocs
+description: Understand the iFrame properties and how to add an iframe to a main form
 Keywords: Main form; iFrame properties; Dynamics 365
 author: Mattp123
 applies_to: 
@@ -10,8 +10,7 @@ applies_to:
 ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
-ms.date: 03/18/2020
-
+ms.date: 06/14/2022
 ms.topic: how-to
 ms.assetid: 1b7e6a0c-18a9-47e2-aa7d-0cffb8c93b19
 search.audienceType: 
@@ -20,32 +19,73 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# iFrame properties for model-driven app main forms
+# Add an iframe to a model-driven app main form
 
+You can add inline frames (iframes) to a form to integrate content from another website within the form.
 
+:::image type="content" source="media/iframe-in-model-app.png" alt-text="Iframe displaying a web page in a model-driven app":::
 
-You can add iFrames to a form to integrate content from another website within a form. 
+1.  Expand **Data**, select **Tables**, open the table that you want, and then select **Forms** from the **Data experiences** area.
 
-To view IFrame properties, follow these steps.
+1. In the list of forms, open a form of type **Main**.
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the form designer, select the section of the canvas where you want to add the iframe.
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+1. On the **Components** left pane, expand **Display**, select **External website**, enter the **Site URL**, such as *http://www.microsoft.com*, and then select **Done**.
 
-3. In the list of forms, open a form of type **Main**.
+   :::image type="content" source="media/add-external-website.png" alt-text="Add external website to a main form by selecting External website.":::
+  
+|Tab|Property|Description|  
+|---------|--------------|-----------------|
+|**Display options**|**Label**|**Required**: A label to display for the iFrame.|
+|**Display options**|**Name**|**Required**: A unique name for the iframe. The name can contain only alphanumeric characters and underscores.|
+|**Display options**|**Hide label**|Select if you want the label hidden.|
+|**Display options**|**Hide**|You can hide the iFrame so that it can be made visible by using scripts. More information: [Visibility options](visibility-options-legacy.md)|
+|**Display options**|**URL**|**Required**: The URL for the page to display in the iFrame.|
+|**Formatting**|**Column width**|When the section containing the iframe has more than one column you can set the column to occupy up to the number of columns that the section has.|  
+|**Formatting**|**Component height**|You can control the height of the iframe by specifying a number of rows the control occupies.|  
+|**Formatting**|**Use all available vertical space**|Instead of setting the height by a number of rows, you can allow the iframe height to expand to available space.|  
+|**Formatting**|**Scrolling**|You have three options for scrolling behavior:<br /><br /> - **As Necessary**: Display scrollbars when the size of the iframe is larger than the available space.<br />- **Always**: Always display scrollbars.<br />- **Never**:  Never display scrollbars.|
+|**Formatting**|**Display border**|Display a border around the iframe.|  
+|**Dependencies**|**Table column dependencies**|An iframe may interact with columns in the form using script. If a column is removed from the form the script in the iframe may break. Add any columns referenced by scripts in the iframes to the **Table column dependencies** so that they can't be removed accidentally.|  
+|**Advanced**|**Restrict cross-frame scripting, where supported**|It is considered a security risk to allow pages from a different web site to interact with the app using scripts. Use this option to restrict cross frame scripting for pages you do not have control over.<br /><br />|  
+|**Advanced**|**Pass row object-type code and unique identifiers as parameters**|Data about the organization, user, and the record can be passed to the iframe. More information: [Pass parameters to iFrames](#pass-parameters-to-iframes) |  
+  
+1. **Save** and **Publish** the form.
 
-4.  Select **Switch to classic** to edit the form in the classic form designer.
+> [!NOTE]
+> * If the web page doesn't appear in the iframe, it might be because the website doesn't allow iframe rendering. When this occurs, the message *URL* **refused to connect** is displayed in the iframe.
+> * Forms are not designed to be displayed within an iframe.
+> * Authentication inside an iFrame, either through a redirection or popups, isn't supported on mobile.
 
-4.  On the **Insert** tab, select IFRAME to view IFRAME properties.
+## Pass parameters to iFrames
+
+ Information about the row can be passed by enabling the **Pass row object-type code and unique identifiers as parameters** option. The values passed are:  
+  
+|Parameter|Description|  
+|---------------|-----------------|  
+|`orglcid`|The Organization default language LCID.|  
+|`orgname`|The name of the organization.|  
+|`userlcid`|The user's preferred language LCID|  
+|`type`|The table type code. This value can be different for custom tables in different organizations. Use `typename` instead.|  
+|`typename`|The table type name.|  
+|`id`|The id value of the row. this parameter has no value until the table row is saved.|  
+
+## Add an iframe using the classic form designer
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+1.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.
+
+1. In the list of forms, open a form of type **Main**.
+
+1. Select **Switch to classic** to edit the form in the classic form designer.
+
+1. On the **Insert** tab, select **IFRAME** to view iframde properties.
 
       > [!div class="mx-imgBorder"] 
       > ![iframe properties.](media/iframe-properties.png)
-
-
-> [!NOTE]
-> * Forms are not designed to be displayed within an iFrame.
-> * Authentication inside an iFrame, either through a redirection or popups, isn't supported on mobile.
-  
+ 
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  
 |**General**|**Name**|**Required**: A unique name for the iFrame. The name can contain only alphanumeric characters and underscores.|  
@@ -61,19 +101,7 @@ To view IFrame properties, follow these steps.
 ||**Automatically expand to use available space**|Instead of setting the height by a number of rows, you can allow the iFrame height to expand to available space.|  
 ||**Select the scrolling type for the iFrame**|You have three options:<br /><br /> - **As Necessary**: Show scrollbars when the size of the iFrame is larger than the available space.<br />- **Always**: Always show scrollbars.<br />- **Never**:  Never show scrollbars.|  
 ||**Display border**|Display a border around the iFrame.|  
-|**Dependencies**|**Dependent columns**|An iFrame may interact with columns in the form using script. If a column is removed from the form the script in the iFrame may break. Add any columns referenced by scripts in the iFrames to the **Dependent columns** so that they cannot be removed accidentally.|  
-  
-## Pass parameters to iFrames  
- Information about the row can be passed by enabling the **Pass row object-type code and unique identifiers as parameters** option. The values passed are:  
-  
-|Parameter|Description|  
-|---------------|-----------------|  
-|`orglcid`|The Organization default language LCID.|  
-|`orgname`|The name of the organization.|  
-|`userlcid`|The user's preferred language LCID|  
-|`type`|The table type code. This value can be different for custom tables in different organizations. Use `typename` instead.|  
-|`typename`|The table type name.|  
-|`id`|The id value of the row. this parameter has no value until the table row is saved.|  
+|**Dependencies**|**Dependent columns**|An iFrame may interact with columns in the form using script. If a column is removed from the form the script in the iFrame may break. Add any columns referenced by scripts in the iFrames to the **Dependent columns** so that they cannot be removed accidentally.|
 
 ## Next steps
 
