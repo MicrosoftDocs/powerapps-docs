@@ -1,1 +1,0 @@
-Returns the value of the specified column name.

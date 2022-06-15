@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2022
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,11 +13,15 @@ contributors:
   - nickdoelman
   - GitanjaliSingh33msft
   - HemantGaur
+  - ProfessorKendrick
 ---
 
 # Use code components in portals
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Power Apps component framework overview](../../developer/component-framework/overview.md)
+
+> [!NOTE] 
+> You can also use code components in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 Power Apps portals now supports controls for model-driven apps created using Power Apps component framework. To use code components in portals webpages, follow these steps:
 

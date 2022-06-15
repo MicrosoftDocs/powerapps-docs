@@ -16,6 +16,10 @@ contributors:
 
 [!INCLUDE [loadexactpage-description](includes/loadexactpage-description.md)]
 
+> [!NOTE]
+> `loadExactPage` does not support parallel execution.
+> Executing `loadExactPage` will trigger `updateView` on the control with newly fetched results.
+
 ## Available for
 
 Model-driven and canvas apps

@@ -5,7 +5,7 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/31/2022
+ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: lknibb
 search.audienceType: 
@@ -111,7 +111,6 @@ Container in App Center to store the built packages for mobile app distribution.
 | Platform                                         |  OS | Build Output file type |
 |-------------------------------------------------------------|---------------------------|-------------------------------|
 | **iOS** (for distribution using Apple Store)                                                         | Custom                    |  \*.zip                       |
-| **Android** (for distribution using the Google Play Store)         | Custom                    |      \*.aab                   |
 | **Android** (for distribution using all channels except Google Play Store) |  Android                   | \*.apk                       |
 
 ### App Center URL

@@ -20,8 +20,6 @@ search.app:
 
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 |File|Description|
 |--|--|
 |Package file|A package file used by Package Deployer tool to deploy your solutions and demo configuration data into multiple languages.|
