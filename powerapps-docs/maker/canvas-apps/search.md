@@ -200,7 +200,7 @@ As you refine the list of results to replace, the replace button at the bottom o
 
 :::image type="content" source="media/search/work-with-search-results-3.png" alt-text="Results showing total replacements found.":::
 
-If you've selected results from the list, the button is updated to read, "Replace selected" with the total count of selected items.
+If you've selected results from the list, the button is updated to read, **Replace selected** with the total count of selected items.
 
 :::image type="content" source="media/search/work-with-search-results-4.png" alt-text="Replace selected button showing total number of replace items.":::
 
@@ -222,7 +222,7 @@ Similar to variables, replacing a result in the Collections category replaces th
 
 ### Replacing Screens results
 
-The Screens category shows individual replaceable results following the structure in the Tree View, allowing you to replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, allowing you to choose to pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
+The Screens category shows individual replaceable results following the structure in the tree view, allowing you to replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, allowing you to choose to pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
 
 :::image type="content" source="media/search/replace-screens.png" alt-text="Replaceing Screens results.":::
 
