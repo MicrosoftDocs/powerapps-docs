@@ -4,7 +4,7 @@ description: Learn about the application lifecycle management (ALM) with compone
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/01/2022
+ms.date: 06/10/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -20,7 +20,7 @@ contributors:
 
 A [component library](component-library.md) is a special type of canvas app that can contain one or more canvas components. These library components can then be used by all the other canvas apps in the environment. This capability enables you to create reusable shared components across all apps in an environment, unlike [app-level components](create-component.md#components-in-canvas-apps) that are restricted to one app.
 
-To use a component from a component library, you have to first import the component into the canvas app. Once imported, you can then add the component to the app screen. Any updates in the component definition from the component library will prompt you to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Microsoft Dataverse solutions](/power-platform/alm/solution-concepts-alm).
+To use a component from a component library, you have to first import the component into the canvas app. Once imported, you can then add the component to any app screen. Any updates in the component definition from the component library will prompt you to review and incorporate the change [on demand](component-library.md#method-2-proactive-check-for-updates) or when the [app is opened for editing](component-library.md#method-1-component-update-notification-on-app-edit). Component libraries and dependent apps can also be moved to another environment using standard [Microsoft Dataverse solutions](/power-platform/alm/solution-concepts-alm).
 
 > [!NOTE]
 > In this article, the term "import" refers to importing a component from a component library to an app, and shouldn't be confused with importing a solution into Dataverse.
@@ -32,7 +32,7 @@ In order to maintain the relationship from the app to the component library, ens
 
 ## Canvas apps and component libraries solution support
 
-Consistent with the other solution object dependencies, if a canvas app uses a control from a component library, it will have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution or install it as a pre-requisite. App to component library dependency is maintained in the target environment. At a later point, when a component library with the updated component is imported using a solution into the target environment, existing apps will get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
+Consistent with the other solution object dependencies, if a canvas app imports a canvas component from a component library, it will have a dependency on that component library. In order to move an app to the new environment, you'll need to either package the component library inside the same solution or install it as a pre-requisite. App to component library dependency is maintained in the target environment. At a later point, when a component library with the updated component is imported using a solution into the target environment, existing apps will get the new component definitions using the regular [component update flow](component-library.md#update-a-component-library).
 
 ### Creating and exporting component library in a solution
 
@@ -85,12 +85,14 @@ Dependencies are calculated based on the latest published state of an app. If yo
 
 - If the app isn't able to receive the update from the library component in the target environment where the solution is installed, check using the below actions:
 
+
+    - Changes made to a component library in a target environment reside at the top layer of a component. Subsequently, these customizations define the runtime behavior of the component. To remove these unmanaged customizations, see [Remove an unmanaged layer](../data-platform/solution-layers.md#remove-an-unmanaged-layer).
     - Determine the component library logical name from the solution view. Use the default solution if library isn't explicitly added to solution.
     - Download app using the library component to local computer using **File** > **Save as** > **This computer**. Rename the downloaded file to have a .zip extension, and unzip the package. Open the **Properties.json** file, and then search for the keyword "LibraryDependencies". You should see a matching library logical name.
     - If you're consuming the solution, check that the canvas app has properly identified the component libraries as [solution dependencies](/power-platform/alm/solution-concepts-alm#solution-dependencies). If the solution doesn't properly identify the component libraries as solution dependencies, that means the app dependency to the component library link hasn't been created properly. In that case, check with the solution provider to resolve the issue.
     - If you're the solution publisher, check that the component libraries are saved with the library logical name in the solution, and that it's same as the one referenced in the component library .msapp package.
 
-- Solution export always exports the latest version of the component library. Hence, always update the apps with the latest component version before exporting them though solutions. This action ensures that the apps have the same component version as available in the latest version of the component library. Apps and library are considered to be synchronized with each other when they're moved to a target environment for the first time; and hence, you're not prompted for any update being available when editing the app.
+- Solution export always exports the latest version of the component library. Hence, always update the apps with the latest component version before exporting them through solutions. This action ensures that the apps have the same component version as available in the latest version of the component library. Apps and library are considered to be synchronized with each other when they're moved to a target environment for the first time; and hence, you're not prompted for any update being available when editing the app.
 
 ### See also
 

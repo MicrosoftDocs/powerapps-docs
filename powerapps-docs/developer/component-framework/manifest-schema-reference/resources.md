@@ -35,7 +35,6 @@ Model-driven and canvas apps
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|0 or more|
 |[platform-library](platform-library.md)|[!INCLUDE [platform-library-description](includes/platform-library-description.md)]|0 or more|
-<!--|[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|-->
 
 
 ## Example

@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/01/2022
+ms.date: 06/15/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -13,16 +13,22 @@ contributors:
     - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - ProfessorKendrick
 ---
 
 # Configure a contact for use on a portal
 
-The following instructions will outline how to provide access to a portal for a new or existing contact in Microsoft Dataverse.
+After filling out the basic information for a contact (or having a user fill out the sign-up form in a portal), go to the web authentication tab on the portal contact form to configure a contact by using local authentication. For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). 
+
+> [!NOTE] 
+> You can also configure a contact in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+
+To configure a contact for portals by using local authentication, follow these instructions:  
 
 > [!IMPORTANT]
 > - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 
-1. Open the [Portal Management app](configure-portal.md).
+Complete the change password workflow, and the necessary fields will be automatically configured. When you've done this, your contact will be configured for your portals.
 
 1. In the **Security** section, select **Contacts**.
 
