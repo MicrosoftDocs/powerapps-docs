@@ -90,12 +90,12 @@ In the following table:
 Each column includes boolean properties that describe the kinds of operations it can participate in and how it can be in a form.
 
 | Property| Description |
-| ------------------- | ----------------------------------------------------------- |
-| `IsRequiredForForm` | Whether the column must be included in a form.  |
-| `IsValidForCreate`  | Whether the column value can be set in a create operation.  |
-| `IsValidForForm` | Whether the column can be included as a column in a form.|
-| `IsValidForRead` | Whether the column value can be retrieved.|
-| `IsValidForUpdate`  | Whether the column value can be set in an update operation. |
+|-----|-----|
+|`IsRequiredForForm`| Whether the column must be included in a form.  |
+|`IsValidForCreate`| Whether the column value can be set in a create operation.  |
+|`IsValidForForm`| Whether the column can be included as a column in a form.|
+|`IsValidForRead`| Whether the column value can be retrieved.|
+|`IsValidForUpdate`| Whether the column value can be set in an update operation. |
 
 If you try to set a value in a create or update operation for a column that is not valid for that operation, the value will be ignored.
 If you try to retrieve a column that is not valid for read, a null value will be returned.
@@ -107,7 +107,7 @@ The `RequiredLevel` property is a Boolean managed property that describes if a c
 This property can have the following values set:
 
 | Name| Value | UI Label| Description |
-| --------------------- | ----- | ------------------------ | ----------------------------------------------------- |
+|-----|-----|-----|-----|
 | `None` | 0  | **Optional** | No requirements are specified.|
 | `SystemRequired`| 1  | **System Required**| The data service requires the column to have a value. |
 | `ApplicationRequired` | 2  | **Business Required** | The application requires the column to have a value.  |
@@ -140,7 +140,7 @@ The format values for column controls how it is displayed in model-driven apps. 
 Use the `Format` property with integer columns to display alternate user experiences for this type.
 
 | Option  | Description  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----|-----|
 | `None`  | Displays a text box to edit a number value |
 | `Duration` | Displays a drop-down list that contains time intervals. A user can select a value from the list or type an integer value that represents the number of minutes. |
 | `TimeZone` | Displays a drop-down list that contains a list of time zones.|
@@ -148,10 +148,10 @@ Use the `Format` property with integer columns to display alternate user experie
 
 ### String formats
 
-Use the `FormatName` property with string columns to set values from the [StringFormatName Class](/dotnet/api/microsoft.xrm.sdk.metadata.stringformatname) to control how the string column is formatted.
+Use the `FormatName` property with string columns to set values from the <xref:Microsoft.Xrm.Sdk.Metadata.StringFormatName> to control how the string column is formatted.
 
 | Name| Description  |
-| --------------- | --------------------------------------------------------------------------------------------------------- |
+|-----|-----|
 | `Email`| The form column will validate the text value as an e-mail address and create a mailto link in the column. |
 | `PhoneNumber`| The form column will contain a link to initiate a phone call by using Skype.|
 | `PhoneticGuide` | For internal use only.|
@@ -167,7 +167,7 @@ The `DateTimeBehavior` property to controls the behavior for Date and Time colum
 There are three options:
 
 | Option | Short Description |
-| --------------------- | -------------------------------------------------------------------------------------- |
+|-----|-----|
 | `UserLocal`  | Stores the date and time value as UTC value in the system.  |
 | `DateOnly`| Stores the actual date value with the time value as 12:00 AM (00:00:00) in the system. |
 | `TimeZoneIndependent` | Stores the actual date and time values in the system regardless of the user time zone. |
@@ -175,7 +175,7 @@ There are three options:
 Use the `Format` property control how the value is to be displayed in a model-driven app regardless of the `DateTimeBehavior`.
 
 | Option| Description  |
-| ----------- | ------------------------------ |
+|-----|-----|
 | DateAndTime | Display the full date and time |
 | DateOnly | Display just the date.|
 
@@ -196,16 +196,16 @@ The organization service provides request classes you can use to retrieve the op
 
 #### Use the organization service to retrieve options
 
-Each of the columns with options inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options).
+Each of the columns with options inherit from <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> and include an <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet?text=OptionSet Property>. This property contains the <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> that includes the options within the <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options?text=Options property>.
 
 With the organization service you can use the following messages to retrieve information about choice:
 
 | Request Class|Description |
 |-----|-----|
-|[RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest)| Retrieves data about all _global_ choice|
-|[RetrieveAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveattributerequest)| Retrieves data about a column including any choice|
-|[RetrieveMetadataChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) | Retrieves metadata based on a query that can include choice<br />More information: [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md) |
-|[RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest)| Retrieves data about a _global_ choice.|
+|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllOptionSetsRequest>| Retrieves data about all _global_ choice|
+|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>| Retrieves data about a column including any choice|
+|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>| Retrieves metadata based on a query that can include choice<br />More information: [Retrieve and detect changes to table definitions](org-service/metadata-retrieve-detect-changes.md) |
+|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest>| Retrieves data about a _global_ choice.|
 
 More information:
 
