@@ -31,30 +31,30 @@ You can add inline frames (iframes) to a form to integrate content from another 
 
 1. In the form designer, select the section of the canvas where you want to add the iframe.
 
-1. On the **Components** left pane, expand **Display**, select **External website**, enter the **Site URL**, such as *http://www.microsoft.com*, and then select **Done**.
+1. On the **Components** left pane, expand **Display**, select **External website**, enter the **Site URL**, and then select **Done**.
 
    :::image type="content" source="media/add-external-website.png" alt-text="Add external website to a main form by selecting External website.":::
   
-|Tab|Property|Description|  
-|---------|--------------|-----------------|
-|**Display options**|**Label**|**Required**: A label to display for the iFrame.|
-|**Display options**|**Name**|**Required**: A unique name for the iframe. The name can contain only alphanumeric characters and underscores.|
-|**Display options**|**Hide label**|Select if you want the label hidden.|
-|**Display options**|**Hide**|You can hide the iFrame so that it can be made visible by using scripts. More information: [Visibility options](visibility-options-legacy.md)|
-|**Display options**|**URL**|**Required**: The URL for the page to display in the iFrame.|
-|**Formatting**|**Column width**|When the section containing the iframe has more than one column you can set the column to occupy up to the number of columns that the section has.|  
-|**Formatting**|**Component height**|You can control the height of the iframe by specifying a number of rows the control occupies.|  
-|**Formatting**|**Use all available vertical space**|Instead of setting the height by a number of rows, you can allow the iframe height to expand to available space.|  
-|**Formatting**|**Scrolling**|You have three options for scrolling behavior:<br /><br /> - **As Necessary**: Display scrollbars when the size of the iframe is larger than the available space.<br />- **Always**: Always display scrollbars.<br />- **Never**:  Never display scrollbars.|
-|**Formatting**|**Display border**|Display a border around the iframe.|  
-|**Dependencies**|**Table column dependencies**|An iframe may interact with columns in the form using script. If a column is removed from the form the script in the iframe may break. Add any columns referenced by scripts in the iframes to the **Table column dependencies** so that they can't be removed accidentally.|  
-|**Advanced**|**Restrict cross-frame scripting, where supported**|It is considered a security risk to allow pages from a different web site to interact with the app using scripts. Use this option to restrict cross frame scripting for pages you do not have control over.<br /><br />|  
-|**Advanced**|**Pass row object-type code and unique identifiers as parameters**|Data about the organization, user, and the record can be passed to the iframe. More information: [Pass parameters to iFrames](#pass-parameters-to-iframes) |  
+   |Tab|Property|Description|  
+   |---------|--------------|-----------------|
+   |**Display options**|**Label**|**Required**: A label to display for the iFrame.|
+   |**Display options**|**Name**|**Required**: A unique name for the iframe. The name can contain only alphanumeric characters and underscores.|
+   |**Display options**|**Hide label**|Select if you want the label hidden.|
+   |**Display options**|**Hide**|You can hide the iFrame so that it can be made visible by using scripts. More information: [Visibility options](visibility-options-legacy.md)|
+   |**Display options**|**URL**|**Required**: The URL for the page to display in the iFrame.|
+   |**Formatting**|**Column width**|When the section containing the iframe has more than one column you can set the column to occupy up to the number of columns that the section has.|  
+   |**Formatting**|**Component height**|You can control the height of the iframe by specifying a number of rows the control occupies.|  
+   |**Formatting**|**Use all available vertical space**|Instead of setting the height by a number of rows, you can allow the iframe height to expand to available space.|  
+   |**Formatting**|**Scrolling**|You have three options for scrolling behavior:<br /><br /> - **As Necessary**: Display scrollbars when the size of the iframe is larger than the available space.<br />- **Always**: Always display scrollbars.<br />- **Never**:  Never display scrollbars.|
+   |**Formatting**|**Display border**|Display a border around the iframe.|  
+   |**Dependencies**|**Table column dependencies**|An iframe may interact with columns in the form using script. If a column is removed from the form the script in the iframe may break. Add any columns referenced by scripts in the iframes to the **Table column dependencies** so that they can't be removed accidentally.|  
+   |**Advanced**|**Restrict cross-frame scripting, where supported**|It is considered a security risk to allow pages from a different web site to interact with the app using scripts. Use this option to restrict cross frame scripting for pages you do not have control over.<br /><br />|  
+   |**Advanced**|**Pass row object-type code and unique identifiers as parameters**|Data about the organization, user, and the record can be passed to the iframe. More information: [Pass parameters to iFrames](#pass-parameters-to-iframes) |  
   
 1. **Save** and **Publish** the form.
 
 > [!NOTE]
-> * If the web page doesn't appear in the iframe, it might be because the website doesn't allow iframe rendering. When this occurs, the message *URL* **refused to connect** is displayed in the iframe.
+> * If the web page doesn't appear in the iframe, it might be because the website doesn't allow iframe rendering. When this occurs, the message *URL* **refused to connect** is displayed in the iframe at runtime.
 > * Forms are not designed to be displayed within an iframe.
 > * Authentication inside an iFrame, either through a redirection or popups, isn't supported on mobile.
 
