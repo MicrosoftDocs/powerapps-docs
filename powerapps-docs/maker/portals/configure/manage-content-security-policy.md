@@ -5,7 +5,7 @@ author: nabha
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2022
+ms.date: 06/15/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -51,6 +51,20 @@ For more information about nonce, see [Using a nonce with CSP](https://content-s
 
 To enable Nonce in Portals, add the **script-src 'nonce';** value to the **HTTP/Content-Security-Policy** site settings.
 
+**Examples**
+
+If you want a strict policy and don't want to allow script loading from sources outside of portals:
+
+`script-src 'self' content.powerapps.com 'nonce'`
+
+If you want to load scripts from any secure source:
+
+`script-src https: 'nonce'`
+
 > [!NOTE]
-> unsafe-eval will be auto injected to support auto generated eval validation when **nonce** is enabled. To disable unsafe-eval auto injection, add/update site setting **HTTP/Content-Security-Policy/Inject-unsafe-eval** to **false**.
+> - unsafe-eval will be auto injected to support auto generated eval validation when **nonce** is enabled. To disable unsafe-eval auto injection, add/update site setting **HTTP/Content-Security-Policy/Inject-unsafe-eval** to **false**.
+> - If unsafe-eval injection is disabled, auto-generated field validation on [basic](../configure/entity-forms.md) and [advanced](../configure/web-form-properties.md) forms may no longer function correctly.
+
+
+
 
