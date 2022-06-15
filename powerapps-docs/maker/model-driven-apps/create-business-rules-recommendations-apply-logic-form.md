@@ -52,7 +52,7 @@ By combining conditions and actions, the following actions are possible with bus
 >
 > Business rules don’t work with multi-select choices.
   
-## Create a business rule or business recommendation in Power Apps
+## View, edit or create a business rule in Power Apps
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
@@ -62,11 +62,7 @@ By combining conditions and actions, the following actions are possible with bus
 
 3.  On the command bar, select **New business rule**.
 
-      The Business Rule designer window opens with a single condition already created. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
-
-      :::image type="content" source="media/business-rules-design-window.png" alt-text="Sample model-driven app":::
-  
-## View or add a business rule for a form in form designer
+## View, edit or create a business rule for a form in form designer
 
 1. On form designer left navigation pane, select **Business rules**.
 
@@ -75,11 +71,16 @@ By combining conditions and actions, the following actions are possible with bus
 > [!TIP]
 > To modify an existing business rule, you must deactivate it before you can modify it.
 
-## Update the business rule properties
+## Set the business rule properties
 
-1.  Optionally, add a description in the description box in the upper-left corner of the window.  
-  
-2.  The scope of the business rule determines which forms the business rule will be applied. Set the scope, according to the following:  
+When the business rule designer window opens for a new rule, a single condition is already created. Every rule starts with a condition. The business rule takes one or more actions based on that condition.
+ 
+:::image type="content" source="media/business-rules-design-window.png" alt-text="Sample model-driven app" lightbox="media/business-rules-design-window.png":::
+
+Enter or select the following properties from the business rule command bar.
+1. **Business rule name**: By default, the rule is named *New business rule*. We recommend you enter a meaningful name for the business rule.
+1. **Description**: Optionally, add a description.  
+1. **Scope**: The scope of the business rule determines which forms the business rule will be applied to. Set the scope, according to the following:  
   
     :::row:::
      :::row-end:::
@@ -93,10 +94,10 @@ By combining conditions and actions, the following actions are possible with bus
     :::row-end:::
     :::row:::
     :::column span="":::
-       Table
+       **Entity**
     :::column-end:::
     :::column span="":::
-       All forms and server
+       The table and all forms for the table
     :::column-end:::
     :::row-end:::
     :::row:::
@@ -104,7 +105,7 @@ By combining conditions and actions, the following actions are possible with bus
        **All Forms**
     :::column-end:::
     :::column span="":::
-       All forms
+       All forms for the table
     :::column-end:::
     :::row-end:::
     :::row:::
