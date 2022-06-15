@@ -215,7 +215,7 @@ More information:
 
 #### Use the Web API to retrieve choice values
 
-The Web API provides a RESTful style for querying choice values. You can retrieve local or global choice by retrieving the column within a table. The following example returns the <xref:Microsoft.Dynamics.CRM.OptionSetMetadata> for the choice included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
+The Web API provides a RESTful style for querying choice values. You can retrieve local or global choice by retrieving the column within a table. The following example returns the <xref:Microsoft.Dynamics.CRM.OptionSetMetadata> for the choice included in the [Account.AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
 
 `GET <organization url>/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet`
 
@@ -227,7 +227,7 @@ More information: [Query table definitions using the Web API > Retrieving attrib
 
 When you create a new table record in the context of an existing table record, you can automatically transfer certain values from the existing table record as default values for the new table record. This streamlines data entry for people using model-driven apps. Application users see the mapped values and can edit them before saving the entity.
 
-For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest?displayProperty=nameWithType> or Web API <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function>) to get the entity data with the configured default values set.
+For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest?text=InitializeFromRequest Class> or Web API <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function>) to get the entity data with the configured default values set.
 
 More information
 
