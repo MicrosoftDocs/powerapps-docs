@@ -339,7 +339,7 @@ initializeIcons(undefined, { disableWarnings: true });
 > [!NOTE]
 > The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
 
-Add the following class fields underneath `export class GridCanvas`:
+Add the following class fields underneath `export class CanvasGrid`:
 
 ```typescript
 notifyOutputChanged: () => void;
