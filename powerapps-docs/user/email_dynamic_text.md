@@ -1,11 +1,11 @@
 ---
-title: "Use the Insert dynamic text option | MicrosoftDocs"
-description: "Personalize emails using the Insert dynamic text option"
+title: Personalize emails with dynamic text
+description: Personalize your customer engagement emails with dynamic text in Power Apps.
 ms.custom: ""
 author: gandhamm
 manager: shujoshi
 ms.topic: task
-ms.date: 05/06/2022
+ms.date: 06/09/2022
 ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
@@ -15,49 +15,54 @@ search.app:
   - D365CE
 ---
 
-
 # Personalize emails with dynamic text
 
-Dynamic text enables you to personalize email content. The **Insert dynamic text** option allows you to update an email with the dynamic value of an entity. For example, rather than using a generic greeting like “Dear customer,” you can use the dynamic text, (“Dear ``{!Case:Customer;}``”). On sending the message, the dynamic text is replaced with the customer's name (“Dear John”).
+Generic greetings like "Dear customer" make customers less likely to engage with your emails. Personalize your outreach instead with dynamic text in your email templates.
+
+Dynamic text replaces a placeholder entity with the value of the entity when you send the email. For example, your email template might contain "Dear {!User:First Name;}" but your customer sees “Dear Sal.”
 
 ## Insert dynamic text
 
-You can insert dynamic fields in the existing email templates or newly created email templates. Select **Insert dynamic text** in the email template editor to add dynamic text to your template.
+You can insert dynamic text in existing email templates or templates that you create.
 
-:::image type="content" source="media/email_dyn_text.png" alt-text="Screenshot of the insert dynamic text option in the email editor.":::
+1. In the template editor, place your cursor where you want the personalized content to appear.
 
-On the **Edit dynamic text** select the **Record type** and **Field name**. The options displayed in **Field name** are default fields and are based on the **Record type**. 
+1. Select **Insert dynamic text**.
 
-The **Record type** options are determined by the **Category** you specify when you are creating the email template.
+    :::image type="content" source="media/email_dyn_text.png" alt-text="Screenshot of the email template editor, with Insert dynamic text highlighted.":::
+
+1. Select the **Record type** and **Field name**.
+
+    The category that you specified when you created the email template determines the record types you can choose. The record type you choose determines the fields you can select.
+
+    :::image type="content" source="media/email_dyn_text_fields.png" alt-text="Screenshot of the Edit dynamic text pane, with Record type and Field name highlighted.":::
 
 ## Insert custom fields
 
-If you must insert fields from custom entities in the templates, use the following syntax:
+Dynamic text isn't limited to what you can insert by selecting a record type and field. You can also insert fields from custom entities by typing them directly in your email template.
 
+Use the following syntax:
 
-|Field Type  |Syntax  |
-|----------|-----------|
-|Single Line of Text
-Multiline Line of Text |{!EntityLogicalName:FieldLogicalName;} |
-|Lookup|{!EntityLogicalName:FieldLogicalName/@name;} |
-|Date|{!EntityLogicalName:FieldLogicalName/@date;} |
-|Time|{!EntityLogicalName:FieldLogicalName/@time;} |
-|Currency |{!EntityLogicalName:FieldLogicalName;} |
-|Decimal Number |{!EntityLogicalName:FieldLogicalName;} |
-|Floating Number|{!EntityLogicalName:FieldLogicalName;} |
-|Multiline Line of Text |{!EntityLogicalName:FieldLogicalName;} |
-|Multi select option set|{!EntityLogicalName:FieldLogicalName/@name;} |
-|Option Set |{!EntityLogicalName:FieldLogicalName/@name;} |
-|Two options |{!EntityLogicalName:FieldLogicalName/@name;} |
+| Field Type | Syntax |
+| --- | --- |
+| Single line of text | {!EntityLogicalName:FieldLogicalName;} |
+| Lookup | {!EntityLogicalName:FieldLogicalName/@name;} |
+| Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
+| Time | {!EntityLogicalName:FieldLogicalName/@time;} |
+| Currency | {!EntityLogicalName:FieldLogicalName;} |
+| Decimal number | {!EntityLogicalName:FieldLogicalName;} |
+| Floating number  | {!EntityLogicalName:FieldLogicalName;} |
+| Multiple lines of text | {!EntityLogicalName:FieldLogicalName;} |
+| Multi-select option set | {!EntityLogicalName:FieldLogicalName/@name;} |
+| Option set | {!EntityLogicalName:FieldLogicalName/@name;} |
+| Two options | {!EntityLogicalName:FieldLogicalName/@name;} |
+<!-- The syntax on most of these is the same. It's not readily apparent how I would differentiate them in a template. Can you please give a few more examples of how to use custom fields? -->
 
-For example, if you want to add a custom  field, Customer id, that is linked to the Record type user to the template, you can insert this syntax: ``{{!User:Customerid;}}`` in the editor.
-
- When the email is sent out, the dynamic text is replaced with the user's customer id.
+For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``
 
 ### See also
 
-[How to create an email template  in model-driven apps](email-template-create.md)  
-[Enable the enhanced email template editor page](cs_email_template_builder.md)
-
+[How to create an email template in model-driven apps](email-template-create.md)  
+[Enable the enhanced email template editor page](cs-email-template-builder.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
