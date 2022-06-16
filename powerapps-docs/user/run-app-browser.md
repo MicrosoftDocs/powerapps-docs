@@ -44,13 +44,16 @@ The Home page may show several types of business apps, but you can find a specif
 ![Busines Apps.](media/bussinessapps.png)
 
 The Microsoft 365 apps page has a different URL per cloud. 
-| **#** |     Cloud                                       |     Microsoft   365 app discovery URL                                                                                                                                                                                                                                                                                               |
-|-------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1     |     Commercial                                  |     https://www.office.com/apps                                                                                                                                                                                                                                                                                                     |
-| 2     |     Government   Community Cloud (GCC)          |     https://www.office.com/apps                                                                                                                                                                                                                                                                                                     |
-| 3     |     Government   Community Cloud (GCC High)     |     https://www.office365.us/apps                                                                                                                                                                                                                                                                                                   |
-| 4     |     Department   of Defense                     |     https://www.ohome.apps.mil/apps                                                                                                                                                                                                                                                                                                 |
-| 5     |     Office   365 operated by 21Vianet           |     There   isn’t a corresponding https://www.office.com/apps   experience for this cloud. However, the Microsoft 365 app launcher experience   throughout Microsoft 365 experiences includes Power Apps and Dynamics apps. E.g.   new word document in https://portal.partner.microsoftonline.cn/NewSpoDocument?docType=Word       |
+
+
+|  **#**        | Cloud         |  Microsoft   365 app discovery URL |
+| ------------- | ------------- | ------------- 
+| 1             | Commercial    | [https://www.office.com/apps](https://www.office.com/apps)                |
+| 2             | Government Community Cloud (GCC) | [https://www.office.com/apps](https://www.office.com/apps) |
+| 3             | Government Community Cloud (GCC High)  | [https://www.office365.us/apps ](https://www.office365.us/apps)   |
+| 4             | Department of Defense  | [https://www.ohome.apps.mil/apps ](https://www.ohome.apps.mil/apps ) |
+| 5             | Office 365 operated by 21Vianet  | There isn’t a corresponding [https://www.office.com/apps](https://www.office.com/apps)   experience for this cloud. However, the Microsoft 365 app launcher experience   throughout Microsoft 365 experiences includes Power Apps and Dynamics apps such as new word document in [https://portal.partner.microsoftonline.cn/NewSpoDocument?docType=Word](https://portal.partner.microsoftonline.cn/NewSpoDocument?docType=Word)   |
+
 
 ## Run an app from a URL
 You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
