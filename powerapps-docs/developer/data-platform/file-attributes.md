@@ -1,30 +1,30 @@
 ---
 title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about File columns that store file data within the application, supporting columns, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/11/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "phecke" # GitHub ID
+ms.date: 06/15/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: nhelgren # MSFT alias of Microsoft employees only
+manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # File columns
 
-A file column is used for storing file data up to a specified maximum size. A custom or customizable table can have zero or more file columns plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file column is `EntityFile`.
+A file column is used for storing file data up to a specified maximum size. A custom or customizable table can have zero or more file columns plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file column is `EntityFile`, the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> is `entityfile`.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Web API (REST) | .NET API (SOAP)
-------- | -------
-[FileAttributeMetadata](/dynamics365/customer-engagement/web-api/fileattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
+|Web API| SDK for .NET|
+|-------| -------|
+|<xref:Microsoft.Dynamics.CRM.FileAttributeMetadata>|<xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>|
 
 For information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
 
@@ -42,20 +42,22 @@ For information about types of files that are not allowed, see [System Settings 
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
   
-## Supporting columns  
+## Supporting columns
+
 When a file column is added to a table some additional columns are created to support it.
   
-### MaxValue column
+### `MaxValue` column
 
- This value represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+This value represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
  
  > [!NOTE]
  > MaxValue is set when the File column is added to a table. This cannot be changed after it is set.
   
 ## Retrieve file data
+
 To retrieve file column data use the following APIs.
 
-Web API (REST) | .NET API (SOAP)
+|Web API|SDK for .NET|
 ------- | -------
  none  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest>
 GET /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
