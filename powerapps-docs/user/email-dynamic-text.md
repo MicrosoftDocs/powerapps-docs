@@ -39,7 +39,7 @@ You can insert dynamic text in existing email templates or templates that you cr
 
 ## Insert custom fields
 
-Dynamic text isn't limited to what you can insert by selecting a record type and field. You can also insert fields from custom entities by typing them directly in your email template.
+ You can insert fields from custom entities by typing them directly in your email template.
 
 Use the following syntax:
 
@@ -52,7 +52,7 @@ Use the following syntax:
 
 For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
 
-For example, let's say you want to insert a custom field, *ModifiedOn*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
+If you want to insert a custom field, *ModifiedOn*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
 
 ### See also
 

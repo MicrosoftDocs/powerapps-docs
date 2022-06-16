@@ -119,8 +119,8 @@
           href: ../user/email-template-create.md
         - name: Customize an email template using the template editor
           href: ../user/cs-template-options.md
-        - name: Personalize content with dynamic text
-          href: ../user/email_dynamic_text.md  
+        - name: Personalize emails with dynamic text
+          href: ../user/email-dynamic-text.md  
         - name: Insert an email template
           href: ../user/insert-email-template.md
         - name: Convert an email to a template
