@@ -3,11 +3,10 @@ title: What is Microsoft Dataverse? | Microsoft Docs
 description: Introduction to Microsoft Dataverse, tables, server-side logic, security, and developer capabilities.
 author: mattp123
 manager: kvivek
-
 ms.topic: overview
 ms.component: cds
 ms.custom: intro-internal
-ms.date: 11/10/2020
+ms.date: 06/15/2022
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
@@ -19,17 +18,16 @@ search.app:
 searchScope:
   - "Power Apps"
 ---
-
 # What is Microsoft Dataverse?
-
 
 Dataverse lets you securely store and manage data that's used by business applications. Data within Dataverse is stored within a set of tables. A *table* is a set of rows (formerly referred to as records) and columns (formerly referred to as fields/attributes). Each column in the table is designed to store a certain type of data, for example, name, age, salary, and so on. Dataverse includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data by using Power Query. App makers can then use Power Apps to build rich applications that use this data.
 
-![Diagram showing overview of Microsoft Power Platform.](./media/data-platform-cds-intro/platform.png "Dataverse in Microsoft Power Platform")
+:::image type="content" source="media/data-platform-cds-intro/platform.png" alt-text="Diagram with overview of Microsoft Power Platform.":::
 
 For information about purchasing a plan to use Dataverse, go to [Pricing info](/power-platform/admin/pricing-billing-skus).
 
 ## Why use Dataverse?
+
 Standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you create a business-focused definition of your organization's data for use within apps. If you're not sure whether tables are your best option, consider these benefits:
 
 - **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
@@ -55,7 +53,6 @@ Responding to customer feedback and data from user research, effective November 
 
 > [!NOTE]
 > These terminology updates aren’t applicable to any APIs or messages in the Dataverse web services. For example, the names of the messages <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> won't change. 
-
 
 ## Dynamics 365 and Dataverse
 
@@ -99,6 +96,7 @@ Tables within Dataverse can take advantage of rich server-side logic and validat
 - **Business logic with code** supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](../../developer/data-platform/apply-business-logic-with-code.md)
 
 ## Security
+
 Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Dataverse environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities

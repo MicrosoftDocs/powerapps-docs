@@ -1,6 +1,216 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/admin-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/admin-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/application-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/application-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/auth-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/auth-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/canvas-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/canvas-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/org-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/org-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/package-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/package-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/paportal-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/paportal-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/pcf-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/pcf-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/plugin-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/plugin-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/solution-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/solution-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/telemetry-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/telemetry-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/powerapps-cli.md",
+      "redirect_url": "/power-platform/developer/cli/introduction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/entity/getvalue.md",
+      "redirect_url": "../../entityrecord/getvalue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/dataset/getRelatedDataSet.md",
+      "redirect_url": "../",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/client-scripting-best-practices.md",
+      "redirect_url": "/power-apps/developer/model-driven-apps/best-practices/business-logic/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/detect-duplicate-data.md",
+      "redirect_url": "manage-duplicate-detection-create-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/test-null-value.md",
+      "redirect_url": "entity-operations-query-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/reference/iimageinfo.md",
+      "redirect_url": "../",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/mode.md",
+      "redirect_url": "../",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/manifest-schema-reference/html.md",
+      "redirect_url": "../",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/customization-support.md",
+      "redirect_url": "supported-customizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/connect-microsoft-office-365.md",
+      "redirect_url": "authentication#microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/control-implementation-library.md",
+      "redirect_url": "custom-controls-overview#component-implementation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/extend-customer-engagement-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/extend-dynamics-365-outlook.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/extend-customer-engagement-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/walkthrough-configure-assembly-security-offline-plugin.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/walkthrough-configure-assembly-security-offline-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/offline-use-services.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/supported-messages-entities-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/offline-outlook-filters-templates.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/offline-outlook-filters-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/outlook-client/sample-outlook-methods.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/sample-outlook-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/create-retrieve-outlook-filters.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/outlook-client/sample-create-retrieve-outlook-filters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/best-practices/business-logic/remove-unsupported-code-using-reflection-workflow-activities.md",
+      "redirect_url": "../data-platform/best-practices/business-logic/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/audit-user-access.md",
+      "redirect_url": "../data-platform/auditing/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/retrieve-and-delete-the-history-of-audited-data-changes.md",
+      "redirect_url": "../data-platform/auditing/retrieve-audit-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/configure-entities-attributes-auditing.md",
+      "redirect_url": "../data-platform/auditing/auditing",
+      "redirect_document_id": false
+     },
+     {
+      "source_path": "powerapps-docs/developer/data-platform/auditing-overview.md",
+      "redirect_url": "../data-platform/auditing/overview",
+      "redirect_document_id": false
+     }, 
+     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-sections.md",
+      "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formContext-ui-tab-sections",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getLabel.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getLabel",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getName.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getName",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getParent.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getParent",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/getVisible.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/getVisible",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/setLabel.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/setLabel",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-sections/setVisible.md",
+      "redirect_url": "/powerapps-docs/developer/model-driven-apps/clientapi/reference/formcontext-ui-tab-sections/setVisible",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/embedding-sdk.md",
       "redirect_url": "/power-apps/maker/canvas-apps/dev-enterprise-intro",
       "redirect_document_id": "false"
@@ -6428,6 +6638,11 @@
     {
       "source_path": "powerapps-docs/developer/component-framework/reference/linking/removeLinkedEntity.md",
       "redirect_url": "/powerapps/developer/component-framework/reference/linking",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/supported-web-browsers.md",
+      "redirect_url": "/power-apps/limits-and-config",
       "redirect_document_id": "false"
     }
   ]

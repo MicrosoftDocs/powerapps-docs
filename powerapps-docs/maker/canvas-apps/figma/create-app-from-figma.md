@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/24/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
@@ -27,8 +27,9 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 - You must have access to a Figma design file that you want to use and create an app from.
 - The Figma file must be designed using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981).
 
-> [!TIP]
-> If you're using the UI kit for the first time, familiarize yourself with the feature [overview](overview.md), the [UI kit](design-using-kit.md) capabilities, and its [components](supported-components.md).
+> [!NOTE]
+> - If you're using the UI kit for the first time, familiarize yourself with the feature [overview](overview.md), the [UI kit](design-using-kit.md) capabilities, and its [components](supported-components.md).
+> - Power Apps doesn't persist the Figma files that you provide. The Figma files are only processed in-memory to generate the app.
 
 ## Create an app
 

@@ -1,20 +1,24 @@
 ---
 title: refresh | Microsoft Docs
 description: Refreshes the dataset based on filters, sorting, linking, new column.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # refresh
 
 [!INCLUDE[./includes/refresh-description.md](./includes/refresh-description.md)]
+
+> [!NOTE]
+> `refresh` does not support parallel execution.
+> Executing `refresh` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 
