@@ -134,7 +134,7 @@ Context variable selected:
 
 Selecting a collection under the **Collections** header will take you to the information screen backstage for that collection.
 
-:::image type="content" source="media/search/collections.png" alt-text="Collections selected from search results showing the relevant collection details.":::
+:::image type="content" source="media/search/collections-1.png" alt-text="Collections selected from search results showing the relevant collection details.":::
 
 ### Data
 
