@@ -46,11 +46,13 @@ Use the following syntax:
 | Field Type | Syntax |
 | --- | --- |
 | <ul><li>Single line of text</li> <li>Currency</li><li> Multiple lines of text </li><li> Decimal number </li><li> Floating number</li></ul> | {!EntityLogicalName:FieldLogicalName;} |
-| Lookup <br> Multi-select option set<br>Option set<br>Two options| {!EntityLogicalName:FieldLogicalName/@name;} |
+| <ul><li>Lookup</li> <li> Multi-select option set</li><li>Option set</li>| {!EntityLogicalName:FieldLogicalName/@name;} |
 | Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
 | Time | {!EntityLogicalName:FieldLogicalName/@time;} |
 
-For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``
+For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
+
+For example, let's say you want to insert a custom field, *ModifiedOn*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
 
 ### See also
 

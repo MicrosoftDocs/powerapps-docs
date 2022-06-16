@@ -17,6 +17,9 @@ search.app:
 
 # Customize an email template using the template editor
 
+> [!NOTE]
+> The enhanced email template editor is available only in Dynamics 365 Customer Service.
+
 Use the **Editor** tab in the **Email Template** form to create customized email templates. The **Editor** tab has three sections:
 
 - Design canvas
