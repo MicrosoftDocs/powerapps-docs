@@ -41,6 +41,7 @@ If you have questions or issues with this feature you can contact technical supp
 
 The following limitations apply to dependent assembly plug-ins.
 
+- A plugin package is limited to 16 MB in size or 50 assemblies.
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
 
@@ -156,10 +157,6 @@ While viewing the list of plugin packages using the **Display by Package** view,
 
 > [!IMPORTANT]
 > Unregistering a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
-
-## Limitations
-
-A plugin package is limited to 16 MB in size or 50 assemblies.
 
 ## Design notes
 
