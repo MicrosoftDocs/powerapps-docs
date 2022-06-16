@@ -76,8 +76,8 @@ Apps published with the setting [Debug published app](../monitor-canvasapps.md#s
 
 [Understand canvas app execution phases and data call flow](execution-phases-data-flow.md) <br>
 [Tips and best practices to improve canvas app performance](performance-tips.md) <br>
-[Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
-[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
+[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
