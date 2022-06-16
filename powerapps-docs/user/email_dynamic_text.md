@@ -37,7 +37,8 @@ If you must insert fields from custom entities in the templates, use the followi
 
 |Field Type  |Syntax  |
 |----------|-----------|
-|Single Line of Text |{!EntityLogicalName:FieldLogicalName;} |
+|Single Line of Text
+Multiline Line of Text |{!EntityLogicalName:FieldLogicalName;} |
 |Lookup|{!EntityLogicalName:FieldLogicalName/@name;} |
 |Date|{!EntityLogicalName:FieldLogicalName/@date;} |
 |Time|{!EntityLogicalName:FieldLogicalName/@time;} |
