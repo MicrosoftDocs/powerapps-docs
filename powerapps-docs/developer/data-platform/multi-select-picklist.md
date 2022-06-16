@@ -103,7 +103,7 @@ Two new condition operators have been added to support querying values in choice
 > [!NOTE]
 > These operators depend on full-text indexing to be applied on the database tables that store the multiple values. There is some latentcy after new records are created and the full-text index takes effect. You may need to wait several seconds after new records are created before filters using these operators can evaluate the values.
 
-Other existing condition operators that can be used with this type of column include: `Equal`, `NotEqual`, `NotNull`, `Null`, `In` and `NotIn`.
+Other existing condition operators that can be used with this type of column include the following:
 
 |Web API|FetchXml|<xref:Microsoft.Xrm.Sdk.Query.ConditionOperator>|
 |---------|---------|---------|
@@ -115,7 +115,7 @@ Other existing condition operators that can be used with this type of column inc
 |<xref:Microsoft.Dynamics.CRM.NotIn>|`not-in`|<xref:Microsoft.Xrm.Sdk.Query.ConditionOperator.NotIn>|
 
 
-The following examples shows the use of `ContainValues` and `not-contain-values` using `FetchXML` against the following data set on choices column named `sample_outdooractivities` on the `contact` table.
+The following examples show using the `ContainValues` and `DoesNotContainValues` operators against the following data set on choices column named `sample_outdooractivities` on the `contact` table.
 
 ### Choices `sample_outdooractivities` values
 
@@ -133,7 +133,7 @@ The following examples shows the use of `ContainValues` and `not-contain-values`
 
 ### Contact table values
 
-|'fullname' column| 'sample_outdooractivities' column |
+|`fullname`| 'sample_outdooractivities'|
 |--------|-------------------|
 |Wayne Yarborough|1,9|
 |Monte Orton|2|
