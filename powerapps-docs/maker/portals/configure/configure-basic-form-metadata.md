@@ -20,7 +20,7 @@ contributors:
 The basic form Metadata contains extra behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 > [!TIP]
-> If two basic form metadata records are created for the same attribute that conflicting actions, the basic form metadata record that was created **first** will apply and the subsequent records will not.
+> If two basic form metadata records are created for the same attribute that have conflicting actions, the basic form metadata record that was created **first** will apply and the subsequent records will not.
 
 ## Add a new record
 
