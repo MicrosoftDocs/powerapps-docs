@@ -232,9 +232,13 @@ Once you have refined your selection to the items you'd like to replace, selecti
 
 :::image type="content" source="media/search/search-replace.png" alt-text="Select Replace to confirm to replace and undo replacements.":::
 
-Confirming the operation performs the replacement and a notification indicates whether the replacement was successful. The replacement operation may fail if a control name is already in use or unsupported characters are included.
+Confirming the operation performs the replacement and a notification indicates whether the replacement was successful. 
 
 :::image type="content" source="media/search/search-replace-confirm.png" alt-text="Confirmation of replacements.":::
+
+The replacement operation may fail if a control name is already in use or unsupported characters are included.
+
+:::image type="content" source="media/search/replace-fail.png" alt-text="Replacement operation has failed.":::
 
 After the replacement is complete, you can undo the replacement by using the undo button or by selecting **Ctrl+Z**.
 
