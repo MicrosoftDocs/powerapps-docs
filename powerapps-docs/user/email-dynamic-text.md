@@ -5,7 +5,7 @@ ms.custom: ""
 author: gandhamm
 manager: shujoshi
 ms.topic: task
-ms.date: 06/09/2022
+ms.date: 06/16/2022
 ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
@@ -29,14 +29,14 @@ You can insert dynamic text in existing email templates or templates that you cr
 
 1. Select **Insert dynamic text**.
 
-    :::image type="content" source="media/email-dyn-text.png" alt-text="Screenshot of the email template editor, with Insert dynamic text highlighted.":::
+    :::image type="content" source="media/email-dyn-text.png" alt-text="The email template editor, with Insert dynamic text highlighted.":::
 
 
 1. Select the **Record type** and **Field name**.
 
     The category that you specified when you created the email template determines the record types you can choose. The record type you choose determines the fields you can select.
 
-    :::image type="content" source="media/email-dyn-text-fields.png" alt-text="Screenshot of the Edit dynamic text pane, with Record type and Field name highlighted.":::
+    :::image type="content" source="media/email-dyn-text-fields.png" alt-text="The Edit dynamic text pane, with Record type and Field name highlighted.":::
 
 ## Insert custom fields
 
