@@ -45,7 +45,7 @@ Use the following syntax:
 
 | Field Type | Syntax |
 | --- | --- |
-| - Single line of text <br>- Currency <br>- Multiple lines of text <br>- Decimal number <br>- Floating number | {!EntityLogicalName:FieldLogicalName;} |
+| <ul><li>Single line of text</li> <li>Currency</li><li> Multiple lines of text </li><li> Decimal number </li><li> Floating number</li></ul> | {!EntityLogicalName:FieldLogicalName;} |
 | Lookup <br> Multi-select option set<br>Option set<br>Two options| {!EntityLogicalName:FieldLogicalName/@name;} |
 | Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
 | Time | {!EntityLogicalName:FieldLogicalName/@time;} |
