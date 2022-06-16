@@ -25,9 +25,12 @@ Dynamic text replaces a placeholder entity with the value of the entity when you
 
 You can insert dynamic text in existing email templates or templates that you create.
 
-1. In the template editor, place your cursor where you want the personalized content to appear and select **Insert dynamic text**.
+1. Select **Email Template** to edit an existing template or create a new email template. On the template editor, place your cursor where you want the personalized content to appear.
+
+1. Select **Insert dynamic text**.
 
     :::image type="content" source="media/email-dyn-text.png" alt-text="Screenshot of the email template editor, with Insert dynamic text highlighted.":::
+
 
 1. Select the **Record type** and **Field name**.
 
