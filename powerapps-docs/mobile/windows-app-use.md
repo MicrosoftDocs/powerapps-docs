@@ -25,12 +25,17 @@ This topic covers how to sign in and run your apps on Power Apps for Windows.
 
 ## Sign in 
 
-Sign into Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
+Sign into Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator. 
 
-1.  On the Welcome screen, select **Sign in**.
+1.  On the Welcome screen, select **Sign in**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Sign in.](media/pam-windows-image1.png)
+
+    > [!NOTE]
+    > You also have the option to sign in as a guest user and choose a different region.
+    >  ![Enter your email addreass.](media/mobile-gcc.png)
+
 
 2.  Enter your email address, and then select **Next**. Then enter your password and then select **Sign in**.
 
