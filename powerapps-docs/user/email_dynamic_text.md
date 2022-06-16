@@ -45,8 +45,7 @@ Use the following syntax:
 
 | Field Type | Syntax |
 | --- | --- |
-| Single line of text  
- Currency | {!EntityLogicalName:FieldLogicalName;} |
+| Single line of text<br>Currency<br>Multiple lines of text<br>Decimal number<br>Floating number | {!EntityLogicalName:FieldLogicalName;} |
 | Lookup | {!EntityLogicalName:FieldLogicalName/@name;} |
 | Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
 | Time | {!EntityLogicalName:FieldLogicalName/@time;} |
