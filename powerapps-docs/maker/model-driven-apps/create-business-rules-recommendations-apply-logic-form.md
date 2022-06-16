@@ -68,8 +68,9 @@ By combining conditions and actions, the following actions are possible with bus
 
 1. Select from these options: 
    - By default, only active business rules for the form are displayed. Clear **Show only active business rules** to view deactivated business rules for the form.
-   - Select **...** > **Edit** to open the business rule designer to make changes to a rule. 
    - To create a business rule, select **New business rule**.
+   - Select the business rule to view properties and edit the business rule.
+   :::image type="content" source="media/business-rule-properties.png" alt-text="Business rule properties.":::
 
 ## Set the business rule properties
 
