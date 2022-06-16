@@ -242,7 +242,7 @@ After the replacement is complete, you can undo the replacement by using the und
 
 The Search pane is limited to returning a maximum of 2000 results. A notification appears if you exceed this limit.
 
-:::image type="content" source="media/search/max-results.png" alt-text="Maximum number of results reached.":::
+:::image type="content" source="media/search/max-results-1.png" alt-text="Maximum number of results reached.":::
 
 ### See also
 
