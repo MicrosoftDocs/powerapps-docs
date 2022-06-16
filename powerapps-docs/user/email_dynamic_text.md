@@ -45,18 +45,10 @@ Use the following syntax:
 
 | Field Type | Syntax |
 | --- | --- |
-| Single line of text<br>Currency<br>Multiple lines of text<br>Decimal number<br>Floating number | {!EntityLogicalName:FieldLogicalName;} |
-| Lookup | {!EntityLogicalName:FieldLogicalName/@name;} |
+| - Single line of text <br>- Currency <br>- Multiple lines of text <br>- Decimal number <br>- Floating number | {!EntityLogicalName:FieldLogicalName;} |
+| Lookup <br> Multi-select option set<br>Option set<br>Two options| {!EntityLogicalName:FieldLogicalName/@name;} |
 | Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
 | Time | {!EntityLogicalName:FieldLogicalName/@time;} |
-| Currency | {!EntityLogicalName:FieldLogicalName;} |
-| Decimal number | {!EntityLogicalName:FieldLogicalName;} |
-| Floating number  | {!EntityLogicalName:FieldLogicalName;} |
-| Multiple lines of text | {!EntityLogicalName:FieldLogicalName;} |
-| Multi-select option set | {!EntityLogicalName:FieldLogicalName/@name;} |
-| Option set | {!EntityLogicalName:FieldLogicalName/@name;} |
-| Two options | {!EntityLogicalName:FieldLogicalName/@name;} |
-
 
 For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``
 
