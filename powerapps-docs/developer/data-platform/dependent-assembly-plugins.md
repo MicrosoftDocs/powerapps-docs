@@ -165,6 +165,9 @@ Assuming that this is all built using MS technologies, we can have links to any 
 
 ## FAQ
 
+### Q: Can I continue to use ILMerge?
+
+**A**: We have never supported ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality and more. But nothing else has changed. If ILMerge works for you, you can continue to use it. But we recommend using dependent assemblies.
  <!-- Need Amol/Divya to provide FAQ to add here -->
 ### See also
 
