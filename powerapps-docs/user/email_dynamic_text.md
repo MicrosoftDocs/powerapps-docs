@@ -45,7 +45,8 @@ Use the following syntax:
 
 | Field Type | Syntax |
 | --- | --- |
-| Single line of text | {!EntityLogicalName:FieldLogicalName;} |
+| Single line of text  
+ Currency | {!EntityLogicalName:FieldLogicalName;} |
 | Lookup | {!EntityLogicalName:FieldLogicalName/@name;} |
 | Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
 | Time | {!EntityLogicalName:FieldLogicalName/@time;} |
@@ -56,7 +57,7 @@ Use the following syntax:
 | Multi-select option set | {!EntityLogicalName:FieldLogicalName/@name;} |
 | Option set | {!EntityLogicalName:FieldLogicalName/@name;} |
 | Two options | {!EntityLogicalName:FieldLogicalName/@name;} |
-<!-- The syntax on most of these is the same. It's not readily apparent how I would differentiate them in a template. Can you please give a few more examples of how to use custom fields? -->
+
 
 For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``
 
