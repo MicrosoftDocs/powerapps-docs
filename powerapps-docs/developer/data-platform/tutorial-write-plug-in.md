@@ -55,7 +55,7 @@ Create an asynchronous plug-in registered on the Create message of the account t
 
 ## Create a plug-in project
 
-You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can use [Power Platform CLI](../../../power-platform/developer/cli/reference/plugin-command) to create a new project using the command `pac plugin init`.
+You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can use [Power Platform CLI](/power-platform/developer/cli/reference/plugin-command) to create a new project using the command `pac plugin init`.
 
 You can also find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
 
