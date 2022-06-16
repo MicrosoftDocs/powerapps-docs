@@ -34,7 +34,7 @@ Sign into Power Apps for Windows quickly using your work email address. If you n
 
     > [!NOTE]
     > You also have the option to sign in as a guest user and choose a different region.
-    >  ![Enter your email addreass.](media/mobile-gcc.png)
+    >  ![Sign in to a differnt region.](media/mobile-gcc.png)
 
 
 2.  Enter your email address, and then select **Next**. Then enter your password and then select **Sign in**.
