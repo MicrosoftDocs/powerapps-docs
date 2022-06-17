@@ -67,9 +67,11 @@ GET /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:
 File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
 
 ### Example: Download with chunking
+
 #### [Web API](#tab/webapi)
 
 **Request**
+
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute/$value
 Headers:
@@ -77,6 +79,7 @@ Range: bytes=0-1023/8192
 ```
 
 **Response**
+
 ```http
 206 Partial Content
 
@@ -134,6 +137,7 @@ static async Task ChunkedDownloadAsync(
     await File.WriteAllBytesAsync(Path.Combine(fileRootPath, downloadFileName), downloaded);
 }
 ```
+
 ---
 
 <a name="BKMK_UploadingFiles"></a>
@@ -196,6 +200,7 @@ The following is the legacy method of uploading a data file of 16 MB or more by 
 ##### First request
 
 **Request**
+
 ```http
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute 
 
@@ -216,6 +221,7 @@ x-ms-transfer-mode: chunked
 ```
 
 **Response**
+
 ```http
 200 OK 
 
@@ -226,7 +232,9 @@ Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken
 ```
 
 ##### Next request
+
 **Request**
+
 ```http
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
 
@@ -240,6 +248,7 @@ byte[]
 ```
 
 **Response**
+
 ```http
 206 Partial Content
 ```
@@ -298,6 +307,7 @@ static async Task ChunkedUploadAsync(
 <a name="BKMK_DeletingFiles"></a>
 
 ## Delete file data
+
 To delete the file column data from storage, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)

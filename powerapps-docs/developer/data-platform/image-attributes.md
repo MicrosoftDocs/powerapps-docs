@@ -111,6 +111,7 @@ Note that in this case the image column download makes use of the file column me
 ### Example: REST thumbnail download
 
 **Request**
+
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(b9ccec62-f266-e911-8196-000d3a6de638)/myentityimage/$value
 
@@ -119,6 +120,7 @@ Content-Type: application/octet-stream
 ```
 
 **Response**
+
 ```http
 204 No Content
 
@@ -129,13 +131,16 @@ byte[]
 ### Example: REST full image download (<=16MB)
 
 **Request**
+
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage/$value?size=full
 
 Headers:
 Content-Type: application/octet-stream
 ```
+
 **Response**
+
 ```http
 204 No Content
 
@@ -152,13 +157,16 @@ In the above example, the query string parameter `size=full` indicates to downlo
 ### Example: REST full image download (>16MB)
 
 **Request**
+
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage/$value?size=full
 
 Header:
 Range: bytes=0-1023/8192
 ```
+
 **Response**
+
 ```http
 206 Partial Content
 
@@ -202,6 +210,7 @@ To upload full image data in single call, use the following APIs.
 ### Example: REST full image upload
 
 **Request**
+
 ```http
 PUT [Organization URI]/api/data/v9.1/accounts(C0864F1C-0B71-E911-8196-000D3A6D09B3)/myentityimage
 
@@ -233,6 +242,7 @@ To use the legacy chunking to upload image data greater than 16MB in size, use t
 #### First request
 
 **Request**
+
 ```http
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myentityimage
 
@@ -242,6 +252,7 @@ x-ms-file-name: sample.png
 ```
 
 **Response**
+
 ```http
 Response:
 200 OK
@@ -277,6 +288,7 @@ byte[]
 In the above request, the next block of data is being uploaded. After all image data has been received by the web service, a thumbnail image is automatically created by the web service.
 
 ### See also
+
 [File columns](file-attributes.md)<br />
 [Table definitions in Microsoft Dataverse](entity-metadata.md)<br />
 [Column definitions](entity-attribute-metadata.md)<br />
