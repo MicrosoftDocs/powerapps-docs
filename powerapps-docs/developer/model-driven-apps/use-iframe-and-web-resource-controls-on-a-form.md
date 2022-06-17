@@ -1,11 +1,11 @@
 ---
 title: "Use IFRAME and web resource controls on a form (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.author: jdaly
 author: HemantGaur
-manager: evchaki
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 06/10/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
@@ -22,7 +22,7 @@ contributors:
 IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  
 
 > [!NOTE]
->  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
+>  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren't displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
 You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. 
 
@@ -45,7 +45,7 @@ Displaying a form within an IFrame embedded in another form is not supported.
 
 ## Select whether to restrict cross-frame scripting  
 
- Use the **Restrict cross-frame scripting, where supported** option when you don’t fully trust the content displayed in an IFRAME. When this option is selected, the IFRAME has the parameters set that are listed in the following table.  
+ Use the **Restrict cross-frame scripting, where supported** option when you don't fully trust the content displayed in an IFRAME. When this option is selected, the IFRAME has the parameters set that are listed in the following table.  
 
 
 |        Parameter        |        Description      |
@@ -108,7 +108,7 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
  Use the [getValue](clientapi/reference/controls/getValue.md) method on the columns that contain the data that you want to pass to the other website, and compose a string of the query string arguments the other page will be able to use. Then use a [Column OnChange event](clientapi/reference/events/attribute-onchange.md), [IFRAME OnReadyStateComplete event](clientapi/reference/events/onreadystatecomplete.md), or [Tab TabStateChange event](clientapi/reference/events/tabstatechange.md) and the [setSrc](clientapi/reference/controls/setSrc.md) method to append your parameters to the `src` property of the IFRAME or web resource.  
 
- If you’re using the data parameter to pass data to a Silverlight web resource, you can use the [getData](clientapi/reference/controls/getData.md) and [setData](clientapi/reference/controls/setData.md) methods to manipulate the value passed via the data parameter. For webpage (HTML) web resources, use the [setSrc](clientapi/reference/controls/setSrc.md) method to manipulate the `querystring` parameter directly.  
+ If you're using the data parameter to pass data to a Silverlight web resource, you can use the [getData](clientapi/reference/controls/getData.md) and [setData](clientapi/reference/controls/setData.md) methods to manipulate the value passed via the data parameter. For webpage (HTML) web resources, use the [setSrc](clientapi/reference/controls/setSrc.md) method to manipulate the `querystring` parameter directly.  
 
  Avoid using the [OnLoad event](clientapi/reference/events/form-onload.md). IFRAMES and web resources load asynchronously and the frame may not have finished loading before the `Onload` event script finishes. This can cause the `src` property of the IFRAME or web resource you have changed to be overwritten by the default value of the IFRAME or web resource URL property.  
 
@@ -119,28 +119,29 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
  You may want to change the target of the IFRAME based on such considerations as the data in the form or whether the user is working offline. You can set the target of the IFRAME dynamically.  
 
 > [!NOTE]
->  When you change the target page for the IFRAME, parameters aren’t passed to the new URL automatically. You must append the query string parameters to the URL before you use the `setSrc` method.  
+>  When you change the target page for the IFRAME, parameters aren't passed to the new URL automatically. You must append the query string parameters to the URL before you use the `setSrc` method.  
 
-### Example  
+### Example
 
  The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.  
 
 ```javascript  
-//Get the value of a choice column  
-var value = Xrm.Page.data.entity.attributes.get("new_pagechooser").getValue();  
+//Get the value of an option set attribute
+var formContext = executionContext.getFormContext();
+var value = formContext.getAttribute("new_pagechooser").getValue();  
 var newTarget = "";  
-//Set the target based on the value of the choice  
+//Set the target based on the value of the option set  
 switch (value) {  
     case 100000001:  
-        newTarget = "https://myServer/test/pageOne.aspx";  
+        newTarget = https://myServer/test/pageOne.aspx;  
         break;  
     default:  
-        newTarget = "https://myServer/test/pageTwo.aspx";  
+        newTarget = https://myServer/test/pageTwo.aspx;  
         break;  
 }  
 //Get the default URL for the IFRAME, which includes the   
 // query string parameters  
-var IFrame = Xrm.Page.ui.controls.get("IFRAME_test");  
+var IFrame = formContext.ui.controls.get("IFRAME_test");  
 var Url = IFrame.getSrc();  
 // Capture the parameters  
 var params = Url.substr(Url.indexOf("?"));  
@@ -148,7 +149,7 @@ var params = Url.substr(Url.indexOf("?"));
 newTarget = newTarget + params;  
 // Use the setSrc method so that the IFRAME uses the  
 // new page with the existing parameters  
-IFrame.setSrc(newTarget);  
+IFrame.setSrc(newTarget);
 ```  
 
 ## See Also  

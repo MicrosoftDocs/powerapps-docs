@@ -1,16 +1,16 @@
 ---
 title: "Create a model-driven app field component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a model-driven app field component, and deploy, configure, and test the component on a form using Visual Studio Code."
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.custom: "intro-internal"
-ms.topic: "index-page"
+ms.topic: tutorial
 ms.subservice: pcf
 contributors:
-    - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 
@@ -66,7 +66,7 @@ Running 'npm install' for you...
 >[!div class="mx-imgBorder"]
 > ![Creating code component using pac pcf init.](media/field-component-1.gif "Creating code component using pac pcf init")
 
-You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [component implementation](control-implementation-library.md).
+You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
 
 
 ### Install Microsoft Fluent UI

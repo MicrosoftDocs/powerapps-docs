@@ -1,17 +1,14 @@
 ---
 title: Configure web roles for a partner relationship management (PRM) portal
 description: Learn how to add web roles for a partner portal.
-author: sbmjais
-
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Configure web roles for a partner relationship management (PRM) portal

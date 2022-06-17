@@ -2,9 +2,8 @@
 title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
 description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
-ms.date: 08/25/2020
+ms.date: 05/03/2022
 ms.reviewer: "matp"
-
 ms.topic: "how-to"
 author: "Aneesmsft"
 ms.subservice: mda-maker
@@ -21,7 +20,11 @@ search.app:
 
 # Add, configure, move, or delete sections on a form
 
-Add, configure, move, or delete sections on a form using the form designer.
+A section on a form occupies the space available in a tab. Sections have several configurable properties including a label that can be displayed.  
+  
+Sections help you group similar components in an area of a form tab, such as the ACCOUNT INFORMATION, ADDRESS, and Timeline single column sections on the main account form Summary tab. Sections can have up to four columns.
+
+:::image type="content" source="media/form-sections.png" alt-text="Default sections on the account main form":::
 
 ## Add sections to a form
 
@@ -59,7 +62,7 @@ To add sections to a form, use the **Components** pane.
 3. On the command bar, select **Add component**, or in the left pane, select **Components**.  
 4. In the **Components** pane, select a section component to add it to the form. Alternatively, select **...** next to the section component you want, and then select **Add to selected tab**.
 5. Repeat steps 2-4 above if you want to add more sections.
-6. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
+6. On the command bar, select **Save** to save the form. Select **Publish** to save and make your changes visible to users.
 
 :::image type="content" source="../../maker/model-driven-apps/media/add-form-sections-selection.gif" alt-text="add form sections using selection":::
 
@@ -69,13 +72,14 @@ These are the properties available to configure a section when you create or edi
 
 |Area   |Name  |Description  |
 |---------|---------|---------|
-|**Display options** | **Section label**    | The localizable label for the section visible to users. <br /><br />This property is required.      |
+|**Display options** | **Label**    | The localizable label for the section visible to users. <br /><br />This property is required.      |
 |**Display options** | **Name** | The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
 |**Display options** | **Hide label** |  When selected, the section label is hidden. |
-|**Display options** | **Lock section** | Lock this section to keep it from being removed. |
-|**Display options** | **Hide section** | When selected, the section is hidden by default and can be shown using code. |
 |**Display options** | **Hide on phone** |  The section can be hidden to render a condensed version of this form on phone screens. |
+|**Display options** | **Hide** | When selected, the section is hidden by default and can be shown using code. |
+|**Display options** | **Lock** | Lock this section to keep it from being removed. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
+|**Formatting** |  **Component label position** |  Determines the position for the component label. Select **Left** to display the label to the left of the value or **Top** to place the label above the value. |
 
 > [!NOTE]
 > We recommend limiting the length of section label text to about 50 characters. Section label text doesn't wrap and can truncate on devices with small screens.

@@ -1,14 +1,15 @@
 ---
 title: Import components into model-driven apps in Microsoft Dataverse | Microsoft Docs
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.topic: "article"
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Package a code component

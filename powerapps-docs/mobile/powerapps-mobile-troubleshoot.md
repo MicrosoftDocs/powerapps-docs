@@ -27,25 +27,6 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 > If you are having an issue with Power Apps for iOS or Android and you don’t find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.”
 
 
-## Unable to sign in on an Android device using Authenticator or Company Portal
-
-There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which caused sign-in to fail with no error message in the Power Apps mobile.
-
-The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following version:
-
- - Authenticator that's **later** than version **6.2104.2518**
- - Company portal that's **later** than  version **5.0.5123.0**
-
-
-## Unable to open an app
-
-There was an intermittent issue with Microsoft Authenticator app version **6.2104.2518** and Company Portal version **5.0.5123.0**, which prevents apps opening in the Power Apps mobile app.
-
-The issue has been fixed. Make sure that you're using a version of Authenticator or Company Portal that's later than the following:
-
- - Authenticator app that's **later** than version **6.2104.2518**
- - Company portal that's **later** than  version **5.0.5123.0**
-
 ## Error: There was a problem signing you in
 
 You are unable to sign in due to issues with the Microsoft Authenticator app. 
@@ -58,8 +39,9 @@ If you already have the Microsoft Authenticator app installed and you're having 
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall Power Apps mobile.
 4. Reinstall the Microsoft Authenticator app and add your back up account.
-5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
+5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and then sign in.
+
 
 ## Error: Your device configuration is preventing sign in
 
@@ -96,21 +78,11 @@ If the issue is still not fixed, then try these steps:
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall Power Apps mobile.
 4. Install Microsoft Authenticator again and add your back up accounts again.
-5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
+5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and sign in.
 
-If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
+If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get. 
 
-
-## Pin to Home does not work on iOS 14
-
-**iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](../mobile/run-powerapps-on-mobile.md#use-siri-shortcuts-to-add-a-shortcut-to-the-home-screen-ios-14-or-later).
-
-**iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](../mobile/run-powerapps-on-mobile.md#use-safari-to-add-a-shortcut-ios-13-or-earlier)
-
-## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14 
-
-If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again. 
 
 ## App list is empty
 
@@ -122,15 +94,19 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
-## Flows created in a solution is not supported on Power Apps mobile
 
-The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
+## Pin to Home does not work on iOS 14
+
+**iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](../mobile/run-powerapps-on-mobile.md#use-siri-shortcuts-to-add-a-shortcut-to-the-home-screen-ios-14-or-later).
+
+**iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](../mobile/run-powerapps-on-mobile.md#use-safari-to-add-a-shortcut-ios-13-or-earlier)
+
 
 ## App resets when running it on Power Apps mobile
 
 When you run a canvas or model-driven app on Power Apps mobile it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, and the web browser suspends the page because it is consuming too much power.
 
-Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest specificized device that your end-users will use.
+Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest-specification device that your end-users will use.
 
 If you experience a reset, contact your app developer, and point them to this topic. 
 
@@ -140,6 +116,20 @@ For more information for developers, see:
 - Whitepaper: [PowerApps canvas app coding
 standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
 
+
+## Unable to download SharePoint attachment in the mobile app
+
+The Power Apps platform does not support accessing authenticated URLs, including SharePoint attachments. If you run a Power Apps application in a web browser and it tries to access a SharePoint attachment, it may work if you are signed-in to SharePoint in another tab. This is because web browsers support multiple signed-in users, and sign-ins are valid across browser tabs. However, the Power Apps mobile app is not a web browser, so does not benefit from this browser-based behavior.
+
+
+## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14 
+
+If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again.
+
+
+## Flows created in a solution are not supported on Power Apps mobile
+
+The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
 
 ### See also  

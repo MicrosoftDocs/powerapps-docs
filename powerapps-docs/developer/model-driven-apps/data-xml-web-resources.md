@@ -3,7 +3,7 @@ title: "Data (XML) Web resources (model-driven apps) | Microsoft Docs" # Intent 
 description: "Learn about using data (XML) Web resources to save and access data." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
