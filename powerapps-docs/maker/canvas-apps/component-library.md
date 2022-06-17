@@ -4,7 +4,7 @@ description: Learn about working with a library of reusable components for canva
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/01/2022
+ms.date: 06/16/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -14,11 +14,12 @@ search.app:
 contributors:
   - hemantgaur
   - tapanm-msft
+  - ProfessorKendrick
 ---
 
 # Component library
 
-In the [overview](create-component.md) article for creating components, you are introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
+In the [overview](create-component.md) article for creating components, you're introduced to components inside canvas app. As you create components inside an app, you can also create a library of components that can be reused. By creating a component library, app makers easily share and update one or more components with other makers.
 
 Component libraries are containers of component definitions that make it easy to:
 
@@ -81,7 +82,7 @@ When creating component inside a component library, you have the option to allow
 
 :::image type="content" source="media/component-library/allow-customization-on.png" alt-text="Option to allow customization to this component when being used by an app.":::
 
-When you add a component that allows customization, you'll see an option to edit this component for additional customization. App makes a local copy and you can make changes to local component copy. Note that the association with the component library is removed once the component is edited.
+When you add a component that allows customization, you'll see an option to edit this component for more customization. App makes a local copy and you can make changes to local component copy. The association with the component library is removed once the component is edited.
 
 :::image type="content" source="media/component-library/edit-customizable-component.png" alt-text="Edit a component allowed for customization.":::
 
@@ -116,7 +117,7 @@ Components available inside the app are listed under the **Custom** category in 
 
 ## Update a component library
 
-You can modify an existing component library and save any changes with additional version notes. However, the updated component library version must be published for use in existing apps that use the component library. The [example component library](component-library.md#create-an-example-component-library) steps above explain how to publish a component library after saving it.
+You can modify an existing component library and save any changes with other version notes. However, the updated component library version must be published for use in existing apps that use the component library. The [example component library](component-library.md#create-an-example-component-library) steps above explain how to publish a component library after saving it.
 
 There are two ways apps using the components from library can get the latest changes.
 
@@ -144,7 +145,7 @@ To do this check, select Insert component panel on the left-side, and then selec
 
 ![Check for latest components](./media/component-library/check-for-updates.png "Check for latest components")
 
-If there are updates in the components used from library , maker will get the message to review and get the latest changes. Upon review and update, the app gets updated with the latest components.
+If there are updates in the components used from library, maker will get the message to review and get the latest changes. Upon review and update, the app gets updated with the latest components.
 
 The following animation shows the process to get the latest components.
 
@@ -163,7 +164,7 @@ If you select **Create a copy**, the component is copied to the local app. The l
 
 ## Deleting a component library
 
-If a component library is referenced by a canvas app it cannot be deleted. This is true for both Power Platform and non-Power Platform environments.  Please remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or in the message which is shown when you try to delete library.
+If a component library is referenced by a canvas app, it can't be deleted. This is true for both Power Platform and non-Power Platform environments.  Remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or in the message, which is shown when you try to delete library.
 
 ![Delete library component.](./media/component-library/delete-component-library-dependencies.png "Delete library component")
 
@@ -179,7 +180,7 @@ Sharing a component library works the same way you share a canvas app. When you 
     ![Import component library file.](./media/component-library/import-component-library-file.png "Import component library file")
 
 - If you're importing an app and a component library in an environment for the first time, ensure the app uses the latest version of the component included with the component library. Otherwise, the app won't receive updates after the import. The app will recognize and prompt for the updated version upon subsequent component library imports to the same environment.
-- Code components are not supported inside component libraries.
+- Code components aren't supported inside component libraries.
 
 ### See also
 
