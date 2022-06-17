@@ -1,4 +1,4 @@
-----
+---
 title: Add canvas apps to solution by default
 description: In Power Apps, learn about how to configure environment for adding all new canvas apps to default solution through various methods.
 author: tapanm-msft
