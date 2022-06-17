@@ -35,8 +35,8 @@ The following table describes the `organization` table columns that control audi
 |Schema Name<br />Logical Name<br />Display Name|Type|Description  |
 |---------|---------|---------|
 |`IsAuditEnabled`<br />`isauditenabled`<br />**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment.|
-|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
-|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)|
+|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
+|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.|
 |`UserAccessAuditingInterval`<br />`useraccessauditinginterval`<br />**User Authentication Auditing Interval**|Integer|The interval how often user access is logged in hours. Default value is 4.|
 
 ### Retrieve organization settings
@@ -504,7 +504,7 @@ More information:
 
 ### See also
 
-[Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)<br />
+[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
 [Administrators Guide: System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)<br />
 [Auditing overview](overview.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
