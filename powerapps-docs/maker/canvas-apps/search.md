@@ -196,11 +196,11 @@ You can also filter the result list to only show selected categories of results.
 
 :::image type="content" source="media/search/work-with-search-results-2.png" alt-text="Filter the result list to only show selected categories of results.":::
 
-As you refine the list of results to replace, the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected, the button reads, **Replace all** with the total count of all replaceable items.
+As you refine the list of results to replace the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected the button reads **Replace all** with the total count of all replaceable items.
 
 :::image type="content" source="media/search/work-with-search-results-3.png" alt-text="Results showing total replacements found.":::
 
-If you've selected results from the list, the button is updated to read, **Replace selected** with the total count of selected items.
+If you've selected results from the list the button is updated to read **Replace selected** with the total count of selected items.
 
 :::image type="content" source="media/search/work-with-search-results-4.png" alt-text="Replace selected button showing total number of replace items.":::
 
