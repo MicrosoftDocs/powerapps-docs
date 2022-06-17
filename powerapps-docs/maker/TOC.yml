@@ -440,6 +440,8 @@
                 href: ./canvas-apps/mixed-reality-cgtrader.md
               - name: Use the Markup in MR control in Power Apps (preview)
                 href: ./canvas-apps/markup-in-mixed-reality.md
+              - name: Use marker detection with mixed reality controls (preview)
+                href: ./canvas-apps/mixed-reality-marker-detection.md
           - name: "Add geospatial controls"
             items:
             - name: Geospatial controls
