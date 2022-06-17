@@ -163,7 +163,7 @@ If you select **Create a copy**, the component is copied to the local app. The l
 
 ## Deleting a component library
 
-If a component library is referenced by a canvas app it cannot be deleted. This is true for both Dataverse and non-Dataverse environments.  Please remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or in the message which is shown when you try to delete library.
+If a component library is referenced by a canvas app it cannot be deleted. This is true for both Power Platform and non-Power Platform environments.  Please remove the component from the app before deleting the library.  You can find information about the apps using the component library in either solution dependencies view or in the message which is shown when you try to delete library.
 
 ![Delete library component.](./media/component-library/delete-component-library-dependencies.png "Delete library component")
 
