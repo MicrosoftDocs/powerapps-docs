@@ -16,7 +16,7 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Analyze and resolve Portal Checker diagnostics results
+# Portal checker configuration issues
 
 In this article, you'll learn about Portal Checker diagnostics results related to configuration issues, and how to resolve any issues or problems found.
 
