@@ -1,7 +1,7 @@
 ---
 title: "Configure auditing (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Explains how to configure programatically configure auditing settins for the organization, tables and columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+ms.date: 06/13/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
@@ -35,8 +35,8 @@ The following table describes the `organization` table columns that control audi
 |Schema Name<br />Logical Name<br />Display Name|Type|Description  |
 |---------|---------|---------|
 |`IsAuditEnabled`<br />`isauditenabled`<br />**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment.|
-|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/audit-data-user-activity#startstop-auditing-and-set-retention-policy)|
-|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.<br />More information: [Microsoft Power Platform admin: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)|
+|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
+|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.|
 |`UserAccessAuditingInterval`<br />`useraccessauditinginterval`<br />**User Authentication Auditing Interval**|Integer|The interval how often user access is logged in hours. Default value is 4.|
 
 ### Retrieve organization settings
@@ -139,7 +139,7 @@ You can set these column values using Web API or Dataverse SDK for .NET. More in
 
 ## Configure tables and columns
 
-When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. By default, all columns that can participate in auditing are enabled. The primary control is at the organization and then table level.
+When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. The primary control is at the organization and then table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
 
@@ -504,7 +504,7 @@ More information:
 
 ### See also
 
-[Administrators Guide: Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)<br />
+[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
 [Administrators Guide: System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)<br />
 [Auditing overview](overview.md)<br />
 [Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
