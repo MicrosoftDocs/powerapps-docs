@@ -2,7 +2,7 @@
 title: "Quickstart: Create a plug-in using Power Platform Tools | Microsoft Docs"
 description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
-ms.date: 16/20/2020
+ms.date: 06/20/2020
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
