@@ -61,7 +61,7 @@ To use Power BI with Dataverse, you need the following items:
    > [!NOTE]
    > This is the earlier version of the Dataverse connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.
 
-1. In the dialog box that appears, paste in your complete environment URL into the **Server Url** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your environment URL](#find-your-dataverse-environment-url)
+1. In the dialog box that appears, paste in your complete environment URL into the **Server Url** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your environment URL](#find-your-environment-url)
 
 1. Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**
 
