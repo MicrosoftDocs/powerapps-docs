@@ -4,7 +4,7 @@ description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/01/2022
+ms.date: 06/10/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -270,6 +270,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 ## Known limitations
 
+- A custom input property can't be configured to a custom output property value across same or different instances when you have two or more instances of same component in an app. This action will result in a circular reference warning message. To work around this limitation, you can create a copy of the component inside your app.
 - Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
 - You can't insert a component into a gallery or a form (including SharePoint form).
