@@ -52,7 +52,7 @@ In addition to bringing data into Dataverse, Data Factory can also be used to pr
 
 ## Exporting data from Dataverse
 
-Exporting data, either to another data technology or to another Dataverse environment, can use any of the same technologies mentioned for importing data, such as dataflows, Data Factory, Power Query, and Power Automate.
+Exporting data, either to another data technology or to another environment, can use any of the same technologies mentioned for importing data, such as dataflows, Data Factory, Power Query, and Power Automate.
 
 ![Export Dataverse data methods.](media/export-cds-data.png "Export Dataverse data methods")
 
