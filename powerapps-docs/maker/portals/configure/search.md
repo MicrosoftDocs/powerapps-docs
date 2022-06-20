@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 5/18/2022
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -21,8 +21,13 @@ In Power Apps portals, you can search for records across multiple tables by usin
 
 List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results.
 
+> [!NOTE] 
+> You can also search in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+
 >[!IMPORTANT]
 > Starting with website version 9.4.4.xx, portal search uses Dataverse search to deliver results from multiple tables and fields for new portals. Lucene .NET search is deprecated; however, existing portals use Lucene .NET search will not be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by using site setting Search/EnableDataverseSearch to true.
+>
+> **All the existing customers who are using Lucene .Net search need to migrate to Dataverse search by October 2023.**
 
 ## Pre-requisite
 
@@ -46,7 +51,8 @@ Once the index is provisioned, it may take anywhere between an hour or more to c
 
 ## Global search
 
-The benefits of global search include its ability to:
+Benefits of global search include its ability to:
+
 - Find matches to any word in the search term in any field in the table. Matches can include inflectional words like stream, streaming, or streamed.
 - Return results from all searchable tables in a single list sorted by relevance, based on factors such as:
     - Number of words matched.
@@ -107,14 +113,14 @@ The following site settings are related to global search:
 |-----------------------|--------------------|-------------|
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br />If you're using out-of-the-box web templates and you turn off this setting, the search box won't be displayed in the header and on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
 | Search/EnableDataverseSearch | True | A Boolean value that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .NET based search.  <br /><br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. |
-| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional tables on your portal. <br /> Requires *Search/Enabled* set to *True* when used.  |
-| Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;<br>Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br>Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment". <br /> **Note**: <ul> <li> Values in the filter dropdown will have the table's plural name instead of the key value defined here. </li> <li> When using multiple tables, the filter dropdown will have the name of the first table in the comma separated list. </li> </ul>  |
+| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on other tables on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
+| Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;<br />Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,<br />adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br />Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment". <br /> **Note**: <ul> <li> Values in the filter dropdown will have the table's plural name instead of the key value defined here. </li> <li> When using multiple tables, the filter dropdown will have the name of the first table in the comma separated list. </li> </ul>  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
-| Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2<br> -_logicalname:adx_webfile\~0.9 adx_partialurl:<br />(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:<br>adx_communityforumthread\~0.9   | This setting adds more weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br />For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br />**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
+| Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2<br /> -_logicalname:adx_webfile\~0.9 adx_partialurl:<br />(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:<br />adx_communityforumthread\~0.9   | This setting adds other weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br />For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | Enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
-| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread, adx_communityforumpost;<br />Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | Determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br />"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br />Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
+| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;<br />Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | Determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br />"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br />Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 
 
@@ -132,9 +138,9 @@ The following content snippets are related to global search:
 | Search/Facet/Downloads   | Downloads   | This content snippet determines the label displayed in the search results of annotation attachments and web file records in the "Record Type" facet.<br />![Download facet.](../media/facet-download.png "Download facet")|
 | Search/Facet/Less    | Show less  | This content snippet determines the label of the button that collapses facet results.<br />![Show less facet.](../media/facet-show-less.png "Show less facet") |
 | Search/Facet/ModifiedDate  | Modified date  | This content snippet determines the label of the header shown for the Modified date facet.<br />![Modified date.](../media/facet-modified-date.png "Modified date facet")   |
-| Search/Facet/More   | Show more  | This content snippet determines the label of the button that expands facet results.<br />![Show more facet.](../media/facet-show-more.png "Show more facet")  |
+| Search/Facet/More   | Show more  | This content snippet determines the label of the button that expands facet results.<br>![Show more facet.](../media/facet-show-more.png "Show more facet")  |
 | Search/Facet/Product  | Products | This content snippet determines the label of the Products facet.<br />![Products facet.](../media/facet-product.png "Products facet")  |
-| Search/Facet/Rating   | Rating   | This content snippet determines the label of the Rating facet.<br>![Ratings facet.](../media/facet-rating.png "Ratings facet")  |
+| Search/Facet/Rating   | Rating   | This content snippet determines the label of the Rating facet.<br />![Ratings facet.](../media/facet-rating.png "Ratings facet")  |
 | Search/Facet/RecordType   | Record Type | This content snippet determines the label of the Record Type facet.<br />![Record Type facet.](../media/facet-record-type.png "Record Type facet")     |
 | Search/Facet/SortOrder/AverageUserRating | Average User Ratings | This content snippet determines the label shown for the "Sort by Average User Ratings" option in the sorting drop-down list on the Search Results page.<br />![Sort by average user rating.](../media/sort-avg-user-rating.png "Sort by average user rating")  |
 | Search/Facet/SortOrder/Relevance| Relevance| This content snippet determines the label shown for the "Sort by Relevance" option in the sorting drop-down list on the Search Results page.<br />![Sort by relevance.](../media/sort-relevance.png "Sort by relevance")|
@@ -153,7 +159,7 @@ The following content snippets are related to global search:
 
         - **Product facet**: This facet allows you to filter search results based on the product associated to the knowledge articles.
 
-    - **Attachment search**: This functionality allows you to search within the attachments or notes associated to a knowledge article. This allows you to search within note description, title, attachment file name, and attachment content of notes or attachments that are exposed on the portal. More information: [Search within file attachment content](search-file-attachment.md)
+    - **Attachment search**: This functionality allows you to search within the attachments or notes associated to a knowledge article. Search within note description, title, attachment file name, and attachment content of notes or attachments that are exposed on the portal. More information: [Search within file attachment content](search-file-attachment.md)
 
 ## Special characters and syntax supported by search
 
@@ -163,7 +169,7 @@ As part of portal global search, various special characters and syntaxes are sup
 
     - **Single term**: Single term is a single word. For example, a query {hello world} would be parsed into two single terms, "hello" and "world". Each single term is searched separately. Therefore, in the query {hello world}, all the records having the term "hello" or "world" would be displayed in search results.
 
-    - **Phrases**: A phrase is a group of terms surrounded by double quotes (""). For example, a query {"hello world"} would be parsed as a phrase "hello world". Each phrase is searched completely. For example, in the query {"hello world"}, all the records having the complete phrase "hello world" would be displayed in search results and any record that only has "hello" or "world" wouldn't be displayed.
+    - **Phrases**: A phrase is a group of terms surrounded by double quotes (""). For example, a query {"hello world"} would be parsed as a phrase "hello world". Each phrase is searched completely. For example, in the query {"hello world"}, all the records having the complete phrase "hello world" would be displayed in search results.  Any record that only has "hello" or "world" wouldn't be displayed.
 
     Each search query can consist of one or many of these terms of any type that are combined using Boolean operators to create complex queries.
 
@@ -279,7 +285,8 @@ To block the Case table from getting indexed, you must rename the view of the Ca
 
 After performing the actions described in Step 1, the Case table would be stopped from getting indexed. To remove the case table from UI surface areas, you must modify the site setting associated with portal global search. The following site setting must be modified:
 
-search/filters: Removes case table from filters on the Search page and the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
+search/filters: This will remove case table from filters on the Search page and the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
+
 
 You must delete `Help Desk:incident;` from the value of this site setting so that the Incident table is removed from filters that come next to the search box in the UI.
 

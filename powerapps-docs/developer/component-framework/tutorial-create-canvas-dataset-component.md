@@ -66,7 +66,7 @@ You can download the complete sample from [here](https://github.com/microsoft/Po
    > [!div class="mx-imgBorder"] 
    > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
-The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](control-implementation-library.md).
+The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
 
 ### Install Microsoft Fluent UI
 
@@ -339,7 +339,7 @@ initializeIcons(undefined, { disableWarnings: true });
 > [!NOTE]
 > The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
 
-Add the following class fields underneath `export class GridCanvas`:
+Add the following class fields underneath `export class CanvasGrid`:
 
 ```typescript
 notifyOutputChanged: () => void;

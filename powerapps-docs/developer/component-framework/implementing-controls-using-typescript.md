@@ -362,7 +362,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
     > [!NOTE]
     >
-    > The path provided here is relate to the current **solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
+    > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
 
 4. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
 

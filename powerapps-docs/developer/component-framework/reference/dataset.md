@@ -163,8 +163,6 @@ The sorting status for the current query. This is supported in both model-driven
 | [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieverecordcommand-description](dataset/includes/retrieverecordcommand-description.md)]   | Model-driven                 |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and Canvas apps |
 
-<!-- | [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getrelateddataset-description](dataset/includes/getrelateddataset-description.md)]           | Canvas apps                  | -->
-
 ## Lookup columns
 
 Dataverse table's lookup columns can now be retrieved. For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
