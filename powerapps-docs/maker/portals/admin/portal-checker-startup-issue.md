@@ -16,13 +16,17 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Portal doesn't load and displays server error
+# Portal checker startup issue
+
+In this article, you'll learn about Portal Checker diagnostics results related to startup issues, and how to resolve any issues or problems found.
+
+## Portal doesn't load and displays server error
 
 This issue can be caused by several different reasons, such as when a portal isn't able to connect to the underlying Dataverse environment, the Dataverse environment doesn't exist or its URL has changed, or when a request to the Dataverse environment has timed out. When you run the Portal Checker tool, it will try to determine the exact reason and point you to the correct mitigation. 
 
 Below is a list of common causes for this error and their corresponding mitigation steps:
 
-## URL of the connected Microsoft Dataverse environment has changed 
+### URL of the connected Microsoft Dataverse environment has changed 
 
 This happens when the URL of the Dataverse environment is changed by a user after a portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
 
@@ -31,13 +35,13 @@ This happens when the URL of the Dataverse environment is changed by a user afte
 
 Once this action is successfully completed, your Dataverse environment URL will be updated and your portal will start working.
 
-## Microsoft Dataverse environment connected to your portal is in administration mode
+### Microsoft Dataverse environment connected to your portal is in administration mode
 
 This issue occurs when the Dataverse environment is put in administration mode either when changing the organization from production to sandbox mode or manually by an organization administrator.
 
 If this is the cause, you can disable administration mode by following the steps listed [here](/dynamics365/admin/manage-sandbox-instances#administration-mode). Once administration mode is disabled, your portal should work.
 
-## Authentication connection between Dataverse environment and portal is broken
+### Authentication connection between Dataverse environment and portal is broken
 
 This issue occurs when the authentication connection between the Dynamics 365 organization and the portal is broken because the Dataverse environment was either restored from a backup or was deleted and recreated from a backup. To fix this issue:
 
@@ -51,7 +55,7 @@ Once these steps are completed, the portal restarts and can now make an authenti
 
 In certain situations, especially if the organization ID has changed after the restore operation (or if you reprovisioned the organization), these mitigation steps won't work. In these situations, you can reset and reprovision the portal against the same instance. For information on how to reset a portal, see [Reset a portal](reset-portal.md).
 
-## Request to Microsoft Dataverse environment has timed out
+### Request to Microsoft Dataverse environment has timed out
 
 This issue can occur if the API request to your Dataverse environment has timed out. This issue should automatically mitigate itself once the API request starts working. You can also try restarting the portal:
 
@@ -60,7 +64,7 @@ This issue can occur if the API request to your Dataverse environment has timed 
 
 If restarting the portal doesn't work and the issue continues for a long period of time, contact Microsoft Support for help.
 
-## Website binding not found
+### Website binding not found
 
 This issue occurs when the website binding records for the portal are deleted from the underlying Dataverse environment and the portal isn't able to create binding automatically. To fix this issue:
 
@@ -82,13 +86,13 @@ There are situations in which the portal won't be able to recreate website bindi
       - Leave all other fields blank.
 1. Once website binding record is recreated, restart your portal from the Power Apps portals admin center.
 
-## An unexpected error has occurred while trying to connect to your Microsoft Dataverse environment
+### An unexpected error has occurred while trying to connect to your Microsoft Dataverse environment
 
 This situation can arise because of some unexpected issue. To mitigate this situation, try resetting or reprovisioning the portal. For information on how to reset a portal, see [Reset a portal](reset-portal.md).
 
 If neither a portal reset nor reprovision solves the issue, contact Microsoft Support for help.
 
-### See also
+#### See also
 
 [Run Portal Checker](portal-checker.md)
 
