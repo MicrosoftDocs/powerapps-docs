@@ -1,7 +1,7 @@
 ---
 title: "Auditing overview (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically use the auditing capability of Microsoft Dataverse to record data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+ms.date: 06/13/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: Bluebear7 # GitHub ID
@@ -54,7 +54,7 @@ More information: [Configure organization settings](configure.md#configure-organ
 
 When auditing is enabled for the organization, the tables that are enabled for auditing will begin writing audit data when data changes.
 
-When auditing is enabled for a table, the columns that are enabled for auditing will be included in the audit data. By default all columns that support auditing are enabled.
+When auditing is enabled for a table, the columns that are enabled for auditing will be included in the audit data.
 
 You can use Dataverse APIs to query the table and column definitions to determine which tables and columns are enabled for auditing.
 

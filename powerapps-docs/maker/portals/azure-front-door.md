@@ -17,6 +17,9 @@ contributors:
 
 As a portal maker, you can use Azure Front Door with Power Apps portals to use its edge caching and web application firewall (WAF) capabilities. In this article, you'll learn how to set up [Azure Front Door](/azure/frontdoor/overview) with portals.
 
+> [!NOTE] 
+> You can also set up Azure Front Door with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+
 > [!NOTE]
 > - Although this article is focused on [Azure Front Door](/azure/frontdoor/overview), similar steps can be used for any other content delivery network or WAF provider. The terminology used by various components might be different.
 > - While [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS version 1.2 for strong ciphers.
@@ -227,7 +230,7 @@ The portal in this scenario can contain static files with file name extensions o
    Screenshot of an IF condition named "Request file extension" with the Operator set to Equal, the Value set to css png jpg js svg woff ico, and Case transform set to No transform.
 :::image-end:::
 
-In the following action configuration, you override the cache header set by portals so that these files will be cached a little longer on the browser. By default, portals sets the caching expiration to one day. But we'll override that in this scenario and set it to seven days. To do this, we set up a **Cache expiration** action and set **Cache behavior** to **Override**, as shown in the following image.
+In the following action configuration, you override the cache header set by portals so that these files will be cached a little longer on the browser. By default, portals sets the caching expiration to one day. But we'll override that in this scenario and set it to seven days by setting up a **Cache expiration** action and setting **Cache behavior** to **Override** as shown in the following image.
 
 ![Screenshot showing a THEN action named "Cache expiration" with Cache behavior set to Override and specified as 7 days.](media/azure-front-door/cache-expiration-action.png "Example cache expiration action")
 
@@ -312,7 +315,7 @@ The next step in the setup is to configure the WAF rules on incoming requests. I
 
 1. Select the name of the WAF policy.
 
-1. Select **Policy Settings**, and then do the following:
+1. Select **Policy Settings**, and then:
 
     1. **Enable request body inspection**: Select this checkbox if you want the request body to be inspected in addition to cookies, headers, and URLs.
 

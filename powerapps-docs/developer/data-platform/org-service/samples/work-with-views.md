@@ -4,7 +4,7 @@ description: "This sample shows how to work with views" # 115-145 characters inc
 author: caburk
 ms.author: caburk
 manager: evlew
-ms.date: 04/06/2022
+ms.date: 06/10/2022
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType: 
@@ -19,7 +19,7 @@ contributors:
 # Sample: Work with views
 
 
-This sample shows how to perform various actions on views.
+This sample shows how to perform various actions on views. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithViews).
 
 ## How to run this sample
 
