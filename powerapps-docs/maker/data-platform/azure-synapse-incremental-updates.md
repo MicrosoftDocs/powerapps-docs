@@ -2,7 +2,7 @@
 title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 04/27/2022
+ms.date: 06/20/2022
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -73,7 +73,7 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
 For each synced table, all stored records are merged into one complete table for efficient consumption. For more information about how to read incremental update in Azure Synapse Analytics workspace, go to [Read the incremental updates of Dataverse data](azure-synapse-link-incremental.md) 
 
 > [!NOTE] 
-> Near Real-Time Data view is not supported when this feature enabled. You should use Snapshot Data instead. More information: [Access near real-time data and read-only snapshot data](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data-preview)
+> Near real-time data view is not supported when the view incremental folder feature is enabled. To view real-time data use snapshot data instead. More information: [Access near real-time data and read-only snapshot data](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data-preview)
 > 
 > The built-in SQL template is ready for a quick table view. Right-click the table, and then select **New SQL Script – Select TOP 100 rows**. A SQL script appears. Select **Run** to check the result.
 
