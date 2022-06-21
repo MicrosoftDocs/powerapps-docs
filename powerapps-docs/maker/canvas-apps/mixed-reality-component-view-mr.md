@@ -98,7 +98,7 @@ To test this out, open your app for editing in [Power Apps Studio](https://creat
 5. Set the _ItmesThumbnail_ property to `"thumbnail"`.
 6. Save and publish the app, then open it on your mobile device.
 
-  :::image type="content" source="./media/augmented-3d/multi-model-selection-tray.gif" alt-text="A video showing what the media gallery looks like in the mixed reality experience":::
+   :::image type="content" source="./media/augmented-3d/multi-model-selection-tray.gif" alt-text="A video showing what the media gallery looks like in the mixed reality experience":::
 
 ### How objects are scaled if you resize them
 
