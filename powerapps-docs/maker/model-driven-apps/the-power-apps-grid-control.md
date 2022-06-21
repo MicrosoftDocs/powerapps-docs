@@ -1,7 +1,8 @@
+---
 title: "Power Apps grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid"
 ms.custom: ""
-ms.date: 10/04/2021
+ms.date: 06/20/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -26,15 +27,15 @@ The Power Apps grid control represents the next evolution of the Power Apps read
 When you configure the Power Apps grid control for an entity, all views for that entity will display using that grid.
 
 1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
-2.	Expand **Entities**. Browse to the entity you want and select it. In the **Controls** tab, select **Add control**.
-3.	In the **Add control** dialog box, select **(Preview) Power Apps grid control**, and then select **Add**. 
+1.	Expand **Entities**. Browse to the entity you want and select it. In the **Controls** tab, select **Add control**.
+1.	In the **Add control** dialog box, select **(Preview) Power Apps grid control**, and then select **Add**. 
     :::image type="content" source="media/add-the-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
 
 ## Configure the Power Apps grid control
 
 1.	In the **(Preview) Power Apps grid control** row, select the app types you want to apply the grid to. This makes the control the default control for the selected clients. 
     :::image type="content" source="media/configure-the-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control":::
-3.	There are several properties included with the control to let you tailor the grid experience for that entity. To modify any of these properties, select **Edit** in the corresponding row, and then change the value using the dropdown list under **Bind to static options**. 
+1.	There are several properties included with the control to let you tailor the grid experience for that entity. To modify any of these properties, select **Edit** in the corresponding row, and then change the value using the dropdown list under **Bind to static options**. 
     - The **Enable editing** property determines whether the grid is read-only or editable. The default value is No (a read-only grid). Select Yes to make the grid editable.
     - The **Enable filtering** property determines if filtering options are available to users in the grid column header dropdowns. The default value is Yes. 
     - The **Allow range selection** property controls whether users can select a subset of the grid and copy that data to another application like Excel. The default value is Yes.
@@ -49,10 +50,10 @@ After configuring the Power Apps grid control to meet your needs, select **Save*
  
 ## Add the Power Apps grid control to a subgrid
 1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
-2.	Open the form that contains the subgrid.
-3.	Select the subgrid where you want to configure this grid, and then select **Change properties** on the command bar.
-4.	In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **(Preview) Power Apps grid control**.
-5.	To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
+1.	Open the form that contains the subgrid.
+1.	Select the subgrid where you want to configure this grid, and then select **Change properties** on the command bar.
+1.	In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **(Preview) Power Apps grid control**.
+1.	To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
 
 ## Known issues and limitations
 
