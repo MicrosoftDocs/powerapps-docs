@@ -2207,6 +2207,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2204.x
+                href: ./portals/versions/package-version-9.3.2204.md             
               - name: Package 9.3.2201.x
                 href: ./portals/versions/package-version-9.3.2201.md           
               - name: Package 9.3.2109.x
