@@ -71,7 +71,7 @@ To test this out, open your app for editing in [Power Apps Studio](https://creat
 1. From the **Insert** tab select, **Mixed Reality** > **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 2. Edit the _Sources List (Items)_ property and insert this formula:
 
-:::image type="content" source="./media/augmented-view-mr/source-list.png" alt-text="A screenshot of View in MR control properties.":::
+    :::image type="content" source="./media/augmented-view-mr/source-list.png" alt-text="A screenshot of View in MR control properties.":::
 
 
    ```javascript
