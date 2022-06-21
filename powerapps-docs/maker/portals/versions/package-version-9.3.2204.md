@@ -21,7 +21,7 @@ Starter portal package version 9.3.2204.x is generally available. To learn how t
 In this article, you'll learn about the fixes and enhancements included in this update.
 
 > [!NOTE]
-> - The update package for starter portal shows as "Common Data Service Starter Portal" in the Power Platform admin center.
+> - The update packages show as **Dataverse Base Portal**, **Dataverse Starter Portal**, and **Starter Portal** in the Power Platform admin center.
 > - Package updates are released in stages across regions. During the rollout phase, your environment may take time to show the new package update depending on your region.
 
 For a full list of all portal updates released to date and their corresponding KB articles, go to [Portal Capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/topic/portal-capabilities-for-microsoft-dynamics-365-releases-81f5fcc9-ef72-8b2e-5b4b-29e9840fb5c4).
