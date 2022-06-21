@@ -32,15 +32,13 @@ For more information about creating a portal with starter portal package, go to 
 
 The package update includes the following enhancements to extend the capabilities of portals:
 
-<!-- - Enabled support for multiple portals of same type in an environment. More information: [Create additional portals in an environment](../create-additional-portals.md)-->
+- Enabled support for right-to-left languages (Arabic and Hebrew) for the [Dataverse starter portal](../create-portal.md). More information: [Support Languages](../configure/enable-multiple-language-support.md#supported-languages).
 
-## Fixes
+- Enabled choices attribute in attribute selector on basic form metadata to enable configuring multiple choice code component.
 
-<!--
-The package update includes the fixes for the following problems:
+- CAPTCHA capabilities is hidden from basic form components in the China region.
 
-- Fixed 2-byte file name size limit for attachments uploaded using annotation web resource.
--->
+- Enable map feature is hidden on list components the China region.
 
 ### See also
 
