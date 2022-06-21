@@ -31,7 +31,7 @@ Power Apps enables configuring the most common options, but certain options can 
 
 ## Create an alternate key
 
-1. While [viewing alternate keys](#view-alternate-keys), select **Add key**.
+1. While [viewing alternate keys](#view-alternate-keys), select **New key**.
 2. Use the panel to set a **Display name** and choose the columns to use to create the alternate key.
 
     The **Name** column will be populated based on the display name.
