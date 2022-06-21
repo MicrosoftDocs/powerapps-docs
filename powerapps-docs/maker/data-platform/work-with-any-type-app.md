@@ -42,7 +42,7 @@ Tables in Dataverse can use rich server-side logic and validation to ensure data
 
 A common approach of app integration is through the use of events. For example, an event such as adding a new row occurs in Dataverse, and this should be communicated to an associated system so that an action can be taken. For example, if a new support request was raised, it might trigger an SMS message to be sent to the assigned support staff.
 
-This interactivity can also occur in the opposite direction&mdash;an update in an external system might result in data being added, updated, or deleted from a Dataverse environment.
+This interactivity can also occur in the opposite direction&mdash;an update in an external system might result in data being added, updated, or deleted from a Power Platform environment.
 
 The most popular approaches in Dataverse involve webhooks, Azure messaging (Service Bus, Event Hubs), Azure Logic Apps, or Power Automate.
 

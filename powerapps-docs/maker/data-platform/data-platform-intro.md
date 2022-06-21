@@ -97,7 +97,7 @@ Tables within Dataverse can take advantage of rich server-side logic and validat
 
 ## Security
 
-Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Dataverse environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
+Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Power Platform environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities
 In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Dataverse includes features for developers to programmatically access metadata and data to create tables and business logic, in addition to interacting with data. More information: [Dataverse Developer Overview](../../developer/data-platform/overview.md)

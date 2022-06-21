@@ -22,6 +22,10 @@ search.app:
 # Create email templates
 
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
+
+> [!NOTE]
+> The enhanced email template editor is available only in Dynamics 365 Customer Service.
+
 You can create email templates by using one of the following options:  
 - **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
 - **Start with an existing template** : Create a template by choosing an existing template. The editor that's displayed depends on the editor in which the existing template was created.
@@ -84,6 +88,9 @@ When you create a template from an existing template, irrespective of the enhanc
 
 ## Email template editor
 
+> [!NOTE]
+> The enhanced email template editor is available only in Dynamics 365 Customer Service.
+
 You can use either the enhanced email template editor or the default email template editor to create email templates.
 
 ### Enhanced email template editor
@@ -108,5 +115,6 @@ The default email template editor is displayed the enhanced email template edito
 
 ### See also
 
+[Personalize content with Insert dynamic text](email-dynamic-text.md)
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)   
