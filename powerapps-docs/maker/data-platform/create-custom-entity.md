@@ -52,7 +52,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Open the **Pet** table that was created in the previous section.
 
-1. On the **Columns** tab, select the **Pet** column.
+1. Select **Columns**, and select the **Pet** column.
 
 1. In the right pane make the following changes to the **Display name** column: 
 
@@ -64,7 +64,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select **Done**.
 
-1. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
+1. On the **Columns** area on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Choice*
     - **Choice**. *New choice*
@@ -100,7 +100,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Add a relationship
 
-1. Select the **Relationships** tab. Then, on the table designer toolbar, select **Add relationship**, and then select **Many-to-one**.
+1. Select the **Relationships** area. Then, on the table designer toolbar, select **Add relationship**, and then select **Many-to-one**.
 
 1. On the right pane, in the **Related** list select **Account**.
 
@@ -108,9 +108,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select **Save table**.
 
-  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Columns** tab.
-  > [!div class="mx-imgBorder"]
-  > ![Account lookup column.](media/create-custom-entity/account-lookup-field.png)
+  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns in the **Columns** area.
 
 ## Customize a view
 

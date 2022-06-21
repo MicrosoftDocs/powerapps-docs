@@ -33,7 +33,7 @@ In addition to configuring aspects of the Dataverse column, such as its type and
 1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**, and then select the table that has the columns you want to view.
 
 > [!note]
-> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** tab.
+> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
 
 2. Select the column that you want to view.
 

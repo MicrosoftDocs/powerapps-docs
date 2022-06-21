@@ -51,7 +51,7 @@ To enable the rich text editor with default values on any new or existing text c
    > [!NOTE]
    > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions](/powerapps/developer/data-platform/data-type-format-conversions)
 
-1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** tab.
+1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** area.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.
 
