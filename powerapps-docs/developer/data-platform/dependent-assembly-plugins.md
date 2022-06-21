@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/14/2022
+ms.date: 06/21/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -21,7 +21,7 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-It is frequently valuable to include another assembly within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly.  
+It is frequently valuable to include another assembly or a resource file within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly. You may want to access a list of localized strings.  
 
 Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, it was never supported by Dataverse and it didn't always work. ILMerge is no longer being maintained.
 
@@ -51,7 +51,7 @@ To use this feature, you should use these tools and applications.
 
 |Tool/App|Instructions |
 |---------|---------|
-|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the stand-alone version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the stand-alone version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
+|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
 |**Plug-in Registration tool (PRT)**|You should use version X.X.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
@@ -146,7 +146,7 @@ This opens a dialog to allow you to select the NuGet Package with changes.
 > If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assembies or plugin types that you want to remove with your update.
 >
 > The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
-<!-- Impact for 1P teams b/c they work in solutions the whole removal cannot be done in one solution upgrade, they will need to wait until their next release to actuall remove the unused assembly or type. -->
+
 
 
 ### Delete plugin packages
@@ -160,15 +160,19 @@ While viewing the list of plugin packages using the **Display by Package** view,
 
 ## Design notes
 
-<!-- Think David J/ Andrew should provide this: This section should describe the details of the design so that advanced users can understand what they can or cannot do.
-Assuming that this is all built using MS technologies, we can have links to any concepts -->
+The Visual Studio project created using `pac plugin init` leverages Visual Studio capabilities that enable generating NuGet Packages. You are not required to use the `pac plugin init` command. You can use whatever capabilities you choose to generate a NuGet package.
+
+More information:
+
+- [Create a NuGet package using MSBuild](/nuget/create-packages/creating-a-package-msbuild)
+- [NuGet pack and restore as MSBuild targets](/nuget/reference/msbuild-targets)
 
 ## FAQ
 
 ### Q: Can I continue to use ILMerge?
 
 **A**: We have never supported ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality and more. But nothing else has changed. If ILMerge works for you, you can continue to use it. But we recommend using dependent assemblies.
- <!-- Need Amol/Divya to provide FAQ to add here -->
+
 ### See also
 
 [Use plug-ins to extend business processes](plug-ins.md)<br />
