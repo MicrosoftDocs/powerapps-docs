@@ -1,24 +1,24 @@
 ---
-title: Redirect a user to a default page after signing in
+title: Redirect a user to default page on sign-in
 description: Learn how to redirect a user to a default page after signing in.
-author: gitanjalisingh33msft
+author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/20/2022
+ms.date: 06/21/2022
 ms.subservice: portals
-ms.author: gisingh
+ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
-    - GitanjaliSingh33msft
+    - nageshbhat-msft
 ---
 
-# Redirect a user to a default page after signing in
+# Redirect a user to default page on sign-in
 
 You can configure a portal to redirect a user to a default page after signing in. 
 
-To achieve this functionality, you will need to replace the default studio template used by default for the home page and replace it with a custom template with JavaScript code to redirect the user to the page of your choosing.
+To achieve this functionality, you'll need to replace the *default studio template* used as the page layout for the home page and replace it with a custom template with JavaScript code to redirect the user to the page of your choosing.
 
 - Make a copy of the *default studio template* web template.
 - Add JavaScript code to the web template copy.
@@ -35,7 +35,7 @@ To achieve this functionality, you will need to replace the default studio templ
 
 1. Select **New** to create a new web template record.
 
-1. Give the template a name (e.g. *home page template*) and select the **Website**. Paste the content from the **Default studio template**. Select **Save**. 
+1. Give the template a name (for example, *home page template*) and select the **Website**. Paste the content from the **Default studio template**. Select **Save**. 
 
 ## Add JavaScript code
 
@@ -52,6 +52,9 @@ To achieve this functionality, you will need to replace the default studio templ
     {% endif %}
     //Home web page code, if you want to display the page when the user is being redirected
     ```
+
+    :::image type="content" source="media/redirect-a-user/new-webtemplate.png" alt-text="New web template with JavaScript added.":::
+
 1. Select **Save**.
 
 ## Create a page template
@@ -60,18 +63,24 @@ To achieve this functionality, you will need to replace the default studio templ
 
 1. Select **New** and create a new page template record.
 
-1. Give the page template a name (e.g. *Home page template*). Select the **Website**, choose the **Type** as **Web Template**, and select the **Web Template** you created in the previous step.
+1. Give the page template a name (for example, *Home page template*). Select the **Website**, choose the **Type** as **Web Template**, and select the **Web Template** you created in the previous step.
 
     :::image type="content" source="media/redirect-a-user/page-template.png" alt-text="Creating a new page template.":::
 
 ## Update home page
 
+1. Go to the Portal Management app.
 
+1. In **Web Pages**, locate the **Home** web page record. Change the **Page Template** to the page template record you created earlier. Select **Save & Close**.
+
+    :::image type="content" source="media/redirect-a-user/update-home-page.png" alt-text="Update the home page.":::
+
+1. Navigate to the site, when a user signs-in, they'll be redirected to the page you specified in the JavaScript code in the updated web template.
 
 ### See also
 
-[Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
-[Render the list associated with the current page](render-entity-list-current-page.md)  
-[Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
-[Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
+- [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
+- [Render the list associated with the current page](render-entity-list-current-page.md)  
+- [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
+- [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 

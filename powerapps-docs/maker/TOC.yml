@@ -2073,6 +2073,8 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Redirect a user to a default page on sign-in
+                  href: ./portals/liquid/redirect-a-user-homepage.md                  
                 - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template

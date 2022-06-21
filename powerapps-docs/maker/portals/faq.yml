@@ -57,21 +57,7 @@ sections:
       - question: |
           How do I redirect a user to a default page after signing in?
         answer: |
-          You can configure a portal to redirect a user to a default page after signing in. To achieve this functionality, you can include a JavaScript code in the Home web template.
-          
-          For example, if you want to redirect all users to the Forums page after signing in, you can include a JavaScript code in the Home web template as follows:
-          
-          ```xml
-          {% if user %}
-          //if any user logs in
-          <script>
-            window.location.href='./forums/'
-          </script>
-          {% else %}
-          //Home web page code, if you don't want to display the page when the user is being redirected
-          {% endif %}
-          //Home web page code, if you want to display the page when the user is being redirected
-          ```
+          You can configure a portal to redirect a user to a default page after signing in. To achieve this functionality, go to [Redirect a user to a default page on sign-in](liquid/redirect-a-user-homepage.md).
           
           For more information on working with Liquid templates, see [Work with Liquid templates](liquid/liquid-overview.md).
           
