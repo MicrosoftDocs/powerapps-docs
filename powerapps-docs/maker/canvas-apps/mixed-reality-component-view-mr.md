@@ -69,7 +69,7 @@ When using the _Sources List (Items)_ property you also need to use the followin
 To test this out, open your app for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. From the **Insert** tab select, **Mixed Reality** > **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
-1. Edit the _Sources List (Items)_ property and insert this formula:
+2. Edit the _Sources List (Items)_ property and insert this formula:
 
 :::image type="content" source="./media/augmented-view-mr/source-list.png" alt-text="A screenshot of View in MR control properties.":::
 
@@ -93,10 +93,10 @@ To test this out, open your app for editing in [Power Apps Studio](https://creat
      }
     )
    ```
-1. Set the _ItemsLabel_ property to `"label"`
-1. Set the _ItemsSource_ property to `"source"`
-1. Set the _ItmesThumbnail_ property to `"thumbnail"`
-1. Save and publish the app, then open it on your mobile device
+3. Set the _ItemsLabel_ property to `"label"`.
+4. Set the _ItemsSource_ property to `"source"`.
+5. Set the _ItmesThumbnail_ property to `"thumbnail"`.
+6. Save and publish the app, then open it on your mobile device.
 
   :::image type="content" source="./media/augmented-3d/multi-model-selection-tray.gif" alt-text="A video showing what the media gallery looks like in the mixed reality experience":::
 
