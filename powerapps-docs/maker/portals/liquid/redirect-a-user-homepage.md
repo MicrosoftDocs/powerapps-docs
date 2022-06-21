@@ -14,7 +14,7 @@ contributors:
     - nageshbhat-msft
 ---
 
-# Redirect a user to default page on sign-in
+# Redirect a user to a default page on sign-in
 
 You can configure a portal to redirect a user to a default page after signing in. 
 
