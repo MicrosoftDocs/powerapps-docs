@@ -56,18 +56,20 @@ The control is a button that's labeled with an icon of a cube and the text *View
 
 ### Viewing multiple models in a single session
 
-The View in MR control supports either viewing a single media file at a time or viewing multiple media files in a single mixed reality session. To view multiple files in a single session use the _Sources List (Items)_ property to provide a list of files that the user can choose from within the mixed reality experience. When using the _Sources List (Items)_ property you should use the following additional properties to map the columns of your input table:
-- ItemsSource **(required)** - Specify which column in the _Sources List (Items)_ provides the 3D model or image to show in mixed reality. See [Connect 3D models to Power Apps](mixed-reality-component-view-3d-store.md) to learn more about bringing models into Power Apps. 
-- ItemsLabel - The column that contains what the label should be for the media gallery in mixed reality. The _Alternative Text_ property will be used for items that don't have a value.
-- ItemsThumbnail - The column that contains a thumbnail to show in the media gallery in mixed reality. A default thumbnail will be provided in the gallery for items without a thumbnail specified.
-- ItemsObjectWidth, ItemsObjectHeight, ItemsObjectDepth - Used to specify an explicit size for each media item in the list. The _Object width_, _Object height_, and _Object depth_ will be used as a default for items that don't have a value.
+The View in MR control supports either viewing a single media file at a time or viewing multiple media files in a single mixed reality session. To view multiple files in a single session use the _Sources List (Items)_ property to provide a list of files that the user can choose from within the mixed reality experience. 
 
-To test it out follow these steps:
-With your app open for editing in [Power Apps Studio](https://create.powerapps.com):
+When using the _Sources List (Items)_ property you also need to use the following additional properties to map the columns of your input table:
 
-1. Select the **Insert** tab. 
-2. Select **Mixed Reality** > **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
-1. Edit the _Sources List (Items)_ property and insert the below formula:
+- **ItemsSource** (required) - Specify which column in the _Sources List (Items)_ provides the 3D model or image to show in mixed reality. See [Connect 3D models to Power Apps](mixed-reality-component-view-3d-store.md) to learn more about bringing models into Power Apps. 
+- **ItemsLabel** - The column that contains what the label should be for the media gallery in mixed reality. The _Alternative Text_ property will be used for items that don't have a value.
+- **ItemsThumbnail** - The column that contains a thumbnail to show in the media gallery in mixed reality. A default thumbnail will be provided in the gallery for items without a thumbnail specified.
+- **ItemsObjectWidth, ItemsObjectHeight, ItemsObjectDepth** - Used to specify an explicit size for each media item in the list. The _Object width_, _Object height_, and _Object depth_ will be used as a default for items that don't have a value.
+
+
+To test this out, open your app for editing in [Power Apps Studio](https://create.powerapps.com):
+
+1. From the **Insert** tab select, **Mixed Reality** > **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
+1. Edit the _Sources List (Items)_ property and insert this formula:
 
 :::image type="content" source="./media/augmented-view-mr/source-list.png" alt-text="A screenshot of View in MR control properties.":::
 
@@ -96,7 +98,7 @@ With your app open for editing in [Power Apps Studio](https://create.powerapps.c
 1. Set the _ItmesThumbnail_ property to `"thumbnail"`
 1. Save and publish the app, then open it on your mobile device
 
-:::image type="content" source="./media/augmented-3d/multi-model-selection-tray.gif" alt-text="A video showing what the media gallery looks like in the mixed reality experience":::
+  :::image type="content" source="./media/augmented-3d/multi-model-selection-tray.gif" alt-text="A video showing what the media gallery looks like in the mixed reality experience":::
 
 ### How objects are scaled if you resize them
 
