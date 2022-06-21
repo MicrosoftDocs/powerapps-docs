@@ -67,7 +67,7 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 - Cost implications due to increased capacity consumption. 
 - Known solution limitations related to canvas apps still apply to canvas apps created within solutions by default. 
 - This feature also enables the automatic creation of environment variables when adding data sources for your apps. 
-- By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps.
+- By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps. To learn about adding canvas apps to solutions, see [Add an existing canvas app to a solution](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 - When you toggle the feature switch in the Power Platform admin center, the Dataverse property `enablecanvasappsinsolutionsbydefault` in the organization table is updated.  The value can be reviewed using the following sample ODATA snippet.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
