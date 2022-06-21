@@ -2,7 +2,7 @@
 title: "Install Power Platform Tools | Microsoft Docs"
 description: "Learn how to install the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
-ms.date: 08/31/2021
+ms.date: 06/20/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -30,7 +30,7 @@ Power Platform Tools for Visual Studio supports the rapid creation, debugging, a
 
 Before installing Power Platform Tools into Visual Studio you must have the following applications and frameworks installed on your development computer:
 
-- Microsoft Visual Studio 2019 or later.
+- Microsoft Visual Studio 2019.
 
 - .NET Framework 4.6.2 (required only for plug-in and workflow activity development)
 
