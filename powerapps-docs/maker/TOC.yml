@@ -637,7 +637,7 @@
         - name: Formula reference
           items:
           - name: Overview
-            href: ./canvas-apps/formula-reference.md
+            href: /power-platform/power-fx/formula-reference
           - name: Abs
             href: ./canvas-apps/functions/function-numericals.md
           - name: Acceleration
@@ -715,7 +715,7 @@
           - name: CountRows
             href: ./canvas-apps/functions/function-table-counts.md
           - name: Data types
-            href: ./canvas-apps/functions/data-types.md
+            href: /power-platform/power-fx/reference/data-types
           - name: DataSourceInfo
             href: ./canvas-apps/functions/function-datasourceinfo.md
           - name: Date
