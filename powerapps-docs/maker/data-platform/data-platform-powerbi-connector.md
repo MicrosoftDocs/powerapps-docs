@@ -24,7 +24,7 @@ Microsoft Dataverse allows you to connect directly to your data using Power BI D
 To use Power BI with Dataverse, you need the following items:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
-* A Dataverse environment with the following privileges: 
+* A Power Platform environment with the following privileges: 
    * To access data in a table, you must have read privileges to the table.
    * To modify a table in make.powerapps.com, you must have a security role that includes maker privileges, such as system customizer or environment maker.
 * You must have the appropriate Power BI [license](/power-bi/admin/service-admin-licensing-organization) to build and share Power BI reports.
@@ -41,7 +41,7 @@ To use Power BI with Dataverse, you need the following items:
 
 1. Select the **Dataverse** connector, and then select  **Connect**.
 
-1. In the list of Dataverse environments, expand the environment you want, select the tables you want, and then select **Load**.
+1. In the list of environments, expand the environment you want, select the tables you want, and then select **Load**.
    
 1. Select from the following **Data Connectivity** mode options:
    * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
@@ -50,7 +50,7 @@ To use Power BI with Dataverse, you need the following items:
 1. Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
 
 > [!IMPORTANT]
-> To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*.
+> To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*.
 
 # [Common Data Service (Legacy)](#tab/Legacy)
 
@@ -61,7 +61,7 @@ To use Power BI with Dataverse, you need the following items:
    > [!NOTE]
    > This is the earlier version of the Dataverse connector. Use this connector when the query results will be greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.
 
-1. In the dialog box that appears, paste in your complete Dataverse environment URL into the **Server Url** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
+1. In the dialog box that appears, paste in your complete environment URL into the **Server Url** box, in the format *https://org.crm.dynamics.com/*. More information: [Find your environment URL](#find-your-environment-url)
 
 1. Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**
 
@@ -117,7 +117,7 @@ While some relationships may be automatically created, you can still review and 
 * The related table will have a column in the format "[tableName]ID" that contains the GUID, for example `Accountid` or `MyCustomtableid`
 * Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup column, and the ID column on the related table.
 
-## Find your Dataverse environment URL
+## Find your environment URL
 
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Session details**.
 
