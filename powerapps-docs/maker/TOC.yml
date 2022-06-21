@@ -119,6 +119,8 @@
           href: ../user/email-template-create.md
         - name: Customize an email template using the template editor
           href: ../user/cs-template-options.md
+        - name: Personalize emails with dynamic text
+          href: ../user/email-dynamic-text.md  
         - name: Insert an email template
           href: ../user/insert-email-template.md
         - name: Convert an email to a template
@@ -438,6 +440,8 @@
                 href: ./canvas-apps/mixed-reality-cgtrader.md
               - name: Use the Markup in MR control in Power Apps (preview)
                 href: ./canvas-apps/markup-in-mixed-reality.md
+              - name: Use marker detection with mixed reality controls (preview)
+                href: ./canvas-apps/mixed-reality-marker-detection.md
           - name: "Add geospatial controls"
             items:
             - name: Geospatial controls
@@ -1630,7 +1634,7 @@
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-  - name: 'Mobile offline'
+  - name: Mobile offline
     items:
     - name: Mobile offline overview (preview)
       href: ../mobile/mobile-offline-overview.md
@@ -1640,11 +1644,11 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
-  - name: 'Power Apps for Windows (preview)'
+  - name: Power Apps for Windows 
     items:
-    - name: Install Power Apps for Windows (preview)
+    - name: Install Power Apps for Windows 
       href: ../mobile/windows-app-install.md
-    - name: Use Power Apps for Windows (preview)
+    - name: Use Power Apps for Windows 
       href: ../mobile/windows-app-use.md
 - name: Portals
   items:
@@ -1989,6 +1993,10 @@
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
               href: ./portals/configure/website-access-permission.md
+        - name: Website security
+          items:
+            - name: Manage content security policy 
+              href: ./portals/configure/manage-content-security-policy.md
     - name: Configure search in portals
       items:
         - name: Portal search overview
@@ -2855,14 +2863,14 @@
     - name: Advanced monitoring
       href: monitor-advanced.md
   - name: Common issues and resolutions
-    href: ./canvas-apps/common-issues-and-resolutions.md
+    href: /troubleshoot/power-platform/power-apps/common-issues-and-resolutions
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
   - name: Change Power Apps Studio version
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
-    href: ../troubleshooting-startup-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
   - name: Troubleshoot Power Query
-    href: ./data-platform/troubleshoot-power-query-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
     href: https://powerapps.microsoft.com/support/
