@@ -63,7 +63,10 @@ The View in MR control supports either viewing a single media file at a time or 
 - ItemsObjectWidth, ItemsObjectHeight, ItemsObjectDepth - Used to specify an explicit size for each media item in the list. The _Object width_, _Object height_, and _Object depth_ will be used as a default for items that don't have a value.
 
 To test it out follow these steps:
-1. Insert a View in MR control to your app
+With your app open for editing in [Power Apps Studio](https://create.powerapps.com):
+
+1. Select the **Insert** tab. 
+2. Select **Mixed Reality** > **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 1. Edit the _Sources List (Items)_ property and insert this formula
    ```javascript
    Table(
