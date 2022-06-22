@@ -73,7 +73,7 @@ Create a new file data type column in [Microsoft Dataverse](https://docs.microso
         "Entity Image Url":"{{ item.myfileattribute.Name }}",      
         "Entity Image Size":"{{ item.myfileattribute.Size }}",
         "Entity Image Type":"{{ item.myfileattribute.Url }}" 
-  {% endfor %}
+{% endfor %}
 ```
 
 ## Web API
