@@ -26,7 +26,7 @@ landingContent:
          links:
           - text: Power Pages (preview)
             url: /power-pages/introduction 
-          - text: Configure a file column on portals(preview)
+          - text: Configure a file column on portals (preview)
             url: configure/file-column.md
           - text: Manage content security policy
             url: configure/manage-content-security-policy.md                       
