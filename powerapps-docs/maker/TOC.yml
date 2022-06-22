@@ -1823,7 +1823,7 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
-        - name: Configure file column
+        - name: Configure file column (preview)
           href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
