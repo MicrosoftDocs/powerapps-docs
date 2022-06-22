@@ -104,6 +104,16 @@ This issue occurs when a [web page](../configure/web-page.md) record doesn't hav
 
 ## Published state configuration
 
+## Web page publishing is hidden
+
+This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field isn't checked. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Publishing State** record to navigate to the record.
+1. Select the **IsVisible** field and make sure that it's checked (set to true).
+
 ### Published state isn't available for this website
 
 To fix this issue, ensure that the publishing state **Published** is available and active.
