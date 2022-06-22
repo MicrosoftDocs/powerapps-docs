@@ -5,7 +5,7 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/20/2022
+ms.date: 06/22/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
