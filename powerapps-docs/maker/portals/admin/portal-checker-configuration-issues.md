@@ -323,7 +323,7 @@ This issue occurs when the **Access Denied** site marker is available, but is po
 1. Find the **Access Denied** site marker record.
 1. Update the **Page** field to point to an active Access Denied page of your portal.
 
-#### Search site marker availability
+## Search site marker availability
 
 ## An active Search site marker isn't available for this portal
 

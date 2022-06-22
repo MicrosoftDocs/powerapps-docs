@@ -20,14 +20,6 @@ contributors:
 
 In this article, you'll learn about Portal Checker diagnostics results for cache invalidation issues.
 
-## Tables not enabled for cache invalidation
-
-If you're seeing stale data only for certain tables and not everything, this can be because the change tracking metadata isn't enabled on that specific table.
-
-If you run the Portal Checker (self-service diagnostic) tool, it will list the Object Type Code of all the tables that are referenced on the portal that aren't enabled for change tracking. You can browse your metadata by following the steps outlined at [Browse the metadata for your organization](/dynamics365/customerengagement/on-premises/developer/browse-your-metadata).
-
-If you're experiencing stale data issues in any of these tables, you can enable change tracking by using the Power Apps portals admin center UI or Dynamics 365 API. For more information, see [Enable change tracking for a table](/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity).
-
 ## Portal isn't displaying updated data from Microsoft Dataverse environment
 
 Any data displayed on the portal is rendered from the portal cache. This cache gets updated whenever data in the Dataverse environment is updated. However, this process can take up to 15 minutes. If changes are made in the metadata table of the portal (for example, webpages, web files, content snippet, or site setting), it's recommended to clear the cache manually or restart the portal from the Power Apps portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](clear-server-side-cache.md). 
