@@ -36,7 +36,7 @@ You must configure site settings **Control/EnableFilePreview** and set its value
 
 Liquid is an open-source template language that is integrated natively into Microsoft Power Apps portals. Developers can retrieve file column values while data is being queried by using fetchXML and entity view
 
-```twig
+```
 {% for item in tables.results.entities %}
     {{ item.columnname.Name }}
     {{ item.columnname.Size }}
@@ -58,7 +58,7 @@ Create a new file data type column in [Microsoft Dataverse](https://docs.microso
 > [!NOTE]
 > Make sure you've configured the appropriate table permission on the contact table to read record
 
-```twig
+```
 {% fetchxml contacts %}
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
   <entity name="contact">
@@ -84,7 +84,7 @@ Portals Web API can be used to perform create, read, update, and delete operatio
 
 To retrieve file data, use the following APIs
 
-```html
+```
 GET /\_api/&lt;entity-type&gt;(id)/&lt;file-attribute-name&gt;/$value
 ```
 
@@ -94,7 +94,7 @@ File data transfers from the web service endpoints are limited to a maximum of 1
 
 ##### Request
 
-```html
+```
 HTTP
 GET [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/myfileattribute/$value
 Headers:
@@ -102,7 +102,7 @@ Content-Type: application/octet-stream
 ```
 ##### Response
 
-```html
+```
 204 No Content
 Body:
 Byte[ ]
@@ -112,7 +112,7 @@ Byte[ ]
 
 ##### Request
 
-```html
+```
 HTTP
 GET [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/myfileattribute/$value
 Headers:
@@ -122,7 +122,7 @@ Range: bytes=0-1023
 
 ##### Response
 
-```html
+```
 HTTP
 204 No Content
 Body:
@@ -133,7 +133,7 @@ Byte[ ]
 
 To upload the file, set the value of the file column to a byte array that contains the content of the file
 
-```html
+```
 PUT or PATCH /\_api/&lt;entity-type&gt;(id)/&lt;file-attribute-name&gt;
 ```
 
@@ -141,7 +141,7 @@ PUT or PATCH /\_api/&lt;entity-type&gt;(id)/&lt;file-attribute-name&gt;
 
 ##### Request
 
-```html
+```
 HTTP
 PUT [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/ myfileattribute
 Headers:
