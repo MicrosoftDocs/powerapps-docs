@@ -1,6 +1,6 @@
 ---
-title: "Manage model-driven app properties in the Power Apps app designer | MicrosoftDocs"
-description: "Learn how to manage the properties for your app"
+title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
+description: "Learn how to manage the settings for your app"
 keywords: ""
 ms.date: 06/22/2022
 ms.custom: 
@@ -24,10 +24,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
+# Manage model-driven app settings in the app designer
 
-# Manage model-driven app properties in the app designer
-
-App properties define important details about the app, like its title. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
+App settings define important details about the app, like its title. You define app settings when you create an app. If you want to change those settings later, you can do that in the app designer.  
   
 1. In the app designer, on the left pane, select **App** under the **Pages** section. Or alternatively, select **Settings** on the command bar.
 
@@ -36,7 +35,7 @@ App properties define important details about the app, like its title. You defin
   
 2. View and change the information, as required:
 
-    |Area|Property|Description|  
+    |Area|Setting|Description|  
     |-------------|--------------|-----------------|
     | **General**  | **Solution**  | Read-only property that displays the solution name where the app is located.  |
     |**General** |**App name**| The friendly name for the app.|  
