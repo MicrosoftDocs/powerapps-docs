@@ -17,7 +17,7 @@ contributors:
 
 [This topic is pre-release documentation and is subject to change.]
 
-The **file** column is used for storing binary data. The primary intended use of this column is to store a single file, note, or attachment; however, storage of other forms of binary data is also possible. Portals maker can configure file column on Basic and Advanced form to provide upload, view, modify and delete the file. The file column provides storing file up to the specified maximum size in Microsoft Dataverse table column.
+The file column is used for storing binary data. The primary intended use of this column is to store a single file, note, or attachment; however, storage of other forms of binary data is also possible. Portals maker can configure file column on Basic and Advanced form to provide upload, view, modify and delete the file. The file column provides storing file up to the specified maximum size in Microsoft Dataverse table column.
 
 > [!NOTE]
 > - This is a preview feature.
@@ -25,7 +25,7 @@ The **file** column is used for storing binary data. The primary intended use of
 
 ## Enable File control on form
 
-You must configure site settings **Control/EnableFilePreview** and set its value to **true** to enable **file** controls on the form. You don't require to make any configuration to use file column with Liquid code or Web API.
+You must configure site settings **Control/EnableFilePreview** and set its value to **true** to enable file controls on the form. You don't require to make any configuration to use file column with Liquid code or Web API.
 
 :::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enable file preview with value set to true.":::
 
