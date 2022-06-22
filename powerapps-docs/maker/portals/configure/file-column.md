@@ -17,7 +17,7 @@ contributors:
 
 [This topic is pre-release documentation and is subject to change.]
 
-The **File** column is used for storing binary data. The primary intended use of this column is to store a single file, note, or attachment; however, storage of other forms of binary data is also possible. Portals maker can configure file column on Basic and Advanced form to provide upload, view, modify and delete the file. The file column provides storing file up to the specified maximum size in Microsoft Dataverse table column.
+The **file** column is used for storing binary data. The primary intended use of this column is to store a single file, note, or attachment; however, storage of other forms of binary data is also possible. Portals maker can configure file column on Basic and Advanced form to provide upload, view, modify and delete the file. The file column provides storing file up to the specified maximum size in Microsoft Dataverse table column.
 
 > [!NOTE]
 > - This is a preview feature.
@@ -29,7 +29,7 @@ You must configure site settings **Control/EnableFilePreview** and set its value
 
 ![Graphical user interface  text  application  email Description automatically generated](media/image1.png)
 
-> [!Important]
+> [!IMPORTANT]
 > This site setting is only required during preview period only.
 
 ## Liquid code
