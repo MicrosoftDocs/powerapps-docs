@@ -247,8 +247,8 @@ E:\projects\PowerPlatformVSSolution\ExamplePlugins\bin\outputPackages\PowerPlatf
 ```
 > [!IMPORTANT]
 > If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assembies or plugin types that you want to remove with your update.
-
-The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
+>
+> The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
 
 #### View Plugin Packages with Power Platform Tools
 
@@ -269,7 +269,7 @@ Within the Power Platform Explorer, select a plug-in package and select **Delete
 #### Create a Plugin Package with Power Platform Tools
 
 > [!NOTE]
-> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to create a plug-in package in the usual flow of creating a plug-in. It will be created automatically the first time you deploy the plug-in while **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
+> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to create a plug-in package in the usual flow of creating a plug-in. It will be created automatically the first time you deploy the plug-in while the **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
 > However, you can create a new plug-in package from a Nuget package using the steps below. 
 
 1. Within the Power Platform Explorer, select **Plug-in Packages** and select **Create** from the context menu.
@@ -285,10 +285,10 @@ Within the Power Platform Explorer, select a plug-in package and select **Delete
 #### Update a Plugin Package with Power Platform Tools
 
 > [!NOTE]
-> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to update a plug-in package in the usual flow of creating a plug-in. It will be updated automatically each time you deploy the plug-in while **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
+> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to update a plug-in package in the usual flow of creating a plug-in. It will be updated automatically each time you deploy the plug-in while the **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
 > However, you can update a new plug-in package from a Nuget package using the steps below.
 
-Within the Power Platform Explorer, select a plug-in package and select **Update** from the context menu.
+Within the **Power Platform Explorer**, select a plug-in package and select **Update** from the context menu.
 
 :::image type="content" source="media/power-platform-update-pluginpackage.png" alt-text="Select a plug-in package and select Update from the context menu":::
 
@@ -309,7 +309,7 @@ More information:
 
 ### Q: Can I continue to use ILMerge?
 
-**A**: We have never supported ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality and more. But nothing else has changed. If ILMerge works for you, you can continue to use it. But we recommend using dependent assemblies.
+**A**: We have never supported ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality and more. But nothing else has changed. If ILMerge works for you, you can continue to use it. We recommend using dependent assemblies because we can support this solution.
 
 ### See also
 
