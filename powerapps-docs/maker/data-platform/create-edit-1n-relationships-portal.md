@@ -36,7 +36,7 @@ The portal enables configuring the most common options, but certain options can 
 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
 2. Select **Data** > **Tables** and select the table that has the relationships you want to view.
-3. With the **Relationships** tab selected, you can select the following views: 
+3. With the **Relationships** area selected, you can select the following views: 
 
  |View|Description|
  |--|--|
