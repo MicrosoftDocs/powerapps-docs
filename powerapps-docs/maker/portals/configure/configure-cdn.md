@@ -5,7 +5,7 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/20/2022
+ms.date: 06/22/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -21,7 +21,7 @@ contributors:
 
 A *content delivery network* is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
 
-:::image type="complex" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.":::
+:::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.":::
 
 > [!NOTE]
 > - This is a preview feature.
