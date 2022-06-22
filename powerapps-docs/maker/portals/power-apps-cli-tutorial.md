@@ -195,7 +195,7 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ## Next steps
 
-[Overview of portals support for Microsoft Power Platform CLI](power-apps-cli-tutorial.md)
+[Use the Visual Studio Code extension](vs-code-extension.md)
 
 ### See also
 
