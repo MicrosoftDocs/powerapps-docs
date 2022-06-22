@@ -32,7 +32,7 @@ For more information about creating a portal with starter portal package, go to 
 
 The package update includes the following enhancements to extend the capabilities of portals:
 
-- Enabled support for right-to-left languages (Arabic and Hebrew) for the [Dataverse starter portal](../create-portal.md). More information: [Support Languages](../configure/enable-multiple-language-support.md#supported-languages).
+- Enabled support for right-to-left languages (Arabic and Hebrew) for the [Dataverse starter portal](../create-portal.md). More information: [Supported Languages](../configure/enable-multiple-language-support.md#supported-languages).
 
 - Enabled choices attribute on basic form metadata. More information: [Configure basic form metadata](../configure/configure-basic-form-metadata.md).
 
