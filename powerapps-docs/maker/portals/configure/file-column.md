@@ -27,7 +27,7 @@ The **file** column is used for storing binary data. The primary intended use of
 
 You must configure site settings **Control/EnableFilePreview** and set its value to **true** to enable **file** controls on the form. You don't require to make any configuration to use file column with Liquid code or Web API.
 
-![Graphical user interface  text  application  email Description automatically generated](media/image1.png)
+:::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enable file preview with value set to true.":::
 
 > [!IMPORTANT]
 > This site setting is only required during preview period only.
@@ -43,8 +43,6 @@ Liquid is an open-source template language that is integrated natively into Micr
     {{ item.columnname.Url }}
 {% endfor %}
 ```
-
-
 | Attribute | Description | 
 |-----|-----|
 | Name | Name of the file associated with column |
