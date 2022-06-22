@@ -51,7 +51,7 @@ Liquid is an open-source template language that is integrated natively into Micr
 
 Example: Retrieve file column data from contact table
 
-Create a new file data type column in [Microsoft Dataverse](../../data-platform/create-edit-field-portal.md#create-a-column)for contact table with name 'myfileattribute'.
+Create a new file data type column in [Microsoft Dataverse](../../data-platform/create-edit-field-portal.md#create-a-column) for contact table with name 'myfileattribute'.
 
 > [!NOTE]
 > Make sure you've configured the appropriate table permission on the contact table to read record
