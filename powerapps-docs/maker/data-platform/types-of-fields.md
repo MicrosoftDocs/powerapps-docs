@@ -203,7 +203,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 ### Create an image column and add it to a form
 
 1. Go to [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution that contains the table form where you want to add an image column.
-1. Open the table, and then select the **Columns** tab.
+1. Open the table, and then select the **Columns** area.
 1. On the command bar, select **Add column**.
 1. Enter or select values for the following properties, and then select **Done**.
    - **Display Name**, such as *Recipe image*. 
@@ -244,10 +244,7 @@ The default **Maximum file size** is 32 MB and the largest size you can set is 1
 > - Once the maximum file size has been saved, it can't be changed.
 > - File columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
 
-To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
-
-> [!div class="mx-imgBorder"] 
-> ![File data type.](media/file-data-type.png)
+To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, select the **Columns** area, select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
 More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
 
