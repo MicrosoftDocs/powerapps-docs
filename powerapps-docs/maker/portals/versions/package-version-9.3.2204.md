@@ -34,7 +34,7 @@ The package update includes the following enhancements to extend the capabilitie
 
 - Enabled support for right-to-left languages (Arabic and Hebrew) for the [Dataverse starter portal](../create-portal.md). More information: [Support Languages](../configure/enable-multiple-language-support.md#supported-languages).
 
-- Enabled choices attribute in attribute selector on basic form metadata to enable configuring multiple choice code component.
+- Enabled choices attribute on basic form metadata. More information: [Configure basic form metadata](../configure/configure-basic-form-metadata.md).
 
 - CAPTCHA capabilities is hidden from basic form components in the China region.
 
