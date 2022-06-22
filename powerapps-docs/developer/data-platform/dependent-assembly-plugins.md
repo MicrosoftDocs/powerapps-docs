@@ -79,7 +79,7 @@ Use the PAC CLI `pac plugin init` command to create a Visual Studio project that
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
 
-Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the promect in the `bin\Debug` or `bin\Release` folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
+Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the project in the `bin\Debug` or `bin\Release` folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
 
 > [!NOTE]
 > It is no longer required to sign the assemblies when using dependent assemblies. But in .NET, signed assemblies cannot use resources contained within unsigned assemblies, so you may still want to sign your assemblies.
@@ -98,7 +98,7 @@ To include another file or assembly that will be available in the runtime for yo
 1. Add the file to your Visual Studio project.
 1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
 
-:::image type="content" source="media/add-dependent-file-or-assembly.png" alt-text="Adding a file to the Visual Studio project.":::
+   :::image type="content" source="media/add-dependent-file-or-assembly.png" alt-text="Adding a file to the Visual Studio project.":::
 
 If you view the csproj file, you will find that an `ItemGroup` like following will be added by Visual Studio:
 
@@ -185,7 +185,7 @@ See the following topics related to installing and using Power Platform Tools fo
 - [Quickstart: Create a Power Platform Tools project](tools/devtools-create-project.md)
 - [Quickstart: Create a plug-in using Power Platform Tools](tools/devtools-create-plugin.md)
 
-Use the same process to create and manage plug-ins using Power Platform Tools for Visual Studio, but the following capabilities are new to support dependent assemblies.
+You will generally use the same process to create and manage plug-ins using Power Platform Tools for Visual Studio, however signing the assemblies is no longer required.
 
 #### Enable Plugin Packages for Power Platform Tools
 
@@ -199,9 +199,34 @@ Power Platform Tools for Visual Studio provides several configuration options as
 > [!NOTE]
 > When this option is selected, all your plug-in projects will be deployed with Plug-in packages.
 
+#### Add a dependent assembly using NuGet with Power Platform Tools
+
+You can add a NuGet Package to your Visual Studio project as you normally do. After you build the project, you should find the assembly in the NuGet package. The nuget package will be in the `bin\outputPackages` folder
+
+You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
+
+#### Add another dependent file or assembly with Power Platform Tools
+
+To include another file or assembly that will be available in the runtime for your plug-in.
+
+1. Add the file to your Visual Studio project.
+1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
+
+   :::image type="content" source="media/power-platform-add-strings.localized.json.png" alt-text="Set the Copy to Output Directory property of the file to Copy if newer":::
+
+If you unload the project file and view csproj file, you will find that an `ItemGroup` like following will be added by Visual Studio:
+
+```xml
+<ItemGroup>
+  <None Update="strings.localized.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup> 
+```
+
 #### Deploy Plugin Packages for Power Platform Tools
 
-To deploy your plug-in package, in Solution Explorer, right-click the plug-in project and select **Deploy** from the context menu.
+To deploy your plug-in package, in **Solution Explorer** right-click the plug-in project and select **Deploy** from the context menu.
 
 :::image type="content" source="media/power-platform-deploy-pluginpackage.png" alt-text="foo":::
 
@@ -216,9 +241,14 @@ ID allotted was 06a20e15-77f2-ec11-bb3c-000d3a892245.
 Each time you deploy after that, you will see a message in the output window that informs you that the plug-in package was updated.
 
 ```
-6/22/2022 3:20:14 PM : update of Plugin Package sample_PowerPlatformVSSolution.ExamplePlugins, at E:\projects\PowerPlatformVSSolution\ExamplePlugins\bin\outputPackages\PowerPlatformVSSolution.ExamplePlugins.1.0.0.nupkg was successful.
+6/22/2022 3:20:14 PM : update of Plugin Package sample_PowerPlatformVSSolution.ExamplePlugins, at
+E:\projects\PowerPlatformVSSolution\ExamplePlugins\bin\outputPackages\PowerPlatformVSSolution.ExamplePlugins.1.0.0.nupkg was successful.
 
 ```
+> [!IMPORTANT]
+> If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assembies or plugin types that you want to remove with your update.
+
+The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
 
 #### View Plugin Packages with Power Platform Tools
 
@@ -233,19 +263,13 @@ Within the Power Platform Explorer, select a plug-in package and select **Delete
 
 :::image type="content" source="media/power-platform-delete-pluginpackage.png" alt-text="Select a plug-in package and select Delete from the context menu":::
 
-#### Add another dependent file or assembly with Power Platform Tools
-
-To include another file or assembly that will be available in the runtime for your plug-in.
-
-1. Add the file to your Visual Studio project.
-1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
-
-   :::image type="content" source="media/power-platform-add-strings.localized.json.png" alt-text="Set the Copy to Output Directory property of the file to Copy if newer":::
+> [!IMPORTANT]
+> Deleting a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
 
 #### Create a Plugin Package with Power Platform Tools
 
 > [!NOTE]
-> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to create a plug-in package in the usuall flow of creating a plug-in. It will be created automatically the first time you deploy the plug-in while **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
+> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to create a plug-in package in the usual flow of creating a plug-in. It will be created automatically the first time you deploy the plug-in while **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
 > However, you can create a new plug-in package from a Nuget package using the steps below. 
 
 1. Within the Power Platform Explorer, select **Plug-in Packages** and select **Create** from the context menu.
@@ -256,10 +280,12 @@ To include another file or assembly that will be available in the runtime for yo
 
    :::image type="content" source="media/power-platform-create-pluginpackage-dialog.png" alt-text="The **Import new Plugin package dialog":::
 
+   Select the NuGet package and choose which solution it should be added to, or create a new solution.
+
 #### Update a Plugin Package with Power Platform Tools
 
 > [!NOTE]
-> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to update a plug-in package in the usuall flow of creating a plug-in. It will be updated automatically each time you deploy the plug-in while **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
+> As mentioned in [Deploy Plugin Packages for Power Platform Tools](#deploy-plugin-packages-for-power-platform-tools), you will not typically have to update a plug-in package in the usual flow of creating a plug-in. It will be updated automatically each time you deploy the plug-in while **Use nuget package for deploying Plugins to Dataverse** option is set in Visual Studio.
 > However, you can update a new plug-in package from a Nuget package using the steps below.
 
 Within the Power Platform Explorer, select a plug-in package and select **Update** from the context menu.
@@ -270,11 +296,9 @@ This will open an dialog to allow you to select a nuget package to update the pl
 
 ## Design notes
 
-The Visual Studio project created using `pac plugin init` leverages Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format.
+The Visual Studio project created using `pac plugin init` leverages Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format. Power Platform Tools for Visual Studio uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
 
-The Power Platform Tools uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
-
-You are not required to use the `pac plugin init` command or a project that uses Power Platform Tools for Visual Studio. You can use whatever capabilities you choose to generate a NuGet package, but you must use the tooling available to upload the package to Dataverse.
+You are not required to use these tools to generate a NuGet package with your plug-ins. You can use whatever capabilities you choose to generate a NuGet package, but you must use the tooling available to upload the package to Dataverse.
 
 More information:
 
