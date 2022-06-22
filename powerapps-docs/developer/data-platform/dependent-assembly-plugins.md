@@ -74,7 +74,7 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 
 Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
-1. Create a folder for your plug-in project. The name of this folder will determin the name of the Visual Studio .NET Framework Class library project for your plug-in.
+1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
 1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
