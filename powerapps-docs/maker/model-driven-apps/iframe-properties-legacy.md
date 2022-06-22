@@ -75,7 +75,7 @@ You can add inline frames (iframes) to a form to integrate content from another 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.
+1.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.
 
 1. In the list of forms, open a form of type **Main**.
 

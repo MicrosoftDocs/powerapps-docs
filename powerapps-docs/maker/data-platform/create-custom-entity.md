@@ -137,7 +137,7 @@ Skip this step if you only want to use the Pet table in a canvas app.
 
 1. On the left navigation pane, expand **Data**, select **Tables**, and then select **Pet**.
 
-1. In the **Pet** table, select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form designer.
+1. In the **Pet** table, select the **Forms** area, and then select **Information** next to the **Main** form type to open the form designer.
 
     > [!div class="mx-imgBorder"] 
     > ![Edit main form.](media/create-custom-entity/main-form-edit.png)

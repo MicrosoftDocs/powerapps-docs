@@ -60,7 +60,7 @@ To enable the rich text editor with default values on any new or existing text c
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab.
+1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** area.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
 1. On the form designer canvas, add or create a text column or select an existing text column, such as the custom multi-line text column used in this article.
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
