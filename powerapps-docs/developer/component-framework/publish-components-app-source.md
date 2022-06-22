@@ -2,16 +2,15 @@
 title: "Publish code components on AppSource | Microsoft Docs"
 description: "After you have tested your code components and want it to distribute to others to use it, you must publish it on Microsoft AppSource."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.custom:
-  - "dyn365-a11y"
-  - "dyn365-developer"
 ms.topic: article
 ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Publish code components on AppSource

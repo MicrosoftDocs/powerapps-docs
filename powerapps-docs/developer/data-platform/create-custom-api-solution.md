@@ -2,9 +2,8 @@
 title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 04/29/2022
 ms.reviewer: "jdaly"
-
 ms.topic: "article"
 author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
@@ -212,6 +211,34 @@ Open the solution you created and verify that the Custom API and the associated 
 :::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully.":::
 
 At this point, you can test your API using the steps describe in [Test your Custom API](create-custom-api-maker-portal.md#test-your-custom-api)
+
+## Update a Custom API in a solution
+
+After you ship a solution that contains a Custom API you may want to make some changes to the Custom API in your unmanaged solution. You can add new parameters or response properties and make changes to those columns that support being updated, such as the `displayname` and `description`.
+
+> [!IMPORTANT]
+> You cannot introduce a change to a Custom API in a solution that modifies any of the properties that cannot be changed after they are saved. When you install a newer version of a solution that contains a definition of a Custom API, it will attempt to update the Custom API, Custom API Request Parameters, and Custom API Response properties. A solution update is the same as trying to update the Custom API using any other method.
+>
+> The following are properties in the solution files that cannot be changed after a Custom API is created:
+> - Custom API properties:
+>    - `allowedcustomprocessingsteptype`
+>    - `bindingtype`
+>    - `boundentitylogicalname`
+>    - `isfunction`
+>    - `uniquename`
+>    - `workflowsdkstepenabled`
+> - Custom API RequestParameter properties:
+>    - `isoptional`
+>    - `logicalentityname`
+>    - `type`
+>    - `uniquename`
+> - Custom API Response Property properties:
+>    - `logicalentityname`
+>    - `type`
+>    - `uniquename`
+>
+>  More information: [CustomAPI tables](custom-api-tables.md)
+
 
 
 ## Providing Localized Labels with the solution

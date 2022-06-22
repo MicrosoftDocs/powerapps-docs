@@ -1,8 +1,8 @@
 ---
-title: "MobileOfflineProfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "MobileOfflineProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfile table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -354,10 +354,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -377,10 +377,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -629,11 +629,12 @@ Listed by **SchemaName**.
 - [DefaultMobileOfflineProfile_Organization](#BKMK_DefaultMobileOfflineProfile_Organization)
 - [MobileOfflineProfile_MobileOfflineProfileItem](#BKMK_MobileOfflineProfile_MobileOfflineProfileItem)
 - [MobileOfflineProfile_SystemUser](#BKMK_MobileOfflineProfile_SystemUser)
+- [mobileofflineprofile_mobileofflineprofile](#BKMK_mobileofflineprofile_mobileofflineprofile)
 
 
 ### <a name="BKMK_DefaultMobileOfflineProfile_Organization"></a> DefaultMobileOfflineProfile_Organization
 
-Same as organization table [DefaultMobileOfflineProfile_Organization](organization.md#BKMK_DefaultMobileOfflineProfile_Organization) Many-To-One relationship.
+Same as the [DefaultMobileOfflineProfile_Organization](organization.md#BKMK_DefaultMobileOfflineProfile_Organization) many-to-one relationship for the [organization](organization.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -648,7 +649,7 @@ Same as organization table [DefaultMobileOfflineProfile_Organization](organizati
 
 ### <a name="BKMK_MobileOfflineProfile_MobileOfflineProfileItem"></a> MobileOfflineProfile_MobileOfflineProfileItem
 
-Same as mobileofflineprofileitem table [MobileOfflineProfile_MobileOfflineProfileItem](mobileofflineprofileitem.md#BKMK_MobileOfflineProfile_MobileOfflineProfileItem) Many-To-One relationship.
+Same as the [MobileOfflineProfile_MobileOfflineProfileItem](mobileofflineprofileitem.md#BKMK_MobileOfflineProfile_MobileOfflineProfileItem) many-to-one relationship for the [mobileofflineprofileitem](mobileofflineprofileitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -663,7 +664,7 @@ Same as mobileofflineprofileitem table [MobileOfflineProfile_MobileOfflineProfil
 
 ### <a name="BKMK_MobileOfflineProfile_SystemUser"></a> MobileOfflineProfile_SystemUser
 
-Same as systemuser table [MobileOfflineProfile_SystemUser](systemuser.md#BKMK_MobileOfflineProfile_SystemUser) Many-To-One relationship.
+Same as the [MobileOfflineProfile_SystemUser](systemuser.md#BKMK_MobileOfflineProfile_SystemUser) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -674,6 +675,23 @@ Same as systemuser table [MobileOfflineProfile_SystemUser](systemuser.md#BKMK_Mo
 |ReferencedEntityNavigationPropertyName|MobileOfflineProfile_SystemUser|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mobileofflineprofile_mobileofflineprofile"></a> mobileofflineprofile_mobileofflineprofile
+
+**Added by**: MobileOfflineDirectDeviceSync Solution
+
+Same as the [mobileofflineprofile_mobileofflineprofile](mobileofflineprofileitemfilter.md#BKMK_mobileofflineprofile_mobileofflineprofile) many-to-one relationship for the [mobileofflineprofileitemfilter](mobileofflineprofileitemfilter.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|mobileofflineprofileitemfilter|
+|ReferencingAttribute|mobileofflineprofileid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|mobileofflineprofile_mobileofflineprofile|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -690,23 +708,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_MobileOfflineProfile_modifiedby"></a> lk_MobileOfflineProfile_modifiedby
 
-See systemuser Table [lk_MobileOfflineProfile_modifiedby](systemuser.md#BKMK_lk_MobileOfflineProfile_modifiedby) One-To-Many relationship.
+See the [lk_MobileOfflineProfile_modifiedby](systemuser.md#BKMK_lk_MobileOfflineProfile_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_MobileOfflineProfile_organization"></a> MobileOfflineProfile_organization
 
-See organization Table [MobileOfflineProfile_organization](organization.md#BKMK_MobileOfflineProfile_organization) One-To-Many relationship.
+See the [MobileOfflineProfile_organization](organization.md#BKMK_MobileOfflineProfile_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_MobileOfflineProfile_createdby"></a> lk_MobileOfflineProfile_createdby
 
-See systemuser Table [lk_MobileOfflineProfile_createdby](systemuser.md#BKMK_lk_MobileOfflineProfile_createdby) One-To-Many relationship.
+See the [lk_MobileOfflineProfile_createdby](systemuser.md#BKMK_lk_MobileOfflineProfile_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_MobileOfflineProfile_createdonbehalfby"></a> lk_MobileOfflineProfile_createdonbehalfby
 
-See systemuser Table [lk_MobileOfflineProfile_createdonbehalfby](systemuser.md#BKMK_lk_MobileOfflineProfile_createdonbehalfby) One-To-Many relationship.
+See the [lk_MobileOfflineProfile_createdonbehalfby](systemuser.md#BKMK_lk_MobileOfflineProfile_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_MobileOfflineProfile_modifiedonbehalfby"></a> lk_MobileOfflineProfile_modifiedonbehalfby
 
-See systemuser Table [lk_MobileOfflineProfile_modifiedonbehalfby](systemuser.md#BKMK_lk_MobileOfflineProfile_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_MobileOfflineProfile_modifiedonbehalfby](systemuser.md#BKMK_lk_MobileOfflineProfile_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

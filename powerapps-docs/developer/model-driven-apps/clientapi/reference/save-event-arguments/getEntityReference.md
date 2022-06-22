@@ -1,5 +1,5 @@
 ---
-title: "EventArgs.getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
+title: EventArgs.getEntityReference (Client API reference)
 description: Includes description and supported parameters for the EventArgs.getEntityReference method.
 ms.author: jdaly
 author: adrianorth

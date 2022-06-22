@@ -19,7 +19,7 @@ contributors:
 
 # Connect to Azure DevOps from Power Apps
 
-Power Apps connector for [Azure DevOps](/connectors/visualstudioteamservices/) allows you to work with Azure DevOps instance. You can work view Azure DevOps queries, choose work items based on different work item types, view or edit details all from inside a canvas app that connects to Azure DevOps.
+Power Apps connector for [Azure DevOps](/connectors/visualstudioteamservices/) allows you to work with Azure DevOps instance. You can view Azure DevOps queries, choose work items based on different work item types, view or edit details all from inside a canvas app that connects to Azure DevOps.
 
 > [!TIP]
 > For a complete list of all actions, see [Azure DevOps connector actions](/connectors/visualstudioteamservices/#actions).
@@ -111,7 +111,7 @@ For this purpose, we'll use the [UpdateWorkItem](/connectors/visualstudioteamser
 
 1. Set the **DataSource** property of the edit form to `Gallery2.AllItems`.
 
-    This formula sets the **DataSource** property to all items from gallery configured [earlier](#step-3-list-work-items) to list all work items.
+    This formula sets the **DataSource** property to all items from the gallery configured [earlier](#step-3-list-work-items) to list all work items.
 
 1. Set the **Item** property of the edit form to `Gallery2.Selected`.
 
@@ -177,9 +177,9 @@ For this purpose, we'll use the [UpdateWorkItem](/connectors/visualstudioteamser
 
 1. [Save and publish](../save-publish-app.md) the app.
 
-## Next steps"
+## Next steps
 
-Play the app. Select a query from the list of queries. And then, choose a work item that you want to update the title or description of. Make a change, and then select the save button. The changes are saved to Azure DevOps work item. Switch to another query and switch back to see the changes show inside the app.
+Play the app. Select a query from the list of queries. And then, choose a work item that you want to update the title or description of. Make a change, and then select the save button. The changes are saved to the Azure DevOps work item. Switch to another query and switch back to see the changes show inside the app.
 
 Similarly, customize the app further or create an app with additional data cards on forms. You can also use display form instead of edit form to just show data inside different data cards. When using display form, ensure you use the [Text label](../controls/control-text-box.md) control to display text. When using rich text or HTML format (such as the **Description** field in Azure DevOps), use the [HTML text](../controls/control-html-text.md) control. For more information about customizing that app, see [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
 

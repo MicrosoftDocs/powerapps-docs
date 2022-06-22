@@ -1,8 +1,8 @@
 ---
-title: "KeyVaultReference table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "KeyVaultReference table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KeyVaultReference table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -134,10 +134,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -393,6 +393,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -577,10 +578,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -780,12 +781,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -889,7 +908,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [keyvaultreference_SyncErrors](syncerror.md#BKMK_keyvaultreference_SyncErrors) Many-To-One relationship.
+Same as the [keyvaultreference_SyncErrors](syncerror.md#BKMK_keyvaultreference_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -906,7 +925,7 @@ Same as syncerror table [keyvaultreference_SyncErrors](syncerror.md#BKMK_keyvaul
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [keyvaultreference_DuplicateMatchingRecord](duplicaterecord.md#BKMK_keyvaultreference_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [keyvaultreference_DuplicateMatchingRecord](duplicaterecord.md#BKMK_keyvaultreference_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -923,7 +942,7 @@ Same as duplicaterecord table [keyvaultreference_DuplicateMatchingRecord](duplic
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [keyvaultreference_DuplicateBaseRecord](duplicaterecord.md#BKMK_keyvaultreference_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [keyvaultreference_DuplicateBaseRecord](duplicaterecord.md#BKMK_keyvaultreference_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -940,7 +959,7 @@ Same as duplicaterecord table [keyvaultreference_DuplicateBaseRecord](duplicater
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [keyvaultreference_AsyncOperations](asyncoperation.md#BKMK_keyvaultreference_AsyncOperations) Many-To-One relationship.
+Same as the [keyvaultreference_AsyncOperations](asyncoperation.md#BKMK_keyvaultreference_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -957,7 +976,7 @@ Same as asyncoperation table [keyvaultreference_AsyncOperations](asyncoperation.
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [keyvaultreference_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_keyvaultreference_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [keyvaultreference_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_keyvaultreference_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -974,7 +993,7 @@ Same as mailboxtrackingfolder table [keyvaultreference_MailboxTrackingFolders](m
 
 **Added by**: System Solution Solution
 
-Same as processsession table [keyvaultreference_ProcessSession](processsession.md#BKMK_keyvaultreference_ProcessSession) Many-To-One relationship.
+Same as the [keyvaultreference_ProcessSession](processsession.md#BKMK_keyvaultreference_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -991,7 +1010,7 @@ Same as processsession table [keyvaultreference_ProcessSession](processsession.m
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [keyvaultreference_BulkDeleteFailures](bulkdeletefailure.md#BKMK_keyvaultreference_BulkDeleteFailures) Many-To-One relationship.
+Same as the [keyvaultreference_BulkDeleteFailures](bulkdeletefailure.md#BKMK_keyvaultreference_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1008,7 +1027,7 @@ Same as bulkdeletefailure table [keyvaultreference_BulkDeleteFailures](bulkdelet
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [keyvaultreference_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_keyvaultreference_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [keyvaultreference_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_keyvaultreference_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1023,7 +1042,7 @@ Same as principalobjectattributeaccess table [keyvaultreference_PrincipalObjectA
 
 ### <a name="BKMK_keyvaultreference_ServiceEndpoint"></a> keyvaultreference_ServiceEndpoint
 
-Same as serviceendpoint table [keyvaultreference_ServiceEndpoint](serviceendpoint.md#BKMK_keyvaultreference_ServiceEndpoint) Many-To-One relationship.
+Same as the [keyvaultreference_ServiceEndpoint](serviceendpoint.md#BKMK_keyvaultreference_ServiceEndpoint) many-to-one relationship for the [serviceendpoint](serviceendpoint.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1038,7 +1057,7 @@ Same as serviceendpoint table [keyvaultreference_ServiceEndpoint](serviceendpoin
 
 ### <a name="BKMK_keyvaultreference_ManagedIdentity"></a> keyvaultreference_ManagedIdentity
 
-Same as managedidentity table [keyvaultreference_ManagedIdentity](managedidentity.md#BKMK_keyvaultreference_ManagedIdentity) Many-To-One relationship.
+Same as the [keyvaultreference_ManagedIdentity](managedidentity.md#BKMK_keyvaultreference_ManagedIdentity) many-to-one relationship for the [managedidentity](managedidentity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1055,7 +1074,7 @@ Same as managedidentity table [keyvaultreference_ManagedIdentity](managedidentit
 
 **Added by**: msft_ServerSideSync_Extensions Solution
 
-Same as emailserverprofile table [keyvaultreference_emailserverprofile_keyvaultreferenceid](emailserverprofile.md#BKMK_keyvaultreference_emailserverprofile_keyvaultreferenceid) Many-To-One relationship.
+Same as the [keyvaultreference_emailserverprofile_keyvaultreferenceid](emailserverprofile.md#BKMK_keyvaultreference_emailserverprofile_keyvaultreferenceid) many-to-one relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1087,47 +1106,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_keyvaultreference_createdby](systemuser.md#BKMK_lk_keyvaultreference_createdby) One-To-Many relationship.
+See the [lk_keyvaultreference_createdby](systemuser.md#BKMK_lk_keyvaultreference_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_keyvaultreference_createdonbehalfby"></a> lk_keyvaultreference_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_keyvaultreference_createdonbehalfby](systemuser.md#BKMK_lk_keyvaultreference_createdonbehalfby) One-To-Many relationship.
+See the [lk_keyvaultreference_createdonbehalfby](systemuser.md#BKMK_lk_keyvaultreference_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_keyvaultreference_modifiedby"></a> lk_keyvaultreference_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_keyvaultreference_modifiedby](systemuser.md#BKMK_lk_keyvaultreference_modifiedby) One-To-Many relationship.
+See the [lk_keyvaultreference_modifiedby](systemuser.md#BKMK_lk_keyvaultreference_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_keyvaultreference_modifiedonbehalfby"></a> lk_keyvaultreference_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_keyvaultreference_modifiedonbehalfby](systemuser.md#BKMK_lk_keyvaultreference_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_keyvaultreference_modifiedonbehalfby](systemuser.md#BKMK_lk_keyvaultreference_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_keyvaultreference"></a> user_keyvaultreference
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_keyvaultreference](systemuser.md#BKMK_user_keyvaultreference) One-To-Many relationship.
+See the [user_keyvaultreference](systemuser.md#BKMK_user_keyvaultreference) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_keyvaultreference"></a> team_keyvaultreference
 
 **Added by**: System Solution Solution
 
-See team Table [team_keyvaultreference](team.md#BKMK_team_keyvaultreference) One-To-Many relationship.
+See the [team_keyvaultreference](team.md#BKMK_team_keyvaultreference) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_keyvaultreference"></a> business_unit_keyvaultreference
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_keyvaultreference](businessunit.md#BKMK_business_unit_keyvaultreference) One-To-Many relationship.
+See the [business_unit_keyvaultreference](businessunit.md#BKMK_business_unit_keyvaultreference) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_managedidentity_KeyVaultReference"></a> managedidentity_KeyVaultReference
 
-See managedidentity Table [managedidentity_KeyVaultReference](managedidentity.md#BKMK_managedidentity_KeyVaultReference) One-To-Many relationship.
+See the [managedidentity_KeyVaultReference](managedidentity.md#BKMK_managedidentity_KeyVaultReference) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
 
 ### See also
 

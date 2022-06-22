@@ -57,7 +57,7 @@ You can set one type of custom control to appear in the web browser client while
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the Opportunity table, and then select the **Forms** tab.  
+2. Expand **Data**, select **Tables**, select the Opportunity table, and then select the **Forms** area.  
   
 3. Open a form such as the **Main** form for the **Opportunity** table.
 

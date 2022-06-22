@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/13/2021
+ms.date: 03/28/2022
 ms.author: dileeps
 ms.reviewer: ndoelman
 contributors:
@@ -15,11 +15,13 @@ contributors:
 
 # Set up Azure Front Door with portals
 
-As a portal maker, you can use Azure Front Door with Power Apps portals to use its edge caching and Web Application Firewall (WAF) capabilities. In this article, you'll learn how to set up [Azure Front Door Standard/Premium (preview)](/azure/frontdoor/standard-premium/overview) with portals.
+As a portal maker, you can use Azure Front Door with Power Apps portals to use its edge caching and web application firewall (WAF) capabilities. In this article, you'll learn how to set up [Azure Front Door](/azure/frontdoor/overview) with portals.
+
+> [!NOTE] 
+> You can also set up Azure Front Door with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
-> - Since Azure Front Door Standard/Premium (preview) is in preview, ensure you follow the preview guidelines as outlined in [Azure documentation](/azure/frontdoor/standard-premium/overview).
-> - Although this article is focused on [Azure Front Door Standard/Premium (preview)](/azure/frontdoor/standard-premium/overview), similar steps can be used for [Azure Front Door](/azure/frontdoor/front-door-overview) or any other content delivery network or WAF provider. The terminology used by various components might be different.
+> - Although this article is focused on [Azure Front Door](/azure/frontdoor/overview), similar steps can be used for any other content delivery network or WAF provider. The terminology used by various components might be different.
 > - While [custom domain HTTPS settings using Azure portal](/azure/frontdoor/front-door-faq#can-i-configure-tls-policy-to-control-tls-protocol-versions-) allows you to choose a [default minimum](/azure/frontdoor/front-door-faq#what-tls-versions-are-supported-by-azure-front-door-) TLS version between 1.0 and 1.2, use TLS version 1.2 for strong ciphers.
 
 Follow these steps to set up Azure Front Door with portals:
@@ -49,7 +51,7 @@ In this section, you'll learn how to set up the Azure Front Door service and ena
 > [!NOTE]
 > If you've already created the Azure Front Door resource, go to step 3 of the following procedure.
 
-1. Sign in to the [Azure portal](https://portal.azure.com), and create a new Azure Front Door (Standard or Premium) resource. More information: [Quickstart: Create an Azure Front Door Standard/Premium profile - Azure portal](/azure/frontdoor/standard-premium/create-front-door-portal)
+1. Sign in to the [Azure portal](https://portal.azure.com), and create a new Azure Front Door (Standard or Premium) resource. More information: [Quickstart: Create an Azure Front Door Standard/Premium profile - Azure portal](/azure/frontdoor/create-front-door-portal)
 
     ![Screenshot showing the Compare offerings page where you create an Azure Front Door resource.](media/azure-front-door/create-azure-front-door.png "Create an Azure Front Door resource")
 
@@ -102,7 +104,7 @@ Web browsers reject cookies set by Power Apps portals when you use an Azure Fron
 
     1. Update your DNS provider by removing the CNAME record created earlier during the custom domain setup for portals. Only CNAME should be updated; don't remove the origin host name. DNS will point CNAME to the Azure Front Door endpoint. The only purpose for adding CNAME was to ensure that the custom host name will be present on portals. This presence ensures that portals can serve traffic to this custom domain name through Azure Front Door, and all portal cookies will also have the domain set up correctly.
 
-    1. Set up the custom domain name on the Azure Front Door endpoint by following these steps: [Create a custom domain on Azure Front Door Standard/Premium SKU (preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
+    1. Set up the custom domain name on the Azure Front Door endpoint by following these steps: [Create a custom domain on Azure Front Door Standard/Premium SKU using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
 1. Check the following to validate the setup:
 
@@ -228,7 +230,7 @@ The portal in this scenario can contain static files with file name extensions o
    Screenshot of an IF condition named "Request file extension" with the Operator set to Equal, the Value set to css png jpg js svg woff ico, and Case transform set to No transform.
 :::image-end:::
 
-In the following action configuration, you override the cache header set by portals so that these files will be cached a little longer on the browser. By default, portals sets the caching expiration to one day. But we'll override that in this scenario and set it to seven days. To do this, we set up a **Cache expiration** action and set **Cache behavior** to **Override**, as shown in the following image.
+In the following action configuration, you override the cache header set by portals so that these files will be cached a little longer on the browser. By default, portals sets the caching expiration to one day. But we'll override that in this scenario and set it to seven days by setting up a **Cache expiration** action and setting **Cache behavior** to **Override** as shown in the following image.
 
 ![Screenshot showing a THEN action named "Cache expiration" with Cache behavior set to Override and specified as 7 days.](media/azure-front-door/cache-expiration-action.png "Example cache expiration action")
 
@@ -313,7 +315,7 @@ The next step in the setup is to configure the WAF rules on incoming requests. I
 
 1. Select the name of the WAF policy.
 
-1. Select **Policy Settings**, and then do the following:
+1. Select **Policy Settings**, and then:
 
     1. **Enable request body inspection**: Select this checkbox if you want the request body to be inspected in addition to cookies, headers, and URLs.
 
@@ -373,8 +375,8 @@ By default, Azure Front Door has an origin response timeout of 60 seconds. Howev
 
 ### See also
 
-[What is Azure Front Door?](/azure/frontdoor/standard-premium/overview) <br>
-[Quickstart: Create an Azure Front Door Standard/Premium profile - Azure portal](/azure/frontdoor/standard-premium/create-front-door-portal) <br>
-[Create a custom domain on Azure Front Door Standard/Premium SKU (preview) using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain) <br>
+[What is Azure Front Door?](/azure/frontdoor/overview) <br>
+[Quickstart: Create an Azure Front Door profile - Azure portal](/azure/frontdoor/create-front-door-portal) <br>
+[Create a custom domain on Azure Front Door Standard/Premium SKU using the Azure portal](/azure/frontdoor/standard-premium/how-to-add-custom-domain) <br>
 [How do I lock down the access to my back end to only Azure Front Door?](/azure/frontdoor/front-door-faq#how-do-i-lock-down-the-access-to-my-backend-to-only-azure-front-door-) <br>
 [Azure Front Door Rules Engine match conditions](/azure/frontdoor/front-door-rules-engine-match-conditions) <br>

@@ -1,8 +1,8 @@
 ---
-title: "Fax table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Fax table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Fax table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -246,10 +246,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Outgoing|
-|0|Incoming|
+|1|Outgoing||
+|0|Incoming||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -316,10 +316,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -339,10 +339,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -765,6 +765,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -929,10 +930,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1097,12 +1098,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the fax activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1281,7 +1298,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_fax_principalobjectattributeaccess"></a> fax_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [fax_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_fax_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [fax_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_fax_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1296,7 +1313,7 @@ Same as principalobjectattributeaccess table [fax_principalobjectattributeaccess
 
 ### <a name="BKMK_Fax_AsyncOperations"></a> Fax_AsyncOperations
 
-Same as asyncoperation table [Fax_AsyncOperations](asyncoperation.md#BKMK_Fax_AsyncOperations) Many-To-One relationship.
+Same as the [Fax_AsyncOperations](asyncoperation.md#BKMK_Fax_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1311,7 +1328,7 @@ Same as asyncoperation table [Fax_AsyncOperations](asyncoperation.md#BKMK_Fax_As
 
 ### <a name="BKMK_slakpiinstance_fax"></a> slakpiinstance_fax
 
-Same as slakpiinstance table [slakpiinstance_fax](slakpiinstance.md#BKMK_slakpiinstance_fax) Many-To-One relationship.
+Same as the [slakpiinstance_fax](slakpiinstance.md#BKMK_slakpiinstance_fax) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1326,7 +1343,7 @@ Same as slakpiinstance table [slakpiinstance_fax](slakpiinstance.md#BKMK_slakpii
 
 ### <a name="BKMK_Fax_DuplicateBaseRecord"></a> Fax_DuplicateBaseRecord
 
-Same as duplicaterecord table [Fax_DuplicateBaseRecord](duplicaterecord.md#BKMK_Fax_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Fax_DuplicateBaseRecord](duplicaterecord.md#BKMK_Fax_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1341,7 +1358,7 @@ Same as duplicaterecord table [Fax_DuplicateBaseRecord](duplicaterecord.md#BKMK_
 
 ### <a name="BKMK_Fax_BulkDeleteFailures"></a> Fax_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Fax_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Fax_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Fax_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Fax_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1356,7 +1373,7 @@ Same as bulkdeletefailure table [Fax_BulkDeleteFailures](bulkdeletefailure.md#BK
 
 ### <a name="BKMK_fax_activity_parties"></a> fax_activity_parties
 
-Same as activityparty table [fax_activity_parties](activityparty.md#BKMK_fax_activity_parties) Many-To-One relationship.
+Same as the [fax_activity_parties](activityparty.md#BKMK_fax_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1371,7 +1388,7 @@ Same as activityparty table [fax_activity_parties](activityparty.md#BKMK_fax_act
 
 ### <a name="BKMK_fax_connections2"></a> fax_connections2
 
-Same as connection table [fax_connections2](connection.md#BKMK_fax_connections2) Many-To-One relationship.
+Same as the [fax_connections2](connection.md#BKMK_fax_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1386,7 +1403,7 @@ Same as connection table [fax_connections2](connection.md#BKMK_fax_connections2)
 
 ### <a name="BKMK_Fax_SyncErrors"></a> Fax_SyncErrors
 
-Same as syncerror table [Fax_SyncErrors](syncerror.md#BKMK_Fax_SyncErrors) Many-To-One relationship.
+Same as the [Fax_SyncErrors](syncerror.md#BKMK_Fax_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1401,7 +1418,7 @@ Same as syncerror table [Fax_SyncErrors](syncerror.md#BKMK_Fax_SyncErrors) Many-
 
 ### <a name="BKMK_Fax_DuplicateMatchingRecord"></a> Fax_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Fax_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Fax_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Fax_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Fax_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1416,7 +1433,7 @@ Same as duplicaterecord table [Fax_DuplicateMatchingRecord](duplicaterecord.md#B
 
 ### <a name="BKMK_Fax_Annotation"></a> Fax_Annotation
 
-Same as annotation table [Fax_Annotation](annotation.md#BKMK_Fax_Annotation) Many-To-One relationship.
+Same as the [Fax_Annotation](annotation.md#BKMK_Fax_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1431,7 +1448,7 @@ Same as annotation table [Fax_Annotation](annotation.md#BKMK_Fax_Annotation) Man
 
 ### <a name="BKMK_Fax_ProcessSessions"></a> Fax_ProcessSessions
 
-Same as processsession table [Fax_ProcessSessions](processsession.md#BKMK_Fax_ProcessSessions) Many-To-One relationship.
+Same as the [Fax_ProcessSessions](processsession.md#BKMK_Fax_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1446,7 +1463,7 @@ Same as processsession table [Fax_ProcessSessions](processsession.md#BKMK_Fax_Pr
 
 ### <a name="BKMK_fax_connections1"></a> fax_connections1
 
-Same as connection table [fax_connections1](connection.md#BKMK_fax_connections1) Many-To-One relationship.
+Same as the [fax_connections1](connection.md#BKMK_fax_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1461,7 +1478,7 @@ Same as connection table [fax_connections1](connection.md#BKMK_fax_connections1)
 
 ### <a name="BKMK_Fax_QueueItem"></a> Fax_QueueItem
 
-Same as queueitem table [Fax_QueueItem](queueitem.md#BKMK_Fax_QueueItem) Many-To-One relationship.
+Same as the [Fax_QueueItem](queueitem.md#BKMK_Fax_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1476,7 +1493,7 @@ Same as queueitem table [Fax_QueueItem](queueitem.md#BKMK_Fax_QueueItem) Many-To
 
 ### <a name="BKMK_fax_actioncard"></a> fax_actioncard
 
-Same as actioncard table [fax_actioncard](actioncard.md#BKMK_fax_actioncard) Many-To-One relationship.
+Same as the [fax_actioncard](actioncard.md#BKMK_fax_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1514,67 +1531,67 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_business_unit_fax_activities"></a> business_unit_fax_activities
 
-See businessunit Table [business_unit_fax_activities](businessunit.md#BKMK_business_unit_fax_activities) One-To-Many relationship.
+See the [business_unit_fax_activities](businessunit.md#BKMK_business_unit_fax_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_KnowledgeBaseRecord_Faxes"></a> KnowledgeBaseRecord_Faxes
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_Faxes](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Faxes) One-To-Many relationship.
+See the [KnowledgeBaseRecord_Faxes](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Faxes) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Faxes"></a> KnowledgeArticle_Faxes
 
-See knowledgearticle Table [KnowledgeArticle_Faxes](knowledgearticle.md#BKMK_KnowledgeArticle_Faxes) One-To-Many relationship.
+See the [KnowledgeArticle_Faxes](knowledgearticle.md#BKMK_KnowledgeArticle_Faxes) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_manualsla_fax"></a> manualsla_fax
 
-See sla Table [manualsla_fax](sla.md#BKMK_manualsla_fax) One-To-Many relationship.
+See the [manualsla_fax](sla.md#BKMK_manualsla_fax) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_sla_fax"></a> sla_fax
 
-See sla Table [sla_fax](sla.md#BKMK_sla_fax) One-To-Many relationship.
+See the [sla_fax](sla.md#BKMK_sla_fax) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
 
-See activitypointer Table [activity_pointer_fax](activitypointer.md#BKMK_activity_pointer_fax) One-To-Many relationship.
+See the [activity_pointer_fax](activitypointer.md#BKMK_activity_pointer_fax) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_processstage_faxes"></a> processstage_faxes
 
-See processstage Table [processstage_faxes](processstage.md#BKMK_processstage_faxes) One-To-Many relationship.
+See the [processstage_faxes](processstage.md#BKMK_processstage_faxes) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_user_fax"></a> user_fax
 
-See systemuser Table [user_fax](systemuser.md#BKMK_user_fax) One-To-Many relationship.
+See the [user_fax](systemuser.md#BKMK_user_fax) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_Faxes"></a> Account_Faxes
 
-See account Table [Account_Faxes](account.md#BKMK_Account_Faxes) One-To-Many relationship.
+See the [Account_Faxes](account.md#BKMK_Account_Faxes) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_fax_createdonbehalfby"></a> lk_fax_createdonbehalfby
 
-See systemuser Table [lk_fax_createdonbehalfby](systemuser.md#BKMK_lk_fax_createdonbehalfby) One-To-Many relationship.
+See the [lk_fax_createdonbehalfby](systemuser.md#BKMK_lk_fax_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_fax"></a> team_fax
 
-See team Table [team_fax](team.md#BKMK_team_fax) One-To-Many relationship.
+See the [team_fax](team.md#BKMK_team_fax) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_fax_createdby"></a> lk_fax_createdby
 
-See systemuser Table [lk_fax_createdby](systemuser.md#BKMK_lk_fax_createdby) One-To-Many relationship.
+See the [lk_fax_createdby](systemuser.md#BKMK_lk_fax_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Fax"></a> TransactionCurrency_Fax
 
-See transactioncurrency Table [TransactionCurrency_Fax](transactioncurrency.md#BKMK_TransactionCurrency_Fax) One-To-Many relationship.
+See the [TransactionCurrency_Fax](transactioncurrency.md#BKMK_TransactionCurrency_Fax) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_fax_modifiedby"></a> lk_fax_modifiedby
 
-See systemuser Table [lk_fax_modifiedby](systemuser.md#BKMK_lk_fax_modifiedby) One-To-Many relationship.
+See the [lk_fax_modifiedby](systemuser.md#BKMK_lk_fax_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Contact_Faxes"></a> Contact_Faxes
 
-See contact Table [Contact_Faxes](contact.md#BKMK_Contact_Faxes) One-To-Many relationship.
+See the [Contact_Faxes](contact.md#BKMK_Contact_Faxes) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_fax_modifiedonbehalfby"></a> lk_fax_modifiedonbehalfby
 
-See systemuser Table [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

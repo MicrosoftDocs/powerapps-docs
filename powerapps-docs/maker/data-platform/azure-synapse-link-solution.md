@@ -34,6 +34,7 @@ In Power Apps, solutions are used to transport apps and components from one envi
 This section describes the prerequisites necessary to transport the Azure Synapse Link for Dataverse configuration across environments.
 
 - **Azure Synapse Link for Dataverse.** This guide assumes that you have already exported data from Dataverse by using the [Azure Synapse Link for Dataverse](export-to-data-lake.md).
+- **Azure Synapse Link for Dataverse Advanced Configuration Options enabled.** This guide assumes that you have already toggled the Show advanced configuration settings under Advanced when creating Azure Synapse Link for Dataverse [Azure Synapse Link Advanced Configuration Settings](azure-synapse-link-advanced-configuration.md).
 
 ## Install the Azure Synapse Link for Dataverse solution
 
