@@ -50,11 +50,8 @@ To use offline-first, you need to enable it for each of your model-driven apps. 
 
 2. On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
 
-3. Select **More (...)** > **Edit** > **Edit in preview** to open the modern app designer.
+3. Select **More (...)** > **Edit** to open the modern app designer.
 
-    > [!div class="mx-imgBorder"]
-    > ![Edit an app.](media/offline-edit-app.png)
- 
 4. On the command bar, select **Settings**.
 
     > [!div class="mx-imgBorder"]

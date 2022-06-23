@@ -39,7 +39,7 @@ To use these controls in the form designer:
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Expand **Dataverse** in the left hand menu and select **tables**
-1. Select the required table and then select the **Forms** tab.
+1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
    
 2. Select the **section** you would like to add the control to.  
