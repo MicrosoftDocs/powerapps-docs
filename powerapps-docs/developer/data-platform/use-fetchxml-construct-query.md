@@ -2,7 +2,7 @@
 title: "Use FetchXML to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about FetchXML, a proprietary XML based language that is used in Microsoft Dataverse to query data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/13/2022
+ms.date: 05/31/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"

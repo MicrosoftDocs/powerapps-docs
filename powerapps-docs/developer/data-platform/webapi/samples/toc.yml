@@ -14,6 +14,8 @@
       href: ../web-api-aaduser-samples.md
 - name: (C#) samples
   items:
+    - name: About the samples
+      href: ../web-api-samples-csharp.md
     - name: CDSWebApiService class
       href: cdswebapiservice.md
     - name: Basic Operations
