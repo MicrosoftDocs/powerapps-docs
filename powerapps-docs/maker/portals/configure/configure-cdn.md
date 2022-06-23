@@ -5,7 +5,7 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/20/2022
+ms.date: 06/22/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -21,21 +21,21 @@ contributors:
 
 A *content delivery network* is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
 
-:::image type="complex" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on. The three Content Delivery Network servers duplicate static content that's stored in a central application server that floats up in the sky.":::
+:::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on.":::
 
 > [!NOTE]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
-When you enable CDN on your portal, static content like images, scripts, and style sheet files used to design your portal website will be stored and served from the CDN server closest to your location.  
+When you enable Content Delivery Network on your portal, static content&mdash;like images, scripts, and style sheet files used to design your portal website&mdash;will be stored and served from the Content Delivery Network server closest to your location.  
 
 > [!NOTE] 
 > You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
 >
-> - You need to be a Portal Administrator to enable the CDN. This feature is available for Power Apps portal.  If you're using the Add-on license then you can't enable CDN. Trial portals aren't supported for CDN. You can't enable the CDN for portals configured with custom domain during preview. 
-> - Using a [custom domain name](../admin/add-custom-domain.md) on a site is currently not supported to use CDN.
+> - You need to be a portal administrator to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. You can't enable Content Delivery Network for portals configured with a custom domain during preview. 
+> - Using a [custom domain name](../admin/add-custom-domain.md) on a site is currently not supported with using Content Delivery Network.
 
 ## Enable Content Delivery Network for a production portal 
 
