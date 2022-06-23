@@ -1,17 +1,14 @@
 ---
 title: Crowdsource ideas
 description: Learn how to manage Forum Ideas, Idea Comments, and Idea Votes on a portal.
-author: sbmjais
-
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Crowdsource ideas

@@ -1,20 +1,20 @@
 ---
 title: Metadata | Microsoft Docs
 description: Provides all the information about  column definitions.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Metadata
 
-Provides all the information about  column definitions.
+[!INCLUDE [metadata-description](includes/metadata-description.md)]
 
 ## Available for 
 

@@ -1,15 +1,15 @@
 ---
 title: setValue | Microsoft Docs
 description: Set value for the column.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
 ---
 
 # setValue
@@ -18,7 +18,7 @@ ms.topic: "article"
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
 
 ## Syntax
 
@@ -26,14 +26,18 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------- |
 | `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+| `value`        | `string  | Date     | number              | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
 
 ## Return Value
 
 Type: `Promise`
+
+## Limitations
+
+Canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
 
 ### Related topics
 

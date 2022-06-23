@@ -1,25 +1,18 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.custom: ""
-ms.date: 05/03/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: abae4614-9e03-45e7-94fa-9e6e7225ece5
-caps.latest.revision: 21
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "ryjones"
+ms.date: 06/03/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Retrieve a table row using the Web API
@@ -98,7 +91,7 @@ If an entity has an alternate key defined, you can also use the alternate key to
 GET [Organization URI]/api/data/v9.0/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
 
-If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [lookup property](./web-api-types-operations.md#lookup-properties) as shown here.
+If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties) as shown here.
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001)
@@ -235,7 +228,7 @@ Use the `$expand` system query option to control what data from related entities
 If you simply include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.
 
 > [!NOTE]
-> To retrieve related entities for entity sets, see [Retrieve related tables by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated).  
+> To retrieve related entities for entity sets, see [Retrieve related table records with a query](retrieve-related-entities-query.md).  
 
 - **Retrieve related entities for an entity instance by expanding single-valued navigation properties**: <br />The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
 
@@ -338,9 +331,6 @@ If you simply include the name of the navigation property, you’ll receive all 
      ]
   }
   ```
-  
- > [!NOTE]
- > If you expand on collection-valued navigation parameters to retrieve related entities for *entity sets*, a @odata.nextLink property will be returned instead for the related entities. You should use the value of the @odata.nextLink property with a new GET request to return the required data. More information:[Retrieve related tables by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)
 
 - **Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties**: The following example demonstrates how you can expand related entities for an entity instance using both single- and collection-values navigation properties.  
 
@@ -426,7 +416,7 @@ The following example specifies that related tasks should be returned in ascendi
 > [!NOTE]
 > - Nested `$expand` options can only be applied to single-valued navigation properties.
 >
-> - Each request can include a maximum of 10 `$expand` options. There is no limit on the depth of nested `$expand` options, but the limit of 10 total `$expand` options applies to these as well.
+> - Each request can include a maximum of 15 `$expand` options. There is no limit on the depth of nested `$expand` options, but the limit of 15 total `$expand` options applies to these as well.
 >
 > - This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, and `$levels` aren’t supported for the Web API.
 

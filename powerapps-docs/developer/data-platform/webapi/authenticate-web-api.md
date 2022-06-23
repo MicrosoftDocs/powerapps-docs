@@ -1,25 +1,18 @@
 ---
 title: "Authenticate to Microsoft Dataverse with the Web API (Dataverse)| Microsoft Docs"
 description: "Learn about the different ways to manage authentication when using the Web API"
-ms.custom: ""
-ms.date: 10/31/2018
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 767f39d4-6a8e-48f0-bf7d-69ea1191acef
-caps.latest.revision: 8
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Authenticate to Microsoft Dataverse with the Web API
 

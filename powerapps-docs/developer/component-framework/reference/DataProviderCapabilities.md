@@ -1,19 +1,20 @@
 ---
 title: DataProviderCapabilities | Microsoft Docs
 description: Provides methods to use dataset capabilities.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.subservice: "pcf"
-ms.topic: "reference"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # DataProviderCapabilities
 
-Provides access to all the properties of a file.
+[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)]
 
 ## Available for
 
