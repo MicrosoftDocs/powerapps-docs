@@ -24,13 +24,13 @@ Formula columns are a data type in Microsoft Dataverse that are built on Power F
 ## Add a formula column
 
 1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Go to **Dataverse** > **Tables**, and then open the table you want where you want to add a formula column.
+1. Go to **Dataverse** > **Tables**, and then open the table where you want to add a formula column.
 1. Select the **Columns** area, and then select **New column**.
 1. In the **New column** pane:
    - Enter a **Display name** for the column, such as *Total price*.
-   - Optionally, enter a description for the column.
-   - Select **Formula** as the **Data type**.
-   - Enter the formula in the **Expression** box. In this example, *Price* is a custom column with a decimal data type that is multiplied by the *Number of units*, a custom column with a whole number data type.  Select **Create**.
+   - Optionally, enter a **Description** for the column.
+   - Select **Fx Formula** as the **Data type**.
+   - Enter the formula in the **Formula** box. In this example, *Price* is a custom column with a decimal data type that is multiplied by the *Number of units*, a custom column with a whole number data type.  Select **Save**.
    :::image type="content" source="media/create-formula-column-dataverse.png" alt-text="Create a formula column":::
 
 When you create a record in a model-driven app, the formula column executes upon save and displays the data for the record in the column.
