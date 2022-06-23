@@ -2865,14 +2865,14 @@
     - name: Advanced monitoring
       href: monitor-advanced.md
   - name: Common issues and resolutions
-    href: ./canvas-apps/common-issues-and-resolutions.md
+    href: /troubleshoot/power-platform/power-apps/common-issues-and-resolutions
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
   - name: Change Power Apps Studio version
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
-    href: ../troubleshooting-startup-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
   - name: Troubleshoot Power Query
-    href: ./data-platform/troubleshoot-power-query-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
     href: https://powerapps.microsoft.com/support/

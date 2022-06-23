@@ -29,7 +29,7 @@ A chart can be added to a form or an existing list to a chart can be updated. Fo
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**.
 1. Open the solution and then open the table. 
-1. Select the **Forms** tab, and then open the form where you want to add a chart.
+1. Select the **Forms** area, and then open the form where you want to add a chart.
 1. On the form canvas, select an existing subgrid or add one. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
 1. On the right properties pane for the subgrid, select the **Show chart only** option. When enabled, this option displays the view in a chart format.
       :::image type="content" source="media/sub-grid-show-chart.png" alt-text="Display a chart in the subgrid":::
@@ -40,7 +40,7 @@ A chart can be added to a form or an existing list to a chart can be updated. Fo
 ## Add a chart to a form (classic)
 
 1. Sign into Power Apps, select **Solutions**.
-1. Open the solution with the required table and open this table. Then select the **Forms** tab.
+1. Open the solution with the required table and open this table. Then select the **Forms** area.
 1. Open the required form. In the form designer select **Switch to classic** from the command bar.
 1. Add a sub-grid to the form, or to change an existing list in a sub-grid, double-click a sub-grid on the form.
 1. On the **Set Properties** page for the sub-grid, select the **Show Chart Only** option. When enabled, this option displays the view in a chart format.
