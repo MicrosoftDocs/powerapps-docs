@@ -22,8 +22,8 @@ To achieve this functionality, you'll need to replace the *default studio templa
 
 - Make a copy of the *default studio template* web template.
 - Add JavaScript code to the web template copy.
-- Create a corresponding page template
-- Modify the home page to use the modified template
+- Create a corresponding page template.
+- Modify the home page to use the modified template.
 
 ## Make a copy of the default studio template
 
