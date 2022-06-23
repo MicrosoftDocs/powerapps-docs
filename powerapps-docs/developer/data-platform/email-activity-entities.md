@@ -2,7 +2,7 @@
 title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The email activity in lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/25/2021
+ms.date: 06/22/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -111,8 +111,36 @@ ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectT
     ```  
   
      Because you are reusing an existing attachment file, you do not have to specify the `ActivityMimeAttachment.Body` and `ActivityMimeAttachment.FileName` column values while you are creating and associating email attachment rows to emails or email templates.  
+
+## Email storage
+
+Email descriptions (body of the email) have up to this point been stored in the Dataverse relational store. That is changing as the email [Description](reference/entities/email#BKMK_Description) column in the [email activity](reference/entities/email) table is being relocated to unstructured Azure Blob storage. This data migration will be transparent to customers with the exception that you will see a reduction in the size of the [ActivityPointer](reference/entities/activitypointer) table.
+
+> [!NOTE]
+> The data migration to Azure Blob storage is expected to begin in Summer 2022, using a phased approach by region, and be completed by first quarter 2023.
+
+Azure Blob storage is also used for storage of attachments, annotations, files, and images.
+
+### Search and filtering limitations
+
+Because email descriptions (bodies) are stored in Azure Blob storage, certain limitations apply to filtering, finding, and searching email descriptions as described below.
+
+#### Filtering
+
+Filtering on email descriptions is not supported. Some specific points to consider are as follows.
+
+- FetchXML - You will not be able to search in email bodies using FetchXML.
+- Quick Find and Advanced Find - Filtering email descriptions using these methods is not supported.
+
+> [!TIP]
+> For Quick Find, while filtering is not supported, the email body can be added as a returned column and the body data will be returned in the result.
+
+#### Searching
+
+You can enable [Dataverse search](webapi/relevance-search) on email descriptions to search email descriptions.
   
-### See also  
+### See also
+
  [Activity tables](activity-entities.md)   
  [Sample: Send an email](org-service/samples/send-email.md)   
  [Email table](/reference/entities/email.md)   
