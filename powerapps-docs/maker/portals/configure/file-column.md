@@ -47,7 +47,7 @@ Liquid is an open-source template language that is integrated natively into Micr
 |-----|-----|
 | Name | Name of the file associated with column |
 | Size | File size in bytes |
-| URL  | File download URL (Provides the Web API URL to download file. During private preview, you need to enable Web API read on this column to download file. This URL will be replaced as we reach public preview) |
+| URL  | File download URL |
 
 Example: Retrieve file column data from contact table
 
@@ -83,7 +83,7 @@ Portals Web API can be used to perform create, read, update, and delete operatio
 To retrieve file data, use the following APIs
 
 ```
-GET /\_api/&lt;entity-type&gt;(id)/&lt;file-attribute-name&gt;/$value
+GET /_api/<entity-type>(id)/<file-attribute-name>/$value
 ```
 
 File data transfers from the web service endpoints are limited to a maximum of 16-MB data in a single service call. File data that exceeds 16 MB must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
@@ -132,7 +132,7 @@ Byte[ ]
 To upload the file, set the value of the file column to a byte array that contains the content of the file
 
 ```
-PUT or PATCH /\_api/&lt;entity-type&gt;(id)/&lt;file-attribute-name&gt;
+PUT or PATCH /_api/<entity-type>(id)/<file-attribute-name>
 ```
 
 #### Example: file upload
@@ -141,7 +141,7 @@ PUT or PATCH /\_api/&lt;entity-type&gt;(id)/&lt;file-attribute-name&gt;
 
 ```
 HTTP
-PUT [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/ myfileattribute
+PUT [Portal Url]/_api/accounts(62d53214-9dfa-eb11-94ee-0022482230a8)/myfileattribute
 Headers:
 Content-Type: application/octet-stream
 Body :
