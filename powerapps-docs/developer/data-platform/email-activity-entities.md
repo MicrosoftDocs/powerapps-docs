@@ -114,7 +114,7 @@ ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectT
 
 ## Email storage
 
-Email descriptions (body of the email) have up to this point been stored in the Dataverse relational store. That is changing as the email [Description](reference/entities/email#BKMK_Description) column in the [email activity](reference/entities/email) table is being relocated to unstructured Azure Blob storage. This data migration will be transparent to customers with the exception that you will see a reduction in the size of the [ActivityPointer](reference/entities/activitypointer) table.
+Email descriptions (body of the email) have up to this point been stored in the Dataverse relational store. That is changing as the email [Description](reference/entities/email.md#BKMK_Description) column in the [email activity](reference/entities/email.md) table is being relocated to unstructured Azure Blob storage. This data migration will be transparent to customers with the exception that you will see a reduction in the size of the [ActivityPointer](reference/entities/activitypointer.md) table.
 
 > [!NOTE]
 > The data migration to Azure Blob storage is expected to begin in Summer 2022, using a phased approach by region, and be completed by first quarter 2023.
@@ -137,7 +137,7 @@ Filtering on email descriptions is not supported. Some specific points to consid
 
 #### Searching
 
-You can enable [Dataverse search](webapi/relevance-search) on email descriptions to search email descriptions.
+You can enable [Dataverse search](webapi/relevance-search.md) on email descriptions to search email descriptions.
   
 ### See also
 
