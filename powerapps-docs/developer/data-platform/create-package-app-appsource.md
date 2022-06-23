@@ -2,9 +2,8 @@
 title: "Step 3: Create an AppSource package for your app (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create an AppSource package (.zip file) to include your solution and demo data files along with other required files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
@@ -120,9 +119,7 @@ Here is a description of the elements in the **input.xml** file.
 |SolutionAnchorName|Name of the solution zip file in the package that is used for the display name and description of solution assets.|
 |StartDate|Date on which the app becomes available on AppSource. The format is MM/DD/YYYY.|
 |EndDate|Date on which the app stops being available on AppSource. The format is MM/DD/YYYY.|
-|SupportedCountries|This is a comma-separated list of countries or regions where the app should be available. At the time of writing this article, the supported countries list is the following:<br/>AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,<br/>BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,<br/>
-CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CV,CW,CX,CY,CZ,<br/>DE,DJ,DK,DM,DO,DZ,<br/>EC,EE,EG,ER,ES,ET,<br/>FI,FJ,FK,FM,FO,FR,<br/>GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,<br/>HK,HM,HN,HR,HT,HU,<br/>ID,IE,IL,IM,IN,IO,IQ,IS,IT,<br/>JE,JM,JO,JP,<br/>KE,KG,KH,KI,KM,KN,KR,KW,KY,KZ,<br/>LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,<br/>MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,<br/>NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,<br/>
-OM,<br/>PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,<br/>QA,<br/>RE,RO,RS,RU,RW,<br/>SA,SB,SC,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SZ,<br/>TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,<br/>UA,UG,UM,US,UY,UZ,<br/>VA,VC,VE,VG,VI,VN,VU,<br/>WF,WS,<br/>YE,YT,<br/>ZA,ZM,ZW |
+|SupportedCountries|This is a comma-separated list of countries or regions where the app should be available. At the time of writing this article, the supported countries list is the following: <br/>AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,<br/>CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CV,CW,CX,CY,CZ,<br/>DE,DJ,DK,DM,DO,DZ,<br/>EC,EE,EG,ER,ES,ET,<br/>FI,FJ,FK,FM,FO,FR,<br/>GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,<br/>HK,HM,HN,HR,HT,HU,<br/>ID,IE,IL,IM,IN,IO,IQ,IS,IT,<br/>JE,JM,JO,JP,<br/>KE,KG,KH,KI,KM,KN,KR,KW,KY,KZ,<br/>LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,<br/>MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,<br/>NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,<br/>OM,<br/>PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,<br/>QA,<br/>RE,RO,RS,RU,RW,<br/>SA,SB,SC,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SZ,<br/>TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,<br/>UA,UG,UM,US,UY,UZ,<br/>VA,VC,VE,VG,VI,VN,VU,<br/>WF,WS,<br/>YE,YT,<br/>ZA,ZM,ZW |
 |LearnMoreLink|URL to the detailed information page for this package.|
 |Locales|An instance of this node for each language you want to support in the Preferred solution UI. This node contains the following children elements:<br/>- **PackageLocale.Code**: LCID of the language for this node. Example: US English is 1033<br/>- **PackageLocale.IsDefault**: Indicates the default language. This is used as the fallback language if the language chosen by the customer is not available.<br/>- **Logo**: Logo for your app package. Size of the image must be 32x32. Valid image formats are PNG and JPG.<br/>- **Terms**: Name of the HTML file that contains your license terms for each language.|
 
