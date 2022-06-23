@@ -70,7 +70,7 @@ The following function types are supported with the formulas used in a formula c
 These operators are supported with the formulas used in a formula column: <br>
 +, -, \*, /, %, ^, in, exactin, &
 
-More information: [Operators in Power Apps](../maker/canvas-apps/functions/operators.md)
+More information: [Operators in Power Apps](../canvas-apps/functions/operators.md)
 
 ## Available functions 
 

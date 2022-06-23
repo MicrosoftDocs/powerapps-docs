@@ -56,7 +56,6 @@ The following table includes the corresponding `AttributeTypeDisplayName` API ty
 |**URL**|**Single Line of Text**<br />*URL* Format|`StringType`|
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
 |**Yes/No**|**Two Options**|`BooleanType`|
-| **Fx Formula** | **Fx Formula** | Data type is determined by the formula. |
 
 For more descriptions for each type you can add or edit, see the article for the corresponding designer:
  - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
