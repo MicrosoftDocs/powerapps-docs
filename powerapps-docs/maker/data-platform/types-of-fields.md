@@ -56,6 +56,7 @@ The following table includes the corresponding `AttributeTypeDisplayName` API ty
 |**URL**|**Single Line of Text**<br />*URL* Format|`StringType`|
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
 |**Yes/No**|**Two Options**|`BooleanType`|
+| **Fx Formula** | **Fx Formula** | Data type is determined by the formula. |
 
 For more descriptions for each type you can add or edit, see the article for the corresponding designer:
  - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
@@ -115,7 +116,6 @@ Choices multi-select columns are supported in the following types of forms:
 |**Bulk Edit form**|No|
 
 You can use global choices that are defined in your organization to configure values for the multi-select choices.
-
 
 <a name="BKMK_UsingTheRightTypeOfNumber"></a>
   
@@ -248,5 +248,8 @@ To create a file column, on the left pane in Power Apps select **Solutions**, op
 
 More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
 
+## Fx Formula columns
+
+Built on Power Fx, use an Fx formula column to perform operations that return values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. More information: [Work with formula columns (preview)](formula-columns.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

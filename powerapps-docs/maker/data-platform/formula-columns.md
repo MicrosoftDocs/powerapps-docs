@@ -1,41 +1,41 @@
 ---
-title: Work with Dataverse for Teams formula table columns | Microsoft Docs
-description: Explains how to create and use formula table columns in Dataverse for Teams.
-author: revachauhan
+title: Work with Dataverse formula table columns | Microsoft Docs
+description: Explains how to create and use formula table columns in Dataverse.
+author: matp
 reviewer: mattp123
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
-ms.date: 01/24/2022
+ms.date: 06/23/2022
 ms.subservice: teams
-ms.author: matp
+ms.author: dikamath
 ms.reviewer: matp
 contributors:
   - mattp123
 ---
-
-# Work with formula table columns (preview)
+# Work with formula columns (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)] More information: [Power Apps preview program](/power-platform/admin/preview-environments)
 
-Formula columns are a data type in Microsoft Dataverse for Teams that are built on Power Fx. You can add a formula column to a table in real time. The Dataverse table stores the logic and gives you the values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
+Formula columns are a data type in Microsoft Dataverse that are built on Power Fx. You can add a formula column to a table in real time. The table stores the logic and gives you the values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
 
 > [!NOTE]
 > Formula columns can be added as a calculated field. Currently, formula columns can't be used in roll-up fields or with plugins.
 
 ## Add a formula column
 
-1. On the **Build** tab, select **See all**, and then expand **Tables**.
-1. From the list of tables in Power Apps app for Teams, select the table you want.
-1. Select **Add column** or select **Edit data** > **Add column**. When you select **Edit data**, you can also select **+** on the column where you want to add the formula column.
-1. In the **Add new column** pane: 
-   - Enter a **Name** for the column, such as *Total price*.
-   - Select **Formula** as the **Type**.
-   - Enter the formula in the **Expression** box. In this example, the *Price* column (Decimal data type) is multiplied by the *Number of units* column (Number data type).  Select **Create**.
-   :::image type="content" source="media/create-formula-column.png" alt-text="Create a formula column":::
+1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Go to **Dataverse** > **Tables**, and then open the table you want where you want to add a formula column.
+1. Select the **Columns** area, and then select **New column**.
+1. In the **New column** pane:
+   - Enter a **Display name** for the column, such as *Total price*.
+   - Optionally, enter a description for the column.
+   - Select **Formula** as the **Data type**.
+   - Enter the formula in the **Expression** box. In this example, *Price* is a custom column with a decimal data type that is multiplied by the *Number of units*, a custom column with a whole number data type.  Select **Create**.
+   :::image type="content" source="media/create-formula-column-dataverse.png" alt-text="Create a formula column":::
 
-When you create a record, the formula column executes the formula and displays the data for the record. If the formula column value for a record doesn't update, select **Refresh** on the command bar to execute the formula.
+When you create a record in a model-driven app, the formula column executes upon save and displays the data for the record in the column.
 
-:::image type="content" source="media/record-example-formula-column.png" alt-text="Example record with a formula column":::
+:::image type="content" source="media/record-in-app-formula-column.png" alt-text="Example record with a formula column":::
 
 Notice that the column type is determined by the formula. You can change the formula after you’ve created it if it doesn’t change the column type. For example, the formula *price * discount* creates a column type of number, whereas the formula *First & “ “ & Last* creates a column type of string. You can change a *price * discount* formula to  *price * (discount +10%)* because that doesn’t change the column type. However, once saved, you can’t change the *price * discount* formula to  *Text(price * discount)* because that would require changing the column type to string.
 
@@ -279,5 +279,4 @@ The following scalar functions are available with formula columns.
 
 ### See also
 
-[Work with table columns](table-columns.md) <br />
-[Formula reference for Power Apps](../maker/canvas-apps/formula-reference.md)
+[Types of columns](types-of-fields.md)
