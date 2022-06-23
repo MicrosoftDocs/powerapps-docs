@@ -19,6 +19,8 @@ contributors:
 
 The file column is used for storing binary data. The primary intended use of this column is to store a single file, note, or attachment; however, storage of other forms of binary data is also possible. Portals maker can configure file column on Basic and Advanced form to provide upload, view, modify and delete the file. The file column provides storing file up to the specified maximum size in Microsoft Dataverse table column.
 
+:::image type="content" source="media/file-column/file-column-support.gif" alt-text="An animation depicting the upload file for file column.":::
+
 > [!NOTE]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
