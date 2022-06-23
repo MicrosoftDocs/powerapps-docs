@@ -21,6 +21,11 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+
 It is frequently valuable to include another assembly or a resource file within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly. You may want to access a list of localized strings.  
 
 Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, it was never supported by Dataverse and it didn't always work. ILMerge is no longer being maintained.
@@ -158,7 +163,7 @@ This opens a dialog to allow you to select the NuGet Package with changes.
 :::image type="content" source="media/prt-update-pluginpackage-dialog.png" alt-text="The update Plugin Package dialog.":::
 
 > [!IMPORTANT]
-> If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assembies or plugin types that you want to remove with your update.
+> If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assemblies or plugin types that you want to remove with your update.
 >
 > The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
 
@@ -246,7 +251,7 @@ E:\projects\PowerPlatformVSSolution\ExamplePlugins\bin\outputPackages\PowerPlatf
 
 ```
 > [!IMPORTANT]
-> If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assembies or plugin types that you want to remove with your update.
+> If your update removes any plug-in assemblies, or types which are used in plug-in step registrations, the update will be rejected. You must manually remove any step registrations that use plug-in assemblies or plugin types that you want to remove with your update.
 >
 > The version of the plug-in package or plug-in assembly is not a factor in any upgrade behaviors. You can update the versions of these items as you need.
 
