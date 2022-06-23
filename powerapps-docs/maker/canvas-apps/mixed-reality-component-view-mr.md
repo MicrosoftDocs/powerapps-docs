@@ -54,6 +54,52 @@ The control is a button that's labeled with an icon of a cube and the text *View
 
    :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="A screenshot of the Insert tab in Power Apps Studio, showing where to find the View in MR control.":::
 
+### Viewing multiple models in a single session
+
+The View in MR control supports either viewing a single media file at a time or viewing multiple media files in a single mixed reality session. To view multiple files in a single session use the _Sources List (Items)_ property to provide a list of files that the user can choose from within the mixed reality experience. 
+
+When using the _Sources List (Items)_ property you also need to use the following additional properties to map the columns of your input table:
+
+- **ItemsSource** (required) - Specify which column in the _Sources List (Items)_ provides the 3D model or image to show in mixed reality. See [Connect 3D models to Power Apps](mixed-reality-component-view-3d-store.md) to learn more about bringing models into Power Apps. 
+- **ItemsLabel** - The column that contains what the label should be for the media gallery in mixed reality. The _Alternative Text_ property will be used for items that don't have a value.
+- **ItemsThumbnail** - The column that contains a thumbnail to show in the media gallery in mixed reality. A default thumbnail will be provided in the gallery for items without a thumbnail specified.
+- **ItemsObjectWidth, ItemsObjectHeight, ItemsObjectDepth** - Used to specify an explicit size for each media item in the list. The _Object width_, _Object height_, and _Object depth_ will be used as a default for items that don't have a value.
+
+
+To test this out, open your app for editing in [Power Apps Studio](https://create.powerapps.com):
+
+1. From the **Insert** tab select, **Mixed Reality** > **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
+2. Edit the _Sources List (Items)_ property and insert this formula:
+
+    :::image type="content" source="./media/augmented-view-mr/source-list.png" alt-text="A screenshot of View in MR control properties.":::
+
+
+   ```javascript
+   Table(
+     {
+        label: "Birds of Paradise",
+        source: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/bird_of_paradise_blue.glb",
+        thumbnail: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/bird_of_paradise_blue.png"
+     },
+     {
+        label: "Fiddle Leaf Fig",
+        source: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/flf_orange.glb",
+        thumbnail: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/flf_orange.png"
+     },
+     {
+        label: "Small Palm Tree",
+        source: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/palm_green.glb",
+        thumbnail: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/palm_green.png"
+     }
+    )
+   ```
+3. Set the _ItemsLabel_ property to `"label"`.
+4. Set the _ItemsSource_ property to `"source"`.
+5. Set the _ItmesThumbnail_ property to `"thumbnail"`.
+6. Save and publish the app, then open it on your mobile device.
+
+   :::image type="content" source="./media/augmented-3d/multi-model-selection-tray.gif" alt-text="A video showing what the media gallery looks like in the mixed reality experience":::
+
 ### How objects are scaled if you resize them
 
 If you don't specify dimensions when you place a model, the **View in MR** control follows the dimensions given in the object file. You can resize the model by entering a value other than 0 in one or more of the control's width, height, and depth properties (**Object width**, **Object height**, and **Object depth**). How the model is scaled depends on how many dimensions you change.
@@ -69,68 +115,70 @@ If you don't specify dimensions when you place a model, the **View in MR** contr
 
 > [!NOTE]
 > If the measurements don't adhere to the original aspect ratio, the model could be squashed or distorted when it's viewed in MR.
-
 ### Properties
 
 Change the **View in MR** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
 :::image type="content" source="./media/augmented-view-mr/augmented-view-mr-properties.png" alt-text="A screenshot of a View in MR button under construction in Microsoft Power Apps Studio, shown alongside its properties.":::
 
-| Property | Description | Type | Location |
-| - | - | - | - |
-| Text | Sets the button label text. | String | Properties; Advanced: **Text** |
-| Alternative text | Specifies the text to be displayed if the model can't load or if the user hovers over the model. | String | Properties; Advanced: **AltText** |
-| Display type | Determines whether the button label shows an icon of a cube, text, or both. | Drop-down selection | Properties; Advanced: **DisplayType** |
-| [**Source**](mixed-reality-component-view-3d-store.md) | Identifies the data source (.glb, .stl, or .obj file) to display. | Not applicable | Properties; Advanced: **Source** |
- Object width | Sets the width of the model. | Integer | Properties; Advanced: **ObjectWidth** |
-| Object height | Sets the height of the model. | Integer | Properties; Advanced: **ObjectHeight** |
-| Object depth | Sets the depth of the model. | Integer | Properties; Advanced: **ObjectDepth** |
-| Unit of measurement | Sets the measurement unit used for the model's width, height, and depth. | Drop-down selection | Properties; Advanced: **Units** |
-| Enable Shadows | Determines whether shadows are used to enhance the 3D effect when the model is shown. | Boolean | Properties; Advanced: **EnableShadows** |
-| Visible | Shows or hides the button. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
- Position | Places the upper-left corner of the button at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
-| Size | Determines the size of the button using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
-| Padding top | Sets the distance between the button label text and the top of the button. | Floating point number | Properties; Advanced: **[PaddingTop](./controls/properties-size-location.md)** |
-| Padding bottom | Sets the distance between the button label text and the bottom of the button. | Floating point number | Properties; Advanced: **[PaddingBottom](./controls/properties-size-location.md)** |
-| Padding left | Sets the distance between the button label text and the left edge of the button. | Floating point number | Properties; Advanced: **[PaddingLeft](./controls/properties-size-location.md)** |
-| Padding right | Sets the distance between the button label text and the right edge of the button. | Floating point number | Properties; Advanced: **[PaddingRight](./controls/properties-size-location.md)** |
-| Font | Sets the name of the family of fonts used for the button label text. | Dropdown list | Properties; Advanced: **[Font](./controls/properties-text.md)** |
-| Font size | Sets the size of the button label text. | Floating point number | Properties; Advanced: **[FontSize](./controls/properties-text.md)** |
-| Font weight | Sets the weight of the button label text, either *Bold*, *Lighter*, *Normal*, or *Semibold*. | Dropdown list | Properties; Advanced: **[FontWeight](./controls/properties-text.md)** |
-| Text alignment | Sets the horizontal alignment of the label text in the button, either *Center*, *Justify*, *Left*, or *Right*. | Not applicable | Properties; Advanced: **[TextAlignment](./controls/properties-text.md)** |
-| Vertical alignment | Sets the vertical alignment of the label text in the button, either *Bottom*, *Middle*, or *Top*. | Dropdown list | Properties; Advanced: **[VerticalAlign](./controls/properties-text.md)** |
-| Font style | Sets the style of the button label text, either *Italic*, *Underline*, *Strikethrough*, or none. | Not applicable | Properties; Advanced: **Italic**, **Underline**, **Strikethrough** |
-| Border radius | Determines the corner radius of the button border. | Floating point number | Properties; Advanced: **BorderRadius** |
-| **[Color](./controls/properties-color-border.md)** | Sets the colors of the button label text and the button background. | Not applicable | Properties; Advanced: **FillColor**, **TextColor** |
-| Border | Determines the style, width, and color of the button border. | Not applicable | Properties; Advanced: **[BorderStyle](./controls/properties-color-border.md)**, **[BorderThickness](./controls/properties-color-border.md)**, **[BorderFillColor](./controls/properties-color-border.md)** |
-| Disabled | Turns off the button but leaves it visible. | Boolean | Properties; Advanced: **Disabled** |
-| Disabled color | Sets the colors of the button label text, the button background, and the button border if **[DisplayMode](./controls/properties-core.md)** is **Disabled**. | Not applicable | Properties; Advanced: **DisabledContentColor**, **DisabledFillColor**, **DisabledBorderColor** |
-| Pressed color | Sets the colors of the button label text, the button background, and the button border when the user selects the button. | Not applicable | Properties; Advanced: **PressedContentColor**, **PressedFillColor**, **PressedBorderColor** |
-| Hover color | Sets the colors of the button label text, the button background, and the button border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverContentColor**, **HoverFillColor**, **HoverBorderColor** |
-| OnMixedRealitySelect | Behavior that is triggered when user selects the button to launch into the mixed reality experience. | Defined action | Advanced |
-| OnChange | Behavior that is triggered when any property on the button is changed. This is a common property across multiple controls. | Defined action | Advanced |
-| **[Tooltip](./controls/properties-core.md)** | Determines the text to display when the user hovers over the button. | String | Advanced |
-| ContentLanguage | Determines the display language of the button label, if it's different from the language used in the app. | String | Advanced |
-| **[DisplayMode](./controls/properties-core.md)** | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
-| **[TabIndex](./controls/properties-accessibility.md)** | Specifies the order the button is selected if the user navigates the app using the Tab key. | Integer | Properties; Advanced: **TabIndex** |
+|                        Property                        |                                                                                                   Description                                                                                                    |         Type          |                                                                                                  Location                                                                                                  |
+| -                                                      | -                                                                                                                                                                                                                | -                     | -                                                                                                                                                                                                          |
+| Text                                                   | Sets the button label text.                                                                                                                                                                                      | String                | Properties; Advanced: **Text**                                                                                                                                                                             |
+| Alternative text                                       | Specifies the text to be displayed if the model can't load or if the user hovers over the model.                                                                                                                 | String                | Properties; Advanced: **AltText**                                                                                                                                                                          |
+| Display type                                           | Determines whether the button label shows an icon of a cube, text, or both.                                                                                                                                      | Drop-down selection   | Properties; Advanced: **DisplayType**                                                                                                                                                                      |
+| [**Source**](mixed-reality-component-view-3d-store.md) | Identifies the data source (.glb, .stl, or .obj file) to display.                                                                                                                                                | Not applicable        | Properties; Advanced: **Source**                                                                                                                                                                           |
+| Sources List (Items)                                   | Data source (table) that lists multiple media files to view in a single mixed reality session. See [Viewing multiple models in a single session](#viewing-multiple-models-in-a-single-session) for more details. | Table                 | Properties; Advanced: **Items**                                                                                                                                                                            |
+| Object width                                           | Sets the width of the model.                                                                                                                                                                                     | Integer               | Properties; Advanced: **ObjectWidth**                                                                                                                                                                      |
+| Object height                                          | Sets the height of the model.                                                                                                                                                                                    | Integer               | Properties; Advanced: **ObjectHeight**                                                                                                                                                                     |
+| Object depth                                           | Sets the depth of the model.                                                                                                                                                                                     | Integer               | Properties; Advanced: **ObjectDepth**                                                                                                                                                                      |
+| Unit of measurement                                    | Sets the measurement unit used for the model's width, height, and depth.                                                                                                                                         | Drop-down selection   | Properties; Advanced: **Units**                                                                                                                                                                            |
+| Enable Shadows                                         | Determines whether shadows are used to enhance the 3D effect when the model is shown.                                                                                                                            | Boolean               | Properties; Advanced: **EnableShadows**                                                                                                                                                                    |
+| Enable Marker Detection                                | Determines whether marker detection will be used to determine model position and rotation. See [Use marker detection with mixed reality controls](./mixed-reality-marker-detection.md)                           | Boolean               | Properties; Advanced: **EnableMarkerDetection**                                                                                                                                                            |
+| Visible                                                | Shows or hides the button.                                                                                                                                                                                       | Boolean               | Properties; Advanced: **[Visible](./controls/properties-core.md)**                                                                                                                                         |
+| Position                                               | Places the upper-left corner of the button at the screen coordinates specified in *x* and *y*.                                                                                                                   | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)**                                                                                     |
+| Size                                                   | Determines the size of the button using the pixel values provided in *Width* and *Height*.                                                                                                                       | Integer               | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)**                                                                            |
+| Padding top                                            | Sets the distance between the button label text and the top of the button.                                                                                                                                       | Floating point number | Properties; Advanced: **[PaddingTop](./controls/properties-size-location.md)**                                                                                                                             |
+| Padding bottom                                         | Sets the distance between the button label text and the bottom of the button.                                                                                                                                    | Floating point number | Properties; Advanced: **[PaddingBottom](./controls/properties-size-location.md)**                                                                                                                          |
+| Padding left                                           | Sets the distance between the button label text and the left edge of the button.                                                                                                                                 | Floating point number | Properties; Advanced: **[PaddingLeft](./controls/properties-size-location.md)**                                                                                                                            |
+| Padding right                                          | Sets the distance between the button label text and the right edge of the button.                                                                                                                                | Floating point number | Properties; Advanced: **[PaddingRight](./controls/properties-size-location.md)**                                                                                                                           |
+| Font                                                   | Sets the name of the family of fonts used for the button label text.                                                                                                                                             | Dropdown list         | Properties; Advanced: **[Font](./controls/properties-text.md)**                                                                                                                                            |
+| Font size                                              | Sets the size of the button label text.                                                                                                                                                                          | Floating point number | Properties; Advanced: **[FontSize](./controls/properties-text.md)**                                                                                                                                        |
+| Font weight                                            | Sets the weight of the button label text, either *Bold*, *Lighter*, *Normal*, or *Semibold*.                                                                                                                     | Dropdown list         | Properties; Advanced: **[FontWeight](./controls/properties-text.md)**                                                                                                                                      |
+| Text alignment                                         | Sets the horizontal alignment of the label text in the button, either *Center*, *Justify*, *Left*, or *Right*.                                                                                                   | Not applicable        | Properties; Advanced: **[TextAlignment](./controls/properties-text.md)**                                                                                                                                   |
+| Vertical alignment                                     | Sets the vertical alignment of the label text in the button, either *Bottom*, *Middle*, or *Top*.                                                                                                                | Dropdown list         | Properties; Advanced: **[VerticalAlign](./controls/properties-text.md)**                                                                                                                                   |
+| Font style                                             | Sets the style of the button label text, either *Italic*, *Underline*, *Strikethrough*, or none.                                                                                                                 | Not applicable        | Properties; Advanced: **Italic**, **Underline**, **Strikethrough**                                                                                                                                         |
+| Border radius                                          | Determines the corner radius of the button border.                                                                                                                                                               | Floating point number | Properties; Advanced: **BorderRadius**                                                                                                                                                                     |
+| **[Color](./controls/properties-color-border.md)**     | Sets the colors of the button label text and the button background.                                                                                                                                              | Not applicable        | Properties; Advanced: **FillColor**, **TextColor**                                                                                                                                                         |
+| Border                                                 | Determines the style, width, and color of the button border.                                                                                                                                                     | Not applicable        | Properties; Advanced: **[BorderStyle](./controls/properties-color-border.md)**, **[BorderThickness](./controls/properties-color-border.md)**, **[BorderFillColor](./controls/properties-color-border.md)** |
+| Disabled                                               | Turns off the button but leaves it visible.                                                                                                                                                                      | Boolean               | Properties; Advanced: **Disabled**                                                                                                                                                                         |
+| Disabled color                                         | Sets the colors of the button label text, the button background, and the button border if **[DisplayMode](./controls/properties-core.md)** is **Disabled**.                                                      | Not applicable        | Properties; Advanced: **DisabledContentColor**, **DisabledFillColor**, **DisabledBorderColor**                                                                                                             |
+| Pressed color                                          | Sets the colors of the button label text, the button background, and the button border when the user selects the button.                                                                                         | Not applicable        | Properties; Advanced: **PressedContentColor**, **PressedFillColor**, **PressedBorderColor**                                                                                                                |
+| Hover color                                            | Sets the colors of the button label text, the button background, and the button border when the user hovers the mouse pointer over it.                                                                           | Not applicable        | Properties; Advanced: **HoverContentColor**, **HoverFillColor**, **HoverBorderColor**                                                                                                                      |
+| OnMixedRealitySelect                                   | Behavior that is triggered when user selects the button to launch into the mixed reality experience.                                                                                                             | Defined action        | Advanced                                                                                                                                                                                                   |
+| OnChange                                               | Behavior that is triggered when any property on the button is changed. This is a common property across multiple controls.                                                                                       | Defined action        | Advanced                                                                                                                                                                                                   |
+| **[Tooltip](./controls/properties-core.md)**           | Determines the text to display when the user hovers over the button.                                                                                                                                             | String                | Advanced                                                                                                                                                                                                   |
+| ContentLanguage                                        | Determines the display language of the button label, if it's different from the language used in the app.                                                                                                        | String                | Advanced                                                                                                                                                                                                   |
+| **[DisplayMode](./controls/properties-core.md)**       | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*).                                                                                              | Enum                  | Advanced                                                                                                                                                                                                   |
+| **[TabIndex](./controls/properties-accessibility.md)** | Specifies the order the button is selected if the user navigates the app using the Tab key.                                                                                                                      | Integer               | Properties; Advanced: **TabIndex**                                                                                                                                                                         |
 
 ### Output properties
 
 Your app can make use of more properties when a user interacts with the **View in MR** control. These are known as output properties. You can use these properties in other controls or to customize the app experience.
 
-| Property | Description | Type |
-| - | - | - |
-| Photos | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable |
+| Property |                                                                                      Description                                                                                      |      Type      |
+| -        | -                                                                                                                                                                                     | -              |
+| Photos   | Collects the photos captured during the mixed reality session. You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | Not applicable |
 
 ## Other mixed reality controls
 
 - View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control
 - Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 ### See also
 
-[Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
+- [Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
+- [Use marker detection with mixed reality controls](./mixed-reality-marker-detection.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

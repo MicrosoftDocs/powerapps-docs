@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 04/21/2022
+ms.date: 05/26/2022
 ms.subservice: mda-maker
 ms.topic: conceptual
 search.audienceType: 
@@ -15,9 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Modern commanding known limitations (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Modern commanding known limitations
 
 ## Power Fx and Command component libraries limitations
 
@@ -39,6 +37,6 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 
 ### See also
 
-[Modern commanding overview (preview)](command-designer-overview.md)
+[Modern commanding overview](command-designer-overview.md)
 
 [Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

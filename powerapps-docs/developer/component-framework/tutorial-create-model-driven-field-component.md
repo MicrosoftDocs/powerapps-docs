@@ -66,7 +66,7 @@ Running 'npm install' for you...
 >[!div class="mx-imgBorder"]
 > ![Creating code component using pac pcf init.](media/field-component-1.gif "Creating code component using pac pcf init")
 
-You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [component implementation](control-implementation-library.md).
+You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
 
 
 ### Install Microsoft Fluent UI
