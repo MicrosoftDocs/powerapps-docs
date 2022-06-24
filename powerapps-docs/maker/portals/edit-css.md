@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/24/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -21,37 +21,41 @@ Cascading Style Sheets (CSS) allows you to control the formatting of your websit
 > [!NOTE]
 > Power Apps portals are based on Bootstrap 3.3.x with the exception of [Event portal](/dynamics365/marketing/developer/event-management-web-application). Portal developers should not replace Bootstrap 3 with other CSS libraries as some of the scenarios in Power Apps portals are dependent on Bootstrap 3.3.x. For more information, see [Understanding Bootstrap framework](#understanding-bootstrap-framework) and [Customize Bootstrap](#customize-bootstrap) sections in this article.
 
-To open a CSS in code editor:
+### To open a CSS in code editor:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Theme** ![Theme icon.](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
+1.  Select **Theme** ![Theme icon.](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
     ![Theme.](./media/edit-css/themes.png)
 
-3.  Select the desired CSS to open it in the code editor.
+1.  Select the desired CSS to open it in the code editor.
 
-4.  Edit the code and save the changes.
+1.  Edit the code and save the changes.
 
-To upload a new CSS file:
+### To upload a new CSS file:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Theme** ![Theme icon.](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
+1.  Select **Theme** ![Theme icon.](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
-3. Select **Upload custom CSS**.
+1. Select **Upload custom CSS**.
 
     ![Upload custom CSS.](./media/edit-css/upload-custom-css.png) 
 
-4. Browse and select the CSS file to upload.
+1. Browse and select the CSS file to upload.
 
-### Understanding Bootstrap framework
+### To delete a custom CSS file
+
+1. The CSS files are stored as [web files](configure/web-files.md). To remove the CSS file, go to the [Portal Management app](./configure/configure-portal.md), in **Web Files**, select the CSS file and choose **Delete**. 
+
+## Understanding Bootstrap framework
 
 Bootstrap is a front-end framework that includes CSS and JavaScript components for common web application interface elements. It includes styles for [navigation elements](https://getbootstrap.com/components/#nav), [forms](https://getbootstrap.com/css/#forms), [buttons](https://getbootstrap.com/css/#buttons), and a [responsive grid layout system](https://getbootstrap.com/css/#grid) that allows site layouts to dynamically adjust to devices that have different screen sizes, such as phones and tablets. By using the Bootstrap layout system, you can develop a single site that presents an appropriate interface to all devices your customers might use.
 
 The templates included with portals are implemented by using standard Bootstrap components with minimal additional custom styles. So when you implement the templates, you can take advantage of Bootstrap customization options. You can quickly customize the theme (fonts, colors, and so on) in a way that's applied consistently across the portal.
 
-#### Customize Bootstrap
+### Customize Bootstrap
 
 Bootstrap supports customization through a set of variables. You can set any or all of these variables to custom values and then download a custom version of Bootstrap that is compiled based on these values.
 
