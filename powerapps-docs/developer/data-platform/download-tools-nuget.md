@@ -1,7 +1,7 @@
 ---
 title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
 description: "Download the Plug-in Registration, Package Deployment, and other developer tools from NuGet.org."
-ms.date: 06/24/2024
+ms.date: 06/24/2022
 ms.reviewer: pehecke
 ms.topic: article
 applies_to: 
