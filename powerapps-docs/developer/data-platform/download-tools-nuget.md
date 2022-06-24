@@ -1,20 +1,14 @@
 ---
 title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
 description: "Download the Plug-in Registration, Package Deployment, and other developer tools from NuGet.org."
-ms.custom: ""
-ms.date: 03/18/2021
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 06/24/2024
+ms.reviewer: pehecke
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: feb3e634-7c60-46fd-8b92-3f5682b1570b
-author: "shmcarth" # GitHub ID
+author: marcelbf # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
-manager: "annbe"
+ms.author: marcelbf
 search.audienceType: 
   - developer
 search.app: 
@@ -51,7 +45,11 @@ You can download all SDK tools using the PowerShell script provided below. Note 
     Remove-Item .\Tools -Force -Recurse -ErrorAction Ignore
     Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
     Set-Alias nuget $targetNugetExe -Scope Global -Verbose
-        
+
+    if (-not (./nuget source | ? { $_ -like "*https://api.nuget.org/v3/index.json*"})) {
+      .\nuget sources Add -Name nuget.org.v3 -Source  https://api.nuget.org/v3/index.json
+    }
+
     ##
     ##Download Plug-in Registration tool
     ##
