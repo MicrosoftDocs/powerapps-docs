@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the OnLoad event.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 04/01/2022
+ms.date: 06/24/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -46,7 +46,7 @@ To enable the async Onload event handlers for a specific app:
 1. Go to https://make.powerapps.com.
 2. Make sure you select the correct environment.
 3. Select **Apps** from the left navigation pane.
-4. Select the app and then select **...** (ellipses). Select **Open in preview**.
+4. Select the app and then select **...** (ellipses). Select **Edit**.
 5. Select **Settings** in the command bar.
 6. When the dialog opens, select **Features**.
 7. Turn on **Async onload handler**.
@@ -58,7 +58,7 @@ To enable the async Onload event handlers for a specific app:
 
 When using an async handler, a form load will wait for the promise to be fulfilled. To ensure that a load completes on time, the handler throws a timeout exception after 10 seconds to let you know to tune the async OnLoad event for better performance.
 
-There may be scenarios where you want to halt the OnLoad execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user’s input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
+There may be scenarios where you want to halt the OnLoad execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user's input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
  When the **disableAsyncTimeout is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
 
 This should be used with caution as it might affect the performance of the form load.
