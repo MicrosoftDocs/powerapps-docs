@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the form OnSave e
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 06/24/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -68,7 +68,7 @@ To use async onSave handlers you will need to enable it through an app setting:
 1. Go to https://make.powerapps.com.
 2. Make sure select the correct environment.
 3. Select **Apps** from the left navigation pane.
-4. Select the app and then select **...** (ellipses). Select **Open in preview**.
+4. Select the app and then select **...** (ellipses). Select **Edit**.
 5. Select **Settings** from the command bar.
 6. When the dialog opens, select **Features**.
 7. Turn on **Async onSave handler**.
@@ -80,7 +80,7 @@ To use async onSave handlers you will need to enable it through an app setting:
 
 When using an async save the handler will wait for the promise to be fulfilled. To ensure that a save completes in a timely manner the handler throws a timeout exception after 10 seconds to let you know to tune the async `OnSave` event for better performance.
 
-There may be scenarios where you want to halt the `OnSave` execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user’s input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
+There may be scenarios where you want to halt the `OnSave` execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user's input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
 
 When the **disableAsyncTimeout is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
 

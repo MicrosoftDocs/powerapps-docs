@@ -30,10 +30,10 @@ A form that displays the details of a table record can use a subgrid component t
 ## Add a subgrid component
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-2. Expand **Data**, select **Tables**, select the table that you want, select the **Forms** tab, and then edit the form you want.
+2. Expand **Data**, select **Tables**, select the table that you want, select the **Forms** area, and then edit the form you want.
    
    > [!note]
-   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution from the **Solutions** area, select the table, select the **Forms** tab, and then edit the form you want.
+   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution from the **Solutions** area, select the table, select the **Forms** area, and then edit the form you want.
 
 3. Select **+Component** on the command bar. This can also be selected from the left pane.
 4. Drag a **1 column section** from the layout area of the components menu onto the form.
