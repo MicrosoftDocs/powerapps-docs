@@ -59,7 +59,7 @@ Following are descriptions for each control you can use on forms.
 
 ### Subgrid
 
-A subgrid allows us to present a view of data related to the current record.  
+A subgrid allows you to present a view of data related to the current record.  
 By default it is simply a view, however it can be made editable by configuring the control. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
 
 ### Editable grid
@@ -90,7 +90,7 @@ Display an HTML page or image file on a form via a web resource. More informatio
 
 Requires Dynamics 365 Customer Service app. Add a Knowledge Base Search control to a form to make it easy for users in your organization to find knowledge articles so they can answer common customer questions and resolve their issues right from the records, without having to switch to a different application. More information: [Add the Knowledge Base Search control to forms](/dynamics365/customer-service/add-knowledge-base-search-control-forms)
 
-## Quick view
+### Quick view
 
 The quick view control displays data from a row that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary column is included in the quick view form, it becomes a link to open the related row. More information: [Model-driven app quick view control properties](quick-view-control-properties-legacy.md)
 
@@ -133,10 +133,12 @@ Provide a timeline of recent, relevant news articles and Twitter tweets for an a
 
 ### Checkbox
 
+Let's the user to choose between binary values by checking or clearing a check box. Can be configured with yes/no choice columns.
+:::image type="content" source="media/checkbox-control.png" alt-text="Checkbox control at runtime on a main form.":::
 
 ### Number input
 
- Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
+Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
 
 :::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app.":::
   
@@ -145,9 +147,9 @@ Provide a timeline of recent, relevant news articles and Twitter tweets for an a
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
 |Column|Shows the column the control is mapped to.|  
 
-## Option set
+### Option set
 
- The choice control presents a set of options for your users to choose from when entering data. It is made available by default when introducing a choice column into a form.
+ The option set control presents a set of choices for your users to choose from when entering data. It is made available by default when introducing a choice column into a form.
  More information: [Choices](../data-platform/types-of-fields.md#choices)
 
 ### Pen input
@@ -164,11 +166,11 @@ Use the pen input control to capture written input such as signatures. The pen i
 |--------------|-----------------|  
 |PenMode|Specify **PenMode!Draw**, **PenMode!Erase**, or **PenMode!Select** to determine what happens when a user drags a pointing device in a pen control.|  
 
-## Rich text editor
+### Rich text editor
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
 
-## Star rating
+### Star rating
 
 Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control for whole numbers only; it can’t accept decimal values.  
 
@@ -181,13 +183,13 @@ Use the star rating to provide a visual representation of a rating. The maximum 
 |--------------|-----------------|  
 |Max|Select the maximum number of stars for the control from the dropdown list.|  
 
-## Toggle
+### Toggle
 
- The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button.
+The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. Can be configured with yes/no choice columns.
 
 :::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app.":::
 
-## AI Builder 
+## AI Builder
 
 ### Business card reader
 
@@ -209,7 +211,7 @@ The auto-complete control filters an item list as you type and lets you select a
 |View|Select the table and view for this column.|  
 |Column|Select the column of the view’s primary table to use as the data source.|  
 
-## Flip
+### Flip
 
 The flip switch is like an on/off switch, providing a choice between two values.
   
