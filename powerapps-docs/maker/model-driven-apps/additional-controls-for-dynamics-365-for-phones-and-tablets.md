@@ -133,7 +133,7 @@ Provide a timeline of recent, relevant news articles and Twitter tweets for an a
 
 ### Checkbox
 
-Let's the user to choose between binary values by checking or clearing a check box. Can be configured with yes/no choice columns.
+Let's the user to choose between binary values by checking or clearing a check box. It can be configured with yes/no choice columns.
 :::image type="content" source="media/checkbox-control.png" alt-text="Checkbox control at runtime on a main form.":::
 
 ### Number input
@@ -168,11 +168,11 @@ Use the pen input control to capture written input such as signatures. The pen i
 
 ### Rich text editor
 
-The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
+The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. It can be configured with text columns. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
 
 ### Star rating
 
-Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control for whole numbers only; it can’t accept decimal values.  
+Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
 
 :::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
   
@@ -185,7 +185,7 @@ Use the star rating to provide a visual representation of a rating. The maximum 
 
 ### Toggle
 
-The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. Can be configured with yes/no choice columns.
+The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. It can be configured with yes/no choice columns.
 
 :::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app.":::
 
