@@ -6,8 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
-ms.service: powerapps
+ms.date: 05/26/2022
 ms.subservice: mda-maker
 ms.topic: conceptual
 search.audienceType: 
@@ -17,14 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Manage commands in solutions (preview)
+# Manage commands in solutions
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Unlike classic commands, modern commands are treated the same as other solution components and support core solution behaviors.
-
-<!-- > [!div class="mx-imgBorder"]
-> ![Core solution actions](media/commanddesigner-core-solution-actions.png "Core solution actions")  -->
+Unlike classic commands, modern commands are treated the same as other solution components and support core solution behaviors. You can also edit existing modern commands from within a solution.
 
 Modern commanding provides these benefits when you work with solutions:
 - Add solution components that depend on your command actions.
@@ -41,6 +35,6 @@ Modern commanding provides these benefits when you work with solutions:
 
 ### See also
 
-[Modern commanding overview (preview)](command-designer-overview.md)
+[Modern commanding overview](command-designer-overview.md)
 
 [Solutions overview](../data-platform/solutions-overview.md)

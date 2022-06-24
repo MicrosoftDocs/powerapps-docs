@@ -4,7 +4,7 @@ description: "Learn about how to create a managed solution for your app to inclu
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
@@ -22,8 +22,6 @@ Create a managed solution to include all the components for your app. You might 
 - [Introduction to solutions](introduction-solutions.md)
 - [Plan for solution development](/dynamics365/customer-engagement/developer/plan-solution-development) 
 - [Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
-
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Display name and description of your solution
 

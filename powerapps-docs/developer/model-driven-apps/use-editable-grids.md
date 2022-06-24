@@ -1,20 +1,20 @@
 ---
 title: "Use editable grids in model-driven apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Editable grid is a custom control that provides rich inline editing capabilities on web and mobile clients (Dynamics 365 for phones and Dynamics 365 for tablets) including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/15/2021
-ms.reviewer: ""
-ms.service: powerapps
+ms.author: hemantg
+author: HemantGaur
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Use editable grids
 

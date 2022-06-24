@@ -3,7 +3,7 @@ title: "Create and edit public or system model-driven app views with Power Apps 
 description: "Learn now to create or edit views by using the app designer"
 keywords: ""
 ms.date: 06/23/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -58,7 +58,7 @@ From within the solution there are two ways to edit views: app designer and tabl
 
 In the solution that we opened earlier create a new table or find an existing table that where the public views need to be edited.
 
-1. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
+1. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** area.
 1. On the toolbar, select **Add view**.
    :::image type="content" source="media/add-view.png" alt-text="Add view to table":::
 1. On the **Create a view** dialog, enter a name and, optionally, a description, and then select **Create**.

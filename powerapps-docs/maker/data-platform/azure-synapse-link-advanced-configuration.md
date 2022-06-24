@@ -4,7 +4,6 @@ description: "Learn about the advance configuration options and concepts in Azur
 ms.custom: ""
 ms.date: 07/07/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -68,7 +67,7 @@ You can toggle the **Show advanced configuration settings** under **Advanced** i
 
 ## Data partitioning
 
-When you Dataverse table data to Azure data lake storage using Azure Synapse Link, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by month and data is partitioned in Azure data lake on a monthly basis.
+When you write Dataverse table data to Azure data lake storage using Azure Synapse Link, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by month and data is partitioned in Azure data lake on a monthly basis.
 
 Based on the Dataverse table volume and data distribution, you can choose to partition your data by year. With this option, when Dataverse table data is written to the Azure data lake, it will be partitioned on a yearly basis based on the `createdOn` value on each row in the source. For tables without the `createdOn` column, the rows of data are partitioned into a new file every five million records. This is a per table setting and is available as a checkbox under **Advanced** > **Show advanced configuration settings**.
 

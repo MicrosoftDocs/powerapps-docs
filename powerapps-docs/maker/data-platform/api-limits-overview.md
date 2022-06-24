@@ -1,20 +1,18 @@
 ---
 title: "API limits overview (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the limits for Microsoft Dataverse API requests." 
-
-ms.date: 03/05/2020
-ms.reviewer: "kvivek"
-ms.service: powerapps
-ms.topic: overview
-author: "JimDaly" 
-ms.subservice: dataverse-maker
-ms.author: "jdaly" 
-manager: "ryjones" 
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
-  - maker
+  - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Microsoft Dataverse API limits overview
 

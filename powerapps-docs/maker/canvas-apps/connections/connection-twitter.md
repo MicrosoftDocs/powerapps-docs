@@ -2,7 +2,7 @@
 title: Connect to Twitter from Power Apps
 description: See how to connect to Twitter, step through some examples, and see all the functions.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -88,7 +88,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
-   * To show the another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
 
        `Twitter.Followers( *TwitterHandle* )`
 

@@ -2,11 +2,10 @@
 title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 06/23/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly"
+author: "divka78"
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
 manager: "kvivek"
@@ -15,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Access external web services
 
@@ -25,6 +26,7 @@ Plug-ins and custom workflow activities can access the network through the HTTP 
 - Access to localhost (loopback) is not permitted.
 - IP addresses cannot be used. You must use a named web address that requires DNS name resolution.
 - Anonymous authentication is supported and recommended. There is no provision for prompting the logged on user for credentials or saving those credentials.
+- Your server must allow connections from [Power Platform and Dynamics 365 services IP address values specified under the AzureCloud service tag](/power-platform/admin/online-requirements#ip-addresses-required).
 
 Other methods of accessing web services include the use of Webhooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided below for more information on those topics.
 

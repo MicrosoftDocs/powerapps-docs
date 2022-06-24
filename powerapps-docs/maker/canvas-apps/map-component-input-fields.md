@@ -1,11 +1,10 @@
 ---
-title: Map input fields of a component (preview)
+title: Map input fields of a component
 description: Learn about how to map input fields of a component to the table or record.
 author: hemantgaur
-ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 01/10/2022
+ms.date: 06/01/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -18,9 +17,7 @@ contributors:
   - gregli-msft
 ---
 
-# Map input fields of a component (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Map input fields of a component
 
 A component can receive input values to emit or process data using custom input properties. In this article, you'll learn about working with such components expecting one or more input properties with a specific schema for the given table or record, and how to map the component input fields to the columns of the data source.
 
@@ -128,3 +125,10 @@ When turning the setting on, ensure you save and reopen the app in Power Apps St
 
 - [Behavior formulas for components](component-behavior.md)
 - [Deprecated: Map component fields using dropdown option](important-changes-deprecations.md#map-component-fields-using-dropdown-option)
+- [Canvas components](create-component.md)
+- [Component library](component-library.md)
+- [Component library application lifecycle management (ALM)](component-library.md)
+- [Add multimedia to a component](component-multimedia.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)

@@ -1,10 +1,10 @@
 ---
-title: "Localize labels and strings on a custom page (preview)" 
+title: "Localize labels and strings on a custom page" 
 description: "This article outlines how to load resx files with localized content and how to use PowerFx to set content for labels on your custom page."
 ms.custom: ""
-ms.date: 11/01/2021
+ms.date: 05/26/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "mspilde"
@@ -16,17 +16,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Localize labels, messages, and tooltips on a custom page (preview)
+# Localize labels, messages, and tooltips on a custom page
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This article outlines how to add localized content to a custom page by uploading [web resource RESX](/powerapps/developer/model-driven-apps/resx-web-resources) files for each language into your solution. 
 
 This article shows you how to use Power Fx to set the content of a control on a custom page. You can use similar steps for tooltips and any messages that use a text control on the custom page.
-
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Localizing labels on a custom page
 

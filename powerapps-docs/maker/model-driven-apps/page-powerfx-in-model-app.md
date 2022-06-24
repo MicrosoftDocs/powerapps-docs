@@ -2,9 +2,9 @@
 title: "Use Power Fx in custom page for your model-driven app" 
 description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
-ms.date: 07/06/2021
+ms.date: 05/26/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
@@ -21,9 +21,7 @@ search.app:
 This article outlines how the common [Microsoft Power Fx](../canvas-apps/formula-reference.md) functions work differently between a standalone canvas apps and a custom page. This is because a custom page is a component within the model-driven app. Other Microsoft Power Fx formulas continue to behave in the same way.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to general availability in all regions.  However some specific capabilities or new capabilities are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Add notifications to a custom page
 
@@ -61,7 +59,7 @@ Navigate( CustomPage2  )
 
 ### Navigate to the default view of the table
 
-To navigate to the default view of the table, passed table name as the first parameter.
+To navigate to the default view of the table, pass table name as the first parameter.
 
 ```powerappsfl
 Navigate( Accounts )
@@ -83,12 +81,34 @@ To navigate to the default form of the table, pass the record as the first param
 Navigate( Gallery1.Selected )
 ```
 
-### Navigate to a specific form of a table (preview)
+### Navigate to a specific form of a table
 
-To navigate to a specific form for the record, pass the page in the second parameter.
+To pass a Dataverse record to a specific form, pass the form name in the second parameter's Page attribute.
 
 ```powerappsfl
-Navigate( Gallery1.Selected, { Page: 'Accounts (Forms)'.Account  } )
+Navigate( 
+  AccountGallery.Selected, 
+  { Page: 'Accounts (Forms)'.Account  } )
+```
+
+### Navigate to a specific custom page with a record input
+
+To pass a Dataverse record to a specific custom page, pass the custom page name in the second parameter's Page attribute.
+
+```powerappsfl
+Navigate( 
+  AccountGallery.Selected, 
+  { Page: 'Account Record Page'  } )
+```
+
+In the target custom page, the record is retrieved using **Param** function to get the **etn** and **id** values. 
+
+Below is an example of loading the record into an **EditForm** control.
+
+```powerappsfl
+AccountEditForm.DataSource = Accounts
+AccountEditForm.Item = 
+  LookUp( Accounts, accountid = GUID( Param("id") ) )
 ```
 
 ### Navigate to the default form of the table in create mode 
@@ -99,7 +119,7 @@ To navigate to the default form of the table in create mode, pass a Dataverse re
 Navigate( Defaults( Accounts ) )
 ```
 
-### Navigate to the default form of the table in create mode with field defaulted (preview)
+### Navigate to the default form of the table in create mode with field defaulted
 
 To navigate to a new record with some fields defaulted, use **Patch** function to set fields on the default record for the table. 
 
@@ -167,6 +187,6 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 
 ### See also
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Model-driven app custom page overview](model-app-page-overview.md)

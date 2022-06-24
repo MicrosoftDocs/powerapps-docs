@@ -2,7 +2,7 @@
 title: Configuring additional tables for global search
 description: Learn how global search works for additional tables in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020

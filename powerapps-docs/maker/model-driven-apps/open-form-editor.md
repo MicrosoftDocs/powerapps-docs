@@ -4,7 +4,7 @@ description: Understand the ways you can open the model-driven app form editor
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -41,7 +41,7 @@ If you create any new solution components in the process of editing the form, fo
 
 2. Select **Data** > **Tables** > and then select the table you want, such as the account table. 
 
-3. Select the **Forms** tab and then open the form you want, such as the **Account** main form.
+3. Select the **Forms** area and then open the form you want, such as the **Account** main form.
 
 ## Access the form editor from solution explorer
   
@@ -73,7 +73,7 @@ If you create any new solution components in the process of editing the form, fo
   
 3.  Open the table with the form you want to edit. If the table isn't there, you'll need to add it. More information: [Add a table to an unmanaged solution](#add-a-table-to-an-unmanaged-solution)
 
-4.  Select the **Forms** tab, and then open the form you want to edit.
+4.  Select the **Forms** area, and then open the form you want to edit.
   
 ### Add a table to an unmanaged solution  
   

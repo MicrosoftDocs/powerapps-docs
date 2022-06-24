@@ -4,7 +4,7 @@ description: "A list of controls available for use with Power Apps model-driven 
 ms.custom: ""
 ms.date: 03/29/2021
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -39,7 +39,7 @@ To use these controls in the form designer:
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Expand **Dataverse** in the left hand menu and select **tables**
-1. Select the required table and then select the **Forms** tab.
+1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
    
 2. Select the **section** you would like to add the control to.  
@@ -127,7 +127,7 @@ Currently only available in classic.
 
 Currently only available in classic.
 
-You can embed videos to provide a richer customer experience for sales and column people on the go. Use this control to map to a URL column that contains the audio or video link to play in the control.  
+You can embed videos to provide a richer customer experience for sales and people on the go. Use this control to map to a URL column that contains the audio or video link to play in the control.  
   
 > [!NOTE]
 >  This control is supported on Android versions 4.4 and later.  
@@ -254,7 +254,7 @@ The following controls are all related data controls.
 
 ## Canvas App
 
-Canvas apps can either be embedded with or without a relationship with to the form record.
+Canvas apps can either be embedded with or without a relationship to the form record.
 
 [Learn more about embedding canvas apps into a form](embed-canvas-app-in-form.md)
 
@@ -265,7 +265,7 @@ The quick view control displays data from a row that is selected in a lookup on 
 ## Subgrid
 
 A subgrid allows us to present a view of data related to the current record.  
-By default it is simply a view, however it can be made editable by configuring the control.  Whilst subgrids can be introduced using the form designer, classic mode is required to change the setting to for this to take place.
+By default it is simply a view, however it can be made editable by configuring the control.  Whilst subgrids can be introduced using the form designer, classic mode is required to change the setting for this to take place.
 
 With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
 

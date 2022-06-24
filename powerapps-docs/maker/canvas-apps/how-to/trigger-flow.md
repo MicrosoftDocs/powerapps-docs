@@ -2,7 +2,7 @@
 title: Create a canvas app that can trigger a Power Automate flow (contains video)
 description: Learn about how to create a canvas app that can trigger a Power Automate flow.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -21,7 +21,7 @@ contributors:
 
 # Create a canvas app that can trigger a Power Automate flow
 
-Power Automate can be used to create logic that performs one or more tasks when an event occurs in a canvas app. For example, a button can be configured so that, when a user selects it, an item is created in a SharePoint list, an email, or meeting request is sent, a file is added to the cloud, or all of these. Any control in the app can be configured to start the flow, that continues to run even if you close the app.
+Power Automate can be used to create logic that performs one or more tasks when an event occurs in a canvas app. For example, a button can be configured so that, when a user selects it, an item is created in a list, an email, or meeting request is sent, a file is added to the cloud, or all of these. Any control in the app can be configured to start the flow, that continues to run even if you close the app.
 
 In this article, we'll learn how create and trigger a flow using canvas apps.
 

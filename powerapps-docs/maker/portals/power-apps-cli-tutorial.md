@@ -2,27 +2,29 @@
 title: Tutorial on how to use Power Platform CLI with portals
 description: This page provides a walk-through with examples for how to use Power Platform CLI with Power Apps portals for CI/CD (Continuous Integration/Continuous Deployment).
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/29/2021
+ms.date: 06/08/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Tutorial: Use Microsoft Power Platform CLI with portals
 
 In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
-> [!NOTE]
-> This tutorial focuses on the required Microsoft Power Platform CLI commands for
+> [!NOTE] 
+> - You can also use Power Platform CLI with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+> - This tutorial focuses on the required Microsoft Power Platform CLI commands for
 Power Apps portals use. For more information about commands used in Power Platform
 CLI, read [Common
-commands](../../developer/data-platform/powerapps-cli.md#common-commands).
+commands](/power-platform/developer/cli/introduction#common-commands).
 
 ## Download and install Visual Studio Code
 
@@ -193,7 +195,7 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ## Next steps
 
-[Overview of portals support for Microsoft Power Platform CLI](power-apps-cli-tutorial.md)
+[Use the Visual Studio Code extension](vs-code-extension.md)
 
 ### See also
 

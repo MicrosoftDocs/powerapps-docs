@@ -1,7 +1,7 @@
 ---
-title: "Goal Metric (Metric) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Goal Metric (Metric) table/entity."
-ms.date: 10/05/2021
+title: "Goal Metric (Metric)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Goal Metric (Metric)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Goal Metric (Metric) table/entity reference
+# Goal Metric (Metric)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -143,10 +143,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Amount|
-|0|Count|
+|1|Amount||
+|0|Count||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -166,10 +166,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -557,7 +557,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_metric_goal"></a> metric_goal
 
-Same as goal table [metric_goal](goal.md#BKMK_metric_goal) Many-To-One relationship.
+Same as the [metric_goal](goal.md#BKMK_metric_goal) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -572,7 +572,7 @@ Same as goal table [metric_goal](goal.md#BKMK_metric_goal) Many-To-One relations
 
 ### <a name="BKMK_metric_rollupfield"></a> metric_rollupfield
 
-Same as rollupfield table [metric_rollupfield](rollupfield.md#BKMK_metric_rollupfield) Many-To-One relationship.
+Same as the [metric_rollupfield](rollupfield.md#BKMK_metric_rollupfield) many-to-one relationship for the [rollupfield](rollupfield.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -587,7 +587,7 @@ Same as rollupfield table [metric_rollupfield](rollupfield.md#BKMK_metric_rollup
 
 ### <a name="BKMK_metric_AsyncOperations"></a> metric_AsyncOperations
 
-Same as asyncoperation table [metric_AsyncOperations](asyncoperation.md#BKMK_metric_AsyncOperations) Many-To-One relationship.
+Same as the [metric_AsyncOperations](asyncoperation.md#BKMK_metric_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -602,7 +602,7 @@ Same as asyncoperation table [metric_AsyncOperations](asyncoperation.md#BKMK_met
 
 ### <a name="BKMK_Metric_SyncErrors"></a> Metric_SyncErrors
 
-Same as syncerror table [Metric_SyncErrors](syncerror.md#BKMK_Metric_SyncErrors) Many-To-One relationship.
+Same as the [Metric_SyncErrors](syncerror.md#BKMK_Metric_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -617,7 +617,7 @@ Same as syncerror table [Metric_SyncErrors](syncerror.md#BKMK_Metric_SyncErrors)
 
 ### <a name="BKMK_metric_ProcessSessions"></a> metric_ProcessSessions
 
-Same as processsession table [metric_ProcessSessions](processsession.md#BKMK_metric_ProcessSessions) Many-To-One relationship.
+Same as the [metric_ProcessSessions](processsession.md#BKMK_metric_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -644,23 +644,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_metric_createdby"></a> lk_metric_createdby
 
-See systemuser Table [lk_metric_createdby](systemuser.md#BKMK_lk_metric_createdby) One-To-Many relationship.
+See the [lk_metric_createdby](systemuser.md#BKMK_lk_metric_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_metric_createdonbehalfby"></a> lk_metric_createdonbehalfby
 
-See systemuser Table [lk_metric_createdonbehalfby](systemuser.md#BKMK_lk_metric_createdonbehalfby) One-To-Many relationship.
+See the [lk_metric_createdonbehalfby](systemuser.md#BKMK_lk_metric_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_metric_modifiedby"></a> lk_metric_modifiedby
 
-See systemuser Table [lk_metric_modifiedby](systemuser.md#BKMK_lk_metric_modifiedby) One-To-Many relationship.
+See the [lk_metric_modifiedby](systemuser.md#BKMK_lk_metric_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_metric_modifiedonbehalfby"></a> lk_metric_modifiedonbehalfby
 
-See systemuser Table [lk_metric_modifiedonbehalfby](systemuser.md#BKMK_lk_metric_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_metric_modifiedonbehalfby](systemuser.md#BKMK_lk_metric_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_metric"></a> organization_metric
 
-See organization Table [organization_metric](organization.md#BKMK_organization_metric) One-To-Many relationship.
+See the [organization_metric](organization.md#BKMK_organization_metric) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

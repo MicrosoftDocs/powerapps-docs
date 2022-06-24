@@ -1,7 +1,7 @@
 ---
-title: "Chatbot subcomponent (botcomponent) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent) table/entity."
-ms.date: 10/05/2021
+title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Chatbot subcomponent (botcomponent) table/entity reference
+# Chatbot subcomponent (botcomponent)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -162,6 +162,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |6|Language understanding|Language Understanding (LU) is used by a bot to understand language naturally and contextually to determine what next to do in a conversation flow.|
 |7|Language generation|Language Generation (LG) lets you define multiple variations of a phrase, execute simple expressions based on context, and refer to conversational memory.|
 |8|Dialog schema|Schema of the dialog that specifies dialog's input and output parameters|
+|9|Object Model Dialog|Object model dialog|
+|10|Object Model Trigger|Object model trigger|
+|11|Object Model custom entity|Object model custom entity|
+|12|Object Model global variable|Object model global variable|
+|13|Object Model skill|Object model skill|
 
 
 
@@ -298,10 +303,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |-----|-----|--------|
 |1025|Arabic||
 |1028|Chinese (Traditional)||
+|1029|Czech||
 |1030|Danish||
 |1031|German||
+|1032|Greek||
 |1033|English||
 |1034|Spanish||
+|1035|Finnish||
 |1036|French||
 |1040|Italian||
 |1041|Japanese||
@@ -312,6 +320,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1046|Portuguese (Brazilian)||
 |1049|Russian||
 |1053|Swedish||
+|1054|Thai||
 |1055|Turkish||
 |1057|Indonesian||
 |1081|Hindi||
@@ -536,6 +545,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentBotComponentIdName](#BKMK_ParentBotComponentIdName)
@@ -721,10 +731,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -908,12 +918,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1029,7 +1057,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent_SyncErrors) Many-To-One relationship.
+Same as the [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1046,7 +1074,7 @@ Same as syncerror table [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [botcomponent_AsyncOperations](asyncoperation.md#BKMK_botcomponent_AsyncOperations) Many-To-One relationship.
+Same as the [botcomponent_AsyncOperations](asyncoperation.md#BKMK_botcomponent_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1063,7 +1091,7 @@ Same as asyncoperation table [botcomponent_AsyncOperations](asyncoperation.md#BK
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [botcomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_botcomponent_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [botcomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_botcomponent_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1080,7 +1108,7 @@ Same as mailboxtrackingfolder table [botcomponent_MailboxTrackingFolders](mailbo
 
 **Added by**: System Solution Solution
 
-Same as processsession table [botcomponent_ProcessSession](processsession.md#BKMK_botcomponent_ProcessSession) Many-To-One relationship.
+Same as the [botcomponent_ProcessSession](processsession.md#BKMK_botcomponent_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1097,7 +1125,7 @@ Same as processsession table [botcomponent_ProcessSession](processsession.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [botcomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_botcomponent_BulkDeleteFailures) Many-To-One relationship.
+Same as the [botcomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_botcomponent_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1114,7 +1142,7 @@ Same as bulkdeletefailure table [botcomponent_BulkDeleteFailures](bulkdeletefail
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [botcomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_botcomponent_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [botcomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_botcomponent_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1129,7 +1157,7 @@ Same as principalobjectattributeaccess table [botcomponent_PrincipalObjectAttrib
 
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
-Same as botcomponent table [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) Many-To-One relationship.
+Same as the [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) many-to-one relationship for the [botcomponent](botcomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1161,47 +1189,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_createdby](systemuser.md#BKMK_lk_botcomponent_createdby) One-To-Many relationship.
+See the [lk_botcomponent_createdby](systemuser.md#BKMK_lk_botcomponent_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_botcomponent_createdonbehalfby"></a> lk_botcomponent_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_createdonbehalfby](systemuser.md#BKMK_lk_botcomponent_createdonbehalfby) One-To-Many relationship.
+See the [lk_botcomponent_createdonbehalfby](systemuser.md#BKMK_lk_botcomponent_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_botcomponent_modifiedby"></a> lk_botcomponent_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_modifiedby](systemuser.md#BKMK_lk_botcomponent_modifiedby) One-To-Many relationship.
+See the [lk_botcomponent_modifiedby](systemuser.md#BKMK_lk_botcomponent_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_botcomponent_modifiedonbehalfby"></a> lk_botcomponent_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_botcomponent_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_botcomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_botcomponent_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_botcomponent"></a> user_botcomponent
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_botcomponent](systemuser.md#BKMK_user_botcomponent) One-To-Many relationship.
+See the [user_botcomponent](systemuser.md#BKMK_user_botcomponent) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_botcomponent"></a> team_botcomponent
 
 **Added by**: System Solution Solution
 
-See team Table [team_botcomponent](team.md#BKMK_team_botcomponent) One-To-Many relationship.
+See the [team_botcomponent](team.md#BKMK_team_botcomponent) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_botcomponent"></a> business_unit_botcomponent
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_botcomponent](businessunit.md#BKMK_business_unit_botcomponent) One-To-Many relationship.
+See the [business_unit_botcomponent](businessunit.md#BKMK_business_unit_botcomponent) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
-See botcomponent Table [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) One-To-Many relationship.
+See the [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) one-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -1216,7 +1244,7 @@ Relationship details provided where the botcomponent table is the first table in
 
 ### <a name="BKMK_bot_botcomponent"></a> bot_botcomponent
 
-See bot Table [bot_botcomponent](bot.md#BKMK_bot_botcomponent) Many-To-Many Relationship.
+See the [bot_botcomponent](bot.md#BKMK_bot_botcomponent) many-to-many relationship for the [bot](bot.md) table/entity.
 
 ### <a name="BKMK_botcomponent_botcomponent"></a> botcomponent_botcomponent
 

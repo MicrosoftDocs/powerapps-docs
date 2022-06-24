@@ -1,23 +1,22 @@
 ---
 title: "Sample: Task Parallel Library with CrmServiceClient (Microsoft Dataverse)| Microsoft Docs"
 description: "Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications. This sample demonstrates using this with CrmServiceClient"
-ms.custom: ""
-ms.date: 11/04/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
 ms.topic: sample
 applies_to: 
   - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Sample: Task Parallel Library with CrmServiceClient
 
@@ -83,7 +82,7 @@ namespace PowerApps.Samples
             System.Threading.ThreadPool.SetMinThreads(100, 100);
             //Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server
             System.Net.ServicePointManager.Expect100Continue = false;
-            //Can decreas overall transmission overhead but can cause delay in data packet arrival
+            //Can decrease overall transmission overhead but can cause delay in data packet arrival
             System.Net.ServicePointManager.UseNagleAlgorithm = false;
 
             #endregion Optimize Connection settings

@@ -2,7 +2,7 @@
 title: Create a blank canvas app from scratch
 description: Create an app from scratch and then add your data.
 author: franklanmsft
-ms.service: powerapps
+
 ms.topic: quickstart
 ms.custom: 
   - canvas
@@ -22,7 +22,7 @@ contributors:
 
 # Create a blank canvas app from scratch
 
-In Power Apps, create a blank canvas app that you can then use to customize further with the with data from additional data sources, or by using collections.
+In Power Apps, create a blank canvas app that you can then use to customize further with data from additional data sources, or by using collections.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
@@ -32,7 +32,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 ## Create a blank canvas app
 
-1. Sign in to [Power Apps](https://make.powerapps.com) and, if necessary, [switch environments](/power-platform/admin/working-with-environments).
+1. Sign in to [Power Apps](https://make.powerapps.com) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
 
 1. Select **Blank app**.
 

@@ -1,21 +1,21 @@
 ---
-title: Add custom JavaScript
+title: Add custom JavaScript to a form
 description: Learn how to add custom JavaScript to a form in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/22/2021
+ms.date: 04/05/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
-    - nickdoelman
+    - Professor Kendrick
 ---
 
-# Add custom JavaScript
+# Add custom JavaScript to a form
 
 The Advanced Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
@@ -23,7 +23,7 @@ The custom block of JavaScript will be added to the bottom of the page just befo
 
 ## Form fields
 
-The HTML input ID of a table field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
+The HTML input ID of a table field is set to the logical name of the attribute. Selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
 
 ```JavaScript
 $(document).ready(function() {

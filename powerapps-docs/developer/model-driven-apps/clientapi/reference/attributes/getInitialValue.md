@@ -1,20 +1,21 @@
 ---
 title: "getInitialValue (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getInitialValue method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 56fb62e6-d357-4096-bf4c-f4c1b543d633
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getInitialValue (Client API reference)
 
@@ -24,7 +25,7 @@ Returns a value that represents the value set for a **Yes/No**, **Choice** or **
 
 ## Column types supported
 
-Tes/No, Choice, Choices 
+Yes/No, Choice, Choices 
 
 ## Syntax
 

@@ -4,7 +4,7 @@ description: Learn how to configure a Bing map in a model-driven app
 ms.custom: ""
 ms.date: 10/18/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -58,7 +58,7 @@ You can remove the maps area in the form editor or add it back by using the **Bi
 
 1. Go to **Data** > **Tables**, and then select the table that you want to configure a map on the main form.
 
-1. Select the **Forms** tab, and then select the main form, and then on the command bar select **Switch to classic**.
+1. Select the **Forms** area, and then select the main form, and then on the command bar select **Switch to classic**.
 
 1. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
 

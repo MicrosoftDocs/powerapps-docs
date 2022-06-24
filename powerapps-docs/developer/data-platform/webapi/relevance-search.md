@@ -3,7 +3,7 @@ title: "Search across table data using Dataverse search (Microsoft Dataverse)| M
 description: "Read about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types using Microsoft Dataverse."
 ms.custom: ""
 ms.date: 10/13/2020
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

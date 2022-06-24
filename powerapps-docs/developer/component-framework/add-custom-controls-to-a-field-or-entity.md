@@ -1,16 +1,15 @@
 ---
 title: Add code components to a column or table in Microsoft Dataverse | Microsoft Docs
 description: Learn how to add code components to a column or table.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: article
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 04/01/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+contributors:
+ - JimDaly
 ---
 
 # Add code components to a column or table in model-driven apps

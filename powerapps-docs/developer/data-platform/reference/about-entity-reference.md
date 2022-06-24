@@ -1,20 +1,19 @@
 ---
-title: "About table/entity reference for Microsoft Dataverse| Microsoft Docs"
+title: "Dataverse table/entity reference | Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific tables, the default columns/attributes of each table/entity and the relationships between tables in Microsoft Dataverse"
-author: JimDaly
-ms.service: powerapps
-ms.devlang: na
+author: phecke
 ms.topic: reference
-ms.date: 03/27/2021
-ms.author: jdaly
-ms.reviewer: "pehecke"
+ms.date: 04/19/2022
+ms.author: pehecke
+ms.reviewer: jdaly
+manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# About table/entity reference for Microsoft Dataverse
+# Dataverse table/entity reference
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -66,7 +65,7 @@ For each one-to-many relationship, the following properties are included:
 |`ReferencingAttribute`|The logical name of the column in the related table that contains a reference to primary key of the primary table.|
 |`IsHierarchical`|Whether the relationship represents a self-referential hierarchical relationship|
 |`IsCustomizable`|Whether the properties of the relationship can be changed.|
-|`ReferencedEntityNavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information:[Navigation properties](../webapi/web-api-types-operations.md#navigation-properties)|
+|`ReferencedEntityNavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Web API Navigation Properties](../webapi/web-api-navigation-properties.md)|
 |`AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the related entity data can be accessed in the UI from the primary entity.|
 |`CascadeConfiguration`|Data that describes which operations performed on the parent entity will cascade down to related entities.<br />More information: [Cascade configuration](../entity-relationship-metadata.md#cascade-configuration)|
 
@@ -81,7 +80,7 @@ For each many-to-many relationship the following properties are included:
 |`IntersectEntityName`|The logical name of the intersect table that supports this many-to-many relationship|
 |`Entity1LogicalName`|The logical name for the first table in the relationship.|
 |`Entity1IntersectAttribute`|The logical name of the intersect table column that includes a reference to the primary key of the first table.|
-|`Entity1NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Navigation properties](../webapi/web-api-types-operations.md#navigation-properties)|
+|`Entity1NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Web API Navigation Properties](../webapi/web-api-navigation-properties.md)|
 |`Entity1AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the first table data can be accessed in the UI from the second table.|
 |`Entity2LogicalName`|The logical name for the second table in the relationship.|
 |`Entity2IntersectAttribute`|The logical name of the intersect table column that includes a reference to the primary key of the second table.|

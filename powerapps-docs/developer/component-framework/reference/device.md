@@ -1,16 +1,15 @@
 ---
 title: Device | Microsoft Docs
 description: Provides methods to use native device capabilities.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 08/09/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a0f9abc5-c605-4433-bf5a-f8253eeeda3b
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Device
@@ -47,8 +46,12 @@ Model-driven and canvas apps
   }
 ```
 
-### Related topics
+## Sample controls
 
+[Device API component](../sample-controls/device-api-control.md)  
+[Image upload component](../sample-controls/image-upload-control.md)
+
+### Related topics
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
 

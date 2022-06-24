@@ -4,7 +4,7 @@ description: "Describes the access rights needed for specific data operations."
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Let's talk about the data operations that you can performs and the access rights required for each. The following table lists the messages that correspond with common data operations and the access rights required to execute those messages.
+Let's talk about the data operations that you can perform and the access rights required for each. The following table lists the messages that correspond with common data operations and the access rights required to execute those messages.
 
 | Message(s) | Access rights required |
 |---|---|

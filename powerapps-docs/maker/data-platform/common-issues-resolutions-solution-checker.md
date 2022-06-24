@@ -3,7 +3,7 @@ title: "Common issues and resolutions for solution checker | Microsoft Docs" # I
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
 ms.date: 09/09/2020
-ms.service: powerapps
+
 ms.custom:
   - ""
 ms.topic: troubleshooting
@@ -47,7 +47,7 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ## Solution checker fails to check Default solution
 
-Solution checker exports the solution from the Microsoft Dataverse environment for analysis. Exporting the Default solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
+Solution checker exports the solution from the Microsoft Power Platform environment for analysis. Exporting the Default solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
 
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
@@ -73,7 +73,7 @@ To uninstall the Power Apps Checker solution:
 
 ### How to install Power Apps Checker
 
-To install Power Apps Checker back into your Dataverse environment:
+To install Power Apps Checker back into your environment:
 
 1. As a System Administrator or as a System Customizer, open up your Power Apps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
@@ -244,7 +244,7 @@ If solution checker exports a solution that contains no components to analyze, i
 
 ## Solution checker fails to export large solutions
 
-The primary scenario for failure to export a large solution from the Dataverse environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
+The primary scenario for failure to export a large solution from the environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
 The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, see guidance to [Optimize custom assembly development](../../developer/data-platform/best-practices/business-logic/optimize-assembly-development.md).
 

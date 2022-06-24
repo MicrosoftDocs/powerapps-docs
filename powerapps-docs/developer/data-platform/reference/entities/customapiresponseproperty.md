@@ -1,7 +1,7 @@
 ---
-title: "CustomAPIResponseProperty table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CustomAPIResponseProperty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPIResponseProperty table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -411,6 +411,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -611,10 +612,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -798,12 +799,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -902,7 +921,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [customapiresponseproperty_SyncErrors](syncerror.md#BKMK_customapiresponseproperty_SyncErrors) Many-To-One relationship.
+Same as the [customapiresponseproperty_SyncErrors](syncerror.md#BKMK_customapiresponseproperty_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -919,7 +938,7 @@ Same as syncerror table [customapiresponseproperty_SyncErrors](syncerror.md#BKMK
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [customapiresponseproperty_AsyncOperations](asyncoperation.md#BKMK_customapiresponseproperty_AsyncOperations) Many-To-One relationship.
+Same as the [customapiresponseproperty_AsyncOperations](asyncoperation.md#BKMK_customapiresponseproperty_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -936,7 +955,7 @@ Same as asyncoperation table [customapiresponseproperty_AsyncOperations](asyncop
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [customapiresponseproperty_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_customapiresponseproperty_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [customapiresponseproperty_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_customapiresponseproperty_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -953,7 +972,7 @@ Same as mailboxtrackingfolder table [customapiresponseproperty_MailboxTrackingFo
 
 **Added by**: System Solution Solution
 
-Same as processsession table [customapiresponseproperty_ProcessSession](processsession.md#BKMK_customapiresponseproperty_ProcessSession) Many-To-One relationship.
+Same as the [customapiresponseproperty_ProcessSession](processsession.md#BKMK_customapiresponseproperty_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -970,7 +989,7 @@ Same as processsession table [customapiresponseproperty_ProcessSession](processs
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [customapiresponseproperty_BulkDeleteFailures](bulkdeletefailure.md#BKMK_customapiresponseproperty_BulkDeleteFailures) Many-To-One relationship.
+Same as the [customapiresponseproperty_BulkDeleteFailures](bulkdeletefailure.md#BKMK_customapiresponseproperty_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -987,7 +1006,7 @@ Same as bulkdeletefailure table [customapiresponseproperty_BulkDeleteFailures](b
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [customapiresponseproperty_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_customapiresponseproperty_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [customapiresponseproperty_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_customapiresponseproperty_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1019,47 +1038,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_customapiresponseproperty_createdby](systemuser.md#BKMK_lk_customapiresponseproperty_createdby) One-To-Many relationship.
+See the [lk_customapiresponseproperty_createdby](systemuser.md#BKMK_lk_customapiresponseproperty_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customapiresponseproperty_createdonbehalfby"></a> lk_customapiresponseproperty_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_customapiresponseproperty_createdonbehalfby](systemuser.md#BKMK_lk_customapiresponseproperty_createdonbehalfby) One-To-Many relationship.
+See the [lk_customapiresponseproperty_createdonbehalfby](systemuser.md#BKMK_lk_customapiresponseproperty_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customapiresponseproperty_modifiedby"></a> lk_customapiresponseproperty_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_customapiresponseproperty_modifiedby](systemuser.md#BKMK_lk_customapiresponseproperty_modifiedby) One-To-Many relationship.
+See the [lk_customapiresponseproperty_modifiedby](systemuser.md#BKMK_lk_customapiresponseproperty_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customapiresponseproperty_modifiedonbehalfby"></a> lk_customapiresponseproperty_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_customapiresponseproperty_modifiedonbehalfby](systemuser.md#BKMK_lk_customapiresponseproperty_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_customapiresponseproperty_modifiedonbehalfby](systemuser.md#BKMK_lk_customapiresponseproperty_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_customapiresponseproperty"></a> user_customapiresponseproperty
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_customapiresponseproperty](systemuser.md#BKMK_user_customapiresponseproperty) One-To-Many relationship.
+See the [user_customapiresponseproperty](systemuser.md#BKMK_user_customapiresponseproperty) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_customapiresponseproperty"></a> team_customapiresponseproperty
 
 **Added by**: System Solution Solution
 
-See team Table [team_customapiresponseproperty](team.md#BKMK_team_customapiresponseproperty) One-To-Many relationship.
+See the [team_customapiresponseproperty](team.md#BKMK_team_customapiresponseproperty) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_customapiresponseproperty"></a> business_unit_customapiresponseproperty
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_customapiresponseproperty](businessunit.md#BKMK_business_unit_customapiresponseproperty) One-To-Many relationship.
+See the [business_unit_customapiresponseproperty](businessunit.md#BKMK_business_unit_customapiresponseproperty) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_customapi_customapiresponseproperty"></a> customapi_customapiresponseproperty
 
-See customapi Table [customapi_customapiresponseproperty](customapi.md#BKMK_customapi_customapiresponseproperty) One-To-Many relationship.
+See the [customapi_customapiresponseproperty](customapi.md#BKMK_customapi_customapiresponseproperty) one-to-many relationship for the [customapi](customapi.md) table/entity.
 
 ### See also
 

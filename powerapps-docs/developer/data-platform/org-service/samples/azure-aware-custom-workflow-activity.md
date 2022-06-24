@@ -1,14 +1,12 @@
 ---
 title: "Azure aware custom workflow activity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample obtains the data context from the current Microsoft Dataverse operation and posts it to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: jdaly
+ms.topic: article
 search.audienceType: 
   - developer
 search.app: 
@@ -16,8 +14,6 @@ search.app:
   - D365CE
 ---
 # Sample: Azure aware custom workflow activity
-
-
 
 This sample obtains the data context from the current operation and posts it to the Azure Service Bus.You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Azurecustomworkflowactivity).
 

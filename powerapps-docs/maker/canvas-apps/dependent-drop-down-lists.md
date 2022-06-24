@@ -2,7 +2,7 @@
 title: Create a dependent drop-down list in a canvas app
 description: Learn about how to create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -26,7 +26,7 @@ As a best practice, create a data source for the values in the "parent" and "chi
 For the scenario in this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location of the store at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Locations** list ensures that employees can't specify a department for a location that doesn't have that department.
 
 > [!NOTE]
-> This article uses Microsoft SharePoint lists as data sources, but all tabular data sources work the same way. Within [Dataverse for Teams](../../teams/create-apps-overview.md), you'll need to enable [classic controls](../../teams/understand-power-apps-studio.md#classic-controls) to get the classic drop-down to work for this scenario.
+> This article uses a list created using Microsoft Lists as the data source. However, all tabular data sources work the same way. Within [Dataverse for Teams](../../teams/create-apps-overview.md), you'll need to enable [classic controls](../../teams/understand-power-apps-studio.md#classic-controls) to get the classic drop-down to work for this scenario.
 
 ## Create data sources
 
@@ -54,7 +54,7 @@ An **Incidents** list shows contact information and information about each incid
 | Tonya       | Cortez   | (206) 555 - 1022 | Eganville      | Produce    | I had a problem with…   | 2/12/2019 |
 | Moses     | Laflamme     | (425) 555 - 1044 | Renfrew        | Floral     | I experienced an issue… | 2/13/2019 |
 
-By default, custom SharePoint lists include a **Title** column that you can't rename or remove, and it must contain data before you can save an item in the list. To configure the column so that it doesn't require data:
+By default, lists include a **Title** column that you can't rename or remove, and it must contain data before you can save an item in the list. To configure the column so that it doesn't require data:
 
 1. Near the upper-right corner, select the gear icon, and then select **List settings**.
 1. On the **Settings** page, select **Title** in the list of columns.

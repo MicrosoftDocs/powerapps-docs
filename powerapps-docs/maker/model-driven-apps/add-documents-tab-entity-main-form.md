@@ -4,7 +4,7 @@ description: "Learn how to add the Documents tab to the main form for a table"
 s.custom: 
 ms.date: 01/06/2020
 ms.reviewer: 
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: how-to
@@ -36,7 +36,7 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 
 1. Create a new solution or open an existing solution. For more information on creating solutions see: [Create a solution](../data-platform/create-solution.md).
 1. Add the table to the solution or select an existing table. All standard and custom tables are supported. For more information on tables in solutions see: [Add solution components](../data-platform/create-solution.md#add-solution-components)
-1. Include the form for the table in the solution, such as the main form for the account table. Next to the table, select **...**, and then select **Edit**. Select the **Forms** tab. If the required form is missing then it should be added.
+1. Include the form for the table in the solution, such as the main form for the account table. Next to the table, select **...**, and then select **Edit**. Select the **Forms** area. If the required form is missing then it should be added.
 1. Add a one-column tab to the main form. To do this, in the form designer select an area on the form canvas, select **Add Component**, and then select **1 Column Tab**.  
    ![Insert one column tab.](media/insert-one-column-tab.png)
 1. In the form designer select the **New Tab** on the form designer canvas, select **Add Column**, and add a column such as *Address 1: City* from the left pane. Any text or numeric column can be used.
@@ -91,7 +91,7 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 ## Remove the documents tab
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), in the left pane expand **Data**, and then select **Tables**.
-1. Select the required table and select the **Forms** tab, and then open the form where the documents tab needs to be removed.
+1. Select the required table and select the **Forms** area, and then open the form where the documents tab needs to be removed.
 1. Select the **Documents** tab, and then on the form designer toolbar, select **Delete**.
 
     ![Delete files tab.](media/delete-files-tab.png)

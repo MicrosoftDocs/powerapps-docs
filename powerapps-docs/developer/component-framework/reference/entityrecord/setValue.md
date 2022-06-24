@@ -1,16 +1,15 @@
 ---
 title: setValue | Microsoft Docs
 description: Set value for the column.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 06/12/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
 ---
 
 # setValue
@@ -19,7 +18,7 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
 
 ## Syntax
 
@@ -27,14 +26,18 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------- |
 | `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+| `value`        | `string  | Date     | number              | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
 
 ## Return Value
 
 Type: `Promise`
+
+## Limitations
+
+Canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
 
 ### Related topics
 

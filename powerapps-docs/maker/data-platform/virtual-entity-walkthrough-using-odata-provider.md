@@ -4,7 +4,7 @@ description: "Learn how to use the OData v4 data provider with a virtual table"
 ms.custom: ""
 ms.date: 08/11/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -36,7 +36,7 @@ Web service url: `https://contosowebservice.azurewebsites.net/odata/`
 
 > [!IMPORTANT]
 > - The web service url used for this walkthrough isn't a functioning web service.
-> - You can't use the OData v4 Data Provider to connect to another Microsoft Dataverse environment.
+> - You can't use the OData v4 Data Provider to connect to another environment.
 
 For this walkthrough, a single virtual table that contains the following columns is needed.
 

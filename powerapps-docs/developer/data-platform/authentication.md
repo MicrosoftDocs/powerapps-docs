@@ -4,7 +4,7 @@ description: "Introduces authentication options that depend on the software fram
 ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

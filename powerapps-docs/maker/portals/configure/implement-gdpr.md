@@ -1,17 +1,18 @@
 ---
 title: Implement General Data Protection Regulations in portals
-description: Learn how to implement GDPR in your Power Apps portals. Identify minor users, get parental consent, and have portal users agree to terms and conditions.
+description: Learn how to implement General Data Protection Regulation in your Power Apps portals. Identify minor users, get parental consent, and have portal users agree to terms and conditions.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 06/06/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Implementing General Data Protection Regulations in your Power Apps portals
@@ -22,9 +23,12 @@ As an administrator, you can configure your portal to meet GDPR standards. For e
 
 GDPR allows you to obtain consent from portal users about the use of their personal data, identify minor users, and get parental consent for minors.
 
+> [!NOTE] 
+> General Data Protection Regulations are also used in Power Pages. More information: [What is Power Pages](/power-pages/introduction).
+
 ## Audit logging
 
-The **Last Successful Sign-in** field in the portal contact record shows when a portal user has last signed in. This date is picked up by an audit of the contact record and makes that information available in the standard audit stream. This allows the administrator to see inactive community members and delete their records.
+The **Last Successful Sign-in** field in the portal contact record shows when a portal user has last signed in. The date is picked up by an audit of the contact record and makes that information available in the standard audit stream, allowing the administrator to see inactive community members and delete their records.
 
 > [!NOTE]
 > The login tracking feature has been deprecated. It's recommended to use an analytics technology like Azure Application Insights to capture this kind of information. To see the list of deprecated features, click [here](https://blogs.msdn.microsoft.com/crm/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/).
@@ -45,11 +49,11 @@ The following site settings control the use of portals by minors and minors with
 | Authentication/Registration/DenyMinorsWithoutParentalConsent | Denies use of the portal by minors without parental consent. By default, this is set to false. |
 |||
 
-If a portal user is determined to be a minor and the portal is configured to block minors, an appropriate message appears and content is not shown.
+If a portal user is determined to be a minor and the portal is configured to block minors, an appropriate message appears and content isn't shown.
 
 ![Age requirements message.](../media/gdpr-age-req.png "Age requirements message: This portal is not suitable for use by minors")
 
-If a portal user is determined to be a minor without parental consent, and the portal is configured to block minors without parental consent, an appropriate message appears and content is not shown.
+If a portal user is determined to be a minor without parental consent, and the portal is configured to block minors without parental consent, an appropriate message appears and content isn't shown.
 
 ![Parental consent message.](../media/gdpr-parental-consent.png "Parental consent message: The use of this portal by minors requires parental consent")
 
@@ -58,12 +62,12 @@ The following content snippets control messages that appear when the portal is u
 | Name                                                        | Type | Value                                                                    |
 |-------------------------------------------------------------|------|--------------------------------------------------------------------------|
 | Account/Signin/MinorNotAllowedHeading                       | Text | Age Requirements                                                         |
-| Account/Signin/MinorNotAllowedCopy                          | HTML | The use of this portal is not suitable for use by minors and is not allowed. |
+| Account/Signin/MinorNotAllowedCopy                          | HTML | The use of this portal isn't suitable for use by minors and isn't allowed. |
 | Account/Signin/MinorWithoutParentalConsentNotAllowedHeading | Text | Parental Consent                                                         |
 | Account/Signin/MinorWithoutParentalConsentNotAllowedCopy    | HTML | The use of this portal by minors requires parental consent.              |
 |||
 
-When someone registers using an external provider and the portal is configured to block minors or minors without parental consent, the contact record is not created and the user is not authenticated.
+When someone registers using an external provider and the portal is configured to block minors or minors without parental consent, the contact record isn't created and the user isn't authenticated.
 
 ## Agreeing to terms and conditions
 
@@ -87,8 +91,8 @@ The following site settings control the terms publication date and whether the t
 
 | Name  | Description |
 |------------|---------------|
-| Authentication/Registration/TermsPublicationDate  | A date/time value (GMT) to represent the effective date of the current published terms and conditions. If the terms agreement is enabled, portal users that have not accepted the terms after this date will be asked to accept them the next time they sign in. If the date is not provided, and the terms agreement is enabled, the terms will be presented every time portal users sign in. <br> **Note**: If you want a portal user to agree to the terms and conditions every time they sign in, do not provide a value for this site setting.|
-| Authentication/Registration/TermsAgreementEnabled | A true or false value. If set to true, the portal will display the terms and conditions of the site. Users must agree to the terms and conditions before they are considered authenticated and can use the site. By default, this is set to false.        |
+| Authentication/Registration/TermsPublicationDate  | A date/time value (GMT) to represent the effective date of the current published terms and conditions. If the terms agreement is enabled, portal users that haven't accepted the terms after this date will be asked to accept them the next time they sign in. If the date isn't provided, and the terms agreement is enabled, the terms will be presented every time portal users sign in. <br> **Note**: If you want a portal user to agree to the terms and conditions every time they sign in, don't provide a value for this site setting.|
+| Authentication/Registration/TermsAgreementEnabled | A true or false value. If set to true, the portal will display the terms and conditions of the site. Users must agree to the terms and conditions before they're considered authenticated and can use the site. By default, this value is set to false.        |
 |||
 
 The following field is added in the portal contact record to store the date and time a portal user agreed to the terms and conditions:

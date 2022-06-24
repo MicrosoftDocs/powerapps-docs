@@ -2,7 +2,7 @@
 title: Change screen size and orientation of canvas apps
 description: Step-by-step instructions for changing settings such as the screen size and the orientation of a canvas app in Power Apps.
 author: emcoope-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -76,6 +76,6 @@ Customize a canvas app by changing its screen size and orientation.
 ## Next steps
 
 - [Create responsive layouts in canvas apps](create-responsive-layout.md).
-- Check [common issues and resolutions](common-issues-and-resolutions.md) if you're running into any problems.
+- Check [common issues and resolutions](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) if you're running into any problems.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

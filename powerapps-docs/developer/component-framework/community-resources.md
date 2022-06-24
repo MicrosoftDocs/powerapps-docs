@@ -1,16 +1,15 @@
 ---
 title: Community resources (Power Apps Component Framework) | Microsoft Docs
 description: Access to community resources
-keywords:
-author: Nkrb
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: article
 ms.subservice: pcf
-ms.author: nabuthuk
-manager: kvivek
-ms.date: 12/09/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+contributors:
+ - JimDaly
 ---
 
 # Community resources for Power Apps component framework

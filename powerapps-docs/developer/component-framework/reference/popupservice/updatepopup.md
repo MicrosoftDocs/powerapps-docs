@@ -1,17 +1,15 @@
 ---
 title: updatePopup | Microsoft Docs
 description: Updates an existing popup in the service with the given name. Does nothing if popup does not exist yet.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
-
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # updatePopup

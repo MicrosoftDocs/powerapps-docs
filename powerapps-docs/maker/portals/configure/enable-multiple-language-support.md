@@ -2,10 +2,10 @@
 title: Enable multiple-language portal support
 description: Learn how to enable multiple languages for a portal and create content in multiple languages.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/17/2021
+ms.date: 06/16/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -17,7 +17,10 @@ contributors:
 
 # Enable multiple-language portal support
 
-Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
+Business isn't confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
+
+> [!NOTE] 
+> You can also enable multiple-language support in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 :::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
@@ -47,10 +50,15 @@ You can set the default language of your portal by changing the *Default Languag
 
 ## Supported languages
 
-The table below shows all the languages currently available out of the box. This list can be found by going to **Portals** &gt; **Content** &gt; **Portal Languages**. The Portal Display Name of a language can be changed after selecting the language to change from this page. Note that the list now includes East Asian languages (Japanese, Chinese, and Korean).
+The table below shows all the languages currently available out of the box. This list can be found by going to **Portals** &gt; **Content** &gt; **Portal Languages**. The Portal Display Name of a language can be changed after selecting the language to change from this page.
+
+> [!NOTE]
+> - Upgrade your portals website version to [9.4.4.xx](/power-platform/released-versions/portals/portalupdate944x) and package version [9.3.2204](../admin/update-portal-solution.md) to configure Arabic and Hebrew language for your website.
+> - Arabic and Hebrew languages are not supported on the [Power Pages](/power-pages/introduction) preview.
 
 | **Name**                           | **Language Code** | **LCID** | **Portal Display Name** |
 |------------------------------------|-------------------|----------|-------------------------|
+| Arabic                             | ar-SA             | 1025     | عربي                    |
 | Basque - Basque                    | eu-ES             | 1069     | euskara                 |
 | Bulgarian - Bulgaria               | bg-BG             | 1026     | български               |
 | Catalan - Catalan                  | ca-ES             | 1027     | català                  |
@@ -68,6 +76,7 @@ The table below shows all the languages currently available out of the box. This
 | Galician - Spain                   | gl-ES             | 1110     | galego                  |
 | German - Germany                   | de-DE             | 1031     | Deutsch                 |
 | Greek - Greece                     | el-GR             | 1032     | Ελληνικά                |
+| Hebrew                             | he-IL             | 1037     | עִברִית                 |  
 | Hindi - India                      | hi-IN             | 1081     | हिंदी                   |
 | Hungarian - Hungary                | hu-HU             | 1038     | magyar                  |
 | Indonesian - Indonesia             | id-ID             | 1057     | Bahasa Indonesia        |
@@ -107,17 +116,24 @@ The table below shows all the languages currently available out of the box. This
 > [!Note]
 > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
 
-Knowledge articles will only be displayed if they have been translated into the language the user sets the portal to be displayed in. However, forums and blogs allow for more control over how they are presented in other languages. Specifying a language for a forum or blog is optional. If a language is not specified, the forum or blog will be displayed in the primary language of the organization. If you want the forum or blog specific to a language, you must create it and assign the language to it.
+Knowledge articles will only be displayed if they've been translated into the language the user sets the portal to be displayed in. However, forums and blogs allow for more control over how they're presented in other languages. Specifying a language for a forum or blog is optional. If a language isn't specified, the forum or blog will be displayed in the primary language of the organization. If you want the forum or blog specific to a language, you must create it and assign the language to it.
 
-Web link sets are the navigation links at the top of the portal. In the **Portal Management** app go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links are created for the newly activated language.
+Web link sets are the navigation links at the top of the portal. In the Portal Management app, go to **Content** > **Web Link Sets** to update the translated text of the menu items. When a language is active for the portal, a new set of links is created for the newly activated language.
 
 :::image type="content" source="media/multi-language/active-weblink-new-language.png" alt-text="Active web link for new language":::
 
 ## View portal in a different language
 
-Once the languages have been enabled, by default, users will see a drop-down on portal pages which will allow them to switch the currently viewed content to different enabled portal languages.
+Once the languages have been enabled, by default, users will see a drop-down on portal pages, which will allow them to switch the currently viewed content to different enabled portal languages.
 
 :::image type="content" source="media/multi-language/multi-language-dropdown.png" alt-text="Multiple-language drop-down list":::  
 
+## Configure user's default language
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+To avoid choosing the language from the drop-down each time, Portal users can set the default language by entering it in the **Preferred Language field** within the user profile section.  
+
+:::image type="content" source="media/multi-language/preferred-language.png" alt-text="Preferred language":::
+
+> [!Note]
+> You will need to configure [table permissions](assign-entity-permissions.md) on the portal language table (adx_portallanguage) to allow read and append access linked to the default authenticated user web role to allow for users to choose their default language.
+

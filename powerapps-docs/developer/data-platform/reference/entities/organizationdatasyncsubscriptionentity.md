@@ -1,7 +1,7 @@
 ---
-title: "organizationdatasyncsubscriptionentity table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "organizationdatasyncsubscriptionentity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncsubscriptionentity table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -59,18 +59,43 @@ search.app:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [BlobPartitionBy](#BKMK_BlobPartitionBy)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [InheritsFromOtc](#BKMK_InheritsFromOtc)
 - [IsActivity](#BKMK_IsActivity)
 - [name](#BKMK_name)
 - [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [OrganizationDataSyncSubscriptioId](#BKMK_OrganizationDataSyncSubscriptioId)
+- [OrganizationDataSyncSubscription](#BKMK_OrganizationDataSyncSubscription)
 - [organizationdatasyncsubscriptionentityId](#BKMK_organizationdatasyncsubscriptionentityId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_BlobPartitionBy"></a> BlobPartitionBy
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|BlobPartitionBy|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|blobpartitionby|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+
+#### BlobPartitionBy Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Day||
+|2|Month||
+|3|Year||
+
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -122,10 +147,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -156,7 +181,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|objecttypecode|
 |MaxValue|2147483647|
-|MinValue|0|
+|MinValue|-2147483648|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
 
@@ -170,6 +195,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|organizationdatasyncsubscriptioid|
+|RequiredLevel|ApplicationRequired|
+|Targets|organizationdatasyncsubscription|
+|Type|Lookup|
+
+
+### <a name="BKMK_OrganizationDataSyncSubscription"></a> OrganizationDataSyncSubscription
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for OrganizationDataSyncSubscription associated with OrganizationDataSyncSubscriptionEntity.|
+|DisplayName|OrganizationDataSyncSubscription|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|organizationdatasyncsubscription|
 |RequiredLevel|ApplicationRequired|
 |Targets|organizationdatasyncsubscription|
 |Type|Lookup|
@@ -300,6 +339,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationDataSyncSubscriptioIdName](#BKMK_OrganizationDataSyncSubscriptioIdName)
+- [OrganizationDataSyncSubscriptionName](#BKMK_OrganizationDataSyncSubscriptionName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -559,6 +599,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_OrganizationDataSyncSubscriptionName"></a> OrganizationDataSyncSubscriptionName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationdatasyncsubscriptionname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 **Added by**: Active Solution Solution
@@ -623,13 +679,14 @@ Listed by **SchemaName**.
 - [organizationdatasyncsubscriptionentity_ProcessSession](#BKMK_organizationdatasyncsubscriptionentity_ProcessSession)
 - [organizationdatasyncsubscriptionentity_BulkDeleteFailures](#BKMK_organizationdatasyncsubscriptionentity_BulkDeleteFailures)
 - [organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses](#BKMK_organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses)
+- [organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname](#BKMK_organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname)
 
 
 ### <a name="BKMK_organizationdatasyncsubscriptionentity_SyncErrors"></a> organizationdatasyncsubscriptionentity_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [organizationdatasyncsubscriptionentity_SyncErrors](syncerror.md#BKMK_organizationdatasyncsubscriptionentity_SyncErrors) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_SyncErrors](syncerror.md#BKMK_organizationdatasyncsubscriptionentity_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -646,7 +703,7 @@ Same as syncerror table [organizationdatasyncsubscriptionentity_SyncErrors](sync
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [organizationdatasyncsubscriptionentity_DuplicateMatchingRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscriptionentity_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_DuplicateMatchingRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscriptionentity_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -663,7 +720,7 @@ Same as duplicaterecord table [organizationdatasyncsubscriptionentity_DuplicateM
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [organizationdatasyncsubscriptionentity_DuplicateBaseRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscriptionentity_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_DuplicateBaseRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscriptionentity_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -680,7 +737,7 @@ Same as duplicaterecord table [organizationdatasyncsubscriptionentity_DuplicateB
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [organizationdatasyncsubscriptionentity_AsyncOperations](asyncoperation.md#BKMK_organizationdatasyncsubscriptionentity_AsyncOperations) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_AsyncOperations](asyncoperation.md#BKMK_organizationdatasyncsubscriptionentity_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -697,7 +754,7 @@ Same as asyncoperation table [organizationdatasyncsubscriptionentity_AsyncOperat
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [organizationdatasyncsubscriptionentity_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_organizationdatasyncsubscriptionentity_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_organizationdatasyncsubscriptionentity_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -714,7 +771,7 @@ Same as mailboxtrackingfolder table [organizationdatasyncsubscriptionentity_Mail
 
 **Added by**: System Solution Solution
 
-Same as processsession table [organizationdatasyncsubscriptionentity_ProcessSession](processsession.md#BKMK_organizationdatasyncsubscriptionentity_ProcessSession) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_ProcessSession](processsession.md#BKMK_organizationdatasyncsubscriptionentity_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -731,7 +788,7 @@ Same as processsession table [organizationdatasyncsubscriptionentity_ProcessSess
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [organizationdatasyncsubscriptionentity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_organizationdatasyncsubscriptionentity_BulkDeleteFailures) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_organizationdatasyncsubscriptionentity_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -748,7 +805,7 @@ Same as bulkdeletefailure table [organizationdatasyncsubscriptionentity_BulkDele
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -758,6 +815,23 @@ Same as principalobjectattributeaccess table [organizationdatasyncsubscriptionen
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname"></a> organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname
+
+**Added by**: DataSyncState Solution
+
+Same as the [organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname](organizationdatasyncstate.md#BKMK_organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname) many-to-one relationship for the [organizationdatasyncstate](organizationdatasyncstate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncstate|
+|ReferencingAttribute|entityname|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organizationdatasyncsubscriptionentity_organizationdatasyncstate_entityname|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
@@ -772,41 +846,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby](#BKMK_lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [subscription_subscriptionentity](#BKMK_subscription_subscriptionentity)
+- [subscription_subscriptionentity_duplicate](#BKMK_subscription_subscriptionentity_duplicate)
 
 
 ### <a name="BKMK_lk_organizationdatasyncsubscriptionentity_createdby"></a> lk_organizationdatasyncsubscriptionentity_createdby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscriptionentity_createdby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_createdby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscriptionentity_createdby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organizationdatasyncsubscriptionentity_createdonbehalfby"></a> lk_organizationdatasyncsubscriptionentity_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscriptionentity_createdonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_createdonbehalfby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscriptionentity_createdonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organizationdatasyncsubscriptionentity_modifiedby"></a> lk_organizationdatasyncsubscriptionentity_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscriptionentity_modifiedby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_modifiedby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscriptionentity_modifiedby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby"></a> lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscriptionentity_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_organizationdatasyncsubscriptionentity"></a> organization_organizationdatasyncsubscriptionentity
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_organizationdatasyncsubscriptionentity](organization.md#BKMK_organization_organizationdatasyncsubscriptionentity) One-To-Many relationship.
+See the [organization_organizationdatasyncsubscriptionentity](organization.md#BKMK_organization_organizationdatasyncsubscriptionentity) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_subscription_subscriptionentity"></a> subscription_subscriptionentity
 
-See organizationdatasyncsubscription Table [subscription_subscriptionentity](organizationdatasyncsubscription.md#BKMK_subscription_subscriptionentity) One-To-Many relationship.
+See the [subscription_subscriptionentity](organizationdatasyncsubscription.md#BKMK_subscription_subscriptionentity) one-to-many relationship for the [organizationdatasyncsubscription](organizationdatasyncsubscription.md) table/entity.
+
+### <a name="BKMK_subscription_subscriptionentity_duplicate"></a> subscription_subscriptionentity_duplicate
+
+See the [subscription_subscriptionentity_duplicate](organizationdatasyncsubscription.md#BKMK_subscription_subscriptionentity_duplicate) one-to-many relationship for the [organizationdatasyncsubscription](organizationdatasyncsubscription.md) table/entity.
 
 ### See also
 

@@ -1,20 +1,18 @@
 ---
 title: "Use the Web API with table definitions (Microsoft Dataverse) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference, enabling you to read, create, and update table and column definitions."
-ms.custom: ""
-ms.date: 04/21/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: pehecke
-manager: "shujoshi"
+ms.date: 04/06/2022
+author: NHelgren
+ms.author: nhelgren
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Use the Web API with table definitions
 

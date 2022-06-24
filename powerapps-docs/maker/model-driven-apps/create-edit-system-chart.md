@@ -2,8 +2,7 @@
 title: "Create or edit a model-driven app system chart in Power Apps | MicrosoftDocs"
 description: "Learn how to create a system chart for a model-driven app"
 ms.custom: ""
-ms.date: 07/08/2021
-ms.service: powerapps
+ms.date: 06/22/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,8 +23,6 @@ search.app:
 ---
 # Create a model-driven app system chart
 
-
-
 In this article you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can't be assigned or shared with specific app users.
 
 > [!Note]
@@ -34,15 +31,15 @@ In this article you learn how to create a system chart. System charts are organi
 ## Create a new chart
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane, select **Dataverse** and then the table which requires a chart.
+1. On the left navigation pane, select **Dataverse**, select the table which requires a chart, and then select **Charts**.
 
-1. Select **Charts** from the menu, and then select **Add Chart**.
+1. Select **New chart**.
 
    :::image type="content" source="media/create-table-chart.png" alt-text="Steps to introducing a chart into a table.":::
 
    A new window opens where you can create a chart.
 
-2. Specify the type of chart, and how the data is displayed in the chart.
+1. Specify the type of chart, and how the data is displayed in the chart.
 
    - Enter the chart name, such as *Number of employees by account*.
    - In the **Select Column** dropdowns:
@@ -53,7 +50,7 @@ In this article you learn how to create a system chart. System charts are organi
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-3.png" alt-text="Description to identify the purpose of the system chart you create.":::
 
-3. Select **Save and Close**.
+1. Select **Save and Close**.
 
 The **Number of employees by account** chart is now displayed in the app designer list of charts available for the account table.
 
@@ -90,7 +87,7 @@ Use your chart:
 
 ## Known chart creation issues
 
-In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error. The calculated columns causing this are using another calculated column, a related table column, or a local column on the table.
+In the chart designer, adding an order by on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using another calculated column, a related table column, or a local column on the table.
 
 ## Next steps
 

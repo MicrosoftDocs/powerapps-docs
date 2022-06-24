@@ -2,11 +2,11 @@
 title: Common sources of slow performance for a canvas app
 description: Learn about the common sources of slow performance for a canvas app.
 author: JinManAhn-MSFT
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/16/2021
+ms.date: 06/16/2022
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -17,6 +17,7 @@ contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
   - wimcoor
+  - ProfessorKendrick
 ---
 
 # Common sources of slow performance for a canvas app
@@ -50,15 +51,13 @@ When these problems occur, tune the back-end data source to avoid slowing the ap
 
 Canvas apps can be used on different devices, browsers, and locations with varying network conditions. As the Power Apps client is executed, be sure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
-If some users are using legacy, unsupported, or deprecated browsers like Internet Explorer 11, their experience might be affected.
-
 ## Geographical location of the on-premises data gateway and environment
 
 Users can access canvas apps globally. However, we recommend that you locate the data source near most of your users. For example, when your app accesses your on-premises data source, the location of on-premises data gateway should be close to the data source to minimize any extra overhead between the data gateway and the data source.
 
 ## Temporary throttling of high-volume requests at the back end
 
-Depending on how you design a canvas app, it can generate many data calls within a short time. For example, an app connecting to a Microsoft Dataverse environment is subject to the [Dataverse service protection API limits](../../developer/data-platform/api-limits.md). Such an app might get throttled when the data calls exceed supported limits.
+Depending on how you design a canvas app, it can generate many data calls within a short time. For example, an app connecting to a Power Platform environment is subject to the [Dataverse service protection API limits](../../developer/data-platform/api-limits.md). Such an app might get throttled when the data calls exceed supported limits.
 
 If an app exceeds the connector's throttling limits, the app is subject to a temporary throttle. Profiling the app by using Monitor can help you to investigate this problem. Also note that apps that generate many avoidable data calls might not give the best user experience, even if the calls don't get throttled.
 
@@ -68,7 +67,7 @@ Connector-specific limits are available in [Power Apps connectors documentation]
 
 ## Debug published app setting enabled
 
-Apps published with the setting [Debug published app](../monitor-canvasapps.md#setting-debug-published-app) enabled perform significantly slower. Publish your app with this setting disabled as soon as you no longer need to view source expressions when debugging your published app.  
+Apps published with the setting [Debug published app](../monitor-canvasapps.md#setting-debug-published-app) enabled perform slower. Publish your app with this setting disabled as soon as you no longer need to view source expressions when debugging your published app.  
 
 ## Next steps
 
@@ -78,8 +77,8 @@ Apps published with the setting [Debug published app](../monitor-canvasapps.md#s
 
 [Understand canvas app execution phases and data call flow](execution-phases-data-flow.md) <br>
 [Tips and best practices to improve canvas app performance](performance-tips.md) <br>
-[Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
-[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
+[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

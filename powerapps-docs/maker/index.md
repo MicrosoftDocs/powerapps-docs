@@ -2,7 +2,7 @@
 title: Start building apps | Microsoft Docs
 description: Get an introduction to creating canvas or model-driven apps in Power Apps, and incorporating the Microsoft Dataverse.
 author: alaug
-ms.service: powerapps
+
 ms.topic: overview
 
 ms.date: 01/07/2021
@@ -32,7 +32,7 @@ Canvas apps give you the flexibility to arrange the user experience and interfac
 You can start to build your app from Microsoft tools where your data lives, such as:
 
 - [From a SharePoint list](canvas-apps/app-from-sharepoint.md#create-an-app-from-within-sharepoint-online)
-- [From a Power BI dashboard](canvas-apps/embed-powerapps-powerbi.md)
+- [From a Power BI dashboard](/power-bi/visuals/power-bi-visualization-powerapp)
 
 Creating a canvas app is easy. With Power Apps, you can find or create your app in several ways:
 

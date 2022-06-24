@@ -4,7 +4,7 @@ description: "Learn how to control access to main forms"
 ms.custom: ""
 ms.date: 06/25/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -29,7 +29,7 @@ Power Apps forms settings are a set of capabilities that make it easy for model-
 - [Set the form order](#set-the-form-order).
 - [Set the fallback form for a table](#set-the-fallback-form-for-a-table).
 
-You can access form settings from the **Forms** tab in Power Apps or command bar in the form designer.
+You can access form settings from the **Forms** area in Power Apps or command bar in the form designer.
 
 ## Set security roles for a form
   
@@ -43,7 +43,7 @@ You can access form settings from the **Forms** tab in Power Apps or command bar
   
 ### Assign a security role to a form
 
-1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** tab.
+1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** area.
 2. Next to the main form you want to configure the security roles for a form, select **...,** and then select **Form settings**.
 
    :::image type="content" source="../../maker/model-driven-apps/media/form-settings.png" alt-text="Advanced Settings":::
@@ -62,7 +62,7 @@ When you have multiple main, quick create, quick view, or card forms for a table
 
 Notice that the form order does not set who can see the form, that is managed by setting security roles. More information: [Set security roles for a form](#set-security-roles-for-a-form)
 
-1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** tab.
+1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** area.
 2. Next to the main form you want to configure the fallback form for, select **...**, and then select **Form settings**.
 3. In the left navigation on the **Form settings** page, select **Form order**.
 4. Select the form set that you want, such as **Main Form**, **Quick Create Form**, **Quick View Form** or **Card Form**.
@@ -90,7 +90,7 @@ If you are using role-based forms because you want to restrict the information p
   
 ### Set the fallback form for a table
 
-1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** tab.
+1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** area.
 2. Next to the main form you want to configure the fallback form for, select **...**, and then select **Form settings**.
 3. In the left navigation on the **Form settings** page, select **Fallback forms**.
 4. To disable a form from the fallback order, clear the checkbox. In this example the **Information** form will be removed from the fallback order.

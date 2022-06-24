@@ -1,7 +1,7 @@
 ---
-title: "solutioncomponentconfiguration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "solutioncomponentconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the solutioncomponentconfiguration table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -204,10 +204,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -574,10 +574,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -818,7 +818,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [solutioncomponentconfiguration_SyncErrors](syncerror.md#BKMK_solutioncomponentconfiguration_SyncErrors) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_SyncErrors](syncerror.md#BKMK_solutioncomponentconfiguration_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -835,7 +835,7 @@ Same as syncerror table [solutioncomponentconfiguration_SyncErrors](syncerror.md
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [solutioncomponentconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_solutioncomponentconfiguration_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_solutioncomponentconfiguration_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -852,7 +852,7 @@ Same as duplicaterecord table [solutioncomponentconfiguration_DuplicateMatchingR
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [solutioncomponentconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_solutioncomponentconfiguration_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_solutioncomponentconfiguration_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -869,7 +869,7 @@ Same as duplicaterecord table [solutioncomponentconfiguration_DuplicateBaseRecor
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [solutioncomponentconfiguration_AsyncOperations](asyncoperation.md#BKMK_solutioncomponentconfiguration_AsyncOperations) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_AsyncOperations](asyncoperation.md#BKMK_solutioncomponentconfiguration_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -886,7 +886,7 @@ Same as asyncoperation table [solutioncomponentconfiguration_AsyncOperations](as
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [solutioncomponentconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_solutioncomponentconfiguration_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_solutioncomponentconfiguration_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -903,7 +903,7 @@ Same as mailboxtrackingfolder table [solutioncomponentconfiguration_MailboxTrack
 
 **Added by**: System Solution Solution
 
-Same as processsession table [solutioncomponentconfiguration_ProcessSession](processsession.md#BKMK_solutioncomponentconfiguration_ProcessSession) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_ProcessSession](processsession.md#BKMK_solutioncomponentconfiguration_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -920,7 +920,7 @@ Same as processsession table [solutioncomponentconfiguration_ProcessSession](pro
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [solutioncomponentconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_solutioncomponentconfiguration_BulkDeleteFailures) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_solutioncomponentconfiguration_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -937,7 +937,7 @@ Same as bulkdeletefailure table [solutioncomponentconfiguration_BulkDeleteFailur
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [solutioncomponentconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_solutioncomponentconfiguration_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [solutioncomponentconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_solutioncomponentconfiguration_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -952,7 +952,7 @@ Same as principalobjectattributeaccess table [solutioncomponentconfiguration_Pri
 
 ### <a name="BKMK_solutioncomponentconfig_solutioncomponentattrconfig"></a> solutioncomponentconfig_solutioncomponentattrconfig
 
-Same as solutioncomponentattributeconfiguration table [solutioncomponentconfig_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_solutioncomponentconfig_solutioncomponentattrconfig) Many-To-One relationship.
+Same as the [solutioncomponentconfig_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_solutioncomponentconfig_solutioncomponentattrconfig) many-to-one relationship for the [solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -982,37 +982,37 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentconfiguration_createdby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_createdby) One-To-Many relationship.
+See the [lk_solutioncomponentconfiguration_createdby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentconfiguration_createdonbehalfby"></a> lk_solutioncomponentconfiguration_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_createdonbehalfby) One-To-Many relationship.
+See the [lk_solutioncomponentconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentconfiguration_modifiedby"></a> lk_solutioncomponentconfiguration_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentconfiguration_modifiedby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_modifiedby) One-To-Many relationship.
+See the [lk_solutioncomponentconfiguration_modifiedby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentconfiguration_modifiedonbehalfby"></a> lk_solutioncomponentconfiguration_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_solutioncomponentconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentconfiguration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_solutioncomponentconfiguration"></a> organization_solutioncomponentconfiguration
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_solutioncomponentconfiguration](organization.md#BKMK_organization_solutioncomponentconfiguration) One-To-Many relationship.
+See the [organization_solutioncomponentconfiguration](organization.md#BKMK_organization_solutioncomponentconfiguration) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_entity_solutioncomponentconfiguration"></a> entity_solutioncomponentconfiguration
 
 **Added by**: System Solution Solution
 
-See entity Table [entity_solutioncomponentconfiguration](entity.md#BKMK_entity_solutioncomponentconfiguration) One-To-Many relationship.
+See the [entity_solutioncomponentconfiguration](entity.md#BKMK_entity_solutioncomponentconfiguration) one-to-many relationship for the [entity](entity.md) table/entity.
 
 ### See also
 

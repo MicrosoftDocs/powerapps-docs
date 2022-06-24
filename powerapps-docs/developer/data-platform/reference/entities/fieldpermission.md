@@ -1,7 +1,7 @@
 ---
-title: "FieldPermission table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "FieldPermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the FieldPermission table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -254,10 +254,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -339,7 +339,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_FieldPermission_SyncErrors"></a> FieldPermission_SyncErrors
 
-Same as syncerror table [FieldPermission_SyncErrors](syncerror.md#BKMK_FieldPermission_SyncErrors) Many-To-One relationship.
+Same as the [FieldPermission_SyncErrors](syncerror.md#BKMK_FieldPermission_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -363,11 +363,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_fieldpermission_fieldsecurityprofileid"></a> lk_fieldpermission_fieldsecurityprofileid
 
-See fieldsecurityprofile Table [lk_fieldpermission_fieldsecurityprofileid](fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid) One-To-Many relationship.
+See the [lk_fieldpermission_fieldsecurityprofileid](fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid) one-to-many relationship for the [fieldsecurityprofile](fieldsecurityprofile.md) table/entity.
 
 ### <a name="BKMK_solution_fieldpermission"></a> solution_fieldpermission
 
-See solution Table [solution_fieldpermission](solution.md#BKMK_solution_fieldpermission) One-To-Many relationship.
+See the [solution_fieldpermission](solution.md#BKMK_solution_fieldpermission) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### See also
 

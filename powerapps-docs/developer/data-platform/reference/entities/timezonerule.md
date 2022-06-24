@@ -1,7 +1,7 @@
 ---
-title: "TimeZoneRule table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TimeZoneRule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TimeZoneRule table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -618,23 +618,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_timezonerule_createdby"></a> lk_timezonerule_createdby
 
-See systemuser Table [lk_timezonerule_createdby](systemuser.md#BKMK_lk_timezonerule_createdby) One-To-Many relationship.
+See the [lk_timezonerule_createdby](systemuser.md#BKMK_lk_timezonerule_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonerule_modifiedonbehalfby"></a> lk_timezonerule_modifiedonbehalfby
 
-See systemuser Table [lk_timezonerule_modifiedonbehalfby](systemuser.md#BKMK_lk_timezonerule_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_timezonerule_modifiedonbehalfby](systemuser.md#BKMK_lk_timezonerule_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonerule_modifiedby"></a> lk_timezonerule_modifiedby
 
-See systemuser Table [lk_timezonerule_modifiedby](systemuser.md#BKMK_lk_timezonerule_modifiedby) One-To-Many relationship.
+See the [lk_timezonerule_modifiedby](systemuser.md#BKMK_lk_timezonerule_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonerule_timezonedefinitionid"></a> lk_timezonerule_timezonedefinitionid
 
-See timezonedefinition Table [lk_timezonerule_timezonedefinitionid](timezonedefinition.md#BKMK_lk_timezonerule_timezonedefinitionid) One-To-Many relationship.
+See the [lk_timezonerule_timezonedefinitionid](timezonedefinition.md#BKMK_lk_timezonerule_timezonedefinitionid) one-to-many relationship for the [timezonedefinition](timezonedefinition.md) table/entity.
 
 ### <a name="BKMK_lk_timezonerule_createdonbehalfby"></a> lk_timezonerule_createdonbehalfby
 
-See systemuser Table [lk_timezonerule_createdonbehalfby](systemuser.md#BKMK_lk_timezonerule_createdonbehalfby) One-To-Many relationship.
+See the [lk_timezonerule_createdonbehalfby](systemuser.md#BKMK_lk_timezonerule_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -4,7 +4,7 @@ description: Learn how to configure form header properties for a model-driven ap
 ms.custom: ""
 ms.date: 01/25/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -72,8 +72,8 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 > [!NOTE]
 > - Use the new form designer. The classic form designer does not provide the ability to show or hide the header flyout.   
 > - The visibility of header flyout can only be controlled by choosing the option in the form header configuration.
-> - An image for a table will be displayed in the header only if the **Primary Imagine** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns). <br />
-    Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute?view=dynamics-general-ce-9) attribute.
+> - An image for a table will be displayed in the header only if the **Primary Image** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns). <br />
+    Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute) attribute.
 > - High-density headers limit what controls will render in the header body and are limited to a checkbox, datetime, decimal, duration, emailaddress, float, integer, languagepicker, lookup, money, phonenumber, picklist, radio, regarding, textbox, ticker and timezonepicklist.  Any other type of control, including custom Power Apps control framework controls or web resources will not be displayed.  You'll need to switch to the high-density header with flyout to ensure your users can access controls in the header that aren't in the supported list.
 
 ## Form designer messages related to form headers

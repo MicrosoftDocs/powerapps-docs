@@ -4,7 +4,7 @@ description: "Learn how to export table data to an Azure Synapse Analytics and A
 ms.custom: intro-internal
 ms.date: 05/26/2021
 ms.reviewer: "Mattp123"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -44,7 +44,7 @@ The Azure Synapse Link for Dataverse is a service designed for enterprise big da
 
 The Azure Synapse Link for Dataverse provides these features:
 
-- Linking or unlinking the Dataverse environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
+- Linking or unlinking the environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
 - Continuous replication of tables to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
 - Replication of both standard and custom tables as well as create, update, and delete (CUD) transactions.
 - Fewer clicks to process, transform, and visualize your data in Azure Synapse Analytics.

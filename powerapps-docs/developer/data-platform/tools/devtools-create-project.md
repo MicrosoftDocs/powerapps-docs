@@ -2,9 +2,9 @@
 title: "Quickstart: Create a Power Platform Tools project | Microsoft Docs"
 description: "Learn how to start a new Visual Studio project for plug-in or custom workflow assembly development using Power Platform Tools."
 ms.custom: ""
-ms.date: 07/19/2021
+ms.date: 06/20/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
@@ -23,7 +23,7 @@ Like any Visual Studio solution, you begin by creating a new project. In the new
 
 ## Prerequisites
 
-- Visual Studio 2019 or later
+- Visual Studio 2019
 - Power Platform Tools for Visual Studio
 - C# language
 - .NET Framework 4.6.2 (only for plug-in or custom workflow activity development)

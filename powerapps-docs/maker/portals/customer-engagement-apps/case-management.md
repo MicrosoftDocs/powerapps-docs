@@ -1,17 +1,15 @@
 ---
 title: Manage cases in portals
 description: Learn how to manage cases in a portal.
-author: sbmjais
-ms.service: powerapps
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: ndoelman
+ms.reviewer: ndoelman
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Manage cases in portals

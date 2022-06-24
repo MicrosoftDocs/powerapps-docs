@@ -2,11 +2,11 @@
 title: How to create a canvas app connected to Microsoft Dataverse from scratch
 description: Learn about how to create a canvas app from scratch.
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.subservice: canvas-maker
-ms.date: 01/27/2022
+ms.date: 06/17/2022
 ms.author: tapanm
 ms.reviewer: tapanm
 search.app: 
@@ -14,13 +14,14 @@ search.app:
 contributors:
     - sbahl10
     - tapanm-msft
+    - ProfessorKendrick
 ---
 
 # How to create a canvas app connected to Microsoft Dataverse from scratch
 
 Microsoft Dataverse is a premier data platform for Power Platform. Dataverse lets you securely store and manage data used by your apps within a set of tables.
 
-In this article, we'll create an app connected to existing data in a Dataverse environment.
+In this article, we'll create an app connected to existing data in a Power Platform environment.
 
 ## Prerequisites
 

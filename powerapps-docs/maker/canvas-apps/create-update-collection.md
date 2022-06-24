@@ -2,7 +2,7 @@
 title: Create and update a collection in a canvas app (contains video)
 description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
 author: tapanm-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -114,21 +114,21 @@ Watch this video to learn how to create and update a collection:
 
 1. While holding down the Alt key, select the **Trash** icon for an item to remove that item from the collection, or select the **Clear** button to remove all items from the collection.
 
-## Put a SharePoint list into a collection
+## Put a list into a collection
 
-1. [Create a connection to a SharePoint list](connections/connection-sharepoint-online.md#create-a-connection).
+1. [Create a connection to a list created using Microsoft Lists](connections/connection-sharepoint-online.md#create-a-connection).
 
-1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
+1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your list:<br>
 
     `Collect(MySPCollection, ListName)`
 
-    This function creates a collection that's named **MySPCollection** and that contains the same data as your SharePoint list.
+    This function creates a collection that's named **MySPCollection** and that contains the same data as your list.
 
 1. While holding down the Alt key, select the button.
 
 1. (optional) To preview the collection that you created, select **Collections** on the **File**  menu.
 
-For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery: [Show list columns in a gallery](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
+For information about how to show data from Microsoft Lists or SharePoint (such as dates, choices, and people) in a gallery: [Show list columns in a gallery](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
 Display form controls](controls/control-form-detail.md).
 
 ## Next steps

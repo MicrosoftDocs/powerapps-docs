@@ -2,16 +2,17 @@
 title: Add custom certificates
 description: When extending portals functionality using a client-side API call with OAuth 2.0 implicit grant flow, configure custom certificates for added security.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/25/2021
+ms.date: 5/11/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Manage custom certificates
@@ -46,22 +47,5 @@ When extending portals functionality using a client-side API call with [OAuth 2.
 
 
     :::image type="content" source="media/manage-custom-certificates/custom-certificates.png" alt-text="Manage custom certificates tab in the Power Apps portals admin center." :::
-
-## Configure site settings
-
-1. Go to [portal settings](../manage-existing-portals.md#settings) and select **Site Settings**.
-
-1. To create a new setting, select **New**.
-
-1. To edit an existing setting, select the site setting listed in the grid.
-
-1. Specify values 
-    - Name: `CustomCertificates/ImplicitGrantflow`
-	- Website: The associated website
-	- Value: Copy the thumbprint of the uploaded custom certificate from the **Manage custom certificate** screen and paste here. The value will indicate which certificate will get used for implicit grant flow. 
-	
-1. Select **Save & Close**.
-
-    :::image type="content" source="media/manage-custom-certificates/custom-certificate-site-setting.png" alt-text="Create New Site Setting in Portal Management app." :::
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

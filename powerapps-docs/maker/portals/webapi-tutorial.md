@@ -2,10 +2,10 @@
 title: "Tutorial: How to use the portal Web API"
 description: This page walks you through example steps for performing read, write, update, and delete portal Web API requests.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/29/2021
+ms.date: 01/31/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -37,16 +37,6 @@ Before you can use the portals Web API, you have to enable the required site set
 1. On the left pane of the **Portal Management** app, select **Site Settings**.
 
     :::image type="content" source="media/read-operations/site-settings.png" alt-text="Open site settings in Portal Management app." border="false":::
-
-1. Select **New**.
-
-1. In the **Name** box, enter **WebAPI/enableReadOperationPreview**. This site setting is only required while the Web API read operation is in preview.
-
-1. In the **Website** list, select your website record.
-
-1. In the **Value** box, enter **true**.
-
-    :::image type="content" source="media/read-operations/enable-read.png" alt-text="Enable WebAPI read operation site setting. " border="true":::
 
 1. Select **New**.
 
@@ -542,6 +532,7 @@ Now that you've created a webpage with a sample to read, edit, create, and delet
 
 [Portals Web API overview](web-api-overview.md)</br>
 [Portals write, update and delete operations using the Web API](write-update-delete-operations.md)</br>
-[Portals read operations using the Web API](read-operations.md)
+[Portals read operations using the Web API](read-operations.md)</br>
+[Configure column permissions](configure/column-permissions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

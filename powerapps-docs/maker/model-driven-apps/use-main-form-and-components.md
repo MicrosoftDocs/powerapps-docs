@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: powerapps
+
 ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
@@ -57,7 +57,7 @@ Follow the procedures given below to access the form designer.
    - For a custom table, select **Include all components**.
    - For a standard table choose **Select components**, and then browse to and select the main form you want to customize, and then select **Add**.
 
-1. The table is added to the solution. In the list of components, open the table, select the **Forms** tab, and then open form of type **Main**.
+1. The table is added to the solution. In the list of components, open the table, select the **Forms** area, and then open form of type **Main**.
 
 6. In the form designer, make the changes you want.
 
@@ -71,7 +71,7 @@ Certain customizations that make changes to the user interface require that they
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.  
 
 3. In the list of forms, open the form of type **Main**.
 
@@ -144,7 +144,7 @@ You can add iFrames to a form to integrate content from another website within a
   
  To enable editing navigation, you must first select **Navigation** from the **Select** group on the **Home** tab.  
   
- In the Relationship Explorer,** you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. So you can only add each relationship one time.  
+ In the Relationship Explorer, you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. So you can only add each relationship one time.  
   
  To add a relationship from the **Relationship Explorer** just double-click it and it will be added below the currently selected relationship in the navigation area. Double-click a relationship in the navigation area and you can change the label on the **Display** tab. On the **Name** tab, you can see information about the relationship. Use the **Edit** button to open the definition of the table.  
   

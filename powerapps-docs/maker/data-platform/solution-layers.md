@@ -3,7 +3,7 @@ title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
 ms.date: 03/05/2021
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 ms.assetid: 
@@ -25,9 +25,7 @@ search.app:
 
 # Solution layers
 
-
-
-Managed and unmanaged solutions exist at different levels within a Microsoft Dataverse environment. In Dataverse, there are two distinct layer levels:  
+Managed and unmanaged solutions exist at different levels within a Microsoft Power Platform environment. In Dataverse, there are two distinct layer levels:  
 - Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  
 - Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the tables and components that are required for the platform to function. 
 

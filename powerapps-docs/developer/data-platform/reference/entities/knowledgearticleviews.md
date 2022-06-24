@@ -1,7 +1,7 @@
 ---
-title: "KnowledgeArticleViews table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "KnowledgeArticleViews table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticleViews table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -642,7 +642,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_KnowledgeArticleViews_SyncErrors"></a> KnowledgeArticleViews_SyncErrors
 
-Same as syncerror table [KnowledgeArticleViews_SyncErrors](syncerror.md#BKMK_KnowledgeArticleViews_SyncErrors) Many-To-One relationship.
+Same as the [KnowledgeArticleViews_SyncErrors](syncerror.md#BKMK_KnowledgeArticleViews_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -657,7 +657,7 @@ Same as syncerror table [KnowledgeArticleViews_SyncErrors](syncerror.md#BKMK_Kno
 
 ### <a name="BKMK_knowledgearticleview_principalobjectattributeaccess"></a> knowledgearticleview_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [knowledgearticleview_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_knowledgearticleview_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [knowledgearticleview_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_knowledgearticleview_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -685,27 +685,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_knowledgearticleviews_modifiedonbehalfby"></a> lk_knowledgearticleviews_modifiedonbehalfby
 
-See systemuser Table [lk_knowledgearticleviews_modifiedonbehalfby](systemuser.md#BKMK_lk_knowledgearticleviews_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_knowledgearticleviews_modifiedonbehalfby](systemuser.md#BKMK_lk_knowledgearticleviews_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_knowledgearticle_views"></a> knowledgearticle_views
 
-See knowledgearticle Table [knowledgearticle_views](knowledgearticle.md#BKMK_knowledgearticle_views) One-To-Many relationship.
+See the [knowledgearticle_views](knowledgearticle.md#BKMK_knowledgearticle_views) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_knowledgearticleviews_createdby"></a> lk_knowledgearticleviews_createdby
 
-See systemuser Table [lk_knowledgearticleviews_createdby](systemuser.md#BKMK_lk_knowledgearticleviews_createdby) One-To-Many relationship.
+See the [lk_knowledgearticleviews_createdby](systemuser.md#BKMK_lk_knowledgearticleviews_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_knowledgearticleviews_modifiedby"></a> lk_knowledgearticleviews_modifiedby
 
-See systemuser Table [lk_knowledgearticleviews_modifiedby](systemuser.md#BKMK_lk_knowledgearticleviews_modifiedby) One-To-Many relationship.
+See the [lk_knowledgearticleviews_modifiedby](systemuser.md#BKMK_lk_knowledgearticleviews_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_knowledgearticleviews_createdonbehalfby"></a> lk_knowledgearticleviews_createdonbehalfby
 
-See systemuser Table [lk_knowledgearticleviews_createdonbehalfby](systemuser.md#BKMK_lk_knowledgearticleviews_createdonbehalfby) One-To-Many relationship.
+See the [lk_knowledgearticleviews_createdonbehalfby](systemuser.md#BKMK_lk_knowledgearticleviews_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_knowledgearticleviews"></a> transactioncurrency_knowledgearticleviews
 
-See transactioncurrency Table [transactioncurrency_knowledgearticleviews](transactioncurrency.md#BKMK_transactioncurrency_knowledgearticleviews) One-To-Many relationship.
+See the [transactioncurrency_knowledgearticleviews](transactioncurrency.md#BKMK_transactioncurrency_knowledgearticleviews) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 

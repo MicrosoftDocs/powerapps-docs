@@ -3,7 +3,7 @@ title: Manage custom columns in a table | Microsoft Docs
 description: Walkthrough of how to create, read, update, and delete custom columns in a table in Microsoft Dataverse.
 author: lancedMicrosoft
 manager: kfile
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018

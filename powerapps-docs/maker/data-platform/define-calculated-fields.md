@@ -4,7 +4,7 @@ description: "Learn how to define calculated columns"
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -68,14 +68,14 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
-1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
+1. Open the table you want, select the **Columns** area, and then select **Add Column**.  
 1. Provide the required information for the column, including the **Display name**, **Name**, and **Data type**.
 1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
 
     ![Make column calculated.](media/make-field-calculated-maker.png)
 
 1. By selecting **Calculation**, you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
-1. On the **Columns** tab, open the column that you saved in the previous step.
+1. In the **Columns** area, open the column that you saved in the previous step.
 1. On the column properties pane, select **Open calculation**.
 
    <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">

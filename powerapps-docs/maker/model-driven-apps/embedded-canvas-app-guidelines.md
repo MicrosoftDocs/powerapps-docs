@@ -4,7 +4,7 @@ description: Understand the recommended ways to work with embedded canvas apps i
 ms.custom: ""
 ms.date: 09/02/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
@@ -91,7 +91,7 @@ An embedded canvas app may not render correctly within the field on the model-dr
 This issue can occur when one or both of the following are true.
 
 - The **Scale to fit** option isn’t enabled with the canvas app. 
-- The **App Name** property value is missing or is incorrectly defined in the embedded canvas app control.  This might occur when the model-driven app and canvas app have been imported as a solution into another Dataverse environment.
+- The **App Name** property value is missing or is incorrectly defined in the embedded canvas app control.  This might occur when the model-driven app and canvas app have been imported as a solution into another environment.
 
 Instead of creating apps that scale to the space available, you can create apps that are **responsive** to the form factor.  [Learn more about responsive apps](../../maker/canvas-apps/build-responsive-apps.md)
 

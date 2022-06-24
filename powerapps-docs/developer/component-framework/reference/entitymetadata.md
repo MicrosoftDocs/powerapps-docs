@@ -1,16 +1,15 @@
 ---
 title: EntityMetadata in Microsoft Dataverse| Microsoft Docs
 description: Information about methods and properties for table definitions.
-keywords:
-ms.author: nabuthuk
-manager: kvivek
-author: nkrb
-ms.date: 10/01/2020
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: ad8659f7-f566-43db-bed1-c8484c114a59
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # EntityMetadata

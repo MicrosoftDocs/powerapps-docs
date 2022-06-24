@@ -4,7 +4,7 @@ description: Learn how to create and edit model-driven app forms
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -38,7 +38,7 @@ Use the new form designer to create, edit, or configure forms for model-driven a
    > [!Note]
    > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, and then open the **table**.
 
-3. Select a table, such as the account table, and then select the **Forms** tab.
+3. Select a table, such as the account table, and then select the **Forms** area.
 
 4. Select **Add form**, and then select one of the following
     - **Main form**  
@@ -55,7 +55,7 @@ An extract of this process is shown below.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. On the left navigation pane, expand **Data**, and then select **Tables**.  Alternatively, navigate to the table via a solution.
-3. Open a table, such as the account table, and then select the **Forms** tab.
+3. Open a table, such as the account table, and then select the **Forms** area.
 4. Select the form name where edits are required.  
     - The row in the grid that relates to a form can be selected, and then in the command bar, select **Edit form**
     - Alternatively, select **...** next to the form name, and then in the menu, select **Edit form**.

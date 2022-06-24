@@ -2,7 +2,7 @@
 title: Create an app with 3D and mixed reality controls
 description: Learn about how to use 3D and mixed reality controls.
 author: Joel-lindstrom
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -20,7 +20,7 @@ contributors:
 
 # Create an app with 3D and mixed reality controls
 
-You can use the [View in 3D](../mixed-reality-component-view-3d.md) and [View in MR](../mixed-reality-component-view-mr.md) controls to view items in 3D, or to see how a particular item might fit within a specified space.
+You can use the [3D object](../mixed-reality-component-view-3d.md) and [View in MR](../mixed-reality-component-view-mr.md) controls to view items in 3D, or to see how a particular item might fit within a specified space.
 
 In this article, you'll learn how to use the 3D and mixed reality controls in Power Apps.
 
@@ -154,11 +154,11 @@ To move the object, press on it and slide it to where you would like it to be pl
 
 Use the back button in the top left corner to return to the app screen and select another object. Repeat this process as desired to view each of the objects.
 
-## Create an app with View in 3D control
+## Create an app with 3D object control
 
-The **View in 3D** control allows you to view an item in 3D inside Power Apps. When app loads, it shows the 3D models (in the .glb file format) or image (in .jpg or .png file formats) inside the app through the control. You can select the 3D model to rotate, zoom in or out.
+The **3D object** control allows you to view an item in 3D inside Power Apps. When app loads, it shows the 3D models (in the .glb file format) or image (in .jpg or .png file formats) inside the app through the control. You can select the 3D model to rotate, zoom in or out.
 
-In this section, we will build a screen in an app that will allow a user to view the selected items in 3D using the **View in 3D** control.
+In this section, we will build a screen in an app that will allow a user to view the selected items in 3D using the **3D object** control.
 
 1. Follow the steps 1 and 2 from the [Create an app with View in MR control](#create-an-app-with-view-in-mr-control) section to create an app with the collection of 3D objects for the app.
 
@@ -168,7 +168,7 @@ In this section, we will build a screen in an app that will allow a user to view
 
     | Property       | Value               |
     |----------------|---------------------|
-    | Text           | "View In 3D"        |
+    | Text           | "3D object"        |
     | Font size      | 24                  |
     | Font weight    | `FontWeight.Semibold` |
     | Text alignment | `Align.Center`        |
@@ -213,7 +213,7 @@ In this section, we will build a screen in an app that will allow a user to view
 
 1. Edit the gallery again.
 
-1. From the **Media** section of the **Insert** tab, drag and drop the **View in 3D** control into the gallery.
+1. From the **Media** section of the **Insert** tab, drag and drop the **3D object** control into the gallery.
 
 1. Change the following properties of the **View in MR** control.
 
@@ -231,14 +231,14 @@ This change will provide a gallery that has a list of 3D objects that you can vi
 
 Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device, open the app, touch the screen to zoom in, zoom out, or turn the object being viewed in 3D.
 
-:::image type="content" source="media/build-view-in-mr-3d-apps/view-in-3d.png" alt-text="View in 3D.":::
+:::image type="content" source="media/build-view-in-mr-3d-apps/view-in-3d.png" alt-text="3D object.":::
 
 Since the gallery contains several objects in 3D, swipe down on the screen to see other objects and use the zoom or turn capabilities to work with the objects in 3D.
 
 ### See also
 
-- [View in 3D control](../mixed-reality-component-view-3d.md)
-- [Measure in MR control](../mixed-reality-component-measure-distance.md)
+- [3D object control](../mixed-reality-component-view-3d.md)
+- [Measuring Camera control](../mixed-reality-component-measure-distance.md)
 - [View shape in MR control](../mixed-reality-component-view-shape.md) 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

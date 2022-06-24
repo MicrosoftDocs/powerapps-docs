@@ -2,16 +2,17 @@
 title: Cookies in Power Apps portals
 description: Learn about cookies used by Power Apps portals.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/17/2021
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
  
 # Cookies in Power Apps portals
@@ -34,6 +35,9 @@ Power Apps portals also use cookies to store information for various purposes. T
 | isDSTSupport | Indicates whether a specified date and time falls in the range of daylight saving time. | Session |
 | timeZoneCode | Stores the *timezonecode* field value of *CRM timezonedefinition* table for the current timezone. | Session |
 | timezoneoffset | Stores the [timezone difference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset) between UTC and Local browser time. | Session |
+
+> [!NOTE] 
+> Cookies are also used in Power Pages. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Frequently asked questions
 

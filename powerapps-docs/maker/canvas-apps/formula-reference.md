@@ -2,11 +2,10 @@
 title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm-msft
-ms.date: 01/24/2022
+ms.date: 04/21/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -152,6 +151,8 @@ Other elements include:
 
 **[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
+**[Error](functions/function-iferror.md)** – Create a custom error or pass throguh an error.
+
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
 **[exactin](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case dependent.  Also used to check if a record is in a table.  
@@ -187,6 +188,8 @@ Other elements include:
 **[IfError](functions/function-iferror.md)** - Detects errors and provides an alternative value or takes action. 
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
+
+**[Index](functions/function-first-last.md)** – Returns a record from a table based on ordered position.
 
 **[Int](functions/function-round.md)** – Rounds down to the nearest integer.
 
@@ -287,7 +290,9 @@ Other elements include:
 ## R
 **[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
-**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number between 0 and 1.
+
+**[RandBetween](functions/function-rand.md)** – Returns a pseudo-random number between two numbers.
 
 **[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
 

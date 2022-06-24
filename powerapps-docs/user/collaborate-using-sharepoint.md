@@ -6,7 +6,7 @@ author: mduelae
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model

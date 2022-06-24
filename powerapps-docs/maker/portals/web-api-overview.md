@@ -2,21 +2,25 @@
 title: Overview of portals Web API
 description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse tables from your portals pages.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
-ms.date: 12/02/2021
+ms.date: 06/08/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Portals Web API overview
 
-The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, read, update, and delete operations across all Microsoft Dataverse tables from your portals pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+The portals Web API enables a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, read, update, and delete operations across all Microsoft Dataverse tables from your portals pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+
+> [!NOTE] 
+> You can also use portals Web API in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work**.
@@ -60,6 +64,8 @@ users are allowed to perform create, update, and delete operations on this entit
 ## Security with the portals Web API
 
 You can configure record-based security to individual records in portals by using [table permissions](configure/assign-entity-permissions.md). The portals Web API accesses table (entity) records and follows the table permissions given to users through the associated [web role](configure/create-web-roles.md).
+
+You can configure [column permissions](configure/column-permissions.md) to further define privileges to individual columns within a table while using the portals Web API. 
 
 ![Portals Web API security.](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
 

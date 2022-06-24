@@ -1,20 +1,20 @@
 ---
 title: "Sample charts (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic contains sample charts along with the respective data description and presentation XML strings." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: "kvivek"
-ms.service: powerapps
+author: mspilde
+ms.author: mspilde
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Sample charts
 

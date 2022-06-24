@@ -1,24 +1,26 @@
 ---
 title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/15/2021
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 05/24/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
-author: Nkrb 
 ms.subservice: mda-developer
-ms.author: nabuthuk
-manager: kvivek 
-ms.reviewer: kvivek 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Define ribbon enable rules
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 When configuring ribbon elements, you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
 
@@ -172,6 +174,9 @@ function EnableRule() {
 
 ### Value Rule
 Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
+
+ > [!NOTE]
+ >  On a form, a `ValueRule` requires the specified column to be part of the form for it to work. On a grid or subgrid, the column must be one of the grid columns.
 
 ### Show On Quick Action Rule
 

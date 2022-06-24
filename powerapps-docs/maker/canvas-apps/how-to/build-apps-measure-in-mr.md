@@ -1,8 +1,8 @@
 ---
-title: Create an app using the Measure in MR control
-description: Learn how to use the Measure in MR control in Power Apps.
+title: Create an app using the Measuring Camera control
+description: Learn how to use the Measuring Camera control in Power Apps.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -18,9 +18,9 @@ contributors:
   - anuitz
 ---
 
-# Create an app using the Measure in MR control
+# Create an app using the Measuring Camera control
 
-You can use the [Measure in MR](../mixed-reality-component-measure-distance.md) control in your app to let users measure distance, area, and volume. During the measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
+You can use the [Measuring Camera](../mixed-reality-component-measure-distance.md) control in your app to let users measure distance, area, and volume. During the measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
 
 The control creates a button in your app. When app users select the button, it shows a live camera feed of the device. App users can then specify a starting point, and one or multiple sequential endpoints to measure between. The instances of measured segments are shown directly on the live camera feed.
 
@@ -28,24 +28,24 @@ When the user exits the control, the measurements that were taken are captured i
 
 Screenshots taken during the mixed reality experience are stored in the **Photos** property for viewing within the app.
 
-In this article, we'll create a screen in an app to use the **Measure in MR** control to measure the area of a user-defined space as well as view a photo of the space that was measured.
+In this article, we'll create a screen in an app to use the **Measuring camera** control to measure the area of a user-defined space as well as view a photo of the space that was measured.
 
-Watch this video to learn how to build mobile apps with Measure in MR control:
+Watch this video to learn how to build mobile apps with Measuring Camera control:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLPQh]
 
 ## Prerequisites
 
 See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.md#prerequisites).
 
-## Create the app with Measure in MR control
+## Create the app with Measuring Camera control
 
 1. Open an app in [Power Apps Studio](https://make.powerapps.com).
 
 1. Select the **Insert** tab.
 
-1. Expand **Mixed Reality**.
+1. Expand **Media**.
 
-1. Select the **Measure in MR** control to insert it on the screen.
+1. Select the **Measuring camera** control to insert it on the screen.
 
 1. Position the control near the bottom of the screen.
 
@@ -97,7 +97,7 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
     | Image            | `First(colMRPhotos).ImageURI` |
     | Border Thickness | 2                           |
 
-    The image control will display the first image taken from the **Measure in MR** control.
+    The image control will display the first image taken from the **Measuring camera** control.
 
 1. Add another label to the screen, positioning it below the image control. 
 
@@ -109,14 +109,14 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
     :::image type="content" source="media\build-apps-measure-in-mr\completed-app.png" alt-text="Completed app.":::
 
-    This label will display the first area measurement and unit type that is collected from the **Measure in MR** control. If there's no measurement to be returned, the text will show **Area: no area measured** to let the user know that no value is present.
+    This label will display the first area measurement and unit type that is collected from the **Measuring camera** control. If there's no measurement to be returned, the text will show **Area: no area measured** to let the user know that no value is present.
 
 ## Test the app
 
 > [!TIP]
 > Watch the video embedded at the top of this article to see how the app works.
 
-Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device (as defined in the Prerequisites section), open the app, and press the **Measure Area** button. This action will open the **Measure in MR** experience, allowing the user to define an area to be measured.
+Now that all the controls have been added, [save and publish](../save-publish-app.md) the app. On a mixed-reality capable device (as defined in the Prerequisites section), open the app, and press the **Measure Area** button. This action will open the **Measuring camera** experience, allowing the user to define an area to be measured.
 
 Follow the on-screen instructions to calibrate the device by slowly moving it left and right while pointing the camera at a surface to be measured. Once the calibration is complete, you'll see an array of dots on the surface as well as a circle and dot reticle in the center of the screen. This reticle is used to define lengths, areas, and volumes by using the + button to add points and line segments.
 
@@ -134,5 +134,5 @@ The measurement and photo can then be used like any other photo or text field in
 
 ### See also
 
-- [Measure in MR control](../mixed-reality-component-measure-distance.md)
+- [Measuring Camera control](../mixed-reality-component-measure-distance.md)
 - [Add mixed reality controls to your canvas app](../mixed-reality-overview.md)

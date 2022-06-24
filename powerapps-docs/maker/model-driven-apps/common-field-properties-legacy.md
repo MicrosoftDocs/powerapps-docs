@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 02/25/2020
-ms.service: powerapps
+
 ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"
@@ -33,7 +33,7 @@ In addition to configuring aspects of the Dataverse column, such as its type and
 1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**, and then select the table that has the columns you want to view.
 
 > [!note]
-> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** tab.
+> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
 
 2. Select the column that you want to view.
 
@@ -97,7 +97,7 @@ The following table describes properties that all columns have. Certain types of
 ||**Field Behavior**|Specify the column level behavior using the check boxes.|  
 ||**Locking**|This will prevent the column from being removed from the form accidentally. This will prevent any configuration applied to the column, such as event handlers, from being cleared if the column were removed. To remove this column, a customizer would need to clear this setting first.|  
 ||**Visibility**|Showing the column is optional and can be controlled using scripts. More information: [Visibility options](visibility-options-legacy.md)|  
-||**Availability**|Choose if you want the tab to be available on the phone.|
+||**Availability**|Choose if you want the field to be available on the phone.|
 |**Formatting**|**Select the number of fields the control occupies**|When the section containing the columns has more than one column this can set the column to occupy up to the number of columns that the section has.|  
 |**Details**|**Display Name**, **Name**, and **Description**|These read-only columns are for reference. Select **Edit** for access to the column definition if you want to edit it.<br /><br /> Each instance of a column in the form has a name property so that they can be referenced in form scripts, but this name is managed by the application. The first instance of the column is the name of the column specified when it was created. More information: [Create and edit columns](../data-platform/create-edit-fields.md)<br /><br /> For each additional time that a column is included in a form, the name appends a number starting with 1 to the end. So if the column name is 'new_cost', the first instance is 'new_cost', the second is 'new_cost1', and so on, for each instance of the column in the form.<br /><br />**Note:** The column **Description** value provides tooltip text for the column when people place their cursor over it.|  
 |**Events**|**Form Libraries**|Specify any JavaScript web resources that will be used in the column `OnChange` event handler.<br /><br />|  
@@ -112,9 +112,9 @@ In some scenarios, it is desirable to render a data column within a form field i
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Tables**.
    > [!Note]
-   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a form within a solution, first navigate to your **Solution**, open the **Table**, and then select the **Forms** tab.
+   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a form within a solution, first navigate to your **Solution**, open the **Table**, and then select the **Forms** area.
 
-3. Select a table, such as the account table, and then select the **Forms** tab.
+3. Select a table, such as the account table, and then select the **Forms** area.
 
 4. Select the form where customizations are required.
 

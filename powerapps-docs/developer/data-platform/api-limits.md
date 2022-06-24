@@ -2,11 +2,10 @@
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 10/31/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 03/22/2022
+ms.reviewer: "jdaly"
 ms.topic: "article"
-author: "JimDaly" 
+author: "divka78" 
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
 manager: "ryjones" 
@@ -15,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Service protection API limits

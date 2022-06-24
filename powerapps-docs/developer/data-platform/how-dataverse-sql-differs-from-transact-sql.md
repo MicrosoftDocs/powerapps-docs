@@ -4,7 +4,7 @@ description: "Learn what subset of the Transact-SQL language is supported by the
 ms.custom: ""
 ms.date: 12/16/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

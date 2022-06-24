@@ -2,10 +2,10 @@
 title: Render the list associated with the current page
 description: Sample code to render the list associated with the current page in a portal.
 author: gitanjalisingh33msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/29/2021
+ms.date: 04/21/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -199,7 +199,7 @@ Render the List associated with the current page as a paginated sortable table. 
         {% for page in entityview.pages offset:page_offset limit:10 -%}
           <li{% if page == entityview.page %} class="active"{% endif %}>
             <a href="{{ request.url | add_query:'page', page | path_and_query  | h }}">
-              {{ page  | h }}
+              {{ page }}
             </a>
           </li>
         {% endfor -%}

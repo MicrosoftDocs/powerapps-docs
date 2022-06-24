@@ -4,7 +4,7 @@ description: "Learn how to specify a default view"
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -35,7 +35,7 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2. Select **Solutions** on the left navigation pane where the table is located.
-3. Open the table, and then select the **Views** tab.
+3. Open the table, and then select the **Views** area.
 
 4. Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for forms") next to the view, and then select **Set as default view**. This can also be set on the command bar.
 

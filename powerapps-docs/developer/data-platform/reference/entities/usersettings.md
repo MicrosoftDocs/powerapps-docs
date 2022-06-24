@@ -1,7 +1,7 @@
 ---
-title: "UserSettings table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 10/05/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -90,6 +90,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsSendAsAllowed](#BKMK_IsSendAsAllowed)
 - [LastAlertsViewedTime](#BKMK_LastAlertsViewedTime)
+- [LastModifiedTimeForViewPersonalizationSettings](#BKMK_LastModifiedTimeForViewPersonalizationSettings)
 - [LocaleId](#BKMK_LocaleId)
 - [LongDateFormatCode](#BKMK_LongDateFormatCode)
 - [NegativeCurrencyFormatCode](#BKMK_NegativeCurrencyFormatCode)
@@ -509,10 +510,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -596,10 +597,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -643,10 +644,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -666,10 +667,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -689,10 +690,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -712,10 +713,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -735,10 +736,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -758,10 +759,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -782,10 +783,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Enabled|
-|0|Disabled|
+|1|Enabled||
+|0|Disabled||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -805,10 +806,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -824,6 +825,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|lastalertsviewedtime|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_LastModifiedTimeForViewPersonalizationSettings"></a> LastModifiedTimeForViewPersonalizationSettings
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Stores the timestamp for when the ViewPersonalizationSettings attribute was updated for this user in the UserEntityUISettings table.|
+|DisplayName|Last modified timestamp for the view personalization settings in UserEntityUISettings table|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lastmodifiedtimeforviewpersonalizationsettings|
 |RequiredLevel|None|
 |Type|DateTime|
 
@@ -1104,10 +1122,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1127,10 +1145,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Expanded|
-|0|Collapsed|
+|1|Expanded||
+|0|Collapsed||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1150,10 +1168,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1569,10 +1587,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1592,10 +1610,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1615,10 +1633,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1638,10 +1656,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1661,10 +1679,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1780,10 +1798,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2086,41 +2104,41 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
-- [user_settings](#BKMK_user_settings)
 - [lk_usersettingsbase_createdby](#BKMK_lk_usersettingsbase_createdby)
 - [lk_usersettings_createdonbehalfby](#BKMK_lk_usersettings_createdonbehalfby)
 - [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
 - [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
+- [user_settings](#BKMK_user_settings)
 
 
 ### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
 
-See transactioncurrency Table [transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings) One-To-Many relationship.
-
-### <a name="BKMK_user_settings"></a> user_settings
-
-See systemuser Table [user_settings](systemuser.md#BKMK_user_settings) One-To-Many relationship.
+See the [transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_usersettingsbase_createdby"></a> lk_usersettingsbase_createdby
 
-See systemuser Table [lk_usersettingsbase_createdby](systemuser.md#BKMK_lk_usersettingsbase_createdby) One-To-Many relationship.
+See the [lk_usersettingsbase_createdby](systemuser.md#BKMK_lk_usersettingsbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usersettings_createdonbehalfby"></a> lk_usersettings_createdonbehalfby
 
-See systemuser Table [lk_usersettings_createdonbehalfby](systemuser.md#BKMK_lk_usersettings_createdonbehalfby) One-To-Many relationship.
+See the [lk_usersettings_createdonbehalfby](systemuser.md#BKMK_lk_usersettings_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usersettingsbase_modifiedby"></a> lk_usersettingsbase_modifiedby
 
-See systemuser Table [lk_usersettingsbase_modifiedby](systemuser.md#BKMK_lk_usersettingsbase_modifiedby) One-To-Many relationship.
+See the [lk_usersettingsbase_modifiedby](systemuser.md#BKMK_lk_usersettingsbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usersettings_modifiedonbehalfby"></a> lk_usersettings_modifiedonbehalfby
 
-See systemuser Table [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
 
-See businessunit Table [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) One-To-Many relationship.
+See the [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_user_settings"></a> user_settings
+
+See the [user_settings](systemuser.md#BKMK_user_settings) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
