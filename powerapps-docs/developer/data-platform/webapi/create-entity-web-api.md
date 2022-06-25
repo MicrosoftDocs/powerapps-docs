@@ -2,7 +2,7 @@
 title: "Create an entity record using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create an entity record on Microsoft Dataverse using the Web API"
 ms.custom: ""
-ms.date: 10/3/2020
+ms.date: 06/24/2022
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -132,7 +132,7 @@ OData-Version: 4.0
 
 ## Create related entity records in one operation
 
- You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. This approach has two advantages. It is more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it is [atomic](https://msdn.microsoft.com/library/aa719484\(v=vs.71\).aspx), where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created. 
+ You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. This approach has two advantages. It is more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it is atomic where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created. 
 
  As with a basic create, the response `OData-EntityId` header contains the Uri of the created entity. The URIs for the related entities created aren’t returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
