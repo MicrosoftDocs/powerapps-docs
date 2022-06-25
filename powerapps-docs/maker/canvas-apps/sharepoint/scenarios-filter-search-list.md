@@ -1,8 +1,8 @@
 ---
 title: Filter a search list in an app
-description: This article explains how to search for items and filter the list in your app when sourcing data from a SharePoint list.
+description: This article explains how to search for items and filter the list in your app when sourcing data from a list created using Microsoft Lists.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -25,14 +25,14 @@ In this scenario article, you'll learn how to filter a search list in a canvas a
 
 ## Prerequisites
 
-- You must have created an app using a SharePoint connector that connects to a SharePoint list.
-- The SharePoint list should consist of several list items to filter data inside the canvas app.
+- You must have created an app using a SharePoint connector that connects to a list created using Microsoft Lists.
+- The list should consist of several list items to filter data inside the canvas app.
 
 ## Scenario details
 
-You can use text input control in a canvas app to input text and filter the list such as a data table to filter list items from the connected SharePoint list.
+You can use text input control in a canvas app to input text and filter the list such as a data table to filter list items from the connected list.
 
-To search using text input and to filter the records, you have to use the function [filter](../functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
+To search using text input and to filter the records, you have to use the function [filter](../functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the list connection **Colors** and the column **Title** to filter the records.
 
 ## Example
 
@@ -41,7 +41,7 @@ To search using text input and to filter the records, you have to use the functi
 1. [Create](../app-from-sharepoint.md) a new app, or [edit](../edit-app.md) an existing app.
 
     > [!NOTE]
-    > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.
+    > Ensure the app uses SharePoint connection and connects to a list as described in the prerequisites.
 
 1. Select **+** (insert) from the left pane.
 
@@ -57,7 +57,7 @@ To search using text input and to filter the records, you have to use the functi
 
     `Filter([@Colors], StartsWith(Title, TextInput1.Text))`
 
-    Replace **Colors** with the name of your SharePoint list, **Title** with the name of the column in the list, and **TextInput1** with your text input control name.
+    Replace **Colors** with the name of your list, **Title** with the name of the column in the list, and **TextInput1** with your text input control name.
 
     ![Filter formula.](./media/scenarios-filter-search-list/filter-formula.png "Filter formula")
 

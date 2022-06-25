@@ -3,7 +3,7 @@ title: Embed a canvas app as tab app | Microsoft Docs
 description: Learn how to add an app to a Microsoft Teams channel using the PowerApps tab so that people you've shared the app with can open it in that channel.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 09/15/2020
@@ -23,7 +23,7 @@ contributors:
 
 # Embed a canvas app as tab app in Teams
 
-You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams using the **PowerApps** tab. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
+You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams using the **Power Apps** tab. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
 
 ![App embedded in Microsoft Teams.](media/open-app-embedded-in-teams/embedded-app.png "App embedded in Microsoft Teams")
 

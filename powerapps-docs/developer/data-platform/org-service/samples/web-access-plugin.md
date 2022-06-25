@@ -1,19 +1,20 @@
 ---
 title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write a plug-in that can access resources on the World Wide Web." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/17/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly"
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: pehecke
+manager: sunilg
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Sample: Web access from a plug-in
 

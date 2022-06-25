@@ -2,9 +2,8 @@
 title: "Create and edit virtual tables with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to create virtual tables"
 ms.custom: ""
-ms.date: 03/03/2020
+ms.date: 06/08/2022
 ms.reviewer: ""
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -25,8 +24,6 @@ search.app:
   - D365CE
 ---
 # Create and edit virtual tables that contain data from an external data source
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 A virtual table is a custom table in Microsoft Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  
   
@@ -55,7 +52,7 @@ Alternatively, developers can build their own data providers. Data providers are
  Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
   
 1. Sign in to Power Apps, and then select **Settings** > **Advanced settings**. 
-1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual Entity Data Sources**.  
+1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Administration** > **Virtual Entity Data Sources**.  
 1. On the actions toolbar, select **New**.  
 1. On the **Select  Data Provider** dialog box, select from the following data sources, and then select **OK**.
  
@@ -143,12 +140,22 @@ Virtual tables have these restrictions.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
 - Dashboards and charts are not supported with virtual tables.
-- Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, relevance search, and Power Apps portals solutions.  
+- Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, Dataverse search, and Power Apps portals solutions.  
 - Virtual tables are organization owned and don't support the row-level Dataverse security concepts. We recommend that you implement your own security model for the external data source.  
 - Column metadata properties that validate on update don’t apply to virtual tables. For example, a Whole Number column on a virtual table column may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual table.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
-- Virtual tables don't support change tracking and cannot be synchronized by using a Dataverse feature, such as the Data Export Service.
+- Virtual tables don't support change tracking and cannot be synchronized by using a Dataverse feature, such as the Data Export Service or Azure Synapse Link for Dataverse.
 - Virtual tables that use the included OData v4 data provider are enabled on outbound port 443.
-  
+- Business process flows are not supported with virtual tables. More information: [Unexpected error received when a user activates a business process flow](#unexpected-error-received-when-a-user-activates-a-business-process-flow)
+
+## Unexpected error received when a user activates a business process flow
+
+When a user attempts to activate a business process flow, they may receive an "unexpected error" message. Viewing the log file the following log entry is displayed.
+
+ErrorCode: 0x80040216
+Message: System.Web.HttpUnhandledException: Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: Business process flow cannot be enabled for Virtual Entity
+
+This issue occurs because virtual tables don't support business process flows.
+
 ### See also  
 
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 

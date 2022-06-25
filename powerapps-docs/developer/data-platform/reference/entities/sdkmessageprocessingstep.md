@@ -1,13 +1,13 @@
 ---
-title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -58,6 +58,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [AsyncAutoDelete](#BKMK_AsyncAutoDelete)
 - [CanUseReadOnlyConnection](#BKMK_CanUseReadOnlyConnection)
+- [Category](#BKMK_Category)
 - [Configuration](#BKMK_Configuration)
 - [Description](#BKMK_Description)
 - [EventExpander](#BKMK_EventExpander)
@@ -73,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Name](#BKMK_Name)
 - [PluginTypeId](#BKMK_PluginTypeId)
 - [Rank](#BKMK_Rank)
+- [RuntimeIntegrationProperties](#BKMK_RuntimeIntegrationProperties)
 - [SdkMessageFilterId](#BKMK_SdkMessageFilterId)
 - [SdkMessageId](#BKMK_SdkMessageId)
 - [SdkMessageProcessingStepId](#BKMK_SdkMessageProcessingStepId)
@@ -97,12 +99,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AsyncAutoDelete Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -121,13 +123,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanUseReadOnlyConnection Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_Category"></a> Category
+
+**Added by**: API messages extension solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Category|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|category|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Configuration"></a> Configuration
@@ -266,11 +287,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### InvocationSource Choices/Options
 
-|Value|Label|
-|-----|-----|
-|-1|Internal|
-|0|Parent|
-|1|Child|
+|Value|Label|Description|
+|-----|-----|--------|
+|-1|Internal||
+|0|Parent||
+|1|Child||
 
 
 
@@ -314,10 +335,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Mode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Synchronous|
-|1|Asynchronous|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Synchronous||
+|1|Asynchronous||
 
 
 
@@ -365,6 +386,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_RuntimeIntegrationProperties"></a> RuntimeIntegrationProperties
+
+**Added by**: RuntimeIntegration Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds miscellaneous properties related to runtime integration.|
+|DisplayName|Runtime Integration Properties|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|runtimeintegrationproperties|
+|MaxLength|512|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_SdkMessageFilterId"></a> SdkMessageFilterId
@@ -437,21 +476,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Stage Choices/Options
 
-|Value|Label|
-|-----|-----|
-|5|Initial Pre-operation (For internal use only)|
-|10|Pre-validation|
-|15|Internal Pre-operation Before External Plugins (For internal use only)|
-|20|Pre-operation|
-|25|Internal Pre-operation After External Plugins (For internal use only)|
-|30|Main Operation (For internal use only)|
-|35|Internal Post-operation Before External Plugins (For internal use only)|
-|40|Post-operation|
-|45|Internal Post-operation After External Plugins (For internal use only)|
-|50|Post-operation (Deprecated)|
-|55|Final Post-operation (For internal use only)|
-|80|Pre-Commit stage fired before transaction commit (For internal use only)|
-|90|Post-Commit stage fired after transaction commit (For internal use only)|
+|Value|Label|Description|
+|-----|-----|--------|
+|5|Initial Pre-operation (For internal use only)||
+|10|Pre-validation||
+|15|Internal Pre-operation Before External Plugins (For internal use only)||
+|20|Pre-operation||
+|25|Internal Pre-operation After External Plugins (For internal use only)||
+|30|Main Operation (For internal use only)||
+|35|Internal Post-operation Before External Plugins (For internal use only)||
+|40|Post-operation||
+|45|Internal Post-operation After External Plugins (For internal use only)||
+|50|Post-operation (Deprecated)||
+|55|Final Post-operation (For internal use only)||
+|80|Pre-Commit stage fired before transaction commit (For internal use only)||
+|90|Post-Commit stage fired after transaction commit (For internal use only)||
 
 
 
@@ -512,11 +551,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SupportedDeployment Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Server Only|
-|1|Microsoft Dynamics 365 Client for Outlook Only|
-|2|Both|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Server Only||
+|1|Microsoft Dynamics 365 Client for Outlook Only||
+|2|Both||
 
 
 <a name="read-only-attributes"></a>
@@ -566,12 +605,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -728,12 +767,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -954,7 +993,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SdkMessageProcessingStep_AsyncOperations"></a> SdkMessageProcessingStep_AsyncOperations
 
-Same as asyncoperation table [SdkMessageProcessingStep_AsyncOperations](asyncoperation.md#BKMK_SdkMessageProcessingStep_AsyncOperations) Many-To-One relationship.
+Same as the [SdkMessageProcessingStep_AsyncOperations](asyncoperation.md#BKMK_SdkMessageProcessingStep_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -969,7 +1008,7 @@ Same as asyncoperation table [SdkMessageProcessingStep_AsyncOperations](asyncope
 
 ### <a name="BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage"></a> sdkmessageprocessingstepid_sdkmessageprocessingstepimage
 
-Same as sdkmessageprocessingstepimage table [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage) Many-To-One relationship.
+Same as the [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage) many-to-one relationship for the [sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1003,51 +1042,51 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
 
-See plugintype Table [plugintype_sdkmessageprocessingstep](plugintype.md#BKMK_plugintype_sdkmessageprocessingstep) One-To-Many relationship.
+See the [plugintype_sdkmessageprocessingstep](plugintype.md#BKMK_plugintype_sdkmessageprocessingstep) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
 
 ### <a name="BKMK_sdkmessagefilterid_sdkmessageprocessingstep"></a> sdkmessagefilterid_sdkmessageprocessingstep
 
-See sdkmessagefilter Table [sdkmessagefilterid_sdkmessageprocessingstep](sdkmessagefilter.md#BKMK_sdkmessagefilterid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [sdkmessagefilterid_sdkmessageprocessingstep](sdkmessagefilter.md#BKMK_sdkmessagefilterid_sdkmessageprocessingstep) one-to-many relationship for the [sdkmessagefilter](sdkmessagefilter.md) table/entity.
 
 ### <a name="BKMK_serviceendpoint_sdkmessageprocessingstep"></a> serviceendpoint_sdkmessageprocessingstep
 
-See serviceendpoint Table [serviceendpoint_sdkmessageprocessingstep](serviceendpoint.md#BKMK_serviceendpoint_sdkmessageprocessingstep) One-To-Many relationship.
+See the [serviceendpoint_sdkmessageprocessingstep](serviceendpoint.md#BKMK_serviceendpoint_sdkmessageprocessingstep) one-to-many relationship for the [serviceendpoint](serviceendpoint.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessageprocessingstep_createdonbehalfby"></a> lk_sdkmessageprocessingstep_createdonbehalfby
 
-See systemuser Table [lk_sdkmessageprocessingstep_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_createdonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessageprocessingstep_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sdkmessageprocessingstep"></a> organization_sdkmessageprocessingstep
 
-See organization Table [organization_sdkmessageprocessingstep](organization.md#BKMK_organization_sdkmessageprocessingstep) One-To-Many relationship.
+See the [organization_sdkmessageprocessingstep](organization.md#BKMK_organization_sdkmessageprocessingstep) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_impersonatinguserid_sdkmessageprocessingstep"></a> impersonatinguserid_sdkmessageprocessingstep
 
-See systemuser Table [impersonatinguserid_sdkmessageprocessingstep](systemuser.md#BKMK_impersonatinguserid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [impersonatinguserid_sdkmessageprocessingstep](systemuser.md#BKMK_impersonatinguserid_sdkmessageprocessingstep) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessageprocessingstep_modifiedonbehalfby"></a> lk_sdkmessageprocessingstep_modifiedonbehalfby
 
-See systemuser Table [lk_sdkmessageprocessingstep_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessageprocessingstep_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_modifiedby_sdkmessageprocessingstep"></a> modifiedby_sdkmessageprocessingstep
 
-See systemuser Table [modifiedby_sdkmessageprocessingstep](systemuser.md#BKMK_modifiedby_sdkmessageprocessingstep) One-To-Many relationship.
+See the [modifiedby_sdkmessageprocessingstep](systemuser.md#BKMK_modifiedby_sdkmessageprocessingstep) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_sdkmessageid_sdkmessageprocessingstep"></a> sdkmessageid_sdkmessageprocessingstep
 
-See sdkmessage Table [sdkmessageid_sdkmessageprocessingstep](sdkmessage.md#BKMK_sdkmessageid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [sdkmessageid_sdkmessageprocessingstep](sdkmessage.md#BKMK_sdkmessageid_sdkmessageprocessingstep) one-to-many relationship for the [sdkmessage](sdkmessage.md) table/entity.
 
 ### <a name="BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep"></a> sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep
 
-See sdkmessageprocessingstepsecureconfig Table [sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep](sdkmessageprocessingstepsecureconfig.md#BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep](sdkmessageprocessingstepsecureconfig.md#BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep) one-to-many relationship for the [sdkmessageprocessingstepsecureconfig](sdkmessageprocessingstepsecureconfig.md) table/entity.
 
 ### <a name="BKMK_createdby_sdkmessageprocessingstep"></a> createdby_sdkmessageprocessingstep
 
-See systemuser Table [createdby_sdkmessageprocessingstep](systemuser.md#BKMK_createdby_sdkmessageprocessingstep) One-To-Many relationship.
+See the [createdby_sdkmessageprocessingstep](systemuser.md#BKMK_createdby_sdkmessageprocessingstep) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_plugintypeid_sdkmessageprocessingstep"></a> plugintypeid_sdkmessageprocessingstep
 
-See plugintype Table [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK_plugintypeid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK_plugintypeid_sdkmessageprocessingstep) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
 
 ### See also
 

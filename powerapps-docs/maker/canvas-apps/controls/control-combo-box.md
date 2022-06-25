@@ -2,11 +2,10 @@
 title: Combo box control in Power Apps
 description: Learn about the details, properties and examples of the combo box control in Power Apps.
 author: chmoncay
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/06/2021
+ms.date: 05/09/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -40,6 +39,9 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **[Items](properties-core.md)** – The source of data from which selections can be made.
 
 **DefaultSelectedItems** – The initial selected item(s) before the user interacts with the control.
+
+> [!NOTE]
+> **Default** property is deprecated, use **DefaultSelectedItems** instead.
 
 **SelectedItems** – List of selected items resulting from user interaction.
 
@@ -94,6 +96,9 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+> [!NOTE]
+> Flyout border properties are controlled by **Border** properties.
 
 ## Examples
 

@@ -2,7 +2,7 @@
 title: Work with permissions in a lookup list from a SharePoint site
 description: This article explains how to configure lookup list permissions in SharePoint when using a canvas app.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -21,24 +21,24 @@ contributors:
 ---
 # Work with permissions in a lookup list from a SharePoint site
 
-In this scenario article, you'll learn how to configure permissions for fields that use lookup columns from SharePoint lists. When you create a canvas app that connects to SharePoint, the app follows permissions configured inside SharePoint. Unique permissions at different levels inside SharePoint can become confusing when surfacing lists, libraries, or items on a canvas app screen.
+In this scenario article, you'll learn how to configure permissions for fields that use lookup columns from a list created using Microsoft Lists. When you create a canvas app that connects to SharePoint, the app follows permissions configured inside SharePoint. Unique permissions at different levels inside SharePoint can become confusing when surfacing lists, libraries, or items on a canvas app screen.
 
 The example in this tutorial explains how you can work with a canvas app that connects to SharePoint with such broken inheritance.
 
 ## Prerequisites
 
-- You must have created an app using a SharePoint connector that connects to a SharePoint list.
-- The SharePoint list should consist of a lookup column with values from another column.
+- You must have created an app using a SharePoint connector that connects to a list.
+- The list should consist of a lookup column with values from another column.
 - You need two user accounts with access to the app and the SharePoint site hosting the lists.
-- You need to be knowledgeable about how to configure SharePoint lists and list/item permissions.
+- You need to be knowledgeable about how to configure lists and list/item permissions.
 
 ## Scenario details
 
-You can customize permissions for a SharePoint list or list item when you [stop inheriting permissions](https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c). Consider, for example, that you connect your app with a SharePoint site that has a broken inheritance at different levels. The app behavior might appear confusing if the user doesn't have access to the correct SharePoint objects as intended. Ensure the user can browse to the list and work with the objects with the same permissions that you expect the canvas app to surface.
+You can customize permissions for a list or list item when you [stop inheriting permissions](https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c). Consider, for example, that you connect your app with a SharePoint site that has a broken inheritance at different levels. The app behavior might appear confusing if the user doesn't have access to the correct SharePoint objects as intended. Ensure the user can browse to the list and work with the objects with the same permissions that you expect the canvas app to surface.
 
 ## Example
 
-1. Create two SharePoint lists with one list consuming columns as lookups from the other list. In this tutorial, we'd use two lists:
+1. Create two lists with one list consuming columns as lookups from the other list. In this tutorial, we'd use two lists:
 
     | List | Columns
     | - | - |
@@ -73,7 +73,7 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
     Since the SharePoint site, list or items aren't shared with the user, the app will show no available items.
 
-1. Grant the user item-level permission to a SharePoint list item.
+1. Grant the user item-level permission to a list item.
 
     ![Item level permission.](./media/scenarios-lookup-list-permissions/item-level-permission.png "Item level permission")
 

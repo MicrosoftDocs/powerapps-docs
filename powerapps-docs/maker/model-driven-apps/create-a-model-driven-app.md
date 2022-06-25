@@ -1,15 +1,17 @@
 ---
-title: "Example: Create a model-driven app | MicrosoftDocs"
+title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 07/05/2021
-ms.service: powerapps
+ms.date: 05/19/2022
+
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: matp
 ms.reviewer: matp
 ---
-# Create a model-driven app that has an account table page
+# Create a model-driven app that has an account table page (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
 
@@ -45,10 +47,6 @@ We recommend creating your model-driven app from a solution. A solution is a pac
 
 1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
 
-1. Select **Modern app designer**, and then select **Create**
-
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app.":::
-
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 
    :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-2.png" alt-text="Enter a name and then select Create.":::
@@ -64,17 +62,17 @@ Next, you add a new page to the model-driven app.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
-1. Select the **Account** table, and then select **Add**.
+1. Select table such as **Contact**, and then select **Add**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app.":::
 
-   The account form and view appear in the pages menu.
+   The contact form and view appear in the pages menu.
 
-1. Select **Account view**, and then select **Manage views**.
+1. Select **Contact view**, and then select **Add views**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
 
-1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**, and then select **Save**.
+1. Select the views that you want to add.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 

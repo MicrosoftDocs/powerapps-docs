@@ -3,7 +3,7 @@ title: "Add or edit Power BI visualizations on your dashboard | MicrosoftDocs"
 description: How to edit Power BI visualizations on dashboards
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/15/2019
@@ -34,8 +34,7 @@ Create rich, interactive reports and real-time visualizations with [!INCLUDE[pn_
 > 
 > - Enable [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations for your organization in **Settings** > **Administration** > **System Settings** > **Reporting** tab > **Allow Power BI visualization embedding**.  
 > - Have a [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] account and have access to at least one [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard.  
-> - Avoid adding [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations to system dashboards; it's not supported.
-> - Enable third-party cookies in your browser, otherwise authentication to [!INCLUDE[pn_power_bi_for_office_365_short] will fail.
+> - Enable third-party cookies in your browser, otherwise authentication to [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] will fail.
 
   
 
@@ -86,7 +85,9 @@ To show the features available with a [!INCLUDE[pn_power_bi_for_office_365_short
   
 1. Select the **Refresh** button ![Refresh button.](media/embed-pbi-tile-refresh-button.png "Refresh button") to refresh the tile’s underlying report data.  
   
-2. Select the **Open in Power BI** button ![Open in Power BI button](media/open-in-power-bi.png "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.  
+2. Select the **Open in Power BI** button ![Open in Power BI button](media/open-in-power-bi.png "Open in Power BI button") to open the [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] dashboard that contains the visualization  in a new browser tab.
+> [!NOTE]
+   > Power BI options to open a report in Power BI is not supported on mobile devices.
   
 3. Select the **Enlarge** button ![Enlarge tile.](media/embed-pbi-tile-enlarge-button.png "Enlarge tile") to expand the visualization and increase the viewing area for the visualization, like the Sales Pipeline tile displayed here.  
   

@@ -1,11 +1,10 @@
 ---
-title: Create a component for canvas apps
+title: Canvas component overview (contains video)
 description: Learn about how to create reusable components for canvas apps.
 author: hemantgaur
-ms.service: powerapps
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2021
+ms.date: 06/10/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -15,16 +14,22 @@ search.app:
 contributors:
   - hemantgaur
   - tapanm-msft
+  - gregli-msft
+ms.custom: intro-internal
 ---
 
-# Create a component for canvas apps
+# Canvas component overview
 
-> [!IMPORTANT]
-> This feature is still in public preview. For more information, see [Experimental and preview features](./working-with-experimental-preview.md).
+> [!NOTE]
+> - This section explains canvas components that encompasses low-code UI extensibility capabilities. Professional developers can also use the [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) to build code components.
+> - Canvas components can also be used in model-driven apps using custom pages and component library. More information: [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
 
 Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across apps using a [component library](component-library.md). Components can use advanced features such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
 
 Components are useful in building larger apps that have similar control patterns. If you update a component definition inside the app, all instances in the app reflect your changes. Components also reduce duplication of efforts by eliminating the need to copy/paste controls and improve performance. Components also help create collaborative development and standardizes look-and-feel in an organization when you use a [component library](component-library.md).
+
+Watch this video to learn how to use components in canvas apps:
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLlkO]
 
 ## Components in canvas apps
 
@@ -44,13 +49,6 @@ Components available inside the app are listed under the **Custom** category in 
 
 > [!NOTE]
 > Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](../../developer/component-framework/overview.md).
-
-## Scope
-
-Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component. And you can't refer to anything outside of the component from inside the component. The exception is data sources shared between an app and its components. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
-
-> [!NOTE]
-> You can insert instances of components into a screen within a component library, and preview that screen for testing purposes. Also, note that the component library does not display when using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/).
 
 ## Custom properties
 
@@ -73,11 +71,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 ### Create a new component
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **Apps** and select **Canvas app from blank**.
-
-1. Provide an app name, select any layout, and then select **Create**.
+1. Create a [blank canvas app](create-blank-app.md).
 
 1. In the **Tree View**, select **Components** and then select **New component** to create a new component.
 
@@ -187,12 +181,37 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
     The **Label** control reflects the menu item that you selected most recently.
 
-## Import and export components
+## Scope
+
+Input and output properties clearly define the interface between a component and its host app.  By default, the component is encapsulated so that it's easier to reuse the component across apps, requiring the use of the properties to pass the information in and out of the component. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable component-definition updates&mdash;especially across apps with component libraries.
+
+But there are times when a component may want to share a data source or a variable with its host. Especially when the component is only intended for use in one particular app. For these cases, you can directly access app level information by turning on the **Access app scope** switch in the component's property pane:
+
+![Access app scope switch in component property pane](media/create-component/access-app-scope.png)
+
+When **Access app scope** is turned on, the following are accessible from within a component:
+
+- Global variables
+- Collections
+- Controls and components on screens, such as a TextInput control
+- Tabular data sources, such as Dataverse tables
+
+When this setting is turned Off, none of the above are available to the component. [**Set**](functions/function-set.md) and [**Collect**](functions/function-clear-collect-clearcollect.md) functions are still available but the resulting variables and collections are scoped to the component instance and not shared with the app.
+
+Non-tabular data sources, such as Azure Blob Storage or a custom connector, are available whether this setting is turned on or off. Think of these data sources more like referencing an environment resource rather than an app resource. When a component is brought into an app from a component library, these data sources from the environment are also brought in.
+
+Components in a component library can never have access to app scope, as there's no single app scope to refer to. So, this setting isn't available in this context, and is effectively off. Once imported into an app, and if customization was allowed by the component maker, the switch can be enabled, and the component can be modified to use the app scope.
+
+> [!NOTE]
+> - You can insert instances of components into a screen within a component library, and preview that screen for testing purposes.
+> - Component library doesn't display when using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/).
+
+## Import and export components (retired)
 
 > [!NOTE]
 > This feature is retired. [Component libraries](component-library.md) are the recommended way to reuse the components across the apps. When using component library, an app maintains dependencies on the components it uses. The app maker will be alerted when the updates to dependent components become available. Hence, all new reusable components should be created within the component libraries instead.
 
-The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **File** > **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
+The ability to import and export of components is disabled by default since this feature is retired. While recommended method to work with components is to use [component libraries](component-library.md), you can still enable this feature on a per-app basis as an exception until the feature is removed. To do this, [edit your app](edit-app.md) in Power Apps Studio and then, go to **Settings** > **Upcoming features** > **Retired** > Set **Export and import components** to On.
 
 ![Enable export and import of components.](./media/create-component/settings-enable-import-export.png "Enable export and import of components")
 
@@ -211,6 +230,9 @@ You can save an app with existing components to a file locally and then reuse th
 If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. 
 
 After you create components in an app, other apps can consume the components from this app by importing them.
+
+> [!NOTE]
+> If a component that you imported from another app is modified in the original app, you must manually import the component again in the consuming app to receive latest component changes. Use component libraries instead to work with [component updates](component-library.md#update-a-component-library) more efficiently.
 
 ### Export components from your app
 
@@ -248,16 +270,24 @@ Once you save the app, you can reuse the components of this app using the same m
 
 ## Known limitations
 
+- A custom input property can't be configured to a custom output property value across same or different instances when you have two or more instances of same component in an app. This action will result in a circular reference warning message. To work around this limitation, you can create a copy of the component inside your app.
+- Adding and running Power Automate flows in component libraries is not supported.
 - You can't save data sources, forms, and data tables with components.
-- Collections in components are not supported.
-- You can't insert a component into a gallery or a form.
-- A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
-- You can't package media files when you import a component.
+- You can't insert a component into a gallery or a form (including SharePoint form).
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
 
 ## Next steps
 
 Learn to use a [component library](component-library.md) to create a repository of reusable components.
 
+### See also
+
+- [Component library](component-library.md)
+- [Component library application lifecycle management (ALM)](component-library-alm.md)
+- [Map input fields of a component](map-component-input-fields.md)
+- [Add multimedia to a component](component-multimedia.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

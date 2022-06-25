@@ -1,25 +1,18 @@
 ---
 title: "Perform conditional operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
-ms.custom: ""
-ms.date: 05/04/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 771002b0-825a-462d-bbf0-1aeba4b726c8
-caps.latest.revision: 16
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Perform conditional operations using the Web API

@@ -1,13 +1,13 @@
 ---
-title: "ExchangeSyncIdMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ExchangeSyncIdMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ExchangeSyncIdMapping table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -133,12 +133,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDeletedInExchange Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -156,12 +156,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsUnlinkedInCRM Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -344,6 +344,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -417,12 +418,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description||
 |DisplayName||
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -480,15 +497,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_user_exchangesyncidmapping"></a> user_exchangesyncidmapping
 
-See systemuser Table [user_exchangesyncidmapping](systemuser.md#BKMK_user_exchangesyncidmapping) One-To-Many relationship.
+See the [user_exchangesyncidmapping](systemuser.md#BKMK_user_exchangesyncidmapping) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_exchangesyncidmapping"></a> team_exchangesyncidmapping
 
-See team Table [team_exchangesyncidmapping](team.md#BKMK_team_exchangesyncidmapping) One-To-Many relationship.
+See the [team_exchangesyncidmapping](team.md#BKMK_team_exchangesyncidmapping) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
 
-See businessunit Table [business_unit_exchangesyncidmapping](businessunit.md#BKMK_business_unit_exchangesyncidmapping) One-To-Many relationship.
+See the [business_unit_exchangesyncidmapping](businessunit.md#BKMK_business_unit_exchangesyncidmapping) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

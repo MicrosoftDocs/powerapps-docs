@@ -1,13 +1,13 @@
 ---
-title: "AppModuleComponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "AppModuleComponent table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the AppModuleComponent table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -121,15 +121,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Entities|
-|26|Views|
-|29|Business Process Flows|
-|48|Command (Ribbon) for Forms, Grids, sub grids|
-|59|Charts|
-|60|Forms|
-|62|Sitemap|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Entities||
+|26|Views||
+|29|Business Process Flows||
+|48|Command (Ribbon) for Forms, Grids, sub grids||
+|59|Charts||
+|60|Forms||
+|62|Sitemap||
 
 
 
@@ -164,12 +164,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -187,12 +187,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMetadata Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Metadata|
-|0|Data|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Metadata||
+|0|Data||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -236,11 +236,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RootComponentBehavior Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Include Subcomponents|
-|1|Do not include subcomponents|
-|2|Include As Shell Only|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Include Subcomponents||
+|1|Do not include subcomponents||
+|2|Include As Shell Only||
 
 
 
@@ -434,8 +434,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -591,23 +591,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_appmodule_appmodulecomponent"></a> appmodule_appmodulecomponent
 
-See appmodule Table [appmodule_appmodulecomponent](appmodule.md#BKMK_appmodule_appmodulecomponent) One-To-Many relationship.
+See the [appmodule_appmodulecomponent](appmodule.md#BKMK_appmodule_appmodulecomponent) one-to-many relationship for the [appmodule](appmodule.md) table/entity.
 
 ### <a name="BKMK_lk_appmodulecomponent_createdonbehalfby"></a> lk_appmodulecomponent_createdonbehalfby
 
-See systemuser Table [lk_appmodulecomponent_createdonbehalfby](systemuser.md#BKMK_lk_appmodulecomponent_createdonbehalfby) One-To-Many relationship.
+See the [lk_appmodulecomponent_createdonbehalfby](systemuser.md#BKMK_lk_appmodulecomponent_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appmodulecomponent_modifiedonbehalfby"></a> lk_appmodulecomponent_modifiedonbehalfby
 
-See systemuser Table [lk_appmodulecomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_appmodulecomponent_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appmodulecomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_appmodulecomponent_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appmodulecomponent_createdby"></a> lk_appmodulecomponent_createdby
 
-See systemuser Table [lk_appmodulecomponent_createdby](systemuser.md#BKMK_lk_appmodulecomponent_createdby) One-To-Many relationship.
+See the [lk_appmodulecomponent_createdby](systemuser.md#BKMK_lk_appmodulecomponent_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appmodulecomponent_modifiedby"></a> lk_appmodulecomponent_modifiedby
 
-See systemuser Table [lk_appmodulecomponent_modifiedby](systemuser.md#BKMK_lk_appmodulecomponent_modifiedby) One-To-Many relationship.
+See the [lk_appmodulecomponent_modifiedby](systemuser.md#BKMK_lk_appmodulecomponent_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

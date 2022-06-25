@@ -2,11 +2,11 @@
 title: Use Cognitive Services in canvas apps
 description: Build a basic canvas app that uses the Azure Cognitive Services Text Analytics API to analyze text.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/01/2021
+ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -43,17 +43,7 @@ Before you begin building a canvas app using the Text Analytics API, you must pr
 
 Create a blank app and add a connection with the **Text Analytics** connector.
 
-1. Go to [Power Apps](https://make.powerapps.com).
-
-1. Select **Canvas app from blank**.
-
-    ![Create an app from blank.](./media/cognitive-services-api/app-from-blank.png "Create an app from blank")
-
-1. Enter app name.
-
-1. Choose a layout for the app, and select **Create**. For this demo, we'll use **Tablet** layout.
-
-    ![Name the app, choose the layout, and select Create.](./media/cognitive-services-api/app-name-create.png "Name the app, choose the layout, and select Create")
+1. Start by creating a [blank canvas app](create-blank-app.md) with **Tablet** layout, and a name like "Demo app with Text Analytics API".
 
 1. Select **Data** from the left pane.
 
@@ -408,7 +398,7 @@ Now that you've created a basic structure of the app with the expected design, l
     In this step, the formula uses the following functions.
 
     - [ClearCollect](functions/function-clear-collect-clearcollect.md) - creates collections for each option (checkboxes) for use with Cognitive Services. There are two collections used. First for collecting the information from the text input (**tiTextToAnalyze**). And then, second collection to store the Text Analytics related API call results.
-    - [Cognitive Services Text Analytics API Actions](/connectors/cognitiveservicestextanalytics#actions) - used in the formula to store the analysis details in the local collections. Actions used: [Detect Language (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#detect-language-(v3.0)-(preview)), [Sentiment (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#sentiment-(v3.0)-(preview)), [Entity Linking (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#entity-linking-(v3.0)-(preview)), [Key Phrases (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#key-phrases-(v3.0)-(preview)), [Named Entity Recognition (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#named-entity-recognition-(v3.0)-(preview)) 
+    - [Cognitive Services Text Analytics API Actions](/connectors/cognitiveservicestextanalytics#actions) - used in the formula to store the analysis details in the local collections. Actions used: [Detect Language (V3.0) (preview)](/connectors/cognitiveservicestextanalytics/#detect-language-(v3.0)-(preview)), [Sentiment (V3.0) (preview)](/connectors/cognitiveservicestextanalytics/#sentiment-(v3.0)-(preview)), [Entity Linking (V3.0) (preview)](/connectors/cognitiveservicestextanalytics/#entity-linking-(v3.0)-(preview)), [Key Phrases (V3.0) (preview)](/connectors/cognitiveservicestextanalytics/#key-phrases-(v3.0)-(preview)), [Named Entity Recognition (V3.0) (preview)](/connectors/cognitiveservicestextanalytics/#named-entity-recognition-(v3.0)-(preview)) 
 
 1. Copy and paste the following formula as the value of the **Text** property for the **dLanguage** label.
 

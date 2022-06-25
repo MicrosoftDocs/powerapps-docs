@@ -2,12 +2,11 @@
 title: Show text, dates, and times in canvas apps
 description: Learn about how to show text, dates, and times in a canvas app.
 author: tapanm-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 12/18/2020
+ms.date: 08/17/2021
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -249,6 +248,8 @@ You may need to convert data that you didn't expect. If you add **[Text input](c
    
     You can add entries to **Hour** and **Minute** so that users can select from a bigger range of hours and a more precise number of minutes. You can also add a third **[Drop down](controls/control-drop-down.md)** control so that users can specify seconds. If you add a third list, set the **[Text](controls/properties-core.md)** property of the **[Label](controls/control-text-box.md)** control to the following expression:<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
 
+### See also
 
+[Date picker control examples](controls/control-date-picker.md#examples)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

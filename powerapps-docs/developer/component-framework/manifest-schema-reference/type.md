@@ -1,17 +1,15 @@
 ---
 title: Type | Microsoft Docs
 description: The type in the type-group node defines the data type in Microsoft Dataverse.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d9fb178c-6cc6-48cc-99c0-9972e37dec3e
+contributors:
+ - JimDaly
 ---
 
 # type

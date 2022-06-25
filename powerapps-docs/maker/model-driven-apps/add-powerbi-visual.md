@@ -1,11 +1,10 @@
 ---
-title: "Add Add a Power BI visual in a a model-driven app | MicrosoftDocs"
+title: "Add a Power BI visual in a model-driven app (contains video) | MicrosoftDocs"
 description: "Learn how to add Power BI visuals into model-driven apps"
 ms.date: 06/25/2021
-ms.service: powerapps
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: matp
 ms.reviewer: matp
 ---
 
@@ -17,7 +16,9 @@ In this tutorial, you create a quick Power BI report and a model-driven app. The
 
 ## Prerequisites
 
-To complete this tutorial, you need the ability to create Power BI dashboards and reports in Power BI.
+To complete this tutorial, you need the following:
+- Ability to create Power BI dashboards and reports in Power BI.
+- Enable the Power BI visualization embedding setting for your environment from the Power Platform admin center. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Create a workspace, dashboard, and report
 
@@ -129,7 +130,7 @@ In this section, you create a model-driven app and add the Power BI embedded rep
 
    ![Select the Edit Site Map button to open the Site Map](media/add-a-power-bi-visual-into-a-model-driven-app/create-a-new-model-driven-app-4.png "Select the Edit Site Map button to open the Site Map")
 
-1. Select **New subarea** on the site map. Then select the following **Properties**, and then select select **Save**:
+1. Select **New subarea** on the site map. Then select the following **Properties**, and then select **Save**:
    - **Type**: **Dashboard**
    - **Default Dashboard**: **Test Embedded BI Report**
    - **Title**: **Test Embedded BI**

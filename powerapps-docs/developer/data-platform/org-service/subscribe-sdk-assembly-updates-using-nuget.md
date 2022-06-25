@@ -1,19 +1,20 @@
 ---
 title: "Subscribe to SDK assembly updates using NuGet (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Microsoft Dataverse (.NET Framework) SDK assemblies and some command-line tools are available through a software distribution website called nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Microsoft Dataverse (.NET Framework) SDK assemblies and some command-line tools are available through nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: phecke # GitHub ID
+ms.author: pehecke # MSFT alias of Microsoft employees only
+manager: kvivek # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Subscribe to SDK assembly updates using NuGet
@@ -33,7 +34,6 @@ The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk
 |[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools/)|Contains the SDK tools authored by the Microsoft Dynamics 365 team.|
 |[Microsoft.CrmSdk.Deployment](https://www.nuget.org/packages/Microsoft.CrmSdk.Deployment/)|Contains the Microsoft.Xrm.Sdk.Deployment.dll assembly|
 |[Microsoft.CrmSdk.Outlook](https://www.nuget.org/packages/Microsoft.CrmSdk.Outlook/)|Contains the Microsoft.Crm.Outlook.dll assembly|
-|[Microsoft.CrmSdk.WebApi.Samples.HelperCode](https://www.nuget.org/packages/Microsoft.CrmSdk.WebApi.Samples.HelperCode/)|C# helper code authored by the Power Apps documentation team. This code is for use with the Web API. These classes provide web service authentication for both on-premises and online deployments, error handling, and connection string configuration. These classes are used in our Web API samples|
 |[Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/)|Contains the Microsoft.Xrm.Sdk.Workflow.dll assembly|
 |[Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/)|Contains the  Microsoft.Xrm.Tooling.Connector assembly |
 |[Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell/)|Contains the assemblies for Xrm.Tooling.Connector Powershell |

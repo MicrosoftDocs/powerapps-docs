@@ -1,10 +1,10 @@
 ---
-title: "Visualize hierarchical data with model-driven apps | MicrosoftDocs"
+title: "Configure visualizations for hierarchical data with model-driven apps | MicrosoftDocs"
 description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 06/11/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,7 +24,7 @@ search.app:
 ---
 # Visualize hierarchical data with model-driven apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When a table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)
 
@@ -109,7 +109,6 @@ Based on your needs, you can choose between using a tree view, which shows the e
 ### See also 
 
 [Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)<br />
-[Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

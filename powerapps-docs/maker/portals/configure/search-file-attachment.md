@@ -2,15 +2,15 @@
 title: Search within file attachment content
 description: Learn how to configure your portal to search within file attachment content in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 05/19/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
@@ -38,8 +38,12 @@ When you search for a term, the search results also include attachments. If the 
 ![Download attachment.](../media/search-attachment-content.png "Download attachment") 
 
 > [!NOTE]
-> - To use this functionality, you must [enable relevance search](/dynamics365/customer-engagement/admin/configure-relevance-search-organization). More information: [Relevance search](/dynamics365/customer-engagement/basics/relevance-search-results)
- 
+> [Dataverse search](/power-platform/admin/configure-relevance-search-organization) must be enabled in your environment to use this functionality.
+
+### Search through knowledge article attachments on the portal
+
+You can enable the portal to search through knowledge article attachments by setting the **Sync knowledge article attachments to portal** option to **Yes** in the Dynamics 365 Customer Service admin center or Customer Service Hub app. This allows Dataverse search to look through knowledge article attachments and make information easily accessible to knowledge consumers. With this attachment capability, you won’t need to use the notes attachments for the portal. Knowledge article attachments will automatically be synced to the notes attachment. More information: [Update knowledge article attachments for portal](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article?tabs=customerserviceadmincenter#update-knowledge-article-attachments-for-portal)
+
 ## Update portal configurations
 
 If you already have a portal before April 2018 and you have upgraded your portal to the latest version, you must use the following configurations to have the same user experience as a new portal installation.

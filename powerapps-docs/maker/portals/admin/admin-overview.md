@@ -2,21 +2,24 @@
 title: Power Apps portals admin center
 description: Learn about Power Apps portals admin center.
 author: neerajnandwana-msft
-ms.service: powerapps
-ms.topic: conceptual
-ms.custom: intro-internal
-ms.date: 04/21/2021
+
+ms.topic: overview
+
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
 
 # Power Apps portals admin center
 
-The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
+The Power Apps portals admin center allows you to perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
+
+> [!NOTE]
+> The Power Apps portals admin center is also used to configure admin options for Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 ## Open Power Apps portals admin center
 
@@ -44,7 +47,7 @@ Power Apps portals admin center is now open.
 
 ## Add yourself as an owner of the Azure AD application
 
-If you are not a global administrator and you try to manage a portal that has already been provisioned, or you resubmit the provisioning if it failed, you must be the owner of the Azure Active Directory (Azure AD) application connected to your portal.
+If you aren't a global administrator and you try to manage a portal that has already been provisioned, or you resubmit the provisioning if it failed, you must be the owner of the Azure Active Directory (Azure AD) application connected to your portal.
 
 1. Go to the Power Apps portals admin center and open the **Portal Details** tab.
 

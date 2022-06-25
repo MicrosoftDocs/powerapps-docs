@@ -4,7 +4,7 @@ description: "Learn how to enable feedback for a table"
 ms.custom: ""
 ms.date: 07/28/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Configure a table for feedback/ratings
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Let customers or employees submit feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback. Use this capability for the following scenarios: 
 - For customers to capture data via a portal or survey.
@@ -89,7 +89,7 @@ The feedback table form has the following columns:
 Optionally, you can create a rollup column that's based on the feedback or ratings for the table, and then add it to the form of the table you're enabling for feedback.
 
 For example, you can provide a running total of all feedback records created for a given record.
-1. Open the table that contains the form with the feeback grid and select the **Columns** tab.
+1. Open the table that contains the form with the feedback grid and select **Columns**.
 1. Select **Add column**, and then select the following properties:
    - **Display name**: *Total feedback*
    - **Data type**: **Whole Number**

@@ -3,10 +3,9 @@ title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
 description: How to use keyboard shortcuts
 author: mduelae
 manager: kvivek
-ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 09/30/2021
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -25,6 +24,14 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 > [!NOTE]
 > The keyboard shortcuts described here refer to the United States keyboard layout. Keys on other keyboard layouts might not correspond exactly to the keys on a US keyboard. 
+
+## Global shortcuts 
+
+|Type | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|
+| General | F2 | Activates the flyout. |
+| Landmark | Ctrl+F6 | Navigates you through the landmarks of a page in clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
+| Landmark | Ctrl+F6+Shift | Navigates you through the landmarks of a page in counter clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
 
 ## Form shortcuts
 
@@ -67,13 +74,14 @@ The following table outlines a list of accessibility shortcuts available when us
 |Type | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|
 | General | Alt+F11 | Toggle full-screen view. |
-| Tab navigation | Alt+Ctrl+0 | Go to menu bar. |
+| Tab navigation | Alt+Ctrl+0 | Go to the editor toolbar. |
 | Tab navigation | Alt+1 | Go to the rich-text editor. |
 | Tab navigation | Alt+2 | Go to the HTML editor. |
 | Tab navigation | Alt+3 | Go to the preview view. |
 | General editor commands | Alt+F10 | Navigate to the editor toolbar. Move to the next and previous toolbar group with Tab and Shift+Tab. Move to the next and previous toolbar button with Right Arrow or Left Arrow. Press Space or Enter to activate the toolbar button. |
-| General editor commands |  | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively.. |
-| General editor commands |  | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
+| General editor commands | Alt+- | Expand/collapse the toolbar. |
+| General editor commands | See description. | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively. |
+| General editor commands | See description. | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
 | Base commands | Ctrl+Z | Undo command. |
 | Base commands | Shift+Ctrl+Z | Redo command. |
 | Base commands | Ctrl+B | Bold command. |

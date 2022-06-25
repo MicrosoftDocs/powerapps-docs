@@ -1,25 +1,18 @@
 ---
 title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "These code samples shows how to query data using the Web API. These samples are implemented using client-side JavaScript and C#."
-ms.custom: ""
-ms.date: 06/15/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 9457ce4f-0ef6-4085-8346-fe3134ec7106
-caps.latest.revision: 18
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Query Data Sample
@@ -47,7 +40,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Ordering results](#bkmk_orderresults)|[Order results](query-data-web-api.md#bkmk_order)<br /><br /> [Filter results](query-data-web-api.md#bkmk_filter)|
 |[Parameter alias](#bkmk_parameteralias)|[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
 |[Limit results](#bkmk_limitresults)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /><br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
-|[Expanding results](#bkmk_expandresults)|[Retrieve related rows by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)|
+|[Expanding results](#bkmk_expandresults)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
 |[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType/><br /><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType/>|
 <!-- TODO:
 |[FetchXML queries](#bkmk_fetchxml)|[FetchXML schema](../org-service/fetchxml-schema.md)<br /><br /> [Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)| -->
@@ -1372,7 +1365,7 @@ Page 2 of 3:
 
 ## Expanding results
 
-To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information:[Retrieve related rows by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated).  
+To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information:[Retrieve related table records with a query](retrieve-related-entities-query.md)
   
 ### Expand on single-valued navigation property
 

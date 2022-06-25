@@ -1,16 +1,15 @@
 ---
 title: openForm | Microsoft Docs
 description: Opens a form or a quick create form.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: bea56947-d976-4974-9ac7-2d5f5c7b6732
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # openForm

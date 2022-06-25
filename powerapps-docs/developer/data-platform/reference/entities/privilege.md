@@ -1,13 +1,13 @@
 ---
-title: "Privilege table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Privilege table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Privilege table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -95,12 +95,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeBasic Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -118,12 +118,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeDeep Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -141,12 +141,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeEntityReference Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -164,12 +164,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeGlobal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -187,12 +187,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeLocal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -210,12 +210,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CanBeParentEntityReference Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -308,12 +308,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -331,12 +331,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsDisabledWhenIntegrated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -354,12 +354,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -430,7 +430,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Privilege_AsyncOperations"></a> Privilege_AsyncOperations
 
-Same as asyncoperation table [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) Many-To-One relationship.
+Same as the [Privilege_AsyncOperations](asyncoperation.md#BKMK_Privilege_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -445,7 +445,7 @@ Same as asyncoperation table [Privilege_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_Privilege_BulkDeleteFailures"></a> Privilege_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Privilege_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Privilege_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -466,7 +466,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_solution_privilege"></a> solution_privilege
 
-See solution Table [solution_privilege](solution.md#BKMK_solution_privilege) One-To-Many relationship.
+See the [solution_privilege](solution.md#BKMK_solution_privilege) one-to-many relationship for the [solution](solution.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships

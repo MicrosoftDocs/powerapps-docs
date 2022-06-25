@@ -1,21 +1,21 @@
 ---
 title: Analyze telemetry of a canvas app using Application Insights
 description: Learn about how to analyze app telemetry of canvas apps using Application Insights.
-author: hasharaf
-ms.service: powerapps
+author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/19/2021
+ms.date: 05/05/2022
 ms.subservice: canvas-maker
-ms.author: hasharaf
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - hasharaf
   - tapanm-msft
+  - maustinjones 
+  - mattgon
 ---
 
 # Analyze telemetry of a canvas app using Application Insights
@@ -316,16 +316,25 @@ A set of default dimensions is also added to the *customDimensions* property on 
 
 | Dimension Name  | Represents                                            |
 |-----------------|-------------------------------------------------------|
-| ms-appId        | The Application ID of the app that sent the event.     |
-| ms-appName      | The Application name of the app that sent the event.   |
-| ms-appSessionId | The application session ID.                           |
+| ms-appId | The Application ID of the app that sent the event. |
+| ms-appname | The Application name of the app that sent the event. |
+| ms-appSessionId | The application session ID. This value may not be populated is some scenarios. When available, this value overrides the standard App Insights sessionID dimension. |
+| ms-tenantID | The unique identifier of the tenant where the application is published. |
+| ms-environmentId | The name of the environment where the application is published. |
+| userId | A unique identifier for the end-user associated with the session. |
+| ms-duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value overrides the standard App Insights PageView duration dimension. |
+| sessionId | A session ID that can be used to correlate all events associated with a single application session. This value will always be present and is recommended for understanding unique session count. This value is taken from the player's session ID and is shown when viewing the session details while playing the app. Session ID might sometimes get a default, random, and unique Application Insights generated value. This default value isn't reliable and doesn't correlate with any app-specific parameters. |
+| Duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value is the same as the duration reported by the ms-duration dimension. |
+| ms-isTest | Indicates if the session is associated with the Test Studio test runner. |
+| ms-currentScreenName | The name of the page an end user is navigating from (present for page navigation events). |
+| ms-targetScreenName | The name of the page an end user is navigating to (present for page navigation events). |
 
 ## Unsupported scenarios
 
 App Insights doesn't support the following scenarios.
 
-- Offline and mobile apps/player events (both Android and iOS) are not captured.
-- Network requests and errors are not captured.  
-- GCC and non-public clouds are not supported.
+- Offline and mobile apps/player events (both Android and iOS) aren't captured.
+- Network requests and errors aren't captured.  
+- GCC and non-public clouds aren't supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

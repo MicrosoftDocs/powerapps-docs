@@ -1,9 +1,9 @@
 ---
 title: "Add a custom page to your model-driven app" 
 description: " Learn how to add a custom page to a model-driven app"
-ms.date: 06/29/2021
+ms.date: 05/26/2022
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "How-to"
 author: "aorth"
@@ -14,15 +14,14 @@ search.audienceType:
 search.app: 
   - "PowerApps"
 ---
-# Add a custom page to your model-driven app (preview)
+# Add a custom page to your model-driven app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This article guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Create or edit a model-driven app using modern app designer
 
@@ -52,10 +51,7 @@ The following steps walk you through opening the new modern app designer, which 
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
-1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
-
-    > [!div class="mx-imgBorder"]
-    > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
+1. Open the model-driven app menu and select **Edit** to open the modern app designer.
 
 ## Create or edit a custom page
 
@@ -153,18 +149,16 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 1. To close the app designer select **Back** and return to the solution.
 
-<!-- ## Enabling custom page before public preview
+## Publishing a custom page
 
-By default custom pages are not available in the new app designer until custom page public preview.  These parameters are not needed for internal test.  
-```
-?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true
-```
+> [!IMPORTANT]
+> Currently, model-driven apps must be re-published after a custom page is published.  Otherwise the model-driven app continues to use the previous published custom page.
 
-## Upcoming changes in new App Designer
+After saving changes to a custom page in the canvas designer, the custom page must be first published by the canvas designer. Then all model-driven apps referencing that custom page need to be published. 
 
-* Adding custom page in app designer without being in the navigation
+1. From canvas designer, select **Publish**
 
-    * Workaround: add into sitemap which adds to both sitemap and pages collection, then remove from sitemap which leaves in the pages collection  -->
+1. From app designer or solution explorer, select **Publish** on each model-driven app referencing the custom page
 
 ### See also
 
@@ -174,6 +168,6 @@ By default custom pages are not available in the new app designer until custom p
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Code components for custom page designer](../../developer/component-framework/component-framework-for-canvas-apps.md)

@@ -3,8 +3,8 @@ title: Migrate data between Microsoft Dataverse environments using the dataflows
 author: denisem-msft
 ms.reviewer: "nabuthuk"
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
-ms.date: 03/24/2021
-ms.service: powerapps
+ms.date: 11/24/2021
+
 ms.topic: "article"
 ms.subservice: dataverse-developer
 ms.author: demora
@@ -14,7 +14,7 @@ search.app:
 
 # Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
 
@@ -97,15 +97,14 @@ In the **target** environment, create a new dataflow with the OData connector.
     > ![Confirm the column values are correct.](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
 
-    | Column | Description |
-    |--|--|
-    | URL | Provide the Service Root URL in the URL column of the connection settings. |
-    | Connection | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before. |
-    | Connection name | Optionally, rename the connection name, but a value is automatically populated. |  |
-    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service. |
-    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
-
-    > [!IMPORTANT] 
+    | Column                   | Description                                                                                                                          |
+    |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+    | URL                      | Provide the Service Root URL in the URL column of the connection settings.                                                           |
+    | Connection               | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before.               |
+    | Connection name          | Optionally, rename the connection name, but a value is automatically populated.                                                      |
+    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
+    | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
+   > [!IMPORTANT] 
     > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
@@ -157,6 +156,9 @@ For each table chosen, select the behavior for importing that table in these set
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.
 
     - Requires a key configuration in the target environment (as the unique identifier columns are not available to modify).
+
+  > [!IMPORTANT]
+  > The 'delete rows' option is only available when a key is specified. It is possible to have a table without a key, but a key is required when you want to update or delete records since it is the unique identifier the system uses to perform these tasks. You can add a key directly in the Dataverse table if your table does not have a key and you want to use the delete or update functionality provided by Dataflows.<p/>More information: [Define alternate keys using Power Apps portal](../../maker/data-platform/define-alternate-keys-portal.md)
 
 - **Load to new table (not recommended)**
 

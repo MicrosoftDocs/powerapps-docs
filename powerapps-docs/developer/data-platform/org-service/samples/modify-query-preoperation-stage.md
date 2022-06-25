@@ -1,23 +1,23 @@
 ---
 title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 09/23/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Modify query in PreOperation stage
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 

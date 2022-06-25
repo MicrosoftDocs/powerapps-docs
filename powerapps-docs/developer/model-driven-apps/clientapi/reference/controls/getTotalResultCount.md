@@ -1,19 +1,20 @@
 ---
 title: "getTotalResultCount (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getTotalResultCount method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1f9169ce-cba3-4bb6-af20-f86140139cfe
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getTotalResultCount (Client API reference)
 

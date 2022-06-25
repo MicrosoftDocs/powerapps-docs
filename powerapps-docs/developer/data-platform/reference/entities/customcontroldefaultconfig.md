@@ -1,13 +1,13 @@
 ---
-title: "CustomControlDefaultConfig table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CustomControlDefaultConfig table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomControlDefaultConfig table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -200,12 +200,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -343,12 +343,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -559,23 +559,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_customcontroldefaultconfig_organization"></a> customcontroldefaultconfig_organization
 
-See organization Table [customcontroldefaultconfig_organization](organization.md#BKMK_customcontroldefaultconfig_organization) One-To-Many relationship.
+See the [customcontroldefaultconfig_organization](organization.md#BKMK_customcontroldefaultconfig_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_customcontroldefaultconfig_createdonbehalfby"></a> lk_customcontroldefaultconfig_createdonbehalfby
 
-See systemuser Table [lk_customcontroldefaultconfig_createdonbehalfby](systemuser.md#BKMK_lk_customcontroldefaultconfig_createdonbehalfby) One-To-Many relationship.
+See the [lk_customcontroldefaultconfig_createdonbehalfby](systemuser.md#BKMK_lk_customcontroldefaultconfig_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontroldefaultconfig_modifiedonbehalfby"></a> lk_customcontroldefaultconfig_modifiedonbehalfby
 
-See systemuser Table [lk_customcontroldefaultconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontroldefaultconfig_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_customcontroldefaultconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontroldefaultconfig_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontroldefaultconfig_modifiedby"></a> lk_customcontroldefaultconfig_modifiedby
 
-See systemuser Table [lk_customcontroldefaultconfig_modifiedby](systemuser.md#BKMK_lk_customcontroldefaultconfig_modifiedby) One-To-Many relationship.
+See the [lk_customcontroldefaultconfig_modifiedby](systemuser.md#BKMK_lk_customcontroldefaultconfig_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontroldefaultconfig_createdby"></a> lk_customcontroldefaultconfig_createdby
 
-See systemuser Table [lk_customcontroldefaultconfig_createdby](systemuser.md#BKMK_lk_customcontroldefaultconfig_createdby) One-To-Many relationship.
+See the [lk_customcontroldefaultconfig_createdby](systemuser.md#BKMK_lk_customcontroldefaultconfig_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

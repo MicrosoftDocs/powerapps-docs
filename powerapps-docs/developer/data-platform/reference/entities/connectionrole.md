@@ -1,13 +1,13 @@
 ---
-title: "ConnectionRole table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ConnectionRole table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ConnectionRole table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -81,16 +81,16 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Category Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Business|
-|2|Family|
-|3|Social|
-|4|Sales|
-|5|Other|
-|1000|Stakeholder|
-|1001|Sales Team|
-|1002|Service|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Business||
+|2|Family||
+|3|Social||
+|4|Sales||
+|5|Other||
+|1000|Stakeholder||
+|1001|Sales Team||
+|1002|Service||
 
 
 
@@ -274,12 +274,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -417,12 +417,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -633,7 +633,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_connection_role_connections1"></a> connection_role_connections1
 
-Same as connection table [connection_role_connections1](connection.md#BKMK_connection_role_connections1) Many-To-One relationship.
+Same as the [connection_role_connections1](connection.md#BKMK_connection_role_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -648,7 +648,7 @@ Same as connection table [connection_role_connections1](connection.md#BKMK_conne
 
 ### <a name="BKMK_ConnectionRole_SyncErrors"></a> ConnectionRole_SyncErrors
 
-Same as syncerror table [ConnectionRole_SyncErrors](syncerror.md#BKMK_ConnectionRole_SyncErrors) Many-To-One relationship.
+Same as the [ConnectionRole_SyncErrors](syncerror.md#BKMK_ConnectionRole_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -663,7 +663,7 @@ Same as syncerror table [ConnectionRole_SyncErrors](syncerror.md#BKMK_Connection
 
 ### <a name="BKMK_ConnectionRole_ProcessSessions"></a> ConnectionRole_ProcessSessions
 
-Same as processsession table [ConnectionRole_ProcessSessions](processsession.md#BKMK_ConnectionRole_ProcessSessions) Many-To-One relationship.
+Same as the [ConnectionRole_ProcessSessions](processsession.md#BKMK_ConnectionRole_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -678,7 +678,7 @@ Same as processsession table [ConnectionRole_ProcessSessions](processsession.md#
 
 ### <a name="BKMK_Connection_Role_AsyncOperations"></a> Connection_Role_AsyncOperations
 
-Same as asyncoperation table [Connection_Role_AsyncOperations](asyncoperation.md#BKMK_Connection_Role_AsyncOperations) Many-To-One relationship.
+Same as the [Connection_Role_AsyncOperations](asyncoperation.md#BKMK_Connection_Role_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -693,7 +693,7 @@ Same as asyncoperation table [Connection_Role_AsyncOperations](asyncoperation.md
 
 ### <a name="BKMK_connection_role_connections2"></a> connection_role_connections2
 
-Same as connection table [connection_role_connections2](connection.md#BKMK_connection_role_connections2) Many-To-One relationship.
+Same as the [connection_role_connections2](connection.md#BKMK_connection_role_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -720,23 +720,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_createdby_connection_role"></a> createdby_connection_role
 
-See systemuser Table [createdby_connection_role](systemuser.md#BKMK_createdby_connection_role) One-To-Many relationship.
+See the [createdby_connection_role](systemuser.md#BKMK_createdby_connection_role) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_connection_roles"></a> organization_connection_roles
 
-See organization Table [organization_connection_roles](organization.md#BKMK_organization_connection_roles) One-To-Many relationship.
+See the [organization_connection_roles](organization.md#BKMK_organization_connection_roles) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_connectionrolebase_createdonbehalfby"></a> lk_connectionrolebase_createdonbehalfby
 
-See systemuser Table [lk_connectionrolebase_createdonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_createdonbehalfby) One-To-Many relationship.
+See the [lk_connectionrolebase_createdonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_modifiedby_connection_role"></a> modifiedby_connection_role
 
-See systemuser Table [modifiedby_connection_role](systemuser.md#BKMK_modifiedby_connection_role) One-To-Many relationship.
+See the [modifiedby_connection_role](systemuser.md#BKMK_modifiedby_connection_role) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connectionrolebase_modifiedonbehalfby"></a> lk_connectionrolebase_modifiedonbehalfby
 
-See systemuser Table [lk_connectionrolebase_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_connectionrolebase_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionrolebase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships

@@ -4,7 +4,7 @@ description: Understand the ways you can open the model-driven app form editor
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -25,29 +25,33 @@ search.app:
   - D365CE
 ---
 
-# Open the model-driven app form editor 
-The form editor is where you design forms by dropping components such as sections, tabs, columns, and controls onto the form editor canvas. In this topic you learn how several different ways to access the form editor.
- 
+# Open the model-driven app form editor
+
+Model-driven app forms allow a user to update the data within columns, or fields, associated with a given table record.
+
+The form editor is where you design forms by dropping components such as sections, tabs, columns, and controls onto the form editor canvas. In this article, you learn how several different ways to access the form editor.
+
+:::image type="content" source="../../maker/model-driven-apps/media/add-columns-drag-and-drop.gif" alt-text="Advanced Settings":::
+
 If you create any new solution components in the process of editing the form, for example web resources, the names of the components will use the solution publisher customization prefix for the default solution and these components will only be included in the default solution. If you want any new solution components to be included in a specific unmanaged solution, you should open the form editor through that unmanaged solution.  
 
 ## Access the form editor from the Power Apps site
 
-1. Sign in to [Power Apps](https://make.powerapps.com/). 
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
 2. Select **Data** > **Tables** > and then select the table you want, such as the account table. 
 
-3. Select the **Forms** tab and then open the form you want, such as the **Account** main form.
+3. Select the **Forms** area and then open the form you want, such as the **Account** main form.
 
 ## Access the form editor from solution explorer
   
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer).
   
-2.  Under **Components**, expand **Tables**, and then the table you want, and click **Forms**.  
+2.  Under **Components**, expand **Tables**, and then the table you want, and select **Forms**.  
   
-3.  In the list of forms, click the form you want to edit.  
+3.  In the list of forms, select the form you want to edit.  
   
-
-## Access the form editor through the command bar within a model-driven app 
+## Access the form editor through the command bar within a model-driven app
   
 1.  Open a row.  
   
@@ -69,23 +73,22 @@ If you create any new solution components in the process of editing the form, fo
   
 3.  Open the table with the form you want to edit. If the table isn't there, you'll need to add it. More information: [Add a table to an unmanaged solution](#add-a-table-to-an-unmanaged-solution)
 
-4.  Select the **Forms** tab, and then open the form you want to edit.
+4.  Select the **Forms** area, and then open the form you want to edit.
   
 ### Add a table to an unmanaged solution  
   
-1.  Select the **Tables** node and, in the toolbar above the list, click **Add Existing**.  
+1.  Select the **Tables** node and, in the toolbar above the list, select **Add Existing**.  
   
-2.  In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Table**, select the table you want to add and click **OK**.  
+2.  In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Table**, select the table you want to add and select **OK**.  
   
-3.  If the **Missing Required Components** dialog box appears, you can click **No, do not include required components** if you don't intend to export this unmanaged solution to another environment. If you choose not to include missing required components at this time, you can add them later. You'll receive notification again if you export this solution in the future.  
+3.  If the **Missing Required Components** dialog box appears, you can select **No, do not include required components** if you don't intend to export this unmanaged solution to another environment. If you choose not to include missing required components at this time, you can add them later. You'll receive notification again if you export this solution in the future.  
   
-5.  In the solution explorer expand the table with the form you want to edit and select **Forms**.  
+5.  In the solution explorer, expand the table with the form you want to edit and select **Forms**.  
   
 6.  In the list of forms, double-click the form you want to edit.  
 
 ## Next steps
 
-[Create and design forms](create-design-forms.md)
-
+[Create or edit forms](create-and-edit-forms.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

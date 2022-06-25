@@ -2,8 +2,7 @@
 title: Understand data sources for canvas apps
 description: Learn about working with connections and data sources for canvas apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
@@ -32,9 +31,9 @@ Data sources can be connected to a cloud service, or they can be local to an app
 
 ### Connected data sources
 
-The most common data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services such as OneDrive for Business, DropBox, and SQL Server.
+The most common data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, lists created using Microsoft Lists, SharePoint libraries, SQL tables, and many other formats, which can be stored in cloud services such as OneDrive for Business, DropBox, and SQL Server.
 
-Data sources other tha tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
+Data sources other than tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
 
 ### Local data sources
 
@@ -76,7 +75,7 @@ However, collection data sources *can* be created and modified inside an app, bu
 ![Flow of information when an app reads the information in a data source.](media/working-with-data-sources/reading-from-a-datasource.png)
 The diagram above shows the flow of information when an app reads the information in a data source:
 
-* The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
+* The information is stored and shared through a storage service (in this case, Microsoft Lists or SharePoint Online).
 * A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
 * When the app is started or the **[Refresh](functions/function-refresh.md)** function is pressed, information is drawn from the connection into a data source in the app for local use.
 * Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **[Items](controls/properties-core.md)** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **[Default](controls/properties-core.md)** property.  

@@ -1,20 +1,20 @@
 ---
 title: "Composite columns in model-driven apps in model-driven apps| MicrosoftDocs"
-description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
-ms.date: 04/15/2021
-ms.service: powerapps
+description: "Some columns added to a form can represent multiple items of data. These composite columns behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly." 
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
-author: "Nkrb"
-ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Composite columns 
 

@@ -1,13 +1,13 @@
 ---
-title: "NavigationSetting table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "NavigationSetting table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the NavigationSetting table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -299,12 +299,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProgressState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Visited|
-|0|Not Visited|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Visited||
+|0|Not Visited||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -351,12 +351,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SettingType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Advanced Setup|
-|1|Basic Setup|
-|2|Advanced Setup Summary|
-|3|Basic Setup Summary|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Advanced Setup||
+|1|Basic Setup||
+|2|Advanced Setup Summary||
+|3|Basic Setup Summary||
 
 
 <a name="read-only-attributes"></a>
@@ -402,12 +402,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -532,12 +532,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -733,27 +733,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_navigationsetting_modifiedonbehalfby"></a> lk_navigationsetting_modifiedonbehalfby
 
-See systemuser Table [lk_navigationsetting_modifiedonbehalfby](systemuser.md#BKMK_lk_navigationsetting_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_navigationsetting_modifiedonbehalfby](systemuser.md#BKMK_lk_navigationsetting_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_navigationsetting_appconfig"></a> navigationsetting_appconfig
 
-See appconfig Table [navigationsetting_appconfig](appconfig.md#BKMK_navigationsetting_appconfig) One-To-Many relationship.
+See the [navigationsetting_appconfig](appconfig.md#BKMK_navigationsetting_appconfig) one-to-many relationship for the [appconfig](appconfig.md) table/entity.
 
 ### <a name="BKMK_lk_navigationsetting_createdonbehalfby"></a> lk_navigationsetting_createdonbehalfby
 
-See systemuser Table [lk_navigationsetting_createdonbehalfby](systemuser.md#BKMK_lk_navigationsetting_createdonbehalfby) One-To-Many relationship.
+See the [lk_navigationsetting_createdonbehalfby](systemuser.md#BKMK_lk_navigationsetting_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_navigationsetting_createdby"></a> lk_navigationsetting_createdby
 
-See systemuser Table [lk_navigationsetting_createdby](systemuser.md#BKMK_lk_navigationsetting_createdby) One-To-Many relationship.
+See the [lk_navigationsetting_createdby](systemuser.md#BKMK_lk_navigationsetting_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_navigationsetting_modifiedby"></a> lk_navigationsetting_modifiedby
 
-See systemuser Table [lk_navigationsetting_modifiedby](systemuser.md#BKMK_lk_navigationsetting_modifiedby) One-To-Many relationship.
+See the [lk_navigationsetting_modifiedby](systemuser.md#BKMK_lk_navigationsetting_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_navigationsetting"></a> organization_navigationsetting
 
-See organization Table [organization_navigationsetting](organization.md#BKMK_organization_navigationsetting) One-To-Many relationship.
+See the [organization_navigationsetting](organization.md#BKMK_organization_navigationsetting) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

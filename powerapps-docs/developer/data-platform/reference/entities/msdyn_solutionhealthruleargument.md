@@ -1,13 +1,13 @@
 ---
-title: "msdyn_solutionhealthruleargument table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_solutionhealthruleargument table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_solutionhealthruleargument table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -318,6 +318,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -621,12 +622,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -697,7 +716,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_solutionhealthruleargument_SyncErrors](syncerror.md#BKMK_msdyn_solutionhealthruleargument_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_SyncErrors](syncerror.md#BKMK_msdyn_solutionhealthruleargument_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -714,7 +733,7 @@ Same as syncerror table [msdyn_solutionhealthruleargument_SyncErrors](syncerror.
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_solutionhealthruleargument_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleargument_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleargument_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -731,7 +750,7 @@ Same as duplicaterecord table [msdyn_solutionhealthruleargument_DuplicateMatchin
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_solutionhealthruleargument_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleargument_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_solutionhealthruleargument_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -748,7 +767,7 @@ Same as duplicaterecord table [msdyn_solutionhealthruleargument_DuplicateBaseRec
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_solutionhealthruleargument_AsyncOperations](asyncoperation.md#BKMK_msdyn_solutionhealthruleargument_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_AsyncOperations](asyncoperation.md#BKMK_msdyn_solutionhealthruleargument_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -765,7 +784,7 @@ Same as asyncoperation table [msdyn_solutionhealthruleargument_AsyncOperations](
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_solutionhealthruleargument_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_solutionhealthruleargument_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_solutionhealthruleargument_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -782,7 +801,7 @@ Same as mailboxtrackingfolder table [msdyn_solutionhealthruleargument_MailboxTra
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_solutionhealthruleargument_ProcessSession](processsession.md#BKMK_msdyn_solutionhealthruleargument_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_ProcessSession](processsession.md#BKMK_msdyn_solutionhealthruleargument_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -799,7 +818,7 @@ Same as processsession table [msdyn_solutionhealthruleargument_ProcessSession](p
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_solutionhealthruleargument_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_solutionhealthruleargument_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_solutionhealthruleargument_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -816,7 +835,7 @@ Same as bulkdeletefailure table [msdyn_solutionhealthruleargument_BulkDeleteFail
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -848,47 +867,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_solutionhealthruleargument_createdby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_createdby) One-To-Many relationship.
+See the [lk_msdyn_solutionhealthruleargument_createdby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_solutionhealthruleargument_createdonbehalfby"></a> lk_msdyn_solutionhealthruleargument_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_solutionhealthruleargument_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_solutionhealthruleargument_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_solutionhealthruleargument_modifiedby"></a> lk_msdyn_solutionhealthruleargument_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_solutionhealthruleargument_modifiedby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_solutionhealthruleargument_modifiedby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_solutionhealthruleargument_modifiedonbehalfby"></a> lk_msdyn_solutionhealthruleargument_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_solutionhealthruleargument_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_solutionhealthruleargument_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_solutionhealthruleargument_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_solutionhealthruleargument"></a> user_msdyn_solutionhealthruleargument
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_solutionhealthruleargument](systemuser.md#BKMK_user_msdyn_solutionhealthruleargument) One-To-Many relationship.
+See the [user_msdyn_solutionhealthruleargument](systemuser.md#BKMK_user_msdyn_solutionhealthruleargument) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_solutionhealthruleargument"></a> team_msdyn_solutionhealthruleargument
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_solutionhealthruleargument](team.md#BKMK_team_msdyn_solutionhealthruleargument) One-To-Many relationship.
+See the [team_msdyn_solutionhealthruleargument](team.md#BKMK_team_msdyn_solutionhealthruleargument) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_solutionhealthruleargument"></a> business_unit_msdyn_solutionhealthruleargument
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_solutionhealthruleargument](businessunit.md#BKMK_business_unit_msdyn_solutionhealthruleargument) One-To-Many relationship.
+See the [business_unit_msdyn_solutionhealthruleargument](businessunit.md#BKMK_business_unit_msdyn_solutionhealthruleargument) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule"></a> msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule
 
-See msdyn_solutionhealthrule Table [msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule](msdyn_solutionhealthrule.md#BKMK_msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule) One-To-Many relationship.
+See the [msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule](msdyn_solutionhealthrule.md#BKMK_msdyn_msdyn_solutionhealthrule_msdyn_solutionhealthruleargument_SolutionHealthRule) one-to-many relationship for the [msdyn_solutionhealthrule](msdyn_solutionhealthrule.md) table/entity.
 
 ### See also
 

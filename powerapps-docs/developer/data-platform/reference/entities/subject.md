@@ -1,13 +1,13 @@
 ---
-title: "Subject table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Subject table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Subject table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -588,7 +588,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Subject_AsyncOperations"></a> Subject_AsyncOperations
 
-Same as asyncoperation table [Subject_AsyncOperations](asyncoperation.md#BKMK_Subject_AsyncOperations) Many-To-One relationship.
+Same as the [Subject_AsyncOperations](asyncoperation.md#BKMK_Subject_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -603,7 +603,7 @@ Same as asyncoperation table [Subject_AsyncOperations](asyncoperation.md#BKMK_Su
 
 ### <a name="BKMK_subject_knowledgearticles"></a> subject_knowledgearticles
 
-Same as knowledgearticle table [subject_knowledgearticles](knowledgearticle.md#BKMK_subject_knowledgearticles) Many-To-One relationship.
+Same as the [subject_knowledgearticles](knowledgearticle.md#BKMK_subject_knowledgearticles) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -618,7 +618,7 @@ Same as knowledgearticle table [subject_knowledgearticles](knowledgearticle.md#B
 
 ### <a name="BKMK_Subject_BulkDeleteFailures"></a> Subject_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Subject_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Subject_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Subject_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Subject_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -633,7 +633,7 @@ Same as bulkdeletefailure table [Subject_BulkDeleteFailures](bulkdeletefailure.m
 
 ### <a name="BKMK_Subject_ProcessSessions"></a> Subject_ProcessSessions
 
-Same as processsession table [Subject_ProcessSessions](processsession.md#BKMK_Subject_ProcessSessions) Many-To-One relationship.
+Same as the [Subject_ProcessSessions](processsession.md#BKMK_Subject_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -648,7 +648,7 @@ Same as processsession table [Subject_ProcessSessions](processsession.md#BKMK_Su
 
 ### <a name="BKMK_Subject_SyncErrors"></a> Subject_SyncErrors
 
-Same as syncerror table [Subject_SyncErrors](syncerror.md#BKMK_Subject_SyncErrors) Many-To-One relationship.
+Same as the [Subject_SyncErrors](syncerror.md#BKMK_Subject_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -663,7 +663,7 @@ Same as syncerror table [Subject_SyncErrors](syncerror.md#BKMK_Subject_SyncError
 
 ### <a name="BKMK_subject_parent_subject"></a> subject_parent_subject
 
-Same as subject table [subject_parent_subject](subject.md#BKMK_subject_parent_subject) Many-To-One relationship.
+Same as the [subject_parent_subject](subject.md#BKMK_subject_parent_subject) many-to-one relationship for the [subject](subject.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -678,7 +678,7 @@ Same as subject table [subject_parent_subject](subject.md#BKMK_subject_parent_su
 
 ### <a name="BKMK_subject_kb_articles"></a> subject_kb_articles
 
-Same as kbarticle table [subject_kb_articles](kbarticle.md#BKMK_subject_kb_articles) Many-To-One relationship.
+Same as the [subject_kb_articles](kbarticle.md#BKMK_subject_kb_articles) many-to-one relationship for the [kbarticle](kbarticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -695,7 +695,7 @@ Same as kbarticle table [subject_kb_articles](kbarticle.md#BKMK_subject_kb_artic
 
 **Added by**: Knowledge Management Features Solution
 
-Same as msdyn_knowledgearticletemplate table [msdyn_subject_knowledgearticletemplate_subjectid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) Many-To-One relationship.
+Same as the [msdyn_subject_knowledgearticletemplate_subjectid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) many-to-one relationship for the [msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -723,27 +723,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_subjectbase_modifiedby"></a> lk_subjectbase_modifiedby
 
-See systemuser Table [lk_subjectbase_modifiedby](systemuser.md#BKMK_lk_subjectbase_modifiedby) One-To-Many relationship.
+See the [lk_subjectbase_modifiedby](systemuser.md#BKMK_lk_subjectbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_subjectbase_createdby"></a> lk_subjectbase_createdby
 
-See systemuser Table [lk_subjectbase_createdby](systemuser.md#BKMK_lk_subjectbase_createdby) One-To-Many relationship.
+See the [lk_subjectbase_createdby](systemuser.md#BKMK_lk_subjectbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_subjects"></a> organization_subjects
 
-See organization Table [organization_subjects](organization.md#BKMK_organization_subjects) One-To-Many relationship.
+See the [organization_subjects](organization.md#BKMK_organization_subjects) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_subject_createdonbehalfby"></a> lk_subject_createdonbehalfby
 
-See systemuser Table [lk_subject_createdonbehalfby](systemuser.md#BKMK_lk_subject_createdonbehalfby) One-To-Many relationship.
+See the [lk_subject_createdonbehalfby](systemuser.md#BKMK_lk_subject_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_subject_parent_subject"></a> subject_parent_subject
 
-See subject Table [subject_parent_subject](subject.md#BKMK_subject_parent_subject) One-To-Many relationship.
+See the [subject_parent_subject](subject.md#BKMK_subject_parent_subject) one-to-many relationship for the [subject](subject.md) table/entity.
 
 ### <a name="BKMK_lk_subject_modifiedonbehalfby"></a> lk_subject_modifiedonbehalfby
 
-See systemuser Table [lk_subject_modifiedonbehalfby](systemuser.md#BKMK_lk_subject_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_subject_modifiedonbehalfby](systemuser.md#BKMK_lk_subject_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

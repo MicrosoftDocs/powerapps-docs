@@ -4,7 +4,7 @@ description: "App builders must be members of Microsoft Partner Network (MPN) to
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
@@ -20,8 +20,6 @@ search.app:
 
 If you are not already a member of the Microsoft Partner Center, you must become a member by enrolling at <https://aka.ms/joinmarketplace>.
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 You must be a member of Partner Center to publish apps on AppSource.
 
 > [!div class="nextstepaction"]
@@ -29,7 +27,9 @@ You must be a member of Partner Center to publish apps on AppSource.
 
 ### See also 
 
-[Publish your apps on AppSource](publish-app-appsource.md)
+[Microsoft commercial marketplace](/azure/marketplace/overview)<br/>
+[Create a commercial marketplace account in Partner Center](/azure/marketplace/create-account)
+
   
 
 

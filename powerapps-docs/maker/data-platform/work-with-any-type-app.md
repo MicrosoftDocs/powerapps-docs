@@ -4,15 +4,14 @@ description: Learn how Microsoft Dataverse provides multiple ways to integrate w
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "powerapps"
-author: "mmercuri"
+author: "matp"
 ms.subservice: dataverse-maker
-ms.author: "mmercuri"
+ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -20,7 +19,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Work with any type of app 
 
 Microsoft Dataverse provides multiple ways to integrate in any type of app (mobile, web, desktop), device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
@@ -30,7 +28,7 @@ In some cases, integration with an app can be achieved by using business logic c
 
 ## Defining business logic
 
-tables in Dataverse can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
+Tables in Dataverse can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
 
 - **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](./data-platform-create-business-rule.md)
 
@@ -44,7 +42,7 @@ tables in Dataverse can use rich server-side logic and validation to ensure data
 
 A common approach of app integration is through the use of events. For example, an event such as adding a new row occurs in Dataverse, and this should be communicated to an associated system so that an action can be taken. For example, if a new support request was raised, it might trigger an SMS message to be sent to the assigned support staff.
 
-This interactivity can also occur in the opposite direction&mdash;an update in an external system might result in data being added, updated, or deleted from a Dataverse environment.
+This interactivity can also occur in the opposite direction&mdash;an update in an external system might result in data being added, updated, or deleted from a Power Platform environment.
 
 The most popular approaches in Dataverse involve webhooks, Azure messaging (Service Bus, Event Hubs), Azure Logic Apps, or Power Automate.
 
@@ -101,9 +99,9 @@ All popular programming languages support a form of integration with REST-based 
 
 The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [www.odata.org](https://www.odata.org/). For more information about this standard, see [www.oasis-open.org](https://www.oasis-open.org/standards#odatav4.0).
 
-Dataverse takes an "API first" approach. This means that the service doesn't just provide a mechanism to query data, it also provides metadata from the service on business rules, constraints, and so on that you can use to build intelligent, responsive apps and services.
+Dataverse takes an "API first" approach. This means that the service doesn't just provide a mechanism to query data, it also provides metadata from the service on business rules, constraints, and so on, that you can use to build intelligent, responsive apps and services.
 
-The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Dataverse, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
+The API is secured by using OAuth. OAuth requires an `idtable` provider for authentication. For Dataverse, the `idtable` provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Microsoft Authentication Libraries (MSAL).
 
 For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](../../developer/data-platform/webapi/overview.md).
 
@@ -147,7 +145,7 @@ Azure Functions provides a serverless code execution option for business and int
 
 ![Dataverse with Azure Functions.](media/azure-functions.png "Dataverse with Azure Functions")
 
-Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Common Data Service connector.
+Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Dataverse connector.
 
 More information:
 [Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md)

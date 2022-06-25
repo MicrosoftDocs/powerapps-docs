@@ -2,7 +2,7 @@
 title: Use the mobile app | Microsoft Docs
 description: Provides an overview of how to use the mobile app.
 author: ramanasridhar
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020
@@ -27,7 +27,7 @@ To get started with the mobile app, you need to download the Power Apps Mobile a
 
 -   Ensure that your organization has [deployed](deploy-solution.md) and [configured](configure-data.md) the Higher Education Crisis Financial Impact Tracker app.<
 
-After you install Power Apps Mobile, open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign-in](/powerapps/user/run-app-client#open-power-apps-and-sign-in)
+After you install Power Apps Mobile, open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign-in](/powerapps/mobile/run-powerapps-on-mobile#sign-in)
 
 ## Using the mobile app
 

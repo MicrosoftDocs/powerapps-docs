@@ -1,23 +1,23 @@
 ---
 title: "getRows (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getRows method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
-search.audienceType: 
+search.audienceType:
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
+
 # getRows (Client API reference)
-
-
 
 [!INCLUDE[./includes/getRows-description.md](./includes/getRows-description.md)]
 
@@ -27,11 +27,11 @@ Read-only and editable grids
 
 ## Syntax
 
-`var allRows = gridContext.getGrid().getRows();`
+`let allRows = gridContext.getGrid().getRows();`
 
 ## Return Value
 
-**Type**: Collection
+**Type**: [Collection](./../../collections.md)
 
 **Description**: A collection of rows in the grid.
 
@@ -40,7 +40,5 @@ Read-only and editable grids
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
 
 See [Collections (Client API reference)](../../collections.md) for information on the methods available to access data in a collection.
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

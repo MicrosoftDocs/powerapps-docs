@@ -1,24 +1,26 @@
 ---
 title: "Create a custom table using code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Shows how to programmatically create a custom table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/10/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
+
 ---
 
 # Create a custom table using code
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 
 This topic shows how to programmatically create a custom user-owned table (entity) called **Bank Account** and add four different types of columns (attributes) to it.  
   

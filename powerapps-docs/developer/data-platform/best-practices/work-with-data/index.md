@@ -8,7 +8,7 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -30,6 +30,7 @@ This list below contains all of the best practices and guidance around integrati
 |Best Practice  |Description  |
 |---------|---------|
 |[Service protection API limits (Dataverse)](../../api-limits.md)     |Understand the limits for API requests.         |
+|[Manage invalid characters](invalidcharactersinfield.md)| Manage invalid characters |
 
 ### See Also
 

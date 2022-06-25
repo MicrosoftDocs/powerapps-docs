@@ -3,7 +3,7 @@ title: "Autonumber columns in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber columns"
 keywords: ""
 ms.date: 02/26/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: conceptual
 applies_to: 
@@ -13,7 +13,7 @@ applies_to:
 author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
-ms.author: daemelia
+ms.author: kvivek
 manager: kvivek
 ms.reviewer: Mattp123
 ms.suite: 
@@ -26,7 +26,6 @@ search.app:
 ---
 # Autonumber columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Autonumber columns are columns that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these columns to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.
 
@@ -74,7 +73,7 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
   
 2.  On the left pane expand **Data** and select **Tables**.
   
-3.  Select the table that you would like to add an autonumber column to and then select the **Columns** tab.
+3.  Select the table that you would like to add an autonumber column to and then select **Columns**.
   
 4.  On the toolbar, select **Add** column.  
   

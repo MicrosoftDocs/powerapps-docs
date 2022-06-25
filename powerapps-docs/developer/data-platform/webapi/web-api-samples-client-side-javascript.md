@@ -1,25 +1,18 @@
 ---
 title: "Web API  Data operations Samples (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
 description: "This article provides a description of various Web API samples that are implemented using client-side JavaScript"
-ms.custom: ""
-ms.date: 07/15/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: a32e9a04-7bc1-41dd-b9af-bb4f21a613c6
-caps.latest.revision: 15
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API Data operations Samples (Client-side JavaScript)
@@ -90,7 +83,7 @@ This article provides common understanding about Web API samples using client-si
   
 -   Program output and error messages are sent to the browser’s debugger console. To see these output, open the console window first before running the sample.  Press F12 to access the developer tools, including the console window, in Microsoft Edge browser.  
   
--   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For Internet Explorer, this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because Internet Explorer is the only browser supported by Dataverse which does not have native support for this feature.  
+-   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it.  
   
      Promises are not required. Similar interactions can be performed using callback functions.  
   

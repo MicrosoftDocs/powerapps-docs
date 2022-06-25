@@ -1,13 +1,13 @@
 ---
-title: "ManagedIdentity table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ManagedIdentity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ManagedIdentity table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-ManagedIdentity entity
+Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.
 
 **Added by**: ManagedIdentityExtensions Solution
 
@@ -49,7 +49,7 @@ ManagedIdentity entity
 |--------|-----|
 |CollectionSchemaName|ManagedIdentities|
 |DisplayCollectionName|Managed Identities|
-|DisplayName|ManagedIdentity|
+|DisplayName|Managed Identity|
 |EntitySetName|managedidentities|
 |IsBPFEntity|False|
 |LogicalCollectionName|managedidentities|
@@ -100,7 +100,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Client Secret|
+|Description|Contains a secret for the Azure Active Directory application. Once set, it cannot be read except by Dataverse.|
 |DisplayName|Client Secret|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -117,8 +117,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|CredentialSource|
+|Description|Where the Managed Identity will get the credentials to use.|
+|DisplayName|Credential Source|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|credentialsource|
@@ -127,11 +127,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CredentialSource Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|ClientSecret|
-|1|KeyVault|
-|2|IsManaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|ClientSecret||
+|1|KeyVault||
+|2|IsManaged||
+|3|MicrosoftFirstPartyCertificate||
 
 
 
@@ -201,7 +202,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Name|
+|Description|The name assigned to this Managed Identity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -264,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the ManagedIdentity|
+|Description|Status of the Managed Identity|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -286,7 +287,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the ManagedIdentity|
+|Description|Reason for the status of the Managed Identity|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -307,7 +308,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|TenantId|
+|Description|The Id of the Azure Active Directory Tenant that the Application is part of.|
 |DisplayName|TenantId|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -376,6 +377,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -414,12 +416,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -558,12 +560,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -776,12 +778,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -885,7 +905,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [managedidentity_SyncErrors](syncerror.md#BKMK_managedidentity_SyncErrors) Many-To-One relationship.
+Same as the [managedidentity_SyncErrors](syncerror.md#BKMK_managedidentity_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -902,7 +922,7 @@ Same as syncerror table [managedidentity_SyncErrors](syncerror.md#BKMK_managedid
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [managedidentity_DuplicateMatchingRecord](duplicaterecord.md#BKMK_managedidentity_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [managedidentity_DuplicateMatchingRecord](duplicaterecord.md#BKMK_managedidentity_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -919,7 +939,7 @@ Same as duplicaterecord table [managedidentity_DuplicateMatchingRecord](duplicat
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [managedidentity_DuplicateBaseRecord](duplicaterecord.md#BKMK_managedidentity_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [managedidentity_DuplicateBaseRecord](duplicaterecord.md#BKMK_managedidentity_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -936,7 +956,7 @@ Same as duplicaterecord table [managedidentity_DuplicateBaseRecord](duplicaterec
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [managedidentity_AsyncOperations](asyncoperation.md#BKMK_managedidentity_AsyncOperations) Many-To-One relationship.
+Same as the [managedidentity_AsyncOperations](asyncoperation.md#BKMK_managedidentity_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -953,7 +973,7 @@ Same as asyncoperation table [managedidentity_AsyncOperations](asyncoperation.md
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [managedidentity_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_managedidentity_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [managedidentity_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_managedidentity_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -970,7 +990,7 @@ Same as mailboxtrackingfolder table [managedidentity_MailboxTrackingFolders](mai
 
 **Added by**: System Solution Solution
 
-Same as processsession table [managedidentity_ProcessSession](processsession.md#BKMK_managedidentity_ProcessSession) Many-To-One relationship.
+Same as the [managedidentity_ProcessSession](processsession.md#BKMK_managedidentity_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -987,7 +1007,7 @@ Same as processsession table [managedidentity_ProcessSession](processsession.md#
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [managedidentity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_managedidentity_BulkDeleteFailures) Many-To-One relationship.
+Same as the [managedidentity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_managedidentity_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1004,7 +1024,7 @@ Same as bulkdeletefailure table [managedidentity_BulkDeleteFailures](bulkdeletef
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [managedidentity_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_managedidentity_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [managedidentity_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_managedidentity_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1019,7 +1039,7 @@ Same as principalobjectattributeaccess table [managedidentity_PrincipalObjectAtt
 
 ### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
 
-Same as pluginassembly table [managedidentity_PluginAssembly](pluginassembly.md#BKMK_managedidentity_PluginAssembly) Many-To-One relationship.
+Same as the [managedidentity_PluginAssembly](pluginassembly.md#BKMK_managedidentity_PluginAssembly) many-to-one relationship for the [pluginassembly](pluginassembly.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1034,7 +1054,7 @@ Same as pluginassembly table [managedidentity_PluginAssembly](pluginassembly.md#
 
 ### <a name="BKMK_managedidentity_KeyVaultReference"></a> managedidentity_KeyVaultReference
 
-Same as keyvaultreference table [managedidentity_KeyVaultReference](keyvaultreference.md#BKMK_managedidentity_KeyVaultReference) Many-To-One relationship.
+Same as the [managedidentity_KeyVaultReference](keyvaultreference.md#BKMK_managedidentity_KeyVaultReference) many-to-one relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1051,7 +1071,7 @@ Same as keyvaultreference table [managedidentity_KeyVaultReference](keyvaultrefe
 
 **Added by**: msft_ServerSideSync_Extensions Solution
 
-Same as emailserverprofile table [managedidentity_emailserverprofile_managedidentityid](emailserverprofile.md#BKMK_managedidentity_emailserverprofile_managedidentityid) Many-To-One relationship.
+Same as the [managedidentity_emailserverprofile_managedidentityid](emailserverprofile.md#BKMK_managedidentity_emailserverprofile_managedidentityid) many-to-one relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1083,49 +1103,50 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_managedidentity_createdby](systemuser.md#BKMK_lk_managedidentity_createdby) One-To-Many relationship.
+See the [lk_managedidentity_createdby](systemuser.md#BKMK_lk_managedidentity_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_managedidentity_createdonbehalfby"></a> lk_managedidentity_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_managedidentity_createdonbehalfby](systemuser.md#BKMK_lk_managedidentity_createdonbehalfby) One-To-Many relationship.
+See the [lk_managedidentity_createdonbehalfby](systemuser.md#BKMK_lk_managedidentity_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_managedidentity_modifiedby"></a> lk_managedidentity_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_managedidentity_modifiedby](systemuser.md#BKMK_lk_managedidentity_modifiedby) One-To-Many relationship.
+See the [lk_managedidentity_modifiedby](systemuser.md#BKMK_lk_managedidentity_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_managedidentity_modifiedonbehalfby"></a> lk_managedidentity_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_managedidentity_modifiedonbehalfby](systemuser.md#BKMK_lk_managedidentity_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_managedidentity_modifiedonbehalfby](systemuser.md#BKMK_lk_managedidentity_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_managedidentity"></a> user_managedidentity
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_managedidentity](systemuser.md#BKMK_user_managedidentity) One-To-Many relationship.
+See the [user_managedidentity](systemuser.md#BKMK_user_managedidentity) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_managedidentity"></a> team_managedidentity
 
 **Added by**: System Solution Solution
 
-See team Table [team_managedidentity](team.md#BKMK_team_managedidentity) One-To-Many relationship.
+See the [team_managedidentity](team.md#BKMK_team_managedidentity) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_managedidentity"></a> business_unit_managedidentity
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_managedidentity](businessunit.md#BKMK_business_unit_managedidentity) One-To-Many relationship.
+See the [business_unit_managedidentity](businessunit.md#BKMK_business_unit_managedidentity) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_keyvaultreference_ManagedIdentity"></a> keyvaultreference_ManagedIdentity
 
-See keyvaultreference Table [keyvaultreference_ManagedIdentity](keyvaultreference.md#BKMK_keyvaultreference_ManagedIdentity) One-To-Many relationship.
+See the [keyvaultreference_ManagedIdentity](keyvaultreference.md#BKMK_keyvaultreference_ManagedIdentity) one-to-many relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.managedidentity?text=managedidentity EntityType" />

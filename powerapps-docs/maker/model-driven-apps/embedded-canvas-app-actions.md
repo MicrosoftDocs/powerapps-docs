@@ -4,7 +4,7 @@ description: Learn how to perform predefined actions in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -27,7 +27,7 @@ search.app:
 ---
 # Perform predefined actions on the host model-driven form from within an embedded canvas app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 

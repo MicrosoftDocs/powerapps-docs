@@ -2,9 +2,9 @@
 title: "Virtual table walkthrough using the OData Data Provider in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to use the OData v4 data provider with a virtual table"
 ms.custom: ""
-ms.date: 02/23/2021
+ms.date: 08/11/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,7 +24,7 @@ search.app:
 
 # Virtual table walkthrough using the OData v4 Data Provider
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Imagine that you want to access, create, update, and delete some personal information about a contact from an external data source within your model-driven app. In this simple walkthrough, you will model a virtual table named *Person* with columns mapped to the external schema to these operations at runtime from an OData web service.
 
@@ -35,7 +35,8 @@ Because the data source used for this walkthrough has an OData v4 web service, w
 Web service url: `https://contosowebservice.azurewebsites.net/odata/` 
 
 > [!IMPORTANT]
-> The web service url used for this walkthrough isn't a functioning web service.
+> - The web service url used for this walkthrough isn't a functioning web service.
+> - You can't use the OData v4 Data Provider to connect to another environment.
 
 For this walkthrough, a single virtual table that contains the following columns is needed.
 

@@ -2,28 +2,42 @@
 title: Analyze and resolve Portal Checker diagnostics results
 description: Learn about Portal Checker diagnostics results, how to analyze them, and how to resolve issues or problems found by Portal Checker.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2021
+ms.date: 05/26/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
     - dileepsinghmicrosoft
+    - ProfessorKendrick
 ---
 
 # Analyze and resolve Portal Checker diagnostics results
 
 In this article, you'll learn about Portal Checker diagnostics results, and how to resolve any issues or problems found.
 
+## An active Search site marker isn't available for this portal
+
+This issue occurs when the **Search** site marker isn't available in your portal configuration. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Site Markers**.
+1. If a site marker named **Search** is available and deactivated, activate it.
+1. If not available, create a new site marker with following values:
+    - **Name**: Search
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the search page of your portal.
+1. Select **Save & Close**.
+
 ## Anonymous access to Basic/Advanced forms and Lists
 
-Basic Forms, Advanced Forms and Lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Secure your Lists](../configure/entity-lists.md#securing-lists) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
+Basic Forms, Advanced Forms and Lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Securing lists](../configure/securing-lists.md) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
 
-While this method is useful for quickly testing your configurations during development of portal, not securing Lists and Forms on portal can have unintended consequences including unauthorized access to data. That's why we don't advise this method to be used outside a secure dev or test environment.
+This method is useful for quickly testing your configurations during development of portal, but not securing Lists and Forms on portal can have unintended consequences including unauthorized access to data. We don't advise this method to be used outside a secure dev or test environment.
 
 To fix this issue for List/Basic forms:
 
@@ -33,7 +47,7 @@ To fix this issue for List/Basic forms:
 
 1. Find the record mentioned in the Portal checker rule.
 
-1. Update the property "Enable Table Permissions" for [List](../configure/entity-lists.md#securing-lists) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
+1. Update the property "Enable Table Permissions" for [Lists](../configure/securing-lists.md) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
 
 To fix this issue for Advanced forms:
 
@@ -55,7 +69,10 @@ Once these changes are made, appropriate table permissions would need to be crea
 
 ## Anonymous access available to OData feed
 
-List component in portal can be enabled for OData feed by enabling [OData feed configuration](/configure/entity-lists.md#list-odata-feeds) on lists.
+> [!NOTE]
+> Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), lists on all portals (new or existing) that have [OData feeds](../configure/list-odata-feeds.md) enabled will require appropriate [table permissions](../configure/entity-permissions-studio.md) setup for the feed on these lists to work.
+
+List component in portal can be enabled for OData feed by enabling [OData feeds](../configure/list-odata-feeds.md) on lists. 
 
 To find anonymous OData feeds enabled on your portal:
 
@@ -76,9 +93,9 @@ To find anonymous OData feeds enabled on your portal:
 
 If you've unintended OData feed enabled on your portal anonymous, it could be because of one of these possibilities:
 
-1. By not securing list on which OData feed is enabled as described in [Secure your Lists](../configure/entity-lists.md#securing-lists) article.
+1. By not securing list on which OData feed is enabled as described in the [Securing lists](../configure/securing-lists.md) article.
 
-    - To fix this problem, secure the list as described in the [Secure your Lists](../configure/entity-lists.md#securing-lists) article, and use appropriate table permissions and web roles to provide access to users.
+    - To fix this problem, secure the list as described in the [Securing lists](../configure/securing-lists.md) article, and use appropriate table permissions and web roles to provide access to users.
 
     - You can also find the lists that aren't secured through Portal Checker as described in the above mentioned article.
 
@@ -141,7 +158,7 @@ This issue occurs when the website binding records for the portal are deleted fr
 
 Once you complete these steps, your portal will restart and should recreate website binding records automatically.
 
-However, there are situations in which the portal won't be able to recreate website binding records automatically. This can occur when the GUID of the website record available in your instance is different than the one created during default installation of your portal. In this situation, do the following:
+There are situations in which the portal won't be able to recreate website binding records automatically, such as when the GUID of the website record available in your instance is different than the one created during default installation of your portal. In this situation, do the following:
 
 1. Delete all website binding records related to your portal.
 
@@ -236,7 +253,7 @@ The Portal Checker tool will list all the web files that are enabled for page tr
 3. Search for all the web files where **Enable Tracking (Deprecated)** field is enabled (value is set to Yes).
 4. Bulk edit all the records and set this field to **No**.
 
-You can also go to each file listed in the Portal Checker result and set the value of **Enable Tracking (Deprecated)** field to **No**. It's important to know that if you're on portal solution version 9.x, this field won't be displayed on the form and you might need to add it to the form first. 
+You can also go to each file listed in the Portal Checker result and set the value of **Enable Tracking (Deprecated)** field to **No**. If you're on portal solution version 9.x, this field won't be displayed on the form and you might need to add it to the form first. 
 
 ## Login tracking enabled
 
@@ -281,7 +298,7 @@ The Portal Checker tool will check to see if footer output cache is disabled on 
 
 The web file table is used by a portal to store any static files you want to use on your portal. The main use case of this table is to store static content of your website such as CSS, JavaScript, image files, and so on. However, having a large number of these files can cause slowness during the startup of your portal.
 
-The Portal Checker tool will check for this scenario and provide you an indication if you have more than 500 active web files in your portal. If all of these files represent static content, you can take the following actions to mitigate this issue:
+The Portal Checker tool will check for this scenario and provide you an indication if you've more than 500 active web files in your portal. If all of these files represent static content, you can take the following actions to mitigate this issue:
 
 - Use an external file server like Azure blob storage or CDN to store these files and then reference these files on the appropriate pages either within the page or in an underlying template.
 
@@ -295,7 +312,7 @@ The Portal Checker tool will check for this scenario and provide you an indicati
 
 When working on portal implementation, it's important to understand that you completely manage the HTML of the page. That means that standard web development practices should be followed to ensure that your webpage's client side performance isn't affected.
 
-One of the most common causes of performance issues on webpages is loading a lot of static resources (CSS/JS) synchronously on the the page. In portals, whenever you associate a web file directly to the homepage, it creates a dependency in the generated HTML. This means that web file is always loaded along with the homepage. Synchronous loading of a large number of CSS/JS files can lead to long client-side processing time for your webpages.
+One of the most common causes of performance issues on webpages is loading numerous static resources (CSS/JS) synchronously on the page. In portals, whenever you associate a web file directly to the homepage, it creates a dependency in the generated HTML. This means that web file is always loaded along with the homepage. Synchronous loading of a large number of CSS/JS files can lead to long client-side processing time for your webpages.
 
 To avoid this, do the following:
 
@@ -307,7 +324,7 @@ To avoid this, do the following:
 
 Enabling a lookup to render as a drop-down mode in basic forms or advanced forms can lead to performance issues if the number of records shown in the drop-down exceeds 200 and are changed frequently. Use this option for only static lookups, such as country and state list, having a limited number of records.
 
-If this option is enabled for lookups that can have a large number of records, it will slow down the load time of the webpage on which the basic form is available. If this page is used by a lot of users and loaded many times, it can slow down the entire website by using website resources to render this page. For these situations, full lookup experience should be used, or a custom HTML control that calls an AJAX endpoint (created using web templates) should be built for the wanted look and feel.
+When this option is enabled for lookups that can have a large number of records, it will slow down the load time of the webpage on which the basic form is available. When this page is used by many users and loaded many times, it can slow down the entire website by using website resources to render this page. For these situations, full lookup experience should be used, or a custom HTML control that calls an AJAX endpoint (created using web templates) should be built for the wanted look and feel.
 
 ## Number of web roles
 
@@ -477,6 +494,133 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 ## MIME type of file isn't text/CSS
 
 To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
+
+## Identifying web pages listed in diagnostic results
+
+The portal checker diagnostic results could list web pages that have the same name as other pages in the portal. If there are multiple web pages with the same name, you can identify the specific page affected using the unique guid of the page.
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Open any web page.
+1. Replace the ID in the URL with the guid specified in the portal checker diagnostic results.
+
+    :::image type="content" source="media/portal-checker-analysis/webpage-by-id.png" alt-text="Replacing the web page ID the URL.":::
+
+## Web page without a page template
+
+This issue occurs when a [web page](../configure/web-page.md) record doesn't have a corresponding [page template](../configure/page-templates.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Page Template** field to point to an active page template record.
+
+## Disabled parent web page
+
+This issue occurs when a parent [web page](../configure/web-page.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Parent Page** record to navigate to the record.
+1. Select **Activate** from the command bar.
+
+## Cyclic parent web page
+
+This issue occurs when a [web page](../configure/web-page.md) references itself as a parent page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that isn't referencing itself.
+
+## Web page belongs to different Website
+
+This issue occurs when a parent [web page](../configure/web-page.md) is associated with a different [website](../configure/websites.md) than a child web page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages (either parent web page or children web pages) [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Web site** field to point the appropriate website.
+
+## Web page publishing is hidden
+
+This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field isn't checked. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Publishing State** record to navigate to the record.
+1. Select the **IsVisible** field and make sure that it's checked (set to true).
+
+## Web page doesn't have minimum of one language content page
+
+This issue occurs when the [web page](../configure/web-page.md) doesn't have at least one [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Scroll down to the **Localized Content** section.
+1. Select **+ New Web Page** to create a new language content page.
+
+    > [!Note]
+    > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
+
+## Web page with disabled page template 
+
+This issue occurs when the [page template](../configure/page-templates.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Page Template** record to navigate to the record.
+1. Select **Activate** from the command bar.
+1. Alternatively, update the **Page Template** to point to an active page template in the web page.
+
+## Web Page having a page template belongs to different web site
+
+This issue occurs when a [page template](../configure/page-templates.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Web site** field to point the appropriate website.
+1. Alternatively, update the **Page Template** to point to a page template in the same website.
+
+## Web page without a publishing state
+
+This issue occurs when a [web page](../configure/web-page.md) record doesn't have a corresponding [publishing state](../configure/publishing-states.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Publishing State** field to point to a publishing state record. 
+
+## Web page having a publishing state belong to different web site
+
+This issue occurs when a [publishing state](../configure/publishing-states.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Publishing State** field to point to a publishing state record in the same website. 
+
+## Web page associated to a localized content page as a parent web page  
+
+This issue occurs when a [web page](../configure/web-page.md) record has it's **Parent Web Page** associated to a [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that isn't a content page.
+
+## Portal is inaccessible
+
+This issue may occur when the authentication certificate for the site needs to be renewed.
+
+When portal is created, a new authentication key is generated. Portal uses this authentication key to connect to the Microsoft Dataverse environment. When authentication key is expired portal users will see message that the portal is inaccessible. 
+
+To fix this issue, [renew the authentication key](manage-auth-key.md#renew-authentication-key) for this site. 
 
 ### See also
 

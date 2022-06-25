@@ -4,7 +4,7 @@ description: "Learn how to export table and column text for translation"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Translate customized table, form, and column text into other languages
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After you create customized table and column text in your unmanaged solution, you may want to translate it into other languages.  
 

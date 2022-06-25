@@ -1,24 +1,18 @@
 ---
 title: "Retrieve related table records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related table records by expanding the navigation properties."
-ms.custom: ""
-ms.date: 04/29/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 3D8FB9AF-3663-437A-988E-CBAE9579F167
-caps.latest.revision: 78
-author: "JimDaly"
-ms.author: "pehecke"
-manager: "ryjones"
+ms.date: 06/03/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Retrieve related table records with a query
@@ -34,12 +28,12 @@ Use the `$expand` system query option in the navigation properties to control wh
 If you include only the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.  
 
 > [!NOTE]
->  - You are limited to no more than 10 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
+>  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
 >  - To retrieve related entities for an entity instance, see [Retrieve related tables for a table by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated). 
 > - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 > 
 
-<a bkmk="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
+<a name="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
 
 ## Retrieve related table records by expanding single-valued navigation properties
 
@@ -136,7 +130,7 @@ OData-Version: 4.0
 You can expand single-valued navigation properties to multiple levels by nesting an `$expand` option within another `$expand` option.
 
 > [!NOTE]
-> There is no limit on the depth of nested `$expand` options, but the combined limit of 10 total `$expand` options in a query still applies.
+> There is no limit on the depth of nested `$expand` options, but the combined limit of 15 total `$expand` options in a query still applies.
 
 The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and finally to the `systemuser` who created the  `account` record.
 
@@ -203,7 +197,7 @@ OData-Version: 4.0
 }
 ```
 
-<a bkmk="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
 ## Retrieve related tables by expanding collection-valued navigation properties
 
@@ -275,7 +269,7 @@ OData-Version: 4.0
  
 ```  
 
-<a bkmk="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
+<a name="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
   
 ## Retrieve related tables by expanding both single-valued and collection-valued navigation properties
 
@@ -359,7 +353,7 @@ The Web API allows you to use two lambda operators, which are `any` and `all` to
 
 ## See also
 
-[Search across table data using relevance search](relevance-search.md)  
+[Search across table data using Dataverse search](relevance-search.md)  
 [Query data using Web API](query-data-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

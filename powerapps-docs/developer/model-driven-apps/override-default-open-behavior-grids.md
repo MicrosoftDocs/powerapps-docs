@@ -1,23 +1,26 @@
 ---
 title: "Override the default open behavior of data rows in grids (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Provides information on how to override the default open behavior of the records in grids" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 05/24/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "nkrb" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Override the default open behavior of data rows in an entity-bound grid
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 By default, performing any of the following actions in a data row in an entity-bound grid opens the table record:
 
@@ -82,12 +85,9 @@ Create a custom button on the form where you want to change the default behavior
 
 1. Open the solution that you created in step 1, and add the table where you want to create the button. It is not required to include all table components and metadata.
 
-1. Select **Add existing** > **Other** > **Site map** to add the site map. 
+1. Select **Add existing** > **Table**  
 
-    > [!div class="mx-imgBorder"]
-    > ![Add the site map.](media/add-existing-site-map-to-solution.png "Add the site map")
-
-1. From the list, select **Site Map**.
+1. From the list, select **Contact**.
 
 1. Save and publish the solution. 
 

@@ -1,20 +1,15 @@
 ---
 title: Control Element | Microsoft Docs
 description: Defines the component's namespace, version and display information.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
+contributors:
+ - JimDaly
 ---
 
 # control element
@@ -31,7 +26,7 @@ Model-driven and canvas apps
 |--|--|--|--|--------|
 |`namespace`|Defines the object prototype of the component|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|Yes|Model-driven and canvas apps |
 |`constructor`|A method for initializing the object|[!INCLUDE [alphanumerictype-description](includes/alphanumerictype-description.md)]|Yes|Model-driven and canvas apps |
-|`control-type`|Standard|[!INCLUDE [controltype-description](includes/controltype-description.md)]|No|Model-driven and canvas apps |
+|`control-type`|Whether the control is a standard control or a React control. The value of `virtual` indicates a React control using platform React library. Virtual controls are a feature in public preview. More information: [React controls & platform libraries (Preview) ](../react-controls-platform-libraries.md)|[!INCLUDE [controltype-description](includes/controltype-description.md)]|No|Model-driven and canvas apps |
 |`description-key`|Defines the description of the component that will be seen on the UI.|`string`|No|Model-driven and canvas apps |
 |`display-name-key`|Defines the name of the control that is displayed on the UI.|`string`|Yes|Model-driven and canvas apps  |  
 |`preview-image`|Image that will be used on the customization screens to show a preview of the component.|`string`|No|Model-driven apps|

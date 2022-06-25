@@ -1,26 +1,27 @@
 ---
 title: " Associate security role to a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign a security role to a user " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Sample: Associate security role to a user
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message. 
+
+This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) message. 
 
 This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
 
@@ -37,7 +38,7 @@ You can download the sample from [here](https://github.com/microsoft/PowerApps-S
 
 ## What this sample does
 
-The [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message is intended to be used in a scenario where it provides programmatic access to the metadata and data for an organization.
+The [IOrganizationService.Associate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) message is intended to be used in a scenario where it provides programmatic access to the metadata and data for an organization.
 
 ## How this sample works
 

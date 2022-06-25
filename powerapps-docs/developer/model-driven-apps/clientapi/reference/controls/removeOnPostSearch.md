@@ -1,19 +1,20 @@
 ---
-title: "addOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the removeOnPostSearch method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c398dbca-0ead-487a-8a92-35b1f2953bf6
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # removeOnPostSearch (Client API reference)
 

@@ -1,20 +1,21 @@
 ---
 title: "Image web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using image web resources to make images available for use" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Image web resources
 
@@ -43,7 +44,7 @@ With image web resources you can add images where you need them. Common uses inc
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of vector images over other image web resources is that they scale. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
+Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of SVG over other image web resources is scale, smaller in size, and if the fill color is removed the model-driven app can control the icon color to avoid contrast issues.  When defining the SVG or before uploading it into the web resource please remove any "fill color" attributes. We recommend using SVG over other image types like PNG and JPG. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
 
 > [!NOTE]
 > Vector Format (SVG) web resources are treated like the [Script (JScript)](./script-jscript-web-resources.md) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.

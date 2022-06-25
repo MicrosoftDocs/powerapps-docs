@@ -1,21 +1,22 @@
 ---
-title: "getControl (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getControl method.
-ms.date: 04/19/2021
-ms.service: powerapps
+title: "formContext.getControl (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the formContext.getControl method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 34715e1f-35c0-4b7f-971e-e0a6518f0722
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getControl (Client API reference)
+# formContext.getControl (Client API reference)
 
 Gets a control on the form. 
 

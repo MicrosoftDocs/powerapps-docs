@@ -2,11 +2,10 @@
 title: "Example: Create and customize a model-driven app form | MicrosoftDocs"
 description: "Learn how to create and customize forms in model-driven Power Apps."
 ms.date: 07/05/2021
-ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-ljoel
+ms.author: matp
 ms.reviewer: matp
 ---
 # Create and customize a model-driven app form
@@ -23,9 +22,9 @@ Main forms have a default three-column layout. Model-driven form fields and comp
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Data** > **Tables** > **Account**.
-1. Select the **Forms** tab.
+1. Select the **Forms** area.
 1. Select **Add Form** from the command bar, and then select **Main Form**.
-1. The form designer opens for you to configure the properties for the form.
+1. The form designer opens to enable you to configure the properties for the form.
 
 | Property| Description                                                                                                                                                                                                                                                     |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -122,3 +121,7 @@ Now that you have created and modified a new form, let’s test it out. Follow t
 1. Open an account record.
 1. The new main form with the section for **ADDRESS 2** is displayed. If your new account **main form** isn't displayed, select **main form** from the form selector in the upper left of the form.
    ![you have created and modified a new form](media/create-and-edit-a-model-driven-form/add-a-new-section-and-fields-to-the-form-3.png "you have created and modified a new form")
+
+## Next steps
+
+[Create or edit quick create forms](create-edit-quick-create-forms.md)

@@ -4,7 +4,7 @@ description: "Learn how to define and query hierarchically related data"
 ms.custom: ""
 ms.date: 06/02/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,7 +26,7 @@ search.app:
 ---
 # Define and query hierarchically related data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can get valuable business insights by defining and querying hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
   
@@ -93,8 +93,6 @@ The following examples illustrate scenarios for querying hierarchies:
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Visualize hierarchical data with model-driven apps](visualize-hierarchical-data.md)<br />
-[Video: Hierarchical Security Modelling](https://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)<br />
-[Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

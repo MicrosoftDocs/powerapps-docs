@@ -7,18 +7,19 @@ ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 08/02/2021
-ms.service: powerapps
-ms.topic: conceptual
+ms.date: 01/03/2022
+ms.topic: overview
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - shmcarth
 ---
-# Environment variables overview 
+# Environment variables overview
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
@@ -29,6 +30,7 @@ Benefits of using environment variables:
 - Provide new parameter values while **importing solutions** to other environments.
 - Store configuration for the **data sources** used in canvas apps and flows. For example, SharePoint Online site and list parameters can be stored as environment variables; therefore allowing you to connect to different sites and lists in different environments without needing to modify the apps and flows.
 - Package and transport your customization and configuration together and manage them in a single location.
+- Package and transport secrets, such as credentials used by different components, separately from the components that use them.
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
 - Additionally, if you need to retire a data source in production environments, you can simply update the environment variable values with information for the new data source. The apps and flows do not require modification and will start using the new data source.
 - Supported by [SolutionPackager](/power-platform/alm/solution-packager-tool) and [DevOps](/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
@@ -40,15 +42,18 @@ Environment variables can be created and modified within the modern solution int
 
 ### Create an environment variable in a solution
 
-1. Sign in to Power Apps, and then on the left pane select **Solutions**.
+1. Sign in to Power Apps (make.powerapps.com), and then on the left pane select **Solutions**.
 1. Open the solution you want or create a new one.
-1. On the command bar, select **New** and then select **Environment variable**. 
+1. On the command bar, select **New** > **More**, and then select **Environment variable**. 
 1. On the right pane, complete the following columns, and then select **Save**:  
    - **Display name**. Enter a name for the environment variable. 
    - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
-   - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, or **Data source**. 
+   - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, **Data source**, or **Secret**.
      >[!NOTE]
-     >If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database. 
+     > 
+     > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database.
+     >
+     > - If **Secret** is the selected type, additional information to set up and configure Azure Key Vault is needed to allow Power Platform to access the secret.
    - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present it will be used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
    - **Default Value**. This column is part of the environment variable definition table and is not required. The default value is used if there is no current value. 
   
@@ -81,7 +86,7 @@ Environment variables can be reused across other apps and even different types o
 This option provides simplicity and ensures environment variables will always be used for data sources, such as SharePoint Online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
 
 1. Edit or create a canvas app from your solution.
-1. Select **File** > **Settings** > **Advanced settings** and enable the setting to **Automatically create environment variables when adding data sources**.
+1. Select **Settings** > **General** and enable the setting to **Automatically create environment variables when adding data sources**.
 1. Add a **New** data source for SharePoint online.
 1. Select a SharePoint **site**, one or more **lists**, and then **Connect**.
    >[!NOTE]
@@ -115,25 +120,113 @@ The modern solution import interface includes the ability to enter values for en
 
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on environment variables do not fail. 
 
-
 ## Security
 
-The `environmentvariabledefinition` table is [user or team owned](/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the `environmentvariablevalue` table is inherited from the parent `environmentvariabledefinition` table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
+The `environmentvariabledefinition` table is [user or team owned](/powerapps/maker/data-platform/types-of-entities). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the `environmentvariablevalue` table is inherited from the parent `environmentvariabledefinition` table and therefore does not require separate privileges. Privileges for `environmentvariabledefinition` tables are included in Environment Maker and Basic User security roles by default. More information: [Security in Dataverse](/power-platform/admin/wp-security).
+
+## Naming
+
+Ensure environment variable names are unique so they can be referenced accurately. Duplicate environment variable display names make environment variables difficult to differentiate and use. Ensure environment variable names are unique so they can be referenced accurately.
+The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
+If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it is recommended to remove the environment variable reference and add it again.
+
+## Use Azure Key Vault secrets (preview)
+
+Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference. 
+
+Environment variables referencing secrets are not currently available from the dynamic content selector for use in flows.
+
+### Configure Azure Key Vault
+
+To use Azure Key Vault secrets with Power Platform, the Azure subscription that has the vault must have the `PowerPlatform` resource provider registered and the user who creates the environment variable must have appropriate permissions to the Azure Key Vault resource.
+
+#### Prerequisites
+
+1. Register the `Microsoft.PowerPlatform` resource provider in your Azure subscription.  Follow these steps to verify and configure: [Resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types)
+
+   :::image type="content" source="media/env-var-secret1.png" alt-text="Register the Power Platform provider in Azure":::
+
+1. Create an Azure Key Vault vault. Consider using a separate vault for every Power Platform environment to minimize the threat in case of a breach. Go to [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices#use-separate-key-vaults) for more information. For more information about how to create a key vault, go to [Quickstart - Create an Azure Key Vault with the Azure portal](/azure/key-vault/general/quick-create-portal)
+1.	The user who creates the environment variable must have read permission on the specific vault. You can verify permission using **View my access** on the **Access Control** > **Check access** tab of the Azure Key Vault on the Azure portal. If the user doesn't have access to the vault, grant access to this resource via the Key Vault Reader or other appropriate role.
+
+      :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
+
+1. Azure Key Vault must have **Get** secret access policy set for the Dataverse service principal. If it doesn't exist for this vault, add a new access policy.  Select **Add Access Policy** and then select **Get** as the access policy. Next to **Select principal**, select **None selected** and then search for **Dataverse**. Select the Dataverse service principal with the **00000007-0000-0000-c000-000000000000** identity and then select **Add**. Once added, the access policy should look like this.
+
+      :::image type="content" source="media/env-var-secret3.png" alt-text="Get access policy for Dataverse security principal in Azure":::
+
+1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
+
+### Create a new environment variable for the Key Vault secret
+
+Once Azure Key Vault is configured and you have a secret registered in your vault, you can now reference it within Power Apps using an environment variable.
+
+1.	Sign on to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and in the **Solutions** area, open the unmanaged solution you're using for development.
+1. Select **New** > **More** > **Environment variable**.
+1.	Enter a **Display name** and optionally, a **Description** for the environment variable.
+1. Select the **Data Type** as **Secret** and **Secret Store** as **Azure Key Vault**.
+1. Choose from the following options:
+   - Select **New Azure Key Vault value reference**. After the information is added in the next step and saved, an environment variable *value* record is created.
+   - Expand **Show default value**, to display the fields to create a **Default Azure Key Vault secret**. After the information is added in the next step and saved, the default value demarcation is added to the environment variable *definition* record.
+1. Enter the following information:
+   - **Azure Subscription ID**: The Azure subscription ID associated with the key vault. 
+   - **Resource Group Name**: The Azure resource group where the key vault that contains the secret is located.
+   - **Azure Key Vault Name**: The name of the key vault that contains the secret.
+   - **Secret Name**: The name of the secret located in Azure Key Vault.
+
+   > [!TIP]
+   > The subscription ID, resource group name, and key vault name can be found on the Azure portal **Overview** page of the key vault. The secret name can be found on the key vault page in the Azure portal by selecting **Secrets** under **Settings**.
+
+1. Select **Save**.
+
+> [!NOTE]
+> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
+> 
+> - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
+
+### Create a Power Automate flow to test the environment variable secret
+
+A simple scenario to demonstrate how to use a secret obtained from Azure Key Vault is to create a Power Automate flow to use the secret to authenticate against a web service.
+
+> [!NOTE]
+> The URI for the web service in this example is not a functioning web service.
+
+1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want.
+1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
+1. Enter a name for the flow, select **Manually trigger a flow**, and then select **Create**.
+1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.
+1.	Select the action named **RetrieveEnvironmentVariableSecretValue** from the dropdown list.
+1. Provide the environment variable unique name (not the display name) added in the previous section, for this example *new_TestSecret* is used.
+1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In the below screenshot, it has been renamed to **GetSecret**.
+
+   :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
+1. Select **...** > **Settings** to display the **GetSecret** action settings.
+1. Enable the **Secure Outputs** option in the settings, and then select **Done**. This is to prevent the output of the action getting exposed in the flow run history.
+
+   :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
+1. Select **New step**, search and select the **HTTP** connector.
+1. Select the **Method** as **GET** and enter the **URI** for the web service. In this example, the fictitious web service *httpbin.org* is used.
+1. Select **Show advanced options**, select the **Authentication** as **Basic**, and then enter the **Username**.
+1. Select the **Password** field, and then on the **Dynamic content** tab under the flow step name above (*GetSecret* in this example) select **RetrieveEnvironmentVariableSecretValueResponse EnvironmentVariableSecretValue**, which is then added as an expression `outputs('GetSecretTest')?['body/EnvironmentVariableSecretValue']` or `body('GetSecretTest')['EnvironmentVariableSecretValue']`.
+
+   :::image type="content" source="media/env-var-secret6.png" alt-text="Create a new step using the HTTP connector":::
+1. Select **Save** to create the flow.
+1. Manually run the flow to test it.
+
+Using the run history of the flow, the outputs can be verified.
+
+:::image type="content" source="media/env-var-secret7.png" alt-text="Flow output":::
 
 ## Current limitations
 
-- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Dataverse connector will be updated soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection. 
-- Using environment variables within triggers in Power Automate is currently only supported for a limited set of connectors. Supported connecters for triggers are SharePoint, Dataverse, and SQL server.
+- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Dataverse connector will be updated soon for when connectivity is required to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection.
+- If you’re using environment variables for storing SharePoint data source parameters in canvas apps, ensure you use **Display Name** (instead of logical name, or ID) when using "Lookup" or "Person or group" column types.
 - When environment variable values are changed directly within an environment instead of through an ALM operation like solution import, flows will continue using the previous value until the flow is either saved or turned off and turned on again.  
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) are not yet available for managing data source environment variables. However, this does not block their usage within Microsoft provided tooling and within source control systems.
 - Interacting with environment variables via custom code requires an API call to fetch the values; there is not a cache exposed for 3rd party code to leverage. 
-<!--  Azure Key Vault integration for secret management. While on our roadmap, currently environment variables shouldn't be used to store secure data such as passwords and keys.
- -->
-- When editing a cloud flow, the environment variables are shown in the dynamic content selector under a heading of **Parameters** but will be under a heading of **Environment Variables** in the near future. 
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 
 - When editing a cloud flow, if an environment variable is added in another browser tab, the flow needs to be reopened in the flow designer to refresh the dynamic content selector.
-- When editing a cloud flow, an environment variable with a label of **$authentication** might show up that was not defined in the environment. 
 
 ## Frequently asked questions
 
@@ -147,9 +240,9 @@ No. Although they're related. A connection represents a credential or authentica
 
 ### Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?
 
-Generally no. Shared connections such as SQL Server with SQL authentication store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
+Generally no. Shared connections with SQL Server store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
 
-Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons SQL Server with SQL authentication, which is a shared connection, will not use data source environment variables but SQL Server with Azure Active Directory (AAD) authentication, which is a personal connection will. 
+Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons authentication with SQL Server, which is a shared connection, will not use data source environment variables. 
 
 ### Can my automated ALM pipeline use different values files for different environments?
 
@@ -171,7 +264,7 @@ No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use 
 
 ### Is there a limit to the number of environment variables I can have?
 
-No. However, the max size of a solution is 29 MB.
+No. However, the max size of a solution is 32 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
 
 ### Can environment variable display names and descriptions be localized?
 
@@ -191,14 +284,17 @@ To remove the value, follow these steps:
 1. Under **Current Value**, select **...** > **Remove from this solution**.
    :::image type="content" source="media/remove-value-env-var.png" alt-text="Remove the value from an environment variable":::
 
+### Can I use environment variables in custom connectors?
+
+Yes. [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)
+
 ### See also
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
 [EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
-
 [Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Create a flow with Dataverse](/flow/connection-cds)
-
+[Create a flow with Dataverse](/flow/connection-cds)</BR>
+[Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)</BR>
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)] 

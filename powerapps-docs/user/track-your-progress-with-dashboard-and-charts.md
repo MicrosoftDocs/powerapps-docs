@@ -3,7 +3,7 @@ title: "Track your progress with dashboards and charts in model-driven apps| Mic
 description: How to use charts in Power Apps.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
@@ -56,9 +56,9 @@ Legend:
 
 Legend:
 
-1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
-2. **Refresh**: Refreshes the rows in the chart.
-3. **View Rows**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+1. **Refresh**: Refreshes the rows in the chart.
+2. **View Records**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+3. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
@@ -87,11 +87,11 @@ Legend:
  
 5. On the **Add Component** dialog box, select your options. 
  
-      |  |  |
-      | --- | --- |
-      | **Row Type** |Select a row.  |
-      | **View** |Select a view for the row.  |
-      | **Chart** |Select the type of chart that you want use. |
+      |              |Options                                   |
+      |--------------|--------------------------------------------|
+      | **Row Type** |Select a row.                               |
+      | **View**     |Select a view for the row.                  |
+      | **Chart**    |Select the type of chart that you want use. |
 
 
       > [!div class="mx-imgBorder"]

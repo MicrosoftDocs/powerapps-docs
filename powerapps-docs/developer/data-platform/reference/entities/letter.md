@@ -1,13 +1,13 @@
 ---
-title: "Letter table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Letter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Letter table/entity."
-ms.date: 05/20/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -251,12 +251,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DirectionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Outgoing|
-|0|Incoming|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Outgoing||
+|0|Incoming||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -305,12 +305,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -328,12 +328,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -409,11 +409,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -724,6 +724,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -866,8 +867,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -886,12 +887,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1056,12 +1057,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the letter activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1240,7 +1257,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Letter_DuplicateBaseRecord"></a> Letter_DuplicateBaseRecord
 
-Same as duplicaterecord table [Letter_DuplicateBaseRecord](duplicaterecord.md#BKMK_Letter_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Letter_DuplicateBaseRecord](duplicaterecord.md#BKMK_Letter_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1255,7 +1272,7 @@ Same as duplicaterecord table [Letter_DuplicateBaseRecord](duplicaterecord.md#BK
 
 ### <a name="BKMK_Letter_BulkDeleteFailures"></a> Letter_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Letter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Letter_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Letter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Letter_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1270,7 +1287,7 @@ Same as bulkdeletefailure table [Letter_BulkDeleteFailures](bulkdeletefailure.md
 
 ### <a name="BKMK_letter_connections1"></a> letter_connections1
 
-Same as connection table [letter_connections1](connection.md#BKMK_letter_connections1) Many-To-One relationship.
+Same as the [letter_connections1](connection.md#BKMK_letter_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1285,7 +1302,7 @@ Same as connection table [letter_connections1](connection.md#BKMK_letter_connect
 
 ### <a name="BKMK_slakpiinstance_letter"></a> slakpiinstance_letter
 
-Same as slakpiinstance table [slakpiinstance_letter](slakpiinstance.md#BKMK_slakpiinstance_letter) Many-To-One relationship.
+Same as the [slakpiinstance_letter](slakpiinstance.md#BKMK_slakpiinstance_letter) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1300,7 +1317,7 @@ Same as slakpiinstance table [slakpiinstance_letter](slakpiinstance.md#BKMK_slak
 
 ### <a name="BKMK_Letter_AsyncOperations"></a> Letter_AsyncOperations
 
-Same as asyncoperation table [Letter_AsyncOperations](asyncoperation.md#BKMK_Letter_AsyncOperations) Many-To-One relationship.
+Same as the [Letter_AsyncOperations](asyncoperation.md#BKMK_Letter_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1315,7 +1332,7 @@ Same as asyncoperation table [Letter_AsyncOperations](asyncoperation.md#BKMK_Let
 
 ### <a name="BKMK_Letter_Annotation"></a> Letter_Annotation
 
-Same as annotation table [Letter_Annotation](annotation.md#BKMK_Letter_Annotation) Many-To-One relationship.
+Same as the [Letter_Annotation](annotation.md#BKMK_Letter_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1330,7 +1347,7 @@ Same as annotation table [Letter_Annotation](annotation.md#BKMK_Letter_Annotatio
 
 ### <a name="BKMK_letter_actioncard"></a> letter_actioncard
 
-Same as actioncard table [letter_actioncard](actioncard.md#BKMK_letter_actioncard) Many-To-One relationship.
+Same as the [letter_actioncard](actioncard.md#BKMK_letter_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1345,7 +1362,7 @@ Same as actioncard table [letter_actioncard](actioncard.md#BKMK_letter_actioncar
 
 ### <a name="BKMK_letter_principalobjectattributeaccess"></a> letter_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [letter_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_letter_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [letter_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_letter_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1360,7 +1377,7 @@ Same as principalobjectattributeaccess table [letter_principalobjectattributeacc
 
 ### <a name="BKMK_Letter_ProcessSessions"></a> Letter_ProcessSessions
 
-Same as processsession table [Letter_ProcessSessions](processsession.md#BKMK_Letter_ProcessSessions) Many-To-One relationship.
+Same as the [Letter_ProcessSessions](processsession.md#BKMK_Letter_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1375,7 +1392,7 @@ Same as processsession table [Letter_ProcessSessions](processsession.md#BKMK_Let
 
 ### <a name="BKMK_Letter_DuplicateMatchingRecord"></a> Letter_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Letter_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Letter_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Letter_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Letter_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1390,7 +1407,7 @@ Same as duplicaterecord table [Letter_DuplicateMatchingRecord](duplicaterecord.m
 
 ### <a name="BKMK_Letter_SyncErrors"></a> Letter_SyncErrors
 
-Same as syncerror table [Letter_SyncErrors](syncerror.md#BKMK_Letter_SyncErrors) Many-To-One relationship.
+Same as the [Letter_SyncErrors](syncerror.md#BKMK_Letter_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1405,7 +1422,7 @@ Same as syncerror table [Letter_SyncErrors](syncerror.md#BKMK_Letter_SyncErrors)
 
 ### <a name="BKMK_letter_activity_parties"></a> letter_activity_parties
 
-Same as activityparty table [letter_activity_parties](activityparty.md#BKMK_letter_activity_parties) Many-To-One relationship.
+Same as the [letter_activity_parties](activityparty.md#BKMK_letter_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1420,7 +1437,7 @@ Same as activityparty table [letter_activity_parties](activityparty.md#BKMK_lett
 
 ### <a name="BKMK_Letter_QueueItem"></a> Letter_QueueItem
 
-Same as queueitem table [Letter_QueueItem](queueitem.md#BKMK_Letter_QueueItem) Many-To-One relationship.
+Same as the [Letter_QueueItem](queueitem.md#BKMK_Letter_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1435,7 +1452,7 @@ Same as queueitem table [Letter_QueueItem](queueitem.md#BKMK_Letter_QueueItem) M
 
 ### <a name="BKMK_letter_connections2"></a> letter_connections2
 
-Same as connection table [letter_connections2](connection.md#BKMK_letter_connections2) Many-To-One relationship.
+Same as the [letter_connections2](connection.md#BKMK_letter_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1473,67 +1490,67 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_KnowledgeBaseRecord_Letters"></a> KnowledgeBaseRecord_Letters
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_Letters](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Letters) One-To-Many relationship.
+See the [KnowledgeBaseRecord_Letters](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Letters) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_Contact_Letters"></a> Contact_Letters
 
-See contact Table [Contact_Letters](contact.md#BKMK_Contact_Letters) One-To-Many relationship.
+See the [Contact_Letters](contact.md#BKMK_Contact_Letters) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_sla_letter"></a> sla_letter
 
-See sla Table [sla_letter](sla.md#BKMK_sla_letter) One-To-Many relationship.
+See the [sla_letter](sla.md#BKMK_sla_letter) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_letter"></a> activity_pointer_letter
 
-See activitypointer Table [activity_pointer_letter](activitypointer.md#BKMK_activity_pointer_letter) One-To-Many relationship.
+See the [activity_pointer_letter](activitypointer.md#BKMK_activity_pointer_letter) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_team_letter"></a> team_letter
 
-See team Table [team_letter](team.md#BKMK_team_letter) One-To-Many relationship.
+See the [team_letter](team.md#BKMK_team_letter) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_processstage_letters"></a> processstage_letters
 
-See processstage Table [processstage_letters](processstage.md#BKMK_processstage_letters) One-To-Many relationship.
+See the [processstage_letters](processstage.md#BKMK_processstage_letters) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_user_letter"></a> user_letter
 
-See systemuser Table [user_letter](systemuser.md#BKMK_user_letter) One-To-Many relationship.
+See the [user_letter](systemuser.md#BKMK_user_letter) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Letters"></a> KnowledgeArticle_Letters
 
-See knowledgearticle Table [KnowledgeArticle_Letters](knowledgearticle.md#BKMK_KnowledgeArticle_Letters) One-To-Many relationship.
+See the [KnowledgeArticle_Letters](knowledgearticle.md#BKMK_KnowledgeArticle_Letters) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_letter_createdby"></a> lk_letter_createdby
 
-See systemuser Table [lk_letter_createdby](systemuser.md#BKMK_lk_letter_createdby) One-To-Many relationship.
+See the [lk_letter_createdby](systemuser.md#BKMK_lk_letter_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Letter"></a> TransactionCurrency_Letter
 
-See transactioncurrency Table [TransactionCurrency_Letter](transactioncurrency.md#BKMK_TransactionCurrency_Letter) One-To-Many relationship.
+See the [TransactionCurrency_Letter](transactioncurrency.md#BKMK_TransactionCurrency_Letter) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_letter_modifiedby"></a> lk_letter_modifiedby
 
-See systemuser Table [lk_letter_modifiedby](systemuser.md#BKMK_lk_letter_modifiedby) One-To-Many relationship.
+See the [lk_letter_modifiedby](systemuser.md#BKMK_lk_letter_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_Letters"></a> Account_Letters
 
-See account Table [Account_Letters](account.md#BKMK_Account_Letters) One-To-Many relationship.
+See the [Account_Letters](account.md#BKMK_Account_Letters) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_letter_createdonbehalfby"></a> lk_letter_createdonbehalfby
 
-See systemuser Table [lk_letter_createdonbehalfby](systemuser.md#BKMK_lk_letter_createdonbehalfby) One-To-Many relationship.
+See the [lk_letter_createdonbehalfby](systemuser.md#BKMK_lk_letter_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_letter_activities"></a> business_unit_letter_activities
 
-See businessunit Table [business_unit_letter_activities](businessunit.md#BKMK_business_unit_letter_activities) One-To-Many relationship.
+See the [business_unit_letter_activities](businessunit.md#BKMK_business_unit_letter_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_manualsla_letter"></a> manualsla_letter
 
-See sla Table [manualsla_letter](sla.md#BKMK_manualsla_letter) One-To-Many relationship.
+See the [manualsla_letter](sla.md#BKMK_manualsla_letter) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_lk_letter_modifiedonbehalfby"></a> lk_letter_modifiedonbehalfby
 
-See systemuser Table [lk_letter_modifiedonbehalfby](systemuser.md#BKMK_lk_letter_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_letter_modifiedonbehalfby](systemuser.md#BKMK_lk_letter_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

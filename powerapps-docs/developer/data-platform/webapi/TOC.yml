@@ -24,6 +24,21 @@
     href: aad-group-team.md
 - name: Types and operations
   href: web-api-types-operations.md
+  items:
+  - name: Service Documents
+    href: web-api-service-documents.md
+  - name: Entity Types
+    href: web-api-entitytypes.md
+  - name: Properties
+    href: web-api-properties.md
+  - name: Navigation Properties
+    href: web-api-navigation-properties.md
+  - name: Action definitions
+    href: web-api-actions.md
+  - name: Function definitions
+    href: web-api-functions.md
+  - name: Complex & Enum types
+    href: web-api-complex-enum-types.md
 - name: Perform Web API operations
   items:
   - name: Get started with performing operations
@@ -62,6 +77,8 @@
     href: manage-duplicate-detection-create-update.md
   - name: Access table data faster using partitions
     href: azure-storage-partitioning.md
+  - name: Troubleshoot client errors
+    href: /troubleshoot/power-platform/power-apps/web-api-client-errors
 - name: Work with table definitions (metadata)
   items:
   - name: Use the Web API with table definitions
@@ -90,7 +107,7 @@
   href: get-started-web-api-client-side-javascript.md
 - name: Web API versions and limitations
   href: web-api-versions.md
-- name: Relevance search, suggestions, and autocomplete
+- name: Dataverse search, suggestions, and autocomplete
   href: relevance-search.md
 - name: Discover the URL for your organization
   items:

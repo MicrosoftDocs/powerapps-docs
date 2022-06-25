@@ -3,10 +3,9 @@ title: Use solution checker to validate your apps in Power Apps | Microsoft Docs
 description: Use the solution checker to validate your solution.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 08/12/2020
+ms.date: 10/31/2021
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -18,9 +17,10 @@ search.app:
 
 # Use solution checker to validate your model-driven apps in Power Apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations comes an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
+
+> [!Important]
+> Starting March 2022, solution checker won’t analyze plugins in solutions. Plugin validations are being modernized and will eventually focus on the native plugin authoring time, which will help you detect and fix issues earlier.
 
 The solution checker analyzes these solution components: 
 - Dataverse plug-ins
@@ -31,14 +31,14 @@ The solution checker analyzes these solution components:
 Solution checker works with unmanaged solutions that can be exported from an environment. 
 
 > [!NOTE]
-> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module&preserve-view=true) 
+> - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of unmanaged solutions for Power Apps environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module&preserve-view=true) 
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
 > - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment. 
 <!-- 
 ## Enable the solution checker
-The Solution checker is enabled by default in every Dataverse environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
+The Solution checker is enabled by default in every environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Dataverse environment where you want to enable the solution checker. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment where you want to enable the solution checker. 
 2. On the left navigation pane, select **Solutions**.
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
@@ -149,7 +149,7 @@ Here's a summary of each column in the report.
 | Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  |
 |Web Resources  | [web-use-async](../../developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously.md?client=PAChecker&error=web-use-async&source=featuredocs)  |  Interact with HTTP and HTTPS resources asynchronously.   |
 |Web Resources  | [web-avoid-modals](../../developer/model-driven-apps/clientapi/reference/xrm-navigation.md?client=PAChecker&error=web-avoid-modals&source=featuredocs)  | Avoid using modal dialogs.   |
-|Web Resources  | [web-avoid-crm2011-service-odata](../../developer/data-platform/org-service/overview.md?client=PAChecker&error=web-avoid-crm2011-service-odata&source=featuredocs)   | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
+|Web Resources  | [web-avoid-crm2011-service-odata](../../developer/model-driven-apps/best-practices/business-logic/do-not-use-odata-v2-endpoint.md?client=PAChecker&error=web-avoid-crm2011-service-odata&source=featuredocs) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
 |Web Resources  | [web-avoid-crm2011-service-soap](../../developer/data-platform/org-service/overview.md?client=PAChecker&error=web-avoid-crm2011-service-soap&source=featuredocs)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
 |Web Resources  | [web-avoid-browser-specific-api](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-avoid-browser-specific-api&source=featuredocs) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
 |Web Resources  | [web-avoid-2011-api](../../developer/data-platform/webapi/overview.md?client=PAChecker&error=web-avoid-2011-api&source=featuredocs)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model.  |

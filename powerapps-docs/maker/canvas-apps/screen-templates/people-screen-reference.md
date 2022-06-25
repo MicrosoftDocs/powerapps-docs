@@ -2,8 +2,7 @@
 title: Reference information about the people-screen template for canvas apps
 description: Understand details of how the people-screen template for canvas apps works in Power Apps.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm

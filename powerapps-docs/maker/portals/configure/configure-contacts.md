@@ -2,62 +2,97 @@
 title: Configure a contact for use on a portal
 description: Learn how to add and configure a contact to be used in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/15/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - ProfessorKendrick
 ---
 
 # Configure a contact for use on a portal
 
-After filling out the basic information for a contact, (or having a user fill out the sign-up form in a portal), go to the web authentication tab on the portal contact form to configure a contact by using local authentication. For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). To configure a contact for portals by using local authentication, follow these instructions:  
+After filling out the basic information for a contact (or having a user fill out the sign-up form in a portal), go to the web authentication tab on the portal contact form to configure a contact by using local authentication. For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). 
 
-1.  Enter a **username**.
-2.  On the command ribbon, go to **More Commands** &gt; **Change Password**.
+> [!NOTE] 
+> You can also configure a contact in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
-Complete the change password workflow, and the necessary fields will be automatically configured. When you have done this, your contact will be configured for your portals.
+To configure a contact for portals by using local authentication, follow these instructions:  
 
-## Change password for a contact from Portal Management app
+> [!IMPORTANT]
+> - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 
-1.  Open the [Portal Management app](configure-portal.md).
+Complete the change password workflow, and the necessary fields will be automatically configured. When you've done this, your contact will be configured for your portals.
 
-2.  Go to **Portals** > **Contacts**, and open the contact for which you want to change the password.
+1. In the **Security** section, select **Contacts**.
+
+1. Create a new contact or select an existing contact.
+
+1. Choose the **Contact - Portal Contact** form.
+
+1. Select the **Web Authentication** tab.
+
+1. Enter a **Username**.
+
+    :::image type="content" source="media/configure-contacts/contact-form.png" alt-text="Configure contact to provide access to portal.":::
+
+1. Select **Save**.
+
+1. On the command bar, choose **Change Password**.
+
+1. Complete the [change password steps](#change-password-for-a-contact-from-the-portal-management-app), and the necessary fields will be automatically configured. The contact will then be configured to access the portal.
+
+A portal user can also [register directly](set-authentication-identity.md#sign-up-by-using-a-local-identity-or-external-identity) on the portal, or be sent an [invitation](invite-contacts.md) to register. 
+
+For more information about federated authentication options, see [set authentication identity for a portal](set-authentication-identity.md). 
+
+## Change password for a contact from the Portal Management app
+
+In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). 
+
+Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
+
+| Schema name | Display name | Table | Privileges |
+| - | - | - | - |
+| adx_identity_logonenabled | Login Enabled | contact | Read, Update, Create |
+| adx_identity_passwordhash | Password Hash | contact | Read, Update, Create |
+| adx_identity_username | User Name | contact | Read, Update, Create |
+| sharepointemailaddress | SharePoint Email Address | user | Update, Create |
+
+Add the user or team that will need to perform these steps to the field security profile.
+
+1. Open the [Portal Management app](configure-portal.md).
+
+1. Go to **Portals** > **Contacts**, and open the contact for which you want to change the password.
     Alternately, you can also open the **Contacts** page from the [Share](../manage-existing-portals.md#share) pane. 
 
-3.	Select **Task Flow** on the toolbar at the top.
+1. Select **Change Password** from the command bar the contact form.
 
-    > [!div class="mx-imgBorder"]
-    > ![Task flow icon.](../media/task-flow.png "Task flow icon")
+    :::image type="content" source="media/configure-contacts/change-password.png" alt-text="Change password from the command bar.":::
 
-4.	Select the **Change password for portal contact** task flow.
+1. In the **New password** field, enter a new password, and then select **Next**.
 
-5.	In the **Change password for portal contact** pane, select or create a contact to change the password, and then select **Next**.
+    :::image type="content" source="media/configure-contacts/change-password-new-password.png" alt-text="Enter new password for the contact.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Select a contact to change the password.](../media/change-password-select-contact.png "Select a contact to change the password")
+    If you don't enter a password and select **Next**, you'll be asked whether you want to remove password for the selected contact.
 
-6.	In the **New password** field, enter a new password, and then select **Next**.
+    :::image type="content" source="media/configure-contacts/change-password-remove-password.png" alt-text="Remove password for the contact.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Enter new password for the contact.](../media/change-password-new-password.png "Enter new password for the contact")
+1. After making the changes, select **Done**.
 
-    If you do not enter a password and select **Next**, you'll be asked whether you want to remove password for the selected contact.
+    :::image type="content" source="media/configure-contacts/change-password-done.png" alt-text="Password changed for the contact.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Remove password for the contact.](../media/change-password-remove-password.png "Remove password for the contact")
+### Deprecation of business process flow
 
-7.	After making the changes, select **Done**.
-
+Earlier versions of the change password process utilized a task flow which has been deprecated. In Dataverse security roles, the **Change Password for Portals Contact** privilege under the **Business Process Flows** tab no longer requires any options selected.
 
 ### See also
 [Invite contacts to your portals](invite-contacts.md)  
 [Set authentication identity for a portal](set-authentication-identity.md)  
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
