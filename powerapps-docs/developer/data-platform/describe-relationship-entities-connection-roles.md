@@ -4,9 +4,10 @@ description: "Describing a relationship between tables using create connection r
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Describe a relationship between tables with connection roles
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can describe the relationship between records through the roles that you assign to them.  
   
@@ -49,7 +50,7 @@ You can describe the relationship between records through the roles that you ass
   
 - Use the `ConnectionRole.Category`  to specify a role category. The possible values for this are defined in the `connectionrole_category` choices.  
   
-- When you create a connection role, you can specify an table type that the role will be applied to, such as lead, account, or competitor. If you do not specify a particular table type, then you can apply a connection role to all Microsoft Dataverse tables. To specify the table type, use the `ConnectionRoleObjectTypeCode.AssociatedObjectTypeCode`. To link the connection role to a particular table type, use the `ConnectionRoleObjectTypeCode.ConnectionRoleId`. A connection role record can be referenced by multiple connection role object type code records. If you remove all references to the connection role record, you can apply this connection role to all Dataverse tables.  
+- When you create a connection role, you can specify a table type that the role will be applied to, such as lead, account, or competitor. If you do not specify a particular table type, then you can apply a connection role to all Microsoft Dataverse tables. To specify the table type, use the `ConnectionRoleObjectTypeCode.AssociatedObjectTypeCode`. To link the connection role to a particular table type, use the `ConnectionRoleObjectTypeCode.ConnectionRoleId`. A connection role record can be referenced by multiple connection role object type code records. If you remove all references to the connection role record, you can apply this connection role to all Dataverse tables.  
   
   > [!TIP]
   >  To find the connection roles for an account, in the query, specify all roles that are linked to the account (Entity Type Code = 1) or to all tables (Entity Type Code = 0).  

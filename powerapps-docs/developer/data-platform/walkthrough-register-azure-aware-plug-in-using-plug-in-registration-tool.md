@@ -1,20 +1,21 @@
 ---
 title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration tool (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to register a service endpoint step using the Plug-in Registration tool for use with Azure-Dataverse integration."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: marcelbf
+ms.author: marcelbf
+manager: pemikkel
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
-author: JimDaly # GitHub ID - Brandon Simmons
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Register an Azure-aware plug-in using the Plug-in Registration tool
@@ -49,7 +50,7 @@ Follow the steps below to connect to Dataverse using the Plug-in Registration to
 1. Click **Create New Connection**.  
 1. In the **Login** dialog box, select **Microsoft 365**.
 
-    ![Login form for an online deployment](media/crm-v6s-pr.png "Login form for an online deployment")
+    ![Login form for an online deployment.](media/crm-v6s-pr.png "Login form for an online deployment")
 
 1. If you check **Display list of available organizations**, you are presented with a list of organizations that you belong to after you click **Login**. This enables you to choose the organization that you want to register the service endpoint with. Otherwise, your default organization is used.  
 1. Enter the indicated information about the server and logon account, and then click **Login**.  
@@ -64,13 +65,16 @@ Follow the steps below to register a step for an event on the service endpoint.
 1. Navigate to the **Register** menu and click **Register New Step**.  
 1. Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.
 
-    ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
+    ![Creating a service endpoint step.](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
   
 1. Click **Register New Step**.  
   
 Dataverse will now post the current message containing the execution context to the Service Bus whenever an account is created. The post is performed asynchronously and is not executed immediately.  
   
 <a name="BKMK_Test"></a>
+
+> [!NOTE]
+> Registered service endpoints support only port 80 for HTTP and port 443 for HTTPS. 
 
 ## Test the endpoint registration
 

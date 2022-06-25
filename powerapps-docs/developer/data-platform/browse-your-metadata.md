@@ -4,9 +4,10 @@ description: "You can use the Metadata Browser to view tables and their properti
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -40,13 +41,13 @@ After you download the solution, you must import it to be able to use it.
 
 After you import the solution successfully, locate the app by selecting **Apps** in the left navigation pane; the app is listed as **Metadata Tools**.
 
-![Metadata Tools app](media/metadata-tools.png)
+![Metadata Tools app.](media/metadata-tools.png)
 
 ## Entities view
 
 On opening the app, **Entities** is the default view that lets you view all the tables.
 
-![Entities view](media/metadata-tools-entity.png)
+![Entities view.](media/metadata-tools-entity.png)
 
 You can perform the following actions:
 
@@ -60,7 +61,7 @@ You can perform the following actions:
 
 Select **Entity Metadata** to inspect individual tables. 
 
-![Metadata view](media/metadata-tools-entity-metadata.png "Metadata view")
+![Metadata view.](media/metadata-tools-entity-metadata.png "Metadata view")
 
 You can perform the following actions for a single table:
 
@@ -77,7 +78,7 @@ You can perform the following actions for a single table:
     - **Filter Attributes**: Filter columns by any attribute property values.
     - **Filter Properties**: Filter the properties displayed for the selected attribute.
 
-- **Keys**: If alternate keys are enabled for an table you can examine how they are configured.
+- **Keys**: If alternate keys are enabled for a table you can examine how they are configured.
 
 - **Relationships**: View the three types of table relationships: One-To-Many, Many-To-One, and Many-To-Many. With these views you can:  
     - **Edit Relationship**: Open the selected relationship form in the default organization, if the relationship supports this.  

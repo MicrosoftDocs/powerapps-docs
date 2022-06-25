@@ -4,10 +4,10 @@ description: "Learn how to define and query hierarchically related data"
 ms.custom: ""
 ms.date: 06/02/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 0cf62817-5ff5-40bb-ad17-e1f6b0921720
 caps.latest.revision: 42
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 ---
 # Define and query hierarchically related data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can get valuable business insights by defining and querying hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
   
@@ -44,7 +45,7 @@ With Microsoft Dataverse, hierarchical data structures are supported by *self-re
 
 When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchical** option is available to be set to **Yes**.
 
-![Hierarchical setting in relationship definition](media/self-referential-relationship-widget.png)
+![Hierarchical setting in relationship definition.](media/self-referential-relationship-widget.png)
 
 To query the data as a hierarchy, you must set one of the table’s one-to-many (1:N) self-referential relationships as hierarchical. 
 
@@ -78,22 +79,20 @@ The following examples illustrate scenarios for querying hierarchies:
   
 ### Query account hierarchy  
   
-![Query accounts in the account hierarchy](media/query-accounts.png)  
+![Query accounts in the account hierarchy.](media/query-accounts.png)  
   
 ### Query account hierarchy, including related activities  
   
-![Query account's related activities](media/query-account-related-activities.png)  
+![Query account's related activities.](media/query-account-related-activities.png)  
   
 ###  Query account hierarchy, including related opportunities  
   
-![Query account's related opportunities](media/query-account-related-opportunities.png)  
+![Query account's related opportunities.](media/query-account-related-opportunities.png)  
   
 ## See also 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Visualize hierarchical data with model-driven apps](visualize-hierarchical-data.md)<br />
-[Video: Hierarchical Security Modelling](https://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)<br />
-[Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

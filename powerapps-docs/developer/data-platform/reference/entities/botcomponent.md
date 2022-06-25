@@ -1,13 +1,13 @@
 ---
-title: "botcomponent table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the botcomponent table/entity."
-ms.date: 03/04/2021
+title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# botcomponent table/entity reference
+# Chatbot subcomponent (botcomponent)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -36,7 +36,6 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/botcomponents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -66,12 +65,15 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AccentColor](#BKMK_AccentColor)
 - [botcomponentId](#BKMK_botcomponentId)
 - [Category](#BKMK_Category)
 - [ComponentType](#BKMK_ComponentType)
 - [Content](#BKMK_Content)
 - [Data](#BKMK_Data)
 - [Description](#BKMK_Description)
+- [HelpLink](#BKMK_HelpLink)
+- [IconUrl](#BKMK_IconUrl)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Language](#BKMK_Language)
@@ -80,11 +82,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentBotComponentId](#BKMK_ParentBotComponentId)
+- [ReusePolicy](#BKMK_ReusePolicy)
 - [SchemaName](#BKMK_SchemaName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AccentColor"></a> AccentColor
+
+|Property|Value|
+|--------|-----|
+|Description|Accent Color for this re-usable subcomponent|
+|DisplayName|Accent Color|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|accentcolor|
+|MaxLength|7|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_botcomponentId"></a> botcomponentId
@@ -132,16 +151,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ComponentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Topic|
-|1|Skill|
-|2|Bot variable|
-|3|Bot entity|
-|4|Dialog|
-|5|Trigger|
-|6|Language understanding|
-|7|Language generation|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Topic|A topic defines a how a bot conversation plays out. A topic has trigger phrases - these are phrases, keywords, or questions - and conversation nodes - these are what you use to define how a bot should respond and what it should do.|
+|1|Skill|Power Virtual Agents enables you to extend your bot using Bot Framework Skills. Bot Framework Skills are re-usable conversational skill building-blocks covering conversational use-cases.|
+|2|Bot variable|Variables let you save responses from your customers in a conversation with your bot so that you can reuse them later in the conversation.|
+|3|Bot entity|An entity can be viewed as an information unit that represents a certain type of a real-world subject, like a phone number, zip code, city, or even a person's name.|
+|4|Dialog|Dialogs provide more advanced functionality than topics and integrate with Bot Framework Composer.|
+|5|Trigger|Trigger defines how the topic is triggered and/or what actions are executed.|
+|6|Language understanding|Language Understanding (LU) is used by a bot to understand language naturally and contextually to determine what next to do in a conversation flow.|
+|7|Language generation|Language Generation (LG) lets you define multiple variations of a phrase, execute simple expressions based on context, and refer to conversational memory.|
+|8|Dialog schema|Schema of the dialog that specifies dialog's input and output parameters|
+|9|Object Model Dialog|Object model dialog|
+|10|Object Model Trigger|Object model trigger|
+|11|Object Model custom entity|Object model custom entity|
+|12|Object Model global variable|Object model global variable|
+|13|Object Model skill|Object model skill|
 
 
 
@@ -193,6 +218,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
+### <a name="BKMK_HelpLink"></a> HelpLink
+
+|Property|Value|
+|--------|-----|
+|Description|Link to learn More about this subcomponent|
+|DisplayName|Help Link|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|helplink|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_IconUrl"></a> IconUrl
+
+|Property|Value|
+|--------|-----|
+|Description|Icon Url for this subcomponent|
+|DisplayName|Icon Url|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|iconurl|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 **Added by**: Basic Solution Solution
@@ -242,28 +299,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Language Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1025|Arabic|
-|1028|Chinese (Traditional)|
-|1030|Danish|
-|1031|German|
-|1033|English|
-|1034|Spanish|
-|1036|French|
-|1040|Italian|
-|1041|Japanese|
-|1042|Korean|
-|1043|Dutch|
-|1044|Norwegian|
-|1045|Polish|
-|1046|Portuguese (Brazilian)|
-|1049|Russian|
-|1053|Swedish|
-|1055|Turkish|
-|1057|Indonesian|
-|1081|Hindi|
-|2052|Chinese (Simplified)|
+|Value|Label|Description|
+|-----|-----|--------|
+|1025|Arabic||
+|1028|Chinese (Traditional)||
+|1029|Czech||
+|1030|Danish||
+|1031|German||
+|1032|Greek||
+|1033|English||
+|1034|Spanish||
+|1035|Finnish||
+|1036|French||
+|1040|Italian||
+|1041|Japanese||
+|1042|Korean||
+|1043|Dutch||
+|1044|Norwegian||
+|1045|Polish||
+|1046|Portuguese (Brazilian)||
+|1049|Russian||
+|1053|Swedish||
+|1054|Thai||
+|1055|Turkish||
+|1057|Indonesian||
+|1081|Hindi||
+|2052|Chinese (Simplified)||
 
 
 
@@ -342,6 +403,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|botcomponent|
 |Type|Lookup|
+
+
+### <a name="BKMK_ReusePolicy"></a> ReusePolicy
+
+|Property|Value|
+|--------|-----|
+|Description|Reuse Policy for the chatbot subcomponent|
+|DisplayName|Reuse Policy|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|reusepolicy|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### ReusePolicy Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None|Not Reusable. By default, a chatbot subcomponent is not reusable and Reuse Policy is None|
+|1|Private|Is required by one or more Public chatbot subcomponent, but is not directly invokable or visible|
+|2|Public|Visible shared / reusable chatbot subcomponent for use in all bots in the environment|
+
 
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
@@ -462,6 +545,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentBotComponentIdName](#BKMK_ParentBotComponentIdName)
@@ -501,12 +585,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -645,12 +729,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -834,12 +918,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -955,7 +1057,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent_SyncErrors) Many-To-One relationship.
+Same as the [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -972,7 +1074,7 @@ Same as syncerror table [botcomponent_SyncErrors](syncerror.md#BKMK_botcomponent
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [botcomponent_AsyncOperations](asyncoperation.md#BKMK_botcomponent_AsyncOperations) Many-To-One relationship.
+Same as the [botcomponent_AsyncOperations](asyncoperation.md#BKMK_botcomponent_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -989,7 +1091,7 @@ Same as asyncoperation table [botcomponent_AsyncOperations](asyncoperation.md#BK
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [botcomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_botcomponent_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [botcomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_botcomponent_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1006,7 +1108,7 @@ Same as mailboxtrackingfolder table [botcomponent_MailboxTrackingFolders](mailbo
 
 **Added by**: System Solution Solution
 
-Same as processsession table [botcomponent_ProcessSession](processsession.md#BKMK_botcomponent_ProcessSession) Many-To-One relationship.
+Same as the [botcomponent_ProcessSession](processsession.md#BKMK_botcomponent_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1023,7 +1125,7 @@ Same as processsession table [botcomponent_ProcessSession](processsession.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [botcomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_botcomponent_BulkDeleteFailures) Many-To-One relationship.
+Same as the [botcomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_botcomponent_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1040,7 +1142,7 @@ Same as bulkdeletefailure table [botcomponent_BulkDeleteFailures](bulkdeletefail
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [botcomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_botcomponent_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [botcomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_botcomponent_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1055,7 +1157,7 @@ Same as principalobjectattributeaccess table [botcomponent_PrincipalObjectAttrib
 
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
-Same as botcomponent table [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) Many-To-One relationship.
+Same as the [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) many-to-one relationship for the [botcomponent](botcomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1079,7 +1181,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_botcomponent_modifiedonbehalfby](#BKMK_lk_botcomponent_modifiedonbehalfby)
 - [user_botcomponent](#BKMK_user_botcomponent)
 - [team_botcomponent](#BKMK_team_botcomponent)
-- [owner_botcomponent](#BKMK_owner_botcomponent)
 - [business_unit_botcomponent](#BKMK_business_unit_botcomponent)
 - [botcomponent_parent_botcomponent](#BKMK_botcomponent_parent_botcomponent)
 
@@ -1088,53 +1189,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_createdby](systemuser.md#BKMK_lk_botcomponent_createdby) One-To-Many relationship.
+See the [lk_botcomponent_createdby](systemuser.md#BKMK_lk_botcomponent_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_botcomponent_createdonbehalfby"></a> lk_botcomponent_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_createdonbehalfby](systemuser.md#BKMK_lk_botcomponent_createdonbehalfby) One-To-Many relationship.
+See the [lk_botcomponent_createdonbehalfby](systemuser.md#BKMK_lk_botcomponent_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_botcomponent_modifiedby"></a> lk_botcomponent_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_modifiedby](systemuser.md#BKMK_lk_botcomponent_modifiedby) One-To-Many relationship.
+See the [lk_botcomponent_modifiedby](systemuser.md#BKMK_lk_botcomponent_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_botcomponent_modifiedonbehalfby"></a> lk_botcomponent_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_botcomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_botcomponent_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_botcomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_botcomponent_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_botcomponent"></a> user_botcomponent
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_botcomponent](systemuser.md#BKMK_user_botcomponent) One-To-Many relationship.
+See the [user_botcomponent](systemuser.md#BKMK_user_botcomponent) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_botcomponent"></a> team_botcomponent
 
 **Added by**: System Solution Solution
 
-See team Table [team_botcomponent](team.md#BKMK_team_botcomponent) One-To-Many relationship.
-
-### <a name="BKMK_owner_botcomponent"></a> owner_botcomponent
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_botcomponent](owner.md#BKMK_owner_botcomponent) One-To-Many relationship.
+See the [team_botcomponent](team.md#BKMK_team_botcomponent) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_botcomponent"></a> business_unit_botcomponent
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_botcomponent](businessunit.md#BKMK_business_unit_botcomponent) One-To-Many relationship.
+See the [business_unit_botcomponent](businessunit.md#BKMK_business_unit_botcomponent) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_botcomponent_parent_botcomponent"></a> botcomponent_parent_botcomponent
 
-See botcomponent Table [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) One-To-Many relationship.
+See the [botcomponent_parent_botcomponent](botcomponent.md#BKMK_botcomponent_parent_botcomponent) one-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -1143,12 +1238,13 @@ Relationship details provided where the botcomponent table is the first table in
 
 - [bot_botcomponent](#BKMK_bot_botcomponent)
 - [botcomponent_botcomponent](#BKMK_botcomponent_botcomponent)
+- [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
 - [botcomponent_workflow](#BKMK_botcomponent_workflow)
 
 
 ### <a name="BKMK_bot_botcomponent"></a> bot_botcomponent
 
-See bot Table [bot_botcomponent](bot.md#BKMK_bot_botcomponent) Many-To-Many Relationship.
+See the [bot_botcomponent](bot.md#BKMK_bot_botcomponent) many-to-many relationship for the [bot](bot.md) table/entity.
 
 ### <a name="BKMK_botcomponent_botcomponent"></a> botcomponent_botcomponent
 
@@ -1170,6 +1266,29 @@ IntersectEntityName: botcomponent_botcomponent<br />
 |LogicalName|botcomponent|
 |IntersectAttribute|botcomponentidtwo|
 |NavigationPropertyName|botcomponent_botcomponent|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_botcomponent_environmentvariabledefinition"></a> botcomponent_environmentvariabledefinition
+
+IntersectEntityName: botcomponent_environmentvariabledefinition<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_environmentvariabledefinition|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|environmentvariabledefinition|
+|IntersectAttribute|environmentvariabledefinitionid|
+|NavigationPropertyName|botcomponent_environmentvariabledefinition|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
 
@@ -1200,3 +1319,4 @@ IntersectEntityName: botcomponent_workflow<br />
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.botcomponent?text=botcomponent EntityType" />

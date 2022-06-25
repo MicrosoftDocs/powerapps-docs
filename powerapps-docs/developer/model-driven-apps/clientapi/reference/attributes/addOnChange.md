@@ -1,19 +1,21 @@
 ---
 title: "addOnChange (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addOnChange (Client API reference)
 

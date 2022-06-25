@@ -4,16 +4,17 @@ description: Understand the privileges required to apps built on Dataverse
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: 43cf7f3a-7e26-4990-8b5a-c817ac6d51bb
 caps.latest.revision: 13
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -25,7 +26,7 @@ search.app:
 ---
 # Privileges required for Dataverse customization
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   

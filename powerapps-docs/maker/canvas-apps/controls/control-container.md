@@ -1,11 +1,11 @@
 ---
-title: 'Container control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Container control
+title: Container control in Power Apps
+description: Learn about the details, properties and examples of the container control in Power Apps.
 author: chmoncay
-ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
-ms.date: 02/12/2021
+ms.date: 06/01/2022
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm-msft
 search.audienceType: 
@@ -17,19 +17,26 @@ contributors:
   - tahoon-ms
   - tapanm-msft
 ---
-# Container control in Power Apps (preview)
-Provides the ability to create hierarchy.
+# Container control in Power Apps
 
-> [!IMPORTANT]
-> This is a preview feature. Preview features are stable but might go through minor changes.
-> For more information, read [Understand experimental and preview features in Power Apps](../working-with-experimental-preview.md).
+Groups logically-related controls to create hierarchies.
 
 ## Description
- The container can hold a set of controls and has its own properties.
+
+The container can hold a set of controls and has its own properties.
 
 You can start with inserting a blank container. And then, customize it by adding controls to it, resizing it, moving it, hiding it, and making other changes. You can also start with a number of controls, select them and add using tree view.
 
+## Limitations
+
+- Containers don't work within forms.
+- The following controls are not supported within a container:
+    - [Data table](control-data-table.md)
+    - [PDF viewer](control-pdf-viewer.md)
+    - [Web barcode scanner](control-barcodescanner.md)
+
 ## Properties
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -49,17 +56,15 @@ You can start with inserting a blank container. And then, customize it by adding
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen, if no parent container). 
 
 
-## Known limitations
-
-Containers don't work within forms.
-
 ## Frequently asked questions
 
 ### What is the difference between a container and a group?
 
-The authoring group is a lightweight concept used for moving around controls and bulk editing similar properties of controls within the group. The authoring group doesn't affect the layout of the app.
+When editing an app, you can select controls and group them using Ctrl + G or the context menu. You can modify common properties of controls within the group. Groups are an aid for app making. They don't have properties of their own and don't affect the layout of the app.
 
-The container control previously shipped in experimental as a replacement for the authoring group renamed as the enhanced group. It was renamed to the container control as there's value in both a lightweight authoring group and a structured container control with additional properties.
+In contrast, containers are actual controls with their own properties like **Width** and **BorderColor**. Containers affect app layout and help screen reader users understand the structure of the app.
+
+While you can add any controls in a group, you should only add logically-related controls in a container. For example, [controls in a tile should be placed in containers](../accessible-apps-structure.md#logical-control-order).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

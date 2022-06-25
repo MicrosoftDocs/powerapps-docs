@@ -2,10 +2,11 @@
 title: Complex tables requiring Power Apps licenses | Microsoft Docs
 description: A list of complex tables in Microsoft Dataverse that require a Power Apps Plan 2 license.
 author: KumarVivek
-ms.service: powerapps
+
 ms.component: cds
-ms.topic: reference
+ms.topic: conceptual
 ms.date: 08/28/2020
+ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -16,7 +17,7 @@ search.app:
 
 # Complex tables and licensing
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!IMPORTANT]
 > *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.*

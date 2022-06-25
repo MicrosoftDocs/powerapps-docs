@@ -1,13 +1,13 @@
 ---
-title: "UserSettings table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -28,7 +28,6 @@ User's preferred settings.
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/usersettingscollection(*systemuserid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/usersettingscollection<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/usersettingscollection(*systemuserid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -91,6 +90,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsSendAsAllowed](#BKMK_IsSendAsAllowed)
 - [LastAlertsViewedTime](#BKMK_LastAlertsViewedTime)
+- [LastModifiedTimeForViewPersonalizationSettings](#BKMK_LastModifiedTimeForViewPersonalizationSettings)
 - [LocaleId](#BKMK_LocaleId)
 - [LongDateFormatCode](#BKMK_LongDateFormatCode)
 - [NegativeCurrencyFormatCode](#BKMK_NegativeCurrencyFormatCode)
@@ -317,10 +317,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataValidationModeForExportToExcel Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Full|
-|1|None|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Full||
+|1|None||
 
 
 
@@ -447,12 +447,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DefaultSearchExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Relevance search|
-|1|Categorized search|
-|2|Use last search|
-|3|Custom search|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Relevance search||
+|1|Categorized search||
+|2|Use last search||
+|3|Custom search||
 
 
 
@@ -470,11 +470,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EntityFormMode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Organization default|
-|1|Read-optimized|
-|2|Edit|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Organization default||
+|1|Read-optimized||
+|2|Edit||
 
 
 
@@ -508,12 +508,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### GetStartedPaneContentEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -595,12 +595,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IgnoreUnsolicitedEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -618,13 +618,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IncomingEmailFilteringMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|All email messages|
-|1|Email messages in response to Dynamics 365 email|
-|2|Email messages from Dynamics 365 Leads, Contacts and Accounts|
-|3|Email messages from Dynamics 365 records that are email enabled|
-|4|No email messages|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|All email messages||
+|1|Email messages in response to Dynamics 365 email||
+|2|Email messages from Dynamics 365 Leads, Contacts and Accounts||
+|3|Email messages from Dynamics 365 records that are email enabled||
+|4|No email messages||
 
 
 
@@ -642,12 +642,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAppsForCrmAlertDismissed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -665,12 +665,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAutoDataCaptureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -688,12 +688,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefaultCountryCodeCheckEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -711,12 +711,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDuplicateDetectionEnabledWhenGoingOnline Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -734,12 +734,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsEmailConversationViewEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -757,12 +757,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsGuidedHelpEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -781,12 +781,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsResourceBookingExchangeSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Enabled|
-|0|Disabled|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Enabled||
+|0|Disabled||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -804,12 +804,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsSendAsAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -825,6 +825,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|lastalertsviewedtime|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_LastModifiedTimeForViewPersonalizationSettings"></a> LastModifiedTimeForViewPersonalizationSettings
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Stores the timestamp for when the ViewPersonalizationSettings attribute was updated for this user in the UserEntityUISettings table.|
+|DisplayName|Last modified timestamp for the view personalization settings in UserEntityUISettings table|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lastmodifiedtimeforviewpersonalizationsettings|
 |RequiredLevel|None|
 |Type|DateTime|
 
@@ -1051,11 +1068,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReportScriptErrors Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Ask me for permission to send an error report to Microsoft|
-|2|Automatically send an error report to Microsoft without asking me for permission|
-|3|Never send an error report to Microsoft about Microsoft Dynamics 365|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Ask me for permission to send an error report to Microsoft||
+|2|Automatically send an error report to Microsoft without asking me for permission||
+|3|Never send an error report to Microsoft about Microsoft Dynamics 365||
 
 
 
@@ -1103,12 +1120,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShowWeekNumber Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1126,12 +1143,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SplitViewState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Expanded|
-|0|Collapsed|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Expanded||
+|0|Collapsed||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1149,12 +1166,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SyncContactCompany Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1568,12 +1585,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForAppointment Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1591,12 +1608,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForContact Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1614,12 +1631,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1637,12 +1654,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseCrmFormForTask Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1660,12 +1677,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseImageStrips Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1699,10 +1716,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### VisualizationPaneLayout Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Top-bottom|
-|1|Side-by-side|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Top-bottom||
+|1|Side-by-side||
 
 
 
@@ -1779,12 +1796,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### AllowEmailCredentials Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2087,41 +2104,41 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [transactioncurrency_usersettings](#BKMK_transactioncurrency_usersettings)
-- [user_settings](#BKMK_user_settings)
 - [lk_usersettingsbase_createdby](#BKMK_lk_usersettingsbase_createdby)
 - [lk_usersettings_createdonbehalfby](#BKMK_lk_usersettings_createdonbehalfby)
 - [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
 - [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
+- [user_settings](#BKMK_user_settings)
 
 
 ### <a name="BKMK_transactioncurrency_usersettings"></a> transactioncurrency_usersettings
 
-See transactioncurrency Table [transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings) One-To-Many relationship.
-
-### <a name="BKMK_user_settings"></a> user_settings
-
-See systemuser Table [user_settings](systemuser.md#BKMK_user_settings) One-To-Many relationship.
+See the [transactioncurrency_usersettings](transactioncurrency.md#BKMK_transactioncurrency_usersettings) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_usersettingsbase_createdby"></a> lk_usersettingsbase_createdby
 
-See systemuser Table [lk_usersettingsbase_createdby](systemuser.md#BKMK_lk_usersettingsbase_createdby) One-To-Many relationship.
+See the [lk_usersettingsbase_createdby](systemuser.md#BKMK_lk_usersettingsbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usersettings_createdonbehalfby"></a> lk_usersettings_createdonbehalfby
 
-See systemuser Table [lk_usersettings_createdonbehalfby](systemuser.md#BKMK_lk_usersettings_createdonbehalfby) One-To-Many relationship.
+See the [lk_usersettings_createdonbehalfby](systemuser.md#BKMK_lk_usersettings_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usersettingsbase_modifiedby"></a> lk_usersettingsbase_modifiedby
 
-See systemuser Table [lk_usersettingsbase_modifiedby](systemuser.md#BKMK_lk_usersettingsbase_modifiedby) One-To-Many relationship.
+See the [lk_usersettingsbase_modifiedby](systemuser.md#BKMK_lk_usersettingsbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usersettings_modifiedonbehalfby"></a> lk_usersettings_modifiedonbehalfby
 
-See systemuser Table [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
 
-See businessunit Table [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) One-To-Many relationship.
+See the [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_user_settings"></a> user_settings
+
+See the [user_settings](systemuser.md#BKMK_user_settings) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

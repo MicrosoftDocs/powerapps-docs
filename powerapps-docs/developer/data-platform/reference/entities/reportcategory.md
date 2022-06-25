@@ -1,13 +1,13 @@
 ---
-title: "ReportCategory table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ReportCategory table/entity."
-ms.date: 03/04/2021
+title: "Report Related Category (ReportCategory)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Report Related Category (ReportCategory)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# ReportCategory table/entity reference
+# Report Related Category (ReportCategory)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ Categories related to a report. A report can be related to multiple categories.
 |Create|POST [*org URI*]/api/data/v9.0/reportcategories<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/reportcategories(*reportcategoryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/reportcategories(*reportcategoryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/reportcategories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/reportcategories(*reportcategoryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -80,12 +79,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CategoryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Sales Reports|
-|2|Service Reports|
-|3|Marketing Reports|
-|4|Administrative Reports|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Sales Reports||
+|2|Service Reports||
+|3|Marketing Reports||
+|4|Administrative Reports||
 
 
 
@@ -242,12 +241,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -368,8 +367,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -388,12 +387,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -669,7 +668,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ReportCategory_SyncErrors"></a> ReportCategory_SyncErrors
 
-Same as syncerror table [ReportCategory_SyncErrors](syncerror.md#BKMK_ReportCategory_SyncErrors) Many-To-One relationship.
+Same as the [ReportCategory_SyncErrors](syncerror.md#BKMK_ReportCategory_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -684,7 +683,7 @@ Same as syncerror table [ReportCategory_SyncErrors](syncerror.md#BKMK_ReportCate
 
 ### <a name="BKMK_reportcategory_principalobjectattributeaccess"></a> reportcategory_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [reportcategory_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_reportcategory_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [reportcategory_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_reportcategory_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -712,27 +711,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_reportcategory_createdonbehalfby"></a> lk_reportcategory_createdonbehalfby
 
-See systemuser Table [lk_reportcategory_createdonbehalfby](systemuser.md#BKMK_lk_reportcategory_createdonbehalfby) One-To-Many relationship.
+See the [lk_reportcategory_createdonbehalfby](systemuser.md#BKMK_lk_reportcategory_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_reportcategory_modifiedonbehalfby"></a> lk_reportcategory_modifiedonbehalfby
 
-See systemuser Table [lk_reportcategory_modifiedonbehalfby](systemuser.md#BKMK_lk_reportcategory_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_reportcategory_modifiedonbehalfby](systemuser.md#BKMK_lk_reportcategory_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_reportcategorybase_createdby"></a> lk_reportcategorybase_createdby
 
-See systemuser Table [lk_reportcategorybase_createdby](systemuser.md#BKMK_lk_reportcategorybase_createdby) One-To-Many relationship.
+See the [lk_reportcategorybase_createdby](systemuser.md#BKMK_lk_reportcategorybase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_ReportCategory"></a> TransactionCurrency_ReportCategory
 
-See transactioncurrency Table [TransactionCurrency_ReportCategory](transactioncurrency.md#BKMK_TransactionCurrency_ReportCategory) One-To-Many relationship.
+See the [TransactionCurrency_ReportCategory](transactioncurrency.md#BKMK_TransactionCurrency_ReportCategory) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_reportcategorybase_modifiedby"></a> lk_reportcategorybase_modifiedby
 
-See systemuser Table [lk_reportcategorybase_modifiedby](systemuser.md#BKMK_lk_reportcategorybase_modifiedby) One-To-Many relationship.
+See the [lk_reportcategorybase_modifiedby](systemuser.md#BKMK_lk_reportcategorybase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_report_reportcategories"></a> report_reportcategories
 
-See report Table [report_reportcategories](report.md#BKMK_report_reportcategories) One-To-Many relationship.
+See the [report_reportcategories](report.md#BKMK_report_reportcategories) one-to-many relationship for the [report](report.md) table/entity.
 
 ### See also
 

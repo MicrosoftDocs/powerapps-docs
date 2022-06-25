@@ -1,13 +1,13 @@
 ---
-title: "CustomerAddress table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CustomerAddress table/entity."
-ms.date: 03/04/2021
+title: "Address (CustomerAddress)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Address (CustomerAddress)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# CustomerAddress table/entity reference
+# Address (CustomerAddress)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ Address and shipping information. Used to store additional addresses for an acco
 |Create|POST [*org URI*]/api/data/v9.0/customeraddresses<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/customeraddresses(*customeraddressid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/customeraddresses(*customeraddressid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/customeraddresses<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/customeraddresses(*customeraddressid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -120,12 +119,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Bill To|
-|2|Ship To|
-|3|Primary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Bill To||
+|2|Ship To||
+|3|Primary||
+|4|Other||
 
 
 
@@ -221,10 +220,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FOB|
-|2|No Charge|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FOB||
+|2|No Charge||
 
 
 
@@ -459,15 +458,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Airborne|
-|2|DHL|
-|3|FedEx|
-|4|UPS|
-|5|Postal Mail|
-|6|Full Load|
-|7|Will Call|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Airborne||
+|2|DHL||
+|3|FedEx||
+|4|UPS||
+|5|Postal Mail||
+|6|Full Load||
+|7|Will Call||
 
 
 
@@ -775,8 +774,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -988,7 +987,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_CustomerAddress_BulkDeleteFailures"></a> CustomerAddress_BulkDeleteFailures
 
-Same as bulkdeletefailure table [CustomerAddress_BulkDeleteFailures](bulkdeletefailure.md#BKMK_CustomerAddress_BulkDeleteFailures) Many-To-One relationship.
+Same as the [CustomerAddress_BulkDeleteFailures](bulkdeletefailure.md#BKMK_CustomerAddress_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1003,7 +1002,7 @@ Same as bulkdeletefailure table [CustomerAddress_BulkDeleteFailures](bulkdeletef
 
 ### <a name="BKMK_CustomerAddress_SyncErrors"></a> CustomerAddress_SyncErrors
 
-Same as syncerror table [CustomerAddress_SyncErrors](syncerror.md#BKMK_CustomerAddress_SyncErrors) Many-To-One relationship.
+Same as the [CustomerAddress_SyncErrors](syncerror.md#BKMK_CustomerAddress_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1018,7 +1017,7 @@ Same as syncerror table [CustomerAddress_SyncErrors](syncerror.md#BKMK_CustomerA
 
 ### <a name="BKMK_CustomerAddress_AsyncOperations"></a> CustomerAddress_AsyncOperations
 
-Same as asyncoperation table [CustomerAddress_AsyncOperations](asyncoperation.md#BKMK_CustomerAddress_AsyncOperations) Many-To-One relationship.
+Same as the [CustomerAddress_AsyncOperations](asyncoperation.md#BKMK_CustomerAddress_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1033,7 +1032,7 @@ Same as asyncoperation table [CustomerAddress_AsyncOperations](asyncoperation.md
 
 ### <a name="BKMK_CustomerAddress_ProcessSessions"></a> CustomerAddress_ProcessSessions
 
-Same as processsession table [CustomerAddress_ProcessSessions](processsession.md#BKMK_CustomerAddress_ProcessSessions) Many-To-One relationship.
+Same as the [CustomerAddress_ProcessSessions](processsession.md#BKMK_CustomerAddress_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1048,7 +1047,7 @@ Same as processsession table [CustomerAddress_ProcessSessions](processsession.md
 
 ### <a name="BKMK_customeraddress_principalobjectattributeaccess"></a> customeraddress_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [customeraddress_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_customeraddress_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [customeraddress_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_customeraddress_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1077,31 +1076,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_customeraddress_modifiedonbehalfby"></a> lk_customeraddress_modifiedonbehalfby
 
-See systemuser Table [lk_customeraddress_modifiedonbehalfby](systemuser.md#BKMK_lk_customeraddress_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_customeraddress_modifiedonbehalfby](systemuser.md#BKMK_lk_customeraddress_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_CustomerAddress"></a> TransactionCurrency_CustomerAddress
 
-See transactioncurrency Table [TransactionCurrency_CustomerAddress](transactioncurrency.md#BKMK_TransactionCurrency_CustomerAddress) One-To-Many relationship.
+See the [TransactionCurrency_CustomerAddress](transactioncurrency.md#BKMK_TransactionCurrency_CustomerAddress) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_Contact_CustomerAddress"></a> Contact_CustomerAddress
 
-See contact Table [Contact_CustomerAddress](contact.md#BKMK_Contact_CustomerAddress) One-To-Many relationship.
+See the [Contact_CustomerAddress](contact.md#BKMK_Contact_CustomerAddress) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_Account_CustomerAddress"></a> Account_CustomerAddress
 
-See account Table [Account_CustomerAddress](account.md#BKMK_Account_CustomerAddress) One-To-Many relationship.
+See the [Account_CustomerAddress](account.md#BKMK_Account_CustomerAddress) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_customeraddress_createdonbehalfby"></a> lk_customeraddress_createdonbehalfby
 
-See systemuser Table [lk_customeraddress_createdonbehalfby](systemuser.md#BKMK_lk_customeraddress_createdonbehalfby) One-To-Many relationship.
+See the [lk_customeraddress_createdonbehalfby](systemuser.md#BKMK_lk_customeraddress_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customeraddressbase_modifiedby"></a> lk_customeraddressbase_modifiedby
 
-See systemuser Table [lk_customeraddressbase_modifiedby](systemuser.md#BKMK_lk_customeraddressbase_modifiedby) One-To-Many relationship.
+See the [lk_customeraddressbase_modifiedby](systemuser.md#BKMK_lk_customeraddressbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customeraddressbase_createdby"></a> lk_customeraddressbase_createdby
 
-See systemuser Table [lk_customeraddressbase_createdby](systemuser.md#BKMK_lk_customeraddressbase_createdby) One-To-Many relationship.
+See the [lk_customeraddressbase_createdby](systemuser.md#BKMK_lk_customeraddressbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

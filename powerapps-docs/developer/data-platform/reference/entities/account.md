@@ -1,13 +1,13 @@
 ---
-title: "Account table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Account table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Account table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -34,7 +34,6 @@ Business that represents a customer or potential customer. The company that is b
 |Merge|<xref href="Microsoft.Dynamics.CRM.Merge?text=Merge Action" />|<xref:Microsoft.Crm.Sdk.Messages.MergeRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/accounts(*accountid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/accounts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -195,10 +194,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AccountCategoryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Preferred Customer|
-|2|Standard|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Preferred Customer||
+|2|Standard||
 
 
 
@@ -216,9 +215,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AccountClassificationCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -266,9 +265,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AccountRatingCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -299,12 +298,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Bill To|
-|2|Ship To|
-|3|Primary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Bill To||
+|2|Ship To||
+|3|Primary||
+|4|Other||
 
 
 
@@ -386,10 +385,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FOB|
-|2|No Charge|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FOB||
+|2|No Charge||
 
 
 
@@ -551,15 +550,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address1_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Airborne|
-|2|DHL|
-|3|FedEx|
-|4|UPS|
-|5|Postal Mail|
-|6|Full Load|
-|7|Will Call|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Airborne||
+|2|DHL||
+|3|FedEx||
+|4|UPS||
+|5|Postal Mail||
+|6|Full Load||
+|7|Will Call||
 
 
 
@@ -686,9 +685,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_AddressTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -770,9 +769,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_FreightTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -934,9 +933,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Address2_ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1050,9 +1049,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### BusinessTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1087,12 +1086,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CreditOnHold Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1110,9 +1109,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CustomerSizeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -1130,20 +1129,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### CustomerTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Competitor|
-|2|Consultant|
-|3|Customer|
-|4|Investor|
-|5|Partner|
-|6|Influencer|
-|7|Press|
-|8|Prospect|
-|9|Reseller|
-|10|Supplier|
-|11|Vendor|
-|12|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Competitor||
+|2|Consultant||
+|3|Customer||
+|4|Investor||
+|5|Partner||
+|6|Influencer||
+|7|Press||
+|8|Prospect||
+|9|Reseller||
+|10|Supplier||
+|11|Vendor||
+|12|Other||
 
 
 
@@ -1177,12 +1176,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotBulkEMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1200,12 +1199,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotBulkPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1223,12 +1222,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotEMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1246,12 +1245,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotFax Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1269,12 +1268,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotPhone Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1292,12 +1291,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1315,12 +1314,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DoNotSendMM Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Send|
-|0|Send|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Send||
+|0|Send||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1418,12 +1417,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FollowEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Allow|
-|0|Do Not Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Allow||
+|0|Do Not Allow||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1474,41 +1473,41 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IndustryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Accounting|
-|2|Agriculture and Non-petrol Natural Resource Extraction|
-|3|Broadcasting Printing and Publishing|
-|4|Brokers|
-|5|Building Supply Retail|
-|6|Business Services|
-|7|Consulting|
-|8|Consumer Services|
-|9|Design, Direction and Creative Management|
-|10|Distributors, Dispatchers and Processors|
-|11|Doctor's Offices and Clinics|
-|12|Durable Manufacturing|
-|13|Eating and Drinking Places|
-|14|Entertainment Retail|
-|15|Equipment Rental and Leasing|
-|16|Financial|
-|17|Food and Tobacco Processing|
-|18|Inbound Capital Intensive Processing|
-|19|Inbound Repair and Services|
-|20|Insurance|
-|21|Legal Services|
-|22|Non-Durable Merchandise Retail|
-|23|Outbound Consumer Service|
-|24|Petrochemical Extraction and Distribution|
-|25|Service Retail|
-|26|SIG Affiliations|
-|27|Social Services|
-|28|Special Outbound Trade Contractors|
-|29|Specialty Realty|
-|30|Transportation|
-|31|Utility Creation and Distribution|
-|32|Vehicle Retail|
-|33|Wholesale|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Accounting||
+|2|Agriculture and Non-petrol Natural Resource Extraction||
+|3|Broadcasting Printing and Publishing||
+|4|Brokers||
+|5|Building Supply Retail||
+|6|Business Services||
+|7|Consulting||
+|8|Consumer Services||
+|9|Design, Direction and Creative Management||
+|10|Distributors, Dispatchers and Processors||
+|11|Doctor's Offices and Clinics||
+|12|Durable Manufacturing||
+|13|Eating and Drinking Places||
+|14|Entertainment Retail||
+|15|Equipment Rental and Leasing||
+|16|Financial||
+|17|Food and Tobacco Processing||
+|18|Inbound Capital Intensive Processing||
+|19|Inbound Repair and Services||
+|20|Insurance||
+|21|Legal Services||
+|22|Non-Durable Merchandise Retail||
+|23|Outbound Consumer Service||
+|24|Petrochemical Extraction and Distribution||
+|25|Service Retail||
+|26|SIG Affiliations||
+|27|Social Services||
+|28|Special Outbound Trade Contractors||
+|29|Specialty Realty||
+|30|Transportation||
+|31|Utility Creation and Distribution||
+|32|Vehicle Retail||
+|33|Wholesale||
 
 
 
@@ -1574,12 +1573,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MarketingOnly Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1672,12 +1671,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### OwnershipCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Public|
-|2|Private|
-|3|Subsidiary|
-|4|Other|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Public||
+|2|Private||
+|3|Subsidiary||
+|4|Other||
 
 
 
@@ -1709,12 +1708,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ParticipatesInWorkflow Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1732,12 +1731,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PaymentTermsCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Net 30|
-|2|2% 10, Net 30|
-|3|Net 45|
-|4|Net 60|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Net 30||
+|2|2% 10, Net 30||
+|3|Net 45||
+|4|Net 60||
 
 
 
@@ -1755,15 +1754,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredAppointmentDayCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Sunday|
-|1|Monday|
-|2|Tuesday|
-|3|Wednesday|
-|4|Thursday|
-|5|Friday|
-|6|Saturday|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Sunday||
+|1|Monday||
+|2|Tuesday||
+|3|Wednesday||
+|4|Thursday||
+|5|Friday||
+|6|Saturday||
 
 
 
@@ -1781,11 +1780,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredAppointmentTimeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Morning|
-|2|Afternoon|
-|3|Evening|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Morning||
+|2|Afternoon||
+|3|Evening||
 
 
 
@@ -1803,13 +1802,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PreferredContactMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Any|
-|2|Email|
-|3|Phone|
-|4|Fax|
-|5|Mail|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Any||
+|2|Email||
+|3|Phone||
+|4|Fax||
+|5|Mail||
 
 
 
@@ -1933,9 +1932,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ShippingMethodCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2103,9 +2102,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### TerritoryCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Default Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Default Value||
 
 
 
@@ -2267,6 +2266,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentAccountIdName](#BKMK_ParentAccountIdName)
@@ -2642,8 +2642,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -2662,12 +2662,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2748,12 +2748,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### Merged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2964,12 +2964,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -3215,7 +3231,6 @@ Listed by **SchemaName**.
 - [Account_Faxes](#BKMK_Account_Faxes)
 - [slakpiinstance_account](#BKMK_slakpiinstance_account)
 - [account_PostFollows](#BKMK_account_PostFollows)
-- [account_PostRegardings](#BKMK_account_PostRegardings)
 - [Account_Tasks](#BKMK_Account_Tasks)
 - [account_connections1](#BKMK_account_connections1)
 - [SocialActivity_PostAuthorAccount_accounts](#BKMK_SocialActivity_PostAuthorAccount_accounts)
@@ -3246,11 +3261,12 @@ Listed by **SchemaName**.
 - [account_master_account](#BKMK_account_master_account)
 - [Account_SharepointDocumentLocation](#BKMK_Account_SharepointDocumentLocation)
 - [account_connections2](#BKMK_account_connections2)
+- [account_chats](#BKMK_account_chats)
 
 
 ### <a name="BKMK_account_principalobjectattributeaccess"></a> account_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [account_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_account_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [account_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_account_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3265,7 +3281,7 @@ Same as principalobjectattributeaccess table [account_principalobjectattributeac
 
 ### <a name="BKMK_Account_Faxes"></a> Account_Faxes
 
-Same as fax table [Account_Faxes](fax.md#BKMK_Account_Faxes) Many-To-One relationship.
+Same as the [Account_Faxes](fax.md#BKMK_Account_Faxes) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3280,7 +3296,7 @@ Same as fax table [Account_Faxes](fax.md#BKMK_Account_Faxes) Many-To-One relatio
 
 ### <a name="BKMK_slakpiinstance_account"></a> slakpiinstance_account
 
-Same as slakpiinstance table [slakpiinstance_account](slakpiinstance.md#BKMK_slakpiinstance_account) Many-To-One relationship.
+Same as the [slakpiinstance_account](slakpiinstance.md#BKMK_slakpiinstance_account) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3295,7 +3311,7 @@ Same as slakpiinstance table [slakpiinstance_account](slakpiinstance.md#BKMK_sla
 
 ### <a name="BKMK_account_PostFollows"></a> account_PostFollows
 
-Same as postfollow table [account_PostFollows](postfollow.md#BKMK_account_PostFollows) Many-To-One relationship.
+Same as the [account_PostFollows](postfollow.md#BKMK_account_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3308,24 +3324,9 @@ Same as postfollow table [account_PostFollows](postfollow.md#BKMK_account_PostFo
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_account_PostRegardings"></a> account_PostRegardings
-
-Same as postregarding table [account_PostRegardings](postregarding.md#BKMK_account_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|account_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_Account_Tasks"></a> Account_Tasks
 
-Same as task table [Account_Tasks](task.md#BKMK_Account_Tasks) Many-To-One relationship.
+Same as the [Account_Tasks](task.md#BKMK_Account_Tasks) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3340,7 +3341,7 @@ Same as task table [Account_Tasks](task.md#BKMK_Account_Tasks) Many-To-One relat
 
 ### <a name="BKMK_account_connections1"></a> account_connections1
 
-Same as connection table [account_connections1](connection.md#BKMK_account_connections1) Many-To-One relationship.
+Same as the [account_connections1](connection.md#BKMK_account_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3355,7 +3356,7 @@ Same as connection table [account_connections1](connection.md#BKMK_account_conne
 
 ### <a name="BKMK_SocialActivity_PostAuthorAccount_accounts"></a> SocialActivity_PostAuthorAccount_accounts
 
-Same as socialactivity table [SocialActivity_PostAuthorAccount_accounts](socialactivity.md#BKMK_SocialActivity_PostAuthorAccount_accounts) Many-To-One relationship.
+Same as the [SocialActivity_PostAuthorAccount_accounts](socialactivity.md#BKMK_SocialActivity_PostAuthorAccount_accounts) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3370,7 +3371,7 @@ Same as socialactivity table [SocialActivity_PostAuthorAccount_accounts](sociala
 
 ### <a name="BKMK_Account_DuplicateBaseRecord"></a> Account_DuplicateBaseRecord
 
-Same as duplicaterecord table [Account_DuplicateBaseRecord](duplicaterecord.md#BKMK_Account_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Account_DuplicateBaseRecord](duplicaterecord.md#BKMK_Account_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3385,7 +3386,7 @@ Same as duplicaterecord table [Account_DuplicateBaseRecord](duplicaterecord.md#B
 
 ### <a name="BKMK_SocialActivity_PostAuthor_accounts"></a> SocialActivity_PostAuthor_accounts
 
-Same as socialactivity table [SocialActivity_PostAuthor_accounts](socialactivity.md#BKMK_SocialActivity_PostAuthor_accounts) Many-To-One relationship.
+Same as the [SocialActivity_PostAuthor_accounts](socialactivity.md#BKMK_SocialActivity_PostAuthor_accounts) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3400,7 +3401,7 @@ Same as socialactivity table [SocialActivity_PostAuthor_accounts](socialactivity
 
 ### <a name="BKMK_Account_SyncErrors"></a> Account_SyncErrors
 
-Same as syncerror table [Account_SyncErrors](syncerror.md#BKMK_Account_SyncErrors) Many-To-One relationship.
+Same as the [Account_SyncErrors](syncerror.md#BKMK_Account_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3415,7 +3416,7 @@ Same as syncerror table [Account_SyncErrors](syncerror.md#BKMK_Account_SyncError
 
 ### <a name="BKMK_Account_MailboxTrackingFolder"></a> Account_MailboxTrackingFolder
 
-Same as mailboxtrackingfolder table [Account_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Account_MailboxTrackingFolder) Many-To-One relationship.
+Same as the [Account_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Account_MailboxTrackingFolder) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3430,7 +3431,7 @@ Same as mailboxtrackingfolder table [Account_MailboxTrackingFolder](mailboxtrack
 
 ### <a name="BKMK_Account_BulkDeleteFailures"></a> Account_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Account_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Account_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Account_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Account_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3445,7 +3446,7 @@ Same as bulkdeletefailure table [Account_BulkDeleteFailures](bulkdeletefailure.m
 
 ### <a name="BKMK_Account_ActivityPointers"></a> Account_ActivityPointers
 
-Same as activitypointer table [Account_ActivityPointers](activitypointer.md#BKMK_Account_ActivityPointers) Many-To-One relationship.
+Same as the [Account_ActivityPointers](activitypointer.md#BKMK_Account_ActivityPointers) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3460,7 +3461,7 @@ Same as activitypointer table [Account_ActivityPointers](activitypointer.md#BKMK
 
 ### <a name="BKMK_Account_Email_SendersAccount"></a> Account_Email_SendersAccount
 
-Same as email table [Account_Email_SendersAccount](email.md#BKMK_Account_Email_SendersAccount) Many-To-One relationship.
+Same as the [Account_Email_SendersAccount](email.md#BKMK_Account_Email_SendersAccount) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3475,7 +3476,7 @@ Same as email table [Account_Email_SendersAccount](email.md#BKMK_Account_Email_S
 
 ### <a name="BKMK_Account_Appointments"></a> Account_Appointments
 
-Same as appointment table [Account_Appointments](appointment.md#BKMK_Account_Appointments) Many-To-One relationship.
+Same as the [Account_Appointments](appointment.md#BKMK_Account_Appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3490,7 +3491,7 @@ Same as appointment table [Account_Appointments](appointment.md#BKMK_Account_App
 
 ### <a name="BKMK_Socialprofile_customer_accounts"></a> Socialprofile_customer_accounts
 
-Same as socialprofile table [Socialprofile_customer_accounts](socialprofile.md#BKMK_Socialprofile_customer_accounts) Many-To-One relationship.
+Same as the [Socialprofile_customer_accounts](socialprofile.md#BKMK_Socialprofile_customer_accounts) many-to-one relationship for the [socialprofile](socialprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3505,7 +3506,7 @@ Same as socialprofile table [Socialprofile_customer_accounts](socialprofile.md#B
 
 ### <a name="BKMK_Account_Emails"></a> Account_Emails
 
-Same as email table [Account_Emails](email.md#BKMK_Account_Emails) Many-To-One relationship.
+Same as the [Account_Emails](email.md#BKMK_Account_Emails) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3520,7 +3521,7 @@ Same as email table [Account_Emails](email.md#BKMK_Account_Emails) Many-To-One r
 
 ### <a name="BKMK_account_activity_parties"></a> account_activity_parties
 
-Same as activityparty table [account_activity_parties](activityparty.md#BKMK_account_activity_parties) Many-To-One relationship.
+Same as the [account_activity_parties](activityparty.md#BKMK_account_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3535,7 +3536,7 @@ Same as activityparty table [account_activity_parties](activityparty.md#BKMK_acc
 
 ### <a name="BKMK_Account_Phonecalls"></a> Account_Phonecalls
 
-Same as phonecall table [Account_Phonecalls](phonecall.md#BKMK_Account_Phonecalls) Many-To-One relationship.
+Same as the [Account_Phonecalls](phonecall.md#BKMK_Account_Phonecalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3550,7 +3551,7 @@ Same as phonecall table [Account_Phonecalls](phonecall.md#BKMK_Account_Phonecall
 
 ### <a name="BKMK_Account_SocialActivities"></a> Account_SocialActivities
 
-Same as socialactivity table [Account_SocialActivities](socialactivity.md#BKMK_Account_SocialActivities) Many-To-One relationship.
+Same as the [Account_SocialActivities](socialactivity.md#BKMK_Account_SocialActivities) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3565,7 +3566,7 @@ Same as socialactivity table [Account_SocialActivities](socialactivity.md#BKMK_A
 
 ### <a name="BKMK_Account_DuplicateMatchingRecord"></a> Account_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Account_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Account_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Account_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Account_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3580,7 +3581,7 @@ Same as duplicaterecord table [Account_DuplicateMatchingRecord](duplicaterecord.
 
 ### <a name="BKMK_account_actioncard"></a> account_actioncard
 
-Same as actioncard table [account_actioncard](actioncard.md#BKMK_account_actioncard) Many-To-One relationship.
+Same as the [account_actioncard](actioncard.md#BKMK_account_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3595,7 +3596,7 @@ Same as actioncard table [account_actioncard](actioncard.md#BKMK_account_actionc
 
 ### <a name="BKMK_Account_AsyncOperations"></a> Account_AsyncOperations
 
-Same as asyncoperation table [Account_AsyncOperations](asyncoperation.md#BKMK_Account_AsyncOperations) Many-To-One relationship.
+Same as the [Account_AsyncOperations](asyncoperation.md#BKMK_Account_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3610,7 +3611,7 @@ Same as asyncoperation table [Account_AsyncOperations](asyncoperation.md#BKMK_Ac
 
 ### <a name="BKMK_Account_CustomerAddress"></a> Account_CustomerAddress
 
-Same as customeraddress table [Account_CustomerAddress](customeraddress.md#BKMK_Account_CustomerAddress) Many-To-One relationship.
+Same as the [Account_CustomerAddress](customeraddress.md#BKMK_Account_CustomerAddress) many-to-one relationship for the [customeraddress](customeraddress.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3625,7 +3626,7 @@ Same as customeraddress table [Account_CustomerAddress](customeraddress.md#BKMK_
 
 ### <a name="BKMK_Account_Annotation"></a> Account_Annotation
 
-Same as annotation table [Account_Annotation](annotation.md#BKMK_Account_Annotation) Many-To-One relationship.
+Same as the [Account_Annotation](annotation.md#BKMK_Account_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3640,7 +3641,7 @@ Same as annotation table [Account_Annotation](annotation.md#BKMK_Account_Annotat
 
 ### <a name="BKMK_Account_Letters"></a> Account_Letters
 
-Same as letter table [Account_Letters](letter.md#BKMK_Account_Letters) Many-To-One relationship.
+Same as the [Account_Letters](letter.md#BKMK_Account_Letters) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3655,7 +3656,7 @@ Same as letter table [Account_Letters](letter.md#BKMK_Account_Letters) Many-To-O
 
 ### <a name="BKMK_Account_RecurringAppointmentMasters"></a> Account_RecurringAppointmentMasters
 
-Same as recurringappointmentmaster table [Account_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_Account_RecurringAppointmentMasters) Many-To-One relationship.
+Same as the [Account_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_Account_RecurringAppointmentMasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3670,7 +3671,7 @@ Same as recurringappointmentmaster table [Account_RecurringAppointmentMasters](r
 
 ### <a name="BKMK_Account_Email_EmailSender"></a> Account_Email_EmailSender
 
-Same as email table [Account_Email_EmailSender](email.md#BKMK_Account_Email_EmailSender) Many-To-One relationship.
+Same as the [Account_Email_EmailSender](email.md#BKMK_Account_Email_EmailSender) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3685,7 +3686,7 @@ Same as email table [Account_Email_EmailSender](email.md#BKMK_Account_Email_Emai
 
 ### <a name="BKMK_Account_ProcessSessions"></a> Account_ProcessSessions
 
-Same as processsession table [Account_ProcessSessions](processsession.md#BKMK_Account_ProcessSessions) Many-To-One relationship.
+Same as the [Account_ProcessSessions](processsession.md#BKMK_Account_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3700,7 +3701,7 @@ Same as processsession table [Account_ProcessSessions](processsession.md#BKMK_Ac
 
 ### <a name="BKMK_account_parent_account"></a> account_parent_account
 
-Same as account table [account_parent_account](account.md#BKMK_account_parent_account) Many-To-One relationship.
+Same as the [account_parent_account](account.md#BKMK_account_parent_account) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3715,7 +3716,7 @@ Same as account table [account_parent_account](account.md#BKMK_account_parent_ac
 
 ### <a name="BKMK_contact_customer_accounts"></a> contact_customer_accounts
 
-Same as contact table [contact_customer_accounts](contact.md#BKMK_contact_customer_accounts) Many-To-One relationship.
+Same as the [contact_customer_accounts](contact.md#BKMK_contact_customer_accounts) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3730,7 +3731,7 @@ Same as contact table [contact_customer_accounts](contact.md#BKMK_contact_custom
 
 ### <a name="BKMK_account_master_account"></a> account_master_account
 
-Same as account table [account_master_account](account.md#BKMK_account_master_account) Many-To-One relationship.
+Same as the [account_master_account](account.md#BKMK_account_master_account) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3745,7 +3746,7 @@ Same as account table [account_master_account](account.md#BKMK_account_master_ac
 
 ### <a name="BKMK_Account_SharepointDocumentLocation"></a> Account_SharepointDocumentLocation
 
-Same as sharepointdocumentlocation table [Account_SharepointDocumentLocation](sharepointdocumentlocation.md#BKMK_Account_SharepointDocumentLocation) Many-To-One relationship.
+Same as the [Account_SharepointDocumentLocation](sharepointdocumentlocation.md#BKMK_Account_SharepointDocumentLocation) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3760,7 +3761,7 @@ Same as sharepointdocumentlocation table [Account_SharepointDocumentLocation](sh
 
 ### <a name="BKMK_account_connections2"></a> account_connections2
 
-Same as connection table [account_connections2](connection.md#BKMK_account_connections2) Many-To-One relationship.
+Same as the [account_connections2](connection.md#BKMK_account_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -3771,6 +3772,23 @@ Same as connection table [account_connections2](connection.md#BKMK_account_conne
 |ReferencedEntityNavigationPropertyName|account_connections2|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 100|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_account_chats"></a> account_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [account_chats](chat.md#BKMK_account_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|account_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -3793,72 +3811,67 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_account](#BKMK_sla_account)
 - [lk_accountbase_modifiedonbehalfby](#BKMK_lk_accountbase_modifiedonbehalfby)
 - [team_accounts](#BKMK_team_accounts)
-- [owner_accounts](#BKMK_owner_accounts)
 
 
 ### <a name="BKMK_account_primary_contact"></a> account_primary_contact
 
-See contact Table [account_primary_contact](contact.md#BKMK_account_primary_contact) One-To-Many relationship.
+See the [account_primary_contact](contact.md#BKMK_account_primary_contact) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_account_master_account"></a> account_master_account
 
-See account Table [account_master_account](account.md#BKMK_account_master_account) One-To-Many relationship.
+See the [account_master_account](account.md#BKMK_account_master_account) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_system_user_accounts"></a> system_user_accounts
 
-See systemuser Table [system_user_accounts](systemuser.md#BKMK_system_user_accounts) One-To-Many relationship.
+See the [system_user_accounts](systemuser.md#BKMK_system_user_accounts) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_accountbase_modifiedby"></a> lk_accountbase_modifiedby
 
-See systemuser Table [lk_accountbase_modifiedby](systemuser.md#BKMK_lk_accountbase_modifiedby) One-To-Many relationship.
+See the [lk_accountbase_modifiedby](systemuser.md#BKMK_lk_accountbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_account_parent_account"></a> account_parent_account
 
-See account Table [account_parent_account](account.md#BKMK_account_parent_account) One-To-Many relationship.
+See the [account_parent_account](account.md#BKMK_account_parent_account) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_business_unit_accounts"></a> business_unit_accounts
 
-See businessunit Table [business_unit_accounts](businessunit.md#BKMK_business_unit_accounts) One-To-Many relationship.
+See the [business_unit_accounts](businessunit.md#BKMK_business_unit_accounts) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_account"></a> transactioncurrency_account
 
-See transactioncurrency Table [transactioncurrency_account](transactioncurrency.md#BKMK_transactioncurrency_account) One-To-Many relationship.
+See the [transactioncurrency_account](transactioncurrency.md#BKMK_transactioncurrency_account) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_user_accounts"></a> user_accounts
 
-See systemuser Table [user_accounts](systemuser.md#BKMK_user_accounts) One-To-Many relationship.
+See the [user_accounts](systemuser.md#BKMK_user_accounts) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_accountbase_createdonbehalfby"></a> lk_accountbase_createdonbehalfby
 
-See systemuser Table [lk_accountbase_createdonbehalfby](systemuser.md#BKMK_lk_accountbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_accountbase_createdonbehalfby](systemuser.md#BKMK_lk_accountbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processstage_account"></a> processstage_account
 
-See processstage Table [processstage_account](processstage.md#BKMK_processstage_account) One-To-Many relationship.
+See the [processstage_account](processstage.md#BKMK_processstage_account) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_manualsla_account"></a> manualsla_account
 
-See sla Table [manualsla_account](sla.md#BKMK_manualsla_account) One-To-Many relationship.
+See the [manualsla_account](sla.md#BKMK_manualsla_account) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_lk_accountbase_createdby"></a> lk_accountbase_createdby
 
-See systemuser Table [lk_accountbase_createdby](systemuser.md#BKMK_lk_accountbase_createdby) One-To-Many relationship.
+See the [lk_accountbase_createdby](systemuser.md#BKMK_lk_accountbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_sla_account"></a> sla_account
 
-See sla Table [sla_account](sla.md#BKMK_sla_account) One-To-Many relationship.
+See the [sla_account](sla.md#BKMK_sla_account) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_lk_accountbase_modifiedonbehalfby"></a> lk_accountbase_modifiedonbehalfby
 
-See systemuser Table [lk_accountbase_modifiedonbehalfby](systemuser.md#BKMK_lk_accountbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_accountbase_modifiedonbehalfby](systemuser.md#BKMK_lk_accountbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_accounts"></a> team_accounts
 
-See team Table [team_accounts](team.md#BKMK_team_accounts) One-To-Many relationship.
-
-### <a name="BKMK_owner_accounts"></a> owner_accounts
-
-See owner Table [owner_accounts](owner.md#BKMK_owner_accounts) One-To-Many relationship.
+See the [team_accounts](team.md#BKMK_team_accounts) one-to-many relationship for the [team](team.md) table/entity.
 
 ### See also
 

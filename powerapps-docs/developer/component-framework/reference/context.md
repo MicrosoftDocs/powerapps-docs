@@ -1,25 +1,26 @@
 ---
 title: Context | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6e066350-9d22-4078-b497-26be7d2fa374
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Context
 
 [!INCLUDE [context-description](includes/context-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps, canvas apps, & portals.
+
+## Properties
 
 ### client
 
@@ -58,19 +59,21 @@ Model-driven apps and canvas apps (public preview)
 
 ### parameters
 
-The data provided to the component. Structure defined by the component’s manifest, corresponding to parameter and data-set nodes.
+The data provided to the component. Structure defined by the component's manifest, corresponding to parameter and dataset nodes.
 
 **Type**: `TInputs`
 
 ### resources
 
-The resource interface of `context.resource`
+The resource interface of `context.resources`
 
 [!INCLUDE [resource-description](includes/resources-description.md)]
 
+**Type**: [Resources](resources.md)
+
 ### updatedProperties
 
-An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). `updatesProperties` is currently only supported for model-driven apps and always returns empty string for canvas apps.
+An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
 
 **Type**: `string[]`
 

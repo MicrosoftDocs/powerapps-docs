@@ -1,19 +1,20 @@
 ---
-title: "How to create and edit columns for Microsoft Dataverse| MicrosoftDocs"
+title: "How to create and edit columns for Microsoft Dataverse(contains video) | MicrosoftDocs"
 description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: d88677fa-2caf-47b0-aec6-10a25a7ec9c3
 caps.latest.revision: 55
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -25,9 +26,12 @@ search.app:
 ---
 # How to create and edit columns
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
+
+Watch this video for a quick overview about columns:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEC1G]
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -42,7 +46,7 @@ There are two designers you can use to create or edit columns:
 > You can also create columns in your environment using the following:
 > - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](./add-data-power-query.md).
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
 > - A developer can use [Metadata services](/powerapps/developer/data-platform/use-web-services#metadata-services) to write a program to create and update columns.
 
 Information in this topic will help you choose which designer you can use. 
@@ -57,7 +61,7 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
    - More information: [Define status reason transitions for the Case or custom tables](define-status-reason-transitions.md)
 - Edit multiple columns at once.
 - Enable Auditing. 
-   - More information: [Auditing overview](../../developer/data-platform/auditing-overview.md)
+   - More information: [Auditing overview](../../developer/data-platform/auditing/overview.md)
 - Enable Column Level Security. 
    - More information: [Column security tables](../../developer/data-platform/field-security-entities.md)
 - Select whether the column appears in global filter in interactive experience. 

@@ -4,9 +4,10 @@ description: "Execute duplicate detection for a specific record, table type, or 
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -28,7 +29,7 @@ There are several ways to perform duplicate detection after you enable it and pu
 
 Detect and retrieve duplicates:
 
-- Before you create an table
+- Before you create a table
 - For an existing table
 - For other tables that correspond to duplicate rules across tables. For example, any Lead table which matches a contact table.
 

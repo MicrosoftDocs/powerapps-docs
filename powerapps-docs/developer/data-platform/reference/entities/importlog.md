@@ -1,13 +1,13 @@
 ---
-title: "ImportLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ImportLog table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportLog table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -28,7 +28,6 @@ Failure reason and other detailed information for a record that failed to import
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/importlogs(*importlogid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importlogs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -220,12 +219,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### LogPhaseCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Parse|
-|1|Transform|
-|2|Import Create|
-|3|Import Update|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Parse||
+|1|Transform||
+|2|Import Create||
+|3|Import Update||
 
 
 
@@ -302,6 +301,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SequenceNumber](#BKMK_SequenceNumber)
@@ -592,12 +592,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Business unit that owns the import log.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -675,7 +691,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ImportLog_BulkDeleteFailures"></a> ImportLog_BulkDeleteFailures
 
-Same as bulkdeletefailure table [ImportLog_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportLog_BulkDeleteFailures) Many-To-One relationship.
+Same as the [ImportLog_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportLog_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -690,7 +706,7 @@ Same as bulkdeletefailure table [ImportLog_BulkDeleteFailures](bulkdeletefailure
 
 ### <a name="BKMK_ImportLog_AsyncOperations"></a> ImportLog_AsyncOperations
 
-Same as asyncoperation table [ImportLog_AsyncOperations](asyncoperation.md#BKMK_ImportLog_AsyncOperations) Many-To-One relationship.
+Same as the [ImportLog_AsyncOperations](asyncoperation.md#BKMK_ImportLog_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -709,56 +725,46 @@ Same as asyncoperation table [ImportLog_AsyncOperations](asyncoperation.md#BKMK_
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_importlog_createdonbehalfby](#BKMK_lk_importlog_createdonbehalfby)
-- [owner_importlogs](#BKMK_owner_importlogs)
 - [BusinessUnit_ImportLogs](#BKMK_BusinessUnit_ImportLogs)
 - [SystemUser_ImportLogs](#BKMK_SystemUser_ImportLogs)
 - [lk_importlogbase_modifiedby](#BKMK_lk_importlogbase_modifiedby)
 - [lk_importlogbase_createdby](#BKMK_lk_importlogbase_createdby)
 - [ImportLog_ImportFile](#BKMK_ImportLog_ImportFile)
 - [team_ImportLogs](#BKMK_team_ImportLogs)
-- [ImportLog_ImportData](#BKMK_ImportLog_ImportData)
 - [lk_importlog_modifiedonbehalfby](#BKMK_lk_importlog_modifiedonbehalfby)
 
 
 ### <a name="BKMK_lk_importlog_createdonbehalfby"></a> lk_importlog_createdonbehalfby
 
-See systemuser Table [lk_importlog_createdonbehalfby](systemuser.md#BKMK_lk_importlog_createdonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_owner_importlogs"></a> owner_importlogs
-
-See owner Table [owner_importlogs](owner.md#BKMK_owner_importlogs) One-To-Many relationship.
+See the [lk_importlog_createdonbehalfby](systemuser.md#BKMK_lk_importlog_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_BusinessUnit_ImportLogs"></a> BusinessUnit_ImportLogs
 
-See businessunit Table [BusinessUnit_ImportLogs](businessunit.md#BKMK_BusinessUnit_ImportLogs) One-To-Many relationship.
+See the [BusinessUnit_ImportLogs](businessunit.md#BKMK_BusinessUnit_ImportLogs) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_SystemUser_ImportLogs"></a> SystemUser_ImportLogs
 
-See systemuser Table [SystemUser_ImportLogs](systemuser.md#BKMK_SystemUser_ImportLogs) One-To-Many relationship.
+See the [SystemUser_ImportLogs](systemuser.md#BKMK_SystemUser_ImportLogs) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importlogbase_modifiedby"></a> lk_importlogbase_modifiedby
 
-See systemuser Table [lk_importlogbase_modifiedby](systemuser.md#BKMK_lk_importlogbase_modifiedby) One-To-Many relationship.
+See the [lk_importlogbase_modifiedby](systemuser.md#BKMK_lk_importlogbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importlogbase_createdby"></a> lk_importlogbase_createdby
 
-See systemuser Table [lk_importlogbase_createdby](systemuser.md#BKMK_lk_importlogbase_createdby) One-To-Many relationship.
+See the [lk_importlogbase_createdby](systemuser.md#BKMK_lk_importlogbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ImportLog_ImportFile"></a> ImportLog_ImportFile
 
-See importfile Table [ImportLog_ImportFile](importfile.md#BKMK_ImportLog_ImportFile) One-To-Many relationship.
+See the [ImportLog_ImportFile](importfile.md#BKMK_ImportLog_ImportFile) one-to-many relationship for the [importfile](importfile.md) table/entity.
 
 ### <a name="BKMK_team_ImportLogs"></a> team_ImportLogs
 
-See team Table [team_ImportLogs](team.md#BKMK_team_ImportLogs) One-To-Many relationship.
-
-### <a name="BKMK_ImportLog_ImportData"></a> ImportLog_ImportData
-
-See importdata Table [ImportLog_ImportData](importdata.md#BKMK_ImportLog_ImportData) One-To-Many relationship.
+See the [team_ImportLogs](team.md#BKMK_team_ImportLogs) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_importlog_modifiedonbehalfby"></a> lk_importlog_modifiedonbehalfby
 
-See systemuser Table [lk_importlog_modifiedonbehalfby](systemuser.md#BKMK_lk_importlog_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_importlog_modifiedonbehalfby](systemuser.md#BKMK_lk_importlog_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

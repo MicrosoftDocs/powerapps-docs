@@ -1,19 +1,14 @@
 ---
 title: "Avoid using window.top | MicrosoftDocs"
 description: "Describes how to avoid script errors and incorrect application behavior associated with using window.top in JavaScript customizations."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
 manager: austinj
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 1/15/2019
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer

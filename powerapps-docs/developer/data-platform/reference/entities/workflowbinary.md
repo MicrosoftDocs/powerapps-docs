@@ -1,13 +1,13 @@
 ---
-title: "workflowbinary table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "workflowbinary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workflowbinary table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflowbinaries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -369,6 +368,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ProcessName](#BKMK_ProcessName)
@@ -691,12 +691,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -775,14 +793,13 @@ Listed by **SchemaName**.
 - [workflowbinary_ProcessSession](#BKMK_workflowbinary_ProcessSession)
 - [workflowbinary_BulkDeleteFailures](#BKMK_workflowbinary_BulkDeleteFailures)
 - [workflowbinary_PrincipalObjectAttributeAccesses](#BKMK_workflowbinary_PrincipalObjectAttributeAccesses)
-- [workflowbinary_FileAttachments](#BKMK_workflowbinary_FileAttachments)
 
 
 ### <a name="BKMK_workflowbinary_SyncErrors"></a> workflowbinary_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [workflowbinary_SyncErrors](syncerror.md#BKMK_workflowbinary_SyncErrors) Many-To-One relationship.
+Same as the [workflowbinary_SyncErrors](syncerror.md#BKMK_workflowbinary_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -799,7 +816,7 @@ Same as syncerror table [workflowbinary_SyncErrors](syncerror.md#BKMK_workflowbi
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [workflowbinary_AsyncOperations](asyncoperation.md#BKMK_workflowbinary_AsyncOperations) Many-To-One relationship.
+Same as the [workflowbinary_AsyncOperations](asyncoperation.md#BKMK_workflowbinary_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -816,7 +833,7 @@ Same as asyncoperation table [workflowbinary_AsyncOperations](asyncoperation.md#
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [workflowbinary_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_workflowbinary_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [workflowbinary_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_workflowbinary_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -833,7 +850,7 @@ Same as mailboxtrackingfolder table [workflowbinary_MailboxTrackingFolders](mail
 
 **Added by**: System Solution Solution
 
-Same as processsession table [workflowbinary_ProcessSession](processsession.md#BKMK_workflowbinary_ProcessSession) Many-To-One relationship.
+Same as the [workflowbinary_ProcessSession](processsession.md#BKMK_workflowbinary_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -850,7 +867,7 @@ Same as processsession table [workflowbinary_ProcessSession](processsession.md#B
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [workflowbinary_BulkDeleteFailures](bulkdeletefailure.md#BKMK_workflowbinary_BulkDeleteFailures) Many-To-One relationship.
+Same as the [workflowbinary_BulkDeleteFailures](bulkdeletefailure.md#BKMK_workflowbinary_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -867,7 +884,7 @@ Same as bulkdeletefailure table [workflowbinary_BulkDeleteFailures](bulkdeletefa
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [workflowbinary_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [workflowbinary_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -876,23 +893,6 @@ Same as principalobjectattributeaccess table [workflowbinary_PrincipalObjectAttr
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|workflowbinary_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_workflowbinary_FileAttachments"></a> workflowbinary_FileAttachments
-
-**Added by**: System Solution Solution
-
-Same as fileattachment table [workflowbinary_FileAttachments](fileattachment.md#BKMK_workflowbinary_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workflowbinary_FileAttachments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -908,9 +908,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_workflowbinary_modifiedonbehalfby](#BKMK_lk_workflowbinary_modifiedonbehalfby)
 - [user_workflowbinary](#BKMK_user_workflowbinary)
 - [team_workflowbinary](#BKMK_team_workflowbinary)
-- [owner_workflowbinary](#BKMK_owner_workflowbinary)
 - [business_unit_workflowbinary](#BKMK_business_unit_workflowbinary)
-- [FileAttachment_workflowbinary_Data](#BKMK_FileAttachment_workflowbinary_Data)
 - [flowsession_workflowbinary_FlowSessionId](#BKMK_flowsession_workflowbinary_FlowSessionId)
 - [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
 
@@ -919,65 +917,53 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_createdby](systemuser.md#BKMK_lk_workflowbinary_createdby) One-To-Many relationship.
+See the [lk_workflowbinary_createdby](systemuser.md#BKMK_lk_workflowbinary_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowbinary_createdonbehalfby"></a> lk_workflowbinary_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_createdonbehalfby](systemuser.md#BKMK_lk_workflowbinary_createdonbehalfby) One-To-Many relationship.
+See the [lk_workflowbinary_createdonbehalfby](systemuser.md#BKMK_lk_workflowbinary_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowbinary_modifiedby"></a> lk_workflowbinary_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_modifiedby](systemuser.md#BKMK_lk_workflowbinary_modifiedby) One-To-Many relationship.
+See the [lk_workflowbinary_modifiedby](systemuser.md#BKMK_lk_workflowbinary_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowbinary_modifiedonbehalfby"></a> lk_workflowbinary_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowbinary_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_workflowbinary_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowbinary_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_workflowbinary"></a> user_workflowbinary
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_workflowbinary](systemuser.md#BKMK_user_workflowbinary) One-To-Many relationship.
+See the [user_workflowbinary](systemuser.md#BKMK_user_workflowbinary) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_workflowbinary"></a> team_workflowbinary
 
 **Added by**: System Solution Solution
 
-See team Table [team_workflowbinary](team.md#BKMK_team_workflowbinary) One-To-Many relationship.
-
-### <a name="BKMK_owner_workflowbinary"></a> owner_workflowbinary
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_workflowbinary](owner.md#BKMK_owner_workflowbinary) One-To-Many relationship.
+See the [team_workflowbinary](team.md#BKMK_team_workflowbinary) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_workflowbinary"></a> business_unit_workflowbinary
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_workflowbinary](businessunit.md#BKMK_business_unit_workflowbinary) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_workflowbinary_Data"></a> FileAttachment_workflowbinary_Data
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_workflowbinary_Data](fileattachment.md) One-To-Many relationship.
+See the [business_unit_workflowbinary](businessunit.md#BKMK_business_unit_workflowbinary) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 
-See flowsession Table [flowsession_workflowbinary_FlowSessionId](flowsession.md#BKMK_flowsession_workflowbinary_FlowSessionId) One-To-Many relationship.
+See the [flowsession_workflowbinary_FlowSessionId](flowsession.md#BKMK_flowsession_workflowbinary_FlowSessionId) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
 
 ### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
 
 **Added by**: System Solution Solution
 
-See workflow Table [workflow_workflowbinary_Process](workflow.md#BKMK_workflow_workflowbinary_Process) One-To-Many relationship.
+See the [workflow_workflowbinary_Process](workflow.md#BKMK_workflow_workflowbinary_Process) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 

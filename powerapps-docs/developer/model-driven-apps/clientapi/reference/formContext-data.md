@@ -1,25 +1,28 @@
 ---
 title: "formContext.data (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
-ms.date: 04/15/2021
-ms.service: powerapps
+description: "Provides properties and methods to work with the data on a form."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.data (Client API reference)
 
 Provides properties and methods to work with the data on a form.
 
-![formContext Data object model](../../media/ClientAPI-formContext-data-Model.png)
+![formContext Data object model.](../../media/ClientAPI-formContext-data-Model.png)
 
 ## Properties
 

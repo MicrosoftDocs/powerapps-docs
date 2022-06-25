@@ -1,21 +1,22 @@
 ---
-title: "getData (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getData method.
-ms.date: 04/21/2021
-ms.service: powerapps
+title: "gridRow.getData (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridRow.getData method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getData (Client API reference)
+# gridRow.getData (Client API reference)
 
 
 

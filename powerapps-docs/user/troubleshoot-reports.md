@@ -3,10 +3,11 @@ title: Troubleshoot problems with data not displaying in a report | Microsoft Do
 description: Troubleshoot problems with data not displaying in a report
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""

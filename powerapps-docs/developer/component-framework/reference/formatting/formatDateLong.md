@@ -1,16 +1,15 @@
 ---
 title: formatDateLong | Microsoft Docs
 description: Returns a formatted string that represents a date in the long form. Results pattern is based on the culture. In USA it's "Abbreviated Day of week, Month dd, yyyy".
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b1b3449a-4f28-4a4c-97e0-eb1c118376d6
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # formatDateLong
@@ -23,7 +22,7 @@ ms.assetid: b1b3449a-4f28-4a4c-97e0-eb1c118376d6
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Parameters
 

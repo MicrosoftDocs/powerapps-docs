@@ -2,10 +2,11 @@
 title: Testing Phase - Planning a Power Apps project | Microsoft Docs
 description: Now that your app is built, the next step is to start testing it. You'll learn the basics of testing an app and discover Power Apps testing tools.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 

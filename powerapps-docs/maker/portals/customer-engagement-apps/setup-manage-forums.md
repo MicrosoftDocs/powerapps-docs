@@ -1,16 +1,14 @@
 ---
 title: Set up and manage forums
 description: Learn how to create and manage forums on a portal.
-author: sbmjais
-ms.service: powerapps
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
-ms.author: shjais
-ms.reviewer: shjais
+ms.subservice: portals
+ms.author: ndoelman
 contributors:
-    - tapanm-msft
-    - shjais
+    - nickdoelman
 ---
 
 # Set up and manage forums
@@ -45,7 +43,7 @@ For portal users with content management permissions, a limited set of propertie
 
 4. Specify values for the fields provided, and then select **Save**.
 
-    ![Create a new child forum](media/create-new-child-forum.png "Create a new child forum")  
+    ![Create a new child forum.](media/create-new-child-forum.png "Create a new child forum")  
 
 ### Forum attributes used by portals
 

@@ -1,11 +1,12 @@
 ---
-title: Connect and upload files to Azure Blob Storage using canvas apps | Microsoft Docs
+title: Connect to Azure Blob Storage from Power Apps
 description: Learn how to connect and upload files to Azure Blob Storage using canvas apps.
 author: vasavib
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.date: 03/15/2021
+ms.date: 01/27/2022
+ms.subservice: canvas-maker
 ms.author: vabhavir
 ms.reviewer: tapanm
 search.audienceType: 
@@ -49,11 +50,11 @@ To create the Azure Blob Storage connection:
 
 1. Select **Azure Blob Storage**.
 
-    ![New Azure Bob Storage connection](./media/connection-azure-blob-storage/azure-blob-storage-connection.png "New Azure Bob Storage connection")
+    ![New Azure Bob Storage connection.](./media/connection-azure-blob-storage/azure-blob-storage-connection.png "New Azure Bob Storage connection")
 
 1. Copy and paste the account name, and access key.
 
-    ![Enter storage account name and access keys](./media/connection-azure-blob-storage/storage-access-keys.png "Enter storage account name and access keys")
+    ![Enter storage account name and access keys.](./media/connection-azure-blob-storage/storage-access-keys.png "Enter storage account name and access keys")
 
     For more information about how to copy account name and access key, go to [View account access keys in Azure](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
@@ -68,24 +69,15 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 > [!NOTE]
 > In this section, you'll create a sample app with sample controls, functionality and layout design. Depending on your business requirement, you can create the app with a different structure, or customize differently.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. On the left-pane, select **Create**.
+1. Create a [blank canvas app](../create-blank-app.md) with the name "Sample app for Azure Blob Storage" and **Phone** layout.
 
-1. Select **Canvas app from blank**.
-
-1. Enter app name, such as "Sample app for Azure Blob Storage".
-
-1. Select **Phone** layout.
-
-1. Select **Create**.
-
-1. Inside the Power Apps Studio, on the left-pane, select ![Data](./media/connection-azure-blob-storage/select-data.png "Data").
+1. Inside Power Apps Studio, on the left-pane, select ![Data](./media/connection-azure-blob-storage/select-data.png "Data").
 
 1. Select **Add data**.
 
 1. From the list of connectors, select **Azure Blob Storage**.
 
-    ![Select Azure Blob Storage connection](./media/connection-azure-blob-storage/select-connector.png "Select Azure Blob Storage connection")
+    ![Select Azure Blob Storage connection.](./media/connection-azure-blob-storage/select-connector.png "Select Azure Blob Storage connection")
 
 ## View containers and files
 
@@ -95,15 +87,15 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. From the right-side of the screen, on the property pane, select the layout drop-down and choose **Title**.
 
-    ![Select gallery layout for containers](./media/connection-azure-blob-storage/select-layout-1.png "Select gallery layout for containers")
+    ![Select gallery layout for containers.](./media/connection-azure-blob-storage/select-layout-1.png "Select gallery layout for containers")
 
-1. Select first ![Arrow icon](./media/connection-azure-blob-storage/arrow-icon.png "Arrow icon") inside the gallery, and delete it.
+1. Select first ![Arrow icon.](./media/connection-azure-blob-storage/arrow-icon.png "Arrow icon") inside the gallery, and delete it.
 
-    ![Delete arrow icon](./media/connection-azure-blob-storage/delete-arrow-icon.png "Delete arrow icon")
+    ![Delete arrow icon.](./media/connection-azure-blob-storage/delete-arrow-icon.png "Delete arrow icon")
 
 1. From the right-side of the screen, on the property pane, select the drop-down for data source, and choose **Azure Blob Storage**.
 
-    ![Data source for the gallery of containers](./media/connection-azure-blob-storage/select-data-source-for-gallery.png "Data source for the gallery of containers")
+    ![Data source for the gallery of containers.](./media/connection-azure-blob-storage/select-data-source-for-gallery.png "Data source for the gallery of containers")
 
 1. Set the **Items** property of the gallery to:
 
@@ -111,7 +103,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
     AzureBlobStorage.ListRootFolderV2().value
     ```
 
-    ![List of containers](./media/connection-azure-blob-storage/containers-list.png "List of containers")
+    ![List of containers.](./media/connection-azure-blob-storage/containers-list.png "List of containers")
 
     This operation lists blobs in the Azure Blob Storage root folder. More information: [List blobs in root folder](/connectors/azureblob#list-blobs-in-root-folder)
 
@@ -121,7 +113,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. From the right-side of the screen, on the property pane, select the layout drop-down and choose **Title, subtitle, and body**.
 
-1. Select first ![Arrow icon](./media/connection-azure-blob-storage/arrow-icon.png "Arrow icon") inside the gallery, and delete it.
+1. Select first ![Arrow icon.](./media/connection-azure-blob-storage/arrow-icon.png "Arrow icon") inside the gallery, and delete it.
 
 1. From the right-side of the screen, on the property pane, select the drop-down for data source, and choose **Azure Blob Storage**.
 
@@ -130,7 +122,8 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
     ```powerapps-dot
     AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
     ```
-    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs) <br>
+
+    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs)
     
     > [!NOTE]
     > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. Update the formula with the gallery name if different.
@@ -139,11 +132,11 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. Change the selected fields for the gallery title as **DisplayName**, subtitle as **LastModified**, and body as **Path**.
 
-    ![Select fields](./media/connection-azure-blob-storage/set-fields.png "Select fields")
+    ![Select fields.](./media/connection-azure-blob-storage/set-fields.png "Select fields")
 
     The gallery now shows the list of files from the container selected using the gallery on the top.
 
-    ![List of files from a container](./media/connection-azure-blob-storage/files-list.png "List of files from a container")
+    ![List of files from a container.](./media/connection-azure-blob-storage/files-list.png "List of files from a container")
 
 1. Select **Insert** -> **Text label**.
 
@@ -159,7 +152,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. Set the label's  **Text** property as "Files list".
 
-    ![List of files with labels added](./media/connection-azure-blob-storage/files-list-with-labels.png "List of files with labels added")
+    ![List of files with labels added.](./media/connection-azure-blob-storage/files-list-with-labels.png "List of files with labels added")
 
 ## Upload files to Azure Blob Storage
 
@@ -198,25 +191,25 @@ Let's configure the app with controls and logic to allow upload of files to the 
 
     The app controls look like this in the sample app now.
 
-    ![Upload file to the connected storage](./media/connection-azure-blob-storage/upload-functionality-added.png "Upload file to the connected storage")
+    ![Upload file to the connected storage.](./media/connection-azure-blob-storage/upload-functionality-added.png "Upload file to the connected storage")
 
     > [!TIP]
     > Ensure you select **All files** when using the upload option to ensure all file types are visible in the file explorer dialog box.
 
 ## Download files from Azure Blob Storage
 
-So far you've added the ability to view containers, files from the selected container, and the option to upload file to the storage. Now, let's understand how to work with the download capability with the connected storage.
+So far you've added the ability to view containers, files from the selected container, and the option to upload files to the storage. Now, let's understand how to work with the download capability with the connected storage.
 
 1. Select the first row in the gallery with the list of files from a container.
 
-    ![Select first row in the file list gallery](./media/connection-azure-blob-storage/select-first-row.png "Select first row in the file list gallery")
+    ![Select first row in the file list gallery.](./media/connection-azure-blob-storage/select-first-row.png "Select first row in the file list gallery")
 
 1. Select **Insert** -> **Icons** -> **Download**.
     This adds the download icon for all rows in the gallery.
 
-1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves rest of the icons for next rows in gallery.
+1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves the rest of the icons for the next rows in the gallery.
 
-    ![Move first row in the file list gallery](./media/connection-azure-blob-storage/move-download-icon.png "Move first row in the file list gallery")
+    ![Move first row in the file list gallery.](./media/connection-azure-blob-storage/move-download-icon.png "Move first row in the file list gallery")
 
 1. Set the **OnSelect** property of the download icon to:
 
@@ -262,9 +255,9 @@ Similarly, you can use different file extension types, or media types to additio
 
 The Azure Blob Storage connection doesn't refresh data inside the galleries automatically when the data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
 
-Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
+Another method that can be considered is to use a collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
 
-For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible screen property).
+For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when the upload button is selected, or when the screen appears (OnVisible screen property).
 
 1. Set the **Items** property of the first gallery for the list of containers to "TopLevelList".
 

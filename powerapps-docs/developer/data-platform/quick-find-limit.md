@@ -4,9 +4,10 @@ description: "Learn about the record limit of a Quick Search and how to avoid hi
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "NHelgren" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only
 manager: "jday" # MSFT alias of manager or PM counterpart
 search.audienceType: 

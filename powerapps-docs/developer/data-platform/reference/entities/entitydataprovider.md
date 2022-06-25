@@ -1,13 +1,13 @@
 ---
-title: "EntityDataProvider table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EntityDataProvider table/entity."
-ms.date: 03/04/2021
+title: "Virtual Entity Data Provider (EntityDataProvider)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Virtual Entity Data Provider (EntityDataProvider)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# EntityDataProvider table/entity reference
+# Virtual Entity Data Provider (EntityDataProvider)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ Developers can register plug-ins on a data provider to enable data access for vi
 |Create|POST [*org URI*]/api/data/v9.0/entitydataproviders<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entitydataproviders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -59,6 +58,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CreateMultiplePlugin](#BKMK_CreateMultiplePlugin)
 - [CreatePlugin](#BKMK_CreatePlugin)
 - [DataSourceLogicalName](#BKMK_DataSourceLogicalName)
+- [DeleteMultiplePlugin](#BKMK_DeleteMultiplePlugin)
 - [DeletePlugin](#BKMK_DeletePlugin)
 - [Description](#BKMK_Description)
 - [EntityDataProviderId](#BKMK_EntityDataProviderId)
@@ -116,6 +116,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|128|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_DeleteMultiplePlugin"></a> DeleteMultiplePlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the deletemultipleplugin id that should be run when DeleteMultiple is invoked|
+|DisplayName|Contains the deletemultipleplugin id that should be run when DeleteMultiple is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|deletemultipleplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_DeletePlugin"></a> DeletePlugin
@@ -334,12 +349,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -370,12 +385,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -441,7 +456,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_organization_entitydataprovider"></a> organization_entitydataprovider
 
-See organization Table [organization_entitydataprovider](organization.md#BKMK_organization_entitydataprovider) One-To-Many relationship.
+See the [organization_entitydataprovider](organization.md#BKMK_organization_entitydataprovider) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

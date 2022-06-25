@@ -1,29 +1,23 @@
 ---
 title: "Do not use parallel execution within plug-ins and workflow activities | MicrosoftDocs"
 description: "Multi or parallel threading within plug-ins or custom workflow activities is not supported."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: ryjones
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date:  08/14/2019
-ms.author: pehecke
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Do not use parallel execution within plug-ins and workflow activities
-
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 **Category**: Design, Performance, Security, Supportability
 

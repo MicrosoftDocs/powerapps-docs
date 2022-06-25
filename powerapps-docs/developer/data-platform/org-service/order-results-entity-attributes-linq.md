@@ -1,29 +1,32 @@
 ---
-title: "Order results using entity attributes with LINQ (Microsoft Dataverse) | Microsoft Docs" 
-description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
+title: "Order results using table columns with LINQ (Microsoft Dataverse) | Microsoft Docs" 
+description: "Read how you can use lookup or choices (picklist) columns to order results within a LINQ query."
+ms.date: 04/03/2022
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.reviewer: pehecke
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
+
 ---
-# Order results using entity attributes with LINQ
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Order results using table columns with LINQ
 
-In Microsoft Dataverse(Dataverse) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+In Microsoft Dataverse you can use lookup or choices (picklist) columns to order results within a LINQ query. This topic shows several examples of this type of query.  
   
-## Using a Lookup Value to Order By  
+## Using a lookup value to Order By  
 
-The following sample shows use the lookup attribute `PrimaryContactId` in an `Order By` clause.  
+The following sample shows use the lookup column `PrimaryContactId` in an `Order By` clause.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -44,9 +47,9 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ```
   
-## Using a Picklist to Order By  
+## Using choices to Order By  
 
-The following sample shows use of a lookup value to order by.  
+The following sample shows use of a choices (picklist) value to order by.  
   
 ```csharp
 
@@ -70,9 +73,9 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-### See also  
- [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
- [Page large result sets with LINQ](page-large-result-sets-linq.md)
+### See also
 
+ [Build queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
+ [Page large result sets with LINQ](page-large-result-sets-linq.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

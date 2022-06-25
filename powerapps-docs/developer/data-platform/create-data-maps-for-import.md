@@ -4,9 +4,10 @@ description: "Data maps are required to import data, and contain mappings betwee
 ms.custom: ""
 ms.date: 03/15/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Create data maps for import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 To import data into Microsoft Dataverse, you must provide the appropriate data maps.  
   

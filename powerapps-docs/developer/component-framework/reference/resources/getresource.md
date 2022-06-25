@@ -1,16 +1,15 @@
 ---
 title: getResource | Microsoft Docs
-description: Provides access to the methods to get all the information about the resource files defined in the manifest.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5c04ba7c-acfe-4375-8dd8-6c537ded9352
+description: Provides information about the methods available for getResource.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getResource

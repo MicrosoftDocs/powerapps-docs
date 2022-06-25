@@ -1,18 +1,21 @@
 ---
-title: Transform your InfoPath form to a canvas app | Microsoft Docs
-description: Start to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
+title: Transform your InfoPath form to Power Apps
+description: Learn about how to transform your InfoPath form to Power Apps with information about common scenarios and how to create these items in a canvas app.
 author: emcoope-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/05/2019
+ms.date: 04/26/2021
+ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - emcoope-msft
 ---
 # Transform your InfoPath form to Power Apps
 
@@ -34,13 +37,13 @@ Have you ever tried to build an app and then publish it for iOS or Android devic
 With Power Apps, you can leverage the power of the user's mobile device. You have access to acceleration, the camera, the compass, the connection information, and location signals: all from within your app. This opens up a whole world of possibilities for building apps to get work done. Of course, touch functionality is just automatic in Power Apps: nothing extra to code when you build your app.
 
 **Get out of the box**  
-With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a SharePoint list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. Power Apps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-standard-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Power Automate and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
+With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. Power Apps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-standard-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Power Automate and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
 
 Now you can build solutions to scale where your users need to take you, not just where the original data lived.
 
 ## Power Apps and SharePoint: even better together
 
-Power Apps is a great tool for making your SharePoint experience better in two ways. You have the option to either customize the forms for a SharePoint list or to create a standalone app for working with SharePoint data.
+Power Apps is a great tool for making your SharePoint experience better in two ways. You have the option to either customize the forms for a list or to create a standalone app for working with SharePoint data.
 
 **Customizing a SharePoint form** is great if you want to customize how users add, view, or edit items in a list that they use for their everyday work. Clicking **Customize Forms** will create a single-screen &quot;forms app&quot; that will change modes (new/edit/view) based on context. SharePoint manages these apps; their permissions are the same as the list permissions for editing/viewing.
 
@@ -54,7 +57,7 @@ The Power Apps and SharePoint teams have worked together to create a customizati
 
 With Power Apps you can now customize your list forms as native functionality. And when you do so, you get the full power of Power Apps. In the screenshot below, you can see an example of a Power Apps form with a Power BI report embedded. The entire solution was done in less than 15 minutes.
 
-![SharePoint integration](./media/transform-infopath/sharepoint-integration.png)
+![SharePoint integration.](./media/transform-infopath/sharepoint-integration.png)
 
 Another important feature of Power Apps is the ability to easily connect to another SharePoint site collection or a different environment from the same form. For example, do you want to make one form that displays and updates data from your SharePoint Online and SharePoint on-premises environment at the same time? No problem. If you install the [on-premises data gateway](gateway-management.md), you are up and running in a few minutes, connecting Power Apps, Power BI, Power Automate, and Azure Logic Apps with your on-premises data. No changes to firewall rules are required. You can go a step further by connecting this app with Power Automate.
 
@@ -64,13 +67,13 @@ Use this technique if, instead of just updating the list-form experience, you wa
 
 To get started, follow these steps:
 
-1. Open the SharePoint list from which you would like to build an app.
-1. On the menu bar, select **Power Apps**, and then select **Create an app**.
+1. Open the list from which you would like to build an app.
+1. On the menu bar, select **Integrate** -> **Power Apps** -> **Create an app**.
 1. Provide a name, and then select **Create**.
 
 Power Apps will build you an app that you can customize.
 
-Start with a simple custom list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#create-an-app-from-within-sharepoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in Power Apps. Each of these builds on a simple SharePoint list app.
+Start with a simple list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#create-an-app-from-within-sharepoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in Power Apps. Each of these builds on a simple list app.
 
 ## How do you do that with Power Apps?
 
@@ -79,11 +82,11 @@ Now that you know the fundamental concepts, let's go further. With your first ap
 **Hide/show/lock a field based on a value**  
 Successful forms often enforce strong business logic by, for example, changing the state of a field based on a value or an action. With Power Apps, you can set the **DisplayMode** property of a control to **Edit** or **View** to specify whether a user can change the field. You can also use a simple **If** formula to do so conditionally. First, select the card that you want to edit, and then select the lock icon. This step unlocks the card so that you can change the value.
 
-![Hide Show Lock Data Cards](./media/transform-infopath/hide-show-lock.png)
+![Hide Show Lock Data Cards.](./media/transform-infopath/hide-show-lock.png)
 
 In the right-hand pane, scroll to the **DisplayMode** property so that you can edit it.
 
-![If Else Statement Expressions](./media/transform-infopath/if-else-statement.png)
+![If Else Statement Expressions.](./media/transform-infopath/if-else-statement.png)
 
 In this example, use an **If** formula:
 
@@ -147,7 +150,7 @@ If you still need a variable (there are many cases that you do), this will help 
 **Cascading dropdowns**  
 Cascading dropdowns are very useful because you can, for example, filter the choices in one dropdown based on the value selected in the previous dropdown. In Power Apps, these are often created by having two data sources in your app. The first data source is the data you're viewing or updating, and the second data source stores the values to build the cascading effect. This graphic shows an example of the second data source with the choice options.
 
-![Cascading dropdowns](./media/transform-infopath/cascading-dropdowns.png)
+![Cascading dropdowns.](./media/transform-infopath/cascading-dropdowns.png)
 
 In this example, you could add a dropdown named **ddSelectType** and set its **Items** property to this formula:
 

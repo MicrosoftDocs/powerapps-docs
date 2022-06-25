@@ -1,23 +1,23 @@
 ---
-title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the addOnLoad method.
-ms.date: 04/21/2021
-ms.service: powerapps
+title: "gridContext.addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.addOnLoad method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 24f34ac9-2a15-478e-980c-588a79d84e8d
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
-search.audienceType: 
+search.audienceType:
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# addOnLoad (Client API reference)
 
-
+# gridContext.addOnLoad (Client API reference)
 
 [!INCLUDE[./includes/addOnLoad-description.md](./includes/addOnLoad-description.md)]
 
@@ -31,9 +31,9 @@ Read-only and editable grids
 
 ## Parameter
 
-|Name|Type|Required|Description|
-|--|--|--|--|
-|myFunction|function reference|Yes|The function to be executed when the subgrid loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information.
+| Name       | Type               | Required | Description                                                                                                                                                                                                                                                                                              |
+| ---------- | ------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| myFunction | function reference | Yes      | The function to be executed when the subgrid loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information. |
 
 ## Remarks
 
@@ -45,9 +45,9 @@ Add the myContactsGridOnloadFunction function to the Contacts subgrid **OnLoad**
 
 ```JavaScript
 function myFunction(executionContext) {
-    var formContext = executionContext.getFormContext(); // get the form context
-    var gridContext = formContext.getControl("Contacts");// get the grid context
-    var myContactsGridOnloadFunction = function () { console.log("Contacts Subgrid OnLoad event occurred") };
+    let formContext = executionContext.getFormContext(); // get the form context
+    let gridContext = formContext.getControl("Contacts");// get the grid context
+    let myContactsGridOnloadFunction = function () { console.log("Contacts Subgrid OnLoad event occurred") };
     gridContext.addOnLoad(myContactsGridOnloadFunction);
 }
 ```
@@ -55,9 +55,5 @@ function myFunction(executionContext) {
 ### Related topics
 
 [removeOnLoad](removeOnLoad.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

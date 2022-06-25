@@ -7,7 +7,7 @@ metadata:
   title: Dataverse developer documentation
   description: Provides access to highlighted areas within the Dataverse developer documentation
   services: service
-  ms.service: powerapps 
+  
   ms.subservice: subservice
   ms.topic: landing-page 
   ms.collection: collection
@@ -130,7 +130,7 @@ landingContent:
             url: ./view-download-developer-resources.md
           - text: Developer tools
             url: ./developer-tools.md
-          - text: Microsoft Power Apps CLI
+          - text: Microsoft Power Platform CLI
             url: ./powerapps-cli.md
           - text: Community tools
             url: ./community-tools.md
@@ -143,11 +143,11 @@ landingContent:
           - text: Table reference
             url: reference/about-entity-reference.md
           - text: SDK API class libraries
-            url: /dotnet/api/?view=dynamics-general-ce-9
+            url: /dotnet/api/?view=dataverse-sdk-latest
           - text: Web API
-            url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
+            url: /dynamics365/customer-engagement/web-api/about
           - text: XRM Tooling API Reference
-            url: /dotnet/api/?view=dynamics-xrmtooling-ce-9
+            url: /dotnet/api/microsoft.xrm.tooling.connector
 
 
   # Card

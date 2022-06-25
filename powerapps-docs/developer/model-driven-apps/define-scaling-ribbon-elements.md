@@ -1,25 +1,26 @@
 ---
 title: "Define scaling for ribbon elements (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining scaling for ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/14/2021
-ms.service: powerapps
-ms.custom:
-  - ""
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 05/24/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: c2cc39d2-e540-0800-f04f-3fa66df21191
-author: Nkrb # GitHub ID
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Define scaling for ribbon elements
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 For application ribbons and updated form ribbons there is no scaling. Scaling only applies to forms for tables that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
   
@@ -45,12 +46,12 @@ Each `<Tab>` element must contain one `<MaxSize>` in the `<Scaling>`. The `MaxSi
   
 The following diagram shows how `MaxSize`, `Scale`, `Group`, `Layout` and `OverflowSection` elements must reference each other to enable scaling when you are using a `<OverflowSection>` element.  
   
- ![Element relationships with OverflowSection](media/ribbon-ui-definition.png "Element relationships with OverflowSection")  
+ ![Element relationships with OverflowSection.](media/ribbon-ui-definition.png "Element relationships with OverflowSection")  
   
  The following diagram shows how `MaxSize`, `Scale`, `Group`, `Layout` and `ControlRef` elements must reference each other to enable scaling when you 
  are using a `<Section>` element.  
   
- ![Element Relationships with Section](media/ui-definition.png "Element Relationships with Section") 
+ ![Element Relationships with Section.](media/ui-definition.png "Element Relationships with Section") 
   
 ### Use existing group templates  
  When creating a new group, instead of defining new group templates, you can re-use existing `GroupTemplate` elements.  

@@ -1,29 +1,23 @@
 ---
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
-ms.custom: ""
-ms.date: 02/07/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 64a39182-25de-4d31-951c-852025a75811
-caps.latest.revision: 13
-author: "JimDaly" # GitHub ID
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
-manager: "sunilg"
+description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API, and then learn how to identify and handle errors returned in the response"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
+
 # Compose HTTP requests and handle errors
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You interact with the Web API by composing and sending HTTP requests. You need to know how to set the appropriate HTTP headers and handle any errors included in the response.  
 
@@ -41,14 +35,13 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.1`.|
-|Resource|The name of the entity, function, or action you want to use.|
+|Resource|The name of the entity (table), function, or action you want to use.|
 
-
-The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
+The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource. You can find these values mentioned in the above table by navigating your browser to the Power Apps [portal](https://make.powerapps.com), selecting the settings (gear) icon in the top toolbar, and choosing **Developer resources** in the menu.
 
 <a name="version_compatiblity"></a>
 
-###   Version compatibility
+### Version compatibility
 
 This release introduces capabilities which are not available in previous versions. Subsequent minor versions may provide additional capabilities which will not be back ported to earlier minor versions. Your code written for v9.0 will continue to work in future versions when you reference v9.0 in the URL you use.
 
@@ -70,7 +63,7 @@ As new capabilities are introduced they may conflict with earlier versions. This
 |POST|Use when creating entities or calling actions.|  
 |PATCH|Use when updating entities or performing upsert operations.|  
 |DELETE|Use when deleting entities or individual properties of entities.|  
-|PUT|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. You'll use this when updating model entities.|  
+|PUT|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. You'll use this when updating table definitions.|  
   
 <a name="bkmk_headers"></a>
 
@@ -78,9 +71,9 @@ As new capabilities are introduced they may conflict with earlier versions. This
 
 Although the OData protocol allows for both JSON and ATOM format, the web API only supports JSON. Therefore the following headers can be applied.  
   
-Every request should include the Accept header value of `application/json`, even when no response body is expected. Any error returned in the response will be returned as JSON. While your code should work even if this header isn't included, we recommend including it as a best practice  
+Every request should include the `Accept` header value of `application/json`, even when no response body is expected. Any error returned in the response will be returned as JSON. While your code should work even if this header isn't included, we recommend including it as a best practice  
   
-The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the Maximum version to apply in your code. Use both OData-Version and OData-MaxVersion headers set to a value of 4.0.  
+The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the Maximum version to apply in your code. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of `4.0`.  
  
 Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
  
@@ -93,7 +86,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```  
   
-Every request that includes JSON data in the request body must include a Content-Type header with a value of `application/json`.  
+Every request that includes JSON data in the request body must include a `Content-Type` header with a value of `application/json`.  
   
 ```  
 Content-Type: application/json  
@@ -105,19 +98,21 @@ You can use additional headers to enable specific capabilities.
   
 -   To return formatted values with a query, include the odata.include-annotations preference set to `Microsoft.Dynamics.CRM.formattedvalue` using the [Prefer](https://tools.ietf.org/html/rfc7240) header. More information:[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)  
   
--   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information:[Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
+-   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information:[Specify the number of tables (entities) to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
   
--   To impersonate another user when the caller has the privileges to do so, add the `CallerObjectId` header with the user's Azure Active Directory Object Id value of the user to impersonate. This data is in the [SystemUser entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute. More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
+-   To impersonate another user when the caller has the privileges to do so, add the `CallerObjectId` header with the user's Azure Active Directory Object Id value of the user to impersonate. This data is in the [SystemUser table/entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
   
 -   To apply optimistic concurrency, you can apply the [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) header with an `Etag` value. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency).  
   
--   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert an entity](update-delete-entities-using-web-api.md#bkmk_upsert).  
+-   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert a table (entity)](update-delete-entities-using-web-api.md#bkmk_upsert).  
   
--   When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).  
+-   When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).  
 
-- When you create a solution component and want to associate it with a solution, use the `MSCRM.SolutionUniqueName` request header and set the value to the  unique name of the solution.
+- When you create a solution component and want to associate it with a solution, use the `MSCRM.SolutionUniqueName` request header and set the value to the unique name of the solution.
 
 - When you want to enable duplicate detection when creating a new entity record, set the `MSCRM.SuppressDuplicateDetection` request header value to false. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)
+
+- When you want to by-pass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege, set the `MSCRM.BypassCustomPluginExecution` request header to `true`. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
   
 <a name="bkmk_statusCodes"></a>
 
@@ -130,7 +125,7 @@ You can use additional headers to enable specific capabilities.
 |200 OK|Expect this when your operation will return data in the response body.|Success|  
 |201 Created|Expect this when your entity POST operation succeeds and you have specified the `return=representation` preference in your request.|Success|  
 |204 No Content|Expect this when your operation succeeds but does not return data in the response body.|Success|  
-|304 Not Modified|Expect this when testing whether an entity has been modified since it was last retrieved. More information:[Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)|Redirection|  
+|304 Not Modified|Expect this when testing whether an entity has been modified since it was last retrieved. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)|Redirection|  
 |403 Forbidden|Expect this for the following types of errors:<br /><br /> -   AccessDenied<br />-   AttributePermissionReadIsMissing<br />-   AttributePermissionUpdateIsMissingDuringUpdate<br />-   AttributePrivilegeCreateIsMissing<br />-   CannotActOnBehalfOfAnotherUser<br />-   CannotAddOrActonBehalfAnotherUserPrivilege<br />-   CrmSecurityError<br />-   InvalidAccessRights<br />-   PrincipalPrivilegeDenied<br />-   PrivilegeCreateIsDisabledForOrganization<br />-   PrivilegeDenied<br />-   unManagedinvalidprincipal<br />-   unManagedinvalidprivilegeedepth|Client Error|  
 |401 Unauthorized|Expect this for the following types of errors:<br /><br /> -   BadAuthTicket<br />-   ExpiredAuthTicket<br />-   InsufficientAuthTicket<br />-   InvalidAuthTicket<br />-   InvalidUserAuth<br />-   MissingCrmAuthenticationToken<br />-   MissingCrmAuthenticationTokenOrganizationName<br />-   RequestIsNotAuthenticated<br />-   TamperedAuthTicket<br />-   UnauthorizedAccess<br />-   UnManagedInvalidSecurityPrincipal|Client Error|  
 |413 Payload Too Large|Expect this when the request length is too large.|Client Error|  
@@ -288,16 +283,15 @@ This can also be done using the Organization Service: [Add a Shared Variable fro
 ### See also  
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Query data using the Web API](query-data-web-api.md)<br />
+[Create a table (entity) using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table (entity) using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables (entities) using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables (entities) using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

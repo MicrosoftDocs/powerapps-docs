@@ -1,21 +1,24 @@
 ---
-title: Abs, Exp, Ln, Power, and Sqrt functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Abs, Sqrt, and other functions in Power Apps
+title: Abs, Exp, Ln, Power, Log, and Sqrt functions in Power Apps
+description: Reference information including syntax and examples for the Abs, Exp, Ln, Power, and Sqrt functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 09/13/2016
+ms.reviewer: tapanm
+ms.date: 12/14/2021
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
-# Abs, Exp, Ln, Power, and Sqrt functions in Power Apps
-Calculates absolute values, natural logarithms, square roots, and the results of raising *e* or any number to specified powers.
+# Abs, Exp, Ln, Power, Log, and Sqrt functions in Power Apps
+Calculates absolute values, logarithms, square roots, and the results of raising *e* or any number to specified powers.
 
 ## Description
 The **Abs** function returns the non-negative value of its argument. If a number is negative, **Abs** returns the positive equivalent.
@@ -25,6 +28,8 @@ The **Exp** function returns *e* raised to the power of its argument.  The trans
 The **Ln** function returns the natural logarithm (base *e*) of its argument.
 
 The **Power** function returns a number raised to a power.  It is equivalent to using the [**^** operator](operators.md).
+
+The **Log** function returns the logarithm of its first argument in the base specified by its second argument (or 10 if not specified).
 
 The **Sqrt** function returns the number that, when multiplied by itself, equals its argument.
 
@@ -42,6 +47,11 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 * *Base* - Required. Base number to raise.
 * *Exponent* - Required. The exponent to which the base number is raised.
 
+**Log**( *Number*, *Base* )
+
+* *Number* - Required. Number to calculate the logarithm.
+* *Base* - Optional. The base of the logarithm to calculate. By default, 10 (when not specified).
+
 **Abs**( *SingleColumnTable* )<br>**Exp**( *SingleColumnTable* )<br>**Ln**( *SingleColumnTable* )<br>**Sqrt**( *SingleColumnTable* )
 
 * *SingleColumnTable* - Required. A single-column table of numbers to operate on.
@@ -54,20 +64,22 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 | **Abs( -55 )** |Returns the number without the negative sign. |55 |
 | **Exp( 2 )** |Returns *e* raised to the power of 2, or *e* \* *e*. |7.389056... |
 | **Ln( 100 )** |Returns the natural logarithm (base *e*) of the number 100. |4.605170... |
+| **Log( 100 )** |Returns the logarithm in base 10 of the number 100. |2 |
+| **Log( 64, 2 )** |Returns the logarithm in base 2 of the number 64. |6 |
 | **Power( 5, 3 )** |Returns 5 raised to the power of 3, or 5 \* 5 \* 5. |125 |
 | **Sqrt( 9 )** |Returns the number that, when multiplied by itself, results in 9. |3 |
 
 ### Single-column table
 The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains this data:
 
-![](media/function-numericals/values.png)
+![Table example.](media/function-numericals/values.png)
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Abs(&nbsp;ValueTable&nbsp;)** |Returns the absolute value of each number in the table. | ![](media/function-numericals/values-abs.png) |
-| **Exp(&nbsp;ValueTable&nbsp;)** |Returns *e* raised to the power of each number in the table. | ![](media/function-numericals/values-exp.png) |
-| **Ln(&nbsp;ValueTable&nbsp;)** |Returns the natural logarithm of each number in the table. | ![](media/function-numericals/values-ln.png) |
-| **Sqrt(&nbsp;ValueTable&nbsp;)** |Returns the square root of each number in the table |![](media/function-numericals/values-sqrt.png) |
+| **Abs(&nbsp;ValueTable&nbsp;)** |Returns the absolute value of each number in the table. | ![Abs.](media/function-numericals/values-abs.png) |
+| **Exp(&nbsp;ValueTable&nbsp;)** |Returns *e* raised to the power of each number in the table. | ![Exp.](media/function-numericals/values-exp.png) |
+| **Ln(&nbsp;ValueTable&nbsp;)** |Returns the natural logarithm of each number in the table. | ![Ln.](media/function-numericals/values-ln.png) |
+| **Sqrt(&nbsp;ValueTable&nbsp;)** |Returns the square root of each number in the table |![Sqrt.](media/function-numericals/values-sqrt.png) |
 
 ### Step-by-step example
 1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Source**.

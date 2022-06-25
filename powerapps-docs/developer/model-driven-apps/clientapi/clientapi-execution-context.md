@@ -1,19 +1,23 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "Explains the client api execution context"
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 1fcbf0fd-4e47-4352-a555-9315f7e57331
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Client API execution context
 
@@ -24,10 +28,10 @@ The execution context is passed in one of the following ways:
 - **Defining event handlers using UI**: The execution context is an *optional* parameter that can be passed to a JavaScript library function through an event handler. Use the **Pass execution context as first parameter** option in the **Handler Properties** dialog while specify the name of the function to pass the event execution context. The execution context is the first parameter passed to a function.
 
    ### [Legacy](#tab/pass-execution-context-legacy)
-     ![Pass execution context](../media/ClientAPI-PassExecutionContext.png "Pass execution context")
+     ![Pass execution context.](../media/ClientAPI-PassExecutionContext.png "Pass execution context")
 
    ### [Unified Interface](#tab/pass-execution-context-unified-interface)
-     ![Pass execution context as parameter](../media/pass-execution-context-as-first-parameter.png "Pass execution context as parameter")
+     ![Pass execution context as parameter.](../media/pass-execution-context-as-first-parameter.png "Pass execution context as parameter")
 
    ---
 

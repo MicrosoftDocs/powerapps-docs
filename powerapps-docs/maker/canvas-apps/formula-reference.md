@@ -1,18 +1,20 @@
 ---
-title: Functions, signals, and enumerations | Microsoft Docs
+title: Formula reference for Power Apps
 description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 03/23/2021
+ms.reviewer: tapanm-msft
+ms.date: 04/21/2022
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
 # Formula reference for Power Apps
 
@@ -53,7 +55,7 @@ Other elements include:
 
 **[As](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Names the current record in gallery, form, and record scope functions such as **ForAll**, **With**, and **Sum**.
 
-**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
+**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific table type.
 
 **[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
@@ -149,6 +151,8 @@ Other elements include:
 
 **[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
+**[Error](functions/function-iferror.md)** – Create a custom error or pass throguh an error.
+
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
 **[exactin](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case dependent.  Also used to check if a record is in a table.  
@@ -185,7 +189,13 @@ Other elements include:
 
 **[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
+**[Index](functions/function-first-last.md)** – Returns a record from a table based on ordered position.
+
+**[Int](functions/function-round.md)** – Rounds down to the nearest integer.
+
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
+
+**[IsBlankOrError](functions/function-iferror.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value or error.
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
@@ -195,9 +205,13 @@ Other elements include:
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
-**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
+**[ISOWeekNum](functions/function-weeknum.md)** – Returns the ISO week number of a date/time value.
 
-**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.
+**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today in the user's time zone.
+
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific table type.
+
+**[IsUTCToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today in Coordinated Universal Time (UTC).
 
 ## J
 **[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
@@ -220,6 +234,8 @@ Other elements include:
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from an app host such as a local device.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
+
+**[Log](functions/function-numericals.md)** – Returns the logarithm in any base of a number.
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
@@ -251,7 +267,7 @@ Other elements include:
 
 **[Notify](functions/function-showerror.md)** – Displays a banner message to the user.
 
-**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value in the user's time zone.
 
 ## O
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
@@ -274,11 +290,17 @@ Other elements include:
 ## R
 **[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
-**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number between 0 and 1.
+
+**[RandBetween](functions/function-rand.md)** – Returns a pseudo-random number between two numbers.
+
+**[ReadNFC](functions/function-readnfc.md)** – Reads a Near Field Communication (NFC) tag.
+
+**[RecordInfo](functions/function-recordinfo.md)** – Provides information about a record of a data source.
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
-**[Relate](functions/function-relate-unrelate.md)** – Relates records of two entities through a one-to-many or many-to-many relationship.
+**[Relate](functions/function-relate-unrelate.md)** – Relates records of two tables through a one-to-many or many-to-many relationship.
 
 **[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
@@ -368,7 +390,7 @@ Other elements include:
 
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
-**[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Today](functions/function-now-today-istoday.md)** – Returns the current date-only value.
 
 **[Trace](functions/function-trace.md)** - Provide additional information in your test results.
 
@@ -376,10 +398,12 @@ Other elements include:
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
 
+**[Trunc](functions/function-round.md)** – Truncates the number to only the integer portion by removing any decimal portion.
+
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
-**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two entities from a one-to-many or many-to-many relationship.
+**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two tables from a one-to-many or many-to-many relationship.
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
@@ -390,6 +414,10 @@ Other elements include:
 **[Upper](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
 
 **[User](functions/function-user.md)** – Returns information about the current user.
+
+**[UTCNow](functions/function-now-today-istoday.md)** – Returns the current date/time value in Coordinated Universal Time (UTC).
+
+**[UTCToday](functions/function-now-today-istoday.md)** – Returns the current date-only value in Coordinated Universal Time (UTC).
 
 ## V
 **[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
@@ -402,6 +430,8 @@ Other elements include:
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+
+**[WeekNum](functions/function-weeknum.md)** – Returns the week number of a date/time value.
 
 **[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 

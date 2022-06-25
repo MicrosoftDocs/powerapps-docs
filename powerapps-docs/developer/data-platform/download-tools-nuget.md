@@ -4,7 +4,7 @@ description: "Download the Plug-in Registration, Package Deployment, and other d
 ms.custom: ""
 ms.date: 03/18/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -12,6 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: feb3e634-7c60-46fd-8b92-3f5682b1570b
 author: "shmcarth" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly"
 manager: "annbe"
 search.audienceType: 
@@ -56,7 +57,7 @@ You can download all SDK tools using the PowerShell script provided below. Note 
     ##
     ./nuget install Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool -O .\Tools
     md .\Tools\PluginRegistration
-    $prtFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}
+    $prtFolder = (Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}).Name
     move .\Tools\$prtFolder\tools\*.* .\Tools\PluginRegistration
     Remove-Item .\Tools\$prtFolder -Force -Recurse
     

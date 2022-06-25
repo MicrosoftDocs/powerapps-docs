@@ -1,16 +1,15 @@
 ---
 title: Client | Microsoft Docs
 description: Provides access to the methods to determine which client is being used, whether the client is connected to server, and what kind of device is being used.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Client
@@ -23,13 +22,13 @@ ms.assetid: 4ce41c82-bf4a-4d34-9344-5311c24d76de
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps, canvas apps, & portals.
 
 ## Properties
 
 ### disableScroll
 
-Disables the scrolling capabilities for the components.
+Disables the scrolling capabilities for the components. This property is supported in both model-driven and canvas apps.
 
 **Type**: `boolean`
 
@@ -37,8 +36,8 @@ Disables the scrolling capabilities for the components.
 
 |Method | Description |Available for|
 | ------------- |-------------|------|
-|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven apps and canvas apps (public preview)|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven apps and canvas apps (public preview)|
+|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven and canvas apps|
+|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven and canvas apps|
 |[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
 
 ## Example 

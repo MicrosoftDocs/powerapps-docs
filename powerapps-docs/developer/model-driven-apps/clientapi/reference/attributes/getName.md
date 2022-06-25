@@ -1,21 +1,23 @@
 ---
-title: "getName (Client API reference)| MicrosoftDocs"
-description: Includes description and supported parameters for the getName method.
-ms.date: 04/19/2021
-ms.service: powerapps
+title: "attribute.getName  (Client API reference)| MicrosoftDocs"
+description: Includes description and supported parameters for the attribute.getName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d9f0639b-c14e-4a26-9d1a-c45471e131f1
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getName (Client API reference)
+# attribute.getName (Client API reference)
 
 
 

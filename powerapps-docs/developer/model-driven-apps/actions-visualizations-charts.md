@@ -1,20 +1,20 @@
 ---
 title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Using the Microsoft Dataverse web services, you can perform the following actions on the visualization tables." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/15/2021
-ms.service: powerapps
+author: mspilde
+ms.author: mspilde
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: c7eb3bdf-9d6f-9bcc-8114-4c3dc5be2976
-author: Nkrb # GitHub ID
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Actions on visualizations (charts)
@@ -30,7 +30,7 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
   > [!NOTE]
   >  After updating an organization-owned visualization, you must publish the table definitions changes to make it visible across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. Alternatively, whenever you publish a table, all the unpublished organization-owned visualizations that are attached to the table are published automatically.  
   
-- Query and retrieve all the organization-owned visualizations that are attached to a table using the `SavedQueryVisualization.PrimaryEntityTypeCode`. Multiple organization-owned visualizations can be attached to a single table. For a list of tables with which you can attach a visualization, see [Tables Supported for visualizations](view-data-with-visualizations-charts.md). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to an table, see [Sample: Retrieve all charts attached to a table](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
+- Query and retrieve all the organization-owned visualizations that are attached to a table using the `SavedQueryVisualization.PrimaryEntityTypeCode`. Multiple organization-owned visualizations can be attached to a single table. For a list of tables with which you can attach a visualization, see [Tables Supported for visualizations](view-data-with-visualizations-charts.md). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to a table, see [Sample: Retrieve all charts attached to a table](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
   
   > [!NOTE]
   >  You cannot change or update a visualization to attach it with a different table after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` is not valid for the update action on the organization-owned visualization.

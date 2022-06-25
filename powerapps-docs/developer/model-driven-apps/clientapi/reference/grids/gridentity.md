@@ -1,19 +1,20 @@
 ---
 title: "GridEntity (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the GridEntity method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: cc2b7eca-61f4-4949-8398-52c9fc36721c
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # GridEntity (Client API reference)
 
@@ -24,7 +25,7 @@ GridEntity is returned by the [GridRowData](gridrowdata.md).[getEntity](gridrowd
 ```JavaScript
 var myRows = gridContext.getGrid().getRows();
 var myRow = myRows.get(arg);
-var gridEntity = myRow.getData().getEntity();
+var gridEntity = myRow.data.entity;
 ```
 
 GridEntity also supports the **columns** collection that provides methods of working with a collection of columns for a table in the editable grid. Each column ([GridAttribute](gridattribute.md)) represents the data in the cell of an editable grid, and contains a reference to all the cells associated with the column. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.

@@ -1,19 +1,20 @@
 ---
 title: "Troubleshoot plug-ins (Microsoft Dataverse for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn what plug-in errors can occur and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Troubleshoot plug-ins
 
@@ -21,10 +22,10 @@ search.app:
 
 This topic contains information about errors that can occur due to plug-in execution and how to fix them.
 
-## Error: No Sandbox Worker processes are currently available
+## Error: Sandbox Worker process crashed
 
 Error Code: `-2147204723`<br />
-Error Message: `The plug-in execution failed because no Sandbox Worker processes are currently available. Please try again.`
+Error Message: `The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.`
 
 This error simply means that the worker process running your plug-in code crashed. The reason it crashed may be your plug-in, but it could also be another plug-in running concurrently for your organization. Because the process crashed, we can’t extract any more specific information about why it crashed. But after examining data from the crash dumps after the fact, we have found that this usually happens for one of the 4 reasons below:
 
@@ -37,7 +38,7 @@ This error simply means that the worker process running your plug-in code crashe
 
 As mentioned in [Handle exceptions in plug-ins](handle-exceptions.md), when you write a plug-in you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to gracefully terminate the operation with an error meaningful to the user.
 
-A common scenario for this is when using a the [HttpClient.SendAsync Method](/dotnet/api/system.net.http.httpclient.sendasync?view=netframework-4.6.2) or [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2) which are asynchronous operations that returns a [Task](/dotnet/api/system.threading.tasks.task-1?view=netframework-4.6.2). To make this work in a plug-in where code needs to be synchronous, people may use the [Task<TResult>.Result Property](/dotnet/api/system.threading.tasks.task-1.result?view=netframework-4.6.2). When an error occurs, this returns an [AggregateException](/dotnet/api/system.aggregateexception?view=netframework-4.6.2) which consolidates multiple failures into a single exception which can be difficult to handle. A better design is to use [Task<TResult>.ConfigureAwait(false)](/dotnet/api/system.threading.tasks.task-1.configureawait?view=netframework-4.6.2).[GetAwaiter()](/dotnet/api/system.aggregateexception?view=netframework-4.6.2).[GetResult()](/dotnet/api/system.runtime.compilerservices.taskawaiter-1.getresult?view=netframework-4.6.2) because it propagates the results as the specific error that caused the failure.
+A common scenario for this is when using a the [HttpClient.SendAsync Method](/dotnet/api/system.net.http.httpclient.sendasync?view=netframework-4.6.2) or [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2) which are asynchronous operations that returns a [Task](/dotnet/api/system.threading.tasks.task-1?view=netframework-4.6.2). To make this work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](/dotnet/api/system.threading.tasks.task-1.result?view=netframework-4.6.2). When an error occurs, this returns an [AggregateException](/dotnet/api/system.aggregateexception?view=netframework-4.6.2) which consolidates multiple failures into a single exception which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](/dotnet/api/system.threading.tasks.task-1.getawaiter?view=netframework-4.6.2).[GetResult()](/dotnet/api/system.runtime.compilerservices.taskawaiter-1.getresult?view=netframework-4.6.2) because it propagates the results as the specific error that caused the failure.
 
 The following example shows the correct way to manage the exception and an outbound call using [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2). This plug-in will attempt to get the response text for a Url set in the unsecure config for a step registered for it.
 
@@ -92,12 +93,12 @@ namespace ErrorRepro
                     client.Timeout = TimeSpan.FromMilliseconds(15000); //15 seconds
                     client.DefaultRequestHeaders.ConnectionClose = true; //Set KeepAlive to false
 
-                    HttpResponseMessage response = client.GetAsync(webAddress).ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+                    HttpResponseMessage response = client.GetAsync(webAddress).GetAwaiter().GetResult(); //Make sure it is synchronous
                     response.EnsureSuccessStatusCode();
 
                     tracingService.Trace($"ErrorRepro.AsyncError.GetWebResponse succeeded.");
 
-                    string responseContent = response.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+                    string responseContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult(); //Make sure it is synchronous
 
                     tracingService.Trace($"ErrorRepro.AsyncError.GetWebResponse responseContent parsed successfully.");
 
@@ -191,7 +192,7 @@ When the plug-in code above is used in a synchronous plug-in, the following erro
 {
     "error": {
         "code": "0x8004418d",
-        "message": "The plug-in execution failed because no Sandbox Worker processes are currently available. Please try again.\r\nSystem.ServiceModel.CommunicationException: The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.\r\n   at Microsoft.Crm.Sandbox.SandboxWorkerProcess.Execute(SandboxCallInfo callInfo, SandboxPluginExecutionContext requestContext, Guid pluginAssemblyId, Int32 sourceHash, String assemblyName, Guid pluginTypeId, String pluginTypeName, String pluginConfiguration, String pluginSecureConfig, Boolean returnTraceInfo, Int64& wcfExecInMs, Int64& initializeInMs, Int64& trackCallInMs, Int64& trackGoodReturnInMs, Int64& waitInMs, Int64& taskStartDelay) +0x330: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #8503641A",
+        "message": "The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.\r\nSystem.ServiceModel.CommunicationException: The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.\r\n   at Microsoft.Crm.Sandbox.SandboxWorkerProcess.Execute(SandboxCallInfo callInfo, SandboxPluginExecutionContext requestContext, Guid pluginAssemblyId, Int32 sourceHash, String assemblyName, Guid pluginTypeId, String pluginTypeName, String pluginConfiguration, String pluginSecureConfig, Boolean returnTraceInfo, Int64& wcfExecInMs, Int64& initializeInMs, Int64& trackCallInMs, Int64& trackGoodReturnInMs, Int64& waitInMs, Int64& taskStartDelay) +0x330: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #8503641A",
         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionSourceKey": "Plugin/ErrorRepro.SOError, ErrorRepro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c2bee3e550ec0851",
         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiStepKey": "d5958631-b87e-eb11-a812-000d3a4f50a7",
         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiDepthKey": "1",
@@ -203,7 +204,7 @@ When the plug-in code above is used in a synchronous plug-in, the following erro
         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionHttpStatusCode": "500",
         "@Microsoft.PowerApps.CDS.HelpLink": "http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a8004418d&client=platform",
         "@Microsoft.PowerApps.CDS.TraceText": "\r\n[ErrorRepro: ErrorRepro.SOError]\r\n[d5958631-b87e-eb11-a812-000d3a4f50a7: ErrorRepro.SOError: Create of account]\r\n\r\n",
-        "@Microsoft.PowerApps.CDS.InnerError.Message": "The plug-in execution failed because no Sandbox Worker processes are currently available. Please try again.\r\nSystem.ServiceModel.CommunicationException: The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.\r\n   at Microsoft.Crm.Sandbox.SandboxWorkerProcess.Execute(SandboxCallInfo callInfo, SandboxPluginExecutionContext requestContext, Guid pluginAssemblyId, Int32 sourceHash, String assemblyName, Guid pluginTypeId, String pluginTypeName, String pluginConfiguration, String pluginSecureConfig, Boolean returnTraceInfo, Int64& wcfExecInMs, Int64& initializeInMs, Int64& trackCallInMs, Int64& trackGoodReturnInMs, Int64& waitInMs, Int64& taskStartDelay) +0x330: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #8503641A"
+        "@Microsoft.PowerApps.CDS.InnerError.Message": "The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.\r\nSystem.ServiceModel.CommunicationException: The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.\r\n   at Microsoft.Crm.Sandbox.SandboxWorkerProcess.Execute(SandboxCallInfo callInfo, SandboxPluginExecutionContext requestContext, Guid pluginAssemblyId, Int32 sourceHash, String assemblyName, Guid pluginTypeId, String pluginTypeName, String pluginConfiguration, String pluginSecureConfig, Boolean returnTraceInfo, Int64& wcfExecInMs, Int64& initializeInMs, Int64& trackCallInMs, Int64& trackGoodReturnInMs, Int64& waitInMs, Int64& taskStartDelay) +0x330: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #8503641A"
     }
 }
 ```
@@ -213,7 +214,7 @@ This is how this error will be recorded in the Plug-in trace log:
 ```
 Unhandled exception: 
 Exception type: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]
-Message: The plug-in execution failed because no Sandbox Worker processes are currently available. Please try again.
+Message: The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.
 System.ServiceModel.CommunicationException: The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.
    at Microsoft.Crm.Sandbox.SandboxWorkerProcess.Execute(SandboxCallInfo callInfo, SandboxPluginExecutionContext requestContext, Guid pluginAssemblyId, Int32 sourceHash, String assemblyName, Guid pluginTypeId, String pluginTypeName, String pluginConfiguration, String pluginSecureConfig, Boolean returnTraceInfo, Int64& wcfExecInMs, Int64& initializeInMs, Int64& trackCallInMs, Int64& trackGoodReturnInMs, Int64& waitInMs, Int64& taskStartDelay) +0x330: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #4BC22433Detail: 
 <OrganizationServiceFault xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/xrm/2011/Contracts">
@@ -221,7 +222,7 @@ System.ServiceModel.CommunicationException: The server did not provide a meaning
   <ErrorCode>-2147204723</ErrorCode>
   <ErrorDetails xmlns:d2p1="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
   <HelpLink i:nil="true" />
-  <Message>The plug-in execution failed because no Sandbox Worker processes are currently available. Please try again.
+  <Message>The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.
 System.ServiceModel.CommunicationException: The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.
    at Microsoft.Crm.Sandbox.SandboxWorkerProcess.Execute(SandboxCallInfo callInfo, SandboxPluginExecutionContext requestContext, Guid pluginAssemblyId, Int32 sourceHash, String assemblyName, Guid pluginTypeId, String pluginTypeName, String pluginConfiguration, String pluginSecureConfig, Boolean returnTraceInfo, Int64&amp; wcfExecInMs, Int64&amp; initializeInMs, Int64&amp; trackCallInMs, Int64&amp; trackGoodReturnInMs, Int64&amp; waitInMs, Int64&amp; taskStartDelay) +0x330: Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #4BC22433</Message>
   <Timestamp>2021-03-06T22:14:22.0629638Z</Timestamp>
@@ -306,7 +307,7 @@ Because these behaviors can be configured differently between environments, the 
 
 ### Indexes on new tables
 
-If the plug-in is performing operations using an table or column that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
+If the plug-in is performing operations using a table or column that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
 
 ## Errors due to user privileges
 
@@ -365,7 +366,7 @@ At run-time the error is frequently due to the developer assuming that the value
 
 To prevent this error you must check that the key exists before attempting to use it to access a value. 
 
-For example, when accessing a table column, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether a column exists in an table as shown in the following code.
+For example, when accessing a table column, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether a column exists in a table as shown in the following code.
 
 ```csharp
 // Obtain the execution context from the service provider.  

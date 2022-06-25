@@ -1,13 +1,13 @@
 ---
-title: "UserMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "UserMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserMapping table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ User Mapping
 |Create|POST [*org URI*]/api/data/v9.0/usermappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/usermappings(*usermappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/usermappings(*usermappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/usermappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/usermappings(*usermappingid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -95,10 +94,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PartnerApplicationType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|SharePoint|
-|1|Exchange|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|SharePoint||
+|1|Exchange||
 
 
 
@@ -321,8 +320,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -507,7 +506,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_usermapping_AsyncOperations"></a> usermapping_AsyncOperations
 
-Same as asyncoperation table [usermapping_AsyncOperations](asyncoperation.md#BKMK_usermapping_AsyncOperations) Many-To-One relationship.
+Same as the [usermapping_AsyncOperations](asyncoperation.md#BKMK_usermapping_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -522,7 +521,7 @@ Same as asyncoperation table [usermapping_AsyncOperations](asyncoperation.md#BKM
 
 ### <a name="BKMK_usermapping_ProcessSession"></a> usermapping_ProcessSession
 
-Same as processsession table [usermapping_ProcessSession](processsession.md#BKMK_usermapping_ProcessSession) Many-To-One relationship.
+Same as the [usermapping_ProcessSession](processsession.md#BKMK_usermapping_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -537,7 +536,7 @@ Same as processsession table [usermapping_ProcessSession](processsession.md#BKMK
 
 ### <a name="BKMK_usermapping_BulkDeleteFailures"></a> usermapping_BulkDeleteFailures
 
-Same as bulkdeletefailure table [usermapping_BulkDeleteFailures](bulkdeletefailure.md#BKMK_usermapping_BulkDeleteFailures) Many-To-One relationship.
+Same as the [usermapping_BulkDeleteFailures](bulkdeletefailure.md#BKMK_usermapping_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -565,27 +564,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_usermapping_createdby"></a> lk_usermapping_createdby
 
-See systemuser Table [lk_usermapping_createdby](systemuser.md#BKMK_lk_usermapping_createdby) One-To-Many relationship.
+See the [lk_usermapping_createdby](systemuser.md#BKMK_lk_usermapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usermapping_createdonbehalfby"></a> lk_usermapping_createdonbehalfby
 
-See systemuser Table [lk_usermapping_createdonbehalfby](systemuser.md#BKMK_lk_usermapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_usermapping_createdonbehalfby](systemuser.md#BKMK_lk_usermapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usermapping_modifiedby"></a> lk_usermapping_modifiedby
 
-See systemuser Table [lk_usermapping_modifiedby](systemuser.md#BKMK_lk_usermapping_modifiedby) One-To-Many relationship.
+See the [lk_usermapping_modifiedby](systemuser.md#BKMK_lk_usermapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_usermapping_modifiedonbehalfby"></a> lk_usermapping_modifiedonbehalfby
 
-See systemuser Table [lk_usermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_usermapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_usermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_usermapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_UserMapping"></a> organization_UserMapping
 
-See organization Table [organization_UserMapping](organization.md#BKMK_organization_UserMapping) One-To-Many relationship.
+See the [organization_UserMapping](organization.md#BKMK_organization_UserMapping) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_UserMapping"></a> TransactionCurrency_UserMapping
 
-See transactioncurrency Table [TransactionCurrency_UserMapping](transactioncurrency.md#BKMK_TransactionCurrency_UserMapping) One-To-Many relationship.
+See the [TransactionCurrency_UserMapping](transactioncurrency.md#BKMK_TransactionCurrency_UserMapping) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 

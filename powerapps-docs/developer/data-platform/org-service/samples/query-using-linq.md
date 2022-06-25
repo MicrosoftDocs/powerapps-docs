@@ -4,8 +4,8 @@ description: "This sample showcases how to assign records to a team." # 115-145 
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "KumarVivek" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Query data using LINQ
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 These samples show how to query business data using [Language-Integrated Query (LINQ)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesUsingLINQ). 
 
@@ -28,8 +28,9 @@ See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/mas
 ## What this sample does
 
 Read each sample's comments to find out what each sample does. There are samples that:
+
 * Create a simple LINQ query
-* Create a LINQ query using entity late binding
+* Create a LINQ query using late binding
 * Retrieve multiple records using condition operators
 * Complex queries - a wide assortment of LINQ examples
 
@@ -39,7 +40,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-Creates any entity instances required by the `Demonstrate` region of each `Main`() method.
+Creates any table instances required by the `Demonstrate` region of each `Main`() method.
 
 ### Demonstrate
 
@@ -49,7 +50,7 @@ Code in the `Demonstrate` region of the `Main`() method performs one or more LIN
 
 Displays an option to delete the records created in [Setup](#setup).
 
-The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

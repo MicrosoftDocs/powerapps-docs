@@ -1,13 +1,13 @@
 ---
-title: "PostLike table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PostLike table/entity."
-ms.date: 03/04/2021
+title: "Like (PostLike)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Like (PostLike)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# PostLike table/entity reference
+# Like (PostLike)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ A like on an activity feed post.
 |Create|POST [*org URI*]/api/data/v9.0/postlikes<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/postlikes(*postlikeid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/postlikes(*postlikeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postlikes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -270,7 +269,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|postidname|
-|MaxLength|4000|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
 
@@ -288,19 +287,19 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_postlike_createdonbehalfby"></a> lk_postlike_createdonbehalfby
 
-See systemuser Table [lk_postlike_createdonbehalfby](systemuser.md#BKMK_lk_postlike_createdonbehalfby) One-To-Many relationship.
+See the [lk_postlike_createdonbehalfby](systemuser.md#BKMK_lk_postlike_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Post_Likes"></a> Post_Likes
 
-See post Table [Post_Likes](post.md#BKMK_Post_Likes) One-To-Many relationship.
+See the [Post_Likes](post.md#BKMK_Post_Likes) one-to-many relationship for the [post](post.md) table/entity.
 
 ### <a name="BKMK_lk_postlike_createdby"></a> lk_postlike_createdby
 
-See systemuser Table [lk_postlike_createdby](systemuser.md#BKMK_lk_postlike_createdby) One-To-Many relationship.
+See the [lk_postlike_createdby](systemuser.md#BKMK_lk_postlike_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_postlike"></a> organization_postlike
 
-See organization Table [organization_postlike](organization.md#BKMK_organization_postlike) One-To-Many relationship.
+See the [organization_postlike](organization.md#BKMK_organization_postlike) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

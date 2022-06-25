@@ -1,19 +1,21 @@
 ---
 title: "Webpage (HTML) Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic covers how to implement HTML web resources and its capabilities and limitations" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Webpage (HTML) web resources
 
@@ -32,6 +34,8 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 - An HTML web resource can’t contain any code that must be executed on the server. ASP.NET pages can’t be uploaded as HTML web resources.
 
 - HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
+
+- HTML web resources embedded as controls in a form can be reloaded by the form runtime for performance reasons. For example, the form runtime may destroy and re-initialize the control during tab navigations. 
 
 <a name="BKMK_UsingTextEditor"></a>
 

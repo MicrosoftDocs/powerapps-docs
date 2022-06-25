@@ -4,9 +4,10 @@ description: "Data importation runs directly on the Dynamics 365 server, and req
 ms.custom: ""
 ms.date: 03/15/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Run data import
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Data import runs directly on the Microsoft Dataverse server. To run data import, set up asynchronous jobs to run in the background that do the following, in this order:  
   

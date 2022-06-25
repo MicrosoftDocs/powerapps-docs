@@ -1,13 +1,13 @@
 ---
-title: "OwnerMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "OwnerMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the OwnerMapping table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ In a data map, maps ownership data from the source file to Microsoft Dynamics 36
 |Create|POST [*org URI*]/api/data/v9.0/ownermappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/ownermappings(*ownermappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/ownermappings(*ownermappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/ownermappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -126,11 +125,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Process|
-|2|Ignore|
-|3|Internal|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Process||
+|2|Ignore||
+|3|Internal||
 
 
 
@@ -275,12 +274,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -421,12 +420,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -626,27 +625,27 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_ownermapping_modifiedby"></a> lk_ownermapping_modifiedby
 
-See systemuser Table [lk_ownermapping_modifiedby](systemuser.md#BKMK_lk_ownermapping_modifiedby) One-To-Many relationship.
+See the [lk_ownermapping_modifiedby](systemuser.md#BKMK_lk_ownermapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ownermapping_createdonbehalfby"></a> lk_ownermapping_createdonbehalfby
 
-See systemuser Table [lk_ownermapping_createdonbehalfby](systemuser.md#BKMK_lk_ownermapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_ownermapping_createdonbehalfby](systemuser.md#BKMK_lk_ownermapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_OwnerMapping_SystemUser"></a> OwnerMapping_SystemUser
 
-See systemuser Table [OwnerMapping_SystemUser](systemuser.md#BKMK_OwnerMapping_SystemUser) One-To-Many relationship.
+See the [OwnerMapping_SystemUser](systemuser.md#BKMK_OwnerMapping_SystemUser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ownermapping_modifiedonbehalfby"></a> lk_ownermapping_modifiedonbehalfby
 
-See systemuser Table [lk_ownermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_ownermapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_ownermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_ownermapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ownermapping_createdby"></a> lk_ownermapping_createdby
 
-See systemuser Table [lk_ownermapping_createdby](systemuser.md#BKMK_lk_ownermapping_createdby) One-To-Many relationship.
+See the [lk_ownermapping_createdby](systemuser.md#BKMK_lk_ownermapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_OwnerMapping_ImportMap"></a> OwnerMapping_ImportMap
 
-See importmap Table [OwnerMapping_ImportMap](importmap.md#BKMK_OwnerMapping_ImportMap) One-To-Many relationship.
+See the [OwnerMapping_ImportMap](importmap.md#BKMK_OwnerMapping_ImportMap) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### See also
 

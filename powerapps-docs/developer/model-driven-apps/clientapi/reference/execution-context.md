@@ -1,24 +1,23 @@
 ---
-title: "Client API execution context in model-driven apps| MicrosoftDocs"
+title: "Execution context (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the executionContext method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 1fcbf0fd-4e47-4352-a555-9315f7e57331
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Execution context (Client API reference)
-
-
 
 The execution context defines the event context in which your code executes. More information: [Client API execution context](../clientapi-execution-context.md).
 

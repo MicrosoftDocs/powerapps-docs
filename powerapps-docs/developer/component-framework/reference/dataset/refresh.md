@@ -1,25 +1,28 @@
 ---
 title: refresh | Microsoft Docs
-description: Refreshes the data-set based on filters, sorting, linking, new column.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d8fde7bd-6e69-46cb-a644-d3c527726169
+description: Refreshes the dataset based on filters, sorting, linking, new column.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # refresh
 
 [!INCLUDE[./includes/refresh-description.md](./includes/refresh-description.md)]
 
-## Available for 
+> [!NOTE]
+> `refresh` does not support parallel execution.
+> Executing `refresh` will trigger `updateView` on the control with newly fetched results.
 
-Model-driven apps
+## Available for
+
+Model-driven and canvas apps
 
 ## Syntax
 

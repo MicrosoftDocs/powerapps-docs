@@ -3,10 +3,11 @@ title: Create a custom table that has components with Power Apps | Microsoft Doc
 description: Topic with step-by-step instructions for creating and configuring a table to use with a Power Apps app.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: cds
 ms.topic: tutorial
 ms.date: 01/26/2021
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -17,7 +18,7 @@ search.app:
 
 # Create a custom table that has components in Power Apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. A table defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 
@@ -40,7 +41,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 1. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New table](media/create-custom-entity/create-new-entity.png)
+    > ![New table.](media/create-custom-entity/create-new-entity.png)
 
 2. In the right pane, enter the following values, and then select **Create**.
 
@@ -51,7 +52,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Open the **Pet** table that was created in the previous section.
 
-1. On the **Columns** tab, select the **Pet** column.
+1. Select **Columns**, and select the **Pet** column.
 
 1. In the right pane make the following changes to the **Display name** column: 
 
@@ -59,11 +60,11 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
     - Make sure **Searchable** is selected.
   
       > [!div class="mx-imgBorder"] 
-      > ![Change primary column](media/create-custom-entity/primary-field.png)
+      > ![Change primary column.](media/create-custom-entity/primary-field.png)
 
 1. Select **Done**.
 
-1. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
+1. On the **Columns** area on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Choice*
     - **Choice**. *New choice*
@@ -81,7 +82,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
       d. Select **Done**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New choice ](media/create-custom-entity/optionset-add-items.png)
+    > ![New choice .](media/create-custom-entity/optionset-add-items.png)
 
 1. Make sure **Searchable** is selected, and then select **Done**.
 
@@ -99,7 +100,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Add a relationship
 
-1. Select the **Relationships** tab. Then, on the table designer toolbar, select **Add relationship**, and then select **Many-to-one**.
+1. Select the **Relationships** area. Then, on the table designer toolbar, select **Add relationship**, and then select **Many-to-one**.
 
 1. On the right pane, in the **Related** list select **Account**.
 
@@ -107,13 +108,11 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select **Save table**.
 
-  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Columns** tab.
-  > [!div class="mx-imgBorder"]
-  > ![Account lookup column](media/create-custom-entity/account-lookup-field.png)
+  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns in the **Columns** area.
 
 ## Customize a view
 
-1. Select the **Views** tab, and then open the **Active Pets** view. If you don't see the **Active Pets** view, change the filter on the command bar from **Default** to **All**.
+1. Select the **Views** area, and then open the **Active Pets** view. If you don't see the **Active Pets** view, change the filter on the command bar from **Default** to **All**.
 
 1. On the view designer **Table columns** left pane, select the following columns to add them to the view.
 
@@ -126,7 +125,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. To arrange the columns, on the view designer canvas, select the column you want to move and then use **Move Left** or **Move Right**. Your view should look like this.
     > [!div class="mx-imgBorder"] 
-    > ![Active pets view](media/create-custom-entity/active-pets-view.png)
+    > ![Active pets view.](media/create-custom-entity/active-pets-view.png)
 
 1. On the view designer toolbar, select **Save**, and then select **Publish**.  
 
@@ -138,15 +137,15 @@ Skip this step if you only want to use the Pet table in a canvas app.
 
 1. On the left navigation pane, expand **Data**, select **Tables**, and then select **Pet**.
 
-1. In the **Pet** table, select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form designer.
+1. In the **Pet** table, select the **Forms** area, and then select **Information** next to the **Main** form type to open the form designer.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit main form](media/create-custom-entity/main-form-edit.png)
+    > ![Edit main form.](media/create-custom-entity/main-form-edit.png)
 
 1. On the form editor, select the  **Table columns** on the left pane. Then, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** columns located on the pane on to the **General** section of the form designer canvas until the form looks like this.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select columns for main form](media/create-custom-entity/main-form-edit2.png) 
+    > ![Select columns for main form.](media/create-custom-entity/main-form-edit2.png) 
 
 1. Select **Save**.
 

@@ -1,19 +1,21 @@
 ---
-title: Add custom JavaScript
+title: Add custom JavaScript to a form
 description: Learn how to add custom JavaScript to a form in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 04/05/2022
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
+    - Professor Kendrick
 ---
 
-# Add custom JavaScript
+# Add custom JavaScript to a form
 
 The Advanced Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
@@ -21,13 +23,16 @@ The custom block of JavaScript will be added to the bottom of the page just befo
 
 ## Form fields
 
-The HTML input ID of a table field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
+The HTML input ID of a table field is set to the logical name of the attribute. Selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
 
 ```JavaScript
 $(document).ready(function() {
    $("#address1_stateorprovince").val("Saskatchewan");
 });
 ```
+
+> [!Important]
+> Adding a choice column to model-driven form to be used in an Advanced Form step or a Basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
 
 ## Additional client-side field validation
 Sometimes you might need to customize the validation of fields on the form. The following example demonstrates adding a custom validator. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.
