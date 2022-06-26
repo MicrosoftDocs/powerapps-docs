@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-A workspace is a place to store data in Azure Data Lake.
+Deprecated. A workspace is a place to store data in Azure Data Lake.
 
 **Added by**: Data lake workspaces Solution
 
@@ -306,7 +306,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Application Id that is white listed in AAD Tenant ID to access the Graph API.|
+|Description|Application Id that is allow listed in AAD Tenant ID to access the Graph API.|
 |DisplayName|Whitelisted App Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
