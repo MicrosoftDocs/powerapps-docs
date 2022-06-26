@@ -2,22 +2,24 @@
 title: Gather feedback by using polls on a portal
 description: Learn how to create polls on a portal and gather feedback by using them.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 04/12/2022
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Gather feedback by using polls on a portal
 
 Polls give your web audiences a quick and easy way to voice their opinion on specific topics, and then immediately and automatically see feedback from their vote.
 
-Use the polls capability of portals to ask your audience about topics of interest and let them give single answers or multiple-choice responses. Either way, their responses are instantly stored and associated with the applicable Contact record for immediate review or aggregate reporting. You can use polls as simple market research tools and, if you refresh or rotate the polls dynamically, you'll keep your website looking current and topical.
+Use the polls capability of portals to ask your audience about topics of interest and let them give single answers or let them submit the response from a list of options. Either way, their responses are instantly stored and associated with the applicable Contact record for immediate review or aggregate reporting. You can use polls as simple market research tools and, if you refresh or rotate the polls dynamically, you'll keep your website looking current and topical.
 
 Polls can be placed on the portal by using the PollPlacement control. This control works similarly to the AdPlacement control. If there are any polls associated with the Poll Placement table that is being rendered by the PollPlacement control, those polls will be rendered. If there is more than one poll for a given placement, the placement will randomly present one of the specified polls.
 
@@ -56,7 +58,7 @@ To create a new poll placement region:
 
 ## Polls
 
-A poll is a simple yes/no or multiple-choice question that you can display on your portal via poll placements. There are many customizable options for the display of polls available for developers, but for content managers, adding polls to your website is as easy as choosing a question and series of possible answers (poll options). A poll must have related options to function, and must be associated with a poll placement to be rendered on the portal.
+A poll is a simple yes/no question that you can display on your portal via poll placements. There are many customizable options for the display of polls available for developers, but for content managers, adding polls to your website is as easy as choosing a question and series of possible answers (poll options). A poll must have related options to function, and must be associated with a poll placement to be rendered on the portal.
 
 A new poll can be created in two ways: 
 - By going to the **Polls** section in the **Portals** area.
@@ -82,7 +84,7 @@ A new poll can be created in two ways:
 Now that the poll has been created, you must associate one or more poll options with this poll. On the **Options** tab of the poll, select **New Poll Option**.
 
 > [!div class=mx-imgBorder]
-> ![Add poll options](../media/add-poll-options.png "Add poll options")  
+> ![Add poll options.](../media/add-poll-options.png "Add poll options")  
 
 ## Poll options
 
@@ -103,12 +105,12 @@ A poll is a question that is being presented to the user. A poll has two or more
 When a user visits the website, they will be given the opportunity to vote on the poll displayed on the page.
 
 > [!div class=mx-imgBorder]
-> ![Submit a poll](../media/submit-poll.png "Submit a poll")  
+> ![Submit a poll.](../media/submit-poll.png "Submit a poll")  
 
 Users can vote only one time; after this, if the poll is displayed, they will see the results for that poll.
 
 > [!div class=mx-imgBorder]
-> ![Poll votes](../media/poll-votes.png "Poll votes")  
+> ![Poll votes.](../media/poll-votes.png "Poll votes")  
 
 The details of the poll voting results are stored in Dataverse as Poll Submission records. The Poll Submission table contains the following information:
 

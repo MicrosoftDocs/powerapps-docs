@@ -1,19 +1,20 @@
 ---
 title: "openErrorDialog (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openErrorDialog method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9749143d-c159-4833-aff9-d8bc2c3395f3
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # openErrorDialog (Client API reference)
 
@@ -49,7 +50,7 @@ Xrm.Navigation.openErrorDialog({ errorCode:1234 }).then(
 
 This displays an error dialog with the default message:
 
-![Error dialog with default message](../../../media//clientapi_sampleerrordialog.png)
+![Error dialog with default message.](../../../media//clientapi_sampleerrordialog.png)
 
 ### Related topics
 

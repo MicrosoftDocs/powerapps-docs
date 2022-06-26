@@ -1,31 +1,28 @@
 ---
 title: clearSelectedRecordIds | Microsoft Docs
 description: Clears the selected record ids list.
-keywords:
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.reviewer: "nabuthuk"
-ms.author: "nabuthuk"
-author: Nkrb
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 35d94cf8-eab3-4dee-82af-336f6b33b789
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # clearSelectedRecordIds
 
 [!INCLUDE[./includes/clearselectedrecordids-description.md](./includes/clearselectedrecordids-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
 `context.parameters.dataset.clearSelectedRecordIds()`
-
 
 ### Related topics
 

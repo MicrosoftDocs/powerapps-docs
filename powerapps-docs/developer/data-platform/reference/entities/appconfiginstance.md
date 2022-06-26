@@ -1,13 +1,13 @@
 ---
-title: "AppConfigInstance table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppConfigInstance table/entity."
-ms.date: 03/04/2021
+title: "App Configuration Instance (AppConfigInstance)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the App Configuration Instance (AppConfigInstance)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# AppConfigInstance table/entity reference
+# App Configuration Instance (AppConfigInstance)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ Contains a property or a list of properties from the app configuration master li
 |Create|POST [*org URI*]/api/data/v9.0/appconfiginstances<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/appconfiginstances(*appconfiginstanceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/appconfiginstances(*appconfiginstanceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfiginstances<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/appconfiginstances(*appconfiginstanceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
@@ -241,12 +240,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -371,12 +370,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -588,31 +587,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_appconfig_appconfiginstance"></a> appconfig_appconfiginstance
 
-See appconfig Table [appconfig_appconfiginstance](appconfig.md#BKMK_appconfig_appconfiginstance) One-To-Many relationship.
+See the [appconfig_appconfiginstance](appconfig.md#BKMK_appconfig_appconfiginstance) one-to-many relationship for the [appconfig](appconfig.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_modifiedby"></a> lk_appconfiginstance_modifiedby
 
-See systemuser Table [lk_appconfiginstance_modifiedby](systemuser.md#BKMK_lk_appconfiginstance_modifiedby) One-To-Many relationship.
+See the [lk_appconfiginstance_modifiedby](systemuser.md#BKMK_lk_appconfiginstance_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_createdby"></a> lk_appconfiginstance_createdby
 
-See systemuser Table [lk_appconfiginstance_createdby](systemuser.md#BKMK_lk_appconfiginstance_createdby) One-To-Many relationship.
+See the [lk_appconfiginstance_createdby](systemuser.md#BKMK_lk_appconfiginstance_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_createdonbehalfby"></a> lk_appconfiginstance_createdonbehalfby
 
-See systemuser Table [lk_appconfiginstance_createdonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_createdonbehalfby) One-To-Many relationship.
+See the [lk_appconfiginstance_createdonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appconfiginstance_modifiedonbehalfby"></a> lk_appconfiginstance_modifiedonbehalfby
 
-See systemuser Table [lk_appconfiginstance_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appconfiginstance_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfiginstance_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_appconfiginstance"></a> organization_appconfiginstance
 
-See organization Table [organization_appconfiginstance](organization.md#BKMK_organization_appconfiginstance) One-To-Many relationship.
+See the [organization_appconfiginstance](organization.md#BKMK_organization_appconfiginstance) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_appconfigmaster_appconfiginstance"></a> appconfigmaster_appconfiginstance
 
-See appconfigmaster Table [appconfigmaster_appconfiginstance](appconfigmaster.md#BKMK_appconfigmaster_appconfiginstance) One-To-Many relationship.
+See the [appconfigmaster_appconfiginstance](appconfigmaster.md#BKMK_appconfigmaster_appconfiginstance) one-to-many relationship for the [appconfigmaster](appconfigmaster.md) table/entity.
 
 ### See also
 

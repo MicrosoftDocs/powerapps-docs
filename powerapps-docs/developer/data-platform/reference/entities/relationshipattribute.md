@@ -1,13 +1,13 @@
 ---
-title: "RelationshipAttribute table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "RelationshipAttribute table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the RelationshipAttribute table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,7 +29,8 @@ Stores relationship attributes mapping for Multi-predicate relationship
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/relationshipattributes(*relationshipattributeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/relationshipattributes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -42,7 +43,7 @@ Stores relationship attributes mapping for Multi-predicate relationship
 |IsBPFEntity|False|
 |LogicalCollectionName|relationshipattributes|
 |LogicalName|relationshipattribute|
-|OwnershipType|None|
+|OwnershipType|OrganizationOwned|
 |PrimaryIdAttribute|relationshipattributeid|
 |PrimaryNameAttribute|name|
 |SchemaName|RelationshipAttribute|
@@ -160,6 +161,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [IsManaged](#BKMK_IsManaged)
+- [OrganizationId](#BKMK_OrganizationId)
+- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [ReferencedAttributeIdName](#BKMK_ReferencedAttributeIdName)
 - [ReferencingAttributeIdName](#BKMK_ReferencingAttributeIdName)
@@ -199,12 +202,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -224,13 +227,43 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_OrganizationId"></a> OrganizationId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the organization|
+|DisplayName|Organization Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationid|
+|RequiredLevel|None|
+|Targets|organization|
+|Type|Lookup|
+
+
+### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationidname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
@@ -344,7 +377,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [relationshipattribute_SyncErrors](syncerror.md#BKMK_relationshipattribute_SyncErrors) Many-To-One relationship.
+Same as the [relationshipattribute_SyncErrors](syncerror.md#BKMK_relationshipattribute_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -361,7 +394,7 @@ Same as syncerror table [relationshipattribute_SyncErrors](syncerror.md#BKMK_rel
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [relationshipattribute_AsyncOperations](asyncoperation.md#BKMK_relationshipattribute_AsyncOperations) Many-To-One relationship.
+Same as the [relationshipattribute_AsyncOperations](asyncoperation.md#BKMK_relationshipattribute_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -378,7 +411,7 @@ Same as asyncoperation table [relationshipattribute_AsyncOperations](asyncoperat
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [relationshipattribute_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_relationshipattribute_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [relationshipattribute_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_relationshipattribute_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -395,7 +428,7 @@ Same as mailboxtrackingfolder table [relationshipattribute_MailboxTrackingFolder
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [relationshipattribute_BulkDeleteFailures](bulkdeletefailure.md#BKMK_relationshipattribute_BulkDeleteFailures) Many-To-One relationship.
+Same as the [relationshipattribute_BulkDeleteFailures](bulkdeletefailure.md#BKMK_relationshipattribute_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -412,7 +445,7 @@ Same as bulkdeletefailure table [relationshipattribute_BulkDeleteFailures](bulkd
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [relationshipattribute_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_relationshipattribute_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [relationshipattribute_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_relationshipattribute_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -433,25 +466,32 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
 - [relationship_relationshipattribute](#BKMK_relationship_relationshipattribute)
+- [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 
 
 ### <a name="BKMK_referencingattribute_relationshipattribute"></a> referencingattribute_relationshipattribute
 
 **Added by**: System Solution Solution
 
-See attribute Table [referencingattribute_relationshipattribute](attribute.md#BKMK_referencingattribute_relationshipattribute) One-To-Many relationship.
+See the [referencingattribute_relationshipattribute](attribute.md#BKMK_referencingattribute_relationshipattribute) one-to-many relationship for the [attribute](attribute.md) table/entity.
 
 ### <a name="BKMK_referencedattribute_relationshipattribute"></a> referencedattribute_relationshipattribute
 
 **Added by**: System Solution Solution
 
-See attribute Table [referencedattribute_relationshipattribute](attribute.md#BKMK_referencedattribute_relationshipattribute) One-To-Many relationship.
+See the [referencedattribute_relationshipattribute](attribute.md#BKMK_referencedattribute_relationshipattribute) one-to-many relationship for the [attribute](attribute.md) table/entity.
 
 ### <a name="BKMK_relationship_relationshipattribute"></a> relationship_relationshipattribute
 
 **Added by**: System Solution Solution
 
-See relationship Table [relationship_relationshipattribute](relationship.md#BKMK_relationship_relationshipattribute) One-To-Many relationship.
+See the [relationship_relationshipattribute](relationship.md#BKMK_relationship_relationshipattribute) one-to-many relationship for the [relationship](relationship.md) table/entity.
+
+### <a name="BKMK_organization_relationshipattribute"></a> organization_relationshipattribute
+
+**Added by**: System Solution Solution
+
+See the [organization_relationshipattribute](organization.md#BKMK_organization_relationshipattribute) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

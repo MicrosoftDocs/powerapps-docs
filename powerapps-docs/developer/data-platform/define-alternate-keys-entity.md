@@ -4,9 +4,10 @@ description: "The topic explains about how to create alternate keys for a table.
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -52,7 +53,7 @@ You should be aware of the following constraints when creating alternate keys:
 
 - **Maximum number of alternate key table definitions for a table**  
 
-   There can be a maximum of 5 alternate key table definitions for a table in a Dataverse instance.  
+   There can be a maximum of ten alternate key table definitions for a table in a Dataverse instance.  
 
 - **Unicode characters in key value**
 

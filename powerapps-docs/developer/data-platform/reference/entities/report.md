@@ -1,13 +1,13 @@
 ---
-title: "Report table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Report table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Report table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -35,7 +35,6 @@ Data summary in an easy-to-read layout.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/reports<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -249,12 +248,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsPersonal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Individual|
-|0|Organization|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Individual||
+|0|Organization||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -376,11 +375,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ReportTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Reporting Services Report|
-|2|Other Report|
-|3|Linked Report|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Reporting Services Report||
+|2|Other Report||
+|3|Linked Report||
 
 
 
@@ -527,6 +526,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentReportIdName](#BKMK_ParentReportIdName)
@@ -554,12 +554,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -716,12 +716,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsCustomReport Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -739,12 +739,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -762,12 +762,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsScheduledReport Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -947,12 +947,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the report.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1131,7 +1147,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Report_ProcessSessions"></a> Report_ProcessSessions
 
-Same as processsession table [Report_ProcessSessions](processsession.md#BKMK_Report_ProcessSessions) Many-To-One relationship.
+Same as the [Report_ProcessSessions](processsession.md#BKMK_Report_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1146,7 +1162,7 @@ Same as processsession table [Report_ProcessSessions](processsession.md#BKMK_Rep
 
 ### <a name="BKMK_Report_SyncErrors"></a> Report_SyncErrors
 
-Same as syncerror table [Report_SyncErrors](syncerror.md#BKMK_Report_SyncErrors) Many-To-One relationship.
+Same as the [Report_SyncErrors](syncerror.md#BKMK_Report_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1161,7 +1177,7 @@ Same as syncerror table [Report_SyncErrors](syncerror.md#BKMK_Report_SyncErrors)
 
 ### <a name="BKMK_Report_AsyncOperations"></a> Report_AsyncOperations
 
-Same as asyncoperation table [Report_AsyncOperations](asyncoperation.md#BKMK_Report_AsyncOperations) Many-To-One relationship.
+Same as the [Report_AsyncOperations](asyncoperation.md#BKMK_Report_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1176,7 +1192,7 @@ Same as asyncoperation table [Report_AsyncOperations](asyncoperation.md#BKMK_Rep
 
 ### <a name="BKMK_report_reportcategories"></a> report_reportcategories
 
-Same as reportcategory table [report_reportcategories](reportcategory.md#BKMK_report_reportcategories) Many-To-One relationship.
+Same as the [report_reportcategories](reportcategory.md#BKMK_report_reportcategories) many-to-one relationship for the [reportcategory](reportcategory.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1191,7 +1207,7 @@ Same as reportcategory table [report_reportcategories](reportcategory.md#BKMK_re
 
 ### <a name="BKMK_report_parent_report"></a> report_parent_report
 
-Same as report table [report_parent_report](report.md#BKMK_report_parent_report) Many-To-One relationship.
+Same as the [report_parent_report](report.md#BKMK_report_parent_report) many-to-one relationship for the [report](report.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1215,36 +1231,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_reportbase_modifiedby](#BKMK_lk_reportbase_modifiedby)
 - [business_unit_reports](#BKMK_business_unit_reports)
 - [lk_reportbase_createdby](#BKMK_lk_reportbase_createdby)
-- [owner_reports](#BKMK_owner_reports)
 
 
 ### <a name="BKMK_lk_report_createdonbehalfby"></a> lk_report_createdonbehalfby
 
-See systemuser Table [lk_report_createdonbehalfby](systemuser.md#BKMK_lk_report_createdonbehalfby) One-To-Many relationship.
+See the [lk_report_createdonbehalfby](systemuser.md#BKMK_lk_report_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_report_modifiedonbehalfby"></a> lk_report_modifiedonbehalfby
 
-See systemuser Table [lk_report_modifiedonbehalfby](systemuser.md#BKMK_lk_report_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_report_modifiedonbehalfby](systemuser.md#BKMK_lk_report_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_report_parent_report"></a> report_parent_report
 
-See report Table [report_parent_report](report.md#BKMK_report_parent_report) One-To-Many relationship.
+See the [report_parent_report](report.md#BKMK_report_parent_report) one-to-many relationship for the [report](report.md) table/entity.
 
 ### <a name="BKMK_lk_reportbase_modifiedby"></a> lk_reportbase_modifiedby
 
-See systemuser Table [lk_reportbase_modifiedby](systemuser.md#BKMK_lk_reportbase_modifiedby) One-To-Many relationship.
+See the [lk_reportbase_modifiedby](systemuser.md#BKMK_lk_reportbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_reports"></a> business_unit_reports
 
-See businessunit Table [business_unit_reports](businessunit.md#BKMK_business_unit_reports) One-To-Many relationship.
+See the [business_unit_reports](businessunit.md#BKMK_business_unit_reports) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_reportbase_createdby"></a> lk_reportbase_createdby
 
-See systemuser Table [lk_reportbase_createdby](systemuser.md#BKMK_lk_reportbase_createdby) One-To-Many relationship.
-
-### <a name="BKMK_owner_reports"></a> owner_reports
-
-See owner Table [owner_reports](owner.md#BKMK_owner_reports) One-To-Many relationship.
+See the [lk_reportbase_createdby](systemuser.md#BKMK_lk_reportbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

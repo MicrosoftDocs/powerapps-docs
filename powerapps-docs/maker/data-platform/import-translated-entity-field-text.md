@@ -4,7 +4,7 @@ description: "Learn how to import translated table and column text"
 ms.custom: ""
 ms.date: 06/19/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 3d77d149-819b-45e6-8e70-1fbe54d5c153
 caps.latest.revision: 19
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 ---
 # Import translated table, form, and column text back into an app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
   

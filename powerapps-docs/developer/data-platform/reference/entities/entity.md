@@ -1,13 +1,13 @@
 ---
-title: "Entity table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -27,7 +27,7 @@ search.app:
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entities<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -348,12 +348,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -408,15 +408,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [entity_solutioncomponentconfiguration](#BKMK_entity_solutioncomponentconfiguration)
-- [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
+- [entity_solutioncomponentbatchconfiguration_PrimaryEntity](#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity)
+- [entity_solutioncomponentbatchconfiguration_RelatedEntity](#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity)
 - [catalogassignment_entity](#BKMK_catalogassignment_entity)
+- [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
+- [sharedlinksetting_extensionofrecordid](#BKMK_sharedlinksetting_extensionofrecordid)
+- [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
+- [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
+- [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
+- [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
+- [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 
 
 ### <a name="BKMK_entity_solutioncomponentconfiguration"></a> entity_solutioncomponentconfiguration
 
 **Added by**: Solution Component Configuration Solution
 
-Same as solutioncomponentconfiguration table [entity_solutioncomponentconfiguration](solutioncomponentconfiguration.md#BKMK_entity_solutioncomponentconfiguration) Many-To-One relationship.
+Same as the [entity_solutioncomponentconfiguration](solutioncomponentconfiguration.md#BKMK_entity_solutioncomponentconfiguration) many-to-one relationship for the [solutioncomponentconfiguration](solutioncomponentconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -429,11 +437,62 @@ Same as solutioncomponentconfiguration table [entity_solutioncomponentconfigurat
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
+### <a name="BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity"></a> entity_solutioncomponentbatchconfiguration_PrimaryEntity
+
+**Added by**: Solution Component Configuration Solution
+
+Same as the [entity_solutioncomponentbatchconfiguration_PrimaryEntity](solutioncomponentbatchconfiguration.md#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity) many-to-one relationship for the [solutioncomponentbatchconfiguration](solutioncomponentbatchconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentbatchconfiguration|
+|ReferencingAttribute|primaryentity|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_solutioncomponentbatchconfiguration_PrimaryEntity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity"></a> entity_solutioncomponentbatchconfiguration_RelatedEntity
+
+**Added by**: Solution Component Configuration Solution
+
+Same as the [entity_solutioncomponentbatchconfiguration_RelatedEntity](solutioncomponentbatchconfiguration.md#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity) many-to-one relationship for the [solutioncomponentbatchconfiguration](solutioncomponentbatchconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentbatchconfiguration|
+|ReferencingAttribute|relatedentity|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_solutioncomponentbatchconfiguration_RelatedEntity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_catalogassignment_entity"></a> catalogassignment_entity
+
+**Added by**: CatalogFramework Solution
+
+Same as the [catalogassignment_entity](catalogassignment.md#BKMK_catalogassignment_entity) many-to-one relationship for the [catalogassignment](catalogassignment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|catalogassignment|
+|ReferencingAttribute|object|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|CatalogAssignments|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_entity_entityanalyticsconfig"></a> entity_entityanalyticsconfig
 
 **Added by**: Advanced Analytics Infrastructure Solution
 
-Same as entityanalyticsconfig table [entity_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_entity_entityanalyticsconfig) Many-To-One relationship.
+Same as the [entity_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_entity_entityanalyticsconfig) many-to-one relationship for the [entityanalyticsconfig](entityanalyticsconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -446,19 +505,104 @@ Same as entityanalyticsconfig table [entity_entityanalyticsconfig](entityanalyti
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
-### <a name="BKMK_catalogassignment_entity"></a> catalogassignment_entity
+### <a name="BKMK_sharedlinksetting_extensionofrecordid"></a> sharedlinksetting_extensionofrecordid
 
-**Added by**: CatalogFramework Solution
+**Added by**: Active Solution Solution
 
-Same as catalogassignment table [catalogassignment_entity](catalogassignment.md#BKMK_catalogassignment_entity) Many-To-One relationship.
+Same as the [sharedlinksetting_extensionofrecordid](sharedlinksetting.md#BKMK_sharedlinksetting_extensionofrecordid) many-to-one relationship for the [sharedlinksetting](sharedlinksetting.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|catalogassignment|
-|ReferencingAttribute|object|
+|ReferencingEntity|sharedlinksetting|
+|ReferencingAttribute|extensionofrecordid|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|CatalogAssignments|
+|ReferencedEntityNavigationPropertyName|sharedlinksetting_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_entity_serviceplanmapping"></a> entity_serviceplanmapping
+
+**Added by**: License Enforcement Solution
+
+Same as the [entity_serviceplanmapping](serviceplanmapping.md#BKMK_entity_serviceplanmapping) many-to-one relationship for the [serviceplanmapping](serviceplanmapping.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplanmapping|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|entity_serviceplanmapping|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_virtualentitymetadata_extensionofrecordid"></a> virtualentitymetadata_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as the [virtualentitymetadata_extensionofrecordid](virtualentitymetadata.md#BKMK_virtualentitymetadata_extensionofrecordid) many-to-one relationship for the [virtualentitymetadata](virtualentitymetadata.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|virtualentitymetadata|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|virtualentitymetadata_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid"></a> msdyn_insightsstorevirtualentity_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as the [msdyn_insightsstorevirtualentity_extensionofrecordid](msdyn_insightsstorevirtualentity.md#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid) many-to-one relationship for the [msdyn_insightsstorevirtualentity](msdyn_insightsstorevirtualentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_insightsstorevirtualentity|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_insightsstorevirtualentity_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
+
+**Added by**: Power Apps Actions Solution
+
+Same as the [entity_appaction_ContextEntity](appaction.md#BKMK_entity_appaction_ContextEntity) many-to-one relationship for the [appaction](appaction.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|contextentity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|entity_appaction_ContextEntity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_entity_appactionrule_ContextEntity"></a> entity_appactionrule_ContextEntity
+
+**Added by**: Power Apps Actions Solution
+
+Same as the [entity_appactionrule_ContextEntity](appactionrule.md#BKMK_entity_appactionrule_ContextEntity) many-to-one relationship for the [appactionrule](appactionrule.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appactionrule|
+|ReferencingAttribute|contextentity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|entity_appactionrule_ContextEntity|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

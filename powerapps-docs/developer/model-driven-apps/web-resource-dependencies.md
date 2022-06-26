@@ -1,19 +1,21 @@
 ---
 title: "Web resource dependencies (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about defining dependencies between web resources in Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/15/2021
-ms.reviewer: ""
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Web resource dependencies
 
@@ -25,7 +27,7 @@ However there are some other behaviors which developers using JavaScript web res
 
 The following image shows the dependencies tab within the web resource form. Dependencies between web resources are set in the top list. Column dependencies are set using the lower list. Column dependencies are only available for JavaScript web resources. More information [Column dependencies](#column-dependencies)
 
-![web resource dependencies tab](media/web-resource-dependencies.PNG)
+![web resource dependencies tab.](media/web-resource-dependencies.PNG)
 
 Within a solution you can define dependencies within solution components. Up until Mode-driven Apps the main purpose of these dependencies was to prevent the deletion of a solution component when another solution component depended on it. With Model-driven apps the behavior for JavaScript web resources is enhanced so that any other web resource listed as a dependency to the JavaScript web resource will be loaded along with the JavaScript web resource. 
 

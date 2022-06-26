@@ -1,13 +1,13 @@
 ---
-title: "ACIViewMapper table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ACIViewMapper table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ACIViewMapper table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ Customized messages for an entity that has been renamed.
 |Create|POST [*org URI*]/api/data/v9.0/aciviewmappers<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/aciviewmappers(*aciviewmapperid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/aciviewmappers(*aciviewmapperid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/aciviewmappers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/aciviewmappers(*aciviewmapperid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/aciviewmappers(*aciviewmapperid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
@@ -465,23 +464,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_ACIViewMapper_modifiedby"></a> lk_ACIViewMapper_modifiedby
 
-See systemuser Table [lk_ACIViewMapper_modifiedby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedby) One-To-Many relationship.
+See the [lk_ACIViewMapper_modifiedby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_aciviewmapper"></a> organization_aciviewmapper
 
-See organization Table [organization_aciviewmapper](organization.md#BKMK_organization_aciviewmapper) One-To-Many relationship.
+See the [organization_aciviewmapper](organization.md#BKMK_organization_aciviewmapper) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_ACIViewMapper_modifiedonbehalfby"></a> lk_ACIViewMapper_modifiedonbehalfby
 
-See systemuser Table [lk_ACIViewMapper_modifiedonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_ACIViewMapper_modifiedonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ACIViewMapper_createdonbehalfby"></a> lk_ACIViewMapper_createdonbehalfby
 
-See systemuser Table [lk_ACIViewMapper_createdonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_createdonbehalfby) One-To-Many relationship.
+See the [lk_ACIViewMapper_createdonbehalfby](systemuser.md#BKMK_lk_ACIViewMapper_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_ACIViewMapper_createdby"></a> lk_ACIViewMapper_createdby
 
-See systemuser Table [lk_ACIViewMapper_createdby](systemuser.md#BKMK_lk_ACIViewMapper_createdby) One-To-Many relationship.
+See the [lk_ACIViewMapper_createdby](systemuser.md#BKMK_lk_ACIViewMapper_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -1,25 +1,22 @@
 ---
 title: "Set Timeout when making external calls in a plug-in | MicrosoftDocs"
 description: "Limit the time period that external calls will expect a response within plug-ins"
-services: ''
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: ryjones
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/06/2021
-ms.author: jdaly
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Set Timeout when making external calls in a plug-in
 
@@ -59,10 +56,10 @@ using (HttpClient client = new HttpClient())
   client.DefaultRequestHeaders.ConnectionClose = true; //Set KeepAlive to false
   
 
-  HttpResponseMessage response =  client.GetAsync(webAddress).ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+  HttpResponseMessage response =  client.GetAsync(webAddress).GetAwaiter().GetResult(); //Make sure it is synchronous
   response.EnsureSuccessStatusCode();
 
-  string responseText = response.Content.ReadAsStringAsync().ConfigureAwait(false).GetAwaiter().GetResult(); //Make sure it is synchronous
+  string responseText = response.Content.ReadAsStringAsync().GetAwaiter().GetResult(); //Make sure it is synchronous
   tracingService.Trace(responseText);
   //Log success in the Plugin Trace Log:
   tracingService.Trace("HttpClientPlugin completed successfully.");

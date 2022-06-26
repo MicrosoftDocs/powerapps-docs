@@ -4,9 +4,10 @@ description: "Learn about using access teams and owner teams to colloborate and 
 ms.custom: ""
 ms.date: 03/28/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer

@@ -1,19 +1,12 @@
 ---
 title: "Remove deactivated or disabled customizations | MicrosoftDocs"
 description: "Deactivated or disabled customizations should be removed from a solution to improve solution management and to decrease the risk of utilizing or managing an outdated component."
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
 manager: austinj
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 1/15/2019
+ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -52,7 +45,7 @@ As well as table components such as:
 - Views
 - Business Rules
 
-![Deactivated Processes](../media/deactivated-processes.png)
+![Deactivated Processes.](../media/deactivated-processes.png)
 
 <a name='seealso'></a>
 

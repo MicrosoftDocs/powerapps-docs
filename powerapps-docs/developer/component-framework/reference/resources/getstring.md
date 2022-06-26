@@ -1,16 +1,15 @@
 ---
 title: getString| Microsoft Docs
 description: Returns the localized string for a given key associated with the specified resource (resx) defined in the manifest file.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: f28117a1-5d88-4c52-999c-1e07b09c0fe0
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getString
@@ -19,7 +18,7 @@ ms.assetid: f28117a1-5d88-4c52-999c-1e07b09c0fe0
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps, canvas apps, & portals.
 
 ## Syntax
 

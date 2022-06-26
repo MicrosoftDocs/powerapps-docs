@@ -1,35 +1,30 @@
 ---
-title: "Insert, update, delete, and order global option set options (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Code samples to show you how to insert, update, delete, and order options in a global option set" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
+title: "Insert, update, delete, and order global choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Code samples to show how to insert, update, delete, and order global choices." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Insert, update, delete, and order global option set options
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Insert, update, delete, and order global choices
 
-<!-- 
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/insert-update-delete-order-global-option-set-options 
-
--->
-
-These code samples show you how to insert, update, delete, and order options in a global option set.  
+These code samples show you how to insert, update, delete, and order global choices.  
   
-<a name="BKMK_InsertNewOption"></a>   
-## Insert a new option  
- The following sample shows how to add a new option to a global option set by using 
+<a name="BKMK_InsertNewOption"></a>
+
+## Insert a new choice
+
+ The following code sample shows how to add a new choice to global choices by using
  <xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>:  
   
 ```csharp
@@ -51,12 +46,12 @@ _insertedOptionValue = ((InsertOptionValueResponse)_serviceProxy.Execute(
 PublishXmlRequest pxReq2 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
 _serviceProxy.Execute(pxReq2);
 ```
-
-
   
-<a name="BKMK_UpdateAnOption"></a>   
-## Update an option  
- The following sample shows how to update an option in a global option set by using 
+<a name="BKMK_UpdateAnOption"></a>
+
+## Update a choice
+
+ The following code sample shows how to update a choice in global choices by using
  <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionValueRequest>:  
   
 ```csharp
@@ -79,9 +74,11 @@ PublishXmlRequest pxReq3 = new PublishXmlRequest { ParameterXml = String.Format(
 _serviceProxy.Execute(pxReq3);
 ```
   
-<a name="BKMK_DeleteAnOption"></a>   
-## Delete an option  
- The following sample shows how to deletes an option in a global option set by using 
+<a name="BKMK_DeleteAnOption"></a>
+
+## Delete a choice
+
+ The following sample shows how to delete a choice in global choies by using 
  <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>:  
   
 ```csharp
@@ -98,9 +95,11 @@ DeleteOptionValueRequest deleteOptionValueRequest =
 _serviceProxy.Execute(deleteOptionValueRequest);
 ```  
   
-<a name="BKMK_OrderOptions"></a>   
-## Order options  
- The following sample shows how to set the order of options in a global option set by using 
+<a name="BKMK_OrderOptions"></a>
+
+## Order of choices
+  
+ The following sample shows how to set the order of choices in global choices by using
  <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>:  
   
 ```csharp
@@ -132,7 +131,6 @@ _serviceProxy.Execute(orderOptionRequest);
 //Publish the OptionSet
 PublishXmlRequest pxReq4 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
 _serviceProxy.Execute(pxReq4);
-``` 
-
+```
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

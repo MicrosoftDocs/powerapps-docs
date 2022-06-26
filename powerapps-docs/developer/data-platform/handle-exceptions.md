@@ -1,19 +1,21 @@
 ---
 title: "Handle exceptions in a plug-in (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
-ms.custom: ""
-ms.date: 03/15/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: "article"
-author: JimDaly
-ms.author: pehecke
-manager: kvivek
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Handle exceptions in plug-ins
 
@@ -52,5 +54,14 @@ However, when any exception occurs in the plug-in code for a synchronous step, t
 ## How Asynchronous plug-ins exceptions are handled
 
 The exception message for asynchronous registered plug-ins is written to a **System Job** table, also known as the [AsyncOperation Table](reference/entities/asyncoperation.md)  which can be viewed in the **System Jobs** area of the web application. No dialog will be displayed to the user. Async plug-ins do not participate in the database transaction that queued them, therefore they cannot cancel the transaction.
+
+### Retry an asynchronous plug-in
+
+With an asynchronous plug-in step, you can re-try when a plug-in fails. This may be due to a network error or some other re-triable error calling an external resource. 
+
+To retry your plug-in, use the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor using the [OperationStatus Enum](/dotnet/api/microsoft.xrm.sdk.operationstatus) `Retry` member value.
+
+When your plug-in throws this type of exception, the asynchronous service will attempt to run your plug-in four times. If it doesn't succeed within four attempts it will fail.
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,10 +2,11 @@
 title: "Fusion development ebook: Prerequisites and setup | Microsoft Docs"
 description: "Prerequisites and setup for fusion development."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021
+ms.subservice: guidance
 ms.author: shboyer
 ms.reviewer: kvivek
 

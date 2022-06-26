@@ -3,9 +3,10 @@ title: Migrate data between Microsoft Dataverse environments using the dataflows
 author: denisem-msft
 ms.reviewer: "nabuthuk"
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
-ms.date: 03/24/2021
-ms.service: powerapps
+ms.date: 11/24/2021
+
 ms.topic: "article"
+ms.subservice: dataverse-developer
 ms.author: demora
 search.app: 
   - PowerApps
@@ -13,7 +14,7 @@ search.app:
 
 # Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
 
@@ -69,7 +70,7 @@ From the **source** environment, get the [OData endpoint](./view-download-develo
 1. Copy the **Service Root URL** to Notepad.
 
     > [!div class="mx-imgBorder"]
-    > ![Copy the service root URL in the developer resources](./media/get-odata-endpoint-url.png "Copy the service root URL in the developer resources")
+    > ![Copy the service root URL in the developer resources.](./media/get-odata-endpoint-url.png "Copy the service root URL in the developer resources")
  
 ## Step 3: Create a new OData dataflow
 
@@ -83,28 +84,27 @@ In the **target** environment, create a new dataflow with the OData connector.
 
 1. Select **New dataflow** to create a new dataflow. Provide a meaningful name for the dataflow. Select **Create**.
    > [!div class="mx-imgBorder"]
-   > ![Prompt for a new dataflow](./media/enter-name-for-new-dataflow.png "Prompt for a new dataflow")
+   > ![Prompt for a new dataflow.](./media/enter-name-for-new-dataflow.png "Prompt for a new dataflow")
 
 1. Select the **OData** connector.
 
     > [!div class="mx-imgBorder"]
-    > ![Select OData source](media/select-odata-data-source.png "Select OData source")
+    > ![Select OData source.](media/select-odata-data-source.png "Select OData source")
 
 1. In the **Connection settings** dialog box, type the column values:
 
     > [!div class="mx-imgBorder"]
-    > ![Confirm the column values are correct](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
+    > ![Confirm the column values are correct.](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
 
-    | Column | Description |
-    |--|--|
-    | URL | Provide the Service Root URL in the URL column of the connection settings. |
-    | Connection | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before. |
-    | Connection name | Optionally, rename the connection name, but a value is automatically populated. |  |
-    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service. |
-    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
-
-    > [!IMPORTANT] 
+    | Column                   | Description                                                                                                                          |
+    |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+    | URL                      | Provide the Service Root URL in the URL column of the connection settings.                                                           |
+    | Connection               | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before.               |
+    | Connection name          | Optionally, rename the connection name, but a value is automatically populated.                                                      |
+    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
+    | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
+   > [!IMPORTANT] 
     > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
@@ -116,7 +116,7 @@ Use Power Query to select the tables and also transform data as per your require
 First, select the tables that need to be transferred. You can browse all tables in the source environment and preview some of the data in each table.
 
 > [!div class="mx-imgBorder"]
-> ![Power query navigator](./media/edit-queries-for-selected-entities.png "Power query navigator")
+> ![Power query navigator.](./media/edit-queries-for-selected-entities.png "Power query navigator")
 
 1. Select one or multiple tables as needed, and then select **Transform data**.
 
@@ -143,7 +143,7 @@ This section describes how to define the target environment settings.
 For each table chosen, select the behavior for importing that table in these settings and then select **Next**.
 
 > [!div class="mx-imgBorder"]
-> ![Map tables](./media/map-entities-to-target.png "Map tables")
+> ![Map tables.](./media/map-entities-to-target.png "Map tables")
 
 - **Load to existing table (recommended)**
 
@@ -156,6 +156,9 @@ For each table chosen, select the behavior for importing that table in these set
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.
 
     - Requires a key configuration in the target environment (as the unique identifier columns are not available to modify).
+
+  > [!IMPORTANT]
+  > The 'delete rows' option is only available when a key is specified. It is possible to have a table without a key, but a key is required when you want to update or delete records since it is the unique identifier the system uses to perform these tasks. You can add a key directly in the Dataverse table if your table does not have a key and you want to use the delete or update functionality provided by Dataflows.<p/>More information: [Define alternate keys using Power Apps portal](../../maker/data-platform/define-alternate-keys-portal.md)
 
 - **Load to new table (not recommended)**
 
@@ -174,12 +177,12 @@ Select **Refresh manually** since this is a one-time migration and then select *
 The initial dataflow load initiates when you select **Create**. 
 
 > [!div class="mx-imgBorder"]
-> ![Initial dataflow load](./media/initiate-dataflow-process.png "Initial dataflow load")
+> ![Initial dataflow load.](./media/initiate-dataflow-process.png "Initial dataflow load")
 
 You can manually initiate a dataflow by selecting **(...)** in the dataflows list. Make sure to run dependent dataflows after the parent flows have completed.
 
 > [!div class="mx-imgBorder"]
-> ![Refresh manually](./media/refresh-dataflow-manually.png "Refresh manually") 
+> ![Refresh manually.](./media/refresh-dataflow-manually.png "Refresh manually") 
 
 ## Tips
 

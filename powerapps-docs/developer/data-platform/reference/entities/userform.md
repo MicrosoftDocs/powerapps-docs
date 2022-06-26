@@ -1,13 +1,13 @@
 ---
-title: "UserForm table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the UserForm table/entity."
-ms.date: 03/04/2021
+title: "User Dashboard (UserForm)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the User Dashboard (UserForm)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# UserForm table/entity reference
+# User Dashboard (UserForm)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -33,7 +33,6 @@ User-owned dashboards.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userforms<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -136,12 +135,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsTabletEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -217,10 +216,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Dashboard|
-|103|Power BI Dashboard|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Dashboard||
+|103|Power BI Dashboard||
 
 
 
@@ -260,6 +259,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -517,12 +517,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -579,7 +595,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_UserForm_AsyncOperations"></a> UserForm_AsyncOperations
 
-Same as asyncoperation table [UserForm_AsyncOperations](asyncoperation.md#BKMK_UserForm_AsyncOperations) Many-To-One relationship.
+Same as the [UserForm_AsyncOperations](asyncoperation.md#BKMK_UserForm_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -594,7 +610,7 @@ Same as asyncoperation table [UserForm_AsyncOperations](asyncoperation.md#BKMK_U
 
 ### <a name="BKMK_UserForm_BulkDeleteFailures"></a> UserForm_BulkDeleteFailures
 
-Same as bulkdeletefailure table [UserForm_BulkDeleteFailures](bulkdeletefailure.md#BKMK_UserForm_BulkDeleteFailures) Many-To-One relationship.
+Same as the [UserForm_BulkDeleteFailures](bulkdeletefailure.md#BKMK_UserForm_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -615,7 +631,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_userformbase_modifiedonbehalfby](#BKMK_lk_userformbase_modifiedonbehalfby)
 - [lk_userformbase_createdonbehalfby](#BKMK_lk_userformbase_createdonbehalfby)
 - [team_userform](#BKMK_team_userform)
-- [owner_userform](#BKMK_owner_userform)
 - [lk_userform_createdby](#BKMK_lk_userform_createdby)
 - [lk_userform_modifiedby](#BKMK_lk_userform_modifiedby)
 - [user_userform](#BKMK_user_userform)
@@ -624,35 +639,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_userformbase_modifiedonbehalfby"></a> lk_userformbase_modifiedonbehalfby
 
-See systemuser Table [lk_userformbase_modifiedonbehalfby](systemuser.md#BKMK_lk_userformbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_userformbase_modifiedonbehalfby](systemuser.md#BKMK_lk_userformbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userformbase_createdonbehalfby"></a> lk_userformbase_createdonbehalfby
 
-See systemuser Table [lk_userformbase_createdonbehalfby](systemuser.md#BKMK_lk_userformbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_userformbase_createdonbehalfby](systemuser.md#BKMK_lk_userformbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_userform"></a> team_userform
 
-See team Table [team_userform](team.md#BKMK_team_userform) One-To-Many relationship.
-
-### <a name="BKMK_owner_userform"></a> owner_userform
-
-See owner Table [owner_userform](owner.md#BKMK_owner_userform) One-To-Many relationship.
+See the [team_userform](team.md#BKMK_team_userform) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_userform_createdby"></a> lk_userform_createdby
 
-See systemuser Table [lk_userform_createdby](systemuser.md#BKMK_lk_userform_createdby) One-To-Many relationship.
+See the [lk_userform_createdby](systemuser.md#BKMK_lk_userform_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userform_modifiedby"></a> lk_userform_modifiedby
 
-See systemuser Table [lk_userform_modifiedby](systemuser.md#BKMK_lk_userform_modifiedby) One-To-Many relationship.
+See the [lk_userform_modifiedby](systemuser.md#BKMK_lk_userform_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_userform"></a> user_userform
 
-See systemuser Table [user_userform](systemuser.md#BKMK_user_userform) One-To-Many relationship.
+See the [user_userform](systemuser.md#BKMK_user_userform) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_userform"></a> business_unit_userform
 
-See businessunit Table [business_unit_userform](businessunit.md#BKMK_business_unit_userform) One-To-Many relationship.
+See the [business_unit_userform](businessunit.md#BKMK_business_unit_userform) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

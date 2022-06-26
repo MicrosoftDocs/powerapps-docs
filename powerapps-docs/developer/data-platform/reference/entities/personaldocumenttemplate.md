@@ -1,13 +1,13 @@
 ---
-title: "PersonalDocumentTemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "PersonalDocumentTemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the PersonalDocumentTemplate table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -33,7 +33,6 @@ Used to store Personal Document Templates in database in binary format.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/personaldocumenttemplates(*personaldocumenttemplateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/personaldocumenttemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -152,10 +151,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DocumentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Microsoft Excel|
-|2|Microsoft Word|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Microsoft Excel||
+|2|Microsoft Word||
 
 
 
@@ -247,12 +246,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Draft|
-|0|Activated|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Draft||
+|0|Activated||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 <a name="read-only-attributes"></a>
@@ -275,6 +274,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -484,12 +484,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the personal document template.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -544,33 +560,28 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_personaldocumenttemplates](#BKMK_business_unit_personaldocumenttemplates)
 - [lk_personaldocumenttemplatebase_createdonbehalfby](#BKMK_lk_personaldocumenttemplatebase_createdonbehalfby)
 - [lk_personaldocumenttemplatebase_modifiedby](#BKMK_lk_personaldocumenttemplatebase_modifiedby)
-- [owner_personaldocumenttemplates](#BKMK_owner_personaldocumenttemplates)
 - [lk_personaldocumenttemplatebase_modifiedonbehalfby](#BKMK_lk_personaldocumenttemplatebase_modifiedonbehalfby)
 
 
 ### <a name="BKMK_lk_personaldocumenttemplatebase_createdby"></a> lk_personaldocumenttemplatebase_createdby
 
-See systemuser Table [lk_personaldocumenttemplatebase_createdby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_createdby) One-To-Many relationship.
+See the [lk_personaldocumenttemplatebase_createdby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_personaldocumenttemplates"></a> business_unit_personaldocumenttemplates
 
-See businessunit Table [business_unit_personaldocumenttemplates](businessunit.md#BKMK_business_unit_personaldocumenttemplates) One-To-Many relationship.
+See the [business_unit_personaldocumenttemplates](businessunit.md#BKMK_business_unit_personaldocumenttemplates) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_personaldocumenttemplatebase_createdonbehalfby"></a> lk_personaldocumenttemplatebase_createdonbehalfby
 
-See systemuser Table [lk_personaldocumenttemplatebase_createdonbehalfby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_createdonbehalfby) One-To-Many relationship.
+See the [lk_personaldocumenttemplatebase_createdonbehalfby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_personaldocumenttemplatebase_modifiedby"></a> lk_personaldocumenttemplatebase_modifiedby
 
-See systemuser Table [lk_personaldocumenttemplatebase_modifiedby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_modifiedby) One-To-Many relationship.
-
-### <a name="BKMK_owner_personaldocumenttemplates"></a> owner_personaldocumenttemplates
-
-See owner Table [owner_personaldocumenttemplates](owner.md#BKMK_owner_personaldocumenttemplates) One-To-Many relationship.
+See the [lk_personaldocumenttemplatebase_modifiedby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_personaldocumenttemplatebase_modifiedonbehalfby"></a> lk_personaldocumenttemplatebase_modifiedonbehalfby
 
-See systemuser Table [lk_personaldocumenttemplatebase_modifiedonbehalfby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_personaldocumenttemplatebase_modifiedonbehalfby](systemuser.md#BKMK_lk_personaldocumenttemplatebase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

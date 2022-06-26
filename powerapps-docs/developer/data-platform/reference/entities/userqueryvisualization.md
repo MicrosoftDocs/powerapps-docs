@@ -1,13 +1,13 @@
 ---
-title: "UserQueryVisualization table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the UserQueryVisualization table/entity."
-ms.date: 03/04/2021
+title: "User Chart (UserQueryVisualization)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the User Chart (UserQueryVisualization)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# UserQueryVisualization table/entity reference
+# User Chart (UserQueryVisualization)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -33,7 +33,6 @@ Chart attached to an entity.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/userqueryvisualizations(*userqueryvisualizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userqueryvisualizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -89,10 +88,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ChartType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|ASP.NET Charts|
-|1|Power BI|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|ASP.NET Charts||
+|1|Power BI||
 
 
 
@@ -142,12 +141,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -274,6 +273,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -515,12 +515,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|ApplicationRequired|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -574,7 +590,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_UserQueryVisualization_SyncErrors"></a> UserQueryVisualization_SyncErrors
 
-Same as syncerror table [UserQueryVisualization_SyncErrors](syncerror.md#BKMK_UserQueryVisualization_SyncErrors) Many-To-One relationship.
+Same as the [UserQueryVisualization_SyncErrors](syncerror.md#BKMK_UserQueryVisualization_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -598,46 +614,41 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_userqueryvisualizationbase_createdonbehalfby](#BKMK_lk_userqueryvisualizationbase_createdonbehalfby)
 - [team_userqueryvisualizations](#BKMK_team_userqueryvisualizations)
 - [business_unit_userqueryvisualizations](#BKMK_business_unit_userqueryvisualizations)
-- [owner_userqueryvisualizations](#BKMK_owner_userqueryvisualizations)
 - [lk_userqueryvisualization_createdby](#BKMK_lk_userqueryvisualization_createdby)
 - [lk_userqueryvisualization_modifiedby](#BKMK_lk_userqueryvisualization_modifiedby)
 
 
 ### <a name="BKMK_lk_userqueryvisualizationbase_modifiedonbehalfby"></a> lk_userqueryvisualizationbase_modifiedonbehalfby
 
-See systemuser Table [lk_userqueryvisualizationbase_modifiedonbehalfby](systemuser.md#BKMK_lk_userqueryvisualizationbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_userqueryvisualizationbase_modifiedonbehalfby](systemuser.md#BKMK_lk_userqueryvisualizationbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_userqueryvisualizations"></a> user_userqueryvisualizations
 
-See systemuser Table [user_userqueryvisualizations](systemuser.md#BKMK_user_userqueryvisualizations) One-To-Many relationship.
+See the [user_userqueryvisualizations](systemuser.md#BKMK_user_userqueryvisualizations) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_webresource_userqueryvisualizations"></a> webresource_userqueryvisualizations
 
-See webresource Table [webresource_userqueryvisualizations](webresource.md#BKMK_webresource_userqueryvisualizations) One-To-Many relationship.
+See the [webresource_userqueryvisualizations](webresource.md#BKMK_webresource_userqueryvisualizations) one-to-many relationship for the [webresource](webresource.md) table/entity.
 
 ### <a name="BKMK_lk_userqueryvisualizationbase_createdonbehalfby"></a> lk_userqueryvisualizationbase_createdonbehalfby
 
-See systemuser Table [lk_userqueryvisualizationbase_createdonbehalfby](systemuser.md#BKMK_lk_userqueryvisualizationbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_userqueryvisualizationbase_createdonbehalfby](systemuser.md#BKMK_lk_userqueryvisualizationbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_userqueryvisualizations"></a> team_userqueryvisualizations
 
-See team Table [team_userqueryvisualizations](team.md#BKMK_team_userqueryvisualizations) One-To-Many relationship.
+See the [team_userqueryvisualizations](team.md#BKMK_team_userqueryvisualizations) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_userqueryvisualizations"></a> business_unit_userqueryvisualizations
 
-See businessunit Table [business_unit_userqueryvisualizations](businessunit.md#BKMK_business_unit_userqueryvisualizations) One-To-Many relationship.
-
-### <a name="BKMK_owner_userqueryvisualizations"></a> owner_userqueryvisualizations
-
-See owner Table [owner_userqueryvisualizations](owner.md#BKMK_owner_userqueryvisualizations) One-To-Many relationship.
+See the [business_unit_userqueryvisualizations](businessunit.md#BKMK_business_unit_userqueryvisualizations) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_userqueryvisualization_createdby"></a> lk_userqueryvisualization_createdby
 
-See systemuser Table [lk_userqueryvisualization_createdby](systemuser.md#BKMK_lk_userqueryvisualization_createdby) One-To-Many relationship.
+See the [lk_userqueryvisualization_createdby](systemuser.md#BKMK_lk_userqueryvisualization_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userqueryvisualization_modifiedby"></a> lk_userqueryvisualization_modifiedby
 
-See systemuser Table [lk_userqueryvisualization_modifiedby](systemuser.md#BKMK_lk_userqueryvisualization_modifiedby) One-To-Many relationship.
+See the [lk_userqueryvisualization_modifiedby](systemuser.md#BKMK_lk_userqueryvisualization_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

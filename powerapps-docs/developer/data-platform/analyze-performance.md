@@ -1,12 +1,11 @@
 ---
 title: "Analyze plug-in performance (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to find and analyze performance data on plug-ins execution."
-ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly"
+author: "divka78"
+ms.subservice: dataverse-developer
 ms.author: "pehecke"
 manager: "kvivek"
 search.audienceType: 
@@ -14,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Analyze plug-in performance
 
@@ -21,7 +22,7 @@ In addition to using a debugger and profiler to learn how your plug-in is perfor
 
 Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
 
-![Analytics plug-in dashboard](media/cds-insights-plugins.png)
+![Analytics plug-in dashboard.](media/cds-insights-plugins.png)
 
 ## See also
 

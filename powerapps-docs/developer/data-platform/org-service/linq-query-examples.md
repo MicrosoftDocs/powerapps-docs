@@ -1,28 +1,32 @@
 ---
-title: "Linq Query Examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
+title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Browse code samples of LINQ queries." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 04/03/2022
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.reviewer: pehecke
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
+
 # LINQ query examples using OrganizationServiceContext with Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This topic contains many code samples of LINQ queries.  
   
-<a name="SimpleWhereClause"></a>   
-## Simple Where clause  
+<a name="SimpleWhereClause"></a>
+
+## Simple Where clause
+
  The following sample shows how to retrieve a list of accounts where the Name contains “Contoso”.  
   
 ```csharp
@@ -55,8 +59,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="JoinandSimpleWhereClause"></a>   
-## Join and simple Where clause  
+<a name="JoinandSimpleWhereClause"></a>
+
+## Join and simple Where clause
+
  The following sample shows how to retrieve the account Name and the contact LastName where the account Name contains “Contoso” and the contact LastName contains “Smith” and the contact is the Primary Contact for the account.  
   
 ```csharp
@@ -84,8 +90,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="UsingtheDistinctOperator"></a>   
-## Use the Distinct Operator  
+<a name="UsingtheDistinctOperator"></a>
+
+## Use the Distinct Operator
+
  The following sample shows how to retrieve a distinct list of contact last names. Although there may be duplicates, each name will be listed only once.  
   
 ```csharp
@@ -100,8 +108,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="SimpleInnerJoin"></a>   
-## Simple inner join  
+<a name="SimpleInnerJoin"></a>
+
+## Simple inner join
+
 The following sample shows how to retrieve information about an account and the contact listed as the primary contact for the account.  
   
 ```csharp
@@ -128,8 +138,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="SelfJoin"></a>   
-## Self-join  
+<a name="SelfJoin"></a>
+
+## Self-join
+
  The following sample shows how to retrieve information about accounts where an account is the parent account for an account.  
   
 ```csharp
@@ -151,8 +163,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="DoubleJoin"></a>   
-## Double and multiple joins  
+<a name="DoubleJoin"></a>
+
+## Double and multiple joins
+
  The following sample shows how to retrieve information from account, contact and lead where the contact is the primary contact for the account and the lead was the originating lead for the account.  
   
 ```csharp
@@ -202,8 +216,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="JoinUsingEntityFields"></a>   
-## Join using entity fields  
+<a name="JoinUsingEntityFields"></a>
+
+## Join using table column fields
+
  The following sample shows how to retrieve information about accounts from a list  
   
 ```csharp
@@ -224,8 +240,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="LeftJoin"></a>   
-## Late-binding left join  
+<a name="LeftJoin"></a>
+
+## Late-binding left join
+
  The following sample shows a left join. A left join is designed to return parents with and without children from two sources. There is a correlation between parent and child, but no child may actually exist.  
   
 ```csharp
@@ -248,8 +266,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="UsingtheEqualsOperator"></a>   
-## Use the Equals operator  
+<a name="UsingtheEqualsOperator"></a>
+
+## Use the Equals operator
+
  The following sample shows how to retrieve a list of contacts where the FirstName is “Colin”.  
   
 ```csharp
@@ -272,7 +292,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
- The following sample shows how to retrieve a list of contacts where the FamilyStatusCode is 3. This corresponds to the **Marital Status** option of **Divorced**.  
+ The following sample shows how to retrieve a list of contacts where the FamilyStatusCode is 3. This corresponds to the **Marital Status** choice of **Divorced**.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -294,8 +314,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="UsingtheNotEqualsOperator"></a>   
-## Use the Not Equals operator  
+<a name="UsingtheNotEqualsOperator"></a>
+
+## Use the Not Equals operator
+
  The following sample shows how to retrieve a list of contacts where the Address1_City is not “Redmond”.  
   
 ```csharp
@@ -339,8 +361,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingMethodBasedLINQQueryWithWhereClause"></a>   
-## Use a method-based LINQ query with a Where clause  
+<a name="BKMK_UsingMethodBasedLINQQueryWithWhereClause"></a>
+
+## Use a method-based LINQ query with a Where clause
+
  The following sample shows how to retrieve a list of contacts where the LastName is “Smith” or contains “Smi”.  
   
 ```csharp
@@ -368,8 +392,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="BKMK_UsingGreaterThanOperator"></a>   
-## Use the Greater Than operator  
+<a name="BKMK_UsingGreaterThanOperator"></a>
+
+## Use the Greater Than operator
+
  The following sample shows how to retrieve a list of contacts with an Anniversary date later than February 5, 2010.  
   
 ```csharp
@@ -413,8 +439,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="BKMK_UsingGreaterThanOrEqualsAndLessThanOrEqualsOperators"></a>   
-## Use the Greater Than or Equals and Less Than or Equals operators  
+<a name="BKMK_UsingGreaterThanOrEqualsAndLessThanOrEqualsOperators"></a>
+
+## Use the Greater Than or Equals and Less Than or Equals operators
+
  The following sample shows how to retrieve contacts with a CreditLimit greater than $200 and less than $400.  
   
 ```csharp
@@ -435,8 +463,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="BKMK_UsingContainsOperator"></a>   
-## Use the Contains operator  
+<a name="BKMK_UsingContainsOperator"></a>
+
+## Use the Contains operator
+
  The following sample shows how to retrieve contacts where the Description contains “Alpine”.  
   
 ```csharp
@@ -456,8 +486,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="BKMK_UsingDoesNotContainOperator"></a>   
-## Use the Does Not Contain operator  
+<a name="BKMK_UsingDoesNotContainOperator"></a>
+
+## Use the Does Not Contain operator
+
  The following sample shows how to retrieve contacts where the Description does not contain “Coho”.  
   
 ```csharp
@@ -477,8 +509,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingEndsWithOperator"></a>   
-## Use the StartsWith and EndsWith operators  
+<a name="BKMK_UsingEndsWithOperator"></a>
+
+## Use the StartsWith and EndsWith operators
+
  The following sample shows how to retrieve contacts where FirstName starts with “Bri”.  
   
 ```csharp
@@ -519,8 +553,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingAndOrOperators"></a>   
-## Use the And and Or operators  
+<a name="BKMK_UsingAndOrOperators"></a>
+
+## Use the And and Or operators
+
  The following sample shows how to retrieve contacts where Address1_City is “Redmond” or “Bellevue” and a CreditLimit that is greater than $200.  
   
 ```csharp
@@ -542,8 +578,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMKUsingOrderByOperator"></a>   
-## Use the OrderBy operator  
+<a name="BKMKUsingOrderByOperator"></a>
+
+## Use the OrderBy operator
+
  The following sample shows how to retrieve contacts ordered by CreditLimit in descending order.  
   
 ```csharp
@@ -589,9 +627,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingFirstAndSingleOperators"></a>   
-## Use the First and Single operators  
- The following sample shows how to retrieve only the first contact record returned and retrieve only one contact record that matches the criterion.  
+<a name="BKMK_UsingFirstAndSingleOperators"></a>
+
+## Use the First and Single operators
+
+ The following sample shows how to retrieve only the first contact row returned and retrieve only one contact row that matches the criterion.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -608,9 +648,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_RetrievingFormattedValues"></a>   
-## Retrieving formatted values  
- The following sample shows how to retrieve the label for an optionset option, in this case the value for the current record status.  
+<a name="BKMK_RetrievingFormattedValues"></a>
+
+## Retrieving formatted values
+
+ The following sample shows how to retrieve the label for a choices option, in this case the value for the current row.
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -626,10 +668,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingTheSkipAndTakeOperatorsWithoutPaging"></a>   
-## Use the Skip and Take operators without paging 
+<a name="BKMK_UsingTheSkipAndTakeOperatorsWithoutPaging"></a>
 
- The following sample shows how to retrieve just two records after skipping two records where the LastName is not “Parker” using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
+## Use the Skip and Take operators without paging
+
+ The following sample shows how to retrieve just two rows after skipping two rows where the LastName is not “Parker” using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -651,8 +694,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingTheFirstOrDefaultAndSingleOrDefaultOperators"></a>   
-## Use the FirstOrDefault and SingleOrDefault operators  
+<a name="BKMK_UsingTheFirstOrDefaultAndSingleOrDefaultOperators"></a>
+
+## Use the FirstOrDefault and SingleOrDefault operators
+
  The [FirstOrDefault](/dotnet/api/system.linq.enumerable.firstordefault) operator returns the first element of a sequence, or a default value if no element is found. The [SingleOrDefault](/dotnet/api/system.linq.enumerable.singleordefault) operator returns a single, specific element of a sequence, or a default value if that element is not found. The following sample shows how to use these operators.  
   
 ```csharp
@@ -674,8 +719,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingASelfJoinWithConditionOnLinkedEntity"></a>   
-## Use a self-join with a condition on the linked entity  
+<a name="BKMK_UsingASelfJoinWithConditionOnLinkedEntity"></a>
+
+## Use a self-join with a condition on the linked table row
+
  The following sample shows how to retrieve the names of two accounts where one account is the parent account of the other.  
   
 ```csharp
@@ -694,8 +741,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingTransformationInTheWhereClause"></a>   
-## Use a transformation in the Where Clause  
+<a name="BKMK_UsingTransformationInTheWhereClause"></a>
+
+## Use a transformation in the Where Clause
+
  The following sample shows how to retrieve a specific contact where the anniversary date is later than January 1, 2010.  
   
 ```csharp
@@ -717,8 +766,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_UsingAPagingSort"></a>   
-## Use a paging sort  
+<a name="BKMK_UsingAPagingSort"></a>
+
+## Use a paging sort
+
  The following sample shows a multi-column sort with an extra condition.  
   
 ```csharp
@@ -755,7 +806,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
- The following sample shows how to retrieve just the first 10 records.  
+ The following sample shows how to retrieve just the first 10 rows.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -779,9 +830,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
-<a name="BKMK_RetrievingRelatedEntityColumns"></a>   
-## Retrieve related entity columns for 1 to N relationships  
- The following sample shows how to retrieve columns from related account and contact records.  
+<a name="BKMK_RetrievingRelatedEntityColumns"></a>
+
+## Retrieve related table row columns for 1 to N relationships  
+
+ The following sample shows how to retrieve columns from related account and contact rows.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -799,8 +852,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>   
-## Use .value to retrieve the value of an attribute  
+<a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>
+
+## Use .value to retrieve the value of a column (attribute)
+
  The following sample shows usage of Value to access the value of an attribute.  
   
 ```csharp
@@ -829,8 +884,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_MultipleProjectionsNewDataTypeCastingToDifferentTypes"></a>   
-## Multiple projections, new data type casting to different types  
+<a name="BKMK_MultipleProjectionsNewDataTypeCastingToDifferentTypes"></a>
+
+## Multiple projections, new data type casting to different types
+
  The following sample shows multiple projections and how to cast values to a different type.  
   
 ```csharp
@@ -857,8 +914,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingTheGetAttributeValueMethod"></a>   
-## Use the GetAttributeValue method  
+<a name="BKMK_UsingTheGetAttributeValueMethod"></a>
+
+## Use the GetAttributeValue method
+
  The following sample shows how to use the <xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method.  
   
 ```csharp
@@ -882,8 +941,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="mathoperators"></a>   
-## Use Math methods  
+<a name="mathoperators"></a>
+
+## Use Math methods
+
  The following sample shows how to use various [Math](/dotnet/api/system.math) methods.  
   
 ```csharp
@@ -908,8 +969,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingMultipleSelectAndWhereClauses"></a>   
-## Use Multiple Select and Where clauses  
+<a name="BKMK_UsingMultipleSelectAndWhereClauses"></a>
+
+## Use Multiple Select and Where clauses
+
  The following sample shows multiple select and where clauses using a method-based query syntax.  
   
 ```csharp
@@ -929,8 +992,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
-<a name="BKMK_UsingSelectMany"></a>   
-## Use SelectMany  
+<a name="BKMK_UsingSelectMany"></a>
+
+## Use SelectMany
+
  The following sample shows how to use the [SelectMany Method](/dotnet/api/system.linq.enumerable.selectmany).  
   
 ```csharp
@@ -947,8 +1012,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="BKMK_UsingStringOperations"></a>   
-## Use string operations  
+<a name="BKMK_UsingStringOperations"></a>
+
+## Use string operations
+
  The following sample shows how to use various String methods.  
   
 ```csharp
@@ -978,8 +1045,10 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```
   
-<a name="BKMK_UsingTwoWhereClauses"></a>   
-## Use two Where clauses  
+<a name="BKMK_UsingTwoWhereClauses"></a>
+
+## Use two Where clauses
+
  The following sample shows how to use two Where clauses.  
   
 ```csharp
@@ -999,9 +1068,11 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ``` 
   
-<a name="BKMK_UseLoadProperty"></a>   
-## Use LoadProperty to retrieve related records  
- The following sample shows how to [Relationship)]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related records.  
+<a name="BKMK_UseLoadProperty"></a>
+
+## Use LoadProperty to retrieve related rows
+
+ The following sample shows how to call <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related rows.  
   
 ```csharp
 Contact benAndrews = svcContext.ContactSet.Where(c => c.FullName == "Ben Andrews").FirstOrDefault();
@@ -1016,7 +1087,5 @@ if (benAndrews != null)
      }
 }
 ```
-  
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

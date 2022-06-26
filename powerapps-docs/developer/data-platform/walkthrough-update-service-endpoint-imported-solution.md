@@ -1,20 +1,21 @@
 ---
 title: "Walkthrough: Update a service endpoint imported from a solution (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates updating a Dataverse service endpoint imported from a solution."
-keywords: ""
-ms.date: 03/18/2021
-ms.service: powerapps
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 66795838-3b15-bfb3-6f59-68cfe2fe988e
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Update a service endpoint imported from a solution
@@ -33,7 +34,7 @@ Follow these steps to set the SAS Key for each service endpoint after solution i
   
 1. Select **Update**. You should see the following form with the fields already filled in.  
   
-    ![Update service endpoint SAS key value](media/sas-key.PNG "Update service endpoint SAS key value")  
+    ![Update service endpoint SAS key value.](media/sas-key.PNG "Update service endpoint SAS key value")  
   
 1. The **SAS Key** field is displayed with a value of "*******".  Replace that value with the correct SAS key value. You can obtain the SAS Key for your Azure messaging entity (queue, topic, etc.) from the [Azure portal](https://portal.azure.com).  
   

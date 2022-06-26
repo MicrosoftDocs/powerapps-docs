@@ -1,31 +1,30 @@
 ---
-title: "Retrieve, update and delete entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
+title: "Retrieve, update and delete tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to retrieve, update, and delete tables." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Retrieve, update, and delete entities
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+# Retrieve, update, and delete tables
 
-This topic shows how to retrieve, update, and delete an entity by using the custom `Bank Account` entity created in [Create a Custom Entity](create-custom-entity.md).  
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+
+Learn how to retrieve, update, and delete a table definition.  This topic uses the custom `Bank Account` table that was created in [Create a custom table](create-custom-entity.md).  
   
 <a name="BKMK_RetrieveAndUpdateEntity"></a>  
- 
-## Retrieve and update an entity  
 
- The following sample retrieves an entity by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest> message. It then updates the entity to disable mail merge by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled> property to `false`, and sets <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasNotes> to `true` in the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> to specify that the entity should include a relationship to the `Annotation` entity so that the entity can display notes.  
+## Retrieve and update a table  
+
+ The following code sample retrieves a table definition by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest> message. It then updates the table to disable mail merge by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled> property to `false`, and sets <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasNotes> to `true` in the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> to specify that the table should include a relationship to the `Annotation` table for the purpose of displaying notes.  
   
 ```csharp
 
@@ -53,9 +52,9 @@ _serviceProxy.Execute(updateBankAccountRequest);
   
 <a name="BKMK_DeleteCustomEntity"></a>   
 
-## Delete a custom entity  
+## Delete a custom table
 
-The following sample uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> message to delete the entity with the logical name specified by the `_customEntityName` variable.  
+The following code sample uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> message to delete the table definition with the logical name specified by the `_customEntityName` variable.  
   
 ```csharp
 
@@ -66,11 +65,11 @@ DeleteEntityRequest request = new DeleteEntityRequest()
 _serviceProxy.Execute(request);
 ```
   
-### See also  
- [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
- [Customize entity metadata](../customize-entity-metadata.md)   
- [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
- [Create a Custom Entity](create-custom-entity.md)
+### See also
 
+ [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
+ [Customize table definitions](../customize-entity-metadata.md)   
+ [Create and update a table that can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
+ [Create a custom table](create-custom-entity.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

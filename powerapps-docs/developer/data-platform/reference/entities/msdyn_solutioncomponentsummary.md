@@ -1,13 +1,13 @@
 ---
-title: "msdyn_solutioncomponentsummary table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_solutioncomponentsummary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_solutioncomponentsummary table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -103,6 +103,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_sdkmessagename](#BKMK_msdyn_sdkmessagename)
 - [msdyn_solutioncomponentsummaryId](#BKMK_msdyn_solutioncomponentsummaryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
+- [msdyn_standardstatus](#BKMK_msdyn_standardstatus)
 - [msdyn_status](#BKMK_msdyn_status)
 - [msdyn_statusname](#BKMK_msdyn_statusname)
 - [msdyn_subtype](#BKMK_msdyn_subtype)
@@ -829,6 +830,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_solutionid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_standardstatus"></a> msdyn_standardstatus
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|msdyn_standardstatus|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_standardstatus|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|

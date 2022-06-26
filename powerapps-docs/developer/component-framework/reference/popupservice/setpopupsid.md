@@ -1,16 +1,15 @@
 ---
 title: setPopupsId | Microsoft Docs
 description: Sets the ID (on the DOM and in the system) for the root popup element.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: eae8e529-5aef-4bf0-9f73-f3200aef84ed
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # setPopupsId

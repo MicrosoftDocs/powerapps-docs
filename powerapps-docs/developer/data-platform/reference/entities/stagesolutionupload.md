@@ -1,13 +1,13 @@
 ---
-title: "StageSolutionUpload table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "StageSolutionUpload table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the StageSolutionUpload table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/stagesolutionuploads(*stagesolutionuploadid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/stagesolutionuploads<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -303,6 +302,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionFile_Name](#BKMK_SolutionFile_Name)
@@ -591,12 +591,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -679,14 +697,13 @@ Listed by **SchemaName**.
 - [stagesolutionupload_ProcessSession](#BKMK_stagesolutionupload_ProcessSession)
 - [stagesolutionupload_BulkDeleteFailures](#BKMK_stagesolutionupload_BulkDeleteFailures)
 - [stagesolutionupload_PrincipalObjectAttributeAccesses](#BKMK_stagesolutionupload_PrincipalObjectAttributeAccesses)
-- [stagesolutionupload_FileAttachments](#BKMK_stagesolutionupload_FileAttachments)
 
 
 ### <a name="BKMK_stagesolutionupload_SyncErrors"></a> stagesolutionupload_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [stagesolutionupload_SyncErrors](syncerror.md#BKMK_stagesolutionupload_SyncErrors) Many-To-One relationship.
+Same as the [stagesolutionupload_SyncErrors](syncerror.md#BKMK_stagesolutionupload_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -703,7 +720,7 @@ Same as syncerror table [stagesolutionupload_SyncErrors](syncerror.md#BKMK_stage
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [stagesolutionupload_DuplicateMatchingRecord](duplicaterecord.md#BKMK_stagesolutionupload_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [stagesolutionupload_DuplicateMatchingRecord](duplicaterecord.md#BKMK_stagesolutionupload_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -720,7 +737,7 @@ Same as duplicaterecord table [stagesolutionupload_DuplicateMatchingRecord](dupl
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [stagesolutionupload_DuplicateBaseRecord](duplicaterecord.md#BKMK_stagesolutionupload_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [stagesolutionupload_DuplicateBaseRecord](duplicaterecord.md#BKMK_stagesolutionupload_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -737,7 +754,7 @@ Same as duplicaterecord table [stagesolutionupload_DuplicateBaseRecord](duplicat
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [stagesolutionupload_AsyncOperations](asyncoperation.md#BKMK_stagesolutionupload_AsyncOperations) Many-To-One relationship.
+Same as the [stagesolutionupload_AsyncOperations](asyncoperation.md#BKMK_stagesolutionupload_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -754,7 +771,7 @@ Same as asyncoperation table [stagesolutionupload_AsyncOperations](asyncoperatio
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [stagesolutionupload_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_stagesolutionupload_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [stagesolutionupload_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_stagesolutionupload_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -771,7 +788,7 @@ Same as mailboxtrackingfolder table [stagesolutionupload_MailboxTrackingFolders]
 
 **Added by**: System Solution Solution
 
-Same as processsession table [stagesolutionupload_ProcessSession](processsession.md#BKMK_stagesolutionupload_ProcessSession) Many-To-One relationship.
+Same as the [stagesolutionupload_ProcessSession](processsession.md#BKMK_stagesolutionupload_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -788,7 +805,7 @@ Same as processsession table [stagesolutionupload_ProcessSession](processsession
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [stagesolutionupload_BulkDeleteFailures](bulkdeletefailure.md#BKMK_stagesolutionupload_BulkDeleteFailures) Many-To-One relationship.
+Same as the [stagesolutionupload_BulkDeleteFailures](bulkdeletefailure.md#BKMK_stagesolutionupload_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -805,7 +822,7 @@ Same as bulkdeletefailure table [stagesolutionupload_BulkDeleteFailures](bulkdel
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [stagesolutionupload_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_stagesolutionupload_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [stagesolutionupload_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_stagesolutionupload_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -814,23 +831,6 @@ Same as principalobjectattributeaccess table [stagesolutionupload_PrincipalObjec
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|stagesolutionupload_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_stagesolutionupload_FileAttachments"></a> stagesolutionupload_FileAttachments
-
-**Added by**: System Solution Solution
-
-Same as fileattachment table [stagesolutionupload_FileAttachments](fileattachment.md#BKMK_stagesolutionupload_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|stagesolutionupload_FileAttachments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -846,64 +846,50 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_stagesolutionupload_modifiedonbehalfby](#BKMK_lk_stagesolutionupload_modifiedonbehalfby)
 - [user_stagesolutionupload](#BKMK_user_stagesolutionupload)
 - [team_stagesolutionupload](#BKMK_team_stagesolutionupload)
-- [owner_stagesolutionupload](#BKMK_owner_stagesolutionupload)
 - [business_unit_stagesolutionupload](#BKMK_business_unit_stagesolutionupload)
-- [FileAttachment_StageSolutionUpload_SolutionFile](#BKMK_FileAttachment_StageSolutionUpload_SolutionFile)
 
 
 ### <a name="BKMK_lk_stagesolutionupload_createdby"></a> lk_stagesolutionupload_createdby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_stagesolutionupload_createdby](systemuser.md#BKMK_lk_stagesolutionupload_createdby) One-To-Many relationship.
+See the [lk_stagesolutionupload_createdby](systemuser.md#BKMK_lk_stagesolutionupload_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_stagesolutionupload_createdonbehalfby"></a> lk_stagesolutionupload_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_stagesolutionupload_createdonbehalfby](systemuser.md#BKMK_lk_stagesolutionupload_createdonbehalfby) One-To-Many relationship.
+See the [lk_stagesolutionupload_createdonbehalfby](systemuser.md#BKMK_lk_stagesolutionupload_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_stagesolutionupload_modifiedby"></a> lk_stagesolutionupload_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_stagesolutionupload_modifiedby](systemuser.md#BKMK_lk_stagesolutionupload_modifiedby) One-To-Many relationship.
+See the [lk_stagesolutionupload_modifiedby](systemuser.md#BKMK_lk_stagesolutionupload_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_stagesolutionupload_modifiedonbehalfby"></a> lk_stagesolutionupload_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_stagesolutionupload_modifiedonbehalfby](systemuser.md#BKMK_lk_stagesolutionupload_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_stagesolutionupload_modifiedonbehalfby](systemuser.md#BKMK_lk_stagesolutionupload_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_stagesolutionupload"></a> user_stagesolutionupload
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_stagesolutionupload](systemuser.md#BKMK_user_stagesolutionupload) One-To-Many relationship.
+See the [user_stagesolutionupload](systemuser.md#BKMK_user_stagesolutionupload) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_stagesolutionupload"></a> team_stagesolutionupload
 
 **Added by**: System Solution Solution
 
-See team Table [team_stagesolutionupload](team.md#BKMK_team_stagesolutionupload) One-To-Many relationship.
-
-### <a name="BKMK_owner_stagesolutionupload"></a> owner_stagesolutionupload
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_stagesolutionupload](owner.md#BKMK_owner_stagesolutionupload) One-To-Many relationship.
+See the [team_stagesolutionupload](team.md#BKMK_team_stagesolutionupload) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_stagesolutionupload"></a> business_unit_stagesolutionupload
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_stagesolutionupload](businessunit.md#BKMK_business_unit_stagesolutionupload) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_StageSolutionUpload_SolutionFile"></a> FileAttachment_StageSolutionUpload_SolutionFile
-
-**Added by**: System Solution Solution
-
-See fileattachment Table [FileAttachment_StageSolutionUpload_SolutionFile](fileattachment.md) One-To-Many relationship.
+See the [business_unit_stagesolutionupload](businessunit.md#BKMK_business_unit_stagesolutionupload) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

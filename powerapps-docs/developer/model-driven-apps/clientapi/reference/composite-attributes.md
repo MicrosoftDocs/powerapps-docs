@@ -1,19 +1,20 @@
 ---
 title: "Composite columns in model-driven apps in model-driven apps| MicrosoftDocs"
-description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
-ms.date: 04/15/2021
-ms.service: powerapps
+description: "Some columns added to a form can represent multiple items of data. These composite columns behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly." 
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Composite columns 
 
@@ -290,7 +291,7 @@ When composite columns are added to a main form, the web application will show j
 
 For example, the **Address** column on a Contact form is a composite column. Selecting the **Address** column displays a flyout with individual columns that comprise the composite column. 
 
-![An example of a composite column](../../media/clientapi_compositeattribute.png "An example for composite column")
+![An example of a composite column.](../../media/clientapi_compositeattribute.png "An example for composite column")
 
 Although not explicitly added to the form in the form editor, each of the columns that are part of the column are available to the form. Although you can read the value of the composite value using [getValue](attributes/getValue.md), you can’t use [setValue](attributes/setValue.md) to change the value of the composite column directly; you must set one or more of the columns referenced by the composite column.
 

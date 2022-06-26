@@ -1,25 +1,28 @@
 ---
 title: "Sample: Create a custom activity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create a custom activity" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Create a custom activity
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample demonstrates how to create a custom activity using [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest?view=dynamics-general-ce-9) and [CreateAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest?view=dynamics-general-ce-9). You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CustomActivity). 
+
+This sample demonstrates how to create a custom activity using [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) and [CreateAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest). You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CustomActivity). 
+
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 
@@ -39,13 +42,13 @@ Checks for the current version of the current org.
 
 ### Demonstrate
 
-1. Creates the custom activity entity using the `CreateEntityRequest` message.
-2. Publishes the created custom activity entity.
-3. Creates few attributes to the custom activity entity using `CreateAttributeRequest` message.
+1. Creates the custom activity table using the `CreateEntityRequest` message.
+2. Publishes the created custom activity table.
+3. Creates few columns to the custom activity table using `CreateAttributeRequest` message.
 
 ### Clean up
 
-Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

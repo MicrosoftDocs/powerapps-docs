@@ -1,18 +1,21 @@
 ---
-title: Defaults function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Defaults function in Power Apps
+title: Defaults function in Power Apps
+description: Reference information including syntax and examples for the Defaults function in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/01/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Defaults function in Power Apps
 Returns the default values for a [data source](../working-with-data-sources.md).  

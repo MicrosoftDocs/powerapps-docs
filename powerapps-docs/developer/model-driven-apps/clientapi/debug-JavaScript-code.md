@@ -1,31 +1,32 @@
 ---
 title: "Debug your JavaScript code for model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "Explains how to debug JavaScript code for model-driven apps"
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 3edad039-4397-4984-a29b-9307a7a2aaee 
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Debug your JavaScript code for model-driven apps
 
-
-
-Each browser provides some kind of debugging extension. Microsoft Edge and Internet Explorer provide F12 Developer Tools you can use to debug scripts in model-driven apps. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge or Internet Explorer. For more information, see Using the [F12 developer tools guide](/microsoft-edge/f12-devtools-guide).
+Each browser provides some kind of debugging extension. Microsoft Edge provides F12 Developer Tools you can use to debug scripts in model-driven apps. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge. For more information, see Using the [F12 developer tools guide](/microsoft-edge/f12-devtools-guide).
 
 For Google Chrome, press F12 to open developer tools. Firebug is a popular browser extension for web development using Mozilla Firefox. For Apple Safari, you must first select the **Show Develop** menu in menu bar in **Advanced Preferences**. Then you can select **Show Web Inspector** from the **Develop** menu.
 
 When you use JavaScript libraries in model-driven apps, your libraries are loaded with the web page. It can sometimes be difficult to isolate your specific library in the debugging environment. When using debugging tools in Microsoft Edge, on the **Debugger** tab, click on the folder icon at the top-left corner, and expand the available scripts and find the one with the name that corresponds to the name of your JavaScript web resource, such as the **new_myCustomJavaScript.js** web resource shown below. You can also search for your JavaScript library by typing the file name in the search box.
 
-![Debugging JavaScript](../media/form-script-debugging.png)
+![Debugging JavaScript.](../media/form-script-debugging.png)
 
 Debugging tools for different browsers have similar capabilities. Once you have found your library, you can set a break point and recreate the event that should cause your code to run.
 

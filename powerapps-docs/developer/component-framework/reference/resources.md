@@ -1,16 +1,15 @@
 ---
 title: Resources | Microsoft Docs
 description: Provides access to the methods to get all the information about the resource files defined in the manifest.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Resources
@@ -19,14 +18,14 @@ ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps, canvas apps, & portals.
 
 ## Methods
 
-|Method | Description |
-| ------|-------------|
-|[getResource](resources/getresource.md)|[!INCLUDE [getresource-description](resources/includes/getresource-description.md)]|
-|[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|
+|Method | Description |Available for|
+| ------|-------------|------------|
+|[getResource](resources/getresource.md)|[!INCLUDE [getresource-description](resources/includes/getresource-description.md)]| Model-driven apps|
+|[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|Model-driven and canvas apps|
 
 
 ### Related topics

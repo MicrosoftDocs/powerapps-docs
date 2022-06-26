@@ -4,9 +4,10 @@ description: "Tables are defined by table definitions. By defining or changing t
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Customize table definitions
 
-Tables are defined by table definitions. By defining or changing the table definitions, you can control the capabilities of a able. To view the table definitions for your environment, use the metadata browser. [Download the table definitions browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
+Tables are defined by table definitions. By defining or changing the table definitions, you can control the capabilities of a table. To view the table definitions for your environment, use the metadata browser. [Download the table definitions browser](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip).
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -84,7 +85,7 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 |----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                 **Allow Quick Create**                                 |                                                                                   Use `IsQuickCreateEnabled` to enable quick create forms for the table. Before you can use quick create forms you must first create and publish a quick create form.<br /> **Note**:<br /> Activity tables do not support quick create forms.                                                                                   |
 |                                    **Access Teams**                                    |                                                                                                                                Use `AutoCreateAccessTeams` to enable the table for access teams. See [About team templates](/dynamics365/customer-engagement/admin/about-team-templates) for more information.                                                                                                                                |
-|                                   **Primary Image**                                    |                                                                                             If a table has an image column you can enable or disable displaying that image in the application using `PrimaryImageAttribute`. For more information see [Table Images](/dynamics365/customer-engagement/developer/introduction-entities).                                                                                             |
+|                                   **Primary Image**                                    |                                                                                             If a table has an image column you can enable or disable displaying that image in the application using `PrimaryImageAttribute`. For more information see [Entity Images](/dynamics365/customer-engagement/developer/introduction-entities).                                                                                             |
 |                                **Change display text**                                 |                                                                                             The managed property `IsRenameable` prevents the display name from being changed in the application. You can still programmatically change the labels by updating the `DisplayName` and `DisplayCollectionName` properties.                                                                                             |
 |                            **Edit the table Description**                             |                                                                                                         The managed property `IsRenameable` prevents the table description from being changed in the application. You can still programmatically change the labels by updating the `Description` property.                                                                                                         |
 |                            **Enable for use while offline**                            |                                                                                                          Use `IsAvailableOffline` to enable or disable the ability of Dynamics 365 for Microsoft Office Outlook with Offline Access users to take data for this table offline.                                                                                                           |

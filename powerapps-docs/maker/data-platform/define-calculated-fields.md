@@ -4,10 +4,10 @@ description: "Learn how to define calculated columns"
 ms.custom: ""
 ms.date: 04/15/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 6d58a297-2ddf-4236-be3a-47249b49d5fa
 caps.latest.revision: 67
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 ---
 # Define calculated columns to automate calculations
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 
@@ -67,22 +68,22 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
-1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
+1. Open the table you want, select the **Columns** area, and then select **Add Column**.  
 1. Provide the required information for the column, including the **Display name**, **Name**, and **Data type**.
 1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
 
-    ![Make column calculated](media/make-field-calculated-maker.png)
+    ![Make column calculated.](media/make-field-calculated-maker.png)
 
 1. By selecting **Calculation**, you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
-1. On the **Columns** tab, open the column that you saved in the previous step.
+1. In the **Columns** area, open the column that you saved in the previous step.
 1. On the column properties pane, select **Open calculation**.
 
    <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
 
 1. In the calculated column definition editor, notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
-  ![New Column Calculation form](media/empty-field-calculation.png)
-   1. In the **Condition** section, select **Add condition** to specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators. When you're finished specifying the condition, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition":::.
-   1. After you've specified the condition, in the **Action** section, select **Add action** to provide the formula for the calculated column. When you're finished specifying the action, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition":::.
+  ![New Column Calculation form.](media/empty-field-calculation.png)
+   1. In the **Condition** section, select **Add condition** to specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators. When you're finished specifying the condition, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition.":::.
+   1. After you've specified the condition, in the **Action** section, select **Add action** to provide the formula for the calculated column. When you're finished specifying the action, select the check mark :::image type="content" source="../canvas-apps/media/sharepoint-scenario-build-app/icon-check-mark.png" alt-text="Save condition.":::.
   
    > [!NOTE]
    >  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
@@ -104,15 +105,15 @@ In the calculated column definition editor, in the **Condition** section, we spe
   
 #### Set the condition on the opportunities:
   
-![Set Weighted Revenue in Dynamics 365](media/calc-field-open-opportunity.png)  
+![Set Weighted Revenue in Dynamics 365.](media/calc-field-open-opportunity.png)  
   
 #### Provide the formula for the weighted revenue: 
   
-![Set Weighted Revenue estimated value Dynamics 365](media/calc-field-open-opportunities-3.png)  
+![Set Weighted Revenue estimated value Dynamics 365.](media/calc-field-open-opportunities-3.png)  
   
 #### Altogether:
   
-![Weighted revenue to est. revenue in Dynamics 365](media/calculated-field-open-opportunity.png)  
+![Weighted revenue to est. revenue in Dynamics 365.](media/calculated-field-open-opportunity.png)  
   
 ### Follow up date of opportunity 
  
@@ -130,21 +131,21 @@ The following screenshots show step by step how to define the **Follow-up date**
   
 #### Set the two conditions on the originating lead:
   
-![Follow up date on an opportunity in Dynamics 365 one ](media/calc-field-follow-update-2.PNG)  
+![Follow up date on an opportunity in Dynamics 365 one .](media/calc-field-follow-update-2.PNG)  
   
-![Follow up date on an opportunity in Dynamics 365 two](media/calc-field-follow-update-3.PNG)  
+![Follow up date on an opportunity in Dynamics 365 two.](media/calc-field-follow-update-3.PNG)  
   
 #### Provide the formula to follow up in one week:
   
-![Follow up date on an opportunity in Dynamics 365 three](media/calc-field-follow-update-4.PNG)  
+![Follow up date on an opportunity in Dynamics 365 three.](media/calc-field-follow-update-4.PNG)  
   
 #### Provide the formula to follow up in one month:
   
-![Set Follow up date in Dynamics 365](media/calc-field-follow-update-5.PNG)  
+![Set Follow up date in Dynamics 365.](media/calc-field-follow-update-5.PNG)  
   
 #### Altogether:
   
- ![Set Follow up date If&#45;Then & Else in Dynamics 365](media/calc-field-follow-update-6.PNG)  
+ ![Set Follow up date If&#45;Then & Else in Dynamics 365.](media/calc-field-follow-update-6.PNG)  
   
 ### Days from a row creation 
  
@@ -154,11 +155,11 @@ Create a new Whole Number column called **Calculated difference in days**.
   
 #### Provide the formula for computing the difference in days
   
-![Calculated column, DIFFINDAYS function](media/custom-calc-field-diff-days.png)  
+![Calculated column, DIFFINDAYS function.](media/custom-calc-field-diff-days.png)  
   
 #### Altogether:
   
-![Difference in days since row creation](media/calc-field-diff-days-complete.png)  
+![Difference in days since row creation.](media/calc-field-diff-days-complete.png)  
   
 <a name="Syntax"></a> 
   
@@ -210,7 +211,7 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
  
 You should be aware of certain conditions and limitations when working with calculated columns:  
   
-- [Saved queries](../../developer/data-platform/saved-queries.md), charts, and visualizations can have a maximum of 10 unique calculated columns.  
+- [Saved queries](../../developer/data-platform/saved-queries.md), charts, and visualizations can have a maximum of 50 unique calculated columns.  
 - The calculated column values are not displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
 - A maximum number of chained calculated columns is 5.  
 - A calculated column can’t refer to itself or have cyclic chains.  

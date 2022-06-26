@@ -2,12 +2,12 @@
 title: "Show or hide model-driven app form elements with Power Apps | MicrosoftDocs"
 description: "Learn how to display or hide from elements, such as tabs, sections, or columns"
 ms.custom: ""
-ms.date: 08/27/2020
+ms.date: 04/07/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 7b9e8dc2-229c-455f-ae18-49e8d879ff71
 caps.latest.revision: 63
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -42,9 +43,8 @@ In Unified Interface, for sections where columns don’t span more than one colu
 
 ## Client API methods for controlling the visibility of form elements
 
-For information about how to change the form element show or hide status for the header, command bar, footer, and tabs at app runtime, see these client API reference articles:
+For information about how to change the form element show or hide status for the header, command bar, and tabs at app runtime, see these client API reference articles:
 - [formContext.ui.headerSection item (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection.md)
-- [formContext.ui.footerSection item (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md)
 - [formContext.ui.tabs (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-tabs.md)
 
 ## Next steps

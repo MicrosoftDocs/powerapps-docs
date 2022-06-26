@@ -1,29 +1,23 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.custom: ""
-ms.date: 03/15/2021
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 799b2346-bda1-4a26-a330-79d0927a7743
-caps.latest.revision: 11
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
+
 # Execute batch operations using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You can group multiple operations into a single HTTP request using a batch operation. These operations will be performed sequentially in the order they are specified.
   
@@ -40,7 +34,7 @@ Also, the responses returned are essentially text documents rather than objects 
 >[!NOTE]
 >  Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.
 >
->  URLs for `GET` requests sent with a batch are limited to 32768 characters.
+>  URLs for `GET` requests sent with a batch are limited to 64 KB (65,536 characters).
 
   
 <a name="bkmk_BatchRequests"></a> 
@@ -51,7 +45,7 @@ Use a POST request to submit a batch operation that contains multiple requests. 
   
 The POST request containing the batch must have a Content-Type header with a value set to multipart/mixed with a boundary set to include the identifier of the batch using this pattern:  
   
-```  
+```
 --batch_<unique identifier>
 ```  
   
@@ -73,13 +67,13 @@ The end of the batch must contain a termination indicator like the following:
 
 ## Change sets
 
-When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. Like a batch request, change sets must have a Content-Type header with value set to multipart/mixed with a boundary set to include the identifier of the change set using this pattern:  
+When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a boundary set to include the identifier of the change set using this pattern:  
   
 ```  
 --changeset_<unique identifier>
 ```  
   
-The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
+The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
   
 ```  
 --changeset_BBB456
@@ -87,23 +81,33 @@ Content-Type: application/http
 Content-Transfer-Encoding:binary
 ```  
   
-Change sets can also include a Content-ID header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of 1, you can refer to that entity using `$1` later in your change set.  
+Change sets can also include a `Content-ID` header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of 1, you can refer to that entity using `$1` later in your change set.  
   
 The end of the change set must contain a termination indicator like the following:  
   
 ```  
 --changeset_BBB456--
 ```  
-  
+
+<a name="bkmk_handling_errors"></a>
+
+## Handling errors
+
+When an error occurs for a request within a batch, the error for that request will be returned for the batch request and additional requests will not be processed.
+
+You can use the `Prefer: odata.continue-on-error` request header to specify that additional requests be processed when errors occur. The batch request will return `200 OK` and individual response errors will be returned in the batch response body.
+
+More information: [Enable/Disable continue-on-error in Batch Request](/odata/webapi/batch#enabledisable-continue-on-error-in-batch-request)
+
 <a name="bkmk_Example"></a>
 
 ## Example
 
-The following example includes a batch with a unique identifier of AAA123 and a change set with a unique identifier of BBB456.  
+The following example includes a batch with a unique identifier of `AAA123` and a change set with a unique identifier of `BBB456`.  
   
-Within the change set, two tasks are created using POST and associated with an existing account with accountid = 00000000-0000-0000-000000000001.  
+Within the change set, two tasks are created using `POST` and associated with an existing account with `accountid` = `00000000-0000-0000-000000000001`.  
   
-Finally, a GET request is included outside the change set to return all six tasks associated with the account, including the two that were created in the batch request.  
+Finally, a `GET` request is included outside the change set to return all six tasks associated with the account, including the two that were created in the batch request.  
   
  **Request**
 
@@ -201,7 +205,7 @@ OData-Version: 4.0
 }
 --batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f--
 ```  
-Include `odata.include-annotations` preference header with the `GET` requests and set its value to "*" to specify that all annotations related to the properties be returned.
+Include `odata.include-annotations` preference header with the `GET` requests and set its value to `"*"` to specify that all annotations related to the properties be returned.
 
 ```HTTP
 --batch_AAA123
@@ -586,7 +590,7 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 ```
 
 > [!NOTE]
-> Referencing a Content-ID before it has been declared in the request body will return the error **HTTP 400** Bad request.
+> Referencing a `Content-ID` before it has been declared in the request body will return the error **HTTP 400** Bad request.
 >
 > The example given below shows a request body that can cause this error.
 > 
@@ -638,14 +642,13 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,13 +1,13 @@
 ---
-title: "ImportFile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ImportFile table/entity."
-ms.date: 03/04/2021
+title: "Import Source File (ImportFile)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Import Source File (ImportFile)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# ImportFile table/entity reference
+# Import Source File (ImportFile)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -35,7 +35,6 @@ File name of file used for import.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/importfiles(*importfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveParsedDataImportFile|<xref href="Microsoft.Dynamics.CRM.RetrieveParsedDataImportFile?text=RetrieveParsedDataImportFile Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveParsedDataImportFileRequest>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -124,11 +123,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataDelimiterCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|DoubleQuote|
-|2|None|
-|3|SingleQuote|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|DoubleQuote||
+|2|None||
+|3|SingleQuote||
 
 
 
@@ -146,12 +145,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### EnableDuplicateDetection Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -182,12 +181,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FieldDelimiterCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Colon|
-|2|Comma|
-|3|Tab|
-|4|Semicolon|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Colon||
+|2|Comma||
+|3|Tab||
+|4|Semicolon||
 
 
 
@@ -205,12 +204,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### FileTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|CSV|
-|1|XML Spreadsheet 2003|
-|2|Attachment|
-|3|XLSX|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|CSV||
+|1|XML Spreadsheet 2003||
+|2|Attachment||
+|3|XLSX||
 
 
 
@@ -270,12 +269,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsFirstRowHeader Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -336,11 +335,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Process|
-|2|Ignore|
-|3|Internal|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Process||
+|2|Ignore||
+|3|Internal||
 
 
 
@@ -528,11 +527,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UpsertModeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Create|
-|1|Update|
-|2|Ignore|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Create||
+|1|Update||
+|2|Ignore||
 
 
 
@@ -550,12 +549,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### UseSystemMap Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -603,6 +602,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParsedTableColumnPrefix](#BKMK_ParsedTableColumnPrefix)
@@ -963,12 +963,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName||
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1077,20 +1093,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ProcessingStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Not Started|
-|2|Parsing|
-|3|Parsing Complete|
-|4|Complex Transformation|
-|5|Lookup Transformation|
-|6|Picklist Transformation|
-|7|Owner Transformation|
-|8|Transformation Complete|
-|9|Import Pass 1|
-|10|Import Pass 2|
-|11|Import Complete|
-|12|Primary Key Transformation|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Not Started||
+|2|Parsing||
+|3|Parsing Complete||
+|4|Complex Transformation||
+|5|Lookup Transformation||
+|6|Picklist Transformation||
+|7|Owner Transformation||
+|8|Transformation Complete||
+|9|Import Pass 1||
+|10|Import Pass 2||
+|11|Import Complete||
+|12|Primary Key Transformation||
 
 
 
@@ -1164,14 +1180,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 Listed by **SchemaName**.
 
 - [ImportFile_BulkDeleteFailures](#BKMK_ImportFile_BulkDeleteFailures)
-- [ImportFile_ImportData](#BKMK_ImportFile_ImportData)
 - [ImportLog_ImportFile](#BKMK_ImportLog_ImportFile)
 - [ImportFile_AsyncOperations](#BKMK_ImportFile_AsyncOperations)
 
 
 ### <a name="BKMK_ImportFile_BulkDeleteFailures"></a> ImportFile_BulkDeleteFailures
 
-Same as bulkdeletefailure table [ImportFile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportFile_BulkDeleteFailures) Many-To-One relationship.
+Same as the [ImportFile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportFile_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1184,24 +1199,9 @@ Same as bulkdeletefailure table [ImportFile_BulkDeleteFailures](bulkdeletefailur
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_ImportFile_ImportData"></a> ImportFile_ImportData
-
-Same as importdata table [ImportFile_ImportData](importdata.md#BKMK_ImportFile_ImportData) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|importdata|
-|ReferencingAttribute|importfileid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ImportFile_ImportData|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_ImportLog_ImportFile"></a> ImportLog_ImportFile
 
-Same as importlog table [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_ImportFile) Many-To-One relationship.
+Same as the [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_ImportFile) many-to-one relationship for the [importlog](importlog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1216,7 +1216,7 @@ Same as importlog table [ImportLog_ImportFile](importlog.md#BKMK_ImportLog_Impor
 
 ### <a name="BKMK_ImportFile_AsyncOperations"></a> ImportFile_AsyncOperations
 
-Same as asyncoperation table [ImportFile_AsyncOperations](asyncoperation.md#BKMK_ImportFile_AsyncOperations) Many-To-One relationship.
+Same as the [ImportFile_AsyncOperations](asyncoperation.md#BKMK_ImportFile_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1237,7 +1237,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_importfilebase_createdby](#BKMK_lk_importfilebase_createdby)
 - [lk_importfilebase_createdonbehalfby](#BKMK_lk_importfilebase_createdonbehalfby)
 - [team_ImportFiles](#BKMK_team_ImportFiles)
-- [owner_importfiles](#BKMK_owner_importfiles)
 - [ImportFile_Team](#BKMK_ImportFile_Team)
 - [ImportFile_SystemUser](#BKMK_ImportFile_SystemUser)
 - [SystemUser_ImportFiles](#BKMK_SystemUser_ImportFiles)
@@ -1250,51 +1249,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importfilebase_createdby"></a> lk_importfilebase_createdby
 
-See systemuser Table [lk_importfilebase_createdby](systemuser.md#BKMK_lk_importfilebase_createdby) One-To-Many relationship.
+See the [lk_importfilebase_createdby](systemuser.md#BKMK_lk_importfilebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importfilebase_createdonbehalfby"></a> lk_importfilebase_createdonbehalfby
 
-See systemuser Table [lk_importfilebase_createdonbehalfby](systemuser.md#BKMK_lk_importfilebase_createdonbehalfby) One-To-Many relationship.
+See the [lk_importfilebase_createdonbehalfby](systemuser.md#BKMK_lk_importfilebase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_ImportFiles"></a> team_ImportFiles
 
-See team Table [team_ImportFiles](team.md#BKMK_team_ImportFiles) One-To-Many relationship.
-
-### <a name="BKMK_owner_importfiles"></a> owner_importfiles
-
-See owner Table [owner_importfiles](owner.md#BKMK_owner_importfiles) One-To-Many relationship.
+See the [team_ImportFiles](team.md#BKMK_team_ImportFiles) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_ImportFile_Team"></a> ImportFile_Team
 
-See team Table [ImportFile_Team](team.md#BKMK_ImportFile_Team) One-To-Many relationship.
+See the [ImportFile_Team](team.md#BKMK_ImportFile_Team) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_ImportFile_SystemUser"></a> ImportFile_SystemUser
 
-See systemuser Table [ImportFile_SystemUser](systemuser.md#BKMK_ImportFile_SystemUser) One-To-Many relationship.
+See the [ImportFile_SystemUser](systemuser.md#BKMK_ImportFile_SystemUser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_SystemUser_ImportFiles"></a> SystemUser_ImportFiles
 
-See systemuser Table [SystemUser_ImportFiles](systemuser.md#BKMK_SystemUser_ImportFiles) One-To-Many relationship.
+See the [SystemUser_ImportFiles](systemuser.md#BKMK_SystemUser_ImportFiles) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importfilebase_modifiedonbehalfby"></a> lk_importfilebase_modifiedonbehalfby
 
-See systemuser Table [lk_importfilebase_modifiedonbehalfby](systemuser.md#BKMK_lk_importfilebase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_importfilebase_modifiedonbehalfby](systemuser.md#BKMK_lk_importfilebase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Import_ImportFile"></a> Import_ImportFile
 
-See import Table [Import_ImportFile](import.md#BKMK_Import_ImportFile) One-To-Many relationship.
+See the [Import_ImportFile](import.md#BKMK_Import_ImportFile) one-to-many relationship for the [import](import.md) table/entity.
 
 ### <a name="BKMK_ImportMap_ImportFile"></a> ImportMap_ImportFile
 
-See importmap Table [ImportMap_ImportFile](importmap.md#BKMK_ImportMap_ImportFile) One-To-Many relationship.
+See the [ImportMap_ImportFile](importmap.md#BKMK_ImportMap_ImportFile) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### <a name="BKMK_lk_importfilebase_modifiedby"></a> lk_importfilebase_modifiedby
 
-See systemuser Table [lk_importfilebase_modifiedby](systemuser.md#BKMK_lk_importfilebase_modifiedby) One-To-Many relationship.
+See the [lk_importfilebase_modifiedby](systemuser.md#BKMK_lk_importfilebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_BusinessUnit_ImportFiles"></a> BusinessUnit_ImportFiles
 
-See businessunit Table [BusinessUnit_ImportFiles](businessunit.md#BKMK_BusinessUnit_ImportFiles) One-To-Many relationship.
+See the [BusinessUnit_ImportFiles](businessunit.md#BKMK_BusinessUnit_ImportFiles) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

@@ -2,10 +2,11 @@
 title: Planning - Power Apps project tasks and owners | Microsoft Docs
 description: List the tasks to be done during each project phase (planning, designing, making, testing, and deploying and refining) and who will be responsible for each task.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 

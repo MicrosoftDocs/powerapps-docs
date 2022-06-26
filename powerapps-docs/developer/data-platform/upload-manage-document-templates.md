@@ -4,9 +4,10 @@ description: "In Microsoft Dataverse, the *template* tables help you create cons
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -21,7 +22,7 @@ In Microsoft Dataverse, the *template* tables help you create consistent layout 
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-These are the types of template entites:
+These are the types of template tables:
 
 - [DocumentTemplate](reference/entities/documenttemplate.md)
 - [KbArticleTemplate](reference/entities/kbarticletemplate.md) 

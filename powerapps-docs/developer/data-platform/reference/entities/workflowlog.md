@@ -1,13 +1,13 @@
 ---
-title: "WorkflowLog table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the WorkflowLog table/entity."
-ms.date: 03/04/2021
+title: "Process Log (WorkflowLog)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Process Log (WorkflowLog)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# WorkflowLog table/entity reference
+# Process Log (WorkflowLog)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ Log used to track process execution.
 |Create|POST [*org URI*]/api/data/v9.0/workflowlogs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflowlogs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/workflowlogs(*workflowlogid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -412,13 +411,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Status Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|In Progress|
-|2|Succeeded|
-|3|Failed|
-|4|Canceled|
-|5|Waiting|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|In Progress||
+|2|Succeeded||
+|3|Failed||
+|4|Canceled||
+|5|Waiting||
 
 
 
@@ -850,27 +849,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|systemuser|
 |Type|Lookup|
 
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_workflowlog_FileAttachments"></a> workflowlog_FileAttachments
-
-Same as fileattachment table [workflowlog_FileAttachments](fileattachment.md#BKMK_workflowlog_FileAttachments) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workflowlog_FileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -890,69 +868,59 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_translationprocess_workflowlogs](#BKMK_lk_translationprocess_workflowlogs)
 - [lk_expiredprocess_workflowlogs](#BKMK_lk_expiredprocess_workflowlogs)
 - [lk_workflowlog_modifiedonbehalfby](#BKMK_lk_workflowlog_modifiedonbehalfby)
-- [FileAttachment_WorkflowLog_Inputs](#BKMK_FileAttachment_WorkflowLog_Inputs)
-- [FileAttachment_WorkflowLog_Outputs](#BKMK_FileAttachment_WorkflowLog_Outputs)
 
 
 ### <a name="BKMK_business_unit_workflowlogs"></a> business_unit_workflowlogs
 
-See businessunit Table [business_unit_workflowlogs](businessunit.md#BKMK_business_unit_workflowlogs) One-To-Many relationship.
+See the [business_unit_workflowlogs](businessunit.md#BKMK_business_unit_workflowlogs) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_createdby"></a> lk_workflowlog_createdby
 
-See systemuser Table [lk_workflowlog_createdby](systemuser.md#BKMK_lk_workflowlog_createdby) One-To-Many relationship.
+See the [lk_workflowlog_createdby](systemuser.md#BKMK_lk_workflowlog_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_processsession"></a> lk_workflowlog_processsession
 
-See processsession Table [lk_workflowlog_processsession](processsession.md#BKMK_lk_workflowlog_processsession) One-To-Many relationship.
+See the [lk_workflowlog_processsession](processsession.md#BKMK_lk_workflowlog_processsession) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_processsession_childworkflow"></a> lk_workflowlog_processsession_childworkflow
 
-See processsession Table [lk_workflowlog_processsession_childworkflow](processsession.md#BKMK_lk_workflowlog_processsession_childworkflow) One-To-Many relationship.
+See the [lk_workflowlog_processsession_childworkflow](processsession.md#BKMK_lk_workflowlog_processsession_childworkflow) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_asyncoperation_childworkflow"></a> lk_workflowlog_asyncoperation_childworkflow
 
-See asyncoperation Table [lk_workflowlog_asyncoperation_childworkflow](asyncoperation.md#BKMK_lk_workflowlog_asyncoperation_childworkflow) One-To-Many relationship.
+See the [lk_workflowlog_asyncoperation_childworkflow](asyncoperation.md#BKMK_lk_workflowlog_asyncoperation_childworkflow) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_asyncoperations"></a> lk_workflowlog_asyncoperations
 
-See asyncoperation Table [lk_workflowlog_asyncoperations](asyncoperation.md#BKMK_lk_workflowlog_asyncoperations) One-To-Many relationship.
+See the [lk_workflowlog_asyncoperations](asyncoperation.md#BKMK_lk_workflowlog_asyncoperations) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_modifiedby"></a> lk_workflowlog_modifiedby
 
-See systemuser Table [lk_workflowlog_modifiedby](systemuser.md#BKMK_lk_workflowlog_modifiedby) One-To-Many relationship.
+See the [lk_workflowlog_modifiedby](systemuser.md#BKMK_lk_workflowlog_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_newprocess_workflowlogs"></a> lk_newprocess_workflowlogs
 
-See newprocess Table [lk_newprocess_workflowlogs](newprocess.md#BKMK_lk_newprocess_workflowlogs) One-To-Many relationship.
+See the [lk_newprocess_workflowlogs](newprocess.md#BKMK_lk_newprocess_workflowlogs) one-to-many relationship for the [newprocess](newprocess.md) table/entity.
 
 ### <a name="BKMK_team_workflowlog"></a> team_workflowlog
 
-See team Table [team_workflowlog](team.md#BKMK_team_workflowlog) One-To-Many relationship.
+See the [team_workflowlog](team.md#BKMK_team_workflowlog) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_createdonbehalfby"></a> lk_workflowlog_createdonbehalfby
 
-See systemuser Table [lk_workflowlog_createdonbehalfby](systemuser.md#BKMK_lk_workflowlog_createdonbehalfby) One-To-Many relationship.
+See the [lk_workflowlog_createdonbehalfby](systemuser.md#BKMK_lk_workflowlog_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_translationprocess_workflowlogs"></a> lk_translationprocess_workflowlogs
 
-See translationprocess Table [lk_translationprocess_workflowlogs](translationprocess.md#BKMK_lk_translationprocess_workflowlogs) One-To-Many relationship.
+See the [lk_translationprocess_workflowlogs](translationprocess.md#BKMK_lk_translationprocess_workflowlogs) one-to-many relationship for the [translationprocess](translationprocess.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_workflowlogs"></a> lk_expiredprocess_workflowlogs
 
-See expiredprocess Table [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK_lk_expiredprocess_workflowlogs) One-To-Many relationship.
+See the [lk_expiredprocess_workflowlogs](expiredprocess.md#BKMK_lk_expiredprocess_workflowlogs) one-to-many relationship for the [expiredprocess](expiredprocess.md) table/entity.
 
 ### <a name="BKMK_lk_workflowlog_modifiedonbehalfby"></a> lk_workflowlog_modifiedonbehalfby
 
-See systemuser Table [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_WorkflowLog_Inputs"></a> FileAttachment_WorkflowLog_Inputs
-
-See fileattachment Table [FileAttachment_WorkflowLog_Inputs](fileattachment.md) One-To-Many relationship.
-
-### <a name="BKMK_FileAttachment_WorkflowLog_Outputs"></a> FileAttachment_WorkflowLog_Outputs
-
-See fileattachment Table [FileAttachment_WorkflowLog_Outputs](fileattachment.md) One-To-Many relationship.
+See the [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

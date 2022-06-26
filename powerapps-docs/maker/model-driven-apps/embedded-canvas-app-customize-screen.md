@@ -4,7 +4,7 @@ description: "Learn how to change the screen and orientation of a canvas app"
 ms.custom: ""
 ms.date: 01/19/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -13,6 +13,7 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 

@@ -1,20 +1,22 @@
 ---
 title: "Create, manage, and publish model-driven apps using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/15/2021
-ms.service: powerapps
+author: caburk
+ms.author: caburk
+manager: evlew
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 4261c476-2eff-10e3-a334-d02e0cbbb9d5
-author: Nkrb # GitHub ID
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - adrianorth
+  - emcoope-msft
 ---
 
 # Create, manage, and publish model-driven apps using code

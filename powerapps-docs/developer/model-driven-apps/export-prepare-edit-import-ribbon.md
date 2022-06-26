@@ -1,21 +1,25 @@
 ---
 title: "Export, prepare to edit, and import the ribbon(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about exporting the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 05/24/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Export, prepare to edit, and import the ribbon
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 To edit the ribbon, you must perform the following steps:  
   
@@ -144,7 +148,7 @@ You export the ribbon by including it in a solution and then exporting the solut
 
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
 ### See also  
  [Customize the ribbon](customize-commands-ribbon.md)   

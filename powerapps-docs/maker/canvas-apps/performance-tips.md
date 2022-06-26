@@ -1,13 +1,13 @@
 ---
-title: Tips to improve canvas app performance | Microsoft Docs
-description: Follow the best practices in this topic to boost the performance of canvas apps that you create in Power Apps. 
+title: Tips and best practices to improve performance of canvas apps
+description: Follow the best practices and tips in this topic to boost the performance of canvas apps.
 author: yingchin
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/11/2020
+ms.date: 01/21/2022
+ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -17,20 +17,21 @@ contributors:
   - yingchin
   - tapanm-msft
   - chmoncay
+  - melzoghbi
 ---
-# Tips and best practices to improve canvas app performance
+# Tips and best practices to improve performance of canvas apps
 
 In the previous articles, you learned about the [execution phases and data call flow](execution-phases-data-flow.md), [common sources of slow performance](slow-performance-sources.md), and [common performance issues and resolutions](common-performance-issue-resolutions.md) in canvas apps. You can also benefit by following the tips and best practices in this article to boost the performance of apps that you create.
 
 ## Limit data connections
 
-**Don't connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
+**Don't add more than 30 connections in one app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
 
-You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources, such as Microsoft Dataverse, Azure SQL, SharePoint, and Excel on OneDrive.  
+You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections. Each added connection is counted individually in this limit, irrespective of the connected data source type&mdash;such as Microsoft Dataverse or SQL Server tables, or lists created using Microsoft Lists.
 
 ## Limit the number of controls
 
-**Don't add more than 500 controls to the same app**. Power Apps generates an HTML document object model to render each control. The more controls you add, the more generation time Power Apps needs.
+**Don't add more than 500 controls in one app**. Power Apps generates an HTML document object model to render each control. The more controls you add, the more generation time Power Apps needs.
 
 You can, in some cases, achieve the same result and have the app start faster if you use a gallery instead of individual controls. In
 addition, you might want to reduce the number of control types on the same screen. Some controls (such as PDF viewer, data table, and
@@ -51,7 +52,7 @@ ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
 
 You can confirm this behavior in the Developer Tools for your browser, as shown in the following image.
 
-![Diagram showing the four tables being loaded one after the other](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
+![Diagram showing the four tables being loaded one after the other.](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
 
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
@@ -65,10 +66,13 @@ Concurrent(
 
 With this change, the app fetches the tables in parallel, as shown in the following image.
 
-![Diagram showing the four tables being loaded simultaneously](./media/performance-tips/perfconcurrent2.png)	
+![Diagram showing the four tables being loaded simultaneously.](./media/performance-tips/perfconcurrent2.png)	
 
 > [!NOTE]
 > For more information about the performance problems and resolutions related to OnStart, read [OnStart event needs tuning](common-performance-issue-resolutions.md#onstart-event-needs-tuning).
+
+> [!TIP]
+> We recommend using [App.StartScreen](functions/object-app.md#startscreen-property) property since it simplifies app launch and boosts the app's performance.
 
 ## Cache lookup data
 
@@ -99,12 +103,12 @@ Where possible, use functions that delegate data processing to the data source i
 > [!TIP]
 > To learn about delegable functions supported by specific connectors, go to the [connector documentation](/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is non-delegable while the second is delegable.
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a list created using Microsoft Lists. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
-| ``Filter ('SharePoint list data source', ID = 123 )`` | Yes        |
-| ``Filter(`SharePoint list data source', ID ="123")``  | No         |
+| ``Filter ('List data source', ID = 123 )`` | Yes        |
+| ``Filter(`List data source', ID ="123")``  | No         |
 
 Because we assume that the ID column in SharePoint is defined with the data type of **Number**, the right-side value should be a numeric variable instead of a string variable. Otherwise, this mismatch might trigger the formula to be non-delegable.
 
@@ -153,8 +157,8 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 [Understand canvas app execution phases and data call flow](execution-phases-data-flow.md) <br>
 [Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Common sources of slow performance for a canvas app](slow-performance-sources.md) <br>
-[Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
-[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
+[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

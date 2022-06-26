@@ -1,20 +1,23 @@
 ---
-title: Understand data sources for canvas apps | Microsoft Docs
-description: Reference information about working with connections and data sources for canvas apps.
+title: Understand data sources for canvas apps
+description: Learn about working with connections and data sources for canvas apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/08/2017
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - gregli-msft
 ---
-# Understand data sources for canvas apps in Power Apps
+# Understand data sources for canvas apps
 
 In Power Apps, most canvas apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps access these data sources by using **Connections**.
 
@@ -28,7 +31,7 @@ Data sources can be connected to a cloud service, or they can be local to an app
 
 ### Connected data sources
 
-The most common data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services such as OneDrive for Business, DropBox, and SQL Server.
+The most common data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, lists created using Microsoft Lists, SharePoint libraries, SQL tables, and many other formats, which can be stored in cloud services such as OneDrive for Business, DropBox, and SQL Server.
 
 Data sources other than tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
 
@@ -69,10 +72,10 @@ Power Apps can't be used to create a connected data source, or modify its struct
 However, collection data sources *can* be created and modified inside an app, but are only temporary.
 
 ### Display one or more records
-![](media/working-with-data-sources/reading-from-a-datasource.png)
+![Flow of information when an app reads the information in a data source.](media/working-with-data-sources/reading-from-a-datasource.png)
 The diagram above shows the flow of information when an app reads the information in a data source:
 
-* The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
+* The information is stored and shared through a storage service (in this case, Microsoft Lists or SharePoint Online).
 * A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
 * When the app is started or the **[Refresh](functions/function-refresh.md)** function is pressed, information is drawn from the connection into a data source in the app for local use.
 * Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **[Items](controls/properties-core.md)** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **[Default](controls/properties-core.md)** property.  
@@ -83,7 +86,7 @@ In the preceding section, you saw how to read a data source.  Note that the arro
 
 Note that, to modify an existing record of a data source, the record must have originally come from the data source.  The record may have traveled through a gallery, a [context variable](working-with-variables.md#use-a-context-variable), and any number of formulas, but its origin should be traceable back to the data source.  This is important because additional information travels with the record that uniquely identifies it, ensuring that you modify the correct record.    
 
-![](media/working-with-data-sources/writing-to-a-datasource.png)
+![Flow of information to update a data source.](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
 
 * An **[Edit form](controls/control-form-detail.md)** control provides a container for input cards, which are made up of user input controls such as a text-input control or a slider.  The **[DataSource](controls/control-form-detail.md)** and **[Item](controls/control-form-detail.md)** properties are used to identify the record to edit.

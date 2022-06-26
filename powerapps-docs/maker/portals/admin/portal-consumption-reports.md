@@ -2,15 +2,16 @@
 title: Portals capacity consumption reports
 description: Learn how to view, download, and review the Power Apps portals capacity consumption reports from the Power Platform admin center.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 05/24/2022
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - nickdoelman
 ---
  
 # Portals capacity consumption reports
@@ -18,6 +19,9 @@ contributors:
 Power Apps portals is licensed by using **per login** and **per page view** capacity add-ons for external users. This capacity must be allocated to a Microsoft Power Platform environment by an administrator. More information: [Licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals)
 
 Administrators can download portal sign-in and page view reports from the [Power Platform admin center](https://admin.powerplatform.com). These reports show the number of sign-ins ("logins") and page views for Power Apps portals across all environments for a tenant.
+
+> [!NOTE]
+> You can also view capacity consumption reports for Power Pages sites. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Download the reports
 
@@ -33,30 +37,24 @@ The individual reports contain data for a duration of 30 days preceding the date
 
 1. In the **Add-ons** section, select **Download reports**.
 
-    ![Add-ons](media/portal-consumption-reports/summary-add-ons.png "Add-ons")
+    ![Add-ons.](media/portal-consumption-reports/summary-add-ons.png "Add-ons")
 
-1. Select the **Portal Logins** or **Portal Views** report.
+1. Select **New**.
+    :::image type="content" source="media/portal-consumption-reports/new-report.png" alt-text="Request a report from the admin center.":::
 
-1. Select a **Target Date**. The report will include data for the 30 days preceding this date.
+1. Select the **Portals Logins** or **Portals Views** report.
 
 1. Select **Submit**.
 
-    ![Confirmation for the request](media/portal-consumption-reports/confirmation.png "Confirmation for the request")
+1. After the generated report becomes available, select the **Download** tab.
 
-    A notification appears that acknowledges your download request.
-
-1. After the generated report becomes available, select **Download** in the notification that appears.
-
-    ![Notification that the report is ready to download](media/portal-consumption-reports/download-notification.png "Notification that the report is ready to download")
-
-    > [!TIP]
-    > To quickly regenerate the report for the selected report type and target date, select **Regenerate report** in the notification.
+    :::image type="content" source="media/portal-consumption-reports/download-report.png" alt-text="Download report.":::
 
 1. Select **Save**, and then select **Open**.
 
 ## Analyze reports
 
-The report contains capacity consumption of all available portals across all environments for the tenant, organized by date. You can filter on different columns in the report&mdash;such as portal ID, environment ID, or date range&mdash;for additional analysis.
+The report contains capacity consumption of all available portals across all environments for the tenant, organized by date. You can filter on different columns in the report&mdash;such as portal ID, environment ID, or date range&mdash;for more analysis.
 
 The following table describes the columns in the downloaded report.
 

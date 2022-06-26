@@ -1,13 +1,13 @@
 ---
-title: "msdyn_slakpi table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_slakpi table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_slakpi table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_slakpis(*msdyn_slakpiid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_slakpis<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -136,12 +135,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_AdvancedPauseConfiguration Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -454,6 +453,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -492,12 +492,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -636,12 +636,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -825,12 +825,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -932,7 +950,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_slakpi_SyncErrors](syncerror.md#BKMK_msdyn_slakpi_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_slakpi_SyncErrors](syncerror.md#BKMK_msdyn_slakpi_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -949,7 +967,7 @@ Same as syncerror table [msdyn_slakpi_SyncErrors](syncerror.md#BKMK_msdyn_slakpi
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_slakpi_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_slakpi_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_slakpi_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_slakpi_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -966,7 +984,7 @@ Same as duplicaterecord table [msdyn_slakpi_DuplicateMatchingRecord](duplicatere
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_slakpi_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_slakpi_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_slakpi_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_slakpi_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -983,7 +1001,7 @@ Same as duplicaterecord table [msdyn_slakpi_DuplicateBaseRecord](duplicaterecord
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_slakpi_AsyncOperations](asyncoperation.md#BKMK_msdyn_slakpi_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_slakpi_AsyncOperations](asyncoperation.md#BKMK_msdyn_slakpi_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1000,7 +1018,7 @@ Same as asyncoperation table [msdyn_slakpi_AsyncOperations](asyncoperation.md#BK
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_slakpi_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_slakpi_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_slakpi_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_slakpi_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1017,7 +1035,7 @@ Same as mailboxtrackingfolder table [msdyn_slakpi_MailboxTrackingFolders](mailbo
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_slakpi_ProcessSession](processsession.md#BKMK_msdyn_slakpi_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_slakpi_ProcessSession](processsession.md#BKMK_msdyn_slakpi_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1034,7 +1052,7 @@ Same as processsession table [msdyn_slakpi_ProcessSession](processsession.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_slakpi_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_slakpi_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_slakpi_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_slakpi_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1051,7 +1069,7 @@ Same as bulkdeletefailure table [msdyn_slakpi_BulkDeleteFailures](bulkdeletefail
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_slakpi_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_slakpi_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_slakpi_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_slakpi_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1066,7 +1084,7 @@ Same as principalobjectattributeaccess table [msdyn_slakpi_PrincipalObjectAttrib
 
 ### <a name="BKMK_msdyn_msdyn_slakpi_slaitem"></a> msdyn_msdyn_slakpi_slaitem
 
-Same as slaitem table [msdyn_msdyn_slakpi_slaitem](slaitem.md#BKMK_msdyn_msdyn_slakpi_slaitem) Many-To-One relationship.
+Same as the [msdyn_msdyn_slakpi_slaitem](slaitem.md#BKMK_msdyn_msdyn_slakpi_slaitem) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1090,7 +1108,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_slakpi_modifiedonbehalfby](#BKMK_lk_msdyn_slakpi_modifiedonbehalfby)
 - [user_msdyn_slakpi](#BKMK_user_msdyn_slakpi)
 - [team_msdyn_slakpi](#BKMK_team_msdyn_slakpi)
-- [owner_msdyn_slakpi](#BKMK_owner_msdyn_slakpi)
 - [business_unit_msdyn_slakpi](#BKMK_business_unit_msdyn_slakpi)
 
 
@@ -1098,49 +1115,43 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_slakpi_createdby](systemuser.md#BKMK_lk_msdyn_slakpi_createdby) One-To-Many relationship.
+See the [lk_msdyn_slakpi_createdby](systemuser.md#BKMK_lk_msdyn_slakpi_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_slakpi_createdonbehalfby"></a> lk_msdyn_slakpi_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_slakpi_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_slakpi_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_slakpi_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_slakpi_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_slakpi_modifiedby"></a> lk_msdyn_slakpi_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_slakpi_modifiedby](systemuser.md#BKMK_lk_msdyn_slakpi_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_slakpi_modifiedby](systemuser.md#BKMK_lk_msdyn_slakpi_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_slakpi_modifiedonbehalfby"></a> lk_msdyn_slakpi_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_slakpi_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_slakpi_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_slakpi_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_slakpi_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_slakpi"></a> user_msdyn_slakpi
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_slakpi](systemuser.md#BKMK_user_msdyn_slakpi) One-To-Many relationship.
+See the [user_msdyn_slakpi](systemuser.md#BKMK_user_msdyn_slakpi) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_slakpi"></a> team_msdyn_slakpi
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_slakpi](team.md#BKMK_team_msdyn_slakpi) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_slakpi"></a> owner_msdyn_slakpi
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_slakpi](owner.md#BKMK_owner_msdyn_slakpi) One-To-Many relationship.
+See the [team_msdyn_slakpi](team.md#BKMK_team_msdyn_slakpi) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_slakpi"></a> business_unit_msdyn_slakpi
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_slakpi](businessunit.md#BKMK_business_unit_msdyn_slakpi) One-To-Many relationship.
+See the [business_unit_msdyn_slakpi](businessunit.md#BKMK_business_unit_msdyn_slakpi) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

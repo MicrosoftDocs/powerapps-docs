@@ -3,7 +3,7 @@ title: "Deploy Dynamics 365 App for Outlook | MicrosoftDocs"
 ms.custom: ""
 ms.date: "2017-04-20"
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -157,7 +157,7 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
 ### Supported clients per feature  
  The [!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)] features supported depend on the client you're running. The following table summarizes which features are supported for each client/configuration of [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] and [!INCLUDE[pn_Exchange](../includes/pn-exchange.md)].  
   
- ![Clients supported for each Dynamics 365 App for Outlook feature](media/clients-supported-for-each-dynamics-365-app-for-outlook-feature.png "Clients supported for each Dynamics 365 App for Outlook feature")  
+ ![Clients supported for each Dynamics 365 App for Outlook feature.](media/clients-supported-for-each-dynamics-365-app-for-outlook-feature.png "Clients supported for each Dynamics 365 App for Outlook feature")  
   
  (1)  [!INCLUDE[pn_outlook_web_app](../includes/pn-outlook-web-app.md)] supports [!INCLUDE[pn_IE_10](../includes/pn-ie-10.md)], [!INCLUDE[pn_ie_11](../includes/pn-ie-11.md)], [!INCLUDE[pn_microsoft_edge](../includes/pn-microsoft-edge.md)], [!INCLUDE[tn_Safari](../includes/tn-safari.md)] 9, [!INCLUDE[tn_Safari](../includes/tn-safari.md)] 10, [!INCLUDE[tn_Firefox](../includes/tn-firefox.md)], and [!INCLUDE[tn_chrome](../includes/tn-chrome.md)].  
   
@@ -226,7 +226,7 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
   
 #### To have users install the app themselves  
   
-1.  Users click the **Settings** button ![Settings button](media/mp-ua-r16-settings.png "Settings button"), and then click **Apps for Dynamics 365**.  
+1.  Users click the **Settings** button ![Settings button.](media/mp-ua-r16-settings.png "Settings button"), and then click **Apps for Dynamics 365**.  
   
 2.  In the **Apps for Dynamics 365** screen, under **[!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)]**, users click **Add app to [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)]**.  
   
@@ -237,9 +237,9 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
 ## To deploy to Dynamics 365 on-premises users  
  Follow these steps if you're using Dynamics 365 on-premises.  
   
--   Configure your Dynamics 365 server for Internet-facing deployment. See [Configure IFD for Microsoft Dynamics 365](https://technet.microsoft.com/library/dn609803.aspx).  
+-   Configure your Dynamics 365 server for Internet-facing deployment. See [Configure IFD for Microsoft Dynamics 365](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/dn609803(v=crm.8)).  
   
--   If you're connecting to Exchange on-premises, configure the OAuth provider and register client apps. See [Configure Windows Server 2012 R2 for Dynamics 365 applications that use OAuth](https://technet.microsoft.com/library/hh699726.aspx).  
+-   If you're connecting to Exchange on-premises, configure the OAuth provider and register client apps. See [Configure Windows Server 2012 R2 for Dynamics 365 applications that use OAuth](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699726(v=crm.8)).  
   
 <a name="BKMK_Troubleshoot"></a>   
 ## Troubleshooting installation problems  
@@ -249,11 +249,11 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
 ## Explore the User’s Guide and train your users  
  To learn how to use [!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)], [see the Dynamics 365 App for Outlook User’s Guide](https://go.microsoft.com/fwlink/p/?LinkID=613099).  
   
- ![Dynamics 365 App for Outlook User's Guide page](media/dynamics-365-app-for-outlook-user-s-guide-page.png "Dynamics 365 App for Outlook User's Guide page")  
+ ![Dynamics 365 App for Outlook User's Guide page.](media/dynamics-365-app-for-outlook-user-s-guide-page.png "Dynamics 365 App for Outlook User's Guide page")  
   
 ## See Also  
  [Dynamics 365 App for Outlook User's Guide](https://go.microsoft.com/fwlink/p/?LinkID=613099)   
  [Read more details about supported clients in this blog: Dynamics 365 App for Outlook Support Matrix](https://blogs.msdn.microsoft.com/crm/2016/12/13/dynamics-365-app-for-outlook-support-matrix/)   
  [Set up server-side synchronization of email, appointments, contacts, and tasks](../Topic/Set%20up%20server-side%20synchronization%20of%20email,%20appointments,%20contacts,%20and%20tasks.md)   
- [Add users, licenses, and security roles](https://msdn.microsoft.com/23612155-f92d-4871-a109-186419d5c19d)   
+ [Add users, licenses, and security roles](/previous-versions/dynamicscrm-2013/crm.6/jj863697(v=crm.6))   
  [Add interoperation features to Microsoft Dynamics 365 (online)](../DocSets/CRMIGv9_Admin/Toc/Add%20interoperation%20features%20to%20Microsoft%20Dynamics%20365%20\(online\).md)

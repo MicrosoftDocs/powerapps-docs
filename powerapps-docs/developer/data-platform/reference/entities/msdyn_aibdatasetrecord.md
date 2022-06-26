@@ -1,13 +1,13 @@
 ---
-title: "msdyn_AIBDatasetRecord table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_AIBDatasetRecord table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AIBDatasetRecord table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +36,6 @@ search.app:
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_aibdatasetrecords(*msdyn_aibdatasetrecordid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_aibdatasetrecords<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -172,10 +171,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### msdyn_RecordType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|190691000|eeInputRow|
-|190691001|eeNamedEntity|
+|Value|Label|Description|
+|-----|-----|--------|
+|190691000|eeInputRow|Entity Extraction Input Row|
+|190691001|eeNamedEntity|Entity Extraction Named Entity|
 
 
 
@@ -324,6 +323,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -627,12 +627,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -703,7 +721,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_aibdatasetrecord_SyncErrors](syncerror.md#BKMK_msdyn_aibdatasetrecord_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_SyncErrors](syncerror.md#BKMK_msdyn_aibdatasetrecord_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -720,7 +738,7 @@ Same as syncerror table [msdyn_aibdatasetrecord_SyncErrors](syncerror.md#BKMK_ms
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_aibdatasetrecord_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aibdatasetrecord_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aibdatasetrecord_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -737,7 +755,7 @@ Same as duplicaterecord table [msdyn_aibdatasetrecord_DuplicateMatchingRecord](d
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_aibdatasetrecord_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aibdatasetrecord_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aibdatasetrecord_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -754,7 +772,7 @@ Same as duplicaterecord table [msdyn_aibdatasetrecord_DuplicateBaseRecord](dupli
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_aibdatasetrecord_AsyncOperations](asyncoperation.md#BKMK_msdyn_aibdatasetrecord_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_AsyncOperations](asyncoperation.md#BKMK_msdyn_aibdatasetrecord_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -771,7 +789,7 @@ Same as asyncoperation table [msdyn_aibdatasetrecord_AsyncOperations](asyncopera
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_aibdatasetrecord_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aibdatasetrecord_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aibdatasetrecord_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -788,7 +806,7 @@ Same as mailboxtrackingfolder table [msdyn_aibdatasetrecord_MailboxTrackingFolde
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_aibdatasetrecord_ProcessSession](processsession.md#BKMK_msdyn_aibdatasetrecord_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_ProcessSession](processsession.md#BKMK_msdyn_aibdatasetrecord_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -805,7 +823,7 @@ Same as processsession table [msdyn_aibdatasetrecord_ProcessSession](processsess
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_aibdatasetrecord_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aibdatasetrecord_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aibdatasetrecord_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -822,7 +840,7 @@ Same as bulkdeletefailure table [msdyn_aibdatasetrecord_BulkDeleteFailures](bulk
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_aibdatasetrecord_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aibdatasetrecord_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_aibdatasetrecord_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aibdatasetrecord_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -846,7 +864,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_aibdatasetrecord_modifiedonbehalfby](#BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby)
 - [user_msdyn_aibdatasetrecord](#BKMK_user_msdyn_aibdatasetrecord)
 - [team_msdyn_aibdatasetrecord](#BKMK_team_msdyn_aibdatasetrecord)
-- [owner_msdyn_aibdatasetrecord](#BKMK_owner_msdyn_aibdatasetrecord)
 - [business_unit_msdyn_aibdatasetrecord](#BKMK_business_unit_msdyn_aibdatasetrecord)
 - [msdyn_AIBDatasetRecord_msdyn_AIBDataset](#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset)
 
@@ -855,53 +872,47 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibdatasetrecord_createdby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_createdby) One-To-Many relationship.
+See the [lk_msdyn_aibdatasetrecord_createdby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aibdatasetrecord_createdonbehalfby"></a> lk_msdyn_aibdatasetrecord_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibdatasetrecord_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_aibdatasetrecord_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aibdatasetrecord_modifiedby"></a> lk_msdyn_aibdatasetrecord_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibdatasetrecord_modifiedby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_aibdatasetrecord_modifiedby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby"></a> lk_msdyn_aibdatasetrecord_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_aibdatasetrecord_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_aibdatasetrecord_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_aibdatasetrecord"></a> user_msdyn_aibdatasetrecord
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_aibdatasetrecord](systemuser.md#BKMK_user_msdyn_aibdatasetrecord) One-To-Many relationship.
+See the [user_msdyn_aibdatasetrecord](systemuser.md#BKMK_user_msdyn_aibdatasetrecord) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_aibdatasetrecord"></a> team_msdyn_aibdatasetrecord
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_aibdatasetrecord](team.md#BKMK_team_msdyn_aibdatasetrecord) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_aibdatasetrecord"></a> owner_msdyn_aibdatasetrecord
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_aibdatasetrecord](owner.md#BKMK_owner_msdyn_aibdatasetrecord) One-To-Many relationship.
+See the [team_msdyn_aibdatasetrecord](team.md#BKMK_team_msdyn_aibdatasetrecord) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_aibdatasetrecord"></a> business_unit_msdyn_aibdatasetrecord
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_aibdatasetrecord](businessunit.md#BKMK_business_unit_msdyn_aibdatasetrecord) One-To-Many relationship.
+See the [business_unit_msdyn_aibdatasetrecord](businessunit.md#BKMK_business_unit_msdyn_aibdatasetrecord) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset"></a> msdyn_AIBDatasetRecord_msdyn_AIBDataset
 
-See msdyn_aibdataset Table [msdyn_AIBDatasetRecord_msdyn_AIBDataset](msdyn_aibdataset.md#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset) One-To-Many relationship.
+See the [msdyn_AIBDatasetRecord_msdyn_AIBDataset](msdyn_aibdataset.md#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset) one-to-many relationship for the [msdyn_aibdataset](msdyn_aibdataset.md) table/entity.
 
 ### See also
 

@@ -1,19 +1,20 @@
 ---
 title: "Debug plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to debug plug-ins using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 05/10/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Debug Plug-ins
 
@@ -63,7 +64,7 @@ Before you will be able to use this service, you must enable tracing in your Mic
 
 While debugging, you can easily query the trace logs for a given plug-in class using the Web API in your browser. If your assembly is named `BasicPlugin.FollowUpPlugin`, you can use this query in your browser address field:
 
-`GET <your org uri>/api/data/v9.0/plugintracelogs?$select=messageblock&$filter=typename eq 'BasicPlugin.FollowUpPlugin'`
+`GET <your org uri>/api/data/v9.0/plugintracelogs?$select=messageblock&$filter=startswith(typename,'BasicPlugin.FollowUpPlugin')`
 
 The JSON results will be returned to your browser like so:
 
@@ -102,17 +103,17 @@ After you have installed the Plug-in profiler and captured some profiles, you ca
 
 You can view this data using the Plug-in Registration tool by selecting the **View Plug-in Profile** command. This will open the Plugin Profile dialog
 
-![Open plug-in profile](media/view-plug-in-profile.png)
+![Open plug-in profile.](media/view-plug-in-profile.png)
 
-Select the ![download icon](media/prt-down-arrow-icon.png) icon and in the **Select Profile from CRM** dialog, specify the log item to use.
+Select the ![download icon.](media/prt-down-arrow-icon.png) icon and in the **Select Profile from CRM** dialog, specify the log item to use.
 
-![Select profile from CRM](media/prt-select-profile-from-crm.png)
+![Select profile from CRM.](media/prt-select-profile-from-crm.png)
 
 And then select **View** in the **Plugin Profile** dialog.
 
 This will download an open an XML file with the profile information. The `Context` element represents the execution context passed to the plug-in.
 
-![example profile data](media/prt-example-profile-data.png)
+![example profile data.](media/prt-example-profile-data.png)
 
 ### More information
 

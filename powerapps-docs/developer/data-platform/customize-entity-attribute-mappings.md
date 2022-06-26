@@ -4,9 +4,10 @@ description: "Learn about mapping columns between tables that have a relationshi
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -42,7 +43,7 @@ The response received from InitializeFrom request consists of values of mapped c
 > [!NOTE] 
 > To determine if two tables can be mapped, use the following Web API request:<br/>`GET [Organization URI]/api/data/v9.0/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
-For more information see [Create a new record from another table](webapi/create-entity-web-api.md#create-a-new-entity-record-from-another-entity).
+For more information see [Create a new row from another table](webapi/create-entity-web-api.md#create-a-new-table-row-from-another-table).
 
 ### Using Organization Service
 

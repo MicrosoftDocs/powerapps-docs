@@ -4,9 +4,10 @@ description: "Learn about customizing labels to support multiple languages." # 1
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Customize labels to support multiple languages
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 When you create customizations in Microsoft Dataverse, you can support multiple languages by using labels.  
 

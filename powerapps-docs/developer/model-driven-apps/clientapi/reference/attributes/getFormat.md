@@ -1,19 +1,21 @@
 ---
 title: "getFormat (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getFormat method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: e5f97552-4a48-4bf9-b460-6105442e2e6b
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getFormat (Client API reference)
 

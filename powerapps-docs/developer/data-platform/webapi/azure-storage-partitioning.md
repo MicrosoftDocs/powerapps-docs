@@ -4,11 +4,11 @@ description: "Learn how to improve access performance for non-relational entity 
 ms.custom: ""
 ms.date: 01/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+author: "Bluebear73" # GitHub ID
+ms.author: "munzinge" # MSFT alias of Microsoft employees only
+manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

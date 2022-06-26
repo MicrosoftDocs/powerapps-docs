@@ -1,13 +1,13 @@
 ---
-title: "RecurringAppointmentMaster table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the RecurringAppointmentMaster table/entity."
-ms.date: 03/04/2021
+title: "Recurring Appointment (RecurringAppointmentMaster)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Recurring Appointment (RecurringAppointmentMaster)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# RecurringAppointmentMaster table/entity reference
+# Recurring Appointment (RecurringAppointmentMaster)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -38,7 +38,6 @@ The Master appointment of a recurring appointment series.
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Reschedule|<xref href="Microsoft.Dynamics.CRM.Reschedule?text=Reschedule Action" />|<xref:Microsoft.Crm.Sdk.Messages.RescheduleRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/recurringappointmentmasters(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/recurringappointmentmasters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -87,12 +86,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsMapiPrivate](#BKMK_IsMapiPrivate)
 - [IsNthMonthly](#BKMK_IsNthMonthly)
 - [IsNthYearly](#BKMK_IsNthYearly)
+- [IsOnlineMeeting](#BKMK_IsOnlineMeeting)
 - [IsRegenerate](#BKMK_IsRegenerate)
 - [IsWeekDayPattern](#BKMK_IsWeekDayPattern)
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [Location](#BKMK_Location)
 - [MonthOfYear](#BKMK_MonthOfYear)
 - [Occurrences](#BKMK_Occurrences)
+- [OnlineMeetingChatId](#BKMK_OnlineMeetingChatId)
+- [OnlineMeetingId](#BKMK_OnlineMeetingId)
+- [OnlineMeetingJoinUrl](#BKMK_OnlineMeetingJoinUrl)
+- [OnlineMeetingType](#BKMK_OnlineMeetingType)
 - [OptionalAttendees](#BKMK_OptionalAttendees)
 - [Organizer](#BKMK_Organizer)
 - [OutlookOwnerApptId](#BKMK_OutlookOwnerApptId)
@@ -326,13 +330,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Instance Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|First|
-|2|Second|
-|3|Third|
-|4|Fourth|
-|5|Last|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|First||
+|2|Second||
+|3|Third||
+|4|Fourth||
+|5|Last||
 
 
 
@@ -366,12 +370,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAllDayEvent Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -389,12 +393,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -412,12 +416,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsMapiPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -435,12 +439,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsNthMonthly Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -458,12 +462,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsNthYearly Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsOnlineMeeting"></a> IsOnlineMeeting
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Displays whether or not this is an online meeting.|
+|DisplayName|Is Online Meeting|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isonlinemeeting|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsOnlineMeeting Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -481,12 +510,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsRegenerate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -504,12 +533,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWeekDayPattern Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -527,12 +556,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -566,21 +595,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### MonthOfYear Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Invalid Month Of Year|
-|1|January|
-|2|February|
-|3|March|
-|4|April|
-|5|May|
-|6|June|
-|7|July|
-|8|August|
-|9|September|
-|10|October|
-|11|November|
-|12|December|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Invalid Month Of Year||
+|1|January||
+|2|February||
+|3|March||
+|4|April||
+|5|May||
+|6|June||
+|7|July||
+|8|August||
+|9|September||
+|10|October||
+|11|November||
+|12|December||
 
 
 
@@ -598,6 +627,82 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_OnlineMeetingChatId"></a> OnlineMeetingChatId
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the online meeting chat id.|
+|DisplayName|Online Meeting Chat Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|onlinemeetingchatid|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OnlineMeetingId"></a> OnlineMeetingId
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the online meeting id.|
+|DisplayName|Online Meeting Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|onlinemeetingid|
+|MaxLength|300|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OnlineMeetingJoinUrl"></a> OnlineMeetingJoinUrl
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the online meeting join url.|
+|DisplayName|Online Meeting Join Url|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|onlinemeetingjoinurl|
+|MaxLength|600|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OnlineMeetingType"></a> OnlineMeetingType
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Displays the online meeting type.|
+|DisplayName|Online Meeting Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|onlinemeetingtype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### OnlineMeetingType Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Teams Meeting||
+
 
 
 ### <a name="BKMK_OptionalAttendees"></a> OptionalAttendees
@@ -716,11 +821,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PatternEndType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|No End Date|
-|2|Occurrences|
-|3|Pattern End Date|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|No End Date||
+|2|Occurrences||
+|3|Pattern End Date||
 
 
 
@@ -753,11 +858,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -788,12 +893,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### RecurrencePatternType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Daily|
-|1|Weekly|
-|2|Monthly|
-|3|Yearly|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Daily||
+|1|Weekly||
+|2|Monthly||
+|3|Yearly||
 
 
 
@@ -852,12 +957,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### SeriesStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Active|
-|0|Inactive|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Active||
+|0|Inactive||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1092,6 +1197,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -1250,8 +1356,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -1270,11 +1376,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ExpansionStateCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Unexpanded|
-|1|Partial|
-|2|Full|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Unexpanded||
+|1|Partial||
+|2|Full||
 
 
 
@@ -1306,13 +1412,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### InstanceTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Recurring|
-|1|Recurring Master|
-|2|Recurring Instance|
-|3|Recurring Exception|
-|4|Recurring Future Exception|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Recurring||
+|1|Recurring Master||
+|2|Recurring Instance||
+|3|Recurring Exception||
+|4|Recurring Future Exception||
 
 
 
@@ -1330,12 +1436,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1530,12 +1636,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the recurring appointment series.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1694,7 +1816,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [recurringappointmentmaster_PostRegardings](#BKMK_recurringappointmentmaster_PostRegardings)
 - [recurringappointmentmaster_PostFollows](#BKMK_recurringappointmentmaster_PostFollows)
 - [RecurringAppointmentMaster_SyncErrors](#BKMK_RecurringAppointmentMaster_SyncErrors)
 - [RecurringAppointmentMaster_DuplicateBaseRecord](#BKMK_RecurringAppointmentMaster_DuplicateBaseRecord)
@@ -1712,24 +1833,9 @@ Listed by **SchemaName**.
 - [RecurringAppointmentMaster_DuplicateMatchingRecord](#BKMK_RecurringAppointmentMaster_DuplicateMatchingRecord)
 
 
-### <a name="BKMK_recurringappointmentmaster_PostRegardings"></a> recurringappointmentmaster_PostRegardings
-
-Same as postregarding table [recurringappointmentmaster_PostRegardings](postregarding.md#BKMK_recurringappointmentmaster_PostRegardings) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postregarding|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|recurringappointmentmaster_PostRegardings|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_recurringappointmentmaster_PostFollows"></a> recurringappointmentmaster_PostFollows
 
-Same as postfollow table [recurringappointmentmaster_PostFollows](postfollow.md#BKMK_recurringappointmentmaster_PostFollows) Many-To-One relationship.
+Same as the [recurringappointmentmaster_PostFollows](postfollow.md#BKMK_recurringappointmentmaster_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1744,7 +1850,7 @@ Same as postfollow table [recurringappointmentmaster_PostFollows](postfollow.md#
 
 ### <a name="BKMK_RecurringAppointmentMaster_SyncErrors"></a> RecurringAppointmentMaster_SyncErrors
 
-Same as syncerror table [RecurringAppointmentMaster_SyncErrors](syncerror.md#BKMK_RecurringAppointmentMaster_SyncErrors) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_SyncErrors](syncerror.md#BKMK_RecurringAppointmentMaster_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1759,7 +1865,7 @@ Same as syncerror table [RecurringAppointmentMaster_SyncErrors](syncerror.md#BKM
 
 ### <a name="BKMK_RecurringAppointmentMaster_DuplicateBaseRecord"></a> RecurringAppointmentMaster_DuplicateBaseRecord
 
-Same as duplicaterecord table [RecurringAppointmentMaster_DuplicateBaseRecord](duplicaterecord.md#BKMK_RecurringAppointmentMaster_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_DuplicateBaseRecord](duplicaterecord.md#BKMK_RecurringAppointmentMaster_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1774,7 +1880,7 @@ Same as duplicaterecord table [RecurringAppointmentMaster_DuplicateBaseRecord](d
 
 ### <a name="BKMK_recurringappointmentmaster_actioncard"></a> recurringappointmentmaster_actioncard
 
-Same as actioncard table [recurringappointmentmaster_actioncard](actioncard.md#BKMK_recurringappointmentmaster_actioncard) Many-To-One relationship.
+Same as the [recurringappointmentmaster_actioncard](actioncard.md#BKMK_recurringappointmentmaster_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1789,7 +1895,7 @@ Same as actioncard table [recurringappointmentmaster_actioncard](actioncard.md#B
 
 ### <a name="BKMK_RecurringAppointmentMaster_BulkDeleteFailures"></a> RecurringAppointmentMaster_BulkDeleteFailures
 
-Same as bulkdeletefailure table [RecurringAppointmentMaster_BulkDeleteFailures](bulkdeletefailure.md#BKMK_RecurringAppointmentMaster_BulkDeleteFailures) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_BulkDeleteFailures](bulkdeletefailure.md#BKMK_RecurringAppointmentMaster_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1804,7 +1910,7 @@ Same as bulkdeletefailure table [RecurringAppointmentMaster_BulkDeleteFailures](
 
 ### <a name="BKMK_RecurringAppointmentMaster_QueueItem"></a> RecurringAppointmentMaster_QueueItem
 
-Same as queueitem table [RecurringAppointmentMaster_QueueItem](queueitem.md#BKMK_RecurringAppointmentMaster_QueueItem) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_QueueItem](queueitem.md#BKMK_RecurringAppointmentMaster_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1819,7 +1925,7 @@ Same as queueitem table [RecurringAppointmentMaster_QueueItem](queueitem.md#BKMK
 
 ### <a name="BKMK_RecurringAppointmentMaster_AsyncOperations"></a> RecurringAppointmentMaster_AsyncOperations
 
-Same as asyncoperation table [RecurringAppointmentMaster_AsyncOperations](asyncoperation.md#BKMK_RecurringAppointmentMaster_AsyncOperations) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_AsyncOperations](asyncoperation.md#BKMK_RecurringAppointmentMaster_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1834,7 +1940,7 @@ Same as asyncoperation table [RecurringAppointmentMaster_AsyncOperations](asynco
 
 ### <a name="BKMK_recurringappointmentmaster_activity_parties"></a> recurringappointmentmaster_activity_parties
 
-Same as activityparty table [recurringappointmentmaster_activity_parties](activityparty.md#BKMK_recurringappointmentmaster_activity_parties) Many-To-One relationship.
+Same as the [recurringappointmentmaster_activity_parties](activityparty.md#BKMK_recurringappointmentmaster_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1849,7 +1955,7 @@ Same as activityparty table [recurringappointmentmaster_activity_parties](activi
 
 ### <a name="BKMK_recurringappointmentmaster_connections2"></a> recurringappointmentmaster_connections2
 
-Same as connection table [recurringappointmentmaster_connections2](connection.md#BKMK_recurringappointmentmaster_connections2) Many-To-One relationship.
+Same as the [recurringappointmentmaster_connections2](connection.md#BKMK_recurringappointmentmaster_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1864,7 +1970,7 @@ Same as connection table [recurringappointmentmaster_connections2](connection.md
 
 ### <a name="BKMK_recurringappointmentmaster_connections1"></a> recurringappointmentmaster_connections1
 
-Same as connection table [recurringappointmentmaster_connections1](connection.md#BKMK_recurringappointmentmaster_connections1) Many-To-One relationship.
+Same as the [recurringappointmentmaster_connections1](connection.md#BKMK_recurringappointmentmaster_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1879,7 +1985,7 @@ Same as connection table [recurringappointmentmaster_connections1](connection.md
 
 ### <a name="BKMK_recurringappointmentmaster_principalobjectattributeaccess"></a> recurringappointmentmaster_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [recurringappointmentmaster_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_recurringappointmentmaster_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [recurringappointmentmaster_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_recurringappointmentmaster_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1894,7 +2000,7 @@ Same as principalobjectattributeaccess table [recurringappointmentmaster_princip
 
 ### <a name="BKMK_recurringappointmentmaster_appointment"></a> recurringappointmentmaster_appointment
 
-Same as appointment table [recurringappointmentmaster_appointment](appointment.md#BKMK_recurringappointmentmaster_appointment) Many-To-One relationship.
+Same as the [recurringappointmentmaster_appointment](appointment.md#BKMK_recurringappointmentmaster_appointment) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1909,7 +2015,7 @@ Same as appointment table [recurringappointmentmaster_appointment](appointment.m
 
 ### <a name="BKMK_RecurringAppointmentMaster_ProcessSessions"></a> RecurringAppointmentMaster_ProcessSessions
 
-Same as processsession table [RecurringAppointmentMaster_ProcessSessions](processsession.md#BKMK_RecurringAppointmentMaster_ProcessSessions) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_ProcessSessions](processsession.md#BKMK_RecurringAppointmentMaster_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1924,7 +2030,7 @@ Same as processsession table [RecurringAppointmentMaster_ProcessSessions](proces
 
 ### <a name="BKMK_RecurringAppointmentMaster_Annotation"></a> RecurringAppointmentMaster_Annotation
 
-Same as annotation table [RecurringAppointmentMaster_Annotation](annotation.md#BKMK_RecurringAppointmentMaster_Annotation) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_Annotation](annotation.md#BKMK_RecurringAppointmentMaster_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1939,7 +2045,7 @@ Same as annotation table [RecurringAppointmentMaster_Annotation](annotation.md#B
 
 ### <a name="BKMK_RecurringAppointmentMaster_DuplicateMatchingRecord"></a> RecurringAppointmentMaster_DuplicateMatchingRecord
 
-Same as duplicaterecord table [RecurringAppointmentMaster_DuplicateMatchingRecord](duplicaterecord.md#BKMK_RecurringAppointmentMaster_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [RecurringAppointmentMaster_DuplicateMatchingRecord](duplicaterecord.md#BKMK_RecurringAppointmentMaster_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1972,72 +2078,67 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_recurringappointmentmaster_modifiedonbehalfby](#BKMK_lk_recurringappointmentmaster_modifiedonbehalfby)
 - [user_recurringappointmentmaster](#BKMK_user_recurringappointmentmaster)
 - [KnowledgeArticle_RecurringAppointmentMasters](#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
-- [owner_recurringappointmentmasters](#BKMK_owner_recurringappointmentmasters)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters"></a> KnowledgeBaseRecord_RecurringAppointmentMasters
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_RecurringAppointmentMasters](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters) One-To-Many relationship.
+See the [KnowledgeBaseRecord_RecurringAppointmentMasters](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_RecurringAppointmentMaster"></a> TransactionCurrency_RecurringAppointmentMaster
 
-See transactioncurrency Table [TransactionCurrency_RecurringAppointmentMaster](transactioncurrency.md#BKMK_TransactionCurrency_RecurringAppointmentMaster) One-To-Many relationship.
+See the [TransactionCurrency_RecurringAppointmentMaster](transactioncurrency.md#BKMK_TransactionCurrency_RecurringAppointmentMaster) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_recurringappointmentmaster_modifiedby"></a> lk_recurringappointmentmaster_modifiedby
 
-See systemuser Table [lk_recurringappointmentmaster_modifiedby](systemuser.md#BKMK_lk_recurringappointmentmaster_modifiedby) One-To-Many relationship.
+See the [lk_recurringappointmentmaster_modifiedby](systemuser.md#BKMK_lk_recurringappointmentmaster_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_recurringappointmentmaster"></a> activity_pointer_recurringappointmentmaster
 
-See activitypointer Table [activity_pointer_recurringappointmentmaster](activitypointer.md#BKMK_activity_pointer_recurringappointmentmaster) One-To-Many relationship.
+See the [activity_pointer_recurringappointmentmaster](activitypointer.md#BKMK_activity_pointer_recurringappointmentmaster) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_recurrencerule_recurringappointmentmaster"></a> recurrencerule_recurringappointmentmaster
 
-See recurrencerule Table [recurrencerule_recurringappointmentmaster](recurrencerule.md#BKMK_recurrencerule_recurringappointmentmaster) One-To-Many relationship.
+See the [recurrencerule_recurringappointmentmaster](recurrencerule.md#BKMK_recurrencerule_recurringappointmentmaster) one-to-many relationship for the [recurrencerule](recurrencerule.md) table/entity.
 
 ### <a name="BKMK_team_recurringappointmentmaster"></a> team_recurringappointmentmaster
 
-See team Table [team_recurringappointmentmaster](team.md#BKMK_team_recurringappointmentmaster) One-To-Many relationship.
+See the [team_recurringappointmentmaster](team.md#BKMK_team_recurringappointmentmaster) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_Contact_RecurringAppointmentMasters"></a> Contact_RecurringAppointmentMasters
 
-See contact Table [Contact_RecurringAppointmentMasters](contact.md#BKMK_Contact_RecurringAppointmentMasters) One-To-Many relationship.
+See the [Contact_RecurringAppointmentMasters](contact.md#BKMK_Contact_RecurringAppointmentMasters) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_processstage_recurringappointmentmasters"></a> processstage_recurringappointmentmasters
 
-See processstage Table [processstage_recurringappointmentmasters](processstage.md#BKMK_processstage_recurringappointmentmasters) One-To-Many relationship.
+See the [processstage_recurringappointmentmasters](processstage.md#BKMK_processstage_recurringappointmentmasters) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_business_unit_recurringappointmentmaster_activities"></a> business_unit_recurringappointmentmaster_activities
 
-See businessunit Table [business_unit_recurringappointmentmaster_activities](businessunit.md#BKMK_business_unit_recurringappointmentmaster_activities) One-To-Many relationship.
+See the [business_unit_recurringappointmentmaster_activities](businessunit.md#BKMK_business_unit_recurringappointmentmaster_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_recurringappointmentmaster_createdonbehalfby"></a> lk_recurringappointmentmaster_createdonbehalfby
 
-See systemuser Table [lk_recurringappointmentmaster_createdonbehalfby](systemuser.md#BKMK_lk_recurringappointmentmaster_createdonbehalfby) One-To-Many relationship.
+See the [lk_recurringappointmentmaster_createdonbehalfby](systemuser.md#BKMK_lk_recurringappointmentmaster_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_recurringappointmentmaster_createdby"></a> lk_recurringappointmentmaster_createdby
 
-See systemuser Table [lk_recurringappointmentmaster_createdby](systemuser.md#BKMK_lk_recurringappointmentmaster_createdby) One-To-Many relationship.
+See the [lk_recurringappointmentmaster_createdby](systemuser.md#BKMK_lk_recurringappointmentmaster_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_RecurringAppointmentMasters"></a> Account_RecurringAppointmentMasters
 
-See account Table [Account_RecurringAppointmentMasters](account.md#BKMK_Account_RecurringAppointmentMasters) One-To-Many relationship.
+See the [Account_RecurringAppointmentMasters](account.md#BKMK_Account_RecurringAppointmentMasters) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_recurringappointmentmaster_modifiedonbehalfby"></a> lk_recurringappointmentmaster_modifiedonbehalfby
 
-See systemuser Table [lk_recurringappointmentmaster_modifiedonbehalfby](systemuser.md#BKMK_lk_recurringappointmentmaster_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_recurringappointmentmaster_modifiedonbehalfby](systemuser.md#BKMK_lk_recurringappointmentmaster_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_recurringappointmentmaster"></a> user_recurringappointmentmaster
 
-See systemuser Table [user_recurringappointmentmaster](systemuser.md#BKMK_user_recurringappointmentmaster) One-To-Many relationship.
+See the [user_recurringappointmentmaster](systemuser.md#BKMK_user_recurringappointmentmaster) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_RecurringAppointmentMasters"></a> KnowledgeArticle_RecurringAppointmentMasters
 
-See knowledgearticle Table [KnowledgeArticle_RecurringAppointmentMasters](knowledgearticle.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) One-To-Many relationship.
-
-### <a name="BKMK_owner_recurringappointmentmasters"></a> owner_recurringappointmentmasters
-
-See owner Table [owner_recurringappointmentmasters](owner.md#BKMK_owner_recurringappointmentmasters) One-To-Many relationship.
+See the [KnowledgeArticle_RecurringAppointmentMasters](knowledgearticle.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### See also
 

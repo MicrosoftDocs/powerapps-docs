@@ -1,24 +1,22 @@
 ---
 title: "Sample: Simplified connection quick start (Developer Guide for Microsoft Dataverse) | MicrosoftDocs"
 description: "This sample shows you how to connect to the Microsoft Dataverse web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on a table. "
-ms.custom: 
-ms.date: 04/12/2021
-author: Nkrb
-ms.service: powerapps
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: samples
+ms.date: 04/01/2022
+author: MattB-msft
+ms.topic: sample
+ms.author: mbarbour
+ms.reviewer: jdaly
+manager: jstrauss
 applies_to: 
   - Microsoft Dataverse (online)
-ms.assetid: a4fb3634-948e-4bac-a32f-f626c78d83a0
-caps.latest.revision: 29
-ms.author: nabuthuk
-manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - D365CE
   - PowerApps
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Sample: Simplified connection quick start using Microsoft Dataverse
 
@@ -46,9 +44,18 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <connectionStrings>  
-    <!-- Online using Microsoft 365 -->  
-    <!-- <add name="Server=CRM Online, organization=contoso, user=someone"  
-         connectionString="Url=https://contoso.crm.dynamics.com; Username=someone@contoso.onmicrosoft.com; Password=password; authtype=Office365"/> -->  
+
+  <!--<add name="Connect"
+  connectionString="
+  AuthType=OAuth;
+  Username=jsmith@contoso.onmicrosoft.com;
+  Url=https://contosotest.crm.dynamics.com;
+  Password=passcode;
+  AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
+  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
+  TokenCacheStorePath=d:\MyTokenCache;
+  LoginPrompt=Auto"/>-->
+
   </connectionStrings>  
   <startup>  
     <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />  

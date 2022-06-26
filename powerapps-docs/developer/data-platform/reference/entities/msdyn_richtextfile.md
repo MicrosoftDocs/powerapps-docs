@@ -1,13 +1,13 @@
 ---
-title: "msdyn_richtextfile table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_richtextfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_richtextfile table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +36,6 @@ Image or file attached to a rich text field
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_richtextfiles(*msdyn_richtextfileid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_richtextfiles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -317,6 +316,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_fileblob_Name](#BKMK_msdyn_fileblob_Name)
 - [msdyn_imageblob](#BKMK_msdyn_imageblob)
 - [msdyn_imageblob_Timestamp](#BKMK_msdyn_imageblob_Timestamp)
 - [msdyn_imageblob_URL](#BKMK_msdyn_imageblob_URL)
@@ -324,6 +324,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -567,11 +568,29 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_msdyn_imageblob"></a> msdyn_imageblob
+### <a name="BKMK_msdyn_fileblob_Name"></a> msdyn_fileblob_Name
+
+**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
 |Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_fileblob_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_imageblob"></a> msdyn_imageblob
+
+|Property|Value|
+|--------|-----|
+|Description|Base64 encoded image content for Rich Text Attachments|
 |DisplayName|Image Blob|
 |IsPrimaryImage|True|
 |IsValidForForm|True|
@@ -671,12 +690,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -745,7 +782,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_richtextfile_SyncErrors](syncerror.md#BKMK_msdyn_richtextfile_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_richtextfile_SyncErrors](syncerror.md#BKMK_msdyn_richtextfile_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -762,7 +799,7 @@ Same as syncerror table [msdyn_richtextfile_SyncErrors](syncerror.md#BKMK_msdyn_
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_richtextfile_AsyncOperations](asyncoperation.md#BKMK_msdyn_richtextfile_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_richtextfile_AsyncOperations](asyncoperation.md#BKMK_msdyn_richtextfile_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -779,7 +816,7 @@ Same as asyncoperation table [msdyn_richtextfile_AsyncOperations](asyncoperation
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_richtextfile_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_richtextfile_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_richtextfile_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_richtextfile_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -796,7 +833,7 @@ Same as mailboxtrackingfolder table [msdyn_richtextfile_MailboxTrackingFolders](
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_richtextfile_ProcessSession](processsession.md#BKMK_msdyn_richtextfile_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_richtextfile_ProcessSession](processsession.md#BKMK_msdyn_richtextfile_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -813,7 +850,7 @@ Same as processsession table [msdyn_richtextfile_ProcessSession](processsession.
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_richtextfile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_richtextfile_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_richtextfile_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_richtextfile_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -830,7 +867,7 @@ Same as bulkdeletefailure table [msdyn_richtextfile_BulkDeleteFailures](bulkdele
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_richtextfile_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_richtextfile_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_richtextfile_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_richtextfile_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -854,7 +891,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_msdyn_richtextfile_modifiedonbehalfby](#BKMK_lk_msdyn_richtextfile_modifiedonbehalfby)
 - [user_msdyn_richtextfile](#BKMK_user_msdyn_richtextfile)
 - [team_msdyn_richtextfile](#BKMK_team_msdyn_richtextfile)
-- [owner_msdyn_richtextfile](#BKMK_owner_msdyn_richtextfile)
 - [business_unit_msdyn_richtextfile](#BKMK_business_unit_msdyn_richtextfile)
 
 
@@ -862,49 +898,43 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_richtextfile_createdby](systemuser.md#BKMK_lk_msdyn_richtextfile_createdby) One-To-Many relationship.
+See the [lk_msdyn_richtextfile_createdby](systemuser.md#BKMK_lk_msdyn_richtextfile_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_richtextfile_createdonbehalfby"></a> lk_msdyn_richtextfile_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_richtextfile_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_richtextfile_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_richtextfile_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_richtextfile_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_richtextfile_modifiedby"></a> lk_msdyn_richtextfile_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_richtextfile_modifiedby](systemuser.md#BKMK_lk_msdyn_richtextfile_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_richtextfile_modifiedby](systemuser.md#BKMK_lk_msdyn_richtextfile_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_richtextfile_modifiedonbehalfby"></a> lk_msdyn_richtextfile_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_richtextfile_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_richtextfile_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_richtextfile_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_richtextfile_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_richtextfile"></a> user_msdyn_richtextfile
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_richtextfile](systemuser.md#BKMK_user_msdyn_richtextfile) One-To-Many relationship.
+See the [user_msdyn_richtextfile](systemuser.md#BKMK_user_msdyn_richtextfile) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_richtextfile"></a> team_msdyn_richtextfile
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_richtextfile](team.md#BKMK_team_msdyn_richtextfile) One-To-Many relationship.
-
-### <a name="BKMK_owner_msdyn_richtextfile"></a> owner_msdyn_richtextfile
-
-**Added by**: System Solution Solution
-
-See owner Table [owner_msdyn_richtextfile](owner.md#BKMK_owner_msdyn_richtextfile) One-To-Many relationship.
+See the [team_msdyn_richtextfile](team.md#BKMK_team_msdyn_richtextfile) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_richtextfile"></a> business_unit_msdyn_richtextfile
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_richtextfile](businessunit.md#BKMK_business_unit_msdyn_richtextfile) One-To-Many relationship.
+See the [business_unit_msdyn_richtextfile](businessunit.md#BKMK_business_unit_msdyn_richtextfile) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 

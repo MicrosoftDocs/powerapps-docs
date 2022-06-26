@@ -1,25 +1,24 @@
 ---
 title: CaptureImage | Microsoft Docs
 description: Invokes the device camera to capture the image.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # captureImage
 
 [!INCLUDE[./includes/captureimage-description.md](./includes/captureimage-description.md)]
 
-## Available for 
+## Available for
 
-Model-driven apps
+Model-driven (mobile client) and canvas apps (mobile client)
 
 ## Syntax
 
@@ -27,9 +26,19 @@ Model-driven apps
 
 ## Parameters
 
-| Parameter Name|Type|Required|Description|
-| ------------- |----|--------|-----------|
-|`options`|`Object`|No|Options for capturing image.|
+| Parameter Name | Type     | Required | Description                  |
+| -------------- | -------- | -------- | ---------------------------- |
+| `options`      | `Object` | No       | Options for capturing image. |
+
+The `options` parameter object has the following properties:
+
+| Name                | Type      | Description                                                              |
+| ------------------- | --------- | ------------------------------------------------------------------------ |
+| `allowEdit`         | `Boolean` | Indicates whether to edit the image before saving.                       |
+| `height`            | `Number`  | Height of the image to capture.                                          |
+| `preferFrontCamera` | `Boolean` | Indicates whether to capture image using the front camera of the device. |
+| `quality`           | `Number`  | Quality of the image file in percentage.                                 |
+| `width`             | `Number`  | Width of the image to capture.                                           |
 
 ## Return Value
 
@@ -37,18 +46,9 @@ Type: `Promise<FileObject>`
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
-## Remarks
+## Exceptions
 
-The `options` parameter object has the following properties:
-
-|Name|Type|Description|
-| ---|----|-----------|
-|`allowEdit`|`Boolean`|Indicates whether to edit the image before saving.|
-|`height`|`Number`|Height of the image to capture.|
-|`preferFrontCamera`|`Boolean`|Indicates whether to capture image using the front camera of the device.|
-|`quality`|`Number`|Quality of the image file in percentage.|
-|`width`|`Number`|Width of the image to capture.|
-
+See [Web service error codes](../../../data-platform/org-service/web-service-error-codes.md)
 
 ### Related topics
 

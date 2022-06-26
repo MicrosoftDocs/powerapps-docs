@@ -1,13 +1,13 @@
 ---
-title: "ActionCardUserState table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ActionCardUserState table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActionCardUserState table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ search.app:
 |Create|POST [*org URI*]/api/data/v9.0/actioncarduserstates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/actioncarduserstates(*actioncarduserstateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/actioncarduserstates(*actioncarduserstateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/actioncarduserstates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/actioncarduserstates(*actioncarduserstateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -185,11 +184,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### State Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Active|
-|1|Dismissed|
-|2|Completed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Active||
+|1|Dismissed||
+|2|Completed||
 
 
 
@@ -262,8 +261,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -352,20 +351,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 - [ActionCardUserState_ActionCard](#BKMK_ActionCardUserState_ActionCard)
 - [TransactionCurrency_ActionCardUserState](#BKMK_TransactionCurrency_ActionCardUserState)
-- [ActionCardUserState_Owner](#BKMK_ActionCardUserState_Owner)
 
 
 ### <a name="BKMK_ActionCardUserState_ActionCard"></a> ActionCardUserState_ActionCard
 
-See actioncard Table [ActionCardUserState_ActionCard](actioncard.md#BKMK_ActionCardUserState_ActionCard) One-To-Many relationship.
+See the [ActionCardUserState_ActionCard](actioncard.md#BKMK_ActionCardUserState_ActionCard) one-to-many relationship for the [actioncard](actioncard.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_ActionCardUserState"></a> TransactionCurrency_ActionCardUserState
 
-See transactioncurrency Table [TransactionCurrency_ActionCardUserState](transactioncurrency.md#BKMK_TransactionCurrency_ActionCardUserState) One-To-Many relationship.
-
-### <a name="BKMK_ActionCardUserState_Owner"></a> ActionCardUserState_Owner
-
-See owner Table [ActionCardUserState_Owner](owner.md#BKMK_ActionCardUserState_Owner) One-To-Many relationship.
+See the [TransactionCurrency_ActionCardUserState](transactioncurrency.md#BKMK_TransactionCurrency_ActionCardUserState) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 

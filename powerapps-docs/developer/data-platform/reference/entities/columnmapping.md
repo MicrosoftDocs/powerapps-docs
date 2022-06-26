@@ -1,13 +1,13 @@
 ---
-title: "ColumnMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ColumnMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ColumnMapping table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ Mapping for columns in a data map.
 |Create|POST [*org URI*]/api/data/v9.0/columnmappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/columnmappings(*columnmappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/columnmappings(*columnmappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/columnmappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -125,11 +124,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ProcessCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Process|
-|2|Ignore|
-|3|Internal|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Process||
+|2|Ignore||
+|3|Internal||
 
 
 
@@ -273,12 +272,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -419,12 +418,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -607,7 +606,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_PickListMapping_ColumnMapping"></a> PickListMapping_ColumnMapping
 
-Same as picklistmapping table [PickListMapping_ColumnMapping](picklistmapping.md#BKMK_PickListMapping_ColumnMapping) Many-To-One relationship.
+Same as the [PickListMapping_ColumnMapping](picklistmapping.md#BKMK_PickListMapping_ColumnMapping) many-to-one relationship for the [picklistmapping](picklistmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -622,7 +621,7 @@ Same as picklistmapping table [PickListMapping_ColumnMapping](picklistmapping.md
 
 ### <a name="BKMK_LookUpMapping_ColumnMapping"></a> LookUpMapping_ColumnMapping
 
-Same as lookupmapping table [LookUpMapping_ColumnMapping](lookupmapping.md#BKMK_LookUpMapping_ColumnMapping) Many-To-One relationship.
+Same as the [LookUpMapping_ColumnMapping](lookupmapping.md#BKMK_LookUpMapping_ColumnMapping) many-to-one relationship for the [lookupmapping](lookupmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -649,23 +648,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_columnmapping_createdonbehalfby"></a> lk_columnmapping_createdonbehalfby
 
-See systemuser Table [lk_columnmapping_createdonbehalfby](systemuser.md#BKMK_lk_columnmapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_columnmapping_createdonbehalfby](systemuser.md#BKMK_lk_columnmapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_columnmapping_createdby"></a> lk_columnmapping_createdby
 
-See systemuser Table [lk_columnmapping_createdby](systemuser.md#BKMK_lk_columnmapping_createdby) One-To-Many relationship.
+See the [lk_columnmapping_createdby](systemuser.md#BKMK_lk_columnmapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ColumnMapping_ImportMap"></a> ColumnMapping_ImportMap
 
-See importmap Table [ColumnMapping_ImportMap](importmap.md#BKMK_ColumnMapping_ImportMap) One-To-Many relationship.
+See the [ColumnMapping_ImportMap](importmap.md#BKMK_ColumnMapping_ImportMap) one-to-many relationship for the [importmap](importmap.md) table/entity.
 
 ### <a name="BKMK_lk_columnmapping_modifiedonbehalfby"></a> lk_columnmapping_modifiedonbehalfby
 
-See systemuser Table [lk_columnmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_columnmapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_columnmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_columnmapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_columnmapping_modifiedby"></a> lk_columnmapping_modifiedby
 
-See systemuser Table [lk_columnmapping_modifiedby](systemuser.md#BKMK_lk_columnmapping_modifiedby) One-To-Many relationship.
+See the [lk_columnmapping_modifiedby](systemuser.md#BKMK_lk_columnmapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

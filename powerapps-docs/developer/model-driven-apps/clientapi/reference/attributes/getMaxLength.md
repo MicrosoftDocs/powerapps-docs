@@ -1,19 +1,21 @@
 ---
 title: "getMaxLength (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getMaxLength method.
-ms.date: 04/19/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 67a96fc4-4d65-4858-90da-f41eeba0365a
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getMaxLength (Client API reference)
 

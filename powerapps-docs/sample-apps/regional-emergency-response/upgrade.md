@@ -3,7 +3,7 @@ title: Upgrade the Regional Government Emergency Response and Monitoring solut
 description: Provides provides detailed instructions for regional IT admins to upgrade the Regional Government Emergency Response and Monitoring solution for their organization.
 author: pankajarora-msft
 manager: annbe
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/05/2020
@@ -92,7 +92,7 @@ Do the following:
 |**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Microsoft Dataverse and then specify a user account to send emails.|
 |**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Dataverse and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-For detailed information about this, see [Step 11.1: Fix the flows for sending emails](deploy.md##step-111-fix-the-flows-for-sending-emails) in the deployment topic.
+For detailed information about this, see [Step 11.1: Fix the flows for sending emails](deploy.md#step-111-fix-the-flows-for-sending-emails) in the deployment topic.
 
 ## Step 7: Verify the flows for performing tasks
 

@@ -3,10 +3,11 @@ title: Power Apps web part | Microsoft Docs
 description: Learn how to run a canvas app from a SharePoint page.
 author: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 11/16/2018
+ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""

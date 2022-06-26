@@ -1,19 +1,20 @@
 ---
 title: "retrieveRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the retrieveRecord method.
-ms.date: 04/21/2021
-ms.service: powerapps
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # retrieveRecord (Client API reference)
 
@@ -27,7 +28,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -52,7 +53,7 @@ search.app:
 <td>No</td>
 <td><p>OData system query options, <b>$select</b> and <b>$expand</b>, to retrieve your data.</p>
 <ul><li>Use the <b>$select</b> system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
+<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
 </ul>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple query options by using <code>&</code> to separate the query options. For example:</p>
 <code>?$select=name&$expand=primarycontactid($select=contactid,fullname)</code>
@@ -76,6 +77,7 @@ search.app:
 ## Return Value
 
 On success, returns a promise containing a JSON object with the retrieved columns and their values.
+If the requested record does not exist, returns an error.
 
 ## Examples
 

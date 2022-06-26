@@ -1,13 +1,13 @@
 ---
-title: "Attribute table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Attribute table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Attribute table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -27,7 +27,7 @@ search.app:
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/attributes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -192,10 +192,43 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [AttributeOf](#BKMK_AttributeOf)
+- [AttributeTypeId](#BKMK_AttributeTypeId)
 - [ComponentState](#BKMK_ComponentState)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
+- [ValidForReadAPI](#BKMK_ValidForReadAPI)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_AttributeOf"></a> AttributeOf
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Attribute Of|
+|DisplayName|Attribute Of|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|attributeof|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_AttributeTypeId"></a> AttributeTypeId
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Attribute Type Id|
+|DisplayName|Attribute Type Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|attributetypeid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
@@ -212,12 +245,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -247,6 +280,26 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ValidForReadAPI"></a> ValidForReadAPI
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Valid For Read API|
+|DisplayName|Valid For Read API|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|validforreadapi|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### ValidForReadAPI Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
@@ -280,7 +333,7 @@ Listed by **SchemaName**.
 
 **Added by**: Solution Component Configuration Solution
 
-Same as solutioncomponentattributeconfiguration table [attribute_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_attribute_solutioncomponentattrconfig) Many-To-One relationship.
+Same as the [attribute_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_attribute_solutioncomponentattrconfig) many-to-one relationship for the [solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -297,7 +350,7 @@ Same as solutioncomponentattributeconfiguration table [attribute_solutioncompone
 
 **Added by**: Metadata Extension Solution
 
-Same as relationshipattribute table [referencingattribute_relationshipattribute](relationshipattribute.md#BKMK_referencingattribute_relationshipattribute) Many-To-One relationship.
+Same as the [referencingattribute_relationshipattribute](relationshipattribute.md#BKMK_referencingattribute_relationshipattribute) many-to-one relationship for the [relationshipattribute](relationshipattribute.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -307,14 +360,14 @@ Same as relationshipattribute table [referencingattribute_relationshipattribute]
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|referencingdattribute_relationshipattribute|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_referencedattribute_relationshipattribute"></a> referencedattribute_relationshipattribute
 
 **Added by**: Metadata Extension Solution
 
-Same as relationshipattribute table [referencedattribute_relationshipattribute](relationshipattribute.md#BKMK_referencedattribute_relationshipattribute) Many-To-One relationship.
+Same as the [referencedattribute_relationshipattribute](relationshipattribute.md#BKMK_referencedattribute_relationshipattribute) many-to-one relationship for the [relationshipattribute](relationshipattribute.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -324,7 +377,7 @@ Same as relationshipattribute table [referencedattribute_relationshipattribute](
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|referencedattribute_relationshipattribute|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### See also

@@ -1,13 +1,13 @@
 ---
-title: "SiteMap table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SiteMap table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SiteMap table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ XML data used to control the application navigation pane.
 |Create|POST [*org URI*]/api/data/v9.0/sitemaps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/sitemaps(*sitemapid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/sitemaps(*sitemapid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sitemaps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/sitemaps(*sitemapid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
@@ -57,10 +56,39 @@ XML data used to control the application navigation pane.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [EnableCollapsibleGroups](#BKMK_EnableCollapsibleGroups)
 - [IsAppAware](#BKMK_IsAppAware)
+- [ShowHome](#BKMK_ShowHome)
+- [ShowPinned](#BKMK_ShowPinned)
+- [ShowRecents](#BKMK_ShowRecents)
 - [SiteMapName](#BKMK_SiteMapName)
 - [SiteMapNameUnique](#BKMK_SiteMapNameUnique)
 - [SiteMapXml](#BKMK_SiteMapXml)
+
+
+### <a name="BKMK_EnableCollapsibleGroups"></a> EnableCollapsibleGroups
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to allow sitemap groups to be collapsed.|
+|DisplayName|Enable Collapsible Groups|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablecollapsiblegroups|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableCollapsibleGroups Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_IsAppAware"></a> IsAppAware
@@ -78,12 +106,87 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAppAware Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_ShowHome"></a> ShowHome
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to show the home button in the sitemap.|
+|DisplayName|Show Home|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|showhome|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ShowHome Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_ShowPinned"></a> ShowPinned
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to show the pinned dropdown in the sitemap.|
+|DisplayName|Show Pinned|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|showpinned|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ShowPinned Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_ShowRecents"></a> ShowRecents
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable to show the recents dropdown in the sitemap.|
+|DisplayName|Show Recents|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|showrecents|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ShowRecents Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
 
 
 
@@ -179,12 +282,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -293,12 +396,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -457,7 +560,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
-|IsValidForRead|False|
+|IsValidForRead|True|
 |LogicalName|sitemapxmlmanaged|
 |MaxLength|1073741823|
 |RequiredLevel|None|
@@ -519,23 +622,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_SiteMap_createdby"></a> lk_SiteMap_createdby
 
-See systemuser Table [lk_SiteMap_createdby](systemuser.md#BKMK_lk_SiteMap_createdby) One-To-Many relationship.
+See the [lk_SiteMap_createdby](systemuser.md#BKMK_lk_SiteMap_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_SiteMap_modifiedby"></a> lk_SiteMap_modifiedby
 
-See systemuser Table [lk_SiteMap_modifiedby](systemuser.md#BKMK_lk_SiteMap_modifiedby) One-To-Many relationship.
+See the [lk_SiteMap_modifiedby](systemuser.md#BKMK_lk_SiteMap_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sitemap"></a> organization_sitemap
 
-See organization Table [organization_sitemap](organization.md#BKMK_organization_sitemap) One-To-Many relationship.
+See the [organization_sitemap](organization.md#BKMK_organization_sitemap) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_SiteMap_createdonbehalfby"></a> lk_SiteMap_createdonbehalfby
 
-See systemuser Table [lk_SiteMap_createdonbehalfby](systemuser.md#BKMK_lk_SiteMap_createdonbehalfby) One-To-Many relationship.
+See the [lk_SiteMap_createdonbehalfby](systemuser.md#BKMK_lk_SiteMap_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_SiteMap_modifiedonbehalfby"></a> lk_SiteMap_modifiedonbehalfby
 
-See systemuser Table [lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_SiteMap_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_SiteMap_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

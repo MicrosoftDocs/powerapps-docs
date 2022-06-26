@@ -1,16 +1,15 @@
 ---
 title: getFormFactor | Microsoft Docs
 description: Returns information about the kind of device the user is using.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0ad24866-08c3-4584-8964-decff50e716e
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getFormFactor
@@ -23,7 +22,7 @@ ms.assetid: 0ad24866-08c3-4584-8964-decff50e716e
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps, canvas apps, & portals.
 
 ## Return Value
 

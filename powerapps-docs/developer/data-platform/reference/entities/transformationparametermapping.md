@@ -1,13 +1,13 @@
 ---
-title: "TransformationParameterMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TransformationParameterMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TransformationParameterMapping table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,6 @@ In a data map, defines parameters for a transformation.
 |Create|POST [*org URI*]/api/data/v9.0/transformationparametermappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/transformationparametermappings(*transformationparametermappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/transformationparametermappings(*transformationparametermappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/transformationparametermappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
@@ -95,10 +94,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### DataTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Reference|
-|1|Value|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Reference||
+|1|Value||
 
 
 
@@ -166,10 +165,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### ParameterTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Input|
-|1|Output|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Input||
+|1|Output||
 
 
 
@@ -243,12 +242,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -373,12 +372,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 #### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -567,7 +566,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_LookUpMapping_TransformationParameterMapping"></a> LookUpMapping_TransformationParameterMapping
 
-Same as lookupmapping table [LookUpMapping_TransformationParameterMapping](lookupmapping.md#BKMK_LookUpMapping_TransformationParameterMapping) Many-To-One relationship.
+Same as the [LookUpMapping_TransformationParameterMapping](lookupmapping.md#BKMK_LookUpMapping_TransformationParameterMapping) many-to-one relationship for the [lookupmapping](lookupmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -594,23 +593,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_TransformationParameterMapping_TransformationMapping"></a> TransformationParameterMapping_TransformationMapping
 
-See transformationmapping Table [TransformationParameterMapping_TransformationMapping](transformationmapping.md#BKMK_TransformationParameterMapping_TransformationMapping) One-To-Many relationship.
+See the [TransformationParameterMapping_TransformationMapping](transformationmapping.md#BKMK_TransformationParameterMapping_TransformationMapping) one-to-many relationship for the [transformationmapping](transformationmapping.md) table/entity.
 
 ### <a name="BKMK_lk_transformationparametermapping_modifiedonbehalfby"></a> lk_transformationparametermapping_modifiedonbehalfby
 
-See systemuser Table [lk_transformationparametermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_transformationparametermapping_modifiedonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_transformationparametermapping_createdonbehalfby"></a> lk_transformationparametermapping_createdonbehalfby
 
-See systemuser Table [lk_transformationparametermapping_createdonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_transformationparametermapping_createdonbehalfby](systemuser.md#BKMK_lk_transformationparametermapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_transformationparametermapping_modifiedby"></a> lk_transformationparametermapping_modifiedby
 
-See systemuser Table [lk_transformationparametermapping_modifiedby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedby) One-To-Many relationship.
+See the [lk_transformationparametermapping_modifiedby](systemuser.md#BKMK_lk_transformationparametermapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_transformationparametermapping_createdby"></a> lk_transformationparametermapping_createdby
 
-See systemuser Table [lk_transformationparametermapping_createdby](systemuser.md#BKMK_lk_transformationparametermapping_createdby) One-To-Many relationship.
+See the [lk_transformationparametermapping_createdby](systemuser.md#BKMK_lk_transformationparametermapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 

@@ -1,18 +1,20 @@
 ---
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
-ms.custom: ""
+description: Learn about table relationships in Microsoft Dataverse
+ms.custom: intro-internal
 ms.date: 08/17/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "overview"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: c765b6d9-4d87-4c2d-aae2-5b1c3b664a71
 caps.latest.revision: 28
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -23,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Table relationships 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to a table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
   
@@ -153,9 +155,7 @@ When a table relationship uses Reparent or Share, and the cascading behavior is 
 Inherited access rights cleanup is a system job that cleans up the legacy inherited access rights that remain after the cascading behavior is changed from **Cascade All** to **Cascade None**. This cleanup will not affect any user that was directly granted access to a table, but will remove access from anyone who received access through inheritance only.
 
 > [!NOTE]
-> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess?view=dynamics-ce-odata-9)
-
-<!-- Automatic triggering to come later-- remove above alert at that time. The cleanup is automatically triggered when you switch Reparent or Share cascading behaviors from All to None. No action is required. -->
+> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess)
 
 This is how inherited access rights cleanup works:
 
@@ -171,7 +171,7 @@ After the cleanup runs, users who were able to access related tables only becaus
 
 
 ### See also
-[Monitor and manage system jobs](/power-platform/admin/monitor-manage-system-jobs) <br />
+[Monitor system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) <br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create Many-to-many (N:N) table relationships](create-edit-nn-relationships.md)
 

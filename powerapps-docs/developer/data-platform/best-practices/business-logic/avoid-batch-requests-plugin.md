@@ -8,12 +8,13 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 12/06/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -23,7 +24,7 @@ search.app:
 ---
 # Do not use batch request types in plug-ins and workflow activities
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Usage, Reliability, Performance
 

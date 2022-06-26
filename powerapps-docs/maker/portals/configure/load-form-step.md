@@ -2,20 +2,21 @@
 title: Define a load form and load tab step type
 description: Learn how to define a load form and load tab step type in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 02/02/2022
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
 contributors:
-    - tapanm-msft
+    - nickdoelman
     - sandhangitmsft
 ---
 
 # Define a load form and load tab step type
 
-This step type allows the advanced form step to act as an basic form within the overall advanced form process. It loads a form with a similar set of options available as an Basic Form.
+This step type allows the advanced form step to act as a basic form within the overall advanced form process. It loads a form with a similar set of options available as a Basic Form.
 
 ## Settings
 
@@ -26,13 +27,24 @@ This step type allows the advanced form step to act as an basic form within the 
 | Form Name                             | The name of the Form on the target table that is to be rendered. Required                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Tab Name                              | The name of a Tab on a Form for a specified table that is to be rendered. Optional                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Mode                                  | One of the following values:<br><ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting Insert indicates the form should insert a new record upon submission. Specifying Edit indicates the form should edit an existing record. Selecting ReadOnly indicates the form should display an existing record's noneditable form. Edit and ReadOnly requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Parameter Name' fields to select the appropriate record when the form is loaded in the portal.  |
-| Auto Generate Steps From Tabs         | Checked indicates that multiple tabs on an basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. Unchecked is the default behavior. Unchecked value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, the first tab is displayed.                                              |
+| Auto Generate Steps From Tabs         | Checked indicates that multiple tabs on a basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. Unchecked is the default behavior. Unchecked value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, the first tab is displayed.                                              |
 | Record Source Type                    | One of the following values:<br><ul><li>Query String <br> Selecting Query String requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Parameter Name' field.</li><li>Current Portal User <br> Selecting Current Portal User will retrieve the portal user record for the current authenticated user.</li></ul>                                                                                                                                                                                                                                                                                                                                                         |
 | Record ID Parameter Name | A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.                                                                                                                                                                                                                                                                                                                                                                                |
 | Relationship Name                     | Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same table type specified by the Table Name field.                                                                                                                                                                                                                           |
 | Allow Create If Null                  | An optional Boolean value available when Record Source Type is Record Associated to Current Portal User. Checked indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist because the form needs a record to data-bind to.                                                                                                                                        |
-| Enable Table Permissions             | Will cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. Note that this only applies to the FIRST step of a form.                                                                                                                                                                                                                     |
+| Enable Table Permissions             | Will cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. Note that this only applies to the FIRST step of a form. <br> **NOTE**: This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. See next section [Secure your forms](#secure-your-forms) for additional details. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)                                                                                                                                                                                                                    |
 ||
+
+## Secure your forms
+
+>[!NOTE]
+> This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals)
+
+To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on an advanced form and does not have permissions, they will receive an error message. In addition, you'll also see a warning when a form is configured with table permissions not enabled:
+
+"Table permissions should be enabled for this record or anyone on the internet can view the data."
+
+To enable permissions for an advanced form, select the checkbox to **Enable Table Permissions**. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
 ## Additional settings
 

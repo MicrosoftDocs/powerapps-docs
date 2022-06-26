@@ -1,13 +1,13 @@
 ---
-title: "Metric table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Metric table/entity."
-ms.date: 03/04/2021
+title: "Goal Metric (Metric)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Goal Metric (Metric)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Metric table/entity reference
+# Goal Metric (Metric)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -30,7 +30,6 @@ Type of measurement for a goal, such as money amount or count.
 |Create|POST [*org URI*]/api/data/v9.0/metrics<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/metrics(*metricid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/metrics(*metricid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/metrics<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/metrics(*metricid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/metrics(*metricid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
@@ -86,11 +85,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### AmountDataType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Money|
-|1|Decimal|
-|2|Integer|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Money||
+|1|Decimal||
+|2|Integer||
 
 
 
@@ -142,12 +141,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsAmount Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Amount|
-|0|Count|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Amount||
+|0|Count||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -165,12 +164,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsStretchTracked Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -558,7 +557,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_metric_goal"></a> metric_goal
 
-Same as goal table [metric_goal](goal.md#BKMK_metric_goal) Many-To-One relationship.
+Same as the [metric_goal](goal.md#BKMK_metric_goal) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -573,7 +572,7 @@ Same as goal table [metric_goal](goal.md#BKMK_metric_goal) Many-To-One relations
 
 ### <a name="BKMK_metric_rollupfield"></a> metric_rollupfield
 
-Same as rollupfield table [metric_rollupfield](rollupfield.md#BKMK_metric_rollupfield) Many-To-One relationship.
+Same as the [metric_rollupfield](rollupfield.md#BKMK_metric_rollupfield) many-to-one relationship for the [rollupfield](rollupfield.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -588,7 +587,7 @@ Same as rollupfield table [metric_rollupfield](rollupfield.md#BKMK_metric_rollup
 
 ### <a name="BKMK_metric_AsyncOperations"></a> metric_AsyncOperations
 
-Same as asyncoperation table [metric_AsyncOperations](asyncoperation.md#BKMK_metric_AsyncOperations) Many-To-One relationship.
+Same as the [metric_AsyncOperations](asyncoperation.md#BKMK_metric_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -603,7 +602,7 @@ Same as asyncoperation table [metric_AsyncOperations](asyncoperation.md#BKMK_met
 
 ### <a name="BKMK_Metric_SyncErrors"></a> Metric_SyncErrors
 
-Same as syncerror table [Metric_SyncErrors](syncerror.md#BKMK_Metric_SyncErrors) Many-To-One relationship.
+Same as the [Metric_SyncErrors](syncerror.md#BKMK_Metric_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -618,7 +617,7 @@ Same as syncerror table [Metric_SyncErrors](syncerror.md#BKMK_Metric_SyncErrors)
 
 ### <a name="BKMK_metric_ProcessSessions"></a> metric_ProcessSessions
 
-Same as processsession table [metric_ProcessSessions](processsession.md#BKMK_metric_ProcessSessions) Many-To-One relationship.
+Same as the [metric_ProcessSessions](processsession.md#BKMK_metric_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -645,23 +644,23 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_metric_createdby"></a> lk_metric_createdby
 
-See systemuser Table [lk_metric_createdby](systemuser.md#BKMK_lk_metric_createdby) One-To-Many relationship.
+See the [lk_metric_createdby](systemuser.md#BKMK_lk_metric_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_metric_createdonbehalfby"></a> lk_metric_createdonbehalfby
 
-See systemuser Table [lk_metric_createdonbehalfby](systemuser.md#BKMK_lk_metric_createdonbehalfby) One-To-Many relationship.
+See the [lk_metric_createdonbehalfby](systemuser.md#BKMK_lk_metric_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_metric_modifiedby"></a> lk_metric_modifiedby
 
-See systemuser Table [lk_metric_modifiedby](systemuser.md#BKMK_lk_metric_modifiedby) One-To-Many relationship.
+See the [lk_metric_modifiedby](systemuser.md#BKMK_lk_metric_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_metric_modifiedonbehalfby"></a> lk_metric_modifiedonbehalfby
 
-See systemuser Table [lk_metric_modifiedonbehalfby](systemuser.md#BKMK_lk_metric_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_metric_modifiedonbehalfby](systemuser.md#BKMK_lk_metric_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_metric"></a> organization_metric
 
-See organization Table [organization_metric](organization.md#BKMK_organization_metric) One-To-Many relationship.
+See the [organization_metric](organization.md#BKMK_organization_metric) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

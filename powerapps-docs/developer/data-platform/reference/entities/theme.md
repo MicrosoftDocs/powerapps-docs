@@ -1,13 +1,13 @@
 ---
-title: "Theme table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Theme table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Theme table/entity."
-ms.date: 03/04/2021
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
@@ -31,7 +31,6 @@ Information that's used to set custom visual theme options for client applicatio
 |Delete|DELETE [*org URI*]/api/data/v9.0/themes(*themeid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |PublishTheme|<xref href="Microsoft.Dynamics.CRM.PublishTheme?text=PublishTheme Action" />|<xref:Microsoft.Crm.Sdk.Messages.PublishThemeRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/themes(*themeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/themes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/themes(*themeid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
@@ -262,12 +261,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### IsDefaultTheme Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -525,12 +524,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 #### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Custom|
-|0|System|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Custom||
+|0|System||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -695,8 +694,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -918,7 +917,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_theme_AsyncOperations"></a> theme_AsyncOperations
 
-Same as asyncoperation table [theme_AsyncOperations](asyncoperation.md#BKMK_theme_AsyncOperations) Many-To-One relationship.
+Same as the [theme_AsyncOperations](asyncoperation.md#BKMK_theme_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -933,7 +932,7 @@ Same as asyncoperation table [theme_AsyncOperations](asyncoperation.md#BKMK_them
 
 ### <a name="BKMK_theme_ProcessSession"></a> theme_ProcessSession
 
-Same as processsession table [theme_ProcessSession](processsession.md#BKMK_theme_ProcessSession) Many-To-One relationship.
+Same as the [theme_ProcessSession](processsession.md#BKMK_theme_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -948,7 +947,7 @@ Same as processsession table [theme_ProcessSession](processsession.md#BKMK_theme
 
 ### <a name="BKMK_theme_BulkDeleteFailures"></a> theme_BulkDeleteFailures
 
-Same as bulkdeletefailure table [theme_BulkDeleteFailures](bulkdeletefailure.md#BKMK_theme_BulkDeleteFailures) Many-To-One relationship.
+Same as the [theme_BulkDeleteFailures](bulkdeletefailure.md#BKMK_theme_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -977,31 +976,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_theme_createdby"></a> lk_theme_createdby
 
-See systemuser Table [lk_theme_createdby](systemuser.md#BKMK_lk_theme_createdby) One-To-Many relationship.
+See the [lk_theme_createdby](systemuser.md#BKMK_lk_theme_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_theme_createdonbehalfby"></a> lk_theme_createdonbehalfby
 
-See systemuser Table [lk_theme_createdonbehalfby](systemuser.md#BKMK_lk_theme_createdonbehalfby) One-To-Many relationship.
+See the [lk_theme_createdonbehalfby](systemuser.md#BKMK_lk_theme_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_theme_modifiedby"></a> lk_theme_modifiedby
 
-See systemuser Table [lk_theme_modifiedby](systemuser.md#BKMK_lk_theme_modifiedby) One-To-Many relationship.
+See the [lk_theme_modifiedby](systemuser.md#BKMK_lk_theme_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_theme_modifiedonbehalfby"></a> lk_theme_modifiedonbehalfby
 
-See systemuser Table [lk_theme_modifiedonbehalfby](systemuser.md#BKMK_lk_theme_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_theme_modifiedonbehalfby](systemuser.md#BKMK_lk_theme_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_theme"></a> organization_theme
 
-See organization Table [organization_theme](organization.md#BKMK_organization_theme) One-To-Many relationship.
+See the [organization_theme](organization.md#BKMK_organization_theme) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Theme"></a> TransactionCurrency_Theme
 
-See transactioncurrency Table [TransactionCurrency_Theme](transactioncurrency.md#BKMK_TransactionCurrency_Theme) One-To-Many relationship.
+See the [TransactionCurrency_Theme](transactioncurrency.md#BKMK_TransactionCurrency_Theme) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_theme_logoid"></a> lk_theme_logoid
 
-See webresource Table [lk_theme_logoid](webresource.md#BKMK_lk_theme_logoid) One-To-Many relationship.
+See the [lk_theme_logoid](webresource.md#BKMK_lk_theme_logoid) one-to-many relationship for the [webresource](webresource.md) table/entity.
 
 ### See also
 

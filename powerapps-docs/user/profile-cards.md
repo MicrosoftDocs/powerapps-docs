@@ -4,10 +4,11 @@ description: View a contact's or user profile card
 ms.custom: ""
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/14/2020
+ms.subservice: end-user
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -31,12 +32,12 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 ## View a contact's profile
 
-1.	Open a row and go a lookup column that has  a contact or owner name.
+1.	Open a row and go to a lookup column that has a contact or owner name.
 2.	Hover over the name to view the profile card.
 
 
     > [!div class="mx-imgBorder"] 
-    > ![Expand contact profile card detail](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
+    > ![Expand contact profile card detail.](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
 
 
 
@@ -54,7 +55,7 @@ The information shown on the user profile card is fetched from Office 365 (Azure
 Currently, the list of columns displayed on the profile card is not open for customization.
 
 ### Why is the **Start chat** option on the profile card disabled (greyed out)?
-The **Start chat** and the **Send Email** options on the profile card will open your default instant message and email apps. The **Start chat** option is enabled if the person you are trying to contact in the same Azure Active Directory environment as you or is a federated contact.
+The **Start chat** and the **Send Email** options on the profile card will open your default instant message and email apps. The **Start chat** option is enabled if the person you are trying to contact is in the same Azure Active Directory environment as you or is a federated contact.
 
 
   

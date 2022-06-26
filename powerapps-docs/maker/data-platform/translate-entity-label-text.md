@@ -4,7 +4,7 @@ description: "Overview of label text translation for custom tables"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 7e269d09-4453-490a-b50c-f0795ff6f348
 caps.latest.revision: 34
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 ---
 # Translate label text
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 The standard tables include default text for labels that are available in many different languages. However, when you customize a form, such as adding or changing columns, or create custom tables, you may need the labels for those components to appear in different languages. You can import translated label text for customized tables for your apps so that the label text displays in languages other than the base language.
 
