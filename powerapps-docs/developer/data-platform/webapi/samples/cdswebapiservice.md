@@ -1,23 +1,23 @@
 ---
 title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
-ms.custom: ""
-ms.date: 07/16/2020
-ms.service: powerapps
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
+
 # CDSWebApiService class library (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Microsoft Dataverse Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
 
@@ -28,11 +28,14 @@ This class library demonstrates how to:
 - Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors that a client application should expect.
     - More information: [Service Protection API Limits](../../api-limits.md)
 
-Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code.
+> [!NOTE]
+> This sample class library is a helper used by other samples. It is not intended to be a re-usable component for any kind of project.
+
+You can find the CDSWebApiService class library source code and Visual Studio solution at [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples)/cds/webapi/C#/CDSWebApiService.
 
 ## Example
 
-This example shows how to instantiate a CDSWebAPIService instance and create a contact record.
+This example shows how to instantiate a CDSWebAPIService instance and create a contact row.
 
 This example expects that the connection string is set in the App.config file as shown below.
 
@@ -88,7 +91,7 @@ This class provides the following public methods:
 
 ## PostCreate
 
-Creates an entity synchronously and returns the URI.
+Creates a table row (entity record) synchronously and returns the URI.
 
 ### Parameters
 
@@ -99,13 +102,13 @@ Creates an entity synchronously and returns the URI.
 
 ### Return Value
 
-The <xref:System.Uri> of the created entity
+The <xref:System.Uri> of the created table row (entity record)
 
 ### Remarks
 
 This method is provided because creating entities is a common operation and the URI is returned in the `OData-EntityId` header. Having this specialized method allows for less code than having only the [Post](#post) method, which returns only a [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm).
 
-More information: [Create an entity record using the Web API](../create-entity-web-api.md).
+More information: [Create a table row using the Web API](../create-entity-web-api.md).
 
 ## PostCreateAsync
 
@@ -129,7 +132,7 @@ A [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JOb
 
 ### Remarks
 
-This method can be used for any operation using the `POST` http method, but it only includes the response content. Use [PostCreate](#postcreate) to create entities and return only the URI of the created entity.
+This method can be used for any operation using the `POST` http method, but it only includes the response content. Use [PostCreate](#postcreate) to create table rows (entity records) and return only the URI of the created row.
 
 More information:
 
@@ -149,18 +152,18 @@ Sends a `PATCH` request synchronously.
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
-|uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific entity|
+|uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific table row (entity record)|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to send|
 |headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
 ### Remarks
 
-Patch is frequently used to Update or Upsert records.
+Patch is frequently used to Update or Upsert table rows.
 
 More information:
 
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
-- [Upsert an entity](../update-delete-entities-using-web-api.md#upsert-an-entity)
+- [Upsert a table](../update-delete-entities-using-web-api.md#upsert-a-table)
 
 ## PatchAsync
 
@@ -186,7 +189,7 @@ A [JToken](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JTok
 More information:
 
 - [Query Data using the Web API](../query-data-web-api.md)
-- [Retrieve an entity record using the Web API](../retrieve-entity-using-web-api.md)
+- [Retrieve a table row using the Web API](../retrieve-entity-using-web-api.md)
 - [Use Web API functions](../use-web-api-functions.md)
 
 
@@ -210,7 +213,7 @@ Sends a `DELETE` request synchronously.
 More information:
 
 - [Basic delete](../update-delete-entities-using-web-api.md#basic-delete)
-- [Remove a reference to an entity](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
+- [Remove a reference to a table](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-a-table-row)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ## DeleteAsync
@@ -226,14 +229,14 @@ Sends a `PUT` request synchronously.
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path to the resource to update.|
-|property|<xref:System.String>|The name of the property to update|
+|property|<xref:System.String>|The name of the column to update|
 |value|<xref:System.String>|The value to set|
 
 ### Remarks
 
-Put is used to update specific entity properties.
+Put is used to update specific table columns.
 
-**Note**: The Http `PUT` method is also used to update Metadata. This method cannot be used for that purpose. It is specifically for business data.
+**Note**: The Http `PUT` method is also used to update table or column definitions (metadata). This method cannot be used for that purpose. It is specifically for business data.
 
 More information: 
 
@@ -259,7 +262,7 @@ The copy of the request is available because of the custom <xref:System.Net.Http
 
 When the internal <xref:System.Net.Http.HttpClient> is initialized in the CDSWebApiService constructor, an instance of this class is set as an <xref:System.Net.Http.HttpMessageHandler>. This class works with the ADAL libraries to ensure that the `accessToken` will be refreshed each time a request is sent. If the `accessToken` expires, the ADAL library methods will automatically refresh it.
 
-More information: [Example demonstrating a DelegatingHandler](../../authenticate-oauth.md#example-demonstrating-a-delegatinghandler)
+More information: [Example demonstrating a DelegatingHandler](../../authenticate-oauth.md#example-demonstrating-a-delegating-message-handler)
 
 ## ServiceConfig
 
@@ -338,3 +341,6 @@ The following C# samples use this class:
 - [Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
 - [Conditional Operations sample (C#)](cdswebapiservice-conditional-operations.md)
 - [Query Data sample (C#)](cdswebapiservice-query-data.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

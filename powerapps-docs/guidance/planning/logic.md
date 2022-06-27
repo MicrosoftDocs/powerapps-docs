@@ -2,10 +2,11 @@
 title: Power Apps architectural design - Where to place logic | Microsoft Docs
 description: "Considerations for deciding where to place the logic in your system: canvas apps, model-driven apps, Microsoft Dataverse, or Power Automate flows?"
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -91,7 +92,7 @@ if:
 
 - You want to reduce dependency on device-side processing power.
 
-More information: [Power Automate documentation](https://docs.microsoft.com/power-automate/)
+More information: [Power Automate documentation](/power-automate/)
 
 ## Dataverse
 
@@ -113,3 +114,6 @@ More information: [Apply business logic in Dataverse](../../maker/data-platform/
 
 > [!div class="nextstepaction"]
 > [Next step: Secure the app and data](security.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

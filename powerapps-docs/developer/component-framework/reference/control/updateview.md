@@ -1,21 +1,23 @@
 ---
-title: "updateView| MicrosoftDocs"
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
-ms.assetid: 899d6eb3-62b4-4c1f-947c-aed1f8643caa
-ms.author: "nabuthuk"
-author: Nkrb
+title: "StandardControl.updateView| MicrosoftDocs"
+description: This method will be called when any value in the property bag has changed. 
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
-# updateView
+# StandardControl.updateView
 
 [!INCLUDE[./includes/updateview-description.md](./includes/updateview-description.md)]
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps, canvas apps, & portals.
 
 ## Syntax
 
@@ -46,3 +48,6 @@ Set the value of the field component to the raw value from the configured field
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

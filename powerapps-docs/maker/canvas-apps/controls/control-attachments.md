@@ -1,45 +1,51 @@
 ---
-title: 'Attachments control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Attachments control
+title: Attachments control in Power Apps
+description: Learn about the details, properties and examples of the attachments control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 08/10/2020
+ms.date: 06/01/2022
+ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
+
 # Attachments control in Power Apps
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Microsoft Dataverse entity.
+
+A control that allows users to download files to their device, as well as upload and delete files from a list created using Microsoft Lists, or a Microsoft Dataverse table.
+
+## Description
+An **Attachments** control lets you open, add, and delete files from a list or a Dataverse table.
 
 ## Limitations
+
 The attachment control has these limitations:
-1. Attachments are supported with SharePoint lists and Dataverse entities.
+
+1. The attachment control only supports lists and Dataverse tables as the data sources.
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Dataverse form.
 
-1. You can upload files only if they're 50 MB or smaller.  
-
-## Description
-An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Dataverse entity.
+1. Attachments control on a web browser lets you select multiple files, and allows use of drag and drop functionality. However, when using attachments control on [Power Apps Mobile](https://powerapps.microsoft.com/downloads/), you can only add files one at a time.
 
 ## Key properties
-**[Items](properties-core.md)** – The source describing the files that can be downloaded.
+**[Items](properties-core.md)** – The **Attachment** column of the list or Dataverse table. [Collections](../create-update-collection.md) and [Tables](../working-with-tables.md) are not supported.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment. 1 MB here is 1,000,000 bytes (10<sup>6</sup> B) or 1,000 KB.
 
-**OnAddFile** – How the app responds when the user adds a new file attachment.
+**OnAddFile** – Actions to perform when the user adds a new file attachment.
 
-**OnRemoveFile** – How the app responds when the user deletes an existing attachment.
+**OnRemoveFile** – Actions to perform when the user deletes an existing attachment.
 
-**OnUndoRemoveFile** – How the app responds when the user restores a deleted attachment.
+**OnUndoRemoveFile** – Actions to perform when the user restores a deleted attachment.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.
@@ -52,7 +58,27 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
+**[Color](properties-color-border.md)** – The color of a control's text.
+
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+
+**[DropTargetBackgroundColor]** – The color of the control's drop target background.
+
+**[DropTargetBorderColor]** – The color of the control's drop target border.
+
+**[DropTargetBorderStyle]** – Whether the control's drop target border is **Solid**, **Dashed**, **Dotted**, or **None**.
+
+**[DropTargetBorderThickness]** – The thickness of the control's drop target border.
+
+**[DropTargetTextColor]** – The color of the control's drop target text.
+
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
 
@@ -60,11 +86,41 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
+
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
+
 **MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
 
+**[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
+
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user selects that control.
+
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user selects that control.
+
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user selects that control.
+
+**Reset** – Reverts all changes to the attachments control returning to the previously saved state.
+
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
+
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
+
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
@@ -76,17 +132,17 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 
 ## Example
-1. Add a form to your app, and set a SharePoint list as its data source.
+1. Add a form to your app, and set a list as its data source.
 
 2. Select the **Display Form** control in the tree view on the left-hand side. You can also use **Edit Form** instead.
 
-3. Select **Data Source** in the Properties tab in the options panel on the right and then select the SharePoint list you connected to.
+3. Select **Data Source** in the Properties tab in the options panel on the right and then select the list you connected to.
 
 4. Select **Edit fields** in *Fields* section and select **Add field**. 
 
 5. Select the **Attachments** field and select **Add**.
 
-    The Attachments field associated with the SharePoint list will appear in the form.
+    The Attachments field associated with the list will appear in the form.
 
 [Learn how to add and configure a control](../add-configure-controls.md)
 
@@ -104,7 +160,7 @@ There must be adequate color contrast between:
 * **MaxAttachmentsColor** and **Fill**
 * **NoAttachmentsColor** and **Fill**
 
-This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+This requirement is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 The following properties must be present:
@@ -115,4 +171,7 @@ The following properties must be present:
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
-* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this clarity.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

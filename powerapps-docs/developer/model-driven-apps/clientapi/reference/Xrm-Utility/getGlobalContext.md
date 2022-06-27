@@ -1,16 +1,19 @@
 ---
 title: "getGlobalContext (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/18/2020
-ms.service: powerapps
+description: Includes description and supported parameters for the getGlobalContext method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getGlobalContext (Client API reference)
 
@@ -54,3 +57,6 @@ Use the following properties of global context to return information about the c
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

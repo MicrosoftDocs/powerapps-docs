@@ -1,18 +1,20 @@
 ---
 title: "getLearningPathAttributeName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getLearningPathAttributeName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getLearningPathAttributeName (Client API reference)
 
@@ -20,7 +22,7 @@ search.app:
 
 [!INCLUDE[./includes/getLearningPathAttributeName-description.md](./includes/getLearningPathAttributeName-description.md)]
 
-An attribute by this name must be added to the UI element that needs to be exposed to Learning Path (guided help). 
+A column by this name must be added to the UI element that needs to be exposed to Learning Path (guided help). 
 
 ## Syntax
 
@@ -30,15 +32,14 @@ An attribute by this name must be added to the UI element that needs to be expos
 
 **Type**: String
 
-**Description**: DOM attribute expected by the Learning Path (guided help) Content Designer.
+**Description**: DOM column expected by the Learning Path (guided help) Content Designer.
 
 ### Related topics
-
-<!-- 
-TODO: File doesn't exist
-[Create your own guided help (Learning Path) for your customers](../../../../customize/create-guided-help-learning-path.md) -->
 
 [Xrm.Utility](../xrm-utility.md)
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

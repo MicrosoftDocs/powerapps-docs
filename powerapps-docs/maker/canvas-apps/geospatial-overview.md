@@ -1,124 +1,105 @@
 ---
-title: Add Geospatial components to apps made with Microsoft Power Apps
-description: Geospatial components let you view and manipulate 3D objects and images in the real world, in augmented reality. 
-author: iaanw
-manager: shellyha
+title: Add geospatial controls to canvas apps
+description: Add geospatial controls to your canvas apps to view 3D objects and 2D images in the real world using mixed-reality features in Power Apps. 
+author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: canvas, ce06122020
-ms.reviewer: tapanm
-ms.date: 6/12/2020
-ms.author: iawilt
+ms.date: 03/3/2022
+ms.reviewer: mkaur
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-
+contributors:
+  - tapanm-msft
+  - anuitz
 ---
 
-# Add geospatial components to your app (Preview)
+# Add geospatial controls to your canvas apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+Add interactive maps with dynamic routing and address lookup to your canvas apps using geospatial controls.
 
-You can add a number of geospatial components to your canvas app to support scenarios that involve mapping locations and addresses.
-
-Components are groups of controls that can answer the need for a specific scenario. You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
-
-The following prebuilt components can be used for geospatial and mapping scenarios:
+Use the following prebuilt controls for geospatial applications:
 
 - [Interactive map](geospatial-component-map.md)
 - [Address input](geospatial-component-input-address.md)
 
 ## Prerequisites
 
-1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
-2. An admin must [ensure the geospatial components will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
-3. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
+Before you can use geospatial features in your apps, your Power Platform administrator has a couple of tasks to complete:
 
-    >[!IMPORTANT]
-    >The components require the default **Organizations** data source to be present. This data source is included whenever you insert the components into an app, but if you manually delete it you'll need to add it before the components will work:
-    >
-    >1. With the component selected, go to the **Data sources** tab on the side navigation menu.
-    >2. In the search field, enter **Organizations**, and then select the data source that appears. This will add it to the component.
+1. Enable geospatial features in the Power Platform admin center for the environment you intend to use. The geospatial features require their own terms of service, which your admin must review and agree to.
+2. Make sure the geospatial controls aren't blocked by the environment's data loss prevention policies.
 
-### Enable the geospatial features for the environment
+>[!IMPORTANT]
+>Your app must be connected to the **Organizations** data source to use geospatial controls. The data source is included whenever you insert a geospatial control in an app. If you manually delete it, you'll need to connect it again.
+>
+>1. With the geospatial control selected, open the **Data** tab, and then select **Add data**.
+>2. Search for and select **Organizations**.
 
-Before you can use geospatial features in your apps, an admin must enable access to the features for the environment where you want to create your app.
+### Enable geospatial features for the environment
 
-The geospatial features require additional terms of use that must be reviewed and agreed to.
+If you don't have administrative access to the Power Platform admin center, ask your admin to enable geospatial features for you.
 
 1. Open the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings**.
 
-1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings** from the top menu.
-
-    ![Environment selected in the Power Platform admin center](./media/geospatial/ppac-environment.png "Environment selected in the Power Platform admin center")
+    :::image type="content" source="./media/geospatial/ppac-environment.png" alt-text="A screenshot of the Power Platform admin center, with an environment selected.":::
 
 1. Expand **Product**, and then select **Features**.
 
-    ![Screenshot of environment settings with Features selection highlighted](./media/geospatial/ppac-settings.png "Screenshot of environment settings with Features selection highlighted")
+    :::image type="content" source="./media/geospatial/ppac-settings.png" alt-text="A screenshot of the Power Platform admin center, with the environment Product Features setting selected.":::
 
-1. Under **Geospatial services (preview)**, set the toggle switch to **On**. A terms of service notice will appear. Read through the terms of service, and if you agree, select the checkbox **I agree to the terms of service**, and then select **Enable**.
-
-    ![Screenshot of the terms of service](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
+1. Turn on the **Geospatial services** toggle.
+1. Read the terms of service. Select **I agree to the terms of service**, and then select **Enable**.
 
     >[!IMPORTANT]
-    >You must read and agree to the terms of service before you can use geospatial features. 
     >
-    >The following are the terms of service:  
-    >  
-    >These features use mapping capabilities that are powered by a third party, TomTom(tm), and operate outside your tenant's geographic region, compliance boundary, or national cloud instance.  
+    >The terms of service must be agreed to before you can use geospatial features in your apps.
     >
-    >Microsoft shares the address and location queries with TomTom(tm). The name of the customer or end user who entered the query is not shared.
-    >
-    >This feature is non-regional and the queries you provide may be stored and processed in the United States or any other country in which Microsoft or its subprocessors operate.
-    >
-    >Additional licensing requirements might be required to enable this feature.  
+    >Mapping capabilities are provided by a third party. Microsoft shares address and location queries, but not customer or user names, with the provider. Requests are sent securely over HTTPS or aren't exposed to the public Internet.
 
-    ![Screenshot of the geospatial services toggle switch to On](./media/geospatial/ppac-geo-on.png "Screenshot of the geospatial services toggle switch to On")
-    
-    >[!NOTE]
-    >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
-    >
-    >Requests between apps you create with the component and the Azure Maps service are sent over HTTPS.
-    
+1. Select **Save**.
 
-1. Select **Save** at the bottom of the settings page.
 
-    ![Screenshot of the Save button](./media/geospatial/ppac-save.png "Screenshot of the Save button")
 
 ### Review the environment's data loss prevention policies
 
-The geospatial components require the Common Data Service and Spatial Services connectors. 
+Geospatial controls use the Microsoft Dataverse and Spatial Services connectors to fetch map tiles and to look up and geocode addresses. Your Power Platform admin must make sure data loss prevention policies that apply to those connectors don't conflict with policies that affect the controls.
 
-For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
+Your admin should confirm that the Microsoft Dataverse and Spatial Services connectors are classified under the same data group, typically **Business**. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
-### Enable the geospatial features for each app
 
-1. Open the app for editing in Power Apps Studio at [https://create.powerapps.com](https://create.powerapps.com).
+## Privacy and security considerations
 
-2. Select **File** from the top menu.
+- Power Apps doesn’t link search queries to any user or tenant when shared with TomTom, and the shared search queries can’t be used to identify individuals or tenants.
+- Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
+- Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
+- Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
+- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
 
-    ![Select File](./media/augmented-overview/augmented-overview-file.png "Select File")
-
-3. Go to the **Settings** tab, select **Advanced settings**, and scroll down to find the **Geospatial features** option. Set the option to **On**.
-
-    ![Set the Geospatial features switch to on](./media/geospatial/enable-geo.png "Set the Geospatial features switch to on")
-
-4. Return to editing your app by selecting the back arrow icon.
-
-    ![Select the back arrow icon](./media/augmented-overview/augmented-overview-back.png "Select the back arrow icon")
-
-5. Open the **Insert** pane to see the geospatial components:
-    - **Address input** is under **Input**
-    - **Map** is under **Media**
-
-    ![See the address input component under Input](./media/geospatial/insert-address-input.png "See the address input component under Input")  
-
-    ![See the map component under Media](./media/geospatial/insert-map.png "See the map component under Media")
+    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
+    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
+    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No |
+    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No |
+    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
+    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
+    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
+    
 
 ### Next steps
 
-Start installing the components in your apps:
+Add the controls to your apps:
 
-- Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** component.
-- See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** component.
+- Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** control.
+- See dynamic address suggestions as you type with the **[Address input](geospatial-component-input-address.md)** control.
+
+### See also
+
+[Create an app that uses mobile sensors](how-to/mobile-sensors.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

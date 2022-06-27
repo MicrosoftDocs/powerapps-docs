@@ -1,5 +1,7 @@
-- name: "About entity reference"
+- name: "About Table/Entity Reference"
   href: ../about-entity-reference.md
+- name: aaduser
+  href: aaduser.md
 - name: Account
   href: account.md
 - name: ACIViewMapper
@@ -8,6 +10,8 @@
   href: actioncard.md
 - name: ActionCardUserState
   href: actioncarduserstate.md
+- name: activityfileattachment
+  href: activityfileattachment.md
 - name: ActivityMimeAttachment
   href: activitymimeattachment.md
 - name: ActivityParty
@@ -18,6 +22,12 @@
   href: annotation.md
 - name: AnnualFiscalCalendar
   href: annualfiscalcalendar.md
+- name: appaction
+  href: appaction.md
+- name: appactionmigration
+  href: appactionmigration.md
+- name: appactionrule
+  href: appactionrule.md
 - name: AppConfig
   href: appconfig.md
 - name: AppConfigInstance
@@ -30,10 +40,14 @@
   href: appmodule.md
 - name: AppModuleComponent
   href: appmodulecomponent.md
+- name: appnotification
+  href: appnotification.md
 - name: Appointment
   href: appointment.md
 - name: AsyncOperation
   href: asyncoperation.md
+- name: Attribute
+  href: attribute.md
 - name: AttributeImageConfig
   href: attributeimageconfig.md
 - name: Audit
@@ -62,6 +76,8 @@
   href: catalogassignment.md
 - name: Category
   href: category.md
+- name: chat
+  href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
 - name: Connection
@@ -100,6 +116,8 @@
   href: datalakeworkspacepermission.md
 - name: DataPerformance
   href: dataperformance.md
+- name: DataProcessingConfiguration
+  href: dataprocessingconfiguration.md
 - name: Dependency
   href: dependency.md
 - name: DisplayString
@@ -116,12 +134,18 @@
   href: email.md
 - name: EmailServerProfile
   href: emailserverprofile.md
+- name: Entity
+  href: entity.md
 - name: EntityAnalyticsConfig
   href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
 - name: EntityImageConfig
   href: entityimageconfig.md
+- name: EntityKey
+  href: entitykey.md
+- name: EntityRelationship
+  href: entityrelationship.md
 - name: EnvironmentVariableDefinition
   href: environmentvariabledefinition.md
 - name: EnvironmentVariableValue
@@ -134,6 +158,8 @@
   href: exportsolutionupload.md
 - name: Fax
   href: fax.md
+- name: featurecontrolsetting
+  href: featurecontrolsetting.md
 - name: Feedback
   href: feedback.md
 - name: FieldPermission
@@ -142,6 +168,14 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowmachine
+  href: flowmachine.md
+- name: flowmachinegroup
+  href: flowmachinegroup.md
+- name: flowmachineimage
+  href: flowmachineimage.md
+- name: flowmachineimageversion
+  href: flowmachineimageversion.md
 - name: flowsession
   href: flowsession.md
 - name: Goal
@@ -170,6 +204,8 @@
   href: kbarticlecomment.md
 - name: KbArticleTemplate
   href: kbarticletemplate.md
+- name: KeyVaultReference
+  href: keyvaultreference.md
 - name: KnowledgeArticle
   href: knowledgearticle.md
 - name: KnowledgeArticleViews
@@ -188,6 +224,8 @@
   href: mailboxtrackingfolder.md
 - name: MailMergeTemplate
   href: mailmergetemplate.md
+- name: ManagedIdentity
+  href: managedidentity.md
 - name: Metric
   href: metric.md
 - name: MobileOfflineProfile
@@ -196,6 +234,8 @@
   href: mobileofflineprofileitem.md
 - name: MobileOfflineProfileItemAssociation
   href: mobileofflineprofileitemassociation.md
+- name: mobileofflineprofileitemfilter
+  href: mobileofflineprofileitemfilter.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
 - name: msdyn_AIBDataset
@@ -206,6 +246,8 @@
   href: msdyn_aibdatasetrecord.md
 - name: msdyn_AIBDatasetsContainer
   href: msdyn_aibdatasetscontainer.md
+- name: msdyn_AIBFeedbackLoop
+  href: msdyn_aibfeedbackloop.md
 - name: msdyn_AIBFile
   href: msdyn_aibfile.md
 - name: msdyn_AIBFileAttachedData
@@ -240,32 +282,64 @@
   href: msdyn_componentlayerdatasource.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
+- name: msdyn_dataflowrefreshhistory
+  href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_datalakeds
+  href: msdyn_datalakeds.md
+- name: msdyn_entityrefreshhistory
+  href: msdyn_entityrefreshhistory.md
 - name: msdyn_federatedarticle
   href: msdyn_federatedarticle.md
 - name: msdyn_federatedarticleincident
   href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
+- name: msdyn_InsightsStoreVirtualEntity
+  href: msdyn_insightsstorevirtualentity.md
+- name: msdyn_kalanguagesetting
+  href: msdyn_kalanguagesetting.md
+- name: msdyn_kbattachment
+  href: msdyn_kbattachment.md
 - name: msdyn_kmfederatedsearchconfig
   href: msdyn_kmfederatedsearchconfig.md
+- name: msdyn_kmpersonalizationsetting
+  href: msdyn_kmpersonalizationsetting.md
 - name: msdyn_knowledgearticleimage
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
+- name: msdyn_knowledgemanagementsetting
+  href: msdyn_knowledgemanagementsetting.md
+- name: msdyn_knowledgepersonalfilter
+  href: msdyn_knowledgepersonalfilter.md
+- name: msdyn_knowledgesearchfilter
+  href: msdyn_knowledgesearchfilter.md
 - name: msdyn_knowledgesearchinsight
   href: msdyn_knowledgesearchinsight.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
+- name: msdyn_pmanalysishistory
+  href: msdyn_pmanalysishistory.md
+- name: msdyn_pminferredtask
+  href: msdyn_pminferredtask.md
+- name: msdyn_pmrecording
+  href: msdyn_pmrecording.md
+- name: msdyn_pmtemplate
+  href: msdyn_pmtemplate.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
 - name: msdyn_serviceconfiguration
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
   href: msdyn_slakpi.md
+- name: msdyn_solutioncomponentcountdatasource
+  href: msdyn_solutioncomponentcountdatasource.md
+- name: msdyn_solutioncomponentcountsummary
+  href: msdyn_solutioncomponentcountsummary.md
 - name: msdyn_solutioncomponentdatasource
   href: msdyn_solutioncomponentdatasource.md
 - name: msdyn_solutioncomponentsummary
@@ -280,6 +354,8 @@
   href: msdyn_solutionhistory.md
 - name: msdyn_solutionhistorydatasource
   href: msdyn_solutionhistorydatasource.md
+- name: msdyn_tour
+  href: msdyn_tour.md
 - name: msdynce_botcontent
   href: msdynce_botcontent.md
 - name: NavigationSetting
@@ -290,6 +366,12 @@
   href: officegraphdocument.md
 - name: Organization
   href: organization.md
+- name: organizationdatasyncstate
+  href: organizationdatasyncstate.md
+- name: organizationdatasyncsubscription
+  href: organizationdatasyncsubscription.md
+- name: organizationdatasyncsubscriptionentity
+  href: organizationdatasyncsubscriptionentity.md
 - name: OwnerMapping
   href: ownermapping.md
 - name: package
@@ -302,6 +384,8 @@
   href: picklistmapping.md
 - name: PluginAssembly
   href: pluginassembly.md
+- name: PluginPackage
+  href: pluginpackage.md
 - name: PluginTraceLog
   href: plugintracelog.md
 - name: PluginType
@@ -348,6 +432,10 @@
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
   href: recurringappointmentmaster.md
+- name: Relationship
+  href: relationship.md
+- name: RelationshipAttribute
+  href: relationshipattribute.md
 - name: Report
   href: report.md
 - name: ReportCategory
@@ -380,6 +468,14 @@
   href: serviceendpoint.md
 - name: ServicePlan
   href: serviceplan.md
+- name: ServicePlanMapping
+  href: serviceplanmapping.md
+- name: SharedLinkSetting
+  href: sharedlinksetting.md
+- name: sharedobject
+  href: sharedobject.md
+- name: sharedworkspace
+  href: sharedworkspace.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -402,6 +498,8 @@
   href: solutioncomponent.md
 - name: solutioncomponentattributeconfiguration
   href: solutioncomponentattributeconfiguration.md
+- name: solutioncomponentbatchconfiguration
+  href: solutioncomponentbatchconfiguration.md
 - name: solutioncomponentconfiguration
   href: solutioncomponentconfiguration.md
 - name: solutioncomponentrelationshipconfiguration
@@ -412,6 +510,18 @@
   href: stagesolutionupload.md
 - name: Subject
   href: subject.md
+- name: synapsedatabase
+  href: synapsedatabase.md
+- name: synapselinkexternaltablestate
+  href: synapselinkexternaltablestate.md
+- name: synapselinkprofile
+  href: synapselinkprofile.md
+- name: synapselinkprofileentity
+  href: synapselinkprofileentity.md
+- name: synapselinkprofileentitystate
+  href: synapselinkprofileentitystate.md
+- name: synapselinkschedule
+  href: synapselinkschedule.md
 - name: SyncError
   href: syncerror.md
 - name: SystemForm
@@ -456,6 +566,8 @@
   href: userqueryvisualization.md
 - name: UserSettings
   href: usersettings.md
+- name: VirtualEntityMetadata
+  href: virtualentitymetadata.md
 - name: WebResource
   href: webresource.md
 - name: Workflow

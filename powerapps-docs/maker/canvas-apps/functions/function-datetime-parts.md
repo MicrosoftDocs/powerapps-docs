@@ -1,18 +1,21 @@
 ---
-title: Day, Month, Year, Hour, Minute, Second, and Weekday functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps
+title: Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps
+description: Reference information including syntax and examples for the Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 10/25/2016
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Day, Month, Year, Hour, Minute, Second, and Weekday functions in Power Apps
 Returns individual components of a Date/Time value.
@@ -72,3 +75,6 @@ For the following example, the current time is **3:59:37 PM** on **Thursday, Apr
 | **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** |Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Thursday. |1 |
 | **Weekday(&nbsp;Now(),&nbsp;StartOfWeek.Wednesday&nbsp;)** |Returns the weekday component of the current time and date, using a **StartOfWeek** enumeration to specify the start of the week as Wednesday. |2 |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

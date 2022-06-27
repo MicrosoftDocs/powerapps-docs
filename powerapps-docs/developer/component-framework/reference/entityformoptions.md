@@ -1,20 +1,19 @@
 ---
-title: EntityFormOptions | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 418871c0-59dc-4a7c-a8f9-9364a19f7662
+title: EntityFormOptions in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for EntityFormOptions in Power Apps component framework.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # EntityFormOptions
 
-Provides access to all the information about the entity forms.
+[!INCLUDE [entityformoptions-description](includes/entityformoptions-description.md)]
 
 ## Available for 
 
@@ -24,19 +23,19 @@ Model-driven apps
 
 ### createFromEntity
 
-Designates a record that will provide default values based on mapped attribute value. The lookup object has following properties: entity type, id and name.
+Designates a record that will provide default values based on mapped column value. The lookup object has following properties: table type, id and name.
 
 **Type**: [Entityreference](entityreference.md)
 
 ### entityId
 
-Unique Id of the entity record to display the form for. 
+Unique Id of the table record to display the form for. 
 
 **Type**: `string`
 
 ### entityName
 
-Logical name of the entity to display the form for. 
+Logical name of the table to display the form for. 
 
 **Type**: `string`
 
@@ -108,3 +107,5 @@ private onRowClick(event: Event): void {
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,18 +1,20 @@
 ---
 title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Progresses to the next stage.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 97640c6a-816b-4d18-9b0b-e79411787c1a
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # moveNext (Client API reference)
 
@@ -20,15 +22,17 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-You can also move to a next stage in a different entity. 
+Moving to next stage is not supported for different table.
 
 ## Syntax
 
 `formContext.data.process.moveNext(callbackFunction);`
 
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
+
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -51,7 +55,7 @@ You can also move to a next stage in a different entity.
 </tr>
 <tr>
 <td>crossEntity</td>
-<td>The next stage is for a different entity.</td>
+<td>The next stage is for a different table.</td>
 </tr>
 <tr>
 <td>end</td>
@@ -67,7 +71,7 @@ You can also move to a next stage in a different entity.
 </tr>
 <tr>
 <td>stageGate</td>
-<td>One or more required field on the current stage is empty.</td>
+<td>One or more required column on the current stage is empty.</td>
 </tr>
 </table>
 </td>
@@ -89,3 +93,6 @@ This methods will cause the [OnStageChange](../../events/onstagechange.md) event
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

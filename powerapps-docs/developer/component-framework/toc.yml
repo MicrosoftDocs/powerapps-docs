@@ -1,26 +1,43 @@
+items:
 - name: Power Apps component framework
-  items: 
+  items:
   - name: Overview
     href: overview.md
   - name: What are code components
     items:
     - name: Overview
       href: custom-controls-overview.md
+    - name: Limitations
+      href: limitations.md
     - name: Code components for model-driven apps
       href: code-components-model-driven-apps.md
     - name: Code components for canvas apps
       href: component-framework-for-canvas-apps.md
-  - name: Get Power Apps CLI
+    - name: Code components for portals
+      href: ../../maker/portals/component-framework.md
+    - name: "React controls & platform libraries (Preview)"
+      href: react-controls-platform-libraries.md
+  - name: Get Microsoft Power Platform CLI
     href: get-powerapps-cli.md
   - name: Learn Power Apps component framework
-    href: https://docs.microsoft.com/learn/paths/use-power-apps-component-framework
+    href: /learn/paths/use-power-apps-component-framework
   - name: Tutorial
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
+    - name: Creating model-driven app field type component
+      href: tutorial-create-model-driven-field-component.md
+    - name: Creating model-driven app dataset type component
+      href: tutorial-create-model-driven-app-dataset-component.md
+    - name: Creating canvas app dataset type component
+      href: tutorial-create-canvas-dataset-component.md
+  - name: Code components ALM
+    href: code-components-alm.md
+  - name: Best practices
+    href: code-components-best-practices.md
   - name: How-to guides
     items:
-    - name: Create and build a code component 
+    - name: Create and build a code component
       href: create-custom-controls-using-pcf.md
     - name: Package a code component
       href: import-custom-controls.md
@@ -30,6 +47,8 @@
       href: add-custom-controls-to-a-field-or-entity.md
     - name: Add components to canvas apps
       href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
+    - name: Add components to portals (Preview)
+      href: ../../maker/portals/component-framework-tutorial.md
     - name: Update existing code components
       href: updating-existing-controls.md
     - name: Publish code components on AppSource
@@ -38,22 +57,24 @@
     items:
     - name: Common issues and workarounds
       href: issues-and-workarounds.md
-    - name: Limitations
-      href: limitations.md
   - name: FAQs
     href: faq.yml
   - name: Sample components
-    items: 
+    items:
     - name: How to use the sample components?
       href: use-sample-components.md
     - name: Angular Flip component
       href: sample-controls/angular-flip-control.md
+    - name: Canvas app grid component
+      href: tutorial-create-canvas-dataset-component.md
+    - name: Choice picker component
+      href: tutorial-create-model-driven-field-component.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Data Set Grid component for model-driven apps
+    - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
-    - name: Data Set component for canvas apps
-      href: sample-controls/data-set-component-canvas.md
+    - name: Device API component
+      href: sample-controls/device-api-control.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
@@ -66,10 +87,18 @@
       href: sample-controls/linear-input-control.md
     - name: Localization API component
       href: sample-controls/localization-api-control.md
+    - name: Lookup component
+      href: sample-controls/lookup-control.md
     - name: Map component
       href: sample-controls/map-control.md
+    - name: Model-driven app grid component
+      href: tutorial-create-model-driven-app-dataset-component.md
+    - name: Choices (Multi select option set) component
+      href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: Property set table component
+      href: sample-controls/data-set-component-canvas.md
     - name: React Facepile component
       href: sample-controls/react-facepile-control.md
     - name: Table component
@@ -80,9 +109,13 @@
       href: sample-controls/webapi-control.md
   - name: Reference
     items:
-    - name: Power Apps component framework 
+    - name: Power Apps component framework
       href: reference/index.md
-      items: 
+      items:
+      - name: AttributeMetadata
+        href: reference/attributemetadata.md
+      - name: AttributeType
+        href: reference/attributetype.md
       - name: Client
         href: reference/client.md
         items:
@@ -91,18 +124,34 @@
         - name: getFormFactor
           href: reference/client/getformfactor.md
         - name: isOffline
-          href: reference/client/isoffline.md      
+          href: reference/client/isoffline.md
       - name: Column
         href: reference/column.md
+      - name: ColumnInfo
+        href: reference/columninfo.md
       - name: ConditionExpression
         href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
+      - name: ControlAttributes
+        href: reference/controlattributes.md
+      - name: ControlAttributesType
+        href: reference/controlattributestype.md
+      - name: DataProviderCapabilities
+        href: reference/dataprovidercapabilities.md
       - name: DataSet
         href: reference/dataset.md
         items:
+        - name: addColumn
+          href: reference/dataset/addcolumn.md
         - name: clearSelectedRecordIds
           href: reference/dataset/clearselectedrecordids.md
+        - name: delete
+          href: reference/dataset/delete.md
+        - name: getCommands
+          href: reference/dataset/getcommands.md
+        - name: getDataSetCapabilities
+          href: reference/dataset/getdatasetcapabilities.md
         - name: getSelectedRecordIds
           href: reference/dataset/getselectedrecordids.md
         - name: getTargetEntityType
@@ -111,12 +160,20 @@
           href: reference/dataset/gettitle.md
         - name: getViewId
           href: reference/dataset/getviewid.md
+        - name: newRecord
+          href: reference/dataset/newrecord.md
         - name: openDatasetItem
           href: reference/dataset/opendatasetitem.md
         - name: refresh
           href: reference/dataset/refresh.md
+        - name: retrieveRecordCommand
+          href: reference/dataset/retrieverecordcommand.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
+      - name: DateFormattingInfo
+        href: reference/dateformattinginfo.md
+      - name: DateTimeFieldBehavior
+        href: reference/datetimefieldbehavior.md
       - name: Device
         href: reference/device.md
         items:
@@ -132,8 +189,6 @@
           href: reference/device/getcurrentposition.md
         - name: pickFile
           href: reference/device/pickfile.md
-      - name: DateFormattingInfo
-        href: reference/dateformattinginfo.md
       - name: Entity
         href: reference/entity.md
       - name: EntityFormOptions
@@ -141,7 +196,9 @@
       - name: EntityRecord
         href: reference/entityrecord.md
         items:
-        - name: getFormattedValue 
+        - name: getColumnInfo
+          href: reference/entityrecord/getcolumninfo.md
+        - name: getFormattedValue
           href: reference/entityrecord/getformattedvalue.md
         - name: getNamedReference
           href: reference/entityrecord/getnamedreference.md
@@ -149,6 +206,14 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
+        - name: isDirty
+          href: reference/entityrecord/isdirty.md
+        - name: isValid
+          href: reference/entityrecord/isvalid.md
+        - name: save
+          href: reference/entityrecord/save.md
+        - name: setValue
+          href: reference/entityrecord/setvalue.md
       - name: EntityMetadata
         href: reference/entitymetadata.md
       - name: EntityReference
@@ -196,8 +261,18 @@
           href: reference/formatting/formatlanguage.md
         - name: formatTime
           href: reference/formatting/formattime.md
+        - name: formatUserDateTimeToUTC
+          href: reference/formatting/formatuserdatetimetoutc.md
+        - name: formatUserInput
+          href: reference/formatting/formatUserInput.md
+        - name: formatUTCDateTimeToUserDate
+          href: reference/formatting/formatutcdatetimetouserdate.md
         - name: getWeekOfYear
           href: reference/formatting/getweekofyear.md
+        - name: parseDateFromInput
+          href: reference/formatting/parsedatefrominput.md
+      - name: ICommand
+        href: reference/icommand.md
       - name: Linking
         href: reference/linking.md
         items:
@@ -205,8 +280,8 @@
           href: reference/linking/addlinkedentity.md
         - name: getLinkedEntity
           href: reference/linking/getlinkedentities.md
-      - name: LookupOptions
-        href: reference/lookupoptions.md
+      - name: LinkEntityExposedExpression
+        href: reference/ilinkentityexposedexpression.md
       - name: Metadata
         href: reference/metadata.md
       - name: Mode
@@ -218,6 +293,8 @@
           href: reference/mode/setfullscreen.md
         - name: trackContainerResize
           href: reference/mode/trackcontainerresize.md
+      - name: MoneyPrecisionSource
+        href: reference/moneyprecisionsource.md
       - name: Navigation
         href: reference/navigation.md
         items:
@@ -237,9 +314,13 @@
           href: reference/navigation/openwebresource.md
       - name: NumberFormattingInfo
         href: reference/numberformattinginfo.md
+      - name: OptionDescriptor
+        href: reference/optiondescriptor.md
       - name: Paging
         href: reference/paging.md
         items:
+        - name: loadExactPage
+          href: reference/paging/loadexactpage.md
         - name: loadNextPage
           href: reference/paging/loadnextpage.md
         - name: loadPreviousPage
@@ -248,6 +329,8 @@
           href: reference/paging/reset.md
         - name: setPageSize
           href: reference/paging/setpagesize.md
+      - name: PickFileOptions
+        href: reference/pickfileoptions.md
       - name: Popup
         href: reference/popup.md
       - name: PopupService
@@ -271,6 +354,17 @@
         href: reference/position.md
       - name: Property
         href: reference/property.md
+      - name: ReactControl (Preview)
+        href: reference/react-control.md
+        items:
+        - name: destroy
+          href: reference/react-control/destroy.md
+        - name: getOutputs
+          href: reference/react-control/getOutputs.md
+        - name: init
+          href: reference/react-control/init.md
+        - name: updateView
+          href: reference/react-control/updateview.md
       - name: RetrieveMultipleResponse
         href: reference/retrievemultipleresponse.md
       - name: Resources
@@ -280,6 +374,8 @@
           href: reference/resources/getresource.md
         - name: getString
           href: reference/resources/getstring.md
+      - name: SecurityPrivilegesMetadata
+        href: reference/securityprivilegesmetadata.md
       - name: SecurityValues
         href: reference/securityvalues.md
       - name: SortStatus
@@ -295,8 +391,13 @@
           href: reference/control/init.md
         - name: updateView
           href: reference/control/updateview.md
+      - name: updatedProperties
+        href: reference/updatedproperties.md
       - name: UserSettings
         href: reference/usersettings.md
+        items:
+          - name: getTimeZoneOffsetMinutes
+            href: reference/usersettings/gettimezoneoffsetminutes.md
       - name: Utility
         href: reference/utility.md
         items:
@@ -330,16 +431,18 @@
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
-      - name: html
-        href: manifest-schema-reference/html.md
+      - name: feature-usage
+        href: manifest-schema-reference/feature-usage.md
       - name: img
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
-      - name: property
-        href: manifest-schema-reference/property.md
+      - name: platform-library
+        href: manifest-schema-reference/platform-library.md
       - name: property-set
         href: manifest-schema-reference/property-set.md
+      - name: property
+        href: manifest-schema-reference/property.md
       - name: resources
         href: manifest-schema-reference/resources.md
       - name: resx
@@ -348,8 +451,8 @@
         href: manifest-schema-reference/type.md
       - name: type-group
         href: manifest-schema-reference/type-group.md
-      - name: feature-usage
-        href: manifest-schema-reference/feature-usage.md
+      - name: types
+        href: manifest-schema-reference/types.md
       - name: uses-feature
         href: manifest-schema-reference/uses-feature.md
   - name: Resources

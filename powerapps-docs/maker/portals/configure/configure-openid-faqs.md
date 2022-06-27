@@ -1,16 +1,21 @@
 ---
-title: "FAQ about using OpenID Connect providers for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals."
+title: FAQs for using OpenID Connect in portals
+description: Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals.
 author: dileepsinghmicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 11/29/2021
+ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
+contributors:
+    - nickdoelman
+    - sandhangitmsft
+    - dileepsinghmicrosoft
 ---
 
-# FAQ for using OpenID Connect in portals
+# FAQs for using OpenID Connect in portals
 
 This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html).
 
@@ -23,20 +28,21 @@ If your identity provider doesn't provide this document, you can create it manua
 > [!NOTE]
 > Similar to the discovery document, portals also requires the identity provider to provide a public *JWKS URI* endpoint where the public keys are available to verify the signature of the ID token. This endpoint needs to be specified in the discovery document as the *jwks_uri* key.
 
-## Does portals support *acr_values*, or *ui_locales* request parameters in the authentication requests?
+## Does portals support *acr_values* request parameters in the authentication requests?
 
-No. Portals doesn't support *acr_values* or *ui_locales* request parameters in authorization requests. However, the portals feature does support all the required&mdash;and recommended&mdash;request parameters defined in the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest).
+No. Portals doesn't support *acr_values* request parameters in authorization requests. However, the portals feature does support all the required&mdash;and recommended&mdash;request parameters defined in the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest).
 
 The following optional parameters are supported:
 
 - Response_mode
 - Nonce
+- UI_Locales
 
 ## Does portals support custom scope parameters in authentication requests?
 
 Yes. Custom scope parameters can be specified by using the scope option during configuration.
 
-## Why does the username value in a contact, or an external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
+## Why does the username value in a contact, or an external identity record in Dataverse, show a different value compared to what the user entered on the sign-in page?
 
 The username field on a contact record and an external identity record will show the value sent in either the sub-claim or object ID (OID) claim (for Azure AD&ndash;based providers). This is because the sub-claim represents the identifier for the end user and is guaranteed by the identity provider to be unique. An OID claim (where the object ID is a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD&ndash;based providers.
 
@@ -62,13 +68,11 @@ These claims are processed at in the following order of priority to set as the *
 
 When in use, "emailclaimsmapping" is also used to search for an existing contact (Primary Email Address field in Dataverse).
 
-## Can I get access to tokens (ID or Access) using JavaScript?
-
 ## Can I get access to tokens (ID or access) by using JavaScript?
 
 No. The ID token provided by the identity provider isn't made available through any standard technique on the client side, and is only used for the purpose of authentication. However, if you're using the Implicit Grant flow, you can use the methods provided by your identity provider to get access to ID or access tokens.
 
-For example, Azure AD provides [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
+For example, Azure AD provides [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
 
 ## Can I use a custom OpenID Connect provider instead of Azure AD?
 
@@ -77,3 +81,6 @@ Yes. Portals supports any OpenID Connect provider that supports the standard [Op
 ### See also
 
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,23 +1,24 @@
 ---
-title: "Sample: Use aggregation in FetchXML(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Use aggregation in FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve aggregate record data using FetchXML." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Use aggregation in FetchXML
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
 
@@ -57,3 +58,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

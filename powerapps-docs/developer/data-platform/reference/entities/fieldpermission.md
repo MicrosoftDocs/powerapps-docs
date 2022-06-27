@@ -1,22 +1,24 @@
 ---
-title: "FieldPermission entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the FieldPermission table."
-ms.date: 11/14/2020
+title: "FieldPermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the FieldPermission table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# FieldPermission entity reference
+
+# FieldPermission table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Group of privileges used to categorize users to provide appropriate access to secured columns.
 
@@ -25,13 +27,13 @@ Group of privileges used to categorize users to provide appropriate access to se
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/fieldpermissions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/fieldpermissions(*fieldpermissionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/fieldpermissions(*fieldpermissionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/fieldpermissions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/fieldpermissions(*fieldpermissionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/fieldpermissions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/fieldpermissions(*fieldpermissionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/fieldpermissions(*fieldpermissionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/fieldpermissions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/fieldpermissions(*fieldpermissionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Group of privileges used to categorize users to provide appropriate access to se
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AttributeLogicalName](#BKMK_AttributeLogicalName)
 - [CanCreate](#BKMK_CanCreate)
@@ -91,12 +93,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### CanCreate Options
+#### CanCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Allowed|
-|4|Allowed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Allowed||
+|4|Allowed||
 
 
 
@@ -112,12 +114,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### CanRead Options
+#### CanRead Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Allowed|
-|4|Allowed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Allowed||
+|4|Allowed||
 
 
 
@@ -133,12 +135,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### CanUpdate Options
+#### CanUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Allowed|
-|4|Allowed|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Allowed||
+|4|Allowed||
 
 
 
@@ -186,9 +188,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [FieldPermissionIdUnique](#BKMK_FieldPermissionIdUnique)
@@ -212,14 +214,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -248,14 +250,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -337,7 +339,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_FieldPermission_SyncErrors"></a> FieldPermission_SyncErrors
 
-Same as syncerror entity [FieldPermission_SyncErrors](syncerror.md#BKMK_FieldPermission_SyncErrors) Many-To-One relationship.
+Same as the [FieldPermission_SyncErrors](syncerror.md#BKMK_FieldPermission_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -353,7 +355,7 @@ Same as syncerror entity [FieldPermission_SyncErrors](syncerror.md#BKMK_FieldPer
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_fieldpermission_fieldsecurityprofileid](#BKMK_lk_fieldpermission_fieldsecurityprofileid)
 - [solution_fieldpermission](#BKMK_solution_fieldpermission)
@@ -361,14 +363,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_fieldpermission_fieldsecurityprofileid"></a> lk_fieldpermission_fieldsecurityprofileid
 
-See fieldsecurityprofile Entity [lk_fieldpermission_fieldsecurityprofileid](fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid) One-To-Many relationship.
+See the [lk_fieldpermission_fieldsecurityprofileid](fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid) one-to-many relationship for the [fieldsecurityprofile](fieldsecurityprofile.md) table/entity.
 
 ### <a name="BKMK_solution_fieldpermission"></a> solution_fieldpermission
 
-See solution Entity [solution_fieldpermission](solution.md#BKMK_solution_fieldpermission) One-To-Many relationship.
+See the [solution_fieldpermission](solution.md#BKMK_solution_fieldpermission) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.fieldpermission?text=fieldpermission EntityType" />

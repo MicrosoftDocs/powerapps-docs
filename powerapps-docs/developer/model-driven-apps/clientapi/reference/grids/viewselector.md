@@ -1,18 +1,20 @@
 ---
 title: "ViewSelector methods (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the ViewSelector method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 37fbabaf-e2ce-4e46-a54e-e46bd884197b
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # ViewSelector methods (Client API reference)
 
@@ -42,3 +44,6 @@ Methods
 [Grids and subgrids in model-driven apps](../grids.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,26 +1,31 @@
 ---
-title: Operators and Identifiers | Microsoft Docs
-description: Reference information, including syntax and examples, for the operators and identifiers in Power Apps
+title: Operators and Identifiers in Power Apps
+description: Reference information including syntax and examples for the Operators and Identifiers in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
-ms.date: 07/17/2020
+ms.reviewer: tapanm
+ms.date: 04/18/2022
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Operators and Identifiers in Power Apps
 
-Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.
+Some of these operators are dependent on the language of the author. For more information about language support in canvas apps, see [Global apps](../global-apps.md).
 
 
-|                               Symbol                                |                        Type                         |                                                                                    Syntax                                                                                    |                                                                                                                           Description                                                                                                                            |
+|                               Symbol                                |                        Type                         |                                                                                    Example                                                                                    |                                                                                                                           Description                                                                                                                            |
 |---------------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **'**...**'** | [Identifier](#identifier-names) | **'Account Name'** | Identifiers that contain special characters, including spaces, are enclosed in single quotes |
+| **"**...**"** | [Text string](data-types.md#text-hyperlink-image-and-media) | **"Hello, World"** | Text strings are enclosed in double quotes |
+| **$"**...**"** | [String interpolation](data-types.md#string-interpolation) | **$"Dear {FirstName},"** | Formulas embedded within a text string |
 |                                **.**                                |                  Property Selector                  |                                                               **Slider1.Value<br>Color.Red<br>Acceleration.X**                                                               |                                               Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backward compatibility, **!** may also be used.                                                |
 | **.**<br>[[language dependent](../global-apps.md)]  |                  Decimal separator                  |                                                             **1.23**                                                           |                                                                              Separator between whole and fractional parts of a number. The character depends on the language.                                                                              |
 |                               **( )**                               |                     Parentheses                     |                                                               **Filter(T, A &lt; 10)**<br><br>**(1 + 2) \* 3**                                                               |                                                                                           Enforces precedence order, and groups subexpressions in a larger expression                                                                                           |
@@ -52,10 +57,14 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                             **Self**                              |         [Self operator](#self-and-parent-operators)         |                                                                               **Self.Fill**                                                                                |                                                                                                           Access to properties of the current control                                                                                                             |
 |                             **Parent**                              |         [Parent operator](#self-and-parent-operators)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
-|                            **ThisRecord**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisRecord.FirstName**                                                                            |                                                                                                          Access to the complete record and individual fields of the record within **ForAll**, **Sum**, **With**, and other record scope functions.  Can be overridden with the **As** operator.                                                                                                           |
+|                            **ThisRecord**                             |       [ThisRecord operator](#thisrecord-operator)       |                                                                            **ThisRecord.FirstName**                                                                            |                                                                                                          Access to the complete record and individual fields of the record within **ForAll**, **Sum**, **With**, and other record scope functions.  Can be overridden with the **As** operator.                                                                                                           |
+
+
+> [!NOTE]
+> The **@** operator can also be used to validate the type of the record object against a data source. For example, `Collect(coll,Account@{'Account Number: 1111')`
 
 ## in and exactin operators
-
+ 
 Use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
@@ -79,14 +88,14 @@ A few controls and functions apply formulas to individual records of a table.  T
 
 ### ThisItem operator
 
-For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
+For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** table included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
 
 ```powerapps-dot
 Employees
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Employees shown in a gallery](media/operators/as-gallery-items.png)
+> ![Employees shown in a gallery.](media/operators/as-gallery-items.png)
 
 The first item in the gallery is a template that is replicated for each employee.  In the template, the formula for the picture uses **ThisItem** to refer to the current item:
 
@@ -95,7 +104,7 @@ ThisItem.Picture
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Formula for the picture of an employee](media/operators/as-gallery-picture.png)
+> ![Formula for the picture of an employee.](media/operators/as-gallery-picture.png)
 
 Likewise, the formula for the name also uses **ThisItem**:
 
@@ -104,7 +113,7 @@ ThisItem.'First Name' & " " & ThisItem.'Last Name'
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Formula for the first and last name of an employee](media/operators/as-gallery-name.png)
+> ![Formula for the first and last name of an employee.](media/operators/as-gallery-name.png)
 
 ### ThisRecord operator
 
@@ -115,7 +124,7 @@ Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Filtering the employees based on name, using ThisRecord](media/operators/as-gallery-filter-thisrecord.png)
+> ![Filtering the employees based on name, using ThisRecord.](media/operators/as-gallery-filter-thisrecord.png)
 
 **ThisRecord** is optional and implied by using the fields directly, for example, in this case, we could have written:
 
@@ -144,7 +153,7 @@ Employees As Employee
 ```   
 
 > [!div class="mx-imgBorder"]  
-> ![Gallery of employees, using the As operator](media/operators/as-gallery-filter-as-employee.png)
+> ![Gallery of employees, using the As operator.](media/operators/as-gallery-filter-as-employee.png)
 
 The formulas for the picture and name are adjusted to use this name for the current record:
 
@@ -152,15 +161,15 @@ The formulas for the picture and name are adjusted to use this name for the curr
 Employee.Picture
 ```
 > [!div class="mx-imgBorder"]  
-> ![Picture of an employee using the Employee name set with the As operator](media/operators/as-gallery-as-picture.png)
+> ![Picture of an employee using the Employee name set with the As operator.](media/operators/as-gallery-as-picture.png)
 
 ```powerapps-dot
 Employee.'First Name' & " " & Employee.'Last Name'
 ```
 > [!div class="mx-imgBorder"]  
-> ![First and last name of an employee using the Employee name set with the As operator](media/operators/as-gallery-as-name.png)
+> ![First and last name of an employee using the Employee name set with the As operator.](media/operators/as-gallery-as-name.png)
 
-**As** can also be used with record scope functions to replace the default name **ThisRecord**.  We can apply this to our previous example to clarify the record we are working with:
+**As** can also be used with record scope functions to replace the default name **ThisRecord**.  We can apply this to our previous example to clarify the record we're working with:
 
 ```powerapps-dot
 With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
@@ -189,7 +198,7 @@ Concat(
 Setting a **Label** control's **Text** property to this formula displays:
 
 > [!div class="mx-imgBorder"]  
-> ![Chessboard text shown in a label control](media/operators/as-forall-nesting.png)
+> ![Chessboard text shown in a label control.](media/operators/as-forall-nesting.png)
 
 Let's unpack what is happening here:
 - We start by iterating an unnamed table of 8 numbered records from the [**Sequence**](function-sequence.md) function.  This loop is for each row of the board, which is commonly referred to as **Rank** and so we give it this name.
@@ -204,7 +213,7 @@ Sequence(8) as Rank
 ```
 
 > [!div class="mx-imgBorder"]  
-> ![Illustration of the outer gallery that provides the Rank iteration](media/operators/as-chessboard-rank.png)
+> ![Illustration of the outer gallery that provides the Rank iteration.](media/operators/as-chessboard-rank.png)
 
 Within this gallery, we'll place a horizontal gallery for the **File**, that will be replicated for each **Rank**, with an **Items** property of:
 
@@ -213,7 +222,7 @@ Sequence(8) as File
 ```
 
 > [!div class="mx-imgBorder"]  
-> ![Illustration of the inner gallery that provides the File iteration](media/operators/as-chessboard-file.png)
+> ![Illustration of the inner gallery that provides the File iteration.](media/operators/as-chessboard-file.png)
 
 And finally, within this gallery, we'll add a **Label** control that will be replicated for each **File** and each **Rank**.   We'll size it to fill the entire space and use the **Fill** property to provide the color with this formula:
 
@@ -222,7 +231,7 @@ If( Mod( Rank.Value + File.Value, 2 ) = 1, Green, Beige )
 ```
 
 > [!div class="mx-imgBorder"]  
-> ![Label control within the two galleries that provides the alternating colors for the chessboard](media/operators/as-chessboard-fill.png)
+> ![Label control within the two galleries that provides the alternating colors for the chessboard.](media/operators/as-chessboard-fill.png)
 
 ## Self and Parent operators
 
@@ -232,7 +241,7 @@ There are three ways to refer to a control and its properties within a formula:
 |--------|-------------|
 | By control name |  Any control can be referenced by name from anywhere within the app.<br><br>For example, **Label1.Fill** refers to the fill property of the control who's name is **Label1**.  | 
 | **Self** operator | It's often convenient to reference another property of the same control when writing a formula.  Instead of using an absolute reference by name, it's easier and more portable to use a relative reference to one*self*.  The **Self** operator provides that easy access to the current control.<br><br>For example, **Self.Fill** refers to the fill color of the current control.   |
-| **Parent** operator | Some controls host other controls, such as the **[Screen](../controls/control-screen.md)** and **[Gallery](../controls/control-gallery.md)** controls. The hosting control of the controls within it is called the *parent*.  Like the **Self** operator, the **Parent** operator provides an easy relative reference to the container control.<br><br>For example, **Parent.Fill** refers to the fill property of the control that is the container for the current control. |
+| **Parent** operator | Some controls host other controls, such as the **[Screen](../controls/control-screen.md)** and **[Gallery](../controls/control-gallery.md)** controls. The hosting control of the controls within it's called the *parent*.  Like the **Self** operator, the **Parent** operator provides an easy relative reference to the container control.<br><br>For example, **Parent.Fill** refers to the fill property of the control that is the container for the current control. |
 
 **Self** and **Parent** are operators and not properties on the controls themselves. Referring to **Parent.Parent**, **Self.Parent** or **Parent.Self** is not supported.
 
@@ -241,9 +250,9 @@ There are three ways to refer to a control and its properties within a formula:
 The names of variables, data sources, columns, and other objects can contain any [Unicode](https://en.wikipedia.org/wiki/Unicode).
 
 Use single quotes around a name that contains a space or other special character.  
-Use two single quotes together to represent one single quote in the name.  Names that do not contain special characters do not require single quotes.
+Use two single quotes together to represent one single quote in the name.  Names that don't contain special characters don't require single quotes.
 
-Here are some example column names you might encounter in a table, and how they are represented in a formula:
+Here are some example column names you might encounter in a table, and how they're represented in a formula:
 
 | Column name in a database   | Column reference in a formula |
 |-----------------------------|-------------------------------|
@@ -259,44 +268,44 @@ Double quotes are used to [designate text strings](data-types.md#embedded-text).
 ## Display names and logical names
 Some data sources such as SharePoint and Microsoft Dataverse have two different names to refer to the same table or column of data:
 
-* **Logical name** - A name that is guaranteed to be unique, does not change after being created, usually does not allow spaces or other special characters, and is not localized into different languages.  As a result, the name can be cryptic.  These names are used by professional developers.  For example, **cra3a_customfield**.  This name may also be referred to as **schema name** or just **name**.
+* **Logical name** - A name that is guaranteed to be unique, doesn't change after being created, usually doesn't allow spaces or other special characters, and isn't localized into different languages.  As a result, the name can be cryptic.  These names are used by professional developers.  For example, **cra3a_customfield**.  This name may also be referred to as **schema name** or just **name**.
 
 * **Display name** - A name that is user-friendly and intended to be seen by end users.  This name may not be unique, may change over time, may contain spaces and any Unicode character, and may be localized into different languages.  Corresponding to the example above, the display name may be **Custom Field** with space in between the words.
  
-Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed indirectly.
+Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names aren't suggested, they can still be used if typed indirectly.
 
-For example, imagine you have added a **Custom Field** to an entity in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
-
-> [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
-
-When authoring a reference to a field of Accounts, the suggestion will be made to use **'Custom Field'** since this is the display name.  Note that the single quotes must be used because this name has a space in it:
+For example, imagine you've added a **Custom Field** to a table in Dataverse.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing suggestions for field names of Accounts with the display name 'Custom Field' highlighted](media/operators/customfield_suggest_display.png)
+> ![Accounts table with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield."](media/operators/customfield_portal.png)
+
+When authoring a reference to a field of Accounts, the suggestion will be made to use **'Custom Field'** since this is the display name.  Single quotes must be used because this name has a space in it:
+
+> [!div class="mx-imgBorder"]  
+> ![Studio formula bar showing suggestions for field names of Accounts with the display name 'Custom Field' highlighted.](media/operators/customfield_suggest_display.png)
 
 After selecting the suggestion, 'Custom Field' is shown in the formula bar and the data is retrieved: 
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing the use of the display name 'Custom Field' for the field](media/operators/customfield_display.png)
+> ![Studio formula bar showing the use of the display name 'Custom Field' for the field.](media/operators/customfield_display.png)
 
-Although it is not suggested, we could also use the logical name for this field.  This will result in the same data being retrieved.  Note that no single quotes are required since this name does not contain spaces or special characters:
+Although it isn't suggested, we could also use the logical name for this field.  This will result in the same data being retrieved.  Single quotes are required since this name doesn't contain spaces or special characters:
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing the use of the logical name cr5e3_customfield for the field](media/operators/customfield_logical.png)
+> ![Studio formula bar showing the use of the logical name cr5e3_customfield for the field.](media/operators/customfield_logical.png)
 
 Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names to switch into new display names, for example, if a display name changes or a maker in a different language edits the app.
 
 > [!NOTE] 
-> Logical names are not translated when moving an app between environments.  For Dataverse system entity and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
+> Logical names are not translated when moving an app between environments.  For Dataverse system table and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
 
 ## Name disambiguation
-Since display names are not unique, the same display name may appear more than once in the same entity.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
+Since display names aren't unique, the same display name may appear more than once in the same table.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
 
 > [!div class="mx-imgBorder"]  
-> ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field"](media/operators/customfield_suggest_alt.png)
+> ![Studio formula bar showing the use of the logical name cr5e3_customfieldalt to disambiguate the two versions of "Custom Field."](media/operators/customfield_suggest_alt.png)
 
-Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Dataverse items. 
+Name disambiguation strings are added in other situations where name conflicts occur, such as the names of table, choices, and other Dataverse items. 
 
 ## Disambiguation operator
 
@@ -307,3 +316,6 @@ Some functions create [record scopes](../working-with-tables.md#record-scope) fo
 
 For more information and examples, see [record scopes](../working-with-tables.md#record-scope).
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

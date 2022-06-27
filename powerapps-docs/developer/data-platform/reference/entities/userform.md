@@ -1,22 +1,24 @@
 ---
-title: "UserForm entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the UserForm table."
-ms.date: 11/14/2020
+title: "User Dashboard (UserForm)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the User Dashboard (UserForm)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# UserForm entity reference
+
+# User Dashboard (UserForm)  table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 User-owned dashboards.
 
@@ -25,19 +27,19 @@ User-owned dashboards.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/userforms<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/userforms<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userforms<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userforms<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/userforms(*userformid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -55,9 +57,9 @@ User-owned dashboards.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Description](#BKMK_Description)
 - [FormJson](#BKMK_FormJson)
@@ -131,14 +133,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsTabletEnabled Options
+#### IsTabletEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -212,12 +214,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### Type Options
+#### Type Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Dashboard|
-|103|Power BI Dashboard|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Dashboard||
+|103|Power BI Dashboard||
 
 
 
@@ -236,9 +238,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -257,6 +259,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -514,12 +517,28 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |--------|-----|
 |Description|Shows the business unit that the record owner belongs to.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -576,7 +595,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_UserForm_AsyncOperations"></a> UserForm_AsyncOperations
 
-Same as asyncoperation entity [UserForm_AsyncOperations](asyncoperation.md#BKMK_UserForm_AsyncOperations) Many-To-One relationship.
+Same as the [UserForm_AsyncOperations](asyncoperation.md#BKMK_UserForm_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -591,7 +610,7 @@ Same as asyncoperation entity [UserForm_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_UserForm_BulkDeleteFailures"></a> UserForm_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [UserForm_BulkDeleteFailures](bulkdeletefailure.md#BKMK_UserForm_BulkDeleteFailures) Many-To-One relationship.
+Same as the [UserForm_BulkDeleteFailures](bulkdeletefailure.md#BKMK_UserForm_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -607,7 +626,7 @@ Same as bulkdeletefailure entity [UserForm_BulkDeleteFailures](bulkdeletefailure
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_userformbase_modifiedonbehalfby](#BKMK_lk_userformbase_modifiedonbehalfby)
 - [lk_userformbase_createdonbehalfby](#BKMK_lk_userformbase_createdonbehalfby)
@@ -620,34 +639,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_userformbase_modifiedonbehalfby"></a> lk_userformbase_modifiedonbehalfby
 
-See systemuser Entity [lk_userformbase_modifiedonbehalfby](systemuser.md#BKMK_lk_userformbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_userformbase_modifiedonbehalfby](systemuser.md#BKMK_lk_userformbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userformbase_createdonbehalfby"></a> lk_userformbase_createdonbehalfby
 
-See systemuser Entity [lk_userformbase_createdonbehalfby](systemuser.md#BKMK_lk_userformbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_userformbase_createdonbehalfby](systemuser.md#BKMK_lk_userformbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_userform"></a> team_userform
 
-See team Entity [team_userform](team.md#BKMK_team_userform) One-To-Many relationship.
+See the [team_userform](team.md#BKMK_team_userform) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_userform_createdby"></a> lk_userform_createdby
 
-See systemuser Entity [lk_userform_createdby](systemuser.md#BKMK_lk_userform_createdby) One-To-Many relationship.
+See the [lk_userform_createdby](systemuser.md#BKMK_lk_userform_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_userform_modifiedby"></a> lk_userform_modifiedby
 
-See systemuser Entity [lk_userform_modifiedby](systemuser.md#BKMK_lk_userform_modifiedby) One-To-Many relationship.
+See the [lk_userform_modifiedby](systemuser.md#BKMK_lk_userform_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_userform"></a> user_userform
 
-See systemuser Entity [user_userform](systemuser.md#BKMK_user_userform) One-To-Many relationship.
+See the [user_userform](systemuser.md#BKMK_user_userform) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_userform"></a> business_unit_userform
 
-See businessunit Entity [business_unit_userform](businessunit.md#BKMK_business_unit_userform) One-To-Many relationship.
+See the [business_unit_userform](businessunit.md#BKMK_business_unit_userform) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.userform?text=userform EntityType" />

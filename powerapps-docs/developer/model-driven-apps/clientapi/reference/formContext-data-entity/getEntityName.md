@@ -1,21 +1,22 @@
 ---
-title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "entity.getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Returns a string representing the logical name of the table for the record.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1a66f93d-a47c-4316-91f1-dcf5d09f9d19
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityName (Client API reference)
-
+# entity.getEntityName (Client API reference)
 
 
 [!INCLUDE[./includes/getEntityName-description.md](./includes/getEntityName-description.md)]
@@ -24,11 +25,16 @@ search.app:
 
 `formContext.data.entity.getEntityName();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: String.
 
-**Description**: The name of the entity.
+**Description**: The name of the table.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

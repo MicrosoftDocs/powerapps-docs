@@ -1,26 +1,29 @@
 ---
 title: "getUserPrivilege (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getUserPrivilege method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 0a3f0349-af9a-418a-b99d-5085999884eb
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getUserPrivilege (Client API reference)
 
 
 
-Returns an object with three Boolean properties corresponding to privileges indicating if the user can create, read or update data values for an attribute. This function is intended for use when Field Level Security modifies a user’s privileges for a particular attribute 
+Returns an object with three boolean properties corresponding to privileges indicating if the user can create, read or update data values for a column. This function is intended for use when Field Level Security modifies a user’s privileges for a particular column. 
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -32,8 +35,11 @@ All
 
 **Type**: Object. 
 
-**Description**: The object has three Boolean properties:
+**Description**: The object has three boolean properties:
 - canRead
 - canUpdate
 - canCreate
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

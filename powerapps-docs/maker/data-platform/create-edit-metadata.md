@@ -4,11 +4,12 @@ description: "Learn about tables and metadata in Microsoft Dataverse"
 ms.custom: ""
 ms.date: 11/16/2020
 ms.reviewer: ""
-ms.service: powerapps
-ms.topic: "article"
+
+ms.topic: "overview"
 author: "Mattp123"
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -20,18 +21,18 @@ search.app:
 
 # Tables and metadata in Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you are evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 
-*Metadata* means data about data. Dataverse provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Dataverse, the metadata is a collection of tables. tables describe the kinds of data which is stored in the database.  Each table corresponds to a database table and each column (also known as attribute) within a table represents a column in that table. table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you are editing this metadata. 
+*Metadata* means data about data. Dataverse provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Dataverse, the metadata is a collection of tables. tables describe the kinds of data which is stored in the database.  Each table corresponds to a database table and each column (also known as attribute) within a table represents a column in that table. Table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you are editing this metadata. 
   
 Different clients people use to interact with the data in your environment depend on the table metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within tables but the tables themselves are not available for customization.
 
-You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](/powerapps/developer/data-platform/reference/about-table-reference).
+You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](../../developer/data-platform/reference/about-entity-reference.md).
 
 > [!TIP]
-> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
+> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](/dynamics365/customer-engagement/developer/browse-your-metadata).
   
 <a name="BKMK_CreateNewOrUseExistingMetadata"></a>
 
@@ -50,7 +51,7 @@ For these reasons, we recommend that you look for and use the provided standard 
 <!--  Can we say this yet? 
     
 > [!NOTE]
-> The [Common Data Model](/powerapps/common-data-model/overview) will provide a capability to add additional standard tables. 
+> The [Common Data Model](/common-data-model/) will provide a capability to add additional standard tables. 
 
 -->
 
@@ -62,7 +63,7 @@ You can’t delete standard tables, columns, or table relationships. They are co
 
 ## Limitations on creating metadata items  
 
-There is a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Resources In Use** page. If you need more custom tables, contact technical support. This upper limit can be adjusted.  
+There is a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#solution-explorer)** > **Administration** > **Resources In Use** page. If you need more custom tables, contact technical support. This upper limit can be adjusted.  
   
 Within each table there is an upper limit on the number of columns you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a database table. It is difficult to provide a specific number because each type of column can use a different amount of space. The upper limit depends on the total space used by all the columns for the table.  
   
@@ -72,5 +73,8 @@ Choice columns provide a set of options that will be displayed in a drop-down co
   
 ### Next steps
 
-[Create or edit tables (row types)](create-edit-entities.md)<br />
+[Create or edit tables (row types)](./data-platform-create-entity.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

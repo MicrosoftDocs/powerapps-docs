@@ -8,12 +8,13 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 12/12/2018
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -23,7 +24,7 @@ search.app:
 --- 
 # Do not retrieve Entity all columns via query APIs
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Performance
 
@@ -110,7 +111,7 @@ The following classes contain a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>  instan
 
 ## Problematic patterns
 
-Queries that include a defined <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> where the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns> property is `true` instruct the platform to issue a SQL command to ["SELECT *"](https://technet.microsoft.com/library/ms189287.aspx) on all physical data included in the query plan.  This scenario should be avoided whenever possible.
+Queries that include a defined <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> where the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns> property is `true` instruct the platform to issue a SQL command to ["SELECT *"](/previous-versions/sql/sql-server-2008-r2/ms189287(v=sql.105)) on all physical data included in the query plan.  This scenario should be avoided whenever possible.
 
 > [!WARNING]
 > These scenarios should be avoided.
@@ -157,3 +158,6 @@ Queries submitted to retrieve data from Dynamics 365 should not select all colum
 <xref href="Microsoft.Xrm.Sdk.Query.ColumnSet?text=ColumnSet Class" /><br />
 [Use of the ColumnSet Class](../../org-service/use-the-columnset-class.md)<br />
 [Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

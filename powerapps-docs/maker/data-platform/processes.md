@@ -1,10 +1,10 @@
 ---
 title: "Apply business logic in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
-ms.custom: ""
+ms.custom: intro-internal
 ms.date: 12/20/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -15,6 +15,7 @@ applies_to:
 ms.assetid: 0b4e6602-5701-4859-81cc-6f6fe50901b2
 caps.latest.revision: 44
 author: "Mattp123"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -24,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Apply business logic in Microsoft Dataverse
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 There are several choices available for applying business logic in Dataverse. 
 
@@ -59,3 +60,6 @@ Power Automate has several different flows you can use to create automated workf
 ### See also
 
 [Apply business logic in model-driven apps](../model-driven-apps/guide-staff-through-common-tasks-processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

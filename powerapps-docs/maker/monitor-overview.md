@@ -1,22 +1,27 @@
 ---
-title: Overview of Power Apps with Monitor | Microsoft Docs
-description: Learn about Power Apps Monitor.
-author: hasharaf
-ms.service: powerapps
-ms.topic: conceptual
+title: Monitor overview
+description: Overview of Power Apps Monitor.
+author: mattgon
+
+ms.subservice: troubleshoot
+ms.topic: overview
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/19/2020
-ms.author: hasharaf
+ms.date: 11/23/2021
+ms.author: austinj
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - tapanm-msft
+  - mattgon
+  - maustinjones
 ---
 
 # Monitor overview
 
-Monitor is a tool that offers makers the ability to view a stream of events from a user's session to diagnose and troubleshoot problems. Makers of canvas apps can use Monitor either to view events while building a new app in Power Apps Studio or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigation, command executions, [form-related issues](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand app behavior and make improvements.
+Monitor is a tool that offers makers the ability to view a stream of events from a user's session to diagnose and troubleshoot problems. Makers of canvas apps can use Monitor either to view events while building a new app in Power Apps Studio or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigation, command executions, [form-related issues](/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand app behavior and make improvements.
 
 ## Benefits
 
@@ -48,11 +53,22 @@ Some examples of problems and queries that you can uncover when using Monitor ar
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
 
+## Prerequisites
+
+You'll need the following security role membership in the environment to use Monitor.
+
+| App type | Required security role |
+| - | - |
+| Canvas app | Environment Admin or Environment Maker |
+| Model-driven app | System Administrator or System Customizer for the Dataverse organization |
+
+More information: [Configure user security to resources in an environment](/power-platform/admin/database-security)
+
 ## Monitor dashboard
 
 You can review various properties for each event inside Monitor. Depending on the event category, some of these properties might not contain data. The following image shows an example of the Monitor dashboard for canvas apps.
 
-![Monitor dashboard](media/monitor/monitor.png "Monitor dashboard")
+![Monitor dashboard.](media/monitor/monitor.png "Monitor dashboard")
 
 | Column name       | Description                                                                                                                                                                                                                                       |
 |-------------------|-----------------------------------------------------|
@@ -75,21 +91,21 @@ When you select an event in the grid, a panel displays additional details about 
     of the data might be collapsed in the tree view. You can expand and drill
     down to view content.
 
-    ![Monitor - Details](media/monitor/monitor-details.png "Monitor - Details")
+    ![Monitor - Details.](media/monitor/monitor-details.png "Monitor - Details")
 
 - **Formula**: Shows the related formula from your app for the selected event. The
     name of the control property triggering the event is displayed on top of the tab and inside the event table.
 
-    ![Monitor - Formula](media/monitor/monitor-formula.png "Monitor - Formula")
+    ![Monitor - Formula.](media/monitor/monitor-formula.png "Monitor - Formula")
 
 - **Request**: Shows the HTTP request that was sent.
 
-    ![Monitor - Request](media/monitor/monitor-request.png "Monitor - Request")
+    ![Monitor - Request.](media/monitor/monitor-request.png "Monitor - Request")
 
 - **Response**: Shows the HTTP response that was received. You can view the response in
     JSON format.
 
-    ![Monitor - Response](media/monitor/monitor-response.png "Monitor - Response")
+    ![Monitor - Response.](media/monitor/monitor-response.png "Monitor - Response")
 
 ## Unsupported scenarios for Monitor
 
@@ -102,6 +118,9 @@ To learn about unsupported scenarios for Monitor, go to [Advanced monitoring - u
 
 ### See also
 
-[Troubleshoot form issues in model-driven apps](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms)  
+[Troubleshoot form issues in model-driven apps](/powerapps/developer/model-driven-apps/troubleshoot-forms)  
 [Collaborative debugging with Monitor](monitor-collaborative-debugging.md)  
 [Advanced monitoring](monitor-advanced.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

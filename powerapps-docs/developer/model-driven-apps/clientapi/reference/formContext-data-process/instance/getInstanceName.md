@@ -1,18 +1,21 @@
 ---
 title: "getInstanceName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getInstanceName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: fea145e7-81de-4620-a395-b4067be627ff
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getInstanceName (Client API reference)
 
@@ -28,7 +31,7 @@ search.app:
 
 **Type**: String. 
 
-**Description**: Pocess instance name.
+**Description**: Process instance name.
 
 ### Related topics
 
@@ -36,3 +39,6 @@ search.app:
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

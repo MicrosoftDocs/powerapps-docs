@@ -1,20 +1,15 @@
 ---
 title: Code Element | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
+description: Refers to the path where the resource files are located.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # code element
@@ -23,14 +18,14 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`path`|Place where the resource files are located|`String`|Yes|Model-driven apps and canvas apps (public preview) |
-|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven apps and canvas apps (public preview) |
+|`path`|Place where the resource files are located|`String`|Yes|Model-driven and canvas apps |
+|`order`|The order in which the resource files should load|`Positive integer`|Yes|Model-driven and canvas apps |
 
 ## Parent Elements
 
@@ -42,7 +37,7 @@ Model-driven apps and canvas apps (public preview)
 
 ```XML
 <code path="TS_IncrementControl.js" order="1" />
-	    <css path="css/TS_IncrementControl.css" order="1" />
+       <css path="css/TS_IncrementControl.css" order="1" />
       <resx path="strings/TSIncrementControl.1033.resx" version="1.0.0" />
 ```
 
@@ -51,3 +46,5 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,18 +1,20 @@
 ---
 title: "getAllowedStatusTransitions (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 09/03/2019
-ms.service: powerapps
+description: Includes description and supported parameters for the getAllowedStatusTransitions method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 28c36741-0070-435c-a42f-49f4dda2ef7f
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # getAllowedStatusTransitions (Client API reference)
@@ -28,7 +30,7 @@ search.app:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the entity.|
+|entityName|String|Yes|The logical name of the table.|
 |statusCode|Number|Yes|The status code to find out the allowed status transition values.|
 |successCallback|Function|No|The function to execute when the operation succeeds.|
 |errorCallback|Function|No|The function to execute when the operation fails.|
@@ -43,3 +45,6 @@ Returns an object with `.then()` function. The parameter to the delegate is an a
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

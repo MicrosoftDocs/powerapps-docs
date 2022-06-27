@@ -1,22 +1,24 @@
 ---
-title: "CallbackRegistration entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CallbackRegistration table."
-ms.date: 11/14/2020
+title: "CallbackRegistration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# CallbackRegistration entity reference
+
+# CallbackRegistration table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Callback Registration that stores configuration.
 
@@ -25,13 +27,13 @@ Callback Registration that stores configuration.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,21 +51,26 @@ Callback Registration that stores configuration.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CallbackRegistrationId](#BKMK_CallbackRegistrationId)
 - [EntityName](#BKMK_EntityName)
 - [FilterExpression](#BKMK_FilterExpression)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
+- [HardDelete](#BKMK_HardDelete)
+- [LogicAppsVersion](#BKMK_LogicAppsVersion)
 - [Message](#BKMK_Message)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PostponeUntil](#BKMK_PostponeUntil)
 - [RunAs](#BKMK_RunAs)
+- [RuntimeIntegrationProperties](#BKMK_RuntimeIntegrationProperties)
 - [Scope](#BKMK_Scope)
+- [SdkMessageName](#BKMK_SdkMessageName)
+- [SoftDeleteStatus](#BKMK_SoftDeleteStatus)
 - [Url](#BKMK_Url)
 - [Version](#BKMK_Version)
 
@@ -130,6 +137,44 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_HardDelete"></a> HardDelete
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds hard delete information.|
+|DisplayName|Hard Delete|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|harddelete|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### HardDelete Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+
+
+### <a name="BKMK_LogicAppsVersion"></a> LogicAppsVersion
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds version of logic apps trigger.|
+|DisplayName|Logic Apps Version|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|logicappsversion|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
 ### <a name="BKMK_Message"></a> Message
 
 |Property|Value|
@@ -142,17 +187,17 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Message Options
+#### Message Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Create|
-|2|Delete|
-|3|Update|
-|4|Create or Update|
-|5|Create or Delete|
-|6|Update or Delete|
-|7|Create or Update or Delete|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Added||
+|2|Deleted||
+|3|Modified||
+|4|Added or Modified||
+|5|Added or Deleted||
+|6|Modified or Deleted||
+|7|Added or Modified or Deleted||
 
 
 
@@ -227,14 +272,32 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### RunAs Options
+#### RunAs Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Triggering User|
-|2|Record Owner|
-|3|Process Owner|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Modifying user||
+|2|Row owner||
+|3|Flow owner||
 
+
+
+### <a name="BKMK_RuntimeIntegrationProperties"></a> RuntimeIntegrationProperties
+
+**Added by**: RuntimeIntegration Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds miscellaneous properties related to runtime integration.|
+|DisplayName|Runtime Integration Properties|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|runtimeintegrationproperties|
+|MaxLength|512|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Scope"></a> Scope
@@ -249,15 +312,51 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Scope Options
+#### Scope Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|User|
-|2|BusinessUnit|
-|3|ParentChildBusinessUnit|
-|4|Organization|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|User||
+|2|BusinessUnit||
+|3|ParentChildBusinessUnit||
+|4|Organization||
 
+
+
+### <a name="BKMK_SdkMessageName"></a> SdkMessageName
+
+**Added by**: API messages extension solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Name of the SDK message the subscriber is interested in|
+|DisplayName|SDK Message Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|sdkmessagename|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_SoftDeleteStatus"></a> SoftDeleteStatus
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds soft delete information.|
+|DisplayName|Soft Delete Status|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|softdeletestatus|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_Url"></a> Url
@@ -288,19 +387,20 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### Version Options
+#### Version Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|V1|
-|2|V2|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|V1||
+|2|V2||
+|3|V3||
 
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -580,7 +680,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_callbackregistration_modifiedonbehalfby](#BKMK_lk_callbackregistration_modifiedonbehalfby)
 - [lk_callbackregistration_modifiedby](#BKMK_lk_callbackregistration_modifiedby)
@@ -591,26 +691,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
 
-See systemuser Entity [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_modifiedby"></a> lk_callbackregistration_modifiedby
 
-See systemuser Entity [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) One-To-Many relationship.
+See the [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
 
-See systemuser Entity [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) One-To-Many relationship.
+See the [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_createdby"></a> lk_callbackregistration_createdby
 
-See systemuser Entity [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) One-To-Many relationship.
+See the [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_businessunit_callbackregistration"></a> businessunit_callbackregistration
 
-See businessunit Entity [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) One-To-Many relationship.
+See the [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.callbackregistration?text=callbackregistration EntityType" />

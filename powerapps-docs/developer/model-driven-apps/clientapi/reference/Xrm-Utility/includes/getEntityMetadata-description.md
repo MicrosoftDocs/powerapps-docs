@@ -1,4 +1,4 @@
-Returns the entity metadata for the specified entity. 
+Returns table definitions for the specified table. 
 
 
 

@@ -1,24 +1,26 @@
 ---
 title: "getContentWindow (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 02/06/2020
-ms.service: powerapps
+description: Includes description and supported parameters for the getContentWindow method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: ad68d177-3715-468e-b4af-8cf9b3c77799
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getContentWindow (Client API reference)
 
 Returns the content window that represents an IFRAME or web resource.
 
 > [!NOTE]
-> This method is supported only on [Unified Interface](/powerapps/user/unified-interface).
+> This method is supported only on [Unified Interface](../../../../../user/unified-interface.md).
 
 ## Control types supported
 
@@ -29,6 +31,8 @@ iframe, web resource
 ```JavaScript
 formContext.getControl(arg).getContentWindow().then(successCallback, errorCallback);
 ```
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameters
 
@@ -60,7 +64,7 @@ function setClientApiContext(xrm, formContext) {
 }
 ```
 
-Next, add the following code in the form onLoad event handler:
+Next, add the following code in the form OnLoad event handler:
 
 ```javascript
 // This should be in a script loaded on the form. 
@@ -77,3 +81,8 @@ function form_onload(executionContext) {
     }
 }
 ```
+
+Similar initialization code should be added to a TabStateChange event handler if such initialization is necessary. Any initialization code should be idempotent if it is re-used. For performance reasons, the form may destroy and re-initialize the control during tab navigations.
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,17 +1,11 @@
 ---
-title: "Create and edit columns for Microsoft Dataverse using Power Apps | MicrosoftDocs"
+title: "Create and edit columns in Dataverse using Power Apps | MicrosoftDocs"
 description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
+ms.topic: "how-to"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
@@ -21,20 +15,18 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit columns for Microsoft Dataverse
+# Create and edit columns in Dataverse using Power Apps
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+Power Apps [(make.powerapps.com)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns in Dataverse.
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns with the Dataverse.
-
-The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+Power Apps enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit columns for Dataverse](create-edit-fields.md)
 - [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)
 
 ## View columns
 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables** and select the table that has the columns you want to view.
-2. With the **Columns** tab selected, you can select the following views: 
+2. With the **Columns** area selected, you can select the following views: 
 
  |View|Description|
  |--|--|
@@ -120,7 +112,7 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 
 |Data type|Description|
 |--|--|
-|**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.More information: [Using currency columns](types-of-fields.md#using-currency-columns)|
+|**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency columns](types-of-fields.md#using-currency-columns)|
 |**Decimal Number**| A decimal value with up to 10 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**File**| For storing binary data.|
 |**Floating Point Number**|A floating point number with up to 5 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
@@ -129,7 +121,7 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 |**Multi Select Choice**|Displays a list of options where more than one can be selected.|
 |<a name="multi-line-column"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
 |**Choice**|Displays a list of options where only one can be selected.|
-|**Yes/No**|DisplaysYes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
+|**Yes/No**|Displays Yes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
 
 ## Save new column
 
@@ -137,7 +129,7 @@ Once you have set the **Display Name**, **Name** and **Data type** properties yo
 
 You can continue to edit the table and add additional columns or return and continue editing this column. The columns will not be created until you select **Save Table** to save all the changes to the table.
 
-![Save Table button](media/save-entity-button.png)
+![Save Table button.](media/save-entity-button.png)
 
 You can also select **Discard** to discard the changes you have made.
  
@@ -223,11 +215,11 @@ With the system administrator security role, you can delete any custom columns t
 
 While [viewing columns](#view-columns), if you select a custom column that can be deleted in the list, the **Delete column** command appears and is enabled.
 
-![Delete a column using the portal](media/delete-field-portal.png)
+![Delete a column using the portal.](media/delete-field-portal.png)
 
 Use the **Delete column** command to delete the column. After deleting the column you must save the changes to the table.
 
-![Save table after deleting column](media/delete-field-portal-save-entity.png)
+![Save table after deleting column.](media/delete-field-portal-save-entity.png)
 
 > [!NOTE]
 > If you get an error related to dependencies, you must use solution explorer to detect dependencies. More information: [Check column dependencies](create-edit-field-solution-explorer.md#check-column-dependencies)
@@ -250,3 +242,6 @@ IME mode does not restrict the characters that users can enter. For example, whe
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />
 [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

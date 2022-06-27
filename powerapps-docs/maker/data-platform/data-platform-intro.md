@@ -3,11 +3,12 @@ title: What is Microsoft Dataverse? | Microsoft Docs
 description: Introduction to Microsoft Dataverse, tables, server-side logic, security, and developer capabilities.
 author: mattp123
 manager: kvivek
-ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 11/10/2020
+ms.custom: intro-internal
+ms.date: 06/15/2022
 ms.reviewer: matp
+ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
@@ -17,17 +18,16 @@ search.app:
 searchScope:
   - "Power Apps"
 ---
-
 # What is Microsoft Dataverse?
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Dataverse lets you securely store and manage data that's used by business applications. Data within Dataverse is stored within a set of tables. A *table* is a set of rows (formerly referred to as records) and columns (formerly referred to as fields/attributes). Each column in the table is designed to store a certain type of data, for example, name, age, salary, and so on. Dataverse includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data by using Power Query. App makers can then use Power Apps to build rich applications that use this data.
 
-![Screenshot showing overview of Microsoft Power Platform.](./media/data-platform-cds-intro/platform.png "Dataverse in Microsoft Power Platform")
+:::image type="content" source="media/data-platform-cds-intro/platform.png" alt-text="Diagram with overview of Microsoft Power Platform.":::
 
-For information about purchasing a plan to use Dataverse, go to [Pricing info](../../administrator/pricing-billing-skus.md).
+For information about purchasing a plan to use Dataverse, go to [Pricing info](/power-platform/admin/pricing-billing-skus).
 
 ## Why use Dataverse?
+
 Standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you create a business-focused definition of your organization's data for use within apps. If you're not sure whether tables are your best option, consider these benefits:
 
 - **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
@@ -54,7 +54,6 @@ Responding to customer feedback and data from user research, effective November 
 > [!NOTE]
 > These terminology updates aren’t applicable to any APIs or messages in the Dataverse web services. For example, the names of the messages <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> won't change. 
 
-
 ## Dynamics 365 and Dataverse
 
 Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Talent&mdash;also use Dataverse to store and secure the data they use. This enables you to build apps by using Power Apps and Dataverse directly against your core business data, which is already used within Dynamics 365, without the need for integration.
@@ -76,12 +75,12 @@ Building an app typically involves data from more than one source. Although this
 * **Transform and import data using Power Query** &ndash; Transforming data when importing into Dataverse can be done through Power Query&mdash;a tool commonly used across Excel and Power BI&mdash;from many online data sources.
 * **One-time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one-time (or infrequent) import of data into Dataverse.
 
-For more information about integrating data into the Dataverse, go to [Add data to a table in Dataverse by using Power Query](add-data-power-query.md).
+For more information about integrating data into the Dataverse, go to [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
 
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Dataverse provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
-For a full list of tables, see the [entity reference](https://docs.microsoft.com/powerapps/developer/data-platform/reference/about-entity-reference).
+For a full list of tables, see the [entity reference](../../developer/data-platform/reference/about-entity-reference.md).
 
 You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. More information: [How to create a custom table](create-custom-entity.md)
 
@@ -92,12 +91,13 @@ Tables within Dataverse can take advantage of rich server-side logic and validat
 
 - **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business process flows overview](/power-automate/business-process-flows-overview)
 
-- **Workflows** allow you to automate business processes without user interaction. More information: [Workflows overview](/powerapps/maker/data-platform/overview-realtime-workflows)
+- **Workflows** allow you to automate business processes without user interaction. More information: [Workflows overview](./overview-realtime-workflows.md)
 
 - **Business logic with code** supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](../../developer/data-platform/apply-business-logic-with-code.md)
 
 ## Security
-Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Dataverse environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
+
+Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Power Platform environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities
 In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Dataverse includes features for developers to programmatically access metadata and data to create tables and business logic, in addition to interacting with data. More information: [Dataverse Developer Overview](../../developer/data-platform/overview.md)
@@ -106,8 +106,11 @@ In addition to the features available through the [Power Apps](https://make.powe
 To get started using Dataverse:
 - [Create a canvas app using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md).
 - [Create a custom table](create-custom-entity.md) and then [create a canvas app that uses the table](../canvas-apps/data-platform-create-app.md).
-- [Create a model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app) built on Dataverse.
-- [Use Power Query](./add-data-power-query.md) to connect to an online or on-premises data source and import the data directly into Dataverse.
+- [Create a model-driven app](../model-driven-apps/build-first-model-driven-app.md) built on Dataverse.
+- [Use Power Query](/power-query/dataflows/add-data-power-query) to connect to an online or on-premises data source and import the data directly into Dataverse.
 
 ## Privacy notice
 With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

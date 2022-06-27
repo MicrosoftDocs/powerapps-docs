@@ -1,16 +1,15 @@
 ---
 title: isOffline | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a28ff618-aaf8-4c76-b322-79ff98bae291
+description: Returns the information whether the server is online or offline.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # isOffline
@@ -23,7 +22,7 @@ ms.assetid: a28ff618-aaf8-4c76-b322-79ff98bae291
 
 ## Available for
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Return Value
 
@@ -35,3 +34,6 @@ Description: **true** if the server is offline; **false** otherwise.
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

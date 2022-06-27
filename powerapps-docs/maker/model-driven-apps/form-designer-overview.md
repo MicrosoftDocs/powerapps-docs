@@ -1,18 +1,19 @@
 ---
 title: "Overview of the model-driven app form designer | MicrosoftDocs"
 description: Learn about the form designer for model-driven apps.
-ms.custom: ""
-ms.date: 08/26/2019
+
+ms.date: 08/04/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: overview
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -35,24 +36,19 @@ The form designer interface has the following areas:
     - **Columns** pane to add columns to a form.
     - **Components** pane to add components to a form.
     - **Tree view** to see the hierarchy of components on the form and select them.
+    - **Form libraries** pane is where form libraries can be viewed and added. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 1. Property pane – Displays properties of the selected element, and also allows you to make changes.
 1. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
+1. Show hidden - Displays hidden columns in the form preview area. By default, this option is turned off and hidden columns don't appear on the form preview and are visible only from the tree view pane. When enabled, columns that are hidden are indicated in the form preview area with ![Hidden column indicator icon](media/hidden-column.png).
 1. Zoom slider - Zooms in or out of the form preview helping you take a closer look.
 1. Fit to width - Quick action to fit the form preview to the available width.
 
 > [!div class="mx-imgBorder"] 
-> ![Form designer layout](media/FormDesignerOverview.png "Form designer layout")
+> ![Form designer layout.](media/FormDesignerOverview.png "Form designer layout")
 
-## See also
-[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
-[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
-[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
-[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
-[Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
-[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
-[Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
-[Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+## Next steps
+
+[How to open the form editor](open-form-editor.md)  
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

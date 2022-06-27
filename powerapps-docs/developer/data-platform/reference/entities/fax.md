@@ -1,22 +1,24 @@
 ---
-title: "Fax entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Fax table."
-ms.date: 11/14/2020
+title: "Fax table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Fax table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Fax entity reference
+
+# Fax table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.
 
@@ -25,23 +27,23 @@ Activity that tracks call outcome and number of pages for a fax and optionally s
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/faxes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/faxes<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/faxes<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/faxes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SendEmail|<xref href="Microsoft.Dynamics.CRM.SendEmail?text=SendEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendEmailRequest>|
 |SendFax|<xref href="Microsoft.Dynamics.CRM.SendFax?text=SendFax Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
 |SendTemplate|<xref href="Microsoft.Dynamics.CRM.SendTemplate?text=SendTemplate Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/faxes(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ Activity that tracks call outcome and number of pages for a fax and optionally s
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityId](#BKMK_ActivityId)
 - [ActualDurationMinutes](#BKMK_ActualDurationMinutes)
@@ -240,14 +242,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### DirectionCode Options
+#### DirectionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Outgoing|
-|0|Incoming|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Outgoing||
+|0|Incoming||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -310,14 +312,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsBilled Options
+#### IsBilled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -333,14 +335,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsWorkflowCreated Options
+#### IsWorkflowCreated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -430,13 +432,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### PriorityCode Options
+#### PriorityCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Low|
-|1|Normal|
-|2|High|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Low||
+|1|Normal||
+|2|High||
 
 
 
@@ -565,7 +567,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### StateCode Options
+#### StateCode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -587,7 +589,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### StatusCode Options
+#### StatusCode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -738,9 +740,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivityTypeCode](#BKMK_ActivityTypeCode)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -763,6 +765,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -905,8 +908,8 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -923,14 +926,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsRegularActivity Options
+#### IsRegularActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1095,12 +1098,28 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the fax activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1279,7 +1298,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_fax_principalobjectattributeaccess"></a> fax_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess entity [fax_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_fax_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [fax_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_fax_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1294,7 +1313,7 @@ Same as principalobjectattributeaccess entity [fax_principalobjectattributeacces
 
 ### <a name="BKMK_Fax_AsyncOperations"></a> Fax_AsyncOperations
 
-Same as asyncoperation entity [Fax_AsyncOperations](asyncoperation.md#BKMK_Fax_AsyncOperations) Many-To-One relationship.
+Same as the [Fax_AsyncOperations](asyncoperation.md#BKMK_Fax_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1309,7 +1328,7 @@ Same as asyncoperation entity [Fax_AsyncOperations](asyncoperation.md#BKMK_Fax_A
 
 ### <a name="BKMK_slakpiinstance_fax"></a> slakpiinstance_fax
 
-Same as slakpiinstance entity [slakpiinstance_fax](slakpiinstance.md#BKMK_slakpiinstance_fax) Many-To-One relationship.
+Same as the [slakpiinstance_fax](slakpiinstance.md#BKMK_slakpiinstance_fax) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1324,7 +1343,7 @@ Same as slakpiinstance entity [slakpiinstance_fax](slakpiinstance.md#BKMK_slakpi
 
 ### <a name="BKMK_Fax_DuplicateBaseRecord"></a> Fax_DuplicateBaseRecord
 
-Same as duplicaterecord entity [Fax_DuplicateBaseRecord](duplicaterecord.md#BKMK_Fax_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Fax_DuplicateBaseRecord](duplicaterecord.md#BKMK_Fax_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1339,7 +1358,7 @@ Same as duplicaterecord entity [Fax_DuplicateBaseRecord](duplicaterecord.md#BKMK
 
 ### <a name="BKMK_Fax_BulkDeleteFailures"></a> Fax_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [Fax_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Fax_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Fax_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Fax_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1354,7 +1373,7 @@ Same as bulkdeletefailure entity [Fax_BulkDeleteFailures](bulkdeletefailure.md#B
 
 ### <a name="BKMK_fax_activity_parties"></a> fax_activity_parties
 
-Same as activityparty entity [fax_activity_parties](activityparty.md#BKMK_fax_activity_parties) Many-To-One relationship.
+Same as the [fax_activity_parties](activityparty.md#BKMK_fax_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1369,7 +1388,7 @@ Same as activityparty entity [fax_activity_parties](activityparty.md#BKMK_fax_ac
 
 ### <a name="BKMK_fax_connections2"></a> fax_connections2
 
-Same as connection entity [fax_connections2](connection.md#BKMK_fax_connections2) Many-To-One relationship.
+Same as the [fax_connections2](connection.md#BKMK_fax_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1384,7 +1403,7 @@ Same as connection entity [fax_connections2](connection.md#BKMK_fax_connections2
 
 ### <a name="BKMK_Fax_SyncErrors"></a> Fax_SyncErrors
 
-Same as syncerror entity [Fax_SyncErrors](syncerror.md#BKMK_Fax_SyncErrors) Many-To-One relationship.
+Same as the [Fax_SyncErrors](syncerror.md#BKMK_Fax_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1399,7 +1418,7 @@ Same as syncerror entity [Fax_SyncErrors](syncerror.md#BKMK_Fax_SyncErrors) Many
 
 ### <a name="BKMK_Fax_DuplicateMatchingRecord"></a> Fax_DuplicateMatchingRecord
 
-Same as duplicaterecord entity [Fax_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Fax_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Fax_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Fax_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1414,7 +1433,7 @@ Same as duplicaterecord entity [Fax_DuplicateMatchingRecord](duplicaterecord.md#
 
 ### <a name="BKMK_Fax_Annotation"></a> Fax_Annotation
 
-Same as annotation entity [Fax_Annotation](annotation.md#BKMK_Fax_Annotation) Many-To-One relationship.
+Same as the [Fax_Annotation](annotation.md#BKMK_Fax_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1429,7 +1448,7 @@ Same as annotation entity [Fax_Annotation](annotation.md#BKMK_Fax_Annotation) Ma
 
 ### <a name="BKMK_Fax_ProcessSessions"></a> Fax_ProcessSessions
 
-Same as processsession entity [Fax_ProcessSessions](processsession.md#BKMK_Fax_ProcessSessions) Many-To-One relationship.
+Same as the [Fax_ProcessSessions](processsession.md#BKMK_Fax_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1444,7 +1463,7 @@ Same as processsession entity [Fax_ProcessSessions](processsession.md#BKMK_Fax_P
 
 ### <a name="BKMK_fax_connections1"></a> fax_connections1
 
-Same as connection entity [fax_connections1](connection.md#BKMK_fax_connections1) Many-To-One relationship.
+Same as the [fax_connections1](connection.md#BKMK_fax_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1459,7 +1478,7 @@ Same as connection entity [fax_connections1](connection.md#BKMK_fax_connections1
 
 ### <a name="BKMK_Fax_QueueItem"></a> Fax_QueueItem
 
-Same as queueitem entity [Fax_QueueItem](queueitem.md#BKMK_Fax_QueueItem) Many-To-One relationship.
+Same as the [Fax_QueueItem](queueitem.md#BKMK_Fax_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1474,7 +1493,7 @@ Same as queueitem entity [Fax_QueueItem](queueitem.md#BKMK_Fax_QueueItem) Many-T
 
 ### <a name="BKMK_fax_actioncard"></a> fax_actioncard
 
-Same as actioncard entity [fax_actioncard](actioncard.md#BKMK_fax_actioncard) Many-To-One relationship.
+Same as the [fax_actioncard](actioncard.md#BKMK_fax_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1490,7 +1509,7 @@ Same as actioncard entity [fax_actioncard](actioncard.md#BKMK_fax_actioncard) Ma
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [business_unit_fax_activities](#BKMK_business_unit_fax_activities)
 - [KnowledgeBaseRecord_Faxes](#BKMK_KnowledgeBaseRecord_Faxes)
@@ -1512,70 +1531,70 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_business_unit_fax_activities"></a> business_unit_fax_activities
 
-See businessunit Entity [business_unit_fax_activities](businessunit.md#BKMK_business_unit_fax_activities) One-To-Many relationship.
+See the [business_unit_fax_activities](businessunit.md#BKMK_business_unit_fax_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_KnowledgeBaseRecord_Faxes"></a> KnowledgeBaseRecord_Faxes
 
-See knowledgebaserecord Entity [KnowledgeBaseRecord_Faxes](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Faxes) One-To-Many relationship.
+See the [KnowledgeBaseRecord_Faxes](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_Faxes) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_Faxes"></a> KnowledgeArticle_Faxes
 
-See knowledgearticle Entity [KnowledgeArticle_Faxes](knowledgearticle.md#BKMK_KnowledgeArticle_Faxes) One-To-Many relationship.
+See the [KnowledgeArticle_Faxes](knowledgearticle.md#BKMK_KnowledgeArticle_Faxes) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_manualsla_fax"></a> manualsla_fax
 
-See sla Entity [manualsla_fax](sla.md#BKMK_manualsla_fax) One-To-Many relationship.
+See the [manualsla_fax](sla.md#BKMK_manualsla_fax) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_sla_fax"></a> sla_fax
 
-See sla Entity [sla_fax](sla.md#BKMK_sla_fax) One-To-Many relationship.
+See the [sla_fax](sla.md#BKMK_sla_fax) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
 
-See activitypointer Entity [activity_pointer_fax](activitypointer.md#BKMK_activity_pointer_fax) One-To-Many relationship.
+See the [activity_pointer_fax](activitypointer.md#BKMK_activity_pointer_fax) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_processstage_faxes"></a> processstage_faxes
 
-See processstage Entity [processstage_faxes](processstage.md#BKMK_processstage_faxes) One-To-Many relationship.
+See the [processstage_faxes](processstage.md#BKMK_processstage_faxes) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_user_fax"></a> user_fax
 
-See systemuser Entity [user_fax](systemuser.md#BKMK_user_fax) One-To-Many relationship.
+See the [user_fax](systemuser.md#BKMK_user_fax) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_Faxes"></a> Account_Faxes
 
-See account Entity [Account_Faxes](account.md#BKMK_Account_Faxes) One-To-Many relationship.
+See the [Account_Faxes](account.md#BKMK_Account_Faxes) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_fax_createdonbehalfby"></a> lk_fax_createdonbehalfby
 
-See systemuser Entity [lk_fax_createdonbehalfby](systemuser.md#BKMK_lk_fax_createdonbehalfby) One-To-Many relationship.
+See the [lk_fax_createdonbehalfby](systemuser.md#BKMK_lk_fax_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_fax"></a> team_fax
 
-See team Entity [team_fax](team.md#BKMK_team_fax) One-To-Many relationship.
+See the [team_fax](team.md#BKMK_team_fax) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_fax_createdby"></a> lk_fax_createdby
 
-See systemuser Entity [lk_fax_createdby](systemuser.md#BKMK_lk_fax_createdby) One-To-Many relationship.
+See the [lk_fax_createdby](systemuser.md#BKMK_lk_fax_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Fax"></a> TransactionCurrency_Fax
 
-See transactioncurrency Entity [TransactionCurrency_Fax](transactioncurrency.md#BKMK_TransactionCurrency_Fax) One-To-Many relationship.
+See the [TransactionCurrency_Fax](transactioncurrency.md#BKMK_TransactionCurrency_Fax) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_fax_modifiedby"></a> lk_fax_modifiedby
 
-See systemuser Entity [lk_fax_modifiedby](systemuser.md#BKMK_lk_fax_modifiedby) One-To-Many relationship.
+See the [lk_fax_modifiedby](systemuser.md#BKMK_lk_fax_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Contact_Faxes"></a> Contact_Faxes
 
-See contact Entity [Contact_Faxes](contact.md#BKMK_Contact_Faxes) One-To-Many relationship.
+See the [Contact_Faxes](contact.md#BKMK_Contact_Faxes) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_lk_fax_modifiedonbehalfby"></a> lk_fax_modifiedonbehalfby
 
-See systemuser Entity [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.fax?text=fax EntityType" />

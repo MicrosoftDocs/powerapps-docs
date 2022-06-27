@@ -1,18 +1,20 @@
 ---
 title: "getObject (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 09/03/2019
-ms.service: powerapps
+description: Includes description and supported parameters for the getObject method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: ad68d177-3715-468e-b4af-8cf9b3c77799
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getObject (Client API reference)
 
@@ -35,3 +37,6 @@ iframe, webresource
 
 **Description**: Object depends on the type of control:
 - An IFRAME and HTML web resource returns the [IFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element from the Document Object Model (DOM).
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

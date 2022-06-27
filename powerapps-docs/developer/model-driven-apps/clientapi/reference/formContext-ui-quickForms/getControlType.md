@@ -1,20 +1,22 @@
 ---
-title: "getControlType (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "quickViewControl.getControlType (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the getControlType method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 72d6c761-bcc7-4de6-b73f-5f2833297825
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getControlType (Client API reference)
+# quickViewControl.getControlType (Client API reference)
 
 
 
@@ -35,3 +37,5 @@ For a constituent control in a quick view control, the method returns the actual
 ### Related topics
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,18 +1,21 @@
 ---
-title: DateValue, TimeValue, and DateTimeValue functions | Microsoft Docs
-description: Reference information, syntax and examples for the DateValue, TimeValue, and DateTimeValue functions in Power Apps
+title: DateValue, TimeValue, and DateTimeValue functions in Power Apps
+description: Reference information including syntax and examples for the DateValue, TimeValue, and DateTimeValue functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 04/08/2020
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # DateValue, TimeValue, and DateTimeValue functions in Power Apps
 
@@ -139,3 +142,6 @@ If( TimeValue( FinishedAt.Text ) < TimeValue( "5:00:00.000 PM" ),
 
 - If you type **4:59:59.999 PM** in the **FinishedAt** control, the label shows "*You made it!*"
 - If you type **5:00:00.000 PM** in the **FinishedAt** control, the label shows "*Too late!*"
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

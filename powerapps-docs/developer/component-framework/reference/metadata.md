@@ -1,21 +1,20 @@
 ---
 title: Metadata | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0a11feb1-0b7d-4591-b7b3-8e45d4e58805
+description: Provides all the information about  column definitions.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Metadata
 
-Provides all the metadata information about the attributes.
+[!INCLUDE [metadata-description](includes/metadata-description.md)]
 
 ## Available for 
 
@@ -25,19 +24,19 @@ Model-driven apps
 
 ### DisplayName
 
-The display name of the attribute.
+The display name of the column.
 
 **Type**: `string`
 
 ### LogicalName 
 
-The logical name of the attribute.
+The logical name of the column.
 
 **Type**: `string`
 
 ### IsSecured
 
-Defines whether the attribute is secured or not.
+Defines whether the column is secured or not.
 
 **Type**: `boolean`
 
@@ -47,13 +46,13 @@ Defines whether the attribute is secured or not.
 
 ### Description
 
-The description of the attribute.
+The description of the column.
 
 **Type**: `string`
 
 ### RequiredLevel
 
-Defines whether the attribute is required or not.
+Defines whether the column is required or not.
 
 **Type**: `RequiredLevel`
 
@@ -72,3 +71,5 @@ The `RequiredLevel` has following values:
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

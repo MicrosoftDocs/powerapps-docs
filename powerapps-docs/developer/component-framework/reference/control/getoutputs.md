@@ -1,21 +1,24 @@
 ---
-title: "getOutputs | MicrosoftDocs"
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.topic: "reference"
-applies_to: ""
-ms.assetid: c83c3a09-f04e-4dc6-8ddf-ccd0b4cc080e
-ms.author: "nabuthuk"
-author: Nkrb
+title: "StandardControl.getOutputs | MicrosoftDocs"
+description: It is called by the framework prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
+
 ---
-# getOutputs
+# StandardControl.getOutputs
 
 [!INCLUDE[./includes/getoutputs-description.md](./includes/getoutputs-description.md)]
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps, canvas apps, & portals.
 
 ## Syntax
 
@@ -49,3 +52,6 @@ public getOutputs(): IOutputs
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

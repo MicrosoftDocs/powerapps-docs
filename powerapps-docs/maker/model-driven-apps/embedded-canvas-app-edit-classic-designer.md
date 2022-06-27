@@ -4,15 +4,16 @@ description: Learn how to edit an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -26,7 +27,7 @@ search.app:
 
 # Edit a canvas app embedded on a model-driven form
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This topic explains how to edit a canvas app embedded on a model-driven form.
 
@@ -60,3 +61,6 @@ Imagine that you want to edit a canvas app embedded on a form named Account Main
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

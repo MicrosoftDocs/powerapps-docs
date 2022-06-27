@@ -1,17 +1,19 @@
 ---
 title: "getSelectedResults (Client API Reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getSelectedResults method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getSelectedResults (Client API Reference)
 
@@ -24,7 +26,7 @@ knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>");
 var kbSearchResult = kbSearchControl.getSelectedResults();
 ```
@@ -54,3 +56,6 @@ var kbSearchResult = kbSearchControl.getSelectedResults();
 | **searchBlurb**     | String   | A short snippet of article content that contains the areas where the search query was hit. Use this to give a glimpse of article to the users in the search list and help them determine if this is the article they are looking for. |
 | **serviceDeskUri**  | String   | Link to the article. Use this link to open the article.   |
 | **timesViewed**     | Number   | The number of times an article is viewed on the portal by customers.  |
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

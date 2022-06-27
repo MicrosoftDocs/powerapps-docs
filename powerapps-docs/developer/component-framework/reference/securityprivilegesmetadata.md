@@ -1,20 +1,20 @@
 ---
 title: SecurityPrivilegesMetadata | Microsoft Docs
-description: Information about entity metadata security privileges.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2020
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+description: Information about table definitions security privileges.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # SecurityPrivilegesMetadata
 
-Provides all the information about the entity metadata security privileges.
+Provides all the information about the table definitions security privileges.
 
 ## Available for
 
@@ -26,8 +26,8 @@ Model-driven apps
 |-----|----|---------|
 |CanBeBasic|boolean|Determines if the user has privilege depth as basic.|
 |CanBeDeep|boolean|Determines if the user has privilege depth as deep.|
-|CanBeEntityReference|boolean|Determines if the user has privilege depth as entity reference.|
-|CanBeParentEntityReference|boolean|Determines if the user has privilege depth as parent entity reference.|
+|CanBeEntityReference|boolean|Determines if the user has privilege depth as table/entity reference.|
+|CanBeParentEntityReference|boolean|Determines if the user has privilege depth as parent table/entity reference.|
 |CanBeLocal|boolean|Determines if the user has privilege depth as local.|
 |Name|string|Name of the privilege.|
 |PrivilegeId|string|The GUID of the privilege.|
@@ -38,3 +38,5 @@ Model-driven apps
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

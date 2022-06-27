@@ -2,10 +2,11 @@
 title: Planning - Data-driven decisions (business rules) | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, determine what decisions are being made based on the data and what business rules need to be followed.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -86,3 +87,6 @@ several escalation methods:
 
 > [!div class="nextstepaction"]
 > [I've documented all the tasks](visually-map-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

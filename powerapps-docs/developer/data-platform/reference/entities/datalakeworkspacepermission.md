@@ -1,24 +1,26 @@
 ---
-title: "datalakeworkspacepermission entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the datalakeworkspacepermission table."
-ms.date: 11/14/2020
+title: "datalakeworkspacepermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the datalakeworkspacepermission table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# datalakeworkspacepermission entity reference
+
+# datalakeworkspacepermission table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
+Deprecated.
 
 **Added by**: Data lake workspaces Solution
 
@@ -27,15 +29,15 @@ search.app:
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/datalakeworkspacepermissions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/datalakeworkspacepermissions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakeworkspacepermissions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakeworkspacepermissions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/datalakeworkspacepermissions(*datalakeworkspacepermissionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -53,9 +55,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [appid](#BKMK_appid)
 - [canexecute](#BKMK_canexecute)
@@ -100,14 +102,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 
-#### canexecute Options
+#### canexecute Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -123,14 +125,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 
-#### canread Options
+#### canread Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -146,14 +148,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 
-#### canwrite Options
+#### canwrite Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -304,7 +306,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Application Id that is white listed in AAD tenant id to access the Graph API.|
+|Description|Application Id that is allow listed in AAD tenant id to access the Graph API.|
 |DisplayName|Whitelisted App ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -329,9 +331,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
@@ -390,14 +392,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -534,14 +536,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -742,7 +744,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -763,7 +765,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -839,7 +841,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [datalakeworkspacepermission_SyncErrors](syncerror.md#BKMK_datalakeworkspacepermission_SyncErrors) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_SyncErrors](syncerror.md#BKMK_datalakeworkspacepermission_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -856,7 +858,7 @@ Same as syncerror entity [datalakeworkspacepermission_SyncErrors](syncerror.md#B
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [datalakeworkspacepermission_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -873,7 +875,7 @@ Same as duplicaterecord entity [datalakeworkspacepermission_DuplicateMatchingRec
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [datalakeworkspacepermission_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakeworkspacepermission_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -890,7 +892,7 @@ Same as duplicaterecord entity [datalakeworkspacepermission_DuplicateBaseRecord]
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [datalakeworkspacepermission_AsyncOperations](asyncoperation.md#BKMK_datalakeworkspacepermission_AsyncOperations) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_AsyncOperations](asyncoperation.md#BKMK_datalakeworkspacepermission_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -907,7 +909,7 @@ Same as asyncoperation entity [datalakeworkspacepermission_AsyncOperations](asyn
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [datalakeworkspacepermission_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakeworkspacepermission_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakeworkspacepermission_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -924,7 +926,7 @@ Same as mailboxtrackingfolder entity [datalakeworkspacepermission_MailboxTrackin
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [datalakeworkspacepermission_ProcessSession](processsession.md#BKMK_datalakeworkspacepermission_ProcessSession) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_ProcessSession](processsession.md#BKMK_datalakeworkspacepermission_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -941,7 +943,7 @@ Same as processsession entity [datalakeworkspacepermission_ProcessSession](proce
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [datalakeworkspacepermission_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakeworkspacepermission_BulkDeleteFailures) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakeworkspacepermission_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -958,7 +960,7 @@ Same as bulkdeletefailure entity [datalakeworkspacepermission_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [datalakeworkspacepermission_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakeworkspacepermission_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [datalakeworkspacepermission_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakeworkspacepermission_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -974,7 +976,7 @@ Same as principalobjectattributeaccess entity [datalakeworkspacepermission_Princ
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_datalakeworkspacepermission_createdby](#BKMK_lk_datalakeworkspacepermission_createdby)
 - [lk_datalakeworkspacepermission_createdonbehalfby](#BKMK_lk_datalakeworkspacepermission_createdonbehalfby)
@@ -988,38 +990,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_datalakeworkspacepermission_createdby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_createdby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_createdonbehalfby"></a> lk_datalakeworkspacepermission_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_datalakeworkspacepermission_createdonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdonbehalfby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_createdonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_modifiedby"></a> lk_datalakeworkspacepermission_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_datalakeworkspacepermission_modifiedby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_modifiedby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby"></a> lk_datalakeworkspacepermission_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_datalakeworkspacepermission_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_datalakeworkspacepermission_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakeworkspacepermission_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_datalakeworkspacepermission"></a> organization_datalakeworkspacepermission
 
 **Added by**: System Solution Solution
 
-See organization Entity [organization_datalakeworkspacepermission](organization.md#BKMK_organization_datalakeworkspacepermission) One-To-Many relationship.
+See the [organization_datalakeworkspacepermission](organization.md#BKMK_organization_datalakeworkspacepermission) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_datalakeworkspace_workspacepermission"></a> datalakeworkspace_workspacepermission
 
-See datalakeworkspace Entity [datalakeworkspace_workspacepermission](datalakeworkspace.md#BKMK_datalakeworkspace_workspacepermission) One-To-Many relationship.
+See the [datalakeworkspace_workspacepermission](datalakeworkspace.md#BKMK_datalakeworkspace_workspacepermission) one-to-many relationship for the [datalakeworkspace](datalakeworkspace.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.datalakeworkspacepermission?text=datalakeworkspacepermission EntityType" />

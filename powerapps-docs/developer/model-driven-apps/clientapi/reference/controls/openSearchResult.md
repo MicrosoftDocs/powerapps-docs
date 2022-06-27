@@ -1,24 +1,24 @@
 ---
 title: "openSearchResult (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the openSearchResult method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1f9169ce-cba3-4bb6-af20-f86140139cfe
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # openSearchResult (Client API reference)
 
-
-
-Opens a search result in the search control by specifying the result number.. 
+Opens a search result in the search control by specifying the result number.
 
 ## Control types supported
 
@@ -26,7 +26,7 @@ knowledge base search control
 
 ## Syntax
 
-```
+```JavaScript
 var kbSearchControl = formContext.getControl("<name>");
 var openResultStatus = kbSearchControl.openSearchResult(resultNumber, mode);
 ```
@@ -43,3 +43,5 @@ var openResultStatus = kbSearchControl.openSearchResult(resultNumber, mode);
 **Type**: Boolean
 
 **Description**:  Status of opening the specified search result. Returns 1 if successful; 0 if unsuccessful. The method will return -1 if the specified resultNumber value is not present, or if the specified mode value is invalid.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

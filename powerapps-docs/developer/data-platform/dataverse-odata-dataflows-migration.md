@@ -3,21 +3,20 @@ title: Migrate data between Microsoft Dataverse environments using the dataflows
 author: denisem-msft
 ms.reviewer: "nabuthuk"
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
-ms.date: 05/05/2020
-ms.service: powerapps
+ms.date: 11/24/2021
+
 ms.topic: "article"
+ms.subservice: dataverse-developer
 ms.author: demora
 search.app: 
   - PowerApps
 ---
 
-
-
 # Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Dataverse [Web API](/powerapps/developer/data-platform/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
+
+Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
 
 In this article, we walk you through how to migrate data between Dataverse environments using the dataflows OData connector. 
 
@@ -47,18 +46,17 @@ In this article, we walk you through how to migrate data between Dataverse envir
 
 1. When importing relationships, multiple dataflows are required.
 
-    Tables that are one (parent/independent) to many (children/dependent) require separate dataflows. Configure the parent dataflow to run before any child tables, since the data in the parent needs to be loaded first to correctly map to the columns in the corresponding child tables.
-    
-    Additionally, you must create an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) in the parent table before being given the option to set a lookup column on the child table. Without a key defined on a parent table, you will be unable to populate lookup columns on any child tables.   
+    Tables that are one (parent/independent) to many (children/dependent) require separate dataflows. Configure the parent dataflow to run before any child tables, since the data in the parent needs to be loaded first to correctly map to the columns in the corresponding child tables. 
+    Additionally, you must create an [alternate key](/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) in the parent table before being given the option to set a lookup column on the child table. Without a key defined on a parent table, you will be unable to populate lookup columns on any child tables.   
 
 ## Step 2: Get the OData endpoint 
 
 Dataverse provides an OData endpoint that does not require additional configuration to authenticate with the dataflows' connector. It is relatively easy to connect to the source environment. 
 
-This article will walk through how to set up a new dataflow with the OData connector. For information on connecting to all data sources supported by dataflows, see [Create and use dataflows](https://docs.microsoft.com/powerapps/maker/data-platform/create-and-use-dataflows). 
+This article will walk through how to set up a new dataflow with the OData connector. For information on connecting to all data sources supported by dataflows, see [Create and use dataflows](../../maker/data-platform/create-and-use-dataflows.md). 
 
 
-From the **source** environment, get the [OData endpoint](https://docs.microsoft.com/powerapps/developer/data-platform/view-download-developer-resources) for that environment:
+From the **source** environment, get the [OData endpoint](./view-download-developer-resources.md) for that environment:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -73,7 +71,7 @@ From the **source** environment, get the [OData endpoint](https://docs.microsoft
 1. Copy the **Service Root URL** to Notepad.
 
     > [!div class="mx-imgBorder"]
-    > ![Copy the service root URL in the developer resources](./media/get-odata-endpoint-url.png "Copy the service root URL in the developer resources")
+    > ![Copy the service root URL in the developer resources.](./media/get-odata-endpoint-url.png "Copy the service root URL in the developer resources")
  
 ## Step 3: Create a new OData dataflow
 
@@ -87,28 +85,26 @@ In the **target** environment, create a new dataflow with the OData connector.
 
 1. Select **New dataflow** to create a new dataflow. Provide a meaningful name for the dataflow. Select **Create**.
    > [!div class="mx-imgBorder"]
-   > ![Prompt for a new dataflow](./media/enter-name-for-new-dataflow.png "Prompt for a new dataflow")
+   > ![Prompt for a new dataflow.](./media/enter-name-for-new-dataflow.png "Prompt for a new dataflow")
 
 1. Select the **OData** connector.
 
     > [!div class="mx-imgBorder"]
-    > ![Select OData source](media/select-odata-data-source.png "Select OData source")
+    > ![Select OData source.](media/select-odata-data-source.png "Select OData source")
 
 1. In the **Connection settings** dialog box, type the column values:
 
     > [!div class="mx-imgBorder"]
-    > ![Confirm the field values are correct](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
+    > ![Confirm the column values are correct.](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
-
-    | Field | Description |
-    |--|--|
-    | URL | Provide the Service Root URL in the URL field of the connection settings. |
-    | Connection | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before. |
-    | Connection name | Optionally, rename the connection name, but a value is automatically populated. |  |
-    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service. |
-    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
-
-    > [!IMPORTANT] 
+    | Column                   | Description                                                                                                                          |
+    |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+    | URL                      | Provide the Service Root URL in the URL column of the connection settings.                                                           |
+    | Connection               | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before.               |
+    | Connection name          | Optionally, rename the connection name, but a value is automatically populated.                                                      |
+    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
+    | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
+   > [!IMPORTANT] 
     > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
@@ -120,7 +116,7 @@ Use Power Query to select the tables and also transform data as per your require
 First, select the tables that need to be transferred. You can browse all tables in the source environment and preview some of the data in each table.
 
 > [!div class="mx-imgBorder"]
-> ![Power query navigator](./media/edit-queries-for-selected-entities.png "Power query navigator")
+> ![Power query navigator.](./media/edit-queries-for-selected-entities.png "Power query navigator")
 
 1. Select one or multiple tables as needed, and then select **Transform data**.
 
@@ -147,22 +143,22 @@ This section describes how to define the target environment settings.
 For each table chosen, select the behavior for importing that table in these settings and then select **Next**.
 
 > [!div class="mx-imgBorder"]
-> ![Map entities](./media/map-entities-to-target.png "Map entities")
+> ![Map tables.](./media/map-entities-to-target.png "Map tables")
 
 - **Load to existing table (recommended)**
 
     - The dataflow syncs data from the source environment's table to the target environment, and the same table schema is already defined in the target environment.
-
-    - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined table is more control over which solution the table is defined in and the prefix.
-    
-    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) on the target/existing table so the dataflow can determine whether to update existing records or create new ones. 
-    
+    - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined table is more control over which solution the table is defined in and the prefix.    
+    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) on the target/existing table so the dataflow can determine whether to update existing records or create new ones.     
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.
+    - Requires a key configuration in the target environment (as the unique identifier columns are not available to modify).
+
+  > [!IMPORTANT]
+  > The 'delete rows' option is only available when a key is specified. It is possible to have a table without a key, but a key is required when you want to update or delete records since it is the unique identifier the system uses to perform these tasks. You can add a key directly in the Dataverse table if your table does not have a key and you want to use the delete or update functionality provided by Dataflows.<p/>More information: [Define alternate keys using Power Apps portal](../../maker/data-platform/define-alternate-keys-portal.md)
 
 - **Load to new table (not recommended)**
 
-    - Ideally there should be an table predefined in the target environment from the same solution import as the source environment. However, there are cases where this might not be feasible, so this is an option if there is no existing table to load to. 
-
+    - Ideally there should be a table predefined in the target environment from the same solution import as the source environment. However, there are cases where this might not be feasible, so this is an option if there is no existing table to load to. 
     - It creates a new custom table in the target environment's default solution.
 
 - There is an option to **Do not load**, but do not include tables in the dataflow that are not being loaded. You can select **Back** from this menu to return to the Power Query menu and remove the tables that are not needed.
@@ -176,12 +172,12 @@ Select **Refresh manually** since this is a one-time migration and then select *
 The initial dataflow load initiates when you select **Create**. 
 
 > [!div class="mx-imgBorder"]
-> ![Refresh manually](./media/initiate-dataflow-process.png "Refresh manually")
+> ![Initial dataflow load.](./media/initiate-dataflow-process.png "Initial dataflow load")
 
 You can manually initiate a dataflow by selecting **(...)** in the dataflows list. Make sure to run dependent dataflows after the parent flows have completed.
 
 > [!div class="mx-imgBorder"]
-> ![Refresh manually](./media/refresh-dataflow-manually.png "Refresh manually") 
+> ![Refresh manually.](./media/refresh-dataflow-manually.png "Refresh manually") 
 
 ## Tips
 
@@ -198,3 +194,6 @@ You can manually initiate a dataflow by selecting **(...)** in the dataflows lis
 - Many-to-many relationship data imports are not supported.
 
 - Parent dataflows must be manually configured to run before child dataflows.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

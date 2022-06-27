@@ -1,20 +1,22 @@
 ---
-title: "getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "step.getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the getAttribute method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: a4321a3a-b584-4cbc-959a-bb39a6c56e82
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getAttribute (Client API reference)
+# step.getAttribute (Client API reference)
 
 
 
@@ -28,7 +30,7 @@ search.app:
 
 **Type**: String. 
 
-**Description**: Some steps don’t contain an attribute value.
+**Description**: Some steps don’t contain a column value.
 
 ### Related topics
 
@@ -36,3 +38,6 @@ search.app:
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

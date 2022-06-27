@@ -4,9 +4,10 @@ description: "Use the app design checklist to evaluate your app design in Power 
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+
 ms.topic: "article"
 author: "omarcdoc" 
+ms.subservice: dataverse-developer
 ms.author: "omarc" 
 manager: "AnnBe" 
 search.audienceType: 
@@ -17,7 +18,7 @@ search.app:
 ---
 # Appendix: App design best practices checklist
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 Use the following checklist to evaluate your app design. 
 
@@ -129,3 +130,6 @@ For information on best practices for creating Canvas apps, see [Canvas App Codi
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

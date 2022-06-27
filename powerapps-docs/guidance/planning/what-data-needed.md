@@ -2,10 +2,11 @@
 title: Data needs for each step of a business process | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, document the data required for each step of the business process you want to automate.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -73,3 +74,6 @@ report. There's no need to check the information again.
 
 > [!div class="nextstepaction"]
 > [Next step: What data is created?](create-edit-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

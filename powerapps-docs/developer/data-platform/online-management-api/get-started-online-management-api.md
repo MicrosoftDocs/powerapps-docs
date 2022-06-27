@@ -2,8 +2,9 @@
 title: "Get started with Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides basic information to help you get started with the Online Admin API for Microsoft Dataverse."
 ms.date: 10/23/2020
-ms.service: powerapps
+
 ms.topic: conceptual
+ms.custom: intro-internal
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
 ms.author: kvivek
@@ -39,7 +40,9 @@ For example, you can pass in the following URL with a **GET** request to retriev
 
 `https://admin.services.crm.dynamics.com/api/v1.2/instances`
 
+For a list service URLs, see [Service URL](/powershell/powerapps/overview#service-url).
 
+<!--
 The following table lists the service URLs of Online Management API for worldwide Microsoft 365 data centers.
 
 |Location | Service URL |
@@ -55,6 +58,7 @@ The following table lists the service URLs of Online Management API for worldwid
 |Canada | https://admin.services.crm3.dynamics.com |
 |United Kingdom (UK) | https://admin.services.crm11.dynamics.com |
 |France | https://admin.services.crm12.dynamics.com |
+-->
 
 ## Standard headers
 
@@ -83,3 +87,6 @@ See [Authenticate to use the Online Management API](authentication.md) to know a
 [Operations supported by Online Management API](operations-supported.md)
 
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

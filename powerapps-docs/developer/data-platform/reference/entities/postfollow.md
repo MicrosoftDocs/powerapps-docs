@@ -1,22 +1,24 @@
 ---
-title: "PostFollow entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PostFollow table."
-ms.date: 11/14/2020
+title: "Follow (PostFollow)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Follow (PostFollow)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PostFollow entity reference
+
+# Follow (PostFollow)  table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Represents a user following the activity feed of an object.
 
@@ -25,12 +27,12 @@ Represents a user following the activity feed of an object.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/postfollows<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/postfollows(*postfollowid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/postfollows(*postfollowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postfollows<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Create|POST [*org URI*]/api/data/v9.0/postfollows<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/postfollows(*postfollowid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/postfollows(*postfollowid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postfollows<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -48,9 +50,9 @@ Represents a user following the activity feed of an object.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -166,9 +168,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -180,6 +182,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PostToYammer](#BKMK_PostToYammer)
@@ -335,12 +338,28 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -383,14 +402,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### PostToYammer Options
+#### PostToYammer Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -484,7 +503,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_PostFollow_AsyncOperations"></a> PostFollow_AsyncOperations
 
-Same as asyncoperation entity [PostFollow_AsyncOperations](asyncoperation.md#BKMK_PostFollow_AsyncOperations) Many-To-One relationship.
+Same as the [PostFollow_AsyncOperations](asyncoperation.md#BKMK_PostFollow_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -499,7 +518,7 @@ Same as asyncoperation entity [PostFollow_AsyncOperations](asyncoperation.md#BKM
 
 ### <a name="BKMK_PostFollow_SyncErrors"></a> PostFollow_SyncErrors
 
-Same as syncerror entity [PostFollow_SyncErrors](syncerror.md#BKMK_PostFollow_SyncErrors) Many-To-One relationship.
+Same as the [PostFollow_SyncErrors](syncerror.md#BKMK_PostFollow_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -515,7 +534,7 @@ Same as syncerror entity [PostFollow_SyncErrors](syncerror.md#BKMK_PostFollow_Sy
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [task_PostFollows](#BKMK_task_PostFollows)
 - [appointment_PostFollows](#BKMK_appointment_PostFollows)
@@ -536,66 +555,66 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_task_PostFollows"></a> task_PostFollows
 
-See task Entity [task_PostFollows](task.md#BKMK_task_PostFollows) One-To-Many relationship.
+See the [task_PostFollows](task.md#BKMK_task_PostFollows) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_appointment_PostFollows"></a> appointment_PostFollows
 
-See appointment Entity [appointment_PostFollows](appointment.md#BKMK_appointment_PostFollows) One-To-Many relationship.
+See the [appointment_PostFollows](appointment.md#BKMK_appointment_PostFollows) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
 
-See phonecall Entity [phonecall_PostFollows](phonecall.md#BKMK_phonecall_PostFollows) One-To-Many relationship.
+See the [phonecall_PostFollows](phonecall.md#BKMK_phonecall_PostFollows) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_recurringappointmentmaster_PostFollows"></a> recurringappointmentmaster_PostFollows
 
-See recurringappointmentmaster Entity [recurringappointmentmaster_PostFollows](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_PostFollows) One-To-Many relationship.
+See the [recurringappointmentmaster_PostFollows](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_PostFollows) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_lk_PostFollow_createdby"></a> lk_PostFollow_createdby
 
-See systemuser Entity [lk_PostFollow_createdby](systemuser.md#BKMK_lk_PostFollow_createdby) One-To-Many relationship.
+See the [lk_PostFollow_createdby](systemuser.md#BKMK_lk_PostFollow_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_account_PostFollows"></a> account_PostFollows
 
-See account Entity [account_PostFollows](account.md#BKMK_account_PostFollows) One-To-Many relationship.
+See the [account_PostFollows](account.md#BKMK_account_PostFollows) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_contact_PostFollows"></a> contact_PostFollows
 
-See contact Entity [contact_PostFollows](contact.md#BKMK_contact_PostFollows) One-To-Many relationship.
+See the [contact_PostFollows](contact.md#BKMK_contact_PostFollows) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_systemuser_PostFollows"></a> systemuser_PostFollows
 
-See systemuser Entity [systemuser_PostFollows](systemuser.md#BKMK_systemuser_PostFollows) One-To-Many relationship.
+See the [systemuser_PostFollows](systemuser.md#BKMK_systemuser_PostFollows) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_postfollows"></a> business_unit_postfollows
 
-See businessunit Entity [business_unit_postfollows](businessunit.md#BKMK_business_unit_postfollows) One-To-Many relationship.
+See the [business_unit_postfollows](businessunit.md#BKMK_business_unit_postfollows) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_OwningTeam_postfollows"></a> OwningTeam_postfollows
 
-See team Entity [OwningTeam_postfollows](team.md#BKMK_OwningTeam_postfollows) One-To-Many relationship.
+See the [OwningTeam_postfollows](team.md#BKMK_OwningTeam_postfollows) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_user_owner_postfollows"></a> user_owner_postfollows
 
-See systemuser Entity [user_owner_postfollows](systemuser.md#BKMK_user_owner_postfollows) One-To-Many relationship.
+See the [user_owner_postfollows](systemuser.md#BKMK_user_owner_postfollows) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_postfollow_createdonbehalfby"></a> lk_postfollow_createdonbehalfby
 
-See systemuser Entity [lk_postfollow_createdonbehalfby](systemuser.md#BKMK_lk_postfollow_createdonbehalfby) One-To-Many relationship.
+See the [lk_postfollow_createdonbehalfby](systemuser.md#BKMK_lk_postfollow_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processsession_PostFollows"></a> processsession_PostFollows
 
-See processsession Entity [processsession_PostFollows](processsession.md#BKMK_processsession_PostFollows) One-To-Many relationship.
+See the [processsession_PostFollows](processsession.md#BKMK_processsession_PostFollows) one-to-many relationship for the [processsession](processsession.md) table/entity.
 
 ### <a name="BKMK_queue_PostFollows"></a> queue_PostFollows
 
-See queue Entity [queue_PostFollows](queue.md#BKMK_queue_PostFollows) One-To-Many relationship.
+See the [queue_PostFollows](queue.md#BKMK_queue_PostFollows) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_knowledgearticle_PostFollows"></a> knowledgearticle_PostFollows
 
-See knowledgearticle Entity [knowledgearticle_PostFollows](knowledgearticle.md#BKMK_knowledgearticle_PostFollows) One-To-Many relationship.
+See the [knowledgearticle_PostFollows](knowledgearticle.md#BKMK_knowledgearticle_PostFollows) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.postfollow?text=postfollow EntityType" />

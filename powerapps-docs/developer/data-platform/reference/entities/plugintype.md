@@ -1,22 +1,24 @@
 ---
-title: "PluginType entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PluginType table."
-ms.date: 11/14/2020
+title: "Plug-in Type (PluginType)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Plug-in Type (PluginType)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PluginType entity reference
+
+# Plug-in Type (PluginType)  table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Type that inherits from the IPlugin interface and is contained within a plug-in assembly.
 
@@ -25,13 +27,13 @@ Type that inherits from the IPlugin interface and is contained within a plug-in 
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/plugintypes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypes<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/plugintypes<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ Type that inherits from the IPlugin interface and is contained within a plug-in 
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Description](#BKMK_Description)
 - [FriendlyName](#BKMK_FriendlyName)
@@ -171,9 +173,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AssemblyName](#BKMK_AssemblyName)
 - [ComponentState](#BKMK_ComponentState)
@@ -235,14 +237,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -397,14 +399,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -420,14 +422,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsWorkflowActivity Options
+#### IsWorkflowActivity Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -698,7 +700,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep entity [plugintype_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintype_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [plugintype_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintype_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -713,7 +715,7 @@ Same as sdkmessageprocessingstep entity [plugintype_sdkmessageprocessingstep](sd
 
 ### <a name="BKMK_plugintype_plugintypestatistic"></a> plugintype_plugintypestatistic
 
-Same as plugintypestatistic entity [plugintype_plugintypestatistic](plugintypestatistic.md#BKMK_plugintype_plugintypestatistic) Many-To-One relationship.
+Same as the [plugintype_plugintypestatistic](plugintypestatistic.md#BKMK_plugintype_plugintypestatistic) many-to-one relationship for the [plugintypestatistic](plugintypestatistic.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -728,7 +730,7 @@ Same as plugintypestatistic entity [plugintype_plugintypestatistic](plugintypest
 
 ### <a name="BKMK_plugintypeid_sdkmessageprocessingstep"></a> plugintypeid_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep entity [plugintypeid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintypeid_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [plugintypeid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_plugintypeid_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -745,7 +747,7 @@ Same as sdkmessageprocessingstep entity [plugintypeid_sdkmessageprocessingstep](
 
 **Added by**: Custom API Framework Solution
 
-Same as customapi entity [plugintype_customapi](customapi.md#BKMK_plugintype_customapi) Many-To-One relationship.
+Same as the [plugintype_customapi](customapi.md#BKMK_plugintype_customapi) many-to-one relationship for the [customapi](customapi.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -761,7 +763,7 @@ Same as customapi entity [plugintype_customapi](customapi.md#BKMK_plugintype_cus
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [pluginassembly_plugintype](#BKMK_pluginassembly_plugintype)
 - [lk_plugintype_createdonbehalfby](#BKMK_lk_plugintype_createdonbehalfby)
@@ -773,30 +775,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_pluginassembly_plugintype"></a> pluginassembly_plugintype
 
-See pluginassembly Entity [pluginassembly_plugintype](pluginassembly.md#BKMK_pluginassembly_plugintype) One-To-Many relationship.
+See the [pluginassembly_plugintype](pluginassembly.md#BKMK_pluginassembly_plugintype) one-to-many relationship for the [pluginassembly](pluginassembly.md) table/entity.
 
 ### <a name="BKMK_lk_plugintype_createdonbehalfby"></a> lk_plugintype_createdonbehalfby
 
-See systemuser Entity [lk_plugintype_createdonbehalfby](systemuser.md#BKMK_lk_plugintype_createdonbehalfby) One-To-Many relationship.
+See the [lk_plugintype_createdonbehalfby](systemuser.md#BKMK_lk_plugintype_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_plugintype"></a> organization_plugintype
 
-See organization Entity [organization_plugintype](organization.md#BKMK_organization_plugintype) One-To-Many relationship.
+See the [organization_plugintype](organization.md#BKMK_organization_plugintype) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_modifiedby_plugintype"></a> modifiedby_plugintype
 
-See systemuser Entity [modifiedby_plugintype](systemuser.md#BKMK_modifiedby_plugintype) One-To-Many relationship.
+See the [modifiedby_plugintype](systemuser.md#BKMK_modifiedby_plugintype) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_plugintype"></a> createdby_plugintype
 
-See systemuser Entity [createdby_plugintype](systemuser.md#BKMK_createdby_plugintype) One-To-Many relationship.
+See the [createdby_plugintype](systemuser.md#BKMK_createdby_plugintype) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_plugintype_modifiedonbehalfby"></a> lk_plugintype_modifiedonbehalfby
 
-See systemuser Entity [lk_plugintype_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintype_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_plugintype_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintype_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.plugintype?text=plugintype EntityType" />

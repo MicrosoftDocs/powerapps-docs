@@ -1,16 +1,15 @@
 ---
 title: getTimeZoneOffsetMinutes | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
+description: Gets the offset in minutes from UTC for the given date.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getTimeZoneOffsetMinutes
@@ -19,7 +18,7 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 ## Available for 
 
-Model-driven apps
+Model-driven and canvas apps
 
 ## Syntax
 
@@ -42,3 +41,5 @@ Description: Time zone offset in minutes.
 [User Settings](../usersettings.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

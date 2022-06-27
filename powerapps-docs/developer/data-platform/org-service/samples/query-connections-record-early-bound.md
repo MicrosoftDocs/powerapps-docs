@@ -1,23 +1,24 @@
 ---
 title: "Sample: Query connections by a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to query connections for a particular record." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Sample: Query connections by a record (early bound)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-record-early-bound -->
 
@@ -40,7 +41,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. Defines some anonymous types to define the range of possible connection property values.
 3. The `ConnectionRole` creates a connection role.
-4. The `ConnectionRoleObjectType` creates a connection role object type code record for account entity. 
+4. The `ConnectionRoleObjectType` creates a connection role object type code record for account table. 
 5. Creates few account and contact records for use in the connection.
 
 ### Demonstrate
@@ -49,4 +50,7 @@ The `QueryExpression` retrieves all the connections associated with the contact 
 
 ### Clean up
 
-Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

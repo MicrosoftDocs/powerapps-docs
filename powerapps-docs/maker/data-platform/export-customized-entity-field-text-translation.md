@@ -4,10 +4,10 @@ description: "Learn how to export table and column text for translation"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 7e269d09-4453-490a-b50c-f0795ff6f348
 caps.latest.revision: 34
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -24,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Translate customized table, form, and column text into other languages
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 After you create customized table and column text in your unmanaged solution, you may want to translate it into other languages.  
 
@@ -47,9 +48,12 @@ After you create customized table and column text in your unmanaged solution, yo
 
 8. Add the translated text in the new column for the object names and object ids that you want.
     > [!div class="mx-imgBorder"]
-    > ![Translated text in Excel file](media/translated-entity-label-text.png)
+    > ![Translated text in Excel file.](media/translated-entity-label-text.png)
 
 9. When you're finished adding your translations, save, and zip up the package so you can [Import translated table and column text](import-translated-entity-field-text.md).
+
+> [!NOTE]
+> Not all content can be translated using this tool. This includes labels for sitemap areas, groups, and subareas. To translate these labels, [use the **More Titles** property in the sitemap designer](../model-driven-apps/create-site-map-app.md#add-an-area-to-the-site-map).
 
 ## Community tools
 
@@ -61,3 +65,6 @@ After you create customized table and column text in your unmanaged solution, yo
 
 ## Next steps  
  [Import translated table and column text](import-translated-entity-field-text.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

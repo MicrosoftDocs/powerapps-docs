@@ -4,9 +4,10 @@ description: "App builders must be members of Microsoft Partner Network (MPN) to
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,8 +18,6 @@ search.app:
 ---
 # Step 1: Create a  Microsoft Partner Center account
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 If you are not already a member of the Microsoft Partner Center, you must become a member by enrolling at <https://aka.ms/joinmarketplace>.
 
 You must be a member of Partner Center to publish apps on AppSource.
@@ -28,5 +27,10 @@ You must be a member of Partner Center to publish apps on AppSource.
 
 ### See also 
 
-[Publish your apps on AppSource](publish-app-appsource.md)
+[Microsoft commercial marketplace](/azure/marketplace/overview)<br/>
+[Create a commercial marketplace account in Partner Center](/azure/marketplace/create-account)
+
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

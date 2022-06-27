@@ -4,7 +4,7 @@ description: "Learn how to export a solution in Power Apps"
 ms.custom: ""
 ms.date: 05/26/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,6 +14,7 @@ applies_to:
   - "powerapps"
 author: "Mattp123"
 ms.assetid: 
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -24,7 +25,7 @@ search.app:
 ---
 
 # Export solutions  
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can manually export solutions using the steps in this article. We recommend that you create an unmanaged solution to use for exporting your customizations, and then export your customizations periodically so that you have a backup in case anything happens. You can't export [managed](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) solutions or the [Default Solution](solutions-overview.md#default-solutions). 
  
@@ -46,7 +47,7 @@ You can manually export solutions using the steps in this article. We recommend 
     - **Export as**: Select the package type, either **Managed** or **Unmanaged**. More information: [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions)
 
     > [!div class="mx-imgBorder"]  
-    > ![Export solution](media/solution-export.png "Export solution")
+    > ![Export solution.](media/solution-export.png "Export solution")
 
 The export can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
 
@@ -125,9 +126,12 @@ The export can take several minutes to complete. Once finished, the export .zip 
 |Auto-Tag Interval|Normal polling frequency used for email auto-tagging in Outlook.|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.
 
-More information:   [Service Calendar Appearance Configuration](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
+More information:   [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
 
 ### See also
 [Import solutions](import-update-export-solutions.md) <br />
 [Update solutions](update-solutions.md) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

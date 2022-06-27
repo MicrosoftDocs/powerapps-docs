@@ -3,11 +3,12 @@ title: "View the history of a solution | MicrosoftDocs"
 description: "Learn how to view the history of a solution"
 keywords: 
 ms.date: 04/20/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 ms.assetid: 
 author: Mattp123
+ms.subservice: dataverse-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -23,7 +24,7 @@ search.app:
 ---
 
 # View the history of a solution
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 You can view details about solution operations from the **Solutions** area of Power Apps. An operation can be a solution import, export, or uninstall. The solution history displays information such as solution version, solution publisher, type of operation, operation start and end time, and operation status.
 
@@ -34,7 +35,7 @@ You can view details about solution operations from the **Solutions** area of Po
     The history is displayed. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Solution history](media/solution-history.png "Solution history")
+    > ![Solution history.](media/solution-history.png "Solution history")
 
 Select a solution operation to display the **Information page**. Each solution history row is read-only and includes the following in the **Details** area:
 -	**Name**. The solution unique name. 
@@ -47,7 +48,7 @@ Select a solution operation to display the **Information page**. Each solution h
 -	**Result**. The result of the operation, such as Success or Failure.
 
  > [!div class="mx-imgBorder"] 
- > ![Solution history details](media/solution-history-details.png "Solution history details")
+ > ![Solution history details.](media/solution-history-details.png "Solution history details")
 
 ### View solution operation error details 
 Below the **Details** area is the **More details** area that has additional information about the solution and, when a solution operation has a failure, the information includes: 
@@ -60,3 +61,6 @@ Below the **Details** area is the **More details** area that has additional info
 [Solutions overview](solutions-overview.md) 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

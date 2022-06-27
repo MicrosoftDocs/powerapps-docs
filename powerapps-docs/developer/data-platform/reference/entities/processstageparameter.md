@@ -1,47 +1,49 @@
 ---
-title: "processstageparameter entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the processstageparameter table."
-ms.date: 11/14/2020
+title: "processstageparameter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the processstageparameter table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# processstageparameter entity reference
+
+# processstageparameter table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
-**Added by**: Microsoft Flow Extensions core package Solution
+**Added by**: Power Automate Extensions core package Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/processstageparameters<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/processstageparameters<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/processstageparameters<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/processstageparameters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/processstageparameters(*processstageparameterid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [name](#BKMK_name)
@@ -198,7 +200,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -219,7 +221,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -277,9 +279,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -298,6 +300,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ProcessStageIdName](#BKMK_ProcessStageIdName)
@@ -586,12 +589,30 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -676,7 +697,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [processstageparameter_SyncErrors](syncerror.md#BKMK_processstageparameter_SyncErrors) Many-To-One relationship.
+Same as the [processstageparameter_SyncErrors](syncerror.md#BKMK_processstageparameter_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -693,7 +714,7 @@ Same as syncerror entity [processstageparameter_SyncErrors](syncerror.md#BKMK_pr
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [processstageparameter_AsyncOperations](asyncoperation.md#BKMK_processstageparameter_AsyncOperations) Many-To-One relationship.
+Same as the [processstageparameter_AsyncOperations](asyncoperation.md#BKMK_processstageparameter_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -710,7 +731,7 @@ Same as asyncoperation entity [processstageparameter_AsyncOperations](asyncopera
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [processstageparameter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_processstageparameter_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [processstageparameter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_processstageparameter_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -727,7 +748,7 @@ Same as mailboxtrackingfolder entity [processstageparameter_MailboxTrackingFolde
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [processstageparameter_ProcessSession](processsession.md#BKMK_processstageparameter_ProcessSession) Many-To-One relationship.
+Same as the [processstageparameter_ProcessSession](processsession.md#BKMK_processstageparameter_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -744,7 +765,7 @@ Same as processsession entity [processstageparameter_ProcessSession](processsess
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [processstageparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_processstageparameter_BulkDeleteFailures) Many-To-One relationship.
+Same as the [processstageparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_processstageparameter_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -761,7 +782,7 @@ Same as bulkdeletefailure entity [processstageparameter_BulkDeleteFailures](bulk
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [processstageparameter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_processstageparameter_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [processstageparameter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_processstageparameter_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -777,7 +798,7 @@ Same as principalobjectattributeaccess entity [processstageparameter_PrincipalOb
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_processstageparameter_createdby](#BKMK_lk_processstageparameter_createdby)
 - [lk_processstageparameter_createdonbehalfby](#BKMK_lk_processstageparameter_createdonbehalfby)
@@ -793,52 +814,52 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_processstageparameter_createdby](systemuser.md#BKMK_lk_processstageparameter_createdby) One-To-Many relationship.
+See the [lk_processstageparameter_createdby](systemuser.md#BKMK_lk_processstageparameter_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_processstageparameter_createdonbehalfby"></a> lk_processstageparameter_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_processstageparameter_createdonbehalfby](systemuser.md#BKMK_lk_processstageparameter_createdonbehalfby) One-To-Many relationship.
+See the [lk_processstageparameter_createdonbehalfby](systemuser.md#BKMK_lk_processstageparameter_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_processstageparameter_modifiedby"></a> lk_processstageparameter_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_processstageparameter_modifiedby](systemuser.md#BKMK_lk_processstageparameter_modifiedby) One-To-Many relationship.
+See the [lk_processstageparameter_modifiedby](systemuser.md#BKMK_lk_processstageparameter_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_processstageparameter_modifiedonbehalfby"></a> lk_processstageparameter_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_processstageparameter_modifiedonbehalfby](systemuser.md#BKMK_lk_processstageparameter_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_processstageparameter_modifiedonbehalfby](systemuser.md#BKMK_lk_processstageparameter_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_processstageparameter"></a> user_processstageparameter
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [user_processstageparameter](systemuser.md#BKMK_user_processstageparameter) One-To-Many relationship.
+See the [user_processstageparameter](systemuser.md#BKMK_user_processstageparameter) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_processstageparameter"></a> team_processstageparameter
 
 **Added by**: System Solution Solution
 
-See team Entity [team_processstageparameter](team.md#BKMK_team_processstageparameter) One-To-Many relationship.
+See the [team_processstageparameter](team.md#BKMK_team_processstageparameter) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_processstageparameter"></a> business_unit_processstageparameter
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_processstageparameter](businessunit.md#BKMK_business_unit_processstageparameter) One-To-Many relationship.
+See the [business_unit_processstageparameter](businessunit.md#BKMK_business_unit_processstageparameter) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_processstage_processstageparameter"></a> processstage_processstageparameter
 
 **Added by**: System Solution Solution
 
-See processstage Entity [processstage_processstageparameter](processstage.md#BKMK_processstage_processstageparameter) One-To-Many relationship.
+See the [processstage_processstageparameter](processstage.md#BKMK_processstage_processstageparameter) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.processstageparameter?text=processstageparameter EntityType" />

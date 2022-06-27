@@ -2,12 +2,11 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 10/02/2020
+ms.date: 03/21/2022
 ms.reviewer: ""
-ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +14,7 @@ applies_to:
 ms.assetid: 
 caps.latest.revision:
 author: "matthewbolanos"
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -26,16 +26,14 @@ search.app:
 
 # Create guided help for your Unified Interface app
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
 
 > [!IMPORTANT]
-> Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
+> - Custom help panes replace the previous learning path guided help feature used with legacy web client apps.
+> - Custom help panes don’t work with Unified Interface apps running on a mobile device, such as Android and iOS tablets and smartphones.
 
 ## Custom help panes and learning path
+
 The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application. However, custom help panes are optimized for the most common guided help scenarios.   
 
 Custom help panes provide the following key features that are not available with learning path: 
@@ -49,60 +47,73 @@ Custom help panes don't provide the following key features that are available wi
 - Help pages per role.
 - Help pages for per-device form factor, such as smartphones. 
 
-## Prerequisites 
-To author custom help panes, you need the following: 
-- Version 9.1.0.10300 or later.
-- Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
-- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
+## Prerequisites
 
-## Enable custom help panes for your environment
-1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
+To use the custom help panes feature, your environment needs the following: 
+- Be version 9.1.0.10300 or later.
+- [Must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
+
+### Enable custom help panes for your environment
+1. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 2. Go to **Settings** > **System** > **Administration**.  
 3. On the **Administration** page, select **System Settings**.
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
+    > ![Enable custom help panes.](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
 > - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are both set to **No**.  
 > - Some environments may require that you also set **Enable Learning Path** to **Yes**.
- 
+
+## Privileges required
+
+- To author help panes, app makers need global create, read, write, delete, append, and append to privileges on the **Help Page** table. By default, System Administrator and System Customizer security roles both have this privilege.
+- To view help panes in an app, users need read privilege on the **Help Page** table. By default, the Help Page Consumer security role has this privilege. By default, the Basic User security role doesn’t have any privileges on the Help Page table.
+
+More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
+
 ## Context-sensitive custom help
+
 Each help pane is unique for these contexts: 
 - Application 
-- table
+- Table
 - Form 
 - Language   
 
 ## Help pane navigation
+
 By default, a help pane stays open and on the help content you first opened it with even when you navigate to a different form. This allows for the help content to remain intact as you direct users to different parts of the app. 
 
 ### To author help pane content
+
 1.	To view the help pane, open a model-driven app, and then on the command bar select **Help**. 
 
-    ![Help](media/help-command.png)   
+    ![Help.](media/help-command.png)   
 2.	On the Help pane, select the vertical ellipsis, and then select **Edit**. 
 
-    ![Edit help](media/help-edit-command.png)
+    ![Edit help.](media/help-edit-command.png)
     
     The help pane is now in edit mode and the cursor is positioned on the help pane title.
 3.	From the edit pane you can perform  the following tasks: 
     - Enter text by typing directly in the help pane area. 
-    - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
-    - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
+    - Format text through rich text capabilities and add bullet/numbered lists, sections, videos, images, links, coach marks, and balloon help. 
 4.	To save your changes, select **Save**.  
 
 ### Free-form text
+
 Text can be placed anywhere within the help pane. Enter free-form text before, in, or after sections. Text supports bold, italic, underline, and strikeout font formats. Cut, copy, and paste can be used as well as multilevel undo. 
 
 ### Bullets and numbered lists
-Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have selected multiple lines in a list, each line becomes bulleted or numbered. Tabbing and indenting subnumbers a line within the list.  
+
+Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have selected multiple lines in a list, each line becomes bulleted or numbered. Tabbing and indenting subnumbers align within the list.  
 
 ### Sections
+
 A section is a collapsible text box.  You can put links or free-form text in it. Use a section to group similar items. A section can be either open or collapsed by default. 
 
 ### Video and static images
+
 You can insert videos and static images into your help pane. Videos and images are links to content on the internet. Custom help panes do not store the video and image files in your help pane. When the help pane is opened, custom help panes bring the content in from the link to display it. You can use a link to a Microsoft Stream video if you want to reference corporate private content. 
 
 > [!TIP]
@@ -114,20 +125,30 @@ Custom help panes support the following video sources:
 - Facebook
 - Vimeo
 
-
 ### Links
+
 Links can be to websites and open in the same window (the default) or open in a separate window. The ability to link to an existing help page is not yet enabled.   
 
 ### Balloons and coach marks
-Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it. A coach mark simply highlights an element with a coach pointer. A way to illustrate several UI elements sequentially is to simply collect links in a list that the user can select. For instance:
 
-1. Link to first UI element with instructions or comments.
-2. Link to second UI element with instructions or comments.
-3. Link to third UI element with instructions or comments.
+Balloons and coach marks can be used to point to specific UI elements. A balloon can have text in it.
 
-A user can either select an element in order or go back to a specific one and highlight it.
+![Insert Balloon](media/balloon.png)
+
+A coach mark simply highlights an element with a coach pointer to draw the user's attention to that UI element.
+
+![Insert Coach Marks](media/coach-marks.png)
+
+Author needs to define the target through drag and drop capability in the properties of balloons and coach marks. Author can input the text for title and description for coach marks. 
+
+![Drag and drop](media/drag-drop.png)
+
+> [!NOTE]
+> - Balloons and coach marks don't work well with custom components. This feature only applies to default Unified Interface UI components.
+> - Sequential help balloons and coachmarks are not supported yet. 
 
 ## Solutions and custom help pane content
+
 All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
 
 ### Moving content via solutions
@@ -139,13 +160,21 @@ By default, all new help pages appear in the default solution. If you want to mo
 4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
+
 You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Dataverse and can be exported and imported for this purpose.  
 
 Custom help panes support a custom XML format. This format is documented below. More information: [Custom help XML definition](#custom-help-xml-definition)  
 
 When exported, each help page is exported as a separate file.   
 
+## About the Contextual Help managed solution
+
+The custom help panes and guided tasks feature consists of the solution components in the Contextual Help managed solution. Customizing or creating records using the tables outside of the custom help panes and guided tasks feature isn’t supported.
+
+Notice that some apps, such as Dynamics 365 Sales and Dynamics 365 Service, include first run experiences that are built by using tables included in the Contextual Help managed solution. For example, both the Help Page (msdyn_helppage) and Tour (msdyn_tour) tables are used in the creation of these first run experiences. Currently, the custom help panes and guided tasks feature doesn’t support creating these first run experiences.
+
 ## Frequently asked questions
+
 This section discusses frequently asked questions about custom help pages. 
 
 ### Are custom help pages the same as customizable help?
@@ -363,3 +392,6 @@ A balloon is an interactive element that can be used to help the user perform an
 - `details`: Specifies the content to show inside the balloon.
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

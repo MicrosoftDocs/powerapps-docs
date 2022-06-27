@@ -1,28 +1,31 @@
 ---
-title: "Xrm.Device| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "getSelectedOption| MicrosoftDocs"
+description: Includes description and supported parameters for the getSelectedOption method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: ce572df6-aae6-431a-aa95-73eee544c7e9
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getSelectedOption (Client API reference)
 
 
 
-Returns the option object or an array of option objects selected in an **optionset** or **multiselectoptionset** attribute respectively. 
+Returns the option object or an array of option objects selected in a **choice** or **choices** column respectively. 
 
-## Attribute types supported
+## Column types supported
 
-optionset, multiselectoptionset
+choice, choices
 
 ## Syntax
 
@@ -30,7 +33,7 @@ optionset, multiselectoptionset
 
 ## Return Value
 
-**Type**: Option object for optionset; array of option objects for multiselectoptionset. 
+**Type**: Option object for choice; array of option objects for choices. 
 
 **Description**: Returns the object with text and value properties.
 
@@ -43,3 +46,6 @@ optionset, multiselectoptionset
 
 [getText (Client API reference)](getText.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

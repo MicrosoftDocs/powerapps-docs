@@ -1,40 +1,35 @@
 ---
 title: The Home page of ISV Studio | Microsoft Docs
 description: Learn about the home page capabilities provided by the ISV Studio portal.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: "phecke" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: article
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
 ms.reviewer: pehecke
-ms.workload: na
-ms.date: 07/11/2019
-ms.author: prkoduku
+manager: jstrauss
+suite: powerapps
+ms.topic: article
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 
 # The Home page
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After a user logs into the ISV Studio, they are presented with the landing page
-known as the *Home* page. A welcome message is displayed which defines the
-objective of this page.
+After a user logs into the ISV Studio, they are presented with the landing page known as the *Home* page. A welcome message is displayed which defines the objective of this page.
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 If a user is associated with multiple publishers, all publishers are displayed and the first publisher is selected by default. All the metrics on this page are specific to the selected publisher. The user can toggle to a different publisher name to see the corresponding metrics for that publisher.
 
-![Home page](media/isv-portal-homepage.png)
+![Home page.](media/isv-portal-homepage.png)
 
 The Home page summary section contains the following graphs and metrics.
 
@@ -48,7 +43,7 @@ When hovering over a tenant tile in the graph, the following information is show
 2. Tenant Name and Tenant ID
 3. Number of package installs of the app in the tenant
 
-![Package installs by tenant](media/isv-portal-homepage-graph1.png)
+![Package installs by tenant.](media/isv-portal-homepage-graph1.png)
 
 ## Package install attempts by app (last 28 days)
 
@@ -60,7 +55,7 @@ When hovering over an app in the graph, the following information is shown:
 2. Status of package installation (Success vs Failures)
 3. Count of package install attempts
 
-![Package install attempts by app (last 28 days)](media/isv-portal-homepage-graph2.png)
+![Package install attempts by app (last 28 days).](media/isv-portal-homepage-graph2.png)
 
 ## Additional insights
 
@@ -70,7 +65,10 @@ Below the summary section the user can access additional insights and can choose
 
 The App names and icons are from AppSource.
 
-![All apps](media/isv-portal-homepage-seeall.png)
+> [!IMPORTANT]
+> With the January 2022 update, the **Total Installs** tile is now tracking the total number of unique environments where an app is installed instead of the previous cumulative total installs. While this update provides more meaningful information about an app's actual install base, the change may lead to a possible sharp drop in the install charts.
+
+![All apps.](media/isv-portal-homepage-seeall.png)
 
 ### See also
 
@@ -79,3 +77,6 @@ The App names and icons are from AppSource.
 [Tenant page](isv-app-management-tenantpage.md)<br/> 
 [AppSource checker](isv-app-management-appsource-checker.md)<br/> 
 [Connector Certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

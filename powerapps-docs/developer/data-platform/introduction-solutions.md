@@ -1,6 +1,6 @@
 ---
 title: Introduction to solutions | Microsoft Docs
-description: Learn how solutions are used to create model apps.
+description: Learn about using solutions to package your Microsoft Dataverse customizations.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -8,12 +8,14 @@ author: "shmcarth" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.reviewer: "pehecke"
+ms.custom: intro-internal
 ms.workload: na
-ms.date: 06/22/2020
+ms.date: 03/17/2021
+ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -23,8 +25,6 @@ search.app:
 ---
 
 # Introduction to solutions
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 *Solutions* are how customizers and developers author, package, and maintain units of software that extend Microsoft Dataverse. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Dataverse to install and uninstall the business functionality defined by the solution.
 
@@ -42,3 +42,6 @@ If you intend to transport customizations or extensions between different Datave
 [Managed properties](/power-platform/alm/managed-properties-alm)  
 [Create packages for the Package Deployer tool](/power-platform/alm/package-deployer-tool)  
 [Team development using shared source control](/power-platform/alm/basics-alm#team-development-using-shared-source-control)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

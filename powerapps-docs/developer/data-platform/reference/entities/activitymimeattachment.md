@@ -1,22 +1,24 @@
 ---
-title: "ActivityMimeAttachment entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ActivityMimeAttachment table."
-ms.date: 11/14/2020
+title: "Attachment (ActivityMimeAttachment)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Attachment (ActivityMimeAttachment)  table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ActivityMimeAttachment entity reference
+
+# Attachment (ActivityMimeAttachment)  table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 MIME attachment for an activity.
 
@@ -25,13 +27,13 @@ MIME attachment for an activity.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ MIME attachment for an activity.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityId](#BKMK_ActivityId)
 - [ActivityMimeAttachmentId](#BKMK_ActivityMimeAttachmentId)
@@ -247,9 +249,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivitySubject](#BKMK_ActivitySubject)
 - [AnonymousLink](#BKMK_AnonymousLink)
@@ -312,14 +314,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -351,14 +353,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsFollowed Options
+#### IsFollowed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -374,14 +376,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -524,7 +526,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ActivityMimeAttachment_AsyncOperations"></a> ActivityMimeAttachment_AsyncOperations
 
-Same as asyncoperation entity [ActivityMimeAttachment_AsyncOperations](asyncoperation.md#BKMK_ActivityMimeAttachment_AsyncOperations) Many-To-One relationship.
+Same as the [ActivityMimeAttachment_AsyncOperations](asyncoperation.md#BKMK_ActivityMimeAttachment_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -539,7 +541,7 @@ Same as asyncoperation entity [ActivityMimeAttachment_AsyncOperations](asyncoper
 
 ### <a name="BKMK_ActivityMimeAttachment_BulkDeleteFailures"></a> ActivityMimeAttachment_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [ActivityMimeAttachment_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ActivityMimeAttachment_BulkDeleteFailures) Many-To-One relationship.
+Same as the [ActivityMimeAttachment_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ActivityMimeAttachment_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -554,7 +556,7 @@ Same as bulkdeletefailure entity [ActivityMimeAttachment_BulkDeleteFailures](bul
 
 ### <a name="BKMK_ActivityMimeAttachment_SyncErrors"></a> ActivityMimeAttachment_SyncErrors
 
-Same as syncerror entity [ActivityMimeAttachment_SyncErrors](syncerror.md#BKMK_ActivityMimeAttachment_SyncErrors) Many-To-One relationship.
+Same as the [ActivityMimeAttachment_SyncErrors](syncerror.md#BKMK_ActivityMimeAttachment_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -570,7 +572,7 @@ Same as syncerror entity [ActivityMimeAttachment_SyncErrors](syncerror.md#BKMK_A
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [appointment_activity_mime_attachment](#BKMK_appointment_activity_mime_attachment)
 - [template_activity_mime_attachments](#BKMK_template_activity_mime_attachments)
@@ -580,22 +582,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_appointment_activity_mime_attachment"></a> appointment_activity_mime_attachment
 
-See appointment Entity [appointment_activity_mime_attachment](appointment.md#BKMK_appointment_activity_mime_attachment) One-To-Many relationship.
+See the [appointment_activity_mime_attachment](appointment.md#BKMK_appointment_activity_mime_attachment) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_template_activity_mime_attachments"></a> template_activity_mime_attachments
 
-See template Entity [template_activity_mime_attachments](template.md#BKMK_template_activity_mime_attachments) One-To-Many relationship.
+See the [template_activity_mime_attachments](template.md#BKMK_template_activity_mime_attachments) one-to-many relationship for the [template](template.md) table/entity.
 
 ### <a name="BKMK_email_activity_mime_attachment"></a> email_activity_mime_attachment
 
-See email Entity [email_activity_mime_attachment](email.md#BKMK_email_activity_mime_attachment) One-To-Many relationship.
+See the [email_activity_mime_attachment](email.md#BKMK_email_activity_mime_attachment) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_activity_mime_attachment"></a> activity_pointer_activity_mime_attachment
 
-See activitypointer Entity [activity_pointer_activity_mime_attachment](activitypointer.md#BKMK_activity_pointer_activity_mime_attachment) One-To-Many relationship.
+See the [activity_pointer_activity_mime_attachment](activitypointer.md#BKMK_activity_pointer_activity_mime_attachment) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.activitymimeattachment?text=activitymimeattachment EntityType" />

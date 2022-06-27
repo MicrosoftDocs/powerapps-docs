@@ -1,18 +1,21 @@
 ---
-title: Calendar and Clock functions | Microsoft Docs
-description: Reference information for the Calendar and Clock functions in Power Apps, including syntax and examples
+title: Calendar and Clock functions in Power Apps
+description: Reference information including syntax and examples for the Calendar and Clock functions in Power Apps.
 author: gregli-msft
-manager: kvivek
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: nabuthuk
+ms.reviewer: tapanm
 ms.date: 11/07/2015
+ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - gregli-msft
+  - tapanm-msft
 ---
 # Calendar and Clock functions in Power Apps
 Retrieves calendar and clock information about the current locale.
@@ -68,3 +71,6 @@ In the United States, with **[Language](function-language.md)** returning "en-US
 | **Clock.AmPmShort()** |This language uses a 12-hour clock. The return value contains the uppercase versions of the short AM and PM designations. |[ "A", "P" ] |
 | **Clock.IsClock24()** |This language uses a 12-hour clock. |**false** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

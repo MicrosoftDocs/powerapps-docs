@@ -1,18 +1,20 @@
 ---
 title: "setProgress (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the setProgress method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 649fe7b0-016d-409f-ba3c-b14e0f1953e0
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setProgress (Client API reference)
 
@@ -26,7 +28,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -72,3 +74,6 @@ This method is supported only for the action steps. Action steps are buttons on 
  
 [formContext.data.process](../../formContext-data-process.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

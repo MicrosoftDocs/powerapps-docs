@@ -1,18 +1,20 @@
 ---
 title: "isLoaded (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the isLoaded method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1870151d-6029-4733-ac35-6ee4d43f9553
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # isLoaded (Client API reference)
 
@@ -36,7 +38,7 @@ The data binding for the constituent controls in a quick view control may not be
 
 ## Example
 
-The following sample code demonstrates how you can use the **isLoaded** method to check the binding status, and then retrieve the value of the attribute that a constituent control in a quick view control is bound to.
+The following sample code demonstrates how you can use the **isLoaded** method to check the binding status, and then retrieve the value of the column that a constituent control in a quick view control is bound to.
 
 ```JavaScript
 function getAttributeValue(executionContext) {
@@ -44,11 +46,11 @@ function getAttributeValue(executionContext) {
     var quickViewControl = formContext.ui.quickForms.get("<QuickViewControlName>");
     if (quickViewControl != undefined) {
         if (quickViewControl.isLoaded()) {
-            // Access the value of the attribute bound to the constituent control
+            // Access the value of the column bound to the constituent control
             var myValue = quickViewControl.getControl(0).getAttribute().getValue();
             console.log(myValue);
             
-            // Search by a specific attribute present in the control       
+            // Search by a specific column present in the control       
             var myValue2 =  quickViewControl.getControl().find(control => control.getName() == "<AttributeSchemaName>").getAttribute().getValue();
             console.log(myValue2);
             
@@ -69,3 +71,6 @@ function getAttributeValue(executionContext) {
 ### Related topics
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,18 +1,20 @@
 ---
 title: "setActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Sets a process as the active process.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 0d4c2d8a-a2fb-4cdd-9153-041646068992
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setActiveProcess (Client API reference)
 
@@ -20,14 +22,16 @@ search.app:
 
 [!INCLUDE[./includes/setActiveProcess-description.md](./includes/setActiveProcess-description.md)]
 
-If there is an active instance of the process, the entity record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the entity record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
+If there is an active instance of the process, the table record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the table record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
 
 > [!NOTE]
-> The `setActiveProcess` method should be used while creating or editing a record. Use the `setActiveProcess` method to set the active process for a business process flow instead of `processId` and `porocessInstanceId` with `Xrm.Navigation.openForm` method . 
+> The `setActiveProcess` method should be used while creating or editing a record. Use the `setActiveProcess` method to set the active process for a business process flow instead of `processId` and `processInstanceId` with `Xrm.Navigation.openForm` method . 
 
 ## Syntax
 
 `formContext.data.process.setActiveProcess(processId, callbackFunction);`
+
+[!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Parameter
 
@@ -46,3 +50,6 @@ If there is an active instance of the process, the entity record is loaded with 
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

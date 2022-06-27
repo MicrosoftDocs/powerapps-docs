@@ -1,17 +1,16 @@
 ---
 title: "Why choose Microsoft Dataverse? | MicrosoftDocs"
 description: Understand how Microsoft Dataverse can help your business become more agile.
-ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: overview
 applies_to: 
   - "powerapps"
 author: "mmercuri"
-ms.author: "mmercuri"
+ms.subservice: dataverse-maker
+ms.author: "kvivek"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -21,8 +20,6 @@ search.app:
 ---
 
 # Why choose Microsoft Dataverse?
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Data is at the center of everything a business does today and powers the
 insights that can drive what it should do tomorrow. To thrive and grow,
@@ -49,7 +46,7 @@ As a result, a wide range of enterprise integration scenarios&mdash;from retriev
 data sent in a spreadsheet as an email attachment to emerging scenarios like
 using Dataverse data in a blockchain network&mdash;can be achieved with ease and with little to no code required. Integration efforts that previously were measured in days and weeks can now often be measured in hours and minutes.
 
-In addition to providing the ability to create data or import it from other systems, Dataverse also supports *virtual tables*. Virtual tables map data in an external data source so that it appears to exist in Dataverse. This enables Dataverse to execute real-time data operations against the external data source. More information: [Work with any data](work-with-any-data.md)
+In addition to providing the ability to create data or import it from other systems, Dataverse also supports *virtual tables*. Virtual tables map data in an external data source so that it appears to exist in Dataverse. This enables Dataverse to execute real-time data operations against the external data source. More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ## Work with any type of app
 
@@ -72,7 +69,7 @@ The goal of Dataverse working with any app means it should also work with the to
 
 Dataverse can be used to gain insights and drive business action using analytics and reporting. Dataverse also includes a variety of ways to deliver data and insight to key decision makers.
 
-![Analytics and reporting features with Dataverse](media/analytics-and-reporting.png "Analytics and reporting features with Dataverse")
+![Analytics and reporting features with Dataverse.](media/analytics-and-reporting.png "Analytics and reporting features with Dataverse")
 
 Dataverse includes the ability to create lightweight charts and paginated reports. The data in Dataverse can also be used with Power BI to create rich, interactive reports and dashboards.
 
@@ -80,14 +77,14 @@ For organizations that are interested in employing AI to analyze their data, AI 
 
 To support advanced analytics and machine learning, Dataverse includes a managed data lake. Data within the lake can be used to run Power BI reporting, machine learning, data warehousing, and other downstream data processing.
 
-![Dataverse with Azure services](media/ai-builder-and-cds.png "Dataverse with Azure services")
+![Dataverse with Azure services.](media/ai-builder-and-cds.png "Dataverse with Azure services")
 
 One of the benefits of the data being in Azure Data Lake is that organizations can take advantage of Azure Synapse Analytics. This service can deliver added productivity by bringing together enterprise data warehousing, data exploration, code-free data orchestration, deeply integrated Apache Spark and SQL engines,
 and integrated AI and BI.
 
 ## Security
 
-Dataverse uses Azure Active Directory idtable and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
+Dataverse uses Azure Active Directory identity and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
 
 Dataverse uses role-based security to group together a collection of privileges. These security roles can be associated directly with users, or they can be associated with Dataverse teams and business units.
 
@@ -151,11 +148,11 @@ Service limits aren't expected to negatively affect normal usage of Dataverse.
 
 For information about current service protection limits for each service, see:
 
-- [Dataverse API request limits](/powerapps/developer/data-platform/api-limits): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
+- [Dataverse API request limits](../../developer/data-platform/api-limits.md): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
 
 - [Microsoft Power Automate limits](/flow/limits-and-config#looping-and-debatching-limits): Applicable for Power Automate. 
 
-- [Limits in connectors](https://docs.microsoft.com/connectors/): Applicable for Power Automate and Power Apps.
+- [Limits in connectors](/connectors/): Applicable for Power Automate and Power Apps.
 
 ### Capacity add-ons
 
@@ -197,3 +194,6 @@ For the current list of datacenter regions, see [Datacenter regions](/power-plat
 ### See also
 
 [Work with any data](work-with-any-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

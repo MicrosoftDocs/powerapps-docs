@@ -1,5 +1,5 @@
-|Error values|Error name and message|
-|---|---|
+| Error values | Error name and message |
+|--------------|------------------------|
 |0x80072559<br />-2147015335|Name: **AADError**<br />Message: Error from AAD|
 |0x80048350<br />-2147187888|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})|
 |0x80048405<br />-2147187707|Name: **AccessDenied**<br />Message: Access is denied.|
@@ -139,6 +139,7 @@
 |0x80050221<br />-2147155423|Name: **AttributeTypeNotSupportedForCalculatedField**<br />Message: Calculated/RollUp Field is not supported for MultiSelectPicklist Attribute Type.|
 |0x80050224<br />-2147155420|Name: **AttributeTypeNotSupportedForGroupByOrderByQuery**<br />Message: GroupBy or OrderBy Query is not supported for MultiSelectPickList Attribute Type.|
 |0x80060463<br />-2147089309|Name: **AttributeUpdateNotAllowed**<br />Message: The Business Process Flow update has failed. The update of attribute "{0}" in workflow "{1}" is not allowed.|
+|0x8005F1FE<br />-2147094018|Name: **AudioCaptureFailed**<br />Message: Audio capture have failed.|
 |0x8004D228<br />-2147167704|Name: **AuthenticateToServerBeforeRequestingProxy**<br />Message: Authenticate to serverType: {0} before requesting a proxy.|
 |0x80091042<br />-2146889662|Name: **AutoDataCaptureAuthorizationFailureException**<br />Message: You don’t have the proper Office 365 license to get untracked emails. Please contact your system administrator.|
 |0x80091041<br />-2146889663|Name: **AutoDataCaptureDisabledError**<br />Message: Auto capture feature is not enabled.|
@@ -158,6 +159,7 @@
 |0x8004A102<br />-2147180286|Name: **BadAuthTicket**<br />Message: The ticket specified for authentication is invalid|
 |0x80090435<br />-2146892747|Name: **BadLinkedAttributeOptionSetId**<br />Message: Invalid option set id found in linked attribute {0} of entity {1}.|
 |0x8005F100<br />-2147094272|Name: **BadRequest**<br />Message: The request could not be understood by the server.|
+|0x8005F1FD<br />-2147094019|Name: **BarCodeCaptureFailed**<br />Message: Barcode capture have failed.|
 |0x80044240<br />-2147204544|Name: **BaseAttributeNameNotPresentError**<br />Message: BaseAttribute name should be present in condition xml.|
 |0x80048cf4<br />-2147185420|Name: **BaseCurrencyCannotBeDeactivated**<br />Message: The base currency cannot be deactivated.|
 |0x80048cff<br />-2147185409|Name: **BaseCurrencyNotDeletable**<br />Message: The base currency of an organization cannot be deleted.|
@@ -516,7 +518,7 @@
 |0x8004F851<br />-2147157935|Name: **CannotEditActiveRule**<br />Message: You can not edit an active routing rule. Deactivate the rule to delete it.|
 |0x8004F860<br />-2147157920|Name: **CannotEditActiveSla**<br />Message: You can't delete active SLA .Please deactivate the SLA to delete or Contact your system administrator.|
 |0x80048421<br />-2147187679|Name: **CannotEnableDuplicateDetection**<br />Message: Duplicate detection cannot be enabled because one or more rules are being published.|
-|0x80060302<br />-2147089662|Name: **CannotEnableEntityForRelevanceSearch**<br />Message: Entity {0} can’t be enabled for relevance search because of the configuration of its managed properties.|
+|0x80060302<br />-2147089662|Name: **CannotEnableEntityForRelevanceSearch**<br />Message: Entity {0} can’t be enabled for Dataverse search because of the configuration of its managed properties.|
 |0x8004027c<br />-2147220868|Name: **CannotExceedFilterLimit**<br />Message: Cannot exceed synchronization filter limit.|
 |0x8004852C<br />-2147187412|Name: **CannotExecuteRequestBecauseHttpsIsRequired**<br />Message: HTTPS protocol is required for this type of request, please enable HTTPS protocol and try again.|
 |0x8004F847<br />-2147157945|Name: **CannotExportRuleOnAnyEntityRoutingRuleFCBOff**<br />Message: Unable to export routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
@@ -707,7 +709,7 @@
 |0x80048107<br />-2147188473|Name: **CascadeReparentOnNonUserOwned**<br />Message: Cannot perform Cascade Reparent on Non-UserOwned entities|
 |0x80090446<br />-2146892730|Name: **CascadeSPGenerationLockException**<br />Message: Cannot start the Cascade SP generation as there is already one running at this moment.|
 |0x800404cf<br />-2147220273|Name: **CaseAlreadyResolved**<br />Message: This case has already been resolved. Close and reopen the case record to see the updates.|
-|0x8006074<br />134242420|Name: **CaseStateChangeInvalid**<br />Message: Because of the status transition rules, you can't resolve a case in the current status. Change the case status, and then try resolving it, or contact your system administrator.|
+|0x8006074<br />134242420   |Name: **CaseStateChangeInvalid**<br />Message: Because of the status transition rules, you can't resolve a case in the current status. Change the case status, and then try resolving it, or contact your system administrator.|
 |0x8004E01A<br />-2147164134|Name: **CategoryDataTypeInvalid**<br />Message: The Data Description for the visualization is invalid. The attribute type for the group by of one of the categories is invalid. Correct the Data Description.|
 |0x80060404<br />-2147089404|Name: **CategoryNotSetToBusinessProcessFlow**<br />Message: Category should be set to BusinessProcessFlow while creating business process flow category|
 |0x80044510<br />-2147203824|Name: **CDSOrgNotSupported**<br />Message: Dynamics 365 for Outlook is not supported for this organization.|
@@ -1309,7 +1311,7 @@
 |0x800608C1<br />-2147088191|Name: **ExportToXlsxFeatureNotEnabled**<br />Message: Export to excel file feature is not enabled.|
 |0x80060004<br />-2147090428|Name: **ExpressionNotSupportedForEditor**<br />Message: Rule contain an expression that is not supported by the editor.|
 |0x80046F8F<br />-2147192945|Name: **ExternalNameExists**<br />Message: An entity with the specified name already exists for data source - {0}. Please specify a new external name.|
-|0x80060300<br />-2147089664|Name: **ExternalSearchAttributeLimitExceeded**<br />Message: The maximum number of indexed fields has been reached. Update the Relevance Search configuration to reduce the total number of indexed fields {1} below {0}.|
+|0x80060300<br />-2147089664|Name: **ExternalSearchAttributeLimitExceeded**<br />Message: The maximum number of indexed fields has been reached. Update the Dataverse search configuration to reduce the total number of indexed fields {1} below {0}.|
 |0x80040316<br />-2147220714|Name: **ExtraPartyInformation**<br />Message: Extra party information should not be provided for this operation.|
 |0x80055007<br />-2147135481|Name: **FailedToAddSLADependency**<br />Message: Failed to add SLA dependency on ApplicableFrom attribute because attribute is not found in applicable entity metadata. Please contact your system administrator.|
 |0x80048411<br />-2147187695|Name: **FailedToAquireLock**<br />Message: PluginSqlLockManager failed to acquire lock|
@@ -1385,6 +1387,7 @@
 |0x8005E211<br />-2147098095|Name: **ForwardMailboxEmailAddressRequired**<br />Message: An e-mail address is a required field in case of forward mailbox.|
 |0x8005E212<br />-2147098094|Name: **ForwardMailboxUnexpectedIncomingDeliveryMethod**<br />Message: Forward mailbox incoming delivery method can only be none or router.|
 |0x8005E213<br />-2147098093|Name: **ForwardMailboxUnexpectedOutgoingDeliveryMethod**<br />Message: Forward mailbox outgoing delivery method can only be none.|
+|0x8005F1FC<br />-2147094020|Name: **GetGeoLocationFailed**<br />Message: Get geo location have failed.|
 |0x80041d37<br />-2147214025|Name: **GenericActiveDirectoryError**<br />Message: Active Directory Error.|
 |0x80041d54<br />-2147213996|Name: **GenericAzureActiveDirectoryError**<br />Message: Azure Active Directory Error.|
 |0x80060752<br />-2147088558|Name: **GenericImportTranslationsError**<br />Message: Errors were encountered while processing the translations import file.|
@@ -1530,7 +1533,7 @@
 |0x80048027<br />-2147188697|Name: **ImportWorkflowNameConflictError**<br />Message: Workflow {0} cannot be imported because a workflow with same name and different unique identifier exists in the target system. Change the name of this workflow, and then try again.|
 |0x80048028<br />-2147188696|Name: **ImportWorkflowPublishedError**<br />Message: Workflow {0}({1}) cannot be imported because a workflow with same unique identifier is published on the target system. Unpublish the workflow on the target system before attempting to import this workflow again.|
 |0x8004801C<br />-2147188708|Name: **ImportWrongPublisherError**<br />Message: The following managed solution cannot be imported: {0}. The publisher name cannot be changed from {1} to {2}.|
-|0x8004801A<br />-2147188710|Name: **ImportXsdValidationError**<br />Message: The import file is invalid. XSD validation failed with the following error: '{0}'. The validation failed at: '...{1} <<<<<ERROR LOCATION>>>>> {2}...'."|
+|0x8004801A<br />-2147188710|Name: **ImportXsdValidationError**<br />Message: The import file is invalid. XSD validation failed with the following error: '{0}'. The validation failed at: '...{1} <<<<\<ERROR LOCATION\>>>>> {2}...'."|
 |0x8005E227<br />-2147098073|Name: **InaccessibleSmtpServer**<br />Message: Cannot reach to the smtp server. Please check that the smtp server is accessible.|
 |0x8005E228<br />-2147098072|Name: **InactiveEmailServerProfile**<br />Message: Email server profile is disabled. Cannot process email for disabled profile.|
 |0x8005E219<br />-2147098087|Name: **InactiveMailbox**<br />Message: The mailbox is in inactive state. Send/Receive mails are allowed only for active mailboxes.|
@@ -1669,7 +1672,7 @@
 |0x80092004<br />-2146885628|Name: **InvalidCrossEntityOperation**<br />Message: Invalid cross-entity stage transition. Target entity must be specified.|
 |0x80092005<br />-2146885627|Name: **InvalidCrossEntityTargetOperation**<br />Message: Invalid cross-entity stage transition. Specified target must match {0}.|
 |0x80048cfc<br />-2147185412|Name: **InvalidCurrency**<br />Message: The currency is invalid.|
-|0x8004F125<br />-2147159771|Name: **InvalidCustomActivityType**<br />Message: A custom entity defined as an activity must be of communicaton activity type.|
+|0x8004F125<br />-2147159771|Name: **InvalidCustomActivityType**<br />Message: A custom entity defined as an activity must be of communication activity type.|
 |0x80090115<br />-2146893547|Name: **InvalidCustomAttributeValue**<br />Message: The attribute '{0}' of entity '{1}' has invalid value for custom attribute.|
 |0x80060996<br />-2147087978|Name: **InvalidCustomDataDownloadFilters**<br />Message: You can’t set custom download filters because Record Distribution Criteria isn’t set to Other Data Filters.|
 |0x8004022d<br />-2147220947|Name: **InvalidCustomer**<br />Message: The customer is invalid.|
@@ -1922,7 +1925,7 @@
 |0x8004700f<br />-2147192817|Name: **InvalidRelationshipType**<br />Message: The specified relationship type is not valid for this operation|
 |0x8004F989<br />-2147157623|Name: **InvalidRelationshipTypeForAccessory**<br />Message: An accessory relationship is always unidirectional and can't be changed.|
 |0x8004F988<br />-2147157624|Name: **InvalidRelationshipTypeForUpSell**<br />Message: An upsell relationship is always unidirectional and can't be changed.|
-|0x80048054<br />-2147188652|Name: **InvalidRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot ends with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot, cannot contain consecutive dots and cannot contain any of the following characters: ~ " # % & * : < > ? / \ { | }.|
+|0x80048054<br />-2147188652|Name: **InvalidRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot ends with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot, cannot contain consecutive dots and cannot contain any of the following characters: ~ " # % & * : < > ? / \ { \| }.|
 |0x80072530<br />-2147015376|Name: **InvalidRequestBody**<br />Message: Passed entity object cannot be null or empty.|
 |0x80044271<br />-2147204495|Name: **InvalidRequestDataFormat**<br />Message: The updated configuration includes invalid data.|
 |0x80044828<br />-2147203032|Name: **InvalidRequestParameter**<br />Message: Both name and value should be specified for request parameter.|
@@ -1947,7 +1950,7 @@
 |0x80048052<br />-2147188654|Name: **InvalidSharePointSiteCollectionUrl**<br />Message: The URL must conform to the http or https schema.|
 |0x80044254<br />-2147204524|Name: **InvalidSimilarityRuleStateError**<br />Message: Invalid similarity rule state.|
 |0x8004024f<br />-2147220913|Name: **InvalidSingletonResults**<br />Message: Crm Internal Exception: Singleton Retrieve Query should not return more than 1 record.|
-|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { | }.|
+|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { \| }.|
 |0x80072000<br />-2147016704|Name: **InvalidSolutionAwarenessDeclaration**<br />Message: The entity {0} cannot have its solution awareness setting updated.|
 |0x8007200E<br />-2147016690|Name: **InvalidSolutionComponentKey**<br />Message: The attribute {0} from key {1} and entity {2} should be exportable to be an export key.|
 |0x8004701B<br />-2147192805|Name: **InvalidSolutionConfigurationPage**<br />Message: The specified configuration page for this solution is invalid.|
@@ -2016,7 +2019,7 @@
 |0x80040204<br />-2147220988|Name: **InvalidUserAuth**<br />Message: User does not have the privilege to perform this action.|
 |0x8004F712<br />-2147158254|Name: **InvalidUserIdInProvisionLanguageForUser**<br />Message: UserId provided '{0}' is invalid.|
 |0x8004B027<br />-2147176409|Name: **InvalidUserLicenseCount**<br />Message: Cannot purchase {0} user licenses for the Offering {1}.|
-|0x80048095<br />-2147188587|Name: **InvalidUserName**<br />Message: You must enter the user name in the format <name>@<domain>. Correct the format and try again.|
+|0x80048095<br />-2147188587|Name: **InvalidUserName**<br />Message: You must enter the user name in the format \<name\>@\<domain\>. Correct the format and try again.|
 |0x8004B011<br />-2147176431|Name: **InvalidUserQuota**<br />Message: You have reached the maximum number of user quota|
 |0x80060807<br />-2147088377|Name: **InvalidUserToImportExcelOnlineFile**<br />Message: You don't have permission to import this file. Only the user who exported this data can import this file.|
 |0x80060806<br />-2147088378|Name: **InvalidUserToViewExcelOnlineFile**<br />Message: You don't have permission to view this file. Only the user who exported this data can view this file.|
@@ -2094,7 +2097,7 @@
 |0x8004F050<br />-2147159984|Name: **LayerDesiredOrderInvalidXMLDetail**<br />Message: The LayerDesiredOrder parameter contains an invalid XML schema. Check the property [{0}].|
 |0x8004F052<br />-2147159982|Name: **LayerDesiredOrderNotAllowedOnPatch**<br />Message: The LayerDesiredOrder parameter cannot be used when importing a Patch. The parameter can only be used while importing a solution.|
 |0x8004F048<br />-2147159992|Name: **LayerDesiredOrderNotSamePublisher**<br />Message: The solution [{0}] was used in the LayerDesiredOrder parameter, but its publisher [{1}] does not match the publisher of the solution being installed: [{2}]. This parameter can be used only by solutions from the same publisher.|
-|0x8004F065<br />-2147159963|Name: **LayerDesiredOrderNotWhitelist**<br />Message: The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be whitelisted to use this feature.|
+|0x8004F065<br />-2147159963|Name: **LayerDesiredOrderNotWhitelist**<br />Message: The LayerDesiredOrder parameter is present in the import request of [{0}], but this solution is not allowed to use it. Solutions must be allow listed to use this feature.|
 |0x8004F047<br />-2147159993|Name: **LayerDesiredOrderPendingUpgrade**<br />Message: The solution [{0}] used in LayerDesiredOrder parameter has a pending upgrade. Please complete its upgrade before retrying this operation.|
 |0x8004F056<br />-2147159978|Name: **LayerDesiredOrderPublisherNotAllowed**<br />Message: The publisher [{0}] is not allowed to use the LayerDesiredOrder parameter.|
 |0x8004F058<br />-2147159976|Name: **LayerDesiredOrderRestrictedSolution**<br />Message: The LayerDesiredOrder parameter cannot be used on [{0}].|
@@ -2413,6 +2416,7 @@
 |0x80040334<br />-2147220684|Name: **OperationCanBeCalledOnlyOnce**<br />Message: The specified action can be done only one time.|
 |0x80060912<br />-2147088110|Name: **OperationCanceled**<br />Message: Refresh was canceled by user.|
 |0x80154B53<br />-2146088109|Name: **OperationFailedTryAgain**<br />Message: Operation could not be performed at the moment. Please try again.|
+|0x8005F1FF<br />-2147094017|Name: **OperationIsNotSupportedOnThisDevice**<br />Message: Operation is not supported on this device.|
 |0x8004D23a<br />-2147167686|Name: **OperationOrganizationNotFullyDisabled**<br />Message: The {1} operation failed because organization {0} is not fully disabled yet.  Use FORCE to override|
 |0x80072008<br />-2147016696|Name: **OperationReservedForSolutionAwareEntities**<br />Message: This operation is reserved for solution-aware entities only.|
 |0x80044241<br />-2147204543|Name: **OperatorCodeNotPresentError**<br />Message: OperatorCode should be present in condition xml.|
@@ -2805,10 +2809,10 @@
 |0x8004F10B<br />-2147159797|Name: **RibbonImportDuplicateElementId**<br />Message: The ribbon element with the Id:{0} cannot be imported because an existing ribbon element with the same Id already exists.|
 |0x8004F103<br />-2147159805|Name: **RibbonImportEntityNotSupported**<br />Message: The solution cannot be imported because the {0} entity contains a Ribbon definition, which is not supported for that entity. Remove the RibbonDiffXml node from the entity definition and try to import again.|
 |0x8004F101<br />-2147159807|Name: **RibbonImportHidingBasicHomeTab**<br />Message: The definition of the ribbon being imported will remove the Microsoft Dynamics 365 home tab. Include a home tab definition, or a ribbon will not be displayed in areas of the application that display the home tab.|
-|0x8004F10A<br />-2147159798|Name: **RibbonImportHidingJewel**<br />Message: Ribbon customizations cannot hide the <Jewel> node. Any ribbon customization that hides this node is ignored during import and will not be exported.|
+|0x8004F10A<br />-2147159798|Name: **RibbonImportHidingJewel**<br />Message: Ribbon customizations cannot hide the \<Jewel\> node. Any ribbon customization that hides this node is ignored during import and will not be exported.|
 |0x8004F102<br />-2147159806|Name: **RibbonImportInvalidPrivilegeName**<br />Message: The RibbonDiffXml in this solution contains a reference to an invalid privilege: {0}. Update the RibbonDiffXml to reference a valid privilege and try importing again.|
 |0x8004F109<br />-2147159799|Name: **RibbonImportLocationAndIdDoNotMatch**<br />Message: CustomAction Id '{0}' cannot override '{1}' because '{2}' does not match the CustomAction Location value.|
-|0x8004F108<br />-2147159800|Name: **RibbonImportModifyingTopLevelNode**<br />Message: Ribbon customizations cannot be made to the following top-level ribbon nodes: <Ribbon>, <ContextualGroups>, and <Tabs>.|
+|0x8004F108<br />-2147159800|Name: **RibbonImportModifyingTopLevelNode**<br />Message: Ribbon customizations cannot be made to the following top-level ribbon nodes: \<Ribbon\>, \<ContextualGroups\>, and \<Tabs\>.|
 |0x8004F10C<br />-2147159796|Name: **RibbonImportRibbonDiffIdInvalidLength**<br />Message: We can’t import this ribbon element because the ID length exceeds the maximum length of 128 characters: {0}|
 |0x80044281<br />-2147204479|Name: **RINotProvisioned**<br />Message: Relationship Insights hasn’t been turned on for your organization {0}.|
 |0x80060471<br />-2147089295|Name: **RoboticProcessAutomationFlowProcessesNotEnabled**<br />Message: Creation of Reserved processes is not enabled.|
@@ -3732,6 +3736,7 @@
 |0x80048542<br />-2147187390|Name: **VersionedRowNotFoundInTempDB**<br />Message: Required versioned row was not found in TempDB; the TempDB is likely out of space; try again at a later time.|
 |0x8004B020<br />-2147176416|Name: **VersionMismatch**<br />Message: Unsupported version - This is {0} version {1}, but version {2} was requested.|
 |0x80048491<br />-2147187567|Name: **VeryLargeFileInZipImport**<br />Message: One of the files in the compressed (.zip) or .cab file that you're trying to import exceeds the size limit.|
+|0x8005F1FF<br />-2147094017|Name: **VideoCaptureFailed**<br />Message: Video capture have failed.|
 |0x80071130<br />-2147020496|Name: **ViewConditionTypeNotSupportedOffline**<br />Message: The condition {0} is not supported.|
 |0x80048838<br />-2147186632|Name: **ViewForDuplicateDetectionNotDefined**<br />Message: Required view for viewing duplicates of an entity not defined.|
 |0x80160047<br />-2146041785|Name: **ViewIdEmptyOrNull**<br />Message: View Id is null or empty. More Details:{0}|

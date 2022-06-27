@@ -4,10 +4,10 @@ description: Understand the format of date and time columns.
 ms.custom: ""
 ms.date: 05/25/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 73d691c7-344e-4c96-8979-c661c290bf81
 caps.latest.revision: 47
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -25,7 +26,7 @@ search.app:
 ---
 # Behavior and format of the Date and Time column
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 In Microsoft Dataverse, the Date and Time data type is used in many standard table columns. Depending on what kind of date the column represents, you can choose different column behaviors: **User Local**, **Date Only**, or **Time-Zone Independent**.  
   
@@ -117,3 +118,6 @@ The following date and time related query operators are invalid for the **Date O
 [Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

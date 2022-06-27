@@ -1,22 +1,24 @@
 ---
-title: "Report entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Report table."
-ms.date: 11/14/2020
+title: "Report table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Report table/entity."
+ms.date: 05/23/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Report entity reference
+
+# Report table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Data summary in an easy-to-read layout.
 
@@ -25,22 +27,22 @@ Data summary in an easy-to-read layout.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/reports(*reportid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/reports<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/reports(*reportid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/reports<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |DownloadReportDefinition|<xref href="Microsoft.Dynamics.CRM.DownloadReportDefinition?text=DownloadReportDefinition Function" />|<xref:Microsoft.Crm.Sdk.Messages.DownloadReportDefinitionRequest>|
 |GetReportHistoryLimit|<xref href="Microsoft.Dynamics.CRM.GetReportHistoryLimit?text=GetReportHistoryLimit Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetReportHistoryLimitRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/reports<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/reports<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetReportRelated|<xref href="Microsoft.Dynamics.CRM.SetReportRelated?text=SetReportRelated Action" />|<xref:Microsoft.Crm.Sdk.Messages.SetReportRelatedRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -58,9 +60,9 @@ Data summary in an easy-to-read layout.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [BodyBinary](#BKMK_BodyBinary)
 - [BodyText](#BKMK_BodyText)
@@ -244,14 +246,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPersonal Options
+#### IsPersonal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Individual|
-|0|Organization|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Individual||
+|0|Organization||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -371,13 +373,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
 
-#### ReportTypeCode Options
+#### ReportTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Reporting Services Report|
-|2|Other Report|
-|3|Linked Report|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Reporting Services Report||
+|2|Other Report||
+|3|Linked Report||
 
 
 
@@ -495,9 +497,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -524,6 +526,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentReportIdName](#BKMK_ParentReportIdName)
@@ -549,14 +552,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -711,14 +714,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsCustomReport Options
+#### IsCustomReport Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -734,14 +737,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -757,14 +760,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsScheduledReport Options
+#### IsScheduledReport Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -944,12 +947,28 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the report.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1128,7 +1147,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_Report_ProcessSessions"></a> Report_ProcessSessions
 
-Same as processsession entity [Report_ProcessSessions](processsession.md#BKMK_Report_ProcessSessions) Many-To-One relationship.
+Same as the [Report_ProcessSessions](processsession.md#BKMK_Report_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1143,7 +1162,7 @@ Same as processsession entity [Report_ProcessSessions](processsession.md#BKMK_Re
 
 ### <a name="BKMK_Report_SyncErrors"></a> Report_SyncErrors
 
-Same as syncerror entity [Report_SyncErrors](syncerror.md#BKMK_Report_SyncErrors) Many-To-One relationship.
+Same as the [Report_SyncErrors](syncerror.md#BKMK_Report_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1158,7 +1177,7 @@ Same as syncerror entity [Report_SyncErrors](syncerror.md#BKMK_Report_SyncErrors
 
 ### <a name="BKMK_Report_AsyncOperations"></a> Report_AsyncOperations
 
-Same as asyncoperation entity [Report_AsyncOperations](asyncoperation.md#BKMK_Report_AsyncOperations) Many-To-One relationship.
+Same as the [Report_AsyncOperations](asyncoperation.md#BKMK_Report_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1173,7 +1192,7 @@ Same as asyncoperation entity [Report_AsyncOperations](asyncoperation.md#BKMK_Re
 
 ### <a name="BKMK_report_reportcategories"></a> report_reportcategories
 
-Same as reportcategory entity [report_reportcategories](reportcategory.md#BKMK_report_reportcategories) Many-To-One relationship.
+Same as the [report_reportcategories](reportcategory.md#BKMK_report_reportcategories) many-to-one relationship for the [reportcategory](reportcategory.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1188,7 +1207,7 @@ Same as reportcategory entity [report_reportcategories](reportcategory.md#BKMK_r
 
 ### <a name="BKMK_report_parent_report"></a> report_parent_report
 
-Same as report entity [report_parent_report](report.md#BKMK_report_parent_report) Many-To-One relationship.
+Same as the [report_parent_report](report.md#BKMK_report_parent_report) many-to-one relationship for the [report](report.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1204,7 +1223,7 @@ Same as report entity [report_parent_report](report.md#BKMK_report_parent_report
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_report_createdonbehalfby](#BKMK_lk_report_createdonbehalfby)
 - [lk_report_modifiedonbehalfby](#BKMK_lk_report_modifiedonbehalfby)
@@ -1216,30 +1235,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_report_createdonbehalfby"></a> lk_report_createdonbehalfby
 
-See systemuser Entity [lk_report_createdonbehalfby](systemuser.md#BKMK_lk_report_createdonbehalfby) One-To-Many relationship.
+See the [lk_report_createdonbehalfby](systemuser.md#BKMK_lk_report_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_report_modifiedonbehalfby"></a> lk_report_modifiedonbehalfby
 
-See systemuser Entity [lk_report_modifiedonbehalfby](systemuser.md#BKMK_lk_report_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_report_modifiedonbehalfby](systemuser.md#BKMK_lk_report_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_report_parent_report"></a> report_parent_report
 
-See report Entity [report_parent_report](report.md#BKMK_report_parent_report) One-To-Many relationship.
+See the [report_parent_report](report.md#BKMK_report_parent_report) one-to-many relationship for the [report](report.md) table/entity.
 
 ### <a name="BKMK_lk_reportbase_modifiedby"></a> lk_reportbase_modifiedby
 
-See systemuser Entity [lk_reportbase_modifiedby](systemuser.md#BKMK_lk_reportbase_modifiedby) One-To-Many relationship.
+See the [lk_reportbase_modifiedby](systemuser.md#BKMK_lk_reportbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_reports"></a> business_unit_reports
 
-See businessunit Entity [business_unit_reports](businessunit.md#BKMK_business_unit_reports) One-To-Many relationship.
+See the [business_unit_reports](businessunit.md#BKMK_business_unit_reports) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_reportbase_createdby"></a> lk_reportbase_createdby
 
-See systemuser Entity [lk_reportbase_createdby](systemuser.md#BKMK_lk_reportbase_createdby) One-To-Many relationship.
+See the [lk_reportbase_createdby](systemuser.md#BKMK_lk_reportbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.report?text=report EntityType" />

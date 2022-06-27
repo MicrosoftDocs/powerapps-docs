@@ -1,16 +1,19 @@
 ---
 title: "addOnPreProcessStatusChange (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
-ms.date: 08/05/2017
-ms.service: crm-online
+description: Includes description and supported parameters for the addOnPreProcessStatusChange method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: reference
-ms.assetid: 
-author: KumarVivek
-ms.author: kvivek
-manager: annbe
 search.audienceType: 
   - developer
 search.app: 
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addOnPreProcessStatusChange (Client API reference)
 
@@ -35,3 +38,6 @@ This client API is only supported on the Unified Client. The legacy web client d
 [removeOnPreProcessStatusChange](removeOnPreProcessStatusChange.md)
 
 [formContext.data.process](../../formContext-data-process.md)
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

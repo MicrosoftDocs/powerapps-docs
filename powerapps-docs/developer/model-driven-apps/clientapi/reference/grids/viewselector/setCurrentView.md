@@ -1,18 +1,20 @@
 ---
 title: "setCurrentView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the setCurrentView method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: f5ee65bf-2964-49c9-9dd2-d81416353bf3
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setCurrentView (Client API reference)
 
@@ -32,7 +34,7 @@ Read-only grid
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|object|Lookup object|Yes|Specify the Lookup object that has the following attributes:<br/>- **entityType**: Number. The object type code for the SavedQuery (1039) or UserQuery (4230) that represents the view the user can select.<br/>- **id**: String. The Id for the view the user can select.<br/>- **name**: String. The name of the view the user can select.|
+|object|Lookup object|Yes|Specify the Lookup object that has the following values:<br/>- **entityType**: Number. The object type code for the SavedQuery (1039) or UserQuery (4230) that represents the view the user can select.<br/>- **id**: String. The Id for the view the user can select.<br/>- **name**: String. The name of the view the user can select.|
 
 ## Remarks
 
@@ -65,3 +67,6 @@ function setView(executionContext) {
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

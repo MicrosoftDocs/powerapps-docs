@@ -1,20 +1,22 @@
 ---
-title: "getName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "tab.getName (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the tab.getName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: e0c93e4c-9e9b-45a3-b196-76a4ad0f69eb
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getName (Client API reference)
+# tab.getName (Client API reference)
 
 
 
@@ -32,3 +34,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

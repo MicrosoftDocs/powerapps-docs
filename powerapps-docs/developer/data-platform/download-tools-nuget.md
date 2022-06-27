@@ -1,19 +1,14 @@
 ---
 title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
-description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+description: "Download the Plug-in Registration, Package Deployment, and other developer tools from NuGet.org."
+ms.date: 06/24/2022
+ms.reviewer: pehecke
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: feb3e634-7c60-46fd-8b92-3f5682b1570b
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly"
-manager: "annbe"
+author: marcelbf # GitHub ID
+ms.subservice: dataverse-developer
+ms.author: marcelbf
 search.audienceType: 
   - developer
 search.app: 
@@ -21,24 +16,26 @@ search.app:
   - D365CE
 ---
 
-# Download tools from NuGet 
+# Download tools from NuGet
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can download tools used in development from NuGet using the  powershell script found below. These tools include:
+You can download tools used in code development from NuGet using the  PowerShell script found below. These tools include:
 
 |Tool|NuGet Package|
 |-|-|
-|Code generation tool `CrmSvcUtil.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
+|Code Generation tool `CrmSvcUtil.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
 |Configuration Migration tool `DataMigrationUtility.exe`|[Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf)|
 |Package Deployer `PackageDeployer.exe`|[Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf)|
-|Plug-in Registration Tool `PluginRegistration.exe` |[Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|
+|Plug-in Registration tool `PluginRegistration.exe` |[Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|
 |SolutionPackager tool `SolutionPackager.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
 
 ## Download tools using PowerShell
 
+You can download all SDK tools using the PowerShell script provided below. Note that this script works with the version of Windows PowerShell that ships in Microsoft Windows 10. The script does not presently work with cross-platform versions of PowerShell based on .NET 5 or later (formerly .NET Core).
+
 1. In your Windows Start menu, type `Windows Powershell` and open it.
-1. Navigate to the folder you want to install the tools to. For example if you want to install them in a `devtools` folder on your D drive, type `cd D:\devtools`.
+1. Navigate to the folder you want to install the tools to. For example if you want to install them in a `devtools` folder on your D: drive, type `cd D:\devtools`.
 1. Copy and paste the following PowerShell script into the PowerShell window and press Enter.
 
     ```powershell
@@ -48,13 +45,17 @@ You can download tools used in development from NuGet using the  powershell scri
     Remove-Item .\Tools -Force -Recurse -ErrorAction Ignore
     Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
     Set-Alias nuget $targetNugetExe -Scope Global -Verbose
-        
+
+    if (-not (./nuget source | ? { $_ -like "*https://api.nuget.org/v3/index.json*"})) {
+      .\nuget sources Add -Name nuget.org.v3 -Source  https://api.nuget.org/v3/index.json
+    }
+
     ##
-    ##Download Plugin Registration Tool
+    ##Download Plug-in Registration tool
     ##
     ./nuget install Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool -O .\Tools
     md .\Tools\PluginRegistration
-    $prtFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}
+    $prtFolder = (Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}).Name
     move .\Tools\$prtFolder\tools\*.* .\Tools\PluginRegistration
     Remove-Item .\Tools\$prtFolder -Force -Recurse
     
@@ -104,8 +105,10 @@ To get the latest version of these tools, repeat these steps.
 
 [Developer tools](developer-tools.md)<br />
 [Visual Studio and the .NET Framework](org-service/visual-studio-dot-net-framework.md)<br />
-[Create early bound entity classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
-[Create extensions for the code generation tool](org-service/extend-code-generation-tool.md)<br />
+[Create early bound table classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
+[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)<br />
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
 [Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
 [Register a plug-in](register-plug-in.md)<br />
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

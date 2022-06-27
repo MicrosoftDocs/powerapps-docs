@@ -1,16 +1,19 @@
 ---
 title: "addOnPreStageChange (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
-ms.date: 07/19/2019
-ms.service: crm-online
+description: Includes description and supported parameters for the addOnPreStageChange method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: reference
-ms.assetid: 
-author: msftman
-ms.author: deonhe
-manager: KVivek
 search.audienceType: 
   - developer
 search.app: 
+  - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addOnPreStageChange (Client API reference)
 
@@ -38,3 +41,6 @@ This client API is only supported on the Unified Client. The legacy web client d
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

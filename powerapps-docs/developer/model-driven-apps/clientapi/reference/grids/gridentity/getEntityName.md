@@ -1,20 +1,22 @@
 ---
-title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "gridEntity.getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridEntity.getEntityName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 20f9127f-c90a-4ea9-aab3-6ef1f0347a48
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityName (Client API reference)
+# gridEntity.getEntityName (Client API reference)
 
 
 
@@ -38,3 +40,6 @@ Read-only and editable grids
 
 To get the `gridEntity` object, see [GridEntity](../gridentity.md). 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -2,10 +2,11 @@
 title: Planning - Defining the app project goals | Microsoft Docs
 description: Having a clear objective for what your Power Apps project team is trying to achieve is important so that your project team members share the same goals.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -66,3 +67,6 @@ releases so that we could deliver value incrementally:
 
 > [!div class="nextstepaction"]
 > [Next step: Defining the project scope](defining-project-scope.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
