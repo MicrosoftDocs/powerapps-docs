@@ -83,15 +83,14 @@ Your admin should confirm that the Microsoft Dataverse and Spatial Services conn
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
 - The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom on full support:
 
-    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
-    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
-    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No |
-    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No |
-    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No |
-    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
-    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
-    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
-- Note that on limited support, the only feature sending user data is the first row above, Show map tiles.
+    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent | Enabled in Full Support | Enabled in Limited Support |
+    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ | ------ | ------ |
+    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No | Yes | Yes |
+    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No | Yes | Yes |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No | Yes | No |
+    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No | Yes | No |
+    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No | Yes | No |
+    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No | Yes | No |
 
 ### Next steps
 
