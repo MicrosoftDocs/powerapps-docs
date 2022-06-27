@@ -350,77 +350,77 @@ You can filter your entity set records based on single-valued navigation propert
   
 For example:  
   
--   **Retrieve all the matching accounts for a specified Contact ID**  
+- **Retrieve all the matching accounts for a specified Contact ID**  
   
-**Request** 
- 
-```http 
-GET [Organization URI]/api/data/v9.2/accounts?$select=name
-&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
+   **Request** 
+   
+   ```http 
+   GET [Organization URI]/api/data/v9.2/accounts?$select=name
+   &$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+   Accept: application/json  
+   OData-MaxVersion: 4.0  
+   OData-Version: 4.0  
+   ```  
+   
+   **Response**  
 
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
-"value":[  
-        {  
-            "@odata.etag":"W/\"513479\"",
-            "name":"Adventure Works (sample)",
-            "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"
-        },
-        {  
-            "@odata.etag":"W/\"514057\"",
-            "name":"Blue Yonder Airlines (sample)",
-            "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77"
-        }
-    ]
-}  
-```  
+   ```http 
+   HTTP/1.1 200 OK  
+   Content-Type: application/json; odata.metadata=minimal  
+   OData-Version: 4.0  
+   
+   {  
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
+   "value":[  
+         {  
+               "@odata.etag":"W/\"513479\"",
+               "name":"Adventure Works (sample)",
+               "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"
+         },
+         {  
+               "@odata.etag":"W/\"514057\"",
+               "name":"Blue Yonder Airlines (sample)",
+               "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77"
+         }
+      ]
+   }  
+   ```  
 
--   **Retrieve child accounts for the specified Account ID**  
+- **Retrieve child accounts for the specified Account ID**  
   
-**Request**  
+   **Request**  
+   
+   ```http
+   GET [Organization URI]/api/data/v9.2/accounts?$select=name
+   &$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
+   Accept: application/json  
+   OData-MaxVersion: 4.0  
+   OData-Version: 4.0  
+   ```  
+   
+   **Response**  
 
-```http 
-GET [Organization URI]/api/data/v9.2/accounts?$select=name
-&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
-
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
-"value":[  
-        {  
-            "@odata.etag":"W/\"514058\"",
-            "name":"Sample Child Account 1",
-            "accountid":"915e89f5-29fc-e511-80d2-00155db07c77"
-        },
-        {  
-            "@odata.etag":"W/\"514061\"",
-            "name":"Sample Child Account 2",
-            "accountid":"03312500-2afc-e511-80d2-00155db07c77"
-        }
-    ]
-}   
-```
+   ```http
+   HTTP/1.1 200 OK  
+   Content-Type: application/json; odata.metadata=minimal  
+   OData-Version: 4.0  
+   
+   {  
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
+   "value":[  
+         {  
+               "@odata.etag":"W/\"514058\"",
+               "name":"Sample Child Account 1",
+               "accountid":"915e89f5-29fc-e511-80d2-00155db07c77"
+         },
+         {  
+               "@odata.etag":"W/\"514061\"",
+               "name":"Sample Child Account 2",
+               "accountid":"03312500-2afc-e511-80d2-00155db07c77"
+         }
+      ]
+   }   
+   ```
 
 ### Filter results based on values of collection-valued navigation properties
 
@@ -431,29 +431,29 @@ The two options for filtering results based on values of collection-valued navig
 
 1. **Construct a query using Lambda operators**
 
-Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
+   Lambda operators allow you to apply filter on values of collection properties for a link-entity. The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team whose name is "CITTEST".
 
-```http
-GET [Organization URI]/api/data/v9.2/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
-&$select=fullname,businessunitid,title,address1_telephone1,systemuserid
-&$orderby=fullname
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```
-More information: [Use Lambda operators](#bkmk_LambdaOperators).
+   ```http
+   GET [Organization URI]/api/data/v9.2/systemusers?$filter=(teammembership_association/any(t:t/name eq 'CITTEST'))
+   &$select=fullname,businessunitid,title,address1_telephone1,systemuserid
+   &$orderby=fullname
+   Accept: application/json  
+   OData-MaxVersion: 4.0  
+   OData-Version: 4.0  
+   ```
+   More information: [Use Lambda operators](#bkmk_LambdaOperators).
 
-2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
+1. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
 
-To get the same results as the example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
+   To get the same results as the example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
 
-Follow the steps in the below example to understand how we can filter results using the iteration method:
+   Follow the steps in the below example to understand how we can filter results using the iteration method:
 
-1. Get a distinct list of <xref:Microsoft.Dynamics.CRM.team?displayProperty=nameWithType>._administratorid_value values.
-      - `GET [OrganizationURI]/api/data/v9.2/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
-      - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
-      - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
-2. Query <xref:Microsoft.Dynamics.CRM.systemuser?displayProperty=nameWithType> using <xref:Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function> to compare the `systemuserid` values with the list collected in Step 1.
+      1. Get a distinct list of <xref:Microsoft.Dynamics.CRM.team?displayProperty=nameWithType>._administratorid_value values.
+            - `GET [OrganizationURI]/api/data/v9.2/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
+            - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
+            - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
+      1. Query <xref:Microsoft.Dynamics.CRM.systemuser?displayProperty=nameWithType> using <xref:Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function> to compare the `systemuserid` values with the list collected in Step 1.
 
 ### Manage single quotes in string filter values
 
@@ -514,9 +514,9 @@ Additional details on OData data aggregation can be found here: [OData extension
   
 ## Use parameter aliases with system query options
 
- You can use parameter aliases for `$filter` and `$orderby` system query options. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn't assigned a value it is assumed to be null.  
+You can use parameter aliases for `$filter` and `$orderby` system query options, but currently not inside the `$expand` option. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn't assigned a value it is assumed to be null.  
   
- Without parameter aliases:
+Without parameter aliases:
 
 ```http  
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
