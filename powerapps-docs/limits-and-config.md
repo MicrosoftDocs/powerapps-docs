@@ -111,6 +111,15 @@ This list identifies all services to which Power Apps communicates and their usa
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 
+## Deprecated endpoints
+
+This identifies endpoints that we no longer support. Instead please use the new endpoint listed below. We recommend updating any bookmarks you have that use the deprecated endpoint to the new endpoint.
+
+| Deprecated endpoint | New endpoint |
+| --- | --- |
+| web.powerapps.com/apps/{yourAppGuid} | apps.powerapps.com/play/{yourAppGuid}
+| web.powerapps.com/apps/{yourAppGuid}/open | apps.powerapps.com/play/{yourAppGuid}
+
 ## Embedding limits for canvas apps
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
