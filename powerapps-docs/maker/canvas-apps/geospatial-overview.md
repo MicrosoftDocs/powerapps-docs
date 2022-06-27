@@ -27,7 +27,9 @@ Use the following prebuilt controls for geospatial applications:
 - [Interactive map](geospatial-component-map.md)
 - [Address input](geospatial-component-input-address.md)
 
-## Prerequisites
+The map control runs limited support by default. Map features not supported in limited support are routing and specifying pins by address instead of latitude and longitude. The address input control is also not included in limited support. To turn these features on, follow the next steps to turn on full support.
+
+## Prerequisites for full support
 
 Before you can use geospatial features in your apps, your Power Platform administrator has a couple of tasks to complete:
 
@@ -42,7 +44,7 @@ Before you can use geospatial features in your apps, your Power Platform adminis
 
 ### Enable geospatial features for the environment
 
-If you don't have administrative access to the Power Platform admin center, ask your admin to enable geospatial features for you.
+If you don't have administrative access to the Power Platform admin center, ask your admin to enable geospatial features for you. You can similarly follow these steps to disable geospatial features.
 
 1. Open the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings**.
@@ -53,7 +55,7 @@ If you don't have administrative access to the Power Platform admin center, ask 
 
     :::image type="content" source="./media/geospatial/ppac-settings.png" alt-text="A screenshot of the Power Platform admin center, with the environment Product Features setting selected.":::
 
-1. Turn on the **Geospatial services** toggle.
+1. Under **Map and address services**, turn on the **Full** toggle. You can use the toggles in this section to similarly turn on and off limited support as well.
 1. Read the terms of service. Select **I agree to the terms of service**, and then select **Enable**.
 
     >[!IMPORTANT]
@@ -79,7 +81,7 @@ Your admin should confirm that the Microsoft Dataverse and Spatial Services conn
 - Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
 - Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
-- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
+- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom on full support:
 
     | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
     | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
@@ -89,7 +91,7 @@ Your admin should confirm that the Microsoft Dataverse and Spatial Services conn
     | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
     | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
     | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
-    
+- Note that on limited support, the only feature sending user data is the first row above, Show map tiles.
 
 ### Next steps
 
