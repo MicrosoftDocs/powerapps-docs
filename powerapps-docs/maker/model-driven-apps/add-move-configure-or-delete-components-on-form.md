@@ -105,7 +105,7 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 1. In the form preview, select another existing component, column, or section. It is possible to switch to a different tab if needed.
 1. On the command bar, select **Paste** or select the chevron, and then select **Paste before**.
 
-   >  [!NOTE]
+   > [!NOTE]
    >
    > - When **Paste** is selected, the component being moved is pasted after the existing component or column.
    > - When **Paste before** is selected, the component being moved is pasted before the existing component or column.
@@ -118,10 +118,10 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 
 1. Select **Get more components** to find and add other Power Apps components as well as custom controls that aren't available by default in the **Component** pane.
    :::image type="content" source="media/get-more-components1.png" alt-text="Get more components link":::
-1. Select the component.
-1. Select **Add**.
-
+1. Select the tab you want, either**Built by Microsoft** or **Built by others**, and then select the component.
    :::image type="content" source="media/get-more-components2.png" alt-text="Get more components link":::
+
+1. Select **Add**.
 
 ## Delete components on a form
 
