@@ -350,77 +350,77 @@ You can filter your entity set records based on single-valued navigation propert
   
 For example:  
   
--   **Retrieve all the matching accounts for a specified Contact ID**  
+- **Retrieve all the matching accounts for a specified Contact ID**  
   
-**Request** 
- 
-```http 
-GET [Organization URI]/api/data/v9.2/accounts?$select=name
-&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
+   **Request** 
+   
+   ```http 
+   GET [Organization URI]/api/data/v9.2/accounts?$select=name
+   &$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77 HTTP/1.1  
+   Accept: application/json  
+   OData-MaxVersion: 4.0  
+   OData-Version: 4.0  
+   ```  
+   
+   **Response**  
 
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
-"value":[  
-        {  
-            "@odata.etag":"W/\"513479\"",
-            "name":"Adventure Works (sample)",
-            "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"
-        },
-        {  
-            "@odata.etag":"W/\"514057\"",
-            "name":"Blue Yonder Airlines (sample)",
-            "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77"
-        }
-    ]
-}  
-```  
+   ```http 
+   HTTP/1.1 200 OK  
+   Content-Type: application/json; odata.metadata=minimal  
+   OData-Version: 4.0  
+   
+   {  
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
+   "value":[  
+         {  
+               "@odata.etag":"W/\"513479\"",
+               "name":"Adventure Works (sample)",
+               "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"
+         },
+         {  
+               "@odata.etag":"W/\"514057\"",
+               "name":"Blue Yonder Airlines (sample)",
+               "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77"
+         }
+      ]
+   }  
+   ```  
 
--   **Retrieve child accounts for the specified Account ID**  
+- **Retrieve child accounts for the specified Account ID**  
   
 **Request**  
 
-```http 
-GET [Organization URI]/api/data/v9.2/accounts?$select=name
-&$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response**  
+   ```http 
+   GET [Organization URI]/api/data/v9.2/accounts?$select=name
+   &$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
+   Accept: application/json  
+   OData-MaxVersion: 4.0  
+   OData-Version: 4.0  
+   ```  
+   
+   **Response**  
 
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
-"value":[  
-        {  
-            "@odata.etag":"W/\"514058\"",
-            "name":"Sample Child Account 1",
-            "accountid":"915e89f5-29fc-e511-80d2-00155db07c77"
-        },
-        {  
-            "@odata.etag":"W/\"514061\"",
-            "name":"Sample Child Account 2",
-            "accountid":"03312500-2afc-e511-80d2-00155db07c77"
-        }
-    ]
-}   
-```
+   ```http 
+   HTTP/1.1 200 OK  
+   Content-Type: application/json; odata.metadata=minimal  
+   OData-Version: 4.0  
+   
+   {  
+   "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name)",
+   "value":[  
+         {  
+               "@odata.etag":"W/\"514058\"",
+               "name":"Sample Child Account 1",
+               "accountid":"915e89f5-29fc-e511-80d2-00155db07c77"
+         },
+         {  
+               "@odata.etag":"W/\"514061\"",
+               "name":"Sample Child Account 2",
+               "accountid":"03312500-2afc-e511-80d2-00155db07c77"
+         }
+      ]
+   }   
+   ```
 
 ### Filter results based on values of collection-valued navigation properties
 
