@@ -545,7 +545,7 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 >
 > If you want to retrieve the total number of rows for a table beyond 5000, use the <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount  Function>.
   
- The response `@odata.count` property will contain the number of rows, up to 5000, that match the filter criteria irrespective of an `odata.maxpagesize` preference limitation.  
+ The response `@odata.count` annotation will contain the number of rows, up to 5000, that match the filter criteria irrespective of an `odata.maxpagesize` preference limitation.  
 
 If the count value is 5000 and you want to know whether the count is exactly 5000 or greater than 5000, you can add the `Prefer` `odata.include-annotations="Microsoft.Dynamics.CRM.*"` header. This will add the following annotations to the result: `@Microsoft.Dynamics.CRM.totalrecordcount` and `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`.
 
