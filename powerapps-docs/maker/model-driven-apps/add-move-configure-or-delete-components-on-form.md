@@ -114,6 +114,15 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 1. Repeat steps 2-5 above if to move more components.
 1. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes visible to users.
 
+## Get more components
+
+1. Select **Get more components** to find and add other Power Apps components as well as custom controls that aren't available by default in the **Component** pane.
+   :::image type="content" source="media/get-more-components1.png" alt-text="Get more components link":::
+1. Select the component.
+1. Select **Add**.
+
+   :::image type="content" source="media/get-more-components2.png" alt-text="Get more components link":::
+
 ## Delete components on a form
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
