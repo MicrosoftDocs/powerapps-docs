@@ -56,6 +56,8 @@ If you don't have administrative access to the Power Platform admin center, ask 
     :::image type="content" source="./media/geospatial/ppac-settings.png" alt-text="A screenshot of the Power Platform admin center, with the environment Product Features setting selected.":::
 
 1. Under **Map and address services**, turn on the **Full** toggle. You can use the toggles in this section to similarly turn on and off limited support as well.
+
+    :::image type="content" source="./media/geospatial/geo-admin-flag.png" alt-text="A screenshot of the Power Platform admin center, with the default Limited and Full support toggle settings in view. The Limited toggle is on and the Full toggle is off.":::
 1. Read the terms of service. Select **I agree to the terms of service**, and then select **Enable**.
 
     >[!IMPORTANT]
