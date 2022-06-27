@@ -1506,6 +1506,8 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
+          - name: Use controls for data visualizations
+            href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
@@ -1515,8 +1517,6 @@
           items:
           - name: Add form navigation for related tables
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
-          - name: Use controls for data visualizations
-            href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: "How-to guides: Forms"
           items:
           - name: How to use the main form and its components
