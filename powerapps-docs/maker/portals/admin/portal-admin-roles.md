@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/04/2022
+ms.date: 06/27/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -40,6 +40,25 @@ The following table lists different administrative tasks for portals, and the ro
 | [Update the Dynamics 365 instance of a portal](update-dynamics365-instance.md) | User account with [Read-Write Access Mode](#read-write-access-mode) and any one of the following roles: <ul> <li> [System administrator](#system-administrator)</li><li>[Portal app owner](#portal-app-owner)</li> <li>[Global administrator](#global-administrator) </li> </ul> |
 | [Update portal packages](update-portal-solution.md) | User account with [Read-Write Access Mode](#read-write-access-mode) and [System administrator](#system-administrator) |
 | [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+
+| tmp | tmp2 |
+| - | - |
+| Restart a portal | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Update Dynamics 365 URL](update-dynamics365-instance.md) ||
+| [Install Project Service Automation extension](../customer-engagement-apps/integrate-project-service-automation.md) ||
+| [Install Field Service extension](../customer-engagement-apps/integrate-field-service.md) ||
+| [Get latest metadata translations](import-metadata-translation.md) ||
+| [Disable custom errors](view-portal-error-log.md#disable-custom-error) ||
+| [Enable diagnostic logging](view-portal-error-log.md#enable-diagnostic-logging) ||
+| [Change base URL](change-base-url.md) ||
+| [Update to Power Apps portals domain](update-portal-domain.md) ||
+| [Enable Maintenance Mode](enable-maintenance-mode.md) ||
+| [Set up SSL](manage-custom-certificates.md) ||
+| [Manage SSL certificates](manage-ssl-certificates.md) ||
+| [Set up SharePoint integration](../manage-sharepoint-documents.md) ||
+| [Set up Power BI integration](set-up-power-bi-integration.md) ||
+| [Run Portal Checker](portal-checker.md) ||
+| [Set up IP address restriction](ip-address-restrict.md) ||
 
 ## Manage membership of the required roles
 
