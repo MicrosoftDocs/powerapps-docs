@@ -261,7 +261,14 @@ See [Detect duplicate data using Web API](manage-duplicate-detection-create-upda
 
 ## Create a new record from another record
 
-Use the <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> to create a new record in the context of an existing record where a mapping exists for the relationship between the tables. For information about creating these mappings, see [Map table columns](../../../maker/data-platform/map-entity-fields.md).
+Use the <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> to create a new record in the context of an existing record where a mapping exists for the relationship between the tables. For information about creating these mappings, see:
+
+- [Map table columns](../../../maker/data-platform/map-entity-fields.md)
+- [Customize table and column mappings](../customize-entity-attribute-mappings.md)
+
+> [!NOTE]
+> To determine whether two entities can be mapped, use this query:<br />
+`GET [Organization URI]/api/data/v9.1/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
 This is a two step process. The `InitializeFrom` function doesn't create the record, but it returns data you can use to create a new record with specified property values mapped from the original record. You will combine the response data returned in the `InitializeFrom` function with any changes you want to make and then `POST` the data to create the new record.
 
@@ -298,9 +305,7 @@ Accept: application/json
 
 The response received from `InitializeFrom` function consists of values of mapped columns between the source table and target table and the GUID of the parent record. The column mapping between tables that have an relationship is different for different tables and is customizable, so the response from `InitializeFrom` function request may vary for different organizations.
 
-> [!NOTE]
-> To determine whether two entities can be mapped, use this query:<br />
-`GET [Organization URI]/api/data/v9.1/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
+
 
 Other property values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the example below.
 
