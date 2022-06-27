@@ -388,9 +388,9 @@ For example:
 
 - **Retrieve child accounts for the specified Account ID**  
   
-**Request**  
-
-   ```http 
+   **Request**  
+   
+   ```http
    GET [Organization URI]/api/data/v9.2/accounts?$select=name
    &$filter=parentaccountid/accountid eq 3adbf27c-8efb-e511-80d2-00155db07c77  
    Accept: application/json  
@@ -400,7 +400,7 @@ For example:
    
    **Response**  
 
-   ```http 
+   ```http
    HTTP/1.1 200 OK  
    Content-Type: application/json; odata.metadata=minimal  
    OData-Version: 4.0  
