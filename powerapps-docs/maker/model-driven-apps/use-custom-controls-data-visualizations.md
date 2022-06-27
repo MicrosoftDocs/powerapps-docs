@@ -25,7 +25,7 @@ search.app:
 ---
 # Use controls for model-driven app data visualizations
 
-In this article, you learn how to configure a control for a column.
+In this article, you learn how to configure a control for a column using the classic for designer.
 
 To add a control using the modern Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
 
