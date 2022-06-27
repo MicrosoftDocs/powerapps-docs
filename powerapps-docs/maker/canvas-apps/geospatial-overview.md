@@ -31,9 +31,9 @@ The map control runs limited support by default. Map features not supported in l
 
 ## Prerequisites for full support
 
-Before you can use geospatial features in your apps, your Power Platform administrator has a couple of tasks to complete:
+Before you can use geospatial features with full support in your apps, your Power Platform administrator has a couple of tasks to complete:
 
-1. Enable geospatial features in the Power Platform admin center for the environment you intend to use. The geospatial features require their own terms of service, which your admin must review and agree to.
+1. Enable full geospatial feature support in the Power Platform admin center for the environment you intend to use. The full geospatial feature support requires its own terms of service, which your admin must review and agree to.
 2. Make sure the geospatial controls aren't blocked by the environment's data loss prevention policies.
 
 >[!IMPORTANT]
@@ -42,9 +42,9 @@ Before you can use geospatial features in your apps, your Power Platform adminis
 >1. With the geospatial control selected, open the **Data** tab, and then select **Add data**.
 >2. Search for and select **Organizations**.
 
-### Enable geospatial features for the environment
+### Enable full geospatial feature support for the environment
 
-If you don't have administrative access to the Power Platform admin center, ask your admin to enable geospatial features for you. You can similarly follow these steps to disable geospatial features.
+If you don't have administrative access to the Power Platform admin center, ask your admin to enable full geospatial feature support for you. You can similarly follow these steps to disable full or limited geospatial feature support.
 
 1. Open the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings**.
