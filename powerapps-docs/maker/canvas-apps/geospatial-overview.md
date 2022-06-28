@@ -27,7 +27,7 @@ Use the following prebuilt controls for geospatial applications:
 - [Interactive map](geospatial-component-map.md)
 - [Address input](geospatial-component-input-address.md)
 
-The map control runs limited support by default. Map features not supported in limited support are routing and specifying pins by address instead of latitude and longitude. The address input control is also not included in limited support. To turn these features on, follow the next steps to turn on full support.
+The map control runs limited support by default, with some features available by default. Refer to the table at the bottom of the page for more details on data usage in limited support.
 
 ## Prerequisites for full support
 
