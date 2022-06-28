@@ -90,7 +90,7 @@ Portal allows you to bring your Power BI reports/dashboard as a [first party com
 
 - Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
 
-- Test your portal by zooming in to 200 percent. Make sure the text is readable, and pages and controls function as expected. For more information, go to [WCAG 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html).
+- Test your portal by zooming in to 400 percent. Make sure the text is readable, and pages and controls function as expected. For more information, go to [WCAG 1.4.10]https://www.w3.org/WAI/WCAG21/Understanding/reflow).
 
 - Color contrast matters. Use a color contrast tool to help you see the contrast ratio. For more information, go to [WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
