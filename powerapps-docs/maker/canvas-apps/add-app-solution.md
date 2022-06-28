@@ -131,6 +131,6 @@ For information about known limitations, see [Solutions overview](../data-platfo
 
 ### See also
 
-[Add canvas apps to solution by default](add-app-solution-default.md)
+[Add canvas apps to solution by default (preview)](add-app-solution-default.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

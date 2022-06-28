@@ -1,5 +1,5 @@
 ---
-title: Add canvas apps to solution by default
+title: Add canvas apps to solution by default (preview)
 description: In Power Apps, learn about how to configure environment for adding all new canvas apps to default solution through various methods.
 author: tapanm-msft
 
@@ -17,13 +17,19 @@ contributors:
   - tapanm-msft
 ---
 
-# Add canvas apps to solution by default
+# Add canvas apps to solution by default (preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 You can [create canvas apps from within a solution](add-app-solution.md) by initiating a canvas app creation from the solutions section in Power Apps. However, creating canvas apps inside solutions is optional, and requires manual steps. Hence, not all new canvas apps are created inside solutions. With this feature, canvas apps can now be included and created from within a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
 
 Canvas apps included in solution by default benefit from reusing Microsoft Dataverse components such as connection references and environment variables. This feature reduces overhead and redundancy to manage individual canvas apps that aren’t part of a solution.
 
 For example, an environment with hundreds of canvas apps that live outside of a solution requires manual efforts to move them into solution to enable ALM. With this release, such manual intervention is eliminated.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
