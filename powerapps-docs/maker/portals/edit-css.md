@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/24/2022
+ms.date: 06/28/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -47,7 +47,13 @@ Cascading Style Sheets (CSS) allows you to control the formatting of your websit
 
 ### To delete a custom CSS file
 
-1. The CSS files are stored as [web files](configure/web-files.md). To remove the CSS file, go to the [Portal Management app](./configure/configure-portal.md), in **Web Files**, select the CSS file and choose **Delete**. 
+1. The CSS files are stored as [web files](configure/web-files.md). To remove the CSS file, go to the [Portal Management app](./configure/configure-portal.md) and select **Web Files**. 
+
+1. Locate the CSS file record. You may need to filter on the **Name** and **Website** values to locate the correct record.
+
+1. Once the web file record is selected, select **Delete**.
+
+1. In the portal Studio, select **Sync configuration** to clear the styling changes from the custom CSS.
 
 ## Understanding Bootstrap framework
 
