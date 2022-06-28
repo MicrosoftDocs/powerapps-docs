@@ -84,7 +84,7 @@ The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides
 
 ### Power BI
 
-Portal allows you to bring your Power BI reports/dashboard as a [first party component](../add-powerbi.md); however, as a Power BI report and dashboard author, you should make sure these are accessible.  Refer to the [Power BI accessibility guide](power-bi/create-reports/desktop-accessibility-creating-reports) for more information.
+Portal allows you to bring your Power BI reports/dashboard as a [first party component](../add-powerbi.md); however, as a Power BI report and dashboard author, you should make sure these are accessible.  Refer to the [Power BI accessibility guide](/power-bi/create-reports/desktop-accessibility-creating-reports) for more information.
 
 ### Quick tips for accessible content
 
