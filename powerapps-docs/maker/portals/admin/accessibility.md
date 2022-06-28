@@ -82,6 +82,10 @@ When custom HTML and [Liquid](../liquid/liquid-overview.md) content are added to
 
 The [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides a list of the WCAG requirements, with links to the full descriptions.
 
+### Power BI
+
+Portal allows you to bring your Power BI reports/dashboard as a [first party component](../add-powerbi.md); however, as a Power BI report and dashboard author, you should make sure these are accessible.  Refer to the [Power BI accessibility guide](/power-bi/create-reports/desktop-accessibility-creating-reports) for more information.
+
 ### Quick tips for accessible content
 
 - Make sure a non-sighted or visually impaired person can do everything a sighted user can do.
