@@ -24,11 +24,9 @@ search.app:
 ---
 # List of controls available for model-driven apps
 
-Controls allow us to visualize data within our table columns in addition to enabling us to interact with them.
+Controls allow app users to visualize data within table columns in addition to enabling interaction with them.
 
-In some cases additional controls exist that provide a more touch-friendly experience on model-driven apps. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
-
-Some, but not all of the controls can only be configured using the classic interface.  These will be migrated over time to enable introduction to a form using the drag and drop experience.
+Controls exist to provide a more touch-friendly experience with model-driven apps. These include toggle, star rating, calendar, number input, and other controls.  
 
 ## Using controls in the form designer
 
@@ -39,19 +37,19 @@ To use these controls in the form designer:
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
    
-2. Select the **section** you would like to add the control to.  
+1. Select the **section** you would like to add the control to.  
  
-4. Select **+ Component** to display the available controls, and then select the control required.  
+1. Select **+ Component** to display the available controls, and then select the control required.  
   
     > [!NOTE]
     >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
     >  Some controls are only available in the classic forms editor interface.  To access these you must **switch to classic** from the menu at the top.
   
-5. Select the devices (web, tablet, and phone) you want the control to appear on.  
+1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
-6. Configure the values for each property.  
+1. Configure the values for each property.  
   
-7. Select **Done** when you’re done configuring the control.  
+1. Select **Done** when you’re done configuring the control.  
   
 Following are descriptions for each control you can use on forms.  
 
