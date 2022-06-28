@@ -2,6 +2,8 @@
 title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
 ms.date: 06/27/2022
+ms.service: powerapps
+ms.topic: "article"
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -125,7 +127,7 @@ OData-Version: 4.0
 
 ## Create related table rows in one operation
 
- You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*.
+ You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. This approach has two advantages. It is more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it is atomic where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created. 
 
  As with a basic create, the response `OData-EntityId` header contains the Uri of the created entity. The URIs for the related entities created aren't returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
@@ -355,4 +357,3 @@ More information: [Access documents faster using storage partitions](azure-stora
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
-
