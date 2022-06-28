@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/27/2022
+ms.date: 06/28/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -128,5 +128,3 @@ To assign a user the Power Platform administrator role, go to [Assign a service 
 [Portal Management app](../configure/configure-portal.md)  
 [Portal site settings](../configure/configure-site-settings.md)  
 
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
