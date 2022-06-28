@@ -7099,6 +7099,11 @@
       "source_path": "powerapps-docs/maker/canvas-apps/functions/signals.md",
       "redirect_url": "/power-platform/power-fx/reference/signals",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/change-dynamics-instance.md",
+      "redirect_url": "powerapps-docs/maker/portals/admin/update-dynamics365-instance.md",
+      "redirect_document_id": "false"
     }
   ]
 }
