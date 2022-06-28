@@ -1172,8 +1172,6 @@
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
         - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
-    - name: Cognitive Services
-      href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
