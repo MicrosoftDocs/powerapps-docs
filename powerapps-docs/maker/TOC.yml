@@ -1280,7 +1280,7 @@
           href: ./model-driven-apps/app-navigation.md
         - name: Create and remove pages
           href: ./model-driven-apps/create-remove-pages.md
-        - name: Manage app properties
+        - name: Manage app settings
           href: ./model-driven-apps/app-properties.md         
         - name: Use custom pages within model-driven apps
           items:
@@ -2073,6 +2073,8 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Redirect a user to a default page on sign-in
+                  href: ./portals/liquid/redirect-a-user-homepage.md                  
                 - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template
@@ -2207,6 +2209,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2204.x
+                href: ./portals/versions/package-version-9.3.2204.md             
               - name: Package 9.3.2201.x
                 href: ./portals/versions/package-version-9.3.2201.md           
               - name: Package 9.3.2109.x
@@ -2863,14 +2867,14 @@
     - name: Advanced monitoring
       href: monitor-advanced.md
   - name: Common issues and resolutions
-    href: ./canvas-apps/common-issues-and-resolutions.md
+    href: /troubleshoot/power-platform/power-apps/common-issues-and-resolutions
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
   - name: Change Power Apps Studio version
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
-    href: ../troubleshooting-startup-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
   - name: Troubleshoot Power Query
-    href: ./data-platform/troubleshoot-power-query-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
     href: https://powerapps.microsoft.com/support/

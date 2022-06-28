@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/common-issues-and-resolutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/cli/reference/admin-command.md",
       "redirect_url": "/power-platform/developer/cli/reference/admin-command",
       "redirect_document_id": false
@@ -169,13 +184,13 @@
       "source_path": "powerapps-docs/developer/data-platform/configure-entities-attributes-auditing.md",
       "redirect_url": "../data-platform/auditing/auditing",
       "redirect_document_id": false
-     },
-     {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/auditing-overview.md",
       "redirect_url": "../data-platform/auditing/overview",
       "redirect_document_id": false
-     }, 
-     {
+    },
+    {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-sections.md",
       "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formContext-ui-tab-sections",
       "redirect_document_id": "false"
@@ -6643,6 +6658,11 @@
     {
       "source_path": "powerapps-docs/maker/portals/supported-web-browsers.md",
       "redirect_url": "/power-apps/limits-and-config",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/change-dynamics-instance.md",
+      "redirect_url": "powerapps-docs/maker/portals/admin/update-dynamics365-instance.md",
       "redirect_document_id": "false"
     }
   ]
