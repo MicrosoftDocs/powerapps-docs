@@ -1442,8 +1442,6 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
-        - name: Use custom controls for data visualizations
-          href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -1508,6 +1506,8 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
+          - name: Use controls for data visualizations
+            href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
