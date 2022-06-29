@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/cognitive-services-api.md",
+      "redirect_url": "/connectors/cognitiveservicestextanalytics",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/common-issues-and-resolutions.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/common-issues-and-resolutions",
       "redirect_document_id": false

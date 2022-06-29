@@ -1172,8 +1172,6 @@
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
         - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
-    - name: Cognitive Services
-      href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
@@ -1442,8 +1440,6 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
-        - name: Use custom controls for data visualizations
-          href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -1508,6 +1504,8 @@
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
+          - name: Use controls for data visualizations
+            href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
