@@ -108,7 +108,8 @@ directly in Visual Studio Code.
 ## Step 5. Upload the changes
 
 > [!NOTE]
-> If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
+> - If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
+> - Ensure that the target environment's [maximum attachment size](../configure-notes.md#attributes) is set to the same or greater size as your source environment.
 
 After making the required changes, upload them using the following command:
 
