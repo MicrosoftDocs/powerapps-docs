@@ -1,7 +1,7 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/28/2022
+ms.date: 06/29/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
