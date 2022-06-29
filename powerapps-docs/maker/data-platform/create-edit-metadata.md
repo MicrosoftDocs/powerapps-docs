@@ -2,7 +2,7 @@
 title: "Tables and metadata in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about tables and metadata in Microsoft Dataverse"
 ms.custom: ""
-ms.date: 11/16/2020
+ms.date: 06/29/2022
 ms.reviewer: ""
 
 ms.topic: "overview"
@@ -25,7 +25,7 @@ contributors:
 
 Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you're evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 
-*Metadata* means data about data. Dataverse provides a flexible platform for you because it's relatively easy to edit the definitions of the data that the environment will use. In Dataverse, the metadata is a collection of tables. Tables describe the kinds of data, which is stored in the database.  Each table corresponds to a database table and each column (also known as attribute) within a table represents a column in that table. Table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you're editing this metadata. 
+*Metadata* means data about data. Dataverse provides a flexible platform for you because it's relatively easy to edit the definitions of the data that the environment will use. In Dataverse, the metadata is a collection of tables. Tables describe the kinds of data stored in the database. Table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you're editing this metadata. 
   
 Different clients people use to interact with the data in your environment depend on the table metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within tables but the tables themselves aren't available for customization.
 
