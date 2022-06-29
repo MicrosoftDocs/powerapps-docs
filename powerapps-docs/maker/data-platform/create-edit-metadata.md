@@ -17,6 +17,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+    - ProfessorKendrick
 ---
 
 # Tables and metadata in Microsoft Dataverse
@@ -45,13 +47,6 @@ For most organizations it's to your advantage to use the standard tables and att
 If you install a solution, you can expect that the solution developer has leveraged the standard tables and attributes. Creating a new custom table that replaces a system table or attribute will mean that any solutions available may not work for your organization.  
   
 For these reasons, we recommend that you look for and use the provided standard tables, columns, and table relationships when they make sense for your organization. If they don’t make sense and can’t be edited to match your need, you should evaluate if creating a new table, column, or table relationships is required. 
-
-<!--  Can we say this yet? 
-    
-> [!NOTE]
-> The [Common Data Model](/common-data-model/) will provide a capability to add additional standard tables. 
-
--->
 
 Remember that you can change the display name of a table so that it matches the nomenclature your organization uses. For example, it's common for people to change the display name of the Account table to *Company* or the name of the Contact table to *Individual*. This can be done to tables or attributes without changing the behavior of the table. For more information about renaming tables, see [Change the name of a table](edit-entities.md#change-the-name-of-a-table).
   
