@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/formula-reference.md",
+      "redirect_url": "/power-platform/power-fx/formula-reference",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/cognitive-services-api.md",
       "redirect_url": "/connectors/cognitiveservicestextanalytics",
       "redirect_document_id": false
