@@ -2,7 +2,7 @@
 title: "Azure Synapse Link Advance Configuration | MicrosoftDocs"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 07/07/2021
+ms.date: 06/29/2022
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -25,8 +25,6 @@ contributors:
 ---
 
 # Advanced Configuration Options in Azure Synapse Link
-
-
 
 Azure Synapse Link offers multiple ways to write and read your data to fit various analytical scenarios.
 
