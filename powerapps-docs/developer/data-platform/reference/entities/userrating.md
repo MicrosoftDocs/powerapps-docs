@@ -1,6 +1,6 @@
 ---
-title: "DataProcessingConfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the DataProcessingConfiguration table/entity."
+title: "userrating table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the userrating table/entity."
 ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
@@ -15,43 +15,43 @@ search.app:
   - D365CE
 ---
 
-# DataProcessingConfiguration table/entity reference
+# userrating table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
-**Added by**: Data lake workspaces Solution
+**Added by**: User Rating Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/dataprocessingconfigurations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/dataprocessingconfigurations(*dataprocessingconfigurationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/userratings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/userratings(*userratingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/dataprocessingconfigurations(*dataprocessingconfigurationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/dataprocessingconfigurations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/dataprocessingconfigurations(*dataprocessingconfigurationid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/dataprocessingconfigurations(*dataprocessingconfigurationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/userratings(*userratingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/userratings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/userratings(*userratingid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/userratings(*userratingid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|DataProcessingConfigurations|
-|DisplayCollectionName|Data Processing configurations|
-|DisplayName|Data Processing configuration|
-|EntitySetName|dataprocessingconfigurations|
+|CollectionSchemaName|userratings|
+|DisplayCollectionName|User Ratings|
+|DisplayName|User Rating|
+|EntitySetName|userratings|
 |IsBPFEntity|False|
-|LogicalCollectionName|dataprocessingconfigurations|
-|LogicalName|dataprocessingconfiguration|
+|LogicalCollectionName|userratings|
+|LogicalName|userrating|
 |OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|dataprocessingconfigurationid|
+|PrimaryIdAttribute|userratingid|
 |PrimaryNameAttribute|name|
-|SchemaName|DataProcessingConfiguration|
+|SchemaName|userrating|
 
 <a name="writable-attributes"></a>
 
@@ -59,53 +59,84 @@ search.app:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [DataProcessingConfigurationId](#BKMK_DataProcessingConfigurationId)
-- [ExternalDataProcessingConfigurationId](#BKMK_ExternalDataProcessingConfigurationId)
+- [AppModuleId](#BKMK_AppModuleId)
+- [Browser](#BKMK_Browser)
+- [Comment](#BKMK_Comment)
+- [Device](#BKMK_Device)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [IsCustomizable](#BKMK_IsCustomizable)
-- [ModuleConfigurationJson](#BKMK_ModuleConfigurationJson)
-- [ModuleName](#BKMK_ModuleName)
-- [ModuleType](#BKMK_ModuleType)
-- [ModuleVersion](#BKMK_ModuleVersion)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [OwningAppId](#BKMK_OwningAppId)
+- [Score](#BKMK_Score)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [userratingId](#BKMK_userratingId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
-### <a name="BKMK_DataProcessingConfigurationId"></a> DataProcessingConfigurationId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Data Processing configuration|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|dataprocessingconfigurationid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_ExternalDataProcessingConfigurationId"></a> ExternalDataProcessingConfigurationId
+### <a name="BKMK_AppModuleId"></a> AppModuleId
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|External Data Processing Configuration Id|
+|DisplayName|App Module Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|externaldataprocessingconfigurationId|
+|LogicalName|appmoduleid|
 |RequiredLevel|None|
-|Type|Uniqueidentifier|
+|Targets|appmodule|
+|Type|Lookup|
+
+
+### <a name="BKMK_Browser"></a> Browser
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Browser|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|browser|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Comment"></a> Comment
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Comment|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|comment|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_Device"></a> Device
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Device|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|device|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
-
-**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -122,95 +153,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_IsCustomizable"></a> IsCustomizable
-
-**Added by**: Basic Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|iscustomizable|
-|RequiredLevel|SystemRequired|
-|Type|ManagedProperty|
-
-
-### <a name="BKMK_ModuleConfigurationJson"></a> ModuleConfigurationJson
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Module Configuration Json|
-|Format|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|moduleconfigurationjson|
-|MaxLength|1073741823|
-|RequiredLevel|SystemRequired|
-|Type|Memo|
-
-
-### <a name="BKMK_ModuleName"></a> ModuleName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Module name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|modulename|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_ModuleType"></a> ModuleType
-
-|Property|Value|
-|--------|-----|
-|Description|Indicates the type of module.|
-|DisplayName|Module type|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|moduletype|
-|RequiredLevel|None|
-|Type|Picklist|
-
-#### ModuleType Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Static||
-|1|Dynamic||
-
-
-
-### <a name="BKMK_ModuleVersion"></a> ModuleVersion
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Module Version|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|moduleversion|
-|MaxLength|100|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-
-
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|Required name field|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -218,7 +165,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|name|
 |MaxLength|100|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -238,24 +185,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
-### <a name="BKMK_OwningAppId"></a> OwningAppId
+### <a name="BKMK_Score"></a> Score
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Application that owns the module configuration|
+|DisplayName|Score|
+|Format|None|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningappid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
+|LogicalName|score|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|ApplicationRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the Data Processing configuration|
+|Description|Status of the User Rating|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -277,7 +227,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the Data Processing configuration|
+|Description|Reason for the status of the User Rating|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -310,6 +260,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_userratingId"></a> userratingId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for entity instances|
+|DisplayName|User Rating|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|userratingid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -331,8 +295,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [ComponentIdUnique](#BKMK_ComponentIdUnique)
-- [ComponentState](#BKMK_ComponentState)
+- [AppModuleIdName](#BKMK_AppModuleIdName)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -340,7 +303,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -350,50 +312,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
-- [OverwriteTime](#BKMK_OverwriteTime)
-- [SolutionId](#BKMK_SolutionId)
-- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
 
-### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
-
-**Added by**: Basic Solution Solution
+### <a name="BKMK_AppModuleIdName"></a> AppModuleIdName
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_ComponentState"></a> ComponentState
-
-**Added by**: Basic Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|componentstate|
-|RequiredLevel|SystemRequired|
-|Type|Picklist|
-
-#### ComponentState Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
+|LogicalName|appmoduleidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -513,31 +448,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
-
-### <a name="BKMK_IsManaged"></a> IsManaged
-
-**Added by**: Basic Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|ismanaged|
-|RequiredLevel|SystemRequired|
-|Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
@@ -693,53 +603,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_OverwriteTime"></a> OverwriteTime
-
-**Added by**: Basic Solution Solution
-
-|Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|overwritetime|
-|RequiredLevel|SystemRequired|
-|Type|DateTime|
-
-
-### <a name="BKMK_SolutionId"></a> SolutionId
-
-**Added by**: Basic Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|solutionid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
-
-**Added by**: Basic Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
-|IsValidForForm|False|
-|IsValidForRead|False|
-|LogicalName|supportingsolutionid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 **Added by**: Active Solution Solution
@@ -762,21 +625,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [dataprocessingconfiguration_SyncErrors](#BKMK_dataprocessingconfiguration_SyncErrors)
-- [dataprocessingconfiguration_DuplicateMatchingRecord](#BKMK_dataprocessingconfiguration_DuplicateMatchingRecord)
-- [dataprocessingconfiguration_DuplicateBaseRecord](#BKMK_dataprocessingconfiguration_DuplicateBaseRecord)
-- [dataprocessingconfiguration_AsyncOperations](#BKMK_dataprocessingconfiguration_AsyncOperations)
-- [dataprocessingconfiguration_MailboxTrackingFolders](#BKMK_dataprocessingconfiguration_MailboxTrackingFolders)
-- [dataprocessingconfiguration_ProcessSession](#BKMK_dataprocessingconfiguration_ProcessSession)
-- [dataprocessingconfiguration_BulkDeleteFailures](#BKMK_dataprocessingconfiguration_BulkDeleteFailures)
-- [dataprocessingconfiguration_PrincipalObjectAttributeAccesses](#BKMK_dataprocessingconfiguration_PrincipalObjectAttributeAccesses)
+- [userrating_SyncErrors](#BKMK_userrating_SyncErrors)
+- [userrating_DuplicateMatchingRecord](#BKMK_userrating_DuplicateMatchingRecord)
+- [userrating_DuplicateBaseRecord](#BKMK_userrating_DuplicateBaseRecord)
+- [userrating_AsyncOperations](#BKMK_userrating_AsyncOperations)
+- [userrating_MailboxTrackingFolders](#BKMK_userrating_MailboxTrackingFolders)
+- [userrating_ProcessSession](#BKMK_userrating_ProcessSession)
+- [userrating_BulkDeleteFailures](#BKMK_userrating_BulkDeleteFailures)
+- [userrating_PrincipalObjectAttributeAccesses](#BKMK_userrating_PrincipalObjectAttributeAccesses)
 
 
-### <a name="BKMK_dataprocessingconfiguration_SyncErrors"></a> dataprocessingconfiguration_SyncErrors
+### <a name="BKMK_userrating_SyncErrors"></a> userrating_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_SyncErrors](syncerror.md#BKMK_dataprocessingconfiguration_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Same as the [userrating_SyncErrors](syncerror.md#BKMK_userrating_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -784,16 +647,16 @@ Same as the [dataprocessingconfiguration_SyncErrors](syncerror.md#BKMK_dataproce
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_SyncErrors|
+|ReferencedEntityNavigationPropertyName|userrating_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_DuplicateMatchingRecord"></a> dataprocessingconfiguration_DuplicateMatchingRecord
+### <a name="BKMK_userrating_DuplicateMatchingRecord"></a> userrating_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_dataprocessingconfiguration_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+Same as the [userrating_DuplicateMatchingRecord](duplicaterecord.md#BKMK_userrating_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -801,16 +664,16 @@ Same as the [dataprocessingconfiguration_DuplicateMatchingRecord](duplicaterecor
 |ReferencingAttribute|duplicaterecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_DuplicateMatchingRecord|
+|ReferencedEntityNavigationPropertyName|userrating_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_DuplicateBaseRecord"></a> dataprocessingconfiguration_DuplicateBaseRecord
+### <a name="BKMK_userrating_DuplicateBaseRecord"></a> userrating_DuplicateBaseRecord
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_dataprocessingconfiguration_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+Same as the [userrating_DuplicateBaseRecord](duplicaterecord.md#BKMK_userrating_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -818,16 +681,16 @@ Same as the [dataprocessingconfiguration_DuplicateBaseRecord](duplicaterecord.md
 |ReferencingAttribute|baserecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_DuplicateBaseRecord|
+|ReferencedEntityNavigationPropertyName|userrating_DuplicateBaseRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_AsyncOperations"></a> dataprocessingconfiguration_AsyncOperations
+### <a name="BKMK_userrating_AsyncOperations"></a> userrating_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_AsyncOperations](asyncoperation.md#BKMK_dataprocessingconfiguration_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Same as the [userrating_AsyncOperations](asyncoperation.md#BKMK_userrating_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -835,16 +698,16 @@ Same as the [dataprocessingconfiguration_AsyncOperations](asyncoperation.md#BKMK
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|userrating_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_MailboxTrackingFolders"></a> dataprocessingconfiguration_MailboxTrackingFolders
+### <a name="BKMK_userrating_MailboxTrackingFolders"></a> userrating_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_dataprocessingconfiguration_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
+Same as the [userrating_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_userrating_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -852,16 +715,16 @@ Same as the [dataprocessingconfiguration_MailboxTrackingFolders](mailboxtracking
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|userrating_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_ProcessSession"></a> dataprocessingconfiguration_ProcessSession
+### <a name="BKMK_userrating_ProcessSession"></a> userrating_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_ProcessSession](processsession.md#BKMK_dataprocessingconfiguration_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
+Same as the [userrating_ProcessSession](processsession.md#BKMK_userrating_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -869,16 +732,16 @@ Same as the [dataprocessingconfiguration_ProcessSession](processsession.md#BKMK_
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_ProcessSession|
+|ReferencedEntityNavigationPropertyName|userrating_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_BulkDeleteFailures"></a> dataprocessingconfiguration_BulkDeleteFailures
+### <a name="BKMK_userrating_BulkDeleteFailures"></a> userrating_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_dataprocessingconfiguration_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Same as the [userrating_BulkDeleteFailures](bulkdeletefailure.md#BKMK_userrating_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -886,16 +749,16 @@ Same as the [dataprocessingconfiguration_BulkDeleteFailures](bulkdeletefailure.m
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|userrating_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_dataprocessingconfiguration_PrincipalObjectAttributeAccesses"></a> dataprocessingconfiguration_PrincipalObjectAttributeAccesses
+### <a name="BKMK_userrating_PrincipalObjectAttributeAccesses"></a> userrating_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as the [dataprocessingconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_dataprocessingconfiguration_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
+Same as the [userrating_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_userrating_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -903,7 +766,7 @@ Same as the [dataprocessingconfiguration_PrincipalObjectAttributeAccesses](princ
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|dataprocessingconfiguration_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|userrating_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -913,45 +776,52 @@ Same as the [dataprocessingconfiguration_PrincipalObjectAttributeAccesses](princ
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_dataprocessingconfiguration_createdby](#BKMK_lk_dataprocessingconfiguration_createdby)
-- [lk_dataprocessingconfiguration_createdonbehalfby](#BKMK_lk_dataprocessingconfiguration_createdonbehalfby)
-- [lk_dataprocessingconfiguration_modifiedby](#BKMK_lk_dataprocessingconfiguration_modifiedby)
-- [lk_dataprocessingconfiguration_modifiedonbehalfby](#BKMK_lk_dataprocessingconfiguration_modifiedonbehalfby)
-- [organization_dataprocessingconfiguration](#BKMK_organization_dataprocessingconfiguration)
+- [lk_userrating_createdby](#BKMK_lk_userrating_createdby)
+- [lk_userrating_createdonbehalfby](#BKMK_lk_userrating_createdonbehalfby)
+- [lk_userrating_modifiedby](#BKMK_lk_userrating_modifiedby)
+- [lk_userrating_modifiedonbehalfby](#BKMK_lk_userrating_modifiedonbehalfby)
+- [organization_userrating](#BKMK_organization_userrating)
+- [appmodule_userrating_app](#BKMK_appmodule_userrating_app)
 
 
-### <a name="BKMK_lk_dataprocessingconfiguration_createdby"></a> lk_dataprocessingconfiguration_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_dataprocessingconfiguration_createdby](systemuser.md#BKMK_lk_dataprocessingconfiguration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_dataprocessingconfiguration_createdonbehalfby"></a> lk_dataprocessingconfiguration_createdonbehalfby
+### <a name="BKMK_lk_userrating_createdby"></a> lk_userrating_createdby
 
 **Added by**: System Solution Solution
 
-See the [lk_dataprocessingconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_dataprocessingconfiguration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_userrating_createdby](systemuser.md#BKMK_lk_userrating_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_dataprocessingconfiguration_modifiedby"></a> lk_dataprocessingconfiguration_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_dataprocessingconfiguration_modifiedby](systemuser.md#BKMK_lk_dataprocessingconfiguration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_dataprocessingconfiguration_modifiedonbehalfby"></a> lk_dataprocessingconfiguration_modifiedonbehalfby
+### <a name="BKMK_lk_userrating_createdonbehalfby"></a> lk_userrating_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [lk_dataprocessingconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_dataprocessingconfiguration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_userrating_createdonbehalfby](systemuser.md#BKMK_lk_userrating_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_organization_dataprocessingconfiguration"></a> organization_dataprocessingconfiguration
+### <a name="BKMK_lk_userrating_modifiedby"></a> lk_userrating_modifiedby
 
 **Added by**: System Solution Solution
 
-See the [organization_dataprocessingconfiguration](organization.md#BKMK_organization_dataprocessingconfiguration) one-to-many relationship for the [organization](organization.md) table/entity.
+See the [lk_userrating_modifiedby](systemuser.md#BKMK_lk_userrating_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_lk_userrating_modifiedonbehalfby"></a> lk_userrating_modifiedonbehalfby
+
+**Added by**: System Solution Solution
+
+See the [lk_userrating_modifiedonbehalfby](systemuser.md#BKMK_lk_userrating_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_organization_userrating"></a> organization_userrating
+
+**Added by**: System Solution Solution
+
+See the [organization_userrating](organization.md#BKMK_organization_userrating) one-to-many relationship for the [organization](organization.md) table/entity.
+
+### <a name="BKMK_appmodule_userrating_app"></a> appmodule_userrating_app
+
+**Added by**: System Solution Solution
+
+See the [appmodule_userrating_app](appmodule.md#BKMK_appmodule_userrating_app) one-to-many relationship for the [appmodule](appmodule.md) table/entity.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.dataprocessingconfiguration?text=dataprocessingconfiguration EntityType" />
+<xref href="Microsoft.Dynamics.CRM.userrating?text=userrating EntityType" />
