@@ -293,7 +293,10 @@ Confirm( "There was a problem, please review your order." )
 
 ## Add notifications to a model-driven app
 
-A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  
+A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
+
+> [!NOTE]
+> Displays the notification message as type information using `NotificationType.Information`.
 
 ```powerappsfl
 Notify( "Model-driven app notification message" )
