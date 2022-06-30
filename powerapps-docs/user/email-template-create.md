@@ -32,8 +32,6 @@ You can create email templates by using one of the following options:
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
-More information: [Enhanced email template editor option](cs-email-template-builder.md) 
-
 ## Start with a blank template
 
 When you start with a blank template, nothing is provided for you. You must add everything you want customers to see. 
@@ -89,7 +87,8 @@ When you create a template from an existing template, irrespective of the enhanc
 ## Email template editor
 
 > [!NOTE]
-> The enhanced email template editor is available only in Dynamics 365 Customer Service.
+> - The enhanced email template editor is available only in Dynamics 365 Customer Service. 
+> - An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
 You can use either the enhanced email template editor or the default email template editor to create email templates.
 

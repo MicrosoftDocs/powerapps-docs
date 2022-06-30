@@ -15,40 +15,32 @@ search.app:
   - D365CE
 ---
 # Enable the enhanced insert email template selection dialog
- 
-You can configure and enable the enhanced email template for apps across the organization. For a specific app, you can disable this option to display the default email template selection window. 
 
-## Enable the enhanced email template across all apps
+You can configure and enable the enhanced email template  in the Customer Service Hub and Customer Service workspace apps. If you need to, you can turn off this option for these apps. Users of that app see the default email template selection window. 
 
-To configure the enhanced email template for apps across the organization, perform the following steps:
+### Enable the enhanced email template editor for Customer Service apps
 
-1. Go to [Power Apps](https://make.preview.powerapps.com/) instance and select the environment in which you you want to configure the template.
-2. Select **Solutions**.
-3. On the **Solutions** page, select the solution in which you want to configure the template.
+   
+1. In [Power Apps](https://make.preview.powerapps.com/), select the environment the environment that contains your solution.
+2. Select **Solutions**, and then select the solution in which you want to turn on the enhanced template editing experience.
    > [!NOTE]
    > Don't select the default solution to configure the template.
 4. Select **Add Existing** > **More** > **Setting**.
-   > ![Add a setting to a solution](media/email_template_dialog_add.png)
-1. On the **Add existing Setting Definition**, select the **Enable the New Insert Template Dialog** option and then select **Next**.
-   > ![Add the email template dialog option](media/new_email_template_option.png)
-1. Select **Add** on the **Selected Setting Definition**. The **Enable the New Insert Template Dialog** option is added to your solution. Select **Edit**.
-1. Set the **Setting environment value** option to **Yes** on the **Edit Enable the New Insert Template Dialog**.
-   > ![Set the option to yes across the apps ](media/new_email_template_envvar.png)
+
+   > ![Add a setting to a solution](media/usr-soln-setting.png)
+1. On the **Add existing Setting Definition** pane, select the **nable the New Insert Template Dialog** option and then select **Next**.
+1. Select **Add** on the **Selected Setting Definition** to add the **Enable the New Email Template Editor** option to your solution. 
+1.  Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the Customer Service workspace and Customer Service Hub apps.
+1. Select the **nable the New Insert Template Dialogr** option. The **Edit Enable the New Insert Template Dialog** pane appears.
+1. Set the **Setting environment value** option to **No** on the **Edit Enable the New Insert Template Dialogr** pane.
+   > ![Set the variable to no](media/cs-enh-temp-editor.png)
+1. On the **Enable the New Insert Template Dialog**, in the **Setting app value** section, the Customer Service Hub and workspace apps are displayed. 
+1. Select **New app value** for the app, and select **Yes** for the specified app.
+   > ![Disable the variable](media/cs-enh-opt-on.png)
 1. Select **Publish All Customizations**.
 
-## Disable the enhanced email template for an app
-
-To disable the enhanced email template selection window and display the default email template for an app, perform the following steps:
-
-1. Go to Power Apps instance.
-2. Select **Solutions**.
-1. Select the solution created for the email template selection option.
-1. Go to **Add Existing** > **App** > **Model-driven app** and select the app.
-   > ![Add a model driven app](media/new_email_template_addcsw.png)
-1. Select the **Enable the new Insert Template Dialog** option.
-1. On the **Edit Enable the New Insert Template Dialog**, in the **Setting app value** section, specify **No** for the specified app.
-   > ![Set the environment variable to No for an app](media/new_email_template_deloptn.png)
-1. Select **Save** and **Publish All Customizations**.
+   > [!NOTE]
+   > If this setting is set to **No** for the apps, the default email template editor is displayed.
 
 ### See also
 
