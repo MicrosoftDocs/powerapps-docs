@@ -5,7 +5,7 @@ author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/15/2022
+ms.date: 06/29/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
