@@ -67,7 +67,7 @@ Before you begin to build forms, it is worth determining whether you have all th
 
 ## Delete a form
 
-To delete a form, sign in to Power Apps and go to **Solutions** > Open the solution you want > select the table that you want > **Forms** tab. Select the form, and then select **Delete** on the command bar.
+To delete a form, sign in to Power Apps and go to **Solutions** > Open the solution you want > select the table that you want > **Forms** area. Select the form, and then select **Delete** on the command bar.
 
 There are a couple of reasons you may not be able to delete a form.
 
@@ -104,7 +104,7 @@ When we set the default form order this is done at the level of the **table** an
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Select **Dataverse** and navigate to the required table.
-3. Select the **Forms** tab, select the ellipses (...) and select **Form settings**
+3. Select the **Forms** area, select the ellipses (...) and select **Form settings**
 
 :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms forms to include in app":::
 
