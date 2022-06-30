@@ -23,6 +23,8 @@ Turn on the enhanced email template editing experience in the Customer Service H
 ### Enable the enhanced email template editor for Customer Service apps
 
    
+ 
+
 1. In [Power Apps](https://make.preview.powerapps.com/), select the environment the environment that contains your solution.
 2. Select **Solutions**, and then select the solution in which you want to turn on the enhanced template editing experience.
    > [!NOTE]
