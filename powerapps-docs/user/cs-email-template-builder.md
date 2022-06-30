@@ -16,7 +16,36 @@ search.app:
 
 # Enable the enhanced email template editor page
 
+
 Turn on the enhanced email template editing experience in apps across your organization. If you need to, you can turn off the enhanced email template page for a specific app. Users of that app see the default email template editor page.
+
+
+
+### Enable the enhanced email template editor for Customer Service apps
+
+   > [!IMPORTANT]
+    > For this release, the Enhanced email template editor is available only for Customer Service Hub and Customer Service workspace apps. Follow the steps in this section to enable this enhancement only for Customer Service apps and not across the organization.   
+
+1. In [Power Apps](https://make.preview.powerapps.com/), select the environment the environment that contains your solution.
+2. Select **Solutions**, and then select the solution in which you want to turn on the enhanced template editing experience.
+   > [!NOTE]
+   > Don't select the default solution to configure the template.
+4. Select **Add Existing** > **More** > **Setting**.
+
+   > ![Add a setting to a solution](media/usr-soln-setting.png)
+1. On the **Add existing Setting Definition** pane, select the **Enable the New Email Template Editor** option and then select **Next**.
+1. Select **Add** on the **Selected Setting Definition** to add the **Enable the New Email Template Editor** option to your solution. 
+1.  Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the Customer Service workspace and Customer Service Hub apps.
+1. Select the **Enable the New Email Template Editor** option. The **Edit Enable the New Email Template Editor** pane appears.
+1. Set the **Setting environment value** option to **No** on the **Edit Enable the New Email Template Editor** pane.
+   > ![Set the variable to no](media/cs-enh-temp-editor.png)
+1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the Customer Service Hub and workspace apps are displayed. 
+1. Select **New app value** for the app, and select **Yes** for the specified app.
+   > ![Disable the variable](media/cs-enh-opt-on.png)
+1. Select **Publish All Customizations**.
+
+   > [!NOTE]
+   > If this setting is set to **Yes** for the apps, the default email template editor is displayed.
 
 ## Enable the enhanced email template editor across all apps
 
