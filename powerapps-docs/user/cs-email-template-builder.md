@@ -38,10 +38,10 @@ Turn on the enhanced email template editing experience in apps across your organ
 1.  Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the Customer Service workspace and Customer Service Hub apps.
 1. Select the **Enable the New Email Template Editor** option. The **Edit Enable the New Email Template Editor** pane appears.
 1. Set the **Setting environment value** option to **No** on the **Edit Enable the New Email Template Editor** pane.
-   > ![Set the variable to no](media/cs-enh-temp-editor.png)
+   > ![Set the variable to no](media/cs-tmp-editor.png)
 1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the Customer Service Hub and workspace apps are displayed. 
 1. Select **New app value** for the app, and select **Yes** for the specified app.
-   > ![Disable the variable](media/cs-enh-opt-on.png)
+   > ![Disable the variable](media/cs-tmp-editor-on.png)
 1. Select **Publish All Customizations**.
 
    > [!NOTE]
