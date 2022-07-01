@@ -39,7 +39,7 @@ The Global Discovery service, sometimes called GDS, is a set of OData v4.0 endpo
 > [!NOTE]
 > While both the Dataverse Web API and the Global Discovery Service are OData v4.0 endpoints, they are separate endpoints with different behaviors.
 
-The following table provides the location for each cloud.
+The following table provides the GDS location for each cloud.
 
 |Cloud|URL and Description|
 |---------|---------|
@@ -53,6 +53,7 @@ More information:
 
 - [Dynamics 365 US Government](/power-platform/admin/microsoft-dynamics-365-government)
 - [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china)
+
 ### Limitations
 
 The Global Discovery Service does not return information where:
@@ -95,7 +96,9 @@ Then, in the Postman **Authorization** tab, set or verify the following values:
 |**Client ID**|`{{clientid}}`|
 |**Client Authentication**|Send as Basic Auth header|
 
-Finally, use `{{globalDiscoUrl}}` as the **Request URL** and send a `GET` request.
+Use `{{globalDiscoUrl}}` as the **Request URL** and in the **Authorization** tab, click **Get New Access Token**.
+
+You should now be able to query the Global Discovery Service using Postman.
 
 More information: [YouTube: Get started using Postman with Microsoft Dataverse Web API](https://youtu.be/HpUj11yU0fY)
 
@@ -107,7 +110,7 @@ Append `$metadata` to the cloud URL and send a `GET` request to view the CSDL (C
 
 ## Instance EntitySet
 
-The following table descripts the properties of the `Instance` EntitySet.
+The following table describes the properties of the `Instance` Entity from the $metadata CDSL Service document.
 
 |Property|Type|Description|
 |---------|---------|---------|
@@ -132,13 +135,13 @@ The following table descripts the properties of the `Instance` EntitySet.
 |`Version`|String|The current version of the environment.|
 |`Url`|String|The application url for the environment.|
 
-You can use these property names with the OData `$select` query parameter to retrieve just the data you need. In most cases, all will need are the `FriendlyName` and `ApiUrl` properties. For example
+You can use these property names with the OData `$select` query parameter to retrieve just the data you need. In most cases, all you will need are the `FriendlyName` and `ApiUrl` properties. For example:
 
 **Request**
 
 ```http
 GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances?$select=ApiUrl,FriendlyName HTTP/1.1
-Authorization: Bearer < truncated for brevity>
+Authorization: Bearer <truncated for brevity>
 ```
 
 **Response**
@@ -153,46 +156,50 @@ odata-version: 4.0
   "@odata.context":"https://10.0.1.76:20193/api/discovery/v2.0/$metadata#Instances(ApiUrl,FriendlyName)",
   "value":[
     {
-      "ApiUrl":"https://yourorganization.api.crm2.dynamics.com",
+      "ApiUrl":"https://yourorganization.api.crm.dynamics.com",
       "FriendlyName":"Your Organization"
     }
   ]
 }
 ```
 
+Use the `FriendlyName` property for your application UI so the user will recognize the name of the environment. Use the `ApiUrl` to connect to the Dataverse Web API.
+
+The rest of the properties are primarily for filtering.
+
 ## Filtering
 
 There are two ways you can filter the instances returned:
 
- - Using key values
- - Use OData `$filter` query options
+- Using key values
+- Use OData `$filter` query options
 
 ### Use one of the key values
 
 You can use the `Id` or `UniqueName` value to filter the list to return a only the specified instance.
 
 > [!NOTE]
-> Unlike the Dataverse Web API, the Global Discovery service doesn't provide for retrieving a specific `Instance` using the `Id` or any of the alternate keys defined for it. GDS always returns an array of values.
+> Unlike the Dataverse Web API, the Global Discovery Service doesn't provide for retrieving a specific `Instance` using the `Id` or any of the alternate keys defined for it. GDS always returns an array of values.
 
 Both of these queries will an array with a single item:
 
 ```http
-GET {{globalDiscoUrl}}Instances(6bcbf6bf-1f2a-4ab9-9901-2605b314d72d)?$select=ApiUrl,FriendlyName,Id,UniqueName
+GET https://globaldisco.crm.dynamics.com/Instances(6bcbf6bf-1f2a-4ab9-9901-2605b314d72d)?$select=ApiUrl,FriendlyName,Id,UniqueName
 ```
 
 ```http
-{{globalDiscoUrl}}Instances(UniqueName='unq6bcbf6bf1f2a4ab999012605b314d')?$select=ApiUrl,FriendlyName,Id,UniqueName
+GET https://globaldisco.crm.dynamics.com/Instances(UniqueName='unq6bcbf6bf1f2a4ab999012605b314d')?$select=ApiUrl,FriendlyName,Id,UniqueName
 ```
 
 You can also use any of the following alternate key values: `Region`, `State`, `Version` to filter on specific values. For example, use the query below to return only those instances where the Region is `NA` representing North America.
 
 ```http
-{{globalDiscoUrl}}Instances(Region='NA')?$select=FriendlyName,Region,State,Version,ApiUrl
+GET https://globaldisco.crm.dynamics.com/Instances(Region='NA')?$select=FriendlyName,Region,State,Version,ApiUrl
 ```
 
 ### Use OData $filter query options
 
-You can use OData `$filter` query options as well with any of the properties.
+You can use OData `$filter` query options as well with any of the properties that apply, including the alternate key properties.
 
 You can use the following comparison, logical and grouping operators:
 
@@ -244,20 +251,10 @@ DiscoverOrganizationsResult organizationsResult = await ServiceClient.DiscoverOn
 return organizationsResult;
 ```
 
-While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it does not return data in the shape of an Instance. Data is returned as an <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the Instance types returned by the OData service.
+While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it does not return data in the shape of an *Instance*. Data is returned as an <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the Instance types returned by the OData service.
 
 > [!NOTE]
 > While the `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter accepts a URL to the Global Discovery Service, any `$select` or `$filter` query options used will be ignored. The `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter is optional and if not provided will default to the Commercial cloud.
 
-
-
-
-> [!NOTE]
-> The *regional* Discovery service was deprecated in March 2020 and removed in April 2021. More information: [Regional Discovery Service is deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
-
-### See Also
-
-[Use the Microsoft Dataverse Web API](webapi/overview.md)<br />
-[Modify your code to use global Discovery service](webapi/discovery-orgsdk-to-webapi.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
