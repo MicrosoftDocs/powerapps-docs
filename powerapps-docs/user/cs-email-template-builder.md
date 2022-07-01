@@ -4,7 +4,7 @@ description: Turn on the enhanced email template option in Power Apps.
 author: gandhamm
 manager: shujoshi
 ms.topic: task
-ms.date: 05/06/2022
+ms.date: 07/01/2022
 ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
