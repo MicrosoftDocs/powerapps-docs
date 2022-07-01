@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the getFetchXml m
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 06/29/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -15,10 +15,9 @@ search.app:
   - D365CE
 contributors:
   - JimDaly
+  - ProfessorKendrick
 ---
 # getFetchXml (Client API reference)
-
-
 
 [!INCLUDE[./includes/getFetchXml-description.md](./includes/getFetchXml-description.md)]
 
@@ -42,7 +41,7 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 
 ## Example
 
-The following example displays the retrieved Fetch XNL of the Contacts subgrid in the console:
+The following example displays the retrieved Fetch XML of the Contacts subgrid in the console:
 
 ```JavaScript
 function myFunction(executionContext) {
