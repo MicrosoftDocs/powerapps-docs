@@ -99,6 +99,10 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
 
+### Reported SQL version
+The Dataverse TDS endpoint emulates SQL server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure  version 12.0.2000.8 for select @@version.
+
+
 ## Limitations
 
 There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
