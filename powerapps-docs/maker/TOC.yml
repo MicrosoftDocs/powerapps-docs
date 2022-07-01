@@ -1610,6 +1610,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+  - name: App Ratings
+    href: ./common/app-ratings.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
