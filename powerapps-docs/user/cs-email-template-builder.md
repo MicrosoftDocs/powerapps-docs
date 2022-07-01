@@ -17,13 +17,10 @@ search.app:
 # Enable the enhanced email template editor page
 
 
-Turn on the enhanced email template editing experience in the Customer Service Hub and Customer Service workspace apps. If you need to, you can turn off the enhanced email template page for a specific app. Users of that app see the default email template editor page.
+Turn on the enhanced email template editing experience in the Customer Service Hub and Customer Service workspace apps. If you need to, you can turn off the enhanced email template page for a specific app. And then, the users of the app see the default email template editor page.
 
 
 ### Enable the enhanced email template editor for Customer Service apps
-
-   
- 
 
 1. In [Power Apps](https://make.preview.powerapps.com/), select the environment the environment that contains your solution.
 2. Select **Solutions**, and then select the solution in which you want to turn on the enhanced template editing experience.
@@ -42,9 +39,6 @@ Turn on the enhanced email template editing experience in the Customer Service H
 1. Select **New app value** for the app, and select **Yes** for the specified app.
    > ![Disable the variable](media/cs-tmp-editor-on.png)
 1. Select **Publish All Customizations**.
-
-   > [!NOTE]
-   > If this setting is set to **No** for the apps, the default email template editor is displayed.
 
 
 ### See also
