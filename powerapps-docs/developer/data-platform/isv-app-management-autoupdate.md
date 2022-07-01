@@ -33,19 +33,19 @@ Automatic updates in the preview will be limited to: 
 ## Enabling Auto App Update  
 
 [!NOTE]
-Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers. 
+Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers.
 
 1.  Log into PPAC as an admin user. From the Environments page, select an environment and click on **Settings**.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-0.jpg?raw=true "PPAC Environment").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-0.jpg?raw=true "PPAC Environment")
 
 2. From the environment settings page, under the **Updates** section, click to open the **App Update Settings** page.  
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-1.jpg?raw=true "PPAC Environment Settings").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-1.jpg?raw=true "PPAC Environment Settings")
 
 3. Toggle the configurator to **'On'** to opt-in to the feature.  From the drop-down list of publishers, select for which publishers you want to automatically update apps.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-2.jpg?raw=true "Configure App Update Settings").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-2.jpg?raw=true "Configure App Update Settings")
 
 4. Click **Save** to keep your changes.
 
@@ -58,14 +58,25 @@ As a publisher with access to ISV Studio, you can view details about your automa
 1. Login to ISV Studio. From the navigation menu, click on **Analytics** and **Published apps.** 
 Graphical user interface, application
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-3.jpg?raw=true "ISV Studio Published Apps").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-3.jpg?raw=true "ISV Studio Published Apps")
  
 2. Select a specific app and click the **Auto Updates** tab to view opt-in rates for publishers and environments, which organizations have opted out, as well as a detailed list of version history. 
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-4.png?raw=true "ISV Studio Auto Updates").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-4.png?raw=true "ISV Studio Auto Updates")
 
 3. From the Version Update History table, click **View Details** to view details about the deployment status by region.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-5.jpg?raw=true "ISV Studio Version Update Details").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-5.jpg?raw=true "ISV Studio Version Update Details")
 
-**Note**: The Cancel Deployment button will cancel automatic updates for any regions with release status in progress or to be scheduled. 
+**Note**: The Cancel Deployment button will cancel automatic updates for any regions with release status in progress or to be scheduled.
+
+### See also
+
+[Introduction to ISV Studio for the Power Platform](isv-app-management.md)  
+[Home page](isv-app-management-homepage.md)<br/> 
+[App page](isv-app-management-apppage.md)<br/> 
+[AppSource checker](isv-app-management-appsource-checker.md)<br/> 
+[Connector Certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
