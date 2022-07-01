@@ -1,6 +1,6 @@
 ---
 title: "App ratings for Model-driven-apps | MicrosoftDocs"
-description: Understand about ratings for model-driven apps. 
+description: Understand ratings for model-driven apps. 
 ms.custom: ""
 ms.date: 07/04/2022
 ms.reviewer: "matp"
