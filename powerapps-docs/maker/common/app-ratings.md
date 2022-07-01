@@ -19,15 +19,14 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-End users of Power Apps provide satisfaction score and feedback for apps they use. With app ratings feature, we enable our makers and administrators to view a specific app’s satisfaction and comments provided by end users in compliance with international privacy laws. The feature also provides action to navigate to solution checker, performance insights, monitoring, and usability recommendations.
+End users of Power Apps provide feedback for apps they use. With app ratings feature, we enable our makers and administrators to view the app’s satisfaction score and comments provided by end users. The collection of feedback is compliant with all international privacy laws. The feature also provides action to improve your app by navigating to solution checker, performance insights, live monitoring, and usability recommendations.
 
 >[!NOTE]
 >This feature is currently only available for model-driven Power Apps.
 
-This feature provides a view of app satisfaction score(link it) on scale of 0 to 200, provides a score trend(link it) over last 90 days, displays different score based on web or mobile device(link it) and based on different browsers(link it) as well.
+This feature provides a view of [app satisfaction score](#what-is-an-app-satisfaction-score) on scale of 0 to 200, provides a [score trend](#how-does-score-trend-work) over last 90 days, displays different score [based on web or mobile device](#app-satisfaction-by-device) and [based on different browsers](#app-satisfaction-by-browser) as well.
 
 The report for current score and comments can be exported per app in app ratings dashboard to share with more stakeholders.
-
 
 
 
@@ -79,10 +78,14 @@ We follow the guidelines below while prompting feedback dialog:
 ## What is an app satisfaction score?
 App satisfaction score is calculated by taking the responses with an answer "Very Satisfied" and subtracting out the percentage of the responses with an answer "Dissatisfied" or "Very Dissatisfied". The total NSAT score is then calculated like this:
 
-100 * (Very Satisfied - Somewhat Dissatisfied - Very Dissatisfied) / (Very Satisfied + Somewhat Satisfied + Somewhat Dissatisfied + Very Dissatisfied) + 100
-Satisfaction is measured on a 4-point scale (very dissatisfied to very satisfied).
+>100 + (%Very Satisfied) - (%Dissatisfied) - (%Very Dissatisfied)
 
 We report App Satisfaction on a scale of 0 to 200, where:
+- 1 to 100: Poor score
+- 101 to 140: Fair score
+- 141 to 160: Good score
+- 161 to 200: World class score
+
 
 ## How does score trend work? 
 App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 0 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend this to analyze with the app updates if updates have helped in improving the score.
