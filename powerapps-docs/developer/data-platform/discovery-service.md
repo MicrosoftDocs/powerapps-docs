@@ -90,8 +90,7 @@ To access the Global Discovery service for each cloud, append `/api/discovery/v2
 
 Append `$metadata` to the cloud URL and send a `GET` request to view the CSDL (Common Schema Definition Language) service document. This XML document provides details on the `Instance` entity and the alternate keys defined for it.
 
-> [!NOTE]
-> Unlike the Dataverse Web API, the Global Discovery service doesn't provide for retrieving a specific `Instance` using the `Id` or any of the alternate keys defined for it. GDS always returns an array of values.
+
 
 ## Instance EntitySet
 
@@ -109,7 +108,7 @@ The following table descripts the properties of the `Instance` EntitySet.
 |`LastUpdated`|DateTimeOffset|When the environment was last updated. |
 |`OrganizationType`|Int32|The type of the organization. Values correspond to the OrganizationType Enum|
 |`Purpose`|String|Information for the purpose provided when the environment was created.|
-|`Region`|String|A three letter code for region where the environment is located. |
+|`Region`|String|A 2-3 letter code for region where the environment is located. |
 |`SchemaType`|String|For internal use only.|
 |`State`|Int32|Whether the organization is enabled (`0`) or eisabled (`1`).|
 |`StatusMessage`|Int32|TODO: This is an integer value. What does it mean?|
@@ -120,7 +119,7 @@ The following table descripts the properties of the `Instance` EntitySet.
 |`Version`|String|The current version of the environment.|
 |`Url`|String|The application url for the environment.|
 
-You can use these property names with the OData $select query parameter to retrieve just the data you need. In most cases, all will need are the `FriendlyName` and `ApiUrl` properties. For example
+You can use these property names with the OData `$select` query parameter to retrieve just the data you need. In most cases, all will need are the `FriendlyName` and `ApiUrl` properties. For example
 
 **Request**
 
@@ -138,7 +137,8 @@ Content-Type: application/json; odata.metadata=minimal
 odata-version: 4.0
 
 {
-  "@odata.context":"https://10.0.1.76:20193/api/discovery/v2.0/$metadata#Instances(ApiUrl,FriendlyName)","value":[
+  "@odata.context":"https://10.0.1.76:20193/api/discovery/v2.0/$metadata#Instances(ApiUrl,FriendlyName)",
+  "value":[
     {
       "ApiUrl":"https://yourorganization.api.crm2.dynamics.com",
       "FriendlyName":"Your Organization"
@@ -149,17 +149,71 @@ odata-version: 4.0
 
 ## Filtering
 
+There are two ways you can filter the instances returned:
+
+ - Using key values
+ - Use OData `$filter` query options
+
+### Use one of the key values
+
+You can use the `Id` or `UniqueName` value to filter the list to return a only the specified instance.
+
+> [!NOTE]
+> Unlike the Dataverse Web API, the Global Discovery service doesn't provide for retrieving a specific `Instance` using the `Id` or any of the alternate keys defined for it. GDS always returns an array of values.
+
+Both of these queries will an array with a single item:
+
+```http
+GET {{globalDiscoUrl}}Instances(6bcbf6bf-1f2a-4ab9-9901-2605b314d72d)?$select=ApiUrl,FriendlyName,Id,UniqueName
+```
+
+```http
+{{globalDiscoUrl}}Instances(UniqueName='unq6bcbf6bf1f2a4ab999012605b314d')?$select=ApiUrl,FriendlyName,Id,UniqueName
+```
+
+You can also use any of the following alternate key values: `Region`, `State`, `Version` to filter on specific values. For example, use the query below to return only those instances where the Region is `NA` representing North America.
+
+```http
+{{globalDiscoUrl}}Instances(Region='NA')?$select=FriendlyName,Region,State,Version,ApiUrl
+```
+
+### Use OData $filter query options
+
+You can use OData `$filter` query options as well with any of the properties.
+
+You can use the following comparison, logical and grouping operators:
+
+|Operator|Description|Example|  
+|--------------|-----------------|-------------|  
+|**Comparison Operators**|||  
+|`eq`|Equal|`$filter=IsUserSysAdmin eq true`|  
+|`ne`|Not Equal|`$filter=IsUserSysAdmin ne true`|  
+|`gt`|Greater than|`$filter=TrialExpirationDate gt 2022-07-14T00:00:00Z`|  
+|`ge`|Greater than or equal|`$filter=TrialExpirationDate ge 2022-07-14T00:00:00Z`|  
+|`lt`|Less than|`$filter=TrialExpirationDate lt 2022-07-14T00:00:00Z`|  
+|`le`|Less than or equal|`$filter=TrialExpirationDate le 2022-07-14T00:00:00Z`|  
+|**Logical Operators**|||  
+|`and`|Logical and|`$filter=TrialExpirationDate gt 2022-07-14T00:00:00Z and IsUserSysAdmin eq true`|  
+|`or`|Logical or|`$filter=TrialExpirationDate gt 2022-07-14T00:00:00Z or IsUserSysAdmin eq true`|  
+|`not`|Logical negation|`$filter=not contains(Purpose,'test')`|  
+|**Grouping Operators**|||  
+|`( )`|Precedence grouping|`(contains(Purpose,'sample') or contains(Purpose,'test')) and TrialExpirationDate gt 2022-07-14T00:00:00Z`|  
 
 
+You can use the following string query functions:
+ 
+|Function|Example|  
+|--------------|-------------|  
+|`contains`|`$filter=contains(Purpose,'test')`|  
+|`endswith`|`$filter=endswith(FriendlyName,'Inc.')`|  
+|`startswith`|`$filter=startswith(FriendlyName,'A')`|  
 
+> [!NOTE]
+> Unlike the Dataverse Web API, Global Discovery Service search strings are case sensitive.
 
+## Use Dataverse ServiceClient
 
-
-
-
-
-
-
+You can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?displayProperty=fullName>
 
 The Discovery service is accessed through two different APIs:
 
