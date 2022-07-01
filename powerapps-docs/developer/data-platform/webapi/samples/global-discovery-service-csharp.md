@@ -110,6 +110,6 @@ static List<Instance> GetInstances(string username, string password)
 
 ## See Also
 
-[Discover the URL for your organization](../discover-url-organization-web-api.md)
+
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

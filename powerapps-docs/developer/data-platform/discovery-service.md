@@ -30,6 +30,8 @@ More information:
 - [Choose an environment](../../maker/canvas-apps/intro-maker-portal.md#choose-an-environment)
 - [Environments overview](/power-platform/admin/environments-overview)
 
+
+
 ## Global Discovery Service
 
 The Global Discovery service, sometimes called GDS, is a set of OData v4.0 endpoints that are available for 5 different clouds.
@@ -51,10 +53,23 @@ More information:
 
 - [Dynamics 365 US Government](/power-platform/admin/microsoft-dynamics-365-government)
 - [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china)
+### Limitations
+
+The Global Discovery Service does not return information where:
+
+- The user's account is disabled.
+- Users have been filtered out based on an instance security group.
+- The user has access as a result of being a delegated administrator.
+
+If the calling user has access to no instances, the response simply returns an empty list.
 
 ## Authentication
 
-The calling user must include a valid OAuth access token for the Global Discovery service.
+The calling user must aquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
+
+### CORS support
+
+The Discovery Service supports the CORS standard for cross-origin access. For more information about CORS support see [Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
 
 ### Use Postman to connect to the Global Discovery Service
 
@@ -90,8 +105,6 @@ To access the Global Discovery service for each cloud, append `/api/discovery/v2
 
 Append `$metadata` to the cloud URL and send a `GET` request to view the CSDL (Common Schema Definition Language) service document. This XML document provides details on the `Instance` entity and the alternate keys defined for it.
 
-
-
 ## Instance EntitySet
 
 The following table descripts the properties of the `Instance` EntitySet.
@@ -103,7 +116,7 @@ The following table descripts the properties of the `Instance` EntitySet.
 |`DatacenterName`|String|The name of the data center where the instance is located. This value is typically null.|
 |`EnvironmentId`|String|The EnvironmentId for the instance.|
 |`FriendlyName`|String|A name for the instance that is displayed in powerapps.com and other client applications that allow selecting instances.|
-|`Id`|Guid|The unique identifier for the instance.|
+|`Id`|Guid|The OrganizationId for the environment.|
 |`IsUserSysAdmin`|Boolean|Whether the calling user has the system administrator role for the environment.|
 |`LastUpdated`|DateTimeOffset|When the environment was last updated. |
 |`OrganizationType`|Int32|The type of the organization. Values correspond to the OrganizationType Enum|
@@ -213,12 +226,31 @@ You can use the following string query functions:
 
 ## Use Dataverse ServiceClient
 
-You can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?displayProperty=fullName>
+You can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to call the Global Discovery Services for .NET applications.
 
-The Discovery service is accessed through two different APIs:
+TODO: Ask Matt B to comment on the key benefits provided by this method.
 
-- For the OData V4 RESTful API: [Discover the URL for your organization](webapi/discover-url-organization-web-api.md)
-- For the discovery API available through the 2011 (SOAP) endpoint: [Use the Discovery service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
+```csharp
+//Call DiscoverOnlineOrganizationsAsync
+DiscoverOrganizationsResult organizationsResult = await ServiceClient.DiscoverOnlineOrganizationsAsync(
+        discoveryServiceUri: new Uri($"{cloudRegionUrl}/api/discovery/v2.0/Instances"),
+        clientCredentials: creds,
+        clientId: clientId,
+        redirectUri: new Uri(redirectUrl),
+        isOnPrem: false,
+        authority: "https://login.microsoftonline.com/organizations/",
+        promptBehavior: PromptBehavior.Auto);
+
+return organizationsResult;
+```
+
+While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it does not return data in the shape of an Instance. Data is returned as an <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the Instance types returned by the OData service.
+
+> [!NOTE]
+> While the `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter accepts a URL to the Global Discovery Service, any `$select` or `$filter` query options used will be ignored. The `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter is optional and if not provided will default to the Commercial cloud.
+
+
+
 
 > [!NOTE]
 > The *regional* Discovery service was deprecated in March 2020 and removed in April 2021. More information: [Regional Discovery Service is deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).

@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/discovery-service.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/discovery-orgsdk-to-webapi.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/discover-url-organization-web-api.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/formula-reference.md",
       "redirect_url": "/power-platform/power-fx/formula-reference",
       "redirect_document_id": false
