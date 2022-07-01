@@ -53,206 +53,62 @@ If you want to switch the environment where your app is deployed, you can select
 > [!IMPORTANT]
 > Since recommendations are generated using user data, we recommend that you view performance insights from an environment where the app will be used, such as a production environment.
 
-## How insights are generated
 
-Performance insights are generated based on collected user data of your model-driven app every 24 hours. When end-users use an app, key user data recorded by the Power Apps platform is stored. The performance insights engine uses this data and analyzes it to generate insights and recommendations related to performance enhancements.  
 
-Performance insights are available for all model-driven apps in your selected environment, provided there is recorded user data. You can view insights history for the previous seven days, as long as there was usage on the selected date, by selecting a date in the list on the **Performance** tab.
 
-:::image type="content" source="media/performance-insight-select-date.png" alt-text="Select a date to view performance insight data.":::
 
-The performance insights engine generates insights over a 24-hour period on a selected date in the universal time coordinated (UTC) time zone. Insights for the previous day, from 00:00 to 23:59 UTC, are generated around 02:00 to 05:00 UTC on a given day. Therefore, insights and recommendations for usage user data recorded the previous day will be available in the morning in the UTC time zone. Time of availability will vary based on your local time zone and its difference from UTC.
+## How do Power Apps capture end user satisfaction?
 
-For example, insights for the 24-hour period that spans June 8 from 00:00 to 23:59 UTC are generated between 02:00 to 05:00 UTC on June 9. Therefore, insights and recommendations for user data recorded on June 8 UTC will be available the morning of June 9 UTC.
+Based on user’s activity inside the app, Microsoft Power Apps asks app users to score an app with following question below:
 
-Insights can be sorted by severity – ranging from **Informational**, **Warning**, to **Critical**. Severity is weighted depending on the affect of the findings on the overall performance. Severity is determined by several factors such as the volume of usage, performance of slow page loads, and outliers. Critical items exceed certain thresholds and we recommend you address those first.
+1. How satisfied are you with (name of the app)?
+-	Very satisfied
+-	Satisfied
+-	Dissatisfied
+-	Very Dissatisfied
 
-Insights are generated for several categories from different areas including client environment, customizations, page performance, and network. For example, if several users are using the app on an older version of a non-recommended browser, performance will be slower in general. Hence, makers will see an insight related to browser type and version in the insight grid.
+2. What can we do to improve?
 
-Performance insights provide a prioritized list of recommendations to help makers improve the performance of model-driven apps. You can select each row in the grid to view detailed information for each category.
+Based on the feedback above, we display app satisfaction score(link to section below) and comments in ratings dashboard.
 
-:::image type="content" source="media/performance-insights-example.png" alt-text="Example of performance insights.":::
+We follow the guidelines below while prompting feedback dialog:
+-	If a user has at least 3 active days during the first 14 days since sign-up, the user will be prompted.
+-	If the user has 6 active days in the last (recent) 90 days, the user will be prompted.
+-	No users can be prompted more than once in 90 days for the same app/product.
 
-## Explanation of performance insights
+## What is an app satisfaction score?
+App satisfaction score is calculated by taking the responses with an answer "Very Satisfied" and subtracting out the percentage of the responses with an answer "Dissatisfied" or "Very Dissatisfied". The total NSAT score is then calculated like this:
 
-The performance insights grid has these columns.
+100 * (Very Satisfied - Somewhat Dissatisfied - Very Dissatisfied) / (Very Satisfied + Somewhat Satisfied + Somewhat Dissatisfied + Very Dissatisfied) + 100
+Satisfaction is measured on a 4-point scale (very dissatisfied to very satisfied).
 
-| Column | Description  |
-|---------|---------|
-| Severity | An insight can be categorized as **Informational**, **Warning**, or **Critical**. Severity is determined by the performance page load time and the number of end-users impacted by an event. |
-| Area |  This area defines the aspects of analyzing user data by the engine of Performance Insights. Includes client environment, network, and usage patterns. |
-| Category | The theme under which the specific insight falls. Categories are grouped under Areas. |
-| Motivation | Gives an overview of why a particular insight could be impacting the overall performance of your app. |
-| Insight | Details the findings related to a specific category and outlines the performance impact. |
-| Recommendation | Outlines the actions you can take. |
-| How to improve | Links to the documentation for a specific category, which could contain further information or external resources to help you mitigate your issue and improve performance. |
-| Data | Evidence data to support the findings in the insight section. |
-| Insight ID | Identifier for a specific insight category. |
+We report App Satisfaction on a scale of 0 to 200, where:
 
-## What aspects does it check? 
+## How does score trend work? 
+App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 0 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend this to analyze with the app updates if updates have helped in improving the score.
 
-Performance of a model-driven app could be affected by multiple factors. Horizontally, the app could be affected by client environment, network, usage pattern, customizations, and configurations. Vertically, web server or back-end SQL Server could affect performance on the client side.  
+## App satisfaction by device
+Currently, we provide distribution of score by device types – web, mobile or others. For tablets, the score will be calculated as mobile. “Others” option categorizes score for unknown devices on Microsoft’s end.
 
-Therefore, it is beneficial to identify what may cause slowness of page loads or operations. The performance insight engine analyzes collected user data and corresponds it with the categories.
+## App satisfaction by browser
+The feature also displays comparison across different browsers. The feature can identify different types of browsers including Edge, IE, Chrome, Mozilla, Opera etc. For those browsers which feature is not able to identify, the score will get attributed towards “others” category.
 
-In some scenarios, there could be an obvious reason for performance issues. In other cases, there may be several reasons identified from the categories that could explain the slowness.
+## Improve your application
+With public preview release, the feature provides following direct links to take actions to improve your app:
+1. Solution Checker(link) – This link will take you to a list of solutions to run checker if applicable. We don’t have the ability yet to precisely identify the solution which app was part of during environment migration. Makers or admins will need to manually identify the solution and run checker tool to identify issues. Know more(link).
+2. Performance Insights (link) – This tool provides direct insights on respective app’s performance and what can makers do to improve the app performance issues. Know more(link).
+3. Monitor(link) – This tool helps makers to troubleshoot and diagnose issues with live monitoring of a user’s session. Know more(link).
+4. Usability – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
-The following table summarizes what areas and categories the performance insights engine checks.
+## How is the feedback data stored in Dataverse?
+Microsoft added a new default entity in dataverse called “User Rating” to all Power Apps and Dynamics 365 organizations based on dataverse. This entity stores rating score and comments from each user feedback. This is an organization owned entity with default create, read, and delete rights provided to system administrators and customizers. Environment Makers role has only read privilege available.
 
-:::row:::
-   :::column span="":::
-      **Area**
-   :::column-end:::
-   :::column span="":::
-      **Insight category**
-   :::column-end:::
-   :::column span="":::
-      **Description**
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Overall performance 
-   :::column-end:::
-   :::column span="":::
-      Overview 
-   :::column-end:::
-   :::column span="":::
-      It provides an overall summary of the performance of a selected app. You can see the performance of app briefly. More information: [Overall performance](performance-insights-categories.md#overall-performance)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Client environment  
-   :::column-end:::
-   :::column span="":::
-      Minimum system requirements  
-   :::column-end:::
-   :::column span="":::
-      Users should at least use the system meeting the minimum specifications. This insight tells makers how many users meet such criteria if user collected and others not. More information: [Minimum system requirements](performance-insights-categories.md#minimum-system-requirements)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Client environment  
-   :::column-end:::
-   :::column span="":::
-      Browser type
-   :::column-end:::
-   :::column span="":::
-      The performance will vary depending on browser type. This insight indicates whether users run a modern browser or a non-recommended Internet Explorer (IE) browser. The performance of Power Apps in IE is noticeably slower compared to modern browsers. More information: [Browser type](performance-insights-categories.md#browser-type)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Client environment  
-   :::column-end:::
-   :::column span="":::
-      Browser version
-   :::column-end:::
-   :::column span="":::
-      Although users run the modern browsers, they could experience slow performance if they are using a browser running on an older version. In general, staying on the latest version would be recommended. More information: [Browser version](performance-insights-categories.md#browser-version)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Client environment  
-   :::column-end:::
-   :::column span="":::
-      HTTP protocol 
-   :::column-end:::
-   :::column span="":::
-      Power Apps supports the HTTP/2 protocol. Apps generally perform better with the HTTP/2 protocol compared to HTTP/1.1. One of the major limitations of HTTP/1.1 is the limited concurrent connections to the same domain, which might cause apps to run slow. More information: [HTTP protocol](performance-insights-categories.md#http-protocol)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Network  
-   :::column-end:::
-   :::column span="":::
-      Network performance
-   :::column-end:::
-   :::column span="":::
-      Network latency, throughput, and bandwidth are key factors affecting the performance of web applications. Apps can perform differently depending on network performance as some contents should be downloading. More information: [Network performance](performance-insights-categories.md#network-performance)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Usage pattern  
-   :::column-end:::
-   :::column span="":::
-      Page load type.
-   :::column-end:::
-   :::column span="":::
-      Page load type can affect app performance. Warm (cached) page loads are faster than cold (not cached) page loads since resources load out of the cache. More information: [Page load type](performance-insights-categories.md#page-load-type)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Page performance  
-   :::column-end:::
-   :::column span="":::
-      Slow dashboard
-   :::column-end:::
-   :::column span="":::
-      One of the reasons why a dashboard might be slow to load is an associated query of a chart or a tile that is performing poorly. If the query executes over a large set of data, it could cause a slow response back. Apart from checking the number of chart controls and tiles on the dashboard, we recommend checking associated queries for both charts or tiles. More information: [Slow dashboards](performance-insights-categories.md#slow-dashboards)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Customization  
-   :::column-end:::
-   :::column span="":::
-      XHR call type  
-   :::column-end:::
-   :::column span="":::
-      Makers can customize the model-driven app by adding a custom function making XMLHttpRequest into an event. If the XMLHttpRequest (XHR) call happens synchronously, other tasks must wait until the XHR call is completed. We strongly recommend that you make the XHR call in your custom functions asynchronous. More information: [XML HTTP Request (XHR) call type](performance-insights-categories.md#xml-http-request-xhr-call-type)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Customization  
-   :::column-end:::
-   :::column span="":::
-      Deprecated controls
-   :::column-end:::
-   :::column span="":::
-     Some controls like the flip switch and calendar V1 controls are deprecated. Makers should always use modern controls. More information: [Deprecated controls](performance-insights-categories.md#deprecated-controls)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Customization  
-   :::column-end:::
-   :::column span="":::
-      Sandbox performance  
-   :::column-end:::
-   :::column span="":::
-      Makers can build their own plug-in. Depending on implemented patterns, there are many aspects to check to confirm the plug-in methods perform well, such as timeout events. This insight checks the plug-in’s timeout to see whether it was caused by the timeout of the external endpoint calls the maker implemented or not. More information: [Sandbox performance - Dominant plug-ins](performance-insights-categories.md#sandbox-performance---dominant-plug-ins)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Customization  
-   :::column-end:::
-   :::column span="":::
-      Saved query
-   :::column-end:::
-   :::column span="":::
-      While building a solution, a maker can build, and reuse a saved query. If the saved query has been created improperly, it could make the query run slow. Consequently, any forms or views using the problematic saved query might suffer from slow performance.
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Configuration  
-   :::column-end:::
-   :::column span="":::
-      Plugin trace log setting
-   :::column-end:::
-   :::column span="":::
-      Administrators can enable plug-in trace logs for a Dataverse environment from **None** to **All**. It is beneficial to check the plug-in trace logs in the development phase. However, for production environments, we recommend setting the feature to either **Exception** or **None** to minimize intensive logging activity that can degrade app performance. More information: [Plug-in trace log setting](performance-insights-categories.md#plug-in-trace-log-setting)
-   :::column-end:::
-:::row-end:::
+>[!Note]
+>1.	Read privilege defines who all can view the ratings feature on the apps.
+>2.	Update action on a user entity record is blocked for all roles and all users.
+
+Administrators can also share the app score and comments to external stakeholders by creating PowerBI dashboards through User Rating entity via TDS endpoints (link). This will help them to convey feedback to makers outside organizations and lacking access to production environments.
+
 
 ### See also
 
