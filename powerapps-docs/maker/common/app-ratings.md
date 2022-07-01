@@ -88,7 +88,7 @@ With public preview release, the feature provides following direct links to take
 3. **[Monitor](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/monitor-page-checker)** – This tool helps makers to troubleshoot and diagnose issues with live monitoring of a user’s session. Know more(link).
 4. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
-## How is the feedback data stored in Dataverse?
+## How is feedback data stored in Dataverse?
 Microsoft added a new default entity in dataverse called “User Rating” to all Power Apps and Dynamics 365 organizations based on dataverse. This entity stores rating score and comments from each user feedback. This is an organization owned entity with default create, read, and delete rights provided to system administrators and customizers. Environment Makers role has only read privilege available.
 
 >[!Note]
