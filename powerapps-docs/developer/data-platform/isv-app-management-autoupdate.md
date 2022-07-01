@@ -32,7 +32,8 @@ Automatic updates in the preview will be limited to: 
 
 ## Enabling Auto App Update  
 
-**Note**: Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers. 
+[!NOTE]
+Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers. 
 
 1.  Log into PPAC as an admin user. From the Environments page, select an environment and click on **Settings**.
 
@@ -61,7 +62,7 @@ Graphical user interface, application
  
 2. Select a specific app and click the **Auto Updates** tab to view opt-in rates for publishers and environments, which organizations have opted out, as well as a detailed list of version history. 
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-4.jpg?raw=true "ISV Studio Auto Updates").
+![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-4.png?raw=true "ISV Studio Auto Updates").
 
 3. From the Version Update History table, click **View Details** to view details about the deployment status by region.
 
