@@ -22,53 +22,51 @@ App Auto Update is a new feature in public preview that allows automatic updates
 
 Automatic updates in the preview will be limited to:  
 
-- **Explicit tenant admin opt-in**: Tenant admin user must opt-in from PPAC to enable the feature. 
+- **Explicit tenant admin opt-in**: Tenant admin user must opt-in from the Power Platform Admin center to enable the feature. 
 
-- **Pre-approved publishers**: Tenant admin user must indicate which publishers are permitted to automatically update apps in their environment once opted-in from PPAC. 
+- **Pre-approved publishers**: Tenant admin user must indicate which publishers are permitted to automatically update apps in their environment once opted-in from the Power Platform Admin center.
 
 - **Dark hours only**: To further minimize impact, automatic updates will only happen during dark hours defined by either the customer or at geo level.  
 
-<br>
-
 ## Enabling Auto App Update  
 
-[!NOTE]
-Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers.
+> [!NOTE]
+> Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers.
 
-1.  Log into PPAC as an admin user. From the Environments page, select an environment and click on **Settings**.
+1. Log into the Power Platform Admin center as an admin user. From the Environments page, select an environment and click on **Settings**.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-0.jpg?raw=true "PPAC Environment")
+   :::image type="content" source="media/auto-app-update-0.jpg" alt-text="Power Platform Admin Center Environment":::
 
-2. From the environment settings page, under the **Updates** section, click to open the **App Update Settings** page.  
+1. From the environment settings page, under the **Updates** section, click to open the **App Update Settings** page.  
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-1.jpg?raw=true "PPAC Environment Settings")
+   :::image type="content" source="media/auto-app-update-1.jpg" alt-text="Power Platform Admin Center Environment Settings":::
 
-3. Toggle the configurator to **'On'** to opt-in to the feature.  From the drop-down list of publishers, select for which publishers you want to automatically update apps.
+1. Toggle the configurator to **'On'** to opt-in to the feature.  From the drop-down list of publishers, select for which publishers you want to automatically update apps.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-2.jpg?raw=true "Configure App Update Settings")
+   :::image type="content" source="media/auto-app-update-2.jpg" alt-text="Configure App Update Settings":::
 
-4. Click **Save** to keep your changes.
+1. Click **Save** to keep your changes.
 
-<br>
 
 ## Monitoring Opt-in Environments in ISV Studio 
 
-As a publisher with access to ISV Studio, you can view details about your automatic updates and opt-in rates. 
+As a publisher with access to ISV Studio, you can view details about your automatic updates and opt-in rates.
  
-1. Login to ISV Studio. From the navigation menu, click on **Analytics** and **Published apps.** 
+1. Login to ISV Studio. From the navigation menu, click on **Analytics** and **Published apps.**
 Graphical user interface, application
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-3.jpg?raw=true "ISV Studio Published Apps")
+   :::image type="content" source="media/auto-app-update-3.jpg" alt-text="ISV Studio Published Apps":::
  
-2. Select a specific app and click the **Auto Updates** tab to view opt-in rates for publishers and environments, which organizations have opted out, as well as a detailed list of version history. 
+1. Select a specific app and click the **Auto Updates** tab to view opt-in rates for publishers and environments, which organizations have opted out, as well as a detailed list of version history.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-4.png?raw=true "ISV Studio Auto Updates")
+   :::image type="content" source="media/auto-app-update-4.png" alt-text="ISV Studio Auto Updates":::
 
-3. From the Version Update History table, click **View Details** to view details about the deployment status by region.
+1. From the Version Update History table, click **View Details** to view details about the deployment status by region.
 
-![alt text](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/akim1/powerapps-docs/developer/data-platform/media/auto-app-update-5.jpg?raw=true "ISV Studio Version Update Details")
+   :::image type="content" source="media/auto-app-update-5.jpg" alt-text="ISV Studio Version Update Details":::
 
-**Note**: The Cancel Deployment button will cancel automatic updates for any regions with release status in progress or to be scheduled.
+> [!NOTE]
+> The Cancel Deployment button will cancel automatic updates for any regions with release status in progress or to be scheduled.
 
 ### See also
 
