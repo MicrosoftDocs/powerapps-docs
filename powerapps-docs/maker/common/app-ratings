@@ -15,11 +15,30 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# What are performance insights? (preview)
+# What are app ratings? (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Performance insights are a self-service tool for enterprise app makers that analyzes runtime user data and provides a prioritized list of recommendations to help improve the performance of model-driven apps. This feature provides a daily set of analytic insights related to the performance of a Power Apps model-driven or customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Service, with recommendations and actionable items. Enterprise app makers can view detailed performance insights at an app-level in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+End users of Power Apps provide satisfaction score and feedback for apps they use. With app ratings feature, we enable our makers and administrators to view a specific app’s satisfaction and comments provided by end users in compliance with international privacy laws. The feature also provides action to navigate to solution checker, performance insights, monitoring, and usability recommendations.
+
+>[!NOTE]
+>This feature is currently only available for model-driven Power Apps.
+
+This feature provides a view of app satisfaction score(link it) on scale of 0 to 200, provides a score trend(link it) over last 90 days, displays different score based on web or mobile device(link it) and based on different browsers(link it) as well.
+
+The report for current score and comments can be exported per app in app ratings dashboard to share with more stakeholders.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## How to access? 
 
