@@ -28,7 +28,7 @@ End users of Power Apps provide feedback for apps they use. With app ratings fea
 
 This feature provides a view of [app satisfaction score](#what-is-an-app-satisfaction-score) on scale of 0 to 200, provides a [score trend](#how-does-score-trend-work) over last 90 days, displays different score [based on web or mobile device](#app-satisfaction-by-device) and [based on different browsers](#app-satisfaction-by-browser) as well.
 
-The report for current score and comments can be exported per app in app ratings dashboard to share with more stakeholders.
+The report for current score and comments can be exported per app in the app ratings dashboard to share with more stakeholders.
 
 ## How to access? 
 
