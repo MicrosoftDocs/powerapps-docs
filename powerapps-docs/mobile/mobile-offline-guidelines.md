@@ -19,9 +19,9 @@ search.app:
 
 # Offline profile guidelines (preview)
 
-[This topic is pre-release documentation and is subject to change.]
+[This article is pre-release documentation and is subject to change.]
 
-There is a lot to keep in mind when creating or updating an offline profile for model-driven apps. An offline profile should include all the data your front-line workers need to complete tasks in the field, but if it includes too much data, your workers might get stuck waiting to download the data they need or even run out of disk space. You'll need to consider the devices and data plans your workers have to make sure workers have a great experience.
+There's a lot to keep in mind when creating or updating an offline profile for model-driven apps. An offline profile should include all the data your front-line workers need to complete tasks in the field, but if it includes too much data, your workers might get stuck waiting to download the data they need or even run out of disk space. You'll need to consider the devices and data plans your workers have to make sure workers have a great experience.
 
 To optimize an offline profile for the exact needs of your organization, keep the following guidelines in mind.
 
@@ -33,9 +33,9 @@ You should develop and roll out your offline profile in three main phases:
 
 ### Phase 1: Offline profile development and iteration
 
-You as the maker or admin create or update an offline profile based on data configured in an app module. In a test environment, you can validate how the app behaves when offline using Power Apps or Field Service on iOS, Android, or Windows. Windows users will find apps in the Microsoft Store that allow quick iterations without the need for a mobile device. In this phase, you will add new tables and filters to existing tables to make sure that the right data is downloaded to the app.
+You as the maker or admin create or update an offline profile based on data configured in an app module. In a test environment, you can validate how the app behaves when offline using Power Apps or Field Service on iOS, Android, or Windows. Windows users will find apps in the Microsoft Store that allow quick iterations without the need for a mobile device. In this phase, you'll add new tables and filters to existing tables to make sure that the right data is downloaded to the app.
 
-***Outcome:*** You validate that all the grids and forms work offline after data download is complete and download sizes are reasonable based on test data.
+***Outcome:*** You validate that all the grids and forms work offline after data download is complete and download sizes are reasonably based on test data.
 
 ### Phase 2: User validation
 
@@ -59,7 +59,7 @@ As you develop your offline profile and test with real or representative data, k
 
 -   Limit the number of tables in an offline profile to less than 100 
 
--   Limit the total data size to less than 4GB. If your users use Files, Images, or Timeline Annotations, you should apply filters to reduce the total download size
+-   Limit the total data size to less than 4 GB. If your users use Files, Images, or Timeline Annotations, you should apply filters to reduce the total download size
 
 If offline data exceeds these recommendations, users will see slower syncs, higher data utilization, higher battery usage, and slower app performance.
 
@@ -69,7 +69,7 @@ Apply the following best practices to ensure that users only download the data t
 
 ## Don't reinvent the wheel
 
-If you are customizing Field Service or Sales, start from the default offline profiles packaged with those apps. They include everything you need for an out-of-box solution, and you can add additional standard and custom tables that are important for your business. By starting with the default profile, you know that core features will work, and you will not miss tables referenced by standard forms.
+If you're customizing Field Service or Sales, start from the default offline profiles packaged with those apps. They include everything you need for an out-of-box solution, and you can add other standard and custom tables that are important for your business. By starting with the default profile, you know that core features will work, and you won't miss tables referenced by standard forms.
 
 If you're using a default profile, **don't remove tables**. Removing tables from the default profile may result in runtime failures in forms or views. If the default profile includes too many or too few rows of data, adjust filters on the largest tables to optimize data sizes for your users.
 
@@ -77,7 +77,7 @@ If you're using a default profile, **don't remove tables**. Removing tables from
 
 When you add a new form or view to your model-driven app, look for references to other tables including lookups and other related tables. Make sure each of these tables is included in your offline profile with a corresponding related table or filters. All tables referenced by web resource scripts should also be added to the offline profile.
 
-When you a table to the offline profile, you can choose between these four options to determine which rows will be downloaded:
+When you add a table to the offline profile, you can choose between these four options to determine which rows will be downloaded:
 
 :::image type="content" source="media/mobile-offline-guidelines/options.png" alt-text="An image that shows four options to download rows with options of organization rows, all rows, related rows only, and custom.":::
 
@@ -91,7 +91,7 @@ Consider which of these categories your table belongs to in your model-driven ap
 
 Choose a row option based on the category of table you add:
 
-|            | Organization rows | All rows | Related rows only | Custom |
+|   Table type         | Organization rows | All rows | Related rows only | Custom |
 |------------|-------------------|----------|-------------------|--------|
 | Standalone | &check;                 |          |                   | &check;      |
 | Related    |                   |          | &check;                 | &check;      |
@@ -104,13 +104,13 @@ If some users have access to a large set of data online, you should add custom f
 > [!IMPORTANT]
 > If you add a custom filter to a table configured to download related rows, the custom filter will be treated as an **OR** with all related rows also being downloaded in addition to rows specified by the filter, so users may download more data than you intend. If you want to download related rows and apply an additional filter, uncheck Related rows only and specify the relationship and the additional restrictions in a custom filter using **AND**.
 
-For **Standalone** Tables, you can use a custom filter which includes the records referenced by the Grid views configured in your model-driven app. By default, all views are included when you add a table to the app designer.
+For **Standalone** Tables, you can use a custom filter that includes the records referenced by the Grid views configured in your model-driven app. By default, all views are included when you add a table to the app designer.
 
-To ensure that users see the same data online and offline, you should explicitly select the views that filter data that you include in the offline profile.
+To ensure that users, see the same data online and offline, you should explicitly select the views that filter data that you include in the offline profile.
 
 :::image type="content" source="media/mobile-offline-guidelines/filters1.png" alt-text="An image that shows filter with explicit equal condition.":::
 
-For **Related** Tables, use a custom filter if you want users to download rows that are related **AND** match your additional filter criteria.
+For **Related** Tables, use a custom filter if you want users to download rows that are related **AND** match your other filter criteria.
 
 :::image type="content" source="media/mobile-offline-guidelines/filters2.png" alt-text="An image that shows filter with custom filter with AND condition.":::
 
@@ -126,11 +126,11 @@ For **Resources** Tables, use a custom filter if you want users to download only
 
 **Filter by** **status** to limit downloads to Active rows or rows that meet your status criteria.
 
-:::image type="content" source="media/mobile-offline-guidelines/filters5.png" alt-text="An image that shows multiple filter with status of active.":::
+:::image type="content" source="media/mobile-offline-guidelines/filters7.png" alt-text="An image that shows multiple filters with status of active.":::
 
 **Filter by custom category or role fields** to scope large tables down to the data needed for your app. For example, you could filter Contacts by Role to limit data to only stakeholders.
 
-:::image type="content" source="media/mobile-offline-guidelines/filters6.png" alt-text="An image that shows a filter with role type.":::
+:::image type="content" source="media/mobile-offline-guidelines/filters5.png" alt-text="An image that shows a filter with role type.":::
 
 ## Avoid these filter pitfalls that can slow down your downloads
 
@@ -140,28 +140,28 @@ If a custom filter results in a slow Dataverse query, it will take longer for yo
 
 -   Avoid multiple levels of relationships in custom filters. Filters like this can lead to slow downloads:
 
-:::image type="content" source="media/mobile-offline-guidelines/image9.png" alt-text="An image that shows multiple filters with relationships and nesting.":::
+    :::image type="content" source="media/mobile-offline-guidelines/filters6.png" alt-text="An image that shows multiple filters with relationships and nesting.":::
 
 -   Avoid too many OR conditions
 
-## Don't miss the data your users need 
+## Don't miss the data your users need
 
-To validate that your users have all the data they need, you should compare the data available online and offline. Use the mobile app in airplane mode or with your internet connection disabled, and make sure that the views and forms you see show the same data as you see in a web browser online. If there are differences, it means you should either refine filters in your Views or refine the filters in your offline profile.
+To validate if your users have all the data they need, you should compare the data available online and offline. Use the mobile app in airplane mode or with your internet connection disabled, and make sure the views and forms you see show the same data as you see in a web browser online. If there are differences, it means you should either refine filters in your Views or refine the filters in your offline profile.
 
 ## Add these related tables if your app needs them
 
-- **Business process flows:** If a form contains a business process flow, make sure to add the business process flow table. See [Mobile Offline Supported Capabilities](https://docs.microsoft.com/en-us/dynamics365/mobile-app/mobile-offline-capabilities#supported--capabilities) for more details.
+- **Business process flows:** If a form contains a business process flow, make sure to add the business process flow table. More information: [Mobile Offline Supported Capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported--capabilities) for more details.
 
-- **Files and Images:** To add Files and Images to your offline profile in the Power Platform Admin Center, see [Configure mobile offline profiles for files and images - Power Apps \| Microsoft Docs](https://docs.microsoft.com/en-us/power-apps/mobile/offline-file-images). Use custom filters to limit the files downloaded to only those that are critical for users.
+- **Files and Images:** To add Files and Images to your offline profile in the Power Platform Admin Center, see [Configure mobile offline profiles for files and images](offline-file-images.md). Use custom filters to limit download of critical files.
 
 - **Timeline:** To make Notes on the timeline control available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so use custom filters to the Notes table to limit download times.
 
-- **Warning**: you may see slower data downloads if users upload files larger than 4MB to the Timeline control. If users need to upload files larger than 4MB, use the Quick Notes control in Field Service or Files or Images instead of the Timeline to improve performance.
+- **Warning**: you may see slower data downloads if users upload files larger than 4 MB to the Timeline control. If users need to upload files larger than 4 MB, use the Quick Notes control in Field Service**, or **Files**/**Images** instead of the **Timeline** to improve performance.
 
 ### See also
 
 - [Configure model-driven apps for offline (preview)](mobile-offline-overview.md)
 - [Configure offline data for the Field Service (Dynamics 365) mobile app (contains video)](/dynamics365/field-service/mobile-power-app-system-offline)
-- [5 tips for implementing the Field Service (Dynamics 365) mobile app (blog)](https://cloudblogs.microsoft.com/dynamics365/it/2021/04/21/5-tips-for-implementing-the-field-service-dynamics-365-mobile-app/)
+- [Five tips for implementing the Field Service (Dynamics 365) mobile app (blog)](https://cloudblogs.microsoft.com/dynamics365/it/2021/04/21/5-tips-for-implementing-the-field-service-dynamics-365-mobile-app/)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
