@@ -83,9 +83,9 @@ The feature also displays comparison across different browsers. The feature can 
 
 ## Improve your application
 With public preview release, the feature provides following direct links to take actions to improve your app:
-1. **[Solution Checker](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/use-powerapps-checker)** – This link will take you to a list of solutions to run checker if applicable. We don’t have the ability yet to precisely identify the solution which app was part of during environment migration. Makers or admins will need to manually identify the solution and run checker tool to identify issues. Know more(link).
-2. **[Performance Insights](https://docs.microsoft.com/en-us/power-apps/maker/common/performance-insights-overview)** – This tool provides direct insights on respective app’s performance and what can makers do to improve the app performance issues. Know more(link).
-3. **[Monitor](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/monitor-page-checker)** – This tool helps makers to troubleshoot and diagnose issues with live monitoring of a user’s session. Know more(link).
+1. **[Solution Checker](../data-platform/use-powerapps-checker)** – This link will take you to a list of solutions to run checker if applicable. We don’t have the ability yet to precisely identify the solution which app was part of during environment migration. Makers or admins will need to manually identify the solution and run checker tool to identify issues. Know more(link).
+2. **[Performance Insights](performance-insights-overview.md)** – This tool provides direct insights on respective app’s performance and what can makers do to improve the app performance issues. Know more(link).
+3. **[Monitor](../model-driven-apps/monitor-page-checker)** – This tool helps makers to troubleshoot and diagnose issues with live monitoring of a user’s session. Know more(link).
 4. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
 ## How is the feedback data stored in Dataverse?
@@ -95,5 +95,5 @@ Microsoft added a new default entity in dataverse called “User Rating” to al
 >1.	Only users with read privileges can view ratings of the apps.
 >2.	Update on user rating entity records is blocked for all roles and users.
 
-Administrators can also share the app score and comments to external stakeholders by creating [PowerBI dashboards on User Rating entity](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/use-powerbi-dataverse). This will help them to convey feedback to makers outside organizations and lacking access to production environments.
+Administrators can also share the app score and comments to external stakeholders by creating [PowerBI dashboards on User Rating entity](../data-platform/use-powerbi-dataverse). This will help them to convey feedback to makers outside organizations and lacking access to production environments.
 
