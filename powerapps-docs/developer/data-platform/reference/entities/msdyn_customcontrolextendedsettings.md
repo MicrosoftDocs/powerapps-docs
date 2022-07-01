@@ -1,6 +1,6 @@
 ---
-title: "msdyn_entityrefreshhistory table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_entityrefreshhistory table/entity."
+title: "msdyn_customcontrolextendedsettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the msdyn_customcontrolextendedsettings table/entity."
 ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
@@ -15,49 +15,49 @@ search.app:
   - D365CE
 ---
 
-# msdyn_entityrefreshhistory table/entity reference
+# msdyn_customcontrolextendedsettings table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
-**Added by**: Dataflow Solution Solution
+**Added by**: User Experiences Extended Settings Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories(*msdyn_entityrefreshhistoryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories(*msdyn_entityrefreshhistoryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories(*msdyn_entityrefreshhistoryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories(*msdyn_entityrefreshhistoryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_entityrefreshhistories(*msdyn_entityrefreshhistoryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|msdyn_entityrefreshhistories|
-|DisplayCollectionName|EntityRefreshHistories|
-|DisplayName|EntityRefreshHistory|
-|EntitySetName|msdyn_entityrefreshhistories|
+|CollectionSchemaName|msdyn_customcontrolextendedsettingses|
+|DisplayCollectionName|CustomControl Extended Settings|
+|DisplayName|Custom Control Extended Setting|
+|EntitySetName|msdyn_customcontrolextendedsettingses|
 |IsBPFEntity|False|
-|LogicalCollectionName|msdyn_entityrefreshhistories|
-|LogicalName|msdyn_entityrefreshhistory|
+|LogicalCollectionName|msdyn_customcontrolextendedsettingses|
+|LogicalName|msdyn_customcontrolextendedsettings|
 |OwnershipType|UserOwned|
-|PrimaryIdAttribute|msdyn_entityrefreshhistoryid|
+|PrimaryIdAttribute|msdyn_customcontrolextendedsettingsid|
 |PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_entityrefreshhistory|
+|SchemaName|msdyn_customcontrolextendedsettings|
 
 <a name="writable-attributes"></a>
 
@@ -66,25 +66,14 @@ search.app:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [msdyn_DataflowHistoryLookup](#BKMK_msdyn_DataflowHistoryLookup)
-- [msdyn_DataflowId](#BKMK_msdyn_DataflowId)
-- [msdyn_DataflowName](#BKMK_msdyn_DataflowName)
-- [msdyn_EndTime](#BKMK_msdyn_EndTime)
-- [msdyn_EntityName](#BKMK_msdyn_EntityName)
-- [msdyn_entityrefreshhistoryId](#BKMK_msdyn_entityrefreshhistoryId)
-- [msdyn_ErrorCount](#BKMK_msdyn_ErrorCount)
-- [msdyn_ErrorInfoErrorCode](#BKMK_msdyn_ErrorInfoErrorCode)
-- [msdyn_ErrorInfoErrorMessage](#BKMK_msdyn_ErrorInfoErrorMessage)
-- [msdyn_ErrorInfoEvaluationResultJson](#BKMK_msdyn_ErrorInfoEvaluationResultJson)
-- [msdyn_ErrorInfoEvaluationResultJsonMemo](#BKMK_msdyn_ErrorInfoEvaluationResultJsonMemo)
-- [msdyn_ErrorInfoLoadToCdsErrorInfoJson](#BKMK_msdyn_ErrorInfoLoadToCdsErrorInfoJson)
-- [msdyn_ErrorInfoLoadToCdsErrorInfoJsonMemo](#BKMK_msdyn_ErrorInfoLoadToCdsErrorInfoJsonMemo)
-- [msdyn_InsertCount](#BKMK_msdyn_InsertCount)
-- [msdyn_Name](#BKMK_msdyn_Name)
-- [msdyn_RefreshStatus](#BKMK_msdyn_RefreshStatus)
-- [msdyn_StartTime](#BKMK_msdyn_StartTime)
-- [msdyn_TransactionId](#BKMK_msdyn_TransactionId)
-- [msdyn_UpsertCount](#BKMK_msdyn_UpsertCount)
+- [msdyn_customcontrolextendedsettingsId](#BKMK_msdyn_customcontrolextendedsettingsId)
+- [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_rte_userpersonalizationsettings](#BKMK_msdyn_rte_userpersonalizationsettings)
+- [msdyn_timelineWall_isAutoExpanded](#BKMK_msdyn_timelineWall_isAutoExpanded)
+- [msdyn_timelineWall_isFilterPaneOpen](#BKMK_msdyn_timelineWall_isFilterPaneOpen)
+- [msdyn_timelineWall_isSortOrderNewerToOlder](#BKMK_msdyn_timelineWall_isSortOrderNewerToOlder)
+- [msdyn_timelineWall_searchTermApplied](#BKMK_msdyn_timelineWall_searchTermApplied)
+- [msdyn_timelineWall_userFilters](#BKMK_msdyn_timelineWall_userFilters)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -111,230 +100,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_msdyn_DataflowHistoryLookup"></a> msdyn_DataflowHistoryLookup
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|DataflowHistoryLookup|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_dataflowhistorylookup|
-|RequiredLevel|None|
-|Targets|msdyn_dataflowrefreshhistory|
-|Type|Lookup|
-
-
-### <a name="BKMK_msdyn_DataflowId"></a> msdyn_DataflowId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|DataflowId|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_dataflowid|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_DataflowName"></a> msdyn_DataflowName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|DataflowName|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_dataflowname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_EndTime"></a> msdyn_EndTime
-
-|Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description||
-|DisplayName|EndTime|
-|Format|DateAndTime|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_endtime|
-|RequiredLevel|None|
-|Type|DateTime|
-
-
-### <a name="BKMK_msdyn_EntityName"></a> msdyn_EntityName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|EntityName|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_entityname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_entityrefreshhistoryId"></a> msdyn_entityrefreshhistoryId
+### <a name="BKMK_msdyn_customcontrolextendedsettingsId"></a> msdyn_customcontrolextendedsettingsId
 
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for entity instances|
-|DisplayName|EntityRefreshHistory|
+|DisplayName|Custom Control Extended Setting|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
-|LogicalName|msdyn_entityrefreshhistoryid|
+|LogicalName|msdyn_customcontrolextendedsettingsid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
 
-### <a name="BKMK_msdyn_ErrorCount"></a> msdyn_ErrorCount
+### <a name="BKMK_msdyn_name"></a> msdyn_name
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|ErrorCount|
-|Format|None|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorcount|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
-|RequiredLevel|None|
-|Type|Integer|
-
-
-### <a name="BKMK_msdyn_ErrorInfoErrorCode"></a> msdyn_ErrorInfoErrorCode
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|ErrorInfoErrorCode|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorinfoerrorcode|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ErrorInfoErrorMessage"></a> msdyn_ErrorInfoErrorMessage
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|ErrorInfoErrorMessage|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorinfoerrormessage|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ErrorInfoEvaluationResultJson"></a> msdyn_ErrorInfoEvaluationResultJson
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|ErrorInfoEvaluationResultJson|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorinfoevaluationresultjson|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ErrorInfoEvaluationResultJsonMemo"></a> msdyn_ErrorInfoEvaluationResultJsonMemo
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|ErrorInfoEvaluationResultJsonMemo|
-|Format|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorinfoevaluationresultjsonmemo|
-|MaxLength|1048576|
-|RequiredLevel|None|
-|Type|Memo|
-
-
-### <a name="BKMK_msdyn_ErrorInfoLoadToCdsErrorInfoJson"></a> msdyn_ErrorInfoLoadToCdsErrorInfoJson
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|ErrorInfoLoadToCdsErrorInfoJson|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorinfoloadtocdserrorinfojson|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ErrorInfoLoadToCdsErrorInfoJsonMemo"></a> msdyn_ErrorInfoLoadToCdsErrorInfoJsonMemo
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|ErrorInfoLoadToCdsErrorInfoJsonMemo|
-|Format|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_errorinfoloadtocdserrorinfojsonmemo|
-|MaxLength|1048576|
-|RequiredLevel|None|
-|Type|Memo|
-
-
-### <a name="BKMK_msdyn_InsertCount"></a> msdyn_InsertCount
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|InsertCount|
-|Format|None|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_insertcount|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
-|RequiredLevel|None|
-|Type|Integer|
-
-
-### <a name="BKMK_msdyn_Name"></a> msdyn_Name
-
-|Property|Value|
-|--------|-----|
-|Description|Required name field|
+|Description|The name of the custom entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -342,71 +126,125 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|msdyn_name|
 |MaxLength|100|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|String|
 
 
-### <a name="BKMK_msdyn_RefreshStatus"></a> msdyn_RefreshStatus
+### <a name="BKMK_msdyn_rte_userpersonalizationsettings"></a> msdyn_rte_userpersonalizationsettings
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|RefreshStatus|
+|Description|User configured personal settings for Rich Text Editor|
+|DisplayName|RTE User Personalization Settings|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_rte_userpersonalizationsettings|
+|MaxLength|65536|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_msdyn_timelineWall_isAutoExpanded"></a> msdyn_timelineWall_isAutoExpanded
+
+|Property|Value|
+|--------|-----|
+|Description|User configured expand state for TimelineWall|
+|DisplayName|IsAutoExpanded|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_timelineWall_isAutoExpanded|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_timelineWall_isAutoExpanded Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_msdyn_timelineWall_isFilterPaneOpen"></a> msdyn_timelineWall_isFilterPaneOpen
+
+|Property|Value|
+|--------|-----|
+|Description|Will the filter pane open by default on TimelineWall load|
+|DisplayName|Is Filter Pane Open|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_timelineWall_isFilterPaneOpen|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_timelineWall_isFilterPaneOpen Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_msdyn_timelineWall_isSortOrderNewerToOlder"></a> msdyn_timelineWall_isSortOrderNewerToOlder
+
+|Property|Value|
+|--------|-----|
+|Description|Is TimelineWall set to sort by newer to older records|
+|DisplayName|Is Sort Order Newer To Older for TimelineWall|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_timelineWall_isSortOrderNewerToOlder|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_timelineWall_isSortOrderNewerToOlder Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_msdyn_timelineWall_searchTermApplied"></a> msdyn_timelineWall_searchTermApplied
+
+|Property|Value|
+|--------|-----|
+|Description|Search term to be applied on TimelineWall load|
+|DisplayName|Search Term Applied|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_refreshstatus|
-|MaxLength|100|
+|LogicalName|msdyn_timelineWall_searchTermApplied|
+|MaxLength|500|
 |RequiredLevel|None|
 |Type|String|
 
 
-### <a name="BKMK_msdyn_StartTime"></a> msdyn_StartTime
+### <a name="BKMK_msdyn_timelineWall_userFilters"></a> msdyn_timelineWall_userFilters
 
 |Property|Value|
 |--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description||
-|DisplayName|StartTime|
-|Format|DateAndTime|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_starttime|
-|RequiredLevel|None|
-|Type|DateTime|
-
-
-### <a name="BKMK_msdyn_TransactionId"></a> msdyn_TransactionId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|TransactionId|
-|FormatName|Text|
+|Description|User configured filter settings for TimelineWall|
+|DisplayName|User Filters|
+|Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_transactionid|
-|MaxLength|100|
+|LogicalName|msdyn_timelineWall_userFilters|
+|MaxLength|65536|
 |RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_UpsertCount"></a> msdyn_UpsertCount
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|UpsertCount|
-|Format|None|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_upsertcount|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
-|RequiredLevel|None|
-|Type|Integer|
+|Type|Memo|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -460,7 +298,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the EntityRefreshHistory|
+|Description|Status of the Timeline Wall Extended Setting|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -482,7 +320,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the EntityRefreshHistory|
+|Description|Reason for the status of the Timeline Wall Extended Setting|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -550,7 +388,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_DataflowHistoryLookupName](#BKMK_msdyn_DataflowHistoryLookupName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -798,22 +635,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_msdyn_DataflowHistoryLookupName"></a> msdyn_DataflowHistoryLookupName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_dataflowhistorylookupname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 **Added by**: Active Solution Solution
@@ -938,21 +759,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [msdyn_entityrefreshhistory_SyncErrors](#BKMK_msdyn_entityrefreshhistory_SyncErrors)
-- [msdyn_entityrefreshhistory_DuplicateMatchingRecord](#BKMK_msdyn_entityrefreshhistory_DuplicateMatchingRecord)
-- [msdyn_entityrefreshhistory_DuplicateBaseRecord](#BKMK_msdyn_entityrefreshhistory_DuplicateBaseRecord)
-- [msdyn_entityrefreshhistory_AsyncOperations](#BKMK_msdyn_entityrefreshhistory_AsyncOperations)
-- [msdyn_entityrefreshhistory_MailboxTrackingFolders](#BKMK_msdyn_entityrefreshhistory_MailboxTrackingFolders)
-- [msdyn_entityrefreshhistory_ProcessSession](#BKMK_msdyn_entityrefreshhistory_ProcessSession)
-- [msdyn_entityrefreshhistory_BulkDeleteFailures](#BKMK_msdyn_entityrefreshhistory_BulkDeleteFailures)
-- [msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses](#BKMK_msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses)
+- [msdyn_customcontrolextendedsettings_SyncErrors](#BKMK_msdyn_customcontrolextendedsettings_SyncErrors)
+- [msdyn_customcontrolextendedsettings_DuplicateMatchingRecord](#BKMK_msdyn_customcontrolextendedsettings_DuplicateMatchingRecord)
+- [msdyn_customcontrolextendedsettings_DuplicateBaseRecord](#BKMK_msdyn_customcontrolextendedsettings_DuplicateBaseRecord)
+- [msdyn_customcontrolextendedsettings_AsyncOperations](#BKMK_msdyn_customcontrolextendedsettings_AsyncOperations)
+- [msdyn_customcontrolextendedsettings_MailboxTrackingFolders](#BKMK_msdyn_customcontrolextendedsettings_MailboxTrackingFolders)
+- [msdyn_customcontrolextendedsettings_ProcessSession](#BKMK_msdyn_customcontrolextendedsettings_ProcessSession)
+- [msdyn_customcontrolextendedsettings_BulkDeleteFailures](#BKMK_msdyn_customcontrolextendedsettings_BulkDeleteFailures)
+- [msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses](#BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses)
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_SyncErrors"></a> msdyn_entityrefreshhistory_SyncErrors
+### <a name="BKMK_msdyn_customcontrolextendedsettings_SyncErrors"></a> msdyn_customcontrolextendedsettings_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_SyncErrors](syncerror.md#BKMK_msdyn_entityrefreshhistory_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_SyncErrors](syncerror.md#BKMK_msdyn_customcontrolextendedsettings_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -960,16 +781,16 @@ Same as the [msdyn_entityrefreshhistory_SyncErrors](syncerror.md#BKMK_msdyn_enti
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_SyncErrors|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_DuplicateMatchingRecord"></a> msdyn_entityrefreshhistory_DuplicateMatchingRecord
+### <a name="BKMK_msdyn_customcontrolextendedsettings_DuplicateMatchingRecord"></a> msdyn_customcontrolextendedsettings_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_entityrefreshhistory_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_customcontrolextendedsettings_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -977,16 +798,16 @@ Same as the [msdyn_entityrefreshhistory_DuplicateMatchingRecord](duplicaterecord
 |ReferencingAttribute|duplicaterecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_DuplicateMatchingRecord|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_DuplicateBaseRecord"></a> msdyn_entityrefreshhistory_DuplicateBaseRecord
+### <a name="BKMK_msdyn_customcontrolextendedsettings_DuplicateBaseRecord"></a> msdyn_customcontrolextendedsettings_DuplicateBaseRecord
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_entityrefreshhistory_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_customcontrolextendedsettings_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -994,16 +815,16 @@ Same as the [msdyn_entityrefreshhistory_DuplicateBaseRecord](duplicaterecord.md#
 |ReferencingAttribute|baserecordid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_DuplicateBaseRecord|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_DuplicateBaseRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_AsyncOperations"></a> msdyn_entityrefreshhistory_AsyncOperations
+### <a name="BKMK_msdyn_customcontrolextendedsettings_AsyncOperations"></a> msdyn_customcontrolextendedsettings_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_AsyncOperations](asyncoperation.md#BKMK_msdyn_entityrefreshhistory_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_AsyncOperations](asyncoperation.md#BKMK_msdyn_customcontrolextendedsettings_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1011,16 +832,16 @@ Same as the [msdyn_entityrefreshhistory_AsyncOperations](asyncoperation.md#BKMK_
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_MailboxTrackingFolders"></a> msdyn_entityrefreshhistory_MailboxTrackingFolders
+### <a name="BKMK_msdyn_customcontrolextendedsettings_MailboxTrackingFolders"></a> msdyn_customcontrolextendedsettings_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_entityrefreshhistory_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_customcontrolextendedsettings_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1028,16 +849,16 @@ Same as the [msdyn_entityrefreshhistory_MailboxTrackingFolders](mailboxtrackingf
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_ProcessSession"></a> msdyn_entityrefreshhistory_ProcessSession
+### <a name="BKMK_msdyn_customcontrolextendedsettings_ProcessSession"></a> msdyn_customcontrolextendedsettings_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_ProcessSession](processsession.md#BKMK_msdyn_entityrefreshhistory_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_ProcessSession](processsession.md#BKMK_msdyn_customcontrolextendedsettings_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1045,16 +866,16 @@ Same as the [msdyn_entityrefreshhistory_ProcessSession](processsession.md#BKMK_m
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_ProcessSession|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_BulkDeleteFailures"></a> msdyn_entityrefreshhistory_BulkDeleteFailures
+### <a name="BKMK_msdyn_customcontrolextendedsettings_BulkDeleteFailures"></a> msdyn_customcontrolextendedsettings_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_entityrefreshhistory_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_customcontrolextendedsettings_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1062,16 +883,16 @@ Same as the [msdyn_entityrefreshhistory_BulkDeleteFailures](bulkdeletefailure.md
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses"></a> msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses"></a> msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as the [msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
+Same as the [msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1079,7 +900,7 @@ Same as the [msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses](princi
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -1089,64 +910,59 @@ Same as the [msdyn_entityrefreshhistory_PrincipalObjectAttributeAccesses](princi
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_msdyn_entityrefreshhistory_createdby](#BKMK_lk_msdyn_entityrefreshhistory_createdby)
-- [lk_msdyn_entityrefreshhistory_createdonbehalfby](#BKMK_lk_msdyn_entityrefreshhistory_createdonbehalfby)
-- [lk_msdyn_entityrefreshhistory_modifiedby](#BKMK_lk_msdyn_entityrefreshhistory_modifiedby)
-- [lk_msdyn_entityrefreshhistory_modifiedonbehalfby](#BKMK_lk_msdyn_entityrefreshhistory_modifiedonbehalfby)
-- [user_msdyn_entityrefreshhistory](#BKMK_user_msdyn_entityrefreshhistory)
-- [team_msdyn_entityrefreshhistory](#BKMK_team_msdyn_entityrefreshhistory)
-- [business_unit_msdyn_entityrefreshhistory](#BKMK_business_unit_msdyn_entityrefreshhistory)
-- [msdyn_EntityRefreshHistory_DataflowHistor](#BKMK_msdyn_EntityRefreshHistory_DataflowHistor)
+- [lk_msdyn_customcontrolextendedsettings_createdby](#BKMK_lk_msdyn_customcontrolextendedsettings_createdby)
+- [lk_msdyn_customcontrolextendedsettings_createdonbehalfby](#BKMK_lk_msdyn_customcontrolextendedsettings_createdonbehalfby)
+- [lk_msdyn_customcontrolextendedsettings_modifiedby](#BKMK_lk_msdyn_customcontrolextendedsettings_modifiedby)
+- [lk_msdyn_customcontrolextendedsettings_modifiedonbehalfby](#BKMK_lk_msdyn_customcontrolextendedsettings_modifiedonbehalfby)
+- [user_msdyn_customcontrolextendedsettings](#BKMK_user_msdyn_customcontrolextendedsettings)
+- [team_msdyn_customcontrolextendedsettings](#BKMK_team_msdyn_customcontrolextendedsettings)
+- [business_unit_msdyn_customcontrolextendedsettings](#BKMK_business_unit_msdyn_customcontrolextendedsettings)
 
 
-### <a name="BKMK_lk_msdyn_entityrefreshhistory_createdby"></a> lk_msdyn_entityrefreshhistory_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_msdyn_entityrefreshhistory_createdby](systemuser.md#BKMK_lk_msdyn_entityrefreshhistory_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_msdyn_entityrefreshhistory_createdonbehalfby"></a> lk_msdyn_entityrefreshhistory_createdonbehalfby
+### <a name="BKMK_lk_msdyn_customcontrolextendedsettings_createdby"></a> lk_msdyn_customcontrolextendedsettings_createdby
 
 **Added by**: System Solution Solution
 
-See the [lk_msdyn_entityrefreshhistory_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_entityrefreshhistory_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_msdyn_customcontrolextendedsettings_createdby](systemuser.md#BKMK_lk_msdyn_customcontrolextendedsettings_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_msdyn_entityrefreshhistory_modifiedby"></a> lk_msdyn_entityrefreshhistory_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_msdyn_entityrefreshhistory_modifiedby](systemuser.md#BKMK_lk_msdyn_entityrefreshhistory_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_msdyn_entityrefreshhistory_modifiedonbehalfby"></a> lk_msdyn_entityrefreshhistory_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_customcontrolextendedsettings_createdonbehalfby"></a> lk_msdyn_customcontrolextendedsettings_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [lk_msdyn_entityrefreshhistory_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_entityrefreshhistory_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_msdyn_customcontrolextendedsettings_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_customcontrolextendedsettings_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_user_msdyn_entityrefreshhistory"></a> user_msdyn_entityrefreshhistory
-
-**Added by**: System Solution Solution
-
-See the [user_msdyn_entityrefreshhistory](systemuser.md#BKMK_user_msdyn_entityrefreshhistory) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_msdyn_entityrefreshhistory"></a> team_msdyn_entityrefreshhistory
+### <a name="BKMK_lk_msdyn_customcontrolextendedsettings_modifiedby"></a> lk_msdyn_customcontrolextendedsettings_modifiedby
 
 **Added by**: System Solution Solution
 
-See the [team_msdyn_entityrefreshhistory](team.md#BKMK_team_msdyn_entityrefreshhistory) one-to-many relationship for the [team](team.md) table/entity.
+See the [lk_msdyn_customcontrolextendedsettings_modifiedby](systemuser.md#BKMK_lk_msdyn_customcontrolextendedsettings_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_business_unit_msdyn_entityrefreshhistory"></a> business_unit_msdyn_entityrefreshhistory
+### <a name="BKMK_lk_msdyn_customcontrolextendedsettings_modifiedonbehalfby"></a> lk_msdyn_customcontrolextendedsettings_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [business_unit_msdyn_entityrefreshhistory](businessunit.md#BKMK_business_unit_msdyn_entityrefreshhistory) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+See the [lk_msdyn_customcontrolextendedsettings_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_customcontrolextendedsettings_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_msdyn_EntityRefreshHistory_DataflowHistor"></a> msdyn_EntityRefreshHistory_DataflowHistor
+### <a name="BKMK_user_msdyn_customcontrolextendedsettings"></a> user_msdyn_customcontrolextendedsettings
 
-See the [msdyn_EntityRefreshHistory_DataflowHistor](msdyn_dataflowrefreshhistory.md#BKMK_msdyn_EntityRefreshHistory_DataflowHistor) one-to-many relationship for the [msdyn_dataflowrefreshhistory](msdyn_dataflowrefreshhistory.md) table/entity.
+**Added by**: System Solution Solution
+
+See the [user_msdyn_customcontrolextendedsettings](systemuser.md#BKMK_user_msdyn_customcontrolextendedsettings) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_team_msdyn_customcontrolextendedsettings"></a> team_msdyn_customcontrolextendedsettings
+
+**Added by**: System Solution Solution
+
+See the [team_msdyn_customcontrolextendedsettings](team.md#BKMK_team_msdyn_customcontrolextendedsettings) one-to-many relationship for the [team](team.md) table/entity.
+
+### <a name="BKMK_business_unit_msdyn_customcontrolextendedsettings"></a> business_unit_msdyn_customcontrolextendedsettings
+
+**Added by**: System Solution Solution
+
+See the [business_unit_msdyn_customcontrolextendedsettings](businessunit.md#BKMK_business_unit_msdyn_customcontrolextendedsettings) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
 [About the table reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.msdyn_entityrefreshhistory?text=msdyn_entityrefreshhistory EntityType" />
+<xref href="Microsoft.Dynamics.CRM.msdyn_customcontrolextendedsettings?text=msdyn_customcontrolextendedsettings EntityType" />
