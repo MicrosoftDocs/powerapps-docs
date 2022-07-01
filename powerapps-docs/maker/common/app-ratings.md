@@ -40,9 +40,9 @@ The report for current score and comments can be exported per app in app ratings
 
 :::image type="content" source="media/ratings-option.png" alt-text="Ratings option image":::
 
-## How do Power Apps capture end user satisfaction?
+## How does Power Apps capture end user satisfaction?
 
-Based on user’s activity inside the app, Microsoft Power Apps asks app users to score an app with following question below:
+Based on user’s activity inside the app, Microsoft Power Apps asks users to score the app with following question below:
 
 1. How satisfied are you with (name of the app)?
 -	Very satisfied
@@ -68,15 +68,15 @@ App satisfaction score is calculated by taking the responses with an answer "Ver
 
 We report App Satisfaction on a scale of 0 to 200, where:
 - 1 to 100 is poor score
-- 101 to 140 is fair score
-- 141 to 160 is good score
-- 161 to 200 is world class score
+- 100 to 140 is fair score
+- 140 to 160 is good score
+- 160 to 200 is world class score
 
 ## How does score trend work? 
-App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 0 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend this to analyze with the app updates if updates have helped in improving the score.
+App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 1 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend this to analyze with the app updates if updates have helped in improving the score.
 
 ## App satisfaction by device
-Currently, we provide distribution of score by device types – web, mobile or others. For tablets, the score will be calculated as mobile. “Others” option categorizes score for unknown devices on Microsoft’s end.
+Currently, we provide distribution of score by device types – web, mobile or others. For tablets, the score will be calculated as mobile. “Others” option categorizes score for unknown devices.
 
 ## App satisfaction by browser
 The feature also displays comparison across different browsers. The feature can identify different types of browsers including Edge, IE, Chrome, Mozilla, Opera etc. For those browsers which feature is not able to identify, the score will get attributed towards “others” category.
@@ -88,12 +88,12 @@ With public preview release, the feature provides following direct links to take
 3. **[Monitor](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/monitor-page-checker)** – This tool helps makers to troubleshoot and diagnose issues with live monitoring of a user’s session. Know more(link).
 4. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
-## How is feedback data stored in Dataverse?
+## How is the feedback data stored in Dataverse?
 Microsoft added a new default entity in dataverse called “User Rating” to all Power Apps and Dynamics 365 organizations based on dataverse. This entity stores rating score and comments from each user feedback. This is an organization owned entity with default create, read, and delete rights provided to system administrators and customizers. Environment Makers role has only read privilege available.
 
 >[!Note]
->1.	Read privilege defines who all can view the ratings feature on the apps.
->2.	Update action on a user entity record is blocked for all roles and all users.
+>1.	Only users with read privileges can view ratings of the apps.
+>2.	Update on user rating entity records is blocked for all roles and users.
 
 Administrators can also share the app score and comments to external stakeholders by creating [PowerBI dashboards on User Rating entity](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/use-powerbi-dataverse). This will help them to convey feedback to makers outside organizations and lacking access to production environments.
 
