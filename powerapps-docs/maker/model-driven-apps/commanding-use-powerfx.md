@@ -296,7 +296,7 @@ Confirm( "There was a problem, please review your order." )
 A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
 
 > [!NOTE]
-> Displays the notification message as type information using `NotificationType.Information`.
+> `NotificationType.Success` is not currently supported and will result in an informational notification type.
 
 ```powerappsfl
 Notify( "Model-driven app notification message" )
