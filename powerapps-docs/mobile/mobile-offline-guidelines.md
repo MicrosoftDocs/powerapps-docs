@@ -55,11 +55,9 @@ Each user has access to a different set of data, so it's important to think abou
 
 As you develop your offline profile and test with real or representative data, keep these best practices in mind:
 
--   Limit the total records synced to less than 200,000
-
--   Limit the number of tables in an offline profile to less than 100 
-
--   Limit the total data size to less than 4 GB. If your users use Files, Images, or Timeline Annotations, you should apply filters to reduce the total download size
+- Limit the total records synced to less than 200,000
+- Limit the number of tables in an offline profile to less than 100 
+- Limit the total data size to less than 4 GB. If your users use Files, Images, or Timeline Annotations, you should apply filters to reduce the total download size
 
 If offline data exceeds these recommendations, users will see slower syncs, higher data utilization, higher battery usage, and slower app performance.
 
@@ -136,13 +134,13 @@ For **Resources** Tables, use a custom filter if you want users to download only
 
 If a custom filter results in a slow Dataverse query, it will take longer for your users to download offline data. Follow these best practices to avoid common performance bottlenecks.
 
--   Don't use partial string matches or "Contains", "Begins with", or "Ends with".
+- Don't use partial string matches or "Contains", "Begins with", or "Ends with".
 
--   Avoid multiple levels of relationships in custom filters. Filters like this can lead to slow downloads:
+- Avoid multiple levels of relationships in custom filters. Filters like this can lead to slow downloads:
 
     :::image type="content" source="media/mobile-offline-guidelines/filters6.png" alt-text="An image that shows multiple filters with relationships and nesting.":::
 
--   Avoid too many OR conditions
+- Avoid too many OR conditions
 
 ## Don't miss the data your users need
 
@@ -156,7 +154,7 @@ To validate if your users have all the data they need, you should compare the da
 
 - **Timeline:** To make Notes on the timeline control available offline, add the Notes table and the Users table to the offline profile. Notes can be large if users upload images and videos, so use custom filters to the Notes table to limit download times.
 
-- **Warning**: you may see slower data downloads if users upload files larger than 4 MB to the Timeline control. If users need to upload files larger than 4 MB, use the Quick Notes control in Field Service**, or **Files**/**Images** instead of the **Timeline** to improve performance.
+- **Warning**: you may see slower data downloads if users upload files larger than 4 MB to the Timeline control. If users need to upload files larger than 4 MB, use the Quick Notes control in **Field Service**, or **Files**/**Images** instead of the **Timeline** to improve performance.
 
 ### See also
 
