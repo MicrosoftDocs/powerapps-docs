@@ -73,7 +73,7 @@ We report App Satisfaction on a scale of 0 to 200, where:
 - 160 to 200 is world class score
 
 ## How does score trend work? 
-App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 1 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend this to analyze with the app updates if updates have helped in improving the score.
+App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 1 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend using this feature to analyze subsequent updates to the app and how they have helped in improving the general experience with end users.
 
 ## App satisfaction by device
 Currently, we provide distribution of score by device types – web, mobile or others. For tablets, the score will be calculated as mobile. “Others” option categorizes score for unknown devices.
