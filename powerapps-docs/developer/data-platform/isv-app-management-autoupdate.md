@@ -1,5 +1,5 @@
 ---
-title: Auto App Updates | Microsoft Docs
+title: Auto App Updates (Preview) | Microsoft Docs
 description: Learn about the latest auto update feature for apps.
 ms.date: 06/30/2022
 author: angela21k
@@ -16,7 +16,9 @@ contributors:
   - JimDaly
 ---
 
-# Auto App Updates
+# Auto App Updates (Preview)
+
+[!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 App Auto Update is a new feature in public preview that allows automatic updates of applications installed through AppSource. This feature helps both publishers and customers keep software up to date in a simple and controlled way with minimal administrative overhead.  
 
