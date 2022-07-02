@@ -432,6 +432,8 @@
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+  - name: "Sample: Global Discovery Service"
+    href: sample-global-discovery-service-csharp.md
   - name: Tutorials 
     items:
     - name: "Tutorial: Register an app with Azure Active Directory"

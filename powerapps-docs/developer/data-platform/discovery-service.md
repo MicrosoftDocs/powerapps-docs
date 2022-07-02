@@ -233,11 +233,16 @@ You can use the following string query functions:
 
 ## Use Dataverse ServiceClient
 
-You can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to call the Global Discovery Services for .NET applications.
+For .NET applications you can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to call the Global Discovery Services.
 
 TODO: Ask Matt B to comment on the key benefits provided by this method.
 
 ```csharp
+ // Set up user credentials
+var creds = new System.ServiceModel.Description.ClientCredentials();
+creds.UserName.UserName = userName;
+creds.UserName.Password = password;
+
 //Call DiscoverOnlineOrganizationsAsync
 DiscoverOrganizationsResult organizationsResult = await ServiceClient.DiscoverOnlineOrganizationsAsync(
         discoveryServiceUri: new Uri($"{cloudRegionUrl}/api/discovery/v2.0/Instances"),
@@ -255,6 +260,40 @@ While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint
 
 > [!NOTE]
 > While the `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter accepts a URL to the Global Discovery Service, any `$select` or `$filter` query options used will be ignored. The `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter is optional and if not provided will default to the Commercial cloud.
+
+## Use CrmServiceClient
+
+For .NET Full Framework applications you can continue to use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method> to call the Global Discovery Service.
+
+```csharp
+  // Set up user credentials
+  var creds = new System.ServiceModel.Description.ClientCredentials();
+  creds.UserName.UserName = userName;
+  creds.UserName.Password = password;
+
+  // Call to get organizations from global discovery
+  var organizations = CrmServiceClient.DiscoverGlobalOrganizations(
+        discoveryServiceUri:new Uri($"{cloudRegionUrl}/api/discovery/v2.0/Instances"), 
+        clientCredentials: creds, 
+        user: null, 
+        clientId: clientId,
+        redirectUri: new Uri(redirectUrl), 
+        tokenCachePath: "",
+        isOnPrem: false,
+        authority: string.Empty, 
+        promptBehavior: PromptBehavior.Auto);
+
+  return organizations.ToList();
+```
+
+Like the `ServiceClient.DiscoverOnlineOrganizationsAsync` method, the `CrmServiceClient.DiscoverGlobalOrganizations` method also does not return data as an *Instance*. It returns a
+
+<xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetailCollection?text=OrganizationDetailCollection> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances that contains the same information as the Instance types returned by the OData service.
+
+### See Also
+
+[Sample: Global Discovery Service Sample (C#)](sample-global-discovery-service-csharp.md)<br />
+[Sample: Access the Discovery service using CrmServiceClient](org-service/samples/access-discovery-service.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: "Sample: Work with discovery service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Use CrmServiceClient to access the Global Discovery Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample code shows how to use discovery services" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly
@@ -15,9 +15,13 @@ contributors:
  - JimDaly
  - phecke
 ---
-# Sample: Access the Discovery service
+# Sample: Use CrmServiceClient to access the Global Discovery Service
 
-This sample code shows how to use the discovery service with SDK assemblies. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DiscoveryService)
+This sample code shows how to use the discovery service with the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method>. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DiscoveryService)
+
+> [!NOTE]
+> This sample is limited to .NET Full Framework.
+> There is a newer sample compatible with .NET Core using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync Method>. See [Sample: Global Discovery Service (C#)](../../sample-global-discovery-service-csharp.md).
 
 ## How to run this sample
 
