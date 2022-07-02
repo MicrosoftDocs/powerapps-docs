@@ -553,5 +553,4 @@ namespace PowerApps.Samples
 
 [Discover user organizations](discovery-service.md)
 
-
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[!INCLUDE [footer-banner](../../includes/footer-banner.md)]
