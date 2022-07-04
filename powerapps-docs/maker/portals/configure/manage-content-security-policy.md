@@ -5,7 +5,7 @@ author: nabha
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/15/2022
+ms.date: 07/04/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -17,7 +17,7 @@ contributors:
 
 # Manage Content Security Policy
 
-Content Security Policy (CSP)<!--note from editor: I'm suggesting title caps because this is the name of a standard.--> is an extra layer of security that helps detect and mitigate some types of web attacks such as data theft, site defacement, or the distribution of malware. CSP provides an extensive set of policy directives that help control the resources that a site page is allowed to load. Each directive defines the restrictions for a specific type of resource.
+Content Security Policy (CSP) is an extra layer of security that helps detect and mitigate some types of web attacks such as data theft, site defacement, or the distribution of malware. CSP provides an extensive set of policy directives that help control the resources that a site page is allowed to load. Each directive defines the restrictions for a specific type of resource.
 
 When CSP is turned on for a portals website, it helps enhance security by blocking connections, scripts, fonts, and other types of resources that originate from unknown or malicious sources. CSP is turned off by default in portals; however, many websites might require CSP to enhance other security.
 
@@ -35,7 +35,7 @@ For more information about CSP, go to [Content Security Policy Reference](https:
 
 1. On the left pane, select **Site Settings**.
 
-1. Create (or update) the **HTTP/Content-Security-Policy** site setting, and set the values you need from<!--note from editor: I'm not sure whether "required" is correct here. The reference page lists a bunch of values, but doesn't say which ones are required (if any).--> the [CSP reference](https://content-security-policy.com/) page, separated by semicolons.
+1. Create (or update) the **HTTP/Content-Security-Policy** site setting, and set the values you need from the [CSP reference](https://content-security-policy.com/) page, separated by semicolons.
 
     **Example**
 
@@ -51,19 +51,19 @@ To enable nonce in portals, add the **script-src 'nonce';** value to the **HTTP/
 
 **Examples**
 
-If you want a strict policy and don't want to allow script loading from sources outside of portals, use the following:<!--note from editor: The following edits are suggested. I think it would be good to use code fencing so the reader can copy these strings, but I'm not sure whether javascript is the correct language indicator.-->
+If you want a strict policy and don't want to allow script loading from sources outside of portals, use the following:
 
-```javascript
+```html
 script-src 'self' content.powerapps.com 'nonce'
 ```
 
 If you want to load scripts from any secure source, use the following:
 
-```javascript
+```html
 script-src https: 'nonce'
 ```
 
 > [!NOTE]
-> - When nonce is enabled, **unsafe-eval** will be automatically injected to support the automatic evaluation of unsafe code.<!--note from editor: Edit assumes that "eval validation" is redundant because otherwise, I don't know what it means.--> To disable the automatic injection of **unsafe-eval**, update<!--note from editor: I assume that if nonce has been enabled, this site setting must already exist.--> the site setting **HTTP/Content-Security-Policy/Inject-unsafe-eval** to **false**.
+> - When nonce is enabled, **unsafe-eval** will be automatically injected to support the automatic evaluation of unsafe code. To disable the automatic injection of **unsafe-eval**, update the site setting **HTTP/Content-Security-Policy/Inject-unsafe-eval** to **false**.
 > - If **unsafe-eval** injection is disabled, the validation of automatically generated fields on [basic](../configure/entity-forms.md) or [advanced](../configure/web-form-properties.md) forms might no longer function correctly.
 
