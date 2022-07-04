@@ -53,13 +53,13 @@ To enable nonce in portals, add the **script-src 'nonce';** value to the **HTTP/
 
 If you want a strict policy and don't want to allow script loading from sources outside of portals, use the following:
 
-```html
+```
 script-src 'self' content.powerapps.com 'nonce'
 ```
 
 If you want to load scripts from any secure source, use the following:
 
-```html
+```
 script-src https: 'nonce'
 ```
 
