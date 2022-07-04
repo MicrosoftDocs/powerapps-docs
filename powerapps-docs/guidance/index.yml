@@ -6,9 +6,8 @@ summary: Power Apps guidance documentation provides best practice information fr
 metadata:
   title: Power Apps guidance documentation
   description: Provides best practice guidance information for Power Apps.
-  services: service
-  
-  ms.subservice: subservice
+  services: service  
+  ms.subservice: guidance
   ms.topic: landing-page 
   ms.collection: collection
   author: KumarVivek
