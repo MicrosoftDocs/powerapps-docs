@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-End users of Power Apps provide feedback for apps they use. With app ratings feature, we enable our makers and administrators to view the app’s satisfaction score and comments provided by end users. The collection of feedback is compliant with all international privacy laws. The feature also provides action to improve your app by navigating to solution checker, performance insights, live monitoring, and usability recommendations.
+Microsoft Power Apps takes feedback from end users on how satisfied they are with their app experience. With app ratings feature, we enable our makers and administrators to view the app's satisfaction score and comments provided by end users. The collection of feedback is compliant with all international privacy laws. The feature also seamlessly integrates with solution checker, performance insights and live monitoring, which can help makers to improve their app.
 
 :::image type="content" source="media/app-ratings-overview.png" alt-text="Ratings feature image":::
 
