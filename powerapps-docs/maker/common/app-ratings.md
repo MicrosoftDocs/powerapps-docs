@@ -6,7 +6,7 @@ ms.date: 07/04/2022
 ms.reviewer: "matp"
 
 ms.topic: overview
-author: "yogupt"
+author: "yogeshgupta698"
 ms.subservice: common
 ms.author: "matp"
 manager: "kvivek"
