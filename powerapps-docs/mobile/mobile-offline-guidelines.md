@@ -65,13 +65,13 @@ If offline data exceeds these recommendations, users will see slower syncs, high
 
 Apply the following best practices to ensure that users only download the data they need.
 
-## Don't reinvent the wheel
+### Don't reinvent the wheel
 
 If you're customizing Field Service or Sales, start from the default offline profiles packaged with those apps. They include everything you need for an out-of-box solution, and you can add other standard and custom tables that are important for your business. By starting with the default profile, you know that core features will work, and you won't miss tables referenced by standard forms.
 
 If you're using a default profile, **don't remove tables**. Removing tables from the default profile may result in runtime failures in forms or views. If the default profile includes too many or too few rows of data, adjust filters on the largest tables to optimize data sizes for your users.
 
-## Add all tables referenced by each form and view in your app module
+### Add all tables referenced by each form and view in your app module
 
 When you add a new form or view to your model-driven app, look for references to other tables including lookups and other related tables. Make sure each of these tables is included in your offline profile with a corresponding related table or filters. All tables referenced by web resource scripts should also be added to the offline profile.
 
@@ -95,7 +95,7 @@ Choose a row option based on the category of table you add:
 | Related    |                   |          | &check;                 | &check;      |
 | Resources  |                   | &check;        |                   | &check;      |
 
-## Use filters to reduce data download size
+### Use filters to reduce data download size
 
 If some users have access to a large set of data online, you should add custom filters to restrict the data that these users will download offline.
 
@@ -116,7 +116,7 @@ For **Resources** Tables, use a custom filter if you want users to download only
 
 :::image type="content" source="media/mobile-offline-guidelines/filters3.png" alt-text="An image that shows filter with active status.":::
 
-### Common custom filters
+#### Common custom filters
 
 **Filter by time and date fields** for time-centric data like bookings and Timeline items. Consider both future and past dates. For example, a common filter might include appointments from the past month and the next three months.
 
@@ -130,7 +130,7 @@ For **Resources** Tables, use a custom filter if you want users to download only
 
 :::image type="content" source="media/mobile-offline-guidelines/filters5.png" alt-text="An image that shows a filter with role type.":::
 
-## Avoid these filter pitfalls that can slow down your downloads
+### Avoid these filter pitfalls that can slow down your downloads
 
 If a custom filter results in a slow Dataverse query, it will take longer for your users to download offline data. Follow these best practices to avoid common performance bottlenecks.
 
@@ -146,7 +146,7 @@ If a custom filter results in a slow Dataverse query, it will take longer for yo
 
 To validate if your users have all the data they need, you should compare the data available online and offline. Use the mobile app in airplane mode or with your internet connection disabled, and make sure the views and forms you see show the same data as you see in a web browser online. If there are differences, it means you should either refine filters in your Views or refine the filters in your offline profile.
 
-## Add these related tables if your app needs them
+### Add these related tables if your app needs them
 
 - **Business process flows:** If a form contains a business process flow, make sure to add the business process flow table. More information: [Mobile Offline Supported Capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported--capabilities) for more details.
 
