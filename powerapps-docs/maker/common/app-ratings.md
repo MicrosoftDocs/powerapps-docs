@@ -4,7 +4,6 @@ description: Understand ratings for model-driven apps.
 ms.custom: ""
 ms.date: 07/04/2022
 ms.reviewer: "matp"
-
 ms.topic: overview
 author: "yogeshgupta698"
 ms.subservice: common
@@ -19,81 +18,91 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Power Apps takes feedback from end users on how satisfied they are with their app experience. With app ratings feature, we enable our makers and administrators to view the app's satisfaction score and comments provided by end users. The collection of feedback is compliant with all international privacy laws. The feature also seamlessly integrates with solution checker, performance insights and live monitoring, which can help makers to improve their app.
+Microsoft Power Apps takes feedback from app users on how satisfied they are with their app experience. With the app ratings feature, makers and administrators view the app's satisfaction score and comments provided by users. The collection of feedback is compliant with all international privacy laws. The feature also seamlessly integrates with solution checker, performance insights, and live monitoring, which can help makers improve their app.
 
 :::image type="content" source="media/app-ratings-overview.png" alt-text="Ratings feature image":::
 
 >[!NOTE]
->This feature is currently only available for model-driven Power Apps.
+> - This feature is currently only available for model-driven Power Apps.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] More information: [Power Apps preview program](../powerapps-preview-program.md)
 
-This feature provides a view of [app satisfaction score](#what-is-an-app-satisfaction-score) on scale of 0 to 200, provides a [score trend](#how-does-score-trend-work) over last 90 days, displays different score [based on web or mobile device](#app-satisfaction-by-device) and [based on different browsers](#app-satisfaction-by-browser) as well.
+This feature has the following benefits: 
+- Provides a view of the [app satisfaction score](#what-is-an-app-satisfaction-score) on a scale of 0 to 200. 
+- Provides a [score trend](#how-does-score-trend-work) over the last 90 days.
+- Displays different satisfaction scores based on [web or mobile device](#app-satisfaction-by-device) and [browser](#app-satisfaction-by-browser).
 
-The report for current score and comments can be exported per app in the app ratings dashboard to share with more stakeholders.
+The report for current score and comments can be exported for each app in the app ratings dashboard to share with others.
 
-## How to access? 
+## Access the ratings dashboard
 
 1. Sign in to [Power Apps](https://make.powerapps.com). 
 
 1. On the left navigation pane, select **Apps**, and then select a model-driven app.
 
-1. Use the **...** context menu or command bar to select **Ratings (Preview)**.
+1. Use the **...** context menu or select **Ratings (preview)** from the command bar.
 
-:::image type="content" source="media/ratings-option.png" alt-text="Ratings option image":::
+   :::image type="content" source="media/ratings-option.png" alt-text="Ratings option image":::
 
-## How does Power Apps capture end user satisfaction?
+## How app user satisfaction is collected
 
-Based on user’s activity inside the app, Microsoft Power Apps asks users to score the app with following question below:
+Based on the user’s activity inside the app, Power Apps occasionally prompts users to score the app with the following questions:
 
 1. How satisfied are you with (name of the app)?
--	Very satisfied
--	Satisfied
--	Dissatisfied
--	Very Dissatisfied
 
-2. What can we do to improve?
+   - Very satisfied
+   - Satisfied
+   - Dissatisfied
+   - Very Dissatisfied
+
+1. What can we do to improve?
 
 :::image type="content" source="media/app-satisfaction-dialog.png" alt-text="App satisfaction dialog image":::
 
-Based on the feedback above, we display [app satisfaction score](#what-is-an-app-satisfaction-score) and comments in ratings dashboard.
+Based on the feedback, an [app satisfaction score](#what-is-an-app-satisfaction-score) and comments are displayed in the ratings dashboard.
 
-We follow the guidelines below while prompting feedback dialog:
--	If a user has at least 3 active days during the first 14 days since sign-up, the user will be prompted.
--	If the user has 6 active days in the last (recent) 90 days, the user will be prompted.
--	No users can be prompted more than once in 90 days for the same app/product.
+The following guidelines are used to prompt an app user with the feedback dialog:
+-	If a user has at least 3 active days during the first 14 days since sign-up, the user is prompted.
+-	If the user has 6 active days in the last (recent) 90 days, the user is prompted.
+-	No users are prompted more than once in 90 days for the same app.
 
-## What is an app satisfaction score?
-App satisfaction score is calculated by taking the responses with an answer "Very Satisfied" and subtracting out the percentage of the responses with an answer "Dissatisfied" or "Very Dissatisfied". The total NSAT score is then calculated like this:
+## App satisfaction score
+
+The app satisfaction score is calculated by taking the responses with an answer "Very Satisfied" and subtracting out the percentage of the responses with an answer "Dissatisfied" or "Very Dissatisfied". The total NSAT score is then calculated like this:
 
 >100 + (%Very Satisfied) - (%Dissatisfied) - (%Very Dissatisfied)
 
-We report App Satisfaction on a scale of 0 to 200, where:
-- 1 to 100 is poor score
-- 100 to 140 is fair score
-- 140 to 160 is good score
-- 160 to 200 is world class score
+We report app satisfaction on a scale of 0 to 200, where:
+- 1 to 100 is poor score.
+- 100 to 140 is fair score.
+- 140 to 160 is good score.
+- 160 to 200 is world class score.
 
-## How does score trend work? 
-App satisfaction score for each day is calculated based on total responses received in the previous 28 days. We display trends from 1 to maximum 90 days depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend using this feature to analyze subsequent updates to the app and how they have helped in improving the general experience with end users.
+### How a score trend work
 
-## App satisfaction by device
-Currently, we provide distribution of score by device types – web, mobile or others. For tablets, the score will be calculated as mobile. “Others” option categorizes score for unknown devices.
+The app satisfaction score for each day is calculated based on total responses received in the previous 28 days. Trends from 1 to maximum 90 days are displayed depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend you use this feature to analyze subsequent updates to the app and follow how those updates have helped in improving the general experience with users.
 
-## App satisfaction by browser
-The feature also displays comparison across different browsers. The feature can identify different types of browsers including Edge, IE, Chrome, Mozilla, Opera etc. For those browsers which feature is not able to identify, the score will get attributed towards “others” category.
+### App satisfaction by device
+
+Currently, the app score is separated by device types – web, mobile, or others. For tablets, the score is calculated as mobile. The Others option categorizes the score for unknown devices.
+
+### App satisfaction by browser
+
+App ratings also displays a comparison across different browsers. The feature can identify different types of browsers including Edge, IE, Chrome, Mozilla, and Opera. For browsers that can't be identified, the score is attributed under the Others category.
 
 ## Improve your application
-With public preview release, the feature provides following direct links to take actions to improve your app:
-1. **[Solution Checker](../data-platform/use-powerapps-checker)** – This link will take you to a list of solutions to run checker if applicable. We don’t have the ability yet to precisely identify the solution which app was part of during environment migration. Makers or admins will need to manually identify the solution and run checker tool to identify issues. Know more(link).
-2. **[Performance Insights](performance-insights-overview.md)** – This tool provides direct insights on respective app’s performance and what can makers do to improve the app performance issues. Know more(link).
-3. **[Monitor](../model-driven-apps/monitor-page-checker)** – This tool helps makers to troubleshoot and diagnose issues with live monitoring of a user’s session. Know more(link).
+
+With the public preview release, the app ratings provides the following direct links to take actions to improve your app:
+1. **[Solution Checker](../data-platform/use-powerapps-checker)** – This link takes you to a list of solutions to run solution checker if applicable. Notice that makers or admins must manually identify the solution and run solution checker to identify issues.
+2. **[Performance Insights](performance-insights-overview.md)** – This tool provides direct insights on the respective app’s performance and what makers can do to improve the app performance issues.
+3. **[Monitor](../model-driven-apps/monitor-page-checker)** – This tool helps makers troubleshoot and diagnose issues with live monitoring of a user’s session.
 4. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
-## How is the feedback data stored in Dataverse?
-Microsoft added a new entity in dataverse called “User Rating” to all Power Apps and Dynamics 365 organizations based on dataverse. This entity stores rating score and comments from each user feedback. This is an organization owned entity with default create, read, and delete rights provided to system administrators and customizers. Environment Makers role has only read privilege available.
+## How the feedback data is stored
 
->[!Note]
->1.	Only users with read privileges can view ratings of the apps.
->2.	Update on user rating entity records is blocked for all roles and users.
+A new system table in Microsoft Dataverse called **User Rating** was added to all Power Apps environments that include Dataverse. This table stores the rating score and comments from each user feedback. This is an organization owned table with default create, read, and delete rights provided to system administrators and customizers. The Environment Makers role has only read privilege on the table.
 
-Administrators can also share the app score and comments to external stakeholders by creating [PowerBI dashboards on User Rating entity](../data-platform/use-powerbi-dataverse). This will help them to convey feedback to makers outside organizations and lacking access to production environments.
+> [!Note]
+> 1.	Only users with at least read privileges on the User Rating table can view app ratings data.
+> 1.	By default update on User Rating table records is unavailable for all other security roles.
 
+Administrators can also share the app score and comments to external stakeholders by creating [Power BI dashboards on the User Rating table](../data-platform/use-powerbi-dataverse). This can help convey app ratings data to makers outside organizations who don't have access to production environments.
