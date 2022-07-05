@@ -2,7 +2,7 @@
 title: Power Apps 30-day free trial
 description: Explore Power Apps for free with a 30-day trial. You’ll be able to extend the capabilities of Office 365, create and run apps, manage environments, and more.
 author: alaug
-
+ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
   - canvas
