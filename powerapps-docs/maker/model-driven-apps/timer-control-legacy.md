@@ -44,7 +44,7 @@ To add a timer control to a form:
 
 2.  On the left navigation pane, expand **Data**, and then select **Tables**.
 
-3.  Select a table, such as the account table, and then select the **Forms** tab.
+3.  Select a table, such as the account table, and then select the **Forms** area.
 
 4.  Select the form that you want.
 

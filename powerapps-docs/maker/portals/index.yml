@@ -6,9 +6,8 @@ summary: Use Power Apps portals to create external-facing websites that allow us
 metadata:
   title: Power Apps portals documentation
   description: Provides access to highlighted areas within the Power Apps portals documentation
-  services: service
-  
-  ms.subservice: subservice
+  services: service  
+  ms.subservice: portals
   ms.topic: landing-page 
   ms.collection: collection
   author: kumarvivek

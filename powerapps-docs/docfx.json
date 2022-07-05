@@ -83,6 +83,10 @@
       },
       "ms.service": {
         "**.*": "powerapps"
+      },
+      "ms.subservice": {
+        "developer/data-platform/**/*.md": "dataverse-developer",
+        "developer/model-driven-apps/**/*.md": "mda-developer"
       }
     },
     "template": [],

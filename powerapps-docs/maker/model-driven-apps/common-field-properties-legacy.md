@@ -33,7 +33,7 @@ In addition to configuring aspects of the Dataverse column, such as its type and
 1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**, and then select the table that has the columns you want to view.
 
 > [!note]
-> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** tab.
+> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
 
 2. Select the column that you want to view.
 
@@ -112,9 +112,9 @@ In some scenarios, it is desirable to render a data column within a form field i
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Tables**.
    > [!Note]
-   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a form within a solution, first navigate to your **Solution**, open the **Table**, and then select the **Forms** tab.
+   > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a form within a solution, first navigate to your **Solution**, open the **Table**, and then select the **Forms** area.
 
-3. Select a table, such as the account table, and then select the **Forms** tab.
+3. Select a table, such as the account table, and then select the **Forms** area.
 
 4. Select the form where customizations are required.
 
