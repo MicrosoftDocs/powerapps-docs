@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 05/26/2022
+ms.date: 06/29/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -293,7 +293,10 @@ Confirm( "There was a problem, please review your order." )
 
 ## Add notifications to a model-driven app
 
-A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  
+A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
+
+> [!NOTE]
+> `NotificationType.Success` is not currently supported and will result in an informational notification type.
 
 ```powerappsfl
 Notify( "Model-driven app notification message" )
@@ -319,9 +322,7 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Not supported in Power Fx
-
-### Functions not supported
+## Functions not supported
 
 The following Power Fx functions are currently not supported with commanding in model-driven apps.
 
@@ -332,13 +333,14 @@ The following Power Fx functions are currently not supported with commanding in 
 - Enable()
 - Exit()
 - InvokeControl()
+- Language()
 - LoadData()
 - Param()
 - ReadNFC()
 - RequestHide()
+- ResetForm()
 - Revert()
 - SaveData()
-- ResetForm()
 - ScanBarcode()
 - Set()
 - SubmitForm()
@@ -347,48 +349,42 @@ The following Power Fx functions are currently not supported with commanding in 
 
 ### Enums not supported
 
+- Align
+- AlignInContainer
+- BarcodeType
 - BorderStyle
 - Color
 - Direction
 - DisplayMode
-- LayoutMode
-- LayoutAlignItems
-- AlignInContainer
-- LayoutJustifyContent
-- LayoutOverflow
 - Font
 - FontWeight
+- FormPattern
+- GridStyle
 - ImagePosition
+- ImageRotation
+- LabelPosition
 - Layout
+- LayoutAlignItems
 - LayoutDirection
-- TextPosition
-- TextMode
-- TextFormat
-- VirtualKeyboardMode
-- TeamsTheme
-- Themes
+- LayoutJustifyContent
+- LayoutMode
+- LayoutOverflow
+- ListItemTemplate
+- MapStyle
+- Overflow
+- PDFPasswordState
 - PenMode
 - RemoveFlags
 - ScreenTransition
-- Align
-- VerticalAlign
+- TeamsTheme
+- TextFormat
+- TextMode
+- TextPosition
+- Themes
 - Transition
-- Overflow
-- MapStyle
-- GridStyle
-- LabelPosition
+- VerticalAlign
+- VirtualKeyboardMode
 - Zoom
-- PDFPasswordState
-- BarcodeType
-- ImageRotation
-- FormPattern
-- ListItemTemplate
-- LoadingSpinner
-- Live
-- TextRole
-- ScreenSize
-- Icon
-- MessageSource
 
 ### Other unsupported areas
 
@@ -398,8 +394,8 @@ The following Power Fx functions are currently not supported with commanding in 
 - Connection
 - Environment
 - Host
-- Location
 - Layout
+- Location
 - ScreenSize
 - User
 

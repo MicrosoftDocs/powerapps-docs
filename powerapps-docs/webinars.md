@@ -8,6 +8,7 @@ ms.custom:
 ms.date: 04/28/2022
 ms.author: kvivek
 ms.reviewer: kvivek
+ms.subservice: common
 searchScope:
   - "Power Apps"
 contributors:

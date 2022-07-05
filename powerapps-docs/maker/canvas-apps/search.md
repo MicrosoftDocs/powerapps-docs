@@ -5,7 +5,7 @@ author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/10/2022
+ms.date: 06/29/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -21,7 +21,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-You can now use the Search pane to locate objects across your app like media files, variables, collections, data sources and more. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what is being used by your app where, along with being able to go right to results to make necessary updates.
+You can now use the Search pane to locate objects across your app like media files, variables, collections, data sources and more. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what is being used by your app where, along with being able to go right to results to make necessary updates. In addition, you can use the replace capability to update one or more instances of text, variables, collections, and formula references.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -53,14 +53,16 @@ To enable the Search pane on existing apps:
 
     The Search pane is enabled:
 
-    :::image type="content" source="media/search/search-pane.png" alt-text="Search pane visible inside Power Apps Studio.":::
+    :::image type="content" source="media/search/search-pane-1.png" alt-text="Search pane visible inside Power Apps Studio.":::
 
 ## Open the Search pane
 
 You can open the Search pane using the Search icon, or shortcut keys. To use the shortcut keys, press **Ctrl+F** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+F** to open the Search pane.
 
+You can also open the Search pane directly to the Replace functionality by pressing **Ctrl+H** when your cursor is outside the formula bar. When inside the formula bar, press **Ctrl+Shift+H** will open the Search pane directly to the Replace functionality.
+
 > [!NOTE]
-> Pressing **Ctrl+F** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
+> Pressing **Ctrl+F** or **Ctrl+H** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
 
 ## Filter search results
 
@@ -70,7 +72,7 @@ To use filter option and select the required categories, use the filter option n
 
 The following example shows the search results filtered for the search term "Snow" with the selected categories of **Variables** and **Collections**:
 
-:::image type="content" source="media/search/filter.png" alt-text="Filter option selected on the Search pane.":::
+:::image type="content" source="media/search/filter-1.png" alt-text="Filter option selected on the Search pane.":::
 
 ## Refine your search
 
@@ -82,19 +84,19 @@ You can use more search options to further refine search. These options are avai
 
     In the below example, instances of "Snow" (upper case) will appear as a match, but "snow" (lower case) wouldn't.
 
-    :::image type="content" source="media/search/match-case.png" alt-text="An example of matching the case for search results with results for upper case keyword.":::
+    :::image type="content" source="media/search/match-case-1.png" alt-text="An example of matching the case for search results with results for upper case keyword.":::
 
 - **Match Whole Word** - returns search results for exact matches of the entire sequence of characters.
 
-    In the below example, "Snow" returns only two results although "Snow" appears within names many times across all app objects.
+    In the below example, "Snow" returns only a few results although "Snow" appears within names many times across all app objects.
 
-    :::image type="content" source="media/search/match-whole-words.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
+    :::image type="content" source="media/search/match-whole-words-1.png" alt-text="An example of matching the whole word in search result that limits search for the exact word only.":::
 
 - **Use regular expression (RegEx)** - returns search results for matches conforming to the [regular expression](/deployedge/edge-learnmore-regex) specified within the input area.
 
     In the below example, using the Regular Expression search capability with `Snowboarding( Mountain | Dashboard)` formula returns matches for "Snowboarding" when it appears together with either "Mountain" or "Dashboard".
 
-    :::image type="content" source="media/search/regex.png" alt-text="An example of matching regular expression syntax while searching for text.":::
+    :::image type="content" source="media/search/regex-1.png" alt-text="An example of matching regular expression syntax while searching for text.":::
 
 ## Work with search results
 
@@ -116,7 +118,7 @@ As shown below, you're taken to the definition of the global or context variable
 
 Search result:
 
-:::image type="content" source="media/search/variables.png" alt-text="Global and context variables available in search result.":::
+:::image type="content" source="media/search/variables-1.png" alt-text="Global and context variables available in search result.":::
 
 Depending on the selected global or context variable, you're taken to the backstage for the selected type of variable.
 
@@ -126,13 +128,13 @@ Global variable selected:
 
 Context variable selected:
 
-:::image type="content" source="media/search/local-variable.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
+:::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
 
 ### Collections
 
 Selecting a collection under the **Collections** header will take you to the information screen backstage for that collection.
 
-:::image type="content" source="media/search/collections.png" alt-text="Collections selected from search results showing the relevant collection details.":::
+:::image type="content" source="media/search/collections-1.png" alt-text="Collections selected from search results showing the relevant collection details.":::
 
 ### Data
 
@@ -168,19 +170,83 @@ Selecting a result under the **Screen** header selects the appropriate control o
 
 If you make changes within the app, you'll need to refresh the results pane to see the change reflected in your search results.
 
-:::image type="content" source="media/search/refresh.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
+:::image type="content" source="media/search/refresh-1.png" alt-text="Use the Refresh button to refresh the search results based on changes inside the app elements.":::
 
 ## Clear the search term
 
 Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign on the right hand side of the input area.
 
-:::image type="content" source="media/search/clear.png" alt-text="Use the clear button to clear the search terms.":::
+:::image type="content" source="media/search/clear-search-term.png" alt-text="Clear the search terms.":::
+
+## Replace
+
+You can replace one or more instances of certain types of search results including variable names, collection names, any formula text including strings, and other formula references.
+
+Once you perform a search, the replace pivot shows the list of search results which can be replaced.
+
+:::image type="content" source="media/search/eligible-replace.png" alt-text="List of search results which are eligible for replacing.":::
+
+### Replace results
+
+All results that can be replaced are selected by default. You can refine the list of results to replace by deselecting individual results or entire categories by selecting the checkbox next to the result or category heading. 
+
+:::image type="content" source="media/search/work-with-search-results-1.png" alt-text="Refine the list of results to replace.":::
+
+You can also filter the result list to only show selected categories of results.
+
+:::image type="content" source="media/search/work-with-search-results-2.png" alt-text="Filter the result list to only show selected categories of results.":::
+
+As you refine the list of results to replace the replace button at the bottom of the panel keeps track of the number of replacements to be made. If all items are selected the button reads **Replace all** with the total count of all replaceable items.
+
+:::image type="content" source="media/search/work-with-search-results-3.png" alt-text="Results showing total replacements found.":::
+
+If you've selected results from the list the button is updated to read **Replace selected** with the total count of selected items.
+
+:::image type="content" source="media/search/work-with-search-results-4.png" alt-text="Replace selected button showing total number of replace items.":::
+
+You can also interact with individual results in the results list directly to perform replacements by selecting the ellipsis to the right of each individual result in the result list.
+
+:::image type="content" source="media/search/work-with-search-results-5.png" alt-text="Select ellipsis to replace individual result.":::
+
+### Replacing Variables results
+
+Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details backstage to review the usage before making the replacement.
+
+:::image type="content" source="media/search/variables.png" alt-text="Screen showing replacing variables results.":::
+
+### Replacing Collections results
+
+Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details backstage prior to making the replacement.
+
+:::image type="content" source="media/search/collections.png" alt-text="Screen showing replace collections results.":::
+
+### Replacing Screens results
+
+The Screens category shows individual replaceable results following the structure in the tree view, allowing you to replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, allowing you to choose to pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
+
+:::image type="content" source="media/search/replace-screens.png" alt-text="Replaceing Screens results.":::
+
+### Completing the replacement and undoing replacements
+
+Once you have refined your selection to the items you'd like to replace, selecting the button prompts you to confirm the operation.
+
+:::image type="content" source="media/search/search-replace.png" alt-text="Select Replace to confirm to replace and undo replacements.":::
+
+Confirming the operation performs the replacement and a notification indicates whether the replacement was successful. 
+
+:::image type="content" source="media/search/search-replace-confirm.png" alt-text="Confirmation of replacements.":::
+
+The replacement operation may fail if a control name is already in use or unsupported characters are included.
+
+:::image type="content" source="media/search/replace-fail.png" alt-text="Replacement operation has failed.":::
+
+After the replacement is complete, you can undo the replacement by using the undo button or by selecting **Ctrl+Z**.
 
 ## Limitations
 
 The Search pane is limited to returning a maximum of 2000 results. A notification appears if you exceed this limit.
 
-:::image type="content" source="media/search/max-results.png" alt-text="Maximum number of results reached.":::
+:::image type="content" source="media/search/max-results-1.png" alt-text="Maximum number of results reached.":::
 
 ### See also
 

@@ -1,7 +1,7 @@
 ---
 title: "connector table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connector table/entity."
-ms.date: 05/23/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -83,6 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PolicyTemplateInstances](#BKMK_PolicyTemplateInstances)
+- [ScriptOperations](#BKMK_ScriptOperations)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -392,6 +393,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_ScriptOperations"></a> ScriptOperations
+
+|Property|Value|
+|--------|-----|
+|Description|A list of operations to which the custom code will apply to.|
+|DisplayName|ScriptOperations|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|scriptoperations|
+|MaxLength|500000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -481,6 +498,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [CustomCodeBlob_Name](#BKMK_CustomCodeBlob_Name)
 - [IconBlob_Timestamp](#BKMK_IconBlob_Timestamp)
 - [IconBlob_URL](#BKMK_IconBlob_URL)
 - [IconBlobId](#BKMK_IconBlobId)
@@ -656,6 +674,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_CustomCodeBlob_Name"></a> CustomCodeBlob_Name
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|customcodeblob_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 

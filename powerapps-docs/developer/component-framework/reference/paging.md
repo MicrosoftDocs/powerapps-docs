@@ -61,6 +61,7 @@ The pageSize of the paging.
 ### totalResultCount
 
 Total number of results on the server for the current query.
+In case when value is not available `-1` is sent.
 
 **Type**: `number`
 
