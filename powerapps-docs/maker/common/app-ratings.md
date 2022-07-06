@@ -27,8 +27,8 @@ Microsoft Power Apps takes feedback from app users on how satisfied they are wit
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] More information: [Power Apps preview program](../powerapps-preview-program.md)
 
 This feature has the following benefits: 
-- Provides a view of the [app satisfaction score](#what-is-an-app-satisfaction-score) on a scale of 0 to 200. 
-- Provides a [score trend](#how-does-score-trend-work) over the last 90 days.
+- Provides a view of the [app satisfaction score](#app-satisfaction-score) on a scale of 0 to 200. 
+- Provides a [score trend](#score-trend) over the last 90 days.
 - Displays different satisfaction scores based on [web or mobile device](#app-satisfaction-by-device) and [browser](#app-satisfaction-by-browser).
 
 The report for current score and comments can be exported for each app in the app ratings dashboard to share with others.
@@ -39,7 +39,7 @@ The report for current score and comments can be exported for each app in the ap
 
 1. On the left navigation pane, select **Apps**, and then select a model-driven app.
 
-1. Use the **...** context menu or select **Ratings (preview)** from the command bar.
+1. Select the **...** context menu, and then select **Ratings (preview)**.
 
    :::image type="content" source="media/ratings-option.png" alt-text="Ratings option image":::
 
@@ -61,33 +61,34 @@ Based on the user’s activity inside the app, Power Apps occasionally prompts u
 Based on the feedback, an [app satisfaction score](#what-is-an-app-satisfaction-score) and comments are displayed in the ratings dashboard.
 
 The following guidelines are used to prompt an app user with the feedback dialog:
--	If a user has at least 3 active days during the first 14 days since sign-up, the user is prompted.
--	If the user has 6 active days in the last (recent) 90 days, the user is prompted.
+-	If a user has at least three active days during the first 14 days since sign-up, the user is prompted.
+-	If the user has six active days in the last (recent) 90 days, the user is prompted.
 -	No users are prompted more than once in 90 days for the same app.
 
 ## App satisfaction score
 
-The app satisfaction score is calculated by taking the responses with an answer "Very Satisfied" and subtracting out the percentage of the responses with an answer "Dissatisfied" or "Very Dissatisfied". The total NSAT score is then calculated like this:
+The app satisfaction score is calculated by taking the responses with an answer "Very Satisfied" and subtracting the percentage of the responses with an answer "Dissatisfied" or "Very Dissatisfied". The total NSAT score is then calculated like this:
 
 >100 + (%Very Satisfied) - (%Dissatisfied) - (%Very Dissatisfied)
 
-We report app satisfaction on a scale of 0 to 200, where:
-- 1 to 100 is poor score.
-- 100 to 140 is fair score.
-- 140 to 160 is good score.
-- 160 to 200 is world class score.
+ App satisfaction is reported on a scale of 0 to 200, where:
 
-### How a score trend work
+- 1 to 100 is a poor score.
+- 100 to 140 is a fair score.
+- 140 to 160 is a good score.
+- 160 to 200 is a world class score.
+
+### Score trend
 
 The app satisfaction score for each day is calculated based on total responses received in the previous 28 days. Trends from 1 to maximum 90 days are displayed depending on the app’s first publish and first response date. This score provides a visualization on how the satisfaction score is trending over a period. We recommend you use this feature to analyze subsequent updates to the app and follow how those updates have helped in improving the general experience with users.
 
 ### App satisfaction by device
 
-Currently, the app score is separated by device types – web, mobile, or others. For tablets, the score is calculated as mobile. The Others option categorizes the score for unknown devices.
+The app score is separated by device types – web, mobile, or others. For tablets, the score is calculated as mobile. The Others option categorizes the score for unknown devices.
 
 ### App satisfaction by browser
 
-App ratings also displays a comparison across different browsers. The feature can identify different types of browsers including Edge, IE, Chrome, Mozilla, and Opera. For browsers that can't be identified, the score is attributed under the Others category.
+App ratings also display a comparison across different browsers. The feature can identify different types of browsers including Microsoft Edge, IE, Chrome, Mozilla, and Opera. For browsers that can't be identified, the score is attributed under the Others category.
 
 ## Improve your application
 
@@ -99,7 +100,7 @@ With the public preview release, the app ratings provides the following direct l
 
 ## How the feedback data is stored
 
-A new system table in Microsoft Dataverse called **User Rating** was added to all Power Apps environments that include Dataverse. This table stores the rating score and comments from each user feedback. This is an organization owned table with default create, read, and delete rights provided to system administrators and customizers. The Environment Makers role has only read privilege on the table.
+A new system table in Microsoft Dataverse called **User Rating** was added to all Power Apps environments that include Dataverse. This table stores the rating score and comments from each user feedback. This is an organization owned table with default create, read, and delete rights provided to system administrators and customizers. The environment maker role has only read privilege on the table.
 
 > [!Note]
 > 1.	Only users with at least read privileges on the User Rating table can view app ratings data.
