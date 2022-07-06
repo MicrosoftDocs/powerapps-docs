@@ -58,7 +58,7 @@ Based on the user’s activity inside the app, Power Apps occasionally prompts u
 
 :::image type="content" source="media/app-satisfaction-dialog.png" alt-text="App satisfaction dialog image":::
 
-Based on the feedback, an [app satisfaction score](#what-is-an-app-satisfaction-score) and comments are displayed in the ratings dashboard.
+Based on the feedback, an [app satisfaction score](#app-satisfaction-score) and comments are displayed in the ratings dashboard.
 
 The following guidelines are used to prompt an app user with the feedback dialog:
 -	If a user has at least three active days during the first 14 days since sign-up, the user is prompted.
