@@ -1,5 +1,5 @@
 ---
-title: Offline profile guidelines (preview) | Microsoft Docs
+title: Offline profile guidelines | Microsoft Docs
 description: Guidelines to configure offline profiles when using offline capabilities in Power Apps mobile.
 author: trdehove
 ms.component: pa-user
@@ -17,9 +17,7 @@ search.app:
   - D365CE
 ---
 
-# Offline profile guidelines (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Offline profile guidelines
 
 There's a lot to keep in mind when creating or updating an offline profile for model-driven apps. An offline profile should include all the data the app users need to complete tasks in the field, but if it includes too much data, app users might get stuck waiting to download the data they need or even run out of disk space. You'll need to consider the devices and data plans your app users have to make sure they have a great experience.
 
