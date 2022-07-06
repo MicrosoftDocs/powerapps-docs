@@ -21,7 +21,7 @@ search.app:
 
 [This article is pre-release documentation and is subject to change.]
 
-There's a lot to keep in mind when creating or updating an offline profile for model-driven apps. An offline profile should include all the data your front-line workers need to complete tasks in the field, but if it includes too much data, your workers might get stuck waiting to download the data they need or even run out of disk space. You'll need to consider the devices and data plans your workers have to make sure workers have a great experience.
+There's a lot to keep in mind when creating or updating an offline profile for model-driven apps. An offline profile should include all the data the app users need to complete tasks in the field, but if it includes too much data, app users might get stuck waiting to download the data they need or even run out of disk space. You'll need to consider the devices and data plans your app users have to make sure they have a great experience.
 
 To optimize an offline profile for the exact needs of your organization, keep the following guidelines in mind.
 
