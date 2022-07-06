@@ -53,7 +53,7 @@ The control is a button that's labeled with an icon of a cube and the text *View
 
 :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="A screenshot of the Insert tab in Power Apps Studio, showing where to find the View in MR control.":::
 
-### View multiple models in a single session
+## View multiple models in a single session
 
 The View in MR control displays one media file by default. To view multiple media files, or a media gallery, use the control's *Items* advanced property. This property creates a table that lists media files the user can choose from in the mixed reality experience.
 
@@ -114,7 +114,7 @@ With your app open for editing in [Power Apps Studio](https://create.powerapps.c
 
 1. Save and publish the app, then open it on your mobile device to try it out.
 
-### How objects are scaled if you resize them
+## How objects are scaled if you resize them
 
 If you don't specify dimensions when you place a model, the **View in MR** control follows the dimensions given in the object file. You can resize the model by entering a value other than 0 in one or more of the control's width, height, and depth properties (**Object width**, **Object height**, and **Object depth**). How the model is scaled depends on how many dimensions you change.
 
@@ -130,7 +130,7 @@ If you don't specify dimensions when you place a model, the **View in MR** contr
 > [!NOTE]
 > If the measurements don't adhere to the original aspect ratio, the model could be squashed or distorted when it's viewed in MR.
 
-### Properties
+## Properties
 
 Change the **View in MR** button's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
@@ -176,7 +176,7 @@ Change the **View in MR** button's behavior and appearance using properties. Som
 | **[DisplayMode](./controls/properties-core.md)** | Determines whether the button allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Enum | Advanced |
 | **[TabIndex](./controls/properties-accessibility.md)** | Specifies the order the button is selected if the user navigates the app using the Tab key. | Integer | Properties; Advanced: **TabIndex** |
 
-### Output properties
+## Output properties
 
 Your app can make use of more properties when a user interacts with the **View in MR** control. These are known as output properties. You can use output properties in other controls or to customize the app experience.
 
