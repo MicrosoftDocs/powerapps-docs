@@ -116,6 +116,29 @@ The modern solution import interface includes the ability to enter values for en
    >[!NOTE]
    > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. You will **not** be prompted for new values during solution import if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in the target environment. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
 
+## Edit environment values after import of managed solution to target environment
+
+After importing a solution as managed to the target environment the option of adding a current value is no longer displayed. In order to change the value of an environment variable in a managed solution we can do the following:
+ >[!NOTE]
+   > Below solution requires making changes to the default solution which are associated with high risk as all components are unmanged in default solution and can be changed or deleted. Changes may cause unmanaged layers to be created preventing changes made by following imported solutions not to show as expected.
+
+1. Navigate to the target solution
+2. Open the default solution
+3. Navigate to Environment Variables
+4. Edit the environemtn variable
+5. Change the current value
+
+Or
+1. Navigate to the target solution
+2. Open the default solution
+3. Navigate to Environment Variables
+4. Edit the environemtn variable
+5. Remove the current value More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
+6. Import the solution again
+
+   >[!NOTE]
+   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. You will **not** be prompted for new values during solution import if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in the target environment. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
+
 ## Notifications
 
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on environment variables do not fail. 
