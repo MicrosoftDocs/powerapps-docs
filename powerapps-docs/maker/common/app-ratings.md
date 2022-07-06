@@ -93,9 +93,9 @@ App ratings also display a comparison across different browsers. The feature can
 ## Improve your application
 
 With the public preview release, the app ratings provides the following direct links to take actions to improve your app:
-1. **[Solution Checker](../data-platform/use-powerapps-checker)** – This link takes you to a list of solutions to run solution checker if applicable. Notice that makers or admins must manually identify the solution and run solution checker to identify issues.
+1. **[Solution Checker](../data-platform/use-powerapps-checker.md)** – This link takes you to a list of solutions to run solution checker if applicable. Notice that makers or admins must manually identify the solution and run solution checker to identify issues.
 2. **[Performance Insights](performance-insights-overview.md)** – This tool provides direct insights on the respective app’s performance and what makers can do to improve the app performance issues.
-3. **[Monitor](../model-driven-apps/monitor-page-checker)** – This tool helps makers troubleshoot and diagnose issues with live monitoring of a user’s session.
+3. **[Monitor](../model-driven-apps/monitor-page-checker.md)** – This tool helps makers troubleshoot and diagnose issues with live monitoring of a user’s session.
 4. **Usability** – This action redirects to documentation of best Power Apps provided recommendations on design and patterns.
 
 ## How the feedback data is stored
@@ -106,4 +106,4 @@ A new system table in Microsoft Dataverse called **User Rating** was added to al
 > 1.	Only users with at least read privileges on the User Rating table can view app ratings data.
 > 1.	By default update on User Rating table records is unavailable for all other security roles.
 
-Administrators can also share the app score and comments to external stakeholders by creating [Power BI dashboards on the User Rating table](../data-platform/use-powerbi-dataverse). This can help convey app ratings data to makers outside organizations who don't have access to production environments.
+Administrators can also share the app score and comments to external stakeholders by creating [Power BI dashboards on the User Rating table](../data-platform/use-powerbi-dataverse.md). This can help convey app ratings data to makers outside organizations who don't have access to production environments.
