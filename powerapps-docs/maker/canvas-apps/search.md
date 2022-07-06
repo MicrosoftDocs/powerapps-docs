@@ -31,7 +31,7 @@ You can now use the Search pane to locate objects&mdash;like media files, variab
 ## Prerequisites
 
 - [Sign up](../signup-for-powerapps.md) for Power Apps.
-- [Create an app from a template](get-started-test-drive.md), [create a new app](data-platform-create-app.md), or [open an existing app](edit-app.md) in Power Apps.<!--note from editor: Edit okay? The fourth bullet seemed to basically say the same thing as this bullet.-->
+- [Create an app from a template](get-started-test-drive.md), [create a new app](data-platform-create-app.md), or [open an existing app](edit-app.md) in Power Apps.
 - [Learn how to configure a control](add-configure-controls.md).
 
 ## Enable the Search pane
@@ -40,7 +40,7 @@ The Search pane is enabled on new apps by default. However, you need to manually
 
 To enable the Search pane on existing apps:
 
-1. Open an [existing](edit-app.md) app in Power Apps Studio.<!--note from editor: Edit okay? That link goes to creating an app, in which case it wouldn't already be existing.-->
+1. Open an [existing](edit-app.md) app in Power Apps Studio.
 
 1. Select **Settings** at the top.
 
@@ -61,11 +61,11 @@ You can open the Search pane by selecting **Search** ![Search icon](media/sear
 You can also open the Search pane directly to the Replace functionality by selecting **Ctrl**+**H** when your cursor is outside the formula bar, or selecting **Ctrl**+**Shift**+**H** when your cursor is inside the formula bar.
 
 > [!NOTE]
-> Selecting **Ctrl**+**F** or **Ctrl**+**H** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.<!--note from editor: Isn't this exactly what you said in the previous paragraphs?-->
+> Selecting **Ctrl**+**F** or **Ctrl**+**H** inside the formula bar will open the [Find and Replace](formula-bar-find-replace.md) capability inside the formula bar.
 
 ## Filter search results
 
-You can filter search results by selecting one or more categories. These categories help you focus the search by narrowing down the areas within the app&mdash;such as screens, media, and collections.<!--note from editor: You don't need "such as" and "and so on" in the same sentence.-->
+You can filter search results by selecting one or more categories. These categories help you focus the search by narrowing down the areas within the app&mdash;such as screens, media, and collections.
 
 To select the categories you want to search on, use the filter option next to the search box. The default selection is **All**, which searches across all categories within the open app.
 
