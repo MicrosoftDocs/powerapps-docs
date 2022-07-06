@@ -101,7 +101,7 @@ See the [Image control reference](control-image.md) for **Image** properties.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**UseMobileCamera** – Whether to use a mobile camera directly, when available. This does not work on Android devices unless the experimental setting **Improved Media Capture** is enabled.
+**UseMobileCamera** – Whether to use a mobile camera directly, when available. For Android devices, this property requires the experimental setting **Improved Media Capture** turned on.
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
