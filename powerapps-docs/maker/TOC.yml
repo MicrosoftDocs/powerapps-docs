@@ -1642,6 +1642,8 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+    - name: Offline profile guidelines (preview)
+      href: ../mobile/mobile-offline-guidelines.md   
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
