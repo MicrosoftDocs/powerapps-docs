@@ -1,7 +1,7 @@
 ---
 title: "Data Map (ImportMap)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Data Map (ImportMap)  table/entity."
-ms.date: 05/23/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1247,78 +1247,80 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10057|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
 |10058|Flow Machine||
 |10059|Flow Machine Group||
-|10060|ProcessStageParameter||
-|10061|Workflow Binary||
-|10062|Connection Reference||
-|10063|AI Builder Feedback Loop||
-|10064|AI Form Processing Document||
-|10065|AI Object Detection Image||
-|10066|AI Object Detection Label||
-|10067|AI Object Detection Bounding Box||
-|10068|AI Object Detection Image Mapping||
-|10070|AI Builder Dataset||
-|10071|AI Builder Dataset File||
-|10072|AI Builder Dataset Record||
-|10073|AI Builder Datasets Container||
-|10074|AI Builder File||
-|10075|AI Builder File Attached Data||
-|10076|Help Page||
-|10077|Tour||
-|10078|BotContent||
-|10079|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10080|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10081|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10087|Comment|A collaborative comment on a maker artifact|
-|10088|PDF Setting|PDF Settings to save enabled pdf entities|
-|10089|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10090|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10091|Service Configuration||
-|10092|SLA KPI||
-|10093|Knowledge Management Setting|Setup knowledge management for your organization.|
-|10094|Knowledge Federated Article||
-|10095|Knowledge Federated Article Incident||
-|10096|Search provider||
-|10097|Knowledge Article Image||
-|10098|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10099|Knowledge Search Insight|Knowledge Search Insight|
-|10100|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10101|Knowledge Article Attachment||
-|10102|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10103|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10104|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10105|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10107|Plugin Package||
-|10108|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10109|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10110|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10111|MobileOfflineProfileItemFilter||
-|10112|TeamMobileOfflineProfileMembership||
-|10113|UserMobileOfflineProfileMembership||
-|10114|OrganizationDataSyncSubscription||
-|10115|OrganizationDataSyncSubscriptionEntity||
-|10116|OrganizationDataSyncState|Information regarding data synchronization state|
-|10117|NonRelational Data Source||
-|10118|Notification|Notification to be provided to a user.|
-|10119|Insights Store Data Source||
-|10120|Insights Store Virtual Entity|Insights Store Virtual Entity|
-|10121|App Action||
-|10122|App Action Migration||
-|10123|App Action Rule||
-|10126|Rich Text Attachment|Image or file attached to a rich text field|
-|10127|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10128|PM Analysis History||
-|10129|PM Inferred Task||
-|10130|PM Recording||
-|10131|PM Template||
-|10132|Analysis Component||
-|10133|Analysis Job||
-|10134|Analysis Result||
-|10135|Analysis Result Detail||
-|10136|Solution Health Rule||
-|10137|Solution Health Rule Argument||
-|10138|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10219|Flow Machine Image||
-|10220|Flow Machine Image Version||
+|10060|Flow Machine Image||
+|10061|Flow Machine Image Version||
+|10062|ProcessStageParameter||
+|10063|Workflow Binary||
+|10064|Connection Reference||
+|10065|AI Builder Feedback Loop||
+|10066|AI Form Processing Document||
+|10067|AI Object Detection Image||
+|10068|AI Object Detection Label||
+|10069|AI Object Detection Bounding Box||
+|10070|AI Object Detection Image Mapping||
+|10072|AI Builder Dataset||
+|10073|AI Builder Dataset File||
+|10074|AI Builder Dataset Record||
+|10075|AI Builder Datasets Container||
+|10076|AI Builder File||
+|10077|AI Builder File Attached Data||
+|10078|Help Page||
+|10079|Tour||
+|10080|BotContent||
+|10081|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10082|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10083|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10089|Comment|A collaborative comment on a maker artifact|
+|10090|PDF Setting|PDF Settings to save enabled pdf entities|
+|10091|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10092|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10093|Service Configuration||
+|10094|SLA KPI||
+|10095|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10096|Knowledge Federated Article||
+|10097|Knowledge Federated Article Incident||
+|10098|Search provider||
+|10099|Knowledge Article Image||
+|10100|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10101|Knowledge Search Insight|Knowledge Search Insight|
+|10102|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10103|Knowledge Article Attachment||
+|10104|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10105|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10106|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10107|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10109|Plugin Package||
+|10110|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10111|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10112|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10113|MobileOfflineProfileItemFilter||
+|10114|TeamMobileOfflineProfileMembership||
+|10115|UserMobileOfflineProfileMembership||
+|10116|OrganizationDataSyncSubscription||
+|10117|OrganizationDataSyncSubscriptionEntity||
+|10118|OrganizationDataSyncState|Information regarding data synchronization state|
+|10119|NonRelational Data Source||
+|10120|Notification|Notification to be provided to a user.|
+|10121|User Rating||
+|10122|Insights Store Data Source||
+|10123|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10124|App Action||
+|10125|App Action Migration||
+|10126|App Action Rule||
+|10129|Rich Text Attachment|Image or file attached to a rich text field|
+|10130|Custom Control Extended Setting||
+|10131|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10132|PM Analysis History||
+|10133|PM Inferred Task||
+|10134|PM Recording||
+|10135|PM Template||
+|10136|Analysis Component||
+|10137|Analysis Job||
+|10138|Analysis Result||
+|10139|Analysis Result Detail||
+|10140|Solution Health Rule||
+|10141|Solution Health Rule Argument||
+|10142|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
 
 
 <a name="onetomany"></a>

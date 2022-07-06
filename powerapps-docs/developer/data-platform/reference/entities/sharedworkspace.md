@@ -1,7 +1,7 @@
 ---
 title: "sharedworkspace table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the sharedworkspace table/entity."
-ms.date: 05/23/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [sharedworkspaceId](#BKMK_sharedworkspaceId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
+- [StorageEndpoint](#BKMK_StorageEndpoint)
 - [TenantId](#BKMK_TenantId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
@@ -210,6 +211,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
+
+
+### <a name="BKMK_StorageEndpoint"></a> StorageEndpoint
+
+|Property|Value|
+|--------|-----|
+|Description|Storage endpoint|
+|DisplayName|Storage Endpoint|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|storageendpoint|
+|MaxLength|256|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_TenantId"></a> TenantId
