@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/10/2022
+ms.date: 07/07/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -113,7 +113,7 @@ This list identifies all services to which Power Apps communicates and their usa
 
 ## Deprecated endpoints
 
-This identifies endpoints that we no longer support. Instead please use the new endpoint listed below. We recommend updating any bookmarks you have that use the deprecated endpoint to the new endpoint.
+This section lists endpoints that we no longer support. Instead, use the new endpoints listed below. We recommend updating any bookmarks you might have that use the deprecated endpoint to the new endpoint.
 
 | Deprecated endpoint | New endpoint |
 | --- | --- |
