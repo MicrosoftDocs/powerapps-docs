@@ -1,7 +1,7 @@
 ---
 title: "BusinessUnit table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnit table/entity."
-ms.date: 05/23/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1622,6 +1622,8 @@ Listed by **SchemaName**.
 - [business_unit_environmentvariablevalue](#BKMK_business_unit_environmentvariablevalue)
 - [business_unit_flowmachine](#BKMK_business_unit_flowmachine)
 - [business_unit_flowmachinegroup](#BKMK_business_unit_flowmachinegroup)
+- [business_unit_flowmachineimage](#BKMK_business_unit_flowmachineimage)
+- [business_unit_flowmachineimageversion](#BKMK_business_unit_flowmachineimageversion)
 - [business_unit_processstageparameter](#BKMK_business_unit_processstageparameter)
 - [business_unit_flowsession](#BKMK_business_unit_flowsession)
 - [business_unit_workflowbinary](#BKMK_business_unit_workflowbinary)
@@ -1664,6 +1666,7 @@ Listed by **SchemaName**.
 - [business_unit_managedidentity](#BKMK_business_unit_managedidentity)
 - [business_unit_appnotification](#BKMK_business_unit_appnotification)
 - [business_unit_msdyn_richtextfile](#BKMK_business_unit_msdyn_richtextfile)
+- [business_unit_msdyn_customcontrolextendedsettings](#BKMK_business_unit_msdyn_customcontrolextendedsettings)
 - [business_unit_msdyn_pmanalysishistory](#BKMK_business_unit_msdyn_pmanalysishistory)
 - [business_unit_msdyn_pminferredtask](#BKMK_business_unit_msdyn_pminferredtask)
 - [business_unit_msdyn_pmrecording](#BKMK_business_unit_msdyn_pmrecording)
@@ -1674,8 +1677,6 @@ Listed by **SchemaName**.
 - [business_unit_msdyn_analysisresultdetail](#BKMK_business_unit_msdyn_analysisresultdetail)
 - [business_unit_msdyn_solutionhealthrule](#BKMK_business_unit_msdyn_solutionhealthrule)
 - [business_unit_msdyn_solutionhealthruleargument](#BKMK_business_unit_msdyn_solutionhealthruleargument)
-- [business_unit_flowmachineimage](#BKMK_business_unit_flowmachineimage)
-- [business_unit_flowmachineimageversion](#BKMK_business_unit_flowmachineimageversion)
 
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
@@ -2961,6 +2962,40 @@ Same as the [business_unit_flowmachinegroup](flowmachinegroup.md#BKMK_business_u
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_flowmachineimage"></a> business_unit_flowmachineimage
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_flowmachineimage](flowmachineimage.md#BKMK_business_unit_flowmachineimage) many-to-one relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachineimage|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_flowmachineimage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_flowmachineimageversion"></a> business_unit_flowmachineimageversion
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_flowmachineimageversion](flowmachineimageversion.md#BKMK_business_unit_flowmachineimageversion) many-to-one relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachineimageversion|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_flowmachineimageversion|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_processstageparameter"></a> business_unit_processstageparameter
 
 **Added by**: Active Solution Solution
@@ -3675,6 +3710,23 @@ Same as the [business_unit_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_busine
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_msdyn_customcontrolextendedsettings"></a> business_unit_msdyn_customcontrolextendedsettings
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md#BKMK_business_unit_msdyn_customcontrolextendedsettings) many-to-one relationship for the [msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_customcontrolextendedsettings|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_customcontrolextendedsettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_msdyn_pmanalysishistory"></a> business_unit_msdyn_pmanalysishistory
 
 **Added by**: Active Solution Solution
@@ -3841,40 +3893,6 @@ Same as the [business_unit_msdyn_solutionhealthruleargument](msdyn_solutionhealt
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_solutionhealthruleargument|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_business_unit_flowmachineimage"></a> business_unit_flowmachineimage
-
-**Added by**: Active Solution Solution
-
-Same as the [business_unit_flowmachineimage](flowmachineimage.md#BKMK_business_unit_flowmachineimage) many-to-one relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|flowmachineimage|
-|ReferencingAttribute|owningbusinessunit|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_flowmachineimage|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_business_unit_flowmachineimageversion"></a> business_unit_flowmachineimageversion
-
-**Added by**: Active Solution Solution
-
-Same as the [business_unit_flowmachineimageversion](flowmachineimageversion.md#BKMK_business_unit_flowmachineimageversion) many-to-one relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|flowmachineimageversion|
-|ReferencingAttribute|owningbusinessunit|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_flowmachineimageversion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
