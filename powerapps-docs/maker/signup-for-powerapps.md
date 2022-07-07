@@ -55,7 +55,7 @@ Regardless of whether you have a license for Power Apps, you can start a free 30
 
     If you're using a phone, select the menu in the top right corner, and then select **Try free**.
 
-1. Near the middle of the screen, select **Pricing** and then select **Start free trial**.
+1. Near the middle of the screen, select **Pricing**, and then select **Start free trial**.
 
 1. In the dialog box that appears, type or paste your work or school email address and then select **Submit**.
 
