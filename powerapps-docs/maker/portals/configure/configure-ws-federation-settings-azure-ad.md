@@ -1,18 +1,19 @@
 ---
 title: Configure a WS-Federation provider for portals with Azure AD
 description: Learn how to configure WS-Federation for portals with Azure Active Directory.
-author: sandhangitmsft
+author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
 ms.date: 07/07/2022
 ms.subservice: portals
-ms.author: sandhan
+ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - nageshbhat-msft
 ---
 
 # Configure a WS-Federation provider for portals with Azure AD
@@ -79,9 +80,9 @@ In this article, you'll learn about configuring a WS-Federation provider for por
     > [!IMPORTANT]
     > Due to a recent update, the APP ID URI must be the auto-generated URI or a verified custom domain name.
 
-    1. To use the auto-generated URI, simply select **Save**. Note that you will need to [manually update the value](#update-app-id-uri-in-site-settings) in site settings after you configure settings using the studio.
+    1. To use the auto-generated URI, select **Save**. You'll need to [manually update the value](#update-app-id-uri-in-site-settings) in site settings after you configure settings using the studio.
        
-    1. If you are using a custom domain name, enter the portal URL as the **App ID URI**.
+    1. If you're using a custom domain name, enter the portal URL as the **App ID URI**.
 
         :::image type="content" source="media/authentication/custom-portal-url-for-appidURI.png" alt-text="Custom Portal URL as the application ID URI.":::
 
@@ -140,11 +141,11 @@ In this article, you'll learn about configuring a WS-Federation provider for por
 
 ### Update App ID URI in site settings
 
-1. If you are using the auto-generated URI for the App ID URI, you will need to update the value in site settings.
+1. If you're using the auto-generated URI for the App ID URI, you'll need to update the value in site settings.
     
     1. Open the Portal Management app.
     1. Navigate to **Site Settings**.
-    1. Update the site setting **Authentication/WsFederation/WSFederation_1/Wtrealm** with default APP ID URI
+    1. Update the site setting **Authentication/WsFederation/WSFederation_1/Wtrealm** with the auto-generated **APP ID URI**
     :::image type="content" source="media/authentication/site-setting-wtrealm.png" alt-text="Configure site setting for the auto-generated URI.":::
 
     1. Select **Save**
