@@ -1,6 +1,6 @@
 ---
-title: Understand Power Apps Studio in Dataverse in a Teams environment (contains video) | Microsoft Docs
-description: Learn the components inside Power Apps Studio in Teams.
+title: Understand Power Apps Studio (contains video) | Microsoft Docs
+description: Learn the components inside Power Apps Studio.
 author: jessicaszelo
 ms.topic: conceptual
 ms.custom: 
@@ -13,7 +13,7 @@ contributors:
   - jessicaszelo
 ---
 
-# Understand Power Apps Studio in Dataverse in a Teams environment
+# Understand Power Apps Studio
 
 When you create a canvas app by using any method, you're taken to the canvas app
 builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
