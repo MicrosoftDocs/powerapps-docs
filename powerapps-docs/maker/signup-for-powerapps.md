@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
-ms.date: 01/25/2022
+ms.date: 07/07/2022
 ms.author: alaug
 ms.reviewer: kvivek
 contributors:
@@ -68,9 +68,8 @@ Regardless of whether you have a license for Power Apps, you can start a free 30
 
     Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and then select **Start**.
 
-
     >[!NOTE]
-    >Your admin can disable self-service signup. If you see the following message, it means that this feature is turned off. Contact your admin for assistance. 
+    >You'll see the following message if your admin has disabled free trials.
 
     ![It turned off sign-ups](./media/signup-for-powerapps/it-turned-off.png)
 
