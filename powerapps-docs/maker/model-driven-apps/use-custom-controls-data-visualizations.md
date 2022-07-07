@@ -1,10 +1,9 @@
 ---
-title: "Use custom controls for model-driven app data visualizations in Power Apps | MicrosoftDocs"
-description: "Learn how to use custom controls for columns"
+title: "Use controls for model-driven app data visualizations in Power Apps | MicrosoftDocs"
+description: "Learn how to use controls for columns"
 ms.custom: ""
 ms.date: 04/29/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,17 +23,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use custom controls for model-driven app data visualizations
+# Use controls for model-driven app data visualizations
 
+In this article, you learn how to configure a control for a column using the classic for designer.
 
+To add a control using the modern Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
 
-In this article, you learn how to configure a custom control for a column.
+## Use a control using the classic form designer
 
-To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
-
-## Use a custom control using the classic form designer
-
-Custom controls let you transform app user interface components, such as a column or view that traditionally contain text, into visualizations. Custom controls can be configured on columns, forms, dashboards, views, and grids. 
+Controls let you transform app user interface components, such as a column or view that traditionally contain text, into visualizations. Controls can be configured on columns, forms, dashboards, views, and grids.
 For example, a star rating can be configured on a whole number column.
 
    > [!div class="mx-imgBorder"] 

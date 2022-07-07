@@ -19,8 +19,6 @@ contributors:
 
 # Customize and build your mobile app
 
-[This article is pre-release documentation and is subject to change.]
-
 Earlier, you learned about the capabilities of wrap feature, how it works, and its benefits. In this article, you'll learn how to use the wrap feature to package one or more canvas apps as a single native mobile app package.
 
 ## Prerequisites

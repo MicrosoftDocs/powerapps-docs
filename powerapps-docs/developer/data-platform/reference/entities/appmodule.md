@@ -1,7 +1,7 @@
 ---
 title: "Model-driven App (AppModule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Model-driven App (AppModule)  table/entity."
-ms.date: 05/23/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -895,6 +895,7 @@ Listed by **SchemaName**.
 - [appmodule_appconfig](#BKMK_appmodule_appconfig)
 - [appmodule_appmodulecomponent](#BKMK_appmodule_appmodulecomponent)
 - [appmodule_appnotification_app](#BKMK_appmodule_appnotification_app)
+- [appmodule_userrating_app](#BKMK_appmodule_userrating_app)
 - [appmodule_appaction_appmoduleid](#BKMK_appmodule_appaction_appmoduleid)
 
 
@@ -943,6 +944,23 @@ Same as the [appmodule_appnotification_app](appnotification.md#BKMK_appmodule_ap
 |ReferencedEntityNavigationPropertyName|appmodule_appnotification_app|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_appmodule_userrating_app"></a> appmodule_userrating_app
+
+**Added by**: User Rating Solution
+
+Same as the [appmodule_userrating_app](userrating.md#BKMK_appmodule_userrating_app) many-to-one relationship for the [userrating](userrating.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|userrating|
+|ReferencingAttribute|appmoduleid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|appmodule_userrating_app|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_appmodule_appaction_appmoduleid"></a> appmodule_appaction_appmoduleid
