@@ -1,25 +1,29 @@
 ---
 title: "captureAudio| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the captureAudio method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: fa39d18e-4b82-423a-84a0-e54450b7964e
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
-search.audienceType: 
+search.audienceType:
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
+
 # captureAudio (Client API reference)
-
-
 
 [!INCLUDE[./includes/captureAudio-description.md](./includes/captureAudio-description.md)]
 
+## Available for
+
+This method is supported only for the mobile clients.
 
 ## Syntax
 
@@ -27,18 +31,21 @@ search.app:
 
 ## Parameters
 
-| Parameter Name        | Type           | Required  |Description  |
-| ------------- |-------------| -----|-----|
-|successCallback |Function | Yes|A function to call when audio is returned. A base64 encoded audio object with the following attributes is passed to the function:<br/>- **fileContent**: Contents of the audio file. String <br/>- **fileName**: Name of the audio file. String.<br/>- **fileSize**: Size of the audio file in KB. Number.<br/>- **mimeType**: Audio file MIME type. String.|
-|errorCallback |Function | Yes|A function to call when the operation fails. |
- 
+| Parameter Name  | Type     | Required | Description                                                                                                                                                                                                                                                                                                                                              |
+| --------------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| successCallback | Function | Yes      | A function to call when audio is returned. A base64 encoded audio object with the following values is passed to the function:<br/>- **fileContent**: Contents of the audio file. String <br/>- **fileName**: Name of the audio file. String.<br/>- **fileSize**: Size of the audio file in KB. Number.<br/>- **mimeType**: Audio file MIME type. String. |
+| errorCallback   | Function | Yes      | A function to call when the operation fails.                                                                                                                                                                                                                                                                                                             |
 
 ## Return Value
-On success, returns a base64 encoded audio object with the attributes specified earlier.
 
-## Remarks
-This method is supported only for the mobile clients.
+On success, returns a base64 encoded audio object with the values specified earlier.
+
+## Exceptions
+
+See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
 
 ### Related topics
+
 [Xrm.Device](../xrm-device.md)
 
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

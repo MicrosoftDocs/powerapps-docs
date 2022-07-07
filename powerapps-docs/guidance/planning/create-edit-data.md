@@ -2,10 +2,11 @@
 title: Planning - Will your app create or edit data? | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, here are some things to consider for each data element your solution needs to capture.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -179,3 +180,6 @@ negotiate better rates. We'll note this in our project plan.
 
 > [!div class="nextstepaction"]
 > [Next step: What are the business rules?](decisions-approvals.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

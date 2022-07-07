@@ -2,10 +2,11 @@
 title: Planning - Identifying Power Apps project risks | Microsoft Docs
 description: When planning a Power Apps project, identify what might present a risk to your project, what kind of risks are created by the app, and what you'll do to address them.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -55,3 +56,6 @@ We created a table like this for our expense report project:
 
 > [!div class="nextstepaction"]
 > [Next step: Get support from management](gaining-support.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

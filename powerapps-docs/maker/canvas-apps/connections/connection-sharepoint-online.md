@@ -1,102 +1,93 @@
 ---
-title: Overview of the SharePoint connection | Microsoft Docs
+title: Connect to SharePoint from a canvas app
 description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/29/2020
+ms.date: 05/11/2021
+ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - lancedmicrosoft
 ---
 # Connect to SharePoint from a canvas app
 
-![SharePoint](./media/connection-sharepoint-online/sharepointicon.png "SharePoint")
+![SharePoint.](./media/connection-sharepoint-online/sharepointicon.png "SharePoint")
 
-Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
+Connect to a SharePoint site to generate an app automatically from a list, or create a connection before you add data to an existing app or build an app from scratch.
 
 Depending on where your data resides, you can take either or both of these approaches:
 
-- Show data from a custom list in a SharePoint Online site or an on-premises site.
+- Show data from a list in a SharePoint Online site or an on-premises site.
 - Show images and play video or audio files in a library (SharePoint Online only).
 
 ## Generate an app
 
-If you want to manage data in a custom list, Power Apps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
+If you want to manage data in a list, Power Apps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
 
 > [!NOTE]
-> If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
+> If your list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
 
 ## Create a connection
 
 1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Connections** in the left navigation bar, and then select **New connection** near the upper-left corner.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select Data > Connections in the left navigation bar, and then select New connection near the upper-left corner.](./media/connection-sharepoint-online/new-connection.png "Create a connection")
+    ![Select Data > Connections in the left navigation bar, and then select New connection near the upper-left corner.](./media/connection-sharepoint-online/new-connection.png "Create a connection")
 
-1. In the search box near the upper-right corner, type or paste **SharePoint**, and then select **SharePoint**.
+1. Select **SharePoint**.
 
-    > [!div class="mx-imgBorder"]
-    > ![In the search box near the upper-right corner, type or paste SharePoint, and then select SharePoint.](./media/connection-sharepoint-online/select-sharepoint.png "Select SharePoint")
+    ![Select SharePoint.](./media/connection-sharepoint-online/select-sharepoint.png "Select SharePoint")
 
 1. Perform either of these sets of steps:
 
     - To connect to SharePoint Online, select **Connect directly (cloud services)**, select **Create**, and then provide credentials (if prompted).
 
-        > [!div class="mx-imgBorder"]
-        > ![To connect to SharePoint Online, select Connect directly (cloud services)](./media/connection-sharepoint-online/select-online.png "Connect to a site")
+        ![To connect to SharePoint Online, select Connect directly (cloud services).](./media/connection-sharepoint-online/select-online.png "Connect to a site")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
     - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
-        > [!div class="mx-imgBorder"]
-        > ![To connect to on-premises site, select **Connect using on-premises data gateway)](./media/connection-sharepoint-online/select-onprem.png "Create a connection to on-premises site")
+        ![To connect to on-premises site, select **Connect using on-premises data gateway).](./media/connection-sharepoint-online/select-onprem.png "Create a connection to on-premises site")
 
         Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
 
-        > [!div class="mx-imgBorder"]
-        > ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png "Specify credentials")
+        ![Specify credentials.](./media/connection-sharepoint-online/specify-creds.png "Specify credentials")
 
         Under **Choose a gateway**, select the gateway that you want to use, and then select **Create**.
 
         > [!NOTE]
         > If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then select the icon to refresh the list of gateways.
 
-        > [!div class="mx-imgBorder"]
-        > ![Choose gateway](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
+        ![Choose gateway.](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
 
-        The connection is created, and you can add a data to an existing app or build an app from scratch.
+        The connection is created, and you can add data to an existing app or build an app from scratch.
 
 ## Add data to an existing app
 
-1. In Power Apps Studio, open the app that you want to update, select the **View** tab, and then select **Data sources**.
+1. In Power Apps Studio, open the app that you want to update, select **Data** on the left-pane.
 
-    > [!div class="mx-imgBorder"]
-    > ![On the View tab, and then select Data sources](./media/connection-sharepoint-online/view-data-sources.png "Data sources")
+    ![Select Data on the left-pane.](./media/connection-sharepoint-online/view-data-sources.png "Select Data on the left-pane")
 
-1. In the **Data** pane, select **Add data source** > **SharePoint**.
+1. Select **Add data** > **Connectors** > **SharePoint**.
 
 1. Under **Connect to a SharePoint site**, select an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then select **Connect**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select site](./media/connection-sharepoint-online/select-sp-site.png "Select site")
+    ![Select site.](./media/connection-sharepoint-online/select-sp-site.png "Select site")
 
-1. Under **Choose a list**, select the check box for **Documents** or one or more lists that you want to use, and then select **Connect**:
+1. Under **Choose a list**, select the check box for one or more lists that you want to use, and then select **Connect**:
 
-    > [!div class="mx-imgBorder"]
-    > ![Under Choose a list, select the check box for Documents or one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png "Select list")
+    ![Under Choose a list, select the check box for one or more lists that you want to use, and then select Connect.](./media/connection-sharepoint-online/select-sp-tables.png "Select list")
 
-    Not all types of lists appear by default. Power Apps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
+    Not all types of lists appear by default. Power Apps supports lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png "Enter name")
-
+    ![Type the name of the list in the box that contains Enter a list name.](./media/connection-sharepoint-online/custom-list.png "Enter name")
     The data source or sources are added to your app.
 
 ## Build your own app from scratch
@@ -105,7 +96,7 @@ Apply the concepts in [Create an app from scratch](../get-started-create-from-bl
 
 ## Show list columns in a gallery
 
-If your custom list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
+If your list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
 
 - For a **Choice** or **Lookup** column, specify **ThisItem.**_ColumnName_**.Value** to show data in that column.
 
@@ -139,7 +130,7 @@ If you have several images in a SharePoint library, you can add a **Drop down** 
     The file names of the images in your library appear in **ImageList**.
 
     > [!div class="mx-imgBorder"]
-    > ![List of images](./media/connection-sharepoint-online/dropdown-items.png "List of images")
+    > ![List of images.](./media/connection-sharepoint-online/dropdown-items.png "List of images")
 
 1. Add an **Image** control, and set its **Image** property to this expression:
 
@@ -150,7 +141,7 @@ If you have several images in a SharePoint library, you can add a **Drop down** 
     The image that you specified appears.
 
     > [!div class="mx-imgBorder"]
-    > ![Image list](./media/connection-sharepoint-online/golden-honey.png "Image list")
+    > ![Image list.](./media/connection-sharepoint-online/golden-honey.png "Image list")
 
 You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
 
@@ -168,7 +159,7 @@ In this one-screen app, the list in the lower-left corner shows all files in you
 When you find the file that you want, select it to show it in the **Video**, **Image**, or **Audio** control along the right-hand side.
 
 > [!div class="mx-imgBorder"]
-> ![Sample image](./media/connection-sharepoint-online/library-app.png "Sample image")
+> ![Sample image.](./media/connection-sharepoint-online/library-app.png "Sample image")
 
 ## Known issues
 
@@ -208,11 +199,11 @@ Not all types of columns are supported, and not all types of columns support all
 
 ### SharePoint document library images render intermittently
 
-SharePoint lists with links to images stored in SharePoint document libraries may fail to render inside Power Apps with authentication errors.
+Lists with links to images stored in SharePoint document libraries may fail to render inside Power Apps with authentication errors.
 
 Power Apps connections to SharePoint are made to an explicitly identified list, and not to a SharePoint site in general. Power Apps will try to resolve an external link to an external source. Rendering such images succeeds if there's no authentication required, or if the user has previously authenticated to the referenced SharePoint site. However, it's common that the Power Apps users on mobile devices may not have previously authenticated to the referenced SharePoint site for images. Using links to refer to images from SharePoint document libraries in this scenario may not succeed. This behavior applies even if a separate connection exists for the document library inside the app.
 
-As a solution for such scenarios, store images on a CORS-enabled source such as [Azure Storage](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services), or a CDN service such as [Azure CDN](https://docs.microsoft.com/azure/cdn/cdn-cors) that allows anonymous access.
+As a solution for such scenarios, store images on a CORS-enabled source such as [Azure Storage](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services), or a CDN service such as [Azure CDN](/azure/cdn/cdn-cors) that allows anonymous access.
 
 ## Next steps
 
@@ -223,3 +214,6 @@ As a solution for such scenarios, store images on a CORS-enabled source such as 
 ### See also
 
 - [SharePoint integration scenarios](../sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

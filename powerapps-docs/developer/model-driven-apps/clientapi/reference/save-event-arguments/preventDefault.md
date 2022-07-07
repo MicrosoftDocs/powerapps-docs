@@ -1,22 +1,22 @@
 ---
 title: "preventDefault (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the preventDefault method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9a8802ad-80aa-4386-a192-573280587546
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # preventDefault (Client API reference)
-
-
 
 [!INCLUDE[./includes/preventDefault-description.md](./includes/preventDefault-description.md)]
 
@@ -24,8 +24,8 @@ search.app:
 
 `executionContext.getEventArgs().preventDefault();`
 
->[!IMPORTANT]
->When you use `preventDefault` on a form with business process flows, the stage navigation may throw this error: **Unable to save form data due to web resource registered onSave invoking preventDefault**. Use [`OnPreStageChange`](../events/onprestagechange.md) to prevent this error. 
+> [!IMPORTANT]
+> When you use `preventDefault` on a form with business process flows, the stage navigation may throw this error: **Unable to save form data due to web resource registered onSave invoking preventDefault**. Use [`OnPreStageChange`](../events/onprestagechange.md) to prevent this error. 
 
 ### Related topics
 
@@ -35,3 +35,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

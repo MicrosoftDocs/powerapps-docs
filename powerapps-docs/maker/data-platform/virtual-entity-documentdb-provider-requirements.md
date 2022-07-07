@@ -3,7 +3,7 @@ title: "Preview Feature: Use the Azure Cosmos DB for SQL API Data Provider with 
 description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual tables."
 keywords: "SQL API"
 ms.date: 02/15/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -12,6 +12,7 @@ applies_to:
   - "powerapps"
 ms.assetid: d0031ffc-8754-4a12-b8c1-e08edc49ff73
 author: Mattp123
+ms.subservice: dataverse-maker
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
@@ -28,7 +29,7 @@ search.app:
 
 # Preview feature: Azure Cosmos DB SQL API Data Provider requirements
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 This topic describes the requirements for the Azure Cosmos DB for SQL API data provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for SQL API data provider with virtual tables. 
 
@@ -40,7 +41,7 @@ This topic describes the requirements for the Azure Cosmos DB for SQL API data p
 
 ## What is Azure Cosmos DB?
 
-Azure Cosmos DB is Microsoft's globally distributed multi-model database service for mission-critical applications. It provides rich and familiar SQL query capabilities with consistent low latencies over schema-less JSON data. More information: [Introduction to Azure Cosmos DB: SQL API](https://docs.microsoft.com/azure/cosmos-db/sql-api-introduction)
+Azure Cosmos DB is Microsoft's globally distributed multi-model database service for mission-critical applications. It provides rich and familiar SQL query capabilities with consistent low latencies over schema-less JSON data. More information: [Introduction to Azure Cosmos DB: SQL API](/azure/cosmos-db/sql-api-introduction)
 
 ## Requirements
 
@@ -117,3 +118,6 @@ SQL query filtering supports the following operators.
 ## See also
 
 [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

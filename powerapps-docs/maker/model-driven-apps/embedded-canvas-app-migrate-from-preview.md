@@ -4,15 +4,16 @@ description: Learn how to migrate your embedded canvas apps created with the pub
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -26,7 +27,7 @@ search.app:
 
 # Migrate embedded canvas apps on model-driven forms created using the public preview release
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!IMPORTANT]
 > With the latest release, embedded canvas apps on model-driven forms are generally available. Any embedded canvas apps on model-driven forms created using the public preview release should be migrated to new embedded canvas apps created using the latest release.
@@ -78,3 +79,6 @@ To migrate an embedded canvas app on a model-driven form that uses a list of row
 [ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,16 +1,15 @@
 ---
 title: formatDateLongAbbreviated | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d91ba452-b57f-425c-bf64-cabf723a6249
+description: Returns a formatted string that represents a date in the long form using abbreviation. Results pattern is based on culture. In USA it's "Abbreviated Day of week, Month dd, yyyy".
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # formatDateLongAbbreviated
 
@@ -22,7 +21,7 @@ ms.assetid: d91ba452-b57f-425c-bf64-cabf723a6249
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ## Parameters
 
@@ -40,3 +39,5 @@ Type: `string`
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

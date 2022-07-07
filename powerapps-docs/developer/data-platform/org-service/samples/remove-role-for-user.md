@@ -1,14 +1,12 @@
 ---
-title: " Remove a role for a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Remove a role for a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to remove a role for a user " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
@@ -16,11 +14,9 @@ search.app:
   - D365CE
 ---
 
-# Remove a role for a user
+# Sample: Remove a role for a user
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
-
-This sample shows how to disassociate a role from a user by using the [IOrganizationService.Disassociate](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.disassociate?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RemoveRoleFromUser).
+This sample shows how to disassociate a role from a user by using the [IOrganizationService.Disassociate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.disassociate) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RemoveRoleFromUser).
 
 This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
 
@@ -35,7 +31,7 @@ This sample requires an additional user that isn't available in your system. Cre
 
 ## What this sample does
 
-The [IOrganizationService.Disassociate](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.disassociate?view=dynamics-general-ce-9) message is intended to be used in a scenario where it deletes a link between records.
+The [IOrganizationService.Disassociate](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.disassociate) message is intended to be used in a scenario where it deletes a link between records.
 
 ## How this sample works
 
@@ -54,3 +50,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

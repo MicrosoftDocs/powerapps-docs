@@ -1,25 +1,26 @@
 ---
 title: "Add and remove sample data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "How to install or uninstall sample data using the Web API or Organization service" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
+description: "Learn how to install or uninstall sample data using the Web API or Organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: JimDaly # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
+
 # Add and remove sample data
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-You can install and uninstall sample data programmatically for an organization using the `InstallSampleData` and  `UninstallSampleData` messages: 
+You can install and uninstall sample data programmatically for an organization using the `InstallSampleData` and  `UninstallSampleData` messages:
 
 |Web API Action |Organization Service Class|
 |--|--|
@@ -83,6 +84,8 @@ service.Execute(request);
 > [!NOTE]
 > Neither the <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataResponse> or <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse> classes returned by these operations include any properties to examine.
 
-### See also
+### See Also
 
 [Import data](import-data.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,18 +1,21 @@
 ---
 title: "get method for collections (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: "Describes the get method used for collections."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # get method for collections (Client API reference)
 
@@ -41,3 +44,6 @@ search.app:
 
 [getLength](getLength.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

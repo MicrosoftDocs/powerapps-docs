@@ -1,26 +1,27 @@
 ---
 title: "fireOnChange (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the fireOnChange method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 215c89c3-da03-4f18-b840-df72a5b377e8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # fireOnChange (Client API reference)
 
+Causes the `OnChange` event to occur on the column so that any script associated to that event can execute.
 
-
-Causes the `OnChange` event to occur on the attribute so that any script associated to that event can execute.
-
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -30,5 +31,8 @@ All
 
 
 ### Related topics
-[Attribute OnChange Event](../events/attribute-onchange.md)
+[Column OnChange Event](../events/attribute-onchange.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

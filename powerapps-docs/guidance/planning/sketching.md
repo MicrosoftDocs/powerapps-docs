@@ -2,10 +2,11 @@
 title: Designing - Sketching the screens | Microsoft Docs
 description: After you've identified the tasks for your Power Apps project, the next step is to sketch the screens. With these tips, you don't have to be an artist! 
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -45,7 +46,10 @@ ideas can help eliminate any difference in expectations. Ideally, you can
 use the sketches as a "paper prototype" and have your user pretend to actually
 use it.
 
-![A sketch of some app screen ideas](media/sketch.png "A sketch of some app screen ideas")
+![A sketch of some app screen ideas.](media/sketch.png "A sketch of some app screen ideas")
 
 > [!div class="nextstepaction"]
 > [Next step: Architectural design](where-is-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

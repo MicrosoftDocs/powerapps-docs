@@ -1,22 +1,24 @@
 ---
-title: "AppModule entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppModule table."
-ms.date: 11/14/2020
+title: "Model-driven App (AppModule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Model-driven App (AppModule)  table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# AppModule entity reference
+
+# Model-driven App (AppModule)  table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 A role-based, modular business app that provides task-based functionality for a particular area of work.
 
@@ -26,17 +28,18 @@ A role-based, modular business app that provides task-based functionality for a 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |AddAppComponents|<xref href="Microsoft.Dynamics.CRM.AddAppComponents?text=AddAppComponents Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/appmodules<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/appmodules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |RemoveAppComponents|<xref href="Microsoft.Dynamics.CRM.RemoveAppComponents?text=RemoveAppComponents Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveAppComponentsRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveAppComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveAppComponents?text=RetrieveAppComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appmodules<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appmodules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveUnpublished|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
 |RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |ValidateApp|<xref href="Microsoft.Dynamics.CRM.ValidateApp?text=ValidateApp Function" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -54,9 +57,9 @@ A role-based, modular business app that provides task-based functionality for a 
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AppModuleId](#BKMK_AppModuleId)
 - [AppModuleIdUnique](#BKMK_AppModuleIdUnique)
@@ -270,14 +273,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 
-#### IsDefault Options
+#### IsDefault Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -293,14 +296,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsFeatured Options
+#### IsFeatured Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -332,12 +335,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### NavigationType Options
+#### NavigationType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Single session|
-|1|Multi session|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Single session||
+|1|Multi session||
 
 
 
@@ -417,7 +420,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -440,7 +443,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -510,9 +513,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -550,14 +553,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -680,14 +683,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -891,11 +894,14 @@ Listed by **SchemaName**.
 
 - [appmodule_appconfig](#BKMK_appmodule_appconfig)
 - [appmodule_appmodulecomponent](#BKMK_appmodule_appmodulecomponent)
+- [appmodule_appnotification_app](#BKMK_appmodule_appnotification_app)
+- [appmodule_userrating_app](#BKMK_appmodule_userrating_app)
+- [appmodule_appaction_appmoduleid](#BKMK_appmodule_appaction_appmoduleid)
 
 
 ### <a name="BKMK_appmodule_appconfig"></a> appmodule_appconfig
 
-Same as appconfig entity [appmodule_appconfig](appconfig.md#BKMK_appmodule_appconfig) Many-To-One relationship.
+Same as the [appmodule_appconfig](appconfig.md#BKMK_appmodule_appconfig) many-to-one relationship for the [appconfig](appconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -910,7 +916,7 @@ Same as appconfig entity [appmodule_appconfig](appconfig.md#BKMK_appmodule_appco
 
 ### <a name="BKMK_appmodule_appmodulecomponent"></a> appmodule_appmodulecomponent
 
-Same as appmodulecomponent entity [appmodule_appmodulecomponent](appmodulecomponent.md#BKMK_appmodule_appmodulecomponent) Many-To-One relationship.
+Same as the [appmodule_appmodulecomponent](appmodulecomponent.md#BKMK_appmodule_appmodulecomponent) many-to-one relationship for the [appmodulecomponent](appmodulecomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -922,11 +928,62 @@ Same as appmodulecomponent entity [appmodule_appmodulecomponent](appmodulecompon
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_appmodule_appnotification_app"></a> appmodule_appnotification_app
+
+**Added by**: AppNotifications Solution
+
+Same as the [appmodule_appnotification_app](appnotification.md#BKMK_appmodule_appnotification_app) many-to-one relationship for the [appnotification](appnotification.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appnotification|
+|ReferencingAttribute|appmoduleid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|appmodule_appnotification_app|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_appmodule_userrating_app"></a> appmodule_userrating_app
+
+**Added by**: User Rating Solution
+
+Same as the [appmodule_userrating_app](userrating.md#BKMK_appmodule_userrating_app) many-to-one relationship for the [userrating](userrating.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|userrating|
+|ReferencingAttribute|appmoduleid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|appmodule_userrating_app|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_appmodule_appaction_appmoduleid"></a> appmodule_appaction_appmoduleid
+
+**Added by**: Power Apps Actions Solution
+
+Same as the [appmodule_appaction_appmoduleid](appaction.md#BKMK_appmodule_appaction_appmoduleid) many-to-one relationship for the [appaction](appaction.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|appmoduleid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|appmodule_appaction_appmoduleid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [organization_appmodule](#BKMK_organization_appmodule)
 - [lk_appmodule_modifiedby](#BKMK_lk_appmodule_modifiedby)
@@ -938,32 +995,32 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_organization_appmodule"></a> organization_appmodule
 
-See organization Entity [organization_appmodule](organization.md#BKMK_organization_appmodule) One-To-Many relationship.
+See the [organization_appmodule](organization.md#BKMK_organization_appmodule) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_appmodule_modifiedby"></a> lk_appmodule_modifiedby
 
-See systemuser Entity [lk_appmodule_modifiedby](systemuser.md#BKMK_lk_appmodule_modifiedby) One-To-Many relationship.
+See the [lk_appmodule_modifiedby](systemuser.md#BKMK_lk_appmodule_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_publisher_appmodule"></a> publisher_appmodule
 
-See publisher Entity [publisher_appmodule](publisher.md#BKMK_publisher_appmodule) One-To-Many relationship.
+See the [publisher_appmodule](publisher.md#BKMK_publisher_appmodule) one-to-many relationship for the [publisher](publisher.md) table/entity.
 
 ### <a name="BKMK_lk_appmodule_modifiedonbehalfby"></a> lk_appmodule_modifiedonbehalfby
 
-See systemuser Entity [lk_appmodule_modifiedonbehalfby](systemuser.md#BKMK_lk_appmodule_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_appmodule_modifiedonbehalfby](systemuser.md#BKMK_lk_appmodule_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appmodule_createdby"></a> lk_appmodule_createdby
 
-See systemuser Entity [lk_appmodule_createdby](systemuser.md#BKMK_lk_appmodule_createdby) One-To-Many relationship.
+See the [lk_appmodule_createdby](systemuser.md#BKMK_lk_appmodule_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_appmodule_createdonbehalfby"></a> lk_appmodule_createdonbehalfby
 
-See systemuser Entity [lk_appmodule_createdonbehalfby](systemuser.md#BKMK_lk_appmodule_createdonbehalfby) One-To-Many relationship.
+See the [lk_appmodule_createdonbehalfby](systemuser.md#BKMK_lk_appmodule_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
 
-Relationship details provided where the AppModule entity is the first entity in the relationship. Listed by **SchemaName**.
+Relationship details provided where the AppModule table is the first table in the relationship. Listed by **SchemaName**.
 
 - [appmoduleroles_association](#BKMK_appmoduleroles_association)
 - [serviceplan_appmodule](#BKMK_serviceplan_appmodule)
@@ -972,7 +1029,7 @@ Relationship details provided where the AppModule entity is the first entity in 
 ### <a name="BKMK_appmoduleroles_association"></a> appmoduleroles_association
 
 IntersectEntityName: appmoduleroles<br />
-#### Entity 1
+#### Table 1
 
 |Property|Value|
 |--------|-----|
@@ -982,7 +1039,7 @@ IntersectEntityName: appmoduleroles<br />
 |NavigationPropertyName|appmoduleroles_association|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
-#### Entity 2
+#### Table 2
 
 |Property|Value|
 |--------|-----|
@@ -994,10 +1051,10 @@ IntersectEntityName: appmoduleroles<br />
 
 ### <a name="BKMK_serviceplan_appmodule"></a> serviceplan_appmodule
 
-See serviceplan Entity [serviceplan_appmodule](serviceplan.md#BKMK_serviceplan_appmodule) Many-To-Many Relationship.
+See the [serviceplan_appmodule](serviceplan.md#BKMK_serviceplan_appmodule) many-to-many relationship for the [serviceplan](serviceplan.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appmodule?text=appmodule EntityType" />

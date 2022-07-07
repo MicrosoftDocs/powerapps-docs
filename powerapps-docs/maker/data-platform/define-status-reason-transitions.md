@@ -4,10 +4,10 @@ description: "Learn how to define status reason transitions"
 ms.custom: ""
 ms.date: 05/25/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,6 +15,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: dbc4f436-0b23-42f9-8079-b0de482aaebe
 caps.latest.revision: 11
+ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
 search.audienceType: 
@@ -26,12 +27,10 @@ search.app:
 
 # Define status reason transitions for the Case or custom tables
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 You can specify status reason transitions for the Incident (**Case**) table or a custom table.
 
 > [!NOTE]
-> Although the Incident (Case) table isn't included in a default Microsoft Dataverse environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Although the Incident (Case) table isn't included in a default Microsoft Power Apps environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
   
 Status reason transitions are an optional additional level of filtering to define what the status reason value can be changed to for each status reason. Defining a limited list of valid options can make it easier for people to choose the correct next status reason for a row when you have a large number of combinations for valid status reason values.  
   
@@ -66,7 +65,7 @@ You can modify the status reason column options for the Case table and custom ta
   
  When you edit a status reason column the **Edit Status Reason Transitions** button is in the menu. 
 
-![Edit Status Reason Transitions command](media/status-reason-transitions-command.png)
+![Edit Status Reason Transitions command.](media/status-reason-transitions-command.png)
 
 When you click this button the **Status Reason Transitions** dialog provides the option to choose **Enable Status Reason Transitions**. When this option is selected you must define which *other* status reason values are allowed for each status reason. To remove the filtering applied, remove the **Enable Status Reason Transitions** selection. The transitions you have defined will be kept but not applied.  
   
@@ -79,11 +78,14 @@ The screenshot below provides an example that meets the following requirements:
   > [!NOTE]
   >  This is not a good example for real work, but it demonstrates how stages of status can be enforced through status reason transitions.  
   
- ![Example of status reason transitions for case](media/status-reason-transitions-example.PNG)  
+ ![Example of status reason transitions for case.](media/status-reason-transitions-example.PNG)  
   
 ### See Also  
 
 [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
-[Table metadata > Table states](/powerapps/developer/data-platform/table-metadata#table-states)<br />
+[Table metadata > Table states](/powerapps/developer/data-platform/entity-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

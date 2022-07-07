@@ -1,19 +1,20 @@
 ---
 title: "Ribbon WSS schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The following is the schema definition for the ribbon types WSS of an import/export customization file. It is included from the Ribbon Core Schema." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: powerapps
-ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Ribbon WSS schema
 
@@ -24,7 +25,7 @@ The following is the schema definition for the ribbon types WSS of an import/exp
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
 
-For more information, see [Package and Distribute Extensions with Solutions](https://docs.microsoft.com/powerapps/developer/data-platform/introduction-solutions).
+For more information, see [Package and Distribute Extensions with Solutions](../data-platform/introduction-solutions.md).
 
 
 ## Schema  
@@ -1007,3 +1008,6 @@ For more information, see [Package and Distribute Extensions with Solutions](htt
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbon Types Schema](ribbon-types-schema.md)   
  [Customization XML Reference](customization-xml-reference.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

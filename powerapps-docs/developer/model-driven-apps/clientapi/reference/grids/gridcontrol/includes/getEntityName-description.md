@@ -1,1 +1,1 @@
-Gets the logical name of the entity data displayed in the grid.
+Gets the logical name of the table data displayed in the grid.

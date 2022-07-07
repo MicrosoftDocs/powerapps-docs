@@ -1,16 +1,15 @@
 ---
 title: formatLanguage | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 859ca133-92db-49d5-a68f-a2f47d8daa83
+description: Returns a formatted string that represents a given language.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # formatLanguage
@@ -23,7 +22,7 @@ ms.assetid: 859ca133-92db-49d5-a68f-a2f47d8daa83
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps 
 
 ## Parameters
 
@@ -41,3 +40,5 @@ Type: `string`
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

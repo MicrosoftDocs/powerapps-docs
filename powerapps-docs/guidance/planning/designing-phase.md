@@ -2,10 +2,11 @@
 title: Design phase - Planning a Power Apps project | Microsoft Docs
 description: In the designing phase, you'll prepare the specifications and designs of your app. This article introduces the conceptual and architectural design phases.
 author: taiki-yoshida
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
+ms.subservice: guidance
 ms.author: tayoshi
 ms.reviewer: kathyos
 
@@ -52,3 +53,6 @@ This is where you'll consider things like:
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying tasks to be done in the app](app-tasks.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

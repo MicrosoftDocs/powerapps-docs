@@ -1,18 +1,20 @@
 ---
 title: "getGlobalContext.client (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 08/27/2019
-ms.service: powerapps
+description: "Describes the client object returned from the getGlobalContext method."
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getGlobalContext.client (Client API reference)
 
@@ -44,6 +46,7 @@ Value |Client |
 |Web |Unified Interface|
 |Outlook |Dynamics 365 for Outlook client (COM add-in)|
 |Mobile |Mobile app |
+|||
 
 ## getClientState
 
@@ -63,6 +66,7 @@ Value |Client |
 |---|---|
 |Online |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
 |Offline |Outlook, Mobile app|
+|||
 
 ## getFormFactor
 
@@ -99,6 +103,20 @@ Returns information whether the server is online or offline.
 
 **Description**: **true** if the server is offline; **false** otherwise.
 
+## isNetworkAvailable
+
+Returns information whether the network is available or not.
+
+### Syntax
+
+`clientContext.isNetworkAvailable()`
+
+### Return Value
+
+**Type**: Boolean
+
+**Description**: **true** if the network is available; **false** otherwise.
+
 ## Related topics
 
 [Organization Settings](organizationSettings.md)
@@ -107,3 +125,6 @@ Returns information whether the server is online or offline.
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

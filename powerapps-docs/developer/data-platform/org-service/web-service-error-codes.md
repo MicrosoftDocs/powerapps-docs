@@ -1,30 +1,31 @@
 ---
 title: "Web service error codes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic lists the error codes you might encounter when you debug your code. " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 07/28/2020
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Web service error codes
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This topic lists the error codes you might encounter when you debug your code.
 
-<a name="BKMK_CRMErrors"></a>   
+<a name="BKMK_CRMErrors"></a>
 
-## Microsoft Dataverse Errors 
+## Microsoft Dataverse Errors
 
  The following list shows the error codes used in Dataverse. For more information about handling errors, see [Handle exceptions in your code](handle-exceptions-code.md).  
 
@@ -33,3 +34,5 @@ This topic lists the error codes you might encounter when you debug your code.
 ### See also
 
 [Handle exceptions in your code](handle-exceptions-code.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

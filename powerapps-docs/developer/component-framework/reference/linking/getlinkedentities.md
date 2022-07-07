@@ -1,16 +1,15 @@
 ---
 title: getLinkedEntities | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: feb4e449-935f-452e-a67a-d3cf3c2bdcfb
+description: Returns all the linked tables information.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getLinkedEntities
@@ -35,3 +34,5 @@ Type: [ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)
 [Linking](../linking.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

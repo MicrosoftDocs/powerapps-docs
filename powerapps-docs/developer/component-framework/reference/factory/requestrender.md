@@ -1,16 +1,15 @@
 ---
 title: requestRender | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8a6521c7-a05d-44ff-a007-1bda53d6d73a
+description: Requests re-rendering of the component with the updated data.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # requestRender
@@ -23,10 +22,12 @@ ms.assetid: 8a6521c7-a05d-44ff-a007-1bda53d6d73a
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
 ### Related topics
 
 [Factory](../factory.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

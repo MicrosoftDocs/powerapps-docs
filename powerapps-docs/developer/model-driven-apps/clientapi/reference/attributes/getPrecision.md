@@ -1,18 +1,21 @@
 ---
 title: "getPrecision (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getPrecision method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 610b9b53-9c29-4228-8ef3-0c05aae14a2b
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getPrecision (Client API reference)
 
@@ -20,7 +23,7 @@ search.app:
 
 Returns the number of digits allowed to the right of the decimal point. 
 
-## Attribute types supported
+## Column types supported
 
 Money, decimal, double, and integer
 
@@ -38,3 +41,6 @@ Money, decimal, double, and integer
 
 [setPrecision](setPrecision.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

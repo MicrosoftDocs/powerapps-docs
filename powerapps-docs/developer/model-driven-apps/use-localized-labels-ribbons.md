@@ -1,23 +1,25 @@
 ---
 title: "Use localized labels with ribbons (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using localized labels with ribbons." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: powerapps
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 05/24/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Use localized labels with ribbons
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/use-localized-labels-ribbons -->
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 Although Ribbon elements that display text allow for direct entry of text, it is a best practice to use localized labels to define text displayed in the ribbon. This enables multi-language capabilities and better management of shared text.  
   
@@ -61,3 +63,6 @@ ToolTipDescription="$LocLabels:MyISV.account.SendToOtherSystem.ToolTip"
  [Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)   
  [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
  [Define Ribbon Commands](define-ribbon-commands.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

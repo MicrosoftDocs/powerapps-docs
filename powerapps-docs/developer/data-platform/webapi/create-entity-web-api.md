@@ -1,35 +1,30 @@
 ---
-title: "Create an entity record using the Web API (Microsoft Dataverse) | Microsoft Docs"
-description: "Read how to create a POST request to send data to create an entity record on Microsoft Dataverse using the Web API"
-ms.custom: ""
-ms.date: 10/3/2020
+title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
+description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
+ms.date: 06/27/2022
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 244259ca-2fbc-4fd4-9a74-6166e6683355
-caps.latest.revision: 51
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
-# Create an entity record using the Web API
+# Create a table row using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Use a POST request to send data to create an entity. You can create multiple related entity records in a single operation using *deep insert*. You also need to know how to set values to associate a new entity record to existing entities using the `@odata.bind` annotation.  
+Use a POST request to send data to create a table row (entity record). You can create multiple related table rows in a single operation using *deep insert*. You also need to know how to set values to associate a new table row to existing tables using the `@odata.bind` annotation.  
 
 > [!NOTE]
-> For information about how to create and update the entity metadata using the Web API, see [Create and update entity definitions using the Web API](create-update-entity-definitions-using-web-api.md).
+> For information about how to create and update the table (entity) definitions using the Web API, see [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md).
 
 <a name="bkmk_basicCreate"></a>
 
@@ -67,13 +62,13 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-To create a new entity record you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [About the Entity Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document) . More information: [Entity types](web-api-types-operations.md#entity-types)
+To create a new entity record you must identify the valid property names and types. For all system entities and attributes (table columns), you can find this information in the topic for that entity in the [About the Table Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
 
 <a name="bkmk_createWithDataReturned"></a>
 
 ## Create with data returned
 
-You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get his result, you must use the `return=representation` preference in the request headers.
+You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get this result, you must use the `return=representation` preference in the request headers.
 
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
@@ -130,11 +125,11 @@ OData-Version: 4.0
 
 <a name="bkmk_CreateRelated"></a>
 
-## Create related entity records in one operation
+## Create related table rows in one operation
 
- You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*.
+ You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. This approach has two advantages. It is more efficient, replacing multiple simpler creation and association operations with one combined operation. Also, it is atomic where either the entire operation succeeds and all the related objects are created, or the operation fails and none are created. 
 
- As with a basic create, the response `OData-EntityId` header contains the Uri of the created entity. The URIs for the related entities created aren’t returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
+ As with a basic create, the response `OData-EntityId` header contains the Uri of the created entity. The URIs for the related entities created aren't returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
  For example, the following request body posted to the `accounts` entity set will create a total of four new entities in the context of creating an account.
 
@@ -143,6 +138,9 @@ OData-Version: 4.0
 - An opportunity is created because it is defined as an object within an array that is set to the value of a collection-valued navigation property `opportunity_customer_accounts`.
 
 - A task is created because it is defined an object within an array that is set to the value of a collection-valued navigation property `Opportunity_Tasks`.
+
+> [!NOTE]
+> When creating a new table row, it is not possible to combine the row creation with the insert of a non-primary image. For a non-primary image to be added, the row must already exist.
 
 **Request**
 
@@ -186,7 +184,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(3c6e4b5f-86f6-e411-80d
 
 <a name="bkmk_associateOnCreate"></a>
 
-## Associate entity records on create
+## Associate table rows on create
 
  To associate new entities to existing entities when they are created you must set the value of navigation properties using the `@odata.bind` annotation.
 
@@ -255,25 +253,35 @@ Preference-Applied: return=representation
 
 <a name="bkmk_SuppressDuplicateDetection"></a>
 
-## Check for Duplicate records
+## Check for duplicate records
 
-
-By default, duplicate detection is suppressed when you are creating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your POST request to enable duplicate detection . Duplicate detection only applies when the organization has enabled duplicate detection, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. More information: [Detect duplicate data using code](../detect-duplicate-data-with-code.md)
+By default, duplicate detection is suppressed when you are creating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your POST request to enable duplicate detection. Duplicate detection only applies when 1) the organization has enabled duplicate detection, 2) the entity is enabled for duplicate detection, and 3) there are active duplicate detection rules being applied. More information: [Detect duplicate data using code](../detect-duplicate-data-with-code.md)
 
 See [Detect duplicate data using Web API](manage-duplicate-detection-create-update.md#bkmk_create) for more information on how to check for duplicate records during Create operation.
 
 <a name="bkmk_initializefrom"></a>
 
-## Create a new entity record from another entity
+## Create a new record from another record
 
-Use `InitializeFrom` function to create a new record in the context of an existing record where a mapping exists between the entities to which the records belong. 
+Use the <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> to create a new record in the context of an existing record where a mapping exists for the relationship between the tables. For information about creating these mappings, see:
 
-The following example shows how to create an account record using the attribute values of an existing record of account entity with `accountid` value equal to `c65127ed-2097-e711-80eb-00155db75426`.
+- [Map table columns](../../../maker/data-platform/map-entity-fields.md)
+- [Customize table and column mappings](../customize-entity-attribute-mappings.md)
+
+> [!NOTE]
+> To determine whether two entities can be mapped, use this query:<br />
+`GET [Organization URI]/api/data/v9.1/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
+
+This is a two step process. The `InitializeFrom` function doesn't create the record, but it returns data you can use to create a new record with specified property values mapped from the original record. You will combine the response data returned in the `InitializeFrom` function with any changes you want to make and then `POST` the data to create the new record.
+
+The following example shows how to create an account record using the values of an existing account record with `accountid` value equal to `00000000-0000-0000-0000-000000000001`.
+
+### Step 1: Get the data using InitializeFrom
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(c65127ed-2097-e711-80eb-00155db75426)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
+GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(00000000-0000-0000-0000-000000000001)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0
@@ -287,7 +295,7 @@ Accept: application/json
 {
     "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
     "@odata.type": "#Microsoft.Dynamics.CRM.account",
-    "parentaccountid@odata.bind": "accounts(c65127ed-2097-e711-80eb-00155db75426)",
+    "parentaccountid@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)",
     "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
     "address1_line1": "123 Maple St.",
     "address1_city": "Seattle",
@@ -295,13 +303,13 @@ Accept: application/json
 }
 ```
 
-The response received from `InitializeFrom` request consists of values of mapped attributes between the source entity and target entity and the GUID of parent record. The attribute mapping between entities that have an entity relationship is different for different entity sets and is customizable, so the response from `InitializeFrom` function request may vary for different entities and organizations. When this response is passed in the body of create request of the new record, these attribute values are replicated in the new record. The values of custom mapped attributes also get set in the new record during the process.
+### Step 2: Create the new record
 
-> [!NOTE]
-> To determine whether two entities can be mapped, use this query:<br />
-`GET [Organization URI]/api/data/v9.1/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
+The response received from `InitializeFrom` function consists of values of mapped columns between the source table and target table and the GUID of the parent record. The column mapping between tables that have an relationship is different for different tables and is customizable, so the response from `InitializeFrom` function request may vary for different organizations.
 
-Other attribute values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the example below.
+
+
+Other property values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the example below.
 
 ```http
 POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
@@ -313,7 +321,7 @@ Accept: application/json
     {
         "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
         "@odata.type": "#Microsoft.Dynamics.CRM.account",
-        "parentaccountid@odata.bind": "accounts(c65127ed-2097-e711-80eb-00155db75426)",
+        "parentaccountid@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)",
         "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
         "name":"Contoso Ltd",
         "numberofemployees":"200",
@@ -325,7 +333,11 @@ Accept: application/json
 }
 ```
 
+## Create documents in storage partitions
 
+If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records.
+
+More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
 
 ### See also
 
@@ -335,11 +347,13 @@ Accept: application/json
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

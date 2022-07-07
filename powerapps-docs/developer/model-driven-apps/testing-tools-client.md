@@ -1,14 +1,12 @@
 ---
 title: "Testing tools for client-side development (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about testing frameworks for client-side development." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: powerapps
-ms.topic: "article"
-author: "aengusheaney" # GitHub ID
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/01/2022
+ms.topic: article
+author: aengusheaney # GitHub ID
+ms.subservice: mda-developer
+ms.author: AHEANEY # MSFT alias of Microsoft employees only
+manager: lwelicki # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -35,3 +33,6 @@ When a solution is developed with unit testing, developers report greater produc
 [Video:  Creating and running UI test](https://youtu.be/ryWgK34Akt0)<br />
 [Blog post: Easy Repro: what is it?](https://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)<br />
 [Video: Introduction to DevOps](https://youtu.be/AorM792M8nY)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

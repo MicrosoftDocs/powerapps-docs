@@ -1,23 +1,22 @@
 ---
 title: Types  | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
+description: Provides information on methods available for types element.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # types element
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview) 
+Model-driven and canvas apps 
 
 ## Parent Elements
 
@@ -37,3 +36,5 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

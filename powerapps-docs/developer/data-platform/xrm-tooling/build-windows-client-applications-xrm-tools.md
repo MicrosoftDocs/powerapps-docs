@@ -1,20 +1,14 @@
 ---
 title: "Build Windows client applications using the XRM tools (Microsoft Dataverse)| Microsoft Docs"
 description: "XRM tooling is a set of APIs that provides support for building Windows client applications for Microsoft Dataverse"
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: get-started-article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: e2f22576-1705-4854-a804-a1ca232c0cfc
-caps.latest.revision: 33
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,13 +17,11 @@ search.app:
 ---
 # Build Windows client applications using the XRM tools
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
-
 XRM tooling is a set of APIs built on top of the Microsoft Dataverse assembly APIs (Organization service and Discovery service) that provide support for building Windows client applications for Dataverse. It provides the following capabilities:  
   
 - Supports all the authentication modes to sign in to Dataverse instance.  
 - Provides PowerShell support for authentication and connection to Dataverse instance.  
-- Provides thread safety for actions performed in Dataverse in a multithreaded environment. More information [Multithreading in Components](https://msdn.microsoft.com/library/vstudio/3es4b6yy.aspx), [Thread-Safe Components](https://msdn.microsoft.com/library/vstudio/a8544e2s.aspx)  
+- Provides thread safety for actions performed in Dataverse in a multithreaded environment. More information [Multithreading in Components](/previous-versions/3es4b6yy(v=vs.140)), [Thread-Safe Components](/previous-versions/a8544e2s(v=vs.140))  
 - Provides a common Windows Presentation Foundation login control for Dataverse for consistent sign-in experience to Dataverse from your Windows client applications.  
 - Supports secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in to Dataverse after initial sign in.  
 - Provides built-in diagnostic tracing and performance reporting of the actions performed in Dataverse, which you can configure based on your organization’s requirements.  
@@ -57,5 +49,8 @@ The following applications in the current version of Dataverse use the common WP
 ### See also
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Blog: PowerShell module for performing data operations and manipulating user and system settings in Dataverse](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+<!--[Blog: PowerShell module for performing data operations and manipulating user and system settings in Dataverse](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)-->
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

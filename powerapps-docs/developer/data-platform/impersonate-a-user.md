@@ -1,23 +1,23 @@
 ---
 title: "Impersonate a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write plug-in code to act on behalf of a specific user."
-ms.custom: ""
-ms.date: 1/24/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: "article"
-author: JimDaly
-ms.author: pehecke
-manager: kvivek
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Impersonate a user
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Sometimes you need the code in a plug-in to run in the context of a different user, for example to perform an operation on their behalf.
 
@@ -48,3 +48,6 @@ You can also provide the [SystemUser.SystemUserId](reference/entities/systemuser
 
 [Plug-ins](plug-ins.md)  
 [Write a plug-in](write-plug-in.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

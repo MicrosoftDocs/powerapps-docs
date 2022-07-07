@@ -1,28 +1,31 @@
 ---
-title: " Dump entity priviliges to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to dump entity priviliges to a file." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+title: "Sample: Dump table privileges to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to dump table privileges to a file." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 04/03/2022
+author: paulliew
+ms.author: paulliew
+manager: mayadu
+ms.reviewer: jdaly
+ms.topic: sample
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
-# Dump Entity privileges information to a file
+# Sample: Dump table privileges information to a file
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to write out all the attribute metadata to an `XML` file. It uses the [RetrieveAllEntitiesRequest](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpEntityPriviliges).
+
+This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpEntityPriviliges).
 
 The following sample creates a new file at `\DumpEntityPriviliges\bin\Debug\EntityPrivileges.xml`. You can open this file in **Office Excel** to see a tabular report. 
+
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 
@@ -30,7 +33,7 @@ The following sample creates a new file at `\DumpEntityPriviliges\bin\Debug\Enti
 
 ## What this sample does
 
-The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the entities.
+The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the tables.
 
 ## How this sample works
 
@@ -42,9 +45,12 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `RetrieveAllEntitiesRequest` method retrieves the metadata. 
+1. The `RetrieveAllEntitiesRequest` method retrieves the metadata.
 1. The `StreamWriter` creates an instance of StreamWriter to write text to a file.
 
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

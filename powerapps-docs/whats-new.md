@@ -1,13 +1,12 @@
 ---
 title: What's new in Power Apps | Microsoft Docs
-description: Provides information about the Power Apps weekly release and release notes
+description: Find information about the new features that have been recently released, features that will be releasing in the next few months, and known limitations.
 author: KumarVivek
-manager: kvivek
-ms.service: powerapps
+ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 04/21/2020
+ms.date: 01/25/2022
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -16,25 +15,30 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+contributors:
+  - kumarvivek
+  - tapanm-msft
 ---
 
 # What's new in Power Apps?
 
-This topic provides resources where you can learn about the new features that have recently released, new features that will be releasing over the next few months, and known limitations.
+This topic provides resources for you to learn about the new features that have been recently released, features that will be releasing over the next few months, and known limitations and resolutions.
 
 ## Weekly releases
 
-For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft Power Apps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps).
+For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft Power Apps](/business-applications-release-notes/powerplatform/released-versions/powerapps).
 
-To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
+To learn more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality might not appear immediately.
 
 ## Release plan
 
-For information about new features releasing over the next few months that you can use for planning, see [2020 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave2/power-apps/planned-features)
+For information about new features being released over the next few months that you can use for planning, see  [2022 release wave 1 plan](/power-platform-release-plan/2022wave1/power-apps/planned-features) and [2021 release wave 2 plan](/power-platform-release-plan/2021wave2/power-apps/planned-features).
 
 ## Known limitations
 
-For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+For information about known limitations, see [Common issues and resolutions](/powerapps/maker/canvas-apps/common-issues-and-resolutions).
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,20 +1,22 @@
 ---
-title: "getControl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "quickViewControl.getControl (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the quickViewControl.getControl method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 57eb6b4b-90c1-4d56-b4b0-a7160af17f8f
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getControl (Client API reference)
+# quickViewControl.getControl (Client API reference)
 
 
 
@@ -54,3 +56,6 @@ For more information about methods supported for a control, see [Controls](../co
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

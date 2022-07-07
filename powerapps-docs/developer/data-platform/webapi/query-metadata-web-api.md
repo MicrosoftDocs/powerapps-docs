@@ -1,40 +1,35 @@
 ---
-title: "Query metadata using the Web API (Microsoft Dataverse) | Microsoft Docs"
-description: "The capability to query system metadata is available using the Web API as well as using the organization service by using RetrieveMetadataChangesRequest"
-ms.custom: ""
-ms.date: 11/04/2018
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
+title: "Query table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
+description: "The capability to query table definitions (metadata) is available using the Web API as well as using the Organization service by using RetrieveMetadataChangesRequest"
+ms.date: 04/21/2021
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 3ad4a332-a304-421f-a9fa-82ea3e0503fe
 caps.latest.revision: 18
-author: "JimDaly" # GitHub ID
+author: "NHelgren" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "annbe"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Query metadata using the Web API
+# Query table definitions using the Web API
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Because Microsoft Dataverse is a metadata-driven application, developers may need to query the system metadata at run-time to adapt to how an organization has been configured. This capability uses a RESTful query style.
+Because Microsoft Dataverse is a metadata-driven application, developers may need to query the system definitions at run-time to adapt to how an organization has been configured. This capability uses a RESTful query style.
 
 > [!NOTE]
-> You can also construct a query using an object-based style using the <xref href="Microsoft.Dynamics.CRM.EntityQueryExpression?text=EntityQueryExpression ComplexType" /> with the <xref href="Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function" />. This function allows for capturing changes to metadata between two periods of time as well as returning a limited set of metadata defined by a query you specify.
+> You can also construct a query using an object-based style using the <xref:Microsoft.Dynamics.CRM.EntityQueryExpression?text=EntityQueryExpression ComplexType/> with the <xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function/>. This function allows for capturing changes to table definitions between two periods of time as well as returning a limited set of definitions described by a query you specify.
 
 <a name="bkmk_QueryingEntityMetadata"></a>
 
 ## Querying the EntityMetadata entity type
 
-You’ll use the same techniques described in [Query Data using the Web API](query-data-web-api.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />. EntityMetadata entities contain a lot of data so you will want to be careful to only retrieve the data that you need. The following example shows the data returned for just the DisplayName, IsKnowledgeManagementEnabled, and EntitySetName properties of the metadata for the `Account` entity. The `MetadataId` property value is always returned.  
+You’ll use the same techniques described in [Query data using the Web API](query-data-web-api.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType/>. EntityMetadata entities contain a lot of data so you will want to be careful to only retrieve the data that you need. The following example shows the data returned for just the DisplayName, IsKnowledgeManagementEnabled, and EntitySetName properties of the definition for the `Account` entity. The `MetadataId` property value is always returned.  
   
  **Request**
 
@@ -129,7 +124,7 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/At
 ```
 
 > [!NOTE]
-> Despite the fact that the `OptionSet` and `GlobalOptionSet` collection-valued navigation properties are defined within <xref href="Microsoft.Dynamics.CRM.EnumAttributeMetadata?text=EnumAttributeMetadata EntityType" />, you cannot cast the attributes to this type. This means that if you want to filter on other types which also inherit these properties (see [Entity types that inherit from EnumAttributeMetadata](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types) ), you must perform separate queries to filter for each type.
+> Despite the fact that the `OptionSet` and `GlobalOptionSet` collection-valued navigation properties are defined within <xref href="Microsoft.Dynamics.CRM.EnumAttributeMetadata?text=EnumAttributeMetadata EntityType" />, you cannot cast the attributes to this type. This means that if you want to filter on other types which also inherit these properties (see [Entity types that inherit from EnumAttributeMetadata](/dynamics365/customer-engagement/web-api/enumattributemetadata#Derived_Types) ), you must perform separate queries to filter for each type.
 
 Another example of this is accessing the `Precision` property available in <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> and <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" /> attributes. To access this property you must cast the attributes collection either as <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> or <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" />. An example showing casting to `MoneyAttributeMetadata` is shown here.
 
@@ -343,7 +338,25 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/On
 
 ## Querying Global OptionSets
 
-You can use the `GlobalOptionSetDefinitions` entity set path to retrieve information about global option sets, but this path does not support the use of the `$filter` system query option. So, unless you know the `MetadataId` for a specific global option set, you can only retrieve all of them. You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
+You can use the `GlobalOptionSetDefinitions` entity set path to retrieve information about global option sets, but this path does not support the use of the `$filter` system query option. So, you can only retrieve a single global option set by either the `MetadataId` or the unique name.
+
+### Example: By MetadataId
+
+The following example shows retrieving a global option set using the `MetadataId`.
+
+```http
+GET [Organization URI]/api/data/v9.0/GlobalOptionSetDefinitions(08fa2cb2-e3fe-497a-9b5d-ee887f5cc3cd)
+```
+### Example: By Name
+
+The following example shows retrieving a global option set by name:
+
+```http
+GET [Organization URI]/api/data/v9.0/GlobalOptionSetDefinitions(Name='incident_caseorigincode')
+````
+
+
+You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
 
 ### See also
 
@@ -351,3 +364,6 @@ You can use the `GlobalOptionSetDefinitions` entity set path to retrieve informa
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Metadata entites and attributes using the Web API](create-update-entity-definitions-using-web-api.md)<br />
 [Metadata entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

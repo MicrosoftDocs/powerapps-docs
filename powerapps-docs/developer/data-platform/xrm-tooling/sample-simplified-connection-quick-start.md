@@ -1,30 +1,28 @@
 ---
 title: "Sample: Simplified connection quick start (Developer Guide for Microsoft Dataverse) | MicrosoftDocs"
-description: "This sample shows you how to connect to the Microsoft Dataverse web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on an entity. "
-ms.custom: 
-ms.date: 03/27/2019
-author: Nkrb
-ms.service: crm-online
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: samples
+description: "This sample shows you how to connect to the Microsoft Dataverse web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on a table. "
+ms.date: 04/01/2022
+author: MattB-msft
+ms.topic: sample
+ms.author: mbarbour
+ms.reviewer: jdaly
+manager: jstrauss
 applies_to: 
   - Microsoft Dataverse (online)
-ms.assetid: a4fb3634-948e-4bac-a32f-f626c78d83a0
-caps.latest.revision: 29
-ms.author: nabuthuk
-manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
   - D365CE
   - PowerApps
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 # Sample: Simplified connection quick start using Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This sample shows how to connect to the Dataverse web services using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and perform basic create, update, retrieve, and delete operations on an entity. For more information about the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, see [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md).
+This sample shows how to connect to the Dataverse web services using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and perform basic create, update, retrieve, and delete operations on a table. For more information about the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, see [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md).
 
 ## Requirements
 
@@ -34,21 +32,30 @@ You must modify the `app.config` file with connection information for your Datav
 
 ## Demonstrates
 
-This sample authenticates the user with the Dataverse web services by using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and methods. After obtaining a reference to the Organization web service, the sample performs basic create, update, retrieve, and delete operations on an `account` entity. The sample also handles common exceptions. No helper code is used to establish a connection to the Organization web service.  
+This sample authenticates the user with the Dataverse web services by using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and methods. After obtaining a reference to the Organization web service, the sample performs basic create, update, retrieve, and delete operations on an `account` table. The sample also handles common exceptions. No helper code is used to establish a connection to the Organization web service.  
 
 In addition, this sample supports `OAuth` authentication and advanced connection diagnostics. For more information on using diagnostics, see [Configure tracing for XRM Tooling](configure-tracing-xrm-tooling.md).
 
 ## Example
 
-The following shows a sample `app.config file`. To use this, remove the comment characters “<!- -” at the beginning of the \<add … /> line and the “- ->” at the end on the line for the line that is relevant to your server and organization. Next, modify the attribute values as appropriate for your configuration.
+The following shows a sample `app.config file`. To use this, remove the comment characters “<!- -” at the beginning of the \<add … /> line and the “- ->” at the end on the line for the line that is relevant to your server and organization. Next, modify the data values as appropriate for your configuration.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <connectionStrings>  
-    <!-- Online using Microsoft 365 -->  
-    <!-- <add name="Server=CRM Online, organization=contoso, user=someone"  
-         connectionString="Url=https://contoso.crm.dynamics.com; Username=someone@contoso.onmicrosoft.com; Password=password; authtype=Office365"/> -->  
+
+  <!--<add name="Connect"
+  connectionString="
+  AuthType=OAuth;
+  Username=jsmith@contoso.onmicrosoft.com;
+  Url=https://contosotest.crm.dynamics.com;
+  Password=passcode;
+  AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
+  RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
+  TokenCacheStorePath=d:\MyTokenCache;
+  LoginPrompt=Auto"/>-->
+
   </connectionStrings>  
   <startup>  
     <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />  
@@ -235,3 +242,6 @@ namespace PowerApps.Samples
 
 [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)<br />
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

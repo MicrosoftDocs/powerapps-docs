@@ -1,14 +1,15 @@
 ---
 title: StandardControl | MicrosoftDocs
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
-ms.assetid: 0b589cb1-fe63-4152-a9ad-7bde9d75de62
-author: ""
-ms.author: "nabuthuk"
-author: Nkrb
+description: Provides properties and methods to initiate, update, destroy and perform various actions to build a component.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # StandardControl
@@ -17,7 +18,7 @@ author: Nkrb
 
 ## Available for 
 
-Model-driven apps and canvas apps (public preview)
+Model-driven apps, canvas apps, & portals.
 
 ## Methods
 
@@ -32,3 +33,5 @@ Model-driven apps and canvas apps (public preview)
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

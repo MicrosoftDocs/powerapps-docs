@@ -2,7 +2,7 @@
 title: "Sample: Authenticate helper for the Online Management API for Dynamics 365 for Customer Engagement Customer Enagament| MicrosoftDocs"
 description: "Helper code to authenticate to Online Management API."
 ms.date: 11/27/2017
-ms.service: crm-online
+
 ms.topic: conceptual
 applies_to: Dynamics 365 for Customer Engagement (online)
 ms.assetid: a96fff7c-814e-4fa1-98b6-7a2875ee0234
@@ -218,3 +218,6 @@ namespace Microsoft.Crm.Sdk.Samples.HelperCode
 [Operations supported by Online Management API](operations-supported.md)
 
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

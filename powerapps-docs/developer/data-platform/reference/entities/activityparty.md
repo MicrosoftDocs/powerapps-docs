@@ -1,22 +1,24 @@
 ---
-title: "ActivityParty entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ActivityParty table."
-ms.date: 11/14/2020
+title: "ActivityParty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the ActivityParty table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ActivityParty entity reference
+
+# ActivityParty table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Person or group associated with an activity. An activity can have multiple activity parties.
 
@@ -25,9 +27,9 @@ Person or group associated with an activity. An activity can have multiple activ
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -45,9 +47,9 @@ Person or group associated with an activity. An activity can have multiple activ
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityId](#BKMK_ActivityId)
 - [ActivityPartyId](#BKMK_ActivityPartyId)
@@ -99,7 +101,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|addressused|
-|MaxLength|200|
+|MaxLength|320|
 |RequiredLevel|None|
 |Type|String|
 
@@ -148,21 +150,21 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ParticipationTypeMask Options
+#### ParticipationTypeMask Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Sender|
-|2|To Recipient|
-|3|CC Recipient|
-|4|BCC Recipient|
-|5|Required attendee|
-|6|Optional attendee|
-|7|Organizer|
-|8|Regarding|
-|9|Owner|
-|10|Resource|
-|11|Customer|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Sender||
+|2|To Recipient||
+|3|CC Recipient||
+|4|BCC Recipient||
+|5|Required attendee||
+|6|Optional attendee||
+|7|Organizer||
+|8|Regarding||
+|9|Owner||
+|10|Resource||
+|11|Customer||
 
 
 
@@ -211,9 +213,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AddressUsedEmailColumnNumber](#BKMK_AddressUsedEmailColumnNumber)
 - [DoNotEmail](#BKMK_DoNotEmail)
@@ -259,14 +261,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### DoNotEmail Options
+#### DoNotEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -282,14 +284,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### DoNotFax Options
+#### DoNotFax Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -305,14 +307,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### DoNotPhone Options
+#### DoNotPhone Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -328,14 +330,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### DoNotPostalMail Options
+#### DoNotPostalMail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Do Not Allow|
-|0|Allow|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Do Not Allow||
+|0|Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -351,15 +353,15 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### InstanceTypeCode Options
+#### InstanceTypeCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Not Recurring|
-|1|Recurring Master|
-|2|Recurring Instance|
-|3|Recurring Exception|
-|4|Recurring Future Exception|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Recurring||
+|1|Recurring Master||
+|2|Recurring Instance||
+|3|Recurring Exception||
+|4|Recurring Future Exception||
 
 
 
@@ -375,14 +377,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPartyDeleted Options
+#### IsPartyDeleted Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -492,7 +494,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ActivityParty_SyncErrors"></a> ActivityParty_SyncErrors
 
-Same as syncerror entity [ActivityParty_SyncErrors](syncerror.md#BKMK_ActivityParty_SyncErrors) Many-To-One relationship.
+Same as the [ActivityParty_SyncErrors](syncerror.md#BKMK_ActivityParty_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -508,7 +510,7 @@ Same as syncerror entity [ActivityParty_SyncErrors](syncerror.md#BKMK_ActivityPa
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [account_activity_parties](#BKMK_account_activity_parties)
 - [letter_activity_parties](#BKMK_letter_activity_parties)
@@ -524,66 +526,73 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [email_activity_parties](#BKMK_email_activity_parties)
 - [fax_activity_parties](#BKMK_fax_activity_parties)
 - [activitypointer_activity_parties](#BKMK_activitypointer_activity_parties)
+- [chat_activity_parties](#BKMK_chat_activity_parties)
 
 
 ### <a name="BKMK_account_activity_parties"></a> account_activity_parties
 
-See account Entity [account_activity_parties](account.md#BKMK_account_activity_parties) One-To-Many relationship.
+See the [account_activity_parties](account.md#BKMK_account_activity_parties) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_letter_activity_parties"></a> letter_activity_parties
 
-See letter Entity [letter_activity_parties](letter.md#BKMK_letter_activity_parties) One-To-Many relationship.
+See the [letter_activity_parties](letter.md#BKMK_letter_activity_parties) one-to-many relationship for the [letter](letter.md) table/entity.
 
 ### <a name="BKMK_phonecall_activity_parties"></a> phonecall_activity_parties
 
-See phonecall Entity [phonecall_activity_parties](phonecall.md#BKMK_phonecall_activity_parties) One-To-Many relationship.
+See the [phonecall_activity_parties](phonecall.md#BKMK_phonecall_activity_parties) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
 
 ### <a name="BKMK_task_activity_parties"></a> task_activity_parties
 
-See task Entity [task_activity_parties](task.md#BKMK_task_activity_parties) One-To-Many relationship.
+See the [task_activity_parties](task.md#BKMK_task_activity_parties) one-to-many relationship for the [task](task.md) table/entity.
 
 ### <a name="BKMK_recurringappointmentmaster_activity_parties"></a> recurringappointmentmaster_activity_parties
 
-See recurringappointmentmaster Entity [recurringappointmentmaster_activity_parties](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_activity_parties) One-To-Many relationship.
+See the [recurringappointmentmaster_activity_parties](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_activity_parties) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 ### <a name="BKMK_contact_activity_parties"></a> contact_activity_parties
 
-See contact Entity [contact_activity_parties](contact.md#BKMK_contact_activity_parties) One-To-Many relationship.
+See the [contact_activity_parties](contact.md#BKMK_contact_activity_parties) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_system_user_activity_parties"></a> system_user_activity_parties
 
-See systemuser Entity [system_user_activity_parties](systemuser.md#BKMK_system_user_activity_parties) One-To-Many relationship.
+See the [system_user_activity_parties](systemuser.md#BKMK_system_user_activity_parties) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_appointment_activity_parties"></a> appointment_activity_parties
 
-See appointment Entity [appointment_activity_parties](appointment.md#BKMK_appointment_activity_parties) One-To-Many relationship.
+See the [appointment_activity_parties](appointment.md#BKMK_appointment_activity_parties) one-to-many relationship for the [appointment](appointment.md) table/entity.
 
 ### <a name="BKMK_socialactivity_activity_parties"></a> socialactivity_activity_parties
 
-See socialactivity Entity [socialactivity_activity_parties](socialactivity.md#BKMK_socialactivity_activity_parties) One-To-Many relationship.
+See the [socialactivity_activity_parties](socialactivity.md#BKMK_socialactivity_activity_parties) one-to-many relationship for the [socialactivity](socialactivity.md) table/entity.
 
 ### <a name="BKMK_queue_activity_parties"></a> queue_activity_parties
 
-See queue Entity [queue_activity_parties](queue.md#BKMK_queue_activity_parties) One-To-Many relationship.
+See the [queue_activity_parties](queue.md#BKMK_queue_activity_parties) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_knowledgearticle_activity_parties"></a> knowledgearticle_activity_parties
 
-See knowledgearticle Entity [knowledgearticle_activity_parties](knowledgearticle.md#BKMK_knowledgearticle_activity_parties) One-To-Many relationship.
+See the [knowledgearticle_activity_parties](knowledgearticle.md#BKMK_knowledgearticle_activity_parties) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_email_activity_parties"></a> email_activity_parties
 
-See email Entity [email_activity_parties](email.md#BKMK_email_activity_parties) One-To-Many relationship.
+See the [email_activity_parties](email.md#BKMK_email_activity_parties) one-to-many relationship for the [email](email.md) table/entity.
 
 ### <a name="BKMK_fax_activity_parties"></a> fax_activity_parties
 
-See fax Entity [fax_activity_parties](fax.md#BKMK_fax_activity_parties) One-To-Many relationship.
+See the [fax_activity_parties](fax.md#BKMK_fax_activity_parties) one-to-many relationship for the [fax](fax.md) table/entity.
 
 ### <a name="BKMK_activitypointer_activity_parties"></a> activitypointer_activity_parties
 
-See activitypointer Entity [activitypointer_activity_parties](activitypointer.md#BKMK_activitypointer_activity_parties) One-To-Many relationship.
+See the [activitypointer_activity_parties](activitypointer.md#BKMK_activitypointer_activity_parties) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
+
+### <a name="BKMK_chat_activity_parties"></a> chat_activity_parties
+
+**Added by**: Activities Patch Solution
+
+See the [chat_activity_parties](chat.md#BKMK_chat_activity_parties) one-to-many relationship for the [chat](chat.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType" />

@@ -2,10 +2,11 @@
 title: "Power Apps patterns: Real-world stories | Microsoft Docs"
 description: See real-world examples of how customers have used Power Apps in a wide variety of common scenarios.
 author: kathyos
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 12/10/2020
+ms.subservice: guidance
 ms.author: kathyos
 ms.reviewer: kathyos
 
@@ -38,3 +39,6 @@ See also: [Pattern: Approval](approval-pattern.md) | [Pattern: Asset management]
 - [IKEA Sweden – Reimagining the customer experience with Microsoft Power Platform](https://powerapps.microsoft.com/blog/ikea-sweden/) (scheduled and walk-in appointment management)
 
 - [Kelly Roofing uses Power Apps to capture photos at work sites](https://powerapps.microsoft.com/blog/kellyroofing/) (construction crew scheduling)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

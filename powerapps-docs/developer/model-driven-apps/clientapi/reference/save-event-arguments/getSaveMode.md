@@ -1,18 +1,20 @@
 ---
 title: "getSaveMode (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getSaveMode method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 03e970ee-7ed3-4df2-9670-222d76a479fd
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getSaveMode (Client API reference)
 
@@ -28,9 +30,9 @@ search.app:
 
 **Type**: Number
 
-**Description**: The following table describes the supported values returned to detect different ways entity records may be saved by the user.
+**Description**: The following table describes the supported values returned to detect different ways table records may be saved by the user.
 
-|Value |Save mode |Entity|
+|Value |Save mode |Table|
 |---|---|---|
 |1|Save|All|
 |2|Save and Close|All|
@@ -39,7 +41,7 @@ search.app:
 |7|Send|Email|
 |15|Disqualify|Lead|
 |16|Qualify|Lead|
-|47|Assign|User or Team owned entities|
+|47|Assign|User or Team owned tables|
 |58|Save as Completed|Activities|
 |59|Save and New|All|
 |70|Auto Save|All|
@@ -61,7 +63,7 @@ function preventAutoSave(executionContext) {
 }
 ```
 
-To save a record the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
+To save a record the user must select the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
 
 ### Related topics
 
@@ -69,3 +71,6 @@ To save a record the user must click the **Save** icon at the bottom of the form
 
 [preventDefault](preventDefault.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

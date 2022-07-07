@@ -1,26 +1,28 @@
 ---
-title: "Lookup Control PreSearch Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "Lookup Control PreSearch event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the PreSearch event.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# Lookup Control PreSearch Event (Client API reference)
+# Lookup Control PreSearch event (Client API reference)
 
 
 
-This event occurs just before the Lookup control launches a dialog to search for records. There is no UI to set event handlers for this event. You must use the [addPreSearch](../controls/addpresearch.md) and [removePreSearch](../controls/removepresearch.md) methods on the lookup control to add or remove event handlers for this event.
+This event occurs just before the lookup control launches a dialog to search for records. There is no UI to set event handlers for this event. You must use the [addPreSearch](../controls/addpresearch.md) and [removePreSearch](../controls/removepresearch.md) methods on the lookup control to add or remove event handlers for this event.
 
-Use this event with other Lookup control methods to change the results displayed in a lookup based on the form data just before the lookup control shows search results for a user to choose from. 
+Use this event with other lookup control methods to change the results displayed in a lookup based on the form data just before the lookup control shows search results for a user to choose from. 
 
 ## Related topics
 
@@ -28,3 +30,6 @@ Use this event with other Lookup control methods to change the results displayed
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

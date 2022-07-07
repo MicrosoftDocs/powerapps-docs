@@ -1,15 +1,19 @@
 ---
 title: "clearGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/09/2020
-ms.service: powerapps
+description: Includes description and supported parameters for the clearGlobalNotification method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # clearGlobalNotification (Client API reference)
 
@@ -21,7 +25,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -85,3 +89,6 @@ Xrm.App.addGlobalNotification(notification).then(
 ### See also
 
 [addGlobalNotification](addGlobalnotification.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

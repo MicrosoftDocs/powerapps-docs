@@ -2,19 +2,24 @@
 title: Dataverse for Teams vs. Dataverse | Microsoft Docs
 description: Explains the differences between Dataverse for Teams and Dataverse.
 author: mmercuri
-ms.service: powerapps
+
 ms.topic: conceptual
-ms.custom: 
-ms.date: 09/22/2020
+ms.custom: intro-internal
+ms.date: 06/16/2022
+ms.subservice: teams
 ms.author: mmercuri
 ms.reviewer: matp
+contributors:
+  - mattp123
+  - hemantgaur
+  - tapanm-msft
+  - ProfessorKendrick
 ---
-
 # How are Dataverse for Teams and Dataverse different?
 
-[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be [upgraded](/power-platform/admin/about-teams-environment#upgrade-process) to Dataverse.
+
+Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires more capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be [upgraded](/power-platform/admin/about-teams-environment#upgrade-process) to Dataverse.
 
 ## Table features
 
@@ -30,10 +35,10 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 |Managed data lake      |  No       | Yes        |
 |File and image support     | Yes        |  Yes       |
 |Find, filter, sort     |   Yes      |  Yes       |
-|Advanced and relevance search      |   No      | Yes        |
+|Advanced and Dataverse search      |   No      | Yes        |
 |Mobile offline     |  No       |  Yes       |
 
-Note that most of the standard tables that are provided with a Dataverse environment won't be present as part of Dataverse for Teams.
+Most of the standard tables that are provided with a Power Platform environment won't be present as part of Dataverse for Teams.
 
 ## Business intelligence and professional developer features
 
@@ -46,6 +51,7 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |      |   Paginated reports (SQL Server Reporting Services)   |  No    |  Yes     |
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
+|      |  Power Apps component framework       |   No      |  Yes       |
 
 ## Environments
 
@@ -53,22 +59,20 @@ In Dataverse for Teams and Dataverse, data is stored within an environment. Data
 
 To make management easier, the lifecycle of the Dataverse for Teams environment is connected to that of the associated team. For example, when a team is deleted, the associated environment is also deleted.
 
-Whereas Dataverse for Teams focuses on one environment per team for up to 500 teams, Dataverse supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
+Whereas Dataverse for Teams focuses on one environment per team for up to 10,000 teams, Dataverse supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
 
 
 |Environment lifecycle  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
 |Maximum size     |   1 million rows or 2 GB      |  4 TB or more     |
-|Promote to Dataverse or Dynamics 365   |  Yes    |  Yes    |
+|Upgrade to Dataverse   |  Yes    |  N/A    |
 
 ## Security
 
 Because collaboration in Teams happens with people inside and outside your organization, the security model needed to support this is easy to use. In Dataverse for Teams, access is preconfigured with a security role based on membership type such as owners, members, or guests.
 
-Both Dataverse for Teams and Dataverse include support for activity logging. For example, activity logging identifies who created a record. However, Dataverse provides additional capabilities for auditing.
-
-Because Dataverse isn't specific to the Teams environment, it delivers more options for admin and user roles. It also includes a number of additional security capabilities such as customer-managed keys, field-level security, hierarchical security, sharing, and support for legacy authentication.
+Because Dataverse isn't specific to the Teams environment, it delivers more options for admin and user roles. It also includes many other security capabilities such as customer-managed keys, field-level security, hierarchical security, sharing, and support for legacy authentication.
 
 > [!NOTE]
 > Because Dataverse for Teams environments are specific to a team, they only contain one business unit.
@@ -76,11 +80,11 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 
 |Security feature  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
-|Admin roles     |  System Administrator and System Customizer       |  System Administrator and System Customizer and additional service admin roles. More information: [Use service admin roles to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)      |
+|Admin roles     |  System Administrator and System Customizer       |  System Administrator and System Customizer and other service admin roles. More information: [Use service admin roles to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)      |
 |User roles    | Team owners, members, and guests        |  Several standard security roles and custom roles can also be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
-|Activity logging     |  Yes       |  Yes       |
-|Business units     |   One      |  Unlimited      |
+|Activity logging     |  No       |  Yes       |
 |Auditing     |  No       |  Yes       |
+|Business units     |   One      |  Unlimited      |
 |Customer-managed environment encryption key     |   No      |  Yes       |
 |Field-level security     |   No      |  Yes       |
 |Hierarchical security     |  No       |  Yes       |
@@ -88,7 +92,7 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 
 ## Integration
 
-Integration with Dataverse for Teams is delivered primarily through connectors. Support for both standard connectors and the ability to use the Dataverse connector to connect to a Dataverse for Teams for a Teams environment is included. Users with Premium licenses have access to the full set of over 350 standard and premium connectors available. This provides the ability to bring data into or retrieve data from tables in Dataverse for Teams, execute workflows when data in those tables change, and also use data from tables in workflow logic.
+Integration with Dataverse for Teams is delivered primarily through connectors. Support for both standard connectors and the ability to use the Dataverse connector to connect to a Dataverse for Teams for a Teams environment is included. Users with Premium licenses have access to the full set of over 350 standard and premium connectors available. This allows you to bring data into or retrieve data from tables in Dataverse for Teams, execute workflows when data in those tables change, and also use data from tables in workflow logic.
 
 Dataverse can also use connectors. Additionally, Dataverse includes other built-in integration capabilities that can export data to a data lake or publish events to an event hub, service bus, or by using webhooks. Dataverse also supports the TDS protocol, which provides integration with SQL Server.
 
@@ -98,7 +102,7 @@ Dataverse can also be used with server-side sync to synchronize with Exchange or
 |Integration feature  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Power Automate     |   Yes      |  Yes       |
-|Export to Azure data lake    |   No      |  Yes       |
+|Azure Synapse Link for Dataverse    |   No      |  Yes       |
 |Data Export Service     |   No      |  Yes       |
 |Events to Azure Event Hubs     |   No      |  Yes       |
 |Events to Azure Service Bus     |   No      |  Yes       |
@@ -111,3 +115,6 @@ Dataverse can also be used with server-side sync to synchronize with Exchange or
 ### See also
 
 [Create a table](create-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

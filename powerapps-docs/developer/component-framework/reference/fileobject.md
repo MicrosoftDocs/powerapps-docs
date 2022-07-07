@@ -1,21 +1,20 @@
 ---
 title: FileObject | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8907f07a-ad45-47e4-a503-8eaae9bba5f7
+description: Provides access to all the properties of a file.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # FileObject
 
-Provides access to all the properties of a file.
+[!INCLUDE [fileobject-description](includes/fileobject-description.md)]
 
 ## Available for
 
@@ -51,3 +50,5 @@ File MIME type.
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

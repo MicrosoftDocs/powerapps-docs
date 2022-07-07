@@ -1,22 +1,22 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: entity.getEntityReference (Client API reference)
+description: Returns a lookup value that references a record.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1a66f93d-a47c-4316-91f1-dcf5d09f9d19
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityReference (Client API reference)
-
-
+# entity.getEntityReference (Client API reference)
 
 [!INCLUDE[./includes/getEntityReference-description.md](./includes/getEntityReference-description.md)]
 
@@ -24,15 +24,20 @@ search.app:
 
 `formContext.data.entity.getEntityReference();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: Lookup object.
 
-**Description**: The returned object has following three attributes:
+**Description**: The returned object has following three parameters:
 
-- **entityType**: String. Logical name of the entity record. For example, "account".
-- **id**: String. GUID value of the entity record.
-- **name**: (Optional) String. Name of the entity record. 
+- **entityType**: String. Logical name of the table record. For example, "account".
+- **id**: String. GUID value of the table record.
+- **name**: (Optional) String. Name of the table record. 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

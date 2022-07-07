@@ -1,12 +1,12 @@
 ---
 title: "Publish your app on AppSource (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to publish your Power Apps on Microsoft AppSource so that subscribers can find it, try it, and buy it." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
+
+ms.topic: overview
 author: "KumarVivek" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "AnnBe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,9 +17,7 @@ search.app:
 ---
 # Publish your app on AppSource
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](/powerapps/user/app-source). 
+Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](../../user/app-source.md). 
 
 ## Prepare for submitting your app on AppSource
 
@@ -43,5 +41,8 @@ Once your app is ready for submission, you use the [Partner Center](https://part
 - [App certification](appendix-app-certification-checklist.md): Provides information about the checks done during the app certification process after you submit your app for publishing on AppSource. 
   
 ### See also  
-[Video: Microsoft AppSource: find the right app for your business](https://youtu.be/hpq_Y9LuIB8)
+[Video: Microsoft AppSource: find the right app for your business](https://youtu.be/sKtLK3gqd4c)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

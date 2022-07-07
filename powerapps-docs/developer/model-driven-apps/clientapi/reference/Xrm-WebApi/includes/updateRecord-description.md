@@ -1,1 +1,1 @@
-Updates an entity record.
+Updates a table record.

@@ -1,22 +1,24 @@
 ---
-title: "ExportSolutionUpload entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ExportSolutionUpload table."
-ms.date: 11/14/2020
+title: "ExportSolutionUpload table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the ExportSolutionUpload table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ExportSolutionUpload entity reference
+
+# ExportSolutionUpload table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
@@ -27,21 +29,21 @@ search.app:
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/exportsolutionuploads<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/exportsolutionuploads<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/exportsolutionuploads<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/exportsolutionuploads<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/exportsolutionuploads(*exportsolutionuploadid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +61,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AsyncOperationId](#BKMK_AsyncOperationId)
 - [ExportSolutionUploadId](#BKMK_ExportSolutionUploadId)
@@ -232,7 +234,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|State|
 
-#### statecode Options
+#### statecode Choices/Options
 
 |Value|Label|DefaultStatus|InvariantName|
 |-----|-----|-------------|-------------|
@@ -253,7 +255,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Status|
 
-#### statuscode Options
+#### statuscode Choices/Options
 
 |Value|Label|State|
 |-----|-----|-----|
@@ -295,9 +297,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -316,6 +318,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionFile_Name](#BKMK_SolutionFile_Name)
@@ -604,12 +607,30 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -698,7 +719,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror entity [exportsolutionupload_SyncErrors](syncerror.md#BKMK_exportsolutionupload_SyncErrors) Many-To-One relationship.
+Same as the [exportsolutionupload_SyncErrors](syncerror.md#BKMK_exportsolutionupload_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -715,7 +736,7 @@ Same as syncerror entity [exportsolutionupload_SyncErrors](syncerror.md#BKMK_exp
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [exportsolutionupload_DuplicateMatchingRecord](duplicaterecord.md#BKMK_exportsolutionupload_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [exportsolutionupload_DuplicateMatchingRecord](duplicaterecord.md#BKMK_exportsolutionupload_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -732,7 +753,7 @@ Same as duplicaterecord entity [exportsolutionupload_DuplicateMatchingRecord](du
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord entity [exportsolutionupload_DuplicateBaseRecord](duplicaterecord.md#BKMK_exportsolutionupload_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [exportsolutionupload_DuplicateBaseRecord](duplicaterecord.md#BKMK_exportsolutionupload_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -749,7 +770,7 @@ Same as duplicaterecord entity [exportsolutionupload_DuplicateBaseRecord](duplic
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation entity [exportsolutionupload_AsyncOperations](asyncoperation.md#BKMK_exportsolutionupload_AsyncOperations) Many-To-One relationship.
+Same as the [exportsolutionupload_AsyncOperations](asyncoperation.md#BKMK_exportsolutionupload_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -766,7 +787,7 @@ Same as asyncoperation entity [exportsolutionupload_AsyncOperations](asyncoperat
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder entity [exportsolutionupload_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_exportsolutionupload_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [exportsolutionupload_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_exportsolutionupload_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -783,7 +804,7 @@ Same as mailboxtrackingfolder entity [exportsolutionupload_MailboxTrackingFolder
 
 **Added by**: System Solution Solution
 
-Same as processsession entity [exportsolutionupload_ProcessSession](processsession.md#BKMK_exportsolutionupload_ProcessSession) Many-To-One relationship.
+Same as the [exportsolutionupload_ProcessSession](processsession.md#BKMK_exportsolutionupload_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -800,7 +821,7 @@ Same as processsession entity [exportsolutionupload_ProcessSession](processsessi
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure entity [exportsolutionupload_BulkDeleteFailures](bulkdeletefailure.md#BKMK_exportsolutionupload_BulkDeleteFailures) Many-To-One relationship.
+Same as the [exportsolutionupload_BulkDeleteFailures](bulkdeletefailure.md#BKMK_exportsolutionupload_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -817,7 +838,7 @@ Same as bulkdeletefailure entity [exportsolutionupload_BulkDeleteFailures](bulkd
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess entity [exportsolutionupload_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_exportsolutionupload_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [exportsolutionupload_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_exportsolutionupload_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -833,7 +854,7 @@ Same as principalobjectattributeaccess entity [exportsolutionupload_PrincipalObj
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_exportsolutionupload_createdby](#BKMK_lk_exportsolutionupload_createdby)
 - [lk_exportsolutionupload_createdonbehalfby](#BKMK_lk_exportsolutionupload_createdonbehalfby)
@@ -848,46 +869,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_exportsolutionupload_createdby](systemuser.md#BKMK_lk_exportsolutionupload_createdby) One-To-Many relationship.
+See the [lk_exportsolutionupload_createdby](systemuser.md#BKMK_lk_exportsolutionupload_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_exportsolutionupload_createdonbehalfby"></a> lk_exportsolutionupload_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_exportsolutionupload_createdonbehalfby](systemuser.md#BKMK_lk_exportsolutionupload_createdonbehalfby) One-To-Many relationship.
+See the [lk_exportsolutionupload_createdonbehalfby](systemuser.md#BKMK_lk_exportsolutionupload_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_exportsolutionupload_modifiedby"></a> lk_exportsolutionupload_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_exportsolutionupload_modifiedby](systemuser.md#BKMK_lk_exportsolutionupload_modifiedby) One-To-Many relationship.
+See the [lk_exportsolutionupload_modifiedby](systemuser.md#BKMK_lk_exportsolutionupload_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_exportsolutionupload_modifiedonbehalfby"></a> lk_exportsolutionupload_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [lk_exportsolutionupload_modifiedonbehalfby](systemuser.md#BKMK_lk_exportsolutionupload_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_exportsolutionupload_modifiedonbehalfby](systemuser.md#BKMK_lk_exportsolutionupload_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_exportsolutionupload"></a> user_exportsolutionupload
 
 **Added by**: System Solution Solution
 
-See systemuser Entity [user_exportsolutionupload](systemuser.md#BKMK_user_exportsolutionupload) One-To-Many relationship.
+See the [user_exportsolutionupload](systemuser.md#BKMK_user_exportsolutionupload) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_exportsolutionupload"></a> team_exportsolutionupload
 
 **Added by**: System Solution Solution
 
-See team Entity [team_exportsolutionupload](team.md#BKMK_team_exportsolutionupload) One-To-Many relationship.
+See the [team_exportsolutionupload](team.md#BKMK_team_exportsolutionupload) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_exportsolutionupload"></a> business_unit_exportsolutionupload
 
 **Added by**: System Solution Solution
 
-See businessunit Entity [business_unit_exportsolutionupload](businessunit.md#BKMK_business_unit_exportsolutionupload) One-To-Many relationship.
+See the [business_unit_exportsolutionupload](businessunit.md#BKMK_business_unit_exportsolutionupload) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.exportsolutionupload?text=exportsolutionupload EntityType" />

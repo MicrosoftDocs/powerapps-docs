@@ -1,18 +1,20 @@
 ---
 title: "openUrl (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the openUrl method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 29cb3685-21aa-42fc-8e84-0074dcc69197
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # openUrl (Client API reference)
 
@@ -29,7 +31,7 @@ search.app:
 |Name |Type |Required |Description |
 |---|---|---|---|
 |url|String|Yes|URL to open.|
-|openUrlOptions|Object|No|Options to open the URL.The object contains the following attributes:<br/>- **height**: (Optional) Number. Height of the window to display the resultant page in pixels.<br/>- **width**: (Optional) Number. Width of the window to display the resultant page in pixels.|
+|openUrlOptions|Object|No|Options to open the URL.The object contains the following values:<br/>- **height**: (Optional) Number. Height of the window to display the resultant page in pixels.<br/>- **width**: (Optional) Number. Width of the window to display the resultant page in pixels.|
 
 ## Remarks
 
@@ -39,3 +41,6 @@ This method is especially helpful for mobile clients to open a URL in a browser 
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

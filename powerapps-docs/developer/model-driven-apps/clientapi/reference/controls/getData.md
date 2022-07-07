@@ -1,22 +1,22 @@
 ---
-title: "getData (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "control.getData (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.getData method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getData (Client API reference)
-
-
+# control.getData (Client API reference)
 
 Returns the value of the data query string parameter passed to a Silverlight web resource. 
 
@@ -28,6 +28,8 @@ Web resource
  
 `formContext.getControl(arg).getData();`
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ## Return Value
 
 **Type**: String
@@ -38,3 +40,6 @@ Web resource
 ### Related topics
 
 [setData](setData.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,18 +1,20 @@
 ---
 title: "Xrm.WebApi.online (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the Xrm.WebApi.online method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 848c277b-bd44-4388-852a-0f59a3a15538
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi.online (Client API reference)
 
@@ -41,3 +43,6 @@ The **onlineWebApi** object provides the following methods:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

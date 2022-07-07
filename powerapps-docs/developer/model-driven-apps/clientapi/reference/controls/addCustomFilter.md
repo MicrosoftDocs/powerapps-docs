@@ -1,24 +1,24 @@
 ---
 title: "addCustomFilter (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Adds filters to the results displayed in the lookup. Each filter is combined with any previously added filter.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: e359b-c4d9-48ac-a57b-367c2e6168c5
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addCustomFilter (Client API reference)
 
-
-
-Adds filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an “AND” condition.
+Adds filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an `AND` condition.
 
 ## Control types supported
 
@@ -38,7 +38,9 @@ Lookup
     </filter>
     ```
 
-- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that entity type. Otherwise, it applies to all types of entities returned.
+- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that table type. Otherwise, it applies to all types of tables returned.
+
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Remarks
 
@@ -71,3 +73,5 @@ Sdk.filterCustomerAccounts = function () {
 [addPreSearch](addPreSearch.md)
 
 [formContext](../../clientapi-form-context.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

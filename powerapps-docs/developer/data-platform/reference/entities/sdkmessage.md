@@ -1,22 +1,24 @@
 ---
-title: "SdkMessage entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SdkMessage table."
-ms.date: 11/14/2020
+title: "SdkMessage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the SdkMessage table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SdkMessage entity reference
+
+# SdkMessage table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Message that is supported by the SDK.
 
@@ -25,10 +27,10 @@ Message that is supported by the SDK.
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessages(*sdkmessageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessages<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessages(*sdkmessageid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessages<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +48,9 @@ Message that is supported by the SDK.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AutoTransact](#BKMK_AutoTransact)
 - [Availability](#BKMK_Availability)
@@ -76,14 +78,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### AutoTransact Options
+#### AutoTransact Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -149,14 +151,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### Expand Options
+#### Expand Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -189,14 +191,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsActive Options
+#### IsActive Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -212,14 +214,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsPrivate Options
+#### IsPrivate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -236,14 +238,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsReadOnly Options
+#### IsReadOnly Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -289,21 +291,21 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### Template Options
+#### Template Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -343,14 +345,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ComponentState Options
+#### ComponentState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Published|
-|1|Unpublished|
-|2|Deleted|
-|3|Deleted Unpublished|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -473,14 +475,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManaged Options
+#### IsManaged Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Managed|
-|0|Unmanaged|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -496,14 +498,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsValidForExecuteAsync Options
+#### IsValidForExecuteAsync Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -709,14 +711,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### WorkflowSdkStepEnabled Options
+#### WorkflowSdkStepEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 <a name="onetomany"></a>
@@ -728,11 +730,12 @@ Listed by **SchemaName**.
 - [sdkmessageid_sdkmessageprocessingstep](#BKMK_sdkmessageid_sdkmessageprocessingstep)
 - [sdkmessageid_sdkmessagefilter](#BKMK_sdkmessageid_sdkmessagefilter)
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
+- [sdkmessage_serviceplanmapping](#BKMK_sdkmessage_serviceplanmapping)
 
 
 ### <a name="BKMK_sdkmessageid_sdkmessageprocessingstep"></a> sdkmessageid_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep entity [sdkmessageid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_sdkmessageid_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [sdkmessageid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_sdkmessageid_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -747,7 +750,7 @@ Same as sdkmessageprocessingstep entity [sdkmessageid_sdkmessageprocessingstep](
 
 ### <a name="BKMK_sdkmessageid_sdkmessagefilter"></a> sdkmessageid_sdkmessagefilter
 
-Same as sdkmessagefilter entity [sdkmessageid_sdkmessagefilter](sdkmessagefilter.md#BKMK_sdkmessageid_sdkmessagefilter) Many-To-One relationship.
+Same as the [sdkmessageid_sdkmessagefilter](sdkmessagefilter.md#BKMK_sdkmessageid_sdkmessagefilter) many-to-one relationship for the [sdkmessagefilter](sdkmessagefilter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -764,7 +767,7 @@ Same as sdkmessagefilter entity [sdkmessageid_sdkmessagefilter](sdkmessagefilter
 
 **Added by**: Custom API Framework Solution
 
-Same as customapi entity [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_customapi) Many-To-One relationship.
+Same as the [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_customapi) many-to-one relationship for the [customapi](customapi.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -776,11 +779,28 @@ Same as customapi entity [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_cus
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_sdkmessage_serviceplanmapping"></a> sdkmessage_serviceplanmapping
+
+**Added by**: License Enforcement Solution
+
+Same as the [sdkmessage_serviceplanmapping](serviceplanmapping.md#BKMK_sdkmessage_serviceplanmapping) many-to-one relationship for the [serviceplanmapping](serviceplanmapping.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplanmapping|
+|ReferencingAttribute|sdkmessage|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|sdkmessage_serviceplanmapping|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_sdkmessage_modifiedonbehalfby](#BKMK_lk_sdkmessage_modifiedonbehalfby)
 - [createdby_sdkmessage](#BKMK_createdby_sdkmessage)
@@ -791,26 +811,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_sdkmessage_modifiedonbehalfby"></a> lk_sdkmessage_modifiedonbehalfby
 
-See systemuser Entity [lk_sdkmessage_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessage_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessage_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessage_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_sdkmessage"></a> createdby_sdkmessage
 
-See systemuser Entity [createdby_sdkmessage](systemuser.md#BKMK_createdby_sdkmessage) One-To-Many relationship.
+See the [createdby_sdkmessage](systemuser.md#BKMK_createdby_sdkmessage) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessage_createdonbehalfby"></a> lk_sdkmessage_createdonbehalfby
 
-See systemuser Entity [lk_sdkmessage_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessage_createdonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessage_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessage_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sdkmessage"></a> organization_sdkmessage
 
-See organization Entity [organization_sdkmessage](organization.md#BKMK_organization_sdkmessage) One-To-Many relationship.
+See the [organization_sdkmessage](organization.md#BKMK_organization_sdkmessage) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_modifiedby_sdkmessage"></a> modifiedby_sdkmessage
 
-See systemuser Entity [modifiedby_sdkmessage](systemuser.md#BKMK_modifiedby_sdkmessage) One-To-Many relationship.
+See the [modifiedby_sdkmessage](systemuser.md#BKMK_modifiedby_sdkmessage) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sdkmessage?text=sdkmessage EntityType" />

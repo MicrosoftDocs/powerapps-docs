@@ -1,22 +1,22 @@
 ---
-title: "getIsDirty (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: data.getIsDirty (Client API reference)
+description: Gets a boolean value indicating whether any columns in the form have been modified.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 93908c95-c813-4f55-9d19-8fd27a0126d7
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getIsDirty (Client API reference)
-
-
+# data.getIsDirty (Client API reference)
 
 [!INCLUDE[./includes/getIsDirty-description.md](./includes/getIsDirty-description.md)]
 
@@ -30,9 +30,14 @@ search.app:
 
 **Description**: true if the form data has changed; false otherwise.
 
+[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+
 ### Related topics
 
 [formContext.data.entity.getIsDirty](../formContext-data-entity/getIsDirty.md)
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

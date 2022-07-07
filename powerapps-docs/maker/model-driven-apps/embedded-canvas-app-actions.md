@@ -4,16 +4,17 @@ description: Learn how to perform predefined actions in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "reference"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.assetid: 00e62904-2ce9-4730-a113-02b1fedbf22e
 author: "Aneesmsft"
+ms.subservice: mda-maker
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -26,7 +27,7 @@ search.app:
 ---
 # Perform predefined actions on the host model-driven form from within an embedded canvas app
 
-[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 
@@ -98,3 +99,6 @@ Saves the data on the host model-driven form.
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

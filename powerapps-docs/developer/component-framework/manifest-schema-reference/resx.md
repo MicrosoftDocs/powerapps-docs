@@ -1,16 +1,15 @@
 ---
 title: Resx Element | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
+description: The resx web resource is used to manage the localized strings you define.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # resx element
@@ -19,9 +18,9 @@ ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
 
 ## Available for
 
-Model-driven apps and canvas apps (public preview)
+Model-driven and canvas apps
 
-## Attributes
+## Parameters
 
 |Name|Description|Type|Required|
 |--|--|--|--|
@@ -39,7 +38,7 @@ Model-driven apps and canvas apps (public preview)
 ```xml
 <resources>
       <code path="TS_LocalizationAPI.js" order="1" />
-	    <css path="css/TS_LocalizationAPI.css" order="1" />
+       <css path="css/TS_LocalizationAPI.css" order="1" />
       <resx path="strings/TSLocalizationAPI.1033.resx" version="1.0.0" />
       <resx path="strings/TSLocalizationAPI.1035.resx" version="1.0.0" />
       <resx path="strings/TSLocalizationAPI.3082.resx" version="1.0.0" />
@@ -51,3 +50,6 @@ Model-driven apps and canvas apps (public preview)
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

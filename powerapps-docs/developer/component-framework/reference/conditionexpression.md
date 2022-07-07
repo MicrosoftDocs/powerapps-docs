@@ -1,16 +1,15 @@
 ---
-title: ConditionExpression | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: bd90b3fd-a4b4-4999-8b53-d2a5dce4966b
+title: ConditionExpression in Microsoft Dataverse| Microsoft Docs
+description: Learn how to use different methods and properties available for ConditionExpression in Power Apps component framework.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # ConditionExpression
@@ -78,7 +77,7 @@ The `conditionOperator` value is an enum with the following possible values
 
 ### entityAliasName
 
-Entity alias name so filtering can be used on linked entities.
+Table alias name so filtering can be used on linked tables.
 
 **Type**: `string`
 
@@ -92,3 +91,5 @@ The value evaluated by the condition.
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

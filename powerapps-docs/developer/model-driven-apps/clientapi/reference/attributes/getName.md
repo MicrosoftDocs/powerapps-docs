@@ -1,26 +1,29 @@
 ---
-title: "getName (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "attribute.getName  (Client API reference)| MicrosoftDocs"
+description: Includes description and supported parameters for the attribute.getName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d9f0639b-c14e-4a26-9d1a-c45471e131f1
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getName (Client API reference)
+# attribute.getName (Client API reference)
 
 
 
-Returns a string representing the logical name of the attribute. 
+Returns a string representing the logical name of the column. 
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -32,7 +35,10 @@ All
 
 **Type**: String. 
 
-**Description**: The logical name of the attribute.
+**Description**: The logical name of the column.
 
 ### Related topics
 [setSubmitMode (Client API reference)](setSubmitMode.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

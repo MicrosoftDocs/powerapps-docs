@@ -1,22 +1,24 @@
 ---
-title: "KnowledgeBaseRecord entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the KnowledgeBaseRecord table."
-ms.date: 11/14/2020
+title: "KnowledgeBaseRecord table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the KnowledgeBaseRecord table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# KnowledgeBaseRecord entity reference
+
+# KnowledgeBaseRecord table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 entities.
 
@@ -25,20 +27,20 @@ Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/knowledgebaserecords<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/knowledgebaserecords<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/knowledgebaserecords<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/knowledgebaserecords<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/knowledgebaserecords(*knowledgebaserecordid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -56,9 +58,9 @@ Metadata of knowledge base (KB) articles associated with Microsoft Dynamics 365 
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [KnowledgeBaseRecordId](#BKMK_KnowledgeBaseRecordId)
 - [PrivateUrl](#BKMK_PrivateUrl)
@@ -179,9 +181,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -321,8 +323,8 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForRead|True|
 |LogicalName|exchangerate|
 |MaxValue|100000000000|
-|MinValue|0.0000000001|
-|Precision|10|
+|MinValue|0.000000000001|
+|Precision|12|
 |RequiredLevel|None|
 |Type|Decimal|
 
@@ -519,11 +521,12 @@ Listed by **SchemaName**.
 - [KnowledgeBaseRecord_BulkDeleteFailures](#BKMK_KnowledgeBaseRecord_BulkDeleteFailures)
 - [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess)
 - [KnowledgeBaseRecord_SyncErrors](#BKMK_KnowledgeBaseRecord_SyncErrors)
+- [knowledgebaserecord_chats](#BKMK_knowledgebaserecord_chats)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_ActivityPointers"></a> KnowledgeBaseRecord_ActivityPointers
 
-Same as activitypointer entity [KnowledgeBaseRecord_ActivityPointers](activitypointer.md#BKMK_KnowledgeBaseRecord_ActivityPointers) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_ActivityPointers](activitypointer.md#BKMK_KnowledgeBaseRecord_ActivityPointers) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -538,7 +541,7 @@ Same as activitypointer entity [KnowledgeBaseRecord_ActivityPointers](activitypo
 
 ### <a name="BKMK_KnowledgeBaseRecord_Appointments"></a> KnowledgeBaseRecord_Appointments
 
-Same as appointment entity [KnowledgeBaseRecord_Appointments](appointment.md#BKMK_KnowledgeBaseRecord_Appointments) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Appointments](appointment.md#BKMK_KnowledgeBaseRecord_Appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -553,7 +556,7 @@ Same as appointment entity [KnowledgeBaseRecord_Appointments](appointment.md#BKM
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
 
-Same as email entity [KnowledgeBaseRecord_Emails](email.md#BKMK_KnowledgeBaseRecord_Emails) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Emails](email.md#BKMK_KnowledgeBaseRecord_Emails) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -568,7 +571,7 @@ Same as email entity [KnowledgeBaseRecord_Emails](email.md#BKMK_KnowledgeBaseRec
 
 ### <a name="BKMK_KnowledgeBaseRecord_Faxes"></a> KnowledgeBaseRecord_Faxes
 
-Same as fax entity [KnowledgeBaseRecord_Faxes](fax.md#BKMK_KnowledgeBaseRecord_Faxes) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Faxes](fax.md#BKMK_KnowledgeBaseRecord_Faxes) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -583,7 +586,7 @@ Same as fax entity [KnowledgeBaseRecord_Faxes](fax.md#BKMK_KnowledgeBaseRecord_F
 
 ### <a name="BKMK_KnowledgeBaseRecord_Letters"></a> KnowledgeBaseRecord_Letters
 
-Same as letter entity [KnowledgeBaseRecord_Letters](letter.md#BKMK_KnowledgeBaseRecord_Letters) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Letters](letter.md#BKMK_KnowledgeBaseRecord_Letters) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -598,7 +601,7 @@ Same as letter entity [KnowledgeBaseRecord_Letters](letter.md#BKMK_KnowledgeBase
 
 ### <a name="BKMK_KnowledgeBaseRecord_PhoneCalls"></a> KnowledgeBaseRecord_PhoneCalls
 
-Same as phonecall entity [KnowledgeBaseRecord_PhoneCalls](phonecall.md#BKMK_KnowledgeBaseRecord_PhoneCalls) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_PhoneCalls](phonecall.md#BKMK_KnowledgeBaseRecord_PhoneCalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -613,7 +616,7 @@ Same as phonecall entity [KnowledgeBaseRecord_PhoneCalls](phonecall.md#BKMK_Know
 
 ### <a name="BKMK_KnowledgeBaseRecord_Tasks"></a> KnowledgeBaseRecord_Tasks
 
-Same as task entity [KnowledgeBaseRecord_Tasks](task.md#BKMK_KnowledgeBaseRecord_Tasks) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Tasks](task.md#BKMK_KnowledgeBaseRecord_Tasks) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -628,7 +631,7 @@ Same as task entity [KnowledgeBaseRecord_Tasks](task.md#BKMK_KnowledgeBaseRecord
 
 ### <a name="BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters"></a> KnowledgeBaseRecord_RecurringAppointmentMasters
 
-Same as recurringappointmentmaster entity [KnowledgeBaseRecord_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_RecurringAppointmentMasters](recurringappointmentmaster.md#BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -643,7 +646,7 @@ Same as recurringappointmentmaster entity [KnowledgeBaseRecord_RecurringAppointm
 
 ### <a name="BKMK_KnowledgeBaseRecord_SocialActivities"></a> KnowledgeBaseRecord_SocialActivities
 
-Same as socialactivity entity [KnowledgeBaseRecord_SocialActivities](socialactivity.md#BKMK_KnowledgeBaseRecord_SocialActivities) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_SocialActivities](socialactivity.md#BKMK_KnowledgeBaseRecord_SocialActivities) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -658,7 +661,7 @@ Same as socialactivity entity [KnowledgeBaseRecord_SocialActivities](socialactiv
 
 ### <a name="BKMK_KnowledgeBaseRecord_connections1"></a> KnowledgeBaseRecord_connections1
 
-Same as connection entity [KnowledgeBaseRecord_connections1](connection.md#BKMK_KnowledgeBaseRecord_connections1) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_connections1](connection.md#BKMK_KnowledgeBaseRecord_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -673,7 +676,7 @@ Same as connection entity [KnowledgeBaseRecord_connections1](connection.md#BKMK_
 
 ### <a name="BKMK_KnowledgeBaseRecord_connections2"></a> KnowledgeBaseRecord_connections2
 
-Same as connection entity [KnowledgeBaseRecord_connections2](connection.md#BKMK_KnowledgeBaseRecord_connections2) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_connections2](connection.md#BKMK_KnowledgeBaseRecord_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -688,7 +691,7 @@ Same as connection entity [KnowledgeBaseRecord_connections2](connection.md#BKMK_
 
 ### <a name="BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord"></a> KnowledgeBaseRecord_DuplicateMatchingRecord
 
-Same as duplicaterecord entity [KnowledgeBaseRecord_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_DuplicateMatchingRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -703,7 +706,7 @@ Same as duplicaterecord entity [KnowledgeBaseRecord_DuplicateMatchingRecord](dup
 
 ### <a name="BKMK_KnowledgeBaseRecord_DuplicateBaseRecord"></a> KnowledgeBaseRecord_DuplicateBaseRecord
 
-Same as duplicaterecord entity [KnowledgeBaseRecord_DuplicateBaseRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_DuplicateBaseRecord](duplicaterecord.md#BKMK_KnowledgeBaseRecord_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -718,7 +721,7 @@ Same as duplicaterecord entity [KnowledgeBaseRecord_DuplicateBaseRecord](duplica
 
 ### <a name="BKMK_KnowledgeBaseRecord_Annotations"></a> KnowledgeBaseRecord_Annotations
 
-Same as annotation entity [KnowledgeBaseRecord_Annotations](annotation.md#BKMK_KnowledgeBaseRecord_Annotations) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_Annotations](annotation.md#BKMK_KnowledgeBaseRecord_Annotations) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -733,7 +736,7 @@ Same as annotation entity [KnowledgeBaseRecord_Annotations](annotation.md#BKMK_K
 
 ### <a name="BKMK_KnowledgeBaseRecord_AsyncOperations"></a> KnowledgeBaseRecord_AsyncOperations
 
-Same as asyncoperation entity [KnowledgeBaseRecord_AsyncOperations](asyncoperation.md#BKMK_KnowledgeBaseRecord_AsyncOperations) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_AsyncOperations](asyncoperation.md#BKMK_KnowledgeBaseRecord_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -748,7 +751,7 @@ Same as asyncoperation entity [KnowledgeBaseRecord_AsyncOperations](asyncoperati
 
 ### <a name="BKMK_KnowledgeBaseRecord_ProcessSession"></a> KnowledgeBaseRecord_ProcessSession
 
-Same as processsession entity [KnowledgeBaseRecord_ProcessSession](processsession.md#BKMK_KnowledgeBaseRecord_ProcessSession) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_ProcessSession](processsession.md#BKMK_KnowledgeBaseRecord_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -763,7 +766,7 @@ Same as processsession entity [KnowledgeBaseRecord_ProcessSession](processsessio
 
 ### <a name="BKMK_KnowledgeBaseRecord_BulkDeleteFailures"></a> KnowledgeBaseRecord_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [KnowledgeBaseRecord_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KnowledgeBaseRecord_BulkDeleteFailures) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_BulkDeleteFailures](bulkdeletefailure.md#BKMK_KnowledgeBaseRecord_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -778,7 +781,7 @@ Same as bulkdeletefailure entity [KnowledgeBaseRecord_BulkDeleteFailures](bulkde
 
 ### <a name="BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess"></a> KnowledgeBaseRecord_PrincipalObjectAttributeAccess
 
-Same as principalobjectattributeaccess entity [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](principalobjectattributeaccess.md#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -793,7 +796,7 @@ Same as principalobjectattributeaccess entity [KnowledgeBaseRecord_PrincipalObje
 
 ### <a name="BKMK_KnowledgeBaseRecord_SyncErrors"></a> KnowledgeBaseRecord_SyncErrors
 
-Same as syncerror entity [KnowledgeBaseRecord_SyncErrors](syncerror.md#BKMK_KnowledgeBaseRecord_SyncErrors) Many-To-One relationship.
+Same as the [KnowledgeBaseRecord_SyncErrors](syncerror.md#BKMK_KnowledgeBaseRecord_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -805,11 +808,28 @@ Same as syncerror entity [KnowledgeBaseRecord_SyncErrors](syncerror.md#BKMK_Know
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_knowledgebaserecord_chats"></a> knowledgebaserecord_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [knowledgebaserecord_chats](chat.md#BKMK_knowledgebaserecord_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgebaserecord_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_KnowledgeBaseRecord_createdby](#BKMK_lk_KnowledgeBaseRecord_createdby)
 - [lk_KnowledgeBaseRecord_createdonbehalfby](#BKMK_lk_KnowledgeBaseRecord_createdonbehalfby)
@@ -821,30 +841,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_createdby"></a> lk_KnowledgeBaseRecord_createdby
 
-See systemuser Entity [lk_KnowledgeBaseRecord_createdby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_createdby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_createdonbehalfby"></a> lk_KnowledgeBaseRecord_createdonbehalfby
 
-See systemuser Entity [lk_KnowledgeBaseRecord_createdonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdonbehalfby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_createdonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_modifiedby"></a> lk_KnowledgeBaseRecord_modifiedby
 
-See systemuser Entity [lk_KnowledgeBaseRecord_modifiedby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_modifiedby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_KnowledgeBaseRecord_modifiedonbehalfby"></a> lk_KnowledgeBaseRecord_modifiedonbehalfby
 
-See systemuser Entity [lk_KnowledgeBaseRecord_modifiedonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_KnowledgeBaseRecord_modifiedonbehalfby](systemuser.md#BKMK_lk_KnowledgeBaseRecord_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_KnowledgeBaseRecord"></a> organization_KnowledgeBaseRecord
 
-See organization Entity [organization_KnowledgeBaseRecord](organization.md#BKMK_organization_KnowledgeBaseRecord) One-To-Many relationship.
+See the [organization_KnowledgeBaseRecord](organization.md#BKMK_organization_KnowledgeBaseRecord) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_KnowledgeBaseRecord"></a> TransactionCurrency_KnowledgeBaseRecord
 
-See transactioncurrency Entity [TransactionCurrency_KnowledgeBaseRecord](transactioncurrency.md#BKMK_TransactionCurrency_KnowledgeBaseRecord) One-To-Many relationship.
+See the [TransactionCurrency_KnowledgeBaseRecord](transactioncurrency.md#BKMK_TransactionCurrency_KnowledgeBaseRecord) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.knowledgebaserecord?text=knowledgebaserecord EntityType" />

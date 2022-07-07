@@ -1,20 +1,22 @@
 ---
-title: "getLabel (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: formItem.getLabel (Client API reference)
+description: Includes description and supported parameters for the formItem.getLabel method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 3fc715b0-4244-4d95-a83e-324d7c05486c
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getLabel (Client API reference)
+# formItem.getLabel (Client API reference)
 
 
 
@@ -36,3 +38,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

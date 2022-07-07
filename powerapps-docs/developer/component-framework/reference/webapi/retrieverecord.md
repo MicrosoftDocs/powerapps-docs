@@ -1,16 +1,15 @@
 ---
 title: RetrieveRecord | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: dddeecc9-5067-420d-8bd7-4c914218e969
+description: Retrieves a table record.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # retrieveRecord
@@ -19,7 +18,7 @@ ms.assetid: dddeecc9-5067-420d-8bd7-4c914218e969
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps & portals.
 
 ## Syntax
 
@@ -27,7 +26,7 @@ Model-driven apps
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -38,21 +37,21 @@ Model-driven apps
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to retrieve. For example: &quot;account&quot;.</td>
+<td>The table logical name of the record you want to retrieve. For example: &quot;account&quot;.</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to retrieve.</td>
+<td>GUID of the table record you want to retrieve.</td>
 </tr>
 <tr>
 <td>options</td>
 <td>String</td>
 <td>No</td>
 <td><p>OData system query options, <b>$select</b> and <b>$expand</b>, to retrieve your data.</p>
-<ul><li>Use the <b>$select</b> system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<li>Use the <b>$expand</b> system query option to control what data from related entities is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
+<ul><li>Use the <b>$select</b> system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using <b>$select</b>, all properties will be returned.</li>
+<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties.</li>
 </ul>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple query options by using <code>&amp;</code> to separate the query options. For example:</p>
 <code>?$select=name&amp;$expand=primarycontactid($select=contactid,fullname)</code>
@@ -84,3 +83,5 @@ Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Glob
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

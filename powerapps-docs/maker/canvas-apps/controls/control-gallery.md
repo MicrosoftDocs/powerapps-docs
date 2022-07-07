@@ -1,20 +1,22 @@
 ---
-title: 'Gallery control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the Gallery control
+title: Gallery control in Power Apps
+description: Learn about the details, properties and examples of the gallery control in Power Apps.
 author: chmoncay
-manager: kvivek
-ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 06/01/2022
+ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tapanm-msft
+  - chmoncay
 ---
-# Gallery control in canvas apps
+# Gallery control in Power Apps
 
 A control that contains other controls and shows a set of data.
 
@@ -33,7 +35,16 @@ Predefined templates for showing images and text in a gallery are available, and
 
 ## Limitations
 
-If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
+- If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
+- The following controls are not supported within a gallery:
+    - [Display form](control-form-detail.md)
+    - [Edit form](control-form-detail.md)
+    - [PDF viewer](control-pdf-viewer.md)
+    - [Power BI tile](control-power-bi-tile.md)
+    - [Rich text editor](control-richtexteditor.md)
+    - [Scrollable screen (Fluid grid)](../add-scrolling-screen.md)
+    - [Web barcode scanner](control-barcodescanner.md)
+- You can only add one gallery inside another gallery.
 
 ## Key properties
 
@@ -110,7 +121,7 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 - [Show text](control-text-box.md#show-data-in-a-gallery)
 - [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
-- [Filter data by selecting a list option](control-drop-down.md#example)
+- [Filter data by selecting a list option](control-drop-down.md#examples)
 - [Filter data by adjusting a slider](control-slider.md#example)
 
 ### Get data from the user
@@ -152,3 +163,9 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
     > [!NOTE]
   > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md) controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
+
+### See also
+
+[Use DelayItemLoading and Loading spinner to improve performance in Gallery](../performance-tips.md#use-delayitemloading-and-loading-spinner-to-improve-performance-in-gallery)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)] 

@@ -1,20 +1,22 @@
 ---
-title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+title: "gridContext.getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.getEntityName method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1ead9dc0-7511-4b41-bd7d-23b8bb3b4e43
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityName (Client API reference)
+# gridContext.getEntityName (Client API reference)
 
 
 
@@ -32,10 +34,13 @@ Read-only and editable grids
 
 **Type**: String
 
-**Description**: The logical name of the entity data displayed in the grid.
+**Description**: The logical name of the table data displayed in the grid.
 
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext). 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

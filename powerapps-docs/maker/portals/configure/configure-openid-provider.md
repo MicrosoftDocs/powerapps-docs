@@ -1,13 +1,19 @@
 ---
-title: "Configure the OpenID Connect provider for Power Apps portals.  | MicrosoftDocs"
-description: "Learn how to configure the OpenID Connect provider for Power Apps portals."
+title: Configure an OpenID Connect provider for portals
+description: Learn how to configure the OpenID Connect provider for Power Apps portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 03/23/2022
+ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: ndoelman
+contributors:
+    - nickdoelman
+    - sandhangitmsft
+    - dileepsinghmicrosoft
+    - nageshbhat-msft
 ---
 
 # Configure an OpenID Connect provider for portals
@@ -43,20 +49,20 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
 
 1. Enter a provider name.
 
-    ![Provider name](media/authentication/select-other-openid.png "Provider name")
+    ![Provider name.](media/authentication/select-other-openid.png "Provider name")
 
 1. Select **Next**.
 
 1. Create the application, and configure the settings with your identity provider.
 
-    ![Create application](media/authentication/step-1-openid.png "Create application")
+    ![Create application.](media/authentication/step-1-openid.png "Create application")
 
     > [!NOTE]
     > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
 
 1. Enter the following site settings for portal configuration.
 
-    ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "Configure OpenID site settings")
+    ![Configure OpenID site settings.](media/authentication/openid-site-settings-1.png "Configure OpenID site settings")
 
     > [!NOTE]
     > Be sure to review&mdash;and if required, change&mdash;the default values.
@@ -74,7 +80,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
 
 1. Configure settings for signing users out.
 
-    ![Logout settings](media/authentication/openid-logout-settings.png "Logout settings")
+    ![Logout settings.](media/authentication/openid-logout-settings.png "Logout settings")
 
     | Name | Description |
     | - | - |
@@ -84,7 +90,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
 
 1. (Optional) Configure additional settings.
 
-    ![Additional settings](media/authentication/openid-additional-settings.png "Additional settings")
+    ![Additional settings.](media/authentication/openid-additional-settings.png "Additional settings")
 
     | Name | Description
     | - | - |
@@ -94,10 +100,13 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     | Validate issuers | If enabled, the issuer is validated during token validation. |
     | Valid issuers | Comma-separated list of issuer URLs. |
     | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
-    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
+    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during every sign-in to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
     | Nonce lifetime | Lifetime of the nonce value, in minutes. Default: 10 minutes. |
     | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the **Application Cookie Expire Timespan** value in the **Authentication/ApplicationCookie/ExpireTimeSpan** site setting. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to **On**, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
+
+    > [!Note]
+    > *UI_Locales* request parameter will now be sent automatically in the authentication request and will be set to the language selected on the portal.
 
 ## Edit an OpenID Connect provider
 
@@ -107,3 +116,5 @@ To edit a configured OpenID Connect provider, see [Edit a provider](use-simplifi
 
 [Configure an OpenID Connect provider for portals with Azure AD](configure-openid-settings.md)  
 [FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

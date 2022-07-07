@@ -2,16 +2,19 @@
 title: Dataverse for Teams environment language | Microsoft Docs
 description: Dataverse for Teams environment language.
 author: NHelgren
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
+ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
+contributors:
+  - mattp123
 ---
 # Dataverse for Teams environment language
 
-A Dataverse for Teams environment is automatically created when a Teams user *either* [creates an app](create-first-app.md) in a team using the Power Apps app for the first time *or* installs an app (created using Power Apps app) in a team for the first time from the Teams app catalog. During the environment creation, the environment’s language is set to the user’s current language.
+A Dataverse for Teams environment is automatically created when a Teams user *either* [creates an app](create-first-app.md) in a team using the Power Apps app for the first time *or* installs an app (created using Power Apps app) in a team for the first time from the Teams app catalog. During the environment creation, the environment’s language is set to the tenant default language.
 
 The language settings for the environment define the language, sorting, and search formats of the tables in the environment. The *default* language set during the automatic creation of the environment can't be changed thereafter. 
 
@@ -59,18 +62,19 @@ The fallback languages are denoted in *italics*.
 | Danish                | Danish                | Danish                       | Danish                | Danish                  | Danish                |
 | Dutch                 | Dutch                 | Dutch                        | Dutch                 | Dutch                   | Dutch                 |
 | English (Canada)      | *English US*            | *English US*                   | *English US*            | *English US*              | *English US*            |
-| English UK            | English UK            | *English US*                   | *English US*            | *English US*              | *English US*            |
+| English UK            | *English US*           | *English US*                   | *English US*            | *English US*              | *English US*            |
 | English US            | English US            | English US                   | English US            | English US              | English US            |
 | Estonian              | Estonian              | Estonian                     | Estonian              | *English US*              | Estonian              |
+| Flipino             | *English US*           | *English US*                   | *English US*            | *English US*              | *English UK*            |
 | Finnish               | Finnish               | Finnish                      | Finnish               | *Swedish*                 | Finnish               |
 | French                | French                | French                       | French                | French                  | French                |
-| French (Canada)       | French (Canada)       | *French*                       | *French*                | *French*                  | *French*                |
+| French (Canada)       | *French*           | *French*                       | *French*                | *French*                  | *French*                |
 | German Standard       | German Standard       | German Standard              | German Standard       | German Standard         | German Standard       |
 | Greek                 | Greek                 | Greek                        | Greek                 | *English US*              | Greek                 |
 | Hebrew                | Hebrew                | *English US*                   | *English US*            | *English US*              | Hebrew                |
 | Hindi                 | Hindi                 | Hindi                        | Hindi                 | Hindi                   | Hindi                 |
 | Hungarian             | Hungarian             | Hungarian                    | Hungarian             | *English US*              | Hungarian             |
-| Icelandic             | *English UK*            | *English US*                   | *English US*            | *English US*              | English UK            |
+| Icelandic             | *English US*               | *English US*                   | *English US*            | *English US*              | English UK            |
 | Indonesian            | Indonesian            | Indonesian                   | Indonesian            | *English US*              | Indonesian            |
 | Italian               | Italian               | Italian                      | Italian               | Italian                 | Italian               |
 | Japanese              | Japanese              | Japanese                     | Japanese              | Japanese                | Japanese              |
@@ -79,7 +83,6 @@ The fallback languages are denoted in *italics*.
 | Lithuanian            | Lithuanian            | Lithuanian                   | Lithuanian            | *English US*              | Lithuanian            |
 | Norwegian - NB        | Norwegian - NB        | Norwegian - NB               | Norwegian - NB        | Norwegian - NB          | Norwegian - NB        |
 | Norwegian - NN        | *Norwegian - NB*        | *Norwegian - NB*               | *Norwegian - NB*        | *Norwegian - NB*          | *Norwegian - NB*        |
-| Philipino             | *English UK*            | *English US*                   | *English US*            | *English US*              | *English UK*            |
 | Polish                | Polish                | Polish                       | Polish                | Polish                  | Polish                |
 | Portuguese (Portugal) | Portuguese (Portugal) | Portuguese (Portugal)        | Portuguese (Portugal) | *Brazilian Portuguese*    | Portuguese (Portugal) |
 | Romanian              | Romanian              | Romanian                     | Romanian              | *English US*              | Romanian              |
@@ -96,10 +99,13 @@ The fallback languages are denoted in *italics*.
 | Turkish               | Turkish               | Turkish                      | Turkish               | Turkish                 | Turkish               |
 | Ukrainian             | Ukrainian             | Ukrainian                    | Ukrainian             | *English US*              | Ukrainian             |
 | Vietnamese            | Vietnamese            | Vietnamese                   | *English US*            | *English US*              | Vietnamese            |
-| Welsh                 | *English UK*            | *English US*                   | *English US*            | *English US*              | *English UK*            | 
+| Welsh                 | *English US*             | *English US*                   | *English US*            | *English US*              | *English UK*            | 
 
 ### See also
 
 [What is Dataverse for Teams?](overview-data-platform.md) <br />
 [Create tables](create-table.md)<br/>
 [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

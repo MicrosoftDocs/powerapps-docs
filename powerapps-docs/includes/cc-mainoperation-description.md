@@ -1,0 +1,1 @@
+For internal use only except for Custom API and Custom virtual table data providers.<br/>More information: <br />[Create and use Custom APIs](/powerapps/developer/data-platform/custom-api)<br />[Custom Virtual table data providers](/powerapps/developer/data-platform/virtual-entities/custom-ve-data-providers)

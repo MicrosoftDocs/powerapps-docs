@@ -1,18 +1,20 @@
 ---
 title: "htmlAttributeEncode| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the htmlAttributeEncode method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 6f0b4d9b-d167-4481-970e-024411c0bef3
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # htmlAttributeEncode (Client API reference)
 
@@ -39,3 +41,5 @@ search.app:
 
 ## Related topics
 [htmEncode](htmlEncode.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

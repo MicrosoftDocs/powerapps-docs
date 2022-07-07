@@ -1,18 +1,20 @@
 ---
 title: "GridEntity (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the GridEntity method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: cc2b7eca-61f4-4949-8398-52c9fc36721c
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # GridEntity (Client API reference)
 
@@ -23,10 +25,10 @@ GridEntity is returned by the [GridRowData](gridrowdata.md).[getEntity](gridrowd
 ```JavaScript
 var myRows = gridContext.getGrid().getRows();
 var myRow = myRows.get(arg);
-var gridEntity = myRow.getData().getEntity();
+var gridEntity = myRow.data.entity;
 ```
 
-GridEntity also supports the **attributes** collection that provides methods of working with a collection of attributes for an entity in the editable grid. Each attribute ([GridAttribute](gridattribute.md)) represents the data in the cell of an editable grid, and contains a reference to all the cells associated with the attribute. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
+GridEntity also supports the **columns** collection that provides methods of working with a collection of columns for a table in the editable grid. Each column ([GridAttribute](gridattribute.md)) represents the data in the cell of an editable grid, and contains a reference to all the cells associated with the column. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
 
 ## Methods
 
@@ -43,6 +45,9 @@ GridEntity also supports the **attributes** collection that provides methods of 
 
 [Grids and subgrids in model-driven apps](../grids.md)
 
-[Attributes](../attributes.md)
+[Columns](../attributes.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

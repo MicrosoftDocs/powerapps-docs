@@ -1,175 +1,89 @@
 ---
-title: Use the View in 3D component in Power Apps (Preview)
+title: Use the 3D object control in Power Apps
 description: View 3D models in Power Apps.
-author: iaanw
-manager: shellyha
-ms.service: powerapps
+author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 5/22/2020
-ms.author: iawilt
+ms.reviewer: mduelae
+ms.date: 02/15/2022
+ms.subservice: canvas-maker
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - mduelae
+  - anuitz
 ---
 
-# View 3D content in canvas apps (Preview)
+# View 3D content in Power Apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+Easily add interactive 3D content to your canvas apps. You can [select from a gallery of 3D content](mixed-reality-component-view-3d-store.md) then rotate and zoom into the model with simple gestures.
 
-Add 3D content to your canvas apps. Use the **View in 3D** component to rotate and zoom into the model with simple gestures.
-
-You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-where-the-3d-content-is-stored).
-
-:::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="Photo showing a 3D object being viewed in a mobile device.":::
-
+:::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="A photo of two phones side by side, both of which show a 3D model of a forklift viewed in two mobile apps.":::
 
 > [!IMPORTANT]
-> Your 3D content must be in the .glb file format.  
-> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
+> Your 3D content must be in the .glb, .obj, or .stl file formats. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
-To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
+> [!TIP]
+> The mixed reality (MR) controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
 
-Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
+## Add 3D object control to an app screen
 
-## Use the component
+With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
-Insert the component into your app as you normally would for any other control or component.
+1. Open the **Insert** tab and expand **Media**.
+2. Select **3D object** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
+## Key properties
 
-1. Open the **Insert** tab.
-2. Expand **Media**.
-3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-You can modify the component with a number of properties.
+Change the 3D content control's behavior and appearance using properties. Some properties are only available on the **Advanced** tab.
 
-### Properties
+:::image type="content" source="./media/augmented-3d/augmented-3d-viewer-controls.png" alt-text="A 3D content control displayed next to the properties tab in Power Apps Studio.":::
 
-The following properties are on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
+| Property | Description | Type | Location |
+| - | - | - | - |
+| Source | Identifies the object file to display. The **3D object** control supports loading models from various sources. See [Loading external 3D models](mixed-reality-component-view-3d-store.md) for details. | Not applicable | Properties; Advanced: **Source** |
+| Alternative text | Specifies the text to be displayed if the model can't load or if the user hovers over the model. | String | Properties; Advanced: **AltText** |
+| Background fill | Sets the control's background color. | Color picker | Properties; Advanced: **BackgroundFill** (accepts RGBA or HTML hexadecimal color codes) |
+| Pins(Items) | [Shows pins on the model at specific coordinates](mixed-reality-add-pins-3d-model.md), provided in a data source (**Items**). If *None*, no pins are shown. | Data table | Properties; Advanced: **Items** |
+| Show pins | Shows the pins described in **Items**. | Boolean | Properties; Advanced: **ShowPins** |
+| MaxPins | Specifies the maximum number of pins that can be shown on the model. | Integer | Advanced |
+| PinsX | Specifies the location of pins on the X axis in 3D coordinate space. | Floating point number | Advanced |
+| PinsY | Specifies the location of pins on the Y axis in 3D coordinate space. | Floating point number | Advanced |
+| PinsZ | Specifies the location of pins on the Z axis in 3D coordinate space. | Floating point number | Advanced |
+| Show reset button | Shows or hides a button that resets the model to its initial state. | Boolean | Properties; Advanced; **ShowReset** |
+| OnModelLoad | Contains behavior formula that runs when a model is loaded.| Event | Advanced |
+| OnChange | Contains behavior formula that runs when any property of the control is changed. | Event | Advanced |
+| OnSelect | Contains behavior formula that runs when the user selects a pin or the control. | Event | Advanced |
 
-![Properties on the component's View in 3D pane](./media/augmented-3d/augmented-3d-viewer-controls.png "Properties on the component's View in 3D pane")
+## Additional properties
 
-Some properties are only available in the **Advanced** tab on the **View in 3D** pane.
-
-Property | Description | Type | Location
-- | - | - | -
-Source | Data source that identifies the .glb file to display. The **View in 3D** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li> | Not applicable | **Properties** (also in **Advanced** as **Src**)
-Background fill | Set the background color for the component. | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
-Pins(Items) | [Add pins to specific coordinates on the 3D model](mixed-reality-add-pins-3d-model.md). | Drop-down selection | **Properties**
-
-### Additional properties
-
-**[DisplayMode](./controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
-
-**[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
-
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
-
-**[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
-
-**[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
-
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
-
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
-
-## Define where the 3D content is stored
-
-You can set the source for 3D content as a direct URL to a .glb file, as a base64-encoded URI, or as attachments or media content.
-
-### Load models from a URL
-
-The **Source** property can be a URL that points to a 3D model file (.glb).
-
-You can't view a 3D model in your app if the file is on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the hosting server must permit cross-origin requests from *powerapps.com*.
-
-You can use the following services to host and obtain a CORS-compliant URL.
-
-**To use Dropbox**
-
-1. Upload your file to Dropbox as you normally would.
-1. Select the **Share** button.
-1. Generate a public download link. For example, *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
-1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct-access URL. For example, *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
-
-**To use GitHub**
-
-1. Ensure that your Git repo is set to **Public**.
-1. Navigate to your file. For example, *https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb*.
-1. Remove **/blob/**.
-1. Replace **https://github.com** with **https://raw.githubusercontent.com**. You now have raw access to your file. For example, *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
-
-### Loading base64-encoded models
-
-The **Source** property can be a base64-encoded 3D model data URI that is in the format *data:base64,\<base64-encoded content\>*.
-
-The following are two common ways you can create a base64-encoded URI of your model.
-
-**To use Power Automate**
-
-Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint document library, you could do the following to load them in Power Apps using the View in 3D:
-
-1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column of type **multiple-line text**.
-1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
-1. Add a new step to **Get file content from SharePoint**, setting **File Identifier** to **Identifier**.
-1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to the multiple-line text column, with the following expression as the URI:  
-    `concat('data:base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))`  
-
-    ![Convert files with SharePoint](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
-
-When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
-
-**To use Microsoft Dataverse**
-
-The [Note entity](/powerapps/developer/data-platform/annotation-note-entity) in Dataverse converts any attached file to base64 in the **Document** field.
-
-### Loading models as attachments or media content
-
-Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** component.
-
-**To use a SharePoint list**
-
-1. Create a SharePoint list.
-1. In the created list, select the **+ Add** column and then select **Show/hide columns**.
-1. Make sure **Attachments** is selected and press **Apply** at the top.
-1. Create a new item in the list and press **Add attachments**.
-1. Select your 3D model (.glb file).
-1. Create a new item in the list for each 3D model that you want to have in your app.
-1. In a canvas app, add a Gallery.
-1. Set the gallery data source to the SharePoint list created earlier.
-1. Add the **View in 3D** control and in the **Advanced** tab, set the **Src** property to **First(Gallery1.Selected.Attachments).Value**.
-
-**To use Excel Online**
-
-1. Create an Excel Online workbook on OneDrive where you've also stored your .glb files.
-
-    ![Using OneDrive to share .glb file](./media/augmented-3d/augmented-3d-onedrive-list.png "Using OneDrive to share .glb file")
-
-1. In the workbook, create a table with columns titled **3DModel [image]** and **Name**.
-1. Add a row for each .glb file, inserting the relative file path to the .glb file in the **3DModel [image]** column.
-
-    ![Using Excel Online to share .glb file](./media/augmented-3d/augmented-3d-excel-list.png "Using Excel Online to share .glb file")
-
-1. In a canvas-based app, add a **Gallery**.
-1. Set the gallery data source to the Excel Online workbook.
-1. In the **Advanced** properties tab for the **View in 3D** component, set the **Src** property to **Gallery1.Selected.3DModel**.
+| Property | Description | Type | Location |
+| - | - | - | - |
+| ContentLanguage | Determines the display language of the control, if it's different from the language used in the app. | String | Advanced |
+| [DisplayMode](./controls/properties-core.md) |  Determines whether the control allows user input (*Edit*), only displays data (*View*), or is disabled (*Disabled*). | Dropdown list | Advanced |
+| Position | Places the upper-left corner of the control at the screen coordinates specified in *x* and *y*. | Floating point number | Properties; Advanced: **[X](./controls/properties-size-location.md)**, **[Y](./controls/properties-size-location.md)** |
+| Size | Determines the size of the control using the pixel values provided in *Width* and *Height*. | Integer | Properties; Advanced: **[Width](./controls/properties-size-location.md)**, **[Height](./controls/properties-size-location.md)** |
+| [TabIndex](./controls/properties-accessibility.md) | Specifies the order the control is selected if the user navigates the app using the Tab key. | Integer |  Advanced |
+| [Tooltip](./controls/properties-core.md) | Determines the text to display when the user hovers over a pin. | String | Advanced |
+| [Visible](./controls/properties-core.md) | Shows or hides the control. | Boolean | Properties; Advanced: **Visible** |
 
 ## Performance considerations
 
-Having multiple instances of the **View in 3D** component on one screen can lead to poor performance, as each version of the component will try to load the 3D models at the same time. 
+We recommend that you use one 3D control on a screen for the best user experience. Multiple instances of the **3D object** control on one screen will try to load their 3D models at the same time, which can severely degrade the performance of your app.
 
-For situations where you want to have a gallery of 3D models, you should put the **View in 3D** component outside of the gallery, and then set its source to the gallery's selected property as described in the [Loading models as attachments or media content](#loading-models-as-attachments-or-media-content) section.
+## Other mixed reality controls
 
-## Known constraints
+- View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+- Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
-- The security architecture of Power Apps requires HTTPS links, not HTTP.
-- The server that hosts the document must not require authentication and must be [CORS-compliant](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
+### See also
 
-## Other mixed reality components
+[Create an app with 3D and mixed reality controls](how-to/build-view-in-mr-3d-apps.md)
 
-- View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

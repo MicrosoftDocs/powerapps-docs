@@ -1,26 +1,29 @@
 ---
 title: "getMax (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the getMax method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 6bcd4b47-b3b6-4a9c-899f-a5dce4cbab51
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getMax (Client API reference)
 
 
 
-Returns a number indicating the maximum allowed value for an attribute. 
+Returns a number indicating the maximum allowed value for a column. 
 
-## Attribute types supported
+## Column types supported
 
 decimal, integer, double, money
 
@@ -32,5 +35,8 @@ decimal, integer, double, money
 
 **Type**: Number. 
 
-**Description**: The maximum allowed value for the attribute.
+**Description**: The maximum allowed value for the column.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

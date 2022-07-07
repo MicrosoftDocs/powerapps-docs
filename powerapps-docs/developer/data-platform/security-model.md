@@ -1,12 +1,13 @@
 ---
 title: "Security and data access (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Microsoft Dataverse provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/09/2020
+ms.custom: intro-internal
+ms.date: 03/11/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
+ms.subservice: dataverse-developer
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
 manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -16,8 +17,6 @@ search.app:
   - D365CE
 ---
 # Security and data access
-
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Microsoft Dataverse provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration. The goals of the model are as follows:
 
@@ -34,3 +33,6 @@ As a developer, you should know that the data operations in your code run in the
 The first step is to understand the security concepts that apply to data access. You should understand how to configure and manage security roles because you will need to apply them when you test your code. But this is beyond the scope of this topic.  You can find more information about security concepts in general and security configuration tasks in [Security concepts in Microsoft Dataverse](/power-platform/admin/wp-security-cds).
 
 In the security related topics that follow, we will assume that you have have a basic understanding of Microsoft Dataverse security concepts and administration so that we can proceed with addressing the security and data access APIs that you will need to use in your plug-in or application.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,7 +7,7 @@ metadata:
   title: Dataverse documentation
   description: Provides access to highlighted areas within the Dataverse documentation
   services: service
-  ms.service: powerapps 
+  
   ms.subservice: subservice
   ms.topic: landing-page 
   ms.collection: collection
@@ -26,12 +26,12 @@ landingContent:
          links:
           - text: What is Dataverse?
             url: data-platform-intro.md
-          - text: Why choose Dataverse
+          - text: Why choose Dataverse?
             url: why-dataverse-overview.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: https://docs.microsoft.com/learn/modules/introduction-data-platform/
+            url: /learn/modules/introduction-common-data-service
 
   # Card
   - title: Define data
@@ -91,7 +91,7 @@ landingContent:
           - text: Create and use dataflows
             url: create-and-use-dataflows.md
           - text: Connect Azure Data Lake Storage Gen2
-            url: connect-azure-data-lake-storage-for-dataflow.md
+            url: /power-query/dataflows/connect-azure-data-lake-storage-for-dataflow
 
   # Card
   - title: Integrate with external data
@@ -136,4 +136,4 @@ landingContent:
           - text: Work with metadata using code
             url: ../../developer/data-platform/metadata-services.md
           - text: More >
-            url: /powerapps/developer/data-platform/        
+            url: ../../developer/data-platform/index.yml

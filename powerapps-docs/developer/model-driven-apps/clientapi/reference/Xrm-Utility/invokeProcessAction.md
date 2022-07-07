@@ -1,18 +1,20 @@
 ---
 title: "invokeProcessAction (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the invokeProcessAction method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: e71012ba-249d-4ae7-8891-f7d3ae16a20a
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # invokeProcessAction (Client API reference)
 
@@ -20,7 +22,7 @@ search.app:
 
 [!INCLUDE[./includes/invokeProcessAction-description.md](./includes/invokeProcessAction-description.md)] 
 
-For more information about actions, see [Use actions](/powerapps/maker/data-platform/actions)
+For more information about actions, see [Use actions](../../../../../maker/data-platform/actions.md)
 
 ## Syntax
 
@@ -41,8 +43,11 @@ On success, returns an object with the Web API result along with any action outp
 On failure, returns an object with error details.
 
 ### Related topics
-[Use actions](/powerapps/maker/data-platform/actions)
+[Use actions](../../../../../maker/data-platform/actions.md)
 
 [Xrm.Utility](../xrm-utility.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -1,18 +1,21 @@
 ---
 title: "setPrecision (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-ms.service: powerapps
+description: Includes description and supported parameters for the setPrecision method.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 580aebec-c1d1-4e4a-8c20-ced859569fb2
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.subservice: mda-developer
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # setPrecision (Client API reference)
 
@@ -20,7 +23,7 @@ search.app:
 
 Sets the number of digits allowed to the right of the decimal point. 
 
-## Attribute types supported
+## Column types supported
 
 Money, decimal, double, and integer
 
@@ -38,3 +41,6 @@ Money, decimal, double, and integer
 
 [getPrecision](getPrecision.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

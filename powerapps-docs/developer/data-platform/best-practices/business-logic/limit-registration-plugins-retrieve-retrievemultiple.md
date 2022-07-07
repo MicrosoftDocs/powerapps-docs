@@ -8,12 +8,13 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 1/15/2019
+ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -23,7 +24,7 @@ search.app:
 ---
 # Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 **Category**: Performance
 
@@ -71,5 +72,8 @@ The `Retrieve` and `RetrieveMultiple` messages are two of the most frequently pr
 
 ### See also
 
-[Performance Optimizations for Microsoft Dynamics CRM Online](https://mbs.microsoft.com/customersource/northamerica/CRM/learning/documentation/user-guides/PerformanceOptimizationsCRMOnlineSuccess)<br />
-[Create and edit virtual entities that contain data from an external data source](/powerapps/maker/data-platform/create-edit-virtual-entities)<br />
+[Performance Optimizations for Microsoft Dynamics CRM Online](/dynamics/s-e/)<br />
+[Create and edit virtual entities that contain data from an external data source](../../../../maker/data-platform/create-edit-virtual-entities.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

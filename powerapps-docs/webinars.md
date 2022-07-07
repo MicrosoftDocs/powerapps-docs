@@ -2,19 +2,25 @@
 title: Power Apps webinars | Microsoft Docs
 description: Power Apps webinars
 author: KumarVivek
-manager: annbe
-ms.service: powerapps
+manager: margoc
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/06/2021
+ms.date: 04/28/2022
 ms.author: kvivek
 ms.reviewer: kvivek
+ms.subservice: common
 searchScope:
   - "Power Apps"
+contributors:
+  - kumarvivek
 ---
 # Power Apps webinars
 
 Register and watch our recorded sessions on-demand.
+
+**What's new and what's next for Power Platform**  
+by Charles Lamanna and Julie Strauss  
+[Register and watch now](https://info.microsoft.com/ww-landing-whats-new-whats-next-power-platform.html?LCID=EN-US)
 
 **Introduction to New Governance Capabilities in Microsoft Power Platform**  
 by Anupma Sharma  
@@ -72,7 +78,79 @@ by Foyin Olajide-Bello
 by Brian Dang and April Dunnam  
 [Register and watch now](https://info.microsoft.com/ww-Landing-EasilyBuildBusinessApps.html?LCID=EN-US)
 
+**Extend SAP solutions using Microsoft Power Platform**  
+by Holger Bruchelt and Ronald Chang  
+[Register and watch now](https://info.microsoft.com/ww-Landing-Extend-SAP-solutions-using-Microsoft-Power-Platform.html?LCID=EN-US)
+
+**A Deep Dive into Serverless Applications on Power Apps and Azure**  
+by Simona Cotin  
+[Register and watch now](https://info.microsoft.com/ww-Landing-ADeepDiveintoServerlessApplications.html?LCID=EN-US)
+
+**Unlock the Future of Azure IoT through Power Platform**  
+by Samuel Adranyi  
+[Register and watch now](https://info.microsoft.com/ww-Landing-UnlocktheFutureofAzureIoTthroughPowerPlatform.html?LCID=EN-US)
+
+**Anyone Can Be a Developer with Microsoft Dataverse for Teams**  
+by Bryony Wolf and Corey Sanders  
+[Register and watch now](https://info.microsoft.com/ww-Landing-AnyoneCanBeaDeveloperwithMicrosoftDataverseforTeams.html?LCID=EN-US)
+
+**Increase Efficiency with Azure Functions and Power Platform**  
+by Lee Baker  
+[Register and watch now](https://info.microsoft.com/ww-Landing-IncreaseEfficiencyAzureFunctionsPowerPlatform.html?LCID=EN-US)
+
+**Build Custom Apps with Power Apps component framework**  
+by Cassie Breviu  
+[Register and watch now](https://info.microsoft.com/ww-Landing-build-apps-Powerapps-component-framework.html?lcid=en-us)
+
+**3 easy steps to build your first app in Microsoft Teams**  
+by Matthew Bolanos  
+[Register and watch now](https://info.microsoft.com/ww-landing-3Steps-build-first-app-teams.html?LCID=EN-US)
+
+**Transform Your Org with Low Code App Platforms**  
+by Clay Wesener  
+[Register and watch now](https://info.microsoft.com/ww-landing-low-code-platforms-15minutes.html?LCID=EN-US)
+
+**Fusion Teams 101: Low-Code Apps with Power Platform (What's new with Power Apps and Azure)**  
+by Matt Soucoup and Kartik Kanakasabesan  
+[Register and watch now](https://info.microsoft.com/ww-Landing-fusion-teams-101LowCode-power-platform.html?LCID=EN-US)
+
+**Building large-scale solutions with Power Platform**  
+by April Dunnam and Dustin Sitton  
+[Register and watch now](https://info.microsoft.com/ww-landing-buildinglargesolutionspowerplatform.html?LCID=EN-US)
+
+**Empower Data Innovation with Dataverse and Power Apps**  
+by Marc Mercuri  
+[Register and watch now](https://info.microsoft.com/ww-landing-empowerdataversepowerapps.html?LCID=EN-US)
+
+**Streamline Workflows with Power Platform Connectors**  
+by Natalie Pienkowska and Greg Hurlman  
+[Register and watch now](https://info.microsoft.com/ww-landing-streamlinepowerplatformconnectors.html?LCID=EN-US)
+
+**Citizen Development 101: APIM, Power Platform and Teams**  
+by Geetha Sivasailam and April Dunnam  
+[Register and watch now](https://info.microsoft.com/ww-landing-citdev101powerplatformteams.html?LCID=EN-US)
+
+**Power Apps How-To: Creating Enterprise IoT Solutions on Azure IoT Central**  
+by Eric Cheng  
+[Register and watch now](https://info.microsoft.com/ww-landing-EnterpriseSolutionsIoTCentral.html?lcid=en-us)
+
+**Developers Roundtable with Power Apps Experts**  
+by Charles Lamanna, Ryan Cunningham, Per Mikkelsen, Kartik Kanakasabesan, and April Dunnam  
+[Register and watch now](https://info.microsoft.com/ww-ondemand-Live-Event-Developers-Roundtable-with-Power-Apps-Experts.html?LCID=EN-US)
+
+**Data visualization in Power Apps**  
+by Srihari Srinivasa  
+[Register and watch now](https://info.microsoft.com/ww-landing-datavisualization15minutes.html?lcid=en-us)
+
+**A More Flexible Way to Pay for Power Apps**  
+by Kavishi Agarwal and Shawn Nandi  
+[Register and watch now](https://info.microsoft.com/ww-ondemand-a-more-flexible-way-to-pay-for-power-apps.html?lcid=en-us)
+
+
 ### See also
 
 [Webinars and videos by Power Apps community](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery)<br/>
 [Power Automate webinars](/power-automate/webinars)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

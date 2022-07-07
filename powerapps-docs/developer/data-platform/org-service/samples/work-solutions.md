@@ -4,8 +4,8 @@ description: "This sample shows how to work with solutions" # 115-145 characters
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Work with solutions
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
@@ -66,3 +66,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

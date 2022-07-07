@@ -2,10 +2,11 @@
 title: Complex tables requiring Power Apps licenses | Microsoft Docs
 description: A list of complex tables in Microsoft Dataverse that require a Power Apps Plan 2 license.
 author: KumarVivek
-ms.service: powerapps
+
 ms.component: cds
-ms.topic: reference
+ms.topic: conceptual
 ms.date: 08/28/2020
+ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -16,7 +17,7 @@ search.app:
 
 # Complex tables and licensing
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 
 > [!IMPORTANT]
 > *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.*
@@ -27,7 +28,7 @@ search.app:
 
 Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
-* Code plug-ins. More information: [Plug-in development](/powerapps/developer/data-platform/plug-ins)
+* Code plug-ins. More information: [Plug-in development](../../developer/data-platform/plug-ins.md)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)
 
     > [!NOTE]
@@ -176,3 +177,6 @@ The following table lists tables that contain complex server-side logic out-of-t
 * Work Order Sub-Status
 * Work template
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

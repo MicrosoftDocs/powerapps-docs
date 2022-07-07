@@ -4,8 +4,8 @@ description: "This sample shows how to detect dependencies on solutions." # 115-
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "samples"
+
+ms.topic: sample
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Detect solution dependencies
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 
 This sample shows how to detect dependencies before you delete a solution component.
 
@@ -38,9 +38,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 1. The `Publisher` method creates the sample publisher that will `own` the two solutions.
 1. The `Solution` method creates the primary solution.
-1. The `OptionSetMetadata` creates the global option set and associates it to the solution.
+1. The `OptionSetMetadata` creates the choice values and associates it to the solution.
 1. The `ExportSolutionRequest` exports the solution as managed so that we can later import it.
-1. The `DeleteOptionSetRequest` deletes the option set previously created, so it can be imported under the managed solution.
+1. The `DeleteOptionSetRequest` deletes the choice column previously created, so it can be imported under the managed solution.
 1. The `ImportSolutionRequest` re-imports the solution as managed.
 
 ### Demonstrate
@@ -50,4 +50,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the solutions created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the solutions created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

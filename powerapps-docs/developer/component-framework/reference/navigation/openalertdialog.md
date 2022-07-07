@@ -1,16 +1,15 @@
 ---
 title: openAlertDialog | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 4acd3f17-74c0-4de1-9326-3778ff413f1e
+description: Displays an alert dialog containing a message and a button.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # openAlertDialog
@@ -44,15 +43,15 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 ```TypeScript
 context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel : "Yes",}).then(
-		function success()
-		{
-			document.getElementById("openAlertDialogButton")!.innerHTML = "Alert dialog closed";
-		},
-		function()
-		{
-			document.getElementById("openAlertDialogButton")!.innerHTML = "Error in Alert Dialog";
-		}
-	);
+      function success()
+      {
+         document.getElementById("openAlertDialogButton")!.innerHTML = "Alert dialog closed";
+      },
+      function()
+      {
+         document.getElementById("openAlertDialogButton")!.innerHTML = "Error in Alert Dialog";
+      }
+   );
 ```
 
 ### Related topics
@@ -60,3 +59,5 @@ context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

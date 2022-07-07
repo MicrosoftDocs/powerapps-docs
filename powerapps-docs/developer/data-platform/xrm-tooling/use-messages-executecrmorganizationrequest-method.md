@@ -1,29 +1,26 @@
 ---
 title: "Use messages with the ExecuteCrmOrganizationRequest method (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to use messages with the ExecuteCrmOrganizationRequest method. The samples demonstrate how to execute CreateRequest and RetrieveMultipleRequest message using the CrmServiceClient.String) method."
-ms.custom: ""
-ms.date: 03/27/2019
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 1ba60f67-522d-4540-a6f9-0787d7074a79
-caps.latest.revision: 17
-author: "MattB-msft"
-ms.author: "kvivek"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use messages with the ExecuteCrmOrganizationRequest method
   
-[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.  
   
@@ -101,3 +98,6 @@ else
 
 [Use XRM Tooling to connect to Microsoft Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

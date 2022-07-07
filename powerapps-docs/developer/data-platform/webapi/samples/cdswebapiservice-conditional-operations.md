@@ -1,25 +1,25 @@
 ---
 title: "Conditional Operation sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample shows how to perform conditional message operations when accessing records of the Microsoft Dataverse."
-ms.custom: ""
-ms.date: 07/16/2020
-ms.service: powerapps
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
+description: "This sample shows how to perform conditional message operations when accessing table rows of the Microsoft Dataverse."
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
+
 # Conditional Operations sample (C#)
 
-[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to perform conditional message operations when accessing entity instance records of the Microsoft Dataverse. The sample uses the Dataverse Web API and the CDSWebApiService class.
+This sample shows how to perform conditional message operations when accessing table rows (entity records) of the Microsoft Dataverse. The sample uses the Dataverse Web API and the CDSWebApiService class.
 
 Messages using a conditional statement, such as "If-None-Match", in the message header are sent to Dataverse.
 
@@ -297,3 +297,5 @@ namespace PowerApps.Samples
 [Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)  
 [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)  
 [Use the Dataverse Web API](../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

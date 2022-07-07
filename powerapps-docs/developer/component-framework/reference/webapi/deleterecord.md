@@ -1,16 +1,15 @@
 ---
 title: deleteRecord | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
+description: Deletes a table record.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # deleteRecord
@@ -19,7 +18,7 @@ ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps & portals.
 
 ## Syntax
 
@@ -27,7 +26,7 @@ Model-driven apps
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -38,13 +37,13 @@ Model-driven apps
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to delete. For example: &quot;account&quot;. </td>
+<td>The table logical name of the record you want to delete. For example: &quot;account&quot;. </td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to delete.</td>
+<td>GUID of the table record you want to delete.</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -52,7 +51,7 @@ Model-driven apps
 <td>No</td>
 <td><p>A function to call when a record is deleted. An object with the following properties will be passed to identify the deleted record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity type of the record.</li>
+<li><b>entityType</b>: String. The table type of the record.</li>
 <li><b>id</b>: String. GUID of the record.</li>
 <li><b>name</b>: String. Name of the record.</li>
 </ul></td>
@@ -67,10 +66,12 @@ Model-driven apps
 
 ## Return Value
 
-Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
+Type: LookupValue[]
 
 ### Related topics
 
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

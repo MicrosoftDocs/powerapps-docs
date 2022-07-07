@@ -1,16 +1,15 @@
 ---
 title: openErrorDialog | Microsoft Docs
-description: 
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 10c154b9-45a0-44ee-a621-73d6a9009c6d
+description: Displays an error dialog.
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # openErrorDialog
 
@@ -44,3 +43,5 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

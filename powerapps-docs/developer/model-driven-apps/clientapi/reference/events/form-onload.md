@@ -1,33 +1,66 @@
 ---
-title: "Form OnLoad Event (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 12/14/2020
-ms.service: powerapps
+title: "Form OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the OnLoad event.
+ms.author: jdaly
+author: adrianorth
+manager: kvivek
+ms.date: 06/24/2022
+ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# Form OnLoad Event (Client API reference)
+# Form OnLoad event
 
+This event occurs whenever the form is loaded, specifically:
 
-The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is created, for example by selecting the **Save** button on the main form.   Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on fields, and interact with other page elements.
+- On initial page load.
+- After a new record is first saved (created). 
+ 
+Use the formContext.ui.[addOnLoad](../formContext-ui/addOnLoad.md) and formContext.ui.[removeOnLoad](../formContext-ui/removeOnLoad.md) methods to manage event handlers for this event. 
 
-You can determine in what context the `OnLoad` event occurs by using [getEventArgs](../executioncontext/getEventArgs.md). By doing so, you can apply logic conditional on the context. 
+> [!NOTE] 
+> Controls in a form may not be ready when a form's `OnLoad` event occurs. Use the `OnLoad` event of the control to wait for it to be ready. More information: [Add or remove event handler function to event using UI](../../events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-ui)
 
-Data for related entities on a form, such as data for subgrids and quick view forms are not guaranteed to be available when the `OnLoad` event handler is executed. Logic that depends on related data should use the [Subgrid OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/subgrid-onload) event, quick view form should use the [isLoaded](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-ui-quickforms/isloaded) function, or the appropriate function for determining when the data should be loaded for the particular related data.
+## Asynchronous OnLoad event handler support
 
-Controls and other UI of the form are not guaranteed to be rendered and in the DOM when the `OnLoad` event occurs. Logic in the `OnLoad` event handler cannot prevent the form from loading.
+The `OnLoad` event handler has the ability to wait for promises returned by event handlers to settle before loading a form which allows for an OnLoad event to be asynchronous ("async").  The `OnLoad` event becomes async when the event handler returns a promise.
 
-The form `OnLoad` events are synchronous. However, you should **not** make synchronous network requests in an `OnLoad` event handler. This can cause a slow save experience and an unresponsive app. Instead, you should [asynchronous network requests](https://docs.microsoft.com/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously). Using asynchronous requests will [dramatically improve the performance of form loads](https://powerapps.microsoft.com/blog/turbocharge-your-model-driven-apps-by-transitioning-away-from-synchronous-requests/) compared to using synchronous requests.
+The form loads when each promise returned by the event handler is resolved. For any promises that are returned, there is a 10 second limit for each promise. After that, the platform considers promises to be timed out. This timeout is applied per promise. For example, if you have five promises returned, the total wait time is 50 seconds.
+Suppose the promise is rejected or timed out. In that case, the form load operation behaves similarly to the current script errors.
 
-You should be careful when using asynchronous code in an `OnLoad` event handler that needs an action to be taken or handled on the resolution of the async code. Asynchronous code can cause issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code has started. For example, there may be code in an `OnLoad` event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is received, the user may have interacted with the control or navigated to a different page, so there may be undesired behavior. If you need to not show data or UI before the asynchronous requests complete, your code can hide or disable the relevant UI until the requests are complete. Your code should also check that the user is in the same context after each asynchronous continuation point.
+The `OnLoad` event will only wait for one promise returned per handler. If multiple promises are required, it is recommended to wrap all the promises in the `Promise.all()` method and return the single resulting promise. For multiple handlers that return a promise, we recommend that you create one handler that calls all the events and return a single promise that wraps all required promises. This is to minimize wait times caused by the timeout.
 
+### Enable Async OnLoad using app setting
 
+To use async onLoad handlers, you will need to enable it through the app setting.
+An app setting is a platform component that allows you to turn supported features on or off for your app.
+To enable the async Onload event handlers for a specific app:
 
+1. Go to https://make.powerapps.com.
+2. Make sure you select the correct environment.
+3. Select **Apps** from the left navigation pane.
+4. Select the app and then select **...** (ellipses). Select **Edit**.
+5. Select **Settings** in the command bar.
+6. When the dialog opens, select **Features**.
+7. Turn on **Async onload handler**.
+8. Select **Save**.
+
+    ![Async OnLoad app setting](../../../media/async_onLoad_app_settings.png "Async OnLoad app setting")
+    
+### Async OnLoad timeouts
+
+When using an async handler, a form load will wait for the promise to be fulfilled. To ensure that a load completes on time, the handler throws a timeout exception after 10 seconds to let you know to tune the async OnLoad event for better performance.
+
+There may be scenarios where you want to halt the OnLoad execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user's input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
+ When the **disableAsyncTimeout is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
+
+This should be used with caution as it might affect the performance of the form load.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

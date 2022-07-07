@@ -1,22 +1,24 @@
 ---
-title: "Organization entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Organization table."
-ms.date: 11/14/2020
+title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Organization table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "margoc"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Organization entity reference
+
+# Organization table/entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
+> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 Top level of the Microsoft Dynamics 365 business hierarchy. The organization can be a specific business, holding company, or corporation.
 
@@ -25,11 +27,11 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/organizations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/organizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity properties
+## Properties
 
 |Property|Value|
 |--------|-----|
@@ -47,12 +49,17 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable columns/attributes
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ACIWebEndpointUrl](#BKMK_ACIWebEndpointUrl)
 - [AcknowledgementTemplateId](#BKMK_AcknowledgementTemplateId)
+- [ActivityTypeFilter](#BKMK_ActivityTypeFilter)
+- [AdvancedColumnEditorEnabled](#BKMK_AdvancedColumnEditorEnabled)
+- [AdvancedColumnFilteringEnabled](#BKMK_AdvancedColumnFilteringEnabled)
+- [AdvancedFilteringEnabled](#BKMK_AdvancedFilteringEnabled)
+- [AdvancedLookupEnabled](#BKMK_AdvancedLookupEnabled)
 - [AllowAddressBookSyncs](#BKMK_AllowAddressBookSyncs)
 - [AllowAutoResponseCreation](#BKMK_AllowAutoResponseCreation)
 - [AllowAutoUnsubscribe](#BKMK_AllowAutoUnsubscribe)
@@ -64,13 +71,16 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [AllowMarketingEmailExecution](#BKMK_AllowMarketingEmailExecution)
 - [AllowOfflineScheduledSyncs](#BKMK_AllowOfflineScheduledSyncs)
 - [AllowOutlookScheduledSyncs](#BKMK_AllowOutlookScheduledSyncs)
+- [AllowRedirectAdminSettingsToModernUI](#BKMK_AllowRedirectAdminSettingsToModernUI)
 - [AllowUnresolvedPartiesOnEmailSend](#BKMK_AllowUnresolvedPartiesOnEmailSend)
 - [AllowUserFormModePreference](#BKMK_AllowUserFormModePreference)
+- [AllowUsersHidingSystemViews](#BKMK_AllowUsersHidingSystemViews)
 - [AllowUsersSeeAppdownloadMessage](#BKMK_AllowUsersSeeAppdownloadMessage)
 - [AllowWebExcelExport](#BKMK_AllowWebExcelExport)
 - [AMDesignator](#BKMK_AMDesignator)
 - [AppDesignerExperienceEnabled](#BKMK_AppDesignerExperienceEnabled)
 - [AppointmentRichEditorExperience](#BKMK_AppointmentRichEditorExperience)
+- [AppointmentWithTeamsMeeting](#BKMK_AppointmentWithTeamsMeeting)
 - [AuditRetentionPeriod](#BKMK_AuditRetentionPeriod)
 - [AuditRetentionPeriodV2](#BKMK_AuditRetentionPeriodV2)
 - [AutoApplyDefaultonCaseCreate](#BKMK_AutoApplyDefaultonCaseCreate)
@@ -92,7 +102,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [CategoryPrefix](#BKMK_CategoryPrefix)
 - [ClientFeatureSet](#BKMK_ClientFeatureSet)
 - [ContentSecurityPolicyConfiguration](#BKMK_ContentSecurityPolicyConfiguration)
+- [ContentSecurityPolicyConfigurationForCanvas](#BKMK_ContentSecurityPolicyConfigurationForCanvas)
+- [ContentSecurityPolicyReportUri](#BKMK_ContentSecurityPolicyReportUri)
 - [ContractPrefix](#BKMK_ContractPrefix)
+- [CopresenceRefreshRate](#BKMK_CopresenceRefreshRate)
 - [CortanaProactiveExperienceEnabled](#BKMK_CortanaProactiveExperienceEnabled)
 - [CreateProductsWithoutParentInActiveState](#BKMK_CreateProductsWithoutParentInActiveState)
 - [CurrencyDecimalPrecision](#BKMK_CurrencyDecimalPrecision)
@@ -127,16 +140,21 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [EmailConnectionChannel](#BKMK_EmailConnectionChannel)
 - [EmailCorrelationEnabled](#BKMK_EmailCorrelationEnabled)
 - [EmailSendPollingPeriod](#BKMK_EmailSendPollingPeriod)
+- [EnableAsyncMergeAPIForUCI](#BKMK_EnableAsyncMergeAPIForUCI)
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
+- [EnableCanvasAppsInSolutionsByDefault](#BKMK_EnableCanvasAppsInSolutionsByDefault)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
 - [EnableLivePersonaCardUCI](#BKMK_EnableLivePersonaCardUCI)
 - [EnableLivePersonCardIntegrationInOffice](#BKMK_EnableLivePersonCardIntegrationInOffice)
 - [EnableLPAuthoring](#BKMK_EnableLPAuthoring)
+- [EnableMakerSwitchToClassic](#BKMK_EnableMakerSwitchToClassic)
 - [EnableMicrosoftFlowIntegration](#BKMK_EnableMicrosoftFlowIntegration)
 - [EnablePricingOnCreate](#BKMK_EnablePricingOnCreate)
 - [EnableSmartMatching](#BKMK_EnableSmartMatching)
+- [EnableUnifiedClientCDN](#BKMK_EnableUnifiedClientCDN)
 - [EnableUnifiedInterfaceShellRefresh](#BKMK_EnableUnifiedInterfaceShellRefresh)
 - [EnforceReadOnlyPlugins](#BKMK_EnforceReadOnlyPlugins)
+- [EnforceValidations](#BKMK_EnforceValidations)
 - [EntityImage](#BKMK_EntityImage)
 - [ExpireChangeTrackingInDays](#BKMK_ExpireChangeTrackingInDays)
 - [ExpireSubscriptionsInDays](#BKMK_ExpireSubscriptionsInDays)
@@ -190,16 +208,20 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsAutoDataCaptureEnabled](#BKMK_IsAutoDataCaptureEnabled)
 - [IsAutoDataCaptureV2Enabled](#BKMK_IsAutoDataCaptureV2Enabled)
 - [IsAutoSaveEnabled](#BKMK_IsAutoSaveEnabled)
+- [IsBasicGeospatialIntegrationEnabled](#BKMK_IsBasicGeospatialIntegrationEnabled)
 - [IsBPFEntityCustomizationFeatureEnabled](#BKMK_IsBPFEntityCustomizationFeatureEnabled)
+- [IsCollaborationExperienceEnabled](#BKMK_IsCollaborationExperienceEnabled)
 - [IsConflictDetectionEnabledForMobileClient](#BKMK_IsConflictDetectionEnabledForMobileClient)
 - [IsContactMailingAddressSyncEnabled](#BKMK_IsContactMailingAddressSyncEnabled)
 - [IsContentSecurityPolicyEnabled](#BKMK_IsContentSecurityPolicyEnabled)
+- [IsContentSecurityPolicyEnabledForCanvas](#BKMK_IsContentSecurityPolicyEnabledForCanvas)
 - [IsContextualEmailEnabled](#BKMK_IsContextualEmailEnabled)
 - [IsContextualHelpEnabled](#BKMK_IsContextualHelpEnabled)
 - [IsCustomControlsInCanvasAppsEnabled](#BKMK_IsCustomControlsInCanvasAppsEnabled)
 - [IsDefaultCountryCodeCheckEnabled](#BKMK_IsDefaultCountryCodeCheckEnabled)
 - [IsDelegateAccessEnabled](#BKMK_IsDelegateAccessEnabled)
 - [IsDelveActionHubIntegrationEnabled](#BKMK_IsDelveActionHubIntegrationEnabled)
+- [IsDesktopFlowSchemaV2Enabled](#BKMK_IsDesktopFlowSchemaV2Enabled)
 - [IsDuplicateDetectionEnabled](#BKMK_IsDuplicateDetectionEnabled)
 - [IsDuplicateDetectionEnabledForImport](#BKMK_IsDuplicateDetectionEnabledForImport)
 - [IsDuplicateDetectionEnabledForOfflineSync](#BKMK_IsDuplicateDetectionEnabledForOfflineSync)
@@ -215,6 +237,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsFullTextSearchEnabled](#BKMK_IsFullTextSearchEnabled)
 - [IsGeospatialAzureMapsIntegrationEnabled](#BKMK_IsGeospatialAzureMapsIntegrationEnabled)
 - [IsHierarchicalSecurityModelEnabled](#BKMK_IsHierarchicalSecurityModelEnabled)
+- [IsIdeasDataCollectionEnabled](#BKMK_IsIdeasDataCollectionEnabled)
 - [IsLUISEnabledforD365Bot](#BKMK_IsLUISEnabledforD365Bot)
 - [IsMailboxForcedUnlockingEnabled](#BKMK_IsMailboxForcedUnlockingEnabled)
 - [IsMailboxInactiveBackoffEnabled](#BKMK_IsMailboxInactiveBackoffEnabled)
@@ -243,7 +266,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsRichTextNotesEnabled](#BKMK_IsRichTextNotesEnabled)
+- [IsRpaAutoscaleEnabled](#BKMK_IsRpaAutoscaleEnabled)
+- [IsRpaUnattendedEnabled](#BKMK_IsRpaUnattendedEnabled)
 - [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
+- [IsSharingInOrgAllowed](#BKMK_IsSharingInOrgAllowed)
 - [IsSOPIntegrationEnabled](#BKMK_IsSOPIntegrationEnabled)
 - [IsTextWrapEnabled](#BKMK_IsTextWrapEnabled)
 - [IsUserAccessAuditEnabled](#BKMK_IsUserAccessAuditEnabled)
@@ -255,9 +281,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [LanguageCode](#BKMK_LanguageCode)
 - [LocaleId](#BKMK_LocaleId)
 - [LongDateFormatCode](#BKMK_LongDateFormatCode)
+- [LookupCharacterCountBeforeResolve](#BKMK_LookupCharacterCountBeforeResolve)
+- [LookupResolveDelayMS](#BKMK_LookupResolveDelayMS)
 - [MailboxIntermittentIssueMinRange](#BKMK_MailboxIntermittentIssueMinRange)
 - [MailboxPermanentIssueMinRange](#BKMK_MailboxPermanentIssueMinRange)
 - [MaxActionStepsInBPF](#BKMK_MaxActionStepsInBPF)
+- [MaxAllowedPendingRollupJobCount](#BKMK_MaxAllowedPendingRollupJobCount)
+- [MaxAllowedPendingRollupJobPercentage](#BKMK_MaxAllowedPendingRollupJobPercentage)
 - [MaxAppointmentDurationDays](#BKMK_MaxAppointmentDurationDays)
 - [MaxConditionsForMobileOfflineFilters](#BKMK_MaxConditionsForMobileOfflineFilters)
 - [MaxDepthForHierarchicalSecurityModel](#BKMK_MaxDepthForHierarchicalSecurityModel)
@@ -270,6 +300,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [MaxProductsInBundle](#BKMK_MaxProductsInBundle)
 - [MaxRecordsForExportToExcel](#BKMK_MaxRecordsForExportToExcel)
 - [MaxRecordsForLookupFilters](#BKMK_MaxRecordsForLookupFilters)
+- [MaxRollupFieldsPerEntity](#BKMK_MaxRollupFieldsPerEntity)
+- [MaxRollupFieldsPerOrg](#BKMK_MaxRollupFieldsPerOrg)
 - [MaxSLAItemsPerSLA](#BKMK_MaxSLAItemsPerSLA)
 - [MaxUploadFileSize](#BKMK_MaxUploadFileSize)
 - [MicrosoftFlowEnvironment](#BKMK_MicrosoftFlowEnvironment)
@@ -277,6 +309,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [MinOfflineSyncInterval](#BKMK_MinOfflineSyncInterval)
 - [MinOutlookSyncInterval](#BKMK_MinOutlookSyncInterval)
 - [MobileOfflineSyncInterval](#BKMK_MobileOfflineSyncInterval)
+- [ModernAdvancedFindFiltering](#BKMK_ModernAdvancedFindFiltering)
 - [Name](#BKMK_Name)
 - [NegativeCurrencyFormatCode](#BKMK_NegativeCurrencyFormatCode)
 - [NegativeFormatCode](#BKMK_NegativeFormatCode)
@@ -294,6 +327,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [OrgInsightsEnabled](#BKMK_OrgInsightsEnabled)
 - [PaiPreviewScenarioEnabled](#BKMK_PaiPreviewScenarioEnabled)
 - [PastExpansionWindow](#BKMK_PastExpansionWindow)
+- [PcfDatasetGridEnabled](#BKMK_PcfDatasetGridEnabled)
 - [Picture](#BKMK_Picture)
 - [PinpointLanguageCode](#BKMK_PinpointLanguageCode)
 - [PluginTraceLogSetting](#BKMK_PluginTraceLogSetting)
@@ -307,13 +341,18 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [PrivReportingGroupName](#BKMK_PrivReportingGroupName)
 - [ProductRecommendationsEnabled](#BKMK_ProductRecommendationsEnabled)
 - [QualifyLeadAdditionalOptions](#BKMK_QualifyLeadAdditionalOptions)
+- [QuickActionToOpenRecordsInSidePaneEnabled](#BKMK_QuickActionToOpenRecordsInSidePaneEnabled)
 - [QuickFindRecordLimitEnabled](#BKMK_QuickFindRecordLimitEnabled)
 - [QuotePrefix](#BKMK_QuotePrefix)
+- [RecalculateSLA](#BKMK_RecalculateSLA)
 - [RecurrenceDefaultNumberOfOccurrences](#BKMK_RecurrenceDefaultNumberOfOccurrences)
 - [RecurrenceExpansionJobBatchInterval](#BKMK_RecurrenceExpansionJobBatchInterval)
 - [RecurrenceExpansionJobBatchSize](#BKMK_RecurrenceExpansionJobBatchSize)
 - [RecurrenceExpansionSynchCreateMax](#BKMK_RecurrenceExpansionSynchCreateMax)
 - [ReferenceSiteMapXml](#BKMK_ReferenceSiteMapXml)
+- [ReleaseWaveName](#BKMK_ReleaseWaveName)
+- [RelevanceSearchEnabledByPlatform](#BKMK_RelevanceSearchEnabledByPlatform)
+- [RelevanceSearchModifiedOn](#BKMK_RelevanceSearchModifiedOn)
 - [RenderSecureIFrameForEmail](#BKMK_RenderSecureIFrameForEmail)
 - [ReportingGroupId](#BKMK_ReportingGroupId)
 - [ReportingGroupName](#BKMK_ReportingGroupName)
@@ -327,6 +366,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [SchemaNamePrefix](#BKMK_SchemaNamePrefix)
 - [SendBulkEmailInUCI](#BKMK_SendBulkEmailInUCI)
 - [ServeStaticResourcesFromAzureCDN](#BKMK_ServeStaticResourcesFromAzureCDN)
+- [SessionRecordingEnabled](#BKMK_SessionRecordingEnabled)
 - [SessionTimeoutEnabled](#BKMK_SessionTimeoutEnabled)
 - [SessionTimeoutInMins](#BKMK_SessionTimeoutInMins)
 - [SessionTimeoutReminderInMins](#BKMK_SessionTimeoutReminderInMins)
@@ -354,6 +394,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [TagMaxAggressiveCycles](#BKMK_TagMaxAggressiveCycles)
 - [TagPollingPeriod](#BKMK_TagPollingPeriod)
 - [TaskBasedFlowEnabled](#BKMK_TaskBasedFlowEnabled)
+- [TelemetryInstrumentationKey](#BKMK_TelemetryInstrumentationKey)
 - [TextAnalyticsEnabled](#BKMK_TextAnalyticsEnabled)
 - [TimeFormatCode](#BKMK_TimeFormatCode)
 - [TimeFormatString](#BKMK_TimeFormatString)
@@ -374,6 +415,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [UserAccessAuditingInterval](#BKMK_UserAccessAuditingInterval)
 - [UseReadForm](#BKMK_UseReadForm)
 - [UserGroupId](#BKMK_UserGroupId)
+- [UserRatingEnabled](#BKMK_UserRatingEnabled)
 - [UseSkypeProtocol](#BKMK_UseSkypeProtocol)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [WebResourceHash](#BKMK_WebResourceHash)
@@ -416,6 +458,131 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Lookup|
 
 
+### <a name="BKMK_ActivityTypeFilter"></a> ActivityTypeFilter
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information on whether filtering activity based on entity in app.|
+|DisplayName|Enable Rich Editing Experience for Appointment|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|activitytypefilter|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ActivityTypeFilter Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AdvancedColumnEditorEnabled"></a> AdvancedColumnEditorEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the display column options on a view in model-driven apps is enabled|
+|DisplayName|Advanced column editor enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|advancedcolumneditorenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AdvancedColumnEditorEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AdvancedColumnFilteringEnabled"></a> AdvancedColumnFilteringEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the advanced column filtering in a view in model-driven apps is enabled|
+|DisplayName|Advanced column filtering enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|advancedcolumnfilteringenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AdvancedColumnFilteringEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AdvancedFilteringEnabled"></a> AdvancedFilteringEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the advanced filtering on all tables in a model-driven app is enabled|
+|DisplayName|Advanced filtering enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|advancedfilteringenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AdvancedFilteringEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AdvancedLookupEnabled"></a> AdvancedLookupEnabled
+
+**Added by**: UnifiedClientLookupExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the Advanced Lookup feature is enabled for lookup controls|
+|DisplayName|Advanced lookup enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|advancedlookupenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### AdvancedLookupEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_AllowAddressBookSyncs"></a> AllowAddressBookSyncs
 
 |Property|Value|
@@ -428,14 +595,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowAddressBookSyncs Options
+#### AllowAddressBookSyncs Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -451,14 +618,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### AllowAutoResponseCreation Options
+#### AllowAutoResponseCreation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -474,14 +641,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### AllowAutoUnsubscribe Options
+#### AllowAutoUnsubscribe Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -497,14 +664,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### AllowAutoUnsubscribeAcknowledgement Options
+#### AllowAutoUnsubscribeAcknowledgement Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -520,14 +687,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowClientMessageBarAd Options
+#### AllowClientMessageBarAd Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -544,14 +711,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowEntityOnlyAudit Options
+#### AllowEntityOnlyAudit Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -567,14 +734,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowLegacyClientExperience Options
+#### AllowLegacyClientExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -590,14 +757,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowLegacyDialogsEmbedding Options
+#### AllowLegacyDialogsEmbedding Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -613,14 +780,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowMarketingEmailExecution Options
+#### AllowMarketingEmailExecution Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -636,14 +803,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowOfflineScheduledSyncs Options
+#### AllowOfflineScheduledSyncs Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -659,14 +826,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowOutlookScheduledSyncs Options
+#### AllowOutlookScheduledSyncs Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AllowRedirectAdminSettingsToModernUI"></a> AllowRedirectAdminSettingsToModernUI
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Control whether the organization Allow Redirect Legacy Admin Settings To Modern UI|
+|DisplayName|Allow Redirect Legacy Admin Settings To Modern UI|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|allowredirectadminsettingstomodernui|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowRedirectAdminSettingsToModernUI Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -682,14 +874,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowUnresolvedPartiesOnEmailSend Options
+#### AllowUnresolvedPartiesOnEmailSend Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -705,14 +897,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowUserFormModePreference Options
+#### AllowUserFormModePreference Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_AllowUsersHidingSystemViews"></a> AllowUsersHidingSystemViews
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if allow end users to hide system views in model-driven apps is enabled|
+|DisplayName|Allow users hiding system views|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|allowusershidingsystemviews|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowUsersHidingSystemViews Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -728,14 +945,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowUsersSeeAppdownloadMessage Options
+#### AllowUsersSeeAppdownloadMessage Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -751,14 +968,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AllowWebExcelExport Options
+#### AllowWebExcelExport Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -790,14 +1007,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AppDesignerExperienceEnabled Options
+#### AppDesignerExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -815,14 +1032,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AppointmentRichEditorExperience Options
+#### AppointmentRichEditorExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AppointmentWithTeamsMeeting"></a> AppointmentWithTeamsMeeting
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information on whether Teams meeting experience for Appointment is enabled.|
+|DisplayName|Enable teams Meeting experience for appointment|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|appointmentwithteamsmeeting|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AppointmentWithTeamsMeeting Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -872,14 +1114,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AutoApplyDefaultonCaseCreate Options
+#### AutoApplyDefaultonCaseCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -895,14 +1137,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AutoApplyDefaultonCaseUpdate Options
+#### AutoApplyDefaultonCaseUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -918,14 +1160,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### AutoApplySLA Options
+#### AutoApplySLA Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1004,14 +1246,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### BoundDashboardDefaultCardExpanded Options
+#### BoundDashboardDefaultCardExpanded Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1107,14 +1349,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### CanOptOutNewSearchExperience Options
+#### CanOptOutNewSearchExperience Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1130,14 +1372,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### CascadeStatusUpdate Options
+#### CascadeStatusUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1205,6 +1447,42 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_ContentSecurityPolicyConfigurationForCanvas"></a> ContentSecurityPolicyConfigurationForCanvas
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Content Security Policy configuration for Canvas apps.|
+|DisplayName|Content Security Policy Configuration for Canvas apps|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentsecuritypolicyconfigurationforcanvas|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_ContentSecurityPolicyReportUri"></a> ContentSecurityPolicyReportUri
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Content Security Policy Report Uri.|
+|DisplayName|Content Security Policy Report Uri|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentsecuritypolicyreporturi|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
 ### <a name="BKMK_ContractPrefix"></a> ContractPrefix
 
 |Property|Value|
@@ -1221,6 +1499,24 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_CopresenceRefreshRate"></a> CopresenceRefreshRate
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Refresh rate for copresence data in seconds.|
+|DisplayName|CopresenceRefreshRate|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|copresencerefreshrate|
+|MaxValue|2147483647|
+|MinValue|30|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_CortanaProactiveExperienceEnabled"></a> CortanaProactiveExperienceEnabled
 
 |Property|Value|
@@ -1233,14 +1529,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### CortanaProactiveExperienceEnabled Options
+#### CortanaProactiveExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1256,14 +1552,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### CreateProductsWithoutParentInActiveState Options
+#### CreateProductsWithoutParentInActiveState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1277,8 +1573,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|currencydecimalprecision|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|MaxValue|10|
+|MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
 
@@ -1295,12 +1591,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### CurrencyDisplayOption Options
+#### CurrencyDisplayOption Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Currency symbol|
-|1|Currency code|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Currency symbol||
+|1|Currency code||
 
 
 
@@ -1316,14 +1612,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### CurrencyFormatCode Options
+#### CurrencyFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|$123|
-|1|123$|
-|2|$ 123|
-|3|123 $|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|$123||
+|1|123$||
+|2|$ 123||
+|3|123 $||
 
 
 
@@ -1515,10 +1811,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### DateFormatCode Options
+#### DateFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 
@@ -1659,13 +1955,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### DefaultRecurrenceEndRangeType Options
+#### DefaultRecurrenceEndRangeType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|No End Date|
-|2|Number of Occurrences|
-|3|End By Date|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|No End Date||
+|2|Number of Occurrences||
+|3|End By Date||
 
 
 
@@ -1711,14 +2007,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### DisableSocialCare Options
+#### DisableSocialCare Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1734,12 +2030,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### DiscountCalculationMethod Options
+#### DiscountCalculationMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Line item|
-|1|Per unit|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Line item||
+|1|Per unit||
 
 
 
@@ -1755,14 +2051,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### DisplayNavigationTour Options
+#### DisplayNavigationTour Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1778,12 +2074,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### EmailConnectionChannel Options
+#### EmailConnectionChannel Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Server-Side Synchronization|
-|1|Microsoft Dynamics 365 Email Router|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Server-Side Synchronization||
+|1|Microsoft Dynamics 365 Email Router||
 
 
 
@@ -1799,14 +2095,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EmailCorrelationEnabled Options
+#### EmailCorrelationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1826,6 +2122,31 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Integer|
 
 
+### <a name="BKMK_EnableAsyncMergeAPIForUCI"></a> EnableAsyncMergeAPIForUCI
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determines whether records merged through the merge dialog in UCI are merged asynchronously|
+|DisplayName|Asynchronous merge enabled for UCI|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enableasyncmergeapiforuci|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### EnableAsyncMergeAPIForUCI Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_EnableBingMapsIntegration"></a> EnableBingMapsIntegration
 
 |Property|Value|
@@ -1838,14 +2159,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableBingMapsIntegration Options
+#### EnableBingMapsIntegration Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_EnableCanvasAppsInSolutionsByDefault"></a> EnableCanvasAppsInSolutionsByDefault
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Note: By enabling this feature, you will also enable the automatic creation of enviornment variables when adding data sources for your apps.|
+|DisplayName|Enable the creation of Canvas apps in Dataverse / Solution by default|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablecanvasappsinsolutionsbydefault|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableCanvasAppsInSolutionsByDefault Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -1861,14 +2207,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableImmersiveSkypeIntegration Options
+#### EnableImmersiveSkypeIntegration Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1884,14 +2230,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableLivePersonaCardUCI Options
+#### EnableLivePersonaCardUCI Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1907,14 +2253,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableLivePersonCardIntegrationInOffice Options
+#### EnableLivePersonCardIntegrationInOffice Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1930,14 +2276,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableLPAuthoring Options
+#### EnableLPAuthoring Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_EnableMakerSwitchToClassic"></a> EnableMakerSwitchToClassic
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Control whether the organization Switch Maker Portal to Classic|
+|DisplayName|Switch Maker Portal to Classic|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablemakerswitchtoclassic|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableMakerSwitchToClassic Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -1953,14 +2324,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableMicrosoftFlowIntegration Options
+#### EnableMicrosoftFlowIntegration Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1976,14 +2347,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnablePricingOnCreate Options
+#### EnablePricingOnCreate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1999,14 +2370,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### EnableSmartMatching Options
+#### EnableSmartMatching Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_EnableUnifiedClientCDN"></a> EnableUnifiedClientCDN
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Leave empty to use default setting. Set to on/off to enable/disable CDN for UCI.|
+|DisplayName|Enable UCI CDN for organization|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enableunifiedclientcdn|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableUnifiedClientCDN Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -2022,14 +2418,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnableUnifiedInterfaceShellRefresh Options
+#### EnableUnifiedInterfaceShellRefresh Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2045,14 +2441,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### EnforceReadOnlyPlugins Options
+#### EnforceReadOnlyPlugins Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_EnforceValidations"></a> EnforceValidations
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether validation enforcement has been enabled for this organization's apps.|
+|DisplayName|Enforce validations for this organization's apps|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enforcevalidations|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnforceValidations Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -2211,17 +2632,17 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### FiscalPeriodFormatPeriod Options
+#### FiscalPeriodFormatPeriod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Quarter {0}|
-|2|Q{0}|
-|3|P{0}|
-|4|Month {0}|
-|5|M{0}|
-|6|Semester {0}|
-|7|Month Name|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Quarter {0}||
+|2|Q{0}||
+|3|P{0}||
+|4|Month {0}||
+|5|M{0}||
+|6|Semester {0}||
+|7|Month Name||
 
 
 
@@ -2285,12 +2706,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### FiscalYearFormatPrefix Options
+#### FiscalYearFormatPrefix Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FY|
-|2||
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FY||
+|2|||
 
 
 
@@ -2306,13 +2727,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### FiscalYearFormatSuffix Options
+#### FiscalYearFormatSuffix Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|FY|
-|2| Fiscal Year|
-|3||
+|Value|Label|Description|
+|-----|-----|--------|
+|1|FY||
+|2| Fiscal Year||
+|3|||
 
 
 
@@ -2328,13 +2749,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### FiscalYearFormatYear Options
+#### FiscalYearFormatYear Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|YYYY|
-|2|YY|
-|3|GGYY|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|YYYY||
+|2|YY||
+|3|GGYY||
 
 
 
@@ -2366,18 +2787,18 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### FullNameConventionCode Options
+#### FullNameConventionCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Last Name, First Name|
-|1|First Name|
-|2|Last Name, First Name, Middle Initial|
-|3|First Name, Middle Initial, Last Name|
-|4|Last Name, First Name, Middle Name|
-|5|First Name, Middle Name, Last Name|
-|6|Last Name, space, First Name|
-|7|Last Name, no space, First Name|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Last Name, First Name||
+|1|First Name||
+|2|Last Name, First Name, Middle Initial||
+|3|First Name, Middle Initial, Last Name||
+|4|Last Name, First Name, Middle Name||
+|5|First Name, Middle Name, Last Name||
+|6|Last Name, space, First Name||
+|7|Last Name, no space, First Name||
 
 
 
@@ -2409,14 +2830,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### GenerateAlertsForErrors Options
+#### GenerateAlertsForErrors Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2432,14 +2853,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### GenerateAlertsForInformation Options
+#### GenerateAlertsForInformation Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2455,14 +2876,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### GenerateAlertsForWarnings Options
+#### GenerateAlertsForWarnings Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2478,14 +2899,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### GetStartedPaneContentEnabled Options
+#### GetStartedPaneContentEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2501,14 +2922,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### GlobalAppendUrlParametersEnabled Options
+#### GlobalAppendUrlParametersEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2540,14 +2961,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### GlobalHelpUrlEnabled Options
+#### GlobalHelpUrlEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -2596,14 +3017,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### GrantAccessToNetworkService Options
+#### GrantAccessToNetworkService Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2699,14 +3120,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IgnoreInternalEmail Options
+#### IgnoreInternalEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2724,14 +3145,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### ImproveSearchLoggingEnabled Options
+#### ImproveSearchLoggingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2747,14 +3168,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### InactivityTimeoutEnabled Options
+#### InactivityTimeoutEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2864,14 +3285,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsActionCardEnabled Options
+#### IsActionCardEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2887,14 +3308,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsActionSupportFeatureEnabled Options
+#### IsActionSupportFeatureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2910,14 +3331,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsActivityAnalysisEnabled Options
+#### IsActivityAnalysisEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2933,14 +3354,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAppMode Options
+#### IsAppMode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2956,14 +3377,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAppointmentAttachmentSyncEnabled Options
+#### IsAppointmentAttachmentSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -2979,14 +3400,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAssignedTasksSyncEnabled Options
+#### IsAssignedTasksSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3002,14 +3423,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAuditEnabled Options
+#### IsAuditEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3025,14 +3446,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAutoDataCaptureEnabled Options
+#### IsAutoDataCaptureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3048,14 +3469,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAutoDataCaptureV2Enabled Options
+#### IsAutoDataCaptureV2Enabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3071,14 +3492,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAutoSaveEnabled Options
+#### IsAutoSaveEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_IsBasicGeospatialIntegrationEnabled"></a> IsBasicGeospatialIntegrationEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determines whether users can make use of basic Geospatial featuers in Canvas apps.|
+|DisplayName|Enable the basic Geospatial features in Canvas Apps|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isbasicgeospatialintegrationenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsBasicGeospatialIntegrationEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -3094,14 +3540,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsBPFEntityCustomizationFeatureEnabled Options
+#### IsBPFEntityCustomizationFeatureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsCollaborationExperienceEnabled"></a> IsCollaborationExperienceEnabled
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|IsCollaborationExperienceEnabled|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscollaborationexperienceenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsCollaborationExperienceEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -3117,14 +3588,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsConflictDetectionEnabledForMobileClient Options
+#### IsConflictDetectionEnabledForMobileClient Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3140,14 +3611,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsContactMailingAddressSyncEnabled Options
+#### IsContactMailingAddressSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -3163,14 +3634,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsContentSecurityPolicyEnabled Options
+#### IsContentSecurityPolicyEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsContentSecurityPolicyEnabledForCanvas"></a> IsContentSecurityPolicyEnabledForCanvas
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Content Security Policy has been enabled for this organization's Canvas apps.|
+|DisplayName|Enable Content Security Policy for this organization's Canvas apps|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|iscontentsecuritypolicyenabledforcanvas|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsContentSecurityPolicyEnabledForCanvas Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -3186,14 +3682,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsContextualEmailEnabled Options
+#### IsContextualEmailEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3209,14 +3705,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsContextualHelpEnabled Options
+#### IsContextualHelpEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3232,14 +3728,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsCustomControlsInCanvasAppsEnabled Options
+#### IsCustomControlsInCanvasAppsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3255,14 +3751,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDefaultCountryCodeCheckEnabled Options
+#### IsDefaultCountryCodeCheckEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -3278,14 +3774,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDelegateAccessEnabled Options
+#### IsDelegateAccessEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3301,14 +3797,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDelveActionHubIntegrationEnabled Options
+#### IsDelveActionHubIntegrationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsDesktopFlowSchemaV2Enabled"></a> IsDesktopFlowSchemaV2Enabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether v2 schema for Desktop Flows is enabled in this organization..|
+|DisplayName|Enable v2 schema for Desktop Flows in this organization.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isdesktopflowschemav2enabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsDesktopFlowSchemaV2Enabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -3324,14 +3845,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDuplicateDetectionEnabled Options
+#### IsDuplicateDetectionEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3347,14 +3868,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDuplicateDetectionEnabledForImport Options
+#### IsDuplicateDetectionEnabledForImport Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3370,14 +3891,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDuplicateDetectionEnabledForOfflineSync Options
+#### IsDuplicateDetectionEnabledForOfflineSync Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3393,14 +3914,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsDuplicateDetectionEnabledForOnlineCreateUpdate Options
+#### IsDuplicateDetectionEnabledForOnlineCreateUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3416,14 +3937,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsEmailMonitoringAllowed Options
+#### IsEmailMonitoringAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -3439,14 +3960,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsEmailServerProfileContentFilteringEnabled Options
+#### IsEmailServerProfileContentFilteringEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3462,14 +3983,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsEnabledForAllRoles Options
+#### IsEnabledForAllRoles Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -3485,14 +4006,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsExternalFileStorageEnabled Options
+#### IsExternalFileStorageEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3508,14 +4029,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsExternalSearchIndexEnabled Options
+#### IsExternalSearchIndexEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3531,14 +4052,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsFiscalPeriodMonthBased Options
+#### IsFiscalPeriodMonthBased Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3554,14 +4075,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsFolderAutoCreatedonSP Options
+#### IsFolderAutoCreatedonSP Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3577,14 +4098,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsFolderBasedTrackingEnabled Options
+#### IsFolderBasedTrackingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3600,14 +4121,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsFullTextSearchEnabled Options
+#### IsFullTextSearchEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -3623,14 +4144,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsGeospatialAzureMapsIntegrationEnabled Options
+#### IsGeospatialAzureMapsIntegrationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3646,14 +4167,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsHierarchicalSecurityModelEnabled Options
+#### IsHierarchicalSecurityModelEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_IsIdeasDataCollectionEnabled"></a> IsIdeasDataCollectionEnabled
+
+**Added by**: AISolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether data collection for ideas in canvas PowerApps has been enabled.|
+|DisplayName|Enable Ideas data collection.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isideasdatacollectionenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsIdeasDataCollectionEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -3669,14 +4215,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsLUISEnabledforD365Bot Options
+#### IsLUISEnabledforD365Bot Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3692,14 +4238,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMailboxForcedUnlockingEnabled Options
+#### IsMailboxForcedUnlockingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3715,14 +4261,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMailboxInactiveBackoffEnabled Options
+#### IsMailboxInactiveBackoffEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3738,14 +4284,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsManualSalesForecastingEnabled Options
+#### IsManualSalesForecastingEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3761,14 +4307,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMobileClientOnDemandSyncEnabled Options
+#### IsMobileClientOnDemandSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3784,14 +4330,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMobileOfflineEnabled Options
+#### IsMobileOfflineEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3807,14 +4353,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsModelDrivenAppsInMSTeamsEnabled Options
+#### IsModelDrivenAppsInMSTeamsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3830,14 +4376,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMSTeamsCollaborationEnabled Options
+#### IsMSTeamsCollaborationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3853,14 +4399,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMSTeamsEnabled Options
+#### IsMSTeamsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3876,14 +4422,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMSTeamsSettingChangedByUser Options
+#### IsMSTeamsSettingChangedByUser Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3899,14 +4445,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsMSTeamsUserSyncEnabled Options
+#### IsMSTeamsUserSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3922,14 +4468,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsNewAddProductExperienceEnabled Options
+#### IsNewAddProductExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3945,14 +4491,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsNotesAnalysisEnabled Options
+#### IsNotesAnalysisEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3968,14 +4514,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsOfficeGraphEnabled Options
+#### IsOfficeGraphEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -3991,14 +4537,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsOneDriveEnabled Options
+#### IsOneDriveEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4014,14 +4560,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPAIEnabled Options
+#### IsPAIEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -4053,14 +4599,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPlaybookEnabled Options
+#### IsPlaybookEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4076,14 +4622,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsPresenceEnabled Options
+#### IsPresenceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -4099,14 +4645,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPreviewEnabledForActionCard Options
+#### IsPreviewEnabledForActionCard Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4122,14 +4668,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPreviewForAutoCaptureEnabled Options
+#### IsPreviewForAutoCaptureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4145,14 +4691,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPreviewForEmailMonitoringAllowed Options
+#### IsPreviewForEmailMonitoringAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -4168,14 +4714,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsPriceListMandatory Options
+#### IsPriceListMandatory Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -4191,14 +4737,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsQuickCreateEnabledForOpportunityClose Options
+#### IsQuickCreateEnabledForOpportunityClose Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4214,14 +4760,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsReadAuditEnabled Options
+#### IsReadAuditEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4237,14 +4783,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsRelationshipInsightsEnabled Options
+#### IsRelationshipInsightsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4261,14 +4807,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsResourceBookingExchangeSyncEnabled Options
+#### IsResourceBookingExchangeSyncEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4284,14 +4830,64 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsRichTextNotesEnabled Options
+#### IsRichTextNotesEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsRpaAutoscaleEnabled"></a> IsRpaAutoscaleEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Autoscale feature for RPA is enabled in this organization.|
+|DisplayName|Enable RPA Autoscale feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaautoscaleenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaAutoscaleEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_IsRpaUnattendedEnabled"></a> IsRpaUnattendedEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Unattended runs feature for RPA is enabled in this organization.|
+|DisplayName|Enable RPA Unattended feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaunattendedenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaUnattendedEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
 
 
 
@@ -4307,14 +4903,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsSalesAssistantEnabled Options
+#### IsSalesAssistantEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsSharingInOrgAllowed"></a> IsSharingInOrgAllowed
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|IsSharingInOrgAllowed|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|issharinginorgallowed|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsSharingInOrgAllowed Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -4330,14 +4951,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsSOPIntegrationEnabled Options
+#### IsSOPIntegrationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4353,14 +4974,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsTextWrapEnabled Options
+#### IsTextWrapEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -4376,14 +4997,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsUserAccessAuditEnabled Options
+#### IsUserAccessAuditEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4399,18 +5020,18 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ISVIntegrationCode Options
+#### ISVIntegrationCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Web|
-|2|Outlook Workstation Client|
-|3|Web; Outlook Workstation Client|
-|4|Outlook Laptop Client|
-|5|Web; Outlook Laptop Client|
-|6|Outlook|
-|7|All|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Web||
+|2|Outlook Workstation Client||
+|3|Web; Outlook Workstation Client||
+|4|Outlook Laptop Client||
+|5|Web; Outlook Laptop Client||
+|6|Outlook||
+|7|All||
 
 
 
@@ -4426,14 +5047,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsWriteInProductsAllowed Options
+#### IsWriteInProductsAllowed Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -4534,6 +5155,42 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Integer|
 
 
+### <a name="BKMK_LookupCharacterCountBeforeResolve"></a> LookupCharacterCountBeforeResolve
+
+**Added by**: UnifiedClientLookupExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Minimum number of characters that should be entered in the lookup control before resolving for suggestions|
+|DisplayName|Minimum number of characters before resolving suggestions in lookup|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lookupcharactercountbeforeresolve|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_LookupResolveDelayMS"></a> LookupResolveDelayMS
+
+**Added by**: UnifiedClientLookupExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Minimum delay (in milliseconds) between consecutive inputs in a lookup control that will trigger a search for suggestions|
+|DisplayName|Minimum delay (in milliseconds) for debouncing lookup control input|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lookupresolvedelayms|
+|MaxValue|2147483647|
+|MinValue|250|
+|RequiredLevel|None|
+|Type|Integer|
+
+
 ### <a name="BKMK_MailboxIntermittentIssueMinRange"></a> MailboxIntermittentIssueMinRange
 
 |Property|Value|
@@ -4576,6 +5233,44 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|maxactionstepsinbpf|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
+### <a name="BKMK_MaxAllowedPendingRollupJobCount"></a> MaxAllowedPendingRollupJobCount
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum Allowed Pending Rollup Job Count|
+|DisplayName|MaxAllowedPendingRollupJobCount|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxallowedpendingrollupjobcount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
+### <a name="BKMK_MaxAllowedPendingRollupJobPercentage"></a> MaxAllowedPendingRollupJobPercentage
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Percentage Of Entity Table Size For Kicking Off Bootstrap Job|
+|DisplayName|MaxAllowedPendingRollupJobPercentage|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxallowedpendingrollupjobpercentage|
 |MaxValue|100|
 |MinValue|0|
 |RequiredLevel|SystemRequired|
@@ -4774,6 +5469,44 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Integer|
 
 
+### <a name="BKMK_MaxRollupFieldsPerEntity"></a> MaxRollupFieldsPerEntity
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum Rollup Fields Per Entity|
+|DisplayName|MaxRollupFieldsPerEntity|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxrollupfieldsperentity|
+|MaxValue|50|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
+### <a name="BKMK_MaxRollupFieldsPerOrg"></a> MaxRollupFieldsPerOrg
+
+**Added by**: RollupFields Extension Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum Rollup Fields Per Organization|
+|DisplayName|MaxRollupFieldsPerOrg|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxrollupfieldsperorg|
+|MaxValue|500|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_MaxSLAItemsPerSLA"></a> MaxSLAItemsPerSLA
 
 **Added by**: Service Level Agreement (SLA) Solution
@@ -4888,6 +5621,31 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Integer|
 
 
+### <a name="BKMK_ModernAdvancedFindFiltering"></a> ModernAdvancedFindFiltering
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the modern advanced find filtering on all tables in a model-driven app is enabled|
+|DisplayName|Modern advanced find filtering|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modernadvancedfindfiltering|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ModernAdvancedFindFiltering Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -4933,15 +5691,15 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### NegativeFormatCode Options
+#### NegativeFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Brackets|
-|1|Dash|
-|2|Dash plus Space|
-|3|Trailing Dash|
-|4|Space plus Trailing Dash|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Brackets||
+|1|Dash||
+|2|Dash plus Space||
+|3|Trailing Dash||
+|4|Space plus Trailing Dash||
 
 
 
@@ -4959,14 +5717,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### NewSearchExperienceEnabled Options
+#### NewSearchExperienceEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -4998,14 +5756,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### NotifyMailboxOwnerOfEmailServerLevelAlerts Options
+#### NotifyMailboxOwnerOfEmailServerLevelAlerts Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -5069,14 +5827,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### OfficeAppsAutoDeploymentEnabled Options
+#### OfficeAppsAutoDeploymentEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5108,14 +5866,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### OOBPriceCalculationEnabled Options
+#### OOBPriceCalculationEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -5163,14 +5921,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### OrgInsightsEnabled Options
+#### OrgInsightsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5186,14 +5944,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### PaiPreviewScenarioEnabled Options
+#### PaiPreviewScenarioEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -5211,6 +5969,24 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MinValue|1|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_PcfDatasetGridEnabled"></a> PcfDatasetGridEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Leave empty to use default setting. Set to on/off to enable/disable replacement of default grids with modern ones in model-driven apps.|
+|DisplayName|Enable modern grids in model-driven apps|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|pcfdatasetgridenabled|
+|MaxLength|16|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Picture"></a> Picture
@@ -5258,13 +6034,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### PluginTraceLogSetting Options
+#### PluginTraceLogSetting Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Off|
-|1|Exception|
-|2|All|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Off||
+|1|Exception||
+|2|All||
 
 
 
@@ -5312,14 +6088,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### PowerBiFeatureEnabled Options
+#### PowerBiFeatureEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Enable|
-|0|Disable|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Enable||
+|0|Disable||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5333,7 +6109,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|pricingdecimalprecision|
-|MaxValue|4|
+|MaxValue|10|
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
@@ -5409,14 +6185,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### ProductRecommendationsEnabled Options
+#### ProductRecommendationsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5436,6 +6212,31 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_QuickActionToOpenRecordsInSidePaneEnabled"></a> QuickActionToOpenRecordsInSidePaneEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Flag to indicate if the feature to use quick action to open records in search side pane is enabled|
+|DisplayName|Enable quick actions to open records in search side pane|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|quickactiontoopenrecordsinsidepaneenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### QuickActionToOpenRecordsInSidePaneEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_QuickFindRecordLimitEnabled"></a> QuickFindRecordLimitEnabled
 
 |Property|Value|
@@ -5448,14 +6249,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### QuickFindRecordLimitEnabled Options
+#### QuickFindRecordLimitEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -5473,6 +6274,31 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MaxLength|20|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_RecalculateSLA"></a> RecalculateSLA
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether SLA Recalculation has been enabled for the organization|
+|DisplayName|Indicates whether SLA Recalculation has been enabled for the organization|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|recalculatesla|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### RecalculateSLA Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_RecurrenceDefaultNumberOfOccurrences"></a> RecurrenceDefaultNumberOfOccurrences
@@ -5555,6 +6381,66 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_ReleaseWaveName"></a> ReleaseWaveName
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Release Wave Applied to Environment.|
+|DisplayName|Release Wave|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|releasewavename|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_RelevanceSearchEnabledByPlatform"></a> RelevanceSearchEnabledByPlatform
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether relevance search was enabled for the environment as part of Dataverse's relevance search on-by-default sweep|
+|DisplayName|Relevance search enabled automatically by Dataverse|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|relevancesearchenabledbyplatform|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### RelevanceSearchEnabledByPlatform Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_RelevanceSearchModifiedOn"></a> RelevanceSearchModifiedOn
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|This setting contains the last modified date for relevance search setting that appears as a toggle in PPAC.|
+|DisplayName|RelevanceSearchModifiedOnDate|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|relevancesearchmodifiedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
 ### <a name="BKMK_RenderSecureIFrameForEmail"></a> RenderSecureIFrameForEmail
 
 |Property|Value|
@@ -5567,14 +6453,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### RenderSecureIFrameForEmail Options
+#### RenderSecureIFrameForEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5619,14 +6505,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### ReportScriptErrors Options
+#### ReportScriptErrors Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|No preference for sending an error report to Microsoft about Microsoft Dynamics 365|
-|1|Ask me for permission to send an error report to Microsoft|
-|2|Automatically send an error report to Microsoft without asking me for permission|
-|3|Never send an error report to Microsoft about Microsoft Dynamics 365|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|No preference for sending an error report to Microsoft about Microsoft Dynamics 365||
+|1|Ask me for permission to send an error report to Microsoft||
+|2|Automatically send an error report to Microsoft without asking me for permission||
+|3|Never send an error report to Microsoft about Microsoft Dynamics 365||
 
 
 
@@ -5642,14 +6528,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### RequireApprovalForQueueEmail Options
+#### RequireApprovalForQueueEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5665,14 +6551,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### RequireApprovalForUserEmail Options
+#### RequireApprovalForUserEmail Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5688,14 +6574,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### ResolveSimilarUnresolvedEmailAddress Options
+#### ResolveSimilarUnresolvedEmailAddress Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5711,14 +6597,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### RestrictStatusUpdate Options
+#### RestrictStatusUpdate Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5779,14 +6665,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### SendBulkEmailInUCI Options
+#### SendBulkEmailInUCI Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5802,14 +6688,39 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### ServeStaticResourcesFromAzureCDN Options
+#### ServeStaticResourcesFromAzureCDN Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_SessionRecordingEnabled"></a> SessionRecordingEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable the session recording feature to record user sessions in UCI|
+|DisplayName|Enable the session recording feature|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|sessionrecordingenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### SessionRecordingEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -5825,14 +6736,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### SessionTimeoutEnabled Options
+#### SessionTimeoutEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5880,12 +6791,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### SharePointDeploymentType Options
+#### SharePointDeploymentType Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Online|
-|1|On-Premises|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Online||
+|1|On-Premises||
 
 
 
@@ -5902,14 +6813,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### ShareToPreviousOwnerOnAssign Options
+#### ShareToPreviousOwnerOnAssign Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5925,14 +6836,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### ShowKBArticleDeprecationNotification Options
+#### ShowKBArticleDeprecationNotification Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -5948,14 +6859,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### ShowWeekNumber Options
+#### ShowWeekNumber Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6020,14 +6931,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### SocialInsightsEnabled Options
+#### SocialInsightsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6060,14 +6971,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### SocialInsightsTermsAccepted Options
+#### SocialInsightsTermsAccepted Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6128,14 +7039,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### SQMEnabled Options
+#### SQMEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6165,14 +7076,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### SuppressSLA Options
+#### SuppressSLA Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6220,14 +7131,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### SyncOptInSelection Options
+#### SyncOptInSelection Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Enable|
-|0|Disable|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Enable||
+|0|Disable||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6243,13 +7154,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### SyncOptInSelectionStatus Options
+#### SyncOptInSelectionStatus Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Processing|
-|2|Passed|
-|3|Failed|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Processing||
+|2|Passed||
+|3|Failed||
 
 
 
@@ -6310,15 +7221,34 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### TaskBasedFlowEnabled Options
+#### TaskBasedFlowEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_TelemetryInstrumentationKey"></a> TelemetryInstrumentationKey
+
+**Added by**: API messages extension solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Instrumentation key for Application Insights used to log plugins telemetry.|
+|DisplayName|Telemetry Instrumentation Key|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|telemetryinstrumentationkey|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_TextAnalyticsEnabled"></a> TextAnalyticsEnabled
@@ -6333,14 +7263,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### TextAnalyticsEnabled Options
+#### TextAnalyticsEnabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6356,10 +7286,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### TimeFormatCode Options
+#### TimeFormatCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 
@@ -6538,14 +7468,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UnresolveEmailAddressIfMultipleMatch Options
+#### UnresolveEmailAddressIfMultipleMatch Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6561,14 +7491,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### UseInbuiltRuleForDefaultPricelistSelection Options
+#### UseInbuiltRuleForDefaultPricelistSelection Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -6584,14 +7514,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UseLegacyRendering Options
+#### UseLegacyRendering Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6607,14 +7537,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UsePositionHierarchy Options
+#### UsePositionHierarchy Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6630,14 +7560,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UseQuickFindViewForGridSearch Options
+#### UseQuickFindViewForGridSearch Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6669,14 +7599,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UseReadForm Options
+#### UseReadForm Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6693,6 +7623,31 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_UserRatingEnabled"></a> UserRatingEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable the user rating feature to show the NSAT score and comment to maker|
+|DisplayName|Enable the user rating feature|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|userratingenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### UserRatingEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_UseSkypeProtocol"></a> UseSkypeProtocol
 
 |Property|Value|
@@ -6705,14 +7660,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### UseSkypeProtocol Options
+#### UseSkypeProtocol Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -6760,10 +7715,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
 
-#### WeekStartDayCode Options
+#### WeekStartDayCode Choices/Options
 
-|Value|Label|
-|-----|-----|
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 
@@ -6831,14 +7786,14 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### YammerOAuthAccessTokenExpired Options
+#### YammerOAuthAccessTokenExpired Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -6855,12 +7810,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### YammerPostMethod Options
+#### YammerPostMethod Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Public|
-|1|Private|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Public||
+|1|Private||
 
 
 
@@ -6881,9 +7836,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only columns/attributes
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AcknowledgementTemplateIdName](#BKMK_AcknowledgementTemplateIdName)
 - [BaseCurrencyIdName](#BKMK_BaseCurrencyIdName)
@@ -6974,7 +7929,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|basecurrencyprecision|
-|MaxValue|4|
+|MaxValue|10|
 |MinValue|0|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
@@ -7271,14 +8226,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### FiscalSettingsUpdated Options
+#### FiscalSettingsUpdated Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -7294,14 +8249,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
 
-#### IsAllMoneyDecimal Options
+#### IsAllMoneyDecimal Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -7317,14 +8272,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### IsDisabled Options
+#### IsDisabled Choices/Options
 
-|Value|Label|
-|-----|-----|
-|1|Yes|
-|0|No|
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -7586,14 +8541,14 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|Picklist|
 
-#### OrganizationState Options
+#### OrganizationState Choices/Options
 
-|Value|Label|
-|-----|-----|
-|0|Creating|
-|1|Upgrading|
-|2|Updating|
-|3|Active|
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Creating||
+|1|Upgrading||
+|2|Updating||
+|3|Active||
 
 
 
@@ -7738,20 +8693,42 @@ Listed by **SchemaName**.
 - [organization_solutioncomponentconfiguration](#BKMK_organization_solutioncomponentconfiguration)
 - [organization_solutioncomponentrelationshipconfiguration](#BKMK_organization_solutioncomponentrelationshipconfiguration)
 - [organization_package](#BKMK_organization_package)
-- [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
-- [organization_territories](#BKMK_organization_territories)
-- [organization_msdyn_federatedarticleincident](#BKMK_organization_msdyn_federatedarticleincident)
+- [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 - [organization_catalog](#BKMK_organization_catalog)
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
+- [organization_sharedobject](#BKMK_organization_sharedobject)
+- [organization_sharedworkspace](#BKMK_organization_sharedworkspace)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
+- [organization_dataprocessingconfiguration](#BKMK_organization_dataprocessingconfiguration)
+- [organization_synapselinkexternaltablestate](#BKMK_organization_synapselinkexternaltablestate)
+- [organization_synapselinkprofile](#BKMK_organization_synapselinkprofile)
+- [organization_synapselinkprofileentity](#BKMK_organization_synapselinkprofileentity)
+- [organization_synapselinkprofileentitystate](#BKMK_organization_synapselinkprofileentitystate)
+- [organization_synapselinkschedule](#BKMK_organization_synapselinkschedule)
+- [organization_sharedlinksetting](#BKMK_organization_sharedlinksetting)
+- [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
+- [organization_msdyn_tour](#BKMK_organization_msdyn_tour)
+- [organization_territories](#BKMK_organization_territories)
+- [organization_msdyn_federatedarticleincident](#BKMK_organization_msdyn_federatedarticleincident)
+- [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
+- [organization_pluginpackage](#BKMK_organization_pluginpackage)
+- [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
+- [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
+- [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
+- [organization_organizationdatasyncstate](#BKMK_organization_organizationdatasyncstate)
+- [organization_userrating](#BKMK_organization_userrating)
+- [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
+- [organization_appaction](#BKMK_organization_appaction)
+- [organization_appactionmigration](#BKMK_organization_appactionmigration)
+- [organization_appactionrule](#BKMK_organization_appactionrule)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
 
-Same as principalobjectattributeaccess entity [lk_principalobjectattributeaccess_organizationid](principalobjectattributeaccess.md#BKMK_lk_principalobjectattributeaccess_organizationid) Many-To-One relationship.
+Same as the [lk_principalobjectattributeaccess_organizationid](principalobjectattributeaccess.md#BKMK_lk_principalobjectattributeaccess_organizationid) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7766,7 +8743,7 @@ Same as principalobjectattributeaccess entity [lk_principalobjectattributeaccess
 
 ### <a name="BKMK_organization_theme"></a> organization_theme
 
-Same as theme entity [organization_theme](theme.md#BKMK_organization_theme) Many-To-One relationship.
+Same as the [organization_theme](theme.md#BKMK_organization_theme) many-to-one relationship for the [theme](theme.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7781,7 +8758,7 @@ Same as theme entity [organization_theme](theme.md#BKMK_organization_theme) Many
 
 ### <a name="BKMK_organization_UserMapping"></a> organization_UserMapping
 
-Same as usermapping entity [organization_UserMapping](usermapping.md#BKMK_organization_UserMapping) Many-To-One relationship.
+Same as the [organization_UserMapping](usermapping.md#BKMK_organization_UserMapping) many-to-one relationship for the [usermapping](usermapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7796,7 +8773,7 @@ Same as usermapping entity [organization_UserMapping](usermapping.md#BKMK_organi
 
 ### <a name="BKMK_organization_metric"></a> organization_metric
 
-Same as metric entity [organization_metric](metric.md#BKMK_organization_metric) Many-To-One relationship.
+Same as the [organization_metric](metric.md#BKMK_organization_metric) many-to-one relationship for the [metric](metric.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7811,7 +8788,7 @@ Same as metric entity [organization_metric](metric.md#BKMK_organization_metric) 
 
 ### <a name="BKMK_organization_position"></a> organization_position
 
-Same as position entity [organization_position](position.md#BKMK_organization_position) Many-To-One relationship.
+Same as the [organization_position](position.md#BKMK_organization_position) many-to-one relationship for the [position](position.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7826,7 +8803,7 @@ Same as position entity [organization_position](position.md#BKMK_organization_po
 
 ### <a name="BKMK_organization_officegraphdocument"></a> organization_officegraphdocument
 
-Same as officegraphdocument entity [organization_officegraphdocument](officegraphdocument.md#BKMK_organization_officegraphdocument) Many-To-One relationship.
+Same as the [organization_officegraphdocument](officegraphdocument.md#BKMK_organization_officegraphdocument) many-to-one relationship for the [officegraphdocument](officegraphdocument.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7841,7 +8818,7 @@ Same as officegraphdocument entity [organization_officegraphdocument](officegrap
 
 ### <a name="BKMK_organization_recommendeddocument"></a> organization_recommendeddocument
 
-Same as recommendeddocument entity [organization_recommendeddocument](recommendeddocument.md#BKMK_organization_recommendeddocument) Many-To-One relationship.
+Same as the [organization_recommendeddocument](recommendeddocument.md#BKMK_organization_recommendeddocument) many-to-one relationship for the [recommendeddocument](recommendeddocument.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7856,7 +8833,7 @@ Same as recommendeddocument entity [organization_recommendeddocument](recommende
 
 ### <a name="BKMK_organization_KnowledgeBaseRecord"></a> organization_KnowledgeBaseRecord
 
-Same as knowledgebaserecord entity [organization_KnowledgeBaseRecord](knowledgebaserecord.md#BKMK_organization_KnowledgeBaseRecord) Many-To-One relationship.
+Same as the [organization_KnowledgeBaseRecord](knowledgebaserecord.md#BKMK_organization_KnowledgeBaseRecord) many-to-one relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7871,7 +8848,7 @@ Same as knowledgebaserecord entity [organization_KnowledgeBaseRecord](knowledgeb
 
 ### <a name="BKMK_organization_translationprocess"></a> organization_translationprocess
 
-Same as translationprocess entity [organization_translationprocess](translationprocess.md#BKMK_organization_translationprocess) Many-To-One relationship.
+Same as the [organization_translationprocess](translationprocess.md#BKMK_organization_translationprocess) many-to-one relationship for the [translationprocess](translationprocess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7886,7 +8863,7 @@ Same as translationprocess entity [organization_translationprocess](translationp
 
 ### <a name="BKMK_organization_navigationsetting"></a> organization_navigationsetting
 
-Same as navigationsetting entity [organization_navigationsetting](navigationsetting.md#BKMK_organization_navigationsetting) Many-To-One relationship.
+Same as the [organization_navigationsetting](navigationsetting.md#BKMK_organization_navigationsetting) many-to-one relationship for the [navigationsetting](navigationsetting.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7901,7 +8878,7 @@ Same as navigationsetting entity [organization_navigationsetting](navigationsett
 
 ### <a name="BKMK_organization_plugintype"></a> organization_plugintype
 
-Same as plugintype entity [organization_plugintype](plugintype.md#BKMK_organization_plugintype) Many-To-One relationship.
+Same as the [organization_plugintype](plugintype.md#BKMK_organization_plugintype) many-to-one relationship for the [plugintype](plugintype.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7916,7 +8893,7 @@ Same as plugintype entity [organization_plugintype](plugintype.md#BKMK_organizat
 
 ### <a name="BKMK_organization_business_unit_news_articles"></a> organization_business_unit_news_articles
 
-Same as businessunitnewsarticle entity [organization_business_unit_news_articles](businessunitnewsarticle.md#BKMK_organization_business_unit_news_articles) Many-To-One relationship.
+Same as the [organization_business_unit_news_articles](businessunitnewsarticle.md#BKMK_organization_business_unit_news_articles) many-to-one relationship for the [businessunitnewsarticle](businessunitnewsarticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7931,7 +8908,7 @@ Same as businessunitnewsarticle entity [organization_business_unit_news_articles
 
 ### <a name="BKMK_organization_saved_query_visualizations"></a> organization_saved_query_visualizations
 
-Same as savedqueryvisualization entity [organization_saved_query_visualizations](savedqueryvisualization.md#BKMK_organization_saved_query_visualizations) Many-To-One relationship.
+Same as the [organization_saved_query_visualizations](savedqueryvisualization.md#BKMK_organization_saved_query_visualizations) many-to-one relationship for the [savedqueryvisualization](savedqueryvisualization.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7946,7 +8923,7 @@ Same as savedqueryvisualization entity [organization_saved_query_visualizations]
 
 ### <a name="BKMK_customcontrolresource_organization"></a> customcontrolresource_organization
 
-Same as customcontrolresource entity [customcontrolresource_organization](customcontrolresource.md#BKMK_customcontrolresource_organization) Many-To-One relationship.
+Same as the [customcontrolresource_organization](customcontrolresource.md#BKMK_customcontrolresource_organization) many-to-one relationship for the [customcontrolresource](customcontrolresource.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7961,7 +8938,7 @@ Same as customcontrolresource entity [customcontrolresource_organization](custom
 
 ### <a name="BKMK_organization_post"></a> organization_post
 
-Same as post entity [organization_post](post.md#BKMK_organization_post) Many-To-One relationship.
+Same as the [organization_post](post.md#BKMK_organization_post) many-to-one relationship for the [post](post.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7976,7 +8953,7 @@ Same as post entity [organization_post](post.md#BKMK_organization_post) Many-To-
 
 ### <a name="BKMK_organization_PostComment"></a> organization_PostComment
 
-Same as postcomment entity [organization_PostComment](postcomment.md#BKMK_organization_PostComment) Many-To-One relationship.
+Same as the [organization_PostComment](postcomment.md#BKMK_organization_PostComment) many-to-one relationship for the [postcomment](postcomment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -7991,7 +8968,7 @@ Same as postcomment entity [organization_PostComment](postcomment.md#BKMK_organi
 
 ### <a name="BKMK_organization_postlike"></a> organization_postlike
 
-Same as postlike entity [organization_postlike](postlike.md#BKMK_organization_postlike) Many-To-One relationship.
+Same as the [organization_postlike](postlike.md#BKMK_organization_postlike) many-to-one relationship for the [postlike](postlike.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8006,7 +8983,7 @@ Same as postlike entity [organization_postlike](postlike.md#BKMK_organization_po
 
 ### <a name="BKMK_organization_importjob"></a> organization_importjob
 
-Same as importjob entity [organization_importjob](importjob.md#BKMK_organization_importjob) Many-To-One relationship.
+Same as the [organization_importjob](importjob.md#BKMK_organization_importjob) many-to-one relationship for the [importjob](importjob.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8021,7 +8998,7 @@ Same as importjob entity [organization_importjob](importjob.md#BKMK_organization
 
 ### <a name="BKMK_organization_queues"></a> organization_queues
 
-Same as queue entity [organization_queues](queue.md#BKMK_organization_queues) Many-To-One relationship.
+Same as the [organization_queues](queue.md#BKMK_organization_queues) many-to-one relationship for the [queue](queue.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8036,7 +9013,7 @@ Same as queue entity [organization_queues](queue.md#BKMK_organization_queues) Ma
 
 ### <a name="BKMK_organization_sdkmessageprocessingstepimage"></a> organization_sdkmessageprocessingstepimage
 
-Same as sdkmessageprocessingstepimage entity [organization_sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md#BKMK_organization_sdkmessageprocessingstepimage) Many-To-One relationship.
+Same as the [organization_sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md#BKMK_organization_sdkmessageprocessingstepimage) many-to-one relationship for the [sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8051,7 +9028,7 @@ Same as sdkmessageprocessingstepimage entity [organization_sdkmessageprocessings
 
 ### <a name="BKMK_organization_plugintypestatistic"></a> organization_plugintypestatistic
 
-Same as plugintypestatistic entity [organization_plugintypestatistic](plugintypestatistic.md#BKMK_organization_plugintypestatistic) Many-To-One relationship.
+Same as the [organization_plugintypestatistic](plugintypestatistic.md#BKMK_organization_plugintypestatistic) many-to-one relationship for the [plugintypestatistic](plugintypestatistic.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8066,7 +9043,7 @@ Same as plugintypestatistic entity [organization_plugintypestatistic](plugintype
 
 ### <a name="BKMK_MobileOfflineProfileItemAssociation_organization"></a> MobileOfflineProfileItemAssociation_organization
 
-Same as mobileofflineprofileitemassociation entity [MobileOfflineProfileItemAssociation_organization](mobileofflineprofileitemassociation.md#BKMK_MobileOfflineProfileItemAssociation_organization) Many-To-One relationship.
+Same as the [MobileOfflineProfileItemAssociation_organization](mobileofflineprofileitemassociation.md#BKMK_MobileOfflineProfileItemAssociation_organization) many-to-one relationship for the [mobileofflineprofileitemassociation](mobileofflineprofileitemassociation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8081,7 +9058,7 @@ Same as mobileofflineprofileitemassociation entity [MobileOfflineProfileItemAsso
 
 ### <a name="BKMK_organization_appmodule"></a> organization_appmodule
 
-Same as appmodule entity [organization_appmodule](appmodule.md#BKMK_organization_appmodule) Many-To-One relationship.
+Same as the [organization_appmodule](appmodule.md#BKMK_organization_appmodule) many-to-one relationship for the [appmodule](appmodule.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8096,7 +9073,7 @@ Same as appmodule entity [organization_appmodule](appmodule.md#BKMK_organization
 
 ### <a name="BKMK_organization_kb_articles"></a> organization_kb_articles
 
-Same as kbarticle entity [organization_kb_articles](kbarticle.md#BKMK_organization_kb_articles) Many-To-One relationship.
+Same as the [organization_kb_articles](kbarticle.md#BKMK_organization_kb_articles) many-to-one relationship for the [kbarticle](kbarticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8111,7 +9088,7 @@ Same as kbarticle entity [organization_kb_articles](kbarticle.md#BKMK_organizati
 
 ### <a name="BKMK_organization_systemforms"></a> organization_systemforms
 
-Same as systemform entity [organization_systemforms](systemform.md#BKMK_organization_systemforms) Many-To-One relationship.
+Same as the [organization_systemforms](systemform.md#BKMK_organization_systemforms) many-to-one relationship for the [systemform](systemform.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8126,7 +9103,7 @@ Same as systemform entity [organization_systemforms](systemform.md#BKMK_organiza
 
 ### <a name="BKMK_organization_appconfig"></a> organization_appconfig
 
-Same as appconfig entity [organization_appconfig](appconfig.md#BKMK_organization_appconfig) Many-To-One relationship.
+Same as the [organization_appconfig](appconfig.md#BKMK_organization_appconfig) many-to-one relationship for the [appconfig](appconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8141,7 +9118,7 @@ Same as appconfig entity [organization_appconfig](appconfig.md#BKMK_organization
 
 ### <a name="BKMK_organization_connection_roles"></a> organization_connection_roles
 
-Same as connectionrole entity [organization_connection_roles](connectionrole.md#BKMK_organization_connection_roles) Many-To-One relationship.
+Same as the [organization_connection_roles](connectionrole.md#BKMK_organization_connection_roles) many-to-one relationship for the [connectionrole](connectionrole.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8156,7 +9133,7 @@ Same as connectionrole entity [organization_connection_roles](connectionrole.md#
 
 ### <a name="BKMK_customcontrol_organization"></a> customcontrol_organization
 
-Same as customcontrol entity [customcontrol_organization](customcontrol.md#BKMK_customcontrol_organization) Many-To-One relationship.
+Same as the [customcontrol_organization](customcontrol.md#BKMK_customcontrol_organization) many-to-one relationship for the [customcontrol](customcontrol.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8171,7 +9148,7 @@ Same as customcontrol entity [customcontrol_organization](customcontrol.md#BKMK_
 
 ### <a name="BKMK_organization_subjects"></a> organization_subjects
 
-Same as subject entity [organization_subjects](subject.md#BKMK_organization_subjects) Many-To-One relationship.
+Same as the [organization_subjects](subject.md#BKMK_organization_subjects) many-to-one relationship for the [subject](subject.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8186,7 +9163,7 @@ Same as subject entity [organization_subjects](subject.md#BKMK_organization_subj
 
 ### <a name="BKMK_organization_calendars"></a> organization_calendars
 
-Same as calendar entity [organization_calendars](calendar.md#BKMK_organization_calendars) Many-To-One relationship.
+Same as the [organization_calendars](calendar.md#BKMK_organization_calendars) many-to-one relationship for the [calendar](calendar.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8201,7 +9178,7 @@ Same as calendar entity [organization_calendars](calendar.md#BKMK_organization_c
 
 ### <a name="BKMK_organization_publisher"></a> organization_publisher
 
-Same as publisher entity [organization_publisher](publisher.md#BKMK_organization_publisher) Many-To-One relationship.
+Same as the [organization_publisher](publisher.md#BKMK_organization_publisher) many-to-one relationship for the [publisher](publisher.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8216,7 +9193,7 @@ Same as publisher entity [organization_publisher](publisher.md#BKMK_organization
 
 ### <a name="BKMK_organization_queueitems"></a> organization_queueitems
 
-Same as queueitem entity [organization_queueitems](queueitem.md#BKMK_organization_queueitems) Many-To-One relationship.
+Same as the [organization_queueitems](queueitem.md#BKMK_organization_queueitems) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8231,7 +9208,7 @@ Same as queueitem entity [organization_queueitems](queueitem.md#BKMK_organizatio
 
 ### <a name="BKMK_organization_teams"></a> organization_teams
 
-Same as team entity [organization_teams](team.md#BKMK_organization_teams) Many-To-One relationship.
+Same as the [organization_teams](team.md#BKMK_organization_teams) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8246,7 +9223,7 @@ Same as team entity [organization_teams](team.md#BKMK_organization_teams) Many-T
 
 ### <a name="BKMK_organization_entitydataprovider"></a> organization_entitydataprovider
 
-Same as entitydataprovider entity [organization_entitydataprovider](entitydataprovider.md#BKMK_organization_entitydataprovider) Many-To-One relationship.
+Same as the [organization_entitydataprovider](entitydataprovider.md#BKMK_organization_entitydataprovider) many-to-one relationship for the [entitydataprovider](entitydataprovider.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8261,7 +9238,7 @@ Same as entitydataprovider entity [organization_entitydataprovider](entitydatapr
 
 ### <a name="BKMK_webresource_organization"></a> webresource_organization
 
-Same as webresource entity [webresource_organization](webresource.md#BKMK_webresource_organization) Many-To-One relationship.
+Same as the [webresource_organization](webresource.md#BKMK_webresource_organization) many-to-one relationship for the [webresource](webresource.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8276,7 +9253,7 @@ Same as webresource entity [webresource_organization](webresource.md#BKMK_webres
 
 ### <a name="BKMK_MobileOfflineProfile_organization"></a> MobileOfflineProfile_organization
 
-Same as mobileofflineprofile entity [MobileOfflineProfile_organization](mobileofflineprofile.md#BKMK_MobileOfflineProfile_organization) Many-To-One relationship.
+Same as the [MobileOfflineProfile_organization](mobileofflineprofile.md#BKMK_MobileOfflineProfile_organization) many-to-one relationship for the [mobileofflineprofile](mobileofflineprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8291,7 +9268,7 @@ Same as mobileofflineprofile entity [MobileOfflineProfile_organization](mobileof
 
 ### <a name="BKMK_organization_transactioncurrencies"></a> organization_transactioncurrencies
 
-Same as transactioncurrency entity [organization_transactioncurrencies](transactioncurrency.md#BKMK_organization_transactioncurrencies) Many-To-One relationship.
+Same as the [organization_transactioncurrencies](transactioncurrency.md#BKMK_organization_transactioncurrencies) many-to-one relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8306,7 +9283,7 @@ Same as transactioncurrency entity [organization_transactioncurrencies](transact
 
 ### <a name="BKMK_organization_expiredprocess"></a> organization_expiredprocess
 
-Same as expiredprocess entity [organization_expiredprocess](expiredprocess.md#BKMK_organization_expiredprocess) Many-To-One relationship.
+Same as the [organization_expiredprocess](expiredprocess.md#BKMK_organization_expiredprocess) many-to-one relationship for the [expiredprocess](expiredprocess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8321,7 +9298,7 @@ Same as expiredprocess entity [organization_expiredprocess](expiredprocess.md#BK
 
 ### <a name="BKMK_organization_mailbox"></a> organization_mailbox
 
-Same as mailbox entity [organization_mailbox](mailbox.md#BKMK_organization_mailbox) Many-To-One relationship.
+Same as the [organization_mailbox](mailbox.md#BKMK_organization_mailbox) many-to-one relationship for the [mailbox](mailbox.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8336,7 +9313,7 @@ Same as mailbox entity [organization_mailbox](mailbox.md#BKMK_organization_mailb
 
 ### <a name="BKMK_lk_dataperformance_organizationid"></a> lk_dataperformance_organizationid
 
-Same as dataperformance entity [lk_dataperformance_organizationid](dataperformance.md#BKMK_lk_dataperformance_organizationid) Many-To-One relationship.
+Same as the [lk_dataperformance_organizationid](dataperformance.md#BKMK_lk_dataperformance_organizationid) many-to-one relationship for the [dataperformance](dataperformance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8351,7 +9328,7 @@ Same as dataperformance entity [lk_dataperformance_organizationid](dataperforman
 
 ### <a name="BKMK_MobileOfflineProfileItem_organization"></a> MobileOfflineProfileItem_organization
 
-Same as mobileofflineprofileitem entity [MobileOfflineProfileItem_organization](mobileofflineprofileitem.md#BKMK_MobileOfflineProfileItem_organization) Many-To-One relationship.
+Same as the [MobileOfflineProfileItem_organization](mobileofflineprofileitem.md#BKMK_MobileOfflineProfileItem_organization) many-to-one relationship for the [mobileofflineprofileitem](mobileofflineprofileitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8366,7 +9343,7 @@ Same as mobileofflineprofileitem entity [MobileOfflineProfileItem_organization](
 
 ### <a name="BKMK_organization_custom_displaystrings"></a> organization_custom_displaystrings
 
-Same as displaystring entity [organization_custom_displaystrings](displaystring.md#BKMK_organization_custom_displaystrings) Many-To-One relationship.
+Same as the [organization_custom_displaystrings](displaystring.md#BKMK_organization_custom_displaystrings) many-to-one relationship for the [displaystring](displaystring.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8381,7 +9358,7 @@ Same as displaystring entity [organization_custom_displaystrings](displaystring.
 
 ### <a name="BKMK_Organization_SyncErrors"></a> Organization_SyncErrors
 
-Same as syncerror entity [Organization_SyncErrors](syncerror.md#BKMK_Organization_SyncErrors) Many-To-One relationship.
+Same as the [Organization_SyncErrors](syncerror.md#BKMK_Organization_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8396,7 +9373,7 @@ Same as syncerror entity [Organization_SyncErrors](syncerror.md#BKMK_Organizatio
 
 ### <a name="BKMK_Organization_AsyncOperations"></a> Organization_AsyncOperations
 
-Same as asyncoperation entity [Organization_AsyncOperations](asyncoperation.md#BKMK_Organization_AsyncOperations) Many-To-One relationship.
+Same as the [Organization_AsyncOperations](asyncoperation.md#BKMK_Organization_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8411,7 +9388,7 @@ Same as asyncoperation entity [Organization_AsyncOperations](asyncoperation.md#B
 
 ### <a name="BKMK_customcontroldefaultconfig_organization"></a> customcontroldefaultconfig_organization
 
-Same as customcontroldefaultconfig entity [customcontroldefaultconfig_organization](customcontroldefaultconfig.md#BKMK_customcontroldefaultconfig_organization) Many-To-One relationship.
+Same as the [customcontroldefaultconfig_organization](customcontroldefaultconfig.md#BKMK_customcontroldefaultconfig_organization) many-to-one relationship for the [customcontroldefaultconfig](customcontroldefaultconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8426,7 +9403,7 @@ Same as customcontroldefaultconfig entity [customcontroldefaultconfig_organizati
 
 ### <a name="BKMK_organization_sitemap"></a> organization_sitemap
 
-Same as sitemap entity [organization_sitemap](sitemap.md#BKMK_organization_sitemap) Many-To-One relationship.
+Same as the [organization_sitemap](sitemap.md#BKMK_organization_sitemap) many-to-one relationship for the [sitemap](sitemap.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8441,7 +9418,7 @@ Same as sitemap entity [organization_sitemap](sitemap.md#BKMK_organization_sitem
 
 ### <a name="BKMK_Organization_MailboxTrackingFolder"></a> Organization_MailboxTrackingFolder
 
-Same as mailboxtrackingfolder entity [Organization_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Organization_MailboxTrackingFolder) Many-To-One relationship.
+Same as the [Organization_MailboxTrackingFolder](mailboxtrackingfolder.md#BKMK_Organization_MailboxTrackingFolder) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8456,7 +9433,7 @@ Same as mailboxtrackingfolder entity [Organization_MailboxTrackingFolder](mailbo
 
 ### <a name="BKMK_organization_emailserverprofile"></a> organization_emailserverprofile
 
-Same as emailserverprofile entity [organization_emailserverprofile](emailserverprofile.md#BKMK_organization_emailserverprofile) Many-To-One relationship.
+Same as the [organization_emailserverprofile](emailserverprofile.md#BKMK_organization_emailserverprofile) many-to-one relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8471,7 +9448,7 @@ Same as emailserverprofile entity [organization_emailserverprofile](emailserverp
 
 ### <a name="BKMK_organization_pluginassembly"></a> organization_pluginassembly
 
-Same as pluginassembly entity [organization_pluginassembly](pluginassembly.md#BKMK_organization_pluginassembly) Many-To-One relationship.
+Same as the [organization_pluginassembly](pluginassembly.md#BKMK_organization_pluginassembly) many-to-one relationship for the [pluginassembly](pluginassembly.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8486,7 +9463,7 @@ Same as pluginassembly entity [organization_pluginassembly](pluginassembly.md#BK
 
 ### <a name="BKMK_Organization_BulkDeleteFailures"></a> Organization_BulkDeleteFailures
 
-Same as bulkdeletefailure entity [Organization_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Organization_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Organization_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Organization_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8501,7 +9478,7 @@ Same as bulkdeletefailure entity [Organization_BulkDeleteFailures](bulkdeletefai
 
 ### <a name="BKMK_lk_fieldsecurityprofile_organizationid"></a> lk_fieldsecurityprofile_organizationid
 
-Same as fieldsecurityprofile entity [lk_fieldsecurityprofile_organizationid](fieldsecurityprofile.md#BKMK_lk_fieldsecurityprofile_organizationid) Many-To-One relationship.
+Same as the [lk_fieldsecurityprofile_organizationid](fieldsecurityprofile.md#BKMK_lk_fieldsecurityprofile_organizationid) many-to-one relationship for the [fieldsecurityprofile](fieldsecurityprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8516,7 +9493,7 @@ Same as fieldsecurityprofile entity [lk_fieldsecurityprofile_organizationid](fie
 
 ### <a name="BKMK_organization_sdkmessagefilter"></a> organization_sdkmessagefilter
 
-Same as sdkmessagefilter entity [organization_sdkmessagefilter](sdkmessagefilter.md#BKMK_organization_sdkmessagefilter) Many-To-One relationship.
+Same as the [organization_sdkmessagefilter](sdkmessagefilter.md#BKMK_organization_sdkmessagefilter) many-to-one relationship for the [sdkmessagefilter](sdkmessagefilter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8531,7 +9508,7 @@ Same as sdkmessagefilter entity [organization_sdkmessagefilter](sdkmessagefilter
 
 ### <a name="BKMK_organization_kb_article_templates"></a> organization_kb_article_templates
 
-Same as kbarticletemplate entity [organization_kb_article_templates](kbarticletemplate.md#BKMK_organization_kb_article_templates) Many-To-One relationship.
+Same as the [organization_kb_article_templates](kbarticletemplate.md#BKMK_organization_kb_article_templates) many-to-one relationship for the [kbarticletemplate](kbarticletemplate.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8546,7 +9523,7 @@ Same as kbarticletemplate entity [organization_kb_article_templates](kbarticlete
 
 ### <a name="BKMK_organization_roles"></a> organization_roles
 
-Same as role entity [organization_roles](role.md#BKMK_organization_roles) Many-To-One relationship.
+Same as the [organization_roles](role.md#BKMK_organization_roles) many-to-one relationship for the [role](role.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8561,7 +9538,7 @@ Same as role entity [organization_roles](role.md#BKMK_organization_roles) Many-T
 
 ### <a name="BKMK_organization_sdkmessageprocessingstepsecureconfig"></a> organization_sdkmessageprocessingstepsecureconfig
 
-Same as sdkmessageprocessingstepsecureconfig entity [organization_sdkmessageprocessingstepsecureconfig](sdkmessageprocessingstepsecureconfig.md#BKMK_organization_sdkmessageprocessingstepsecureconfig) Many-To-One relationship.
+Same as the [organization_sdkmessageprocessingstepsecureconfig](sdkmessageprocessingstepsecureconfig.md#BKMK_organization_sdkmessageprocessingstepsecureconfig) many-to-one relationship for the [sdkmessageprocessingstepsecureconfig](sdkmessageprocessingstepsecureconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8576,7 +9553,7 @@ Same as sdkmessageprocessingstepsecureconfig entity [organization_sdkmessageproc
 
 ### <a name="BKMK_organization_aciviewmapper"></a> organization_aciviewmapper
 
-Same as aciviewmapper entity [organization_aciviewmapper](aciviewmapper.md#BKMK_organization_aciviewmapper) Many-To-One relationship.
+Same as the [organization_aciviewmapper](aciviewmapper.md#BKMK_organization_aciviewmapper) many-to-one relationship for the [aciviewmapper](aciviewmapper.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8591,7 +9568,7 @@ Same as aciviewmapper entity [organization_aciviewmapper](aciviewmapper.md#BKMK_
 
 ### <a name="BKMK_organization_system_users"></a> organization_system_users
 
-Same as systemuser entity [organization_system_users](systemuser.md#BKMK_organization_system_users) Many-To-One relationship.
+Same as the [organization_system_users](systemuser.md#BKMK_organization_system_users) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8606,7 +9583,7 @@ Same as systemuser entity [organization_system_users](systemuser.md#BKMK_organiz
 
 ### <a name="BKMK_languagelocale_organization"></a> languagelocale_organization
 
-Same as languagelocale entity [languagelocale_organization](languagelocale.md#BKMK_languagelocale_organization) Many-To-One relationship.
+Same as the [languagelocale_organization](languagelocale.md#BKMK_languagelocale_organization) many-to-one relationship for the [languagelocale](languagelocale.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8621,7 +9598,7 @@ Same as languagelocale entity [languagelocale_organization](languagelocale.md#BK
 
 ### <a name="BKMK_organization_business_units"></a> organization_business_units
 
-Same as businessunit entity [organization_business_units](businessunit.md#BKMK_organization_business_units) Many-To-One relationship.
+Same as the [organization_business_units](businessunit.md#BKMK_organization_business_units) many-to-one relationship for the [businessunit](businessunit.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8636,7 +9613,7 @@ Same as businessunit entity [organization_business_units](businessunit.md#BKMK_o
 
 ### <a name="BKMK_organization_newprocess"></a> organization_newprocess
 
-Same as newprocess entity [organization_newprocess](newprocess.md#BKMK_organization_newprocess) Many-To-One relationship.
+Same as the [organization_newprocess](newprocess.md#BKMK_organization_newprocess) many-to-one relationship for the [newprocess](newprocess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8651,7 +9628,7 @@ Same as newprocess entity [organization_newprocess](newprocess.md#BKMK_organizat
 
 ### <a name="BKMK_organization_sdkmessageprocessingstep"></a> organization_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep entity [organization_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_organization_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [organization_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_organization_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8666,7 +9643,7 @@ Same as sdkmessageprocessingstep entity [organization_sdkmessageprocessingstep](
 
 ### <a name="BKMK_organization_appconfiginstance"></a> organization_appconfiginstance
 
-Same as appconfiginstance entity [organization_appconfiginstance](appconfiginstance.md#BKMK_organization_appconfiginstance) Many-To-One relationship.
+Same as the [organization_appconfiginstance](appconfiginstance.md#BKMK_organization_appconfiginstance) many-to-one relationship for the [appconfiginstance](appconfiginstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8681,7 +9658,7 @@ Same as appconfiginstance entity [organization_appconfiginstance](appconfiginsta
 
 ### <a name="BKMK_lk_documenttemplatebase_organization"></a> lk_documenttemplatebase_organization
 
-Same as documenttemplate entity [lk_documenttemplatebase_organization](documenttemplate.md#BKMK_lk_documenttemplatebase_organization) Many-To-One relationship.
+Same as the [lk_documenttemplatebase_organization](documenttemplate.md#BKMK_lk_documenttemplatebase_organization) many-to-one relationship for the [documenttemplate](documenttemplate.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8696,7 +9673,7 @@ Same as documenttemplate entity [lk_documenttemplatebase_organization](documentt
 
 ### <a name="BKMK_organization_serviceendpoint"></a> organization_serviceendpoint
 
-Same as serviceendpoint entity [organization_serviceendpoint](serviceendpoint.md#BKMK_organization_serviceendpoint) Many-To-One relationship.
+Same as the [organization_serviceendpoint](serviceendpoint.md#BKMK_organization_serviceendpoint) many-to-one relationship for the [serviceendpoint](serviceendpoint.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8711,7 +9688,7 @@ Same as serviceendpoint entity [organization_serviceendpoint](serviceendpoint.md
 
 ### <a name="BKMK_organization_sdkmessage"></a> organization_sdkmessage
 
-Same as sdkmessage entity [organization_sdkmessage](sdkmessage.md#BKMK_organization_sdkmessage) Many-To-One relationship.
+Same as the [organization_sdkmessage](sdkmessage.md#BKMK_organization_sdkmessage) many-to-one relationship for the [sdkmessage](sdkmessage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8726,7 +9703,7 @@ Same as sdkmessage entity [organization_sdkmessage](sdkmessage.md#BKMK_organizat
 
 ### <a name="BKMK_organization_appconfigmaster"></a> organization_appconfigmaster
 
-Same as appconfigmaster entity [organization_appconfigmaster](appconfigmaster.md#BKMK_organization_appconfigmaster) Many-To-One relationship.
+Same as the [organization_appconfigmaster](appconfigmaster.md#BKMK_organization_appconfigmaster) many-to-one relationship for the [appconfigmaster](appconfigmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8741,7 +9718,7 @@ Same as appconfigmaster entity [organization_appconfigmaster](appconfigmaster.md
 
 ### <a name="BKMK_organization_saved_queries"></a> organization_saved_queries
 
-Same as savedquery entity [organization_saved_queries](savedquery.md#BKMK_organization_saved_queries) Many-To-One relationship.
+Same as the [organization_saved_queries](savedquery.md#BKMK_organization_saved_queries) many-to-one relationship for the [savedquery](savedquery.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8756,7 +9733,7 @@ Same as savedquery entity [organization_saved_queries](savedquery.md#BKMK_organi
 
 ### <a name="BKMK_organization_tracelog"></a> organization_tracelog
 
-Same as tracelog entity [organization_tracelog](tracelog.md#BKMK_organization_tracelog) Many-To-One relationship.
+Same as the [organization_tracelog](tracelog.md#BKMK_organization_tracelog) many-to-one relationship for the [tracelog](tracelog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8771,7 +9748,7 @@ Same as tracelog entity [organization_tracelog](tracelog.md#BKMK_organization_tr
 
 ### <a name="BKMK_organization_solution"></a> organization_solution
 
-Same as solution entity [organization_solution](solution.md#BKMK_organization_solution) Many-To-One relationship.
+Same as the [organization_solution](solution.md#BKMK_organization_solution) many-to-one relationship for the [solution](solution.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8788,7 +9765,7 @@ Same as solution entity [organization_solution](solution.md#BKMK_organization_so
 
 **Added by**: Active Solution Solution
 
-Same as solutioncomponentattributeconfiguration entity [organization_solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md#BKMK_organization_solutioncomponentattributeconfiguration) Many-To-One relationship.
+Same as the [organization_solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md#BKMK_organization_solutioncomponentattributeconfiguration) many-to-one relationship for the [solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8805,7 +9782,7 @@ Same as solutioncomponentattributeconfiguration entity [organization_solutioncom
 
 **Added by**: Active Solution Solution
 
-Same as solutioncomponentconfiguration entity [organization_solutioncomponentconfiguration](solutioncomponentconfiguration.md#BKMK_organization_solutioncomponentconfiguration) Many-To-One relationship.
+Same as the [organization_solutioncomponentconfiguration](solutioncomponentconfiguration.md#BKMK_organization_solutioncomponentconfiguration) many-to-one relationship for the [solutioncomponentconfiguration](solutioncomponentconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8822,7 +9799,7 @@ Same as solutioncomponentconfiguration entity [organization_solutioncomponentcon
 
 **Added by**: Active Solution Solution
 
-Same as solutioncomponentrelationshipconfiguration entity [organization_solutioncomponentrelationshipconfiguration](solutioncomponentrelationshipconfiguration.md#BKMK_organization_solutioncomponentrelationshipconfiguration) Many-To-One relationship.
+Same as the [organization_solutioncomponentrelationshipconfiguration](solutioncomponentrelationshipconfiguration.md#BKMK_organization_solutioncomponentrelationshipconfiguration) many-to-one relationship for the [solutioncomponentrelationshipconfiguration](solutioncomponentrelationshipconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8839,7 +9816,7 @@ Same as solutioncomponentrelationshipconfiguration entity [organization_solution
 
 **Added by**: Active Solution Solution
 
-Same as package entity [organization_package](package.md#BKMK_organization_package) Many-To-One relationship.
+Same as the [organization_package](package.md#BKMK_organization_package) many-to-one relationship for the [package](package.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8852,62 +9829,28 @@ Same as package entity [organization_package](package.md#BKMK_organization_packa
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_msdyn_helppage"></a> organization_msdyn_helppage
+### <a name="BKMK_organization_relationshipattribute"></a> organization_relationshipattribute
 
-**Added by**: Active Solution Solution
+**Added by**: Metadata Extension Solution
 
-Same as msdyn_helppage entity [organization_msdyn_helppage](msdyn_helppage.md#BKMK_organization_msdyn_helppage) Many-To-One relationship.
+Same as the [organization_relationshipattribute](relationshipattribute.md#BKMK_organization_relationshipattribute) many-to-one relationship for the [relationshipattribute](relationshipattribute.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|msdyn_helppage|
+|ReferencingEntity|relationshipattribute|
 |ReferencingAttribute|organizationid|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_msdyn_helppage|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_territories"></a> organization_territories
-
-**Added by**: Application Common Solution
-
-Same as territory entity [organization_territories](territory.md#BKMK_organization_territories) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|territory|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_territories|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_msdyn_federatedarticleincident"></a> organization_msdyn_federatedarticleincident
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_federatedarticleincident entity [organization_msdyn_federatedarticleincident](msdyn_federatedarticleincident.md#BKMK_organization_msdyn_federatedarticleincident) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_federatedarticleincident|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_msdyn_federatedarticleincident|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|ReferencedEntityNavigationPropertyName|organization_relationshipattribute|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_organization_catalog"></a> organization_catalog
 
 **Added by**: Active Solution Solution
 
-Same as catalog entity [organization_catalog](catalog.md#BKMK_organization_catalog) Many-To-One relationship.
+Same as the [organization_catalog](catalog.md#BKMK_organization_catalog) many-to-one relationship for the [catalog](catalog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8924,7 +9867,7 @@ Same as catalog entity [organization_catalog](catalog.md#BKMK_organization_catal
 
 **Added by**: Active Solution Solution
 
-Same as catalogassignment entity [organization_catalogassignment](catalogassignment.md#BKMK_organization_catalogassignment) Many-To-One relationship.
+Same as the [organization_catalogassignment](catalogassignment.md#BKMK_organization_catalogassignment) many-to-one relationship for the [catalogassignment](catalogassignment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8937,11 +9880,45 @@ Same as catalogassignment entity [organization_catalogassignment](catalogassignm
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_sharedobject"></a> organization_sharedobject
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedobject](sharedobject.md#BKMK_organization_sharedobject) many-to-one relationship for the [sharedobject](sharedobject.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedobject|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedobject|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_sharedworkspace"></a> organization_sharedworkspace
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedworkspace](sharedworkspace.md#BKMK_organization_sharedworkspace) many-to-one relationship for the [sharedworkspace](sharedworkspace.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedworkspace|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedworkspace|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
 
 **Added by**: Advanced Analytics Infrastructure Solution
 
-Same as entityanalyticsconfig entity [organization_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_organization_entityanalyticsconfig) Many-To-One relationship.
+Same as the [organization_entityanalyticsconfig](entityanalyticsconfig.md#BKMK_organization_entityanalyticsconfig) many-to-one relationship for the [entityanalyticsconfig](entityanalyticsconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8958,7 +9935,7 @@ Same as entityanalyticsconfig entity [organization_entityanalyticsconfig](entity
 
 **Added by**: Active Solution Solution
 
-Same as datalakeworkspace entity [organization_datalakeworkspace](datalakeworkspace.md#BKMK_organization_datalakeworkspace) Many-To-One relationship.
+Same as the [organization_datalakeworkspace](datalakeworkspace.md#BKMK_organization_datalakeworkspace) many-to-one relationship for the [datalakeworkspace](datalakeworkspace.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8975,7 +9952,7 @@ Same as datalakeworkspace entity [organization_datalakeworkspace](datalakeworksp
 
 **Added by**: Active Solution Solution
 
-Same as datalakeworkspacepermission entity [organization_datalakeworkspacepermission](datalakeworkspacepermission.md#BKMK_organization_datalakeworkspacepermission) Many-To-One relationship.
+Same as the [organization_datalakeworkspacepermission](datalakeworkspacepermission.md#BKMK_organization_datalakeworkspacepermission) many-to-one relationship for the [datalakeworkspacepermission](datalakeworkspacepermission.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -8988,11 +9965,385 @@ Same as datalakeworkspacepermission entity [organization_datalakeworkspacepermis
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_dataprocessingconfiguration"></a> organization_dataprocessingconfiguration
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_dataprocessingconfiguration](dataprocessingconfiguration.md#BKMK_organization_dataprocessingconfiguration) many-to-one relationship for the [dataprocessingconfiguration](dataprocessingconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dataprocessingconfiguration|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_dataprocessingconfiguration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_synapselinkexternaltablestate"></a> organization_synapselinkexternaltablestate
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_synapselinkexternaltablestate](synapselinkexternaltablestate.md#BKMK_organization_synapselinkexternaltablestate) many-to-one relationship for the [synapselinkexternaltablestate](synapselinkexternaltablestate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|synapselinkexternaltablestate|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_synapselinkexternaltablestate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_synapselinkprofile"></a> organization_synapselinkprofile
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_synapselinkprofile](synapselinkprofile.md#BKMK_organization_synapselinkprofile) many-to-one relationship for the [synapselinkprofile](synapselinkprofile.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|synapselinkprofile|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_synapselinkprofile|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_synapselinkprofileentity"></a> organization_synapselinkprofileentity
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_synapselinkprofileentity](synapselinkprofileentity.md#BKMK_organization_synapselinkprofileentity) many-to-one relationship for the [synapselinkprofileentity](synapselinkprofileentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|synapselinkprofileentity|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_synapselinkprofileentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_synapselinkprofileentitystate"></a> organization_synapselinkprofileentitystate
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_synapselinkprofileentitystate](synapselinkprofileentitystate.md#BKMK_organization_synapselinkprofileentitystate) many-to-one relationship for the [synapselinkprofileentitystate](synapselinkprofileentitystate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|synapselinkprofileentitystate|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_synapselinkprofileentitystate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_synapselinkschedule"></a> organization_synapselinkschedule
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_synapselinkschedule](synapselinkschedule.md#BKMK_organization_synapselinkschedule) many-to-one relationship for the [synapselinkschedule](synapselinkschedule.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|synapselinkschedule|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_synapselinkschedule|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_sharedlinksetting"></a> organization_sharedlinksetting
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedlinksetting](sharedlinksetting.md#BKMK_organization_sharedlinksetting) many-to-one relationship for the [sharedlinksetting](sharedlinksetting.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedlinksetting|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedlinksetting|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_helppage"></a> organization_msdyn_helppage
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_helppage](msdyn_helppage.md#BKMK_organization_msdyn_helppage) many-to-one relationship for the [msdyn_helppage](msdyn_helppage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_helppage|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_helppage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_tour"></a> organization_msdyn_tour
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_tour](msdyn_tour.md#BKMK_organization_msdyn_tour) many-to-one relationship for the [msdyn_tour](msdyn_tour.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_tour|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_tour|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_territories"></a> organization_territories
+
+**Added by**: Application Common Solution
+
+Same as the [organization_territories](territory.md#BKMK_organization_territories) many-to-one relationship for the [territory](territory.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|territory|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_territories|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_federatedarticleincident"></a> organization_msdyn_federatedarticleincident
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_federatedarticleincident](msdyn_federatedarticleincident.md#BKMK_organization_msdyn_federatedarticleincident) many-to-one relationship for the [msdyn_federatedarticleincident](msdyn_federatedarticleincident.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_federatedarticleincident|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_federatedarticleincident|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_kmpersonalizationsetting"></a> organization_msdyn_kmpersonalizationsetting
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_kmpersonalizationsetting](msdyn_kmpersonalizationsetting.md#BKMK_organization_msdyn_kmpersonalizationsetting) many-to-one relationship for the [msdyn_kmpersonalizationsetting](msdyn_kmpersonalizationsetting.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_kmpersonalizationsetting|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_kmpersonalizationsetting|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_pluginpackage"></a> organization_pluginpackage
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_pluginpackage](pluginpackage.md#BKMK_organization_pluginpackage) many-to-one relationship for the [pluginpackage](pluginpackage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|pluginpackage|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_pluginpackage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_virtualentitymetadata"></a> organization_virtualentitymetadata
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_virtualentitymetadata](virtualentitymetadata.md#BKMK_organization_virtualentitymetadata) many-to-one relationship for the [virtualentitymetadata](virtualentitymetadata.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|virtualentitymetadata|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_virtualentitymetadata|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_organizationdatasyncsubscription"></a> organization_organizationdatasyncsubscription
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_organizationdatasyncsubscription](organizationdatasyncsubscription.md#BKMK_organization_organizationdatasyncsubscription) many-to-one relationship for the [organizationdatasyncsubscription](organizationdatasyncsubscription.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncsubscription|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_organizationdatasyncsubscription|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_organizationdatasyncsubscriptionentity"></a> organization_organizationdatasyncsubscriptionentity
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_organizationdatasyncsubscriptionentity](organizationdatasyncsubscriptionentity.md#BKMK_organization_organizationdatasyncsubscriptionentity) many-to-one relationship for the [organizationdatasyncsubscriptionentity](organizationdatasyncsubscriptionentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncsubscriptionentity|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_organizationdatasyncsubscriptionentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_organizationdatasyncstate"></a> organization_organizationdatasyncstate
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_organizationdatasyncstate](organizationdatasyncstate.md#BKMK_organization_organizationdatasyncstate) many-to-one relationship for the [organizationdatasyncstate](organizationdatasyncstate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncstate|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_organizationdatasyncstate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_userrating"></a> organization_userrating
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_userrating](userrating.md#BKMK_organization_userrating) many-to-one relationship for the [userrating](userrating.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|userrating|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_userrating|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_insightsstorevirtualentity"></a> organization_msdyn_insightsstorevirtualentity
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_insightsstorevirtualentity](msdyn_insightsstorevirtualentity.md#BKMK_organization_msdyn_insightsstorevirtualentity) many-to-one relationship for the [msdyn_insightsstorevirtualentity](msdyn_insightsstorevirtualentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_insightsstorevirtualentity|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_insightsstorevirtualentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_appaction"></a> organization_appaction
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_appaction](appaction.md#BKMK_organization_appaction) many-to-one relationship for the [appaction](appaction.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appaction|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_appaction|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_appactionmigration"></a> organization_appactionmigration
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_appactionmigration](appactionmigration.md#BKMK_organization_appactionmigration) many-to-one relationship for the [appactionmigration](appactionmigration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appactionmigration|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_appactionmigration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_appactionrule"></a> organization_appactionrule
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_appactionrule](appactionrule.md#BKMK_organization_appactionrule) many-to-one relationship for the [appactionrule](appactionrule.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appactionrule|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_appactionrule|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_msdyn_solutionhealthruleset"></a> organization_msdyn_solutionhealthruleset
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_solutionhealthruleset entity [organization_msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md#BKMK_organization_msdyn_solutionhealthruleset) Many-To-One relationship.
+Same as the [organization_msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md#BKMK_organization_msdyn_solutionhealthruleset) many-to-one relationship for the [msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -9008,7 +10359,7 @@ Same as msdyn_solutionhealthruleset entity [organization_msdyn_solutionhealthrul
 
 ## Many-To-One Relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
+Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_organizationbase_modifiedby](#BKMK_lk_organizationbase_modifiedby)
 - [lk_organization_createdonbehalfby](#BKMK_lk_organization_createdonbehalfby)
@@ -9023,42 +10374,42 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_organizationbase_modifiedby"></a> lk_organizationbase_modifiedby
 
-See systemuser Entity [lk_organizationbase_modifiedby](systemuser.md#BKMK_lk_organizationbase_modifiedby) One-To-Many relationship.
+See the [lk_organizationbase_modifiedby](systemuser.md#BKMK_lk_organizationbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organization_createdonbehalfby"></a> lk_organization_createdonbehalfby
 
-See systemuser Entity [lk_organization_createdonbehalfby](systemuser.md#BKMK_lk_organization_createdonbehalfby) One-To-Many relationship.
+See the [lk_organization_createdonbehalfby](systemuser.md#BKMK_lk_organization_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_EmailServerProfile_Organization"></a> EmailServerProfile_Organization
 
-See emailserverprofile Entity [EmailServerProfile_Organization](emailserverprofile.md#BKMK_EmailServerProfile_Organization) One-To-Many relationship.
+See the [EmailServerProfile_Organization](emailserverprofile.md#BKMK_EmailServerProfile_Organization) one-to-many relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 ### <a name="BKMK_DefaultMobileOfflineProfile_Organization"></a> DefaultMobileOfflineProfile_Organization
 
-See mobileofflineprofile Entity [DefaultMobileOfflineProfile_Organization](mobileofflineprofile.md#BKMK_DefaultMobileOfflineProfile_Organization) One-To-Many relationship.
+See the [DefaultMobileOfflineProfile_Organization](mobileofflineprofile.md#BKMK_DefaultMobileOfflineProfile_Organization) one-to-many relationship for the [mobileofflineprofile](mobileofflineprofile.md) table/entity.
 
 ### <a name="BKMK_lk_organizationbase_createdby"></a> lk_organizationbase_createdby
 
-See systemuser Entity [lk_organizationbase_createdby](systemuser.md#BKMK_lk_organizationbase_createdby) One-To-Many relationship.
+See the [lk_organizationbase_createdby](systemuser.md#BKMK_lk_organizationbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_basecurrency_organization"></a> basecurrency_organization
 
-See transactioncurrency Entity [basecurrency_organization](transactioncurrency.md#BKMK_basecurrency_organization) One-To-Many relationship.
+See the [basecurrency_organization](transactioncurrency.md#BKMK_basecurrency_organization) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_organization_modifiedonbehalfby"></a> lk_organization_modifiedonbehalfby
 
-See systemuser Entity [lk_organization_modifiedonbehalfby](systemuser.md#BKMK_lk_organization_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_organization_modifiedonbehalfby](systemuser.md#BKMK_lk_organization_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_calendar_organization"></a> calendar_organization
 
-See calendar Entity [calendar_organization](calendar.md#BKMK_calendar_organization) One-To-Many relationship.
+See the [calendar_organization](calendar.md#BKMK_calendar_organization) one-to-many relationship for the [calendar](calendar.md) table/entity.
 
 ### <a name="BKMK_Template_Organization"></a> Template_Organization
 
-See template Entity [Template_Organization](template.md#BKMK_Template_Organization) One-To-Many relationship.
+See the [Template_Organization](template.md#BKMK_Template_Organization) one-to-many relationship for the [template](template.md) table/entity.
 
 ### See also
 
-[About entity reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the table reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.organization?text=organization EntityType" />
