@@ -20,15 +20,14 @@ contributors:
 # Understand Power Apps Studio
 
 When you create a canvas app by using any method, you're taken to the canvas app
-builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
+builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app. 
 
 ## Overview of Power Apps Studio
 
 ![Screenshot of Power Apps Studio.](media/studio/pa-studio.png "Power Apps Studio")
 
-1. [Power Apps Studio options](#1--power-apps-studio-options) – options relevant to the settings in a Power Apps Studio session.
-
-1. [App actions](#2--app-actions) - options to rename, save, preview, or publish the app.
+1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar) – dynamic command bar that shows different set of commands based on the control that's selected.
+1. [App actions](#2--app-actions) - options to rename, share, run the app checker, add comments, preview, save, or publish the app.
 
 1. [Properties list](#3--properties-list) - list of properties for the selected object.
 
@@ -52,7 +51,7 @@ menu item for authoring the app.
 Let's understand each option in Power Apps Studio in detail.
 
 
-## 1 – Power Apps Studio options
+## 1 – Power Apps Studio modern command bar
 
 Power Apps Studio options are available on the menu in the upper-left corner. The
 options are relevant to the current session and app-related settings.
