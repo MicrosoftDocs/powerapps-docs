@@ -147,27 +147,27 @@ Here's a summary of each column in the report.
 | Plug-in or workflow activity  | [il-avoid-parallel-plugin](../../developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md?client=PAChecker&error=il-avoid-parallel-plugin)  | The usage of parallel patterns should be avoided within plug-ins.  |
 | Plug-in or workflow activity  | [il-avoid-lock-plugin](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=il-avoid-lock-plugin)  | Avoid lock of static members in plug-ins.  |
 | Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  |
-|Web Resources  | [use-async](./powerapps-checker-docs/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   |
-|Web Resources  | [avoid-modals](./powerapps-checker-docs/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   |
-|Web Resources  | [avoid-dom-form](./powerapps-checker-docs/rules/web/avoid-dom-form.md)  | |
-|Web Resources  | [avoid-dom-form-event](./powerapps-checker-docs/rules/web/avoid-dom-form-event.md)  | |
-|Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker-docs/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
-|Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker-docs/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
-|Web Resources  | [avoid-browser-specific-api](./powerapps-checker-docs/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
-|Web Resources  | [avoid-unpub-api](./powerapps-checker-docs/rules/web/avoid-unpub-api.md) |  |
-|Web Resources  | [avoid-window-top](./powerapps-checker-docs/rules/web/avoid-window-top.md) | |
-|Web Resources  | [avoid-2011-api](./powerapps-checker-docs/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/overview) documentation. |
-|Web Resources  | [use-relative-uri](./powerapps-checker-docs/rules/web/use-relative-uri.md)   | Don't use absolute Dataverse endpoint URLs.    |
-|Web Resources  | [use-cached-webresource](./powerapps-checker-docs/rules/web/use-cached-webresource.md)   |  |
-|Web Resources  | [use-client-context](./powerapps-checker-docs/rules/web/use-client-context.md)  | Use client contexts.   |
-|Web Resources  | [use-navigation-api](./powerapps-checker-docs/rules/web/use-navigation-api.md)   | Use navigation API parameters.   |
-|Web Resources  | [use-offline](./powerapps-checker-docs/rules/web/use-offline.md)   |  |
-|Web Resources  | [do-not-make-parent-assumption](./powerapps-checker-docs/rules/web/do-not-make-parent-assumption.md)   |  |
-|Web Resources  | [use-org-setting](./powerapps-checker-docs/rules/web/use-org-setting.md)   | Use organization settings.   |
-|Web Resources  | [use-global-context](./powerapps-checker-docs/rules/web/use-global-context.md)   |  |
-|Web Resources  | [use-grid-api](./powerapps-checker-docs/rules/web/use-grid-api.md)   | Use the grid APIs.    |
-|Web Resources  | [use-utility-dialogs](./powerapps-checker-docs/rules/web/use-utility-dialogs.md)   |    |
-|Web Resources  | [avoid-isActivityType](./powerapps-checker-docs/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    |
+|Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   |
+|Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   |
+|Web Resources  | [avoid-dom-form](./powerapps-checker/rules/web/avoid-dom-form.md)  | |
+|Web Resources  | [avoid-dom-form-event](./powerapps-checker/rules/web/avoid-dom-form-event.md)  | |
+|Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
+|Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
+|Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
+|Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  |
+|Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | |
+|Web Resources  | [avoid-2011-api](./powerapps-checker/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/overview) documentation. |
+|Web Resources  | [use-relative-uri](./powerapps-checker/rules/web/use-relative-uri.md)   | Don't use absolute Dataverse endpoint URLs.    |
+|Web Resources  | [use-cached-webresource](./powerapps-checker/rules/web/use-cached-webresource.md)   |  |
+|Web Resources  | [use-client-context](./powerapps-checker/rules/web/use-client-context.md)  | Use client contexts.   |
+|Web Resources  | [use-navigation-api](./powerapps-checker/rules/web/use-navigation-api.md)   | Use navigation API parameters.   |
+|Web Resources  | [use-offline](./powerapps-checker/rules/web/use-offline.md)   |  |
+|Web Resources  | [do-not-make-parent-assumption](./powerapps-checker/rules/web/do-not-make-parent-assumption.md)   |  |
+|Web Resources  | [use-org-setting](./powerapps-checker/rules/web/use-org-setting.md)   | Use organization settings.   |
+|Web Resources  | [use-global-context](./powerapps-checker/rules/web/use-global-context.md)   |  |
+|Web Resources  | [use-grid-api](./powerapps-checker/rules/web/use-grid-api.md)   | Use the grid APIs.    |
+|Web Resources  | [use-utility-dialogs](./powerapps-checker/rules/web/use-utility-dialogs.md)   |    |
+|Web Resources  | [avoid-isActivityType](./powerapps-checker/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    |
 |Web Resources  | [meta-avoid-silverlight](/power-platform/important-changes-coming?client=PAChecker&error=meta-avoid-silverlight&source=featuredocs)   | Silverlight web resource usage is deprecated.   |
 | Web Resources  | [web-remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | 
 | Web Resources  | [web-use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | 
