@@ -121,7 +121,7 @@ landingContent:
            url: create-solution.md
          - text: Export solutions
            url: export-solutions.md
-         - text: Validate solution
+         - text: Validate solutions
            url: use-powerapps-checker.md
          - text: More > 
            url: solution-layers.md
