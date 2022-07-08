@@ -1,0 +1,2 @@
+# `avoid-dom-form-event`
+Don't register or unregister handles to the Document Object Model (DOM) events of model-driven apps. This isn't a supported approach in Dynamics 365 or Power Apps. Please use the supported [Client-side event handlers](https://docs.microsoft.com/power-apps/developer/model-driven-apps/clientapi/reference/events) instead.
