@@ -146,7 +146,8 @@ In this article, you'll learn about configuring a WS-Federation provider for por
     1. Open the Portal Management app.
     1. Navigate to **Site Settings**.
     1. Update the site setting **Authentication/WsFederation/WSFederation_1/Wtrealm** with the auto-generated **APP ID URI**
-    :::image type="content" source="media/authentication/site-setting-wtrealm.png" alt-text="Configure site setting for the auto-generated URI.":::
+    
+        :::image type="content" source="media/authentication/site-setting-wtrealm.png" alt-text="Configure site setting for the auto-generated URI.":::
 
     1. Select **Save**
 
