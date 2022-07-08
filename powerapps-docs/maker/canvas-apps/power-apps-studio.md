@@ -8,14 +8,13 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 07/7/2022
 ms.subservice: canvas-maker
-ms.author: lanced
+ms.author: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - mduelae
-  - jessicaszelo
   
 ---
 # Understand Power Apps Studio
