@@ -25,7 +25,7 @@ builder called Power Apps Studio. You can use Power Apps Studio to design, build
 
 ## Overview of Power Apps Studio
 
-![Power Apps Studio.](media/studio/studio-power-apps.png "Power Apps Studio")
+![Screenshot of Power Apps Studio.](media/studio/pa-studio.png "Power Apps Studio")
 
 1. [Build hub](#1---build-hub) – select different pages in the Power Apps app.
 
