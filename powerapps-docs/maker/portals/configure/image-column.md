@@ -67,9 +67,6 @@ where:
 
 ### Example: Retrieve a default contact image
 
-> [!NOTE]
-> Make sure you have [set the appropriate permissions](#create-a-table-permission) on the contact table to read the record.
-
 ```xml
     {% fetchxml contacts %}
         <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
