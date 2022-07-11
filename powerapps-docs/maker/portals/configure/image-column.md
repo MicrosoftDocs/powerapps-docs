@@ -173,34 +173,3 @@ First, you must create a site setting to allow authenticated users to upload a p
 
     :::image type="content" source="media/image-column/add-setting-showimage.png" alt-text="Screenshot of the Profile/ShowImage site setting.":::
 
-#### Create a table permission
-
-Next, you must create a table permission to allow authenticated users to upload a profile picture:
-
-1. In the left pane, under **Security**, select **Table Permissions**, and then select **New**.
-
-    :::image type="content" source="media/image-column/add-table-permission.png" alt-text="Screenshot of the Active Table Permissions view, with New highlighted.":::
-
-1. Set the permission details as follows:
-
-    - Enter a meaningful name for the permission. In our example, we've entered "Contact Profile Update Permission."
-
-    - In the **Table Name** list, select **Contact (contact)**.
-
-    - In **Website**, search for and select the name of your portal.
-
-    - In the **Access Type** list, select **Self**.
-
-    - Under **Privileges**, select **Read**, **Write**, **Append**, and **Append To**.
-
-    :::image type="content" source="media/image-column/add-table-permission-details.png" alt-text="Screenshot of the details of a new table permission called Contact Profile Update Permission.":::
-
-1. Select **Save & Close**.
-
-1. In the **Active Table Permissions** view, select **Contact Profile Update Permission** (or whatever you named your new permission).
-
-1. In the **Web Roles** section, select **Add Existing Web Role**.
-
-1. Search for and select **Authenticated Users**, and then select **Add**.
-
-    :::image type="content" source="media/image-column/add-auth-users-web-role.png" alt-text="Screenshot that shows Authenticated Users selected as a web role.":::
