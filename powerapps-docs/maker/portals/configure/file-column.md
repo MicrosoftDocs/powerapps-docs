@@ -33,7 +33,7 @@ You must configure site settings **Control/EnableFilePreview** and set its value
 :::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enable file preview with value set to true.":::
 
 > [!IMPORTANT]
-> This site setting is required during preview period.
+> This site setting is required during the preview period.
 
 ## Liquid code
 
