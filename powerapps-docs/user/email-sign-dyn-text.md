@@ -21,27 +21,25 @@ search.app:
 
 
 
-# Insert dynamic text in email signatures
+# Insert dynamic text in email signature templates
 
-You can insert dynamic text in the in existing or newly created email signature templates. Dynamic text replaces a placeholder entity with the value of the entity in the **From** field when you send an email. 
+You can insert dynamic text in the existing or newly created email signature templates. When you add a signature template to an email, dynamic text replaces a placeholder entity with the corresponding value of the entity in the **From** field. 
 
 To insert dynamic text, perform the following steps: 
 
- 1. Create an email signature or select an existing email signature template.
+ 1. Create an email signature template or select an existing email signature template.
  2. Place your cursor in the **Signature editor** and select **Insert dynamic text**.
- 1. On  **Edit dynamic text**, specify the **Field name**. 
+ 1. On **Edit dynamic text**, specify the **Field name**. 
      > [!Note]
      > - The **Record type** for email signature templates is always **User**.
      > - You can only select fields that are linked to the **Record type**, User.
 
  ### Insert signature templates with dynamic text
 
-When you insert signature templates with dynamic text placeholders, the information displayed in the body of the email is based on the **From** field as follows:
+If you select **Insert Signature** when you composing an email, the application displays the user specific information corresponding to the placeholders configured in the default template as follows:
 
-- Users: 
-     -  The default signature template linked to the user is added to the email. User specific information corresponding to the dynamic placeholders configured in the default signature template is displayed.
-- Queues:
-     -  The default signature template linked to Queue's owner(user) is added to the email. User specific information corresponding to the dynamic placeholders configured in the default signature template is displayed. 
+- User: If the **From** field is set to user, the default signature template linked to the user is added.
+- Queue: If the **From** field is set to queue, the default signature template linked to the owner of queue(user) is added.
      
 > [!Note]
 > - If the Queues's owner is a team, the default signature template associated with the team's administrator is added to the email.
