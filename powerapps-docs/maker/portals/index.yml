@@ -32,7 +32,7 @@ landingContent:
           - text: Content Delivery Network (preview)
             url: configure/configure-cdn.md
           - text: Configure Dataverse search in portals
-            url: configure/search.md                                            
+            url: configure/search.md  
        - linkListType: reference
          links:
           - text: Latest released version of portals
