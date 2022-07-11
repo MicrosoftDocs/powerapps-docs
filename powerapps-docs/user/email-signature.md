@@ -24,8 +24,8 @@ search.app:
 
 Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company.
 
-## Addtext to an email signature
-Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static text or with dynamic text. Dynamic text replaces a placeholder entity with the corresponding value of the entity in the **From** field. 
+## Add text to an email signature
+Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static or dynamic text. Dynamic text replaces a placeholder entity with the corresponding value of the entity in the **From** field. 
 
 ### Add an email signature
 - On the command bar, select **Insert Signature**.  
