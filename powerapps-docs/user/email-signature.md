@@ -22,9 +22,9 @@ search.app:
 
 # Create a signature for emails
 
-Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company.  
+Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company. You can either insert email signatures with static text or dynamic text. More information: [Insert dynamic text in email signatures](email-sign-dyn-text.md)
 
-## Add an email signature
+## Add static text to an email signature
 Adding an email signature is easy and can be done at any point while you are composing an email.
 
 ### Add an email signature
