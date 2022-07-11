@@ -4,7 +4,7 @@ description: Learn how to configure a file column on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2022
+ms.date: 07/11/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -24,6 +24,7 @@ The file column is used for storing binary data. The primary intended use of thi
 > [!NOTE]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+> - This feature is available with portals website version [9.4.7.xx](/power-platform/released-versions/portals/portalupdate947x).
 
 ## Enable File control on form
 
@@ -70,9 +71,9 @@ Create a new file data type column in [Microsoft Dataverse](../../data-platform/
 
 {% for item in contacts.results.entities %}
         "Full Name":"{{ item.fullname }}"
-        "Entity Image Url":"{{ item.myfileattribute.Name }}",      
-        "Entity Image Size":"{{ item.myfileattribute.Size }}",
-        "Entity Image Type":"{{ item.myfileattribute.Url }}" 
+        "Entity File Url":"{{ item.myfileattribute.Name }}",      
+        "Entity File Size":"{{ item.myfileattribute.Size }}",
+        "Entity File Type":"{{ item.myfileattribute.Url }}" 
 {% endfor %}
 ```
 
