@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2021
+ms.date: 07/11/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -50,6 +50,9 @@ To convert your portal from trial to production:
 
     > [!div class=mx-imgBorder]
     > ![Trial to production confirmation.](../media/trial-to-prod-confirm.png "Trial to production confirmation")
+
+> [!NOTE]
+> Once the portal has been converted to production, you should ensure that the portal is appropriately licensed with page views and logins corresponding to the expected user volume. Not having appropriate licenses assigned can result in degraded performance.
 
 ## Convert an existing portal to capacity-based model
 
