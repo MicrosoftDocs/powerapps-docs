@@ -1,10 +1,10 @@
 ---
-title: Configure an image column on portals (preview)
+title: Configure an image column on portals 
 description: Learn how to configure an image column on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2022
+ms.date: 07/11/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -13,26 +13,9 @@ contributors:
     - nickdoelman
 ---
 
-# Configure an image column on portals (preview)
-
-[This topic is pre-release documentation and is subject to change.]
+# Configure an image column on portals 
 
 An image column stores an image file in a column in a Dataverse table. Add an image column to a form to upload, view, modify, and delete images. The form shows a thumbnail of the image if one is available.
-
-> [!NOTE]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
-## Prerequisites
-
-- **If you configure your site using the Portal Management app:** While the feature is in preview, you'll need to set the value of the site setting **Control/EnableImagePreview** to **true** to add image controls to a form.
-
-    :::image type="content" source="media/image-column/upload-image-preview.png" alt-text="Screenshot of the Control/EnableImagePreview site setting.":::
-
-    >[!IMPORTANT]
-    > This site setting is only required during the preview period.
-
-- **If you use [Liquid code](#liquid) or the [Web API](#web-api):** There's nothing more you need to do to add image controls to a form.
 
 ## Image URL
 
@@ -189,14 +172,6 @@ First, you must create a site setting to allow authenticated users to upload a p
 1. Create a setting called **Profile/ShowImage**, and set its value to **true**. (If the setting exists, set its value to **true**.)
 
     :::image type="content" source="media/image-column/add-setting-showimage.png" alt-text="Screenshot of the Profile/ShowImage site setting.":::
-
-While the feature is in preview, also add or update the following site settings:
-
-- Set **Webapi/contact/enabled** to **true**.
-
-- Set **Webapi/contact/fields** to **entityimage**.
-
-:::image type="content" source="media/image-column/add-settings-webapi.png" alt-text="Screenshot of the webapi site settings.":::
 
 #### Create a table permission
 

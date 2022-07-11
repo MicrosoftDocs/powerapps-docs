@@ -31,7 +31,7 @@ landingContent:
             url: configure/configure-cdn.md
           - text: Configure Dataverse search in portals
             url: configure/search.md  
-          - text: Configuring an image column on portals (preview)
+          - text: Configuring an image column on portals 
             url: configure/image-column.md                                              
        - linkListType: reference
          links:
