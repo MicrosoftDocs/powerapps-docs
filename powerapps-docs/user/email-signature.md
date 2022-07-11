@@ -32,7 +32,7 @@ Adding an email signature is easy and can be done at any point while you are com
 - From the drop-down list, select an existing signature or select **New Email Signature**.<BR>
 ![How to add an email signature.](media\email-how-to-add-an-email-signature-1a.png "How to add an email signature")
 
-Based on the value set in the **From** field, one of the following occurs:
+Based on the value specified in the **From** field of the email, one of the following actions occur:
 
 - User: The default email signature template linked to the user is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the user in the **From** field is displayed.
 - Queues: The default email signature template linked to owner of the queue(user) is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the queue's owner is displayed.
