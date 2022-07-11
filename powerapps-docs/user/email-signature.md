@@ -35,15 +35,15 @@ Adding an email signature is easy and can be done at any point while you are com
 Based on the value set in the **From** field, one of the following occurs:
 
 - User: The default email signature template linked to the user is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the user in the **From** field is displayed.
-- Queues: The default email signature template linked to owner of the queue is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the queue's owner is displayed.
+- Queues: The default email signature template linked to owner of the queue(user) is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the queue's owner is displayed.
 > [!Note]
 > - If the Queues's owner is a team, the default signature template associated with the team's administrator is added to the email.
 
-For example, let's say you are user John Doe. You create a email signature template with the following placeholder: {{!User:Full Name}}. This is the default email signature template assigned to you.
+For example, let's say you are user John Doe. You create a email signature template with the following dynamic placeholder: ``{{!User:Full Name}}``. This is the default email signature template assigned to you.
 
-When you're composing an email, if you specify your user name in the **From** field and you select **Insert signature**, the application displays John Doe in the body of the email.
+When you're composing an email, if you specify your user name in the **From** field and you select **Insert signature**, the application displays *John Doe* in the body of the email.
 
-You are also the owner of the Queue, Contoso Printer. If you specify your Contoso Printer in the **From** field of the email and select **Insert signature**, the application displays John Doe in the body of the email.
+You are also the owner of the queue, *Contoso Printer*. If you specify your Contoso Printer in the **From** field of the email and select **Insert signature**, the application displays *John Doe* in the body of the email.
 
 
 ## Create an email signature
