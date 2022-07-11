@@ -107,7 +107,7 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 2. Select **Unlink** from the command bar.
 
-3. To delete both the data lake file system as well as the Synapse Database, please type the link name to confirm.
+3. To delete both the data lake file system as well as the Synapse Database, type the link name to confirm.
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
 
