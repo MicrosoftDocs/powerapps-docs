@@ -1610,6 +1610,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+  - name: App ratings (preview)
+    href: ./common/app-ratings.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
@@ -1642,6 +1644,8 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+    - name: Offline profile guidelines
+      href: ../mobile/mobile-offline-guidelines.md   
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
