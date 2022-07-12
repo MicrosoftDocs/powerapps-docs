@@ -239,15 +239,14 @@ Takes you to the app settings. Also available using the shake gesture. Can't be 
 - **Clear cache** - resets the wrapped app to default settings.
 - **App settings** - shows a list of apps that are part of the current package. Selecting an app from this list shows the app details, including the connector information that the app might be configured to use.
 
-## Set-up KeyVault for automated signing
+## Set up KeyVault for automated signing
   
-Follow these these to configure KeyVault URI.
+Follow these steps to configure KeyVault URI:
   
- 
 1. Sign in to your tenent as an admin and [create an Azure service principal](/powershell/azure/create-azure-service-principal-azureps?view=azps-8.0.0#create-a-service-principal) for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 ( WrapKeyVaultAccessApp) 
   
 
-2. Make sure to add a role to the above service principal in the subscription where the KeyVault is going to exist. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
+2. Add a role to the service principal listed above in the subscription where the KeyVault is going to exist. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
 
 3. Use the following tags and values to create a KeyVault:
 
@@ -255,15 +254,15 @@ Follow these these to configure KeyVault URI.
 
     | <h4 id="tag-name">Tag Name</h4> | Tag Value | Notes |
     |-------------------------|-------------------------|-------------------------|
-    | &lt;BundleID&gt;.cert | Refer to the KeyVault certificate name to which the iOS certificate was uploaded. | <ul></br><li>IOS Certificate extension (p12) should be renamed to **.pfx** as KeyVault does not accept other formats.</li></br><li>Same iOS Certificate can be used by multiple bundle ID's.</li></br></ul> |
-    | &lt;BundleID&gt;.profile | Refer to the KeyVault secret name to which the **base64 encoded provisioning profile string** is added to. | <ul></br><li>Provisioning profiles are unique for each bundle id.</li></br><li>Command to base64 encode</li></br></ul></br>Mac: base64 -i example.mobileprovision</br>Windows: certutil -encode data.txt tmp.b64 |
+    | &lt;BundleID&gt;.cert | Refer to the KeyVault certificate name to which the iOS certificate was uploaded. | <ul><li>IOS Certificate extension (p12) should be renamed to **.pfx** as KeyVault does not accept other formats.</li><li>Same iOS Certificate can be used by multiple bundle ID's.</li></ul> |
+    | &lt;BundleID&gt;.profile | Refer to the KeyVault secret name to which the **base64 encoded provisioning profile string** is added to. | <ul><li>Provisioning profiles are unique for each bundle id.</li><li>Command to base64 encode: <br>**Mac**: base64 -i example.mobileprovision</br> **Windows**: certutil -encode data.txt tmp.b64</li>  |
 
 
      **KeyVault tag structure for Android**
 
     | Tag Name | Tag Value | Notes |
     |-------------------------|-------------------------|-------------------------|
-    | &lt;BundleID&gt;.keystore | Should refer to the KeyVault certificate name to which the .pfx keystore file is uploaded. | <ul></br><li>Command to create a .pfx keystore</li></br></ul></br>keytool -genkey -alias wrap -keyalg RSA -keystore wrapStore.pfx -keysize 2048 -validity 10000 -storepass Password | 
+    | &lt;BundleID&gt;.keystore | Refer to the KeyVault certificate name to which the .pfx keystore file is uploaded. | <ul><li>Command to create a .pfx keystore: <br> keytool -genkey -alias wrap -keyalg RSA -keystore wrapStore.pfx -keysize 2048 -validity 10000 -storepass Password</li></ul> | 
   
 ## Code signing
 
