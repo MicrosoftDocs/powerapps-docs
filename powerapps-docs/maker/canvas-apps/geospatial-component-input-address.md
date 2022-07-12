@@ -27,19 +27,14 @@ The control returns the address as structured data. Your app can extract informa
 
 Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites-for-full-support).
 
-
 ## Add an address input control to your app
 
 With your app open for [editing](./edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Input**.
-1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely.
+1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely. You must enter at least three characters including one number for the address input control.
 
 ## Set a default search radius
-=======
-
-
-
 
 By default, the control will search around the user's location. You can refine the default search area to help narrow the initial results.
 
@@ -73,11 +68,11 @@ You can add a button to your app to save entered addresses as a data collection.
 
 1. Select the map control. Change its properties as follows:
 
-  | Property name | Value | Where |
-  | - | - | - |
-  | Items | "Locations" | **Properties** tab |
-  | ItemsLatitudes | "Latitude" | **Advanced** tab |
-  | ItemsLongitudes | "Longitude" | **Advanced** tab |
+    | Property name | Value | Where |
+    | - | - | - |
+    | Items | "Locations" | **Properties** tab |
+    | ItemsLatitudes | "Latitude" | **Advanced** tab |
+    | ItemsLongitudes | "Longitude" | **Advanced** tab |
 
 When the user selects the button, the result from the address input control is added to the map as a new pin.
 
