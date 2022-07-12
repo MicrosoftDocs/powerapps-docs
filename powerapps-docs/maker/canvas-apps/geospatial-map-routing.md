@@ -65,7 +65,7 @@ In this example, we'll import waypoint data from an Excel table named *TestData*
 
 ### Bind the data source to a map control
 
-1. [Create a canvas app](./create-blank-app.md). Make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
+1. [Create a canvas app](./create-blank-app.md). Make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites-for-full-support).
 1. [Insert a map control](./geospatial-component-map.md).
 1. On the control's **Properties** tab, select the **Route waypoints(Items)** box and type *excel*.
 

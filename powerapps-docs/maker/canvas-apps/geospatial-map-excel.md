@@ -23,7 +23,7 @@ contributors:
 You can load a table that contains existing data into the map control. The control will then plot each row in your table as a map pin.
 
 ## Prerequisites
-1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
+1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites-for-full-support). 
 2. In your app, [insert a map](geospatial-component-map.md). 
 
 
