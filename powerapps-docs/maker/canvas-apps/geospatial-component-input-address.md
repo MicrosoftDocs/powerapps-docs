@@ -25,21 +25,16 @@ The control returns the address as structured data. Your app can extract informa
 
 ## Prerequisites
 
-Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
-
+Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites-for-full-support).
 
 ## Add an address input control to your app
 
 With your app open for [editing](./edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Input**.
-1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely.
+1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely. You must enter at least three characters including one number for the address input control.
 
 ## Set a default search radius
-=======
-
-
-
 
 By default, the control will search around the user's location. You can refine the default search area to help narrow the initial results.
 
@@ -52,17 +47,18 @@ The control will start searching at the given latitude and longitude, out to the
 
 You can add a button to your app to save entered addresses as a data collection. Then you can retrieve the addresses and display them in [the map control](geospatial-component-map.md).
 
-
 1. Add a map control and an address input control to your app.
+
 1. Insert and place a **Button** control.
+
 1. Change the **OnSelect** property of the button control as follows. (Hint: Copy the formula and paste it in the formula bar or on the **Advanced** properties tab, whichever you prefer.)
-=======
+
 1. Enter a longitude, latitude, and radius (in meters).
 
-The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
+    The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
 
 
-    ```json
+    ```powerapps-dot
     If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
     ```
 
@@ -72,11 +68,11 @@ The control will start searching at the latitude and longitude, out to the dista
 
 1. Select the map control. Change its properties as follows:
 
-  | Property name | Value | Where |
-  | - | - | - |
-  | Items | "Locations" | **Properties** tab |
-  | ItemsLatitudes | "Latitude" | **Advanced** tab |
-  | ItemsLongitudes | "Longitude" | **Advanced** tab |
+    | Property name | Value | Where |
+    | - | - | - |
+    | Items | "Locations" | **Properties** tab |
+    | ItemsLatitudes | "Latitude" | **Advanced** tab |
+    | ItemsLongitudes | "Longitude" | **Advanced** tab |
 
 When the user selects the button, the result from the address input control is added to the map as a new pin.
 
