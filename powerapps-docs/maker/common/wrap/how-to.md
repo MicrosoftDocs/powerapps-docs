@@ -248,7 +248,7 @@ Takes you to the app settings. Also available using the shake gesture. Can't be 
   
 **Prerequisites**
   
-- You'll need to have a ]Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
+- You'll need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios#create-an-ios-provisioning-profile) or enterprise provisioning profile.
 - Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
 - Admin access for your tenant.
