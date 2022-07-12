@@ -239,6 +239,12 @@ Takes you to the app settings. Also available using the shake gesture. Can't be 
 - **Clear cache** - resets the wrapped app to default settings.
 - **App settings** - shows a list of apps that are part of the current package. Selecting an app from this list shows the app details, including the connector information that the app might be configured to use.
 
+## Create KeyVault URI
+  
+Follow these these to configure KeyVault URI.
+  
+  
+  
 ## Code signing
 
 [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
