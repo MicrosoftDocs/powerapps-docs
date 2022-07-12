@@ -31,7 +31,7 @@ Easily add an interactive map to your canvas apps. Plot markers from a data sour
 
 ## Prerequisites
 
-You'll need to satisfy a few [prerequisites](geospatial-overview.md#prerequisites) before you can use maps in your canvas apps.
+You'll need to satisfy a few [prerequisites](geospatial-overview.md#prerequisites-for-full-support) before you can use maps in your canvas apps.
 
 ## Add a map to an app screen
 

@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2022
+ms.date: 06/21/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -44,7 +44,7 @@ The following properties are displayed when the Type selected is 'Attribute'.
 
 |          Name          |                                                                                                                                                    Description                                                                                                                                                     |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Attribute Logical Name |                                                                                                                              The logical name of the attribute field to be modified.                                                                                                                               |
+| Attribute Logical Name |                                                                                                                              The logical name of the attribute field to be modified.<br> **Note:** Columns of type *choice* will not appear on the drop-down list of columns. You can enter the logical name of the choice column directly in the **Attribute Logical Name** text box.                                                                                                                              |
 |         Label          | Replaces the default label assigned to the attribute on the table with the text specified in this input. For each language pack installed and enabled for the Microsoft Dataverse environment a field will be available to enter the message in the associated language. |
 
 ### Control style

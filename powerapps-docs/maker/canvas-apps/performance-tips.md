@@ -157,8 +157,8 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 [Understand canvas app execution phases and data call flow](execution-phases-data-flow.md) <br>
 [Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Common sources of slow performance for a canvas app](slow-performance-sources.md) <br>
-[Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
-[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
+[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
