@@ -35,11 +35,10 @@ Adding an email signature is easy and can be done at any point while you are com
 - From the drop-down list, select an existing signature or select **New Email Signature**.<BR>
 ![How to add an email signature.](media\email-how-to-add-an-email-signature-1a.png "How to add an email signature")
 
-Based on the value specified in the **From** field of the email, one of the following actions occur:
+Based on the email's sender specified in the **From** field, one of the following actions occur:
 
-- If the sender is a user, the dynamic placeholders defined in the email signature template is replaced with the values corresponding to the user in the **From** field.
-- If the sender is a queues, and the owner of the queue is a user, the dynamic placeholders defined in the email signature template is replaced with the values corresponding to the user. If the owner of the queue is a team, the the dynamic placeholders are replaced with the values corresponding to team's Administrator.
-
+- If the sender is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the user.
+- If the sender is a queue and the owner of the queue is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the queue's owner. If the owner of the queue is a team, the the dynamic placeholders are replaced with the values corresponding to the team's Administrator.
 
 
 ## Create an email signature
