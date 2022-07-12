@@ -223,7 +223,7 @@ Configure the **ValidateAccountName** plug-in using these settings:
     ![The registered image.](media/tutorial-update-plug-in-image-added.png)
 
 > [!IMPORTANT]
-> The default behavior when creating an entity image is to select all columns. However, this can result in a web service performance issue. Developers should only include those columns that are required.
+> The default behavior when creating an entity image is to select all columns. However, this can result in reduced web service performance. Developers should only include those columns that are required.
 
 ## Test the plug-in
 
