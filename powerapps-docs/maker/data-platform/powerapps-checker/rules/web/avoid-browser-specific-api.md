@@ -3,4 +3,4 @@
 Don't use Internet Explorer legacy APIs or browser plug-ins.
 
 ## Recommendation
-Examples of APIs you should not use include `XMLHTTP`,`XMLDOM`,and `DOMDocument`. 
+Examples of APIs you should not use include `XMLHTTP`, `XMLDOM`, and `DOMDocument`. 
