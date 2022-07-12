@@ -25,7 +25,10 @@ search.app:
 Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company.
 
 ## Add text to an email signature
-Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static or dynamic text. Dynamic text replaces a placeholder entity with the corresponding value of the entity in the **From** field. 
+Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static or dynamic text. Dynamic placeholders are used to define dynamic text. Dynamic text gets replaced  with the corresponding values of the sender specified in the **From** field of the email. 
+
+> [!Note] 
+> Inserting dynamic text in email signature templates is an early access feature.You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see Opt in to early access updates."
 
 ### Add an email signature
 - On the command bar, select **Insert Signature**.  
@@ -34,16 +37,9 @@ Adding an email signature is easy and can be done at any point while you are com
 
 Based on the value specified in the **From** field of the email, one of the following actions occur:
 
-- User: The default email signature template linked to the user is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the user in the **From** field is displayed.
-- Queues: The default email signature template linked to owner of the queue(user) is added to the email.  If the email signature template you choose has dynamic text, the values corresponding to the queue's owner is displayed.
-> [!Note]
-> - If the Queues's owner is a team, the default signature template associated with the team's administrator is added to the email.
+- If the sender is a user, the dynamic placeholders defined in the email signature template is replaced with the values corresponding to the user in the **From** field.
+- If the sender is a queues, and the owner of the queue is a user, the dynamic placeholders defined in the email signature template is replaced with the values corresponding to the user. If the owner of the queue is a team, the the dynamic placeholders are replaced with the values corresponding to team's Administrator.
 
-For example, let's say you are user John Doe. You create a email signature template with the following dynamic placeholder: ``{{!User:Full Name}}``. This is the default email signature template assigned to you.
-
-When you're composing an email, if you specify your user name in the **From** field and you select **Insert signature**, the application displays *John Doe* in the body of the email.
-
-You are also the owner of the queue, *Contoso Printer*. If you specify your Contoso Printer in the **From** field of the email and select **Insert signature**, the application displays *John Doe* in the body of the email.
 
 
 ## Create an email signature
@@ -60,7 +56,7 @@ You can add a new email signature by:
 
       > [!Note] 
       > - You can  include inline images, such as a business logo, in an email signatures, as long as they are under 1 MB in size.
-      > -  You can insert dynamic text in your signature templates. When you are inserting dynamic text, you can only add fields that are linked to the **Record type**, User.
+      > -  You can insert dynamic placeholders in your signature templates. You can only add fields that are linked to the **Record type**, User as dynamic placeholders.
       > - Signatures can also be created and used for queues.
       
 ## Manage email signature lists
