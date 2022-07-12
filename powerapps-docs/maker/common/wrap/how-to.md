@@ -246,14 +246,21 @@ Takes you to the app settings. Also available using the shake gesture. Can't be 
   
 ## Set up KeyVault for automated signing
   
+**Prerequisites**
+  
+- You'll need to have a ]Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
+- Create a [distribution certificate](code-sign-ios#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios#create-an-ios-provisioning-profile) or enterprise provisioning profile.
+- Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Admin access for your tenant.
+   
 Follow these steps to configure KeyVault URI:
   
 1. Sign in to your tenent as an admin and [create an Azure service principal](/powershell/azure/create-azure-service-principal-azureps?view=azps-8.0.0#create-a-service-principal) for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 ( WrapKeyVaultAccessApp) 
   
 
-2. Add a role to the service principal listed above in the subscription where the KeyVault is going to exist. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
+2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
 
-  **KeyVault tag structure for iOS**
+  **Key Vault tag structure for iOS**
 
   | <h4 id="tag-name">Tag Name</h4> | Tag Value | Notes |
   |-------------------------|-------------------------|-------------------------|
