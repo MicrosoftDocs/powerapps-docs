@@ -35,7 +35,7 @@ To achieve this, you replace the default studio template that's used as the page
 
 1. Select **New** to create a new web template record.
 
-1. Give the template a name (for example, **Home page template**), and select the **Website** you want to redirect users to when they sign in<!--note from editor: Edit okay?-->. Paste the content from the default studio template, and then select **Save**. 
+1. Give the template a name (for example, **Home page template**), and select the **Website** where you want to implement the redirect functionality. Paste the content from the default studio template, and then select **Save**. 
 
 ## Add JavaScript code
 
@@ -63,7 +63,7 @@ To achieve this, you replace the default studio template that's used as the page
 
 1. Select **New**, and then create a new page template record.
 
-1. Give the page template a name (for example, **Home page template**). Select the **Website**<!--note from editor: Will the reader know which website you mean?-->, choose the **Type** as **Web Template**, and select the **Web Template** you created in the previous step.
+1. Give the page template a name (for example, **Home page template**). Select the **Website** record where you want to have the functionality, choose the **Type** as **Web Template**, and select the **Web Template** you created in the previous step.
 
     :::image type="content" source="media/redirect-a-user/page-template.png" alt-text="Creating a new page template.":::
 
@@ -75,7 +75,7 @@ To achieve this, you replace the default studio template that's used as the page
 
     :::image type="content" source="media/redirect-a-user/update-home-page.png" alt-text="Update the home page.":::
 
-Now, when a user signs in, they'll be redirected to the page you specified in the JavaScript code in the updated web template.<!--note from editor: Edit okay? I wasn't sure what the "Navigate to the site" step was saying.-->
+Now, when a user signs in, they'll be redirected to the page you specified in the JavaScript code in the updated web template.
 
 ### See also
 
