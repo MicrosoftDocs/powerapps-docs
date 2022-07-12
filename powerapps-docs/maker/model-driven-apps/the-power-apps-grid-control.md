@@ -18,7 +18,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Power Apps read-only grid control
+# Power Apps grid control
 
 The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides other new capabilities including a modern data browsing experience via infinite scrolling, allowing users to scroll indefinitely through data until they find the records they are interested in, and an ability to customize the visual appearance of columns for specific needs. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
 
