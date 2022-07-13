@@ -2,13 +2,13 @@
 title: Power Apps webinars | Microsoft Docs
 description: Power Apps webinars
 author: KumarVivek
-manager: annbe
-
+manager: margoc
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/21/2021
+ms.date: 04/28/2022
 ms.author: kvivek
 ms.reviewer: kvivek
+ms.subservice: common
 searchScope:
   - "Power Apps"
 contributors:
@@ -141,6 +141,11 @@ by Charles Lamanna, Ryan Cunningham, Per Mikkelsen, Kartik Kanakasabesan, and Ap
 **Data visualization in Power Apps**  
 by Srihari Srinivasa  
 [Register and watch now](https://info.microsoft.com/ww-landing-datavisualization15minutes.html?lcid=en-us)
+
+**A More Flexible Way to Pay for Power Apps**  
+by Kavishi Agarwal and Shawn Nandi  
+[Register and watch now](https://info.microsoft.com/ww-ondemand-a-more-flexible-way-to-pay-for-power-apps.html?lcid=en-us)
+
 
 ### See also
 

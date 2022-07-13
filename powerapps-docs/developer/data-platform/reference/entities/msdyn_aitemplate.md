@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AITemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AITemplate table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -72,6 +72,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_DataBinding](#BKMK_msdyn_DataBinding)
 - [msdyn_defaultrunschedulingoptions](#BKMK_msdyn_defaultrunschedulingoptions)
 - [msdyn_IsTrainable](#BKMK_msdyn_IsTrainable)
+- [msdyn_ModelAction](#BKMK_msdyn_ModelAction)
 - [msdyn_ResourceInfo](#BKMK_msdyn_ResourceInfo)
 - [msdyn_RunConfigSchema](#BKMK_msdyn_RunConfigSchema)
 - [msdyn_RunDataSpecification](#BKMK_msdyn_RunDataSpecification)
@@ -205,6 +206,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_msdyn_ModelAction"></a> msdyn_ModelAction
+
+|Property|Value|
+|--------|-----|
+|Description|Model Action|
+|DisplayName|ModelAction|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_modelaction|
+|MaxLength|5000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_ResourceInfo"></a> msdyn_ResourceInfo

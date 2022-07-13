@@ -1,25 +1,22 @@
 ---
 title: "Use messages with the ExecuteCrmOrganizationRequest method (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to use messages with the ExecuteCrmOrganizationRequest method. The samples demonstrate how to execute CreateRequest and RetrieveMultipleRequest message using the CrmServiceClient.String) method."
-ms.custom: ""
-ms.date: 04/12/2021
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 1ba60f67-522d-4540-a6f9-0787d7074a79
-caps.latest.revision: 17
-author: "MattB-msft"
-ms.author: "kvivek"
-manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use messages with the ExecuteCrmOrganizationRequest method
   

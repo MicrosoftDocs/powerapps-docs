@@ -1,25 +1,18 @@
 ---
 title: "Sample: Calculate a credit score with a custom workflow activity (Microsoft Dataverse) | Microsoft Docs"
 description: "The sample demonstrates workflow activity calculates the credit score based on the Social Security Number (SSN) and name."
-ms.custom: ""
-ms.date: 1/28/2020
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: sample
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 9cb7eb41-1a73-44a8-ae58-14120e84243f
-caps.latest.revision: 19
-author: "JimDaly"
-ms.author: "jdaly"
-manager: "KumarVivek"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Sample: Calculate a credit score with a custom workflow activity
 

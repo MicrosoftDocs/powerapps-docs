@@ -1,0 +1,1 @@
+Provides information on what has changed in the `updateView` method. The information could be change in the property value, component or browser resize event.

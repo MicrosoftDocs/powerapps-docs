@@ -5,18 +5,22 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/21/2022
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Set up Power BI integration
 
 Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on webpages in a portal, you must enable Power BI visualization from the Power Apps portals admin center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
+
+> [!NOTE] 
+> You can also integrate Power BI with Power Pages. More information: [What is Power Pages](/power-pages/introduction).
 
 > [!NOTE]
 > - You must have an appropriate Power BI license.

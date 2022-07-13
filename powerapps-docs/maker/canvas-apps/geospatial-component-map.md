@@ -31,7 +31,7 @@ Easily add an interactive map to your canvas apps. Plot markers from a data sour
 
 ## Prerequisites
 
-You'll need to satisfy a few [prerequisites](geospatial-overview.md#prerequisites) before you can use maps in your canvas apps.
+You'll need to satisfy a few [prerequisites](geospatial-overview.md#prerequisites-for-full-support) before you can use maps in your canvas apps.
 
 ## Add a map to an app screen
 
@@ -131,6 +131,10 @@ Other properties become available when a user interacts with a map. You can use 
 To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+## Known limitations
+
+- Requires internet connection
 
 ### See also
 

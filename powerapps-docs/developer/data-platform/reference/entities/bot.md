@@ -1,7 +1,7 @@
 ---
 title: "Chatbot (bot)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot (bot)  table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -91,6 +91,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SchemaName](#BKMK_SchemaName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
+- [SynchronizationStatus](#BKMK_SynchronizationStatus)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
@@ -293,10 +294,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |-----|-----|--------|
 |1025|Arabic||
 |1028|Chinese (Traditional)||
+|1029|Czech||
 |1030|Danish||
 |1031|German||
+|1032|Greek||
 |1033|English||
 |1034|Spanish||
+|1035|Finnish||
 |1036|French||
 |1040|Italian||
 |1041|Japanese||
@@ -307,6 +311,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1046|Portuguese (Brazilian)||
 |1049|Russian||
 |1053|Swedish||
+|1054|Thai||
 |1055|Turkish||
 |1057|Indonesian||
 |1081|Hindi||
@@ -467,6 +472,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|ProvisionFailed|1|
 |5|MissingLicense|1|
 
+
+
+### <a name="BKMK_SynchronizationStatus"></a> SynchronizationStatus
+
+|Property|Value|
+|--------|-----|
+|Description|Used to store information about the synchronization operations of the bot|
+|DisplayName|SynchronizationStatus|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|synchronizationstatus|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber

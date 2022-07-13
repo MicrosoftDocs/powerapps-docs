@@ -1,7 +1,7 @@
 ---
 title: "flowmachine table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachine table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -70,6 +70,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ConnectivityConfiguration](#BKMK_ConnectivityConfiguration)
 - [Description](#BKMK_Description)
 - [FlowMachineGroupId](#BKMK_FlowMachineGroupId)
+- [HostedMachineError](#BKMK_HostedMachineError)
+- [HostedMachineState](#BKMK_HostedMachineState)
+- [HostingType](#BKMK_HostingType)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [MachineMetadata](#BKMK_MachineMetadata)
 - [name](#BKMK_name)
@@ -143,6 +146,65 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Targets|flowmachinegroup|
 |Type|Lookup|
+
+
+### <a name="BKMK_HostedMachineError"></a> HostedMachineError
+
+|Property|Value|
+|--------|-----|
+|Description|Hosted flow machine error.|
+|DisplayName|Hosted flow machine error.|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|hostedmachineerror|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_HostedMachineState"></a> HostedMachineState
+
+|Property|Value|
+|--------|-----|
+|Description|The state of the machine if it is hosted.|
+|DisplayName|Hosted Machine State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|hostedmachinestate|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+
+#### HostedMachineState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Disabled||
+|1|Enabled||
+|2|Error||
+
+
+
+### <a name="BKMK_HostingType"></a> HostingType
+
+|Property|Value|
+|--------|-----|
+|Description|Flow Machine Hosting Type.|
+|DisplayName|Flow Machine Hosting Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|hostingtype|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### HostingType Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Customer||
+|1|Hosted||
+
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber

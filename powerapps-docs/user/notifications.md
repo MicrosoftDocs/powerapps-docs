@@ -2,7 +2,7 @@
 title: "In-app notifications in model-driven apps | MicrosoftDocs"
 description: How notification work in model-driven apps.
 ms.custom: ""
-ms.date: 10/14/2021
+ms.date: 04/26/2022
 ms.reviewer: ""
 
 ms.subservice: end-user
@@ -17,15 +17,9 @@ search.app:
   - D365CE
 ---
 
-# In-app notifications in model-driven apps (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+# In-app notifications in model-driven apps
 
 In-app notifications allow you to receive notifications in the notification center of your model-driven app. Notifications are stored in the notification center until you dismiss them or when they expire. By default, notifications expire in 14 days but your system administrator can modify the expiration date.
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 You only see notifications when you're using an app. That's when the system runs a check and displays any new notification. Notifications are at the organization level so you'll see notifications in the app you're using for all apps in your environment.
 ## Notification center
@@ -45,7 +39,7 @@ You only see notifications when you're using an app. That's when the system runs
 
 ## Toast notifications
 
-Toast notifications appear temporarily to the left side of your app. When multiple notifications appear, they are stacked. When there's more than three toast notifications at the same time, you'll get a toast letting you know that there's more notifications.
+Toast notifications appear temporarily to the left side of your app. When multiple notifications appear, they are stacked. When there's more than three toast notifications at the same time, you'll get a toast letting you know that there's more notifications. You can use the F2 shortcut key to access the notification toasts.
 
 > [!div class="mx-imgBorder"] 
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  

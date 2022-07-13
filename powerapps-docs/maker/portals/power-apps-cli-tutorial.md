@@ -5,24 +5,26 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/29/2021
+ms.date: 07/13/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Tutorial: Use Microsoft Power Platform CLI with portals
 
 In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
-> [!NOTE]
-> This tutorial focuses on the required Microsoft Power Platform CLI commands for
+> [!NOTE] 
+> - You can also use Power Platform CLI with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+> - This tutorial focuses on the required Microsoft Power Platform CLI commands for
 Power Apps portals use. For more information about commands used in Power Platform
 CLI, read [Common
-commands](../../developer/data-platform/powerapps-cli.md#common-commands).
+commands](/power-platform/developer/cli/introduction#common-commands).
 
 ## Download and install Visual Studio Code
 
@@ -106,7 +108,9 @@ directly in Visual Studio Code.
 ## Step 5. Upload the changes
 
 > [!NOTE]
-> If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
+> - If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
+> - Ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment.
+> - The maximum size of files is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
 After making the required changes, upload them using the following command:
 
@@ -193,7 +197,7 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ## Next steps
 
-[Overview of portals support for Microsoft Power Platform CLI](power-apps-cli-tutorial.md)
+[Use the Visual Studio Code extension](vs-code-extension.md)
 
 ### See also
 

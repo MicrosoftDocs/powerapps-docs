@@ -2,17 +2,20 @@
 title: "Late-bound and early-bound programming using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the different programming styles available when using the .NET SDK assemblies with the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 05/27/2021
-ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "JimDaly" #TODO: NoOwner
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/03/2022
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Late-bound and early-bound programming using the Organization service
@@ -129,7 +132,7 @@ Which programming style you choose to use is up to you. The following table prov
 |You can verify entity, attribute, and relationship names at compile time|No compile time verification of entity, attribute, and relationship names|
 |You must generate entity classes|You don't need to generate entity classes|
 |Better IntelliSense support|Less IntelliSense support|
-|Less, more readable code| More, less readable code|
+|Less code to write; code is more readable| More code to write; code is less readable|
 |Very slightly less performant|Very slightly more performant|
 
 ## Mix early and late bound

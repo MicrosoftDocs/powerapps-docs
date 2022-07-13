@@ -1,22 +1,24 @@
 ---
-title: "destroy | MicrosoftDocs"
+title: "StandardControl.destroy | MicrosoftDocs"
 description: This method is invoked when the component is to be removed from the DOM tree. Use it for the cleanup and to release any memory that the component is using.
-ms.topic: "reference"
-applies_to: ""
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 
 ---
-# destroy
+# StandardControl.destroy
 
 [!INCLUDE[./includes/destroy-description.md](./includes/destroy-description.md)]
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Syntax
 

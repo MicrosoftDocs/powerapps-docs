@@ -27,7 +27,9 @@ Use the following prebuilt controls for geospatial applications:
 - [Interactive map](geospatial-component-map.md)
 - [Address input](geospatial-component-input-address.md)
 
-## Prerequisites
+The map control runs limited support by default, with some features available by default. Refer to the table at the bottom of the page for more details on data usage in limited support.
+
+## Prerequisites for full support
 
 Before you can use geospatial features in your apps, your Power Platform administrator has a couple of tasks to complete:
 
@@ -42,7 +44,7 @@ Before you can use geospatial features in your apps, your Power Platform adminis
 
 ### Enable geospatial features for the environment
 
-If you don't have administrative access to the Power Platform admin center, ask your admin to enable geospatial features for you.
+If you don't have administrative access to the Power Platform admin center, ask your admin to enable geospatial features for you. You can similarly follow these steps to disable geospatial features.
 
 1. Open the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. On the **Environments** tab, select the environment you want to use for your apps, and then select **Settings**.
@@ -53,7 +55,9 @@ If you don't have administrative access to the Power Platform admin center, ask 
 
     :::image type="content" source="./media/geospatial/ppac-settings.png" alt-text="A screenshot of the Power Platform admin center, with the environment Product Features setting selected.":::
 
-1. Turn on the **Geospatial services** toggle.
+1. Under **Map and address services**, turn on the **Full** toggle. You can use the toggles in this section to similarly turn on and off limited support as well.
+
+    :::image type="content" source="./media/geospatial/geo-admin-flag.png" alt-text="A screenshot of the Power Platform admin center, with the default Limited and Full support toggle settings in view. The Limited toggle is on and the Full toggle is off.":::
 1. Read the terms of service. Select **I agree to the terms of service**, and then select **Enable**.
 
     >[!IMPORTANT]
@@ -75,21 +79,20 @@ Your admin should confirm that the Microsoft Dataverse and Spatial Services conn
 
 ## Privacy and security considerations
 
-- Power Apps doesn’t link search queries to any user when shared with TomTom, and the shared search queries can’t be used to identify individuals.
+- Power Apps doesn’t link search queries to any user or tenant when shared with TomTom, and the shared search queries can’t be used to identify individuals or tenants.
 - Azure Maps doesn't store the request information sent by you. For more information about Azure Maps compliance, see [Azure global compliance](https://azure.microsoft.com/blog/new-azure-maps-make-identifying-local-compliance-options-easy/)
 - Requests sent between TomTom and Azure Maps are not exposed over the public Internet.
 - Requests sent between apps you create with the geospatial controls and Azure Maps are sent over HTTPS.
-- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom:
+- The following table describes the user data that Power Apps sends to Azure Maps, Bing Maps, and TomTom on full support:
 
-    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent |
-    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ |
-    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No |
-    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No |
-    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No |
-    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No |
-    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No |
-    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No |
-    
+    | Control | Feature | Data |  Purpose | Sent to Azure Maps | Sent to Bing Maps | Sent to TomTom | User identifiers or tracking data sent | Enabled in Full Support | Enabled in Limited Support |
+    | ------- | ------- | ---- | ------------------ | ----------------- | -------------- | ------- | ------ | ------ | ------ |
+    | Map | Show map tiles | Coordinates in and around the map view | To show the map tiles in the map view. | Yes | No | Yes | No | Yes | Yes |
+    | Map | Show pins and shapes from coordinates | Pin and shape coordinates | Feature does not require sending coordinate data. | No | No | No | No | Yes | Yes |
+    | Map | Show pins and route waypoints | Pins and route waypoint addresses | To translate addresses to latitude/longitude coordinates, and show them on the map. | No | Yes | Yes | No | Yes | No |
+    | Map | Show routes | Route waypoint coordinates | To calculate routes between waypoints. | Yes | No | Yes | No | Yes | No |
+    | Address Input | Address Search | Address search query string | To show address search results. | No | Yes | Yes | No | Yes | No |
+    | Address Input | Address Search | Current device location | To bias address search results around the device location. | No | Yes | Yes | No | Yes | No |
 
 ### Next steps
 

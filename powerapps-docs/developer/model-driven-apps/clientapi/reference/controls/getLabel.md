@@ -1,5 +1,5 @@
 ---
-title: "control.getLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+title: control.getLabel (Client API reference)
 description: Includes description and supported parameters for the control.getLabel method.
 ms.author: jdaly
 author: adrianorth

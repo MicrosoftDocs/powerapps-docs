@@ -2,9 +2,8 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 08/17/2021
+ms.date: 04/27/2022
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -21,12 +20,10 @@ search.app:
   - PowerApps
   - D365CE
 contributors:
-  - sama-zaki
+  - JasonHQX
 ---
 
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
-
-
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
 
@@ -51,7 +48,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > - The storage account and Synapse workspace must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
-> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
+> - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 
@@ -70,13 +67,13 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
     ![Connect to your workspace.](media/connect-to-workspace.png "Connect to your workspace")
 
     > [!NOTE]
-    > As part of linking the Dataverse environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+    > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
 5. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
 
     ![Add tables.](media/add-tables.png "Add tables")
 
-You can follow the steps above to create a link from one Dataverse environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple Dataverse environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
+You can follow the steps above to create a link from one environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
 
 > [!NOTE]
 > The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
@@ -108,9 +105,9 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 1. Select the desired Azure Synapse Link to unlink.
 
-2. Select **Unlink data lake** from the command bar.
+2. Select **Unlink** from the command bar.
 
-3. To delete both the data lake file system as well as the Synapse Database, select **Delete data lake file system**.
+3. To delete both the data lake file system as well as the Synapse Database, type the link name to confirm.
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
 
@@ -135,13 +132,26 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 6. Navigate to Power Apps, and relink the Synapse workspace and data lake.
 
-## View your data in Azure Synapse Analytics
+## Access near real-time data and read-only snapshot data (preview)
 
-1. Select the desired Azure Synapse Link and select the **Go to Azure Synapse Analytics workspace** from the top panel.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-2. Expand **Databases**, and then select dataverse-*environmentName*-*organizationUniqueName* and expand **Tables**.
+After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
 
-All of the exported Dataverse tables will be listed and available for analysis.
+- Near real-time data: Provides a copy of data synchronized from Dataverse via Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
+- Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
+
+> [!NOTE]
+> This is a preview feature.
+>
+> For empty table data, only near real-time data is created.
+
+1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
+1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.
+
+All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
+
+:::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
 
 ### What's next?
 
