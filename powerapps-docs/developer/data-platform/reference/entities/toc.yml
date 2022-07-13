@@ -280,6 +280,8 @@
   href: msdyn_componentlayer.md
 - name: msdyn_componentlayerdatasource
   href: msdyn_componentlayerdatasource.md
+- name: msdyn_customcontrolextendedsettings
+  href: msdyn_customcontrolextendedsettings.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
 - name: msdyn_dataflowrefreshhistory
@@ -564,6 +566,8 @@
   href: userquery.md
 - name: UserQueryVisualization
   href: userqueryvisualization.md
+- name: userrating
+  href: userrating.md
 - name: UserSettings
   href: usersettings.md
 - name: VirtualEntityMetadata
