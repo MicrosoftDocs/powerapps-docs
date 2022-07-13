@@ -42,7 +42,7 @@ Web files can be created, edited, and deleted within Power Apps portals.
 
 > [!WARNING]
 > - If you plan to [migrate your site](../admin/migrate-portal-configuration.md) to another environment, ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment. 
->- The maximum size of files that can be uploaded is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
+>- The maximum size of files is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
 ### Web file attributes
 
