@@ -143,8 +143,6 @@ A globally unique identity of the output mobile app. Follows a reverse domain na
 
 Code signing is the process of finalizing a mobile app prior to distribution to end users. An app that is code signed assures that it comes from a known source, and the app code hasn't changed since last time it was signed by the trusted source.
 
-For more information on code signing for Google Play Store (AAB), see [Sign your app](https://developer.android.com/studio/publish/app-signing).
-
 ### Primary app
 
 A primary app is the entry point or the home app for the mobile app experience when wrapping more than one canvas apps together. All additional apps are considered [secondary apps](#secondary-app). If only one canvas app is wrapped and built, it's also considered the primary app.
