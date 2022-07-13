@@ -1,22 +1,23 @@
 ---
-title: Work with Dataverse formula table columns | Microsoft Docs
-description: Explains how to create and use formula table columns in Dataverse.
+title: Work with Dataverse formula columns
+description: Learn how to create and use formula columns in Microsoft Dataverse.
 author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 06/23/2022
+ms.date: 07/13/2022
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
 contributors:
   - mattp123
 ---
+
 # Work with formula columns (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Formula columns are a data type in Microsoft Dataverse that are built on Power Fx. You can add a formula column to a table in real time. The table stores the logic and gives you the values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
+Formula columns are columns that display a calculated value in a Microsoft Dataverse table. Formulas use [Power Fx](/power-platform/power-fx/overview), a powerful but human-friendly programming language. Build a formula in a Dataverse formula column the same way you would build a formula in Microsoft Excel. As you type, Intellisense suggests functions and syntax, and even helps you fix errors.
 
 > [!NOTE]
 > Formula columns can be added as a calculated field. Currently, formula columns can't be used in roll-up fields or with plugins.
@@ -24,36 +25,47 @@ Formula columns are a data type in Microsoft Dataverse that are built on Power F
 ## Add a formula column
 
 1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Go to **Dataverse** > **Tables**, and then open the table where you want to add a formula column.
-1. Select the **Columns** area, and then select **New column**.
-1. In the **New column** pane:
-   - Enter a **Display name** for the column, such as *Total price*.
-   - Optionally, enter a **Description** for the column.
-   - Select **Fx Formula** as the **Data type**.
-   - Enter the formula in the **Formula** box. In this example, *Price* is a custom column with a decimal data type that is multiplied by the *Number of units*, a custom column with a whole number data type.  Select **Save**.
-   :::image type="content" source="media/create-formula-column-dataverse.png" alt-text="Create a formula column":::
+1. Select **Dataverse** > **Tables**, and then select the table where you want to add a formula column.
+1. In the **Columns** area, select **New column**.
+1. Enter a **Display name** for the column.
+1. Optionally, enter a **Description** of the column.
+1. In **Data type**, select ***fx* Formula**.
+1. Enter the formula in the **Formula** box.
+1. Select **Save**.
 
-When you create a record in a model-driven app, the formula column executes upon save and displays the data for the record in the column.
+The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
 
-:::image type="content" source="media/record-in-app-formula-column.png" alt-text="Example record with a formula column":::
+:::image type="content" source="media/create-formula-column-dataverse.png" alt-text="Screenshot of a formula column definition.":::
 
-Notice that the column type is determined by the formula. You can change the formula after you’ve created it if it doesn’t change the column type. For example, the formula *price * discount* creates a column type of number, whereas the formula *First & “ “ & Last* creates a column type of string. You can change a *price * discount* formula to  *price * (discount +10%)* because that doesn’t change the column type. However, once saved, you can’t change the *price * discount* formula to  *Text(price * discount)* because that would require changing the column type to string.
+The formula column displays the result of *Price* multiplied by *Number of units*.
+
+:::image type="content" source="media/record-in-app-formula-column.png" alt-text="Screenshot of a record with a formula column.":::
+
+The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you’ve created the column only if it doesn’t change the column type.
+
+For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn’t change the column type. However, you can’t change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
+
+## Operators
+
+You can use the following operators in a formula column:  
++, -, \*, /, %, ^, in, exactin, &
+
+For more information, go to [Operators in Power Apps](../canvas-apps/functions/operators.md).
 
 ## Data types
 
-The following data types can be displayed in a formula column:
+You can display the following data types in a formula column:
 
 - Text
 - Decimal Number
 - Yes/No (boolean)
 - Date
 
-> [!NOTE]
-> The Currency data type is not currently supported.
+The Currency data type isn't currently supported.
 
 ## Function types
 
-The following function types are supported with the formulas used in a formula column:
+You can use the following function types in a formula column:
 
 - Decimal
 - String
@@ -65,16 +77,9 @@ The following function types are supported with the formulas used in a formula c
 - Currency
 - Whole Number, promoted to Decimal
 
-## Operators
+## Functions
 
-These operators are supported with the formulas used in a formula column: <br>
-+, -, \*, /, %, ^, in, exactin, &
-
-More information: [Operators in Power Apps](../canvas-apps/functions/operators.md)
-
-## Available functions 
-
-The following scalar functions are available with formula columns.
+You can use the following scalar functions in a formula column:
 
 :::row:::
    :::column span="":::
@@ -275,8 +280,9 @@ The following scalar functions are available with formula columns.
    :::column-end:::
 :::row-end:::
 
-\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. Since the decimal separator varies across locales, and the formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
+\* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. The decimal separator varies across locales. Since formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
 ### See also
 
-[Types of columns](types-of-fields.md)
+[Types of columns](types-of-fields.md)  
+[Microsoft Power Fx overview](/power-platform/power-fx/overview)
