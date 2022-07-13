@@ -85,6 +85,8 @@ The **Properties** tab displays the following properties.
 |**Display options** | **Lock** |  Lock this column so it can't be removed. |
 |**Display options** | **Read-only** | When selected, the column value is not editable. |
 |**Formatting** | **Form field width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
+|**Formatting** | **Form field height** |  Some columns, such as the multiline text column, let you control the height of the column by specifying the number of rows the column occupies. |
+|**Formatting** | **Use all available vertical space** |  Instead of setting the height by a number of rows, some columns, such as the multiline text column, let you set the column height to expand to all the available space on the form. |
 | **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
 
 > [!NOTE]
