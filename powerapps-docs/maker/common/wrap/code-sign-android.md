@@ -17,12 +17,12 @@ contributors:
   - larryk78
 ---
 
-# Code sign for Android
+# Code sign for Android 
 
-In this article, you'll learn about how to code sign for Android. You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
+In this article, you'll learn about how to code sign for Android (APK). You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
-> [!TIP]
-> For general guidance about signing an app for Android platforms, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
+> [!IMPORTANT]
+> If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Prepare your PC
 
