@@ -175,7 +175,8 @@ Here's a summary of each column in the report.
 | Web Resources  | [avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | 
 | Web Resources  | [remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | 
 | Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | 
-| Web Resources  | [avoid-ui-refreshribbon](https://go.microsoft.com/fwlink/?linkid=2157641&error=web-remove-console&client=PAChecker)  | Avoid using refreshRibbon in form onload and EnableRule. | 
+| Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | 
+| Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | 
 | Canvas App  | [app-formula-issues-high](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-high&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | 
 | Canvas App  | [app-formula-issues-medium](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-medium&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | 
 | Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. | 
