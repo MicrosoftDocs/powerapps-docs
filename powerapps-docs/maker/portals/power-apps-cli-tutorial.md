@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2022
+ms.date: 07/13/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -108,7 +108,9 @@ directly in Visual Studio Code.
 ## Step 5. Upload the changes
 
 > [!NOTE]
-> If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
+> - If you're uploading to multiple environments, see [upload the changes using deployment profile](#upload-the-changes-using-deployment-profile) to learn how to upload changes using deployment profile.
+> - Ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment.
+> - The maximum size of files is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
 After making the required changes, upload them using the following command:
 
@@ -195,7 +197,7 @@ portals content for other [supported tables](power-apps-cli.md#supported-tables)
 
 ## Next steps
 
-[Overview of portals support for Microsoft Power Platform CLI](power-apps-cli-tutorial.md)
+[Use the Visual Studio Code extension](vs-code-extension.md)
 
 ### See also
 

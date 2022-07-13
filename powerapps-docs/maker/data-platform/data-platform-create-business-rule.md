@@ -134,7 +134,7 @@ Business rules work with most column types including text, number, choice, date,
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**.
 1. In the list that appears, select **Tables**.
-1. Open the **Task** table, and then select the **Business rules** tab.
+1. Open the **Task** table, and then select the **Business rules** area.
 1. Select **Add business rule**.
 1. Select **New Condition** on the business process flow canvas, and enter or select the following properties:
    - **Display name**: *Task is more than 30 days old*

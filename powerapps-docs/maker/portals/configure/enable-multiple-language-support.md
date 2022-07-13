@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2022
+ms.date: 06/16/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -53,7 +53,8 @@ You can set the default language of your portal by changing the *Default Languag
 The table below shows all the languages currently available out of the box. This list can be found by going to **Portals** &gt; **Content** &gt; **Portal Languages**. The Portal Display Name of a language can be changed after selecting the language to change from this page.
 
 > [!NOTE]
-> Upgrade your portals website version to [9.4.4.xx](/power-platform/released-versions/portals/portalupdate944x) and package version [9.3.2204](../admin/update-portal-solution.md) to configure Arabic and Hebrew language for your website.
+> - Upgrade your portals website version to [9.4.4.xx](/power-platform/released-versions/portals/portalupdate944x) and package version [9.3.2204](../admin/update-portal-solution.md) to configure Arabic and Hebrew language for your website.
+> - Arabic and Hebrew languages are not supported on the [Power Pages](/power-pages/introduction) preview.
 
 | **Name**                           | **Language Code** | **LCID** | **Portal Display Name** |
 |------------------------------------|-------------------|----------|-------------------------|

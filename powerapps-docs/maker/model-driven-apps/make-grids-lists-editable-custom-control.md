@@ -98,7 +98,7 @@ When editable grids are enabled through the editable grid control, users can edi
   
 2. Select **Solutions**, open the solution you want. 
   
-3. Select the **Table** within the solution, and then navigate to the **Forms** tab.  Select the **Main Form** that contains the subgrid.
+3. Select the **Table** within the solution, and then select the **Forms** area.  Select the **Main Form** that contains the subgrid.
 
 4. Select **Switch to Classic**. This will open a new tab in your browser.
   
