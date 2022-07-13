@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/29/2022
+ms.date: 07/13/2022
 //ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -41,7 +41,8 @@ Web files can be created, edited, and deleted within Power Apps portals.
 1. Select **Save & Close**.
 
 > [!WARNING]
-> If you plan to [migrate your site](../admin/migrate-portal-configuration.md) to another environment, ensure that the target environment's [maximum attachment size](../configure-notes.md#attributes) is set to the same or greater size as your source environment.
+> - If you plan to [migrate your site](../admin/migrate-portal-configuration.md) to another environment, ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment. 
+>- The maximum size of files that can be uploaded is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
 ### Web file attributes
 
@@ -75,3 +76,5 @@ For example, if the partial URL of the web file is *user-manual.pdf*:
 
 `<a href="/user-manual.pdf">Select here to download the user manual</a>`
 
+> [!NOTE]
+> The permissions to access the file to be downloaded is controlled by the parent page permissions. For more information, see [Manage page permissions](webpage-access-control.md#permissions-apply-to-child-files).
