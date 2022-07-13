@@ -53,9 +53,9 @@ The control is a button that's labeled with an icon of a cube and the text *View
 
 :::image type="content" source="./media/augmented-view-mr/augmented-view-mr.png" alt-text="A screenshot of the Insert tab in Power Apps Studio, showing where to find the View in MR control.":::
 
-## View multiple models in a single session
+## View different models in a single session
 
-The View in MR control displays one media file by default. To view multiple media files, or a media gallery, use the control's *Items* advanced property. This property creates a table that lists media files the user can choose from in the mixed reality experience.
+The View in MR control displays one media file by default. To view different media files selected through a media gallery during the MR experience, use the control's *Items* advanced property. This property creates a table that lists media files the user can choose from in the mixed reality experience.
 
 When you use the *Items* property, you need to set a value for the following additional advanced properties to map the columns of your table:
 
@@ -80,11 +80,11 @@ With your app open for editing in [Power Apps Studio](https://create.powerapps.c
 
 1. Open the **Insert** tab and expand **Mixed Reality**.
 
-1. Select **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
+2. Select **View in MR** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
-1. On the **Advanced** properties tab, select the *Items* property and type or paste the following code:
+3. On the **Advanced** properties tab, select the *Items* property and type or paste the following code:
 
-    ```javascript
+    ```powerapps-dot
     Table(
     {
     label: "Birds of Paradise",
@@ -101,18 +101,21 @@ With your app open for editing in [Power Apps Studio](https://create.powerapps.c
     source: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/palm_green.glb",
     thumbnail: "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/palm_green.png"
     }
-     )
+    )
     ```
 
-1. Set the *ItemsLabel* property to `"label"`.
+4. Set the *ItemsLabel* property to `"label"`.
 
-1. Set the *ItemsSource* property to `"source"`.
+5. Set the *ItemsSource* property to `"source"`.
 
-1. Set the *ItemsThumbnail* property to `"thumbnail"`.
+6. Set the *ItemsThumbnail* property to `"thumbnail"`.
 
      :::image type="content" source="./media/augmented-view-mr/source-list.png" alt-text="A screenshot of View in MR control properties.":::
 
-1. Save and publish the app, then open it on your mobile device to try it out.
+> [!NOTE]
+> The *Items* property is set to your data source which can be a collection, from a connector, or a hardcoded table like in this example. The *ItemsSource*, *ItemsLabel*, and *ItemsThumbnail* properties are set to the column names of that data source within quotation marks.
+
+7. Save and publish the app, then open it on your mobile device to try it out.
 
 ## How objects are scaled if you resize them
 
