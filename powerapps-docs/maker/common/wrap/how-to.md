@@ -280,8 +280,8 @@ Follow these steps to configure KeyVault URI:
 
 - [Code signing for iOS](code-sign-ios.md)
 - [Code signing for Android](code-sign-android.md)
+- [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
-For more information, see [Code signing for Android](https://developer.android.com/studio/publish/app-signing) and [Code signing for iOS](https://developer.apple.com/support/code-signing/).
 
 ## Test and distribute mobile app package
 
