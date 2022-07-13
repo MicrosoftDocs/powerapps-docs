@@ -123,6 +123,7 @@ Intended platforms for the app that you want to go through the build process for
 
 - **iOS** creates IPA package
 - **Android** creates APK package
+- **Google Play Store** creates AAB package
 
 ### Application (client) ID
 
@@ -141,6 +142,8 @@ A globally unique identity of the output mobile app. Follows a reverse domain na
 ### Code signing
 
 Code signing is the process of finalizing a mobile app prior to distribution to end users. An app that is code signed assures that it comes from a known source, and the app code hasn't changed since last time it was signed by the trusted source.
+
+For more information on code signing for Google Play Store (AAB), see [Sign your app][(https://developer.android.com/studio/publish/app-signing).
 
 ### Primary app
 
