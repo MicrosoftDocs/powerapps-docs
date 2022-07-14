@@ -84,7 +84,8 @@ Studio](https://create.powerapps.com/):
 You can modify the control with several properties.
 
 > [!TIP]
-> Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
+> Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
+> 
 >   ![Markup in MR control properties.](./media/mr-controls/markup-control-properties-2.png)
 
 
