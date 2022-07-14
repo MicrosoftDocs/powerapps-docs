@@ -53,12 +53,15 @@ Let's understand each option in Power Apps Studio in detail.
 
 ## 1 – Power Apps Studio modern command bar
 
-Power Apps Studio options are available on the menu in the upper-left corner. The
-options are relevant to the current session and app-related settings.
+Power Apps Studio options are available on the command bar. The
+options are relevant to the current session and app-related settings. 
 
 > [!div class="mx-imgBorder"] 
 > ![Power Apps Studio options.](media/studio/pa-studio-options.png)
 
+The command bar display changes depending on the control that's selected.
+
+![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
 
 ### Back
 
@@ -88,9 +91,9 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
 
-The **Insert** menu is available on the command bar and on the app authoring menu.
+The **Insert** menu is available from the command bar and from the app authoring menu on the left.
 
-To insert controls on the canvas, you can drag the control to the canvas, select the control, or select (...) and then select Add to canvas.
+To insert controls on the canvas, you can drag the control to the canvas, select the control, or select (...) and then select Add to canvas. The 
 
 ### Add data
 
