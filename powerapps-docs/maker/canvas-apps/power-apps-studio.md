@@ -56,7 +56,9 @@ Let's understand each option in Power Apps Studio in detail.
 Power Apps Studio options are available on the menu in the upper-left corner. The
 options are relevant to the current session and app-related settings.
 
-:::image type="content" source="media/studio-options.png" alt-text="Power Apps Studio options.":::
+> [!div class="mx-imgBorder"] 
+> ![Power Apps Studio options.](media/studio/pa-studio-options.png)
+
 
 ### Back
 
