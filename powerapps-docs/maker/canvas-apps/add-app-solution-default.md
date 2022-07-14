@@ -57,7 +57,7 @@ The following table summarizes which methods benefit from canvas apps within sol
 
 ## Enable the feature
 
-This feature is disabled by default and must be enabled manually. To enable this feature, go to Power Platform admin center by going to **Environments** > select an environment > **Settings** > **Product** > **Features**, and enable the feature **Canvas apps in Dataverse by default**. More information: [Manage feature settings](/power-platform/admin/settings-features)
+This feature is disabled by default and must be enabled manually. To enable this feature, go to Power Platform admin center by going to **Environments** > select an environment > **Settings** > **Product** > **Features**, and enable the feature **Create new canvas apps as Dataverse solutions**. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Check canvas apps in solution 
 
