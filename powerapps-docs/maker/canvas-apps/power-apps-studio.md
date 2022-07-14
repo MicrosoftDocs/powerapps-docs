@@ -89,9 +89,9 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 > [!div class="mx-imgBorder"] 
 > ![Insert controls to the screen.](media/studio/pa-insert-controls.png)
 
-Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
-
 The **Insert** menu is available from the command bar and from the app authoring menu on the left.
+
+Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
 
 To insert controls on the canvas, you can drag the control to the canvas, select the control, or select (...) and then select Add to canvas. The 
 
