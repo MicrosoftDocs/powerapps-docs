@@ -86,11 +86,10 @@ When you create a template from an existing template, irrespective of the enhanc
 
 ## Email template editor
 
-> [!NOTE]
-
 You can use either the enhanced email template editor or the default email template editor to create email templates.
 
 ### Enhanced email template editor (preview)
+> [!NOTE]
 > - This is an early access feature and is available only in Dynamics 365 Customer Service. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates). Starting October 2020, this feature will be enabled by default.
 > - An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
