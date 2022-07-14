@@ -44,7 +44,7 @@ After you select **Insert Template**, a window appears displaying a list of exis
 > - Recipient (TO): user (global) and contact templates are displayed.
 > - Regarding: user (global) and templates for the regarding entity are shown.
 
-### Enhanced email template selection dialog
+### Enhanced email template selection dialog (preview)
 
 > [!Note] 
 > This is an early access feature and is available in environments Microsoft Dynamics 365 for Service package installed. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates). Starting October 2022, this feature will be enabled by default.
