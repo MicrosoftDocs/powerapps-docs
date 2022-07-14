@@ -81,9 +81,22 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Copy** – Copy the selection, and store it in the clipboard.
 - **Paste** - Paste the last cut, or copied selection from the clipboard.
 
+### Insert
+
+> [!div class="mx-imgBorder"] 
+> ![Insert controls to the screen.](media/studio/pa-insert-controls.png)
+
+Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
+
+The **Insert** menu is available on the command bar and on the app authoring menu.
+
+To insert controls on the canvas, you can drag the control to the canvas, select the control, or select (...) and then select Add to canvas.
+
 ### Add data
 
-:::image type="content" source="media/studio-add-data.png" alt-text="Add data.":::
+> [!div class="mx-imgBorder"] 
+> ![Add data.](media/studio/pa-studio-add-dat.png)
+
 
 - Create a new table by selecting **Create new table**.
 - Select any other existing tables from the current environment.
