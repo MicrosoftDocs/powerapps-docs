@@ -47,7 +47,7 @@ After you select **Insert Template**, a window appears displaying a list of exis
 ### Enhanced email template selection dialog
 
 > [!Note] 
-Starting October 2022, this feature will be enabled by default.
+> Starting October 2022, this feature will be enabled by default.
 
 The application displays the enhanced email template selection window only if your admin has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions in the enhanced email template selection window:
 
