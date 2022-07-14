@@ -59,7 +59,7 @@ options are relevant to the current session and app-related settings.
 > [!div class="mx-imgBorder"] 
 > ![Power Apps Studio options.](media/studio/pa-studio-options.png)
 
-The command bar display changes depending on the control that's selected.
+The command bar displays different set of commands depending on which control is selected.
 
 ![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
 
