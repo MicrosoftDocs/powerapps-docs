@@ -145,7 +145,7 @@ Change the **View in MR** button's behavior and appearance using properties. Som
 | Alternative text | Specifies the text to be displayed if the model can't load or if the user hovers over the model. | String | Properties; Advanced: **AltText**|
 | Display type | Determines whether the button label shows an icon of a cube, text, or both. | Drop-down selection | Properties; Advanced: **DisplayType** |
 | [**Source**](mixed-reality-component-view-3d-store.md) | Identifies the data source (.glb, .stl, or .obj file) to display. | Not applicable | Properties; Advanced: **Source** |
-| Sources List (Items) | Data source (table) that lists [multiple media files to view](#view-multiple-models-in-a-single-session) in a single mixed reality session. | Table | Properties; Advanced: **Items** |
+| Sources List (Items) | Data source (table) that lists [multiple media files to view](#view-multiple-models-in-a-single-session.md) in a single mixed reality session. | Table | Properties; Advanced: **Items** |
 | Object width | Sets the width of the model. | Integer | Properties; Advanced: **ObjectWidth** |
 | Object height | Sets the height of the model. | Integer | Properties; Advanced: **ObjectHeight** |
 | Object depth | Sets the depth of the model. | Integer | Properties; Advanced: **ObjectDepth** |
