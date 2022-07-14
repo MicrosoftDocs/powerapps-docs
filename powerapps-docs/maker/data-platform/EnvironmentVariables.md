@@ -254,7 +254,7 @@ If not already prevented by dependency system, runtime will use the last known v
 
 ### If a value is changed, when does the new value get used in canvas apps and cloud flows?
 
-For canvas apps, the new value will be used during the next session. For example, closing the app and then playing it again. 
+It is important to note tha it may take up to an hour to fully publish updated environment variables.  
 
 With cloud flows, the flows must currently be de-activated and re-activated in order to use the updated value. 
 
