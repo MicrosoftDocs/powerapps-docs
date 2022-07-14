@@ -4,7 +4,7 @@ description: Learn the components inside Power Apps Studio in Teams.
 author: jessicaszelo
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/11/2022
+ms.date: 07/7/2022
 ms.subservice: teams
 ms.author: szlo
 ms.reviewer: tapanm

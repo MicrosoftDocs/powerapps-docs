@@ -109,7 +109,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 ### About the assign action
 The assign action allows the owner, the Owning Business Unit or both owner and business unit updates to be cascaded down to all child records when the parent record is updated.
 
-#### Allowed record ownership across business unites not enabled
+#### Allowed record ownership across business units not enabled
 When the [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is not enabled, the Owning Business Unit column can't be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner is updated.
 
 If you update the owner:
@@ -125,7 +125,7 @@ If you update the owner:
   - Child records’ owner is not updated (no cascade)
   - Child records’ business unit is not updated (no cascade)
 
-#### Allowed record ownership across business unites is enabled
+#### Allowed record ownership across business units is enabled
 When [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is enabled,
 the Owning Business Unit column can be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner and/or the business unit is updated.
 
