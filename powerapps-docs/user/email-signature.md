@@ -28,7 +28,7 @@ Email signatures are an important and valuable tool for users. Email signatures 
 Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static or dynamic text. Dynamic placeholders are used to define dynamic text. The placeholders are replaced  with the corresponding values of the email's sender, specified in the **From** field. 
 
 > [!Note] 
-> Inserting dynamic text in email signature templates is an early access feature and is available only in Dynamics 365 Customer Service. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see Opt in to early access updates."
+> Inserting dynamic text in email signature templates is an early access feature and is available only in Dynamics 365 Customer Service. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates). Starting October 2020, this feature will be enabled by default.
 
 ### Add an email signature
 - On the command bar, select **Insert Signature**.  
