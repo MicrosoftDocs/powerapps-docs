@@ -23,7 +23,7 @@ contributors:
 
 # Embed a canvas app as tab app in Teams
 
-You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams using the **PowerApps** tab. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
+You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams using the **Power Apps** tab. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
 
 ![App embedded in Microsoft Teams.](media/open-app-embedded-in-teams/embedded-app.png "App embedded in Microsoft Teams")
 

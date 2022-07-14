@@ -37,7 +37,7 @@ Although card forms can be created and edited in the same way as other form type
 ## Create a card form
 
 1. To create a card form, sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
+2. Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** area.
 3. On the toolbar select **Add form**, and then select **Card form**. Alternatively, you can open an existing **Form type** that's a **Card** form to edit it.
 
    :::image type="content" source="../../maker/model-driven-apps/media/create-card-form.png" alt-text="Create card form":::
@@ -48,7 +48,7 @@ Although card forms can be created and edited in the same way as other form type
 ## Add a card form to a view
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Expand **Data**, select the table you want, and then select the **Views** tab.
+2. Expand **Data**, select the table you want, and then select the **Views** area.
 3. Select the view that you want, and then on the view designer toolbar, select **Switch to classic**.
 4. Select **Custom Controls** from the **Common Tasks** pane.
 

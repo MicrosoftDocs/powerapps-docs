@@ -264,7 +264,7 @@ For example, instead of selecting a table, some columns in the table-specific da
 
 2.  Select **Data** > **Tables** > select the required table.
 
-3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.
+3.  Select the **Dashboards** area, and then on the toolbar select **Add dashboard**.
 
 4.  Choose the layout, either 2, 3, or 4 column width.
   

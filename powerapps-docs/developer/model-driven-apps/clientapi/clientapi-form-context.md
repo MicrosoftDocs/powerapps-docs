@@ -4,7 +4,7 @@ description: The Client API form context (**formContext**) provides a reference 
 author: HemantGaur
 ms.author: hemantg
 manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 05/31/2022
 ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to: 
@@ -26,7 +26,7 @@ The Client API form context (**formContext**) provides a reference to the form o
 Earlier, the global **Xrm.Page** object was used to represent a form or an item on the form. With the latest version, the **Xrm.Page** object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](reference/executioncontext/getFormContext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form. 
 
 > [!IMPORTANT]
-> *Deprecated* means that we intend to remove a feature or capability from a future major release of model-driven apps; the feature or capability will continue to work and is fully supported until it is officially removed. A public announcement here in the documentation, on the official blog, and in many other places will be made at least six months before removal.<br/><br/>Use of the **Xrm.Page** object as a static access to the primary form context is *still* supported to maintain backward compatibility with the existing scripts, and won’t be removed as soon as some other client API methods listed in the [Client API deprecation](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) section. We recommend that you use the new **formContext** object instead of the **Xrm.Page** object in your code targeting version 9.0 or later where possible. Also, using the **formContext** object enables you to create common event handlers that can operate either on a form or in an editable grid depending on where its called. More information: [getFormContext (Client API reference)](reference/executioncontext/getFormContext.md).<br><br>Getting the **formContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions).
+> *Deprecated* means that we intend to remove a feature or capability from a future major release of model-driven apps; the feature or capability will continue to work and is fully supported until it is officially removed. A public announcement here in the documentation, on the official blog, and in many other places will be made at least six months before removal.<br/><br/>Use of the **Xrm.Page** object as a static access to the primary form context is *still* supported to maintain backward compatibility with the existing scripts, and won't be removed as soon as some other client API methods listed in the [Client API deprecation](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) section. We recommend that you use the new **formContext** object instead of the **Xrm.Page** object in your code targeting version 9.0 or later where possible. Also, using the **formContext** object enables you to create common event handlers that can operate either on a form or in an editable grid depending on where its called. More information: [getFormContext (Client API reference)](reference/executioncontext/getFormContext.md).<br><br>Getting the **formContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions).
 
 ## Using the formContext object instead of the Xrm.Page object 
 
@@ -35,9 +35,9 @@ It's easy to convert existing code with **Xrm.Page** to use the new **formContex
 ```JavaScript
 function displayName()
 {
-	var firstName = Xrm.Page.getAttribute("firstname").getValue();
-	var lastName = Xrm.Page.getAttribute("lastname").getValue();
-	console.log(firstName + " " + lastName);
+   var firstName = Xrm.Page.getAttribute("firstname").getValue();
+   var lastName = Xrm.Page.getAttribute("lastname").getValue();
+   console.log(firstName + " " + lastName);
 }
 ```
 
@@ -46,12 +46,12 @@ Here is the updated script that uses the passed in execution context to retrieve
 ```JavaScript
 function displayName(executionContext)
 {
-	var formContext = executionContext.getFormContext(); // get formContext
+   var formContext = executionContext.getFormContext(); // get formContext
 
-	// use formContext instead of Xrm.Page	
-	var firstName = formContext.getAttribute("firstname").getValue(); 
-	var lastName = formContext.getAttribute("lastname").getValue();
-	console.log(firstName + " " + lastName);
+   // use formContext instead of Xrm.Page   
+   var firstName = formContext.getAttribute("firstname").getValue(); 
+   var lastName = formContext.getAttribute("lastname").getValue();
+   console.log(firstName + " " + lastName);
 }
 ```
 
@@ -105,9 +105,9 @@ information about the methods available for collections in general, see [Collect
 |**formContext.data.process.**[stages](reference/formContext-data-process/process/getStages.md) and **formContext.data.process**.[steps](reference/formContext-data-process/stage/getSteps.md)| Provides access to stages and steps collection in a business process flow. These also allow for adding and removing of items from the collection.|
 |**formContext.ui.formSelector.**[items](reference/formContext-ui-formselector.md)|When multiple forms are provided for a table, you can associate each form with security roles. When the security roles associated with a user enable them to see more than one form, the **formContext.ui.formSelector.items** collection provides access to each form definition available to that user.|
 |**formContext.ui.navigation.**[items](reference/formContext-ui-navigation.md)|The **formContext.ui.navigation.items** collection provides access to navigation items that are defined using the navigation area of the form editor. People navigate to these using the command bar.|
-| **formContext.ui.**[quickForms](reference/formContext-ui-quickForms.md) | Provides methods to access all the quick view controls and its constituent controls on the Customer Enagagement forms.|
-| **formContext.ui.**[tabs](reference/formContext-ui-tabs.md) | You can organize each form by using one or more tabs. This collection provides access to each of these tabs.|
-| **formContext.ui.tabs.**[sections](reference/formContext-ui-sections.md) | You can organize each form tab by using one or more sections. The tab **sections** collection provides access to each of these sections. You need to define the tab which contains the desired section or iterate through each tab to find the relevant section.|
+|**formContext.ui.**[quickForms](reference/formContext-ui-quickForms.md) | Provides methods to access all the quick view controls and its constituent controls on the Customer Enagagement forms.|
+|**formContext.ui.**[tabs](reference/formContext-ui-tabs.md) | You can organize each form by using one or more tabs. This collection provides access to each of these tabs.|
+|**formContext.ui Tab.**[sections](reference/formContext-ui-tab-sections.md) | You can organize each form tab by using one or more sections. The tab **sections** collection provides access to each of these sections. You need to define the tab which contains the desired section or iterate through each tab to find the relevant section.|
 
 
   

@@ -264,7 +264,7 @@ No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use 
 
 ### Is there a limit to the number of environment variables I can have?
 
-No. However, the max size of a solution is 29 MB.
+No. However, the max size of a solution is 32 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
 
 ### Can environment variable display names and descriptions be localized?
 

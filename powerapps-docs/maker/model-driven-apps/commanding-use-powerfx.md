@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
+ms.date: 06/29/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
@@ -14,9 +14,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Using Power Fx with commands (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Using Power Fx with commands
 
 This article covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
 
@@ -24,10 +22,6 @@ This article covers aspects of Power Fx that are specific to commanding. Many ot
 - Imperative functions that work with data are supported.
 - Imperative functions for simple `Confirm` and `Notify` are supported.
 - For a list of functions not supported, go to [Functions not supported](#functions-not-supported).
-
-> [!IMPORTANT]
-> - This is a preview feature, and may not be available in all regions.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
 > Publishing Power Fx commands may take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
@@ -299,7 +293,10 @@ Confirm( "There was a problem, please review your order." )
 
 ## Add notifications to a model-driven app
 
-A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  
+A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
+
+> [!NOTE]
+> `NotificationType.Success` is not currently supported and will result in an informational notification type.
 
 ```powerappsfl
 Notify( "Model-driven app notification message" )
@@ -325,9 +322,7 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Not supported in Power Fx
-
-### Functions not supported
+## Functions not supported
 
 The following Power Fx functions are currently not supported with commanding in model-driven apps.
 
@@ -338,13 +333,14 @@ The following Power Fx functions are currently not supported with commanding in 
 - Enable()
 - Exit()
 - InvokeControl()
+- Language()
 - LoadData()
 - Param()
 - ReadNFC()
 - RequestHide()
+- ResetForm()
 - Revert()
 - SaveData()
-- ResetForm()
 - ScanBarcode()
 - Set()
 - SubmitForm()
@@ -353,48 +349,42 @@ The following Power Fx functions are currently not supported with commanding in 
 
 ### Enums not supported
 
+- Align
+- AlignInContainer
+- BarcodeType
 - BorderStyle
 - Color
 - Direction
 - DisplayMode
-- LayoutMode
-- LayoutAlignItems
-- AlignInContainer
-- LayoutJustifyContent
-- LayoutOverflow
 - Font
 - FontWeight
+- FormPattern
+- GridStyle
 - ImagePosition
+- ImageRotation
+- LabelPosition
 - Layout
+- LayoutAlignItems
 - LayoutDirection
-- TextPosition
-- TextMode
-- TextFormat
-- VirtualKeyboardMode
-- TeamsTheme
-- Themes
+- LayoutJustifyContent
+- LayoutMode
+- LayoutOverflow
+- ListItemTemplate
+- MapStyle
+- Overflow
+- PDFPasswordState
 - PenMode
 - RemoveFlags
 - ScreenTransition
-- Align
-- VerticalAlign
+- TeamsTheme
+- TextFormat
+- TextMode
+- TextPosition
+- Themes
 - Transition
-- Overflow
-- MapStyle
-- GridStyle
-- LabelPosition
+- VerticalAlign
+- VirtualKeyboardMode
 - Zoom
-- PDFPasswordState
-- BarcodeType
-- ImageRotation
-- FormPattern
-- ListItemTemplate
-- LoadingSpinner
-- Live
-- TextRole
-- ScreenSize
-- Icon
-- MessageSource
 
 ### Other unsupported areas
 
@@ -404,8 +394,8 @@ The following Power Fx functions are currently not supported with commanding in 
 - Connection
 - Environment
 - Host
-- Location
 - Layout
+- Location
 - ScreenSize
 - User
 
