@@ -74,7 +74,7 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 ### Cut, copy, and paste
 
-![Cut, copy and paste.](media/studio-cut-copy-paste.png "Cut, copy and paste")
+![Cut, copy and paste.](media/studio/pa-studio-cut-copy-paste.png)
 
 - **Cut** – Cut the selection, and store it in the clipboard.
 - **Copy** – Copy the selection, and store it in the clipboard.
