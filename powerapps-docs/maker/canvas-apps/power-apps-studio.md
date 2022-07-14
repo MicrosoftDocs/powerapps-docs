@@ -66,7 +66,8 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 ### Undo and redo
 
-![Undo and redo.](media/studio-undo-redo.png "Undo and redo")
+> [!div class="mx-imgBorder"] 
+> ![Undo and redo.](media/studio/pa-undo-redo.png)
 
 - **Undo** – undo the last action.
 - **Redo** – repeat the last action.
