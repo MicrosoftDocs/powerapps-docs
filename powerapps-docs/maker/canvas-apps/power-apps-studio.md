@@ -104,14 +104,14 @@ To insert controls on the canvas, you can drag the control to the canvas, select
 - Select any other existing tables from the current environment.
 - Search and select a connector, such as **SharePoint** or **SQL Server**.
 
-### New screen
+### New screen layouts
 
 > [!div class="mx-imgBorder"] 
 > ![Add new screen.](media/studio/pa-add-screen.png)
 
 Add screens and select from the list of available screen layouts.
 
-#### Layouts
+#### Screnarios
 
 > [!div class="mx-imgBorder"] 
 > ![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
