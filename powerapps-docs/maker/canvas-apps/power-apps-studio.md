@@ -121,10 +121,8 @@ Or, select the **Screnarios** and select a screen type based on the available sc
 
 ### Background color
 
-
 > [!div class="mx-imgBorder"] 
 > ![Screen background color.](media/studio/pa-studio-background-color.png)
-
 
 Select a background color for a screen. You can select select from the list of standard colors or select the **Custom** table and choose your own color.
 
@@ -139,11 +137,12 @@ Select **Upload** to upload images to set as the background image.
 
 Configure the app's general settings.
 
-:::image type="content" source="media/studio-general-settings.png" alt-text="App settings.":::
+> [!div class="mx-imgBorder"] 
+> ![App settings.](media/studio/pa-studio-general-settings.png)
 
 #### General
 
-Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Browse** option.
+Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Add image** option.
 
 #### Display
 
@@ -154,16 +153,18 @@ Advanced settings allow you to further customize the app screen configuration.
 - **Scale to it**: Scales the app to fit available space.
 - **Lock aspect ratio**: Locks the height and width ratio.
 - **Lock orientation**: Maintains app orientation when device rotates.
+-  **Optimize embedding appearance**: Optimizes for embedded experiences by aligning the app to the top left.
+-  **Replace formula notification**: Displays notifications to prevent replacing customized size and position properties.
 
 To change the setting, toggle the switch.
 
-More information: [Change screen size and orientation](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md)
+More information: [Change screen size and orientation](set-aspect-ratio-portrait-landscape.md)
 
 #### Upcoming features
 
 Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
 
-More information: [Understand experimental, preview, and deprecated features in Power Apps](../maker/canvas-apps/working-with-experimental-preview.md)
+More information: [Understand experimental, preview, and deprecated features in Power Apps](working-with-experimental-preview.md)
 
 #### Support
 
