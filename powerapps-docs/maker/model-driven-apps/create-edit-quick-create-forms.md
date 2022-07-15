@@ -4,7 +4,6 @@ description: "Learn how to create or edit a quick create form"
 ms.custom: ""
 ms.date: 08/28/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -50,7 +49,7 @@ Custom activity tables that support quick create forms can be enabled, and it is
   
 > [!NOTE]
 >  - The table must have the **Enable quick create forms** option enabled for the quick create form to be displayed. 
->  - The table and the quick create form must be added to your app.
+>  - The table must be added to your app.
 >  - Some columns, such as the CREATEDON column, aren't available to add to a quick create form.  
   
 ### How to create a quick create form

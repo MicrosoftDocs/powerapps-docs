@@ -1,7 +1,7 @@
 ---
 title: Use marker detection with mixed-reality controls
 description: How to use the marker detection feature of the View in MR and View shape in MR mixed-reality controls in a canvas app.
-author: mduelae
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - altran
+  - anuitz
 ---
 
 # Use marker detection with mixed-reality controls (preview)
@@ -28,12 +29,12 @@ contributors:
 Use physical markers to improve the precision and persistence of media that's placed using the [View in MR](./mixed-reality-component-view-mr.md) and [View shape in MR](./mixed-reality-component-view-shape.md) controls. This topic covers how to enable marker detection and how to add markers to your space.
 
 ## Prerequisites
+
 In addition to the standard device compatibility requirements outlined in [add mixed reality controls to your canvas app](./mixed-reality-overview.md), marker detection requires physical markers to be present in your space.
 
 To create a marker, print out the image below or display the image on a monitor or tablet. For best results, the marker should be printed in portrait orientation on standard A4 or 8.5" x 11" letter paper. Ensure that the marker is fully visible and not cut off on either the top or bottom. The marker should be approximately 20 x 20 cm for optimal tracking speed and accuracy.
 
 :::image type="content" source="./media/augmented-marker-detection/mixed-reality-marker.png" alt-text="Image used for marker detection in mixed reality experiences." lightbox="./media/augmented-marker-detection/mixed-reality-marker-1.png":::
-
 
 ## Enable marker detection
 

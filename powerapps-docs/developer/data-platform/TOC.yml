@@ -407,6 +407,8 @@
       href: isv-app-usage-analytics.md
     - name: Install failures analytics
       href: isv-install-failure-analytics.md
+    - name: Auto App Updates (Preview) 
+      href: isv-app-management-autoupdate.md
 - name: Create applications
   href: connect-dataverse.md
   items:
