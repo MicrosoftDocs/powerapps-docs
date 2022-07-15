@@ -26,7 +26,7 @@ Easily add cards to maps in your canvas apps to show details about pinned locati
 
 ## Prerequisites
 
-1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
+1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites-for-full-support).
 1. [Insert a map](./geospatial-component-map.md).
 
 
