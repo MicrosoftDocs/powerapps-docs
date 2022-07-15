@@ -113,16 +113,25 @@ Add screens and select from the list of available screen layouts.
 
 #### Layouts
 
-![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
+> [!div class="mx-imgBorder"] 
+> ![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
 
 Or, select the **Screnarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
 
 
 ### Background color
 
-Select a background color for a screen. You can select select from the list of standard colors or selec the **Custom** table and choose your own color.
+
+> [!div class="mx-imgBorder"] 
+> ![Screen background color.](media/studio/pa-studio-background-color.png)
+
+
+Select a background color for a screen. You can select select from the list of standard colors or select the **Custom** table and choose your own color.
 
 ### Background image
+
+> [!div class="mx-imgBorder"] 
+> ![Screen background image.](media/studio/pa-studio-background-image.png)
 
 Select **Upload** to upload images to set as the background image.
 
