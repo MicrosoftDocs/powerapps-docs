@@ -35,7 +35,7 @@ $(document).ready(function() {
 > Adding a choice column to model-driven form to be used in an advanced form step or a basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
 
 ## Additional client-side field validation
-Sometimes you might need to customize the validation of fields on the form. The following example demonstrates adding a custom validator. This example forces the user to specify an email with a specific domain.
+Sometimes you might need to customize the validation of fields on the form. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.
 
 > [!NOTE]
 > The client-side field validation is not supported in a subgrid.
@@ -48,26 +48,29 @@ if (window.jQuery) {
          // Create new validator
          var newValidator = document.createElement('span');
          newValidator.style.display = "none";
-         newValidator.id = "adx_contactemailValidator";
-         newValidator.controltovalidate = "adx_contactemail"; // Replace with the logical name of the form field
-         newValidator.errormessage = "<a href='#adx_contactemail_label' referencecontrolid='adx_contactemail' onclick='javascript:scrollToAndFocus(\"adx_contactemail_label\",\"adx_contactemail\");return false;'>Email has to end with Microsoft domain.</a>";
+         newValidator.id = "emailaddress1Validator";
+         newValidator.controltovalidate = "emailaddress1";
+         newValidator.errormessage = "<a href='#emailaddress1_label' referencecontrolid='emailaddress1 ' onclick='javascript:scrollToAndFocus(\"emailaddress1 _label\",\" emailaddress1 \");return false;'>Email is a required field.</a>";
+         newValidator.validationGroup = ""; // Set this if you have set ValidationGroup on the form
          newValidator.initialvalue = "";
          newValidator.evaluationfunction = function () {
-            var email = $("#adx_contactemail").val();
-            var domain = "microsoft.com";
-            if (email.endsWith(domain)) {
-                return true;
+            var contactMethod = $("#preferredcontactmethodcode").val();
+            if (contactMethod != 2) return true; // check if contact method is not 'Email'.
+            // only require email address if preferred contact method is email.
+            var value = $("#emailaddress1").val();
+            if (value == null || value == "") {
+            return false;
             } else {
-                return false;
+               return true;
             }
          };
 
          // Add the new validator to the page validators array:
          Page_Validators.push(newValidator);
+
       });
    }(window.jQuery));
 }
-
 ```
 
 ## General validation
