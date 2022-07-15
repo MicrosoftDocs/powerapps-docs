@@ -117,11 +117,14 @@ Add screens and select from the list of available screen layouts.
 
 Or, select the **Screnarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
 
-### App checker
 
-Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/) with available rules and shows the results.
+### Background color
 
-![App-checker.](media/studio-app-checker.png "App-checker")
+Select a background color for a screen. You can select select from the list of standard colors or selec the **Custom** table and choose your own color.
+
+### Background image
+
+Select **Upload** to upload images to set as the background image.
 
 ### Settings
 
@@ -189,6 +192,25 @@ Select the name of the app to edit it.
 
 ![App name editor.](media/studio-app-name-editor.png "App name editor")
 
+### Share
+
+Lets you share the with other users and add them as co-owners of your app. You must save the app before you can share it.
+
+### App checker
+
+Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/) with available rules and shows the results.
+
+![App-checker.](media/studio-app-checker.png "App-checker")
+
+### Comments
+
+Use comment in your app to make suggestions or to track issues for follow-up.
+
+
+### Preview
+
+This will show a preview version of the app in Microsoft Teams that you can interact with.
+
 ### Save
 
 :::image type="content" source="media/studio-save-options.png" alt-text="Studio save options.":::
@@ -196,17 +218,15 @@ Select the name of the app to edit it.
 Save allows you to perform the following actions:
 
 - **Save** - Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
+- **Save with version notes** - Save and add notes about the updates you've made.
 - **Save as** - Duplicate the app by saving the app with a different name.
 - **Save and publish** - Allows you to both save the app, and publish it at the same time.
+- **Download a copy** - Downland a local copy of the app.
 
-### Preview
+### Publish
 
-This will show a preview version of the app in Microsoft Teams that you can interact with.
-
-### Publish to Teams
-
-Publishes the app’s current version to a channel within Microsoft Teams. For more
-information about publishing an app, go to [Publish an app](publish-and-share-apps.md#publish-and-add-an-app-to-teams).
+Publishes the app’s current version. For more
+information about publishing an app, go to [Save and publish canvas apps](save-publish-app.md).
 
 ## 3 – Properties list
 
