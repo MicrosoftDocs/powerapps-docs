@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/01/2022
+ms.date: 07/15/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -26,6 +26,9 @@ You can use [available Web API operations](web-api-overview.md#web-api-operation
 - Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
 - The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
+
+> [!NOTE]
+> When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](../../developer/data-platform/entity-metadata.md#table-names), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
 
 ## Query records
 
