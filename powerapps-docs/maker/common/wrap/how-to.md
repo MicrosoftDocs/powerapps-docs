@@ -177,6 +177,10 @@ Determines the output type of the wrap build process based on the platform you s
 ### Sign my app (preview)
   
 **Optional** Azure Keyvault URI allows for automated app signing for distribution by configuring a keyvault containing the required certificates. More information: [Set up KeyVault for automated signing](how-to.md#set-up-keyvault-for-automated-signing)
+ > [!IMPORTANT]
+ > - This is a preview feature.
+ > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
 
 ### Bundle ID
 
