@@ -128,6 +128,11 @@ Here's a summary of each column in the report.
 |Comments     | Details about the issue that include high-level resolution steps.         |  All       |
 
 
+## Run Solution Checker rules locally
+
+You can run Solution Checker rules in your development environment to detect issues much sooner as you create your solution resources.  This is currently supported for web resources (JavaScript and [TypeScript](https://typescript-eslint.io/)).  For more details, see the NPM package [@microsoft/eslint-plugin-power-apps](https://www.npmjs.com/package/@microsoft/eslint-plugin-power-apps).
+
+
 ## Best practice rules used by solution checker
 
 |Solution component  |Rule name  |Rule description  |
