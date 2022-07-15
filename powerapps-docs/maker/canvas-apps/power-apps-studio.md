@@ -98,7 +98,7 @@ To insert controls on the canvas, you can drag the control to the canvas, select
 ### Add data
 
 > [!div class="mx-imgBorder"] 
-> ![Add data.](media/studio/pa-studio-add-dat.png)
+> ![Add data.](media/studio/pa-studio-add-data.png)
 
 
 - Create a new table by selecting **Create new table**.
