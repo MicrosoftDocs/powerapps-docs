@@ -2,7 +2,6 @@
 title: Understand Power Apps Studio
 description:  Learn the components inside Power Apps Studio.
 author: lancedMicrosoft
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
@@ -110,15 +109,13 @@ To insert controls on the canvas, you can drag the control to the canvas, select
 > [!div class="mx-imgBorder"] 
 > ![Add new screen.](media/studio/pa-add-screen.png)
 
-Add screens based on the available layouts.
+Add screens and select from the list of available screen layouts.
 
 #### Layouts
 
-Select a new screen to add to the app based on the layout of the screen.
+![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
 
-![Layout scenarios.](media/studio-scenarios.png "Layout scenarios")
-
-Select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, or **Calendar**.
+Or, select the **Screnarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
 
 ### App checker
 
