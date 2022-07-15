@@ -107,6 +107,9 @@ To insert controls on the canvas, you can drag the control to the canvas, select
 
 ### New screen
 
+> [!div class="mx-imgBorder"] 
+> ![Add new screen.](media/studio/pa-add-screen.png)
+
 Add screens based on the available layouts.
 
 #### Layouts
