@@ -17,9 +17,8 @@ search.app:
   - D365CE
 ---
 
-# Explore data on a grid page (preview)
+# Explore data on a grid page 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 In model-driven apps, the default control that's used to show data in tabular form is the read-only grid. When a subarea contains a table, the subarea's default layout in the app sitemap is called the grid page.
 
