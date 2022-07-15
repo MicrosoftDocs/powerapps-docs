@@ -207,6 +207,9 @@ The following example shows how to compare columns using the Web API:
 
 Use the **$expand** system query option in the navigation properties to control what data from related entities is returned.
 
+> [!NOTE]
+> Table logical/schema name? [here](../../data-platform/webapi/query-data-web-api.md#retrieve-data-about-lookup-properties)
+
 ### Retrieve related table records by expanding single-valued navigation properties
 
 The following example shows how to retrieve the contact for all the account records. For the related contact records, we're only retrieving the **contactid** and **fullname**.
