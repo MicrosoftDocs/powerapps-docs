@@ -109,8 +109,8 @@ This list identifies all services to which Power Apps communicates and their usa
 | *.appsplatform.us | https | Required for Power Apps portals for Power Apps Department of Defense (DoD).<sup>3</sup> |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
-<sup>2</sup> Replaces earlier domain name `high.content.powerapps.us` used prior to July 2022. <br>
-<sup>3</sup> Replaces earlier domain name `content.appsplatform.us` used prior to July 2022.
+<sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
+<sup>3</sup> Replaces domain name `content.appsplatform.us` used prior to July 2022.
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
