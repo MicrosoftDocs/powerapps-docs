@@ -174,21 +174,21 @@ Shows current Power Apps Studio session details, version, and other information 
 
 Create a new flow with Power Automate, or select any available flow.
 
-![Power Automate.](media/studio-power-automate.png "Power Automate")
+![Create a flow using Power Automate.](media/studio/pa-studio-create-flow.gif)
 
-More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app)
+More information: [Use Power Automate pane](working-with-flows.md)
 
 ### Collections
 
-A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. More information: [Collections in canvas apps](../maker/canvas-apps/create-update-collection.md) used by the app.
+A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. More information: [Collections in canvas apps](create-update-collection.md) used by the app.
 
-![Collections.](media/settings-collections.png "Collections")
+![Collections.](media/studio/pa-studio-collections.png )
 
 ### Variables
 
-You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. More information: [Variables in canvas apps](../maker/canvas-apps/working-with-variables.md) used by the app.
+You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. More information: [Variables in canvas apps](working-with-variables.md) used by the app.
 
-![Variables.](media/studio-variables.png "Variables")
+![Variables.](media/stuido/pa-studio-variables.png "Variables")
 
 ## 2 – App actions
 
