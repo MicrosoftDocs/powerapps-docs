@@ -28,6 +28,7 @@ We'll cover the following tasks:
 - Connecting the **3D object** control to a **View in MR** control to view the 3D object in the real world
 - Adding a gallery control to view photos taken with the **View in MR** control
 - Uploading the photos to OneDrive with a Microsoft Power Automate flow
+- Uploading photos captured in mixed-reality to Dataverse
 
 ## Prerequisites
 
@@ -180,6 +181,16 @@ The complete flow should look like this:
 ### Add offline capability to your app
 
 You can use your app even when you have limited or no network connectivity using the [**SaveData** and **LoadData** functions](./functions/function-savedata-loaddata.md).
+
+## Upload photos captured in mixed-reality to Dataverse
+
+You can add photos to Dataverse tables through an Image data type column. Image columns in Dataverse have two required fields - Full and Value - which can be set to the ImageURI output of the MR controls.
+
+For example, if you wanted to upload the first photo captured by the Markup in MR control to a Dataverse column called Image:
+
+```powerapps-dot
+    Image: {Full: First(MarkupInMR.Photos).ImageURI, Value: First(MarkupInMR.Photos).ImageURI}
+```
 
 ### See also
 
