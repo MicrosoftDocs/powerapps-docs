@@ -182,27 +182,35 @@ More information: [Use Power Automate pane](working-with-flows.md)
 
 A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. More information: [Collections in canvas apps](create-update-collection.md) used by the app.
 
-![Collections.](media/studio/pa-studio-collections.png )
+> [!div class="mx-imgBorder"] 
+> ![Collections.](media/studio/pa-studio-collections.png )
 
 ### Variables
 
 You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. More information: [Variables in canvas apps](working-with-variables.md) used by the app.
 
-![Variables.](media/stuido/pa-studio-variables.png "Variables")
+> [!div class="mx-imgBorder"] 
+> ![Variables.](media/studio/pa-studio-variables.png)
 
 ## 2 – App actions
 
 Use the options in the upper-right corner of Power Apps Studio to work with app-specific actions.
 
-:::image type="content" source="media/studio-app-actions.png" alt-text="App actions.":::
+> [!div class="mx-imgBorder"] 
+> ![App actions.](media/studio/pa-studio-actions-menu.png)
+
 
 ### App name editor
 
 Select the name of the app to edit it.
 
-![App name editor.](media/studio-app-name-editor.png "App name editor")
+> [!div class="mx-imgBorder"] 
+> ![App name editor.](media/studio/pa-studio-app-name-editor.png)
 
 ### Share
+
+> [!div class="mx-imgBorder"] 
+> ![Share app.](media/studio/pa-studio-share-app.png)
 
 Lets you share the with other users and add them as co-owners of your app. You must save the app before you can share it.
 
