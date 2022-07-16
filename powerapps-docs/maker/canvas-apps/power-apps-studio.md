@@ -219,20 +219,25 @@ Lets you share the with other users and add them as co-owners of your app. You m
 Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/) with available rules and shows the results.
 
 > [!div class="mx-imgBorder"] 
-> ![App-checker.](media/pa-studio-app-checker.png)
+> ![App-checker.](media/studio/pa-studio-app-checker.png)
 
 ### Comments
 
-Use comment in your app to make suggestions or to track issues for follow-up.
+Add comments in your app to make suggestions or to track issues for follow-up.
 
+> [!div class="mx-imgBorder"] 
+> ![Add comments.](media/studio/pa-studio-comments.png)
 
 ### Preview
 
-This will show a preview version of the app in Microsoft Teams that you can interact with.
+This will show a preview version of the app that you can interact with.
 
 ### Save
 
-:::image type="content" source="media/studio-save-options.png" alt-text="Studio save options.":::
+
+> [!div class="mx-imgBorder"] 
+> ![Studio save options.](media/studio/pa-studio-save-options.png)
+
 
 Save allows you to perform the following actions:
 
@@ -341,7 +346,7 @@ To insert controls on the canvas, you can drag the control to the canvas,
 select the control, or select **(...)** and then select **Add to canvas**.
 
 > [!TIP]
-> Dataverse for Teams provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
+> Dataverse provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
 
 #### Popular controls
 | **Name**      | **Description**                                                                                      |
@@ -361,13 +366,13 @@ and definitions, go to [Controls and properties in Power Apps](../maker/canvas-a
 
 #### Classic controls
 
-Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** > **Upcoming features** > **Experimental** > toggle **Classic controls** to **On**.
+Dataverse uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** > **Upcoming features** > **Experimental** > toggle **Classic controls** to **On**.
 
 After you enable classic controls, you'll be able to see and add them from the **Classic** category.
 
 :::image type="content" source="media/classic-control.png" alt-text="Classic controls.":::
 
-For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse for Teams.
+For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse.
 
 ### Data
 
@@ -380,8 +385,7 @@ In addition to data stored within tables, there are many connectors available to
 
 :::image type="content" source="media/studio-data.png" alt-text="Data.":::
 
-Select **Create new table** to create a new table in the Dataverse for Teams
-environment.
+Select **Create new table** to create a new table in the Dataverse.
 
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can
 enter text in the data source search box or select from the list of connectors.
