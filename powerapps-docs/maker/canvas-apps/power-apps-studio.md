@@ -218,7 +218,8 @@ Lets you share the with other users and add them as co-owners of your app. You m
 
 Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/) with available rules and shows the results.
 
-![App-checker.](media/studio-app-checker.png "App-checker")
+> [!div class="mx-imgBorder"] 
+> ![App-checker.](media/pa-studio-app-checker.png)
 
 ### Comments
 
