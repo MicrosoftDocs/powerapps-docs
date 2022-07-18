@@ -118,7 +118,7 @@
         href: planning/discoverability.md
       - name: Collecting feedback and analyzing telemetry
         href: planning/feedback-telemetry.md
-  - name: "Best practice: Collaborate and co-develop low-code applications"
+  - name: "Best practice: Enabling makers to collaborate and co-develop low-code applications"
     items:
     - name: Overview
       href: co-develop/overview.md
