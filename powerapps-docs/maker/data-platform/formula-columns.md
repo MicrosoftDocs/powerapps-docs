@@ -26,7 +26,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 
 1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Dataverse** > **Tables**, and then select the table where you want to add a formula column.
-1. In the **Columns** area, select **New column**.
+1. Select the **Columns** area, and then select **New column**.
 1. Enter a **Display name** for the column.
 1. Optionally, enter a **Description** of the column.
 1. In **Data type**, select ***fx* Formula**.
