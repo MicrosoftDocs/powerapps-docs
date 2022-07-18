@@ -264,9 +264,10 @@ The properties list changes based on your selection. For a complete list of all 
 
 Use the formula bar to add, edit, or remove functions relevant to the selected
 object and the property selected from the properties list. For example, select
-the screen to update the background by using the [RGBA function](../maker/canvas-apps/functions/function-colors.md).
+the screen to update the background by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
 
-![Formula bar.](media/studio-formula-bar.png "Formula bar")
+> [!div class="mx-imgBorder"] 
+> ![Formula bar.](media/pa-studio-formula-bar.png)
 
 The formula bar is IntelliSense-enabled, and provides tips as you enter text to help you with the function syntax. If a formula returns an error, tips relevant to the syntax error and mitigation steps are displayed. When you start entering text that matches one or more functions, the formula bar shows inline function help and highlights help text relevant to the cursor position.
 
