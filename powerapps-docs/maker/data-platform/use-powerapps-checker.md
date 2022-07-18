@@ -17,7 +17,7 @@ search.app:
 
 # Use solution checker to validate your model-driven apps in Power Apps
 
-To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations comes an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
+To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations come an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
 > [!Important]
 > Starting March 2022, solution checker won’t analyze plugins in solutions. Plugin validations are being modernized and will eventually focus on the native plugin authoring time, which will help you detect and fix issues earlier.
@@ -68,7 +68,7 @@ The Solution checker is enabled by default in every environment. A **Solution ch
     Note the following:
     - The solution checker can take a few minutes to complete the analysis. 
     
-    - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
+    - During this time you'll notice a **Running…** state in the **Solution check** column of the **Solution** list. 
     
     - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
 
@@ -87,15 +87,15 @@ When you install the solution checker in your environment, the **Solution check*
 |---------|---------|
 |Hasn’t been run    | The solution has never been analyzed.        |
 |Running     | The solution is being analyzed.       |
-|Couldn’t be completed     |  Solution analysis was requested but the analysis did not complete successfully.       |
+|Couldn’t be completed     |  Solution analysis was requested but the analysis didn't complete successfully.       |
 |Results as of *date and time*   | Solution analysis completed and results are available for download.      |
-|Couldn’t be completed. Result as of *date and time*     | The latest analysis request did not complete successfully. The last successful results can be downloaded.         |
-|Checked by Microsoft     | This is a Microsoft-managed solution. Solution analysis is not permitted on these solutions.         |
-|Checked by Publisher     | This is a third-party-managed solution. Currently, solution analysis is not available for these solutions.        |
+|Couldn’t be completed. Result as of *date and time*     | The latest analysis request didn't complete successfully. The last successful results can be downloaded.         |
+|Checked by Microsoft     | This is a Microsoft-managed solution. Solution analysis isn't permitted on these solutions.         |
+|Checked by Publisher     | This is a third-party-managed solution. Currently, solution analysis isn't available for these solutions.        |
 
 
 ## Review the solution checker report
-When a solution check is completed, you can view the analysis report in the portal or you can download the report from your web browser. In the portal, you have options to filter, group results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
+When a solution check is completed, you can view the analysis report in the portal, or you can download the report from your web browser. In the portal, you have options to filter, group results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
 
 1. In the left pane, select **Solutions**.
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
@@ -104,7 +104,7 @@ When a solution check is completed, you can view the analysis report in the port
     > [!div class="mx-imgBorder"] 
     > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
 
-The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser.The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
+The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser. The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
 1. In the left pane, select **Solutions**.
 2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download results**.  
@@ -156,7 +156,7 @@ Here's a summary of each column in the report.
 |Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
 |Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  |
 |Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | |
-|Web Resources  | [avoid-2011-api](./powerapps-checker/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/overview) documentation. |
+|Web Resources  | [avoid-2011-api](./powerapps-checker/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](/powerapps/developer/data-platform/webapi/overview) documentation. |
 |Web Resources  | [use-relative-uri](./powerapps-checker/rules/web/use-relative-uri.md)   | Don't use absolute Dataverse endpoint URLs.    |
 |Web Resources  | [use-cached-webresource](./powerapps-checker/rules/web/use-cached-webresource.md)   |  |
 |Web Resources  | [use-client-context](./powerapps-checker/rules/web/use-client-context.md)  | Use client contexts.   |
