@@ -267,11 +267,22 @@ object and the property selected from the properties list. For example, select
 the screen to update the background by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
 
 > [!div class="mx-imgBorder"] 
-> ![Formula bar.](media/pa-studio-formula-bar.png)
+> ![Formula bar.](media/studio/pa-studio-formula-bar.png)
 
-The formula bar is IntelliSense-enabled, and provides tips as you enter text to help you with the function syntax. If a formula returns an error, tips relevant to the syntax error and mitigation steps are displayed. When you start entering text that matches one or more functions, the formula bar shows inline function help and highlights help text relevant to the cursor position.
+The formula bar is IntelliSense-enabled. When you start entering text that matches one or more functions, the formula bar shows the list of fuctions.
 
-![Function in the formula bar.](media/studio-function-1.png "Function in the formula bar")
+> [!div class="mx-imgBorder"] 
+> ![Function in the formula bar.](media/studio/pa-studio-formula-bar-1.png)
+
+When you select a fuction, the formula bar shows inline function help and highlights help text relevant to the cursor position.
+
+> [!div class="mx-imgBorder"] 
+> ![Inline help for function in the formula bar.](media/studio/pa-studio-formula-bar-2.png)
+
+If a formula returns an error, tips relevant to the syntax error and mitigation steps are displayed. 
+
+> [!div class="mx-imgBorder"] 
+> ![Resolve errors in the formula bar.](media/studio/studio/pa-studio-formula-bar-3.png)
 
 Similarly, you'll find help when working with complex functions, nested
 functions, or when correcting a formula syntax.
@@ -298,7 +309,7 @@ canvas, the available **Action** functions also include the function
 
 You can read the description of the selected **Action** function. Double-clicking a function name adds it into the formula bar.
 
-For a complete list of all canvas app functions, go to [Formula reference](../maker/canvas-apps/formula-reference.md).
+For a complete list of all canvas app functions, go to [Power Fx formula reference for Power Apps](/power-platform/power-fx/formula-reference).
 
 
 ## 5 – App authoring menu
