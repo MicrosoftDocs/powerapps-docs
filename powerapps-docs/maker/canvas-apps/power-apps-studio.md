@@ -298,7 +298,7 @@ Select an event type from the drop-down menu at the top of the dialog box, such 
 > [!div class="mx-imgBorder"] 
 > ![Function event selection.](media/studio/pa-studio-select-function.png "Function event selection")
 
-Select an action that you want to add a function for.
+When you select an action that you want to add a function for.
 
 ![Change in function event selection.](media/studio-function-4.png "Change in function event selection")
 
