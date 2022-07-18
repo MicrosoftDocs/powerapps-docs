@@ -2,7 +2,7 @@
 title: "Activities data model and storage | MicrosoftDocs"
 description: "This article will help you understand the activities data model and its impact on storage capacity."
 ms.custom: ""
-ms.date: 07/13/2022
+ms.date: 07/18/2022
 ms.reviewer: mduelae
 ms.topic: "article"
 author: DanaMartens
