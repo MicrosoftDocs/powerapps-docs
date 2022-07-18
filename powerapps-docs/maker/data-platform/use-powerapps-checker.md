@@ -17,7 +17,7 @@ search.app:
 
 # Use solution checker to validate your model-driven apps in Power Apps
 
-To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations comes an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
+To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations come an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
 > [!Important]
 > Starting March 2022, solution checker won’t analyze plugins in solutions. Plugin validations are being modernized and will eventually focus on the native plugin authoring time, which will help you detect and fix issues earlier.
@@ -68,7 +68,7 @@ The Solution checker is enabled by default in every environment. A **Solution ch
     Note the following:
     - The solution checker can take a few minutes to complete the analysis. 
     
-    - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
+    - During this time you'll notice a **Running…** state in the **Solution check** column of the **Solution** list. 
     
     - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
 
@@ -87,15 +87,15 @@ When you install the solution checker in your environment, the **Solution check*
 |---------|---------|
 |Hasn’t been run    | The solution has never been analyzed.        |
 |Running     | The solution is being analyzed.       |
-|Couldn’t be completed     |  Solution analysis was requested but the analysis did not complete successfully.       |
+|Couldn’t be completed     |  Solution analysis was requested but the analysis didn't complete successfully.       |
 |Results as of *date and time*   | Solution analysis completed and results are available for download.      |
-|Couldn’t be completed. Result as of *date and time*     | The latest analysis request did not complete successfully. The last successful results can be downloaded.         |
-|Checked by Microsoft     | This is a Microsoft-managed solution. Solution analysis is not permitted on these solutions.         |
-|Checked by Publisher     | This is a third-party-managed solution. Currently, solution analysis is not available for these solutions.        |
+|Couldn’t be completed. Result as of *date and time*     | The latest analysis request didn't complete successfully. The last successful results can be downloaded.         |
+|Checked by Microsoft     | This is a Microsoft-managed solution. Solution analysis isn't permitted on these solutions.         |
+|Checked by Publisher     | This is a third-party-managed solution. Currently, solution analysis isn't available for these solutions.        |
 
 
 ## Review the solution checker report
-When a solution check is completed, you can view the analysis report in the portal or you can download the report from your web browser. In the portal, you have options to filter, group results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
+When a solution check is completed, you can view the analysis report in the portal, or you can download the report from your web browser. In the portal, you have options to filter, group results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
 
 1. In the left pane, select **Solutions**.
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
@@ -104,7 +104,7 @@ When a solution check is completed, you can view the analysis report in the port
     > [!div class="mx-imgBorder"] 
     > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
 
-The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser.The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
+The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser. The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
 1. In the left pane, select **Solutions**.
 2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download results**.  
@@ -147,26 +147,36 @@ Here's a summary of each column in the report.
 | Plug-in or workflow activity  | [il-avoid-parallel-plugin](../../developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md?client=PAChecker&error=il-avoid-parallel-plugin)  | The usage of parallel patterns should be avoided within plug-ins.  |
 | Plug-in or workflow activity  | [il-avoid-lock-plugin](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=il-avoid-lock-plugin)  | Avoid lock of static members in plug-ins.  |
 | Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  |
-|Web Resources  | [web-use-async](../../developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously.md?client=PAChecker&error=web-use-async&source=featuredocs)  |  Interact with HTTP and HTTPS resources asynchronously.   |
-|Web Resources  | [web-avoid-modals](../../developer/model-driven-apps/clientapi/reference/xrm-navigation.md?client=PAChecker&error=web-avoid-modals&source=featuredocs)  | Avoid using modal dialogs.   |
-|Web Resources  | [web-avoid-crm2011-service-odata](../../developer/model-driven-apps/best-practices/business-logic/do-not-use-odata-v2-endpoint.md?client=PAChecker&error=web-avoid-crm2011-service-odata&source=featuredocs) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
-|Web Resources  | [web-avoid-crm2011-service-soap](../../developer/data-platform/org-service/overview.md?client=PAChecker&error=web-avoid-crm2011-service-soap&source=featuredocs)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
-|Web Resources  | [web-avoid-browser-specific-api](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-avoid-browser-specific-api&source=featuredocs) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
-|Web Resources  | [web-avoid-2011-api](../../developer/data-platform/webapi/overview.md?client=PAChecker&error=web-avoid-2011-api&source=featuredocs)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model.  |
-|Web Resources  | [web-use-relative-uri](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-use-relative-uri&source=featuredocs)   | Don't use absolute Dataverse endpoint URLs.    |
-|Web Resources  | [web-use-client-context](/power-platform/important-changes-coming?client=PAChecker&error=web-use-client-context&source=featuredocs)  | Use client contexts.   |
-|Web Resources  | [web-use-navigation-api](/power-platform/important-changes-coming?client=PAChecker&error=web-use-navigation-api&source=featuredocs)   | Use navigation API parameters.   |
-|Web Resources  | [web-use-org-setting](/power-platform/important-changes-coming?client=PAChecker&error=web-use-org-setting&source=featuredocs)   | Use organization settings.   |
-|Web Resources  | [web-use-grid-api](/power-platform/important-changes-coming?client=PAChecker&error=web-use-grid-api&source=featuredocs)   | Use the grid APIs.    |
-|Web Resources  | [web-avoid-isActivityType](../../developer/model-driven-apps/clientapi/reference/xrm-utility/getentitymetadata.md?client=PAChecker&error=web-avoid-isActivityType&source=featuredocs)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    |
+|Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   |
+|Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   |
+|Web Resources  | [avoid-dom-form](./powerapps-checker/rules/web/avoid-dom-form.md)  | |
+|Web Resources  | [avoid-dom-form-event](./powerapps-checker/rules/web/avoid-dom-form-event.md)  | |
+|Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     |
+|Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
+|Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
+|Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  |
+|Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | |
+|Web Resources  | [avoid-2011-api](./powerapps-checker/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](/powerapps/developer/data-platform/webapi/overview) documentation. |
+|Web Resources  | [use-relative-uri](./powerapps-checker/rules/web/use-relative-uri.md)   | Don't use absolute Dataverse endpoint URLs.    |
+|Web Resources  | [use-cached-webresource](./powerapps-checker/rules/web/use-cached-webresource.md)   |  |
+|Web Resources  | [use-client-context](./powerapps-checker/rules/web/use-client-context.md)  | Use client contexts.   |
+|Web Resources  | [use-navigation-api](./powerapps-checker/rules/web/use-navigation-api.md)   | Use navigation API parameters.   |
+|Web Resources  | [use-offline](./powerapps-checker/rules/web/use-offline.md)   |  |
+|Web Resources  | [do-not-make-parent-assumption](./powerapps-checker/rules/web/do-not-make-parent-assumption.md)   |  |
+|Web Resources  | [use-org-setting](./powerapps-checker/rules/web/use-org-setting.md)   | Use organization settings.   |
+|Web Resources  | [use-global-context](./powerapps-checker/rules/web/use-global-context.md)   |  |
+|Web Resources  | [use-grid-api](./powerapps-checker/rules/web/use-grid-api.md)   | Use the grid APIs.    |
+|Web Resources  | [use-utility-dialogs](./powerapps-checker/rules/web/use-utility-dialogs.md)   |    |
+|Web Resources  | [avoid-isActivityType](./powerapps-checker/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    |
 |Web Resources  | [meta-avoid-silverlight](/power-platform/important-changes-coming?client=PAChecker&error=meta-avoid-silverlight&source=featuredocs)   | Silverlight web resource usage is deprecated.   |
-| Web Resources  | [web-remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | 
-| Web Resources  | [web-use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | 
-| Web Resources  | [web-use-strict-equality-operators](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | 
-| Web Resources  | [web-avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | 
-| Web Resources  | [web-remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | 
-| Web Resources  | [web-remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | 
-| Web Resources  | [web-avoid-ui-refreshribbon](https://go.microsoft.com/fwlink/?linkid=2157641&error=web-remove-console&client=PAChecker)  | Avoid using refreshRibbon in form onload and EnableRule. | 
+| Web Resources  | [remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | 
+| Web Resources  | [use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | 
+| Web Resources  | [use-strict-equality-operators](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | 
+| Web Resources  | [avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | 
+| Web Resources  | [remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | 
+| Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | 
+| Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | 
+| Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | 
 | Canvas App  | [app-formula-issues-high](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-high&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | 
 | Canvas App  | [app-formula-issues-medium](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-medium&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | 
 | Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. | 
