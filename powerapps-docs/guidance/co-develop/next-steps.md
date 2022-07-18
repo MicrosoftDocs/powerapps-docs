@@ -1,7 +1,7 @@
 ---
 title: "Next steps: Solutions and tools | Microsoft Docs"
-description: "Learn more about the fusion development approach to app building in Power Apps."
-author: spboyer
+description: "Learn more about how to collaborate and co-develop low code apps in Power Apps."
+author: ankitchawla23
 
 ms.topic: collaboration-codevelopment
 ms.custom: Focus-center

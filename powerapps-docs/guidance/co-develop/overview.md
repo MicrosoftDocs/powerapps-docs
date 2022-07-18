@@ -1,18 +1,18 @@
 ---
 title: "Collaboration and Co-development best practices overview | Microsoft Docs"
-description: "Learn more about the fusion development approach to app building in Power Apps."
-author: spboyer
+description: "Learn more about how to collaborate and co-develop low code apps in Power Apps."
+author: luis-camino-ms
 
-ms.topic: conceptual
-ms.custom: ebook
-ms.date: 04/26/2021
+ms.topic: collaboration-codevelopment
+ms.custom: Focus-center
+ms.date: 07/15/2022
 ms.subservice: guidance
 ms.author: luis-camino-ms
 ms.reviewer: kvivek
 
 ---
 
-# Overview.......TODO
+# Overview
 
 Digital transformation as a mechanism for improving business efficiency is a key component in the success of most organizations today. Yet often, the business-focused domain experts are unable to create apps with the functionality that they want, whereas developers may struggle to understand the commercial and process implications of the code they’re asked to build. In consequence, there can be a disconnect between an organization’s business imperatives and the subsequent implementation of that company’s applications.
 However, enabling organizations to truly support business growth takes more than just a top-notch development team; it requires the participation of business-savvy individuals to drive the creation of solutions that an organization can use to maintain its competitive advantage. Microsoft Power Apps – part of Microsoft Power Platform – enables these ‘makers’ (that is, business technologists or individuals with business domain experience) to build and deploy low-code or no-code applications within fusion teams. 

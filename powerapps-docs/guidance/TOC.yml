@@ -118,9 +118,13 @@
         href: planning/discoverability.md
       - name: Collecting feedback and analyzing telemetry
         href: planning/feedback-telemetry.md
-  - name: "Best practices: Co-development of apps"
+  - name: "Best practice: Enabling makers to collaborate and co-develop low-code applications"
     items:
     - name: Overview
       href: co-develop/overview.md
+    - name: Establishing a collaboration model
+      href: co-develop/collaboration.md
+    - name: Co-development governance guidance
+      href: co-develop/governance.md  
     - name: Next steps
       href: co-develop/next-steps.md    
