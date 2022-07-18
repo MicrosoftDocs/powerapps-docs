@@ -60,6 +60,17 @@ To run Portal Checker:
     > [!div class=mx-imgBorder]
     > ![Refresh diagnostic results.](../media/diagnostic-results-refresh.png "Refresh diagnostic results")
 
+## Identifying web pages listed in diagnostic results
+
+The portal checker diagnostic results could list web pages that have the same name as other pages in the portal. If there are multiple web pages with the same name, you can identify the specific page affected using the unique guid of the page.
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Open any web page.
+1. Replace the ID in the URL with the guid specified in the portal checker diagnostic results.
+
+    :::image type="content" source="media/portal-checker-analysis/webpage-by-id.png" alt-text="Replacing the web page ID the URL.":::
+
 ## Next steps
 
 Analyze and resolve Portal Checker diagnostics results:

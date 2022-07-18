@@ -58,15 +58,14 @@ This *Page Not Found* error appears if:
 
 To resolve this error, ensure that you have the default site marker named **Page Not Found** present and configured correctly. If the site marker is present and correctly configured, check if the **Page Not Found** webpage is selected for the site marker or whether the **Page Not Found** webpage is present or not.
 
-For steps to create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](#an-active-page-not-found-site-marker-isnt-available-for-this-portal).
+For steps to create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](portal-checker-configuration-issues.md#an-active-page-not-found-site-marker-isnt-available-for-this-portal).
 
-For steps to check site marker configuration and ensure it points to the correct webpage, go to [The Page Not Found site marker isn't pointing to any webpage](#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
+For steps to check site marker configuration and ensure it points to the correct webpage, go to [The Page Not Found site marker isn't pointing to any webpage](portal-checker-configuration-issues.md#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
 
-For steps to change the site marker to point to the correct **Page Not Found** webpage, go to [The Page Not Found site marker is pointing to a deactivated webpage](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-webpage).
+For steps to change the site marker to point to the correct **Page Not Found** webpage, go to [The Page Not Found site marker is pointing to a deactivated webpage](portal-checker-configuration-issues.md#the-page-not-found-site-marker-is-pointing-to-a-deactivated-webpage).
 
 ### See also
 
 [Run Portal Checker](portal-checker.md)
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
