@@ -74,9 +74,9 @@ The portal checker diagnostic results could list web pages that have the same na
 ## Next steps
 
 Analyze and resolve Portal Checker diagnostics results:
-- [Cache invalidation](portal-checker-cache-invalidation.md)
+- [Cache invalidation issues](portal-checker-cache-invalidation.md)
 - [Configuration issues](portal-checker-configuration-issues.md)
-- [Performance](portal-checker-performance.md)
+- [Performance issues](portal-checker-performance.md)
 - [Portal start-up issues](portal-checker-startup-issue.md)
 - [Provisioning issues](portal-checker-provisioning-issues.md)
 

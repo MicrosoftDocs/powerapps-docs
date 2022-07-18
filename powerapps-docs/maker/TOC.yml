@@ -1900,9 +1900,19 @@
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
-              href: ./portals/admin/portal-checker.md
+              href: ./portals/admin/portal-checker.md             
             - name: Analyze and resolve results
-              href: ./portals/admin/portal-checker-analysis.md
+              items:
+                - name: Cache invalidation issues
+                  href: ./portals/admin/portal-checker-cache-invalidation.md
+                - name: Configuration issues
+                  href: ./portals/admin/portal-checker-configuration-issues.md
+                - name: Performance issues
+                  href: ./portals/admin/portal-checker-performance.md
+                - name: Portal start-up issues
+                  href: ./portals/admin/portal-checker-startup-issue.md
+                - name: Provisioning issues
+                  href: ./portals/admin/portal-checker-provisioning-issues.md
         - name: Manage portal authentication key
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
