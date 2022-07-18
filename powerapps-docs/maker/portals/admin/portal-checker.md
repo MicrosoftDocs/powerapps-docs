@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 07/18/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -43,26 +43,29 @@ For a list of common issues diagnosed by Portal Checker, see [Common portal issu
 
 To run Portal Checker:
 
-1.	Open [Power Apps portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
-2.	Go to **Run Portal Checker**.
+1. Go to **Run Portal Checker**.
 
     > [!div class=mx-imgBorder]
     > ![Run Portal Checker.](../media/run-diagnostics.png "Run Portal Checker")
 
-3.	Select the **Run Portal Checker** button. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic Results** section.
+1. Select the **Run Portal Checker** button. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic Results** section.
 
     > [!div class=mx-imgBorder]
     > ![Diagnostic results.](../media/diagnostic-results.png "Diagnostic results")
 
-4.	To rerun the diagnostic checks, select **Refresh results**.
+1. To rerun the diagnostic checks, select **Refresh results**.
 
     > [!div class=mx-imgBorder]
     > ![Refresh diagnostic results.](../media/diagnostic-results-refresh.png "Refresh diagnostic results")
 
 ## Next steps
 
-[Analyze and resolve Portal Checker diagnostics results](portal-checker-analysis.md)
+Analyze and resolve Portal Checker diagnostics results:
+- [Cache invalidation](portal-checker-cache-invalidation.md)
+- [Configuration issues](portal-checker-configuration-issues.md)
+- [Performance](portal-checker-performance.md)
+- [Portal start-up issues](portal-checker-startup-issue.md)
+- [Provisioning issues](portal-checker-provisioning-issues.md)
 
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

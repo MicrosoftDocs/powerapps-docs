@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/20/2022
+ms.date: 07/18/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -20,117 +20,13 @@ contributors:
 
 In this article, you'll learn about Portal Checker diagnostics results related to configuration issues, and how to resolve any issues or problems found.
 
-## Web page has a publishing state that belongs to a different web site
+## Anonymous access to basic form(s), list(s), and advanced form step(s)
 
-This issue occurs when a [publishing state](../configure/publishing-states.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+The following issues relate to configuration of [table permissions](../configure/entity-permissions-studio.md) on Dataverse enabled components.
 
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Update the **Publishing State** field to point to a publishing state record in the same website. 
+### Anonymous access to basic/advanced forms and lists
 
-## Web page doesn't have a publishing state
-
-This issue occurs when a [web page](../configure/web-page.md) record doesn't have a corresponding [publishing state](../configure/publishing-states.md). To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Update the **Publishing State** field to point to a publishing state record. 
-
-## Web page is trying to use an inactive page template
-
-This issue occurs when the [page template](../configure/page-templates.md) record is inactive. To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Select the **Page Template** record to navigate to the record.
-1. Select **Activate** from the command bar.
-1. Alternatively, update the **Page Template** to point to an active page template in the web page.
-
-## Web Page has a page template that belongs to a different web site
-
-This issue occurs when a [page template](../configure/page-templates.md) is associated with a different [website](../configure/websites.md). To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Update the **Web site** field to point the appropriate website.
-1. Alternatively, update the **Page Template** to point to a page template in the same website.
-
-## Parent page of an active web page is inactive
-
-This issue occurs when a parent [web page](../configure/web-page.md) record is inactive. To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Select the **Parent Page** record to navigate to the record.
-1. Select **Activate** from the command bar.
-
-## Web page needs at least one active localized language content page
-
-This issue occurs when the [web page](../configure/web-page.md) doesn't have at least one [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Scroll down to the **Localized Content** section.
-1. Select **+ New Web Page** to create a new language content page.
-
-    > [!Note]
-    > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
-
-## Web page associated a localized content page as a parent web page  
-
-This issue occurs when a [web page](../configure/web-page.md) record has it's **Parent Web Page** associated to a [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Update the **Parent Page** field to point to a valid web page record that isn't a content page.
-
-## Web page without a page template
-
-This issue occurs when a [web page](../configure/web-page.md) record doesn't have a corresponding [page template](../configure/page-templates.md). To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Update the **Page Template** field to point to an active page template record.
-
-## Profile web form configuration
-
-## Published state configuration
-
-## Web page publishing is hidden
-
-This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field isn't checked. To fix this issue:
-
-1. Open the [Portal Management app](../configure/configure-portal.md).
-1. In the left pane, select **Web Pages**.
-1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
-1. Select the **Publishing State** record to navigate to the record.
-1. Select the **IsVisible** field and make sure that it's checked (set to true).
-
-### Published state isn't available for this website
-
-To fix this issue, ensure that the publishing state **Published** is available and active.
-
-### Published state isn't visible
-
-To fix this issue, ensure that the publishing state **Published** has the **isVisible** checkbox is selected.
-
-## Search settings configuration
-
-## Out-of-the-box CSS files configuration
-
-## Anonymous access to entity form(s), entity list(s), and web form step(s)
-
-### Anonymous access to Basic/Advanced forms and Lists
-
-Basic Forms, Advanced Forms and Lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Securing lists](../configure/securing-lists.md) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
+Basic forms, Advanced forms and lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Securing lists](../configure/securing-lists.md) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
 
 This method is useful for quickly testing your configurations during development of portal, but not securing Lists and Forms on portal can have unintended consequences including unauthorized access to data. We don't advise this method to be used outside a secure dev or test environment.
 
@@ -198,9 +94,80 @@ If you've unintended OData feed enabled on your portal anonymous, it could be be
 
     - To fix this problem, ensure that the table permissions assigned to **Anonymous** web role are updated to ensure that only intended data is made available anonymously.
 
+## Cyclic parent web page
+
+This issue occurs when a [web page](../configure/web-page.md) references itself as a parent page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that isn't referencing itself.
+
+## File attachment doesn't have content
+
+To fix this issue, add the CSS file with entire content in the notes section of the web file.
+
+## List of tables with CMS security check failed
+
+To fix this issue, ensure that your table has proper search page.
+
+## List of tables with search result having invalid URL
+
+To fix this issue, ensure that your table has appropriate security permission.
+
+## Loading static resources (CSS/JS) asynchronously
+
+When working on portal implementation, it's important to understand that you completely manage the HTML of the page. That means that standard web development practices should be followed to ensure that your webpage's client side performance isn't affected.
+
+One of the most common causes of performance issues on webpages is loading numerous static resources (CSS/JS) synchronously on the page. In portals, whenever you associate a web file directly to the homepage, it creates a dependency in the generated HTML. This means that web file is always loaded along with the homepage. Synchronous loading of a large number of CSS/JS files can lead to long client-side processing time for your webpages.
+
+To avoid this, do the following:
+
+1. If a web file isn't needed on the homepage, make sure its parent page isn't set to home, and reuse the steps described in the section above to load it on demand.
+1. While loading a JavaScript file on demand on any page, use the `<async>` or `<defer>` HTML attribute to load the file asynchronously.
+1. While loading a CSS file on demand, you can use the `<preload>` HTML attribute (https://www.w3.org/TR/preload/) or JavaScript-based approach since preload isn't supported on all the browsers yet.
+
+## MIME type of file isn't text/CSS
+
+To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
+
+## Parent page of an active web page is inactive
+
+This issue occurs when a parent [web page](../configure/web-page.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Parent Page** record to navigate to the record.
+1. Select **Activate** from the command bar.
+
+## Portal is inaccessible
+
+This issue may occur when the authentication certificate for the site needs to be renewed.
+
+When portal is created, a new authentication key is generated. Portal uses this authentication key to connect to the Microsoft Dataverse environment. When authentication key is expired portal users will see message that the portal is inaccessible. 
+
+To fix this issue, [renew the authentication key](manage-auth-key.md#renew-authentication-key) for this site. 
+
+## Published state configuration
+
+The following issues relate to the [publishing states](../configure/publishing-states.md).
+
+### Published state isn't available for this website
+
+To fix this issue, ensure that the publishing state **Published** is available and active.
+
+### Published state isn't visible
+
+To fix this issue, ensure that the publishing state **Published** has the **isVisible** checkbox is selected.
+
 ## Site markers
 
+The following issues relate to site markers.
+
 ### Home site marker configuration
+
+The following issues relate to site markers and the home [webpage](/configure/web-page.md).
 
 #### An active Home site marker isn't available for this portal
 
@@ -242,6 +209,8 @@ This issue occurs when the **Home** site marker is available, but is pointing to
 
 ### Profile site marker configuration
 
+The following issues relate to site marker configuration to the profile page.
+
 #### An active Profile site marker isn't available for this portal
 
 This issue occurs when the **Profile** site marker isn't available in your portal configuration. To fix this issue:
@@ -272,6 +241,8 @@ This issue occurs when the **Profile** site marker is available, but is pointing
 1. Update the **Page** field to point to an active profile page of your portal.
 
 ### Page Not Found site marker configuration
+
+The following issues relate to site marker configuration to the **Page Not Found** webpage.
 
 #### An active Page Not Found site marker isn't available for this portal
 
@@ -304,6 +275,8 @@ This issue occurs when the **Page Not Found** site marker is available, but is p
 
 ### Access Denied site marker configuration
 
+The following issues relate to site marker configuration to the **Access Denied** page.
+
 #### An active Access Denied site marker isn't available for this portal
 
 This issue occurs when the **Access Denied** site marker isn't available in your portal configuration. To fix this issue:
@@ -333,9 +306,11 @@ This issue occurs when the **Access Denied** site marker is available, but is po
 1. Find the **Access Denied** site marker record.
 1. Update the **Page** field to point to an active Access Denied page of your portal.
 
-## Search site marker availability
+### Search site marker availability
 
-## An active Search site marker isn't available for this portal
+The following issues relate to site marker configuration to the site search page.
+
+#### An active Search site marker isn't available for this portal
 
 This issue occurs when the **Search** site marker isn't available in your portal configuration. To fix this issue:
 
@@ -347,10 +322,95 @@ This issue occurs when the **Search** site marker isn't available in your portal
     - **Website**: Select the website of your portal host.
     - **Page**: Select the webpage record that is set as the search page of your portal.
 1. Select **Save & Close**.
- 
-##### See also
+
+## Web file isn't active
+
+To fix this issue, ensure that the web file is in active state.
+
+## Web pages
+
+The following issues relate to [web pages](../configure/web-page.md).
+
+### Web page associated a localized content page as a parent web page  
+
+This issue occurs when a [web page](../configure/web-page.md) record has it's **Parent Web Page** associated to a [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Parent Page** field to point to a valid web page record that isn't a content page.
+
+### Web page doesn't have a publishing state
+
+This issue occurs when a [web page](../configure/web-page.md) record doesn't have a corresponding [publishing state](../configure/publishing-states.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Publishing State** field to point to a publishing state record. 
+
+### Web Page has a page template that belongs to a different web site
+
+This issue occurs when a [page template](../configure/page-templates.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Web site** field to point the appropriate website.
+1. Alternatively, update the **Page Template** to point to a page template in the same website.
+
+### Web page has a publishing state that belongs to a different web site
+
+This issue occurs when a [publishing state](../configure/publishing-states.md) is associated with a different [website](../configure/websites.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Publishing State** field to point to a publishing state record in the same website. 
+
+### Web page is trying to use an inactive page template
+
+This issue occurs when the [page template](../configure/page-templates.md) record is inactive. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Page Template** record to navigate to the record.
+1. Select **Activate** from the command bar.
+1. Alternatively, update the **Page Template** to point to an active page template in the web page.
+
+### Web page needs at least one active localized language content page
+
+This issue occurs when the [web page](../configure/web-page.md) doesn't have at least one [language content page](../configure/enable-multiple-language-support.md#create-content-in-multiple-languages). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Scroll down to the **Localized Content** section.
+1. Select **+ New Web Page** to create a new language content page.
+
+    > [!Note]
+    > The configuration fields on the home page of a content page is not inherited to the existing content pages. They are used only in creation of new content pages. You must update the content page configurations individually.
+
+### Web page publishing is hidden
+
+This issue occurs when the [publishing state](../configure/publishing-states.md) **IsVisible** field isn't checked. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the **Publishing State** record to navigate to the record.
+1. Select the **IsVisible** field and make sure that it's checked (set to true).
+
+### Web page without a page template
+
+This issue occurs when a [web page](../configure/web-page.md) record doesn't have a corresponding [page template](../configure/page-templates.md). To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web page [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Page Template** field to point to an active page template record.
+
+## See also
 
 [Run Portal Checker](portal-checker.md)
-
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
