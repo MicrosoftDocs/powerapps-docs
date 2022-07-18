@@ -293,7 +293,7 @@ For a quick and easy function reference, you can also select the formula drop-do
 > ![Formula drop-down menu.](media/studio/pa-studio-function-list.png)
 
 Select an event type from the drop-down menu at the top of the dialog box, such as
-**Action** instead of **Text**.
+**Table** instead of **Text**.
 
 > [!div class="mx-imgBorder"] 
 > ![Function event selection.](media/studio/pa-studio-select-function.png "Function event selection")
