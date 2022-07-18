@@ -319,7 +319,9 @@ For a complete list of all canvas app functions, go to [Power Fx formula referen
 
 Switch between various authoring options while working with the app.
 
-:::image type="content" source="media/studio-app-1.png" alt-text="App authoring menu.":::
+
+> [!div class="mx-imgBorder"] 
+> ![App authoring menu.](media/studio/pa-studio-app-authoring-menu.png)
 
 > [!TIP]
 > You can also select the expand button to expand the list to include names instead of just icons.
@@ -328,6 +330,9 @@ Switch between various authoring options while working with the app.
 - **Insert** - Allows you to add different controls to the screen.
 - **Data** - Add or remove data such as tables that the app connects to.
 - **Media** - Insert or remove media from the app.
+- **Power Automate**: Add a flow using the [Power Automate pane](working-with-flows.md).
+- **Advanced tools**: Allows you to access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
+- **Search**: 
 
 ## 6 – App authoring options
 
