@@ -4,4 +4,4 @@ Replace Xrm.Utility.isActivityType method with new Xrm.Utility.getEntityMetadata
 
 ## Recommendation
 
-For details on the correct Xrm.Utility functions see the [Xrm.Utility.getEntityMetadata](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-utility/getentitymetadata) documentation. 
+For details on the correct Xrm.Utility functions go to the [Xrm.Utility.getEntityMetadata](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-utility/getentitymetadata) documentation. 

@@ -4,4 +4,4 @@ Interact with HTTP and HTTPS resources asynchronously.
 
 ## Recommendation
 
-For more information, see [asynchronous HTTP best practices](https://docs.microsoft.com/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously).
+For more information, go to [asynchronous HTTP best practices](/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously).

@@ -4,4 +4,4 @@ Avoid using `showModalDialog()`.
 
 ## Recommendation
 
-Instead, see the documentation for the [XRM Navigation API](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation).
+Instead, go to the documentation for the [XRM Navigation API](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation).

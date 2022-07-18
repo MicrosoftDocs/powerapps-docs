@@ -8,4 +8,5 @@ Use organization settings. Specifically:
 - Calls to `Xrm.Page.context.getOrgUniqueName()` should be replaced with `Xrm.Utility.getGlobalContext().organizationSettings.uniqueName`
 
 ## Recommendation
-For more information, see [Client API Deprecations](https://docs.microsoft.com/power-platform/important-changes-coming#some-client-apis-are-deprecated).
+
+For more information, go to [Client API deprecations](/power-platform/important-changes-coming#some-client-apis-are-deprecated).
