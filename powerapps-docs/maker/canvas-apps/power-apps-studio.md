@@ -293,21 +293,22 @@ For a quick and easy function reference, you can also select the formula drop-do
 > ![Formula drop-down menu.](media/studio/pa-studio-function-list.png)
 
 Select an event type from the drop-down menu at the top of the dialog box, such as
-**Table** instead of **Text**.
+**Action** instead of **Text**.
 
 > [!div class="mx-imgBorder"] 
 > ![Function event selection.](media/studio/pa-studio-select-function.png "Function event selection")
 
-When you select an action that you want to add a function for.
+When you select an action that you want to add a function for. The available functions for the selected event type are dynamically updated
+depending on the object you select.
 
-![Change in function event selection.](media/studio-function-4.png "Change in function event selection")
+![Change in function event selection.](media/studio/pa-studio-select-function-1.png "Change in function event selection")
 
 The available functions for the selected event type are dynamically updated
 depending on the object you select. For example, if you selected a button on the
 canvas, the available **Action** functions also include the function
 *ClearCollect()*.
 
-![Function ClearCollect() selected.](media/studio-function-5.png "Function ClearCollect() selected")
+![Function ClearCollect() selected.](media/studio/pa-studio-function-2.png "Function ClearCollect() selected")
 
 You can read the description of the selected **Action** function. Double-clicking a function name adds it into the formula bar.
 
