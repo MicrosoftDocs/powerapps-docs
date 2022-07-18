@@ -1,3 +1,18 @@
+---
+title: avoid-unpub-api Power Apps checker reference | Microsoft Docs
+description: Power app checker rule reference for avoid-unpub-api.
+author: ecarrleemsft
+manager: tapanm-msft
+ms.topic: reference
+ms.date: 07/18/2022
+ms.service: "powerapps"
+ms.subservice: dataverse-maker
+ms.author: matp
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+---
 # `avoid-unpub-api`
 
 Avoid using unpublished (private) functionality as it is not guaranteed to continue working and utilizing it may break your code in the future.

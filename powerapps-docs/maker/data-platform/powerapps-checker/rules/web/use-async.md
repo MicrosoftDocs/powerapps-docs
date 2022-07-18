@@ -1,3 +1,18 @@
+---
+title: use-async Power Apps checker reference | Microsoft Docs
+description: Power app checker rule reference for use-async.
+author: ecarrleemsft
+manager: tapanm-msft
+ms.topic: reference
+ms.date: 07/18/2022
+ms.service: "powerapps"
+ms.subservice: dataverse-maker
+ms.author: matp
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+---
 # `use-async`
 
 Interact with HTTP and HTTPS resources asynchronously.

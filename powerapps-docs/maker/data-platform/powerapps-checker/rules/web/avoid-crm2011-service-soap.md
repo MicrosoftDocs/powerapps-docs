@@ -1,3 +1,18 @@
+---
+title: avoid-crm2011-service-soap Power Apps checker reference | Microsoft Docs
+description: Power app checker rule reference for avoid-crm2011-service-soap.
+author: ecarrleemsft
+manager: tapanm-msft
+ms.topic: reference
+ms.date: 07/18/2022
+ms.service: "powerapps"
+ms.subservice: dataverse-maker
+ms.author: matp
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+---
 # `avoid-crm2011-service-soap`
 
 Don't target the Microsoft Dynamics CRM 2011 SOAP services.
