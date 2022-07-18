@@ -282,19 +282,21 @@ When you select a fuction, the formula bar shows inline function help and highli
 If a formula returns an error, tips relevant to the syntax error and mitigation steps are displayed. 
 
 > [!div class="mx-imgBorder"] 
-> ![Resolve errors in the formula bar.](media/studio/studio/pa-studio-formula-bar-3.png)
+> ![Resolve errors in the formula bar.](media/studio/pa-studio-formula-bar-3.png)
 
 Similarly, you'll find help when working with complex functions, nested
 functions, or when correcting a formula syntax.
 
 For a quick and easy function reference, you can also select the formula drop-down menu.
 
-![Formula drop-down menu.](media/studio-function-2.png "Formula drop-down menu")
+> [!div class="mx-imgBorder"] 
+> ![Formula drop-down menu.](media/studio/pa-studio-function-list.png)
 
 Select an event type from the drop-down menu at the top of the dialog box, such as
 **Action** instead of **Text**.
 
-![Function event selection.](media/studio-function-3.png "Function event selection")
+> [!div class="mx-imgBorder"] 
+> ![Function event selection.](media/studio/pa-studio-select-function.png "Function event selection")
 
 Select an action that you want to add a function for.
 
