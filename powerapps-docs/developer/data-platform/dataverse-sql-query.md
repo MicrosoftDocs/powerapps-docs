@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 07/08/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -98,6 +98,10 @@ Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a
 Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
+
+### Reported SQL version
+The Dataverse TDS endpoint emulates Microsoft SQL Server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure version 12.0.2000.8 for `select @@version`.
+
 
 ## Limitations
 

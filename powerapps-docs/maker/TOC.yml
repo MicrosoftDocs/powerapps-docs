@@ -131,9 +131,9 @@
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
-      - name: Explore data in a view on a grid page (preview)
+      - name: Explore data in a view on a grid page 
         href: ../user/grid-filters.md
-      - name: Create and manage personal views on a grid page (preview)
+      - name: Create and manage personal views on a grid page 
         href: ../user/grid-filters-advanced.md     
       - name: Faq for grids and views
         href: ../user/faq-for-grids-views.md
@@ -1610,6 +1610,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+  - name: App ratings (preview)
+    href: ./common/app-ratings.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
@@ -1642,6 +1644,8 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+    - name: Offline profile guidelines
+      href: ../mobile/mobile-offline-guidelines.md   
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
@@ -1821,9 +1825,11 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
+        - name: Configure file column (preview)
+          href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
-        - name: Configure image column (preview)
+        - name: Configure image column
           href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md

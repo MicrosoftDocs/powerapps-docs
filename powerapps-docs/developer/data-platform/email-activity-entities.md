@@ -22,7 +22,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The email activity lets you track and manage email communications with customers. Microsoft Dataverse includes the Email Router software that manages the routing of email to or from Dataverse. The email activity is delivered using email protocols. Email Router supports the following email protocols: Exchange Web services, POP3, and SMTP. In addition to the Email Router software, the email activity can also be delivered by using Dynamics 365 for Outlook.  
+The email activity lets you track and manage email communications with customers. 
   
 <a name="Actions"></a>   
 

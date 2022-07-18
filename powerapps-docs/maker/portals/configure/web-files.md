@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2022
+ms.date: 07/13/2022
 //ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -30,15 +30,19 @@ Web files can be created, edited, and deleted within Power Apps portals.
 
 1. Open the [Portal Management app](configure-portal.md).
 
-2. Go to **Portals** > **Web Files**.
+1. Go to **Portals** > **Web Files**.
 
-3. To create a new web file, select **New**.
+1. To create a new web file, select **New**.
 
-4. To edit an existing web file, select the web file name.
+1. To edit an existing web file, select the web file name.
 
-5. Enter appropriate values in the fields.
+1. Enter appropriate values in the fields.
 
-6. Select **Save & Close**.
+1. Select **Save & Close**.
+
+> [!WARNING]
+> - If you plan to [migrate your site](../admin/migrate-portal-configuration.md) to another environment, ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment. 
+>- The maximum size of files is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
 ### Web file attributes
 
@@ -62,8 +66,15 @@ The table below explains many of the standard web file attributes used by portal
 | Enable Tracking (Deprecated)     | If enabled, every request for this web file will be logged. A Web File Log record will be created with the date & time, IP Address, and the contact record if the user is authenticated. Web file tracking is deprecated. For more information, go to [Web file tracking FAQ](../admin/portal-checker-analysis.md#web-file-tracking-enabled).     |
 |||
 
+## Add a download link
 
+To embed a file download link on a web page, web template, or content snippet from a web file record, you can add the following HTML code:
 
+`<a href="/<<partial url of web file record>>"><<Description of link>>/a>`
 
+For example, if the partial URL of the web file is *user-manual.pdf*:
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+`<a href="/user-manual.pdf">Select here to download the user manual</a>`
+
+> [!NOTE]
+> The permissions to access the file to be downloaded is controlled by the parent page permissions. For more information, see [Manage page permissions](webpage-access-control.md#permissions-apply-to-child-files).
