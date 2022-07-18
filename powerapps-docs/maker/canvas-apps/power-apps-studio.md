@@ -332,7 +332,7 @@ Switch between various authoring options while working with the app.
 - **Media** - Insert or remove media from the app.
 - **Power Automate**: Add a flow using the [Power Automate pane](working-with-flows.md).
 - **Advanced tools**: Allows you to access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
-- **Search**: 
+- **Search**: Select to search for media, formulas, text, and more in your app. You can also do a search and replace.
 
 ## 6 – App authoring options
 
@@ -565,9 +565,10 @@ The canvas shows the currently selected screen from the left pane.
 ## 8 – Properties pane
 
 The properties pane shows properties and options available for the currently
-selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations.
+selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
 
-![Properties pane.](media/studio-properties-pane.png "Properties pane")
+> [!div class="mx-imgBorder"] 
+> ![Properties pane.](media/studio/pa-studio-prop-pane.png)
 
 ## 9 – Screen selector
 
