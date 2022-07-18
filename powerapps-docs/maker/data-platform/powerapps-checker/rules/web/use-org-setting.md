@@ -1,6 +1,6 @@
 ---
 title: use-org-setting Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-org-setting.
+description: Power Apps checker rule reference for use-org-setting.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

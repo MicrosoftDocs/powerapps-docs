@@ -1,6 +1,6 @@
 ---
 title: use-offline Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-offline.
+description: Power Apps checker rule reference for use-offline.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

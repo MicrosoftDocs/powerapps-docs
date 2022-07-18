@@ -1,6 +1,6 @@
 ---
 title: avoid-crm2011-service-odata Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for avoid-crm2011-service-odata.
+description: Power Apps checker rule reference for avoid-crm2011-service-odata.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

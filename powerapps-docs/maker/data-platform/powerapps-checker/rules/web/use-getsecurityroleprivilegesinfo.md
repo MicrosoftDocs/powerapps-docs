@@ -1,6 +1,6 @@
 ---
 title: use-getsecurityroleprivilegesinfo Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-getsecurityroleprivilegesinfo.
+description: Power Apps checker rule reference for use-getsecurityroleprivilegesinfo.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

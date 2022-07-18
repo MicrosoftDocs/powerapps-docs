@@ -1,6 +1,6 @@
 ---
 title: use-global-context Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-global-context.
+description: Power Apps checker rule reference for use-global-context.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

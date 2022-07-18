@@ -1,6 +1,6 @@
 ---
 title: use-async Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-async.
+description: Power Apps checker rule reference for use-async.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

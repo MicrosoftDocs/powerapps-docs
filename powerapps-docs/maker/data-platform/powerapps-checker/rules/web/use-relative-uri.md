@@ -1,6 +1,6 @@
 ---
 title: use-relative-uri Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-relative-uri.
+description: Power Apps checker rule reference for use-relative-uri.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

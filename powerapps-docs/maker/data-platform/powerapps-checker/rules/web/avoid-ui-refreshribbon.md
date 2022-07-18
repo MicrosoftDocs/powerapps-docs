@@ -1,6 +1,6 @@
 ---
 title: avoid-ui-refreshribbon Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for avoid-ui-refreshribbon.
+description: Power Apps checker rule reference for avoid-ui-refreshribbon.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

@@ -1,6 +1,6 @@
 ---
 title: use-cached-webresource Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-cached-webresource.
+description: Power Apps checker rule reference for use-cached-webresource.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

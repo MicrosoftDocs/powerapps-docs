@@ -1,6 +1,6 @@
 ---
 title: use-grid-api Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-grid-api.
+description: Power Apps checker rule reference for use-grid-api.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

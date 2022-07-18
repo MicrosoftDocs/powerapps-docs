@@ -1,6 +1,6 @@
 ---
 title: use-utility-dialogs Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for use-utility-dialogs.
+description: Power Apps checker rule reference for use-utility-dialogs.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

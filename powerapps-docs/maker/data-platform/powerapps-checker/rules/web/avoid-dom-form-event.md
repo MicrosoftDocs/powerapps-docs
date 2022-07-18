@@ -1,6 +1,6 @@
 ---
 title: avoid-dom-form-event Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for avoid-dom-form-event.
+description: Power Apps checker rule reference for avoid-dom-form-event.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference

@@ -1,6 +1,6 @@
 ---
 title: avoid-browser-specific-api Power Apps checker reference | Microsoft Docs
-description: Power app checker rule reference for avoid-browser-specific-api.
+description: Power Apps checker rule reference for avoid-browser-specific-api.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference
@@ -18,4 +18,4 @@ search.app:
 Don't use Internet Explorer legacy APIs or browser plug-ins.
 
 ## Recommendation
-Examples of APIs you should not use include `XMLHTTP`, `XMLDOM`, and `DOMDocument`. 
+Examples of APIs you shouldn't use include `XMLHTTP`, `XMLDOM`, and `DOMDocument`. 
