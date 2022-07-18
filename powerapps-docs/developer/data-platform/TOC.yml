@@ -251,6 +251,8 @@
   - name: Activity tables
     href: activity-entities.md
     items:
+    - name: Activities data model and storage
+      href: activities-data-model-storage.md
     - name: Custom activities
       href: custom-activities.md
     - name: Email activity tables
