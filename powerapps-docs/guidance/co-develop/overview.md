@@ -1,11 +1,11 @@
 ---
 title: "Collaboration and Co-development best practices overview | Microsoft Docs"
-description: "Learn more about the fusion development approach to app building in Power Apps."
+description: "Learn more about how to collaborate and co-develop low code apps in Power Apps."
 author: spboyer
 
-ms.topic: conceptual
-ms.custom: ebook
-ms.date: 04/26/2021
+ms.topic: collaboration-codevelopment
+ms.custom: Focus-center
+ms.date: 07/15/2022
 ms.subservice: guidance
 ms.author: luis-camino-ms
 ms.reviewer: kvivek
