@@ -3,32 +3,30 @@ title: "Next steps: Solutions and tools | Microsoft Docs"
 description: "Learn more about the fusion development approach to app building in Power Apps."
 author: spboyer
 
-ms.topic: conceptual
-ms.custom: ebook
-ms.date: 04/26/2021
+ms.topic: collaboration-codevelopment
+ms.custom: Focus-center
+ms.date: 07/15/2022
 ms.subservice: guidance
-ms.author: luis-camino-ms
+ms.author: ankitchawla23
 ms.reviewer: kvivek
 
 ---
 
-# Next steps
+## Next steps
 
-This document provides information on further advanced guidance on Power Apps in fusion team scenarios, including tools and community solutions, such as the Anonymizer, Just-in-Time Access, and Pull Request Checker. 
+This document provides information on further advanced guidance on Power Apps in fusion team scenarios, including tools and community solutions, such as the Anonymizer, Just-in-Time Access, and Pull Request Checker.
 
-See the links below for descriptions, usage instructions, and download locations. 
+See the links below for descriptions, usage instructions, and download locations.
 
-**Anonymizer**
+### Anonymizer
 
 A tool to anonymize data in Dataverse tables after a production org is copied over to a sandbox instance.
 
-**Just-in-Time access**
+### Just-in-Time access
 
 A lightweight and extensible solution for requesting elevated access on a production Dynamics 365 environment using a Canvas app.
 Building a JIT app for elevated permissions on Microsoft Power Platform | Microsoft Power Apps
 
-**Pull request checker**
+### Pull request checker
 
 An ADO build pipeline tool to automate routine and common checks for Dynamics 365 solutions to improve solution ALM and deployments to higher environments.
-
-
