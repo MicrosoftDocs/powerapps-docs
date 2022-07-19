@@ -103,5 +103,10 @@ In Visual Studio, click **IIS Express** to run the sample.
 
 This sample makes no changes to data in your environment.
 
+### See Also
+
+[Discover user organizations](discovery-service.md)<br />
+[Sample: Global Discovery Service (C#)](sample-global-discovery-service-csharp.md)
+
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
