@@ -74,7 +74,7 @@ You should only create Pull Requests (PRs) for stories that are active and have 
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
 
 > [!NOTE]
-> Use the PR checker tool at the end of this document to automate the PR checking process.
+> Use the [PR checker tool](next-steps.md) at the end of this article to automate the PR checking process.
 
 You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](https://docs.microsoft.com/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
 
