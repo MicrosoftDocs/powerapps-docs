@@ -17,7 +17,7 @@ Establishing an effective co-development governance framework is an important pa
 ## Defining the end-to-end process
 You can use the following process as an example and customize it to your organization’s best practices. It is not necessary to complete every single step, as long as you achieve the required outcome. 
 
-![Sample end-to-end process](../images/process-flow.png)
+![Sample end-to-end process](images/process-flow.png)
 
 ### Add features to backlog
 Backlogs enable you to plan your project by adding features that drive the overall experience. The backlog also provides the overall roadmap that the team intends to deliver.
@@ -29,7 +29,7 @@ The focus of this meeting should be limited to reviewing each proposed new featu
 After the scope alignment meeting, any draft user story titles can be added under the feature. At this point, details are not required, and the status of the user story is "New". You can view stories either in the backlog or board view.
 The following figure shows a sample user story added to a backlog.
  
-![Sample user story added to backlog](../images/sample-user-story.png)
+![Sample user story added to backlog](images/sample-user-story.png)
 
 At this point, it is vital to maintain quality by organizing work by work stream and application. This approach helps keep related work items together and enables experts in each workstream to develop and maintain deep understanding of the functionality and data usage within each app. 
 ### Experience review
