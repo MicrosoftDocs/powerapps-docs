@@ -15,4 +15,4 @@ search.app:
 ---
 # `avoid-window-top`
 
-Don't use `window.top` or `window.parent.parent`. Using either of these fields will likely result in cross-origin security errors when hosted outside of the primary web client. Develop an alternate approach.
+Don't use `window.top` or `window.parent.parent`. Using either of these fields will likely result in cross-origin security errors when hosted outside of the primary web client. Develop an alternate approach. For more information, see [here](/power-apps/developer/model-driven-apps/best-practices/business-logic/avoid-window-top).
