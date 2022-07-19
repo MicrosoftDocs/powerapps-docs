@@ -18,8 +18,6 @@
       href: subscribe-sdk-assembly-updates-using-nuget.md
     - name: Visual Studio and the .NET Framework
       href: visual-studio-dot-net-framework.md
-    - name: Discovery Service
-      href: discovery-service.md
     - name: Use XRM Tooling
       href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
 - name: Table  operations
