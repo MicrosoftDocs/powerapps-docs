@@ -20,7 +20,9 @@ See the links below for descriptions, usage instructions, and download locations
 
 ### Anonymizer
 
-A tool to anonymize data in Dataverse tables after a production org is copied over to a sandbox instance.
+A tool to anonymize data in Dataverse tables after a production org is copied over to a sandbox instance. This is specially useful when the data needs to be anonymized for privacy reasons before developers use the sandbox instance.
+
+[Data Anonymization Tools | GitHub](https://github.com/microsoft/Microsoft-Focus-Center/tree/main/Tools/Anonymization)
 
 ### Just-in-Time access
 
@@ -31,3 +33,5 @@ A lightweight and extensible solution for requesting elevated access on a produc
 ### Pull request checker
 
 An ADO build pipeline tool to automate routine and common checks for Dynamics 365 solutions to improve solution ALM and deployments to higher environments.
+
+[Focus Center PR checker | GitHub](https://github.com/microsoft/Microsoft-Focus-Center/tree/main/Tools/FocusCenterPRChecker)
