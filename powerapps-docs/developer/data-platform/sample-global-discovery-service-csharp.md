@@ -555,6 +555,6 @@ namespace PowerApps.Samples
 ## See Also
 
 [Discover user organizations](discovery-service.md)<br />
-[Blazor web assembly sample](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)
+[Sample: Blazor WebAssembly with Global Discovery](sample-blazor-web-assembly-global-discovery.md)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
