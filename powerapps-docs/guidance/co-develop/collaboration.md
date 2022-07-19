@@ -74,7 +74,7 @@ Well-implemented automation can provide a huge boost to productivity. An example
 - Missing connection references.
 - Duplicate components.
 
-The [PR Checker solution](next-steps.md) at the end of this paper includes an example of how to incorporate this automation effectively.   
+The [PR Checker solution](next-steps.md) at the end of this article includes an example of how to incorporate this automation effectively.   
 
 ### Reporting
 Fusion teams and maker-developed apps must align to a data-first approach, which means building apps where it is possible to monitor success directly. Achieving this outcome requires good instrumentation that provides the ability to discover what the team is doing well, along with analysis of this feedback to generate accurate appraisals of the effectiveness of a particular app. To achieve this outcome, you should:
