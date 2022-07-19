@@ -120,7 +120,7 @@
         href: planning/feedback-telemetry.md
   - name: Best practices
     items:
-    - name: Enabling makers to collaborate and co-develop low-code applications
+    - name: Enabling teams to collaborate and co-develop applications
       items:
       - name: Overview
         href: co-develop/overview.md
