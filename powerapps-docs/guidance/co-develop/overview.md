@@ -22,7 +22,7 @@ Fusion teams unite business technologists, professional developers, and IT depar
 
 ## Aim
 
-The aim of this document is to provide guidance for multidisciplinary teams to define and adopt co-development best practices that help promote collaboration, accelerate scalable development, reduce organizational silos, and optimize application delivery of low-code applications when using Microsoft Power Apps. 
+The aim of this article is to provide guidance for multidisciplinary teams to define and adopt co-development best practices that help promote collaboration, accelerate scalable development, reduce organizational silos, and optimize application delivery of low-code applications when using Microsoft Power Apps. 
 
 ## What is an enterprise low-code application platform?
 Microsoft Power Apps is an example of an enterprise low-code application platform . Low-code application platforms are rapid application development and deployment environments that use either low-code or no-code techniques to create multi-platform apps. Non-technical users (makers) can use  low-code application platform to design and build simplified apps in enterprise environments without requiring explicit programming knowledge. 
@@ -49,7 +49,7 @@ Because LCAPs provide a simple mechanism for makers or business technologists to
 An example of this approach is Success Hub, an internal Microsoft implementation of Dataverse with over 50 business apps co-developed by 20+ multi-role teams using a shared environment comprising of a single instance of Dataverse, thereby balancing agility and governance. This environment seamlessly blends technology and commercial domain expertise to create business applications with thousands of monthly active users.
 
 ## Low-code development uisng Power Apps
-Microsoft Power Apps provides an innovative approach that enables business-focused personnel to use low- or no-code approaches to create and deploy apps within their organization. Professional developers can then collaborate with these makers to enhance and refine these apps within fusion teams, consisting of both business and technical staff. Microsoft Power Apps enables organizations to incorporate low-code apps into their application development lifecycles. 
+[Microsoft Power Apps](https://powerplatform.microsoft.com/power-apps/) provides an innovative approach that enables business-focused personnel to use low- or no-code approaches to create and deploy apps within their organization. Professional developers can then collaborate with these makers to enhance and refine these apps within fusion teams, consisting of both business and technical staff. Microsoft Power Apps enables organizations to incorporate low-code apps into their application development lifecycles. 
 
 ### Advantages of Microsoft Power Apps
 Microsoft Power Apps provides a fully featured low-code and no-code development environment suitable for use by single individuals all the way up to full multi-role fusion teams working in all sizes of organization. With a robust feature set, an extensive number of integrations, a wide array of user interface options, a comprehensive set of templates for various business needs, and powerful mobile functionality, Power Apps provides everything a maker might need to solve business challenges while supporting enhancements from professional developers. 
