@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 
 ---
 
-# Co-development governance guidance
+# Co-development governance
 Establishing an effective co-development governance framework is an important part of ensuring consistency and repeatability in maker-defined projects and fusion teams. This section describes an approach to defining a governance flowchart. 
 ## Defining the end-to-end process
 You can use the following process as an example and customize it to your organization’s best practices. It is not necessary to complete every single step, as long as you achieve the required outcome. 
