@@ -1,7 +1,7 @@
 ---
 title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API and the Dataverse.Client.ServiceClient" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/01/2022
+ms.date: 07/18/2022
 author: ImadYanni
 ms.author: iyanni
 ms.reviewer: jdaly
@@ -17,7 +17,10 @@ contributors:
 
 # Sample: Global Discovery Service (C#)
 
-This Visual Studio solution contains two projects that demonstrate how to use the Global Discovery Service.
+This Visual Studio solution contains two .NET 6.0 projects that demonstrate how to use the Global Discovery Service.
+
+- `REST` project shows using the OData endpoint
+- `ServiceClient` project shows using <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync Method>
 
 ## How to run this sample
 
@@ -41,23 +44,23 @@ To run the sample:
 
 Both the `REST` and `ServiceClient` samples do the same things:
 
-1. Retrieve the list of environments available for your credentials
-1. List the environments so you can select one
-1. Execute a WhoAmI message to return the SystemUser.UserId value for your account in the selected environment
+1. Retrieve the list of environments available for your credentials.
+1. List the environments so you can select one.
+1. Execute a `WhoAmI` message to return the `SystemUser.UserId` value for your account in the selected environment.
 
 ## How this sample works
 
 ### REST
 
-The REST project uses the MSAL libraries with an HttpClient to use the Global Discovery OData endpoint without the use of any additional assemblies.
+The `REST` project uses the MSAL libraries with an [HttpClient](/dotnet/api/system.net.http.httpclient) to use the Global Discovery OData endpoint without the use of any additional assemblies.
 
 ### ServiceClient
 
-The ServiceClient project uses the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to use the Global Discovery OData endpoint.
+The `ServiceClient` project uses the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync Method> to use the Global Discovery OData endpoint.
 
 ### Demonstrates
 
-Both samples use the same Cloud enum defined in Cloud.cs to represent the different clouds that may be used with the Global Discovery Service.
+Both projects use the same `Cloud` enum defined in Cloud.cs to represent the different clouds that may be used with the Global Discovery Service.
 
 ```csharp
 using System.ComponentModel;
@@ -119,7 +122,7 @@ namespace PowerApps.Samples
 }
 ```
 
-The Program.cs file contains the following:
+The `REST` Program.cs file contains the following:
 
 ```csharp
 using Microsoft.Identity.Client;
@@ -369,7 +372,7 @@ namespace PowerApps.Samples
 
 #### ServiceClient Project
 
-The ServiceClient Project Program.cs file contains the following:
+The `ServiceClient` project Program.cs file contains the following:
 
 ```csharp
 using Microsoft.Crm.Sdk.Messages;
@@ -551,6 +554,7 @@ namespace PowerApps.Samples
 
 ## See Also
 
-[Discover user organizations](discovery-service.md)
+[Discover user organizations](discovery-service.md)<br />
+[Blazor web assembly sample](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]

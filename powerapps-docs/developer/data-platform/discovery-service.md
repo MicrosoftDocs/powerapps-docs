@@ -1,7 +1,7 @@
 ---
 title: "Discover user organizations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Your client application may connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access."
-ms.date: 07/01/2022
+ms.date: 07/18/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: ImadYanni # GitHub ID
@@ -122,12 +122,12 @@ The following table describes the properties of the `Instance` Entity from the $
 |`Id`|Guid|The OrganizationId for the environment.|
 |`IsUserSysAdmin`|Boolean|Whether the calling user has the system administrator role for the environment.|
 |`LastUpdated`|DateTimeOffset|When the environment was last updated. |
-|`OrganizationType`|Int32|The type of the organization. Values correspond to the OrganizationType Enum|
+|`OrganizationType`|Int32|The type of the organization. Values correspond to the <xref:Microsoft.Dynamics.CRM.OrganizationType?text=OrganizationType EnumType>|
 |`Purpose`|String|Information for the purpose provided when the environment was created.|
 |`Region`|String|A 2-3 letter code for region where the environment is located. |
 |`SchemaType`|String|For internal use only.|
-|`State`|Int32|Whether the organization is enabled (`0`) or eisabled (`1`).|
-|`StatusMessage`|Int32|TODO: This is an integer value. What does it mean?|
+|`State`|Int32|Whether the organization is `0`:enabled  or `1`:disabled.|
+|`StatusMessage`|Int32|One of the following values: <br /> `0`:`InstanceLocked`<br /> `1`:`PendingServiceInstanceMove`<br /> `2`:`InstanceFailed`<br /> `3`:`Provisioning` <br /> `4`:`InActiveOrganizationStatus`<br /> `5`:`NewInstance`<br /> `6`:`InstancePickerReady`   |
 |`TenantId`|Guid|The Id of the tenant associated to the instance|
 |`TrialExpirationDate`|DateTimeOffset|The date when the trial period for the instance expires.|
 |`UniqueName`|String|The Unique Name for the instance.|
@@ -163,7 +163,7 @@ odata-version: 4.0
 }
 ```
 
-Use the `FriendlyName` property for your application UI so the user will recognize the name of the environment. Use the `ApiUrl` to connect to the Dataverse Web API.
+Use the `FriendlyName` property for your application UI so the user will recognize the name of the environment. Use the `ApiUrl` to connect to Dataverse.
 
 The rest of the properties are primarily for filtering.
 
@@ -235,8 +235,6 @@ You can use the following string query functions:
 
 For .NET applications you can use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?text=Dataverse.Client.ServiceClient>.<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=DiscoverOnlineOrganizationsAsync Method> to call the Global Discovery Services.
 
-TODO: Ask Matt B to comment on the key benefits provided by this method.
-
 ```csharp
  // Set up user credentials
 var creds = new System.ServiceModel.Description.ClientCredentials();
@@ -256,7 +254,7 @@ DiscoverOrganizationsResult organizationsResult = await ServiceClient.DiscoverOn
 return organizationsResult;
 ```
 
-While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it does not return data in the shape of an *Instance*. Data is returned as an <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the Instance types returned by the OData service.
+While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint and enables that it be passed in the `discoveryServiceUri` parameter, it does not return data in the shape of an *Instance*. Data is returned as an <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult?text=DiscoverOrganizationsResult Class> that includes a <xref:Microsoft.PowerPlatform.Dataverse.Client.Model.DiscoverOrganizationsResult.OrganizationDetailCollection?text=OrganizationDetailCollection Property> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances. This class contains the same information as the `Instance` types returned by the OData service.
 
 > [!NOTE]
 > While the `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter accepts a URL to the Global Discovery Service, any `$select` or `$filter` query options used will be ignored. The `DiscoverOnlineOrganizationsAsync.discoveryServiceUri` parameter is optional and if not provided will default to the Commercial cloud.
@@ -286,14 +284,13 @@ For .NET Full Framework applications you can continue to use the <xref:Microsoft
   return organizations.ToList();
 ```
 
-Like the `ServiceClient.DiscoverOnlineOrganizationsAsync` method, the `CrmServiceClient.DiscoverGlobalOrganizations` method also does not return data as an *Instance*. It returns a
-
-<xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetailCollection?text=OrganizationDetailCollection> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances that contains the same information as the Instance types returned by the OData service.
+Like the `ServiceClient.DiscoverOnlineOrganizationsAsync` method, the `CrmServiceClient.DiscoverGlobalOrganizations` method also does not return data as an *Instance*. It returns a <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetailCollection?text=OrganizationDetailCollection> which contains a collection of <xref:Microsoft.Xrm.Sdk.Discovery.OrganizationDetail?text=OrganizationDetail Class> instances that contains the same information as the `Instance` types returned by the OData service.
 
 ### See Also
 
 [Sample: Global Discovery Service Sample (C#)](sample-global-discovery-service-csharp.md)<br />
-[Sample: Access the Discovery service using CrmServiceClient](org-service/samples/access-discovery-service.md)
+[Sample: Access the Discovery service using CrmServiceClient](org-service/samples/access-discovery-service.md)<br />
+[Sample: Blazor WebAssembly with Global Discovery](sample-blazor-web-assembly-global-discovery.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
