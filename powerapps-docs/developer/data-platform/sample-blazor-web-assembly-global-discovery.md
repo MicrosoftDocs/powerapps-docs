@@ -22,6 +22,8 @@ You can download the sample from [https://github.com/microsoft/PowerApps-Samples
 
 This sample is a modification of the steps in the [Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse](walkthrough-blazor-webassembly-single-tenant.md)
 
+You can try this sample online here: [https://blazorcds.mohsinonxrm.com/](https://blazorcds.mohsinonxrm.com/)
+
 ## How to run this sample
 
 1. Download or clone the [Samples](https://github.com/microsoft/PowerApps-Samples) repo so that you have a local copy.
@@ -33,7 +35,7 @@ This sample demonstrates how to provide a select (drop-down) control in a web ap
 
 ## How this sample works
 
-The `Pages/EnvironmentChooser.razor `file provides the UI to allow users to select from available environments based on their credentials after they have logged in.
+The `Pages/EnvironmentChooser.razor` file provides the user interface to allow users to select from available environments based on their credentials after they have logged in.
 
 This page depends on a named definition of an HttpClient (`GDSClient`) in  Program.cs that is configured to access the Global Discovery Service. Access to the Global Discovery Service is added to the available scopes when the user logs in. When the user selects a different environment, the `SelectedEnvUrl` in `Models/AppState.cs` changes.
 
@@ -51,11 +53,11 @@ To run this sample you must first configure an Azure Active Directory applicatio
 1. Select **New Registration**.
 1. Enter the following:
 
-  |Field|Value|
-  |---------|---------|
-  |Name|Your choice. You might use: `BlazorGlobalDiscoverySample`|
-  |Supported account types:|Accounts in this organization directory only (Single Tenant)|
-  |Redirect URI (optional)|`https://localhost:44363/authentication/login-callback`|
+   |Field|Value|
+   |---------|---------|
+   |Name|Your choice. You might use: `BlazorGlobalDiscoverySample`|
+   |Supported account types:|Accounts in this organization directory only (Single Tenant)|
+   |Redirect URI (optional)|`https://localhost:44363/authentication/login-callback`|
 
 1. Click **Register**.
 1. Copy the **Application (client) ID** value. You will need this when you [Update the project](#update-the-project).
@@ -65,8 +67,8 @@ To run this sample you must first configure an Azure Active Directory applicatio
 1. Go to **Authentication**.
 1. Under **Implicit grant and hybrid flows**, select both of the following options:
 
-  - Access tokens (used for implicit flows)
-  - ID tokens (used for implicit and hybrid flows)
+   - Access tokens (used for implicit flows)
+   - ID tokens (used for implicit and hybrid flows)
 
 1. Click **Save**.
 
@@ -82,7 +84,7 @@ To run this sample you must first configure an Azure Active Directory applicatio
 
 #### Update the project
 
-1. Open the BlazorCDS Visual Studio solution file (BlazorCDS.sln) with Visual Studio
+1. Open the BlazorCDS Visual Studio solution file (BlazorCDS.sln) with Visual Studio.
 1. In **Solution Explorer**, expand `wwwroot` and open the `appsettings.json` file.
 1. Replace the placeholder `ClientId` value (`11111111-1111-1111-1111-111111111111`) with the application (client) ID value you copied in [Create an app registration](#create-an-app-registration).
 
