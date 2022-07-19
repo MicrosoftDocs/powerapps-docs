@@ -1,7 +1,7 @@
 ---
 title: "Sample: Use CrmServiceClient to access the Global Discovery Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample code shows how to use discovery services" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+ms.date: 07/18/2022
 author: JimDaly
 ms.author: jdaly
 manager: kvivek
@@ -64,6 +64,12 @@ In SampleMethods.cs there is a `Clouds` enumeration for each of the known global
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+### See Also
+
+[Discover user organizations](../../discovery-service.md)<br />
+[Sample: Global Discovery Service (C#)](../../sample-global-discovery-service-csharp.md)<br />
+[Sample: Blazor WebAssembly with Global Discovery](../../sample-blazor-web-assembly-global-discovery.md)
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

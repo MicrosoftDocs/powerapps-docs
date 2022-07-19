@@ -308,5 +308,3 @@
     href: import-files-as-web-resources.md
 - name: Workflow operations
   href: workflow-operations.md
-- name: Access the Discovery service
-  href: access-discovery-service.md

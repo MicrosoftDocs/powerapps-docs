@@ -440,6 +440,8 @@
     href: sample-global-discovery-service-csharp.md
   - name: "Sample: Blazor WebAssembly with Global Discovery"
     href: sample-blazor-web-assembly-global-discovery.md
+  - name: "Sample: Global Discovery Service with CrmServiceClient"
+    href: org-service/samples/access-discovery-service
   - name: Tutorials 
     items:
     - name: "Tutorial: Register an app with Azure Active Directory"
