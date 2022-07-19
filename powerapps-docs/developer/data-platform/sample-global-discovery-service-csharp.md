@@ -552,7 +552,7 @@ namespace PowerApps.Samples
 ```
 
 
-## See Also
+### See Also
 
 [Discover user organizations](discovery-service.md)<br />
 [Sample: Blazor WebAssembly with Global Discovery](sample-blazor-web-assembly-global-discovery.md)
