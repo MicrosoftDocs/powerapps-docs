@@ -21,19 +21,26 @@ You can use the following process as an example and customize it to your organiz
 
 ### Add features to backlog
 Backlogs enable you to plan your project by adding features that drive the overall experience. The backlog also provides the overall roadmap that the team intends to deliver.
+
 When adding a new feature to the backlog, the goal is to describe the general scope. Each feature then defines the business value, draft story titles, scope, and data model changes that drive the code development efforts. 
+
 In addition, when adding a business-critical feature, you are recommended to identify any critical scenarios to automate your testing. After you have added your feature(s), you can schedule your Scope Alignment Meeting.
+
 ### Scope alignment meeting
 The focus of this meeting should be limited to reviewing each proposed new feature, then checking for any existing apps, scenarios, or data models that already provide this functionality to avoid duplication of efforts. This meeting also provides the opportunity to discuss the impact on other apps. Finally, you should check if this feature requires an Experience Review.
+
 ### Add stories and storyboard to backlog
 After the scope alignment meeting, any draft user story titles can be added under the feature. At this point, details are not required, and the status of the user story is "New". You can view stories either in the backlog or board view.
+
 The following figure shows a sample user story added to a backlog.
  
 ![Sample user story added to backlog](media/sample-user-story.png)
 
 At this point, it is vital to maintain quality by organizing work by work stream and application. This approach helps keep related work items together and enables experts in each workstream to develop and maintain deep understanding of the functionality and data usage within each app. 
+
 ### Experience review
 Experience Reviews should focus on the end user experience and ensure that your team follows organizational best practices. This consistency ensures that all your apps provide a dependable and repeatable experience for end users and support teams.
+
 ### Add story details
 Adding a typical user story may incorporate the following information:
 1. Title: As a <persona> I can <do something> so that <impact/priority/value>
@@ -43,10 +50,13 @@ Adding a typical user story may incorporate the following information:
     - Alternative narrative - describes other ways users can accomplish the same outcome
     - Design Notes – records the entity, fields, views, mockup screens, and business rules associated with the user story
     - Security Roles Impacted - lists all the security roles impacted or that are relevant to the user story. 
+
 After adding all these details, you would change the state of the user story to "Ready for Review". In most cases, the feature team and business team (if applicable) review the user stories.
+
 ### Story Review
 Story Reviews typically occur within the fusion team to ensure that all the details are called out in the story and that there is no ambiguity. Following completion of all the reviews, the recommendation is to assign the user story to a team member.
 Ensuring that your team stays aligned during the development process is vital to achieving your overall goals. 
+
 ### Add tasks and test cases
 After reviewing the stories, team members create tasks in [Azure DevOps](https://azure.microsoft.com/services/devops/). The overall process for adding tasks and test cases is as follows:
 1. Open a sprint backlog. Alternatively, create a new sprint.
@@ -54,6 +64,7 @@ After reviewing the stories, team members create tasks in [Azure DevOps](https:/
 1. Add tasks to backlog items. If you don’t have backlog items assigned to your sprint, then do that now. Also set the sprint start and end dates.
 1. Fill out the task form. As a rule of thumb, tasks should take no longer than a day to complete. Task that are larger than this timescale should be broken down. 
 1. Track or integrate any unparented tasks. You can track unparented tasks just like other tasks or drag them to an existing backlog item to parent them. 
+
 After adding tasks and test cases, you can then go on to set sprint capacity.
 
 For more information on adding tasks, see [Add tasks to backlog](https://docs.microsoft.com/azure/devops/boards/sprints/add-tasks) items to support sprint planning.
@@ -65,10 +76,10 @@ Automating the PR governance process helps ensure code quality without requiring
 > [!NOTE]
 > Use the PR checker tool at the end of this document to automate the PR checking process.
 
-
 You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](https://docs.microsoft.com/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
 
 In multi-team environments, it is important to coordinate the duration of sprints and releases. Sprints do not have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group’s preferences. However, the release cadence cannot be less than the shortest sprint duration across all teams. 
+
 ## Templates and Standardization
 Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](https://docs.microsoft.com/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
 
@@ -80,6 +91,7 @@ A key factor in any support model is the definition of the Service Level Agreeme
 - **Outages** – what level of service outage is acceptable, whom to inform, what actions to take, confirmation of service resumption, and actions to prevent a repeat. Any automated testing procedures that the team uses need to align with the expected outage tolerance and the applicable SLA.
 - **Bugs** – who can notify, assignment of severity levels, classification, actions on detection, who is responsible for resolving and signing off.
 - **Escalations** – escalation levels, assignment of staff to levels, responsibilities at each level, distribution lists for each level, and so on.
+
 The SLA should be stored in the team’s documentation portal and updated as required. 
 
 ### Delivering application support
