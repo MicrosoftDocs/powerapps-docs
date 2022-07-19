@@ -22,6 +22,8 @@ search.app:
 
 The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides other new capabilities including a modern data browsing experience via infinite scrolling, allowing users to scroll indefinitely through data until they find the records they are interested in, and an ability to customize the visual appearance of columns for specific needs. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
 
+:::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
+
 ## Add the Power Apps grid control to views for an entity
 
 When you configure the Power Apps grid control for an entity, all views for that entity will display using that grid.
@@ -43,8 +45,8 @@ When you configure the Power Apps grid control for an entity, all views for that
        :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
     - The **Enable pagination** property can be used to decide between modern data browsing (infinite scroll) and paging buttons. The default value is No. Select Yes to disable infinite scrolling and surface paging buttons. 
     - The **Enable OptionSet colors** property can be used to increase the visual appeal of OptionSet columns by showing each value with its configured background color.  The default value is No. Be sure to verify the configured color for each OptionSet column to ensure readability and accessibility before enabling this property for an entity.  
-    - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is All. Select Primary only to suppress hyperlinks on all lookup fields except the primary color for the selected entity.  
-    -  The **Customizer control** property allows the maker to link to a single customizer PCF control with definitions for changing the visuals or interactions for one or more columns in the grid. 
+    - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is **All**. Select **Primary only** to suppress hyperlinks on all lookup fields except the primary column for the selected entity.  
+    -  The **Customizer control** property allows the maker to link to a single customizer PCF control with definitions for changing the visuals or interactions for one or more columns in the grid. See [Customizing the Power Apps grid control](./power-apps-grid-customization.md) for more details. 
 
 After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
  
