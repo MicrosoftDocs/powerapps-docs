@@ -25,7 +25,8 @@ A tool to anonymize data in Dataverse tables after a production org is copied ov
 ### Just-in-Time access
 
 A lightweight and extensible solution for requesting elevated access on a production Dynamics 365 environment using a Canvas app.
-Building a JIT app for elevated permissions on Microsoft Power Platform | Microsoft Power Apps
+
+[Building a JIT app for elevated permissions on Microsoft Power Platform | Microsoft Power Apps](https://powerapps.microsoft.com/en-us/blog/building-a-jit-app-for-elevated-permissions-on-microsoft-power-platform)
 
 ### Pull request checker
 
