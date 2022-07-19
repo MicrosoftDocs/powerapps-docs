@@ -21,7 +21,7 @@ This sample code shows how to use the discovery service with the <xref:Microsoft
 
 > [!NOTE]
 > This sample is limited to .NET Full Framework.
-> There is a newer sample compatible with .NET Core using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync Method>. See [Sample: Global Discovery Service (C#)](../../sample-global-discovery-service-csharp.md).
+> There is a newer sample compatible with .NET Core using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync%2A?text=Dataverse.Client.ServiceClient.DiscoverOnlineOrganizationsAsync Method>. See [Sample: Global Discovery Service (C#)](sample-global-discovery-service-csharp.md).
 
 ## How to run this sample
 
@@ -67,9 +67,9 @@ This sample creates no records. No cleanup is required.
 
 ### See Also
 
-[Discover user organizations](../../discovery-service.md)<br />
-[Sample: Global Discovery Service (C#)](../../sample-global-discovery-service-csharp.md)<br />
-[Sample: Blazor WebAssembly with Global Discovery](../../sample-blazor-web-assembly-global-discovery.md)
+[Discover user organizations](discovery-service.md)<br />
+[Sample: Global Discovery Service (C#)](sample-global-discovery-service-csharp.md)<br />
+[Sample: Blazor WebAssembly with Global Discovery](sample-blazor-web-assembly-global-discovery.md)
 
 
-[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
+[!INCLUDE [footer-banner](../../includes/footer-banner.md)]

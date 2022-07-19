@@ -289,7 +289,7 @@ Like the `ServiceClient.DiscoverOnlineOrganizationsAsync` method, the `CrmServic
 ### See Also
 
 [Sample: Global Discovery Service Sample (C#)](sample-global-discovery-service-csharp.md)<br />
-[Sample: Access the Discovery service using CrmServiceClient](org-service/samples/access-discovery-service.md)<br />
+[Sample: Access the Discovery service using CrmServiceClient](sample-discovery-service-crmserviceclient.md)<br />
 [Sample: Blazor WebAssembly with Global Discovery](sample-blazor-web-assembly-global-discovery.md)
 
 

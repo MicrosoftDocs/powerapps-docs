@@ -441,7 +441,7 @@
   - name: "Sample: Blazor WebAssembly with Global Discovery"
     href: sample-blazor-web-assembly-global-discovery.md
   - name: "Sample: Global Discovery Service with CrmServiceClient"
-    href: org-service/samples/access-discovery-service
+    href: sample-discovery-service-crmserviceclient.md
   - name: Tutorials 
     items:
     - name: "Tutorial: Register an app with Azure Active Directory"
