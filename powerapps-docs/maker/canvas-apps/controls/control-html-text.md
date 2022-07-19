@@ -93,7 +93,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines
-**HTML text** isn't meant to be interactive. Use it only for text display.
+**HTML text** isn't meant to be interactive. Use it only for text display. The ARIA mapping for elements inside the **HTML text** control is not defined automatically by Power Apps. 
 
 ### Color contrast
 There must be adequate color contrast between:
