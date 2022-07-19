@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/global-discovery-service-csharp.md",
+      "redirect_url": "../../sample-global-discovery-service-csharp",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/discovery-service.md",
       "redirect_url": "../discovery-service",
       "redirect_document_id": false
