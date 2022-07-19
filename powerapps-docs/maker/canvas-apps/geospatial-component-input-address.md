@@ -25,7 +25,7 @@ The control returns the address as structured data. Your app can extract informa
 
 ## Prerequisites
 
-Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites-for-full-support).
+Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites-for-full-support). Refer to the [privacy and security table](geospatial-overview.md#privacy-and-security-considerations) for more details on the address input control's data usage.
 
 ## Add an address input control to your app
 
@@ -113,9 +113,9 @@ Change an address input control's behavior and appearance using properties. Some
 | Hover color | Sets the colors of the control text, the control background, and the control border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverFontColor**, **HoverFillColor**, **HoverBorderColor** |
 | Disabled color | Sets the colors of the control text, the control background, and the control border if **DisplayMode** is *Disabled*. | Not applicable | Properties; Advanced: **DisabledFontColor**, **DisabledFillColor**, **DisabledBorderColor** |
 | Pressed color | Sets the colors of the control text, the control background, and the control border when the user selects the control. | Not applicable | Properties; Advanced: **PressedFontColor**, **PressedFillColor**, **PressedBorderColor** |
-| OnMixedAddressSelect | Contains code that runs when the user selects a suggested address. | Event | Advanced |
-| OnChange | Contains code that runs when a control property is changed. | Event | Advanced |
 | ContentLanguage | Determines the display language of the control, if it's different from the language that's used in the app. | String | Advanced |
+| OnAddressSelect | Contains code that runs when the user selects a suggested address. | Event | Advanced |
+| OnChange | Contains code that runs when a control property is changed. | Event | Advanced |
 
 ### Output properties
 
