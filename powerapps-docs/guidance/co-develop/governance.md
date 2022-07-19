@@ -48,14 +48,16 @@ After adding all these details, you would change the state of the user story to 
 Story Reviews typically occur within the fusion team to ensure that all the details are called out in the story and that there is no ambiguity. Following completion of all the reviews, the recommendation is to assign the user story to a team member.
 Ensuring that your team stays aligned during the development process is vital to achieving your overall goals. 
 ### Add tasks and test cases
-After reviewing the stories, team members create tasks in Azure DevOps. The overall process for adding tasks and test cases is as follows:
+After reviewing the stories, team members create tasks in [Azure DevOps](https://azure.microsoft.com/services/devops/). The overall process for adding tasks and test cases is as follows:
 1. Open a sprint backlog. Alternatively, create a new sprint.
 1. Add existing work items to the sprint. If you’ve already added work items that don’t appear in the sprint, then you should check their area and iteration paths. Remember to assign any unparented tasks to the relevant work items.
 1. Add tasks to backlog items. If you don’t have backlog items assigned to your sprint, then do that now. Also set the sprint start and end dates.
 1. Fill out the task form. As a rule of thumb, tasks should take no longer than a day to complete. Task that are larger than this timescale should be broken down. 
 1. Track or integrate any unparented tasks. You can track unparented tasks just like other tasks or drag them to an existing backlog item to parent them. 
 After adding tasks and test cases, you can then go on to set sprint capacity.
-For more information on adding tasks, see Add tasks to backlog items to support sprint planning.
+
+For more information on adding tasks, see [Add tasks to backlog](https://docs.microsoft.com/azure/devops/boards/sprints/add-tasks) items to support sprint planning.
+
 ### Pull requests and deployment review
 You should only create Pull Requests (PRs) for stories that are active and have had features reviewed and approved. PR governance sets PRs to draft if the story or feature is not in either the Dev or Test stage. 
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
@@ -64,18 +66,22 @@ Automating the PR governance process helps ensure code quality without requiring
 > Use the PR checker tool at the end of this document to automate the PR checking process.
 
 
-You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in “Implement Scrum practices for your team in Azure Boards”. Test results from the PR can be screenshots or videos that depict the functionality being built.
+You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](https://docs.microsoft.com/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
+
 In multi-team environments, it is important to coordinate the duration of sprints and releases. Sprints do not have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group’s preferences. However, the release cadence cannot be less than the shortest sprint duration across all teams. 
 ## Templates and Standardization
-Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or work item templates that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
+Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](https://docs.microsoft.com/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
+
 ## Implementing an effective support model
 An effective support model is essential for the long-term success of an application after its deployment, as highlighted in the earlier section about generating a support matrix. Bugs and outages are inevitable, so it is vital that the team has a structured approach for dealing with these occurrences, and the support matrix provides the necessary framework. 
+
 ### Creating the service level agreement
 A key factor in any support model is the definition of the Service Level Agreement (SLA). The SLA should be a formal document that the team draws up that contains sections that cover the following items:
 - **Outages** – what level of service outage is acceptable, whom to inform, what actions to take, confirmation of service resumption, and actions to prevent a repeat. Any automated testing procedures that the team uses need to align with the expected outage tolerance and the applicable SLA.
 - **Bugs** – who can notify, assignment of severity levels, classification, actions on detection, who is responsible for resolving and signing off.
 - **Escalations** – escalation levels, assignment of staff to levels, responsibilities at each level, distribution lists for each level, and so on.
 The SLA should be stored in the team’s documentation portal and updated as required. 
+
 ### Delivering application support
 The best approach for delivering the application support specified in the SLA is for the team that created the solution also to be responsible for supporting it. The advantages of this system are:
 1. It encourages better quality development, because those who created the app know that they are going to have to support it.
@@ -84,7 +90,8 @@ The best approach for delivering the application support specified in the SLA is
 As with other phases of application creation, development, and deployment, the fusion team should partner with IT for assistance when required.
 
 ## Monitoring application satisfaction and usability
-The final part of the support effort is monitoring and assessing the satisfaction and usability of the deployed app. Metrics are particularly useful here, along with more traditional methods, such as polling and questionnaires. For more information about monitoring app usage, see Admin Analytics for Power Apps. 
+The final part of the support effort is monitoring and assessing the satisfaction and usability of the deployed app. Metrics are particularly useful here, along with more traditional methods, such as polling and questionnaires. For more information about monitoring app usage, see [Admin Analytics for Power Apps](https://docs.microsoft.com/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser). 
+
 Ultimately, if customers aren’t using a published app, then that app isn’t fulfilling its purpose. Regular review meetings can check on these satisfaction and usability metrics to create a positive feedback loop that can alter or add stories to the backlog to generate and then deploy an updated version of the app. 
 
 ## Summary

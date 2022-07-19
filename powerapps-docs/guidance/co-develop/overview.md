@@ -42,7 +42,7 @@ Typically, an enterprise  low-code application platform includes the following f
 Because LCAPs provide a simple mechanism for makers or business technologists to create business apps, the ability to start prototyping apps in isolation can also provide challenges for IT departments, including siloing and a growth in shadow IT projects. In consequence, it is important to understand how low-code app development can work alongside traditional coded business apps; indeed, it is essential that both sides work together to create multidisciplinary or fusion team, which provides the best approach for optimal business application co-development. Diverse fusion teams can bring together different perspectives and ideas, leading to better and more successful outcomes.
 
 ### Achieving successful low-code application co-development
-Microsoft Dataverse provides a shared data language for business and analytics applications. Fusion teams can use Dataverse to co-develop applications. 
+[Microsoft Dataverse](https://docs.microsoft.com/power-apps/maker/data-platform/data-platform-intro) provides a shared data language for business and analytics applications. Fusion teams can use Dataverse to co-develop applications. 
 
 An example of this approach is Success Hub, an internal Microsoft implementation of Dataverse with over 50 business apps co-developed by 20+ multi-role teams using a shared environment comprising of a single instance of Dataverse, thereby balancing agility and governance. This environment seamlessly blends technology and commercial domain expertise to create business applications with thousands of monthly active users.
 ## Low-code development uisng Power Apps
@@ -52,11 +52,11 @@ Microsoft Power Apps provides an innovative approach that enables business-focus
 Microsoft Power Apps provides a fully featured low-code and no-code development environment suitable for use by single individuals all the way up to full multi-role fusion teams working in all sizes of organization. With a robust feature set, an extensive number of integrations, a wide array of user interface options, a comprehensive set of templates for various business needs, and powerful mobile functionality, Power Apps provides everything a maker might need to solve business challenges while supporting enhancements from professional developers. 
 
 ### The Microsoft Power Platform Family
-Microsoft Power Apps is part of the Microsoft Power Platform family, which also includes the following low-code or no-code tools:
-- Power BI – make informed confident business decisions by putting data-driven insights into everyone’s hands.
-- Power Pages – quickly create low-code business websites for delivering vital information and services to your customers.
-- Power Automate – boost business productivity by giving everyone the ability to automate organizational processes.
-- Power Virtual Agents – easily build chatbots to engage conversationally with your customers and employees, all without requiring coding.
+[Microsoft Power Apps](https://powerplatform.microsoft.com/power-apps/) is part of the [Microsoft Power Platform](https://powerplatform.microsoft.com/) family, which also includes the following low-code or no-code tools:
+- [Power BI](https://powerplatform.microsoft.com/power-bi/) – make informed confident business decisions by putting data-driven insights into everyone’s hands.
+- [Power Pages](https://powerpages.microsoft.com/) – quickly create low-code business websites for delivering vital information and services to your customers.
+- [Power Automate](https://powerplatform.microsoft.com/power-automate/) – boost business productivity by giving everyone the ability to automate organizational processes.
+- [Power Virtual Agents](https://powerplatform.microsoft.com/power-virtual-agents/) – easily build chatbots to engage conversationally with your customers and employees, all without requiring coding.
 
 This paper concentrates on how Power Apps enables businesses to benefit from new, more integrated ways of working, starting with establishing an effective collaboration model. The fusion team model supports multi-role collaboration generating an advanced way to building apps involving both domain and specialist knowledge and experience.
 
