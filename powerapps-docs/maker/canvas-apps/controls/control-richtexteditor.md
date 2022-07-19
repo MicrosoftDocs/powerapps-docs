@@ -5,7 +5,7 @@ author: chmoncay
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/01/2022
+ms.date: 07/19/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -77,7 +77,7 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 > When the toolbar is focused, **Tab** and **Shift+Tab** keys will navigate between toolbar groups. But you can't cycle back from the last group to the first group and vice versa.
 
 ## Limitations
-### Studio support
-The rich text editor control can only be interacted with in preview mode.
+
+You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
