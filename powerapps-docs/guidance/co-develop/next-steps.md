@@ -19,7 +19,7 @@ This section provides information on community solutions and tools available for
 If you encounter issues using the solutions and tools, report issues [here](https://aka.ms/focus-center-issues). 
 
     > [!IMPORTANT]
-    > Microsoft Support will not be able to help with issues related to these solutions and tools, but they will help with related, underlying platform and core feature issues.  For issues with core features in Microsoft Power Platform, use standard channel to contact Microsoft Support.
+    > Microsoft Support will not be able to help with issues related to these solutions and tools. For issues with core features in Microsoft Power Platform, use standard channel to contact Microsoft Support.
 
 See the links below for descriptions, usage instructions, and download locations.
 
