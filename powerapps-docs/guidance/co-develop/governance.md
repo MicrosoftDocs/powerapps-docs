@@ -27,6 +27,8 @@ The focus of this meeting should be limited to reviewing each proposed new featu
 After the scope alignment meeting, any draft user story titles can be added under the feature. At this point, details are not required, and the status of the user story is "New". You can view stories either in the backlog or board view.
 The following figure shows a sample user story added to a backlog.
  
+![Sample user story added to backlog](../images/sample-user-story.png)
+
 At this point, it is vital to maintain quality by organizing work by work stream and application. This approach helps keep related work items together and enables experts in each workstream to develop and maintain deep understanding of the functionality and data usage within each app. 
 ### Experience review
 Experience Reviews should focus on the end user experience and ensure that your team follows organizational best practices. This consistency ensures that all your apps provide a dependable and repeatable experience for end users and support teams.
