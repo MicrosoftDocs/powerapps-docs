@@ -2333,6 +2333,8 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
+    - name: Fx formula columns
+      href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time column
@@ -2430,6 +2432,56 @@
           items:
           - name: "Common issues and resolutions: solution checker"
             href: ./data-platform/common-issues-resolutions-solution-checker.md
+          - name: "Rule reference"
+            items:
+            - name: "Web"
+              items:
+              - name: "avoid-2011-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-2011-api.md"
+              - name: "avoid-browser-specific-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-browser-specific-api.md"
+              - name: "avoid-crm2011-service-odata"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-crm2011-service-odata.md"
+              - name: "avoid-crm2011-service-soap"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-crm2011-service-soap.md"
+              - name: "avoid-dom-form"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form.md"
+              - name: "avoid-dom-form-event"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form-event.md"
+              - name: "avoid-isactivitytype"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-isactivitytype.md"
+              - name: "avoid-modals"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-modals.md"
+              - name: "avoid-ui-refreshribbon"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-ui-refreshribbon.md"
+              - name: "avoid-unpub-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-unpub-api.md"
+              - name: "avoid-window-top"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-window-top.md"
+              - name: "do-not-make-parent-assumption"
+                href: "./data-platform/powerapps-checker/rules/web/do-not-make-parent-assumption.md"
+              - name: "use-async"
+                href: "./data-platform/powerapps-checker/rules/web/use-async.md"
+              - name: "use-cached-webresource"
+                href: "./data-platform/powerapps-checker/rules/web/use-cached-webresource.md"
+              - name: "use-client-context"
+                href: "./data-platform/powerapps-checker/rules/web/use-client-context.md"
+              - name: "use-getsecurityroleprivilegesinfo"
+                href: "./data-platform/powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md"
+              - name: "use-global-context"
+                href: "./data-platform/powerapps-checker/rules/web/use-global-context.md"
+              - name: "use-grid-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-grid-api.md"
+              - name: "use-navigation-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-navigation-api.md"
+              - name: "use-offline"
+                href: "./data-platform/powerapps-checker/rules/web/use-offline.md"
+              - name: "use-org-setting"
+                href: "./data-platform/powerapps-checker/rules/web/use-org-setting.md"
+              - name: "use-relative-uri"
+                href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
+              - name: "use-utility-dialogs"
+                href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:

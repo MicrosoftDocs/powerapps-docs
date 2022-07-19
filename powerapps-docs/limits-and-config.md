@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/07/2022
+ms.date: 07/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -104,9 +104,13 @@ This list identifies all services to which Power Apps communicates and their usa
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
-| gov.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC). |
-| high.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC High). |
-| content.appsplatform.us | https | Required for Power Apps portals for Power Apps Department of Defense (DoD). |
+| *.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC).<sup>1</sup>  |
+| *.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC High).<sup>2</sup> |
+| *.appsplatform.us | https | Required for Power Apps portals for Power Apps Department of Defense (DoD).<sup>3</sup> |
+
+<sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
+<sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
+<sup>3</sup> Replaces domain name `content.appsplatform.us` used prior to July 2022.
 
 > [!NOTE]
 > If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.

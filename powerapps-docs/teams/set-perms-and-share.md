@@ -5,7 +5,7 @@ author: matthewbolanos
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/07/2021
+ms.date: 07/18/2022
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: tapanm
@@ -90,7 +90,7 @@ ready to share the app with an existing security group.
 > - You can share an app to a single security group.
 > - If you want to share the app to a Microsoft 365 group, it must be [security enabled](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups).
 > - The security group's membership type must be **Assigned**. More information: [Group membership types in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#membership-types)
-> - Your Power Apps administrator may have applied the limit to the maximum size of the security group. By default, this limit is 10,000 members.
+> - Your Power Apps administrator may have applied the limit to the maximum size of the security group. By default, this limit is 10,000 members. More information: [List tenant settings (preview) - powerPlatform.teamsIntegration.shareWithColleaguesUserLimit](/power-platform/admin/list-tenantsettings), [Set-TenantSettings](/powershell/module/microsoft.powerapps.administration.powershell/set-tenantsettings)
 
 To share an app:
 
