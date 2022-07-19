@@ -17,20 +17,20 @@ Establishing an effective co-development governance framework is an important pa
 ## Defining the end-to-end process
 You can use the following process as an example and customize it to your organization’s best practices. It is not necessary to complete every single step, as long as you achieve the required outcome. 
  
-## Add features to backlog
+### Add features to backlog
 Backlogs enable you to plan your project by adding features that drive the overall experience. The backlog also provides the overall roadmap that the team intends to deliver.
 When adding a new feature to the backlog, the goal is to describe the general scope. Each feature then defines the business value, draft story titles, scope, and data model changes that drive the code development efforts. 
 In addition, when adding a business-critical feature, you are recommended to identify any critical scenarios to automate your testing. After you have added your feature(s), you can schedule your Scope Alignment Meeting.
-## Scope alignment meeting
+### Scope alignment meeting
 The focus of this meeting should be limited to reviewing each proposed new feature, then checking for any existing apps, scenarios, or data models that already provide this functionality to avoid duplication of efforts. This meeting also provides the opportunity to discuss the impact on other apps. Finally, you should check if this feature requires an Experience Review.
-## Add stories and storyboard to backlog
+### Add stories and storyboard to backlog
 After the scope alignment meeting, any draft user story titles can be added under the feature. At this point, details are not required, and the status of the user story is "New". You can view stories either in the backlog or board view.
 The following figure shows a sample user story added to a backlog.
  
 At this point, it is vital to maintain quality by organizing work by work stream and application. This approach helps keep related work items together and enables experts in each workstream to develop and maintain deep understanding of the functionality and data usage within each app. 
-## Experience review
+### Experience review
 Experience Reviews should focus on the end user experience and ensure that your team follows organizational best practices. This consistency ensures that all your apps provide a dependable and repeatable experience for end users and support teams.
-## Add story details
+### Add story details
 Adding a typical user story may incorporate the following information:
 1. Title: As a <persona> I can <do something> so that <impact/priority/value>
 1. Description: The description includes (although it is not limited to) certain key details, such as:
@@ -40,10 +40,10 @@ Adding a typical user story may incorporate the following information:
     - Design Notes – records the entity, fields, views, mockup screens, and business rules associated with the user story
     - Security Roles Impacted - lists all the security roles impacted or that are relevant to the user story. 
 After adding all these details, you would change the state of the user story to "Ready for Review". In most cases, the feature team and business team (if applicable) review the user stories.
-## Story Review
+### Story Review
 Story Reviews typically occur within the fusion team to ensure that all the details are called out in the story and that there is no ambiguity. Following completion of all the reviews, the recommendation is to assign the user story to a team member.
 Ensuring that your team stays aligned during the development process is vital to achieving your overall goals. 
-## Add tasks and test cases
+### Add tasks and test cases
 After reviewing the stories, team members create tasks in Azure DevOps. The overall process for adding tasks and test cases is as follows:
 1. Open a sprint backlog. Alternatively, create a new sprint.
 1. Add existing work items to the sprint. If you’ve already added work items that don’t appear in the sprint, then you should check their area and iteration paths. Remember to assign any unparented tasks to the relevant work items.
@@ -52,7 +52,7 @@ After reviewing the stories, team members create tasks in Azure DevOps. The over
 1. Track or integrate any unparented tasks. You can track unparented tasks just like other tasks or drag them to an existing backlog item to parent them. 
 After adding tasks and test cases, you can then go on to set sprint capacity.
 For more information on adding tasks, see Add tasks to backlog items to support sprint planning.
-## Pull requests and deployment review
+### Pull requests and deployment review
 You should only create Pull Requests (PRs) for stories that are active and have had features reviewed and approved. PR governance sets PRs to draft if the story or feature is not in either the Dev or Test stage. 
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
 
@@ -88,3 +88,5 @@ The development of no-code and low-code tools such as Microsoft Power Apps has s
 
 Integrating agile and scrum development approaches within fusion teams results in more rapid app development and a higher probability of successful deployment with a feature set that makes a significant difference to the business. By applying these best practices, guidelines, and recommendations, your fusion team will be able to use Microsoft Power Apps to address your organization’s digital transformation challenges.
 
+> [!div class="nextstepaction"]
+> [Next steps](next-steps.md)
