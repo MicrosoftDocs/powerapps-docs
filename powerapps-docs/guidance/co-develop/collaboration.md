@@ -70,3 +70,7 @@ The PR Checker solution at the end of this paper includes an example of how to i
 Fusion teams and maker-developed apps must align to a data-first approach, which means building apps where it is possible to monitor success directly. Achieving this outcome requires good instrumentation that provides the ability to discover what the team is doing well, along with analysis of this feedback to generate accurate appraisals of the effectiveness of a particular app. To achieve this outcome, you should:
 - Monitor and assess applications. Just because one person thinks something is useful or a good idea, doesn’t automatically mean everyone will find value in it. Teams need to monitor app usability and assess their functionality to ensure that any new developments are useful and functioning appropriately. 
 - Encourage good judgement. In other words, don’t build apps just because you can – only build them to address a specific business need. 
+
+
+> [!div class="nextstepaction"]
+> [Establishing co-development governance](governance.md)

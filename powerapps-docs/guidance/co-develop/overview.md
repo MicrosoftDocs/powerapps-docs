@@ -25,15 +25,15 @@ The aim of this document is to provide guidance for multidisciplinary teams to d
 ## What is an enterprise low-code application platform?
 Microsoft Power Apps is an example of an enterpriselow-code application platform . Low-code application platforms are rapid application development and deployment environments that use either low-code or no-code techniques to create multi-platform apps. Non-technical users (makers) can use  low-code application platform to design and build simplified apps in enterprise environments without requiring explicit programming knowledge. 
 Typically, an enterprise  low-code application platform includes the following functionality:
-•	Application metadata to define the information that the app stores and displays
-•	A runtime interpreter to process this metadata when the app runs
-•	A WYSIWYG user interface that simplifies and speeds up app deployment 
-•	Optional programming extensions, which professional developers can use to enhance the app’s functionality
+- Application metadata to define the information that the app stores and displays
+- A runtime interpreter to process this metadata when the app runs
+- A WYSIWYG user interface that simplifies and speeds up app deployment 
+- Optional programming extensions, which professional developers can use to enhance the app’s functionality
  Low-code application platform will usually also provide:
-•	Simultaneous UI development in both desktop and mobile formats.
-•	App design templates for pages, business processes, and rules. 
-•	A built-in secure database.
-•	One-button application deployment and sharing.
+- Simultaneous UI development in both desktop and mobile formats.
+- App design templates for pages, business processes, and rules. 
+- A built-in secure database.
+- One-button application deployment and sharing.
 
 
 ### Challenges of low-code application co-development
@@ -50,8 +50,12 @@ Microsoft Power Apps provides a fully featured low-code and no-code development 
 
 ### The Microsoft Power Platform Family
 Microsoft Power Apps is part of the Microsoft Power Platform family, which also includes the following low-code or no-code tools:
-•	Power BI – make informed confident business decisions by putting data-driven insights into everyone’s hands.
-•	Power Pages – quickly create low-code business websites for delivering vital information and services to your customers.
-•	Power Automate – boost business productivity by giving everyone the ability to automate organizational processes.
-•	Power Virtual Agents – easily build chatbots to engage conversationally with your customers and employees, all without requiring coding.
+- Power BI – make informed confident business decisions by putting data-driven insights into everyone’s hands.
+- Power Pages – quickly create low-code business websites for delivering vital information and services to your customers.
+- Power Automate – boost business productivity by giving everyone the ability to automate organizational processes.
+- Power Virtual Agents – easily build chatbots to engage conversationally with your customers and employees, all without requiring coding.
 This paper concentrates on how Power Apps enables businesses to benefit from new, more integrated ways of working, starting with establishing an effective collaboration model. The fusion team model supports multi-role collaboration generating an advanced way to building apps involving both domain and specialist knowledge and experience.
+
+
+> [!div class="nextstepaction"]
+> [Establishing a collaboration model](collaboration.md)
