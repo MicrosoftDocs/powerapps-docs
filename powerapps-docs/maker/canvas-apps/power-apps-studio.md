@@ -403,7 +403,7 @@ To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 > [!div class="mx-imgBorder"] 
-> [Create table.](media/stuido/pa-stuido/pa-studio-create-table.png)
+> [Create table.](media/studio/pa-studio-create-table.png)
 
 
 #### Understand visual editor
@@ -411,21 +411,21 @@ the table name. You can also expand the *Advanced settings* to update the table'
 Visual editor allows you to work with table rows, columns, and data.
 
 > [!div class="mx-imgBorder"] 
-> ![Authoring a table in visual editor.](media/stuido/pa-studio-table-1.png "Authoring a table in visual editor")
+> ![Authoring a table in visual editor.](media/studio/pa-studio-table-1.png "Authoring a table in visual editor")
 
 ##### Table name
 
-Select **Edit** ![Edit icon.](media/studio-edit-icon.png "Edit icon") to edit the name of the table.
+Select the **Edit** button to edit the name of the table.
 
 > [!div class="mx-imgBorder"] 
-> ![Edit the table name.](media/stuido/pa-studio-edit-1.png)
+> ![Edit the table name.](media/studio/pa-studio-edit-1.png)
 
 ##### Add row
 
 Select **Add row** to add a new row to the table.
 
 > [!div class="mx-imgBorder"] 
-> ![Add a row.](media/stuido/pa-studio-add-row.png)
+> ![Add a row.](media/studio/pa-studio-add-row.png)
 
 ##### Add columns
 
@@ -463,7 +463,7 @@ Use the **Show/hide columns** option to show or hide available columns, includin
 For example, you can add an *Owner* column created by default to the existing table.
 
 > [!div class="mx-imgBorder"] 
-> ![Show/hide columns.](media/show-hide-columns.png)
+> ![Show/hide columns.](media/studio/pa-studio-show-hide-columns.png)
 
 ##### Refresh
 
