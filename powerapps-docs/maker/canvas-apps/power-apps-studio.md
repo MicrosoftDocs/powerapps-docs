@@ -270,7 +270,7 @@ information about publishing an app, go to [Save and publish canvas apps](save-p
 ## 3 – Properties list
 
 Shows the list of available properties for the selected object on the canvas.
-The properties list changes based on your selection. For a complete list of all properties, go to [All properties](../maker/canvas-apps/reference-properties.md#all-properties).
+The properties list changes based on your selection. For a complete list of all properties, go to [All properties](reference-properties.md#all-properties).
 
 > [!div class="mx-imgBorder"] 
 > ![Properties list.](media/studio/pa-studio-prop-list.png)
