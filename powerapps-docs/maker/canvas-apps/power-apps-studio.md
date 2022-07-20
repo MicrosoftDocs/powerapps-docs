@@ -403,7 +403,7 @@ To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 > [!div class="mx-imgBorder"] 
-> [Create table.](media/studio/pa-studio-create-table.png)
+> ![Create table.](media/studio/pa-studio-create-table.png)
 
 
 #### Understand visual editor
@@ -463,7 +463,7 @@ Use the **Show/hide columns** option to show or hide available columns, includin
 For example, you can add an *Owner* column created by default to the existing table.
 
 > [!div class="mx-imgBorder"] 
-> ![Show/hide columns.](media/studio/pa-studio-show-hide-columns.png)
+> ![Show/hide columns.](media/studio/pa-show-hide-columns.png)
 
 ##### Refresh
 
