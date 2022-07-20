@@ -48,7 +48,7 @@ Icons can be used for the following purposes with model-driven apps.
 
 Each type of icon is stored as a web resource. Create a web resource first and then set the icons to use them. Alternatively, you can add the icon by creating a new web resource when you define the table properties.
 
-## Set the icons for a custom table
+## Set the icons for a custom table from the table definition
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
@@ -62,6 +62,13 @@ Each type of icon is stored as a web resource. Create a web resource first and t
    - Select **New image web resource** to create a web resource to add the icon. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md) 
 
 1. Select **Save**.
+
+## Set the icons for a custom table from form designer
+
+1. On the form designer left pane, select the table.
+1. In the right table properties pane, under **Icon**, select **Use web resource** > **Select icon**.
+1. Select from the list of existing image web resources or select New to create a new one.
+1. Select **Select**, and then select **Publish** to make the changes available in your app. 
 
 ## Review changes to your model-driven app icons
 
