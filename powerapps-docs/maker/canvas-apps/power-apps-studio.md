@@ -342,7 +342,8 @@ The options for working with canvas apps change depending on the selection on th
 
 Select the tree view to show the screens available in the app,
 
-:::image type="content" source="media/studio-tree-view.png" alt-text="Tree view.":::
+> [!div class="mx-imgBorder"] 
+> ![Tree view.](media/studio/pa-studio-tree-view.png)
 
 > [!TIP]
 > Select **App** in the tree view to work with app-specific controls or to
@@ -385,15 +386,6 @@ select the control, or select **(...)** and then select **Add to canvas**.
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
 
-#### Classic controls
-
-Dataverse uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If necessary, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** > **Upcoming features** > **Experimental** > toggle **Classic controls** to **On**.
-
-After you enable classic controls, you'll be able to see and add them from the **Classic** category.
-
-:::image type="content" source="media/classic-control.png" alt-text="Classic controls.":::
-
-For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse.
 
 ### Data
 
