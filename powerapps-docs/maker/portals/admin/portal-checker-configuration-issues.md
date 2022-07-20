@@ -362,7 +362,7 @@ This issue occurs when a parent [web page](../configure/web-page.md) is associat
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 1. In the left pane, select **Web Pages**.
-1. Select the web pages (either parent web page or children web pages) [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Select the web pages (either parent web page or children web pages) [listed](portal-checker.md#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Web site** field to point the appropriate website.
 
 
