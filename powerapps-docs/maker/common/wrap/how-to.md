@@ -264,19 +264,8 @@ Follow these steps to configure KeyVault URI:
 
 2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
 
-  **Key Vault tag structure for iOS**
-
-  | <h4 id="tag-name">Tag Name</h4> | Tag Value | Notes |
-  |-------------------------|-------------------------|-------------------------|
-  | &lt;BundleID&gt;.cert | Refer to the KeyVault certificate name to which the iOS certificate was uploaded. | <ul><li>IOS Certificate extension (p12) should be renamed to **.pfx** as KeyVault does not accept other formats.</li><li>Same iOS Certificate can be used by multiple bundle ID's.</li></ul> |
-  | &lt;BundleID&gt;.profile | Refer to the KeyVault secret name to which the **base64 encoded provisioning profile string** is added to. | <ul><li>Provisioning profiles are unique for each bundle id.</li><li>Command to base64 encode: <br>**Mac**: base64 -i example.mobileprovision</br> **Windows**: certutil -encode data.txt tmp.b64</li>  |
-
-
-   **KeyVault tag structure for Android**
-
-  | Tag Name | Tag Value | Notes |
-  |-------------------------|-------------------------|-------------------------|
-  | &lt;BundleID&gt;.keystore | Refer to the KeyVault certificate name to which the .pfx keystore file is uploaded. | <ul><li>Command to create a .pfx keystore: <br> keytool -genkey -alias wrap -keyalg RSA -keystore wrapStore.pfx -keysize 2048 -validity 10000 -storepass Password</li></ul> | 
+3. ADD STEPS 3-8 
+  
   
 ## Code signing
 
