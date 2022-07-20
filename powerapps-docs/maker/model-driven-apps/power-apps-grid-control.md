@@ -2,15 +2,14 @@
 title: "Power Apps read-only grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view and open records from a view or subgrid"
 ms.custom: ""
-ms.date: 10/04/2021
+ms.date: 07/20/2022
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
 applies_to: 
   - "powerapps"
-author: "Mattp123"
+author: "Jasongre"
 ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
@@ -20,7 +19,7 @@ search.app:
 ---
 # Power Apps read-only grid control
 
-The Power Apps read-only grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps read-only grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling. This control will eventually replace the legacy read-only grid and editable grid controls in both model-driven and canvas apps.
+The Power Apps read-only grid control lets users view and open records from views and subgrids. The control supports the latest Microsoft accessibility standards and is built to be performant and easily extensible for the future. The Power Apps read-only grid control also aligns with the latest Microsoft design guidance for fonts, sizing, and styling.
 
 > [!NOTE] 
 > As of April 2022, the Power Apps read-only grid control is the default control for all read-only views and subgrids.
@@ -36,7 +35,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 
 ### Configure the Power Apps read-only grid control
 
-1. In the **Power Apps Read-Only Grid** row, select the app types you want to apply the grid to. This makes the control the default control for the selected clients.
+1. In the **Power Apps Read-Only Grid** row, select the app types you want to apply the grid to. This selection makes the control the default control for the selected clients.
    :::image type="content" source="media/configure-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control":::
 1. By default, the jump bar is disabled. To display an alphabetic list at the bottom of views or subgrids (the jump bar), select the pencil icon in the **Jump bar** row. Under **Bind to static options**, select **Enable** in the dropdown list. Below is a screenshot of the jump bar enabled for the contact table in a model-driven app.
    :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
@@ -65,12 +64,12 @@ While the Power Apps read-only grid control became the default grid experience i
 
 When a view or subgrid is narrow it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps read-only grid control displays the following behavior in a card list:
 
-- Sort is not currently available in a card list view. To work around this, create views with the sort order you want.
+- Sort isn't currently available in a card list view. To work around this, create views with the sort order you want.
 - Select all and Clear all aren't available in a card list view.
 - The jump bar isn't available in a card list view. To work around this, select **Search** to filter records. Type the desired letter, and then press Enter.
 - Images on a record in the list don't display in a card list view. This includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
 - There are no icons for context menu commands in a card list view.
-- When there are no records, some lists have a prompt to create a new item. This button is not displayed in a card list view that uses the Power Apps read-only grid control.
+- When there are no records, some lists have a prompt to create a new item. This button isn't displayed in a card list view that uses the Power Apps read-only grid control.
 
 #### The list view doesn’t display custom cards for the table
 
@@ -85,9 +84,9 @@ To work around this, you can display a custom card by configuring the table to u
 
 ### UI limitations and differences from the read-only grid control
 
-- The grid does not currently support any theme customizations
+- The grid doesn't currently support any theme customizations
 - Cells with no data are blank instead of displaying three dashes **---**.
-- The owner column does not show online status and a people card for the user.
+- The owner column doesn't show online status and a people card for the user.
 - Filtering a column using **Filter by** from the column header drop-down list doesn't change the underlying view.
 
   :::image type="content" source="media/view-filter-by.png" alt-text="Filter By drop down list in a view":::
