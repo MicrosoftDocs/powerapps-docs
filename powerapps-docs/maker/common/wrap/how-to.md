@@ -269,11 +269,11 @@ Follow these steps to configure KeyVault URI:
      1. Create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
         :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
         > [!NOTE]
-        > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in Step #2.
+        > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
    - For iOS: 
      1. install the .cer into Keychain Access app. More informatoin: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Expor** and select the file format .p12. 
         > [!NOTE]
-        > The .p12 password that you set in step # 5 will be required when uploading it to the keyvault in the next step.
+        > The .p12 password that you set in step 4 will be required when uploading it to the keyvault in the next step.
      2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
         - Mac: base64 -i example.mobileprovision
         - Windows: certutil -encode data.txt tmp.b64
