@@ -495,7 +495,8 @@ Shows the row counts in the table.
 
 Select the drop-down menu next to the column heading to view column-related options.
 
-![Column options.](media/studio-column-options.png "Column options")
+> [!div class="mx-imgBorder"] 
+> ![Column options.](media/studio/pa-studio-column-options.png)
 
 | **Option**      | **Description**                                                                                      |
 |-----------------|------------------------------------------------------------------------------------------------------|
@@ -520,7 +521,9 @@ the app controls or go back to visual editor.
 To edit the table, select the table data source, and then select **Edit data** to
 open the table in visual editor.
 
-:::image type="content" source="media/studio-edit-2.png" alt-text="Edit table data.":::
+
+> [!div class="mx-imgBorder"] 
+> ![Edit table data.](media/studio/pa-studio-edit.png)
 
 After you close visual editor, the data source is automatically refreshed
 to reflect the updated data in Power Apps Studio. You can also select **Refresh**
@@ -530,12 +533,15 @@ to manually refresh Power Apps Studio to reflect the data in the controls you ad
 
 Select **Media** to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media must be 64 MB or smaller, and the size of all media files uploaded to an app can't exceed 200 MB.
 
-:::image type="content" source="media/studio-media.png" alt-text="Media.":::
 
-If you want to reference more media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
-using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
-or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
-More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
+
+> [!div class="mx-imgBorder"] 
+> ![Add media.](media/studio/pa-studio-add-media.png)
+
+If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
+using media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services),
+or from [Microsoft Stream](../controls/control-stream-video.md#example).
+More information: [Using multimedia files in Power Apps](add-images-pictures-audio-video.md)
 
 ## 7 – Canvas/screen
 
