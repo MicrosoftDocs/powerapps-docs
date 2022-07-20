@@ -92,7 +92,22 @@ The **Insert** menu is available from the command bar and from the app authoring
 
 Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
 
-To insert controls on the canvas, you can drag the control to the canvas, select the control, or select (...) and then select Add to canvas. The 
+To insert controls on the canvas, you can drag the control to the canvas or select the control.
+
+
+#### Popular controls
+| **Name**      | **Description**                                                                                      |
+|-----------------|------------------------------------------------------------------------------------------------------|
+|*Text label* | A box that shows data such as text, numbers, dates, or currency. |
+|*Edit form*|Display, edit, or create a record in a data source.|
+|*Text input*|A box that shows text.|
+|*Vertical gallery*|A control that contains other controls and shows a set of data.|
+|*Rectangle*|A rectangular shape to configure the canvas appearance.|
+|*Date Picker*|A control that the user can select to specify a date.|
+|*Button*|A control that the user can select to interact with the app.|
+
+For more information about the controls that you can insert, and their properties
+and definitions, go to [Controls and properties in Power Apps](reference-properties.md).
 
 ### Add data
 
@@ -340,7 +355,7 @@ The options for working with canvas apps change depending on the selection on th
 
 ### Tree view
 
-Select the tree view to show the screens available in the app,
+Select the tree view to show the screens available in the app.
 
 > [!div class="mx-imgBorder"] 
 > ![Tree view.](media/studio/pa-studio-tree-view.png)
@@ -351,54 +366,25 @@ change app behavior, such as adding a formula on *OnStart* event of the app.
 
 Switch to the **Components** tab to work with component library features. You can add
 new components or reuse those that were already published from published
-component libraries. More information: [Component library](../maker/canvas-apps/component-library.md)
+component libraries. More information: [Component library](component-library.md)
 
-![Tree view - components.](media/studio-tree-view-1.png "Tree view - components")
+> [!div class="mx-imgBorder"] 
+> ![Tree view - components.](media/studio/pa-studio-components-tab.png)
 
 ### Insert
 
-**Insert** shows all the popular objects or controls that you can
-add on the selected screen in your canvas app. You can also expand other
-choices or use the components option to insert controls from a component
-library.
-
-:::image type="content" source="media/studio-insert.png" alt-text="Insert.":::
-
-To insert controls on the canvas, you can drag the control to the canvas,
-select the control, or select **(...)** and then select **Add to canvas**.
-
-> [!TIP]
-> Dataverse provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
-
-#### Popular controls
-| **Name**      | **Description**                                                                                      |
-|-----------------|------------------------------------------------------------------------------------------------------|
-|*Label* | A box that shows data such as text, numbers, dates, or currency. |
-|*Edit form*|Display, edit, or create a record in a data source.|
-|*Text*|A box that shows text.|
-|*Text box*|A box in which the user can enter text, numbers, and other data.|
-|*Vertical gallery*|A control that contains other controls and shows a set of data.|
-|*Add icon*|Graphics for which you can configure appearance and behavior properties.|
-|*Rectangle*|A rectangular shape to configure the canvas appearance.|
-|*Date Picker*|A control that the user can select to specify a date.|
-|*Button*|A control that the user can select to interact with the app.|
-
-For more information about the controls that you can insert, and their properties
-and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
-
+More information, see the [Insert](power-apps-studio.md#insert) section above.
 
 ### Data
 
-Add, refresh, or remove data sources from your canvas app. You
-can add one or more
-[connections](../maker/canvas-apps/connections-list.md)
-by using data sources.  
+Add, refresh, or remove data sources from your canvas app. You can add one or more [connections](connections-list.md) by using data sources.  
 
 In addition to data stored within tables, there are many connectors available to interact with data in popular SaaS, services, and systems.
 
-:::image type="content" source="media/studio-data.png" alt-text="Data.":::
+> [!div class="mx-imgBorder"] 
+> ![Data.](media/studio/pa-studio-data.png)
 
-Select **Create new table** to create a new table in the Dataverse.
+Select **Add data** to create a new table in the Dataverse.
 
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can
 enter text in the data source search box or select from the list of connectors.
