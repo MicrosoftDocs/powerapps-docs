@@ -42,6 +42,7 @@ To generate a key, open a command prompt and run the following command:
 
 `keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 100`
 
+
 Parameters:
 
 - **genkey** - command to generate a key.
@@ -53,7 +54,17 @@ Parameters:
 
 Example:
 
-`keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
+
+
+- If preparing Keyvault, PATH_TO_KEYSTORE should have .pfx extension.
+
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
+
+
+- If preparing for manual signing, PATH_TO_KEYSTORE should have .jks extension.
+
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
+
 
 :::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
 
