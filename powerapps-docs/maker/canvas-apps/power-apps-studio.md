@@ -50,7 +50,7 @@ menu item for authoring the app.
 Let's understand each option in Power Apps Studio in detail.
 
 
-## 1 – Power Apps Studio modern command bar
+## 1 – Power Apps Studio command bar
 
 Power Apps Studio options are available on the command bar. The
 options are relevant to the current session and app-related settings. 
@@ -58,15 +58,39 @@ options are relevant to the current session and app-related settings.
 > [!div class="mx-imgBorder"] 
 > ![Power Apps Studio options.](media/studio/pa-studio-options.png)
 
-The command bar displays different set of commands depending on which control is selected.
+
+### Modern command bar (preview)
+
+The command bar displays the relevant set of commands depending on the control that is selected. 
 
 ![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
 
-### Back
+The command bar changes when one of the following control or object is selected: 
+
+1. App object
+2. Screen
+3. Button
+4. Shape
+5. Icon
+6. Blank form
+7. Form with data
+8. Blank gallary
+9. Gallary with data
+10. Label
+11. Text input
+12. Date picker
+
+When more than one type of control is selected, the command bar shows the common commands between the selected controls. 
+
+### Default command bar
+
+The options listed below are on the default command bar.
+
+#### Back
 
 Takes you back to the build hub, closing the current Power Apps Studio session.
 
-### Undo and redo
+#### Undo and redo
 
 > [!div class="mx-imgBorder"] 
 > ![Undo and redo.](media/studio/pa-undo-redo.png)
@@ -74,7 +98,7 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Undo** – undo the last action.
 - **Redo** – repeat the last action.
 
-### Cut, copy, and paste
+#### Cut, copy, and paste
 
 > [!div class="mx-imgBorder"] 
 > ![Cut, copy and paste.](media/studio/pa-studio-cut-copy-paste.png)
@@ -83,7 +107,7 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Copy** – Copy the selection, and store it in the clipboard.
 - **Paste** - Paste the last cut, or copied selection from the clipboard.
 
-### Insert
+#### Insert
 
 > [!div class="mx-imgBorder"] 
 > ![Insert controls to the screen.](media/studio/pa-insert-controls.png)
@@ -95,7 +119,7 @@ Insert shows all the popular objects or controls that you can add on the selecte
 To insert controls on the canvas, you can drag the control to the canvas or select the control.
 
 
-#### Popular controls
+##### Popular controls
 | **Name**      | **Description**                                                                                      |
 |-----------------|------------------------------------------------------------------------------------------------------|
 |*Text label* | A box that shows data such as text, numbers, dates, or currency. |
@@ -109,7 +133,7 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](reference-properties.md).
 
-### Add data
+#### Add data
 
 > [!div class="mx-imgBorder"] 
 > ![Add data.](media/studio/pa-studio-add-data.png)
@@ -119,14 +143,14 @@ and definitions, go to [Controls and properties in Power Apps](reference-propert
 - Select any other existing tables from the current environment.
 - Search and select a connector, such as **SharePoint** or **SQL Server**.
 
-### New screen layouts
+#### New screen layouts
 
 > [!div class="mx-imgBorder"] 
 > ![Add new screen.](media/studio/pa-add-screen.png)
 
 Add screens and select from the list of available screen layouts.
 
-#### Screnarios
+##### Screnarios
 
 > [!div class="mx-imgBorder"] 
 > ![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
@@ -134,32 +158,32 @@ Add screens and select from the list of available screen layouts.
 Or, select the **Screnarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
 
 
-### Background color
+#### Background color
 
 > [!div class="mx-imgBorder"] 
 > ![Screen background color.](media/studio/pa-studio-background-color.png)
 
 Select a background color for a screen. You can select select from the list of standard colors or select the **Custom** table and choose your own color.
 
-### Background image
+#### Background image
 
 > [!div class="mx-imgBorder"] 
 > ![Screen background image.](media/studio/pa-studio-background-image.png)
 
 Select **Upload** to upload images to set as the background image.
 
-### Settings
+#### Settings
 
 Configure the app's general settings.
 
 > [!div class="mx-imgBorder"] 
 > ![App settings.](media/studio/pa-studio-general-settings.png)
 
-#### General
+##### General
 
 Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Add image** option.
 
-#### Display
+##### Display
 
 Shows the screen size and orientation. To change, select the radio buttons for **Orientation** and **Size**.
 
@@ -175,17 +199,17 @@ To change the setting, toggle the switch.
 
 More information: [Change screen size and orientation](set-aspect-ratio-portrait-landscape.md)
 
-#### Upcoming features
+##### Upcoming features
 
 Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
 
 More information: [Understand experimental, preview, and deprecated features in Power Apps](working-with-experimental-preview.md)
 
-#### Support
+##### Support
 
 Shows current Power Apps Studio session details, version, and other information useful when working with Microsoft support.
 
-### Power Automate
+#### Power Automate
 
 Create a new flow with Power Automate, or select any available flow.
 
@@ -193,19 +217,20 @@ Create a new flow with Power Automate, or select any available flow.
 
 More information: [Use Power Automate pane](working-with-flows.md)
 
-### Collections
+#### Collections
 
 A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. More information: [Collections in canvas apps](create-update-collection.md) used by the app.
 
 > [!div class="mx-imgBorder"] 
 > ![Collections.](media/studio/pa-studio-collections.png )
 
-### Variables
+#### Variables
 
 You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. More information: [Variables in canvas apps](working-with-variables.md) used by the app.
 
 > [!div class="mx-imgBorder"] 
 > ![Variables.](media/studio/pa-studio-variables.png)
+
 
 ## 2 – App actions
 
