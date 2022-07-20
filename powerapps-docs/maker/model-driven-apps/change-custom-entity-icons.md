@@ -2,9 +2,8 @@
 title: "Change model-driven app custom table icons in Power Apps | MicrosoftDocs"
 description: "Learn how to change the icon for a custom table"
 ms.custom: ""
-ms.date: 05/04/2020
+ms.date: 07/20/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,9 +25,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Change model-driven app custom table icons 
-
-
+# Change model-driven app custom table icons
 
 When a custom table is created, it is automatically assigned a default icon. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. It is not possible to modify the icons assigned to system tables.
 
@@ -36,24 +33,43 @@ In the example here, the accounts table has an icon already assigned to it as it
 
 :::image type="content" source="media/icons-start.png" alt-text="Model-driven apps without icons set":::
   
- Three types of table icons for each custom table can be uploaded. 
+Icons can be used for the following purposes with model-driven apps.
 
 |Icon Type  |Description  |
 |---------|---------|
-|**Unified Interface Icon**|Must be a scalable vector graphic (.svg) icon |
-|**Icon in Web application**|A .svg, .gif, .png, or .jpg format image, 16x16 pixels in size.|
-|**Icon for table forms**|A .svg, .gif, .png, or .jpg format image, 32x32 pixels in size.|
+|**Table icon**|A .svg, .gif, .png, or .jpg format image, 16x16 pixels in size. This article describes how to edit the table icon. |
+|**Icon for table forms**|A .svg, .gif, .png, or .jpg format image, 32x32 pixels in size. More information: [ Enable or disable table options](../data-platform/edit-entities.md#enable-or-disable-table-options) |
+|**App icon**|Must be a scalable vector graphic (.svg) icon. More information: [Manage model-driven app settings in the app designer](app-properties.md) |
 
 > [!NOTE]
 > All image files must be no more than 10 kilobytes in size.
 >
-> When a scalable vector graphic (.svg) image is used as the **Icon in Web application** or **Icon for table forms**, it must have the default size set. Since SVG is an XML document, the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width) and [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) values can be edited with a text editor to define the default size for the image.
+> When a scalable vector graphic (.svg) image is used as the app icon or icon for table forms, it must have the default size set. Since SVG is an XML document, the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width) and [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) values can be edited with a text editor to define the default size for the image.
 
-Each type of icon is stored as a web resource. Create a web resource first and then set the icons to use them. Alternatively, create the icon when you create the new web resource within the **Lookup Row** dialog by selecting **New** while setting the value. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md)
+Each type of icon is stored as a web resource. Create a web resource first and then set the icons to use them. Alternatively, you can add the icon by creating a new web resource when you define the table properties.
 
 ## Set the icons for a custom table
 
-### Navigate to the table within the solution explorer
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+
+1. Select **Solutions**, and then open the solution you want or create a new one. Then open the custom table from the solution. To use the default solution, expand **Data**, select **Tables**, and then open the table you want.
+
+1. Select **Properties**. In **Edit table** pane, and then expand **Advanced options**.
+   :::image type="content" source="media/select-table-icon.png" alt-text="Select the table icon you want or create a new one":::
+
+1. Under **Choose table image**, select from the following options:
+   - Select the dropdown to choose an existing web resource.
+   - Select **New image web resource** to create a web resource to add the icon. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md) 
+
+1. Select **Save**.
+
+## Review changes to your model-driven app icons
+
+Once the updates have taken effect the changes can be reviewed by playing the app.  In this case, the *Courses* table has been updated and the icon has changed.  
+
+:::image type="content" source="media/icons-end.png" alt-text="Model-driven apps with updated icon set":::
+
+### Set the icons for a custom table (classic)
 
 The solution explorer is currently the only method for setting table icons.
 
@@ -65,7 +81,7 @@ The solution explorer is currently the only method for setting table icons.
 
 5. Select the custom table, which requires an updated icon.
 
-### Set table icons
+#### Set table icons
 
 1. On the command bar, select **Update Icons**.  
   
@@ -75,12 +91,6 @@ The solution explorer is currently the only method for setting table icons.
 5. Select **OK** to close the **Select New Icons** dialog.
 6. On the command bar, on the **File** menu, select **Save**.  
 7. When your changes are complete, publish them. Select **Publish** in the command bar while the table is selected in solution explorer.
-
-## Review changes to your model-driven app icons
-
-Once the updates have taken effect the changes can be reviewed by playing the app.  In this case, the *Courses* table has been updated and the icon has changed.  
-
-:::image type="content" source="media/icons-end.png" alt-text="Model-driven apps with updated icon set":::
 
 ## Community tools
 
