@@ -1,18 +1,16 @@
 ---
 title: Sign up for Power Apps Developer Plan
 description: Sign up for the Power Apps Developer Plan to get a free development environment to build and test with Power Apps, Power Automate, and Microsoft Dataverse.
-author: alaug
+author: marcelbf
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 05/11/2022
-ms.author: evlew
+ms.date: 07/20/2022
+ms.author: marcelbf
 ms.reviewer: tapanm
 contributors:
-  - evanmlew
+  - marcelbf
   - tapanm-msft
-  - gathapar
-  - alaug
 ---
 
 # Sign up for the Power Apps Developer Plan
@@ -158,7 +156,7 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I reset or delete my developer environment?
 
-Resetting a developer environment isn't currently supported; however, it can be deleted. The owner of the developer environment, and members of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) have the permissions needed to delete a developer environment.
+Resetting a developer environment isn't currently supported; however, it can be deleted. The owner of the developer environment, or users with the [permission to delete an environment](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) can delete a developer environment.
 
 However, even after deleting a user's developer environment, a new developer environment will be created when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have the **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new developer environment.
 
