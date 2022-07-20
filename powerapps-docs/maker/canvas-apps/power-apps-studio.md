@@ -533,14 +533,12 @@ to manually refresh Power Apps Studio to reflect the data in the controls you ad
 
 Select **Media** to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media must be 64 MB or smaller, and the size of all media files uploaded to an app can't exceed 200 MB.
 
-
-
 > [!div class="mx-imgBorder"] 
 > ![Add media.](media/studio/pa-studio-add-media.png)
 
 If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
 using media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services),
-or from [Microsoft Stream](../controls/control-stream-video.md#example).
+or from [Microsoft Stream](./controls/control-stream-video.md#example).
 More information: [Using multimedia files in Power Apps](add-images-pictures-audio-video.md)
 
 ## 7 – Canvas/screen
