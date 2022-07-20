@@ -276,7 +276,7 @@ Follow these steps to configure KeyVault URI:
         > [!NOTE]
         > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
      2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
-        - Mac: base64 -i example.mobileprovision
+        - Mac: base64 `-i example.mobileprovision`
         - Windows: certutil -encode data.txt tmp.b64
      
      3. Get the outputted base64 string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
