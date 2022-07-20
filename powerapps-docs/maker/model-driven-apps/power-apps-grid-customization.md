@@ -22,8 +22,10 @@ search.app:
 
 The [Power Apps grid control](./the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist, however, that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid. 
 
+:::image type="content" source="media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control":::
+
 ## Grid customizer control
-A grid customizer is a PCF control implementing the Power Apps grid control customizer interface. While each grid can have a single grid customizer defined for it, there can be multiple grid customizer controls in an environment. Each grid in an environment can have its own customizer control, or the same customizer control can reused with multiple different grids.
+A grid customizer is a PCF control implementing the Power Apps grid control customizer interface, which allows you to define the React element that will be rendered when a grid cell is in read-only mode (the cell renderer) or in edit mode (the cell editor). Multiple grid customizer controls can exist in an environment, but each grid can only have a single grid customizer control assigned. You may decide thta a separate customizer control is needed for each grid you want to modify, or you may choose to reuse the same customizer control for multiple grids.
 
 ### Implementing a grid customizer control
 To implement a grid customizer control, you first need to be familiar with [creating and building code components](https://docs.microsoft.com/en-us/power-apps/developer/component-framework/create-custom-controls-using-pcf) and then follow the steps below: 
@@ -37,7 +39,7 @@ To implement a grid customizer control, you first need to be familiar with [crea
     -  `CellRendererOverrides.tsx` includes cell renderer customizers per data type.
     -  `CellEditorOverrides.tsx` includes cell editor customizers per data type.
 
-    You will modify these files to add React elements that will be rendered when a grid cell is in read-only (cell renderer) or in edit (cell editor) mode. Each file exports an object that maps the column data type to a function returning a React element to be rendered inside the cells for that column type.
+    You will modify these files to add React elements used for cell renderers or cell editors. Each file exports an object that maps the column data type to a function returning a React element to be rendered inside the cells for that column type.
     
         export interface CellRendererOverrides {
           [dataType: string]: (props: CellRendererProps, rendererParams: GetRendererParams)
@@ -59,6 +61,8 @@ To implement a grid customizer control, you first need to be familiar with [crea
 1.  In the Properties panel, set the **Customizer control** property to the full logical name of your grid customizer code component.
     
         Full logical name = {publisher prefix}_{namespace}.{control name}
+
+    :::image type="content" source="media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control":::
  
 1.  **Save and publish** your customizations for this entity.
 1.  Test your customizer by opening the main grid for the customized entity. 
