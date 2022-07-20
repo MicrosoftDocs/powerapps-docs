@@ -4,7 +4,7 @@ description: Learn how to configure a file column on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/11/2022
+ms.date: 07/20/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -33,7 +33,8 @@ You must configure site settings **Control/EnableFilePreview** and set its value
 :::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enable file preview with value set to true.":::
 
 > [!IMPORTANT]
-> This site setting is required during the preview period.
+> - This site setting is required during the preview period.
+> - You cannot upload a file using **Insert** mode on a basic form or advanced form step.
 
 ## Liquid code
 
