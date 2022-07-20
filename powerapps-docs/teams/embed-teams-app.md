@@ -7,7 +7,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 04/20/2022
+ms.date: 07/20/2022
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -66,6 +66,21 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
     > [!TIP]
     > You can also [pin the app](install-personal-app.md#pin-power-apps-to-teams) for easy access.
+
+## Add to Teams using the web player
+
+You can also add canvas apps to Teams using the web player. There are two ways to run a canvas app using the web player.
+
+1. Go to [Power Apps](https://make.powerapps.com) > **Apps** > select the app to launch in a new browser tab.
+1. [Edit the app](../maker/canvas-apps/edit-app.md) > select ![Play the app.](media/embed-teams-app/play.png) or press **F5** to play the app.
+
+After the app is open using the web player, choose the **Add to Teams** button from the top-right side of the screen.
+
+:::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams using web player.":::
+
+When prompted, select **Open Microsoft Teams** to open Teams app, or select **Cancel** followed by **Use the web app instead** to open Teams web. And then, select **Add** to add the app to Teams.
+
+You can also choose to add the app to a specific team using **Add to team**, or a specific chat using **Add to chat**.
 
 ## Publish the app to the Teams catalog
 
