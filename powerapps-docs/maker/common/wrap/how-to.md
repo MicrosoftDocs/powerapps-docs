@@ -283,7 +283,7 @@ Follow these steps to configure KeyVault URI:
 
   5. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
   
-    :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
+     :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
 ## Code signing
 
