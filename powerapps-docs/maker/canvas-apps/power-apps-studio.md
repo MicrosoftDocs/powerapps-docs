@@ -384,7 +384,6 @@ In addition to data stored within tables, there are many connectors available to
 > [!div class="mx-imgBorder"] 
 > ![Data.](media/studio/pa-studio-data.png)
 
-
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can
 enter text in the data source search box or select from the list of connectors.
 
@@ -393,40 +392,40 @@ enter text in the data source search box or select from the list of connectors.
 
 More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
-### Visual editor
+### Visual editor 
 
 When you select **Create new table** and enter a name for the new table, you open visual editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
 
-![Visual editor.](media/studio-table-designer.png "Visual editor")
+> [!div class="mx-imgBorder"] 
+> ![Visual editor.](media/studio/pa-studio-table-designer.png)
 
 To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
-![Create table.](media/studio-create-table.png "Create table")
+> [!div class="mx-imgBorder"] 
+> [Create table.](media/stuido/pa-stuido/pa-studio-create-table.png)
 
-Watch this video that shows you how to quickly create table and columns.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWJ4MI]
-
-> [!NOTE]
-> You can use visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
 
 #### Understand visual editor
 
 Visual editor allows you to work with table rows, columns, and data.
 
-![Authoring a table in visual editor.](media/studio-table-1.png "Authoring a table in visual editor")
+> [!div class="mx-imgBorder"] 
+> ![Authoring a table in visual editor.](media/stuido/pa-studio-table-1.png "Authoring a table in visual editor")
 
 ##### Table name
 
 Select **Edit** ![Edit icon.](media/studio-edit-icon.png "Edit icon") to edit the name of the table.
 
-![Edit the table name.](media/studio-edit-1.png "Edit the table name")
+> [!div class="mx-imgBorder"] 
+> ![Edit the table name.](media/stuido/pa-studio-edit-1.png)
 
 ##### Add row
 
 Select **Add row** to add a new row to the table.
 
-![Add a row.](media/studio-add-row.png "Add a row")
+> [!div class="mx-imgBorder"] 
+> ![Add a row.](media/stuido/pa-studio-add-row.png)
 
 ##### Add columns
 
@@ -455,7 +454,7 @@ are available when creating a new column using visual editor inside Power Apps S
 
 ###### Advanced options
 
-The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of autonumbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/data-platform/types-of-fields.md)
+The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of autonumbering, prefixes, and maximum number of digits. More information: [Types of fields](../data-platform/types-of-fields.md)
 
 ##### Show/hide columns
 
@@ -463,7 +462,8 @@ Use the **Show/hide columns** option to show or hide available columns, includin
 
 For example, you can add an *Owner* column created by default to the existing table.
 
-![Show/hide columns.](media/show-hide-columns.png "Show/hide columns")
+> [!div class="mx-imgBorder"] 
+> ![Show/hide columns.](media/show-hide-columns.png)
 
 ##### Refresh
 
@@ -473,11 +473,12 @@ Refreshes the current table with data.
 
 To save changes to a table, select **Save.** When you change a table and try to close it without saving changes, you're prompted to discard changes.
 
-![Save changes.](media/studio-save-table-changes.png "Save changes")
+![Save changes.](media/studio/pa-studio-save-table-changes.png)
 
 To ensure that changes to the table are saved, you can select the next row inside the table, or select any other cell after editing a cell to trigger the auto save functionality.
 
-![Saving changes.](media/studio-saving-changes.png "Saving changes")
+> [!div class="mx-imgBorder"] 
+> ![Saving changes.](media/studio/pa-studio-saving-changes.png)
 
 After you close a saved table, you'll see the table added to the list of
 available data sources in **Data** on the left pane.
