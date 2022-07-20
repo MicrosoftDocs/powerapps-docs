@@ -81,7 +81,7 @@ You can also add canvas apps to Teams using the web player. There are two ways t
 
 1. When prompted, select **Cancel**.
 
-1. Select followed by **Launch it now** to open Teams app. Alternatively, you can also choose **Use the web app instead** to open Teams web.
+1. Select **Launch it now** to open the Teams app. Alternatively, you can also choose **Use the web app instead** to open the app in Teams web.
 
 ## Publish the app to the Teams catalog
 
