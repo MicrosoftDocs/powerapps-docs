@@ -103,10 +103,6 @@ This issue occurs when a [web page](../configure/web-page.md) references itself 
 1. Select the web pages [listed](portal-checker.md#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Parent Page** field to point to a valid web page record that isn't referencing itself.
 
-## File attachment doesn't have content
-
-To fix this issue, add the CSS file with entire content in the notes section of the web file.
-
 ## List of tables with CMS security check failed
 
 To fix this issue, ensure that your table has proper search page.
@@ -127,9 +123,7 @@ To avoid this, do the following:
 1. While loading a JavaScript file on demand on any page, use the `<async>` or `<defer>` HTML attribute to load the file asynchronously.
 1. While loading a CSS file on demand, you can use the `<preload>` HTML attribute (https://www.w3.org/TR/preload/) or JavaScript-based approach since preload isn't supported on all the browsers yet.
 
-## MIME type of file isn't text/CSS
 
-To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
 
 ## Parent page of an active web page is inactive
 
@@ -323,9 +317,31 @@ This issue occurs when the **Search** site marker isn't available in your portal
     - **Page**: Select the webpage record that is set as the search page of your portal.
 1. Select **Save & Close**.
 
-## Web file isn't active
+## Web files
+
+The following are issues when configuring [web files](../configure/web-files.md).
+
+### Web file isn't active
 
 To fix this issue, ensure that the web file is in active state.
+
+### The partial URL of web file is misconfigured
+
+To fix this issue, ensure that the partial URL is the file name with Home as the root page.
+
+### Web file doesn't have a file attachment
+
+To fix this issue, add the corresponding CSS file in the notes section of the web file.
+
+### File attachment doesn't have content
+
+To fix this issue, add the CSS file with entire content in the notes section of the web file.
+
+### MIME type of file isn't text/CSS
+
+To fix this issue, ensure that there are no plug-ins or flows that override the MIME type of the CSS file(s).
+
+
 
 ## Web pages
 
@@ -339,6 +355,16 @@ This issue occurs when a [web page](../configure/web-page.md) record has it's **
 1. In the left pane, select **Web Pages**.
 1. Select the web pages [listed](portal-checker.md#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
 1. Update the **Parent Page** field to point to a valid web page record that isn't a content page.
+
+### Web page belongs to different website
+
+This issue occurs when a parent [web page](../configure/web-page.md) is associated with a different [website](../configure/websites.md) than a child web page. To fix this issue:
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Select the web pages (either parent web page or children web pages) [listed](#identifying-web-pages-listed-in-diagnostic-results) in the portal checker diagnostic results.
+1. Update the **Web site** field to point the appropriate website.
+
 
 ### Web page doesn't have a publishing state
 
