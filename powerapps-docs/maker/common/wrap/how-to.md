@@ -279,6 +279,7 @@ Follow these steps to configure KeyVault URI:
         - Windows: certutil -encode data.txt tmp.b64
      
      3. Get the outputted base64 string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
+  
         :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
   5. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
