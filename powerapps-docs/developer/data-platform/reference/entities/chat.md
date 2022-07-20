@@ -1,7 +1,7 @@
 ---
-title: "Activity record for the Teams chat (chat)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Activity record for the Teams chat (chat)  table/entity."
-ms.date: 04/28/2022
+title: "Teams chat (chat)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Teams chat (chat)  table/entity."
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Activity record for the Teams chat (chat)  table/entity reference
+# Teams chat (chat)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -48,8 +48,8 @@ For internal use only. Entity which stores association data of Dynamics 365 reco
 |Property|Value|
 |--------|-----|
 |CollectionSchemaName|chats|
-|DisplayCollectionName|Activity Teams chat association entities|
-|DisplayName|Activity record for the Teams chat|
+|DisplayCollectionName|Teams chats|
+|DisplayName|Teams chat|
 |EntitySetName|chats|
 |IsBPFEntity|False|
 |LogicalCollectionName|chats|
@@ -593,8 +593,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DisplayName|Regarding|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Targets|account,contact,interactionforemail,knowledgearticle,knowledgebaserecord|
 |Type|Lookup|
 
@@ -1578,7 +1579,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |Description|For internal use only. Unique identifier of the user who unlinked the record.|
-|DisplayName|UnLinked By|
+|DisplayName|Unlinked By|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|unlinkedby|
@@ -1625,7 +1626,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |DateTimeBehavior|UserLocal|
 |Description|For internal use only. Date and time when the record was unlinked.|
-|DisplayName|UnLinked On|
+|DisplayName|Unlinked On|
 |Format|DateAndTime|
 |IsValidForForm|True|
 |IsValidForRead|True|

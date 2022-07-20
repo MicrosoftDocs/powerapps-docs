@@ -1,14 +1,15 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 05/09/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.custom: "intro-internal"
-ms.topic: "index-page"
+ms.topic: article
 ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Create your first component 
@@ -361,7 +362,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
     > [!NOTE]
     >
-    > The path provided here is relate to the current **solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
+    > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
 
 4. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
 

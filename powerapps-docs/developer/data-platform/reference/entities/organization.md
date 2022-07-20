@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 04/28/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -154,6 +154,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableUnifiedClientCDN](#BKMK_EnableUnifiedClientCDN)
 - [EnableUnifiedInterfaceShellRefresh](#BKMK_EnableUnifiedInterfaceShellRefresh)
 - [EnforceReadOnlyPlugins](#BKMK_EnforceReadOnlyPlugins)
+- [EnforceValidations](#BKMK_EnforceValidations)
 - [EntityImage](#BKMK_EntityImage)
 - [ExpireChangeTrackingInDays](#BKMK_ExpireChangeTrackingInDays)
 - [ExpireSubscriptionsInDays](#BKMK_ExpireSubscriptionsInDays)
@@ -207,6 +208,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsAutoDataCaptureEnabled](#BKMK_IsAutoDataCaptureEnabled)
 - [IsAutoDataCaptureV2Enabled](#BKMK_IsAutoDataCaptureV2Enabled)
 - [IsAutoSaveEnabled](#BKMK_IsAutoSaveEnabled)
+- [IsBasicGeospatialIntegrationEnabled](#BKMK_IsBasicGeospatialIntegrationEnabled)
 - [IsBPFEntityCustomizationFeatureEnabled](#BKMK_IsBPFEntityCustomizationFeatureEnabled)
 - [IsCollaborationExperienceEnabled](#BKMK_IsCollaborationExperienceEnabled)
 - [IsConflictDetectionEnabledForMobileClient](#BKMK_IsConflictDetectionEnabledForMobileClient)
@@ -219,6 +221,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsDefaultCountryCodeCheckEnabled](#BKMK_IsDefaultCountryCodeCheckEnabled)
 - [IsDelegateAccessEnabled](#BKMK_IsDelegateAccessEnabled)
 - [IsDelveActionHubIntegrationEnabled](#BKMK_IsDelveActionHubIntegrationEnabled)
+- [IsDesktopFlowSchemaV2Enabled](#BKMK_IsDesktopFlowSchemaV2Enabled)
 - [IsDuplicateDetectionEnabled](#BKMK_IsDuplicateDetectionEnabled)
 - [IsDuplicateDetectionEnabledForImport](#BKMK_IsDuplicateDetectionEnabledForImport)
 - [IsDuplicateDetectionEnabledForOfflineSync](#BKMK_IsDuplicateDetectionEnabledForOfflineSync)
@@ -234,6 +237,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsFullTextSearchEnabled](#BKMK_IsFullTextSearchEnabled)
 - [IsGeospatialAzureMapsIntegrationEnabled](#BKMK_IsGeospatialAzureMapsIntegrationEnabled)
 - [IsHierarchicalSecurityModelEnabled](#BKMK_IsHierarchicalSecurityModelEnabled)
+- [IsIdeasDataCollectionEnabled](#BKMK_IsIdeasDataCollectionEnabled)
 - [IsLUISEnabledforD365Bot](#BKMK_IsLUISEnabledforD365Bot)
 - [IsMailboxForcedUnlockingEnabled](#BKMK_IsMailboxForcedUnlockingEnabled)
 - [IsMailboxInactiveBackoffEnabled](#BKMK_IsMailboxInactiveBackoffEnabled)
@@ -262,6 +266,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsRichTextNotesEnabled](#BKMK_IsRichTextNotesEnabled)
+- [IsRpaAutoscaleEnabled](#BKMK_IsRpaAutoscaleEnabled)
+- [IsRpaUnattendedEnabled](#BKMK_IsRpaUnattendedEnabled)
 - [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
 - [IsSharingInOrgAllowed](#BKMK_IsSharingInOrgAllowed)
 - [IsSOPIntegrationEnabled](#BKMK_IsSOPIntegrationEnabled)
@@ -2446,6 +2452,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_EnforceValidations"></a> EnforceValidations
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether validation enforcement has been enabled for this organization's apps.|
+|DisplayName|Enforce validations for this organization's apps|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enforcevalidations|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnforceValidations Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_EntityImage"></a> EntityImage
 
 |Property|Value|
@@ -3472,6 +3503,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_IsBasicGeospatialIntegrationEnabled"></a> IsBasicGeospatialIntegrationEnabled
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determines whether users can make use of basic Geospatial featuers in Canvas apps.|
+|DisplayName|Enable the basic Geospatial features in Canvas Apps|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isbasicgeospatialintegrationenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsBasicGeospatialIntegrationEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_IsBPFEntityCustomizationFeatureEnabled"></a> IsBPFEntityCustomizationFeatureEnabled
 
 |Property|Value|
@@ -3742,6 +3798,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### IsDelveActionHubIntegrationEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsDesktopFlowSchemaV2Enabled"></a> IsDesktopFlowSchemaV2Enabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether v2 schema for Desktop Flows is enabled in this organization..|
+|DisplayName|Enable v2 schema for Desktop Flows in this organization.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isdesktopflowschemav2enabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsDesktopFlowSchemaV2Enabled Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -4094,6 +4175,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 1
+
+
+
+### <a name="BKMK_IsIdeasDataCollectionEnabled"></a> IsIdeasDataCollectionEnabled
+
+**Added by**: AISolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether data collection for ideas in canvas PowerApps has been enabled.|
+|DisplayName|Enable Ideas data collection.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isideasdatacollectionenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsIdeasDataCollectionEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -4732,6 +4838,56 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsRpaAutoscaleEnabled"></a> IsRpaAutoscaleEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Autoscale feature for RPA is enabled in this organization.|
+|DisplayName|Enable RPA Autoscale feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaautoscaleenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaAutoscaleEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
+### <a name="BKMK_IsRpaUnattendedEnabled"></a> IsRpaUnattendedEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Unattended runs feature for RPA is enabled in this organization.|
+|DisplayName|Enable RPA Unattended feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaunattendedenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaUnattendedEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
 
 
 
@@ -8540,6 +8696,8 @@ Listed by **SchemaName**.
 - [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 - [organization_catalog](#BKMK_organization_catalog)
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
+- [organization_sharedobject](#BKMK_organization_sharedobject)
+- [organization_sharedworkspace](#BKMK_organization_sharedworkspace)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
@@ -8560,6 +8718,7 @@ Listed by **SchemaName**.
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncstate](#BKMK_organization_organizationdatasyncstate)
+- [organization_userrating](#BKMK_organization_userrating)
 - [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
 - [organization_appaction](#BKMK_organization_appaction)
 - [organization_appactionmigration](#BKMK_organization_appactionmigration)
@@ -9721,6 +9880,40 @@ Same as the [organization_catalogassignment](catalogassignment.md#BKMK_organizat
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_sharedobject"></a> organization_sharedobject
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedobject](sharedobject.md#BKMK_organization_sharedobject) many-to-one relationship for the [sharedobject](sharedobject.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedobject|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedobject|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_sharedworkspace"></a> organization_sharedworkspace
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_sharedworkspace](sharedworkspace.md#BKMK_organization_sharedworkspace) many-to-one relationship for the [sharedworkspace](sharedworkspace.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|sharedworkspace|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_sharedworkspace|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
 
 **Added by**: Advanced Analytics Infrastructure Solution
@@ -10057,6 +10250,23 @@ Same as the [organization_organizationdatasyncstate](organizationdatasyncstate.m
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_organizationdatasyncstate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_userrating"></a> organization_userrating
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_userrating](userrating.md#BKMK_organization_userrating) many-to-one relationship for the [userrating](userrating.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|userrating|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_userrating|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

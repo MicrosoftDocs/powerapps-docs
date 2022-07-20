@@ -1,7 +1,7 @@
 ---
 title: "appaction table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the appaction table/entity."
-ms.date: 04/28/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -89,6 +89,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OnClickEventType](#BKMK_OnClickEventType)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [ParentAppActionId](#BKMK_ParentAppActionId)
+- [Sequence](#BKMK_Sequence)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -168,7 +169,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Button Sequence Priority|
+|DisplayName|Button Sequence Priority (Depreciated)|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|buttonsequencepriority|
@@ -615,6 +616,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|appaction|
 |Type|Lookup|
+
+
+### <a name="BKMK_Sequence"></a> Sequence
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Sequence|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|sequence|
+|MaxValue|100000000000|
+|MinValue|0|
+|Precision|10|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_statecode"></a> statecode

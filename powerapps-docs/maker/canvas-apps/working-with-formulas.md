@@ -22,7 +22,7 @@ contributors:
 # Get started with formulas in canvas apps
 
 > [!NOTE]
-> Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)? 
+> Have you checked out [Microsoft Power Fx](/power-platform/power-fx/overview)? 
 
 Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 

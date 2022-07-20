@@ -20,6 +20,9 @@ search.app:
 
 Microsoft Dataverse includes a virtual table named AAD user (aaduser). This virtual table provides a connection to Azure Active Directory (AAD) and returns data about users within your AAD organization. No virtual table configuration is required to use the functionality. This is an online only feature.
 
+> [!NOTE]
+> Your results with AAD User may differ depending on where it is being used. AAD User in Dataverse will provide the full list of users on the Azure AD for the organization. AAD User in Dataverse for Teams is limited to providing all AAD Users who are also a member of the Team.
+
 ## Lookups using AADUser
 
 You can easily add a lookup to this virtual table from within the Power Apps portal.

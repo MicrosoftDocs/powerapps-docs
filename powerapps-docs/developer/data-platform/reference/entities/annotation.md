@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
-ms.date: 04/28/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -204,12 +204,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|Text of the note.|
 |DisplayName|Description|
-|Format|Email|
+|Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|notetext|
-|MaxLength|1073741823|
+|MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -478,7 +478,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |Description|Dummy attribute associated with the note attachment|
-|DisplayName|File Name|
+|DisplayName|File Name(deprecated)|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -496,7 +496,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |Description|Dummy attribute associated with the note regarding|
-|DisplayName|Regarding|
+|DisplayName|Regarding(deprecated)|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|

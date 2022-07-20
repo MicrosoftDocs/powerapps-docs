@@ -1,7 +1,7 @@
 ---
 title: "workflowbinary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workflowbinary table/entity."
-ms.date: 04/28/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -74,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [Process](#BKMK_Process)
+- [Reference](#BKMK_Reference)
 - [ReferenceName](#BKMK_ReferenceName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -221,6 +222,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Targets|workflow|
 |Type|Lookup|
+
+
+### <a name="BKMK_Reference"></a> Reference
+
+|Property|Value|
+|--------|-----|
+|Description|A reference for the workflow binary|
+|DisplayName|Reference|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|reference|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ReferenceName"></a> ReferenceName

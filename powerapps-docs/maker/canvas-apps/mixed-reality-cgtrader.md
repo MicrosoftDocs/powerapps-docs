@@ -1,7 +1,7 @@
 ---
 title: Load 3D models from CGTrader into mixed reality controls (preview)
 description: Add 3D models from CGTrader into mixed reality controls in your canvas apps.
-author: tapanm-msft
+author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mduelae
@@ -93,3 +93,5 @@ The following table lists the most common CGTrader connector actions and example
 
 - [View 3D content in canvas apps](mixed-reality-component-view-3d.md)
 - [View 3D content or images in the real world](mixed-reality-component-view-mr.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

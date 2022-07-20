@@ -1,12 +1,15 @@
 ---
 title: "ReactControl.init | MicrosoftDocs"
 description: Used to initialize the component instance for a ReactControl. Components can kick off remote server calls and other initialization actions.
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/26/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # ReactControl.init
 

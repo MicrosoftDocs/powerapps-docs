@@ -1,7 +1,7 @@
 ---
 title: "mobileofflineprofileitemfilter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the mobileofflineprofileitemfilter table/entity."
-ms.date: 04/28/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -195,6 +195,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|RELATED_SHARED_IN||
 |4|CUD_OUT||
 |5|FULL_SYNC||
+|6|RELATED_ENTITIES||
 
 
 
@@ -217,6 +218,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|DELTA_IN||
 |1|DELTA_OUT||
 |2|FULL_SYNC||
+|3|TOP_1||
+|4|RELATED_ENTITIES||
 
 
 <a name="read-only-attributes"></a>

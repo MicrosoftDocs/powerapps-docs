@@ -172,6 +172,10 @@
   href: flowmachine.md
 - name: flowmachinegroup
   href: flowmachinegroup.md
+- name: flowmachineimage
+  href: flowmachineimage.md
+- name: flowmachineimageversion
+  href: flowmachineimageversion.md
 - name: flowsession
   href: flowsession.md
 - name: Goal
@@ -276,6 +280,8 @@
   href: msdyn_componentlayer.md
 - name: msdyn_componentlayerdatasource
   href: msdyn_componentlayerdatasource.md
+- name: msdyn_customcontrolextendedsettings
+  href: msdyn_customcontrolextendedsettings.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
 - name: msdyn_dataflowrefreshhistory
@@ -324,6 +330,8 @@
   href: msdyn_pminferredtask.md
 - name: msdyn_pmrecording
   href: msdyn_pmrecording.md
+- name: msdyn_pmtemplate
+  href: msdyn_pmtemplate.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
 - name: msdyn_serviceconfiguration
@@ -466,6 +474,10 @@
   href: serviceplanmapping.md
 - name: SharedLinkSetting
   href: sharedlinksetting.md
+- name: sharedobject
+  href: sharedobject.md
+- name: sharedworkspace
+  href: sharedworkspace.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -554,6 +566,8 @@
   href: userquery.md
 - name: UserQueryVisualization
   href: userqueryvisualization.md
+- name: userrating
+  href: userrating.md
 - name: UserSettings
   href: usersettings.md
 - name: VirtualEntityMetadata

@@ -5,7 +5,7 @@ author: chmoncay
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/12/2022
+ms.date: 07/19/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -78,6 +78,6 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 ## Limitations
 
-Rich text editor can't be used within a gallery.
+You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
