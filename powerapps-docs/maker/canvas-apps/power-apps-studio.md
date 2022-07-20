@@ -384,12 +384,12 @@ In addition to data stored within tables, there are many connectors available to
 > [!div class="mx-imgBorder"] 
 > ![Data.](media/studio/pa-studio-data.png)
 
-Select **Add data** to create a new table in the Dataverse.
 
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can
 enter text in the data source search box or select from the list of connectors.
 
-![Select data source.](media/studio-select-1.png "Select data source")
+> [!div class="mx-imgBorder"] 
+> ![Select data source..](media/studio/pa-studio-data-source.png)
 
 More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
