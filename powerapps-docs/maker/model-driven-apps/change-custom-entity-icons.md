@@ -42,9 +42,12 @@ Icons can be used for the following purposes with model-driven apps.
 |**App icon**|Must be a scalable vector graphic (.svg) icon. More information: [Manage model-driven app settings in the app designer](app-properties.md) |
 
 > [!NOTE]
-> All image files must be no more than 10 kilobytes in size.
 >
-> When a scalable vector graphic (.svg) image is used as the app icon or icon for table forms, it must have the default size set. Since SVG is an XML document, the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width) and [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) values can be edited with a text editor to define the default size for the image.
+> - All image files must be no more than 10 kilobytes in size.
+>
+> - Setting the icon in the app designer overrides the table definition icon setting. When the table icon in app designer is set to the default icon, the icon specified in the table definition is displayed in the app.
+>
+> - When a scalable vector graphic (.svg) image is used as the app icon or icon for table forms, it must have the default size set. Since SVG is an XML document, the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width) and [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) values can be edited with a text editor to define the default size for the image.
 
 Each type of icon is stored as a web resource. Create a web resource first and then set the icons to use them. Alternatively, you can add the icon by creating a new web resource when you define the table properties.
 
@@ -54,18 +57,18 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 1. Select **Solutions**, and then open the solution you want or create a new one. Then open the custom table from the solution. To use the default solution, expand **Data**, select **Tables**, and then open the table you want.
 
-1. Select **Properties**. In **Edit table** pane, and then expand **Advanced options**.
-   :::image type="content" source="media/select-table-icon.png" alt-text="Select the table icon you want or create a new one":::
+1. Select **Properties**. In the right **Edit table** pane, expand **Advanced options**.
 
 1. Under **Choose table image**, select from the following options:
    - Select the dropdown to choose an existing web resource.
    - Select **New image web resource** to create a web resource to add the icon. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md) 
+   :::image type="content" source="media/select-table-icon.png" alt-text="Select the table icon you want or create a new one":::
 
 1. Select **Save**.
 
-## Set the icons for a custom table from form designer
+## Set the icon for a custom table in app designer
 
-1. On the form designer left pane, select the table.
+1. On the app designer left pane, select the table.
 1. In the right table properties pane, under **Icon**, select **Use web resource** > **Select icon**.
 1. Select from the list of existing image web resources or select New to create a new one.
 1. Select **Select**, and then select **Publish** to make the changes available in your app. 
