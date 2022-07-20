@@ -71,8 +71,6 @@ Once the updates have taken effect the changes can be reviewed by playing the ap
 
 ### Set the icons for a custom table (classic)
 
-The solution explorer is currently the only method for setting table icons.
-
 1. From the Power Apps portal, select **Solutions**.
 2. Open the unmanaged solution with the tables where icons need to be set.
 3. Select **Switch to classic** from within the solution command bar (you may need to select **...** first). This opens the solution in the classic solution explorer.
