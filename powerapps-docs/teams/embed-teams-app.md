@@ -7,7 +7,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 07/20/2022
+ms.date: 07/21/2022
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -82,6 +82,9 @@ You can also add canvas apps to Teams using the web player. There are two ways t
 1. When prompted, select **Cancel**.
 
 1. Select **Launch it now** to open the Teams app. Alternatively, you can also choose **Use the web app instead** to open the app in Teams web.
+
+> [!NOTE]
+> You can only add apps to Teams that belong to the same tenant as your Teams account. Otherwise, you'll see an error "App was not found in tenant".
 
 ## Publish the app to the Teams catalog
 
