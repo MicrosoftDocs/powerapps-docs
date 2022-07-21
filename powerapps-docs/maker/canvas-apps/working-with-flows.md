@@ -27,11 +27,11 @@ Create new flows, or add existing flows, and even edit existing flows using Powe
 
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
-2. On the app authoring menu, select the **Power Automate**. 
+2. On the app authoring menu, select **Power Automate**. 
 
    :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane":::
 
-3. Select **Create new flow** in the Power Automate pane.
+3. In the Power Automate pane, select **Create new flow**.
 
    :::image type="content" source="media/working-with-flows/create-new-flow.png" alt-text="A screenshot showing Create your flow screen having several options to choose a flow template from.":::
 
