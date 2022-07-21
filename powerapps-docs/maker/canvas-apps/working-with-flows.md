@@ -169,7 +169,6 @@ The Power Automate pane is now enabled by defualt. To use the classic Power Auto
 
 ### See also
 
-- [Start a flow in a canvas app](using-logic-flows.md)
 - [Add and configure controls](add-configure-controls.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
