@@ -74,7 +74,7 @@ You should only create Pull Requests (PRs) for stories that are active and have 
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
 
 > [!NOTE]
-> Use the [PR checker tool](next-steps.md) at the end of this article to automate the PR checking process.
+> Use the [PR checker tool](next-steps.md) at the end of this article to automate the Pull Request checking process.
 
 You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](https://docs.microsoft.com/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
 
@@ -109,7 +109,7 @@ Ultimately, if customers aren’t using a published app, then that app isn’t f
 ## Summary
 The development of no-code and low-code tools such as Microsoft Power Apps has significantly expanded options for business technologists or makers to create, develop, and deploy apps. This development works best within a fusion team environment, comprising of a product owner, a domain expert, a pro dev, and an administrator, with this team bringing in other resources as required. 
 
-Integrating agile and scrum development approaches within fusion teams results in more rapid app development and a higher probability of successful deployment with a feature set that makes a significant difference to the business. By applying these best practices, guidelines, and recommendations, your fusion team will be able to use Microsoft Power Apps to address your organization’s digital transformation challenges.
+Integrating agile and scrum development approaches within fusion teams results in more rapid app development and a higher probability of successful deployment with a feature set that makes a significant difference to the business. By applying these best practices, guidelines, and recommendations, your fusion team will be able to use Microsoft Power Apps to address your organization’s digital transformation challenges.  
 
 > [!div class="nextstepaction"]
-> [Next steps](next-steps.md)
+> [Try out community solutions and tools](next-steps.md)

@@ -14,7 +14,7 @@ ms.reviewer: kvivek
 
 ## Try out community solutions and tools
 
-This section provides information on community solutions and tools available for fusion teams to use.  Although the underlying features and components used to build these are fully supported, the solutions and tools shared below are **sample implementations**. Our customers and community can use and customize these to implement in their organizations.
+This article provides information on community solutions and tools available for fusion teams to use.  Although the underlying features and components used to build these are fully supported, the solutions and tools shared below are **sample implementations**. Our customers and community can use and customize these to implement in their organizations.
 
 If you encounter issues using the solutions and tools, report issues [here](https://aka.ms/microsoft-focus-center-issues). 
 
