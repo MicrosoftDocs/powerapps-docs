@@ -18,8 +18,11 @@ contributors:
 ---
 # Understand Power Apps Studio
 
+[This article is pre-release documentation and is subject to change.]
+
 When you create a canvas app by using any method, you're taken to the canvas app
 builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app. 
+
 
 ## Overview of Power Apps Studio
 
@@ -64,6 +67,23 @@ options are relevant to the current session and app-related settings.
 The modern command bar displays the relevant set of commands depending on the control that is selected. 
 
 ![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
+
+> [!IMPORTANT]
+> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+#### Enable the modern command bar
+
+The modern command bar needs to be enabled manually through the feature switch. To enable the feature:
+
+1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
+
+1. Select **Settings** at the top.
+
+1. Select **Upcoming features**.
+
+1. Under the **Preview** tab.
 
 The command bar changes when one of the following control or object is selected: 
 
