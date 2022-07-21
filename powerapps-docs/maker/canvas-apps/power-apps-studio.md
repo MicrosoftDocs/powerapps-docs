@@ -266,7 +266,8 @@ Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-no
 
 ### Comments
 
-Add comments in your app to make suggestions or to track issues for follow-up.
+Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.
+
 
 > [!div class="mx-imgBorder"] 
 > ![Add comments.](media/studio/pa-studio-comments.png)
