@@ -1382,7 +1382,7 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
           - name: Configure header properties
             href: ./model-driven-apps/form-designer-header-properties.md
-          - name: Add and configure sub-grid component
+          - name: Add and configure subgrid component
             href: ./model-driven-apps/form-designer-add-configure-subgrid.md
           - name: Add and configure quick view component
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
@@ -1504,7 +1504,7 @@
           items:
           - name: Form properties overview
             href: ./model-driven-apps/form-properties-legacy.md
-          - name: Sub-grid properties overview
+          - name: Subgrid properties overview
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md

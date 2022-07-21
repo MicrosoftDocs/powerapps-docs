@@ -55,14 +55,29 @@ Following are descriptions for each control you can use on forms.
 
 ## Grid controls
 
+Grid controls can be configured at the following levels: 
+- Table. When a grid control is configured for a table, all views for the table will use the grid control.
+- Form. Subgrids added to a form use a grid control to control the behavior of the subgrid.
+
 ### Subgrid
 
-A subgrid allows you to present a view of data related to the current record.  
-By default it is simply a view, however it can be made editable by configuring the control. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+The read-only subgrid allows you to present a view of data related to the current record where users can view and open the record from within the grid.  
+<!-- By default it is simply a view, however it can be made editable by configuring the control. --> More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
 
 ### Editable grid
 
-With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
+With editable grids, users can do rich in-line editing of records directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
+
+### (Preview) Power Apps grid control
+
+The Power Apps grid control represents the next evolution of the Power Apps grid control, allowing users to view, open, and edit records from views and subgrids. By default, the Power Apps grid control is read-only but you can configure it to be editable.
+> [!NOTE]
+>
+> - This is a preview feature.
+>
+> - The Power Apps grid control currently can only be configured for a table.
+
+More information: [Power Apps grid control](the-power-apps-grid-control.md)
 
 ## Display controls
 
