@@ -19,7 +19,7 @@ contributors:
 
 The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist, however, that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid. 
 
-:::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control":::
+:::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png":::
 
 ## Grid customizer control
 
@@ -65,7 +65,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 
    `Full logical name = {publisher prefix}_{namespace}.{control name}`
 
-   :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control":::
+   :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png":::
  
 1. **Save and publish** your customizations for this entity.
 1. Test your customizer by opening the main grid for the customized entity. 
