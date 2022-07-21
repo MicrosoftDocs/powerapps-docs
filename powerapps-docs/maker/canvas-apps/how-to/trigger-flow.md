@@ -252,4 +252,4 @@ An email like this should appear in your inbox
 
 ### See also
 
-[Start a flow in canvas apps](../using-logic-flows.md)
+[Use Power Automate pane](../working-with-flows.md)
