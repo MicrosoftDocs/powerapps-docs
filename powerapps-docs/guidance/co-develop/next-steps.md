@@ -23,6 +23,8 @@ If you encounter issues using the solutions and tools, report issues [here](http
 
 See the links below for descriptions, usage instructions, and download locations.
 
+## Tools
+
 ### Anonymizer
 
 A tool to anonymize data in Dataverse tables after a production org is copied over to a sandbox instance. This is specially useful when the data needs to be anonymized for privacy reasons before developers use the sandbox instance.
