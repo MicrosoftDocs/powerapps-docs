@@ -2,10 +2,10 @@
 metadata:
   title: "Frequently asked questions for legacy Adxstudio Portals v7 | MicrosoftDocs"
   description: "Frequently asked questions for legacy Adxstudio Portals v7"
-  author: sandhangitmsft
-  
+  author: sandhangitmsft  
   ms.topic: faq
-  ms.custom: 
+  ms.custom:
+  ms.subservice: portals
   ms.date: 11/22/2019
   ms.author: sandhan
   ms.reviewer: ndoelman

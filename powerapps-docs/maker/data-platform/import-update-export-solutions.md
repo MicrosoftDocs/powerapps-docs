@@ -103,6 +103,10 @@ After you import a solution, label text doesn’t display in other languages. Th
 
 To workaround this issue, enable the languages that you want and then import the solution again. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
 
+### Duplicate security roles after solution import
+
+Notice that when you try to create a security role in the Power Platform admin center when there’s already a security role with the same name in the environment, you receive a message that a role with the specified name already exists and the role isn’t created. However, it is possible through solution import to import a security role into an environment that already has a different security role with the same name. When this occurs, both security roles with the same name exist in the environment, which can make it difficult to distinguish between the two roles.
+
 ### See also
 
 [Update solutions](update-solutions.md) <br />

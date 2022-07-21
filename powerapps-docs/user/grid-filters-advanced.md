@@ -25,9 +25,8 @@ searchScope:
   - Power Apps
 ---
 
-# Create and manage personal views on a grid page (preview)
+# Create and manage personal views on a grid page 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 In model-driven apps, views define the data that's displayed in tabular form on a grid page. System views are views that are created by your administrator and shared with you. You typically can't modify them. However, you can create and manage personal views. Personal views are available to you only unless you share them.
 
@@ -106,6 +105,9 @@ The following options are available when you add conditions in the filter editor
     :::image type="content" source="./media/filter-editor-add-condition-related.png" alt-text="A screenshot of the view filter editor, showing a condition added from a related table.":::
 
 To undo changes to the view filter at any time, select **Reset to default**.
+
+> [!TIP]
+> If you have the security privilege **Enable Download Fetch XML**, found under Miscellaneous Privileges section of the **Customization** tab within the security role definition page, you can download the FetchXML expression for a view. Contact your administrator if you need this capability.
 
 ## Sort the data
 
@@ -238,6 +240,6 @@ To restore a hidden view:
 - **Assign**: Assigns ownership of the view to another user or team in your organization. This option appears only on personal views that you own.
 - **Delete**: Deletes the view. If you delete a personal view, the view is deleted for everyone who has access to it. This option appears only on personal views you have *Delete* permission to.
 - **Deactivate/Activate**: Deactivates or activates the view. If you deactivate or activate a personal view, the view becomes inactive or active for everyone who has access to it. This option appears only on personal views you have *Write* permission to.
-<!-- It's not clear to me how a deactivated list is different from a hidden list. Can you please elaborate? -->
+- **Download Fetch XML**: Download the FetchXML expression for the view. This capability is enabled by an administrator with the security privilege **Enable Download Fetch XML**, found under Miscellaneous Privileges section of the **Customization** tab within the security role definition page.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

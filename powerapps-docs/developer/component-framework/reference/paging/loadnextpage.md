@@ -16,6 +16,10 @@ contributors:
 
 [!INCLUDE [loadnextpage-description](includes/loadnextpage-description.md)]
 
+> [!NOTE]
+> `loadNextPage` does not support parallel execution.
+> Executing `loadNextPage` will trigger `updateView` on the control with newly fetched results.
+
 ## Available for
 
 Model-driven and canvas apps
