@@ -2,9 +2,8 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 09/02/2021
+ms.date: 07/21/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
@@ -21,8 +20,6 @@ search.app:
   - D365CE
 ---
 # Guidelines and troubleshooting for embedded canvas apps
-
-
 
 ## Guidance on embedding canvas apps
 
@@ -88,9 +85,10 @@ To access columns of a related table, makers can use either of the expressions l
 ### Embedded canvas app doesn’t render correctly
 
 An embedded canvas app may not render correctly within the field on the model-driven app form, such as additional whitespace or scroll bars around the canvas app.
-This issue can occur when one or both of the following are true.
-
-- The **Scale to fit** option isn’t enabled with the canvas app. 
+To fix this issue, check the following settings in your canvas app:
+- Scale to fit.
+  - If your app is not built to be responsive, then ensure the **Scale to fit** option is enabled with the canvas app.
+  - If your app is built to be responsive, then disable the **Scale to fit** option in the canvas app. It is possible when **Scale to fit** is disabled, there will still be a horizontal scroll bar at the bottom of the app. To prevent this, we recommend adding the canvas app control to a field in a 1-column section instead.
 - The **App Name** property value is missing or is incorrectly defined in the embedded canvas app control.  This might occur when the model-driven app and canvas app have been imported as a solution into another environment.
 
 Instead of creating apps that scale to the space available, you can create apps that are **responsive** to the form factor.  [Learn more about responsive apps](../../maker/canvas-apps/build-responsive-apps.md)
