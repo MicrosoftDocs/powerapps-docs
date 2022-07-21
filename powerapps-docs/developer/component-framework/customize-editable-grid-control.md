@@ -17,7 +17,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist, however, that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid. 
+The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist, however, that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
 
 :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png":::
 
@@ -40,7 +40,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
    - `CellEditorOverrides.tsx` includes cell editor customizers per data type.
 
    You will modify these files to add React elements used for cell renderers or cell editors. Each file exports an object that maps the column data type to a function returning a React element to be rendered inside the cells for that column type.
-    
+
    ```typescript
     export interface CellRendererOverrides {
       [dataType: string]: (props: CellRendererProps, rendererParams: GetRendererParams)
@@ -69,7 +69,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
  
 1. **Save and publish** your customizations for this entity.
 1. Test your customizer by opening the main grid for the customized entity. 
-1. Repeat steps 7-12 for any other entities whose grid needs a grid customizer control.
+1. Repeat steps 6-11 for any other entities whose grid needs a grid customizer control.
 
 ## Example
 
