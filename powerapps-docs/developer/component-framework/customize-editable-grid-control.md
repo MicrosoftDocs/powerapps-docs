@@ -71,5 +71,15 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 1. Test your customizer by opening the main grid for the customized entity. 
 1. Repeat steps 7-12 for any other entities whose grid needs a grid customizer control.
 
+## Example
+
+You can find an example of a customized editable grid control here: [Customized Editable Grid Control](sample-controls/customized-editable-grid-control.md).
+
+### See also
+
+[Power Apps component framework overview](overview.md)<br/>
+[Create your first code component](implementing-controls-using-typescript.md)<br/>
+[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
