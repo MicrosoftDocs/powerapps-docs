@@ -1,12 +1,12 @@
 ﻿---
-title: Use Power Automate pane (preview)
+title: Use Power Automate pane
 description: Learn about how to use Power Automate pane to work with flows in Power Apps
 author: TashasEv
 
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/14/2022
+ms.date: 07/21/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -18,44 +18,20 @@ contributors:
   - TashasEv
 ---
 
-# Use Power Automate pane (preview)
+# Use Power Automate pane
 
-[This article is pre-release documentation and is subject to change.]
+Create new flows, or add existing flows, and even edit existing flows using Power Automate pane within Power Apps Studio. The Power Automate pane is enabled by default.
 
-You can now create new flows, or add existing flows, and even edit existing flows using Power Automate pane within Power Apps Studio. You don't have to browse to [Power Automate](https://flow.microsoft.com) to work with flows and then return to Power Apps Studio for app editing. In order to use this capability, you'll have to enable the **Power Automate pane** setting.
-
-> [!NOTE]
-> - This feature must be enabled on a per-app basis.
-> - Flows that you create or edit, and save from inside Power Apps Studio are also visible and available in [Power Automate](https://flow.microsoft.com).
-> - Saved changes to the flows using Power Apps Studio will remain intact even if you close Power Apps Studio without saving changes to the app.
-> - Removing a flow from a canvas app doesn't delete the flow from [Power Automate](https://flow.microsoft.com).
-
-## Enable Power Automate pane
-
-> [!IMPORTANT]
-> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-Power Automate pane needs to be enabled manually through the feature switch. To enable the feature:
-
-1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
-
-1. Select **Settings** at the top.
-
-1. Select **Upcoming features**.
-
-1. Under the **Preview** tab, select **Enable Power Automate pane** to turn on this feature. You may be prompted to close and reopen your canvas app to see the change.
-
-   :::image type="content" source="media/working-with-flows/power-automate-pane-feature.png" alt-text="A screenshot of the Upcoming Features dialog box showing the Enable Power Automate feature toggle.":::
-
-    Save the app and relaunch Power Apps Studio. The Power Automate pane now appears in Power Apps Studio.
-
-   :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane":::
 
 ## Create a new flow
 
-To start with flows inside Power Apps Studio, select **Create new flow** in the Power Automate pane.
+1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
+
+2. On the app authoring menu, select the **Power Automate**. 
+
+   :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane":::
+
+3. Select **Create new flow** in the Power Automate pane.
 
    :::image type="content" source="media/working-with-flows/create-new-flow.png" alt-text="A screenshot showing Create your flow screen having several options to choose a flow template from.":::
 
@@ -178,6 +154,18 @@ To remove a flow from your app, select **...** (ellipsis) to the right of your f
 :::image type="content" source="media/working-with-flows/remove-flow.png" alt-text="A screenshot showing the option to remove the flow from the app.":::
 
 This action only removes flow from the app, while the flow remains intact in the environment. You can add the flow again to the same app, or use in other apps.
+
+## Enable classic Power Automate Pane
+
+To use the classic Power Automate experience to [create a flow](using-logic-flows) you will need to enable it manually.
+
+1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
+
+1. Select **Settings** at the top.
+
+1. Select **Upcoming features**.
+
+1. Under the **Retired** tab, select **Enable Classic Power Automate pane** to set the toggle to **On**. 
 
 ### See also
 
