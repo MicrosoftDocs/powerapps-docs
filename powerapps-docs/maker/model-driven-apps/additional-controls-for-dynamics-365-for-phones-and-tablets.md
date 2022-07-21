@@ -61,12 +61,11 @@ Grid controls can be configured at the following levels:
 
 ### Subgrid
 
-The read-only subgrid allows you to present a view of data related to the current record where users can view and open the record from within the grid.  
-<!-- By default it is simply a view, however it can be made editable by configuring the control. --> More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+The read-only subgrid allows you to present a view of data related to the current record where users can view and open the record from within the grid. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
 
 ### Editable grid
 
-With editable grids, users can do rich in-line editing of records directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
+With editable grids, users can do rich in-line editing of records directly from views and subgrids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
 
 ### (Preview) Power Apps grid control
 
