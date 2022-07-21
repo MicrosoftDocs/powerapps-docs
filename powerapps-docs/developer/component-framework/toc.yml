@@ -53,6 +53,8 @@ items:
       href: updating-existing-controls.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
+    - name: Customize the editable grid control (Preview)
+      href: customize-editable-grid-control.md
   - name: Troubleshooting
     items:
     - name: Common issues and workarounds
@@ -71,6 +73,8 @@ items:
       href: tutorial-create-model-driven-field-component.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
+    - name: Customized Editable Grid
+      href: sample-controls/customized-editable-grid-control.md
     - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
     - name: Device API component
