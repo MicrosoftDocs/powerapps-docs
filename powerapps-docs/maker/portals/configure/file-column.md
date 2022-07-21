@@ -82,6 +82,9 @@ Create a new file data type column in [Microsoft Dataverse](../../data-platform/
 
 Portals Web API can be used to perform create, read, update, and delete operations on file columns across Microsoft Dataverse tables.
 
+> [!NOTE]
+> Make sure you've configured the appropriate API site settings, the attribute * should be included in the site setting Webapi/<table>/fields
+
 ### Retrieving file data
 
 To retrieve file data, use the following APIs
