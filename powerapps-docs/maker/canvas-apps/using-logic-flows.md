@@ -24,9 +24,9 @@ You can use Power Automate to create logic that performs one or more tasks when 
 > [!NOTE]
 > When a user runs a flow from within an app, that user must have permission to perform the tasks that are specified in the flow. Otherwise, the flow will fail.
 
-## Enable classic Power Automate Pane
+## Enable classic Power Automate experience
 
-By default, the new [Power Automate pane](working-with-flows.md) is enabled by default. To use the classic Power Automate experience to create a flow, you will need to enable it manually.
+By default, the new [Power Automate pane](working-with-flows.md) is enabled by default. To use the retired classic Power Automate experience to create a flow, you will need to enable it manually.
 
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
