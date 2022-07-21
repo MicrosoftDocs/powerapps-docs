@@ -279,7 +279,7 @@ Follow these steps to configure KeyVault URI:
         - Mac: base64 `-i example.mobileprovision`
         - Windows:  `certutil -encode data.txt tmp.b64`
      
-     3. Get the outputted base64 string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
+     3. Get the outputted `base64` string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
   
         :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
