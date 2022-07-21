@@ -82,9 +82,12 @@ The command bar changes when one of the following control or object is selected:
 
 When more than one type of control is selected, the command bar shows the common commands between the selected controls. 
 
-### Default command bar
+### Default command bar options
 
-The options listed below are on the default command bar.
+When you open Power Apps Studio you will see the default command bar. 
+
+> [!div class="mx-imgBorder"] 
+> ![Power Apps Studio options.](media/studio/pa-studio-options.png)
 
 #### Back
 
