@@ -61,7 +61,7 @@ options are relevant to the current session and app-related settings.
 
 ### Modern command bar (preview)
 
-The command bar displays the relevant set of commands depending on the control that is selected. 
+The modern command bar displays the relevant set of commands depending on the control that is selected. 
 
 ![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
 
