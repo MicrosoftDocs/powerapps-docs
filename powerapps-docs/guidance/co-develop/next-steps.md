@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 
 ---
 
-## Try out community solutions and tools
+## Community solutions and tools
 
 This article provides information on community solutions and tools available for fusion teams to use.  Although the underlying features and components used to build these are fully supported, the solutions and tools shared below are **sample implementations**. Our customers and community can use and customize these to implement in their organizations.
 
@@ -22,8 +22,6 @@ If you encounter issues using the solutions and tools, report issues [here](http
 > Microsoft Support will not be able to help with issues related to these solutions and tools. For issues with core features in Microsoft Power Platform, use standard channel to contact Microsoft Support.
 
 See the links below for descriptions, usage instructions, and download locations.
-
-## Tools
 
 ### Anonymizer
 
