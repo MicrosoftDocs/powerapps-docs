@@ -17,12 +17,25 @@ contributors:
   - tapanm-msft
   - TashasEv
 ---
-# Start a flow in a canvas app
+# Start a flow in a canvas app (retired)
 
 You can use Power Automate to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a list created using Microsoft Lists, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close Power Apps.
 
 > [!NOTE]
 > When a user runs a flow from within an app, that user must have permission to perform the tasks that are specified in the flow. Otherwise, the flow will fail.
+
+## Enable classic Power Automate Pane
+
+By default, the new [Power Automate pane](working-with-flows.md) is enabled by default. To use the classic Power Automate experience to create a flow, you will need to enable it manually.
+
+1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
+
+1. Select **Settings** at the top.
+
+1. Select **Upcoming features**.
+
+1. Under the **Retired** tab, select **Enable Classic Power Automate pane** to set the toggle to **On**. 
+
 
 ## Prerequisites
 
