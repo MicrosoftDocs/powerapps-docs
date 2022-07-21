@@ -155,7 +155,7 @@ To remove a flow from your app, select **...** (ellipsis) to the right of your f
 
 This action only removes flow from the app, while the flow remains intact in the environment. You can add the flow again to the same app, or use in other apps.
 
-## Enable classic Power Automate experience
+## Classic Power Automate experience
 
 The Power Automate pane is now enabled by defualt. To use the classic Power Automate experience to [create a flow](using-logic-flows), you will need to switch back to the old experience manually.
 
