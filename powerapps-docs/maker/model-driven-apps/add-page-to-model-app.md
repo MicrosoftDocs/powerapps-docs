@@ -51,10 +51,7 @@ The following steps walk you through opening the new modern app designer, which 
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
-1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
-
-    > [!div class="mx-imgBorder"]
-    > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
+1. Open the model-driven app menu and select **Edit** to open the modern app designer.
 
 ## Create or edit a custom page
 

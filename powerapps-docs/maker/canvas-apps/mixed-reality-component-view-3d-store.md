@@ -28,7 +28,7 @@ Make sure your 3D models are [optimized for use with Power Apps](/dynamics365/mi
 Loading 3D models from attachments or media content depends on how a data connector is supported. To check if a data connector will work the mixed reality controls, add a label control to the canvas app and set the **Text** property to the data source. If the label text starts with `appres://`,then that data connector should work with the **3D object control**.
 
 > [!TIP]
-> You can rename a .glb file extension to .jpg and directly upload it to the app.
+> You can rename a .glb file extension to .jpg and directly upload it to the app through the Media tab.
 
 
 ### Load 3D models from Microsoft Lists
@@ -127,10 +127,9 @@ In Power Apps Studio, connect the **3D object** control to the list using the Sh
 
 The [Note table](../../developer/data-platform/annotation-note-entity.md) in Microsoft Dataverse converts any file attached in the **Document** field to Base64.
 
-## Known constraints when loading 3D models in canvas apps
+## Known constraints when loading 3D models from URLs in canvas apps
 
 - The security architecture of Power Apps requires HTTPS links, not HTTP.
 - The server that hosts the model files must not require authentication and must be CORS-compliant.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

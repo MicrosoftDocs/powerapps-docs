@@ -23,9 +23,9 @@ contributors:
 You can load a table that contains existing data into the map control. The control will then plot each row in your table as a map pin.
 
 ## Prerequisites
-1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
-2. In your app, [insert a map](geospatial-component-map.md). 
 
+1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites-for-full-support). 
+2. In your app, [insert a map](geospatial-component-map.md). 
 
 ## Add pin data from an Excel workbook
 
@@ -39,15 +39,11 @@ Latitude of the pin | ItemsLatitudes | Required
 Color of the pin | ItemsColors | Optional
 Icon for the pin | ItemsIcons | Optional
 
-
-
 The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
 
 You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
 
-
 The following Excel table shows the required columns:
-
 
 :::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
 
@@ -66,9 +62,6 @@ Alpine Ski House (sample) | -102.63908 | 35.20919 | |
 A Datum Corporation (sample) | -89.39433 | 40.71025 | |
 Coho Winery (sample) | -116.97751 | 32.87466 | |
 
-
-
-
 1. Copy and paste the table into a new data source. In this example, we are using an Excel workbook.  
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
@@ -86,7 +79,6 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
     :::image type="content" source="media/geospatial/select-excel.png" alt-text="Screenshot of the Import from Excel option.":::
-
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
 
@@ -107,34 +99,28 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
     ![A screenshot of the map control with custom icons and different colors.](./media/geospatial/pins-map.png)
 
  >[!NOTE]
- > Each map control has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map control. Therefore, for pins with both latitude/longtude and an address bound, the map control will prioritize using the latitude/longitude to avoid geocoding the address. 
-
-
+ > Each map control has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map control. Therefore, for pins with both latitude / longitude and an address bound, the map control will prioritize using the latitude / longitude to avoid geocoding the address.
 
 ## Save geocoded addresses from map control to data source
 
-To avoid geocoding the same set of addresses every time the map control is launched, you can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude and longitude instead of geocoding the addresses again. 
+To avoid geocoding the same set of addresses every time the map control is launched, you can save the geocoded addresses back to the original data source, such that when the map relaunches, it will use the latitude and longitude instead of geocoding the addresses again.
 
-To do so, add a button to save the geocoded address back to the original data source with the following formula: 
+To do so, add a button to save the geocoded address back to the original data source with the following formula:
 
-```text
+```powerapps-dot
  ForAll(Map1.GeocodedItems, Patch(Accounts1, LookUp(Accounts1, ThisRecord.Address = Address && ThisRecord.Name = Label), {Latitude: Latitude, Longitude: Longitude }))
 ```
 
-
 ![Screenshot of the app showing the formula in the formula bar.](https://user-images.githubusercontent.com/66707906/118740084-d3081d80-b7ff-11eb-9295-2855bd7e9a96.png)
-
-
 
 ## Other interactive map features
 
 - [Add info cards to pins](geospatial-map-infocards.md)
+- [Show routes between waypoints](geospatial-map-routing.md)
 - [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
-
 
 ## Other geospatial controls
 
 To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** control.
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

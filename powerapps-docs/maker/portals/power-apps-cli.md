@@ -274,7 +274,7 @@ Here's an example of this "test.deployment.yml"  profile YAML file that has uniq
 
 ```yml
 adx_sitesetting:
-    - adx_sitesettingid: 5ad86900-b5d7-43ac-8359-482529724979
+    - adx_sitesettingid: 4ad86900-b5d7-43ac-1234-482529724970
       adx_value: ${OS.FacebookAppId} 
       adx_name: Authentication/OpenAuth/Facebook/AppId
     - adx_sitesettingid: 5ad86900-b5d7-43ac-8359-482529724979

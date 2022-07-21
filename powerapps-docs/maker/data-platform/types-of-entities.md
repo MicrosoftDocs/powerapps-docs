@@ -26,14 +26,12 @@ search.app:
 ---
 # Types of tables
 
-
-
 A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 
 Tables appear in Power Apps as one of three different types, which indicate how the table came into the environment, whether the table is managed or unmanaged, and whether it can be customized.  
-- Standard: Several standard tables, also known as out-of-box tables, are included with a Dataverse environment. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
+- Standard: Several standard tables, also known as out-of-box tables, are included with a Power Platform environment, that includes Microsoft Dataverse. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
 - Managed: Are tables that aren’t customizable and have been imported into the environment as part of a managed solution.
-- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the Dataverse environment. Any user with appropriate privileges can fully customize these tables.
+- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the environment. Any user with appropriate privileges can fully customize these tables.
 
 For more information about how components are customizable, see [Managed properties](solutions-overview.md#managed-properties).
 
@@ -45,7 +43,7 @@ An activity can be thought of as any action for which an entry can be made on a 
   
 Activity tables are a special kind of table that can only be owned by a user or team, but can’t be owned by an organization. When you create a table, you can specify it as a standard or activity table.
   
-The following table lists activity tables that are available in a default Dataverse environment.
+The following table lists activity tables that are available in a default environment.
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  

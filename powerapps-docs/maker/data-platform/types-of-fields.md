@@ -95,7 +95,7 @@ There are three basic text column types. All values indicated below are in numbe
 
 You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns that are called **Choices**. When you add a choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
 
-For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an ‘Area of operation’ column. A user can then select one or more locations from the list of available values.
+For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an 'Area of operation' column. A user can then select one or more locations from the list of available values.
 
 Choices can be used with read-only grids, editable grids, and most forms. Multi-select choices can't be used with: 
 - Workflows, business process flows, actions, dialogs, business rules, charts, rollup columns, or calculated columns.
@@ -116,7 +116,6 @@ Choices multi-select columns are supported in the following types of forms:
 
 You can use global choices that are defined in your organization to configure values for the multi-select choices.
 
-
 <a name="BKMK_UsingTheRightTypeOfNumber"></a>
   
 ## Using the right type of number
@@ -130,7 +129,7 @@ Decimal numbers are stored in the database exactly as specified. Floating point 
   
 Use decimals when you need to provide reports that require very accurate calculations, or if you typically use queries that look for values that are equal or not equal to another value.  
   
-Use floating point numbers when you store data that represents fractions or values that you will typically query comparing to another value using greater than or less than operators. In most cases, the difference between decimal and float isn’t noticeable. Unless you require the most accurate possible calculations, floating point numbers should work for you.  
+Use floating point numbers when you store data that represents fractions or values that you will typically query comparing to another value using greater than or less than operators. In most cases, the difference between decimal and float isn't noticeable. Unless you require the most accurate possible calculations, floating point numbers should work for you.  
 
 Big Integers (or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It is used to store very large numbers that exceed the capabilities of Whole Number and Decimal.  Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
 
@@ -145,9 +144,9 @@ Currency columns allow for an organization to configure multiple currencies that
   
   Individuals can also change their personal options to select a default currency for the rows they create.
   
-- A decimal column called **Exchange Rate** that provides the exchange rate for a selected currency associated with the table with respect to the base currency. If this column is added to the form, people can see the value, but they can’t edit it. The exchange rate is stored with the currency.  
+- A decimal column called **Exchange Rate** that provides the exchange rate for a selected currency associated with the table with respect to the base currency. If this column is added to the form, people can see the value, but they can't edit it. The exchange rate is stored with the currency.  
   
-For each currency column you add, another currency column is added with the suffix `_Base` on the name. This column stores the calculation of the value of the currency column you added and the base currency. Again, if this column is added to the form, it can’t be edited.  
+For each currency column you add, another currency column is added with the suffix `_Base` on the name. This column stores the calculation of the value of the currency column you added and the base currency. Again, if this column is added to the form, it can't be edited.  
   
 When you configure a currency column you can choose the precision value. There are three options as shown in the following table.  
   
@@ -161,7 +160,7 @@ When you configure a currency column you can choose the precision value. There a
   
 ## Different types of lookups  
 
-When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-entity-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
+When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you're working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-entity-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
   
 However, you should be aware that not every lookup behaves this way. There are several different types of system lookups as shown here.  
   
@@ -170,7 +169,7 @@ However, you should be aware that not every lookup behaves this way. There are s
 |**Simple**|Allows for a single reference to a specific table. All custom lookups are this type.|  
 |**Customer**|Allows for a single reference to either an account or a contact row.|  
 |**Owner**|Allows for a single reference to either a team or a user row. All team or user-owned tables have one of these. More information: [Add a table as a lookup option in your app](../model-driven-apps/team-entity-lookup.md)|  
-|**PartyList**|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They’re also used in the Phone and Appointment tables.|  
+|**PartyList**|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They're also used in the Phone and Appointment tables.|  
 |**Regarding**|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|  
 
 <a name="BKMK_ImageFields"></a>
@@ -203,7 +202,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 ### Create an image column and add it to a form
 
 1. Go to [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution that contains the table form where you want to add an image column.
-1. Open the table, and then select the **Columns** tab.
+1. Open the table, and then select the **Columns** area.
 1. On the command bar, select **Add column**.
 1. Enter or select values for the following properties, and then select **Done**.
    - **Display Name**, such as *Recipe image*. 
@@ -211,7 +210,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
    - **Data Type**. Select **Image**.
    - **Primary Image**. Image columns that are set as the primary image are displayed in the upper right corner of the form. You can have only one primary image for each table.
    - **Enable column security**. Use to control access for specific columns. More information: [Field-level security to control access](/power-platform/admin/field-level-security)
-   - **Enable auditing**. Enables the logging of changes that are made to table records and user access so you can review the activity later. More information: [Audit data and user activity for security and compliance](/power-platform/admin/audit-data-user-activity)
+   - **Enable auditing**. Enables the logging of changes that are made to table records and user access so you can review the activity later. More information: [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)
    - **Sortable in interactive experience dashboard**. Specifies the the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-the-interactive-dashboards)
    - **Maximum image size**. Default value is 10,240 KB. The minimum size is 1 KB and the maximum is 30,720 KB.
 
@@ -244,12 +243,12 @@ The default **Maximum file size** is 32 MB and the largest size you can set is 1
 > - Once the maximum file size has been saved, it can't be changed.
 > - File columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
 
-To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
-
-> [!div class="mx-imgBorder"] 
-> ![File data type.](media/file-data-type.png)
+To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, select the **Columns** area, select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
 More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
 
+## Fx Formula columns
+
+Built on Power Fx, use an Fx formula column to perform operations that return values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. More information: [Work with formula columns (preview)](formula-columns.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

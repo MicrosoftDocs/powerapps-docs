@@ -83,14 +83,15 @@
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
-    href: auditing-overview.md
     items:
-    - name: Configure entities and attributes for auditing
-      href: configure-entities-attributes-auditing.md
-    - name: Retrieve and delete the history of audited data changes
-      href: retrieve-and-delete-the-history-of-audited-data-changes.md
-    - name: Audit user access
-      href: audit-user-access.md
+    - name: Overview
+      href: auditing/overview.md
+    - name: Configure auditing
+      href: auditing/configure.md
+    - name: Retrieve audit data
+      href: auditing/retrieve-audit-data.md
+    - name: Delete audit data
+      href: auditing/delete-audit-data.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
@@ -250,6 +251,8 @@
   - name: Activity tables
     href: activity-entities.md
     items:
+    - name: Activities data model and storage
+      href: activities-data-model-storage.md
     - name: Custom activities
       href: custom-activities.md
     - name: Email activity tables
@@ -339,6 +342,12 @@
       href: image-attributes.md
     - name: Define custom state model transitions
       href: define-custom-state-model-transitions.md
+    - name: Data type format conversions
+      href: data-type-format-conversions.md
+    - name: Format and FormatName columns
+      href: format-and-formatname-columns.md
+    - name: Format validations
+      href: format-validations.md
   - name: Table relationships definitions
     href: entity-relationship-metadata.md
     items:
@@ -359,14 +368,6 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
-- name: Work with columns
-  items:
-  - name: Data type format conversions
-    href: data-type-format-conversions.md
-  - name: Format and FormatName columns
-    href: format-and-formatname-columns.md
-  - name: Format validations
-    href: format-validations.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Publish and monitor your (ISV) app
@@ -408,6 +409,8 @@
       href: isv-app-usage-analytics.md
     - name: Install failures analytics
       href: isv-install-failure-analytics.md
+    - name: Auto App Updates (Preview) 
+      href: isv-app-management-autoupdate.md
 - name: Create applications
   href: connect-dataverse.md
   items:
@@ -433,6 +436,12 @@
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+  - name: "Sample: Global Discovery Service"
+    href: sample-global-discovery-service-csharp.md
+  - name: "Sample: Blazor WebAssembly with Global Discovery"
+    href: sample-blazor-web-assembly-global-discovery.md
+  - name: "Sample: Global Discovery Service with CrmServiceClient"
+    href: sample-discovery-service-crmserviceclient.md
   - name: Tutorials 
     items:
     - name: "Tutorial: Register an app with Azure Active Directory"
@@ -462,34 +471,8 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Microsoft Power Platform CLI
-      items:
-      - name: Overview
-        href: powerapps-cli.md
-      - name: CLI reference
-        items:
-        - name: admin 
-          href: cli/reference/admin-command.md
-        - name: application 
-          href: cli/reference/application-command.md
-        - name: auth
-          href: cli/reference/auth-command.md
-        - name: canvas 
-          href: cli/reference/canvas-command.md
-        - name: org 
-          href: cli/reference/org-command.md
-        - name: package
-          href: cli/reference/package-command.md
-        - name: paportal 
-          href: cli/reference/paportal-command.md
-        - name: pcf
-          href: cli/reference/pcf-command.md
-        - name: plugin 
-          href: cli/reference/plugin-command.md
-        - name: solution 
-          href: cli/reference/solution-command.md
-        - name: telemetry
-          href: cli/reference/telemetry-command.md
+    - name: Power Platform CLI
+      href: /power-platform/developer/cli/introduction
     - name: Power Platform Tools for Visual Studio
       href: ./tools/devtools-install.md
   - name: Community Tools

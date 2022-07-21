@@ -145,7 +145,7 @@ Returns a promise which resolves with an object whose keys are the security role
 
 `userSettings.getSecurityRolePrivilegesInfo().then(successCallback, errorCallback);`
 
-## Parameters
+### Parameters
 
 <table>
 <tr>
