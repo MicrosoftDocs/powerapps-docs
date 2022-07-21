@@ -69,7 +69,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 ## Add to Teams using the web player
 
-You can also add canvas apps to Teams using the web player. There are two ways to run a canvas app using the web player.
+You can also add canvas apps to Teams using the web player.
 
 1. Go to [Power Apps](https://make.powerapps.com) > **Apps** > select the app to launch in a new browser tab.
 
