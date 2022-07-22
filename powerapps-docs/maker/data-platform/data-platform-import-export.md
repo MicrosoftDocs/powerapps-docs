@@ -117,7 +117,10 @@ Export data from one or more tables. Exported data is in comma-separated value (
    > [!div class="mx-imgBorder"] 
    > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png)
 
-## Unsupported data types
+   > [!NOTE] Exports have a 12 minute time limit. If the volumne of data exported exceeds 12 minutes the export will fail. If this occurs, 
+   > data will have to be exported in smaller segments.
+
+## Unsupported data types and fields
 
 The following data types aren't currently supported for import or export.
 
@@ -125,6 +128,17 @@ The following data types aren't currently supported for import or export.
 - Choices (multiselect)
 - Image
 - File
+
+The following fields are system fields and are not supported for import and export.
+
+- Ownerid
+- Createdby
+- Createdonbehalfby
+- Createdon
+- Modifiedby
+- Modifiedonbehalfby
+- Modifiedon
+- Overriddencreatedon
 
     > [!NOTE]
     > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
