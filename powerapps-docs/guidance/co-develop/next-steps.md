@@ -1,5 +1,5 @@
 ---
-title: "Next steps: Solutions and tools | Microsoft Docs"
+title: "Collaboration and Co-development best practices overview | Microsoft Docs"
 description: "Learn more about how to collaborate and co-develop low code apps in Power Apps."
 author: ankitchawla23
 
