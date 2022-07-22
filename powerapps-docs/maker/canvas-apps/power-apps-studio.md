@@ -83,7 +83,7 @@ The modern command bar needs to be enabled manually through the feature switch. 
 
 1. Select **Upcoming features**.
 
-1. Under the **Preview** tab.
+1. Under the **Preview** tab, select (TBD).
 
 The command bar changes when one of the following control or object is selected: 
 
