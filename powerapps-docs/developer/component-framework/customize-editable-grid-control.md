@@ -83,7 +83,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 
    Full logical name = `{publisher prefix}_{namespace}.{control name}`
 
-   :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control-full.png":::
+   :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control" lightbox="media/power-apps-grid-assign-customizer-control-full.png":::
  
 1. **Save and publish** your customizations for this entity.
 1. Test your customizer by opening the main grid for the customized entity.
