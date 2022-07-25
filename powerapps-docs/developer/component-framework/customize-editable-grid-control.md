@@ -4,7 +4,7 @@ description: "Learn how you can customize the editable grid control."
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: jasongre
 author: jasongre
-ms.date: 07/22/2022
+ms.date: 07/25/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -17,7 +17,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist, however, that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
+The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
 
 :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png":::
 
@@ -91,7 +91,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 
 ## Example
 
-You can find an example of a customized editable grid control here: [Customized Editable Grid Control](sample-controls/customized-editable-grid-control.md).
+You can find an example of a customized editable grid control here: [Customized editable grid](sample-controls/customized-editable-grid-control.md).
 
 ### See also
 

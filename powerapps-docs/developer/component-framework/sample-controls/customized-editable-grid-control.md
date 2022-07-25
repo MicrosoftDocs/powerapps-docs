@@ -1,9 +1,9 @@
 ---
-title: Customized Editable Grid Control  | Microsoft Docs
+title: Customized editable grid  | Microsoft Docs
 description: "This sample demonstrates how to customize the editable grid control"
 ms.author: jasongre
 author: jasongre
-ms.date: 07/21/2022
+ms.date: 07/25/2022
 ms.reviewer: jdaly
 ms.topic: sample
 contributors:
@@ -11,19 +11,17 @@ contributors:
  - aliry
 ---
 
-# Customized Editable Grid Control
+# Customized editable grid
 
 This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control (Preview)](../customize-editable-grid-control.md)
 
-This sample changes the main grid page for a table that is configured to use this control. All text columns will use green text.
+This sample changes the main grid page for a table that is configured to use this control. All text columns will use green text. Any values for the `creditlimit` column will display as blue if the value is greater than 100,000 and red otherwise.
 
 :::image type="content" source="../media/editable-grid-control-sample-customized-account-main-grid.png" alt-text="Customized grid for account enitity showing text field with green":::
 
-Although not visible in the screenshot above, any values for the `creditlimit` column will display as blue if the value is greater than 100,000 and red otherwise.
-
 ## Available for
 
-Model-driven and canvas apps
+Model-driven apps
 
 ## Code
 
@@ -31,7 +29,7 @@ You can find the code for sample here: [PowerApps-Samples/component-framework/Po
 
 The key change is to [PAGridCustomizer/customizers/CellRendererOverrides.tsx ](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/PowerAppsGridCustomizerControl/PAGridCustomizer/customizers/CellRendererOverrides.tsx)
 
-This sample uses the following override for the cell renderer to change the the text color for text fields to green.
+This sample uses the following override for the cell renderer to change the the text color for text fields to green, and the color of the `creditlimit` column depends on the value.
 
 
 ```typescript

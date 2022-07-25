@@ -73,7 +73,7 @@ items:
       href: tutorial-create-model-driven-field-component.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
-    - name: Customized Editable Grid
+    - name: Customized editable grid
       href: sample-controls/customized-editable-grid-control.md
     - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
