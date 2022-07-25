@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/15/2021
+ms.date: 07/25/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -17,7 +17,7 @@ contributors:
 
 # Configure notes as attachments for basic and advanced forms
 
-Similar to subgrids, adding notes to your managed forms on the portal is easy. Just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
+Similar to subgrids, adding notes to your forms on the portal is easy. Just add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the model-driven app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the timeline control by using metadata.
 
 > [!NOTE]
 > - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
@@ -51,10 +51,6 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy. J
     ![Notes options.](media/configure-notes/notes-options.png)
 
 1. Fill in the fields by entering appropriate values. These settings are explained in more detail below under [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options).
-
-1. (Optional) If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible.
-
-    ![Notes in a custom form.](media/notes-activities-tab.png "Notes in a custom form")
 
 1. Save the form.
 
