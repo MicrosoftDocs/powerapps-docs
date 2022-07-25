@@ -15,7 +15,7 @@ search.app:
 ---
 # `use-grid-api`
 
-Don't use deprecated APIs in the grid object model. Replace these calls with the 'data' property of the grid row object.
+Don't use deprecated APIs in the grid object model. Replace these calls with the `data` property of the grid row object.
 
 ## Recommendation
 

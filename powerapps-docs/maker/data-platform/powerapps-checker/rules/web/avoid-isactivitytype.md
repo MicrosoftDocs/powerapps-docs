@@ -15,7 +15,7 @@ search.app:
 ---
 # `avoid-isactivitytype`
 
-Replace Xrm.Utility.isActivityType method with new Xrm.Utility.getEntityMetadata and don't use in ribbon rules.
+Replace `Xrm.Utility.isActivityType` with `Xrm.Utility.getEntityMetadata` and don't use in ribbon rules.
 
 ## Recommendation
 
