@@ -17,7 +17,7 @@ contributors:
 
 # Configure notes as attachments for basic and advanced forms
 
-Similar to subgrids, adding notes to your forms on the portal is easy. Just add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the model-driven app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the timeline control by using metadata.
+Similar to subgrids, adding notes to your forms on the portal is easy. Just add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the model-driven app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the timeline control to display notes and attachments by using metadata.
 
 > [!NOTE]
 > - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
