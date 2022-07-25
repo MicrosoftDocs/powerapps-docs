@@ -31,7 +31,7 @@ To implement a grid customizer control, you first need to be familiar with the s
 
 The template control is included in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) GitHub repository. You will need to clone or download the repo to access the files located here: [PowerApps-Samples/component-framework/resources/GridCustomizerControlTemplate](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/resources/GridCustomizerControlTemplate)
 
-1. Open the GridCustomizerControlTemplate folder using Visual Studio Code.
+1. Open the `GridCustomizerControlTemplate` folder using Visual Studio Code.
 1. In a terminal window, run `npm install`.
 1. Create your custom cell renderers and editors.
 
@@ -39,36 +39,54 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
    - `CellRendererOverrides.tsx` includes cell renderer customizers per data type.
    - `CellEditorOverrides.tsx` includes cell editor customizers per data type.
 
-   You will modify these files to add React elements used for cell renderers or cell editors. Each file exports an object that maps the column data type to a function returning a React element to be rendered inside the cells for that column type.
+   Modify these files to add react elements to be rendered when a cell is in read-only (cell renderer) or in edit (cell editor) mode.
+
+   Each file exports an object mapping the column data type to a function returning a react element to be rendered inside the cells for that column type.
+
 
    ```typescript
+   /**
+    * Provide cell renderer overrides per column data type.
+   */
     export interface CellRendererOverrides {
       [dataType: string]: (props: CellRendererProps, rendererParams: GetRendererParams)
       => React.ReactElement | null | undefined; 
-   }
-        
+   };
+
+   /**
+    * Provide cell editor overrides per column data type.
+   */
     export interface CellEditorOverrides {
       [dataType: string]: (defaultProps: CellEditorProps, rendererParams: GetEditorParams)
       => React.ReactElement | null | undefined; 
-   }
+   };
    ```
 
    > [!NOTE]
    > If the function returns null or undefined, then the grid will use the internal renderer/editor for the targeted cells.
     
 1. After defining your custom cell renderers and editors, **package** the grid customizer control and **import** it to your Power Apps environment. Alternatively, you can use the `pac pcf push` command. More information: [PCF command](/power-platform/developer/cli/reference/pcf-command)
-1. After publishing the grid customizer control, open the **Customize the system** panel from the **Settings > Customiztaion** menu.
+1. After publishing the grid customizer control, open the **Customize the system** panel from the **Settings > Customizations** menu.
+
+   :::image type="content" source="media/customize-editable-grid-settings-customize-system.png" alt-text="Open the Customize the system panel from the Settings > Customizations menu":::
+
 1. From the entities node, select an entity that your customizer control will target (e.g. Account).  
 1. From the right panel, select the **Controls** tab.
-1. From the Controls list, add the **(Preview) Power Apps grid control**.
+
+   :::image type="content" source="media/customize-editable-grid-control-tab.png" alt-text="The grid control tab":::
+
+1. From the **Controls** list, add the **(Preview) Power Apps grid control**.
+
+   :::image type="content" source="media/customize-editable-grid-add-power-apps-grid-control.png" alt-text="Adding the (Preview) Power Apps grid control" lightbox="media/customize-editable-grid-add-power-apps-grid-control-full.png":::
+
 1. In the Properties panel, set the **Customizer control** property to the full logical name of your grid customizer code component.
 
-   `Full logical name = {publisher prefix}_{namespace}.{control name}`
+   Full logical name = `{publisher prefix}_{namespace}.{control name}`
 
-   :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png":::
+   :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control.png" alt-text="Assign a value to the customizer control property of the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-assign-customizer-control-full.png":::
  
 1. **Save and publish** your customizations for this entity.
-1. Test your customizer by opening the main grid for the customized entity. 
+1. Test your customizer by opening the main grid for the customized entity.
 1. Repeat steps 6-11 for any other entities whose grid needs a grid customizer control.
 
 ## Example
