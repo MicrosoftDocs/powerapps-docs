@@ -36,7 +36,7 @@ When creating an Azure Synapse Link for Dataverse with your Azure Synapse Worksp
 > 
 > Timestamp and table folders are created only when there is a data update during the user-specified time interval.
 > 
-> This feature can only be enabled while creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace.
+> This feature can only be enabled on Synapse Link profile level and all selected tables will be assigned to append-only mode with incremental updates by default.
 
 ## Prerequisites
 
