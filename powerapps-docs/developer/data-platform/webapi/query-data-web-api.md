@@ -1,7 +1,7 @@
 ---
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
-ms.date: 06/27/2022
+ms.date: 07/24/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -498,7 +498,7 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 |--------------|-------------| 
 |List of unique statuses in the query|`accounts?$apply=groupby((statuscode))`|
 |Aggregate sum of the estimated value|`opportunities?$apply=aggregate(estimatedvalue with sum as total)`|
-|Average size of the deal based on estimated value and status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
+|Average size of the deal based on estimated value and status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue))`|
 |Sum of estimated value based on status|`opportunities?$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
 |Total opportunity revenue by account name|`opportunities?$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
 |Primary contact names for accounts in 'WA'|`accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycontactid/fullname))`|
