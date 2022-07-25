@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the createRecord 
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 07/25/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -151,8 +151,12 @@ Xrm.WebApi.createRecord("account", data).then(
 
 ### Associate tables on creating new records
 
-To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios: 
+To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record.
 
+> [!NOTE]
+> The names of single-valued navigation properties are not always the same as the `LogicalName` for the lookup attribute. You should make sure you are using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. More information: [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md)
+
+Here are code examples for both the scenarios:
 
 **For online scenario (connected to server)**
 
