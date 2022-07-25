@@ -13,7 +13,7 @@ contributors:
 
 # Customized editable grid
 
-This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control (Preview)](../customize-editable-grid-control.md)
+This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control (Preview)](../customize-editable-grid-control.md).
 
 This sample changes the main grid page for a table that is configured to use this control. All text columns will use green text. Any values for the `creditlimit` column will display as blue if the value is greater than 100,000 and red otherwise.
 
@@ -27,7 +27,7 @@ Model-driven apps
 
 You can find the code for sample here: [PowerApps-Samples/component-framework/PowerAppsGridCustomizerControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/PowerAppsGridCustomizerControl).
 
-The key change is to [PAGridCustomizer/customizers/CellRendererOverrides.tsx ](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/PowerAppsGridCustomizerControl/PAGridCustomizer/customizers/CellRendererOverrides.tsx)
+The key change is to [PAGridCustomizer/customizers/CellRendererOverrides.tsx ](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/PowerAppsGridCustomizerControl/PAGridCustomizer/customizers/CellRendererOverrides.tsx).
 
 This sample uses the following override for the cell renderer to change the the text color for text fields to green, and the color of the `creditlimit` column depends on the value.
 

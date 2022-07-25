@@ -79,7 +79,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 
    :::image type="content" source="media/customize-editable-grid-add-power-apps-grid-control.png" alt-text="Adding the (Preview) Power Apps grid control" lightbox="media/customize-editable-grid-add-power-apps-grid-control-full.png":::
 
-1. In the Properties panel, set the **Customizer control** property to the full logical name of your grid customizer code component.
+1. In the **Properties** panel, set the **Customizer control** property to the full logical name of your grid customizer code component.
 
    Full logical name = `{publisher prefix}_{namespace}.{control name}`
 
