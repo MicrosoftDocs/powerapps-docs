@@ -1,13 +1,12 @@
 ---
 title: "Retrieve the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to programmatically retrieve the audit change history." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+ms.date: 07/25/2022
 ms.reviewer: jdaly
 ms.topic: overview
-author: Bluebear7 # GitHub ID
+author: paulliew # GitHub ID
+ms.author: paulliew # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
-ms.author: munzinge # MSFT alias of Microsoft employees only
-manager: mayadu # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -416,9 +415,10 @@ These messages provide additional details that depend on the type of action. The
 |<xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail?text=UserAccessAuditDetail ComplexType>|<xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail?text=UserAccessAuditDetail Class>|Provides details to track user access auditing. Provides details on the interval and access time. <br /> Returned by [User Access Events](#user-access-events)|
 
 > [!IMPORTANT]
-> Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…".
 >
-> Because the data is truncated, you cannot use the audit data to restore changes for these column values.
+> - At the time of this writing, the Web API types listed above that inherit from <xref:Microsoft.Dynamics.CRM.AuditDetail?text=AuditDetail ComplexType> do not return the `AuditRecord` navigation property value they should inherit from `AuditDetail`. The SDK for .NET classes return this data.
+>
+> - Large column values included in `AttributeAuditDetail` `OldValue` or `NewValue` properties such as [Email.Description](../reference/entities/email.md#BKMK_Description) or [Annotation](../reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped column value can be recognized by three dots at the end of the text, for example "lorem ipsum, lorem ip…". Because the data is truncated, you cannot use the audit data to restore changes for these column values.
 
 
 ### RetrieveAuditDetails Message
