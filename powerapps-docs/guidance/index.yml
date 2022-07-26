@@ -32,6 +32,8 @@ landingContent:
             url: patterns/communication-pattern.md
           - text: "Pattern: Inspection"
             url: patterns/inspection-pattern.md
+          - text: More patterns
+            url: patterns/more-patterns.md
   
   # Card 
   - title: Planning a Power Apps project
