@@ -44,7 +44,7 @@ Form UI enhancements consist of multiple small changes to improve data presentat
 - Form field dividers are removed and consistent font styling is used across section labels.
 - The **Related** tab has an added chevron to indicate the dropdown flyout, which opens-up when you select it.
 
-:::image type="content" source="media/form-ux1.png" alt-text="Form UI enhancements screenshot":::
+   :::image type="content" source="media/form-ux1.png" alt-text="Form UI enhancements screenshot":::
 
 Also, quick view form actions are displayed on top next to the related records instead of as icons on the quick view form.
 
