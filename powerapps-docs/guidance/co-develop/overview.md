@@ -1,5 +1,5 @@
 ---
-title: "Collaboration and co-development best practices overview | Microsoft Docs"
+title: "Best practices: Collaboration and co-developing apps using Power Apps | Microsoft Docs"
 description: "Learn more about how to collaborate and co-develop low code apps in Power Apps."
 author: luis-camino-ms
 ms.topic: article
@@ -11,7 +11,7 @@ ms.reviewer: kvivek
 
 ---
 
-# Overview: Collaboration and co-development best practices 
+# Best practices: Collaboration and co-developing apps using Power Apps 
 
 Digital transformation as a mechanism for improving business efficiency is a key component in the success of most organizations today. Yet often, the business-focused domain experts are unable to create apps with the functionality that they want, whereas developers may struggle to understand the commercial and process implications of the code they’re asked to build. In consequence, there can be a disconnect between an organization’s business imperatives and the subsequent implementation of that company’s applications.
 
