@@ -1,7 +1,7 @@
 ---
 title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about synchronizing Dataverse data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: Peakerbl # GitHub ID
@@ -21,7 +21,7 @@ contributors:
 
 Sometimes you'll need to synchronize and integrate Microsoft Dataverse data with data that is stored in other systems. The common data integration patterns include taking data from an external system and pushing it into Dataverse, taking data from Dataverse and synchronizing it to some external data store, or updating Dataverse with external data. Dataverse provides several capabilities to make it easier to write code to achieve these scenarios.  
 
-These features can be used separately as needed in any situation, but together they address common issues related to synchronizing and integrating data with external data. 
+These features can be used separately as needed in any situation, but together they address common issues related to synchronizing and integrating data with external data.
 
 ## Enable all operations with Update
 
@@ -37,17 +37,20 @@ Dataverse has a number of specialized messages for specific operations that upda
 
 Simply updating the record is much simpler than using these messages and should streamline your development for data integration and synchronization scenarios. 
 
-More information: [Perform specialized operations using Update](/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update)
+More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
 
 ## Alternate Keys
 
-In enterprise deployments of Dataverse, it's common for data from external enterprise systems to be loaded into Dataverse so that it can be presented to users. These external systems often can't be extended to store the Dataverse record GUID primary key identifiers, required for system synchronization. A common solution is to add a custom column to a table in Dataverse that can be used to store the identifier of the related record in the external system.
+In enterprise deployments of Dataverse, it's common for data from external enterprise systems to be loaded into Dataverse so that it can be presented to users. These external systems often can't be extended to store the Dataverse record GUID primary key identifiers to synchronize data effciently between the systems. A common solution is to add a custom column to a table in Dataverse that can be used to store the identifier of the related record in the external system. Sometimes multiple columns must be created to establish a unique reference.
 
 When you build data load processes that update records in Dataverse and assign references to related records in Dataverse, you first have to make an extra Dataverse web service call to retrieve the target Dataverse record based on this external identifier. This lookup can be slow if an appropriate index is not in place for the custom column, and in Dataverse scenarios, each of these lookups requires a costly round-trip. These extra round trips can increase by an order of magnitude the time it takes to update each Dataverse record and can reduce overall throughput drastically.
 
 Using alternate keys, web service operations can target a Dataverse record using one or more alternate keys instead of a GUID primary key. In addition, table references to related records can be specified using one or more alternate keys. Because alternate keys are indexed, lookup operations show increased performance as compared to adding a custom column as an identifier. If something goes wrong, the system will throw an error and roll back all the changes. 
 
-More information: [Define alternate keys for a table](define-alternate-keys-entity.md)
+More information:
+
+- [Using Power Apps: Define alternate keys to reference rows](../../maker/data-platform/define-alternate-keys-reference-records.md)
+- [Using Code: Work with alternate keys](define-alternate-keys-entity.md)
 
 ## Change tracking
 

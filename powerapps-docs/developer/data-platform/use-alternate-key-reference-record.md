@@ -1,13 +1,12 @@
 ---
 title: "Use an alternate key to reference a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Alternate keys can be used to create instances of Entity and EntityReference classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: divka78 # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -30,86 +29,92 @@ You can use alternate keys using either the Datverse Web API or the Dataverse SD
 
 # [Web API](#tab/webapi)
 
-When using the Web API you must include the alternate key values in the URL that you use to reference a record. Without an alternate key, you simply include the GUID primary key value after the entity set name. 
+When using the Web API you refernce a specific record using a URL and then use the `POST`, `PATCH`, or `DELETE` Http methods to perform the data operation. You also use URLs to set values for single-valued navigation properties using the `@odata.bind` syntax, or as parameters to functions and actions.
 
-For example, to reference an `account` record with the `accountid` primary key value of `00000000-0000-0000-0000-000000000001`, you can use an absolute or relative URL like this: `/accounts(00000000-0000-0000-0000-000000000001)`
+The following table provides examples showing how to reference records using relative urls:
 
-But if the `account` entity has been configured with an alternate key, for example on the `accountnumber` column, then you must include the name of the column in the URL referencing the unique value in that column like this `/accounts(accountnumber='ABC123')`
+|Situation|Example|
+|---------|---------|
+|With a primary key|`/accounts(00000000-0000-0000-0000-000000000001)` OR `accounts(accountid=00000000-0000-0000-0000-000000000001)`|
+|With single alternate key|`/accounts(accountnumber='ABC123')`|
+|With multiple alternate keys|`/contacts(firstname='Joe',emailaddress1='abc@example.com')`|
+|With an alternate key that uses a lookup column|`/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000002)`|
 
-An alternate key may include more than one column in the definition. The combination of values in both columns guarantees uniqueness. To refer to a record that has multiple columns as part of the key, you continue the pattern for a single column, but separate the key/value pairs with a comma. For example, if the `contact` table has an alternate key using both the `firstname` and `emailaddress1` columns, you can refer to that record like this: `/contacts(firstname='Joe',emailaddress1='abc@example.com')`.
-
-When an alternate key is defined for a lookup column, you must use the name of the corresponding [Lookup Property](webapi/web-api-properties.md#lookup-properties). A lookup property follows the following naming convention: `_<name of single-valued navigation property>_value`. So if the primarycontactid lookup column on the account table is defined as an alternate key, you can reference the account record with this URL: `/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000002)`
+When an alternate key is defined for a lookup column, you must use the name of the corresponding [Lookup Property](webapi/web-api-properties.md#lookup-properties). A lookup property follows the following naming convention: `_<name of single-valued navigation property>_value`.
 
 More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
 
 # [SDK for .NET](#tab/sdk)
 
-SDK
+When using the SDK for .NET, there are two ways to use alternate keys.
 
----
+## Using the Entity class
 
+When you create an instance of the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class> you can specify the keys to use to identify the record using the following constructors:
 
-
-You can use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This article discusses the usage patterns and possible exceptions that might be thrown when using alternate keys.
-
-
-
-> [!NOTE]
-> You can also update records using alternate keys. More information: [Update with Alternate Key](org-service/entity-operations-update-delete.md#update-with-alternate-key)
-  
-## Using alternate keys to create a table
-
-You can create an <xref:Microsoft.Xrm.Sdk.Entity> with a primary ID, a single `KeyAttribute`, or a collection of key columns in a single call using these constructors.  
-  
 ```csharp  
-public Entity (string logicalName, Guid id) {…}    
-public Entity (string logicalName, string keyName, object keyValue) {…}  
+// For use with the primary key
+public Entity (string logicalName, Guid id) {…} 
+// For use with a single alternate key value
+public Entity (string logicalName, string keyName, object keyValue) {…} 
+// For use with multiple alternate key values
 public Entity (string logicalName, KeyAttributeCollection keyAttributes) {…}  
-  
-```  
-  
- A valid <xref:Microsoft.Xrm.Sdk.Entity> used for update operations includes a logical name of the table and one of the following:  
-  
-- A value for ID (primary key GUID value)
-- A specified key value pair
-- A <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> with a valid set of columns matching a defined key for the table.  
- 
-## Using alternate keys to create an EntityReference
+```
 
-You can also create an <xref:Microsoft.Xrm.Sdk.EntityReference> with a primary ID, a single `KeyAttribute`, or a collection of key columns in a single call using these constructors.  
-  
-```csharp  
-public EntityReference(string logicalName, Guid id) {…}    
-public EntityReference(string logicalName, string keyName, object keyValue) {…}    
-public EntityReference(string logicalName, KeyAttributeCollection keyAttributeCollection) {…}  
-  
-```  
-  
- A valid <xref:Microsoft.Xrm.Sdk.EntityReference> includes a logical name of the table and either:  
-  
-- A value for ID (primary key GUID value)  
-- A specified key value pair
-- A <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> collection with a valid set of columns matching a defined key for the table.  
-  
-<a name="BKMK_input"></a> 
-  
-## Alternative input to messages
+These values are added to the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text="Entity.KeyAttributes Property">, which is different from the <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text="Entity.Attributes Property">. `KeyAttributes` are used to identify a record. `Attributes` contains the data for the record.
 
-When passing tables to <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, values provided for lookup columns using an <xref:Microsoft.Xrm.Sdk.EntityReference> can now use <xref:Microsoft.Xrm.Sdk.EntityReference> with alternate keys defined in <xref:Microsoft.Xrm.Sdk.EntityReference.KeyAttributes> to specify related record.  These will be resolved to and replaced by primary ID based table references before the messages are processed.  
-  
-<a name="BKMK_Exceptions"></a>   
+For example, when a table has an alternate key that includes two columns, you can define the entity this way.
 
+```csharp
+KeyAttributeCollection keys = new KeyAttributeCollection() {
+   { "example_key1", 5 },
+   { "example_key2", 5 }
+};
+
+Entity thing = new Entity("example_thing", keys);
+thing["example_name"] = "Test Name";
+```
+
+The following table explains what to expect when you use an `Entity` instance with alternate keys with `Create`, `Update`, and `Upsert` messages.
+
+
+|Message|Description|
+|---------|---------|
+|`Create`|The `KeyAttributes` will be ignored.|
+|`Update`|If the `Attributes` property contains a primary key value it will be used. Otherwise the `KeyAttributes` values will be used.|
+|`Upsert` |If the `Attributes` property contains a primary key value it will be used. Otherwise the `KeyAttributes` values will be used.<br /><br /> **If the  record does not exist**, the `KeyAttributes` values are copied to the `Attributes` property and will be set as values for the record as long as the `Attributes` property doesn't already include values for those keys.|
+|`Upsert`|If the `Attributes` property contains a primary key value it will be used. Otherwise the `KeyAttributes` values will be used.<br /><br /> **If the  record DOES exist**, any values with matching keys in the `Attributes` property will be removed.<br/><br/>You cannot change alternate key values while using those values to identify the record. You can update alternate key values if you use the primary key to identify the record, as long as those changes do not violate the unique constraint on the alternate keys.|
+
+## Using the EntityReference class
+
+When you create an instance of the <xref:Microsoft.Xrm.Sdk.EntityReference?text=EntityReference Class> you can specify the keys to use to identify the record using the following constructors that are the same as the ones used for the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class>.
+
+```csharp
+// For use with the primary key
+public EntityReference(string logicalName, Guid id) {…}
+// For use with a single alternate key value
+public EntityReference(string logicalName, string keyName, object keyValue) {…} 
+// For use with multiple alternate key values
+public EntityReference(string logicalName, KeyAttributeCollection keyAttributeCollection) {…}    
+```
+
+- You can use `EntityReference` to set values for entity lookup columns. When used to set a lookup column, the key values are used to find the primary key value, and the primary key values is stored in the database.
+- You can use `EntityReference` for messages that use this type as a property, such as `Delete` using <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest?text=DeleteRequest>.
+
+
+  
+<a name="BKMK_Exceptions"></a>
 ## Exceptions when using alternate keys
 
 You have to be aware of the following conditions and possible exceptions when using alternate keys:  
   
-- The primary ID is used if it is provided. If it is not provided, it will examine the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection>.  If the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> is not provided, it will throw an error.  
-  
-- If the provided <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> includes one column that is the primary key of the table and the value is valid, it populates the ID property of the <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> with the provided value.  
-  
-- If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the ID of the record that matched the provided key values, and populate the ID value of the <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> with this value.  
-  
+- The <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> will be used if it is provided. If it is not provided, it will examine the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection>.  If the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> is not provided, it will throw an error.  
+- If the provided <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> includes one column that is the primary key of the table and the value is valid, it populates the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with the provided value.  
+- If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the ID of the record that matched the provided key values, and populate the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property>with this value.  
 - If you specify a column set that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
+
+---  
+
   
 ### See also
 

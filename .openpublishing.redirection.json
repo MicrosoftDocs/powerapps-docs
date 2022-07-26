@@ -5,7 +5,7 @@
       "redirect_url": "use-alternate-key-reference-record",
       "redirect_document_id": false
     },
-   {
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/samples/access-discovery-service.md",
       "redirect_url": "../../sample-discovery-service-crmserviceclient",
       "redirect_document_id": false
