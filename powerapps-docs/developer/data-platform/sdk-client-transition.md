@@ -78,6 +78,10 @@ Leave your application projects and code as is. Continue using the Microsoft.Crm
 > [!NOTE]
 > If you are using custom authentication with `CrmServiceClient`, you can continue to use your custom authentication code with `ServiceClient`.
 
+## Code samples
+
+Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient) 
+
 ## Timeline
 
 The following table lists some important dates to keep in mind.
@@ -89,8 +93,7 @@ The following table lists some important dates to keep in mind.
 |At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
 
 ### See also
-
-[ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient)  
+  
 [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)  
 [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)  
 
