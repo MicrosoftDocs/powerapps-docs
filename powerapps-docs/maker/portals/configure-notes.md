@@ -25,12 +25,12 @@ To add the ability to view notes and attachments on basic and advanced forms, yo
 
 - Configure [table permissions](configure/assign-entity-permissions.md) for the notes (annotations) table.
 
-You can further configure the behavior of the timeline control to allow site users to add, update, or delete notes and attachments by [configuring the form metadata](#notes-configuration-for-basic-forms) using the Portal Management app.
-
 > [!NOTE]
 > In order for a note to appear on the web page, the description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*). Notes added through a form on a webpage will have the prefix automatically added.
 
 ## Notes configuration for basic forms
+
+You can further configure the timeline control to allow site users to add, update, or delete notes and attachments by configuring the form metadata using the Portal Management app. 
 
 1. Open the [Portal Management](./configure/configure-portal.md) app.
 
