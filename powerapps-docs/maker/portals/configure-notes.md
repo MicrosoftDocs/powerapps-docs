@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/25/2022
+ms.date: 07/26/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -17,7 +17,9 @@ contributors:
 
 # Configure notes as attachments for basic and advanced forms
 
-Similar to subgrids, adding notes to your forms on the portal is easy. Just add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the model-driven app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the timeline control to display notes and attachments by using metadata.
+To add the ability to view notes and attachments on basic and advanced forms, add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the Microsoft Dataverse forms through the model-driven app [form designer](../model-driven-apps/create-design-forms.md) or [Data workspace](/power-pages/configure/data-workspace-forms) if using the Power Pages design studio.
+
+You can configure the behavior of the timeline control to allow site users to add, update, or delete notes and attachments by [configuring the form metadata](#notes-configuration-for-basic-forms) using the Portal Management app.
 
 > [!NOTE]
 > - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
