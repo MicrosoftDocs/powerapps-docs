@@ -2,9 +2,8 @@
 title: "Create and design model-driven app forms | MicrosoftDocs"
 description: "Overview of model-driven forms in Power Apps"
 ms.custom: intro-internal
-ms.date: 09/03/2020
+ms.date: 07/26/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -33,6 +32,27 @@ With Power Apps model-driven apps, forms provide the user interface that people 
 :::image type="content" source="../../maker/model-driven-apps/media/form-no-header.png" alt-text="Example model-driven App form":::
 
 In the default solution or an unmanaged solution, it is possible to create new forms or edit existing forms for all tables that allow form customization.
+
+## Model-driven app form UI enhancements (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Form UI enhancements consist of multiple small changes to improve data presentation and usability of model-driven app forms:
+
+- Forms have a light gray background which removes the white-on-white section treatment that helps users by providing easier visual navigation.
+- There is a better delineation between sections as white space is reduced and shadow and rounded corners to borders are added. 
+- Form field dividers are removed and consistent font styling is used across section labels.
+- The **Related** tab has an added chevron to indicate the dropdown flyout, which opens-up when you select it.
+
+:::image type="content" source="media/form-ux1.png" alt-text="Form UI enhancements screenshot":::
+
+Also, quick view form actions are displayed on top next to the related records instead of as icons on the quick view form.
+
+:::image type="content" source="media/form-ux2.png" alt-text="Form UI enhancements screenshot of related records layout":::
+
+## Forms and solutions
+
+This section describes form customization when the form is in an unmanaged or managed solution.
 
 ### Forms inside unmanaged solutions
 
