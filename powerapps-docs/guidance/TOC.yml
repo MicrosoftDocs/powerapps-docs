@@ -118,15 +118,13 @@
         href: planning/discoverability.md
       - name: Collecting feedback and analyzing telemetry
         href: planning/feedback-telemetry.md
-  - name: Best practices
+  - name: Best practices: Collaborating and co-developing apps
     items:
-    - name: Enabling teams to collaborate and co-develop applications
-      items:
-      - name: Overview
-        href: co-develop/overview.md
-      - name: Establishing a collaboration model
-        href: co-develop/collaboration.md
-      - name: Establishing co-development governance
-        href: co-develop/governance.md  
-      - name: Try community solutions and tools
-        href: co-develop/community-solutions-tools.md
+    - name: Overview
+      href: co-develop/overview.md
+    - name: Establishing a collaboration model
+      href: co-develop/collaboration.md
+    - name: Establishing co-development governance
+      href: co-develop/governance.md  
+    - name: Try community solutions and tools
+      href: co-develop/community-solutions-tools.md
