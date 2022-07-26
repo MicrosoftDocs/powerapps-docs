@@ -28,11 +28,7 @@ You can use [available Web API operations](web-api-overview.md#web-api-operation
 - The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
 
 > [!NOTE]
-> When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](../../developer/data-platform/entity-metadata.md#table-names), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
-> You can determine the **EntitySetName** of specific tables by following these steps: 
-> - Go to https://make.powerapps.com
-> - Select the **Dataverse** tab from the side panel and select the table.
-> - Select the **...** (Commands option) and then choose **Advanced**, **Tools**, and **Copy set name** to copy the **EntitySetName** of the table.
+> When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](./web-api-overview.md#using-entitysetname), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
 
 ## Query records
 
