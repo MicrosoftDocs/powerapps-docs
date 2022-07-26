@@ -4,7 +4,7 @@ description: "Learn about community solutions and tools available for fusion tea
 author: ankitchawla23
 ms.topic: article
 ms.custom: Focus-center
-ms.date: 07/15/2022
+ms.date: 07/26/2022
 ms.subservice: guidance
 ms.author: anchawla
 ms.reviewer: kvivek
@@ -15,7 +15,7 @@ ms.reviewer: kvivek
 This article provides information on community solutions and tools available for fusion teams to use. Although the underlying features and components used to build these are fully supported, the solutions and tools shared below are sample implementations. Our customers and community can use and customize these to implement in their organizations.
 
 > [!IMPORTANT]
-> - If you encounter issues using the solutions and tools, report issues [https://aka.ms/microsoft-focus-center-issues](https://aka.ms/microsoft-focus-center-issues).
+> - If you encounter issues using the solutions and tools, report issues at [https://aka.ms/microsoft-focus-center-issues](https://aka.ms/microsoft-focus-center-issues).
 > - Microsoft Support won't help with issues related to community solutions and tools. For issues with core features in Microsoft Power Platform, use standard channel to contact Microsoft Support.
 
 ## Anonymizer
