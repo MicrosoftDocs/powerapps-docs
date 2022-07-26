@@ -71,7 +71,7 @@ Simply add the [Dataverse.Client](https://www.nuget.org/packages/Microsoft.Power
 
 Nothing really for you to do here. Continue using the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages with .NET Framework 4.6.2.
 
-### On-premise clients
+### On-premises clients
 
 Leave your application projects and code as is. Continue using the Microsoft.CrmSdk.CoreAssemblies NuGet package and `CrmServiceClient`class. However, plan to update your projects from using any custom service clients to instead use the `CrmServiceClient` or `ServiceClient` in the near future. See the planned [timeline](#timeline) for 2011 SOAP endpoint shutdown below.
 
