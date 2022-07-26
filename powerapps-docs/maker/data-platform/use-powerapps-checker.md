@@ -23,7 +23,6 @@ To deliver on complex business requirements, model-driven app makers often can e
 > Starting March 2022, solution checker won’t analyze plugins in solutions. Plugin validations are being modernized and will eventually focus on the native plugin authoring time, which will help you detect and fix issues earlier.
 
 The solution checker analyzes these solution components: 
-- Dataverse plug-ins
 - Dataverse custom workflow activities 
 - Dataverse web resources (HTML and JavaScript)
 - Dataverse configurations, such as SDK message steps 
@@ -121,9 +120,9 @@ Here's a summary of each column in the report.
 |Component     |  The solution component where the issue was identified.        |   All      |
 |Location     |  The location and/or source file of the component where the issue that was identified occurred, such as the assembly or JavaScript file name.        |  All       |
 |Line  #     |  The line number reference of the issue in the impacted web resource component.       |  Web resources       |
-|Module     | Module name where the issue identified in the assembly was detected.     |   Plug-in or custom workflow activity      |
-|Type     | Type of the issue identified in the assembly.        | Plug-in or custom workflow activity        |
-|Member     |  Member of the issue identified in the assembly.      | Plug-in or custom workflow activity        |
+|Module     | Module name where the issue identified in the assembly was detected.     |   Custom workflow activity      |
+|Type     | Type of the issue identified in the assembly.        | Custom workflow activity        |
+|Member     |  Member of the issue identified in the assembly.      | Custom workflow activity        |
 |Statement     | The code statement or configuration that resulted in the issue.        |  All       |
 |Comments     | Details about the issue that include high-level resolution steps.         |  All       |
 
@@ -132,20 +131,11 @@ Here's a summary of each column in the report.
 
 |Solution component  |Rule name  |Rule description  |
 |---------|---------|---------|
-|Plug-in or workflow activity   | [il-specify-column](../../developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md?client=PAChecker&error=il-specify-column&source=featuredocs)  | Avoid selecting all columns via Dataverse query APIs.     |
 |Plug-in or workflow activity   | [meta-remove-dup-reg](../../developer/data-platform/best-practices/business-logic/do-not-duplicate-plugin-step-registration.md?client=PAChecker&error=meta-remove-dup-reg&source=featuredocs)     | Avoid duplicate Dataverse plug-in registrations.     |
-|Plug-in or workflow activity   | [il-turn-off-keepalive](../../developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin.md?client=PAChecker&error=il-turn-off-keepalive&source=featuredocs)   | Set KeepAlive to false when interacting with external hosts in a Dataverse plug-in.     |
-|Plug-in or workflow activity   | [il-avoid-unpub-metadata](../../developer/data-platform/best-practices/work-with-metadata/retrieve-published-metadata.md?client=PAChecker&error=il-avoid-unpub-metadata&source=featuredocs)   | Avoid retrieving unpublished Dataverse metadata.     |
-|Plug-in or workflow activity   | [il-avoid-batch-plugin](../../developer/data-platform/best-practices/business-logic/avoid-batch-requests-plugin.md?client=PAChecker&error=il-avoid-batch-plugin&source=featuredocs)   | Avoid using batch request types in Dataverse plug-ins and workflow activities.    |
 |Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](../../developer/data-platform/best-practices/business-logic/include-filtering-attributes-plugin-registration.md?client=PAChecker&error=meta-avoid-reg-no-attribute&source=featuredocs)  | Include filtering attributes with Dataverse plug-in registrations.    |
 |Plug-in or workflow activity   | [meta-avoid-reg-retrieve](../../developer/data-platform/best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md?client=PAChecker&error=meta-avoid-reg-retrieve&source=featuredocs)  | Use caution with Dataverse plug-ins registered for Retrieve and RetrieveMultiple messages.    |
 |Plug-in or workflow activity   | [meta-remove-inactive](../../developer/model-driven-apps/best-practices/business-logic/remove-deactivated-disabled-configurations.md?client=PAChecker&error=meta-remove-inactive&source=featuredocs)    | Remove inactive configurations in Dataverse.    |
-|Plug-in or workflow activity   | [il-meta-avoid-crm2011-depr-message](/previous-versions/dynamics-crm2011/developers-guide/gg509038(v=crm.5)?client=PAChecker&error=il-avoid-crm2011-depr-message&source=featuredocs)  | Don't use Microsoft Dynamics CRM 2011 deprecated messages.     |
 |Plug-in or workflow activity   | [meta-avoid-crm4-event](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=meta-avoid-crm4-event&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    |
-|Plug-in or workflow activity   | [il-avoid-specialized-update-ops](/previous-versions/dynamicscrm-2016/developers-guide/dn932124(v=crm.8)?client=PAChecker&error=il-avoid-specialized-update-ops&source=featuredocs)  | Don't use specialized update operation requests in Dataverse.    | 
-| Plug-in or workflow activity |  [il-use-autonumber-feature](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=il-use-autonumber-feature)  |Use the auto number feature instead of a custom auto numbering solution. | 
-| Plug-in or workflow activity  | [il-avoid-parallel-plugin](../../developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md?client=PAChecker&error=il-avoid-parallel-plugin)  | The usage of parallel patterns should be avoided within plug-ins.  |
-| Plug-in or workflow activity  | [il-avoid-lock-plugin](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=il-avoid-lock-plugin)  | Avoid lock of static members in plug-ins.  |
 | Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  |
 |Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   |
 |Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   |
