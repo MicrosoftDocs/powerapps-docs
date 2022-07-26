@@ -4,7 +4,7 @@ description: "Learn how to establish an effective co-development governance fram
 author: luis-camino-ms
 ms.topic: article
 ms.custom: Focus-center
-ms.date: 07/22/2022
+ms.date: 07/26/2022
 ms.subservice: guidance
 ms.author: lucamino
 ms.reviewer: kvivek
@@ -52,7 +52,7 @@ Adding a typical user story may incorporate the following information:
 
 After adding all these details, you would change the state of the user story to "Ready for Review". In most cases, the feature team and business team (if applicable) review the user stories.
 
-### Story Review
+### Story review
 Story Reviews typically occur within the fusion team to ensure that all the details are called out in the story and that there's no ambiguity. Following completion of all the reviews, the recommendation is to assign the user story to a team member.
 Ensuring that your team stays aligned during the development process is vital to achieving your overall goals. 
 
@@ -66,21 +66,21 @@ After reviewing the stories, team members create tasks in [Azure DevOps](https:/
 
 After adding tasks and test cases, you can then go on to set sprint capacity.
 
-For more information on adding tasks, see [Add tasks to backlog](https://docs.microsoft.com/azure/devops/boards/sprints/add-tasks) items to support sprint planning.
+For more information on adding tasks, see [Add tasks to backlog](/azure/devops/boards/sprints/add-tasks) items to support sprint planning.
 
 ### Pull requests and deployment review
 You should only create Pull Requests (PRs) for stories that are active and have had features reviewed and approved. PR governance sets PRs to draft if the story or feature isn't in either the Dev or Test stage. 
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
 
 > [!NOTE]
-> Use the [PR checker tool](next-steps.md) at the end of this article to automate the Pull Request checking process.
+> Use the [PR checker tool](community-solutions-tools.md) to automate the pull request checking process.
 
-You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](https://docs.microsoft.com/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
+You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
 
 In multi-team environments, it is important to coordinate the duration of sprints and releases. Sprints don't have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group’s preferences. However, the release cadence can't be less than the shortest sprint duration across all teams. 
 
 ## Templates and Standardization
-Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](https://docs.microsoft.com/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
+Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
 
 ## Implementing an effective support model
 An effective support model is essential for the long-term success of an application after its deployment, as highlighted in the earlier section about generating a support matrix. Bugs and outages are inevitable, so it is vital that the team has a structured approach for dealing with these occurrences, and the support matrix provides the necessary framework. 
@@ -101,7 +101,7 @@ The best approach for delivering the application support specified in the SLA is
 As with other phases of application creation, development, and deployment, the fusion team should partner with IT for assistance when required.
 
 ## Monitoring application satisfaction and usability
-The final part of the support effort is monitoring and assessing the satisfaction and usability of the deployed app. Metrics are useful here, along with more traditional methods, such as polling and questionnaires. For more information about monitoring app usage, see [Admin Analytics for Power Apps](https://docs.microsoft.com/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser). 
+The final part of the support effort is monitoring and assessing the satisfaction and usability of the deployed app. Metrics are useful here, along with more traditional methods, such as polling and questionnaires. For more information about monitoring app usage, see [Admin Analytics for Power Apps](/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser). 
 
 Ultimately, if customers aren’t using a published app, then that app isn’t fulfilling its purpose. Regular review meetings can check on these satisfaction and usability metrics to create a positive feedback loop that can alter or add stories to the backlog to generate and then deploy an updated version of the app. 
 
@@ -111,4 +111,4 @@ The development of no-code and low-code tools such as Power Apps has expanded op
 Integrating agile and scrum development approaches within fusion teams results in more rapid app development and a higher probability of successful deployment with a feature set that makes a significant difference to the business. By applying these best practices, guidelines, and recommendations, your fusion team will be able to use Power Apps to address your organization’s digital transformation challenges.  
 
 > [!div class="nextstepaction"]
-> [Try community solutions and tools](community-solutions-tools.md)
+> [Next step: Try community solutions and tools](community-solutions-tools.md)

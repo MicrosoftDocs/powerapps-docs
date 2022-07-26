@@ -85,4 +85,4 @@ Fusion teams and maker-developed apps must align to a data-first approach, which
 
 
 > [!div class="nextstepaction"]
-> [Establishing co-development governance](governance.md)
+> [Next step: Establishing co-development governance](governance.md)
