@@ -51,7 +51,7 @@ To convert your portal from trial to production:
     > [!div class=mx-imgBorder]
     > ![Trial to production confirmation.](../media/trial-to-prod-confirm.png "Trial to production confirmation")
 
-> [!NOTE]
+> [!IMPORTANT]
 > Once the portal has been converted to production, you should ensure that the portal is appropriately licensed with page views and logins corresponding to the expected user volume. Not having appropriate licenses assigned can result in degraded performance. For information on how to allocate page views and logins, see [Allocate or change capacity in an environment](/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment).
 
 ## Convert an existing portal to capacity-based model
