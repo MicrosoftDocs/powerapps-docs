@@ -118,7 +118,7 @@ Export data from one or more tables. Exported data is in comma-separated value (
    > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png)
 
    > [!NOTE] Exports have a 12 minute time limit. If the volumne of data exported exceeds 12 minutes the export will fail. If this occurs, 
-   > data will have to be exported in smaller segments.
+   > export data in smaller segments.
 
 ## Unsupported data types and fields
 
