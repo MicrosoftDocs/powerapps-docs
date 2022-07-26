@@ -42,8 +42,8 @@ Experience Reviews should focus on the end user experience and ensure that your 
 
 ### Add story details
 Adding a typical user story may incorporate the following information:
-1. Title: As a <persona> I can <do something> so that <impact/priority/value>
-1. Description: The description includes (although it isn't limited to) certain key details, such as:
+1. **Title**: As a \<persona\>, I can \<do something\> so that \<impact/priority/value\>
+1. **Description**: The description includes (although it isn't limited to) certain key details, such as:
     - Brief description of the scenario that summarizes the desired outcome
     - Narrative - describes the actions users will take to navigate and accomplish the scenario
     - Alternative narrative - describes other ways users can accomplish the same outcome
@@ -80,7 +80,7 @@ You should ensure that solution versioning is accurate, following the sprint and
 In multi-team environments, it is important to coordinate the duration of sprints and releases. Sprints don't have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group’s preferences. However, the release cadence can't be less than the shortest sprint duration across all teams. 
 
 ## Templates and Standardization
-Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
+Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](/azure/devops/boards/backlogs/work-item-template?tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
 
 ## Implementing an effective support model
 An effective support model is essential for the long-term success of an application after its deployment, as highlighted in the earlier section about generating a support matrix. Bugs and outages are inevitable, so it is vital that the team has a structured approach for dealing with these occurrences, and the support matrix provides the necessary framework. 
@@ -101,7 +101,7 @@ The best approach for delivering the application support specified in the SLA is
 As with other phases of application creation, development, and deployment, the fusion team should partner with IT for assistance when required.
 
 ## Monitoring application satisfaction and usability
-The final part of the support effort is monitoring and assessing the satisfaction and usability of the deployed app. Metrics are useful here, along with more traditional methods, such as polling and questionnaires. For more information about monitoring app usage, see [Admin Analytics for Power Apps](/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser). 
+The final part of the support effort is monitoring and assessing the satisfaction and usability of the deployed app. Metrics are useful here, along with more traditional methods, such as polling and questionnaires. For more information about monitoring app usage, see [Admin Analytics for Power Apps](/azure/devops/boards/backlogs/work-item-template?tabs=browser). 
 
 Ultimately, if customers aren’t using a published app, then that app isn’t fulfilling its purpose. Regular review meetings can check on these satisfaction and usability metrics to create a positive feedback loop that can alter or add stories to the backlog to generate and then deploy an updated version of the app. 
 

@@ -21,7 +21,7 @@ However, enabling organizations to truly support business growth takes more than
 
 ## Aim
 
-This content provides guidance for multidisciplinary teams to define and adopt co-development best practices that help promote collaboration, accelerate scalable development, reduce organizational silos, and optimize application delivery of low-code applications when using Microsoft Power Apps. 
+This content provides guidance for multidisciplinary teams to define and adopt co-development best practices that help promote collaboration, accelerate scalable development, reduce organizational silos, and optimize application delivery of low-code applications when using Power Apps. 
 
 ## What is an enterprise low-code application platform?
 Power Apps is an example of an enterprise low-code application platform. Low-code application platforms are rapid application development and deployment environments that use either low-code or no-code techniques to create multi-platform apps. Non-technical users (makers) can use  low-code application platform to design and build simplified apps in enterprise environments without requiring explicit programming knowledge. 
@@ -43,18 +43,20 @@ Low-code application platform will also provide:
 Because low-code application platform provides a mechanism for makers or business technologists to create business apps, the ability to start prototyping apps in isolation can also provide challenges for IT departments, including siloing and a growth in shadow IT projects. In consequence, it's important to understand how low-code app development can work alongside traditional coded business apps; indeed, must both sides work together to create multidisciplinary or fusion team, which provides the best approach for optimal business application co-development. Diverse fusion teams can bring together different perspectives and ideas, leading to better and more successful outcomes.
 
 ### Achieving successful low-code application co-development
-[Microsoft Dataverse](https://docs.microsoft.com/power-apps/maker/data-platform/data-platform-intro) provides a shared data language for business and analytics applications. Fusion teams can use Dataverse to co-develop applications. 
+[Microsoft Dataverse](/power-apps/maker/data-platform/data-platform-intro) provides a shared data language for business and analytics applications. Fusion teams can use Dataverse to co-develop applications. 
 
 An example of this approach is Success Hub, an internal Microsoft implementation of Dataverse with over 50 business apps co-developed by 20+ multi-role teams using a shared environment comprising of a single instance of Dataverse, thereby balancing agility and governance. This environment seamlessly blends technology and commercial domain expertise to create business applications with thousands of monthly active users.
 
 ## Low-code development using Power Apps
-[Microsoft Power Apps](https://powerplatform.microsoft.com/power-apps/) provides an innovative approach that enables business-focused personnel to use low- or no-code approaches to create and deploy apps within their organization. Professional developers can then collaborate with these makers to enhance and refine these apps within fusion teams, consisting of both business and technical staff. Microsoft Power Apps enables organizations to incorporate low-code apps into their application development lifecycles. 
+[Power Apps](https://powerplatform.microsoft.com/power-apps/) provides an innovative approach that enables business-focused personnel to use low- or no-code approaches to create and deploy apps within their organization. Professional developers can then collaborate with these makers to enhance and refine these apps within fusion teams, consisting of both business and technical staff. Power Apps enables organizations to incorporate low-code apps into their application development lifecycles. 
 
-### Advantages of Microsoft Power Apps
-Microsoft Power Apps provides a fully featured low-code and no-code development environment suitable for use by single individuals all the way up to full multi-role fusion teams working in all sizes of organization. With a robust feature set, an extensive number of integrations, a wide array of user interface options, a comprehensive set of templates for various business needs, and powerful mobile functionality, Power Apps provides everything a maker might need to solve business challenges while supporting enhancements from professional developers. 
+### Advantages of Power Apps
+
+Power Apps provides a fully featured low-code and no-code development environment suitable for use by single individuals all the way up to full multi-role fusion teams working in all sizes of organization. With a robust feature set, an extensive number of integrations, a wide array of user interface options, a comprehensive set of templates for various business needs, and powerful mobile functionality, Power Apps provides everything a maker might need to solve business challenges while supporting enhancements from professional developers. 
 
 ### Microsoft Power Platform family
-[Microsoft Power Apps](https://powerplatform.microsoft.com/power-apps/) is part of the [Microsoft Power Platform](https://powerplatform.microsoft.com/) family, which also includes the following low-code or no-code tools:
+
+[Power Apps](https://powerplatform.microsoft.com/power-apps/) is part of the [Microsoft Power Platform](https://powerplatform.microsoft.com/) family, which also includes the following low-code or no-code tools:
 - [Power BI](https://powerplatform.microsoft.com/power-bi/) – make informed confident business decisions by putting data-driven insights into everyone’s hands.
 - [Power Pages](https://powerpages.microsoft.com/) – quickly create low-code business websites for delivering vital information and services to your customers.
 - [Power Automate](https://powerplatform.microsoft.com/power-automate/) – boost business productivity by giving everyone the ability to automate organizational processes.
@@ -65,3 +67,7 @@ This paper concentrates on how Power Apps enables businesses to benefit from new
 
 > [!div class="nextstepaction"]
 > [Next step: Establishing a collaboration model](collaboration.md)
+
+### See also
+
+[Ebook: Fusion development approach to building apps using Power Apps](../fusion-dev-ebook/index.md)
