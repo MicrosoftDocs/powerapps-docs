@@ -32,6 +32,10 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 
 > [!NOTE]
 > When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](../../developer/data-platform/entity-metadata.md#table-names), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
+> You can determine the **EntitySetName** of specific tables by following these steps: 
+> - Go to https://make.powerapps.com
+> - Select the **Dataverse** from the side panel and select the table.
+> - Select the **...** (Commands option) and then choose **Advanced**, **Tools**, and **Copy set name** to copy the **EntitySetName** of the table.
 
 ### Basic create
 
