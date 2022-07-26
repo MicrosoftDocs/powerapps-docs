@@ -69,7 +69,8 @@ After adding tasks and test cases, you can then go on to set sprint capacity.
 For more information on adding tasks, see [Add tasks to backlog](/azure/devops/boards/sprints/add-tasks) items to support sprint planning.
 
 ### Pull requests and deployment review
-You should only create Pull Requests (PRs) for stories that are active and have had features reviewed and approved. PR governance sets PRs to draft if the story or feature isn't in either the Dev or Test stage. 
+You should only create pull pequests (PRs) for stories that are active and have had features reviewed and approved. PR governance sets PRs to draft if the story or feature isn't in either the Dev or Test stage.'
+ 
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
 
 > [!NOTE]
@@ -80,7 +81,7 @@ You should ensure that solution versioning is accurate, following the sprint and
 In multi-team environments, it is important to coordinate the duration of sprints and releases. Sprints don't have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group’s preferences. However, the release cadence can't be less than the shortest sprint duration across all teams. 
 
 ## Templates and Standardization
-Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations – whether that is onboarding tasks, story review presentations, or [work item templates](/azure/devops/boards/backlogs/work-item-template?tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks  – benefit from standardization and simplification. 
+Templates and standardization deliver efficiency by helping to promote consistency within the team. All aspects of the team’s operations&#8212;whether that is onboarding tasks, story review presentations, or [work item templates](/azure/devops/boards/backlogs/work-item-template?tabs=browser) that help save time and provide guidance to teams when defining user stories, features, bugs, or tasks&#8212;benefit from standardization and simplification. 
 
 ## Implementing an effective support model
 An effective support model is essential for the long-term success of an application after its deployment, as highlighted in the earlier section about generating a support matrix. Bugs and outages are inevitable, so it is vital that the team has a structured approach for dealing with these occurrences, and the support matrix provides the necessary framework. 
