@@ -17,14 +17,18 @@ contributors:
 
 # Configure notes as attachments for basic and advanced forms
 
-To add the ability to view notes and attachments on basic and advanced forms, add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the Microsoft Dataverse forms through the model-driven app [form designer](../model-driven-apps/create-design-forms.md) or [Data workspace](/power-pages/configure/data-workspace-forms) if using the Power Pages design studio.
+To add the ability to view notes and attachments on basic and advanced forms, you will need to complete the following steps:
 
-You can configure the behavior of the timeline control to allow site users to add, update, or delete notes and attachments by [configuring the form metadata](#notes-configuration-for-basic-forms) using the Portal Management app.
+- [Enable attachments for the table in Microsoft Dataverse](../data-platform/data-platform-create-entity.md#create-a-table).
+
+- Add the [timeline control](../model-driven-apps/set-up-timeline-control.md) to the Dataverse forms through the model-driven app [form designer](../model-driven-apps/create-design-forms.md) or [Data workspace](/power-pages/configure/data-workspace-forms) if using the Power Pages design studio.
+
+- Configure [table permissions](configure/assign-entity-permissions.md) for the notes (annotations) table.
+
+You can further configure the behavior of the timeline control to allow site users to add, update, or delete notes and attachments by [configuring the form metadata](#notes-configuration-for-basic-forms) using the Portal Management app.
 
 > [!NOTE]
-> - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
-> - Explicit [table permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps on how to create and assign these, go to [Assign table permissions](#assign-table-permissions).
-> - The description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) for the note to appear on the portal page.
+> In order for a note to appear on the web page, the description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*). Notes added through a form on a webpage will have the prefix automatically added.
 
 ## Notes configuration for basic forms
 
