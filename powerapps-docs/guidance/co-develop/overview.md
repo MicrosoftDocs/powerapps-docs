@@ -64,4 +64,4 @@ This paper concentrates on how Power Apps enables businesses to benefit from new
 
 
 > [!div class="nextstepaction"]
-> [Nest step: Establishing a collaboration model](collaboration.md)
+> [Next step: Establishing a collaboration model](collaboration.md)
