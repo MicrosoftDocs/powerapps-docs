@@ -66,16 +66,18 @@ While maker-led development and fusion teams enable rapid application developmen
 In consequence, IT must be alerted whenever a maker starts building an app. This notification in turn facilitates the development process, as IT can provide suitable support to the maker and the fusion team, helping them create well-architected apps that are properly secured and managed.
 
 ### Automation
-Well-implemented automation can provide a huge boost to productivity. An example of how to increase solution deployment success is by automating any required checks in multi-solution deployments. These automated checks can include:
+
+A well-implemented automation can provide a huge boost to productivity. An example of how to increase solution deployment success is by automating any required checks in multi-solution deployments. These automated checks can include:
 
 - Solution version verification, where each deployment uses an updated version number, thus avoiding issues when troubleshooting.
 - Duplicate connection references.
 - Missing connection references.
 - Duplicate components.
 
-The [PR Checker solution](next-steps.md) at the end of this article includes an example of how to incorporate this automation effectively.   
+The [PR Checker solution](community-solutions-tools.md) includes an example of how to incorporate this automation effectively. 
 
 ### Reporting
+
 Fusion teams and maker-developed apps must align to a data-first approach, which means building apps where it's possible to monitor success directly. Achieving this outcome requires good instrumentation that provides the ability to discover what the team is doing well, along with analysis of this feedback to generate accurate appraisals of the effectiveness of a particular app. To achieve this outcome, you should:
 
 - **Monitor and assess applications.** Just because one person thinks something is useful or a good idea, doesn’t automatically mean everyone will find value in it. Teams need to monitor app usability and assess their functionality to ensure that any new developments are useful and functioning appropriately. 
