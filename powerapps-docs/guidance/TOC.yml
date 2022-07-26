@@ -118,7 +118,7 @@
         href: planning/discoverability.md
       - name: Collecting feedback and analyzing telemetry
         href: planning/feedback-telemetry.md
-  - name: Best practices: Collaborating and co-developing apps
+  - name: Collaborating and co-developing apps
     items:
     - name: Overview
       href: co-develop/overview.md
