@@ -46,7 +46,7 @@ Form UI enhancements consist of multiple small changes to improve data presentat
 
    :::image type="content" source="media/form-ux1.png" alt-text="Form UI enhancements screenshot":::
 
-Also, quick view form actions are displayed on top next to the related records instead of as icons on the quick view form.
+Also, quick view form labels are displayed on top instead of icons.
 
 :::image type="content" source="media/form-ux2.png" alt-text="Form UI enhancements screenshot of related records layout":::
 
