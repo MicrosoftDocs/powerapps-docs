@@ -62,7 +62,7 @@ landingContent:
             url: fusion-dev-ebook/index.md
           - text: "Best practices: Collaborate and co-develop apps"
             url: co-develop/overview.md
-       - linkListType: overview
+       - linkListType: reference
          links:
           - text: "Community solutions and tools"
             url: co-develop/community-solutions-tools.md   
