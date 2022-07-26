@@ -106,9 +106,9 @@ The final part of the support effort is monitoring and assessing the satisfactio
 Ultimately, if customers aren’t using a published app, then that app isn’t fulfilling its purpose. Regular review meetings can check on these satisfaction and usability metrics to create a positive feedback loop that can alter or add stories to the backlog to generate and then deploy an updated version of the app. 
 
 ## Summary
-The development of no-code and low-code tools such as Microsoft Power Apps has expanded options for business technologists or makers to create, develop, and deploy apps. This development works best within a fusion team environment, comprising a product owner, a domain expert, a pro dev, and an administrator, with this team bringing in other resources as required. 
+The development of no-code and low-code tools such as Power Apps has expanded options for business technologists or makers to create, develop, and deploy apps. This development works best within a fusion team environment, comprising a product owner, a domain expert, a pro dev, and an administrator, with this team bringing in other resources as required. 
 
-Integrating agile and scrum development approaches within fusion teams results in more rapid app development and a higher probability of successful deployment with a feature set that makes a significant difference to the business. By applying these best practices, guidelines, and recommendations, your fusion team will be able to use Microsoft Power Apps to address your organization’s digital transformation challenges.  
+Integrating agile and scrum development approaches within fusion teams results in more rapid app development and a higher probability of successful deployment with a feature set that makes a significant difference to the business. By applying these best practices, guidelines, and recommendations, your fusion team will be able to use Power Apps to address your organization’s digital transformation challenges.  
 
 > [!div class="nextstepaction"]
 > [Try community solutions and tools](community-solutions-tools.md)
