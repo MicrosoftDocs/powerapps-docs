@@ -85,7 +85,7 @@ The following table lists some important dates to keep in mind.
 | Timeframe | Event |
 | --- | --- |
 |June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|Fall 2022|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
+|At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
 |December 2022|Microsoft support for ADAL ends|
 
 ### See also
