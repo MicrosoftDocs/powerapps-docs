@@ -70,6 +70,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 1. Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped columns**, **Fields with error**, or **Required Fields**.
 
     > [!TIP]
+    >
     > - Depending on whether you get a **Warning** or an **Error**, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
     > - Use the *upsert* (**Update** or **Insert**) logic to either update the row, if it already exists, or to insert a new row.
 
@@ -117,8 +118,8 @@ Export data from one or more tables. Exported data is in comma-separated value (
    > [!div class="mx-imgBorder"] 
    > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png)
 
-> [!NOTE] Exports have a 12 minute time limit. If the volumne of data exported exceeds 12 minutes the export will fail. If this occurs, 
-> export data in smaller segments.
+> [!NOTE]
+> Exports have a 12 minute time limit. If the volumne of data exported exceeds 12 minutes the export will fail. If this occurs, export data in smaller segments.
 
 ## Unsupported data types and fields
 
