@@ -84,18 +84,16 @@ To access columns of a related table, makers can use either of the expressions l
 
 ### Embedded canvas app doesn’t render correctly
 
-You can build your canvas app to be responsive, which refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly. Depending on whether your app is built to be responsive or not, we recommend different settings to ensure that your canvas app may render correctly within the field on the model-driven app form. If you are experiencing additional whitespace or scroll bars around your canvas app, we recommend checking the following in your app.
+You can build your canvas app to be [responsive](../../maker/canvas-apps/build-responsive-apps.md), which refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly. Depending on whether your app is built to be responsive or not, we recommend different settings to ensure that your canvas app may render correctly within the field on the model-driven app form. If you are experiencing additional whitespace or scroll bars around your canvas app, we recommend checking the following in your app.
 
 For responsive apps:
-- We recommend that you disable the **Scale to fit** option. This will allow your app to scale according to the dimensions and properties you have set for your app.
+- Disable the **Scale to fit** option. This will allow your app to scale according to the dimensions and properties you have set for your app.
 An embedded canvas app may not render correctly within the field on the model-driven app form, such as additional whitespace or scroll bars around the canvas app.
 
 For non-responsive apps:
 - We recommend that you enable the **Scale to fit** option. This will help the app to resize to fit the available space.
 
 In both scenarios, ensure that the **App Name** property value is set and correctly defined in the embedded canvas app control.
-
-Instead of creating apps that scale to the space available, you can create apps that are **responsive** to the form factor.  [Learn more about responsive apps](../../maker/canvas-apps/build-responsive-apps.md)
 
 ### Embedded canvas app doesn't respect height
 
