@@ -51,7 +51,7 @@ These are the properties available to configure when using a lookup component on
 | **Display options**   | **Use Main Form Dialog for Create**  | Enabling this option allows users to create rows in a pop out dialog for this lookup field, instead of closing the current form and navigating away.  |
 | **Display options**   | **Use Main Form Dialog for Edit**  | Enabling this option allows users to edit rows in a pop out dialog for this lookup field, instead of closing the current form and navigating away.   |
 | **Display options** | **Default view** |  The view of the table selected in the **Table** property that can be used to get and display the list of rows that app users can select in the lookup drop-down list. |
-| **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the table selected in the **Table** property. |
+| **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the table. |
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
 | **Formatting**  | **Form field width**  | Determines the width in number of columns for the lookup column.  |
