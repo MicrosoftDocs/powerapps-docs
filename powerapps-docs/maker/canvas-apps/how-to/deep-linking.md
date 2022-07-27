@@ -140,7 +140,7 @@ Your app is now configured to receive **accountId** as the parameter that contai
 
 To invoke app with the parameter value, we have to use the following syntax:
 
-`https://apps.powerapps.com/play/[App ID]*?*query*`
+`https://apps.powerapps.com/play/{*App ID*}?*query*`
 
 In the above syntax, we have to add the **App ID** and the query that contains **accountId** variable with its value.
 
