@@ -2,11 +2,10 @@
 title: Create a canvas app with deep link to a specific screen
 description: Learn how to deep link to a specific screen within canvas apps.
 author: vasavib
-
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/27/2022
+ms.date: 07/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
 search.audienceType: 
@@ -24,7 +23,7 @@ contributors:
 
 A common scenario when building apps is the need to share a "deep link" to a specific screen. Deep links are useful when you want to get users straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
 
-To deep link into a Power Apps app, you'll use this URL syntax: `https://web.powerapps.com/apps/{AppID}?query`.
+To deep link into a Power Apps app, you'll use this URL syntax: `https://apps.powerapps.com/play/{*App ID*}?*query*`.
 
 In this syntax:
 - **AppID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
@@ -141,7 +140,7 @@ Your app is now configured to receive **accountId** as the parameter that contai
 
 To invoke app with the parameter value, we have to use the following syntax:
 
-`https://web.powerapps.com/apps/[App ID]*}?*query*`
+`https://apps.powerapps.com/play/[App ID]*?*query*`
 
 In the above syntax, we have to add the **App ID** and the query that contains **accountId** variable with its value.
 
