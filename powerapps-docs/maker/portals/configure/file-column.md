@@ -4,7 +4,7 @@ description: Learn how to configure a file column on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/11/2022
+ms.date: 07/20/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -33,7 +33,8 @@ You must configure site settings **Control/EnableFilePreview** and set its value
 :::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enable file preview with value set to true.":::
 
 > [!IMPORTANT]
-> This site setting is required during the preview period.
+> - This site setting is required during the preview period.
+> - You cannot upload a file using **Insert** mode on a basic form or advanced form step.
 
 ## Liquid code
 
@@ -80,6 +81,9 @@ Create a new file data type column in [Microsoft Dataverse](../../data-platform/
 ## Web API
 
 Portals Web API can be used to perform create, read, update, and delete operations on file columns across Microsoft Dataverse tables.
+
+> [!NOTE]
+> Make sure you've configured the appropriate Web API [site settings](../web-api-overview.md#site-settings-for-the-web-api) for the tables and file columns tables you want to access.
 
 ### Retrieving file data
 
