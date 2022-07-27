@@ -128,8 +128,8 @@ Watch a 4 minute video showing how to create a virtual table with the SharePoint
 
 # [SQL Server](#tab/sql)
 
-- Select SQL Server Authentication as Authentication Type. 
-- Enter SQL server name, SQL database name, the credentials needed to connect.
+- Select your Authentication Type (in this example SQL AUthentication was chosen)
+- Enter the required credentials (in this case SQL server name, SQL database name) to connect.
 
    :::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
 
