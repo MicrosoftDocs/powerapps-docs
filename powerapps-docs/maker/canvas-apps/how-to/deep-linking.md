@@ -23,11 +23,11 @@ contributors:
 
 A common scenario when building apps is the need to share a "deep link" to a specific screen. Deep links are useful when you want to get users straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
 
-To deep link into a Power Apps app, you'll use this URL syntax: `https://apps.powerapps.com/play/{*App ID*}?*query*`.
+To deep link into a Power Apps app, you'll use this URL syntax: `https://apps.powerapps.com/play/{App ID}?{Query}`.
 
 In this syntax:
-- **AppID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
-- Query&mdash;The query text allows you to supply the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
+- **App ID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
+- **Query**&mdash;The query text allows you to supply the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
 
 In this article, you'll learn about how to:
 
@@ -140,7 +140,7 @@ Your app is now configured to receive **accountId** as the parameter that contai
 
 To invoke app with the parameter value, we have to use the following syntax:
 
-`https://apps.powerapps.com/play/{*App ID*}?*query*`
+`https://apps.powerapps.com/play/{App ID}?{Query}`
 
 In the above syntax, we have to add the **App ID** and the query that contains **accountId** variable with its value.
 
@@ -168,7 +168,7 @@ For this purpose, we'll create a button and add the ability to invoke an email f
 1. On the button's **OnSelect** property, enter the following:
 
     ```powerapps-dot
-    Office365Outlook.SendEmailV2("Recipient", "Subject", "Here's the deep link to the selected account - https://web.powerapps.com/apps/[App ID]?accountId=" & accountVal.Account)
+    Office365Outlook.SendEmailV2("Recipient", "Subject", "Here's the deep link to the selected account - https://apps.powerapps.com/play/{App ID}?accountId=" & accountVal.Account)
     ```
 
     This formula uses the Microsoft 365 connector for Outlook to send an email using the [SendEmailV2](/connectors/office365/#send-an-email-(v2)) operation.
