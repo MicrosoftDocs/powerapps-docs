@@ -4,10 +4,9 @@ description: "Programmatically use the auditing capability of Microsoft Datavers
 ms.date: 06/13/2022
 ms.reviewer: jdaly
 ms.topic: overview
-author: Bluebear7 # GitHub ID
+author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: munzinge # MSFT alias of Microsoft employees only
-manager: mayadu # MSFT alias of manager or PM counterpart
+ms.author: paulliew # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
