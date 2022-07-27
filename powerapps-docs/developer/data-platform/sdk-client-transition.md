@@ -71,12 +71,16 @@ Simply add the [Dataverse.Client](https://www.nuget.org/packages/Microsoft.Power
 
 Nothing really for you to do here. Continue using the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages with .NET Framework 4.6.2.
 
-### On-premise clients
+### On-premises clients
 
 Leave your application projects and code as is. Continue using the Microsoft.CrmSdk.CoreAssemblies NuGet package and `CrmServiceClient`class. However, plan to update your projects from using any custom service clients to instead use the `CrmServiceClient` or `ServiceClient` in the near future. See the planned [timeline](#timeline) for 2011 SOAP endpoint shutdown below.
 
 > [!NOTE]
 > If you are using custom authentication with `CrmServiceClient`, you can continue to use your custom authentication code with `ServiceClient`.
+
+## Code samples
+
+Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient) 
 
 ## Timeline
 
@@ -85,12 +89,11 @@ The following table lists some important dates to keep in mind.
 | Timeframe | Event |
 | --- | --- |
 |June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
 |December 2022|Microsoft support for ADAL ends|
+|At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
 
 ### See also
-
-[ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient)  
+  
 [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)  
 [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)  
 
