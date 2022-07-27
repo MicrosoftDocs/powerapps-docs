@@ -33,7 +33,7 @@ Upsert is intended to be used to synchronize data from an external system. Unles
 
 If there is a single key attribute, you can use the [Entity(String, String, Object)](/dotnet/api/microsoft.xrm.sdk.entity.-ctor?view=dataverse-sdk-latest#microsoft-xrm-sdk-entity-ctor(system-string-system-string-system-object) constructor to specify a `keyName` and `keyValue`. This is shown in the sample below.
 
-If there are multiple key attributes, define them using a <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> class and set them using the <xref:Microsoft.Xrm.Sdk.Entity(String,KeyAttributeCollection)?displayProperty=nameWithType> constructor.
+If there are multiple key attributes, define them using a <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> class and set them using the [Entity(String, KeyAttributeCollection)](/dotnet/api/microsoft.xrm.sdk.entity.-ctor?view=dataverse-sdk-latest#microsoft-xrm-sdk-entity-ctor(system-string-microsoft-xrm-sdk-keyattributecollection))  constructor.
 
 After sending the request, you can inspect <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> to determine if the record was created. <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> will be true if the record didn't exist and was created. It will be false if the record already existed and was updated. <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target> will be an `EntityReference` to the record that was found to exist or to the record that was created.  
   
