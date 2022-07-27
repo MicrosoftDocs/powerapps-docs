@@ -146,6 +146,23 @@ Every column has the following properties you can change:
 |**Searchable**|De-select this for columns for the table that you don’t use.  When a column is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
 |**Description**|Found within **Advanced Options**. Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
+## Searching and Sorting columns
+
+Most columns have options to enable seraching or sorting of the column's contents. 
+
+### Searchable
+Almost every column data type is created with the Searchable value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types cannot be search enabled:
+> - Image - Images are stored and retrieved using reference URLS and because of this they cannot be searched. 
+> - File - Files are stored and retrieved using reference URLS and because of this they cannot be searched. 
+> - Formulas - Formulas are used to create a dynamically calculated output and because of this cannot be searched.
+The Customer datatype is search enabled by default and this cannot be disabled, it is required to be searchable by the system.
+
+### Sortable
+Almost every data type is created with the Sortable value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types do not provide the ability to enable a sortable attribute:
+> - Formulas - Formulas are used to create a dynamically calculated output and because of this cannot be sorted.
+> - Lookup - Lookups have values that are dynamically retrieved from the source table and because of this cannot be sorted.
+> - Customer - Customer is an out of the box lookup field and cannot be sorted because it is dynamically retrieved.
+
 > [!NOTE]
 >**Making columns required**: Be careful when you make columns required. People will resist using the application if they can’t save rows because they lack the correct information to enter into a required column. People may enter incorrect data simply to save the row and get on with their work.
 >
