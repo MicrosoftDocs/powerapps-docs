@@ -72,7 +72,7 @@ These are the properties available to configure lookup filtering.
 |---------|---------|---------|
 | **Filtering**  | **Filter by related rows**  | When this is enabled, you can filter this lookup based on a row related to both the current table and this lookup. The rows that display in this lookup when users search for a row will then have additional filtering applied. This helps provide more relevant searches when setting the value of the lookup. <br /><br />By default, this is turned off.  |
 | **Filtering**  | **Relationship to current table** | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />The possible relationship combinations will be listed in the table following this one.  |
-| **Filtering**  | **Relationship to this lookup’s table**  | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />For the possible relationship combinations, go to [Table relationships available for a lookup column](#table-relationships-available-for-a-lookup-column).   |
+| **Filtering**  | **Relationship to this lookup’s table**  | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />For the possible relationship combinations, go to [Table relationships available for a lookup column](#possible-relationship-combinations-for-a-lookup-column).   |
 | **Filtering**  | **Allow users to turn off filter**  | When this is enabled, users will have the option to turn off the filter you define here.  |
 
 ## Possible relationship combinations for a lookup column
