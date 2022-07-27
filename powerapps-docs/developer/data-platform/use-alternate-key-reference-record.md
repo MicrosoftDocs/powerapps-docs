@@ -29,13 +29,13 @@ You can use alternate keys using either the Datverse Web API or the Dataverse SD
 
 # [Web API](#tab/webapi)
 
-When using the Web API you refernce a specific record using a URL and then use the `POST`, `PATCH`, or `DELETE` Http methods to perform the data operation. You also use URLs to set values for single-valued navigation properties using the `@odata.bind` syntax, or as parameters to functions and actions.
+When using the Web API you reference a specific record using a URL and then use the `POST`, `PATCH`, or `DELETE` Http methods to perform the data operation. You also use URLs to set values for single-valued navigation properties using the `@odata.bind` syntax, or as parameters to functions and actions.
 
 The following table provides examples showing how to reference records using relative urls:
 
 |Situation|Example|
 |---------|---------|
-|With a primary key|`/accounts(00000000-0000-0000-0000-000000000001)` OR `accounts(accountid=00000000-0000-0000-0000-000000000001)`|
+|With a primary key|`/accounts(00000000-0000-0000-0000-000000000001)` OR<br />`accounts(accountid=00000000-0000-0000-0000-000000000001)`|
 |With single alternate key|`/accounts(accountnumber='ABC123')`|
 |With multiple alternate keys|`/contacts(firstname='Joe',emailaddress1='abc@example.com')`|
 |With an alternate key that uses a lookup column|`/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000002)`|
@@ -50,7 +50,7 @@ When using the SDK for .NET, there are two ways to use alternate keys.
 
 ## Using the Entity class
 
-When you create an instance of the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class> you can specify the keys to use to identify the record using the following constructors:
+When you create an instance of the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class> you can specify the keys to use to identify the record using the following <xref:Microsoft.Xrm.Sdk.Entity.%23ctor?text=Entity Constructors>:
 
 ```csharp  
 // For use with the primary key
@@ -61,9 +61,9 @@ public Entity (string logicalName, string keyName, object keyValue) {…}
 public Entity (string logicalName, KeyAttributeCollection keyAttributes) {…}  
 ```
 
-These values are added to the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text="Entity.KeyAttributes Property">, which is different from the <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text="Entity.Attributes Property">. `KeyAttributes` are used to identify a record. `Attributes` contains the data for the record.
+These values are added to the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property>, which is different from the <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes Property>. `KeyAttributes` are used to identify a record. `Attributes` contains the data for the record.
 
-For example, when a table has an alternate key that includes two columns, you can define the entity this way.
+For example, when a table has an alternate key that includes two alternate key columns, you can define the entity this way.
 
 ```csharp
 KeyAttributeCollection keys = new KeyAttributeCollection() {
@@ -75,19 +75,9 @@ Entity thing = new Entity("example_thing", keys);
 thing["example_name"] = "Test Name";
 ```
 
-The following table explains what to expect when you use an `Entity` instance with alternate keys with `Create`, `Update`, and `Upsert` messages.
-
-
-|Message|Description|
-|---------|---------|
-|`Create`|The `KeyAttributes` will be ignored.|
-|`Update`|If the `Attributes` property contains a primary key value it will be used. Otherwise the `KeyAttributes` values will be used.|
-|`Upsert` |If the `Attributes` property contains a primary key value it will be used. Otherwise the `KeyAttributes` values will be used.<br /><br /> **If the  record does not exist**, the `KeyAttributes` values are copied to the `Attributes` property and will be set as values for the record as long as the `Attributes` property doesn't already include values for those keys.|
-|`Upsert`|If the `Attributes` property contains a primary key value it will be used. Otherwise the `KeyAttributes` values will be used.<br /><br /> **If the  record DOES exist**, any values with matching keys in the `Attributes` property will be removed.<br/><br/>You cannot change alternate key values while using those values to identify the record. You can update alternate key values if you use the primary key to identify the record, as long as those changes do not violate the unique constraint on the alternate keys.|
-
 ## Using the EntityReference class
 
-When you create an instance of the <xref:Microsoft.Xrm.Sdk.EntityReference?text=EntityReference Class> you can specify the keys to use to identify the record using the following constructors that are the same as the ones used for the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class>.
+When you create an instance of the <xref:Microsoft.Xrm.Sdk.EntityReference?text=EntityReference Class> you can specify the keys to use to identify the record using the following <xref:Microsoft.Xrm.Sdk.EntityReference.%23ctor?text=EntityReference Constructors> that use the same pattern as the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class>.
 
 ```csharp
 // For use with the primary key
@@ -101,17 +91,16 @@ public EntityReference(string logicalName, KeyAttributeCollection keyAttributeCo
 - You can use `EntityReference` to set values for entity lookup columns. When used to set a lookup column, the key values are used to find the primary key value, and the primary key values is stored in the database.
 - You can use `EntityReference` for messages that use this type as a property, such as `Delete` using <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest?text=DeleteRequest>.
 
-
-  
 <a name="BKMK_Exceptions"></a>
+
 ## Exceptions when using alternate keys
 
 You have to be aware of the following conditions and possible exceptions when using alternate keys:  
   
 - The <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> will be used if it is provided. If it is not provided, it will examine the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection>.  If the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> is not provided, it will throw an error.  
 - If the provided <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> includes one column that is the primary key of the table and the value is valid, it populates the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with the provided value.  
-- If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the ID of the record that matched the provided key values, and populate the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property>with this value.  
-- If you specify a column set that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
+- If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the primary key value of the record that matched the provided alternate key values, and populate the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with this value.  
+- If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
 
 ---  
 
