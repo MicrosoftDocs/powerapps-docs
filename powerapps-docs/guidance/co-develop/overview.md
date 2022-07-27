@@ -62,7 +62,7 @@ Power Apps provides a fully featured low-code and no-code development environmen
 - [Power Automate](https://powerplatform.microsoft.com/power-automate/) – boost business productivity by giving everyone the ability to automate organizational processes.
 - [Power Virtual Agents](https://powerplatform.microsoft.com/power-virtual-agents/) – easily build chat bots to engage conversationally with your customers and employees, all without requiring coding.
 
-This paper concentrates on how Power Apps enables businesses to benefit from new, more integrated ways of working, starting with establishing an effective collaboration model. The fusion team model supports multi-role collaboration generating an advanced way to building apps involving both domain and specialist knowledge and experience.
+This content concentrates on how Power Apps enables businesses to benefit from new, more integrated ways of working, starting with establishing an effective collaboration model. The fusion team model supports multi-role collaboration generating an advanced way to building apps involving both domain and specialist knowledge and experience.
 
 
 > [!div class="nextstepaction"]
