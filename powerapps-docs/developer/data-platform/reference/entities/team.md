@@ -1,7 +1,7 @@
 ---
 title: "Team table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Team table/entity."
-ms.date: 05/23/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -970,6 +970,8 @@ Listed by **SchemaName**.
 - [team_environmentvariablevalue](#BKMK_team_environmentvariablevalue)
 - [team_flowmachine](#BKMK_team_flowmachine)
 - [team_flowmachinegroup](#BKMK_team_flowmachinegroup)
+- [team_flowmachineimage](#BKMK_team_flowmachineimage)
+- [team_flowmachineimageversion](#BKMK_team_flowmachineimageversion)
 - [team_processstageparameter](#BKMK_team_processstageparameter)
 - [team_flowsession](#BKMK_team_flowsession)
 - [team_workflowbinary](#BKMK_team_workflowbinary)
@@ -1012,6 +1014,7 @@ Listed by **SchemaName**.
 - [team_managedidentity](#BKMK_team_managedidentity)
 - [team_appnotification](#BKMK_team_appnotification)
 - [team_msdyn_richtextfile](#BKMK_team_msdyn_richtextfile)
+- [team_msdyn_customcontrolextendedsettings](#BKMK_team_msdyn_customcontrolextendedsettings)
 - [team_msdyn_pmanalysishistory](#BKMK_team_msdyn_pmanalysishistory)
 - [team_msdyn_pminferredtask](#BKMK_team_msdyn_pminferredtask)
 - [team_msdyn_pmrecording](#BKMK_team_msdyn_pmrecording)
@@ -1022,8 +1025,6 @@ Listed by **SchemaName**.
 - [team_msdyn_analysisresultdetail](#BKMK_team_msdyn_analysisresultdetail)
 - [team_msdyn_solutionhealthrule](#BKMK_team_msdyn_solutionhealthrule)
 - [team_msdyn_solutionhealthruleargument](#BKMK_team_msdyn_solutionhealthruleargument)
-- [team_flowmachineimage](#BKMK_team_flowmachineimage)
-- [team_flowmachineimageversion](#BKMK_team_flowmachineimageversion)
 
 
 ### <a name="BKMK_team_principalobjectattributeaccess_principalid"></a> team_principalobjectattributeaccess_principalid
@@ -2097,6 +2098,40 @@ Same as the [team_flowmachinegroup](flowmachinegroup.md#BKMK_team_flowmachinegro
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_flowmachineimage"></a> team_flowmachineimage
+
+**Added by**: Active Solution Solution
+
+Same as the [team_flowmachineimage](flowmachineimage.md#BKMK_team_flowmachineimage) many-to-one relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachineimage|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_flowmachineimage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_flowmachineimageversion"></a> team_flowmachineimageversion
+
+**Added by**: Active Solution Solution
+
+Same as the [team_flowmachineimageversion](flowmachineimageversion.md#BKMK_team_flowmachineimageversion) many-to-one relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachineimageversion|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_flowmachineimageversion|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_processstageparameter"></a> team_processstageparameter
 
 **Added by**: Active Solution Solution
@@ -2811,6 +2846,23 @@ Same as the [team_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_team_msdyn_rich
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_customcontrolextendedsettings"></a> team_msdyn_customcontrolextendedsettings
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md#BKMK_team_msdyn_customcontrolextendedsettings) many-to-one relationship for the [msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_customcontrolextendedsettings|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_customcontrolextendedsettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_pmanalysishistory"></a> team_msdyn_pmanalysishistory
 
 **Added by**: Active Solution Solution
@@ -2977,40 +3029,6 @@ Same as the [team_msdyn_solutionhealthruleargument](msdyn_solutionhealthruleargu
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|team_msdyn_solutionhealthruleargument|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_flowmachineimage"></a> team_flowmachineimage
-
-**Added by**: Active Solution Solution
-
-Same as the [team_flowmachineimage](flowmachineimage.md#BKMK_team_flowmachineimage) many-to-one relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|flowmachineimage|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_flowmachineimage|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_flowmachineimageversion"></a> team_flowmachineimageversion
-
-**Added by**: Active Solution Solution
-
-Same as the [team_flowmachineimageversion](flowmachineimageversion.md#BKMK_team_flowmachineimageversion) many-to-one relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|flowmachineimageversion|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_flowmachineimageversion|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
