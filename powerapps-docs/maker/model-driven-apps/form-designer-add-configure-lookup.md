@@ -2,9 +2,8 @@
 title: Configure a lookup component on a form | MicrosoftDocs"
 description: Learn how to create a lookup for a form
 ms.custom: ""
-ms.date: 08/26/2019
+ms.date: 07/27/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -24,7 +23,6 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-
 # Configure a lookup component on a form  
 
 Lookups help a user choose records from a **related** table. A lookup component is automatically added when a lookup column is added to a form.
@@ -43,28 +41,39 @@ These are the properties available to configure when using a lookup component on
 
 |Area  |Name  |Description  |
 |---------|---------|---------|
-| **Display options** | **Table** |  The related table that the lookup column connects to. |
+| **Display options** | **Label** |  The label text that is displayed next to the lookup column. |
+| **Display options**   | **Hide label**  | When enabled, the label isn’t displayed.  |
+| **Display options**   | **Hide on phone**  | When enabled, the lookup column won’t display when running the app on a phone.  |
+| **Display options**   | **Hide**  | Don’t display the lookup column. The lookup column can then be displayed using code.  |
+| **Display options**   | **Lock**  | Make this column so that it can’t be removed by you or other makers until the **Lock** property is disabled.  |
+| **Display options**   | **Read-only**  | When this property is enabled, users can’t change the value in the lookup column.  |
+| **Display options**   | **Disable most recently used items**  |   |
+| **Display options**   | **Use Main Form Dialog for Create**  |   |
+| **Display options**   | **Use Main Form Dialog for Edit**  |   |
 | **Display options** | **Default view** |  The view of the table selected in the **Table** property that can be used to get and display the list of rows that app users can select in the lookup drop-down list. |
 | **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the table selected in the **Table** property. |
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
+| **Formatting**  | **Form field width**  | Determines the width in number of columns for the lookup column.  |
+| **Components**  | **+Component** | Configure a control for the lookup column, such as the form component control.  |
+| **Filtering**  | **Filter by related rows**  | When this is enabled, you can filter this lookup based on a row related to both the current table and this lookup. The rows that display in this lookup when users search for a row will then have additional filtering applied. This helps provide more relevant searches when setting the value of the lookup. <br /><br />By default, this is turned off.  |
+| **Filtering**  | **Relationship to current table** | This dropdown defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />The possible relationship combinations will be listed in the table following this one.  |
+| **Filtering**  | **Relationship to this lookup’s table**  | This dropdown defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />For the possible relationship combinations, go to [Table relationships available for a lookup column](#table-relationships-available-for-a-lookup-column).   |
+| **Filtering**  | **Allow users to turn off filter**  | When this is enabled, users will have the option to turn off the filter you define here.  |
 
-Options for a lookup component as they appear in the form designer. 
+<!--Options for a lookup component as they appear in the form designer. 
 
-:::image type="content" source="../../maker/model-driven-apps/media/configure-lookup-component.png" alt-text="Advanced Settings":::
+ :::image type="content" source="../../maker/model-driven-apps/media/configure-lookup-component.png" alt-text="Advanced Settings"::: -->
+
+## Table relationships available for a lookup column
+
+
 
 ## See also
+
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
-[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
-[Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
-[Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
-[Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)  
-[Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
-[Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+[Table relationships](../data-platform/create-edit-entity-relationships.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
