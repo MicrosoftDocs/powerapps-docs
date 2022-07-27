@@ -42,6 +42,7 @@ In the example below notice the module that relates to a given lesson within the
 > [!NOTE]
 > - Data in quick view form controls can't be edited and they do not support form scripts. 
 > - Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles can't be assigned to quick view forms and they can't be activated or deactivated.
+> - Custom controls are not supported in quick view forms, and there is limited customization support for complex controls such as subgrids. If this is required, consider using a [form component control](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/form-component-control)
   
 <a name="BKMK_CreateQFV"></a>
 
