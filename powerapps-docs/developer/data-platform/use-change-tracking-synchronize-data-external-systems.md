@@ -40,7 +40,7 @@ Changes made in tables can be tracked using Web API requests by adding the  `Pre
 Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked. For example, the request that generated the results containing the delta link. The delta link encodes the collection of tables for which changes are being tracked, along with a starting point from which to track changes. Read more about delta links here [Oasis OData Version 4.0 - Delta Links](https://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
 
 
-## Retrieve changes in tables using Web API example
+### Retrieve changes in tables using Web API example
 
 This example shows how to retrieve changes made in accounts data using the Web API.
 
@@ -72,6 +72,7 @@ Content-Type: application/json
        ]
 }
 ```
+
 The `@odata.deltaLink` Uri returned from the above example can be used to fetch changes in tables. In this example a new account was created and an existing account deleted. The delta link returned from the previous request fetches these changes, as shown in the example below.
 
 **Request**
@@ -106,22 +107,22 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telepho
 The response for the delta link returned in the initial change tracking request contains another delta link. This delta link helps in retrieving all the subsequent changes in tables. An empty JSON response is returned if no table changes have occurred after the initial change tracking request was called.
 
 
-## Retrieve count of the changes made in tables using Web API
+### Retrieve count of the changes made in tables using Web API
 
 You can add `$count` to the delta link returned from the initial change tracking request, as shown in the example below, to get the number of changes made.
 
-Request
+**Request**
+
 ```http
 GET [Organization URI]/api/data/v9.0/accounts/$count?$deltatoken=919042%2108%2f22%2f2017%2008%3a10%3a44
 ```
 
+### Query options not supported in Change Tracking Web API request
 
-## Query options not supported in Change Tracking Web API request
-
-System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using the `Prefer: odata.track-changes` header in Web API request. An error message saying "The `$filter`/ `$orderby`/ `$expand` / `$top` query parameter isn't supported when Change Tracking is enabled." will be returned when using these query options in the Web API request.
+System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using the `Prefer: odata.track-changes` header in Web API request. An error message saying `The $filter | $orderby |$expand | $top query parameter isn't supported when Change Tracking is enabled.` will be returned when using these query options in the Web API request.
 
 
-## Retrieve changes for a table using the Organization Service
+## Retrieve changes for a table using .NET SDK
 
 When change tracking is enabled for a table, you can use the `RetrieveEntityChanges`  message with <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest> to retrieve the changes for that table. The first time this message is used it returns all records for the table and that data can be used to populate the external storage. The message also returns a version number that will be sent back with the next use of the `RetrieveEntityChanges` message so that only data for those changes that occurred since that version will be returned.
   
@@ -134,7 +135,7 @@ You should be aware of the following constraints when retrieving changes for a t
 - If the new or updated item collection is greater than 5000, the user can page through the collection.  
   
 
-## Sample code
+### .NET SDK Sample code
 
 The following code snippet shows how the `RetrieveEntityChanges` message is used to retrieve the changes for a table. For the complete sample, see [Synchronize data with external systems using change tracking](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Changetracking).  
   
@@ -180,6 +181,5 @@ while (true)
 [Define alternate keys for a table](define-alternate-keys-entity.md)<br />
 [Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
 [Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
