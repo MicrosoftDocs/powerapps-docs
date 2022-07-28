@@ -97,7 +97,7 @@ In both scenarios, ensure that the **App Name** property value is set and correc
 
 ### Embedded canvas app doesn't respect height
 
-The **Form field height** property is not respected by the canvas app component. When embedded, the dimensions of the canvas app component will respect the aspect ratio set on the canvas app. Because the aspect ratio is fixed, the height of the canvas app component is calculated relative to the width of the app. The width of the app is determined based on the horizontal space available in the model-driven app. If you would like to make adjustments to the height of the canvas app component, we recommend [customizing the aspect ratio](../../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md) on your canvas app. Please note that to customize the aspect ratio, the app must be in Tablet layout.
+The **Form field height** property is not respected by the canvas app component. When embedded, the dimensions of the canvas app component respect the aspect ratio set on the canvas app. Because the aspect ratio is fixed, the height of the canvas app component is calculated relative to the width of the app. The width of the app is determined based on the horizontal space available in the model-driven app. If you would like to make adjustments to the height of the canvas app component, we recommend [customizing the aspect ratio](../../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md) on your canvas app. Note that to customize the aspect ratio, the app must be in tablet layout.
 
 #### Enable scale to fit
 
