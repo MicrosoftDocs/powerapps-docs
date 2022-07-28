@@ -18,9 +18,9 @@ contributors:
 ---
 # Use Upsert to Create or Update a record
 
-You can reduce the complexity involved with data integration scenarios by using the `Upsert` message. When loading data into Microsoft Dataverse from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Dataverse. In such cases you won't know if you should call an `Update` or a `Create` operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can reduce this complexity and load data into Dataverse more efficiently by using the `Upsert` message.
+You can reduce the complexity involved with data integration scenarios by using the `Upsert` message. When loading data into Microsoft Dataverse from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Dataverse. In such cases you won't know if you should use the `Update` or a `Create` message. You must retrieve the record first to determine if it exists before performing the appropriate operation. You can reduce this complexity and load data into Dataverse more efficiently by using the `Upsert` message.
 
-It is best to use `Upsert` only when you aren't sure if the record exists. That is, when you aren't sure if you should call a `Create` or `Update` operation. There is a performance penalty in using `Upsert` versus using `Create`. If you are sure the record doesn't exist, use `Create`.
+There is a performance penalty in using `Upsert` versus using `Create`. If you are sure the record doesn't exist, use `Create`.
 
 > [!NOTE]
 > While you can use primary key values with `Upsert`, it is generally expected that you will be using alternate keys because the common use case is data integration scenarios. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
