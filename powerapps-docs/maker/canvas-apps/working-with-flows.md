@@ -159,6 +159,9 @@ This action only removes flow from the app, while the flow remains intact in the
 
 The Power Automate pane is now enabled by defualt. To use the classic Power Automate experience to [create a flow](using-logic-flows.md), you will need to switch back to the old experience manually.
 
+> [!IMPORTANT]
+> It’s recommended that you use the [Power Automate pane](working-with-flows.md) to create a flow. The classic Power Automate experience should only be used for troubleshooting. The classic experience will be retired soon and won't be available.
+
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
 1. Select **Settings** at the top.
