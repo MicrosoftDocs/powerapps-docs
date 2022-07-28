@@ -70,6 +70,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 1. Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped columns**, **Fields with error**, or **Required Fields**.
 
     > [!TIP]
+    >
     > - Depending on whether you get a **Warning** or an **Error**, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
     > - Use the *upsert* (**Update** or **Insert**) logic to either update the row, if it already exists, or to insert a new row.
 
@@ -85,19 +86,19 @@ Dataverse tables use a primary key to uniquely identify rows within a Dataverse 
 Example:  
 The primary key for an **Account** table is **accountid**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Sample export file from an **Account** table showing **accountid** as the primary key.](./media/data-platform-import-export/export-pk.png)
+> [!div class="mx-imgBorder"] 
+> ![Sample export file from an **Account** table showing **accountid** as the primary key.](./media/data-platform-import-export/export-pk.png)
 
 Sometimes, a primary key might not work when you integrate data from an external source. Use Dataverse to define alternate keys that uniquely identify a row in place of the primary key.
 
 Example:  
 For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.  More information: [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
-   > [!div class="mx-imgBorder"] 
-   > ![Example of creating an alternate key on a **Currency** table.](./media/data-platform-import-export/create-ak.png)
+> [!div class="mx-imgBorder"] 
+> ![Example of creating an alternate key on a **Currency** table.](./media/data-platform-import-export/create-ak.png)
 
-   > [!div class="mx-imgBorder"] 
-   > ![Sample export file from an **Account** table showing **currency name** as a natural key.](./media/data-platform-import-export/export-nk.png)
+> [!div class="mx-imgBorder"] 
+> ![Sample export file from an **Account** table showing **currency name** as a natural key.](./media/data-platform-import-export/export-nk.png)
 
 You can still use primary keys as identifiers after you specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
@@ -109,15 +110,18 @@ Export data from one or more tables. Exported data is in comma-separated value (
 1. Select **Data** > **Export data**.
 1. Select the tables that you want to export data from, and then select **Export data**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Example of exporting data from an **Account** table.](./media/data-platform-import-export/export-account.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Example of exporting data from an **Account** table.](./media/data-platform-import-export/export-account.png)
 
 1. After the export finishes successfully, select **Download exported data** to download the CSV file to the download folder specified in your web browser.
 
    > [!div class="mx-imgBorder"] 
    > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png)
 
-## Unsupported data types
+> [!NOTE]
+> Exports have a 12 minute time limit. If the volumne of data exported exceeds 12 minutes the export will fail. If this occurs, export data in smaller segments.
+
+## Unsupported data types and fields
 
 The following data types aren't currently supported for import or export.
 
@@ -126,8 +130,19 @@ The following data types aren't currently supported for import or export.
 - Image
 - File
 
-    > [!NOTE]
-    > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
+The following fields are system fields and are not supported for import and export.
+
+- Ownerid
+- Createdby
+- Createdonbehalfby
+- Createdon
+- Modifiedby
+- Modifiedonbehalfby
+- Modifiedon
+- Overriddencreatedon
+
+ > [!NOTE]
+ > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

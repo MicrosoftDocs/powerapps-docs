@@ -2,7 +2,7 @@
 title: "Create and edit columns in Dataverse using Power Apps | MicrosoftDocs"
 description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
-ms.date: 07/23/2020
+ms.date: 07/28/2022
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -90,7 +90,6 @@ These columns store data as a number but include different presentation and vali
 |**Timezone**|A number value presented as a drop-down list that contains a list of time zones.|
 |**Language**|A number value presented as a drop-down list that contains a list of languages that have been enabled for the environment. If no other languages have been enabled, the base language will be the only option. The value saved is the Locale Identifier (LCID) value for the language.|
 
-
 ### Date Time
 
 Use these columns to store time values. You can store values as early as 1/1/1753 12:00 AM.
@@ -132,12 +131,13 @@ You can continue to edit the table and add additional columns or return and cont
 ![Save Table button.](media/save-entity-button.png)
 
 You can also select **Discard** to discard the changes you have made.
- 
+
 ## Edit a column
 
 While viewing columns, select the column you want to edit. You can modify the **Display Name** but you cannot change the **Name** and **Data type** if you have saved changes to the table to add the column.
 
-### General Properties
+### General properties
+
 Every column has the following properties you can change:
 
 |Property|Description|
@@ -153,7 +153,12 @@ Every column has the following properties you can change:
 >
 >**Advanced Find availability**: Advanced Find is currently only available for model-driven apps using the Web Client. Advanced find is not currently available in Unified Interface clients.
 
-### Saving rows programmatically for required columns 
+## Searching and sorting columns
+
+For information about columns that can't be enabled for searching or sorting, go to [Searching and sorting columns](types-of-fields.md#searching-and-sorting-columns).
+
+### Saving rows programmatically for required columns
+
 When a row is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. 
 
 Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the row. There are options within the app to override this behavior and allow operation to proceed if needed.

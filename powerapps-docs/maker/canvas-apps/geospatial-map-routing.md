@@ -80,7 +80,7 @@ In this example, we'll import waypoint data from an Excel table named *TestData*
 1. On the **Advanced** tab, find **RouteWaypointsLabels**, **RouteWaypointsLatitudes**, **RouteWaypointsLongitudes**, and **RouteWaypointsAddresses** and enter the name of the corresponding column in the table. (In this example, enter *Name* in **RouteWaypointsLabels**, *Latitude* in **RouteWaypointsLatitudes**, and so on.) Enclose the column name in quotation marks.
 
     >[!NOTE]
-    >Address is interchangeable with Latitude and Longitude. If Latitude and Longitude are provided, then Address isn't used. If Address is provided, then Latitude and Longitude aren't needed.
+    >Address is interchangeable with Latitude and Longitude. If Latitude and Longitude are provided, then Address isn't used. If Address is provided, then Latitude and Longitude aren't needed. There is a limit to the number of waypoints that can be displayed when using address, so use Latitude and Longitude when possible. 
 
 Pins appear on the map at the locations described by the coordinates or addresses in the table. If the table included labels, the pins are labeled. The pins are numbered in the order the waypoint locations appear in the table.
 

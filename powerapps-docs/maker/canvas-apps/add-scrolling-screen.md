@@ -5,7 +5,7 @@ author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/08/2022
+ms.date: 07/22/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -39,7 +39,7 @@ When you add multiple controls in a section, the controls maintain their relativ
 
 ## Add controls
 
-Scrollable screen includes one data card by default. Data cards help separate building blocks on the screen. To make screen scrollable with multiple controls, add more data cards. And then, add controls in data cards as required.
+Scrollable screen includes a fluid grid with one data card by default. Data cards help separate building blocks on the screen. To make screen scrollable with multiple controls, add more data cards. And then, add controls in data cards as required.
 
 To add data cards, you can select **Add section** at the bottom of the scrollable screen.
 

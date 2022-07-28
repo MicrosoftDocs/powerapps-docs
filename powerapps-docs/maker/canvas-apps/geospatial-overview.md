@@ -1,6 +1,6 @@
 ---
 title: Add geospatial controls to canvas apps
-description: Add geospatial controls to your canvas apps to view 3D objects and 2D images in the real world using mixed-reality features in Power Apps. 
+description: Add geospatial controls to your canvas apps to see interactive maps with dynamic routing and get address autosuggestion
 author: anuitz
 ms.service: powerapps
 ms.topic: overview
@@ -27,7 +27,7 @@ Use the following prebuilt controls for geospatial applications:
 - [Interactive map](geospatial-component-map.md)
 - [Address input](geospatial-component-input-address.md)
 
-The map control runs limited support by default, with some features available by default. Refer to the table at the bottom of the page for more details on data usage in limited support.
+The map control runs with limited features available by default. You can enable additional map control features and support for the address input control [by turning on full support in the Power Platform admin center](#prerequisites-for-full-support). Refer to the [table at the bottom of the page](#privacy-and-security-considerations) for more details on data usage in limited and full support.
 
 ## Prerequisites for full support
 
@@ -62,20 +62,17 @@ If you don't have administrative access to the Power Platform admin center, ask 
 
     >[!IMPORTANT]
     >
-    >The terms of service must be agreed to before you can use geospatial features in your apps.
+    >The terms of service must be agreed to before you can use all geospatial features in your apps.
     >
     >Mapping capabilities are provided by a third party. Microsoft shares address and location queries, but not customer or user names, with the provider. Requests are sent securely over HTTPS or aren't exposed to the public Internet.
 
 1. Select **Save**.
-
-
 
 ### Review the environment's data loss prevention policies
 
 Geospatial controls use the Microsoft Dataverse and Spatial Services connectors to fetch map tiles and to look up and geocode addresses. Your Power Platform admin must make sure data loss prevention policies that apply to those connectors don't conflict with policies that affect the controls.
 
 Your admin should confirm that the Microsoft Dataverse and Spatial Services connectors are classified under the same data group, typically **Business**. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
-
 
 ## Privacy and security considerations
 
@@ -103,6 +100,6 @@ Add the controls to your apps:
 
 ### See also
 
-[Create an app that uses mobile sensors](how-to/mobile-sensors.md)
+[Create an app that uses the address input and map controls](how-to/mobile-apps-address-map.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

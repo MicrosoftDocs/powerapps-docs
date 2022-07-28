@@ -1,15 +1,12 @@
 ---
 title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The email activity in lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/29/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 07/27/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: dmartens # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -26,7 +23,8 @@ The email activity lets you track and manage email communications with customers
   
 <a name="Actions"></a>   
 
-## Actions on an email activity  
+## Actions on an email activity
+
  Using Dataverse web services, you can perform the following actions on an email activity:  
   
 - Create, retrieve, update, and delete the email activity.  
@@ -46,7 +44,8 @@ The email activity lets you track and manage email communications with customers
   
 <a name="BulkE-Mail"></a>   
 
-## Bulk email  
+## Bulk email
+
  Dataverse supports sending email to a large list of recipients through a bulk email request. When a bulk email request is sent to Dataverse, an asynchronous operation is created in the asynchronous service queue that sends the email messages by using a background process. This gives you improved system performance.  
   
  The <xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest> and <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> messages are used for sending bulk email messages. The following lists the sequence used to send bulk email:  
@@ -60,7 +59,10 @@ The email activity lets you track and manage email communications with customers
 4. The email router, Dynamics 365 for Outlook, or a third-party email send component polls Dataverse for pending email messages, and if one is found, downloads it by using the `BackgroundSendEmail` request.  
   
 5. The `BackgroundSendEmail` request performs the following operations: checks if pending email messages are present, downloads the email to the caller of the <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> message, and synchronizes the downloads if there are multiple callers.  
-  
+
+NOTE: Your email service provider may have limits which affect how many emails you can send within a period of time. More information: [Exchange Online limits > Sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+
+
 6. The caller of the <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> message receives the downloaded email message, and sends it out.  
   
 <a name="E-MailAttachments"></a>   
@@ -77,7 +79,7 @@ Email attachments are files that can be attached to email messages or email temp
 ActivityMimeAttachment _sampleAttachment = new ActivityMimeAttachment{  
     ObjectId = new EntityReference(Email.EntityLogicalName, _emailId),  
     ObjectTypeCode = Email.EntityLogicalName,  
-    Subject = "Sample Attachment”,  
+    Subject = "Sample Attachment",  
     Body = System.Convert.ToBase64String(new ASCIIEncoding().GetBytes("Example Attachment")),  
     FileName = "ExampleAttachment.txt"};  
 ```  
@@ -108,7 +110,7 @@ ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectT
     ActivityMimeAttachment _reuseAttachment = new ActivityMimeAttachment{  
         ObjectId = new EntityReference(Email.EntityLogicalName, _emailId),  
         ObjectTypeCode = Email.EntityLogicalName,  
-        Subject = "Sample Attachment”,  
+        Subject = "Sample Attachment",  
         AttachmentId = retrievedAttachment.AttachmentId};  
     ```  
   
