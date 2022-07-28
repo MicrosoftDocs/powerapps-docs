@@ -7,7 +7,6 @@ ms.topic: article
 author: Peakerbl # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: peakerbl # MSFT alias of Microsoft employees only
-manager: mayadu # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -52,12 +51,6 @@ More information:
 - [Using Power Apps: Define alternate keys to reference rows](../../maker/data-platform/define-alternate-keys-reference-records.md)
 - [Using Code: Work with alternate keys](define-alternate-keys-entity.md)
 
-## Change tracking
-
-When organizations need to maintain Dataverse data in external storage there is now a way to keep that data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.
-
-More information: [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)
-
 ## Upsert
 
 When loading data into Dataverse from an external system, you may not know if a record already exists in Dataverse and should be updated, or whether you must create a new record. *Upsert* is a combination of *Update* or *Insert* which enables the server to detect whether a record exists or not and apply the appropriate `Update` or `Create` operation in Dataverse. More information: [Use Upsert to insert or update a record](use-upsert-insert-update-record.md) 
@@ -77,17 +70,26 @@ With these features, it just takes one call to the server to perform the same op
 |-----------------------|------------------------------|
 | ![Update using UpdateRequest.](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
 
+## Change tracking
+
+When organizations need to maintain Dataverse data in external storage there is now a way to keep that data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.
+
+More information: [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)
+
 ## In This Section
 
- [Define alternate keys for the table](define-alternate-keys-entity.md)<br />
- [Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
- [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)<br />
- [Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)<br />
- [Sample: Insert or update a record using Upsert](/dynamics365/customer-engagement/developer/sample-insert-update-record-upsert)<br />
- [Sample: Synchronize data with external systems using change tracking](/dynamics365/customer-engagement/developer/sample-synchronize-data-external-systems-using-change-tracking)<br /> 
+[Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
+[Use Upsert to Create or Update a record](use-upsert-insert-update-record.md)
+[Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)
+
+## Sample code
+
+[Sample: Insert or update a record using Upsert](org-service/samples/insert-update-record-upsert.md)<br />
+[Sample: Synchronize data with external systems using change tracking](org-service/samples/synchronize-data-external-systems-using-change-tracking.md)
 
 ## Related Sections
 
+[Define alternate keys for the table](define-alternate-keys-entity.md)<br />
 [Perform specialized operations using Update](/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update)<br /> 
 [Developers guide to customization for Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br /> 
 
