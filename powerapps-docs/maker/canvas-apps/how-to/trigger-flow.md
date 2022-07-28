@@ -228,13 +228,15 @@ In this lesson, we'll create an app to search, view, and create customer account
     > [!NOTE]
     > The email address is picked up from the new account record created on the previous screen. and the body for the email is picked from the text box text captured on this screen.
 
-    ![Fill in the two parameters for the To email address](media/trigger-flow/trigger-the-flow-from-within-the-power-app-2.png "Fill in the two parameters for the To email address")
+    
+   > [!div class="mx-imgBorder"]
+   > ![Fill in the two parameters for the To email address](media/trigger-flow/onselect-flow.png "Fill in the two parameters for the To email address")
 
 ## Test the app
 
 Run the app in preview mode. In this test, we'll create a new account by entering details like account name, phone number, city, and email address on the **New Account** screen. On saving the new account details, we'll be prompted to send an email to the customer where we can update the verbiage of the email, and then select **Yes** to send the email. This will trigger the flow, and email will be sent to the email address on the account.
 
-![Run the app in Preview mode](media/trigger-flow/test-the-app-1.png "Run the app in Preview mode")
+![Run the app in Preview mode](media/trigger-flow/test-the-app-1-1.png "Run the app in Preview mode")
 
 ![Create a new account by entering details like account name](media/trigger-flow/test-the-app-2.gif "Create a new account by entering details like account name")
 
