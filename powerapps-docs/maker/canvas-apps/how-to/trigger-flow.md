@@ -173,47 +173,39 @@ In this lesson, we'll create an app to search, view, and create customer account
 
     ![Navigate to screen 1](media/trigger-flow/build-a-canvas-app-27.png "Navigate to screen 1")
 
-1. Select the **Yes** button, select **Action** on the top, and then select **Power Automate**.
+1. Select the **Yes** button, on the app authoring menu select **Power Automate**.
 
-    ![Select the Yes button and select Action on the top](media/trigger-flow/build-a-canvas-app-28.png "Select the Yes button and select Action on the top")
+    ![Select Power Automate fromt he app authoring menu.](media/trigger-flow/build-a-canvas-app-28-1.png "Select the Yes button and select Action on the top")
 
 1. Select **Create a new flow** to create a new Power Automate flow.
 
-    ![Select Create a new flow to create](media/trigger-flow/build-a-canvas-app-29.png "Select Create a new flow to create")
+    ![Select Create a new flow.](media/trigger-flow/build-a-canvas-app-29-1.png "Select Create a new flow to create")
 
 ## Create the Power Automate Flow
 
-1. After Power Automate opens, select **+ Create** > **Instant cloud flow**.
+1. On the **Create your flow** screen, from the list of instant templates, select **Click a button in Power Apps to send an email**.
 
-    ![select the Instant cloud flow option](media/trigger-flow/create-the-power-automate-flow-1.png "select the Instant cloud flow option")
+    ![Select the Click a button in Power Apps to send an email template.](media/trigger-flow/create-the-power-automate-flow-1-1.png "select the Click a button in Power Apps to send an email.")
 
 1. Enter a name for the flow as "Flow triggered by Power Apps", and select **Power Apps** as the trigger.
 
-    ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2.png "Enter a name for the flow")
+    ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2-1.png "Enter a name for the flow")
 
-1. Select **+ New Step**.
+1. Select **Edit in advanced mode** and then select, **Continue**.
 
-    ![Power Apps gets added as the trigger](media/trigger-flow/create-the-power-automate-flow-3.png "Power Apps gets added as the trigger")
+     ![Edit the flow in advacned mode](media/trigger-flow/edit-advacned-mode.png "Edit in advacned mode")
 
-1. Enter "Send an email" in the search connections textbox, and select **Send an email (V2)** action.
+1. The **To** field and the **Body** field are automatically auto-populated with the following:
+  
+   - To: **Sendanemail(V2)_To**.
+   - Body: **Sendanemail(V2)_Body**
 
-    ![Enter Send an email in the search connections textbox](media/trigger-flow/create-the-power-automate-flow-4.png "Enter Send an email in the search connections textbox")
 
-1. For the **To** field, select **Add dynamic content** > select **Ask in Power Apps** > select **Sendanemail(V2)_To**.
+1. In **Subject** field, delete **Sendanemail(V2)_To** and enten **Thank you for your business!** in the **Subject** field.
 
-    ![For the To field, select Add dynamic content](media/trigger-flow/create-the-power-automate-flow-5.png "For the To field, select Add dynamic content")
+    ![Enter Thank you for your business](media/trigger-flow/add-subject.png "Enter Thank you for your business")
 
-1. For the **Body** field, select **Add dynamic content** > select **Ask in Power Apps** > select **Sendanemail(V2)_Body**
-
-    ![For the Body field, select Add dynamic content](media/trigger-flow/create-the-power-automate-flow-6.png "For the Body field, select Add dynamic content")
-
-    ![select Ask in PowerApps and then select Sendanemail V2](media/trigger-flow/create-the-power-automate-flow-7.png "select Ask in PowerApps and then select Sendanemail V2")
-
-1. Enter "Thank you for your business!" in the **Subject** field.
-
-    ![Enter Thank you for your business](media/trigger-flow/create-the-power-automate-flow-8.png "Enter Thank you for your business")
-
-1. Save the Power Automate flow, and go back to Power Apps.
+1. Select **Save** to save the flow.
 
 ## Trigger the flow from within the canvas app
 
