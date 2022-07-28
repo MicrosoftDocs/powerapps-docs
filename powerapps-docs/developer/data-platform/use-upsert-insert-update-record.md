@@ -23,7 +23,7 @@ You can reduce the complexity involved with data integration scenarios by using 
 It is best to use `Upsert` only when you aren't sure if the record exists. That is, when you aren't sure if you should call a `Create` or `Update` operation. There is a performance penalty in using `Upsert` versus using `Create`. If you are sure the record doesn't exist, use `Create`.
 
 > [!NOTE]
-> While you can use primary key values with upsert, it is generally expected that you will be using alternate keys with `Upsert` because the common use case is data integration scenarios. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
+> While you can use primary key values with `Upsert`, it is generally expected that you will be using alternate keys because the common use case is data integration scenarios. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
 <a name="BKMK_upsert"></a>
 
@@ -36,17 +36,18 @@ It is best to use `Upsert` only when you aren't sure if the record exists. That 
 
 The following steps describe the processing logic when an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> is received:  
   
-1. Send <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance with enough data for a create or insert operation.  
-1. Dataverse will look up the record targeted by the entity set to the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target> property.  
+1. Send an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance with the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target?text=Target Property> set with the <xref:Microsoft.Xrm.Sdk.Entity> instance containing the data for a `Create` or `Update` operation.
+   - The <xref:Microsoft.Xrm.Sdk.Entity> instance will typically have the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property> set with values used to identify the record using alternate keys.
+1. Dataverse will look up the record using the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property> or the primary key value of the <xref:Microsoft.Xrm.Sdk.Entity> instance set to the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target> property.  
 1. **If the record exists:**
    1. Set the `Target` <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id> with the Id of the found record.  
-   1. Remove any attributes from the `Target` <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes> collection that match the alternate keys set in the `Target`.
+   1. Remove any data from the `Target` <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes> collection that match the alternate keys set in the `Target`.
    1. Call `Update`.  
    1. Set the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated?text=UpsertResponse.RecordCreated> property to `false`.  
-   1. Create an <xref:Microsoft.Xrm.Sdk.EntityReference> from the `Target` entity of the update as the value for <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target?text=UpsertResponse.Target>.  
+   1. Create an <xref:Microsoft.Xrm.Sdk.EntityReference> from the `Target` entity as the value for <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target?text=UpsertResponse.Target>.  
    1. Return the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse>.  
 1. **If the record doesn't exist:**  
-   1. Copy any alternate key values from the `Target` <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes> that the `Target` does not already have in its <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes> collection, into the `Target` <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes>.  
+   1. Copy any alternate key values from the `Target` <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes> that the `Target` *does not already have* in its <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes> collection into the `Target` <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes>.  
    1. Call `Create`.  
    1. Set the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated?text=UpsertResponse.RecordCreated> to `true`.  
    1. Create an <xref:Microsoft.Xrm.Sdk.EntityReference> from the `Target` entity and the `id` result of the `Create` operation as the value for <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target?text=UpsertResponse.Target>.  
@@ -58,20 +59,34 @@ The following illustration shows the process that unfolds when an <xref:Microsof
 
 ## Using Web API
 
+Web API doesn't have the same object model as the SDK objects used in the description and the diagram above, but the data can be mapped as shown in the table below.
+
+|Web API|SDK|Description|
+|---------|---------|---------|
+|Key values in URL |<xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property>|Contains the alternate key data to identify the record.|
+|Body of request|The <xref:Microsoft.Xrm.Sdk.Entity> set to the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target?text=UpsertRequest.Target Property>|Contains the data to use for `Create` or `Update`.|
+
+If you are using alternate keys, we recommend not including those key values in the body of the request. You can think of it this way:
+
+- **If the record exists:** The data set in the body of the request for those alternate key values in the Url will be *removed*. This ensures that you cannot update the alternate key values of a record when you are using those alternate key values to identify it.
+- **If the record doesn't exist:** Any alternate key data set in the body of the request will be used to create the new record, *even if it is different* than the data specified by the alternate keys in the Url. If there is no alternate key data in the body of the request, the alternate key data from the URL will be copied into the body of the request. To avoid a situation where the URL alternate key data and the corresponding alternate key data in the body doesn't match, it is best to not include it in the body at all. 
+
+In both of these cases, alternate key data in the body of the request that corresponds to alternate key data in the Url isn't necessary because the alternate key data in the Url will be used.
+
+### Detect when a record is created
+
 With the Web API the `Upsert` and `Update` messages are both initiated using http `PATCH` against a specified entity set resource identified by the keys in the Url.
 
-The difference is defined by whether the `If-Match: *` request header is included. If the `If-Match: *` request header is included and no resource can be identified by the key values in the Url, the request will return a `404 Not Found` status code. The inclusion of the `If-Match: *` request header makes the `PATCH` request an `Update` operation.
+The difference is defined by whether the `If-Match: *` request header is included. If the `If-Match: *` request header is included and no resource can be identified by the key values in the Url, the request will return a `404 Not Found` status code. The inclusion of the `If-Match: *` request header ensures that the `PATCH` request is an `Update` operation.
 
 If the `If-Match: *` request header is not included, the `PATCH` request is treated like an `Upsert` and a new record will be created if no records matching the keys in the URL are found. However, unlike the SDK, the response will not tell you whether a record was created. The status response will be `204 No Content` in either case.
 
-If you include a `Prefer: return=representation` request header the system will return a `201 Created` status for `Create`, and a `200 OK ` status for `Update`. This adds an additional `Retrieve` operation so it has an impact on performance. If you use this option, make sure that the `$select` query option you add only returns the primary key value. More information:
+If you include a `Prefer: return=representation` request header the system will return a `201 Created` status for `Create`, and a `200 OK` status for `Update`. This adds an additional `Retrieve` operation so it has an impact on performance. If you use this option, make sure that the `$select` query option you add only includes the primary key value. More information:
 
 - [Create with data returned](webapi/create-entity-web-api.md#create-with-data-returned)
 - [Update with data returned](webapi/update-delete-entities-using-web-api.md#update-with-data-returned)
 
-With a `PATCH` request you can also include the `If-None-Match: *`  request header to block an `Update` if you only want to create records. 
-
-More information: [Limit upsert operations](webapi/perform-conditional-operations-using-web-api.md#limit-upsert-operations)
+With a `PATCH` request you can also include the `If-None-Match: *`  request header to block an `Update` if you only want to create records. More information: [Limit upsert operations](webapi/perform-conditional-operations-using-web-api.md#limit-upsert-operations)
 
 
 <a name="BKMK_UsingUpsert"></a>
