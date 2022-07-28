@@ -28,6 +28,9 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 By default, the new [Power Automate pane](working-with-flows.md) is enabled by default. To use the classic Power Automate experience to create a flow, will need to switch back to the old experience manually.
 
+> [!IMPORTANT]
+> It’s recommended that you use the [Power Automate pane](working-with-flows.md) to create a flow. The classic Power Automate experience should only be used for troubleshooting. The classic experience will be retired soon and won't be available.
+
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
 1. Select **Settings** at the top.
