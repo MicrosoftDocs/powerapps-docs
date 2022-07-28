@@ -2,7 +2,7 @@
 title: "Create and edit columns in Dataverse using Power Apps | MicrosoftDocs"
 description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
-ms.date: 07/23/2020
+ms.date: 07/28/2022
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -90,7 +90,6 @@ These columns store data as a number but include different presentation and vali
 |**Timezone**|A number value presented as a drop-down list that contains a list of time zones.|
 |**Language**|A number value presented as a drop-down list that contains a list of languages that have been enabled for the environment. If no other languages have been enabled, the base language will be the only option. The value saved is the Locale Identifier (LCID) value for the language.|
 
-
 ### Date Time
 
 Use these columns to store time values. You can store values as early as 1/1/1753 12:00 AM.
@@ -132,12 +131,13 @@ You can continue to edit the table and add additional columns or return and cont
 ![Save Table button.](media/save-entity-button.png)
 
 You can also select **Discard** to discard the changes you have made.
- 
+
 ## Edit a column
 
 While viewing columns, select the column you want to edit. You can modify the **Display Name** but you cannot change the **Name** and **Data type** if you have saved changes to the table to add the column.
 
-### General Properties
+### General properties
+
 Every column has the following properties you can change:
 
 |Property|Description|
@@ -146,23 +146,6 @@ Every column has the following properties you can change:
 |**Searchable**|De-select this for columns for the table that you don’t use.  When a column is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
 |**Description**|Found within **Advanced Options**. Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
-## Searching and Sorting columns
-
-Most columns have options to enable seraching or sorting of the column's contents. 
-
-### Searchable
-Almost every column data type is created with the Searchable value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types cannot be search enabled:
-> - Image - Images are stored and retrieved using reference URLS and because of this they cannot be searched. 
-> - File - Files are stored and retrieved using reference URLS and because of this they cannot be searched. 
-> - Formulas - Formulas are used to create a dynamically calculated output and because of this cannot be searched.
-The Customer datatype is search enabled by default and this cannot be disabled, it is required to be searchable by the system.
-
-### Sortable
-Almost every data type is created with the Sortable value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types do not provide the ability to enable a sortable attribute:
-> - Formulas - Formulas are used to create a dynamically calculated output and because of this cannot be sorted.
-> - Lookup - Lookups have values that are dynamically retrieved from the source table and because of this cannot be sorted.
-> - Customer - Customer is an out of the box lookup field and cannot be sorted because it is dynamically retrieved.
-
 > [!NOTE]
 >**Making columns required**: Be careful when you make columns required. People will resist using the application if they can’t save rows because they lack the correct information to enter into a required column. People may enter incorrect data simply to save the row and get on with their work.
 >
@@ -170,7 +153,12 @@ Almost every data type is created with the Sortable value disabled. The value ca
 >
 >**Advanced Find availability**: Advanced Find is currently only available for model-driven apps using the Web Client. Advanced find is not currently available in Unified Interface clients.
 
-### Saving rows programmatically for required columns 
+## Searching and sorting columns
+
+For information about columns that can't be enabled for searching or sorting, go to [Searching and sorting columns](types-of-fields.md#searching-and-sorting-columns).
+
+### Saving rows programmatically for required columns
+
 When a row is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. 
 
 Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the row. There are options within the app to override this behavior and allow operation to proceed if needed.

@@ -251,21 +251,26 @@ More information for developers working with file data: [File attributes](../../
 
 Built on Power Fx, use an Fx formula column to perform operations that return values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. More information: [Work with formula columns (preview)](formula-columns.md)
 
-## Searching and Sorting columns
+## Searching and sorting columns
 
-Most columns have options to enable seraching or sorting of the column's contents. 
+Most columns have options to enable searching or sorting of the column's contents. 
 
 ### Searchable
-Almost every column data type is created with the Searchable value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types cannot be search enabled:
-> - Image - Images are stored and retrieved using reference URLS and because of this they cannot be searched. 
-> - File - Files are stored and retrieved using reference URLS and because of this they cannot be searched. 
-> - Formulas - Formulas are used to create a dynamically calculated output and because of this cannot be searched.
-The Customer datatype is search enabled by default and this cannot be disabled, it is required to be searchable by the system.
+
+Almost every column data type is created with the **Searchable** value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types can't be search enabled:
+
+- Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
+- File. Files are stored and retrieved using reference URLS and because of this they can't be searched.
+- Formulas. Formulas are used to create a dynamically calculated output and because of this can't be searched.
+
+The **Customer** datatype is search enabled by default and this can't be disabled. It's required to be searchable by the system.
 
 ### Sortable
-Almost every data type is created with the Sortable value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types do not provide the ability to enable a sortable attribute:
-> - Formulas - Formulas are used to create a dynamically calculated output and because of this cannot be sorted.
-> - Lookup - Lookups have values that are dynamically retrieved from the source table and because of this cannot be sorted.
-> - Customer - Customer is an out of the box lookup field and cannot be sorted because it is dynamically retrieved.
+
+Almost every data type is created with the **Sortable** value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types don't provide the ability to enable a sortable attribute:
+
+- Formulas. Formulas are used to create a dynamically calculated output and because of this can't be sorted.
+- Lookup. Lookups have values that are dynamically retrieved from the source table and because of this can't be sorted.
+- Customer. Customer is a standard lookup field and can't be sorted because it is dynamically retrieved.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
