@@ -209,13 +209,7 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 ## Trigger the flow from within the canvas app
 
-1. Select the **Yes** button > select **Action** > **Power Automate**, and then select the flow created earlier.
-
-    ![Flow triggered by a Powerapp](media/trigger-flow/trigger-the-flow-from-within-the-power-app-1.png "Flow triggered by a Powerapp")
-
-    Function `FlowtriggeredbyaPowerapp.Run(` is also added to the **OnSelect** property.
-
-1. Fill in the two parameters for the To email address and the Body of the email as follows:
+1. Select the **Yes** button > in the **OnSelect** property enter the two parameters for the To email address and the Body of the email as follows:
 
     ```powerapps-dot
     FlowtriggeredbyaPowerapp.Run(
