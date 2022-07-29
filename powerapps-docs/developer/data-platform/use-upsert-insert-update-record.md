@@ -30,7 +30,7 @@ There is a performance penalty in using `Upsert` versus using `Create`. If you a
 
 ## Understanding the Upsert process  
 
-`Upsert` messages are processed on the server. The SDK for .NET classes are proxies for server-side objects. Therefore, the following explaination uses the SDK for .NET classes to describe how an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance is processed what is returned by the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse> instance.
+`Upsert` messages are processed on the server. The SDK for .NET classes use the objects used on the server. Therefore, the following explaination uses the SDK for .NET classes to describe how an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance is processed what is returned by the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse> instance.
 
 The following steps describe the processing logic on the server when an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> is received:  
   
@@ -95,7 +95,7 @@ If you include a `Prefer: return=representation` request header the system will 
 
 With a `PATCH` request you can also include the `If-None-Match: *`  request header to block an `Update` if you only want to create records. More information: [Limit upsert operations](webapi/perform-conditional-operations-using-web-api.md#limit-upsert-operations)
 
-### Sample code
+### Web API Sample code
 
 The following examples show `Upsert` operations using a table with two alternate key columns:
 
@@ -156,7 +156,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/example_records(example_key1=2,
 
 When you use the `Prefer: return=representation` header you can get a different status code in the response to indicate whether the record was created or updated.
 
-The following request creates a new record and returns `201 Created`.
+The following request creates a new record and returns status `201 Created`.
 
 **Request**
 
@@ -226,11 +226,11 @@ OData-Version: 4.0
 
 Your client application will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A?text=IOrganizationService.Execute Method> with an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance which has the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target?text=Target Property> set with an <xref:Microsoft.Xrm.Sdk.Entity> instance containing the data for a `Create` or `Update` operation. The <xref:Microsoft.Xrm.Sdk.Entity> instance will typically have the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property> set with values used to identify the record using alternate keys.
 
-The <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse?text=UpsertResponse> instance <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated?text=RecordCreated Property> tells you whether the record was created, and the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target?text=UpsertResponse.Target> contains a reference to the record that was created or updated.
+The <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated?text=UpsertResponse.RecordCreated Property> tells you whether the record was created, and the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.Target?text=UpsertResponse.Target> contains a reference to the record that was created or updated.
   
 <a name="BKMK_SampleCode"></a>
 
-### Sample code
+### SDK for .NET Sample code
 
 The [SampleMethod.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/orgsvc/C%23/InsertRecordUsingUpsert/InsertRecordUsingUpsert/SampleMethod.cs) file in the [Insert record using Upsert](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/InsertRecordUsingUpsert/InsertRecordUsingUpsert) sample contains the following `ProcessUpsert` method to apply the `UpsertRequest` message on the contents of an XML file to create new records or update existing ones.  
   
@@ -271,7 +271,7 @@ public static void ProcessUpsert(CrmServiceClient service, String Filename)
                 Console.WriteLine("Existing record {0} is updated!", productName);
         }
 
-        // Catch any service fault exceptions that Microsoft Dynamics CRM throws.
+        // Catch any service fault exceptions that Dataverse throws.
         catch (FaultException<Microsoft.Xrm.Sdk.OrganizationServiceFault>)
         {
             throw;
