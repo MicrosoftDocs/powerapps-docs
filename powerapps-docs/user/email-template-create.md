@@ -90,8 +90,7 @@ You can use either the enhanced email template editor or the default email templ
 
 ### Enhanced email template editor
 > [!NOTE]
-> - October 2020, this feature will be enabled by default.
-> - An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
+> An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
 The enhanced email template editor is displayed the enhanced email template editor option is enabled. 
 
