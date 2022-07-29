@@ -24,6 +24,9 @@ search.app:
  All columns have the properties listed in [Common column properties](common-field-properties-legacy.md), but certain columns have additional properties, such as this entitlement column that can be opened from the main form for the case table.  
 
 ![special-properties-dialog.](media/special-properties.png)
+
+> [!NOTE]
+> This article describes properties for the classic experience. For information about lookup column properties in the modern for designer, go to [Configure a lookup component on a form](form-designer-add-configure-lookup.md).
   
 <a name="BKMK_LookupFieldProperties"></a>  
 
@@ -41,17 +44,17 @@ search.app:
   
 ### Possible relationship combinations
   
-|First list relationship|Second list relationship|Available?|  
-|-----------------------------|------------------------------|----------------|  
-|N:1|1:N|Yes|  
-|N:1|N:1|Yes|  
-|N:1|N:N|Yes|  
-|1:N|1:N|Yes|  
-|1:N|N:1|No|  
-|1:N|N:N|No|  
-|N:N|1:N|Yes|  
-|N:N|N:1|No|  
-|N:N|N:N|No|  
+|First list relationship|Second list relationship|Available?|
+|-----------------------------|------------------------------|----------------|
+|N:1|1:N|Yes|
+|N:1|N:1|Yes|
+|N:1|N:N|Yes|
+|1:N|1:N|Yes|
+|1:N|N:1|No|
+|1:N|N:N|No|
+|N:N|1:N|Yes|
+|N:N|N:1|No|
+|N:N|N:N|No|
   
 <a name="BKMK_TwoOptionProperties"></a>   
 
