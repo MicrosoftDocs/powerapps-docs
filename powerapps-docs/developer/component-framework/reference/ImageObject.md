@@ -38,7 +38,7 @@ Name of the file.
 
 Size of the file in KB.
 
-**Type**: `Number`
+**Type**: `number`
 
 ### mimeType
 
