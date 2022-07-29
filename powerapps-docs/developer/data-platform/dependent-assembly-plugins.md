@@ -32,7 +32,7 @@ Without dependent assemblies, all plug-ins are registered as individual .NET Fra
 
 With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. Unlike ILMerge, you can also include other file resources, such as JSON files containing localized strings. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
 
-When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PlugPackage` and changes to the related plugin assemblies will be managed on the server.
+When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PluginPackage` and changes to the related plugin assemblies will be managed on the server.
 
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
