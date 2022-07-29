@@ -28,7 +28,7 @@ For more information about using the customization user interface (UI), see [Ena
 
 There are two ways to check whether change tracking is enabled for a table using Web API.
 
-You can query `EntityDefinitions` with the following query:
+You can query `EntityDefinitions` with the following GET request:
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true
@@ -36,7 +36,7 @@ GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filte
 
 More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 
-You can also find this in the Web API $metadata service document. The annotation `Org.OData.Capabilities.V1.ChangeTracking` is set for entity sets that have change tracking enabled.
+You can also find this information in the Web API $metadata service document. The annotation `Org.OData.Capabilities.V1.ChangeTracking` is set for entity sets that have change tracking enabled.
 
 To see annotations in the Web API CDSL service document, use this Web API query:
 
@@ -64,7 +64,7 @@ Delta links are opaque, service-generated links that the client uses to retrieve
 
 ### Retrieve changes in tables using Web API example
 
-This example shows how to retrieve changes made in for account table data using the Web API.
+This example shows how to retrieve changes made for the account table using the Web API.
 
 **Request**
 
@@ -152,7 +152,7 @@ Content-Type: application/json
 
 ### Query options not supported in Change Tracking Web API request
 
-System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using the `Prefer: odata.track-changes` header in Web API request. An error message saying `The \"${filter|orderby|expand|top}\" query parameter isn't supported when Change Tracking is enabled.` will be returned when using these query options in the Web API request.
+System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using the `Prefer: odata.track-changes` header in Web API request. An error message: `The \"${filter|orderby|expand|top}\" query parameter isn't supported when Change Tracking is enabled.` will be returned when using these query options in the Web API request.
 
 
 ## Retrieve changes for a table using .NET SDK

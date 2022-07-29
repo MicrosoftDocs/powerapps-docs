@@ -46,10 +46,7 @@ When an alternate key is defined for a lookup column, you must use the name of t
 
 You have to be aware of the following conditions and possible exceptions when using alternate keys:  
   
-- The primary key value will be used if it is provided. If it is not provided, Dataverse will try to use.  If the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> is not provided, it will throw an error.  
-- If the provided <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> includes one column that is the primary key of the table and the value is valid, it populates the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with the provided value.  
-- If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the primary key value of the record that matched the provided alternate key values, and populate the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with this value.  
-- If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
+- If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required. The error message is: `The key in the request URI is not valid for resource 'Microsoft.Dynamics.CRM.<table logical name>'. Ensure that the names and number of key properties match the declared or alternate key properties for the resource 'Microsoft.Dynamics.CRM.<table logical name>'.`  
 
 More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
 
@@ -86,7 +83,7 @@ thing["example_name"] = "Test Name";
 
 ## Using the EntityReference class
 
-When you create an instance of the <xref:Microsoft.Xrm.Sdk.EntityReference?text=EntityReference Class> you can specify the keys to use to identify the record using the following <xref:Microsoft.Xrm.Sdk.EntityReference.%23ctor?text=EntityReference Constructors> that use the same pattern as the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class>.
+When you create an instance of the <xref:Microsoft.Xrm.Sdk.EntityReference?text=EntityReference Class> you can specify the keys to use to identify the record using the following <xref:Microsoft.Xrm.Sdk.EntityReference.%23ctor?text=EntityReference Constructors> that use the same pattern as the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class> constructors.
 
 ```csharp
 // For use with the primary key

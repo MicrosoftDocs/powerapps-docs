@@ -88,7 +88,7 @@ The difference between `Upsert` and `Update` is defined by whether the `If-Match
 
 If the `If-Match: *` request header is not included, the `PATCH` request is treated like an `Upsert` and a new record will be created if no records matching the keys in the URL are found. However, unlike the SDK, the response will not tell you whether a record was created. The status response will be `204 No Content` in either case.
 
-If you include a `Prefer: return=representation` request header the system will return a `201 Created` status for `Create`, and a `200 OK` status for `Update`. This adds an additional `Retrieve` operation so it has an impact on performance, which is why you are using `Upsert` in the first place. If you use this option, make sure that the `$select` query option you add only includes the primary key value. More information:
+If you include a `Prefer: return=representation` request header the system will return a `201 Created` status for `Create`, and a `200 OK` status for `Update`. This adds an additional `Retrieve` operation so it has an impact on performance. If you use this option, make sure that the `$select` query option you add only includes the primary key value. More information:
 
 - [Create with data returned](webapi/create-entity-web-api.md#create-with-data-returned)
 - [Update with data returned](webapi/update-delete-entities-using-web-api.md#update-with-data-returned)
@@ -101,7 +101,7 @@ The following examples show `Upsert` operations using a table with two alternate
 
 #### Create with Upsert
 
-This request results in creating a record.
+This request creates a record.
 
 **Request**
 
@@ -190,7 +190,7 @@ OData-Version: 4.0
 
 #### Update with Upsert and return=representation preference
 
-This request updates the record created by the request above and returns status 200 OK to show that this was an update operation.
+This request updates the record created by the request above and returns status `200 OK` to show that this was an update operation.
 
 **Request**
 
