@@ -106,7 +106,7 @@ This is a user account in Microsoft Power Platform with **Access Mode** set to *
 
 ### System administrator
 
-*System administrator* is a Microsoft Power Platform security role. This role has full permissions to customize and administrator a Microsoft Power Platform environment.
+*System administrator* is a Microsoft Power Platform security role. This role has full permissions to customize and administer a Microsoft Power Platform environment.
 
 To assign a user the System administrator Power Platform role, go to [Configure user security to resources in an environment](/power-platform/admin/database-security).
 
