@@ -95,7 +95,7 @@ The column filtering for the current query. This is supported in both model-driv
 | 88    | DoesNotContainValues  | No                | Yes         |
 
 > [!NOTE]
-> Filtering feature is only available to Dataverse data source and some limited support for Collections.
+> Filtering feature is only available to Dataverse data source.
 
 **Type**: [Filtering](filtering.md)
 
@@ -139,7 +139,7 @@ IDs of the records in the dataset, order by the query response result. This is s
 The sorting status for the current query. This is supported in both model-driven and canvas apps. Sorting can be configured for a dataset by setting `context.parameters.[dataset_property_name].sorting = [SortStatus]`. Once sorting is configured, calling `context.parameters.[dataset_property_name].refresh()` retrieves the sorted data from the data source.
 
 > [!NOTE]
-> Sorting feature is only available to Dataverse data source and some limited support for Collections.
+> Sorting feature is only available to Dataverse data source.
 > Also, if sorting is re-configured it will reset the filter `context.parameters.[dataset_property_name].filtering`
 
 **Type**: [SortStatus](sortstatus.md)[]
