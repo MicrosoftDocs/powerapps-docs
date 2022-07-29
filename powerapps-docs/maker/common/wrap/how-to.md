@@ -174,6 +174,14 @@ Optional. Additional app(s) to bundle within the same mobile app package. More i
 
 Determines the output type of the wrap build process based on the platform you select. More information: [App platform(s)](overview.md#app-platforms)
 
+### Sign my app (preview)
+  
+**Optional** Azure Keyvault URI allows for automated app signing for distribution by configuring a keyvault containing the required certificates. More information: [Set up KeyVault for automated signing](how-to.md#set-up-keyvault-for-automated-signing)
+ > [!IMPORTANT]
+ > - This is a preview feature.
+ > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+
 ### Bundle ID
 
 Bundle ID that uniquely identifies the mobile app. For example, `com.contoso.myapp`. More information: [Bundle ID](overview.md#bundle-id)
@@ -239,14 +247,54 @@ Takes you to the app settings. Also available using the shake gesture. Can't be 
 - **Clear cache** - resets the wrapped app to default settings.
 - **App settings** - shows a list of apps that are part of the current package. Selecting an app from this list shows the app details, including the connector information that the app might be configured to use.
 
+  
+## Set up KeyVault for automated signing
+  
+**Prerequisites**
+  
+- You'll need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
+- Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
+- Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Admin access for your tenant.
+   
+Follow these steps to configure KeyVault URI:
+  
+1. Sign in to your tenent as an admin and [create an Azure service principal](/powershell/azure/create-azure-service-principal-azureps?#create-a-service-principal) for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) 
+  
+2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For more information, see [Steps to assign an Azure role](/azure/key-vault/general/quick-create-portal).
+
+3. Create or access existing keyvault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
+4. Depending on your device, do one of following:
+   - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
+  
+     :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
+     > [!NOTE]
+      > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
+  
+   - For iOS: 
+     1. Install the .cer into Keychain Access app by double clicking it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
+        > [!NOTE]
+        > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
+     2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
+        - Mac: base64 `-i example.mobileprovision`
+        - Windows:  `certutil -encode data.txt tmp.b64`
+     
+     3. Get the outputted `base64` string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
+  
+        :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
+
+  5. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
+  
+     :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
+  
 ## Code signing
 
 [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
 - [Code signing for Android](code-sign-android.md)
+- [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
-For more information, see [Code signing for Android](https://developer.android.com/studio/publish/app-signing) and [Code signing for iOS](https://developer.apple.com/support/code-signing/).
 
 ## Test and distribute mobile app package
 
