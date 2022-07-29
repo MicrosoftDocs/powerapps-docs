@@ -44,6 +44,9 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 
 You must enable the site setting to enable the portals Web API for your portal. You can also configure the field-level Web API that determines the table fields that can or can't be modified with the portals Web API.
 
+> [!NOTE]
+> Use the table [logical name](../../developer/data-platform/entity-metadata.md) for these settings (for example **account**).
+
 | Site setting name | Description|
 | - |- |
 | *Webapi/\<table name\>/enabled* | Enables or disables the Web API for \<table name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
@@ -75,7 +78,10 @@ You don't need to include an authentication code, because authentication and aut
 
 ## Using EntitySetName
 
-When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](../../developer/data-platform/entity-metadata.md#table-names), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
+When referring to Dataverse tables using the portals Web API in your code, you need to use the [EntitySetName](../../developer/data-platform/entity-metadata.md#table-names), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**; `/_api/accounts()`.
+
+> [!NOTE]
+> Use the table logical name for [site settings](#site-settings-for-the-web-api) (for example, **account**).
 
 You can determine the **EntitySetName** of specific tables by following these steps: 
 
