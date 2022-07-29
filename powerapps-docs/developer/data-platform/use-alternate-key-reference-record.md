@@ -42,6 +42,15 @@ The following table provides examples showing how to reference records using rel
 
 When an alternate key is defined for a lookup column, you must use the name of the corresponding [Lookup Property](webapi/web-api-properties.md#lookup-properties). A lookup property follows the following naming convention: `_<name of single-valued navigation property>_value`.
 
+## Exceptions when using alternate keys with the Web API
+
+You have to be aware of the following conditions and possible exceptions when using alternate keys:  
+  
+- The primary key value will be used if it is provided. If it is not provided, Dataverse will try to use.  If the <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> is not provided, it will throw an error.  
+- If the provided <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> includes one column that is the primary key of the table and the value is valid, it populates the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with the provided value.  
+- If the key columns are provided, the system attempts to match the set of columns provided with the keys defined for the <xref:Microsoft.Xrm.Sdk.Entity>.  If it does not find a match, it will throw an error.  If it does find a match, it will validate the provided values for those columns. If valid, it will retrieve the primary key value of the record that matched the provided alternate key values, and populate the <xref:Microsoft.Xrm.Sdk.Entity.Id?text=Entity.Id Property> or <xref:Microsoft.Xrm.Sdk.EntityReference.Id?text=EntityReference.Id Property> with this value.  
+- If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required.  
+
 More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
 
 # [SDK for .NET](#tab/sdk)
@@ -93,7 +102,7 @@ public EntityReference(string logicalName, KeyAttributeCollection keyAttributeCo
 
 <a name="BKMK_Exceptions"></a>
 
-## Exceptions when using alternate keys
+## Exceptions when using alternate keys with the SDK for .NET
 
 You have to be aware of the following conditions and possible exceptions when using alternate keys:  
   
