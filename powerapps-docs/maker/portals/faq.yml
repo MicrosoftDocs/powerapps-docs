@@ -2,10 +2,10 @@
 metadata:
   title: Frequently asked questions | Microsoft Docs
   description: Frequently asked questions in Power Apps portals.
-  author: sandhangitmsft
-  
+  author: sandhangitmsft  
   ms.topic: faq
   ms.custom: 
+  ms.subservice: portals
   ms.date: 11/3/2021
   ms.author: sandhan
   ms.reviewer: ndoelman
