@@ -19,10 +19,10 @@ contributors:
 
 # Code sign for Android 
 
-In this article, you'll learn about how to code sign for Android (APK). You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
+In this article, you'll learn about how to code sign for Android. You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
-> [!IMPORTANT]
-> If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
+> [!TIP]
+> For general guidance about signing an app for Android platforms, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Prepare your PC
 
@@ -54,17 +54,7 @@ Parameters:
 
 Example:
 
-
-
-- If preparing Keyvault, PATH_TO_KEYSTORE should have .pfx extension.
-
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
-
-
-- If preparing for manual signing, PATH_TO_KEYSTORE should have .jks extension.
-
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
-
+`keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
 
 :::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
 

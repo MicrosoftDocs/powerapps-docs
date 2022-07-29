@@ -124,10 +124,6 @@ Intended platforms for the app that you want to go through the build process for
 
 - **iOS** creates IPA package
 - **Android** creates APK package
-- **Google Play Store** creates AAB package (This is a preview feature)
-    >[!IMPORTANT]
-    > Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
 
 ### Application (client) ID
 
