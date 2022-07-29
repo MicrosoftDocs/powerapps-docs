@@ -26,10 +26,10 @@ Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/workin
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description         |
-| -------------- | -------- | -------- | ------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------- |
-| `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number              | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+| Parameter Name | Type                                                                                                           | Required | Description               |
+| -------------- | -------------------------------------------------------------------------------------------------------------- | -------- | ------------------------- |
+| `columnName`   | `string`                                                                                                       | Yes      | Name of the column.       |
+| `value`        | `string | Date | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes      | New value for the record. |
 
 ## Return Value
 
