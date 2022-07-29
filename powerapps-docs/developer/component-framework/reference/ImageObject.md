@@ -1,6 +1,6 @@
 ---
-title: FileObject | Microsoft Docs
-description: Provides access to all the properties of a file.
+title: ImageObject | Microsoft Docs
+description: Provides access to all the properties of an image.
 ms.author: noazarur
 author: noazarur-microsoft
 manager: lwelicki
@@ -9,12 +9,12 @@ ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
- - JimDaly
+  - JimDaly
 ---
 
-# FileObject
+# ImageObject
 
-[!INCLUDE [fileobject-description](includes/fileobject-description.md)]
+[!INCLUDE [ImageObject-description](includes/ImageObject-description.md)]
 
 ## Available for
 
@@ -43,6 +43,12 @@ Size of the file in KB.
 ### mimeType
 
 File MIME type.
+
+**Type**: `string`
+
+### thumbnailUrl
+
+URL pointing to the thumbnail version of the image, if available.
 
 **Type**: `string`
 

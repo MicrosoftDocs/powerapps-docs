@@ -32,7 +32,7 @@ Model-driven and canvas apps
 
 ## Return Value
 
-Type: `string | Date | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject`
+Type: string | Date | number | number[] | boolean | EntityReference | EntityReference[] | [FileObject](./../fileobject.md) | [ImageObject](./../ImageObject.md)
 
 > [!NOTE]
 > For Canvas apps some attributes for file columns will be missing on the first call, since they depend on some async functions. After async functions resolve they will caches values and next `getValue` call will fetch all existing attributes.
