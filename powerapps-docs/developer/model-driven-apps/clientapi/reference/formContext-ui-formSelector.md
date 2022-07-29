@@ -27,6 +27,9 @@ The **formContext.ui.formSelector** property lets you work with form items where
 > [!NOTE]
 > The `formContext.ui.formSelector`is not supported for quick create forms.
 
+> [!NOTE]
+> The form selector is not visible if the user only has access to one main form
+
 Form Items are available through any of the following:
 
 - **formselector.items** collection: A collection of all the form items accessible to the current user. Only those forms that share an association with one of the user’s security roles are available in this collection. Example:
