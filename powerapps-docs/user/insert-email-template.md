@@ -47,7 +47,7 @@ After you select **Insert Template**, a window appears displaying a list of exis
 ### Enhanced email template selection dialog (preview)
 
 > [!Note] 
-> This is an early access feature and is available in environments with  Microsoft Dynamics 365 for Service package installed. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates). Starting October 2022, this feature will be enabled by default.
+> This is an early access feature and is available in environments with  Microsoft Dynamics 365 for Service package installed. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates). 
 
 The application displays the enhanced email template selection window only if your admin has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions in the enhanced email template selection window:
 
