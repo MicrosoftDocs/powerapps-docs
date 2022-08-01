@@ -31,7 +31,7 @@ With Power Apps model-driven apps, forms provide the user interface that people 
 
 :::image type="content" source="../../maker/model-driven-apps/media/form-no-header.png" alt-text="Example model-driven App form":::
 
-In the default solution or an unmanaged solution, it is possible to create new forms or edit existing forms for all tables that allow form customization.
+In the default solution or an unmanaged solution, it's possible to create new forms or edit existing forms for all tables that allow form customization.
 
 ## Model-driven app form UI enhancements (preview)
 
@@ -39,10 +39,10 @@ In the default solution or an unmanaged solution, it is possible to create new f
 
 Form UI enhancements consist of multiple small changes to improve data presentation and usability of model-driven app forms:
 
-- Forms have a light gray background which removes the white-on-white section treatment that helps users by providing easier visual navigation.
-- There is a better delineation between sections as white space is reduced and shadow and rounded corners to borders are added. 
+- Forms have a light gray background, which removes the white-on-white section treatment that helps users by providing easier visual navigation.
+- There's a better delineation between sections as white space is reduced and shadow and rounded corners to borders are added. 
 - Form field dividers are removed and consistent font styling is used across section labels.
-- The **Related** tab has an added chevron to indicate the dropdown flyout, which opens-up when you select it.
+- The **Related** tab has an added chevron to indicate the dropdown flyout, which opens-ups when you select it.
 
    :::image type="content" source="media/form-ux1.png" alt-text="Form UI enhancements screenshot":::
 
@@ -56,11 +56,11 @@ This section describes form customization when the form is in an unmanaged or ma
 
 ### Forms inside unmanaged solutions
 
-In an unmanaged solution, it is possible to edit the properties, including columns, views, and forms, for an unmanaged custom table that was created for the solution.  Unmanaged solutions are where app makers and developers go to author changes that they require and typically exist in a development environment.
+In an unmanaged solution, it's possible to edit the properties, including columns, views, and forms, for an unmanaged custom table that was created for the solution.  Unmanaged solutions are where app makers and developers go to author changes that they require and typically exist in a development environment.
 
 ### Forms inside managed solutions
 
-In a managed solution, typically in a production environment, it is not possible by default to create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms for that table.
+In a managed solution, typically in a production environment, it isn't possible by default to create new forms or edit existing forms for tables. However, if the managed properties for a table in the managed solution are set to allow customization, you can add or edit forms for that table.
 
 [Learn more about solutions](../../maker/data-platform/solutions-overview.md)
 
@@ -81,7 +81,7 @@ More information: [Types of forms in Power Apps](types-forms.md).
 
 The fundamentals of building a model-driven app include creating a table, configuring data views, and creating and editing forms.
 
-Before you begin to build forms, it is worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms will be a reflection of the number of columns in your table in addition to the complexity of your business process.
+Before you begin to build forms, it's worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms will be a reflection of the number of columns in your table in addition to the complexity of your business process.
 
 [Learn to create, edit, or configure forms using the form designer](create-and-edit-forms.md)
 
@@ -93,8 +93,8 @@ There are a couple of reasons you may not be able to delete a form.
 
 |Reason  |Work around  |
 |---------|---------|
-| Every table requires at least one main form and it is the only main form for the table.   |  Create a new main form for the table. Then delete the main form you tried earlier.  More information: [Create a form](create-and-edit-forms.md#create-a-form)   |
-| Every table requires one designated fallback form and it is the only fallback form.   | Create a new form for the table and set as the fallback. Or designate another existing form as the fallback form. Then delete the form you tried earlier. More information: [Set the fallback form for a table](control-access-forms.md#set-the-fallback-form-for-a-table)     |
+| Every table requires at least one main form and it's the only main form for the table.   |  Create a new main form for the table. Then delete the main form you tried earlier.  More information: [Create a form](create-and-edit-forms.md#create-a-form)   |
+| Every table requires one designated fallback form and it's the only fallback form.   | Create a new form for the table and set as the fallback. Or designate another existing form as the fallback form. Then delete the form you tried earlier. More information: [Set the fallback form for a table](control-access-forms.md#set-the-fallback-form-for-a-table)     |
 
 ## Controlling the display of a form within an app
 
@@ -132,7 +132,7 @@ When we set the default form order this is done at the level of the **table** an
 
 :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-order.png" alt-text="select forms order":::
 
-5. Once in the form order area use the handles to move the order of the forms.
+5. Once in the form order area uses the handles to move the order of the forms.
 
 6. Select **Save and Publish** to save the form order changes.
 
@@ -140,7 +140,7 @@ When we set the default form order this is done at the level of the **table** an
 
 Power Apps provides many options for designing forms using the form designer.
   
-There are still a number of tables, referred to here as classic tables, that retain the appearance and capabilities from earlier versions. These tables are used less often. They are listed here:  
+There are still a number of tables, referred to here as classic tables, that retain the appearance and capabilities from earlier versions. These tables are used less often. They're listed here:  
 
 :::row:::
    :::column span="":::
