@@ -7139,6 +7139,16 @@
       "source_path": "powerapps-docs/maker/portals/admin/change-dynamics-instance.md",
       "redirect_url": "powerapps-docs/maker/portals/admin/update-dynamics365-instance.md",
       "redirect_document_id": "false"
-    }
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/dynamics365/customer-service/cs-email-template-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/customize-insert-email-template.md",
+      "redirect_url": "/dynamics365/customer-service/customize-insert-email-template",
+      "redirect_document_id": "false"
+    }    
   ]
 }
