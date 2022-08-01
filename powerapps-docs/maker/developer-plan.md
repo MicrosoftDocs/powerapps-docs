@@ -5,7 +5,7 @@ author: marcelbf
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 07/20/2022
+ms.date: 08/01/2022
 ms.author: marcelbf
 ms.reviewer: tapanm
 contributors:
@@ -160,10 +160,11 @@ Resetting a developer environment isn't currently supported; however, it can be 
 
 However, even after deleting a user's developer environment, a new developer environment will be created when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have the **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new developer environment.
 
-To remove the Developer Plan capability from a user permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must:
-- Remove the **Microsoft Power Apps for Developer** license. For more information, see  [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference);
-- Disable [self-service sign-up](/azure/active-directory/enterprise-users/directory-self-service-signup);
-- Explicitly block all "internal" consent plans in the tenant using PowerShell. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands). 
+To remove the Developer Plan capability from a user permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform all of the following actions:
+
+- Remove the **Microsoft Power Apps for Developer** license. For more information, see  [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
+- Disable [self-service sign-up](/azure/active-directory/enterprise-users/directory-self-service-signup).
+- Explicitly block all "internal" consent plans in the tenant using PowerShell. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
 No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps.
