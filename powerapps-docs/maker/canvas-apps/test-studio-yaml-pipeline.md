@@ -80,7 +80,7 @@ You can find a sample file, Samples/TestAutomationURLs.json, in the repo you cre
 
     ![Update the JSON file.](media/test-studio-classic-pipeline-editor/json-update.png "Update the JSON file")
 
-### Step 3 - Create an Azure Pipeline YAML file
+### Step 3 - Create an Azure Pipelines YAML file
 
 You can find a sample file, Samples/azure-pipelines.yml, in the repo you created earlier.
 
