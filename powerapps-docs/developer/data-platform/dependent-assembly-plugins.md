@@ -54,16 +54,9 @@ The following limitations apply to dependent assembly plug-ins.
 
 You are not required to sign plug-in assemblies used in plugin packages.
 
-When registering individual plug-in assemblies without the dependent assemblies feature, siging is required because it provides a unique name for the assembly. But with plug-in assemblies within plug-in package, the assemblies are loaded on the sandbox server using a different mechanism, so signing is not necesssary.
+When registering individual plug-in assemblies without the dependent assemblies feature, signing is required because it provides a unique name for the assembly. But with plug-in assemblies within plug-in package, the assemblies are loaded on the sandbox server using a different mechanism, so signing is not necessary.
 
-However, if you choose to sign your assemblies be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed.
-
-> [!NOTE]
-> There is currently a known issue with this public preview. You may get a runtime error when a plug-in assembly is signed and a dependent assembly is not signed. This error is: 
-> ```
-> Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.
-> ```
-> Until this issue is addressed, we recommend you only use dependent assemblies that are signed.
+However, if you choose to sign your assemblies be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed. If any signed assemblies depend on unsigned assemblies, you will get an error like the following: `Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.`
 
 ## Tooling options
 
