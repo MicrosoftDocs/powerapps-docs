@@ -56,7 +56,7 @@ When using the SDK for .NET, there are two ways to use alternate keys.
 
 ## Using the Entity class
 
-When you create an instance of the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class> you can specify the keys to use to identify the record using the following <xref:Microsoft.Xrm.Sdk.Entity.%23ctor?text=Entity Constructors>:
+When you create an instance of the <xref:Microsoft.Xrm.Sdk.Entity?text=Entity Class> you can specify the keys to use to identify the record using the following [Entity Constructors](/dotnet/api/microsoft.xrm.sdk.entity.-ctor): <!-- Not using <xref:Microsoft.Xrm.Sdk.Entity.%23ctor?text=Entity Constructors>: b/c it links to mid-page -->
 
 ```csharp  
 // For use with the primary key
@@ -67,7 +67,7 @@ public Entity (string logicalName, string keyName, object keyValue) {…}
 public Entity (string logicalName, KeyAttributeCollection keyAttributes) {…}  
 ```
 
-These values are added to the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property>, which is different from the <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes Property>. `KeyAttributes` are used to identify a record. `Attributes` contains the data for the record.
+These values are added to the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property>, not the <xref:Microsoft.Xrm.Sdk.Entity.Attributes?text=Entity.Attributes Property>. `KeyAttributes` are used to identify a record. `Attributes` contains the data for the record.
 
 For example, when a table has an alternate key that includes two alternate key columns, you can define the entity this way.
 
