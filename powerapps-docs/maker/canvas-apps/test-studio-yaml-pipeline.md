@@ -40,7 +40,7 @@ Before you begin, you must complete the following steps:
 
 - Create a new [Test URLs .json file](#step-2---create-a-test-url-json-file) that includes the app test URLs you want to run from the pipeline.
 
-- Create a new [Azure Pipelines YAML file](#step-3---create-an-azure-pipeline-yaml-file). 
+- Create a new [Azure Pipelines YAML file](#step-3---create-an-azure-pipelines-yaml-file). 
 
 - Create a [GitHub service connection](#step-4---create-a-github-service-connection) to your repo.
 
@@ -142,7 +142,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Existing Azure Pipelines YAML file**.
 
-1. Set the path to the [Azure YAML pipeline file](#step-3---create-an-azure-pipeline-yaml-file) you created earlier.
+1. Set the path to the [Azure YAML pipeline file](#step-3---create-an-azure-pipelines-yaml-file) you created earlier.
 
 1. Select **Continue**:
 
