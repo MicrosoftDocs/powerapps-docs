@@ -64,6 +64,10 @@ contributors:
    
 1. Click **Save** to save your newly created environment named <b>MyNewEnvironment</b>.
 
+1. With your newly created environment selected, set it as the "active" one by either:
+  1. Clicking the ellipses menu near the top-right and selecting "Set as active environment", or
+  2. Clicking the environment dropdown in the top-right and selecting "<b>MyNewEnvironment</b>".
+
 ### Generate an access token to use with your environment
 
 To connect using **OAuth 2.0**, you must have an access token. Use the following steps to get a new access token:
