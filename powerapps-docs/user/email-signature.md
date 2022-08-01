@@ -56,7 +56,7 @@ You can add a new email signature by:
 
       > [!Note] 
       > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size.
-      > -  You can add only those fields as dynamic placeholders that are linked to the **Record type** user.
+      > -  You can add only those fields as dynamic placeholders that are linked to the **Record type**, user.
       > - Signatures can also be created and used for queues.
       
 ## Manage email signature lists
