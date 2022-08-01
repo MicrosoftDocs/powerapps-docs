@@ -39,7 +39,7 @@ Based on the email's sender specified in the **From** field, one of the followin
 
 - If the sender is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the user.
 - If the sender is set to a queue and the  queue's owner is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the queue's owner. 
- - If the sender is set to a queue and the queue's owner is a team, the the dynamic placeholders are replaced with the values corresponding to the team's Administrator.
+ - If the sender is set to a queue and the queue's owner is a team, the the dynamic placeholders are replaced with the values corresponding to the team's administrator.
 
 
 ## Create an email signature
@@ -55,8 +55,8 @@ You can add a new email signature by:
    2. **Signature editor**. This allows you to create your email signature and **Save** when finished. 
 
       > [!Note] 
-      > - You can  include inline images, such as a business logo, in an email signatures, as long as they are under 1 MB in size.
-      > -  You can insert dynamic placeholders in your signature templates. You can only add fields that are linked to the **Record type**, User as dynamic placeholders.
+      > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size.
+      > -  You can add only those fields as dynamic placeholders that are linked to the **Record type** user.
       > - Signatures can also be created and used for queues.
       
 ## Manage email signature lists
