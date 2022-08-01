@@ -110,13 +110,13 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 > 1. Locate the file `\pac\tools\featureflags.json`
 > 1. Open the file in VS Code and look at or near the bottom for the setting `VerbPluginInitNupkg`.
 > 1. Change the `VerbPluginInitNupkg` setting from `off` to `on`.
-> 
-> Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
-> 
-> 1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
-> 1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
-> 
-> These steps will ensure that the NuGet package generated will be correct. PAC CLI version 1.16 is expected in the first week of August. These steps are not required with that version.
+
+Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
+
+1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
+1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
+
+These steps will ensure that the NuGet package generated will be correct. PAC CLI version 1.16 is expected in the first week of August. These steps are not required with that version.
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
 
