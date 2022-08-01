@@ -17,7 +17,7 @@ contributors:
   - larryk78
 ---
 
-# Code sign for Android
+# Code sign for Android 
 
 In this article, you'll learn about how to code sign for Android. You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
@@ -41,6 +41,7 @@ We'll use **keytool.exe** (available after installing Android Studio, from the f
 To generate a key, open a command prompt and run the following command:
 
 `keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 100`
+
 
 Parameters:
 
