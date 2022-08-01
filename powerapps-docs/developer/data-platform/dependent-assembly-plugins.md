@@ -59,7 +59,7 @@ When registering individual plug-in assemblies without the dependent assemblies 
 However, if you choose to sign your assemblies be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed.
 
 > [!NOTE]
-> There is currently a known issue with this public preview. You may get a runtime error when a dependent assembly is not signed. This error is: 
+> There is currently a known issue with this public preview. You may get a runtime error when a plug-in assembly is signed and a dependent assembly is not signed. This error is: 
 > ```
 > Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.
 > ```
