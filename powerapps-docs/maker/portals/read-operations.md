@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/15/2022
+ms.date: 08/02/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -211,7 +211,7 @@ The following example shows how to compare columns using the Web API:
 Use the **$expand** system query option in the navigation properties to control what data from related entities is returned.
 
 > [!NOTE]
-> Table logical/schema name? [here](../../data-platform/webapi/query-data-web-api.md#retrieve-data-about-lookup-properties)
+> You will need to use the lookup column [schema name](../../developer/data-platform/entity-metadata.md#table-names) when building `$expand' query statements in your code.
 
 ### Retrieve related table records by expanding single-valued navigation properties
 
@@ -219,7 +219,7 @@ The following example shows how to retrieve the contact for all the account reco
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|
-| GET | `[Portal URI]/_api/accounts?$select=name&$expand=primarycontactid($select=contactid,fullname)`</br></br>**Example:**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=name&$expand=primarycontactid($select=contactid,fullname)` |
+| GET | `[Portal URI]/_api/accounts?$select=name&$expand=PrimaryContactId($select=contactid,fullname)`</br></br>**Example:**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=name&$expand=PrimaryContactId($select=contactid,fullname)` |
 
 **Sample response**
 
