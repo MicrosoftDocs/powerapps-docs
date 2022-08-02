@@ -1,7 +1,7 @@
 ---
 title: "Update and delete table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete table rows using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 08/01/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -233,7 +233,7 @@ If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sd
 The following example shows how to update an `Account` using an alternate key defined for the `accountnumber` column (attribute).
 
 > [!IMPORTANT]
-> By default there are no alternate keys defined for any tables. This method can only be used when the environment is configured to define an alternate key for a table.
+> Most tables for business data do not have alternate keys defined. This method can only be used when the environment is configured to define an alternate key for a table.
 
 ```csharp
 var accountNumberKey = new KeyAttributeCollection();
