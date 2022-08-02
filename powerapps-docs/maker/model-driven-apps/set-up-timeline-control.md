@@ -432,7 +432,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
   - Display option: Always show, show on expand, or hide the body text.
 - Footer
   - Label option: Show or hide the label, "Created on", "Modified on", or "Overridden on".
-  - Data column: Select to show the createdon or modifiedon date.
+  - Data column: Select to show the created on or modified on date.
   - Display option: Always show, show on expand, this footer containing the createdon or modifiedon date.
 
 ## Configure mentions in notes and posts on timeline
