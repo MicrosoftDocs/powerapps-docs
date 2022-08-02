@@ -30,7 +30,7 @@ You can open an `entityrecord` or an `entitylist` view in Power Apps mobile by u
 
 If you're already signed in to your instance in the app, the target record is displayed when you follow the link from an external app. Otherwise, you're prompted to sign in to your instance in the mobile app; after you're signed in, the target element is displayed. You must have Power Apps mobile installed on your mobile device to use this feature.
 
-## Supported URL parameters
+## Supported Urls parameters for a model-driven app
 
 Use the following application handler and query string parameters to compose the URL.
 
@@ -40,13 +40,12 @@ Deep links for Power Apps mobile should start with the following:
 
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
+| &lt;targeted-app&gt; | <ul><li>ms-dynamicsxrm -> Dynamics for phones</li><li> ms-apps-fs -> Field Service</li><li>ms-apps-sales -> Sales</li><li>ms-apps -> Power Apps<br><br>**Note**: The <ms-app> protocol only works with Power Apps. It doesn't with Dynamics 365 Sales, Field Service (Dynamics 365), or Microsoft Dynamics 365 Customer Engagement (on-premises).                                                                     |
 | &lt;org-url&gt;      | Connects to the correct org URL                                              |
 | &lt;app-id&gt;       | Opens the correct app module                                                 |
 | tenantId             | Connects to the correct tenant                                               |
 | forceOfflineDataSync | Ensures that data sync is triggered so that all the latest data is available |
-| isShortcut           | TBD                                                                          |
-| openApp              | TBD                                                                          |
-| restartApp           | TBD                                                                          |
+
 
 If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters.
 
@@ -72,3 +71,13 @@ If the link goes to an `entitylist` view, add the following parameters.
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Open a create form for Bookable resource booking | ms-apps:// &lt;org-url&gt;\_&lt;app-id&gt;?tenantId=&lt;tenant-id&gt;&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true&etn=bookableresourcebooking&pagetype=entityrecord&id=    |
 | Open a Bookable resource booking with id=xyz     | ms-apps:// &lt;org-url&gt;\_&lt;app-id&gt;?tenantId=&lt;tenant-id&gt;&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true&etn=bookableresourcebooking&pagetype=entityrecord&id=xyz |
+
+## Supoprted Urls parameters for a canvas app
+  
+```ms-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
+
+| **Parameter**        | **Description**                                                              |
+|----------------------|------------------------------------------------------------------------------|
+| &lt;app-id&gt;       | Opens the correct app module                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+  
