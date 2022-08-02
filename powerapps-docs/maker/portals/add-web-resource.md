@@ -41,7 +41,7 @@ The attachment file is now named attachment.zip.txt. By default, Dataverse  has 
 
 To see and interact with the file stored in Azure, you must add the web resource *adx.annotations.html* to the form. As a pre-requisite, ensure that your users have read access to adx_setting table. Otherwise, the web resource won't render properly.
 
-1. In the form editor for the relevant form, In the **Components** area, in the **Display** section, select the **HTML web Resource**.
+1. In the form editor for the relevant form, In the **Components** area, in the **Display** section, select the **HTML web resource**.
 
 1. In the **Add HTML web resource** box, select **adx_annotations/adx.annotations.html** and choose **Add**.
 
