@@ -255,7 +255,7 @@ When you expand the **Activities record settings** on the timeline component sec
 
 #### Enable status tags on activity record types
 
-Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default.
+Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default. 
 
 |Form designer configuration view | Form designer display view|
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -269,7 +269,24 @@ App makers have the ability to enable activity types so they can be created dire
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11a.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11b.png "Display the option to create directly from timeline") |
-| To allow users to create activity types directly from the timeline, check the box next to **Create directly from timeline**.| When enabled, the activity type will appear in a dropdown box on the  **Create a timeline record** ![Icon for create a timeline record.](media\timeline-create-a-record-icon.png "Icon for create a timeline record") icon in the top-right of the timeline.|
+| To allow users to create activity types directly from the timeline, check the box next to **Create directly from timeline**.<br> | When enabled, the activity type will appear in a dropdown box on the  **Create a timeline record** ![Icon for create a timeline record.](media\timeline-create-a-record-icon.png "Icon for create a timeline record") icon in the top-right of the timeline.|
+
+#### Set create activities form type in the timeline
+
+Specify a form type in **Create activities using** to create the selected activity in either the Default, Quick create form, Main form or Main form dialog form types. When the user selects the activity from the create a timeline record, the activity opens in the selected form type. 
+
+> [!NOTE]
+> The Main form dialog option is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
+
+#### Set open activities form type in the timeline (Preview)
+
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
+For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+
+Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form or Main form dialog form types. When the user selects the activity record, it opens in the selected form type. 
+
+#### Set the activity rollup type in timeline
 
 #### Create and use card forms in timeline
 
@@ -347,24 +364,18 @@ When using Sort date, keep in mind the following:
 
 #### Set create activities form type in the timeline
 
+
 ![How to set create activities form type in timeline.](media\timeline-how-to-set-create-activities-form-type-1a.png "How to set create activities form type in timeline")
 
 1. **Create activities using** lets you choose which type of form users will work in based on your business needs.  
 2. Select **Quick create form**, **Main form** , or **Main form dialog**. There are some activities that don't support quick create forms, such as email, and will use a main form or a main form dialog. More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms) and [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
 
-> [!NOTE]
-> The **Main form dialog** is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
 
-#### Set open activities form type in the timeline(Preview)
-
-> [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
-For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+#### Set open activities form type in the timeline
 
 ![How to set create activities form type in timeline.](media\timeline-how-to-set-open-activities-form-type-1a.png "How to set create activities form type in timeline")
 
-1. **Open activities using** lets you set the type of form users can open activity records from.  
-2. Select **Main form dialog** or **Main form**.
+Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form or Main form dialog form types. When the user selects the activity record, it opens in the selected form type.
 
 #### Set the activity rollup type in timeline
 
