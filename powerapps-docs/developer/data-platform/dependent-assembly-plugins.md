@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/28/2022
+ms.date: 08/01/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -32,7 +32,7 @@ Without dependent assemblies, all plug-ins are registered as individual .NET Fra
 
 With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. Unlike ILMerge, you can also include other file resources, such as JSON files containing localized strings. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
 
-When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PlugPackage` and changes to the related plugin assemblies will be managed on the server.
+When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PluginPackage` and changes to the related plugin assemblies will be managed on the server.
 
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
@@ -49,6 +49,14 @@ The following limitations apply to dependent assembly plug-ins.
 - A plugin package is limited to 16 MB in size or 50 assemblies.
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
+
+## Signing Assemblies
+
+You are not required to sign plug-in assemblies used in plugin packages.
+
+When registering individual plug-in assemblies without the dependent assemblies feature, signing is required because it provides a unique name for the assembly. But with plug-in assemblies within plug-in package, the assemblies are loaded on the sandbox server using a different mechanism, so signing is not necessary.
+
+However, if you choose to sign your assemblies be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed. If any signed assemblies depend on unsigned assemblies, you will get an error like the following: `Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.`
 
 ## Tooling options
 
@@ -77,18 +85,38 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 
 ### Create a Visual Studio project
 
+> [!IMPORTANT]
+> If you are using PAC CLI version 1.15, you should perform the steps below:
+> 
+> 1. Determine the location of your installed pac.exe. Use the VS Code terminal with this command:
+>    
+>    ```powershell
+>    Get-Command pac.exe
+>    ```
+>    
+> 1. The `Source` column will tell you the path. It should be something like:
+>    
+>    ```
+>    c:\Users\you\AppData\Roaming\Code\User\globalStorage\microsoft-isvexptools.powerplatform-vscode\pac\
+>    ```
+>    
+> 1. Locate the file `\pac\tools\featureflags.json`
+> 1. Open the file in VS Code and look at or near the bottom for the setting `VerbPluginInitNupkg`.
+> 1. Change the `VerbPluginInitNupkg` setting from `off` to `on`.
+
 Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
 1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
 1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
+
+These steps will ensure that the NuGet package generated will be correct. PAC CLI version 1.16 is expected in the first week of August. These steps are not required with that version.
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
 
 Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the project in the `bin\Debug` or `bin\Release` folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
 
 > [!NOTE]
-> It is no longer required to sign the assemblies when using dependent assemblies. But in .NET, signed assemblies cannot use resources contained within unsigned assemblies, so you may still want to sign your assemblies.
-
+> It is no longer required to sign the assemblies when using dependent assemblies. More information: [Signing Assemblies](#signing-assemblies)
 
 ### Add a dependent assembly using NuGet
 
@@ -190,7 +218,7 @@ See the following topics related to installing and using Power Platform Tools fo
 - [Quickstart: Create a Power Platform Tools project](tools/devtools-create-project.md)
 - [Quickstart: Create a plug-in using Power Platform Tools](tools/devtools-create-plugin.md)
 
-You will generally use the same process to create and manage plug-ins using Power Platform Tools for Visual Studio, however signing the assemblies is no longer required.
+You will generally use the same process to create and manage plug-ins using Power Platform Tools for Visual Studio, however signing the assemblies is no longer required. More information: [Signing Assemblies](#signing-assemblies).
 
 #### Enable Plugin Packages for Power Platform Tools
 
