@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/26/2022
+ms.date: 08/02/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -55,6 +55,9 @@ You can further configure the timeline control to allow site users to add, updat
 1. The notes configuration settings are displayed. Most of the settings are collapsed by default. You can expand a section to see more settings.
 
     ![Notes options.](media/configure-notes/notes-options.png)
+
+    > [!NOTE]
+    > If you want to enable storing note attachments in Azure, you will need to first [enable Azure storage](enable-azure-storage.md) for note attachments as well as update the **File Attachment Location** option to **Azure Blob Storage**.
 
 1. Fill in the fields by entering appropriate values. These settings are explained in more detail below under [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options).
 
