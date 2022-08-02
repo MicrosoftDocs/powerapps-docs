@@ -65,12 +65,6 @@ If the link goes to an `entitylist` view, add the following parameters.
 | viewid=&lt;view-id&gt;                                       | Designates which view to open                                       |
 | Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Designates whether we're going to a system view or a personal view |
 
-### Example URLs
-
-| **Action**                                       | **Example of a deep-link URL**                                                                                                                                                                                                  |
-|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Open a create form for Bookable resource booking | ms-apps:// &lt;org-url&gt;\_&lt;app-id&gt;?tenantId=&lt;tenant-id&gt;&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true&etn=bookableresourcebooking&pagetype=entityrecord&id=    |
-| Open a Bookable resource booking with id=xyz     | ms-apps:// &lt;org-url&gt;\_&lt;app-id&gt;?tenantId=&lt;tenant-id&gt;&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true&etn=bookableresourcebooking&pagetype=entityrecord&id=xyz |
 
 ## Supoprted Urls parameters for a canvas app
   
