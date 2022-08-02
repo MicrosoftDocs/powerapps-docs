@@ -352,11 +352,18 @@ When using Sort date, keep in mind the following:
 1. **Create activities using** lets you choose which type of form users will work in based on your business needs.  
 2. Select **Quick create form**, **Main form** , or **Main form dialog**. There are some activities that don't support quick create forms, such as email, and will use a main form or a main form dialog. More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms) and [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
 
-#### Set open activities form type in the timeline
+> [!NOTE]
+> The **Main form dialog** is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
 
-![How to set create activities form type in timeline.](media\timeline-how-to-set-create-activities-form-type-1a.png "How to set create activities form type in timeline")
+#### Set open activities form type in the timeline(Preview)
 
-1. **Open activities using** lets you choose from which type of form users can access .  
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
+For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+
+![How to set create activities form type in timeline.](media\timeline-how-to-set-open-activities-form-type-1a.png "How to set create activities form type in timeline")
+
+1. **Open activities using** lets you set the type of form users can open activity records from.  
 2. Select **Main form dialog** or **Main form**.
 
 #### Set the activity rollup type in timeline
@@ -412,7 +419,7 @@ To enable rich text posts on the timeline, contact [Microsoft Support](/power-pl
 |Form designer configuration view | Form designer display view|
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 |![Posts on timeline](media\timeline-posts-1c-rich-text.png "Posts on timeline") |![Posts on timeline - Runtime](media\timeline-posts-1b.png "Posts on timeline - Runtime")|
-|The **Posts** the section expands when enabled and allows you to:<br> 1. Select **Enable user posts** enabling users to leave a message on the record<br> 2. Select **Enable simple auto posts** to display posts in the card form. <br> 3. **Sort posts by** date created or date modified. The **Created On** date is the default setting.<BR> | 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
+|The **Posts** the section expands when enabled and allows you to:<br> 1. Select **Enable user posts** enabling users to leave a message on the record<br> 2. Select **Enable simple auto posts** to display posts in the existing card form. <br> 3. **Sort posts by** date created or date modified. The **Created On** date is the default setting.<BR> | 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
 
 #### Configure the form for posts
 
@@ -432,7 +439,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
   - Display option: Always show, show on expand, or hide the body text.
 - Footer
   - Label option: Show or hide the label, "Created on", "Modified on", or "Overridden on".
-  - Data column: Select to show the created on or modified on date.
+  - Data column: Select to show the createdon or modifiedon date.
   - Display option: Always show, show on expand, this footer containing the createdon or modifiedon date.
 
 ## Configure mentions in notes and posts on timeline
