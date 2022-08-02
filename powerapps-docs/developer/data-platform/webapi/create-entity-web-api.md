@@ -72,6 +72,9 @@ You can compose your `POST` request so that data from the created record will be
 
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
+> [!NOTE]
+> Currently, there is a known issue where expanding a collection that is two levels deep may result in that collection being represented as an empty array in the `POST` response. This issue only affects the `POST` response; the correct data was inserted into the database.
+
 When an entity is created in this way the `OData-EntityId` header containing the URI to the created record is not returned.
 
 This example creates a new account entity and returns the requested data in the response.
