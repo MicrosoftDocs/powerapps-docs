@@ -1,5 +1,5 @@
 ---
-title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
+title: "Create virtual tables using virtual connectors (preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
 ms.date: 08/01/2022
 ms.reviewer: matp
@@ -267,8 +267,9 @@ Return to the Power Apps home page and select **Data**. Your virtual table is no
 
 :::image type="content" source="../../developer/data-platform/virtual-entities/media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
 
-> [!IMPORTANT] 
-> - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider. 
+> [!IMPORTANT]
+>
+> - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider.
 > - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
 > - All columns in the external data are automatically mapped to Dataverse types that are supported by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
 > - Virtual tables require there to be at least one string field to use as the **Primary Name** column.
@@ -278,6 +279,7 @@ Once you've created a virtual table, you can work with it much the same way as a
 ### Setting up virtual table relationship
 
 Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and N:N relationships. Relationships can be established between:
+
 - Local tables in Dataverse and virtual tables.
 - Virtual tables and other virtual tables from the same provider, for example SQL->SQL.
 
@@ -291,7 +293,7 @@ The following example creates an N:1 relationship between a virtual table (**Ser
 
 A representation of the **Service Request** virtual table is shown below. You'll notice that the **AccountId** column, which is the column used for relationship in the external source, is of type **Multiple Line of Text**. You need to have this column represented as a **Lookup** type to create a relationship.
 
-:::image type="content" source="../../developer/data-platform/virtual-entities/media/ve-create-columns.png" alt-text="Create columns in virtual table":::
+:::image type="content" source="../../developer/data-platform/media/ve-create-columns.png" alt-text="Create columns in virtual table":::
 
 1. Go to **Advanced settings > Settings > Customization** and choose **Customize the System**.
 1. In the left navigation pane, expand the **Entities** view and browse to the **Service Request** virtual table definition.
@@ -306,16 +308,16 @@ A representation of the **Service Request** virtual table is shown below. You'll
    1. The **Name** column automatically populates with the lookup column name.
    1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
    
-      :::image type="content" source="../../developer/data-platform/virtual-entities/media/ve-create-relationship.png" alt-text="Create relationship":::
+      :::image type="content" source="../../developer/data-platform/media/ve-create-relationship.png" alt-text="Create relationship":::
    
 1. Refer to the columns for the **Service Request** virtual table, and you'll notice that the **AccountID** column isn't a **Lookup** type. This column can now
 be added to forms and views to see all associated accounts for each of the service request record.
 
-   :::image type="content" source="../../developer/data-platform/virtual-entities/media/ve-custom-table-columns.png" alt-text="Custom table columns":::
+   :::image type="content" source="../../developer/data-platform/media/ve-custom-table-columns.png" alt-text="Custom table columns":::
 
 1. With the relationship established you can now create a new service request and pick accounts to associate them to.
 
-   :::image type="content" source="../../developer/data-platform/virtual-entities/media/ve-new-custom-table.png" alt-text="New custom table":::
+   :::image type="content" source="../../developer/data-platform/media/ve-new-custom-table.png" alt-text="New custom table":::
 
   > [!NOTE]
   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
