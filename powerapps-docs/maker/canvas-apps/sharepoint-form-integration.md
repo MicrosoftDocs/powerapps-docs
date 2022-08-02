@@ -6,7 +6,7 @@ author: NickWaggoner
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/22/2021
+ms.date: 08/02/2022
 ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
@@ -15,8 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
-  - navjotm
-  - wimcoor
+  - amchern
   - lancedMicrosoft
 ---
 # Understand SharePoint forms integration
@@ -141,7 +140,7 @@ Now that you have a better understanding of the default generated form and the *
 
 - Collection variables aren't reset on closing the Power Apps form and the state is persisted for the entire session. That's why, if there are any use-cases where the variables need to be reset, clear the variables in the **OnView** property of the SharePointIntegration object.
 
-- Do not use imperative commands such as **Launch()** in the SharePointIntegration properties (i.e. OnNew, OnView, etc.). This can cause unexpected behavior as SharePointIntegration lifecycle events, such as selections changing, can fire in the background even when the form is not visible.
+- Don't use imperative commands such as **Launch()** in the SharePointIntegration properties (such as OnNew and OnView). This use can cause unexpected behavior since the SharePointIntegration lifecycle events (such as selections changing) can trigger in the background even when the form is not visible.
 
 ### See also
 
