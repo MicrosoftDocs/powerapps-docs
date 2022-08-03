@@ -123,7 +123,7 @@ Custom public views added by a managed solution should only be deleted by uninst
 
 ## Customize views
 
-As a system customizer you can customize views and subgrids through controls by making them read-only or editable as well as display a jump bar.
+As a system customizer you can customize views and subgrids through controls by making them read-only or editable as well as display an alphabetic list at the bottom of views or subgrids (jump bar).
 
 The following controls are available:
 
