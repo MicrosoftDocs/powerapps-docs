@@ -2,9 +2,8 @@
 title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
 ms.custom: intro-internal
-ms.date: 03/19/2020
+ms.date: 08/03/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -26,17 +25,15 @@ search.app:
 ---
 # Understand model-driven app views
 
-
-
-Model-driven apps use views to define how a list of rows for a specific table are displayed in the application.
+Model-driven apps use views to define how a list of records for a specific table are displayed in the application.
 
 A view defines:
 
 - The columns to display.
 - The order of the columns.
 - How wide each column should be.
-- How the list of rows should be sorted by default.
-- The default filters applied to restrict the rows that will appear.
+- How the list of records should be sorted by default.
+- The default filters applied to restrict the records that will appear.
 
 Once a view has been made available in the app, the user can select it.
 
@@ -64,7 +61,7 @@ Users may want to view data in relation to a table in a range of ways. A drop-do
 
 Personal views are included above the list of system or public views that are available in the app. This makes it easier for users to find the data that is important to them.
 
-The rows that are visible in views are displayed in a list. Views frequently provide options for users to change the default sorting, column widths, and filters to more easily find the data that's important to them.
+The records that are visible in views are displayed in a list. Views frequently provide options for users to change the default sorting, column widths, and filters to more easily find the data that's important to them.
 
 Views are not only used by users within model-driven apps, they can also be used to define the data source in, for example,  charts that are used in the application.
 
@@ -90,12 +87,12 @@ As system administrator, you can modify the access level for each action in the 
 |---------|---------|
 |Quick Find     | The default view used when searches are performed using Quick Find. This view also defines which columns are searched when using search capabilities of Quick Find and Lookup views.        |
 |Advanced Find     |  The default view used to display results when using Advanced Find. This view also defines the columns used by default when new custom public views or personal views are created without defining a view to use as a template.       |
-|Associated     |  The default view that lists the related tables for a row.       |
-|Lookup     | The view that is displayed when you select a row to set for a [lookup](../model-driven-apps/model-driven-app-glossary.md#lookup)  column.        |
+|Associated     |  The default view that lists the related tables for a record.       |
+|Lookup     | The view that is displayed when you select a record to set for a [lookup](../model-driven-apps/model-driven-app-glossary.md#lookup)  column.        |
 
 These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You can't delete or deactivate these views. For more information about removing views, go to [Remove views](remove-views.md).
 
-System views are owned by the organization so that everyone can view them. For example, everyone has organization-level access to read rows for the view (`savedquery`) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.
+System views are owned by the organization so that everyone can view them. For example, everyone has organization-level access to read records for the view (`savedquery`) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.
 
 > [!Note]
 > System views are cached for performance optimization purposes and therefore plugins on the `savedquery` table aren't supported.
@@ -126,12 +123,16 @@ Custom public views added by a managed solution should only be deleted by uninst
 
 ## Customize views
 
-As a system customizer you can customize the views through controls by making grids (lists) editable.
+As a system customizer you can customize views and subgrids through controls by making them read-only or editable as well as display an alphabetic list at the bottom of views or subgrids (jump bar).
 
-The following controls are used:
+The following controls are available:
 
-- Editable grid: Allows users to do rich in-line editing directly from grids and subgrids whether they're using a web app, tablet, or phone. For more information, go to [Make grids editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md)
-- Read only grid: Provides users an optimal viewing and interaction experience for any screen size or orientation such as mobiles and tablets by using responsive design principles. For more information, go to [Specify properties for Unified Interface apps](specify-properties-for-unified-interface-apps.md)
+|Grid control name  |Read-only or editable?  |Description  |
+|---------|---------|---------|
+|**Power Apps grid control (Preview)**     |  Read-only or editable   | Currently in preview, this grid control includes accessibility enhancements and will become the default grid control used in views and subgrids. This control will eventually replace all other grid controls. More information: [Power Apps grid control (preview)](the-power-apps-grid-control.md)       |
+|**Power Apps Read-Only Grid**     | Read-only    | Modern grid with accessibility enhancements released in October 2021 and became the default read-only grid experience in April 2022. More information: [Power Apps read-only grid control](power-apps-grid-control.md)       |
+|**Editable Grid**  |  Editable only    | Legacy grid control. More information: [Make model-driven app views editable using the editable grid control](make-grids-lists-editable-custom-control.md)        |
+|**Read-Only Grid**  | Read-only    |  Legacy grid control that is deprecated. More information: [ The legacy read-only grid in model-driven apps is deprecated](/power-platform/important-changes-coming#the-legacy-read-only-grid-in-model-driven-apps-is-deprecated)    |
 
 ## Next steps
 

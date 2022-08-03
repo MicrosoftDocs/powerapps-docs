@@ -144,7 +144,7 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 > [!NOTE]
 > This is a preview feature.
 >
-> For empty table data, only near real-time data is created.
+> For empty table data and metadata table, only near real-time data is created.
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.
