@@ -1133,6 +1133,6 @@ See the [organization_organizationdatasyncsubscription](organization.md#BKMK_org
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.organizationdatasyncsubscription?text=organizationdatasyncsubscription EntityType" />
