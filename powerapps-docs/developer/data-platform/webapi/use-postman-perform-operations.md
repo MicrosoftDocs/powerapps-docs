@@ -100,7 +100,7 @@ The body of the response looks like this:
     }
 }
 ```
-More information: [Retrieve a table using the Web API](retrieve-entity-using-web-api.md).
+More information: [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md).
 
 ## Create a record
 
@@ -116,7 +116,7 @@ Set the body of the request with information about the account to create.
 
 When you send this request, the body will be empty, but the ID of the created account will be in the `OData-EntityId` header value.
 
-More information: [Create a table using the Web API](create-entity-web-api.md).
+More information: [Create a table row using the Web API](create-entity-web-api.md).
 
 ## Update a record
 
@@ -128,7 +128,7 @@ Use the `PATCH` method to update a table record, as shown here.
 
 When you send this request, the response body will be empty, but the ID of the updated account will be in the `OData-EntityId` header value.
 
-More information: [Update and delete tables using the Web API](update-delete-entities-using-web-api.md).
+More information: [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md).
 
 ## Delete a record
 
@@ -140,7 +140,7 @@ Use the `DELETE` method to delete an existing record.
 
 When you send this request, the account record with the given `accountid` gets deleted.
 
-More information: [Update and delete tables using the Web API](update-delete-entities-using-web-api.md).
+More information: [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md).
 
 ## Use a function
 

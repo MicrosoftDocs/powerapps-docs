@@ -3946,6 +3946,6 @@ See the [BusinessUnit_Calendar](calendar.md#BKMK_BusinessUnit_Calendar) one-to-m
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.businessunit?text=businessunit EntityType" />

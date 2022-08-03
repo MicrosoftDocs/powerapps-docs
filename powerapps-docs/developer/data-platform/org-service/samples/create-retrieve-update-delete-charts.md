@@ -51,7 +51,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. The `presentationXml` method sets the presentation XML string. 
 2. The `dataXml` method sets the data XML string.
-3. The `newUserOwnedVisualization` method creates the visualization table instance.
+3. The `newUserOwnedVisualization` method creates the visualization record.
 4. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
 5. The `newDataXml` method updates the name and the data description string.
 

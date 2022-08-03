@@ -27,7 +27,7 @@ Microsoft Dataverse provides support for a set of conditional operations that re
 
 The HTTP protocol defines an *entity tag*, or [ETag](/openspecs/windows_protocols/ms-odata/c4d715eb-10f6-47fa-9ccc-2ebf926558a6) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
   
-Dataverse generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve a table using the Web API](retrieve-entity-using-web-api.md).  
+Dataverse generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md).  
   
 <a name="bkmk_ifMatchHeaders"></a>
  
@@ -243,10 +243,10 @@ OData-Version: 4.0
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
