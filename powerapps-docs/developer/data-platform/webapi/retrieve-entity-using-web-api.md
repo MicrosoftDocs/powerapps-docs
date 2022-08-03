@@ -19,7 +19,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Use a `GET` request to retrieve data for a table specified as the resource with a unique identifier. When retrieving a table row (entity record) you can also request specific properties and expand navigation properties to return properties from related tables.  
+Use a `GET` request to retrieve data for a record specified as the resource with a unique identifier. When retrieving a table row (entity record) you can also request specific properties and expand navigation properties to return properties from related records in different tables.  
 
 > [!NOTE]
 > For information about retrieving table definitions, see [Query table definitions using the Web API](query-metadata-web-api.md).
@@ -45,7 +45,7 @@ To retrieve more than one entity record at a time, see [Basic query example](que
 
 ## Retrieve specific properties
 
-Use the `$select` system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using `$select`, all properties will be returned.  
+Use the `$select` system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using `$select`, all properties will be returned.  
 
 The following example retrieves `name` and `revenue` properties  for the account entity with the primary key value equal to 00000000-0000-0000-0000-000000000001
 
@@ -218,19 +218,19 @@ OData-Version: 4.0
 
 <a name="bkmk_expandRelated"></a>
 
-## Retrieve related tables for a table by expanding navigation properties
+## Retrieve related records by expanding navigation properties
 
 Use the `$expand` system query option to control what data from related entities is returned. There are two types of navigation properties:  
 
 - *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity.
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.  
 
-If you simply include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.
+If you simply include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.
 
 > [!NOTE]
 > To retrieve related entities for entity sets, see [Retrieve related table records with a query](retrieve-related-entities-query.md).  
 
-- **Retrieve related entities for an entity instance by expanding single-valued navigation properties**: <br />The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
+- **Retrieve related records by expanding single-valued navigation properties**: <br />The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
 
   **Request**
 
@@ -381,15 +381,15 @@ If you simply include the name of the navigation property, you’ll receive all 
   ```
 
 > [!NOTE]
-> You can’t use the `/$ref` or `/$count` path segments to return only the URI for the related entity or a count of the number of related entities.
+> You can't use the `/$ref` or `/$count` path segments to return only the URI for the related entity or a count of the number of related entities.
 
 <a name="bkmk_optionsOnExpand"></a>
 
-## Options to apply to expanded tables
+## Options to apply to expanded records
 
  You can apply certain system query options on the entities returned for a collection-valued navigation property. Use a semicolon-separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. You can use `$select`, `$filter`, `$orderby`, `$top`, and `$expand`.
 
- The following example filters the results of task entities related to an `account` to those with a subject that ends with “1.”
+ The following example filters the results of task entities related to an `account` to those with a subject that ends with "1."
 
 ```http
 ?$expand=Account_Tasks($filter=endswith(subject,'1');$select=subject)  
@@ -418,13 +418,13 @@ The following example specifies that related tasks should be returned in ascendi
 >
 > - Each request can include a maximum of 15 `$expand` options. There is no limit on the depth of nested `$expand` options, but the limit of 15 total `$expand` options applies to these as well.
 >
-> - This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, and `$levels` aren’t supported for the Web API.
+> - This is a subset of the system query options described in the "11.2.4.2.1 Expand Options" section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, and `$levels` aren't supported for the Web API.
 
 More information about nested $expand option use: [Multi-level expand of single-valued navigation properties](retrieve-related-entities-query.md#multi-level-expand-of-single-valued-navigation-properties)
 
 <a name="bkmk_DetectIfChanged"></a>
 
-## Detect if a table has changed since it was retrieved
+## Detect if a record has changed since it was retrieved
 
 As a performance best practice you should only request data that you need. If you have previously retrieved an entity record, you can use the *ETag* associated with a previously retrieved record to perform conditional retrievals on that record. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged).
 
@@ -441,9 +441,9 @@ Requesting formatted values for individual record retrievals is done the same wa
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />

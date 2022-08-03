@@ -710,6 +710,6 @@ See the [lk_importbase_createdby](systemuser.md#BKMK_lk_importbase_createdby) on
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.import?text=import EntityType" />

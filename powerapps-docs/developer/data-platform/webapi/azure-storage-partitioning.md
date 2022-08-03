@@ -3,7 +3,6 @@ title: "Access entity data faster using storage partitions (Microsoft Dataverse)
 description: "Learn how to improve access performance for non-relational entity data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 01/27/2021
 ms.reviewer: pehecke
-
 ms.topic: article
 author: Peakerbl # GitHub ID
 ms.author: peakerbl # MSFT alias of Microsoft employees only

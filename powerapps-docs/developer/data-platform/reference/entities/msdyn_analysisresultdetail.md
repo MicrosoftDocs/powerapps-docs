@@ -986,6 +986,6 @@ See the [msdyn_msdyn_analysisresult_msdyn_analysisresultdetail_AnalysisResult](m
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysisresultdetail?text=msdyn_analysisresultdetail EntityType" />

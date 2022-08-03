@@ -822,6 +822,6 @@ See the [appmodule_userrating_app](appmodule.md#BKMK_appmodule_userrating_app) o
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.userrating?text=userrating EntityType" />

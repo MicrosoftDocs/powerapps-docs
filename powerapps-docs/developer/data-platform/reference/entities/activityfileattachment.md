@@ -1048,6 +1048,6 @@ See the [post_comment_activity_file_attachment](postcomment.md#BKMK_post_comment
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.activityfileattachment?text=activityfileattachment EntityType" />
