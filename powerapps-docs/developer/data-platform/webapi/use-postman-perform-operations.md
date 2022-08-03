@@ -144,7 +144,7 @@ More information: [Update and delete table rows using the Web API](update-delete
 
 ## Use a function
 
-Use a `GET` request with the functions listed in [Web API Function Reference](/dynamics365/customer-engagement/web-api/functions) to perform reusable operations with the Web API. The example that follows shows how to send a Web API request that uses the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function /> to detect and retrieve duplicates of a specified record.
+Use a `GET` request with the functions listed in [Web API Function Reference](/dynamics365/customer-engagement/web-api/functions) to perform reusable operations with the Web API. The example that follows shows how to send a Web API request that uses the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function> to detect and retrieve duplicates of a specified record.
 
 |HTTP method|URL|
 |----|----|
@@ -152,7 +152,7 @@ Use a `GET` request with the functions listed in [Web API Function Reference](/d
 
 ![Create a Web API request that uses functions.](media/postman-use-function.png "Create a Web API request that uses functions")
 
-Functions return either a collection or a complex type. The response from the preceding <xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function" /> should look like this:
+Functions return either a collection or a complex type. The response from the preceding <xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates function"> should look like this:
 
 ```json
 {
@@ -171,13 +171,13 @@ More information: [Use Web API functions](use-web-api-functions.md).
 
 Use a `POST` request with the actions listed in [Web API Action Reference](/dynamics365/customer-engagement/web-api/actions) to perform operations that have side effects.
 
-This example shows how to use <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />.
+This example shows how to use <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action">.
 
 `POST` `{{webapiurl}}BulkDetectDuplicates`
 
 ![Create a Web API request that uses actions.](media/postman-use-action.png "Create a Web API request that uses actions")
 
-The request in the example just shown submits an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicatesResponse?text=BulkDetectDuplicatesResponse ComplexType" /> is returned as a response from <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action" />. The response includes the `JobId` property, which contains the GUID of the asynchronous duplicate detection job that detects and logs duplicate records.
+The request in the example just shown submits an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicatesResponse?text=BulkDetectDuplicatesResponse ComplexType"> is returned as a response from <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates action">. The response includes the `JobId` property, which contains the GUID of the asynchronous duplicate detection job that detects and logs duplicate records.
 
 More information: [Use Web API actions](use-web-api-actions.md).
 

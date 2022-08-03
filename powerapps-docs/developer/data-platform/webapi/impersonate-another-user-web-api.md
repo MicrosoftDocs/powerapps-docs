@@ -38,12 +38,13 @@ User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is inc
 
 There are two ways you can impersonate a user, both of which are made possible by passing in a header with the corresponding user id.
 
- 1. **Preferred:** Impersonate a user based on their Azure Active Directory (AAD) object id by passing that value along with the header `CallerObjectId`.
-2. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
+1. **Preferred:** Impersonate a user based on their Azure Active Directory (AAD) object id by passing that value along with the header `CallerObjectId`.
+1. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
 
- In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id `e39c5d16-675b-48d1-8e67-667427e9c084`.   
+ In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id `e39c5d16-675b-48d1-8e67-667427e9c084`.
   
- **Request**  
+ **Request**
+
 ```http 
 POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1  
 CallerObjectId: e39c5d16-675b-48d1-8e67-667427e9c084  
@@ -55,7 +56,8 @@ OData-Version: 4.0
 {"name":"Sample Account created using impersonation"}  
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -66,19 +68,20 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000
 
 ## Determine the actual user
 
-When an operation such as creating an entity is performed using impersonation, the user who actually performed the operation can be found by querying the record including the `createdonbehalfby` single-valued navigation property. A corresponding modifiedonbehalfby single-valued navigation property is available for operations that update the entity.  
+When an operation such as creating an entity is performed using impersonation, the user who actually performed the operation can be found by querying the record including the `createdonbehalfby` single-valued navigation property. A corresponding `modifiedonbehalfby` single-valued navigation property is available for operations that update the entity.  
   
  **Request**
 
-```http 
+```http
 GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000000000003)?$select=name&$expand=createdby($select=fullname),createdonbehalfby($select=fullname),owninguser($select=fullname) HTTP/1.1   
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 ```  
   
- **Response**  
-```http 
+ **Response**
+
+```http
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
 ETag: W/"506868"  

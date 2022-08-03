@@ -5,7 +5,6 @@ ms.date: 04/26/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
