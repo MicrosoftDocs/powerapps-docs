@@ -307,7 +307,7 @@ A representation of the **Service Request** virtual table is shown below. You'll
    
       :::image type="content" source="../media/ve-create-relationship.png" alt-text="Create relationship":::
    
-1. Refer to the columns for the **Service Request** virtual table, and you'll notice that the **AccountID** column isn't a **Lookup** type. This column can now
+1. Refer to the columns for the **Service Request** virtual table, and you'll notice that the **AccountId** column is now a **Lookup** type. This column can now
 be added to forms and views to see all associated accounts for each of the service request record.
 
    :::image type="content" source="../media/ve-custom-table-columns.png" alt-text="Custom table columns":::
