@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 08/01/2022
+ms.date: 08/03/2022
 ms.reviewer: matp
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -22,6 +22,7 @@ contributors:
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions built on Microsoft Power Platform can leverage virtual tables as if they were native Dataverse tables. More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md).
 
 In this public preview release, we're introducing the virtual connector provider that supports creating virtual tables using the following connectors:
+
 - [SQL Server](/connectors/sql/) 
 - Microsoft Excel Online ([Business](/connectors/excelonlinebusiness/))
 - [Microsoft SharePoint](/connectors/sharepointonline/)
@@ -29,10 +30,10 @@ In this public preview release, we're introducing the virtual connector provider
 We'll continue to expand and support other tabular connectors as part of this provider in subsequent releases.
 
 To learn more about supported actions and limitations, see:
+
 - [Connector reference for the SQL Server connector](/connectors/sql/)
 - [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
 - [Connector reference for the SharePoint Online connector](/connectors/sharepointonline).
-
 
 ## Overview
 
@@ -49,7 +50,7 @@ Virtual connector provider streamlines the creation experience by automating som
 
 The **Entity Catalog** doesn't persist any information and always represents the external data source's current state. You can select tables from the **Entity Catalog** to create virtual tables. If you're working with multiple external data sources, an **Entity Catalog** is generated for each external source.
 
-The underlying data source is key for allowing the provider to establish an authenticated remote connection to the external data. It uses a connection reference that stores pertinent details regarding the external source. The information stored in the connection reference is specific to the connector type and the connection it refers to. 
+The underlying data source is key for allowing the provider to establish an authenticated remote connection to the external data. It uses a connection reference that stores pertinent details regarding the external source. The information stored in the connection reference is specific to the connector type and the connection it refers to.
 
 :::image type="content" source="media/ve-connector-provider-overview.png" alt-text="Virtual connectors provider overview":::
 
@@ -74,7 +75,6 @@ Creating a virtual table with the virtual connector provider includes the follow
 1. [Create the Data Source](#create-the-data-source)
 1. [Entity Catalog](#entity-catalog)
 1. [Setting up virtual table relationship](#setting-up-virtual-table-relationship)
-
 
 ### Download and install the virtual connector
 
@@ -197,10 +197,10 @@ Now create the virtual table data source in Dataverse.
    - SQL Server
       - Leave the Data Source field empty
    - Microsoft Excel Online (Business)
-      - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (Ex: SampleData.xlsx)      
+      - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
    - Microsoft SharePoint
       - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
-      
+
 1. Select **Save**.
 
 ### Entity catalog
@@ -209,10 +209,10 @@ With the connection reference and the virtual table data source setup, an **Enti
 
 :::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
 
-> [!NOTE] 
-> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes. 
+> [!NOTE]
+> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes.
 > - The tables displayed in the entity catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
- 
+
 #### View the entity catalog
   
 - Select **Data** > **Tables**, and then select the entity catalog that was created. 
@@ -225,52 +225,53 @@ With the connection reference and the virtual table data source setup, an **Enti
 
 1. To create a virtual table, a model driven app must be built for the entity catalog. Select the entity catalog table.
 
-2. Select **Create an app** in the top navigation.
+1. Select **Create an app** in the top navigation.
 
-:::image type="content" source="media/entity-catalog-table-selected-table-view.jpg" alt-text="Entity catalog with a table selected, table view":::
+   :::image type="content" source="media/entity-catalog-table-selected-table-view.jpg" alt-text="Entity catalog with a table selected, table view":::
 
-3. Name the app, and then select **Create**.
+1. Name the app, and then select **Create**.
 
-:::image type="content" source="media/Create-an-app-screen.jpg" alt-text="Create a Model Driven app screen":::
+   :::image type="content" source="media/Create-an-app-screen.jpg" alt-text="Create a Model Driven app screen":::
 
-The app is automatically generated using the entity catalog table. 
+The app is automatically generated using the entity catalog table.
 
-4. Once the app is completed, you can select **Publish** to complete the app and use it later, or you can select **Play** to create your virtual table now without publishing the app. 
+1. Once the app is completed, you can select **Publish** to complete the app and use it later, or you can select **Play** to create your virtual table now without publishing the app.
 
-:::image type="content" source="media/completed-model-driven-app.jpg" alt-text="Completed model driven app":::
+   :::image type="content" source="media/completed-model-driven-app.jpg" alt-text="Completed model driven app":::
 
-All eligible data sets from your data source will be provided in the app view.
--   SQL: All tables in the database that are eligible are shown.
--   SharePoint: All lists in the site are shown.
--   Excel: All tables in the Excel file are shown.
+   All eligible data sets from your data source will be provided in the app view.
 
-5. Select the data set you wish to use from the entity catalog, and then select **Edit** in the navigation bar.
+   - SQL: All tables in the database that are eligible are shown.
+   - SharePoint: All lists in the site are shown.
+   - Excel: All tables in the Excel file are shown.
 
-:::image type="content" source="media/model-driven-app-entity-catalog-view.jpg" alt-text="Model Driven app Entity Catalog view with a data set selected":::
+1. Select the data set you wish to use from the entity catalog, and then select **Edit** in the navigation bar.
 
-Wait for the form to fully load before editing. When loaded the form will appear like this:
+   :::image type="content" source="media/model-driven-app-entity-catalog-view.jpg" alt-text="Model Driven app Entity Catalog view with a data set selected":::
 
-:::image type="content" source="media/edit-form-for-entity-catalog-model-driven-app.jpg" alt-text="Entity Catalog edit form all fields blank":::
+   Wait for the form to fully load before editing. When loaded the form will appear like this:
 
-6. In the provided form set the **Create** or **Refresh Entity** column to Yes.
+   :::image type="content" source="media/edit-form-for-entity-catalog-model-driven-app.jpg" alt-text="Entity Catalog edit form all fields blank":::
 
-7. Select the **Primary Key** and **Primary Field** of the virtual entity by using the dropdown lists to find the columns you want to use.
+1. In the provided form set the **Create** or **Refresh Entity** column to Yes.
 
-:::image type="content" source="media/edit-form-entity-catalog-fields-completed.jpg" alt-text="Entity Catalog edit form all fields completed":::
+1. Select the **Primary Key** and **Primary Field** of the virtual entity by using the dropdown lists to find the columns you want to use.
 
-8. Save the record to create the virtual table.
+   :::image type="content" source="media/edit-form-entity-catalog-fields-completed.jpg" alt-text="Entity Catalog edit form all fields completed":::
 
-> [!Note] 
-> After the save completes, the form will "reset" with all fields shown as blank, this is normal.
+1. Save the record to create the virtual table.
 
-Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
+   > [!Note] 
+   > After the save completes, the form will "reset" with all fields shown as blank, this is normal.
 
-:::image type="content" source="media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
+1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
+
+   :::image type="content" source="media/maker-table-view-virtual-table.png" alt-text="Maker portal with virtual table selected":::
 
 > [!IMPORTANT]
 >
 > - Virtual tables no longer require an associated GUID as a primary key with the virtual connector provider.
-> - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table. 
+> - The provider automatically maps the primary key associated with the external data source when creating the virtual table. All CRUD operations can be performed on the generated virtual table.
 > - All columns in the external data are automatically mapped to Dataverse types that are supported by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
 > - Virtual tables require there to be at least one string field to use as the **Primary Name** column.
 
@@ -307,9 +308,9 @@ A representation of the **Service Request** virtual table is shown below. You'll
    1. In the **Lookup Field** section, set the **Display Name** to **Account.**
    1. The **Name** column automatically populates with the lookup column name.
    1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
-   
+
       :::image type="content" source="media/ve-create-relationship.png" alt-text="Create relationship":::
-   
+
 1. Refer to the columns for the **Service Request** virtual table, and you'll notice that the **AccountID** column isn't a **Lookup** type. This column can now
 be added to forms and views to see all associated accounts for each of the service request record.
 
@@ -377,7 +378,7 @@ You currently can't select an **All** view for SharePoint columns on a virtual t
    :::image type="content" source="media/ve-table-creation-pending.png" alt-text="table creation pending":::
 
    Here, table creation failed due to 429 "Too Many Requests" error:
-   
+
    :::image type="content" source="media/ve-table-creation-failed-429-error.png" alt-text="table creation failed due to 429 error":::
 
 - Table creation's system job succeeded but I'm getting runtime errors related to invalid or missing columns<br />
