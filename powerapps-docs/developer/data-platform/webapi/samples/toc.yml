@@ -30,8 +30,6 @@
       href: cdswebapiservice-parallel-operations.md
     - name: Async Parallel Operations
       href: cdswebapiservice-async-parallel-operations.md
-    - name: Global Discovery Service
-      href: global-discovery-service-csharp.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples

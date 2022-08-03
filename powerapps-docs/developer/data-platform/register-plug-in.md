@@ -1,7 +1,7 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/29/2022
+ms.date: 07/12/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
@@ -194,7 +194,7 @@ Asynchronous plug-ins can only be registered for the **PostOperation** stage. Fo
 ### Special step registration scenarios
 There are certain scenarios where a step registration and table combination isn't obvious. This is the result of how the system is designed internally where there's a special relationship between tables or operations. The information below identifies these cases and provides step registration guidance.
 
-- There are certain cases where plug-ins registered for the _Update_ event can be called twice. More information: [Behavior of specialized update operations](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/8c969ed391d6fc8e423bde15c65db1f60f5fab2f/powerapps-docs/developer/data-platform/special-update-operation-behavior.md)
+- There are certain cases where plug-ins registered for the _Update_ event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
 - Register a plug-in step on **account** or **contact** when you want to handle data changes to **customeraddress**, **leadaddress**, **publisheraddress**, or **competitoraddress** table instances.
 
 ### Deployment
@@ -220,6 +220,9 @@ You can write your plug-in to accept string values in the constructor to use thi
 Within your plug-in, you may want to reference primary table property values that weren't included in an operation. For example, in an `Update` operation you might want to know what a value was before it was changed, but the execution context doesn't provide this information, it only includes the changed value.
 
 If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this isn't a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you're interested in as they existed before the operation that you can use to compare with the changed values.
+
+> [!IMPORTANT]
+> The default behavior when creating an entity image is to select all columns. However, this can result in reduced web service performance. Developers should only include those columns that are required.
 
 #### Messages that support entity images
 

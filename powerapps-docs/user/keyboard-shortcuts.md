@@ -29,7 +29,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 |Type | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|
-| General | F2 | Activates the flyout. |
+| General | F2 | Activates the flyouts inlcuding toast notifcations. |
 | Landmark | Ctrl+F6 | Navigates you through the landmarks of a page in clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
 | Landmark | Ctrl+F6+Shift | Navigates you through the landmarks of a page in counter clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
 

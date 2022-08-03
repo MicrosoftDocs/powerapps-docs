@@ -92,7 +92,9 @@ When you refresh your data on a grid view, you'll get notification stating, **Re
 > [!div class="mx-imgBorder"]
 > ![Refreshing offline status.](media/offline-first-4.png)
 
+### See also
 
+[Offline profile guidelines (preview)](mobile-offline-guidelines.md)
 
 
 
