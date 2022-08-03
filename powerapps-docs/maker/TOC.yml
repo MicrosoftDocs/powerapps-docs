@@ -126,7 +126,7 @@
         - name: Convert an email to a template
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
-          href: ../user/email-signature.md
+          href: ../user/email-signature.md 
       - name: Enable the enhanced insert email template
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
@@ -2291,6 +2291,8 @@
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
+      - name: Create virtual tables using virtual connectors (preview)
+        href: ./data-platform/create-virtual-tables-using-connectors.md
   - name: Work with table relationships
     href: ./data-platform/relationships-overview.md
     items:

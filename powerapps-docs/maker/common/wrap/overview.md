@@ -19,6 +19,7 @@ contributors:
 
 # Overview of wrap
 
+
 The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps, for native distribution to mobile users.
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::

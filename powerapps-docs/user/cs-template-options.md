@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Customize an email template using the template editor
+# Customize an email template using the template editor 
 
 > [!NOTE]
 > The enhanced email template editor is available only in Dynamics 365 Customer Service.
