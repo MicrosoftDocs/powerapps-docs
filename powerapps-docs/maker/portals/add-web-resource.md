@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 07/29/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -16,52 +16,50 @@ contributors:
 
 # Add the Azure Storage web resource to a form
 
+> [!NOTE]
+> The steps in this topic describe adding a component to view and add file attachments to Azure for a model-driven app. The control is not usable on a basic or advanced form component on a portal webpage. It is recommended to use a different Dataverse form for creating basic and advanced forms for the portal. See [Enable Azure storage](enable-azure-storage.md#configure-basic-or-advanced-forms) for more information on configuring portal forms to add and view attachments stored in Azure.
+
 Attachments uploaded to Azure Storage (instead of directly to Microsoft Dataverse) can be managed by using notes in Dataverse.
 
-To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
-
-> [!NOTE]
-> In this example, the form is added to the Lead form for the Lead table. We recommend using caution when editing existing forms.
+To enable attachments from a particular form in a model-driven app to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
 
 When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on a table and a placeholder for the attachment.
 
-![Attachment on a form.](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
+:::image type="content" source="media/enable-azure-storage/dataverse-form.png" alt-text="File attachment added to Dataverse form on a model-driven Power App.":::
 
 The attachment file is now named attachment.zip.txt. By default, Dataverse  has no conception of an Azure file, so this placeholder .txt file is stored in Dataverse  instead. The Azure Storage context for the placeholder file shows details about the file.
 ```
 {
- Name: attachment.zip,
- Type: application/x-zip-compressed,
- Size: 24890882,
- "Url": "https://accountname.blob.core.windows.net/storage/81a9a9491c36e51182760026833bcf82/attachment.zip"
+  "Name": "attachment.txt",
+  "Type": "text/plain",
+  "Size": 379,
+  "Url": "https://accountname.blob.core.windows.net/storage/81a9a9491c36e51182760026833bcf82/attachment.txt"
 }
 ```
 
 ## Steps to add the Azure Storage web resource to a form
 
-To see and interact with the file stored in Azure, you must add the web resource adx.annotations.html to the form. As a pre-requisite, ensure that your users have read access to adx_setting. Otherwise, the web resource won't render properly.
+To see and interact with the file stored in Azure, you must add the web resource *adx.annotations.html* to the form. As a pre-requisite, ensure that your users have read access to adx_setting table. Otherwise, the web resource won't render properly.
 
-1. In the form editor for the relevant form, select **Web Resource** on the **Insert** tab.
+1. In the form editor for the relevant form, In the **Components** area, in the **Display** section, select the **HTML web resource**.
 
-2. In the **Web resource** box, select **adx_annotations/adx.annotations.html**.
+1. In the **Add HTML web resource** box, select **adx_annotations/adx.annotations.html** and choose **Add**.
 
-3. Enter a name and label for the resource.
+1. Enter a name and label for the resource.
 
-4. In the **Custom Parameter (data)** box, enter **azureEnabled=true**. <br>You can also use the web resource without enabling Azure support in this way, in which case it will function almost entirely the same as the default control.</br>
+1. Select the **Edit** command on the **Web resource** link.
 
-5. On the **Formatting** tab, choose whatever formatting rules you prefer. We recommend that you clear the **Display border** check box.
+1. In the **Custom Parameter (data)** box, enter **azureEnabled=true**. 
 
-6. Select **OK** to save the resource.
+    :::image type="content" source="media/enable-azure-storage/form-designer.png" alt-text="Form designer to add web resource.":::
 
-7. Optionally, you can remove the existing notes control. Or move it to a tab or a section marked to be not visible by default.
+1. Select **Done** to save the resource.
 
-8. Save the form, and then publish the changes.
-
-   ![Add web resource.](media/add-web-resource.png "Add a web resource")
+1. Save the form, and then publish the changes.
 
 The new control will now be rendered on the page, giving you the ability to manage your attachments in Azure Storage.
 
-![Azure file attachment on a form.](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
+:::image type="content" source="media/enable-azure-storage/dataverse-form-azure.png" alt-text="File attachment added to Dataverse form on a model-driven Power App stored in Azure.":::
 
 The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Dataverse; those files will be denoted with the paper-clip icon.
 
@@ -94,5 +92,3 @@ During migration, the processes may get deactivated. Migration may cause attachm
 
 To learn about CORS protocol support in portals, go to [Configure CORS protocol support](configure/cors-support.md).
 
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
