@@ -333,6 +333,10 @@ More information:
 
 **A**: We have never supported ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality and more. But nothing else has changed. If ILMerge works for you, you can continue to use it. We recommend using dependent assemblies because we can support this solution.
 
+## Known issues
+
+You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package.
+
 ### See also
 
 [Use plug-ins to extend business processes](plug-ins.md)<br />
