@@ -54,32 +54,11 @@ When you follow these steps to create a choice in a solution, you're creating a 
 
 1. Select **Save**.
 
-
-## Creating n Choice from the Choice list
-
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Choices** in the left navigation pane.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Choice list.](./media/data-platform-cds-newoptionset/optionsetlist.png "Choice List")
-
-2. Click **New Choice**
-
-3. A new panel will open to create the choice, enter the **Display name** and **Name**. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Choice Create.](./media/data-platform-cds-newoptionset/optionset-create.png "Choice Create")
-
-4. Once you've entered your items, click **Save** to create your choice.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Save a new choice.](./media/data-platform-cds-newoptionset/optionset-create-values.png "Save a new choice")
-
-5. You can now use this choice  by creating new column on a table.
-
-
-
 > [!IMPORTANT]
 > Once a choice  is created as local or global, this cannot be changed.
 
+## Create a choice in the form designer
+
+You can create global or local choice columns in the form designer. More information: [Create a choice column](../model-driven-apps/add-move-or-delete-fields-on-form.md#create-a-choice-column)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
