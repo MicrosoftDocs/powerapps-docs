@@ -66,7 +66,7 @@ If the link goes to an `entitylist` view, add the following parameters.
 | Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Designates whether we're going to a system view or a personal view |
 
 
-## Supoprted Urls parameters for a canvas app
+## Supported Urls parameters for a canvas app
   
 ```ms-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
 
