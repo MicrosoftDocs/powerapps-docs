@@ -6,7 +6,7 @@ ms.reviewer: pehecke
 ms.topic: article
 author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: maydu # MSFT alias of Microsoft employees only
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -80,7 +80,7 @@ Maps a list value in a source file to a Dataverse column of the <xref:Microsoft.
 
 ## Import and export data maps
 
- You can export an existing data map to an XML file and import XML data mappings into Dataverse. To export a data map from Dataverse, use the `ExportMappingsImportMap` message using <xref:Microsoft.Crm.Sdk.Messages.ExportMappingsImportMapRequest> or the <xref:Microsoft.Dynamics.CRM.ExportMappingsImportMap?text=ExportMappingsImportMap Action> . To import XML data mappings and create a data map in Dataverse, use the `ImportMappingsImportMap` message using the <xref:Microsoft.Crm.Sdk.Messages.ImportMappingsImportMapRequest> or <xref:Microsoft.Dynamics.CRM.ImportMappingsImportMap?text=ImportMappingsImportMap Action>.  
+ You can export an existing data map to an XML file and import XML data mappings into Dataverse. To export a data map from Dataverse, use the `ExportMappingsImportMap` message using <xref:Microsoft.Crm.Sdk.Messages.ExportMappingsImportMapRequest?text=ExportMappingsImportMapRequest Class> or the <xref:Microsoft.Dynamics.CRM.ExportMappingsImportMap?text=ExportMappingsImportMap Action> . To import XML data mappings and create a data map in Dataverse, use the `ImportMappingsImportMap` message using the <xref:Microsoft.Crm.Sdk.Messages.ImportMappingsImportMapRequest?text=ImportMappingsImportMapRequest Class> or <xref:Microsoft.Dynamics.CRM.ImportMappingsImportMap?text=ImportMappingsImportMap Action>.  
   
 ### See Also
 

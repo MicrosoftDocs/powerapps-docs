@@ -6,7 +6,7 @@ ms.reviewer: pehecke
 ms.topic: article
 author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: maydu # MSFT alias of Microsoft employees only
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
