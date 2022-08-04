@@ -53,7 +53,7 @@ menu item for authoring the app.
 Let's understand each option in Power Apps Studio in detail.
 
 
-## 1 – Power Apps Studio command bar
+## 1 – Power Apps Studio modern command bar
 
 Power Apps Studio options are available on the command bar. The
 options are relevant to the current session and app-related settings. 
