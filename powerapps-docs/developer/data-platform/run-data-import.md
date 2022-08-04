@@ -35,7 +35,7 @@ Save parsed data in the parse table by using the `ParseImport` message. Retrieve
   
 The following table lists the messages that you can use to parse the import files and retrieve the parsed data from the parse tables.  
   
-|Message|Description|  
+|Message<br />SDK Class<br />Web API Action or Function|Description|  
 |-------------|-----------------|  
 |`ParseImportRequest`<br /><xref:Microsoft.Crm.Sdk.Messages.ParseImportRequest?text=ParseImportRequest Class><br /><xref:Microsoft.Dynamics.CRM.ParseImport?text=ParseImport Action>|Submits an asynchronous job that parses all import files associated with the specified import (data import). Pass the ID of the associated import (data import) in the `ImportId` property of this request. The ID of the asynchronous job that runs in the background and performs parsing of data is returned in the `AsyncOperationId` property of the response.|  
 |`GetDistinctValuesImportFile`<br /><xref:Microsoft.Crm.Sdk.Messages.GetDistinctValuesImportFileRequest?text=GetDistinctValuesImportFileRequest Class><br /><xref:Microsoft.Dynamics.CRM.GetDistinctValuesImportFile?text=GetDistinctValuesImportFile Function>|Returns distinct values for a column in the source file that contains list values. Pass the ID of the associated import file in the `ImportFileId` property of this request. The distinct values are returned in an array of strings, in the `Values` property of the response. Use this message only after you have created a parse table by using the `ParseImport` message. <br />**Important:**  Do not use this message after you use the `ImportRecordsImport` message. You cannot access the parse table after the import job submitted by the `ImportRecordsImport` message has finished running.|  
