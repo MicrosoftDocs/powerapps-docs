@@ -185,15 +185,18 @@ In this lesson, we'll create an app to search, view, and create customer account
 
 1. On the **Create your flow** screen, from the list of instant templates, select **Click a button in Power Apps to send an email**.
 
-    ![Select the Click a button in Power Apps to send an email template.](media/trigger-flow/create-the-power-automate-flow-1-1.png "select the Click a button in Power Apps to send an email.")
+   > [!div class="mx-imgBorder"]
+   > ![Select the Click a button in Power Apps to send an email template.](media/trigger-flow/create-the-power-automate-flow-1-1.png "select the Click a button in Power Apps to send an email.")
 
 1. Enter a name for the flow as "Flow triggered by Power Apps", and select **Power Apps** as the trigger.
-
-    ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2-1.png "Enter a name for the flow")
+    
+   > [!div class="mx-imgBorder"]
+   > ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2-1.png "Enter a name for the flow")
 
 1. Select **Edit in advanced mode** and then select, **Continue**.
-
-     ![Edit the flow in advacned mode](media/trigger-flow/edit-advacned-mode.png "Edit in advacned mode")
+     
+   > [!div class="mx-imgBorder"]
+   > ![Edit the flow in advacned mode](media/trigger-flow/edit-advacned-mode.png "Edit in advacned mode")
 
 1. The **To** field and the **Body** field are automatically auto-populated with the following:
   
