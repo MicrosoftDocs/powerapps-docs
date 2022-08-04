@@ -47,7 +47,7 @@ Deep links for Power Apps mobile should start with the following:
 | forceOfflineDataSync | Ensures that data sync is triggered so that all the latest data is available |
 
 
-If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters.
+If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters:
 
 | **Parameter**                       | **Description**                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ If opening an `entityrecord` form or creating a new `entityrecord`, use the foll
 | extraqs=&lt;form-id&gt;         | Designates which form to open for the `entityrecord`; if not specified, the default form will open. The `extraqs` parameter can also be used to default field values.        |
 | id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the create form for the table will open |
 
-If the link goes to an `entitylist` view, add the following parameters.
+If the link goes to an `entitylist` view, add the following parameters:
 
 | **Parameter**                                                | **Description**                                                     |
 |--------------------------------------------------------------|---------------------------------------------------------------------|
