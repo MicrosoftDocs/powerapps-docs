@@ -223,9 +223,13 @@ You can add a NuGet Package to your Visual Studio project as you normally do. Af
 
 You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
 
-#### Add another dependent file or assembly with Power Platform Tools
+### Add a dependent assembly without using NuGet with Power Platform Tools
 
-To include another file or assembly that will be available in the runtime for your plug-in.
+If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
+
+#### Add a file resource with Power Platform Tools
+
+To include another file that will be available in the runtime for your plug-in.
 
 1. Add the file to your Visual Studio project.
 1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
