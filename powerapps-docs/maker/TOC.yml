@@ -1636,6 +1636,8 @@
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
+  - name: Use deep links with Power Apps mobile
+    href: ../mobile/mobile-deep-links.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
