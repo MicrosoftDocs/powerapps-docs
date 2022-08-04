@@ -67,6 +67,27 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 
 :::image type="content" source="../../maker/model-driven-apps/media/add-form-columns-using-selection.gif" alt-text="Add form columns using selection":::
 
+## Create a choice column
+
+1. In the form designer on the command bar select **Form field**.
+1. Select **New table column**.
+1. In the New column pane, enter or select the values for the following properties:
+   - Display name.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+   - Description. Enter an optional description of the choice column.
+   - Data type. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
+   - Behavior.
+   - Required. 
+   - Searchable.
+   - Selecting multiple choices is allowed. Select this option if you want to create a choice where the user can select more than one option (multi-select).
+   - Sync with global choice?
+      - Yes. Select this option if you want the choice to be available to other tables (global choice).
+      - No. Select this option if you want the choice only available in the table where you are creating the new choice. 
+   - **Choices**. Create the options for your choice:
+      - In the **Label** field, enter the label you want displayed for the choice option.
+      - The **Value** number represents a unique value for the option and is not displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
+      - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
+   - Default choice. Select one of the options you created as the default choice.
+
 ## Configure column properties on a form
 
 The properties and events can be configured for column when you create or edit a form using the form designer.

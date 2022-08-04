@@ -2,8 +2,7 @@
 title: Create a choice| Microsoft Docs
 description: Step-by-step instructions for how to create a choice.
 author: lancedMicrosoft
-manager: kvivek
-
+manager: tapanm
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018
@@ -15,56 +14,46 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Create a choice
 
+Choice columns allow you to include dropdown lists of fixed values to a user within your app to ensure data consistency. Choice columns, were formerly referred to as option sets and are sometimes called picklists. Similar to tables, there are both standard choices or makers have the ability to create custom choice columns to use in apps.
 
+Choices can be created while working in a table in the table hub, in a table form in the form designer, or directly from a solution in powerapps.com.
 
-Choices allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice columns in other applications. Similar to tables, there are both standard choices, and the ability to create custom Choices to use within your app.
+Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app.
 
-Choices can be created in two ways, either from the **Choices** list within the portal or directly within a table while creating a column. For more information on how to create a table, see [Create a table](data-platform-create-entity.md).
+::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
-## Creating a Choice while adding a column
+## Global and local choice columns
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
+Choices can be local or global. Local choices can only be used by the table and column they are created against, and can't be reused with other tables. More information: [Create and edit global choices overview](create-edit-global-option-sets.md)
 
-    ![table Details.](./media/data-platform-cds-create-entity/entitylist.png "table List")
+## Create a global choice within a solution
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
+When you follow these steps to create a choice in a solution, you're creating a global choice that is single selection.
 
-3. Add a new column to your table by clicking **Add column**.
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select Solutions, and then open the solution you want.
 
-4. In the new column panel, enter the **Display name** for your column, **Name** will be automatically populated and is used as the unique name for your column. The **Display name** is used when presenting this column to your users, the **Name** is used when building your app, in expressions and formulas.
+1. On the command bar, select **New** > **Choice**.
 
-5. Click the **Data type** drop down and select **Choice** or **Multi Select Choice**.
+1. In the **New choice** panel, enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
 
-    > [!div class="mx-imgBorder"] 
-    > ![New choice column.](./media/data-platform-cds-create-entity/newfieldpanel.png "New Column Panel")
+1. Create the options for your choice:
+   - In the **Label** field, enter the label you want displayed for the choice option.
+   - The **Value** number represents a unique value for the option and is not displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
+   - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
 
-6. Click the **Choice** drop down and select **New Choice**
+1. Select **+ New choice** to create additional options for the choice list. Repeat steps 4-5 until all the options you want are created.
 
-    > [!NOTE]
-    > If an existing choice  could be used for your table, you can select it from this list without creating a new one.
+1. Optionally, expand **Advanced options** to display the following properties:
+   - **Name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved you can't change this.
+   - **External type name**: This value is used for virtual tables to map a value in an external data source with this option.
+   - **Description**: Add an optional description for the choice.
 
-    ![Choice List.](./media/data-platform-cds-newoptionset/fieldpanel-1.png "Choice list")
+   :::image type="content" source="media/data-platform-cds-newoptionset/choice-created-in-solution.png" alt-text="New choice properties pane.":::
 
-7. A new panel will open to create the choice, the **Display name** and **Name** will default from the name of the column but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
+1. Select **Save**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![New choice.](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "New choice")
-
-8. Once you've entered your items, click **Save** to create your choice.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Save choice.](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Save choirce")
-
-9. Click **Done** to close the column panel, and then **Save Table** to save your table to Microsoft Dataverse.
-
-    > [!NOTE]
-    > You can select one of your items as the **Default** for this column, and it will be selected by default when users are creating new rows in your table.
-
-    > [!div class="mx-imgBorder"] 
-    > ![New Field.](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Column Panel")
 
 ## Creating n Choice from the Choice list
 
@@ -87,9 +76,7 @@ Choices can be created in two ways, either from the **Choices** list within the 
 
 5. You can now use this choice  by creating new column on a table.
 
-## Global and local choices
 
-By default, Choices are created as Global Choices which allows them to be reused across multiple tables. Under the **View more** option when creating a new Choice you can chose to make a Choice **Local**. This option is only available when creating a new Choice while adding a column, and not through the **Choices** list. Local choices can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local choice .
 
 > [!IMPORTANT]
 > Once a choice  is created as local or global, this cannot be changed.
