@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the AppSidePane m
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 04/21/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 search.audienceType: 
@@ -17,13 +17,7 @@ contributors:
 ---
 # AppSidePane (Client API reference)
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Provides methods for managing a single side pane.
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions.
-> - [!INCLUDE[cc-preview-features-definition](../../../../includes/cc-preview-features-definition.md)]
 
 ## Methods
 
@@ -38,7 +32,7 @@ Provides methods for managing a single side pane.
 |Parameter Name| Type| Required|Description|
 |-------------|------|---------|------------|
 |title|string|No|The title of the pane. Used in pane header and for tooltip.|
-|panelId|string|No| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
+|paneId|string|No| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|
 |canClose|Boolean|No| Whether the pane header will show a close button or not.|
 |imageSrc|string|No| The path of the icon to show in the panel switcher control.|
 |width|Number|No| The width of the pane in pixels.|

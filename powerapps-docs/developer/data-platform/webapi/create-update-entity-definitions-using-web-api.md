@@ -1,25 +1,18 @@
 ---
 title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table definitions using the Web API."
-ms.custom: ""
-ms.date: 04/21/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: 1f430d2d-e829-4ffa-922e-dfcfb7c9e86e
-caps.latest.revision: 24
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Create and update table definitions using the Web API
 
@@ -34,38 +27,39 @@ You can perform all the same operations on table definitions using the Web API t
 
 ## Create table definitions
 
-To create a table definition, POST the JSON representation of the entity definition data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute. You don’t need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you do not specify will be set to default values. To understand the default values, look at the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this topic uses the following entity properties.  
+To create a table definition, `POST` the JSON representation of the entity definition data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute. You don't need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you do not specify will be set to default values. To understand the default values, look at the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this topic uses the following entity properties.  
   
 |EntityMetadata property|Value|  
 |---------------------|-----------|  
-|SchemaName|new_BankAccount **Note:**  You should include the customization prefix that matches the solution publisher. Here the default value “new_” is used, but you should choose the prefix that works for your solution.|  
-|DisplayName|Bank Account|  
-|DisplayCollectionName|Bank Accounts|  
-|Description|An entity to store information about customer bank accounts.|  
-|OwnershipType|UserOwned **Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType" />.|  
-|IsActivity|false|  
-|HasActivities|false|  
-|HasNotes|false|  
+|`SchemaName`|`new_BankAccount` **Note:**  You should include the customization prefix that matches the solution publisher. Here the default value "new_" is used, but you should choose the prefix that works for your solution.|  
+|`DisplayName`|Bank Account|  
+|`DisplayCollectionName`|Bank Accounts|  
+|`Description`|An entity to store information about customer bank accounts.|  
+|`OwnershipType`|`UserOwned` **Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType" />.|  
+|`IsActivity`|false|  
+|`HasActivities`|false|  
+|`HasNotes`|false|  
   
  In addition to the properties listed previously, the `EntityMetadataAttributes` property must contain an array that includes one 
- <xref href="Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata EntityType" /> to represent the primary name attribute for the entity. The attribute IsPrimaryName property must be true. The following table describes the properties set in the example.  
+ <xref href="Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata EntityType" /> to represent the primary name attribute for the entity. The attribute `IsPrimaryName` property must be true. The following table describes the properties set in the example.  
   
 |Primary Attribute property|Value|  
 |--------------------------------|-----------|  
-|SchemaName|new_AccountName|  
-|RequiredLevel|None <br />**Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType" />.|  
-|MaxLength|100|  
-|FormatName|Text <br />**Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [String formats](../entity-attribute-metadata.md#string-formats).|  
-|DisplayName|Account Name|  
-|Description|Type the name of the bank account.|  
-|IsPrimaryName|true|  
+|`SchemaName`|`new_AccountName`|  
+|`RequiredLevel`|None <br />**Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType" />.|  
+|`MaxLength`|100|  
+|`FormatName`|`Text` <br />**Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [String formats](../entity-attribute-metadata.md#string-formats).|  
+|`DisplayName`|Account Name|  
+|`Description`|Type the name of the bank account.|  
+|`IsPrimaryName`|true|  
   
 > [!NOTE]
->  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user’s language preference and is read-only.  
+>  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
   
 The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
- **Request**  
+ **Request**
+
 ```http 
 POST [Organization URI]/api/data/v9.0/EntityDefinitions HTTP/1.1  
 Accept: application/json  
@@ -153,7 +147,8 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -165,23 +160,23 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
 ## Update table definitions
   
 > [!IMPORTANT]
->  You can’t use the HTTP PATCH method to update data model entities. The table definitions have parity with the Organization service 
+>  You can't use the `PATCH` method to update data model entities. The table definitions have parity with the Organization service 
 >  <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> that replaces the entity definition with the one included. 
->  Therefore, you must use the HTTP PUT method when updating data model entities and be careful to include all the existing properties that you don’t intend to change. 
->  You can’t update individual properties.  
+>  Therefore, you must use the `PUT` method when updating data model entities and be careful to include all the existing properties that you don't intend to change.
+>  You can't update individual properties.  
   
- When you update table definitions with labels, you should include a custom `MSCRM.MergeLabels` header to control how any labels in the update should be handled. If a label for an item already has labels for other languages and you update it with a label that contains only one label for a specific language, the `MSCRM.MergeLabels` header controls whether to overwrite the existing labels or merge your new label with any existing language labels. With `MSCRM.MergeLabels` set to `true`, any new labels defined will only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`.  
+ When you update table definitions with labels, you should include a custom `MSCRM.MergeLabels` request header to control how any labels in the update should be handled. If a label for an item already has labels for other languages and you update it with a label that contains only one label for a specific language, the `MSCRM.MergeLabels` header controls whether to overwrite the existing labels or merge your new label with any existing language labels. With `MSCRM.MergeLabels` set to `true`, any new labels defined will only overwrite existing labels when the language code matches. If you want to overwrite the existing labels to include only the labels you include, set `MSCRM.MergeLabels` to `false`.  
   
 > [!IMPORTANT]
->  If you don’t include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
+>  If you don't include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
   
- When you update a table or column definition, you must use the 
- <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" /> or 
+When you update a table or column definition, you must use the  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" /> or 
 <xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action" /> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
- Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the DisplayName changed to “Bank Business Name.” It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the DisplayName changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
   
- **Request**  
+ **Request**
+
 ```http 
 PUT [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1  
 Accept: application/json  
@@ -479,7 +474,8 @@ MSCRM.MergeLabels: true
 }  
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -499,14 +495,14 @@ The following example will use these properties to create a string attribute.
   
 |String attribute properties|Values|  
 |---------------------------------|------------|  
-|SchemaName|new_BankName|  
-|DisplayName|Bank Name|  
-|Description|Type the name of the bank.|  
-|RequiredLevel|None|  
-|MaxLength|100|  
-|FormatName|Text|  
+|`SchemaName`|`new_BankName`|  
+|`DisplayName`|Bank Name|  
+|`Description`|Type the name of the bank.|  
+|`RequiredLevel`|`None`|  
+|`MaxLength`|100|  
+|`FormatName`|`Text`|  
   
-The following example creates a string attribute using the properties and adds it to the entity with the MetadataId value of 402fa40f-287c-e511-80d2-00155d2a68d2.
+The following example creates a string attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
 
 The URI for the attribute is returned in the response.  
   
@@ -559,7 +555,8 @@ OData-Version: 4.0
   
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -574,15 +571,16 @@ The following example will use these properties to create a money attribute.
   
 |Money attribute properties|Values|  
 |--------------------------------|------------|  
-|SchemaName|new_Balance|  
-|DisplayName|Balance|  
-|Description|Enter the balance amount.|  
-|RequiredLevel|None|  
-|PrecisionSource|2 <br />**Note:**  For information on the valid values for PrecisionSource, see [MoneyType](../entity-attribute-metadata.md#money_type). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|  
+|`SchemaName`|`new_Balance`|  
+|`DisplayName`|Balance|  
+|`Description`|Enter the balance amount.|  
+|`RequiredLevel`|None|  
+|`PrecisionSource`|2 <br />**Note:**  For information on the valid values for PrecisionSource, see [MoneyType](../entity-attribute-metadata.md#money_type). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|  
   
-The following example creates a money attribute using the properties and adds it to the entity with the MetadataId value of 402fa40f-287c-e511-80d2-00155d2a68d2. The URI for the attribute is returned in the response.  
+The following example creates a money attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`. The URI for the attribute is returned in the response.  
   
- **Request**  
+ **Request**
+
 ```http   
 POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1  
 Accept: application/json  
@@ -626,7 +624,8 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -641,13 +640,13 @@ The following example will use these properties to create a datetime attribute.
   
 |Datetime attribute properties|Values|  
 |-----------------------------------|------------|  
-|SchemaName|new_Checkeddate|  
-|DisplayName|Date|  
-|Description|The date the account balance was last confirmed.|  
-|RequiredLevel|None|  
-|Format|DateOnly **Note:**  For the valid options for this property, see <xref href="Microsoft.Dynamics.CRM.DateTimeFormat?text=DateTimeFormat EnumType" />.|  
+|`SchemaName`|`new_Checkeddate`|  
+|`DisplayName`|`Date`|  
+|`Description`|The date the account balance was last confirmed.|  
+|`RequiredLevel`|`None`|  
+|`Format`|`DateOnly` **Note:**  For the valid options for this property, see <xref href="Microsoft.Dynamics.CRM.DateTimeFormat?text=DateTimeFormat EnumType" />.|  
   
-The following example creates a datetime attribute using the properties and adds it to the entity with the MetadataId value of 402fa40f-287c-e511-80d2-00155d2a68d2. 
+The following example creates a datetime attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
  The URI for the attribute is returned in the response.  
   
  **Request**
@@ -695,7 +694,8 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -706,7 +706,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
 
 ### Create a customer lookup column
 
-Unlike  other attributes, a customer lookup attribute is created using the <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action" />. 
+Unlike other attributes, a customer lookup attribute is created using the <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action" />. 
 
 The parameters for this action require the definition of the lookup attribute and a pair of one-to-many relationships. A customer lookup attribute has two one-to-many relationships: one to the account entity and the other one to contact entity.  
   
@@ -714,15 +714,15 @@ The parameters for this action require the definition of the lookup attribute an
   
 |Customer lookup attribute properties|Values|  
 |------------------------------------------|------------|  
-|SchemaName|new_CustomerId|  
-|DisplayName|Customer|  
-|Description|Sample Customer Lookup Attribute|  
+|`SchemaName`|new_CustomerId|  
+|`DisplayName`|Customer|  
+|`Description`|Sample Customer Lookup Attribute|  
   
 The example creates a customer lookup attribute, `new_CustomerId`, and adds it to the custom entity:  `new_bankaccount`. The response is a <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType" />.  
   
  **Request**
 
-```http 
+```http
 POST [Organization URI]/api/data/v9.0/CreateCustomerRelationships HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -776,7 +776,8 @@ Content-Type: application/json; charset=utf-8
 }  
 ```  
   
- **Response**  
+ **Response**
+
 ```http 
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  

@@ -1,38 +1,31 @@
 ---
 title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to add a reference to a collection-valued navigation property, remove a reference, and change an existing reference using the Web API"
-ms.custom: ""
-ms.date: 05/03/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: ad4e4eac-117a-4958-9df0-b7353305b0c7
-caps.latest.revision: 13
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "annbe"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Associate and disassociate table rows using the Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are several methods you can use to associate and disassociate tables (entities). Which method you apply depends on whether you’re creating or updating the tables and whether you’re operating in the context of the referenced table or the referencing table.  
+There are several methods you can use to associate and disassociate records (table rows). Which method you apply depends on whether you're creating or updating the record and whether you're operating in the context of the referenced record or the referencing record.  
 
 <a name="bkmk_Addareferencetoacollection"></a>
 
 ## Add a reference to a collection-valued navigation property
 
- The following example shows how to associate an existing opportunity with the `opportunityid` value of `00000000-0000-0000-0000-000000000001` to the collection-valued `opportunity_customer_accounts` navigation property for an account with the `accountid` value of `00000000-0000-0000-0000-000000000002`. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
+The following example shows how to associate an existing opportunity with the `opportunityid` value of `00000000-0000-0000-0000-000000000001` to the collection-valued `opportunity_customer_accounts` navigation property for an account with the `accountid` value of `00000000-0000-0000-0000-000000000002`. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
   
 **Request**  
 ```http  
@@ -59,7 +52,7 @@ OData-Version: 4.0
  
 ## Change the reference in a single-valued navigation property
 
- You can associate rows by setting the value of a single-valued navigation property using PUT request with the following pattern.  
+ You can associate a record by setting the value of a single-valued navigation property using `PUT` request with the following pattern.  
   
  **Request**
 
@@ -87,7 +80,7 @@ OData-Version: 4.0
 
 ## Remove a reference to a table row
 
- Use a DELETE request to remove a reference to a row. The way you do it is different depending on whether you’re referring to a collection-valued navigation property or a single-valued navigation property.  
+ Use a `DELETE` request to remove a reference to a row. The way you do it is different depending on whether you're referring to a collection-valued navigation property or a single-valued navigation property.  
   
  **Request**  
  For a collection-valued navigation property, use the following.  
@@ -101,7 +94,7 @@ OData-Version: 4.0
   
  Or, use this.  
   
-```http 
+```http
 DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts(00000000-0000-0000-0000-000000000001)/$ref HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -130,9 +123,9 @@ OData-Version: 4.0
 
 ## Associate table rows on create
 
-As described in [Associate rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new row to existing rows by setting the navigation properties using the `@odata.bind` annotation.
+As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new row to existing rows by setting the navigation properties using the `@odata.bind` annotation.
 
-As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new tables can be created with relationships using *deep insert*.  
+As described in [Create related table rows in one operation](create-entity-web-api.md#bkmk_CreateRelated), new tables can be created with relationships using *deep insert*.  
   
 ## Associate and disassociate table rows on update
 
@@ -179,8 +172,8 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 
 {
-	"parentaccountid@odata.bind":  null,
-	"primarycontactid@odata.bind": null
+   "parentaccountid@odata.bind":  null,
+   "primarycontactid@odata.bind": null
 }
 
 
@@ -210,7 +203,7 @@ More information: [Basic update](update-delete-entities-using-web-api.md#basic-u
 The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) with an [Email](../reference/entities/email.md) using collection-valued navigation property `email_activity_parties`.
 
 > [!NOTE]
-> Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType />.
+> Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType>.
 
 **Request**
 
@@ -222,18 +215,18 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 
 {
-	"value": [
-		{
-			"partyid_contact@odata.bind":"contacts(a30d4045-fc46-e711-8115-e0071b66df51)",
-			"participationtypemask":3
-			
-		},
-		{
-			"partyid_contact@odata.bind":"contacts(1dcdda07-3a39-e711-8145-e0071b6a2001)",
-			"participationtypemask":2
-			
-		}
-		]
+   "value": [
+      {
+         "partyid_contact@odata.bind":"contacts(a30d4045-fc46-e711-8115-e0071b66df51)",
+         "participationtypemask":3
+         
+      },
+      {
+         "partyid_contact@odata.bind":"contacts(1dcdda07-3a39-e711-8145-e0071b6a2001)",
+         "participationtypemask":2
+         
+      }
+      ]
 }
 ```
 
@@ -251,9 +244,9 @@ OData-Version: 4.0
  [Perform operations using the Web API](perform-operations-web-api.md)   
  [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)   
  [Query Data using the Web API](query-data-web-api.md)   
- [Create a table using the Web API](create-entity-web-api.md)   
- [Retrieve a table using the Web API](retrieve-entity-using-web-api.md)   
- [Update and delete tables using the Web API](update-delete-entities-using-web-api.md)   
+ [Create a table row using the Web API](create-entity-web-api.md)   
+ [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
+ [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
  [Use Web API functions](use-web-api-functions.md)   
  [Use Web API actions](use-web-api-actions.md)   
  [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   

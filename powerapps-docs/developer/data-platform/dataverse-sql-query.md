@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 07/08/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -22,6 +22,10 @@ search.app:
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
 A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+
+## Prerequisites
+
+The **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Applications support
 
@@ -94,6 +98,10 @@ Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a
 Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
+
+### Reported SQL version
+The Dataverse TDS endpoint emulates Microsoft SQL Server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure version 12.0.2000.8 for `select @@version`.
+
 
 ## Limitations
 

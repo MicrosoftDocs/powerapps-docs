@@ -1,7 +1,7 @@
 ---
 title: "CallbackRegistration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -60,6 +60,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FilterExpression](#BKMK_FilterExpression)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
 - [HardDelete](#BKMK_HardDelete)
+- [LogicAppsVersion](#BKMK_LogicAppsVersion)
 - [Message](#BKMK_Message)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
@@ -154,6 +155,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
+
+
+### <a name="BKMK_LogicAppsVersion"></a> LogicAppsVersion
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds version of logic apps trigger.|
+|DisplayName|Logic Apps Version|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|logicappsversion|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_Message"></a> Message
@@ -692,6 +711,6 @@ See the [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_ca
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.callbackregistration?text=callbackregistration EntityType" />

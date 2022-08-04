@@ -4,7 +4,7 @@ description: "Contains information about the types of calendars used in Datavers
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "JimDaly" #TODO: NoOwner
+author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart

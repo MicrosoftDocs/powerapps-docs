@@ -1,20 +1,15 @@
 ---
 title: Image Element | Microsoft Docs
 description: The img web resource allows you to add images for the code components.
-keywords:
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # img element
@@ -43,7 +38,7 @@ Model-driven apps
 ```XML
 <resources>
    <code path="index.ts" order="1" />
-	  <img path="img/default.png" />
+     <img path="img/default.png" />
  </resources>
 ```
 

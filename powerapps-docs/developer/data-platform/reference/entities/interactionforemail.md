@@ -1,7 +1,7 @@
 ---
 title: "InteractionForEmail table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -833,6 +833,7 @@ Listed by **SchemaName**.
 
 - [interactionforemail_ActivityPointers](#BKMK_interactionforemail_ActivityPointers)
 - [interactionforemail_AsyncOperations](#BKMK_interactionforemail_AsyncOperations)
+- [interactionforemail_chats](#BKMK_interactionforemail_chats)
 
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
@@ -863,6 +864,23 @@ Same as the [interactionforemail_AsyncOperations](asyncoperation.md#BKMK_interac
 |ReferencedEntityNavigationPropertyName|new_interactionforemail_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_interactionforemail_chats"></a> interactionforemail_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [interactionforemail_chats](chat.md#BKMK_interactionforemail_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -914,6 +932,6 @@ See the [TransactionCurrency_InteractionForEmail](transactioncurrency.md#BKMK_Tr
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.interactionforemail?text=interactionforemail EntityType" />

@@ -1,7 +1,7 @@
 ---
 title: "datalakeworkspacepermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakeworkspacepermission table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -302,11 +302,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_whitelistedappid"></a> whitelistedappid
+### <a name="BKMK_whitelistedappid"></a> listedappid
 
 |Property|Value|
 |--------|-----|
-|Description|Application Id that is white listed in AAD tenant id to access the Graph API.|
+|Description|Application Id that is  listed in AAD tenant id to access the Graph API.|
 |DisplayName|Whitelisted App ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -1022,6 +1022,6 @@ See the [datalakeworkspace_workspacepermission](datalakeworkspace.md#BKMK_datala
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.datalakeworkspacepermission?text=datalakeworkspacepermission EntityType" />

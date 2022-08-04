@@ -1,19 +1,18 @@
 ---
 title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
-ms.custom: ""
-ms.date: 10/17/2021
-
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # CDSWebApiService class library (C#)
@@ -164,7 +163,7 @@ Patch is frequently used to Update or Upsert table rows.
 More information:
 
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
-- [Upsert a table](../update-delete-entities-using-web-api.md#upsert-a-table)
+- [Update or create a record with Upsert](../update-delete-entities-using-web-api.md#update-or-create-a-record-with-upsert)
 
 ## PatchAsync
 

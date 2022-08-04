@@ -6,7 +6,7 @@ author: JinManAhn-MSFT
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 06/16/2022
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -17,13 +17,14 @@ contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
   - melzoghbi
+  - ProfessorKendrick
 ---
 
 # Common canvas app performance issues and resolutions
 
-You can build canvas apps by using a diverse array of data sources. Choose the data source and connector based on the business needs and scenarios you're designing the app for. For enterprise apps, Microsoft Dataverse is the recommended data source because it provides several performance benefits. For apps with a small number of transactions, you can go with any other available data sources in your environment.
+You can build canvas apps by using a diverse array of data sources. Choose the data source and connector based on the business needs and scenarios you're designing the app for. For enterprise apps, Microsoft Dataverse is the recommended data source because it provides several performance benefits. For apps with a few transactions, you can go with any other available data sources in your environment.
 
-For performance considerations of an app, think about the number of users who will use the app when it has been published; the volume of create, retrieve, update, and delete (CRUD) transactions; the type of data interactions; geographical access; and the kind of devices users have.
+For performance considerations of an app, think about the number of users who will use the app when it has been published; the volume of create, retrieve, update, and delete (CRUD) transactions; the type of data interactions; geographical access; and the kinds of devices users have.
 
 In this article, you'll learn about some of the most common performance issues that can make canvas apps run slowly, and how to resolve them. This information will help you to improve app performance with your business plan and growth in mind.
 
@@ -51,15 +52,15 @@ Users who use unsupported or legacy browsers, might experience performance issue
 
 ## Slow performance because of geographical distance
 
-The geographical location of the Dataverse environment and the distance of the data source from users can affect performance.
+The geographical location of the environment and the distance of the data source from users can affect performance.
 
 We recommend that your environment be located close to users. Though Power Apps uses Azure Content Delivery Network for content, data calls still get the data from the data source. A data source located in another geographical location might adversely affect the performance of the app.
 
 Excessive geographical distance affects performance in different ways, such as latency, reduced throughput, lower bandwidth, or packet loss.
 
-## Allow list not configured
+## Allowlist not configured
 
-Ensure that required service URLs haven't been blocked or that they've been added to your firewall's allow list. For a complete list of all service URLs that must be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
+Ensure that required service URLs haven't been blocked or that they've been added to your firewall's allowlist. For a complete list of all service URLs that must be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
 
 ## Use of non-delegable functions and inappropriate data row limits for non-delegable queries
 
@@ -246,13 +247,13 @@ Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. 
 
 ## Performance considerations for the Excel connector
 
-The [Excel connector](connections/connection-excel.md) provides connectivity from a canvas app to the data in a table in an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;which restrict the canvas app to loading data from the table only up to 2,000 records. To load more than 2,000 records, partition your data in different data tables as additional data sources.
+The [Excel connector](connections/connection-excel.md) provides connectivity from a canvas app to the data in a table in an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;which restrict the canvas app to loading data from the table only up to 2,000 records. To load more than 2,000 records, partition your data in different data tables as other data sources.
 
 Let's take a look at the common performance problems with using Excel as the data source for canvas apps, and how to resolve them.
 
 ### Too many data tables and large data size
 
-An app can perform slowly when it uses an Excel file that has too many data tables, or data tables that contain an immense amount of data over several columns. An Excel file isn't a relational database or a data source that provides delegable functions. Power Apps has to load data from the defined data tables first, and then use functions such as **Filter**, **Sort**, **JOIN**, **Group By**, and **Search**.
+An app can perform slowly when it uses an Excel file that has too many data tables, or data tables that contain an immense amount of data over several columns. An Excel file isn't a relational database or a data source that provides delegable functions. Power Apps has to load data from the defined data tables first, and then uses functions such as **Filter**, **Sort**, **JOIN**, **Group By**, and **Search**.
 
 Having too many data tables with many rows and columns affects app performance and the client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure-at-the-client-side). This effect also leads to the app's consuming more client-side memory.
 
@@ -286,8 +287,8 @@ It's better to keep the file near your users (or most users, if you have a globa
 
 [Understand canvas app execution phases and data call flow](execution-phases-data-flow.md) <br>
 [Common sources of slow performance for a canvas app](slow-performance-sources.md) <br>
-[Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
-[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
+[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

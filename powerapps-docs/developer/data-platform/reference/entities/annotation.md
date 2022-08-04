@@ -1,7 +1,7 @@
 ---
 title: "Note (Annotation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Note (Annotation)  table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -204,12 +204,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|Text of the note.|
 |DisplayName|Description|
-|Format|Email|
+|Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|notetext|
-|MaxLength|1073741823|
+|MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -224,7 +224,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
+|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
 |Type|Lookup|
 
 
@@ -478,7 +478,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |Description|Dummy attribute associated with the note attachment|
-|DisplayName|File Name|
+|DisplayName|File Name(deprecated)|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -496,7 +496,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |Description|Dummy attribute associated with the note regarding|
-|DisplayName|Regarding|
+|DisplayName|Regarding(deprecated)|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -912,6 +912,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
+- [chat_Annotations](#BKMK_chat_Annotations)
 
 
 ### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
@@ -1040,8 +1041,14 @@ See the [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#B
 
 See the [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) one-to-many relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
 
+### <a name="BKMK_chat_Annotations"></a> chat_Annotations
+
+**Added by**: Activities Patch Solution
+
+See the [chat_Annotations](chat.md#BKMK_chat_Annotations) one-to-many relationship for the [chat](chat.md) table/entity.
+
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.annotation?text=annotation EntityType" />

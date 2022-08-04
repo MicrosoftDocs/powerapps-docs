@@ -1,7 +1,7 @@
 ---
 title: "Currency (TransactionCurrency)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Currency (TransactionCurrency)  table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -646,6 +646,7 @@ Listed by **SchemaName**.
 - [transactioncurrency_account](#BKMK_transactioncurrency_account)
 - [TransactionCurrency_recommendeddocument](#BKMK_TransactionCurrency_recommendeddocument)
 - [TransactionCurrency_Territory](#BKMK_TransactionCurrency_Territory)
+- [chat_transactioncurrency_transactioncurrencyid](#BKMK_chat_transactioncurrency_transactioncurrencyid)
 
 
 ### <a name="BKMK_TransactionCurrency_Goal"></a> TransactionCurrency_Goal
@@ -1504,6 +1505,23 @@ Same as the [TransactionCurrency_Territory](territory.md#BKMK_TransactionCurrenc
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_chat_transactioncurrency_transactioncurrencyid"></a> chat_transactioncurrency_transactioncurrencyid
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_transactioncurrency_transactioncurrencyid](chat.md#BKMK_chat_transactioncurrency_transactioncurrencyid) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|transactioncurrencyid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_transactioncurrency_transactioncurrencyid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1539,6 +1557,6 @@ See the [lk_transactioncurrency_createdonbehalfby](systemuser.md#BKMK_lk_transac
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType" />

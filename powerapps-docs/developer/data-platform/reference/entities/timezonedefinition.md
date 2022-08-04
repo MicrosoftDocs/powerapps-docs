@@ -1,7 +1,7 @@
 ---
 title: "TimeZoneDefinition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TimeZoneDefinition table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -441,6 +441,6 @@ See the [lk_timezonedefinition_createdby](systemuser.md#BKMK_lk_timezonedefiniti
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.timezonedefinition?text=timezonedefinition EntityType" />

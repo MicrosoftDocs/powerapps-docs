@@ -2,11 +2,10 @@
 title: Limitations of controls in canvas apps
 description: Learn about the limitations of controls in canvas apps.
 author: navjotm
-
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
@@ -31,6 +30,8 @@ In this article, learn about the general limitations of the controls used in can
     - On iOS, the camera control is supported in the Power Apps for mobile app. It's not supported within the browser or Teams Mobile.
    - On Android, the camera control isn't supported in Teams Mobile.
    - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
+
+- [Container control](controls/control-container.md) - see [Container control limitations](controls/control-container.md#limitations).
 
 - [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
@@ -71,7 +72,7 @@ The following controls aren't supported by apps embedded in Teams:
 - [Address Input](geospatial-component-input-address.md)
 - [Camera](controls/control-camera.md) (in Teams Mobile)
 - [Map](geospatial-component-map.md)
-- [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
+- [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measuring Camera)
 - [Power BI tile control](controls/control-power-bi-tile.md)
 - [Web barcode scanner control](controls/control-barcodescanner.md)
 

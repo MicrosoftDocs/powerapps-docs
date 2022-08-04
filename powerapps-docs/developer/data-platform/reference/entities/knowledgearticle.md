@@ -1,7 +1,7 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -83,8 +83,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [MajorVersionNumber](#BKMK_MajorVersionNumber)
 - [MinorVersionNumber](#BKMK_MinorVersionNumber)
 - [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
+- [msdyn_iscontentsyncedtostore](#BKMK_msdyn_iscontentsyncedtostore)
 - [msdyn_isingestedarticle](#BKMK_msdyn_isingestedarticle)
 - [msdyn_keywordsdescsuggestioncontrol](#BKMK_msdyn_keywordsdescsuggestioncontrol)
+- [msdyn_retrycountformigrationtocontentstore](#BKMK_msdyn_retrycountformigrationtocontentstore)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -433,6 +435,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_msdyn_iscontentsyncedtostore"></a> msdyn_iscontentsyncedtostore
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Sets whether the article content is synced to file storage|
+|DisplayName|Is content synced to file storage|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_iscontentsyncedtostore|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_iscontentsyncedtostore Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_msdyn_isingestedarticle"></a> msdyn_isingestedarticle
 
 **Added by**: Knowledge Management Patch Solution
@@ -481,6 +508,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_msdyn_retrycountformigrationtocontentstore"></a> msdyn_retrycountformigrationtocontentstore
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Displays the number of times migration to file storage retry is attempted for an article|
+|DisplayName|File storage migration retry count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_retrycountformigrationtocontentstore|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -1605,6 +1650,7 @@ Listed by **SchemaName**.
 - [knowledgearticle_parentarticle_contentid](#BKMK_knowledgearticle_parentarticle_contentid)
 - [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
 - [KnowledgeArticle_Emails](#BKMK_KnowledgeArticle_Emails)
+- [knowledgearticle_chats](#BKMK_knowledgearticle_chats)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
 
@@ -2089,6 +2135,23 @@ Same as the [KnowledgeArticle_Emails](email.md#BKMK_KnowledgeArticle_Emails) man
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
+### <a name="BKMK_knowledgearticle_chats"></a> knowledgearticle_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [knowledgearticle_chats](chat.md#BKMK_knowledgearticle_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
 ### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
 
 **Added by**: Knowledge Management Patch Solution
@@ -2243,6 +2306,6 @@ See the [msdyn_msdyn_kbattachment_knowledgearticle](msdyn_kbattachment.md#BKMK_m
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.knowledgearticle?text=knowledgearticle EntityType" />
