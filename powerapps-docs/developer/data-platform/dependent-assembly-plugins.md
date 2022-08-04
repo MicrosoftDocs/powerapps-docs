@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/01/2022
+ms.date: 08/04/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -79,30 +79,11 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 
 |Tool/App|Instructions |
 |---------|---------|
-|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
+|**Microsoft Power Platform CLI**|You must have version 1.17 or higher.<br />The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
 |**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ### Create a Visual Studio project
-
-> [!IMPORTANT]
-> If you are using PAC CLI version 1.15, you should perform the steps below:
-> 
-> 1. Determine the location of your installed pac.exe. Use the VS Code terminal with this command:
->    
->    ```powershell
->    Get-Command pac.exe
->    ```
->    
-> 1. The `Source` column will tell you the path. It should be something like:
->    
->    ```
->    c:\Users\you\AppData\Roaming\Code\User\globalStorage\microsoft-isvexptools.powerplatform-vscode\pac\
->    ```
->    
-> 1. Locate the file `\pac\tools\featureflags.json`
-> 1. Open the file in VS Code and look at or near the bottom for the setting `VerbPluginInitNupkg`.
-> 1. Change the `VerbPluginInitNupkg` setting from `off` to `on`.
 
 Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
@@ -124,9 +105,13 @@ You can add a NuGet Package to your Visual Studio project as you normally do. Af
 
 You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
 
-### Add another dependent file or assembly
+### Add a dependent assembly without using NuGet
 
-To include another file or assembly that will be available in the runtime for your plug-in.
+If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
+
+### Add a file resource
+
+To include another file resource that will be available in the runtime for your plug-in.
 
 1. Add the file to your Visual Studio project.
 1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
