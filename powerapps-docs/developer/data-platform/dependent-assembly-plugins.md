@@ -223,7 +223,7 @@ You can add a NuGet Package to your Visual Studio project as you normally do. Af
 
 You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
 
-### Add a dependent assembly without using NuGet with Power Platform Tools
+#### Add a dependent assembly without using NuGet with Power Platform Tools
 
 If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
 
