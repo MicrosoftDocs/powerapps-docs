@@ -1155,6 +1155,6 @@ See the [msdyn_workflow_msdyn_pmrecording](workflow.md#BKMK_msdyn_workflow_msdyn
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_pmrecording?text=msdyn_pmrecording EntityType" />

@@ -484,6 +484,6 @@ See the [lk_ACIViewMapper_createdby](systemuser.md#BKMK_lk_ACIViewMapper_created
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.aciviewmapper?text=aciviewmapper EntityType" />

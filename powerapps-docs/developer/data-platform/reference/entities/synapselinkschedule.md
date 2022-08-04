@@ -1007,6 +1007,6 @@ See the [profileschedules](synapselinkprofile.md#BKMK_profileschedules) one-to-m
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.synapselinkschedule?text=synapselinkschedule EntityType" />
