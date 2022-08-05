@@ -77,13 +77,13 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
    - **Data type**. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
    - **Behavior**. Select calculated to enable the column to be included in calculated columns to automate manual calculations.
    - **Required**. Setting this to **Business required** makes it so a record can't be saved without data in this column.
-   - **Searchable**. This column appears in Advanced Find and is available when customizing views.
+   - **Searchable**. When selected, this column appears in Advanced Find and is available when customizing views.
    - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
    - **Sync with global choice?**
       - **Yes**. Select this option if you want the choice to be available to other tables (global choice).
       - **No**. Select this option if you want the choice only available in the table where you are creating the new choice. 
-   - **Sync this choice with**. Select an existing choice column. Then, the options configured for that choice will be used for this choice.
-   - **Choices**. Create the options for your choice:
+   - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice will be used for this choice.
+   - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
       - In the **Label** field, enter the label you want displayed for the choice option.
       - The **Value** number represents a unique value for the option and is not displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
       - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
