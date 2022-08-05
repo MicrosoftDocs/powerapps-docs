@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/use-alternate-key-create-record.md",
+      "redirect_url": "use-alternate-key-reference-record",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/virtual-entities/create-virtual-tables-using-connectors.md",
       "redirect_url": "../../../../power-apps/maker/data-platform/create-virtual-tables-using-connectors",
       "redirect_document_id": false
