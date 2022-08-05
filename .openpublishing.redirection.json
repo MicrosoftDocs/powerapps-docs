@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "powerapps-docs/developer/data-platform/webapi/web-api-aaduser-samples.md",
-      "redirect_url": "../../aaduser-entity#aaduser-table-web-api-examples",
+      "redirect_url": "../aaduser-entity#aaduser-table-web-api-examples",
       "redirect_document_id": false
     },
     {
