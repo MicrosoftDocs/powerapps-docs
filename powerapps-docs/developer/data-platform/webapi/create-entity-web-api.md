@@ -72,7 +72,7 @@ You can compose your `POST` request so that data from the created record will be
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
 > [!NOTE]
-> Nested $expand on collection-valued navigation properties will not return data. More information: [Retrieve related entities for an entity instance by expanding collection-valued navigation properties](retrieve-entity-using-web-api.md#retrieve-related-entities-for-an-entity-instance-by-expanding-collection-valued-navigation-properties)
+> Nested `$expand` on collection-valued navigation properties will not return data. More information: [Retrieve related entities for an entity instance by expanding collection-valued navigation properties](retrieve-entity-using-web-api.md#retrieve-related-entities-for-an-entity-instance-by-expanding-collection-valued-navigation-properties)
 
 When an entity is created in this way the `OData-EntityId` header containing the URI to the created record is not returned.
 

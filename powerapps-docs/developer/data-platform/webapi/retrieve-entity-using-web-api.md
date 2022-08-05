@@ -373,7 +373,7 @@ OData-Version: 4.0
 > Note that the expanded `Opportunity_Tasks` collection-valued navigation property is an empty array. There may be data in that collection, but you will need another query to retrieve it.
 >
 
-### Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties**
+### Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties
 
 The following example demonstrates how you can expand related entities for an entity instance using both single and collection-valued navigation properties.  
 
