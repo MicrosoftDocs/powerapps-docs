@@ -331,7 +331,7 @@ Within Application Insights, when you switch your query to use `exceptions` rath
 
 :::image type="content" source="media/application-insights-ilogger-cause-error-exceptions.png" alt-text="Switch your query to use exceptions rather than traces.":::
 
-The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
+The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
 
 > [!NOTE]
 > The SandboxRoleInstance `client_Type` is `PC`. This is because the plug-in runs in an isolated sandbox as a client rather than on the server.

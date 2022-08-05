@@ -40,7 +40,7 @@ Before you begin, you must complete the following steps:
 
 - Create a new [Test URLs .json file](#step-2---create-a-test-url-json-file) that includes the app test URLs you want to run from the pipeline.
 
-- Create a new [Azure Pipelines YAML file](#step-3---create-an-azure-pipeline-yaml-file). 
+- Create a new [Azure Pipelines YAML file](#step-3---create-an-azure-pipelines-yaml-file). 
 
 - Create a [GitHub service connection](#step-4---create-a-github-service-connection) to your repo.
 
@@ -80,7 +80,7 @@ You can find a sample file, Samples/TestAutomationURLs.json, in the repo you cre
 
     ![Update the JSON file.](media/test-studio-classic-pipeline-editor/json-update.png "Update the JSON file")
 
-### Step 3 - Create an Azure Pipeline YAML file
+### Step 3 - Create an Azure Pipelines YAML file
 
 You can find a sample file, Samples/azure-pipelines.yml, in the repo you created earlier.
 
@@ -142,7 +142,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Existing Azure Pipelines YAML file**.
 
-1. Set the path to the [Azure YAML pipeline file](#step-3---create-an-azure-pipeline-yaml-file) you created earlier.
+1. Set the path to the [Azure YAML pipeline file](#step-3---create-an-azure-pipelines-yaml-file) you created earlier.
 
 1. Select **Continue**:
 

@@ -82,7 +82,7 @@ When you use a custom action there are no classes in the SDK assemblies for thes
 More information: 
 
 - [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
-- [Custom Actions](../custom-actions.md)
+- [Create your own messages](../custom-actions.md)
 
 ## Passing optional parameters with a request
 
