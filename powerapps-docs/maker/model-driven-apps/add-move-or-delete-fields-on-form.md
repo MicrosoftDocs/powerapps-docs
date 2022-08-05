@@ -25,7 +25,7 @@ search.app:
 ---
 # Add, move, configure, or delete columns on a form
 
-Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app. For information about the different column types, see [Types of columns](../data-platform/types-of-fields.md).
+Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they're available in your app. For information about the different column types, see [Types of columns](../data-platform/types-of-fields.md).
 
 Add, configure, move, or delete columns using the form designer.
 
@@ -43,10 +43,10 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. On the command bar, select **Add column**, or in the left pane, select **Columns**.  The **Columns** pane is open by default when the form designer is opened.
 3. In the **Columns** pane, search, filter, or scroll to find the column you want to add. If you can't find a column, it might already be on the form. Clear **Show only unused columns** to view all columns, including those already added to the form.
-4. In the **Columns** pane, select a column and drag it onto the form preview. As you drag the column on the form preview, you will see drop targets where you can add the column.
+4. In the **Columns** pane, select a column and drag it onto the form preview. As you drag the column on the form preview, you'll see drop targets where you can add the column.
 5. Drop the column in the location you want. Note the following:
     - Columns can be dropped before or after any existing column or component.
-    - Columns can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
+    - Columns can also be dropped in the empty area within a section. In this case, the column will be added in an available space so as to evenly distribute columns and components across the section columns.
     - Hovering over a tab header when dragging a column changes the currently selected tab, allowing you to add the column to a different tab.
 6. Repeat steps 3-5 above if you want to add more columns.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
@@ -69,7 +69,7 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 
 ## Create a choice column
 
-1. In the form designer on the command bar select **Form field**.
+1. In the form designer on the command bar, select **Form field**.
 1. Select **New table column**.
 1. In the **New column** pane, enter or select the values for the following properties:
    - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
@@ -81,14 +81,14 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
    - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
    - **Sync with global choice?**
       - **Yes**. Select this option if you want the choice to be global. Then, you can also select an existing global choice to use the options from that global choice.
-      - **No**. Select this option if you want the choice only available in the table where you are creating the new choice. 
+      - **No**. Select this option if you want the choice only available in the table where you're creating the new choice. 
    - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice will be used for this choice.
    - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
       - In the **Label** field, enter the label you want displayed for the choice option.
-      - The **Value** number represents a unique value for the option and is not displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
+      - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
       - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
    - **Default choice**. Select one of the options you created as the default choice.
-   - **Schema name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved you can't change this.
+   - **Schema name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved, you can't change this.
    - **Enable column security**. Select this to allow for securing the data in the column beyond the security defined for the table.
    - **Enable auditing.** If auditing has been enabled in the environment, this column can be included in change tracking.
    - **Appears in dashboard's global filter**. Select this option to allow column to be available as a filter in interactive dashboards.
@@ -110,8 +110,8 @@ The **Properties** tab displays the following properties.
 |**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
 |**Display options** | **Hide** | When selected, the column is hidden by default and can be shown using code. |
 |**Display options** | **Lock** |  Lock this column so it can't be removed. |
-|**Display options** | **Read-only** | When selected, the column value is not editable. |
-|**Formatting** | **Form field width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
+|**Display options** | **Read-only** | When selected, the column value isn't editable. |
+|**Formatting** | **Form field width** |  When the section containing the columns has more than one column, you can set the column to occupy up to the number of columns that the section has. |
 |**Formatting** | **Form field height** |  Some columns, such as the multiline text column, let you control the height of the column by specifying the number of rows the column occupies. |
 |**Formatting** | **Use all available vertical space** |  Instead of setting the height by a number of rows, some columns, such as the multiline text column, let you set the column height to expand to all the available space on the form. |
 | **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
@@ -143,10 +143,10 @@ You can move a column on a form using drag and drop or cut and paste actions.
 ### Move columns on a form using drag and drop
 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
-2. In the form preview, select the column that you want to move and drag and drop it. As you drag the column on the form preview, you will see drop targets where you can move the column to.
+2. In the form preview, select the column that you want to move and drag and drop it. As you drag the column on the form preview, you'll see drop targets where you can move the column to.
    Note the following:
     - Columns can be dropped before or after any existing column or component.
-    - Columns can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
+    - Columns can also be dropped in the empty area within a section. In this case, the column will be added in an available space so as to evenly distribute columns and components across the section columns.
     - Hovering over a tab header when dragging a column changes the currently selected tab, allowing you to add the column to a different tab.
 3. Repeat step 2 above if you want to move more columns.
 4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
@@ -162,7 +162,7 @@ You can move a column on a form using drag and drop or cut and paste actions.
 5. On the command bar, select **Paste** or select the chevron, and then select **Paste before**.      Note the following:
      - When you select **Paste**, the column that is moved is pasted after the existing column or component. 
      - When you select **Paste before**, the column that is moved is pasted before the existing column or component.
-     - When you select a section, the column that is moved is added in an available space so as to evenly distribute columns and components across the section columns. The **Paste before** action is not applicable and therefore not available in this case.
+     - When you select a section, the column that is moved is added in an available space so as to evenly distribute columns and components across the section columns. The **Paste before** action isn't applicable and therefore not available in this case.
 6. Repeat steps 2-5 above if you want to move more columns.
 7. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users.
 
@@ -205,7 +205,7 @@ Create new columns from the form designer. When a column is created on a table, 
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
-[Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
+[Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
