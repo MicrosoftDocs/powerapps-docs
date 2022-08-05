@@ -71,17 +71,18 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 
 1. In the form designer on the command bar select **Form field**.
 1. Select **New table column**.
-1. In the New column pane, enter or select the values for the following properties:
-   - Display name.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
-   - Description. Enter an optional description of the choice column.
-   - Data type. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
-   - Behavior.
-   - Required. 
-   - Searchable.
-   - Selecting multiple choices is allowed. Select this option if you want to create a choice where the user can select more than one option (multi-select).
-   - Sync with global choice?
-      - Yes. Select this option if you want the choice to be available to other tables (global choice).
-      - No. Select this option if you want the choice only available in the table where you are creating the new choice. 
+1. In the **New column** pane, enter or select the values for the following properties:
+   - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+   - **Description**. Enter an optional description of the choice column.
+   - **Data type**. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
+   - **Behavior**. Select calculated to enable the column to be included in calculated columns to automate manual calculations.
+   - **Required**. Setting this to **Business required** makes it so a record can't be saved without data in this column.
+   - **Searchable**. This column appears in Advanced Find and is available when customizing views.
+   - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
+   - **Sync with global choice?**
+      - **Yes**. Select this option if you want the choice to be available to other tables (global choice).
+      - **No**. Select this option if you want the choice only available in the table where you are creating the new choice. 
+   - **Sync this choice with**. Select an existing choice column. Then, the options configured for that choice will be used for this choice.
    - **Choices**. Create the options for your choice:
       - In the **Label** field, enter the label you want displayed for the choice option.
       - The **Value** number represents a unique value for the option and is not displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
