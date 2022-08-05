@@ -62,7 +62,7 @@ Where:
 
 ## Assign a security role to an AAD group team
 
-An administrator can assign a security role to an AAD group team after the AAD group is created in AAD. The AAD group team is created into Dataverse automatically if it doesn’t exist in Dataverse.
+An administrator can assign a security role to an AAD group team after the AAD group is created in AAD. The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
 **Request**
 
@@ -77,7 +77,7 @@ Accept: application/json
 
 ## Assign a security role to a user
 
-An administrator can assign a security role to an AAD group user.  The user is added into Dataverse automatically if the user doesn’t exist in Dataverse and the role is assigned directly to the user.
+An administrator can assign a security role to an AAD group user.  The user is added into Dataverse automatically if the user doesn't exist in Dataverse and the role is assigned directly to the user.
 
 **Request**
 
@@ -91,7 +91,7 @@ Accept: application/json
 ```
 ## Assign a record to an AAD group
 
-An administrator can assign a record to an AAD group.  The AAD group team is created into Dataverse automatically if it doesn’t exist in Dataverse.
+An administrator can assign a record to an AAD group.  The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
 The example below shows the syntax for assigning an account record.
 
@@ -108,7 +108,7 @@ Accept: application/json
 
 ## Assign a record to an AAD group member
 
-An administrator can assign a record to an AAD group member.  The AAD group member is added into Dataverse automatically if the user doesn’t exist in Dataverse.
+An administrator can assign a record to an AAD group member.  The AAD group member is added into Dataverse automatically if the user doesn't exist in Dataverse.
 
 The example below shows the syntax for assigning an account record.
 
@@ -124,7 +124,7 @@ Accept: application/json
 ```
 <!-- ## Share a record to an AAD group 
 
-“An administrator or a record owner can share a record to an AAD group. The AAD group team is created into Dataverse automatically if it doesn’t exist in Dataverse.
+"An administrator or a record owner can share a record to an AAD group. The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
 The example below shows the syntax for sharing an account record.
 
@@ -150,7 +150,7 @@ Accept: application/json
 
 <!-- ## Share a record to an AAD group member
 
-“An administrator or a record owner can share a record to an AAD group member. The AAD group member is added into Dataverse automatically if the user doesn’t exist in Dataverse.
+"An administrator or a record owner can share a record to an AAD group member. The AAD group member is added into Dataverse automatically if the user doesn't exist in Dataverse.
 
 The example below shows the syntax for sharing an account record.
 
@@ -176,7 +176,7 @@ Accept: application/json
 
 ## Retrieve a user
 
-You can retrieve a user row using an Azure user object identifier (ID). If the user doesn’t exist in Dataverse, the user is added to Dataverse automatically.
+You can retrieve a user row using an Azure user object identifier (ID). If the user doesn't exist in Dataverse, the user is added to Dataverse automatically.
 
 The example below shows the syntax for retrieving a user row.
 
@@ -241,8 +241,9 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
 }
 ```
 
-## Checking user or team's access rights on a table
-If you have a non-interactive process where your service needs to check if the user has access rights to a table, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
+## Checking user or team's access rights on a record
+
+If you have a non-interactive process where your service needs to check if the user has access rights to a record, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
 
 More information: [Impersonate another user](../impersonate-another-user.md)
 

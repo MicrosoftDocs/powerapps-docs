@@ -1035,6 +1035,6 @@ See the [chat_ActionCards](chat.md#BKMK_chat_ActionCards) one-to-many relationsh
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.actioncard?text=actioncard EntityType" />
