@@ -24,35 +24,41 @@ Choice columns can be single selection only (choice) or can allow multi-selectio
 
 :::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
-## Create a global choice within a solution
+## Create a choice within a solution
 
 When you follow these steps to create a choice in a solution, you're creating a global choice that is single selection.
 
-1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select Solutions, and then open the solution you want.
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want.
 
-1. On the command bar, select **New** > **Choice**.
+1. Open the table where you want to create the choice, and then on the command bar, select **New** > **Choice**.
 
-1. In the **New choice** panel, enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+1. In the **New choice** panel, enter properties for the choice column.
 
-1. Create the options for your choice:
-   - In the **Label** field, enter the label you want displayed for the choice option.
-   - The **Value** number represents a unique value for the option and is not displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
-   - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
+### Configure properities for a choice
 
-1. Select **+ New choice** to create additional options for the choice list. Repeat steps 4-5 until all the options you want are created.
+- **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+- **Description**. Enter an optional description of the choice column.
+- **Data type**. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
+- **Behavior**. Select calculated to enable the column to be included in calculated columns to automate manual calculations.
+- **Required**. Setting this to **Business required** makes it so a record can't be saved without data in this column.
+- **Searchable**. When selected, this column appears in Advanced Find and is available when customizing views.
+- **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
+- **Sync with global choice?**
+   - **Yes**. Select this option if you want the choice to be global. Then, you can also select an existing global choice to use the options from that global choice.
+   - **No**. Select this option if you want the choice only available in the table where you're creating the new choice. 
+   - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice will be used for this choice.
+   - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
+- In the **Label** field, enter the label you want displayed for the choice option.
+- The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
+- Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
+- **Default choice**. Select one of the options you created as the default choice.
+- **Schema name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved, you can't change this.
+- **Enable column security**. Select this to allow for securing the data in the column beyond the security defined for the table.
+- **Enable auditing.** If auditing has been enabled in the environment, this column can be included in change tracking.
+- **Appears in dashboard's global filter**. Select this option to allow column to be available as a filter in interactive dashboards.
+- **Sortable**. Select this option to allow sorting of this column when used in interactive dashboards.
 
-1. Optionally, expand **Advanced options** to display the following properties:
-   - **Name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved you can't change this.
-   - **External type name**: This value is used for virtual tables to map a value in an external data source to the choice column.
-   - **Description**: Add an optional description for the choice.
-
-   :::image type="content" source="media/data-platform-cds-newoptionset/choice-created-in-solution.png" alt-text="New choice properties pane.":::
-
-1. Select **Save**.
-
-## Create a choice in the form designer
-
-You can create global or local choice columns in the form designer. More information: [Create a choice column](../model-driven-apps/add-move-or-delete-fields-on-form.md#create-a-choice-column)
+Select **Save**.
 
 ## Create and edit global choices using solution explorer
 

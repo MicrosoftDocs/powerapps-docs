@@ -71,28 +71,7 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 
 1. In the form designer on the command bar, select **Form field**.
 1. Select **New table column**.
-1. In the **New column** pane, enter or select the values for the following properties:
-   - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
-   - **Description**. Enter an optional description of the choice column.
-   - **Data type**. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
-   - **Behavior**. Select calculated to enable the column to be included in calculated columns to automate manual calculations.
-   - **Required**. Setting this to **Business required** makes it so a record can't be saved without data in this column.
-   - **Searchable**. When selected, this column appears in Advanced Find and is available when customizing views.
-   - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
-   - **Sync with global choice?**
-      - **Yes**. Select this option if you want the choice to be global. Then, you can also select an existing global choice to use the options from that global choice.
-      - **No**. Select this option if you want the choice only available in the table where you're creating the new choice. 
-   - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice will be used for this choice.
-   - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
-      - In the **Label** field, enter the label you want displayed for the choice option.
-      - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
-      - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
-   - **Default choice**. Select one of the options you created as the default choice.
-   - **Schema name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved, you can't change this.
-   - **Enable column security**. Select this to allow for securing the data in the column beyond the security defined for the table.
-   - **Enable auditing.** If auditing has been enabled in the environment, this column can be included in change tracking.
-   - **Appears in dashboard's global filter**. Select this option to allow column to be available as a filter in interactive dashboards.
-   - **Sortable**. Select this option to allow sorting of this column when used in interactive dashboards.
+1. In the **New column** pane, enter or select the values for the following complete the properties for the choice column. More information: [Configure properities for a choice](../data-platform/custom-picklists.md#configure-properities-for-a-choice)
 
 ## Configure column properties on a form
 
