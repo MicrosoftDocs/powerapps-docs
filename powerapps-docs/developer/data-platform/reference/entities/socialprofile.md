@@ -945,6 +945,6 @@ See the [Socialprofile_customer_accounts](account.md#BKMK_Socialprofile_customer
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.socialprofile?text=socialprofile EntityType" />

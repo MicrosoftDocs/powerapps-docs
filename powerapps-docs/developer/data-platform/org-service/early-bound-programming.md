@@ -30,7 +30,8 @@ Late binding allows you to work with custom tables (entities) or columns (attrib
 
 ## Late-bound
 
-Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to tables and columns (entities and attributes) using their `LogicalName` property values: 
+Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to table rows and columns (entities and attributes) using their `LogicalName` property values:
+
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 

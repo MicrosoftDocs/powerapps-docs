@@ -30,7 +30,8 @@ There are three ways to search rows in Dataverse:
 -   Advanced Find
 
 > [!NOTE]
-> Multi-table Quick Find is also called Categorized Search. 
+> Multi-table Quick Find is also called Categorized Search.
+> For a given query, the search results from the three options below might be different due to the searchs cope and search behavior.
   
 The following table provides a brief comparison of the three options.
 

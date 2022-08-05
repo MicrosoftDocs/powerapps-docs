@@ -35,7 +35,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.1`.|
-|Resource|The name of the entity (table), function, or action you want to use.|
+|Resource|The EntitySetName of the table, or the name of the function or action you want to use.|
 
 The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource. You can find these values mentioned in the above table by navigating your browser to the Power Apps [portal](https://make.powerapps.com), selecting the settings (gear) icon in the top toolbar, and choosing **Developer resources** in the menu.
 
@@ -98,13 +98,13 @@ You can use additional headers to enable specific capabilities.
   
 -   To return formatted values with a query, include the odata.include-annotations preference set to `Microsoft.Dynamics.CRM.formattedvalue` using the [Prefer](https://tools.ietf.org/html/rfc7240) header. More information:[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)  
   
--   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information:[Specify the number of tables (entities) to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
+-   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information: [Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
   
 -   To impersonate another user when the caller has the privileges to do so, add the `CallerObjectId` header with the user's Azure Active Directory Object Id value of the user to impersonate. This data is in the [SystemUser table/entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
   
 -   To apply optimistic concurrency, you can apply the [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) header with an `Etag` value. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency).  
   
--   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert a table (entity)](update-delete-entities-using-web-api.md#bkmk_upsert).  
+-   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Update or create a record with Upsert](update-delete-entities-using-web-api.md#bkmk_upsert).  
   
 -   When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).  
 
@@ -181,7 +181,7 @@ Details about errors are included as JSON in the response. Errors will be in thi
 
 Some errors can include additional details using *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response will include all the annotations which will include additional details about errors and a URL that can be used to be directed to any specific guidance for the error.
 
-Some of these details can be set by developers writing plug-ins. For example, let’s say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This allows you to pass an OperationStatus value, a custom integer error code, and an error message.
+Some of these details can be set by developers writing plug-ins. For example, let's say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This allows you to pass an OperationStatus value, a custom integer error code, and an error message.
 
 A simple plug-in might look like this:
 
@@ -284,10 +284,10 @@ This can also be done using the Organization Service: [Add a Shared Variable fro
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Query data using the Web API](query-data-web-api.md)<br />
-[Create a table (entity) using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table (entity) using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete tables (entities) using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables (entities) using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
