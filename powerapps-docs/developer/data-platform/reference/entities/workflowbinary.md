@@ -984,6 +984,6 @@ See the [workflow_workflowbinary_Process](workflow.md#BKMK_workflow_workflowbina
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.workflowbinary?text=workflowbinary EntityType" />

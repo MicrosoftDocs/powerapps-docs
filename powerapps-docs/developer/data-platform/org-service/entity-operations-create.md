@@ -279,7 +279,7 @@ If you are creating large numbers of table rows that contain non-relational data
 
 ### See also
 
-[R table row using the Organization Service](entity-operations-retrieve.md)<br />
+[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
 [Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
 

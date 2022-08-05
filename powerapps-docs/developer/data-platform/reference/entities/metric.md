@@ -664,6 +664,6 @@ See the [organization_metric](organization.md#BKMK_organization_metric) one-to-m
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.metric?text=metric EntityType" />

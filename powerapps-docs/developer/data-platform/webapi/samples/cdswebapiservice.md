@@ -165,6 +165,7 @@ More information:
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
 - [Upsert a table](../update-delete-entities-using-web-api.md#bkmk_upsert)
 
+
 ## PatchAsync
 
 The asynchronous version of [Patch](#patch).

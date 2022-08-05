@@ -883,6 +883,6 @@ See the [organization_msdyn_helppage](organization.md#BKMK_organization_msdyn_he
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_helppage?text=msdyn_helppage EntityType" />

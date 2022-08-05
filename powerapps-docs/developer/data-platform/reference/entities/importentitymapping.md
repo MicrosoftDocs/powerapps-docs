@@ -617,6 +617,6 @@ See the [lk_importentitymapping_modifiedby](systemuser.md#BKMK_lk_importentityma
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importentitymapping?text=importentitymapping EntityType" />
