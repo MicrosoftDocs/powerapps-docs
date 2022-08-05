@@ -30,9 +30,9 @@ Choice columns can be single selection only (choice) or can allow multi-selectio
 
 1. Open the table where you want to create the choice, and then on the command bar, select **New** > **Choice**.
 
-1. In the **New choice** panel, enter properties for the choice column.
+1. In the **New column** panel, enter properties for the choice column.
 
-### Configure properities for a choice
+### Configure properties for a choice
 
 - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
 - **Description**. Enter an optional description of the choice column.
