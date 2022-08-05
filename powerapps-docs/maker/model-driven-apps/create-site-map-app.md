@@ -293,8 +293,6 @@ To create a model-driven app with the same site map items as the legacy app, the
 
 1. Open [make.powerapps.com](https://make.powerapps.com/)
 
-1. On the left navigation pane, select **Solutions**, and then open or create a new solution.
-
 1. Select **New > App > Model-driven app**.
 
 1. Select **Classic app designer**, and then select **Create**.
