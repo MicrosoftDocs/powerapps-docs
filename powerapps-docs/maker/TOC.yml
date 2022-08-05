@@ -371,7 +371,7 @@
               - name: Configure Office 365 screens
                 items:
                   - name: Calendar-screen overview
-                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+                    href: /canvas-apps/screen-templates/calendar-screen-overview.md
                   - name: Calendar-screen reference
                     href: ./canvas-apps/screen-templates/calendar-screen-reference.md
                   - name: Email-screen overview
