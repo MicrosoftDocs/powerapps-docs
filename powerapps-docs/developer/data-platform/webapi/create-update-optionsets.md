@@ -1,24 +1,20 @@
 ---
 title: "Create and update choices (option sets) using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating choices in Microsoft Dataverse."
-ms.custom: ""
 ms.date: 03/11/2022
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-caps.latest.revision: 15
-author: "NHelgren" # GitHub ID
-ms.author: "jdaly"
-ms.reviewer: "pehecke"
-manager: "kvivek"
+author: NHelgren # GitHub ID
+ms.author: nhelgren
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Create and update choices (option sets) using the Web API
@@ -40,22 +36,22 @@ and in any option sets that are defined in environments where your managed solut
   
 |Message|Web API Operation|  
 |--|--|
-|CreateOptionSet|Use `POST` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions`.|
-|DeleteOptionSet|Use `DELETE` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`.|
-|RetrieveAllOptionSets|Use `GET` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions`.| 
-|RetrieveOptionSet|Use `GET` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`.|   
+|`CreateOptionSet`|Use `POST` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions`.|
+|`DeleteOptionSet`|Use `DELETE` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`.|
+|`RetrieveAllOptionSets`|Use `GET` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions`.| 
+|`RetrieveOptionSet`|Use `GET` request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`.|   
 
 The following table lists the messages you can use with local and global option sets
 
 |Message|Web API Operation|  
 |--|--|
-|DeleteOptionValue<p/>Deletes one of the values in a global option set.|<xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action />  
-|InsertOptionValue<p/>Inserts a new option into a global option set.|<xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action />| 
-|InsertStatusValue<p/>Inserts a new option into the global option set used in the `Status` column.|<xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action />|
-|OrderOption<p/>Changes the relative order of the options in an option set.|<xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action />|
-|UpdateOptionSet|Use `PUT` request with a <xref:Microsoft.Dynamics.CRM.OptionSetMetadataBase?text=OptionSetMetadataBase EntityType /> to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`<br />Only those properties defined by the `OptionSetMetadataBase` can be updated. This does not include the options. Use other actions to make changes to options.|
-|UpdateOptionValue<p/>Updates an option in a global option set.|<xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action />|
-|UpdateStateValue<p/>Inserts a new option into the option set used in the `Status` column.|<xref:Microsoft.Dynamics.CRM.UpdateStateValue?text=UpdateStateValue Action />|
+|`DeleteOptionValue`<br />Deletes one of the values in a global option set.|<xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action> 
+|`InsertOptionValue`<br />Inserts a new option into a global option set.|<xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>| 
+|`InsertStatusValue`<br />Inserts a new option into the global option set used in the `Status` column.|<xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action>|
+|`OrderOption`<br />Changes the relative order of the options in an option set.|<xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>|
+|`UpdateOptionSet`|Use `PUT` request with a <xref:Microsoft.Dynamics.CRM.OptionSetMetadataBase?text=OptionSetMetadataBase EntityType>to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`<br />Only those properties defined by the `OptionSetMetadataBase` can be updated. This does not include the options. Use other actions to make changes to options.|
+|`UpdateOptionValue`<br />Updates an option in a global option set.|<xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>|
+|`UpdateStateValue`<br />Inserts a new option into the option set used in the `Status` column.|<xref:Microsoft.Dynamics.CRM.UpdateStateValue?text=UpdateStateValue Action>|
 
 ### See also
 

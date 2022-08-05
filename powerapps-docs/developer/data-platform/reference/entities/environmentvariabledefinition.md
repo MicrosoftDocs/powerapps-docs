@@ -1277,6 +1277,6 @@ See the [botcomponent_environmentvariabledefinition](botcomponent.md#BKMK_botcom
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.environmentvariabledefinition?text=environmentvariabledefinition EntityType" />

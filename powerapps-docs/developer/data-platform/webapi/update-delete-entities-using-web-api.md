@@ -25,12 +25,12 @@ Operations to modify data are a core part of the Web API. In addition to a simpl
 
 ## Basic update
 
-Update operations use the HTTP `PATCH` verb. Pass a JSON object containing the properties you want to update to the URI that represents the entity. A response with a status of 204 will be returned if the update is successful.  
+Update operations use the HTTP `PATCH` verb. Pass a JSON object containing the properties you want to update to the URI that represents the record. A response with a status of `204 No Content` will be returned if the update is successful.  
   
-The `If-Match: *` header helps ensure you don't create a new record by accidentally performing an upsert operation. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert).
+The `If-Match: *` header ensures you don't create a new record by accidentally performing an upsert operation. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert).
   
 > [!IMPORTANT]
->  When updating an entity, only include the properties you are changing in the request body. Simply updating the properties of an entity that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven’t actually changed.
+> When updating an record, only include the properties you are changing in the request body. Simply updating the properties of a record that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
 
 > [!NOTE] 
 > The definition for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#column-requirement-level)
@@ -65,17 +65,17 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  See [Associate and disassociate tables on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-table-rows-on-update) for information about associating and disassociating entities on update.  
+>  See [Associate and disassociate table rows on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-table-rows-on-update) for information about associating and disassociating entities on update.  
   
 <a name="bkmk_updateWithDataReturned"></a>
 
 ## Update with data returned
   
-To retrieve data from an entity you are updating you can compose your `PATCH` request so that data from the created record will be returned with a status of 200 (OK).  To get this result, you must use the `return=representation` preference in the request headers.  
+To retrieve data from an entity you are updating you can compose your `PATCH` request so that data from the created record will be returned with a status of 200 (OK).  To get this result, you must use the `Prefer: return=representation` request header.  
   
- To control which properties are returned, append the `$select` query option to the URL to the entity set.  The `$expand` query option will be ignored if used.  
+To control which properties are returned, append the `$select` query option to the URL to the entity set.  The `$expand` query option will be ignored if used.  
   
- This example updates an account entity and returns the requested data in the response.  
+This example updates an account entity and returns the requested data in the response.  
   
  **Request**
 
@@ -168,13 +168,13 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  This can’t be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Remove a reference to a table](associate-disassociate-entities-using-web-api.md#bkmk_Removeareferencetoarow).  
+>  This can't be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Remove a reference to a table](associate-disassociate-entities-using-web-api.md#bkmk_Removeareferencetoarow).  
   
 <a name="bkmk_upsert"></a>
 
-## Upsert a table
+## Update or create a record with Upsert
 
-An *upsert* operation is exactly like an update. It uses a `PATCH` request and uses a URI to reference a specific entity. The difference is that if the entity doesn’t exist it will be created. If it already exists, it will be updated. Normally when creating a new entity you will let the system assign a unique identifier. This is a best practice. But if you need to create a record with a specific `id` value, an `upsert` operation provides a way to do this. This can be valuable in situation where you are synchronizing data in different systems.  
+An *upsert* operation is like an update because it uses a `PATCH` request and uses a URI to reference a specific entity. The difference is that if the entity doesn't exist it will be created. If it already exists, it will be updated. Normally when creating a new entity you will let the system assign a unique identifier. This is a best practice. But if you need to create a record with a specific `id` value, an `upsert` operation provides a way to do this. This can be valuable in situation where you are synchronizing data in different systems.  More information: [Use Upsert to insert or update a record](../use-upsert-insert-update-record.md)
   
 Sometimes there are situations where you want to perform an `upsert`, but you want to prevent one of the potential default actions: either create or update. You can accomplish this through the addition of `If-Match` or `If-None-Match` headers. For more information, see [Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations).  
   
@@ -182,7 +182,7 @@ Sometimes there are situations where you want to perform an `upsert`, but you wa
   
 ## Basic delete
 
-A delete operation is very straightforward. Use the DELETE verb with the URI of the entity you want to delete. This example message deletes an account entity with the primary key `accountid` value equal to 00000000-0000-0000-0000-000000000001.  
+A delete operation is very straightforward. Use the `DELETE` verb with the URI of the entity you want to delete. This example message deletes an account entity with the primary key `accountid` value equal to 00000000-0000-0000-0000-000000000001.  
   
  **Request**
 
@@ -195,7 +195,7 @@ OData-Version: 4.0
   
  **Response**
 
- If the entity exists, you’ll get a normal response with status 204 to indicate the delete was successful. If the entity isn’t found, you’ll get a response with status 404.  
+ If the entity exists, you'll get a normal response with status 204 to indicate the delete was successful. If the entity isn't found, you'll get a response with status 404.  
   
 ```http
 HTTP/1.1 204 No Content  
@@ -206,7 +206,7 @@ OData-Version: 4.0
 
 ## Check for duplicate records
 
-See [Detect duplicates during Update operation using the Web API](manage-duplicate-detection-create-update.md#bkmk_update) for more information on how to check for duplicate records during Update operation.
+See [Detect duplicates during Update operation using the Web API](manage-duplicate-detection-create-update.md#bkmk_update) for more information on how to check for duplicate records during an update operation.
 
 ## Update and delete documents in storage partitions
 
@@ -221,9 +221,9 @@ More information: [Access table data faster using storage partitions](azure-stor
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
