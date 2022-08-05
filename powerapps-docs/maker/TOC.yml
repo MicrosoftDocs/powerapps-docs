@@ -618,10 +618,10 @@
           href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Working with flows
           items:
-          - name: Add a flow
-            href: ./canvas-apps/using-logic-flows.md
-          - name: Use Power Automate pane (preview)
+          - name: Use Power Automate pane 
             href: ./canvas-apps/working-with-flows.md
+          - name: Add a flow (retired)
+            href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
