@@ -26,8 +26,6 @@ Choice columns can be single selection only (choice) or can allow multi-selectio
 
 ## Create a choice within a solution
 
-When you follow these steps to create a choice in a solution, you're creating a global choice that is single selection.
-
 1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want.
 
 1. Open the table where you want to create the choice, and then on the command bar, select **New** > **Choice**.
@@ -48,9 +46,9 @@ When you follow these steps to create a choice in a solution, you're creating a 
    - **No**. Select this option if you want the choice only available in the table where you're creating the new choice. 
    - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice will be used for this choice.
    - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
-- In the **Label** field, enter the label you want displayed for the choice option.
-- The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
-- Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
+   - In the **Label** field, enter the label you want displayed for the choice option.
+   - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
+   - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
 - **Default choice**. Select one of the options you created as the default choice.
 - **Schema name**. This is the unique name used by the system and is automatically generated based on the display name and solution publisher prefix. After a new choice column is saved, you can't change this.
 - **Enable column security**. Select this to allow for securing the data in the column beyond the security defined for the table.
