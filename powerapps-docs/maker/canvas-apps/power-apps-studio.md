@@ -83,7 +83,10 @@ The modern command bar needs to be enabled manually through the feature switch. 
 
 1. Select **Upcoming features**.
 
-1. Under the **Preview** tab, select (TBD).
+1. Under the **Preview** tab, set the toggle to **on** for **Enable modern command bar**.
+
+  > [!div class="mx-imgBorder"] 
+  > ![Enable the modern command bar.](media/studio/pa-studio-enable-modern-bar.png)
 
 The command bar changes when one of the following control or object is selected: 
 
