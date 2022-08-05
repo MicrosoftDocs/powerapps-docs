@@ -230,92 +230,183 @@ If you simply include the name of the navigation property, you'll receive all th
 > [!NOTE]
 > To retrieve related entities for entity sets, see [Retrieve related table records with a query](retrieve-related-entities-query.md).  
 
-- **Retrieve related records by expanding single-valued navigation properties**: <br />The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
+### Retrieve related records by expanding single-valued navigation properties
+ 
+The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
 
-  **Request**
+**Request**
 
-  ```http
-  GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
-  Accept: application/json  
-  OData-MaxVersion: 4.0  
-  OData-Version: 4.0  
-  ```
+```http
+GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
 
-  **Response**
+**Response**
 
-  ```http
-  HTTP/1.1 200 OK  
-  Content-Type: application/json; odata.metadata=minimal  
-  OData-Version: 4.0  
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
 
+{  
+  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))/$entity",  
+  "@odata.etag":"W/\"550616\"",  
+  "name":"Adventure Works (sample)",  
+  "accountid":"00000000-0000-0000-0000-000000000001",  
+  "primarycontactid":
   {  
-    "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))/$entity",  
-    "@odata.etag":"W/\"550616\"",  
-    "name":"Adventure Works (sample)",  
-    "accountid":"00000000-0000-0000-0000-000000000001",  
-    "primarycontactid":
-    {  
-    "@odata.etag":"W/\"550626\"",  
-    "contactid":"c59648c3-68f7-e511-80d3-00155db53318",  
-    "fullname":"Nancy Anderson (sample)"  
+  "@odata.etag":"W/\"550626\"",  
+  "contactid":"c59648c3-68f7-e511-80d3-00155db53318",  
+  "fullname":"Nancy Anderson (sample)"  
+  }
+}
+```
+
+Instead of returning the related entities for entity records, you can also return references (links) to the related entities by expanding the single-valued navigation property with the `$ref` option. The following example returns links to the contact record for the account entity.  
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+
+{  
+  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid)/$entity",  
+  "@odata.etag":"W/\"550616\"",  
+  "name":"Adventure Works (sample)",  
+  "accountid":"00000000-0000-0000-0000-000000000001",  
+  "_primarycontactid_value":"c59648c3-68f7-e511-80d3-00155db53318",  
+  "primarycontactid": { "@odata.id":"[Organization URI]/api/data/v9.0/contacts(c59648c3-68f7-e511-80d3-00155db53318)" }
+}
+```
+
+### Retrieve related entities for an entity instance by expanding collection-valued navigation properties
+
+The following example demonstrates how you can retrieve all the tasks assigned to an account record.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)?$select=name
+&$expand=Account_Tasks($select=subject,scheduledstart)
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))/$entity",
+  "@odata.etag": "W/\"514069\"",
+  "name": "Sample Child Account 1",
+  "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
+  "Account_Tasks":
+    [
+    {
+      "@odata.etag": "W/\"514085\"",
+      "subject": "Sample Task 1",
+      "scheduledstart": "2016-04-11T15:00:00Z",
+      "activityid": "a983a612-3ffc-e511-80d2-00155db07c77"
+    },
+    {
+      "@odata.etag": "W/\"514082\"",
+      "subject": "Sample Task 2",
+      "scheduledstart": "2016-04-13T15:00:00Z",
+      "activityid": "7bcc572f-3ffc-e511-80d2-00155db07c77"
     }
-  }
-  ```
+    ]
+}
+```
 
-  Instead of returning the related entities for entity records, you can also return references (links) to the related entities by expanding the single-valued navigation property with the `$ref` option. The following example returns links to the contact record for the account entity.  
+> [!NOTE]
+> If you use nested `$expand` on collection-valued navigation properties, only the first level of data will be returned. Data for the second level will return an empty array. For example the following query:
+>
+> ```http
+> GET [Organization URI]/api/data/v9.2/accounts(226e5c0d-8e12-ed11-b83d-0022482df33a)?$select=name
+> &$expand=primarycontactid($select=firstname,lastname),opportunity_customer_accounts($select=name;
+> $expand=Opportunity_Tasks($select=subject))
+> ```
+>
+> Will return data like the following:
+>
+> ```json
+> {
+>   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,primarycontactid(firstname,lastname),opportunity_customer_accounts(name,Opportunity_Tasks> (subject)))/$entity",
+>   "@odata.etag": "W/\"71457700\"",
+>   "name": "Sample Account",
+>   "accountid": "226e5c0d-8e12-ed11-b83d-0022482df33a",
+>   "primarycontactid": {
+>     "@odata.etag": "W/\"71457682\"",
+>     "firstname": "John",
+>     "lastname": "Smith",
+>     "contactid": "236e5c0d-8e12-ed11-b83d-0022482df33a"
+>   },
+>   "opportunity_customer_accounts": [
+>     {
+>       "@odata.etag": "W/\"71457705\"",
+>       "name": "Opportunity associated to Sample Account",
+>       "opportunityid": "246e5c0d-8e12-ed11-b83d-0022482df33a",
+>       "Opportunity_Tasks": []
+>     }
+>   ]
+> }
+> ```
+>
+> Note that the expanded `Opportunity_Tasks` collection-valued navigation property is an empty array. There may be data in that collection, but you will need another query to retrieve it.
+>
 
-  **Request**
+### Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties**
 
-  ```http
-  GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
-  Accept: application/json  
-  OData-MaxVersion: 4.0  
-  OData-Version: 4.0  
-  ```
+The following example demonstrates how you can expand related entities for an entity instance using both single and collection-valued navigation properties.  
 
-  **Response**
+**Request**
 
-  ```http
-  HTTP/1.1 200 OK  
-  Content-Type: application/json; odata.metadata=minimal  
-  OData-Version: 4.0  
-  
-  {  
-    "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid)/$entity",  
-    "@odata.etag":"W/\"550616\"",  
-    "name":"Adventure Works (sample)",  
-    "accountid":"00000000-0000-0000-0000-000000000001",  
-    "_primarycontactid_value":"c59648c3-68f7-e511-80d3-00155db53318",  
-    "primarycontactid": { "@odata.id":"[Organization URI]/api/data/v9.0/contacts(c59648c3-68f7-e511-80d3-00155db53318)" }
-  }
-  ```
+```http 
+GET [Organization URI]/api/data/v9.0/accounts(99390c24-9c72-e511-80d4-00155d2a68d1)?$select=accountid
+&$expand=parentaccountid($select%20=%20createdon,%20name),Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
 
-- **Retrieve related entities for an entity instance by expanding collection-valued navigation properties**:<br /> The following example demonstrates how you can retrieve all the tasks assigned to an account record.
+**Response**
 
-  **Request**
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
 
-  ```http
-  GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)?$select=name
-  &$expand=Account_Tasks($select=subject,scheduledstart)
-  Accept: application/json
-  OData-MaxVersion: 4.0
-  OData-Version: 4.0
-  ```
-
-  **Response**
-
-  ```http
-  HTTP/1.1 200 OK  
-  Content-Type: application/json; odata.metadata=minimal  
-  OData-Version: 4.0
-
-  {
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))/$entity",
-    "@odata.etag": "W/\"514069\"",
-    "name": "Sample Child Account 1",
-    "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
-    "Account_Tasks":
-     [
+{
+  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,parentaccountid,Account_Tasks,parentaccountid(createdon,name),Account_Tasks(subject,scheduledstart))/$entity",
+  "@odata.etag": "W/\"514069\"",
+  "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
+  "parentaccountid": 
+    {
+      "@odata.etag": "W/\"514074\"",
+      "createdon": "2016-04-06T00:29:04Z",
+      "name": "Adventure Works (sample)",
+      "accountid": "3adbf27c-8efb-e511-80d2-00155db07c77"
+    },
+  "Account_Tasks":
+    [
       {
         "@odata.etag": "W/\"514085\"",
         "subject": "Sample Task 1",
@@ -328,57 +419,9 @@ If you simply include the name of the navigation property, you'll receive all th
         "scheduledstart": "2016-04-13T15:00:00Z",
         "activityid": "7bcc572f-3ffc-e511-80d2-00155db07c77"
       }
-     ]
-  }
-  ```
-
-- **Retrieve related entities for an entity instance by expanding both single-valued and collection-valued navigation properties**: The following example demonstrates how you can expand related entities for an entity instance using both single- and collection-values navigation properties.  
-
-  **Request**
-
-  ```http 
-  GET [Organization URI]/api/data/v9.0/accounts(99390c24-9c72-e511-80d4-00155d2a68d1)?$select=accountid
-  &$expand=parentaccountid($select%20=%20createdon,%20name),Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
-  Accept: application/json
-  OData-MaxVersion: 4.0
-  OData-Version: 4.0
-  ```
-
-  **Response**
-
-  ```http
-  HTTP/1.1 200 OK  
-  Content-Type: application/json; odata.metadata=minimal  
-  OData-Version: 4.0  
-
-  {
-   "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,parentaccountid,Account_Tasks,parentaccountid(createdon,name),Account_Tasks(subject,scheduledstart))/$entity",
-   "@odata.etag": "W/\"514069\"",
-   "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
-   "parentaccountid": 
-      {
-        "@odata.etag": "W/\"514074\"",
-        "createdon": "2016-04-06T00:29:04Z",
-        "name": "Adventure Works (sample)",
-        "accountid": "3adbf27c-8efb-e511-80d2-00155db07c77"
-      },
-    "Account_Tasks":
-      [
-        {
-          "@odata.etag": "W/\"514085\"",
-          "subject": "Sample Task 1",
-          "scheduledstart": "2016-04-11T15:00:00Z",
-          "activityid": "a983a612-3ffc-e511-80d2-00155db07c77"
-        },
-        {
-          "@odata.etag": "W/\"514082\"",
-          "subject": "Sample Task 2",
-          "scheduledstart": "2016-04-13T15:00:00Z",
-          "activityid": "7bcc572f-3ffc-e511-80d2-00155db07c77"
-        }
-      ]
-  }
-  ```
+    ]
+}
+```
 
 > [!NOTE]
 > You can't use the `/$ref` or `/$count` path segments to return only the URI for the related entity or a count of the number of related entities.
@@ -387,9 +430,9 @@ If you simply include the name of the navigation property, you'll receive all th
 
 ## Options to apply to expanded records
 
- You can apply certain system query options on the entities returned for a collection-valued navigation property. Use a semicolon-separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. You can use `$select`, `$filter`, `$orderby`, `$top`, and `$expand`.
+You can apply certain system query options on the entities returned for a collection-valued navigation property. Use a semicolon-separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. You can use `$select`, `$filter`, `$orderby`, `$top`, and `$expand`.
 
- The following example filters the results of task entities related to an `account` to those with a subject that ends with "1."
+The following example filters the results of task entities related to an `account` to those with a subject that ends with "1."
 
 ```http
 ?$expand=Account_Tasks($filter=endswith(subject,'1');$select=subject)  
@@ -401,20 +444,20 @@ The following example specifies that related tasks should be returned in ascendi
 ?$expand=Account_Tasks($orderby=createdon asc;$select=subject,createdon)  
 ```
 
- The following example returns only the first related task.
+The following example returns only the first related task.
 
 ```http
 ?$expand=Account_Tasks($top=1;$select=subject)
 ```
 
- The following example applies nested `$expand` options to return details about the `systemuser` who last modified the account and the name of the `businessunit` that user belongs to.
+The following example applies nested `$expand` options to return details about the `systemuser` who last modified the account and the name of the `businessunit` that user belongs to.
 
 ```http
 ?$select=name&$expand=modifiedby($select=fullname;$expand=businessunitid($select=name))
 ```
 
 > [!NOTE]
-> - Nested `$expand` options can only be applied to single-valued navigation properties.
+> - Nested `$expand` options can only be applied to single-valued navigation properties. When applied to collection-valued navigation properties an empty array will be returned.
 >
 > - Each request can include a maximum of 15 `$expand` options. There is no limit on the depth of nested `$expand` options, but the limit of 15 total `$expand` options applies to these as well.
 >
