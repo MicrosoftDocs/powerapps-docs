@@ -4,7 +4,7 @@ description: Learn how to configure a file column to store binary data on portal
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/20/2022
+ms.date: 08/05/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -18,8 +18,8 @@ contributors:
 [This topic is pre-release documentation and is subject to change.]
 
 A file column is used for storing binary data. This column is primarily used to store a single file, note, or attachment; however, it's possible to store other forms of binary data. You can configure a file column on basic and advanced forms to provide the capability to upload, view, modify, or delete the file. The file column can store files up to the specified maximum size of a Microsoft Dataverse table column.
-<!--note from editor: This animation needs to have descriptive alt text so a reader with low vision knows what it's showing. This will necessarily be fairly long alt text, so you'll need to use image type="complex". The text might be something like "Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue." (Note that our style is to use the first spelling given in the American Heritage dictionary, which is "catalog." I realize you have to follow the UI here, but perhaps you could mention this to the UI design team?) Also, it looks like the animation plays immediately when the page is loaded, but it needs to pause before it goes into autoplay. Please see the Docs Contribute Guide https://review.docs.microsoft.com/en-us/help/contribute/contribute-accessibility-multimedia?branch=main#playback-control-requirements-for-animated-gifs-->
-:::image type="content" source="media/file-column/file-column-support.gif" alt-text="An animation depicting the upload file for file column.":::
+
+:::image type="complex" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue.":::
 
 > [!NOTE]
 > - This is a preview feature.
@@ -38,7 +38,7 @@ You must configure the site setting **Control/EnableFilePreview** and set its va
 
 ## Liquid code
 
-Liquid is an open-source template language that's integrated natively into Microsoft Power Apps portals. Developers can retrieve file column values when they query data by using fetchXML and entity view.<!--note from editor: Edit okay?-->
+Liquid is an open-source template language that's integrated natively into Microsoft Power Apps portals. Developers can retrieve file column values when they query data by using fetchXML and entity view.
 
 ```
 {% for item in tables.results.entities %}
@@ -84,11 +84,11 @@ Create a new file data type column in [Dataverse](../../data-platform/create-edi
 Portals Web API can be used to perform create, read, update, and delete operations on file columns across Dataverse tables.
 
 > [!NOTE]
-> Make sure you've configured the appropriate Web API [site settings](../web-api-overview.md#site-settings-for-the-web-api) for the tables and file columns<!--note from editor: Edit okay? Not sure what "file column tables" means here.--> you want to access.
+> Make sure you've configured the appropriate Web API [site settings](../web-api-overview.md#site-settings-for-the-web-api) for the tables and file columns you want to access.
 
 ### Retrieving file data
 
-To retrieve file data, use the API request described in the following examples.<!--note from editor: Edit okay?-->
+To retrieve file data, use the API request described in the following examples.
 
 ```
 GET /_api/<entity-type>(id)/<file-attribute-name>/$value
