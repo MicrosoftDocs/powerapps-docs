@@ -19,7 +19,7 @@ contributors:
 
 A file column is used for storing binary data. This column is primarily used to store a single file, note, or attachment; however, it's possible to store other forms of binary data. You can configure a file column on basic and advanced forms to provide the capability to upload, view, modify, or delete the file. The file column can store files up to the specified maximum size of a Microsoft Dataverse table column.
 
-:::image type="complex" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue.":::
+:::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue.":::
 
 > [!NOTE]
 > - This is a preview feature.
