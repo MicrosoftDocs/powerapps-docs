@@ -20,7 +20,7 @@ Choice columns allow you to include dropdown lists of fixed values to a user wit
 
 Choices can be created while working from a solution in powerapps.com in a table in the table hub or on a table form in the form designer.
 
-Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app. More information: 
+Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app. More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
 
 :::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
