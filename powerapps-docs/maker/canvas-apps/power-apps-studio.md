@@ -480,3 +480,5 @@ based on the current authoring window size. The zoom percentage or screen size y
 authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
 
 ### See also
+
+[Understand Power Apps Studio in Dataverse in a Teams environment](/teams/understand-power-apps-studio)
