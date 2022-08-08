@@ -6,7 +6,7 @@ author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/22/2022
+ms.date: 08/08/2022
 ms.subservice: canvas-maker
 ms.author: hasharaf
 search.audienceType: 
@@ -21,11 +21,13 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-You can [create canvas apps from within a solution](add-app-solution.md) by initiating a canvas app creation from the solutions section in Power Apps. However, creating canvas apps inside solutions is optional, and requires manual steps. Hence, not all new canvas apps are created inside solutions. With this feature, canvas apps can now be included and created from within a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
+You can [create canvas apps from within a solution](add-app-solution.md) by initiating a canvas app creation from the solutions section in Power Apps. However, creating canvas apps inside solutions is optional, and requires manual steps.
+
+Canvas apps can now be included and created from within a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
 
 Canvas apps included in solution by default benefit from reusing Microsoft Dataverse components such as connection references and environment variables. This feature reduces overhead and redundancy to manage individual canvas apps that aren’t part of a solution.
 
-For example, an environment with hundreds of canvas apps that live outside of a solution requires manual efforts to move them into solution to enable ALM. With this release, such manual intervention is eliminated.
+For example, an environment with hundreds of canvas apps that live outside of a solution requires manual efforts to move them into solution to enable ALM. Such manual intervention is eliminated with canvas apps added to solutions by default.
 
 > [!IMPORTANT]
 > - This is a preview feature.
