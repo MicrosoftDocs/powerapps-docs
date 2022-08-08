@@ -649,6 +649,6 @@ See the [OwnerMapping_ImportMap](importmap.md#BKMK_OwnerMapping_ImportMap) one-t
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.ownermapping?text=ownermapping EntityType" />

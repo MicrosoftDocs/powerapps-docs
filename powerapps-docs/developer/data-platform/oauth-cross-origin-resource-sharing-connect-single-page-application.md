@@ -39,7 +39,10 @@ SPAs depend on extensive use of client-side JavaScript to create a single dynami
 
 ## Use CORS with Dataverse
 
-The [Cross-Origin Resource Sharing specification](https://www.w3.org/TR/cors/) provides a detailed description of how to implement and use CORS. It explains all about the various headers and preflight requests that you need to apply to make CORS work. The good news is that you don't need to become an expert in CORS to use it with Dataverse. The server-side part has been done for you and all you need is to know how to consume it.  You don't need to understand all the inner workings of CORS to use it with Dataverse. Instead you can use the [Azure Active Directory Authentication Library for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) (adal.js) and it will take care of much of the CORS complexity for you. Since Dataverse are authenticated using Azure Active Directory, ADAL.js is the supported way to authenticate SPA users.  
+The [Cross-Origin Resource Sharing specification](https://www.w3.org/TR/cors/) provides a detailed description of how to implement and use CORS. It explains all about the various headers and preflight requests that you need to apply to make CORS work. The good news is that you don't need to become an expert in CORS to use it with Dataverse. The server-side part has been done for you and all you need is to know how to consume it.  You don't need to understand all the inner workings of CORS to use it with Dataverse. Instead you can use the [Azure Active Directory Authentication Library for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) (adal.js) and it will take care of much of the CORS complexity for you. Since Dataverse are authenticated using Azure Active Directory, ADAL.js is the supported way to authenticate SPA users.
+
+> [!NOTE]
+> A future version of this topic will be updated to describe use of [MSAL.js](https://github.com/AzureAD/microsoft-authentication-library-for-js) for SPA instead of ADAL.js, which is deprecated.
   
 <a name="bkmk_how_adaljs_works"></a>
 

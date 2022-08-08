@@ -108,24 +108,29 @@ It is also advised that you add the domain https://discovery.crmreplication.azur
 |profiles/validate|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_ValidateBeforeProfileCreation)|Perform test operations on a profile description before creating it.|  
 |profiles/{id}/failures|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetProfileFailuresInfoById)|Get the connection string to a blob that contains failure details for a given profile.|  
   
-### Gain Access  
-Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](/azure/active-directory/develop/security-tokens). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
-  
-```csharp  
-  
-//Reference Azure AD authentication Library (ADAL v2.29)    
-using Microsoft.IdentityModel.Clients.ActiveDirectory;  
-   . . .  
-    string yourAppClientID = "[app-associated-GUID]";   //Your AAD-registered AppId   
-    string crmAdminUser = "admin1@contoso.com";  //Your CRM administrator user name  
-    string crmAdminPassword = "Admin1Password";  //Your CRM administrator password;   
-    //For interactive applications, there are overloads of AcquireTokenAsync() which prompt for password.   
-    var authParam = AuthenticationParameters.CreateFromResourceUrlAsync(new   
-        Uri("https://discovery.crmreplication.azure.net/crm/exporter/aad/challenge")).Result;  
-    AuthenticationContext authContext = new AuthenticationContext(authParam.Authority, false);  
-    string token = authContext.AcquireTokenAsync(authParam.Resource, yourAppClientID,   
-        new UserCredential(crmAdminUser, crmAdminPassword)).Result.AccessToken;  
-  
+### Gain Access
+
+Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](/azure/active-directory/develop/security-tokens). The following code snippet demonstrates generating such a token for a web application. You must replace the `resource` and `AppId` values with those values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.
+
+```csharp
+using Microsoft.Identity.Client;
+
+string resource = "https://contoso.api.crm.dynamics.com"; // Target environment
+var AppId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
+var redirectUri = "http://localhost"; // Loopback for the interactive login.
+
+// MSAL authentication
+var authBuilder = PublicClientApplicationBuilder.Create(AppId)
+    .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
+    .WithRedirectUri(redirectUri)
+    .Build();
+var scope = resource + "/.default";
+string[] scopes = { scope };
+
+// Use interactive username and password prompt
+AuthenticationResult token =
+    authBuilder.AcquireTokenInteractive(scopes).ExecuteAsync().Result;
+string accessToken = token.AccessToken;
 ```  
   
 For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/v2-oauth2-auth-code-flow). For more information about Azure user security, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/authentication-vs-authorization).  
