@@ -1004,6 +1004,6 @@ See the [flowmachinegroup_flowmachine](flowmachinegroup.md#BKMK_flowmachinegroup
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.flowmachine?text=flowmachine EntityType" />

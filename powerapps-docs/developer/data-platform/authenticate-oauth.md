@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 10/29/2021
+ms.date: 07/28/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -22,7 +22,7 @@ search.app:
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL) or Microsoft Authentication Library (MSAL).
+OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
 
 > [!NOTE]
 > This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
@@ -33,7 +33,7 @@ OAuth requires an identity provider for authentication. For Dataverse, the ident
 
 When you connect using OAuth you must first register an application in your Azure AD tenant. How you should register your app depends on the type of app you want to make.
 
-In all cases, start with basic steps to register an app described in the AAD topic: [Quickstart: Register an app with the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/quickstart-v1-add-azure-ad-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
+In all cases, start with basic steps to register an app described in the AAD topic: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
 
 The decisions you will need to make in this step mostly depend on the Application Type choice (see below).
 
@@ -76,17 +76,18 @@ More information: [Connect as an app](#connect-as-an-app)
 
 ## Use authentication libraries to connect
 
-Use one of the Microsoft-supported Azure Active Directory authentication client libraries to connect to Dataverse. There are two such libraries available from Microsoft: [Azure Active Directory Authentication Library (ADAL)](/azure/active-directory/azuread-dev/active-directory-authentication-libraries), and [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/reference-v2-libraries). These libraries are available for various platforms as described in the provided links.
+Use one of the Microsoft-supported Azure Active Directory authentication client libraries to connect to Dataverse such as [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/reference-v2-libraries). That library is available for various platforms as described in the provided links.
 
 > [!NOTE]
-> Of the two authentication libraries mentioned, ADAL is no longer actively receiving updates and is scheduled to be supported only until June, 2022. MSAL is the recommended authentication library to use for new projects.<p/>
-> Currently, all our samples use the .NET client libraries except for [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application](oauth-cross-origin-resource-sharing-connect-single-page-application.md) which uses the JavaScript ADAL.js library.
+> Azure Active Directory Authentication Library (ADAL) is no longer actively receiving updates and is scheduled to be supported only until June, 2022. MSAL is the recommended authentication library to use for projects.
 
-For a code sample that demonstrates use of ADAL and MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart).
+For a code sample that demonstrates use of MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart).
 
-### ADAL .NET client library versions
+### .NET client libraries
 
-Dataverse supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. For your custom .NET applications, use ADAL v3.19 or greater for application authentication with the Web API endpoint. When using the XrmTooling APIs (such as [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient)) found in the [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package, the correct version of the ADAL library will be imported automatically into your Visual Studio project. Use XrmTooling APIs from the [v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) (or greater) NuGet package. Consult the package's release notes for the release history.  
+Dataverse supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. For your custom .NET applications, use MSAL for application authentication with the Web API endpoint.
+
+Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) and [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) to handle authentication. The `CrmServiceClient` class currently uses ADAL for authentication while `ServiceClient` uses MSAL. Writing your application code to use these clients removes the need to manage authentication directly. Both clients work with the SOAP and Web API endpoints.
 
 ## Use the AccessToken with your requests
 
@@ -95,28 +96,29 @@ This only requires a few lines of code, and just a few more lines to configure a
 
 ### Simple example
 
-The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the ADAL library and is taken from the QuickStart sample mentioned above.
+The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart) sample.
 
 ```csharp
 string resource = "https://contoso.api.crm.dynamics.com";
 var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
-var redirectUri = new Uri("app://58145B91-0C36-4500-8554-080854F2AC97");
+var redirectUri = "http://localhost"; // Loopback for the interactive login.
 
-var authContext = new AuthenticationContext(
-    "https://login.microsoftonline.com/common", false);
+// MSAL authentication
+var authBuilder = PublicClientApplicationBuilder.Create(clientId)
+    .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
+    .WithRedirectUri(redirectUri)
+    .Build();
+var scope = resource + "/.default";
+string[] scopes = { scope };
 
-var token = authContext.AcquireTokenAsync(
-    resource, clientId, redirectUri,
-    new PlatformParameters(
-        PromptBehavior.SelectAccount   // Prompt the user for a logon account.
-    ),
-    UserIdentifier.AnyUser
-).Result;
+AuthenticationResult token =
+    authBuilder.AcquireTokenInteractive(scopes).ExecuteAsync().Result;
 
+// Set up the HTTP client
 var client = new HttpClient
 {
     BaseAddress = new Uri(resource + "/api/data/v9.2/"),
-    Timeout = new TimeSpan(0, 2, 0)
+    Timeout = new TimeSpan(0, 2, 0)  // Standard two minute timeout.
 };
 
 HttpRequestHeaders headers = client.DefaultRequestHeaders;
@@ -126,10 +128,11 @@ headers.Add("OData-Version", "4.0");
 headers.Accept.Add(
     new MediaTypeWithQualityHeaderValue("application/json"));
 
+// Web API call
 var response = client.GetAsync("WhoAmI").Result;
 ```
 
-This simple approach does not represent a good pattern to follow because the `token` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireTokenAsync` method is called. However in this simple example, the token is only acquired once.
+This simple approach does not represent a good pattern to follow because the `token` will expire in about an hour. MSAL libraries will cache the token for you and will refresh it each time the `AcquireTokenInteractive` method is called. However in this simple example, the token is only acquired once.
 
 ### Example demonstrating a delegating message handler
 
@@ -264,24 +267,6 @@ See the [Enhanced QuickStart](https://github.com/Microsoft/PowerApps-Samples/tre
 
 Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 
-### Discover the authority at run time
-
-The authentication authority URL, and the resource URL, can be determined dynamically at run time using the following ADAL code. This is the recommended method to use as compared to the well-known authority URL ("https://login.microsoftonline.com/common") shown previously in a code snippet.  
-  
-```csharp    
-AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(  
-                        new Uri("https://mydomain.crm.dynamics.com/api/data/")).Result;  
-  
-String authorityUrl = ap.Authority;  
-String resourceUrl  = ap.Resource;  
-```  
-  
-For the Web API, another way to obtain the authority URL is to send any message request to the web service specifying no access token. This is known as a *bearer challenge*. The response can be parsed to obtain the authority URL.  
-  
-```csharp  
-httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "");  
-```  
-
 ## Connect as an app
 
 Some apps you will create are not intended to be run interactively by a user. For example, you may want to make a web client application that can perform operations on Dataverse data, or a console application that performs a scheduled task of some kind. 
@@ -323,7 +308,6 @@ To add a password:
 
 #### Dataverse user account bound to the registered app
 
-
 The first thing you must do is create a custom security role that will define what access and privileges this account will have within the Dataverse organization. More information: [Create or configure a custom security role](/power-platform/admin/database-security#create-or-configure-a-custom-security-role)
 
 After you have created the custom security role, you must create the user account which will use it.
@@ -361,19 +345,28 @@ After you have created the custom security role, you must create the user accoun
 
 #### Connect using the application secret
 
-If you are connecting using an secret configured for the application, you will use the <xref:Microsoft.IdentityModel.Clients.ActiveDirectory.ClientCredential> class passing in the `clientId` and `clientSecret` rather than a <xref:Microsoft.IdentityModel.Clients.ActiveDirectory.UserCredential> with `userName` and `password` parameters.
+If you are connecting using a client secret and using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> you can use code like the following:
+
 ```csharp
-string serviceUrl = "https://yourorg.crm.dynamics.com";
-string clientId = "<your app id>";
-string secret = "<your app secret>";
+string SecretID = "00000000-0000-0000-0000-000000000000";
+string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
+string InstanceUri = "https://yourorg.crm.dynamics.com";
 
-AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/<Tenant-ID-here>");
-ClientCredential credential = new ClientCredential(clientId, secret);
+string ConnectionStr = $@"AuthType=ClientSecret;
+                        SkipDiscovery=true;url={InstanceUri};
+                        Secret={SecretID};
+                        ClientId={AppID};
+                        RequireNewInstance=true";
+using (ServiceClient svc = new ServiceClient(ConnectionStr))
+{
+    if (svc.IsReady)
+    {
+    //your code goes here
+    }
 
-AuthenticationResult result = authContext.AcquireToken(serviceUrl, credential);
-
-string accessToken = result.AccessToken;
+}
 ```
+
 #### Connect using a certificate thumbprint
 
 If you are connecting using a certificate and using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> you can use code like the following:
@@ -388,7 +381,7 @@ string ConnectionStr = $@"AuthType=Certificate;
                         thumbprint={CertThumbPrintId};
                         ClientId={AppID};
                         RequireNewInstance=true";
-using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
+using (ServiceClient svc = new ServiceClient(ConnectionStr))
 {
     if (svc.IsReady)
     {
@@ -403,6 +396,5 @@ using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
 [Authentication with Microsoft Dataverse web services](authentication.md)<br />
 [Authenticating .NET Framework applications](authenticate-dot-net-framework.md)<br/>
 [Overview of the Microsoft Authentication Library](/azure/active-directory/develop/msal-overview)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

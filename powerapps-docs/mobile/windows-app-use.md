@@ -186,6 +186,10 @@ To see get the session ID, select the More button (...) > **Settings** and then 
    > [!div class="mx-imgBorder"] 
    > ![See non-production apps.](media/non-prod-apps.png)
 
+## Deep links
+
+For more information on deep links, see [Use deep links with Power Apps mobile](mobile-deep-links.md).
+
 ## Limitations and known issues
 - The following is not supported:
   - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md).

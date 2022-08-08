@@ -206,12 +206,12 @@
   - name: Synchronize data
     href: data-synchronization.md
     items:
-    - name: Use an alternate key to create a record
-      href: use-alternate-key-create-record.md
+    - name: Use an alternate key to reference a record
+      href: use-alternate-key-reference-record.md
+    - name: Use Upsert to create or update a record
+      href: use-upsert-insert-update-record.md
     - name: Use change tracking to synchronize data with external systems
       href: use-change-tracking-synchronize-data-external-systems.md
-    - name: Use Upsert to insert or update a record
-      href: use-upsert-insert-update-record.md
   - name: Server-side synchronization
     href: server-side-synchronization-entities.md
     items:
