@@ -134,7 +134,7 @@ The Web API supports these standard OData string query functions:
 
 ### Dataverse query functions
 
-The Web API supports Dataverse query functions to filter results. For more information, see [Web API Query Function Reference](../../developer/data-platform/webapi/reference/queryfunctions.md)
+The Web API supports Dataverse query functions to filter results. For more information, see [Web API Query Function Reference](../../developer/data-platform/webapi/reference/queryfunctions.md?view=dataverse-latest)
 
 ## Order results
 
