@@ -1,15 +1,12 @@
 ---
 title: "Work with alternate keys (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic explains about how to create alternate keys for a table. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/12/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 07/28/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -70,7 +67,44 @@ If you need to retrieve or delete alternate keys, you can use the customization 
 |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityKeyRequest>|Retrieves the specified alternate key.|  
 |<xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityKeyRequest>|Deletes the specified alternate key.|  
 
-To retrieve all the keys for a table, use the new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Keys> property of `EntityMetadata` (<xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class). It gets an array of keys for a table.  
+To retrieve all the keys for a table, use the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Keys> property of `EntityMetadata` (<xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class). It gets an array of keys for a table.
+
+Use this Web API query to view all tables and see which ones have alternate keys:
+
+
+```http
+GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$expand=Keys($select=KeyAttributes)
+```
+
+Some examples returned by this request:
+
+```json
+{
+    "SchemaName": "Account",
+    "MetadataId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+    "Keys": [
+        {
+            "KeyAttributes": [
+                "accountnumber"
+            ],
+            "MetadataId": "1dc7b1d2-6beb-ec11-bb3d-0022482ea769"
+        }
+    ]
+},
+{
+    "SchemaName": "example_Table",
+    "MetadataId": "8f521e41-8934-ec11-b6e6-002248242f3b",
+    "Keys": [
+        {
+            "KeyAttributes": [
+                "example_key1",
+                "example_key2"
+            ],
+            "MetadataId": "2f16d0c6-88ea-ec11-bb3d-0022482ea769"
+        }
+    ]
+}
+```
 
 <a name="BKMK_index"></a>   
 
@@ -87,8 +121,9 @@ When an alternate key is created using the API, if the index creation fails, you
 
 If the alternate key is deleted while an index creation job is still pending or in progress, the job is cancelled and the index is deleted.  
 
-### See also  
- [Using alternate keys](use-alternate-key-create-record.md)<br />
+### See also
+
+ [Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
  [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)<br />
  [Use Upsert to insert or update a record](use-upsert-insert-update-record.md)
  [Define alternate keys to reference records](../../maker/data-platform/define-alternate-keys-reference-records.md)

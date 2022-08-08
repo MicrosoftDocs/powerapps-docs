@@ -2,12 +2,11 @@
 title: "Manage invalid characters | Microsoft Docs"
 description: Describes how to manage invalid characters.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78"
+ms.reviewer: jdaly
+ms.topic: article
+author: divka78
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
-manager: "kvivek"
+ms.author: dikamath
 search.audienceType: 
   - developer
 search.app: 
