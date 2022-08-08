@@ -126,6 +126,33 @@ Extend the functionality of your apps by performing these tasks:
 - Configure business logic in [Power Automate](/flow/getting-started)
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md)
 
+## Sign in using Azure B2B collaboration
+
+> [!NOTE]
+> Defintions that help describe how a user authenticates and where they edit apps.
+> - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
+> - A **home tenant** is where the user's account resides and authenticates against.
+
+When a user signs into https://make.powerapps.com they sign into their home tenant, the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After sign in, a user can change the directory they intend to build apps in using the ‘Switch directory’ link. The ‘Switch directory’ link is in the user profile menu as shown in the following screenshot. 
+
+TODO 1 
+
+The switch directory link opens Power Apps settings which contains a ‘Directories’ tab that lists all the Azure AD tenants the user exists as a member or an Azure B2B ‘guest’. By clicking the ‘Switch’ button it will trigger https://make.powerapps.com to sign out of the current tenant and then sign into the selected tenant. 
+
+TODO 2
+
+### Frequently Ask Questions
+
+1.	As an Azure B2B maker, why am I unable to share apps?
+
+The Power Apps sharing experience is requires users to have permissions in the tenant included when the Azure Azure Active Directory [external collaboration settings has guest user access to "(most inclusive)"](https://docs.microsoft.com/azure/active-directory/b2b/delegate-invitations). Azure B2B Makers without sufficient privileges will see the following error dialog in the sharing experience. 
+
+TODO 3
+
+2. Can I operate in https://make.powerapps.com in both my home tenant and a resource tenant? 
+- Yes, but in separate browser sessions. E.g. Edge may be open in its standard mode and a separate session may be started in a new InPrivate window.
+- If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible. 
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
