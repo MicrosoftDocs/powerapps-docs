@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/15/2022
+ms.date: 08/08/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -131,6 +131,10 @@ The Web API supports these standard OData string query functions:
 | contains     | *$filter=contains(name,'(sample)')* |
 | endswith     | *$filter=endswith(name,'Inc.')*     |
 | startswith   | *$filter=startswith(name,'a')*      |
+
+### Dataverse query functions
+
+The Web API supports Dataverse query functions to filter results. For more information, see [Web API Query Function Reference](../../developer/data-platform/webapi/reference/reference/queryfunctions.md)
 
 ## Order results
 
