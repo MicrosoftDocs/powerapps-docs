@@ -898,7 +898,7 @@ OData-Version: 4.0
     "AttributeId": "39a5d94c-e8a2-4a41-acc0-8487242d455e"  
 }  
   
-``` 
+```
   
 <a name="bkmk_updateAttribute"></a>
  
@@ -912,7 +912,6 @@ Using the boolean attribute created in [Create a Boolean column](#create-a-boole
 
 ```http
 GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$expand=OptionSet HTTP/1.1
-Consistency: Strong
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -1167,10 +1166,12 @@ OData-Version: 4.0
 Then, change the properties you want to change.
 
 |Boolean attribute properties|Old Values|New Values|
-|-----------------------------------|------------|------------| 
+|-----------------------------------|------------|------------|
 |`DisplayName`|`Sample Boolean`|Sample Boolean Updated|
 |`Description`|Boolean Attribute|Boolean Attribute Updated|
-|`RequiredLevel`|`ApplicationRequired`|`None`|  
+|`RequiredLevel`|`None`|`ApplicationRequired`|
+|`OptionSet.DisplayName`|Boolean Attribute|Boolean Attribute Choice|
+|`OptionSet.Description`|Boolean Attribute|Boolean Attribute Choice Description|
 |`OptionSet.TrueOption`|True|Up|
 |`OptionSet.FalseOption`|False|Down|
 
@@ -1189,210 +1190,242 @@ Accept: application/json
 
 {
   "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
+  "MetadataId": "e160ff9b-6f17-ed11-b83e-00224837179f",
+  "HasChanged": null,
+  "AttributeOf": null,
   "AttributeType": "Boolean",
-  "AttributeTypeName": {
-    "Value": "BooleanType"
-  },
+  "ColumnNumber": 35,
+  "DeprecatedVersion": null,
+  "IntroducedVersion": "1.0.0.0",
+  "EntityLogicalName": "new_bankaccount",
+  "IsCustomAttribute": true,
+  "IsPrimaryId": false,
+  "IsValidODataAttribute": true,
+  "IsPrimaryName": false,
+  "IsValidForCreate": true,
+  "IsValidForRead": true,
+  "IsValidForUpdate": true,
+  "CanBeSecuredForRead": true,
+  "CanBeSecuredForCreate": true,
+  "CanBeSecuredForUpdate": true,
+  "IsSecured": false,
+  "IsRetrievable": false,
+  "IsFilterable": false,
+  "IsSearchable": false,
+  "IsManaged": false,
+  "LinkedAttributeId": null,
+  "LogicalName": "new_boolean",
+  "IsValidForForm": true,
+  "IsRequiredForForm": false,
+  "IsValidForGrid": true,
+  "SchemaName": "new_Boolean",
+  "ExternalName": null,
+  "IsLogical": false,
+  "IsDataSourceSecret": false,
+  "InheritsFrom": null,
+  "CreatedOn": "2022-08-08T23:12:55Z",
+  "ModifiedOn": "2022-08-08T23:12:55Z",
+  "SourceType": 0,
+  "AutoNumberFormat": null,
   "DefaultValue": false,
   "FormulaDefinition": "",
   "SourceTypeMask": 0,
-  "OptionSet": {
-    "TrueOption": {
-      "Value": 1,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Down",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        ]
-      },
-      "Description": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": []
-      },
-      "IsManaged": false,
-      "ExternalValue": ""
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "False",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632"
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "False",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632"
-        }
-      },
-      "Description": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": []
-      },
-      "IsManaged": false,
-      "ExternalValue": ""
-    },
-    "OptionSetType": "Boolean",
-    "Description": {
-      "@odata.type": "Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels": [
-        {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Boolean Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f"
-        }
-      ],
-      "UserLocalizedLabel": {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f"
-      }
-    },
-    "DisplayName": {
-      "@odata.type": "Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels": [
-        {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Sample Boolean",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f"
-        }
-      ],
-      "UserLocalizedLabel": {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f"
-      }
-    },
-    "IntroducedVersion": "1.0.0.0",
-    "IsCustomizable": {
-      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "new_bankaccount_new_boolean",
-    "MetadataId": "39d20735-6817-ed11-b83e-00224837179f"
+  "AttributeTypeName": {
+    "Value": "BooleanType"
   },
-  "CanBeSecuredForCreate": true,
-  "CanBeSecuredForRead": true,
-  "CanBeSecuredForUpdate": true,
-  "CanModifyAdditionalSettings": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
-  },
-  "ColumnNumber": 35,
   "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
     "LocalizedLabels": [
       {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
         "Label": "Boolean Attribute Updated",
         "LanguageCode": 1033,
-        "IsManaged": false
+        "IsManaged": false,
+        "MetadataId": "b370f0dd-329f-434e-8b9f-b6eb47d0141f",
+        "HasChanged": null
       }
-    ]
+    ],
+    "UserLocalizedLabel": {
+      "Label": "Boolean Attribute Updated",
+      "LanguageCode": 1033,
+      "IsManaged": false,
+      "MetadataId": "b370f0dd-329f-434e-8b9f-b6eb47d0141f",
+      "HasChanged": null
+    }
   },
   "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
     "LocalizedLabels": [
       {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
         "Label": "Sample Boolean Updated",
         "LanguageCode": 1033,
-        "IsManaged": false
+        "IsManaged": false,
+        "MetadataId": "63a9e5f1-e730-40cb-a410-495367d5856d",
+        "HasChanged": null
       }
-    ]
+    ],
+    "UserLocalizedLabel": {
+      "Label": "Sample Boolean Updated",
+      "LanguageCode": 1033,
+      "IsManaged": false,
+      "MetadataId": "63a9e5f1-e730-40cb-a410-495367d5856d",
+      "HasChanged": null
+    }
   },
-  "EntityLogicalName": "new_bankaccount",
-  "IntroducedVersion": "1.0.0.0",
   "IsAuditEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
     "Value": true,
     "CanBeChanged": true,
     "ManagedPropertyLogicalName": "canmodifyauditsettings"
   },
-  "IsCustomAttribute": true,
-  "IsCustomizable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  },
-  "IsDataSourceSecret": false,
-  "IsFilterable": false,
   "IsGlobalFilterEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
     "Value": false,
     "CanBeChanged": true,
     "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
   },
-  "IsLogical": false,
-  "IsManaged": false,
-  "IsPrimaryId": false,
-  "IsPrimaryName": false,
-  "IsRenameable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "isrenameable"
-  },
-  "IsRequiredForForm": false,
-  "IsRetrievable": false,
-  "IsSearchable": false,
-  "IsSecured": false,
   "IsSortableEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
     "Value": false,
     "CanBeChanged": true,
     "ManagedPropertyLogicalName": "canmodifyissortablesettings"
   },
+  "IsCustomizable": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "iscustomizable"
+  },
+  "IsRenameable": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "isrenameable"
+  },
   "IsValidForAdvancedFind": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
     "Value": true,
     "CanBeChanged": true,
     "ManagedPropertyLogicalName": "canmodifysearchsettings"
   },
-  "IsValidForCreate": true,
-  "IsValidForForm": true,
-  "IsValidForGrid": true,
-  "IsValidForRead": true,
-  "IsValidForUpdate": true,
-  "LogicalName": "new_boolean",
   "RequiredLevel": {
     "Value": "ApplicationRequired",
     "CanBeChanged": false,
     "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
   },
-  "SchemaName": "new_Boolean",
-  "SourceType": 0,
-  "MetadataId": "38d20735-6817-ed11-b83e-00224837179f"
+  "CanModifyAdditionalSettings": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+  },
+  "Settings": [],
+  "OptionSet": {
+    "MetadataId": "e260ff9b-6f17-ed11-b83e-00224837179f",
+    "HasChanged": null,
+    "IsCustomOptionSet": true,
+    "IsGlobal": false,
+    "IsManaged": false,
+    "Name": "new_bankaccount_new_boolean",
+    "ExternalTypeName": null,
+    "OptionSetType": "Boolean",
+    "IntroducedVersion": "1.0.0.0",
+    "Description": {
+      "LocalizedLabels": [
+        {
+          "Label": "Boolean Attribute Choice Description",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "e460ff9b-6f17-ed11-b83e-00224837179f",
+          "HasChanged": null
+        }
+      ],
+      "UserLocalizedLabel": {
+        "Label": "Boolean Attribute Choice Description",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "e460ff9b-6f17-ed11-b83e-00224837179f",
+        "HasChanged": null
+      }
+    },
+    "DisplayName": {
+      "LocalizedLabels": [
+        {
+          "Label": "Sample Boolean Choice",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "e360ff9b-6f17-ed11-b83e-00224837179f",
+          "HasChanged": null
+        }
+      ],
+      "UserLocalizedLabel": {
+        "Label": "Sample Boolean Choice",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "e360ff9b-6f17-ed11-b83e-00224837179f",
+        "HasChanged": null
+      }
+    },
+    "IsCustomizable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+    },
+    "TrueOption": {
+      "Value": 1,
+      "Color": null,
+      "IsManaged": false,
+      "ExternalValue": "",
+      "ParentValues": [],
+      "MetadataId": null,
+      "HasChanged": null,
+      "Label": {
+        "LocalizedLabels": [
+          {
+            "Label": "Up",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "5d0b245d-d303-4243-92eb-a2acdca12b44",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "Up",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "5d0b245d-d303-4243-92eb-a2acdca12b44",
+          "HasChanged": null
+        }
+      },
+      "Description": {
+        "LocalizedLabels": [],
+        "UserLocalizedLabel": null
+      }
+    },
+    "FalseOption": {
+      "Value": 0,
+      "Color": null,
+      "IsManaged": false,
+      "ExternalValue": "",
+      "ParentValues": [],
+      "MetadataId": null,
+      "HasChanged": null,
+      "Label": {
+        "LocalizedLabels": [
+          {
+            "Label": "Down",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "682e7b7b-02ba-46d7-93ac-3d736527f3fd",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "Down",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "682e7b7b-02ba-46d7-93ac-3d736527f3fd",
+          "HasChanged": null
+        }
+      },
+      "Description": {
+        "LocalizedLabels": [],
+        "UserLocalizedLabel": null
+      }
+    }
+  }
 }
+
 ```
 
 **Response**
@@ -1411,7 +1444,6 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 [Query table definitions using the Web API](query-metadata-web-api.md)<br />
 [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
-
 [Work with table definitions using the Organization service](../org-service/work-with-metadata.md)<br />
 [Column (attribute) definitions](../entity-attribute-metadata.md)
 
