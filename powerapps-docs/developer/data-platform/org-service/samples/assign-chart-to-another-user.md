@@ -48,7 +48,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 2. The `CreateRequiredRecords` method creates a sample account and some opportunity records for the visualization.
-3. The `newUserOwnedVisualization` method creates the visualization table instance.
+3. The `newUserOwnedVisualization` method creates the visualization record.
 
 ### Demonstrate
 

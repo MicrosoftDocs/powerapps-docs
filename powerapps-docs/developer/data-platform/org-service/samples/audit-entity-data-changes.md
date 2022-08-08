@@ -2,8 +2,8 @@
 title: "Sample: Audit table data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to audit table data changes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: Bluebear73
-ms.author: munzinge
+author: paulliew
+ms.author: paulliew
 manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample

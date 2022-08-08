@@ -523,6 +523,6 @@ See the [organization_importjob](organization.md#BKMK_organization_importjob) on
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importjob?text=importjob EntityType" />

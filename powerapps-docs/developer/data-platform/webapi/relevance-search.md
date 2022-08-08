@@ -1,20 +1,14 @@
 ---
 title: "Search across table data using Dataverse search (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types using Microsoft Dataverse."
-ms.custom: ""
 ms.date: 10/13/2020
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
 applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
-caps.latest.revision: 78
-author: "MitiJ"
-ms.author: "mijosh"
-ms.reviewer: "pehecke"
-manager: "mayadumesh"
+  - Dynamics 365 (online)
+author: mspilde
+ms.author: mspilde
+ms.reviewer: pehecke
+manager: mayadumesh
 search.audienceType: 
   - developer
 search.app: 
@@ -56,7 +50,7 @@ The minimum syntax of a Dataverse search HTTP request is as shown below.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-  “search”: “<search term>”
+  "search": "<search term>"
 }
 ```
 
@@ -96,9 +90,9 @@ retrieved.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-  “search”: ”maria”,
+  "search": "maria",
 
-  “facets”: ["@search.entityname,count:100",  
+  "facets": ["@search.entityname,count:100",  
     "account.primarycontactid,count:100",  
     "ownerid,count:100",  
     "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
@@ -114,9 +108,9 @@ syntax.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-  “search”: ”maria”,
+  "search": "maria",
 
-  “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
+  "filter": "account:modifiedon ge 2020-04-27T00:00:00,
     activities: regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account',
     incident: (prioritycode eq 1 or prioritycode eq 2)"
 }
@@ -141,7 +135,7 @@ A list of comma-separated clauses where each clause consists of a column name fo
 
 For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
-`“orderby”: [“@search.score desc", "modifiedon desc”]`
+`"orderby": ["@search.score desc", "modifiedon desc"]`
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
@@ -174,7 +168,7 @@ The Lucene query syntax supports the following functionality:
 |---|---|
 | Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
-| Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - “/.\*pine/” |
+| Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "/.\*pine/" |
 | Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |
 | Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
@@ -194,9 +188,9 @@ Below is an example of a basic search request and response.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-  “search”: ”maria”,
+  "search": "maria",
 
-  “facets”: ["@search.entityname,count:100",  
+  "facets": ["@search.entityname,count:100",  
     "account.primarycontactid,count:100",  
     "ownerid,count:100",  
     "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
@@ -233,11 +227,11 @@ POST [Organization URI]/api/search/v1.0/query
             "createdon": "10/9/2020 5:27 PM",
             "modifiedon": "10/9/2020 5:27 PM",
             "emailaddress1": "maria@contoso.com",
-            "address1_city": **“Seattle”**,
-            "address1_telephone1": **“206-400-0200”**,
+            "address1_city": **"Seattle"**,
+            "address1_telephone1": **"206-400-0200"**,
             "parentcustomerid": **null**,
             "parentcustomeridname": **null**,
-            "telephone1": **“206-400-0300”**
+            "telephone1": **"206-400-0300"**
         }
     ],
     "facets": {
@@ -334,7 +328,7 @@ The minimum syntax of a suggestion search HTTP request is as shown below.
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
 {
-  “search”: “<text-fragment>”
+  "search": "<text-fragment>"
 }
 ```
 
@@ -366,7 +360,7 @@ A list of comma-separated clauses where each clause consists of an column name f
 
 For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
-`“orderby”: [“@search.score desc", "modifiedon desc”]`
+`"orderby": ["@search.score desc", "modifiedon desc"]`
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
@@ -384,9 +378,9 @@ syntax.
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
 {  
-  “search”: ”mar”,
+  "search": "mar",
 
-  “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
+  "filter": "account:modifiedon ge 2020-04-27T00:00:00,
     activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
 }
 ```
@@ -400,7 +394,7 @@ The following is an example of a basic suggestion search request.
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
 {  
-  “search”: ”mar”
+  "search": "mar"
 }
 ```
 
@@ -439,7 +433,7 @@ The minimum syntax of a Dataverse search HTTP request is as follows.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-  “search”: ”<text-fragment>”
+  "search": "<text-fragment>"
 }
 ```
 
@@ -471,9 +465,9 @@ syntax.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-  “search”: ”mar”,
+  "search": "mar",
 
-  “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
+  "filter": "account:modifiedon ge 2020-04-27T00:00:00,
     activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
 }
 ```
@@ -487,7 +481,7 @@ The following is an example of a basic autocomplete request.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-  “search”: ”mar”
+  "search": "mar"
 }
 ```
 
