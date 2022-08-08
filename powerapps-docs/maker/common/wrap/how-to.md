@@ -31,7 +31,7 @@ Earlier, you learned about the capabilities of wrap feature, how it works, and i
 
 ## Add canvas app to solution
 
-This feature requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#link-an-existing-canvas-app-to-a-solution)
+This feature requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
 
 ## App registration
 
