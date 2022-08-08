@@ -1167,7 +1167,7 @@ Then, change the properties you want to change.
 
 |Boolean attribute properties|Old Values|New Values|
 |-----------------------------------|------------|------------|
-|`DisplayName`|`Sample Boolean`|Sample Boolean Updated|
+|`DisplayName`|Sample Boolean|Sample Boolean Updated|
 |`Description`|Boolean Attribute|Boolean Attribute Updated|
 |`RequiredLevel`|`None`|`ApplicationRequired`|
 |`OptionSet.DisplayName`|Boolean Attribute|Boolean Attribute Choice|
