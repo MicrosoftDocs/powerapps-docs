@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 02/23/2022
+ms.date: 08/08/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -109,7 +109,7 @@ By selecting options in the header and left navigation bar, you can do more than
 
 - Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
 
-    For more information, see these topics:
+    For more information, see these articles:
 
   - [Overview of canvas-app connectors](connections-list.md)
   - [Build and certify custom connectors for canvas apps](register-custom-api.md)
@@ -129,30 +129,28 @@ Extend the functionality of your apps by performing these tasks:
 ## Sign in using Azure B2B collaboration
 
 > [!NOTE]
-> Defintions that help describe how a user authenticates and where they edit apps.
 > - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
 > - A **home tenant** is where the user's account resides and authenticates against.
 
-When a user signs into https://make.powerapps.com they sign into their home tenant, the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After sign in, a user can change the directory they intend to build apps in using the ‘Switch directory’ link. The ‘Switch directory’ link is in the user profile menu as shown in the following screenshot. 
+When a user signs into [Power Apps](https://make.powerapps.com), they sign into their **home tenant**&mdash;the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can change the directory they intend to build apps in using the **Switch directory** link as shown below:
 
-![Azure B2B Maker](media/intro-maker-portal/intro_to_maker_portal_switch_directory_1.png) 
+:::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_switch_directory_1.png" alt-text="Azure B2B Maker - switch directory option.":::
 
-The switch directory link opens Power Apps settings which contains a ‘Directories’ tab that lists all the Azure AD tenants the user exists as a member or an Azure B2B ‘guest’. By clicking the ‘Switch’ button it will trigger https://make.powerapps.com to sign out of the current tenant and then sign into the selected tenant. 
+The switch directory link opens Power Apps settings that contain a **Directories** tab that lists all the Azure AD tenants the user exists in as a member or an Azure B2B guest. By selecting **Switch**, it will trigger [Power Apps](https://make.powerapps.com) to sign out of the current tenant and then sign into the selected tenant.
 
-![Azure B2B Maker](media/intro-maker-portal/intro_to_maker_portal_switch_directory_2.png)
+:::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_switch_directory_2.png" alt-text="Azure B2B Maker - switch tenant.":::
 
 ### Frequently Ask Questions
 
-1.	As an Azure B2B maker, why am I unable to share apps?
+#### As an Azure B2B maker, why am I unable to share apps?
 
-The Power Apps sharing experience is requires users to have permissions in the tenant included when the Azure Azure Active Directory [external collaboration settings has guest user access to "(most inclusive)"](https://docs.microsoft.com/azure/active-directory/b2b/delegate-invitations). Azure B2B Makers without sufficient privileges will see the following error dialog in the sharing experience. 
+The Power Apps sharing experience requires users to have permissions in the tenant included when the Azure Azure Active Directory [external collaboration settings has guest user access to "(most inclusive)"](/azure/active-directory/b2b/delegate-invitations). Azure B2B makers without sufficient privileges will see the following error dialog in the sharing experience.
 
-![Azure B2B Maker](media/intro-maker-portal/intro_to_maker_portal_Azure_B2B_share_error.png)
+:::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_Azure_B2B_share_error.png" alt-text="Invalid domain name in the request url.":::
 
-2. Can I operate in https://make.powerapps.com in both my home tenant and a resource tenant? 
-- Yes, but in separate browser sessions. E.g. Edge may be open in its standard mode and a separate session may be started in a new InPrivate window.
-- If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible. 
+#### Can I work in [Power Apps](https://make.powerapps.com) in both my home tenant and a resource tenant?
 
+- Yes, but in separate browser sessions. For example, Microsoft Edge may be open in its standard mode and a separate session may be started in a new **InPrivate** window.
+- If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
