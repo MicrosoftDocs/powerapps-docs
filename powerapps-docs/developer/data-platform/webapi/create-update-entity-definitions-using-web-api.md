@@ -1,11 +1,10 @@
 ---
 title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table definitions using the Web API."
-ms.date: 04/06/2022
-author: divka78
-ms.author: dikamath
+ms.date: 08/08/2022
+author: NHelgren
+ms.author: nhelgren
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -18,7 +17,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This topic focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.  
+You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This topic focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType">.  
 
 <a name="bkmk_createEntities"></a>
 
@@ -35,18 +34,18 @@ To create a table definition, `POST` the JSON representation of the entity defin
 |`DisplayName`|Bank Account|  
 |`DisplayCollectionName`|Bank Accounts|  
 |`Description`|An entity to store information about customer bank accounts.|  
-|`OwnershipType`|`UserOwned` **Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType" />.|  
+|`OwnershipType`|`UserOwned` **Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType">.|  
 |`IsActivity`|false|  
 |`HasActivities`|false|  
 |`HasNotes`|false|  
   
  In addition to the properties listed previously, the `EntityMetadataAttributes` property must contain an array that includes one 
- <xref href="Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata EntityType" /> to represent the primary name attribute for the entity. The attribute `IsPrimaryName` property must be true. The following table describes the properties set in the example.  
+ <xref href="Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata EntityType"> to represent the primary name attribute for the entity. The attribute `IsPrimaryName` property must be true. The following table describes the properties set in the example.  
   
 |Primary Attribute property|Value|  
 |--------------------------------|-----------|  
 |`SchemaName`|`new_AccountName`|  
-|`RequiredLevel`|None <br />**Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType" />.|  
+|`RequiredLevel`|None <br />**Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType"> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType">.|  
 |`MaxLength`|100|  
 |`FormatName`|`Text` <br />**Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [String formats](../entity-attribute-metadata.md#string-formats).|  
 |`DisplayName`|Account Name|  
@@ -54,14 +53,15 @@ To create a table definition, `POST` the JSON representation of the entity defin
 |`IsPrimaryName`|true|  
   
 > [!NOTE]
->  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
+>  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType">, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
   
 The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.0/EntityDefinitions HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -170,15 +170,16 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
 > [!IMPORTANT]
 >  If you don't include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
   
-When you update a table or column definition, you must use the  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" /> or 
-<xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action" /> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
+When you update a table or column definition, you must use the  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action"> or 
+<xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action"> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
 Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the DisplayName changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
   
  **Request**
 
 ```http 
-PUT [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1  
+PUT [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -509,7 +510,8 @@ The URI for the attribute is returned in the response.
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1  
+POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -582,7 +584,8 @@ The following example creates a money attribute using the properties and adds it
  **Request**
 
 ```http   
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1  
+POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -644,7 +647,7 @@ The following example will use these properties to create a datetime attribute.
 |`DisplayName`|`Date`|  
 |`Description`|The date the account balance was last confirmed.|  
 |`RequiredLevel`|`None`|  
-|`Format`|`DateOnly` **Note:**  For the valid options for this property, see <xref href="Microsoft.Dynamics.CRM.DateTimeFormat?text=DateTimeFormat EnumType" />.|  
+|`Format`|`DateOnly` **Note:**  For the valid options for this property, see <xref href="Microsoft.Dynamics.CRM.DateTimeFormat?text=DateTimeFormat EnumType">.|  
   
 The following example creates a datetime attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
  The URI for the attribute is returned in the response.  
@@ -652,7 +655,8 @@ The following example creates a datetime attribute using the properties and adds
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1  
+POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -701,12 +705,114 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(fe1bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
+
+### Create a Boolean column
+
+The following example will use these properties to create a boolean attribute.  
   
+|Boolean attribute properties|Values|  
+|-----------------------------------|------------|  
+|`SchemaName`|`new_Boolean`|  
+|`DisplayName`|Sample Boolean|  
+|`Description`|Boolean Attribute|  
+|`RequiredLevel`|`None`|  
+|`OptionSet.TrueOption`|True|
+|`OptionSet.FalseOption`|False|  
+  
+The following example creates a boolean attribute using the properties and adds it to the entity with the `LogicalName` value of `new_bankaccount`. The URI for the attribute is returned in the response.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
+  "AttributeType": "Boolean",
+  "AttributeTypeName": {
+    "Value": "BooleanType"
+  },
+  "DefaultValue": false,
+  "OptionSet": {
+    "TrueOption": {
+      "Value": 1,
+      "Label": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "True",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        ]
+      }
+    },
+    "FalseOption": {
+      "Value": 0,
+      "Label": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "False",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        ]
+      }
+    },
+    "OptionSetType": "Boolean"
+  },
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Boolean Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ]
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Boolean",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ]
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "new_Boolean"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(38d20735-6817-ed11-b83e-00224837179f)
+```
+
 <a name="bkmk_CreateCustomerLookup"></a>
 
 ### Create a customer lookup column
 
-Unlike other attributes, a customer lookup attribute is created using the <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action" />. 
+Unlike other attributes, a customer lookup attribute is created using the <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action">. 
 
 The parameters for this action require the definition of the lookup attribute and a pair of one-to-many relationships. A customer lookup attribute has two one-to-many relationships: one to the account entity and the other one to contact entity.  
   
@@ -718,12 +824,13 @@ The parameters for this action require the definition of the lookup attribute an
 |`DisplayName`|Customer|  
 |`Description`|Sample Customer Lookup Attribute|  
   
-The example creates a customer lookup attribute, `new_CustomerId`, and adds it to the custom entity:  `new_bankaccount`. The response is a <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType" />.  
+The example creates a customer lookup attribute, `new_CustomerId`, and adds it to the custom entity:  `new_bankaccount`. The response is a <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType">.  
   
  **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/CreateCustomerRelationships HTTP/1.1  
+POST [Organization URI]/api/data/v9.0/CreateCustomerRelationships HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Accept: application/json  
@@ -778,7 +885,7 @@ Content-Type: application/json; charset=utf-8
   
  **Response**
 
-```http 
+```http
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
@@ -791,13 +898,512 @@ OData-Version: 4.0
     "AttributeId": "39a5d94c-e8a2-4a41-acc0-8487242d455e"  
 }  
   
-```  
+``` 
   
 <a name="bkmk_updateAttribute"></a>
  
 ## Update a column
 
-As mentioned in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), data model entities are updated using the HTTP PUT method with the entire JSON definition of the current item. This applies to entity attributes as well as entities. Just like with entities, you have the option to overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they are active in the system.  
+As mentioned in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), data model entities are updated using the HTTP `PUT` method with the entire JSON definition of the current item. This applies to entity attributes as well as entities. Just like with entities, you have the option to overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they are active in the system.  
+
+Using the boolean attribute created in [Create a Boolean column](#create-a-boolean-column) above, we must first retrieve the entire attribute. In this case also expanding the `OptionSet` property so we can change the labels for the options.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$expand=OptionSet HTTP/1.1
+Consistency: Strong
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('new_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(OptionSet())/$entity",
+  "MetadataId": "38d20735-6817-ed11-b83e-00224837179f",
+  "HasChanged": null,
+  "AttributeOf": null,
+  "AttributeType": "Boolean",
+  "ColumnNumber": 35,
+  "DeprecatedVersion": null,
+  "IntroducedVersion": "1.0.0.0",
+  "EntityLogicalName": "new_bankaccount",
+  "IsCustomAttribute": true,
+  "IsPrimaryId": false,
+  "IsValidODataAttribute": true,
+  "IsPrimaryName": false,
+  "IsValidForCreate": true,
+  "IsValidForRead": true,
+  "IsValidForUpdate": true,
+  "CanBeSecuredForRead": true,
+  "CanBeSecuredForCreate": true,
+  "CanBeSecuredForUpdate": true,
+  "IsSecured": false,
+  "IsRetrievable": false,
+  "IsFilterable": false,
+  "IsSearchable": false,
+  "IsManaged": false,
+  "LinkedAttributeId": null,
+  "LogicalName": "new_boolean",
+  "IsValidForForm": true,
+  "IsRequiredForForm": false,
+  "IsValidForGrid": true,
+  "SchemaName": "new_Boolean",
+  "ExternalName": null,
+  "IsLogical": false,
+  "IsDataSourceSecret": false,
+  "InheritsFrom": null,
+  "CreatedOn": "2022-08-08T22:19:49Z",
+  "ModifiedOn": "2022-08-08T22:19:49Z",
+  "SourceType": 0,
+  "AutoNumberFormat": null,
+  "DefaultValue": false,
+  "FormulaDefinition": "",
+  "SourceTypeMask": 0,
+  "AttributeTypeName": {
+    "Value": "BooleanType"
+  },
+  "Description": {
+    "LocalizedLabels": [
+      {
+        "Label": "Boolean Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "2b5545d2-a59b-4503-8846-95665283b41f",
+        "HasChanged": null
+      }
+    ],
+    "UserLocalizedLabel": {
+      "Label": "Boolean Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false,
+      "MetadataId": "2b5545d2-a59b-4503-8846-95665283b41f",
+      "HasChanged": null
+    }
+  },
+  "DisplayName": {
+    "LocalizedLabels": [
+      {
+        "Label": "Sample Boolean",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "e6b8d06c-067e-4ab0-a9a8-32f520b25e36",
+        "HasChanged": null
+      }
+    ],
+    "UserLocalizedLabel": {
+      "Label": "Sample Boolean",
+      "LanguageCode": 1033,
+      "IsManaged": false,
+      "MetadataId": "e6b8d06c-067e-4ab0-a9a8-32f520b25e36",
+      "HasChanged": null
+    }
+  },
+  "IsAuditEnabled": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyauditsettings"
+  },
+  "IsGlobalFilterEnabled": {
+    "Value": false,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
+  },
+  "IsSortableEnabled": {
+    "Value": false,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyissortablesettings"
+  },
+  "IsCustomizable": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "iscustomizable"
+  },
+  "IsRenameable": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "isrenameable"
+  },
+  "IsValidForAdvancedFind": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifysearchsettings"
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "CanModifyAdditionalSettings": {
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+  },
+  "Settings": [],
+  "OptionSet": {
+    "MetadataId": "39d20735-6817-ed11-b83e-00224837179f",
+    "HasChanged": null,
+    "IsCustomOptionSet": true,
+    "IsGlobal": false,
+    "IsManaged": false,
+    "Name": "new_bankaccount_new_boolean",
+    "ExternalTypeName": null,
+    "OptionSetType": "Boolean",
+    "IntroducedVersion": "1.0.0.0",
+    "Description": {
+      "LocalizedLabels": [
+        {
+          "Label": "Boolean Attribute",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f",
+          "HasChanged": null
+        }
+      ],
+      "UserLocalizedLabel": {
+        "Label": "Boolean Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f",
+        "HasChanged": null
+      }
+    },
+    "DisplayName": {
+      "LocalizedLabels": [
+        {
+          "Label": "Sample Boolean",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f",
+          "HasChanged": null
+        }
+      ],
+      "UserLocalizedLabel": {
+        "Label": "Sample Boolean",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f",
+        "HasChanged": null
+      }
+    },
+    "IsCustomizable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+    },
+    "TrueOption": {
+      "Value": 1,
+      "Color": null,
+      "IsManaged": false,
+      "ExternalValue": "",
+      "ParentValues": [],
+      "MetadataId": null,
+      "HasChanged": null,
+      "Label": {
+        "LocalizedLabels": [
+          {
+            "Label": "True",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "7af31d83-0c00-4cd8-822a-1068414051d2",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "True",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "7af31d83-0c00-4cd8-822a-1068414051d2",
+          "HasChanged": null
+        }
+      },
+      "Description": {
+        "LocalizedLabels": [],
+        "UserLocalizedLabel": null
+      }
+    },
+    "FalseOption": {
+      "Value": 0,
+      "Color": null,
+      "IsManaged": false,
+      "ExternalValue": "",
+      "ParentValues": [],
+      "MetadataId": null,
+      "HasChanged": null,
+      "Label": {
+        "LocalizedLabels": [
+          {
+            "Label": "False",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632",
+            "HasChanged": null
+          }
+        ],
+        "UserLocalizedLabel": {
+          "Label": "False",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632",
+          "HasChanged": null
+        }
+      },
+      "Description": {
+        "LocalizedLabels": [],
+        "UserLocalizedLabel": null
+      }
+    }
+  }
+}
+```
+
+Then, change the properties you want to change.
+
+|Boolean attribute properties|Old Values|New Values|
+|-----------------------------------|------------|------------| 
+|`DisplayName`|`Sample Boolean`|Sample Boolean Updated|
+|`Description`|Boolean Attribute|Boolean Attribute Updated|
+|`RequiredLevel`|`ApplicationRequired`|`None`|  
+|`OptionSet.TrueOption`|True|Up|
+|`OptionSet.FalseOption`|False|Down|
+
+Now you can send the `PUT` request with the modified properties:
+
+**Request**
+
+```http
+PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean') HTTP/1.1
+MSCRM.SolutionUniqueName: examplesolution
+MSCRM.MergeLabels: true
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
+  "AttributeType": "Boolean",
+  "AttributeTypeName": {
+    "Value": "BooleanType"
+  },
+  "DefaultValue": false,
+  "FormulaDefinition": "",
+  "SourceTypeMask": 0,
+  "OptionSet": {
+    "TrueOption": {
+      "Value": 1,
+      "Label": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Down",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        ]
+      },
+      "Description": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": []
+      },
+      "IsManaged": false,
+      "ExternalValue": ""
+    },
+    "FalseOption": {
+      "Value": 0,
+      "Label": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "False",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632"
+          }
+        ],
+        "UserLocalizedLabel": {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "False",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632"
+        }
+      },
+      "Description": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": []
+      },
+      "IsManaged": false,
+      "ExternalValue": ""
+    },
+    "OptionSetType": "Boolean",
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Boolean Attribute",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f"
+        }
+      ],
+      "UserLocalizedLabel": {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Boolean Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f"
+      }
+    },
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Sample Boolean",
+          "LanguageCode": 1033,
+          "IsManaged": false,
+          "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f"
+        }
+      ],
+      "UserLocalizedLabel": {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Boolean",
+        "LanguageCode": 1033,
+        "IsManaged": false,
+        "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f"
+      }
+    },
+    "IntroducedVersion": "1.0.0.0",
+    "IsCustomizable": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+    },
+    "IsCustomOptionSet": true,
+    "IsGlobal": false,
+    "IsManaged": false,
+    "Name": "new_bankaccount_new_boolean",
+    "MetadataId": "39d20735-6817-ed11-b83e-00224837179f"
+  },
+  "CanBeSecuredForCreate": true,
+  "CanBeSecuredForRead": true,
+  "CanBeSecuredForUpdate": true,
+  "CanModifyAdditionalSettings": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+  },
+  "ColumnNumber": 35,
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Boolean Attribute Updated",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ]
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Boolean Updated",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ]
+  },
+  "EntityLogicalName": "new_bankaccount",
+  "IntroducedVersion": "1.0.0.0",
+  "IsAuditEnabled": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyauditsettings"
+  },
+  "IsCustomAttribute": true,
+  "IsCustomizable": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "iscustomizable"
+  },
+  "IsDataSourceSecret": false,
+  "IsFilterable": false,
+  "IsGlobalFilterEnabled": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": false,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
+  },
+  "IsLogical": false,
+  "IsManaged": false,
+  "IsPrimaryId": false,
+  "IsPrimaryName": false,
+  "IsRenameable": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "isrenameable"
+  },
+  "IsRequiredForForm": false,
+  "IsRetrievable": false,
+  "IsSearchable": false,
+  "IsSecured": false,
+  "IsSortableEnabled": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": false,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifyissortablesettings"
+  },
+  "IsValidForAdvancedFind": {
+    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+    "Value": true,
+    "CanBeChanged": true,
+    "ManagedPropertyLogicalName": "canmodifysearchsettings"
+  },
+  "IsValidForCreate": true,
+  "IsValidForForm": true,
+  "IsValidForGrid": true,
+  "IsValidForRead": true,
+  "IsValidForUpdate": true,
+  "LogicalName": "new_boolean",
+  "RequiredLevel": {
+    "Value": "ApplicationRequired",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "new_Boolean",
+  "SourceType": 0,
+  "MetadataId": "38d20735-6817-ed11-b83e-00224837179f"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')
+```
+
+
   
 ### See also
 
