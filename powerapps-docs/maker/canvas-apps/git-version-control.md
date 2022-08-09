@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2022
+ms.date: 08/09/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
