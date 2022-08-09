@@ -176,5 +176,33 @@ From a list view, swipe left to access the actions menu for a row.
 
 From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select the profile icon ![Profile icon](media/profile_icon.png "Site map icon"), and then select **Sign out**.
 
+## Commanding improvments (preview)
+
+You app maker can enable [Mobile commanding improvements.](/maker/model-driven-apps/app-properties) to provide easy access to contextual commands when you're using Power Apps mobile. The following is a list of improvments:
+
+- The **Delete** command is automatically hidden when it's not applicable. For example, when there's no record selected then you won't see the option to **Delete** becuase nothing is selected.
+- The **Process** command is hidden if there is no process defined for the table.
+
+
+  | Before | After |
+  | :---:         |     :---:      |
+  | ![Process command.](media/process.gif "Process command hidden.")
+  | ![Process command.](media/process-2.gif "Process command hidden.")| 
+ 
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Process command.](media/process.gif "Process command hidden.")
+
+
+
+
+
+
+
+
+
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
