@@ -178,23 +178,18 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 ## Commanding improvments (preview)
 
-You app maker can enable [Mobile commanding improvements.](/maker/model-driven-apps/app-properties) to provide easy access to contextual commands when you're using Power Apps mobile. The following is a list of improvments:
+Your app maker can enable [Mobile commanding improvements.](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. The following is a list of improvments:
 
 - The **Delete** command is automatically hidden when it's not applicable. For example, when there's no record selected then you won't see the option to **Delete** becuase nothing is selected.
 - The **Process** command is hidden if there is no process defined for the table.
 
-
   | Before | After |
   | :---:         |     :---:      |
-  | ![Process command.](media/process.gif "Process command hidden.")
-  | ![Process command.](media/process-2.gif "Process command hidden.")| 
+  | ![Process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
+- The command bar for tablets was at the button and was limited to only show up to three commands. Now the commands are displayed at the top on forms, grids, and dashbords.
 
-
-   > [!div class="mx-imgBorder"]
-   > ![Process command.](media/process.gif "Process command hidden.")
-
-
+    ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
 
 
 
