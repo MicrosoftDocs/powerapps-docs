@@ -20,11 +20,11 @@ Choice columns allow you to include dropdown lists of fixed values to a user wit
 
 Choices can be created while working from a solution in powerapps.com or on a table form in the form designer.
 
-Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app. More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
+Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app.
 
 :::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
-Choices are either global or local. You can define a choice to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other choice columns. More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
+Choices are either global or local. You can define a choice to use a set of options defined elsewhere (globally) which can be made available to other choice columns, or define a set of options only available within the choice column (locally). More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
 
 ## Create a global choice within a solution
 
