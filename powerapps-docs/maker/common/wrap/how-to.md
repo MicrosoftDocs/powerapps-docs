@@ -14,7 +14,6 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
-  - larryk78
 ---
 
 # Customize and build your mobile app
