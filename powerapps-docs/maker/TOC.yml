@@ -618,10 +618,10 @@
           href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Working with flows
           items:
-          - name: Add a flow
-            href: ./canvas-apps/using-logic-flows.md
-          - name: Use Power Automate pane (preview)
+          - name: Use Power Automate pane 
             href: ./canvas-apps/working-with-flows.md
+          - name: Add a flow (retired)
+            href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
@@ -1026,6 +1026,8 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
+      - name: Add canvas apps to solution by default (preview)
+        href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
           - name: Install the data
