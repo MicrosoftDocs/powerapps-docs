@@ -178,7 +178,7 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 ## Commanding improvements (preview)
 
-Your app maker can enable [Mobile commanding improvements.](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. The following is a list of improvements:
+Your app maker can enable [Mobile commanding improvements.](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
 - The **Delete** command is automatically hidden when it's not applicable. For example, when there is no record selected then you won't see the option to **Delete** because nothing is selected.
 - The **Process** command is hidden when there is no process defined for the table.
