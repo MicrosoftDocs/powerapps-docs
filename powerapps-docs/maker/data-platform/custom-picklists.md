@@ -18,13 +18,34 @@ search.app:
 
 Choice columns allow you to include dropdown lists of fixed values to a user within your app to ensure data consistency. Choice columns, were formerly referred to as option sets and are sometimes called picklists. Similar to tables, there are both standard choices or makers have the ability to create custom choice columns to use in apps.
 
-Choices can be created while working from a solution in powerapps.com in a table in the table hub or on a table form in the form designer.
+Choices can be created while working from a solution in powerapps.com or on a table form in the form designer.
 
 Choice columns can be single selection only (choice) or can allow multi-selection (choices). The following screenshot shows a multi-select choices column in a model-driven app. More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
 
 :::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
-## Create a choice within a solution
+Choices are either local or global. You can define a choice to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other choice columns.
+
+## Create a global choice within a solution
+
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want.
+1. On the command bar, select **New** > **Choice**.
+1. Enter the following properties:
+   - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+   - **Description**. Enter an optional description of the choice column.
+   - In the **Label** field, enter the label you want displayed for the choice option.
+   - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
+   - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
+
+1. Select **New choice** to enter create another option for the choice.
+1. Repeat the previous step to until you have the options you want for the choice.
+1. Expand Advanced options to display additional properties: 
+   - Name. Unique name of the global choice including the solution publisher prefix.
+   - External name. This value is used for virtual entities to map a value in an external data source with this option.
+   - Description. Enter an option description for the choice column.
+1. Select **Save**.
+
+## Create a local choice within a solution
 
 1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want.
 
@@ -32,7 +53,7 @@ Choice columns can be single selection only (choice) or can allow multi-selectio
 
 1. In the **New column** panel, enter properties for the choice column.
 
-### Configure properties for a choice
+### Configure properties for a local choice
 
 - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
 - **Description**. Enter an optional description of the choice column.
@@ -42,9 +63,9 @@ Choice columns can be single selection only (choice) or can allow multi-selectio
 - **Searchable**. When selected, this column appears in Advanced Find and is available when customizing views.
 - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
 - **Sync with global choice?**
-   - **Yes**. Select this option if you want the choice to be global. Then, you can also select an existing global choice to use the options from that global choice.
-   - **No**. Select this option if you want the choice only available in the table where you're creating the new choice. 
-   - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice will be used for this choice.
+   - **Yes**. Select this option if you want the local choice to have the ability to use options from a global choice. Then, you can also select an existing global choice to use the options from that global choice.
+   - **No**. Select this option if you do not want the choice to have the ability to use options from a global choice.
+   - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice can be used for this choice.
    - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
    - In the **Label** field, enter the label you want displayed for the choice option.
    - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
@@ -60,7 +81,8 @@ Select **Save**.
 
 ## Create and edit global choices using solution explorer
 
-Solution explorer provides one way to create and edit global choices for Dataverse.
+For information about how to create a global choice using the classic solution explorer, go to [Create or edit a global option set (on-premises)](/dynamics365/customerengagement/on-premises/customize/create-edit-global-option-sets).
+<!-- Solution explorer provides one way to create and edit global choices for Dataverse.
 
 > [!NOTE]
 > [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) is the best way to create and edit choice columns.
@@ -96,6 +118,6 @@ A **Name** column value will be generated for you based on the **Display name** 
 Type a **Description** for the global choice . 
 
 > [!TIP]
-> Use the **Description** to explain the purpose of this global choice . This value is not visible to users of the application, it is for other people with the system administrator or customizer role who may want to know why this particular global choice  was created.
+> Use the **Description** to explain the purpose of this global choice . This value is not visible to users of the application, it is for other people with the system administrator or customizer role who may want to know why this particular global choice  was created. -->
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
