@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/15/2021
+ms.date: 8/09/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
