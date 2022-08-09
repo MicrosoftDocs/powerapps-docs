@@ -7,7 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 01/03/2022
+ms.date: 07/20/2022
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -18,8 +18,6 @@ contributors:
   - shmcarth
 ---
 # Environment variables overview
-
-
 
 Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
@@ -132,7 +130,7 @@ If an environment variable is used in a flow and the display name of the environ
 
 ## Use Azure Key Vault secrets (preview)
 
-Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Platform components, such as Power Automate.  The actual secrets are only stored in Azure Key Vault and the environment variable simply references the secrets.  Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference. 
+Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use with Power Automate. The actual secrets are stored in Azure Key Vault and the environment variable references the key vault secret location. Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference. 
 
 Environment variables referencing secrets are not currently available from the dynamic content selector for use in flows.
 
@@ -183,6 +181,8 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 > - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
 > 
 > - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
+>
+> - The Azure Key Vault must be in the same tenant as your Power Platform subscription.
 
 ### Create a Power Automate flow to test the environment variable secret
 
@@ -210,6 +210,8 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1. Select the **Password** field, and then on the **Dynamic content** tab under the flow step name above (*GetSecret* in this example) select **RetrieveEnvironmentVariableSecretValueResponse EnvironmentVariableSecretValue**, which is then added as an expression `outputs('GetSecretTest')?['body/EnvironmentVariableSecretValue']` or `body('GetSecretTest')['EnvironmentVariableSecretValue']`.
 
    :::image type="content" source="media/env-var-secret6.png" alt-text="Create a new step using the HTTP connector":::
+1. Select **...** > **Settings** to display the **HTTP** action settings.
+1. Enable the **Secure Inputs** and **Secure Outputs** options in the settings, and then select **Done**. Enabling these options prevents the input and outputs of the action getting exposed in the flow run history.
 1. Select **Save** to create the flow.
 1. Manually run the flow to test it.
 
@@ -254,7 +256,7 @@ If not already prevented by dependency system, runtime will use the last known v
 
 ### If a value is changed, when does the new value get used in canvas apps and cloud flows?
 
-For canvas apps, the new value will be used during the next session. For example, closing the app and then playing it again. 
+It may take up to an hour to fully publish updated environment variables.  
 
 With cloud flows, the flows must currently be de-activated and re-activated in order to use the updated value. 
 

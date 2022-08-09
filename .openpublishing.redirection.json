@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/web-api-aaduser-samples.md",
+      "redirect_url": "../aaduser-entity#aaduser-table-web-api-examples",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/use-alternate-key-create-record.md",
+      "redirect_url": "use-alternate-key-reference-record",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/virtual-entities/create-virtual-tables-using-connectors.md",
+      "redirect_url": "../../../../power-apps/maker/data-platform/create-virtual-tables-using-connectors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/access-discovery-service.md",
+      "redirect_url": "../../sample-discovery-service-crmserviceclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/global-discovery-service-csharp.md",
+      "redirect_url": "../../sample-global-discovery-service-csharp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/discovery-service.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/discovery-orgsdk-to-webapi.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/discover-url-organization-web-api.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/formula-reference.md",
       "redirect_url": "/power-platform/power-fx/formula-reference",
       "redirect_document_id": false
@@ -7114,6 +7154,16 @@
       "source_path": "powerapps-docs/maker/portals/admin/change-dynamics-instance.md",
       "redirect_url": "powerapps-docs/maker/portals/admin/update-dynamics365-instance.md",
       "redirect_document_id": "false"
-    }
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/dynamics365/customer-service/cs-email-template-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/customize-insert-email-template.md",
+      "redirect_url": "/dynamics365/customer-service/customize-insert-email-template",
+      "redirect_document_id": "false"
+    }    
   ]
 }

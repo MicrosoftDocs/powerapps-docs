@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/11/2021
+ms.date: 07/27/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -289,7 +289,33 @@ adx_contentsnippet:
 > [!NOTE]
 > To learn about all commands used in CLI in addition to portals, go to [Common commands in Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#common-commands).
 
-## Use the Visual Studio Code extension (preview)
+## Manifest files
+
+When you download the website content using `pac paportal download` CLI command, along with downloading the site content it will also generate two manifest files;
+- Environment manifest file (org-url-manifest.yml)
+- Delete tracking manifest file (manifest.yml)
+
+### Environment manifest file (org-url-manifest.yml)
+
+The environment manifest file is generated every time when the `pac paportal download` command is run. 
+
+After every download, PAC CLI tool reads the existing environment manifest file and updates the entries deleted in the environment, or creates the environment manifest file if it doesn’t exist. 
+
+When you run the `pac paportal upload` command to upload the portal website content. It reads the environment manifest file and identifies the changes made since last download and only uploads the updated content. This helps in optimizing the upload process as only updated website content get uploaded, instead of uploading the all the content on every upload command.
+
+The environment manifest file will be readonly when it connects to the same environment (environment URL matches with file name), to avoid accidental changes. 
+
+### Delete tracking manifest file (manifest.yml)
+
+This file is used for tracking the deleted records from the environment.
+
+When website content is downloaded with `pac paportal download` command, this will add the deleted records from [environment manifest file (org-url-manifest.yml)](#environment-manifest-file-org-url-manifestyml) to manifest.yml file. So, when you upload the website content using the `pac paportal upload` command it will delete the files from the environment (even to a different environment).
+This file is not deleted, and it get used regardless which environment you are connected.
+
+> [!NOTE]
+> In order to delete the site content records in one environment and also delete the same content records in another environment using the PAC CLI, you will need to run the `pac paportal download` command *before* and *after* the deleting the website record content. The manifest.yml will track these changes and remove the corresponding records in the target environment when the `pac paportal upload` command is run.
+
+## Use the Visual Studio Code extension
 
 You can also use VS Code extension **Power Platform VS Code Extension** to benefit built-in Liquid language from IntelliSense, code completion assistance, hinting, and interact with Microsoft Power Platform CLI using VS Code Integrated Terminal. More information: [Use the Visual Studio Code extension (preview)](vs-code-extension.md)
 

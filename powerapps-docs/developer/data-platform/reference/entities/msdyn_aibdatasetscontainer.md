@@ -911,6 +911,6 @@ See the [msdyn_AIBDatasetsContainer_msdyn_AIModelI](msdyn_aimodel.md#BKMK_msdyn_
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer?text=msdyn_aibdatasetscontainer EntityType" />

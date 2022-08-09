@@ -23,13 +23,13 @@ contributors:
 
 The .NET Language-Integrated Query (LINQ) query provider in Microsoft Dataverse uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant table types and the relationships between them. You can then specify the data source and the other query parameters.  
 
- The `from` clause is used to return a single “root” table. The query provider can only return rows of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add rows with a relationship to the “root” table.  
+ The `from` clause is used to return a single "root" table. The query provider can only return rows of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add rows with a relationship to the "root" table.  
 
 <a name="bkmk_operators"></a>   
 
 ## LINQ operators
 
- All LINQ query expressions have a similar format. The following table shows the most common clauses in a LINQ query expression when using the Dataverse LINQ query provider.  
+ All LINQ query expressions have a similar format. The following sections show the most common clauses in a LINQ query expression when using the Dataverse LINQ query provider.  
 
 ### from
 

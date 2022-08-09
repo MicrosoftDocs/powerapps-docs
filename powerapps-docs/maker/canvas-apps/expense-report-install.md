@@ -59,7 +59,7 @@ The Expense Report sample app includes a lot of the functionality commonly used 
 
 [Save the app](save-publish-app.md#save-changes-to-an-app) and update it to use a data source such as [SharePoint](connections/connection-sharepoint-online.md) or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
-You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
+You can also enable the capability to send emails or approval routing using [Power Automate pane](working-with-flows.md) or [Approvals connector](/connectors/approvals).
 
 Additionally, you can also read [Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/) to create a custom expense report app.
 

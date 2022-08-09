@@ -4,9 +4,9 @@ description: "Explains how to configure programatically delete audit data." # 11
 ms.date: 06/03/2022
 ms.reviewer: jdaly
 ms.topic: overview
-author: Bluebear7 # GitHub ID
+author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: munzinge # MSFT alias of Microsoft employees only
+ms.author: paulliew # MSFT alias of Microsoft employees only
 manager: mayadu # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
