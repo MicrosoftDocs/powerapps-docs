@@ -310,7 +310,7 @@ When you create an activity from the timeline, you can also link related records
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") <br>![Display the option to create directly from timeline](media\maker-enable-commands-3.png "Display the option to create directly from timeline") |
+|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") |
 |To enable **Regarding records** for a record, check the box next to the record type.<br> | When enabled, users can link the record from an activity and is displayed on the timeline.|
 
 #### Create and use card forms in timeline
@@ -456,6 +456,12 @@ To enable rich text posts on the timeline, contact [Microsoft Support](/power-pl
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 |![Posts on timeline](media\timeline-posts-1c-rich-text.png "Posts on timeline") |![Posts on timeline - Runtime](media\timeline-posts-1b.png "Posts on timeline - Runtime")|
 |The **Posts** the section expands when enabled and allows you to:<br> 1. Select **Enable user posts** enabling users to leave a message on the record<br> 2. Select **Enable simple auto posts** to display posts in the existing card form. <br> 3. **Sort posts by** date created or date modified. The **Created On** date is the default setting.<BR> | 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
+
+#### Select and order commands (Preview)
+
+To display the command actions that can be performed on posts displayed on the timeline, select the checkbox against the action. You can also move the position of the commands to change the order in which they are displayed on the timeline.
+
+
 
 #### Configure the form for posts
 
