@@ -297,12 +297,21 @@ To display the command actions that can be performed on an activity on the timel
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-commands-2.png"Display the option to create directly from timeline") |
+|![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-commands-2.png "Display the option to create directly from timeline") |
 | To allow users to enable command actions for an activity directly from the timeline, check the box next to action in  **Select and order commands**.<br> | When enabled, the command action will appear on the activity in the timeline.|
 
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+
+#### Regarding records (Preview)
+
+When you create an activity from the timeline, you can also link related records to it.
+
+|Form designer configuration view |  Form designer display view |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") <br>![Display the option to create directly from timeline](media\maker-enable-records-3.png "Display the option to create directly from timeline") |
+|To enable **Regarding records** for a record, check the box next to the record type.<br> | When enabled, users can link the record from an activity and is displayed on the timeline.|
 
 #### Create and use card forms in timeline
 
