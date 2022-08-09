@@ -185,7 +185,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
 
   | Before | After |
   | :---:         |     :---:      |
-  | ![Process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
+  | ![Old process comman.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
 - The command bar for tablets was at the button and it was limited to only show up to three commands. Now the commands on forms, grids, and dashboards pages are displayed at the top.
 
