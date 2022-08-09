@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/10/2022
+ms.date: 08/09/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -18,7 +18,7 @@ contributors:
 
 A portal connects to a Dataverse environment using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dataverse environment during the portal provisioning process.
 
-:::image type="content" source="media/connectivity/connect-with-dynamics.png" alt-text="Connecting a portal with Dataverse environment.":::
+:::image type="content" source="media/connectivity/connect-with-dataverse.png" alt-text="Connecting a portal with Dataverse environment.":::
 
 Each portal has a separate Azure Active Directory application associated with it, whether it's connected to the same Dataverse environment or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 
@@ -31,6 +31,20 @@ You can see the associated portal application in Azure Active Directory. The nam
 > Changing the portal name will not update the portal application name in Azure Active Directory.
 
 The portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. Don't delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the Power Apps Portals admin center.
+
+## Dataverse user accounts
+
+Sites created earlier than mid-2022 use a special Dataverse user called **SYSTEM** to allow communication between the site Azure Active Directory application and Dataverse. For more information on the **SYSTEM** user, see [System and application users](/power-platform/admin/system-application-users).
+
+Going forward, sites will use an [Dataverse application user](/power-platform/admin/manage-application-users) that will be automatically created as part of the site creation process.
+
+> [!WARNING]
+> The application user will appear in Dataverse and will have the following roles, **do not** remove these roles from the application user:
+> - Service Reader
+> - Service Writer
+> - Service Deleter
+
+Customizations built that interact specifically with the **SYSTEM** account should be refactored to interact with the new Dataverse application user.
 
 ## Understanding authentication key in portals
 
