@@ -310,7 +310,7 @@ When you create an activity from the timeline, you can also link related records
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") <br>![Display the option to create directly from timeline](media\maker-enable-records-3.png "Display the option to create directly from timeline") |
+|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") <br>![Display the option to create directly from timeline](media\maker-enable-commands-3.png "Display the option to create directly from timeline") |
 |To enable **Regarding records** for a record, check the box next to the record type.<br> | When enabled, users can link the record from an activity and is displayed on the timeline.|
 
 #### Create and use card forms in timeline
