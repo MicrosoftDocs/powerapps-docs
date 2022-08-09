@@ -24,7 +24,7 @@ Choice columns can be single selection only (choice) or can allow multi-selectio
 
 :::image type="content" source="media/data-platform-cds-newoptionset/multi-select-choice.png" alt-text="A multi-select choices column displayed on a model-driven app main form":::
 
-Choices are either local or global. You can define a choice to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other choice columns.
+Choices are either global or local. You can define a choice to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other choice columns. More information: [Create and edit choice columns overview](create-edit-global-option-sets.md)
 
 ## Create a global choice within a solution
 
@@ -39,10 +39,10 @@ Choices are either local or global. You can define a choice to use a set of opti
 
 1. Select **New choice** to enter create another option for the choice.
 1. Repeat the previous step to until you have the options you want for the choice.
-1. Expand Advanced options to display additional properties: 
-   - Name. Unique name of the global choice including the solution publisher prefix.
-   - External name. This value is used for virtual entities to map a value in an external data source with this option.
-   - Description. Enter an option description for the choice column.
+1. Expand **Advanced options** to display additional properties: 
+   - **Name**. Unique name of the global choice including the solution publisher prefix.
+   - **External name**. This value is used for virtual entities to map a value in an external data source with this option.
+   - **Description**. Enter an optional description for the choice column.
 1. Select **Save**.
 
 ## Create a local choice within a solution
@@ -81,7 +81,7 @@ Select **Save**.
 
 ## Create and edit global choices using solution explorer
 
-For information about how to create a global choice using the classic solution explorer, go to [Create or edit a global option set (on-premises)](/dynamics365/customerengagement/on-premises/customize/create-edit-global-option-sets).
+For information about how to create and edit global choices using the classic solution explorer, go to [Create or edit a global option set (on-premises)](/dynamics365/customerengagement/on-premises/customize/create-edit-global-option-sets).
 <!-- Solution explorer provides one way to create and edit global choices for Dataverse.
 
 > [!NOTE]
