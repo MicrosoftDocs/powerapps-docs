@@ -7,14 +7,13 @@ ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 06/06/2022
 ms.subservice: canvas-maker
-ms.author: lknibb
+ms.author: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - tapanm-msft
-  - larryk78
 ---
 
 # Code sign for iOS
