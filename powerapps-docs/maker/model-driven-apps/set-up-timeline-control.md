@@ -55,7 +55,7 @@ More information: [Create a custom table](../data-platform/data-platform-create-
 1. Before you can view any configuration changes on the table form, you must save and publish your updates on the timeline component. Select **Save**, and then select **Publish** to make your form changes available on the table form for the environment.
 
 Note the following when you work with the timeline control in the form designer.
-- If the timeline control is unavailable to add to a form, it means a timeline already exists on the form. You can only have one timeline per form.
+- You can add multiple timelines to a form.
 - To remove the timeline component from a form, select the **Timeline** component area, and then press the Delete key.
 - Since the timeline component relies exclusively on underlying related data, **Almost there** is displayed in the timeline section.
 - Because you are in a create and/or edit state on the form, there is no underlying data, so the timeline section is blank in the form designer.
@@ -271,22 +271,38 @@ App makers have the ability to enable activity types so they can be created dire
 |![Configure the ability to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11a.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11b.png "Display the option to create directly from timeline") |
 | To allow users to create activity types directly from the timeline, check the box next to **Create directly from timeline**.<br> | When enabled, the activity type will appear in a dropdown box on the  **Create a timeline record** ![Icon for create a timeline record.](media\timeline-create-a-record-icon.png "Icon for create a timeline record") icon in the top-right of the timeline.|
 
-#### Set create activities form type in the timeline
+#### Set create form type for an activity
+
 
 Specify a form type in **Create activities using** to create the selected activity in either the Default, Quick create form, Main form or Main form dialog form types. When the user selects the activity from the create a timeline record, the activity opens in the selected form type. 
+
+This setting overrides the **Create activities using** setting used to set the form type across all activities.
 
 > [!NOTE]
 > The Main form dialog option is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
 
-#### Set open activities form type in the timeline (Preview)
+#### Set open form type for an activity (Preview)
 
 > [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
-Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form or Main form dialog form types. When the user selects the activity record, it opens in the selected form type. 
+Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form, or Main form dialog form types. When the user selects the activity record, it opens in the selected form type. 
 
-#### Set the activity rollup type in timeline
+This setting overrides the **Create activities using** setting used to set the form type across all activities.
+
+#### Select and order commands (Preview)
+
+To display the command actions that can be performed on an activity on the timeline, select the checkbox against the action. You can also move the position of the actions to change the order in which they are displayed on the timeline.
+
+|Form designer configuration view |  Form designer display view |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-commands-2.png"Display the option to create directly from timeline") |
+| To allow users to enable command actions for an activity directly from the timeline, check the box next to action in  **Select and order commands**.<br> | When enabled, the command action will appear on the activity in the timeline.|
+
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
+For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
 #### Create and use card forms in timeline
 
@@ -371,13 +387,13 @@ When using Sort date, keep in mind the following:
 2. Select **Quick create form**, **Main form** , or **Main form dialog**. There are some activities that don't support quick create forms, such as email, and will use a main form or a main form dialog. More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms) and [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
 
 
-#### Set open activities form type in the timeline
+#### Set open activities form type in the timeline (Preview)
 
 ![How to set create activities form type in timeline.](media\timeline-how-to-set-open-activities-form-type-1a.png "How to set create activities form type in timeline")
 
 Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form or Main form dialog form types. When the user selects the activity record, it opens in the selected form type.
 
-#### Set the activity rollup type in timeline
+#### Set the activity rollup type in timeline 
 
 The activity rollup type can be configured for timelines on forms for the account and contact tables. The available types of rollups are **Extended**, **Related**, and **None**. Activity rollup only affects accounts and contacts in Dynamics 365 apps, such as Dynamics 365 Customer Service applications. To only show activities that are directly related to the table in timeline, select **None**.
 
