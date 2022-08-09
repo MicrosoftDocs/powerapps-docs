@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/06/2022
+ms.date: 08/09/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -138,6 +138,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
 - Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
 - If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
+- This feature does not support renaming of custom components. 
 
 ## Feedback to the community forum
 
