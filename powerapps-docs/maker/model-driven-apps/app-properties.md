@@ -2,7 +2,7 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 06/22/2022
+ms.date: 08/09/2022
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -46,6 +46,19 @@ App settings define important details about the app, like its title. You define 
     |**Advanced settings**  | **Primary mobile player**(preview)  | [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]<br />Determines which mobile player you want the model-driven app to be available from. By default, **Power Apps mobile** is selected. For example, if you want the model-driven app only available from the Dynamics 365 Sales mobile app, select **Dynamics 365 Sales**.<br /> - **Power Apps Mobile**. More information: [Use model-driven apps on Power Apps mobile](../../mobile/use-custom-model-driven-app-on-mobile.md) <br /> - **Dynamics 365 Sales**. More information: [Overview of Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) <br /> - **Field Service (Dynamics 365)**. More information: [Overview of the Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-power-app-overview) |
 
 3. **Save** the app.  
+
+## Features
+
+When you select **Settings** from the command bar, select **Features** to enable or disable model-driven app features for the app. 
+
+:::image type="content" source="media/model-driven-app-features.png" alt-text="Features available to this model-driven app":::
+
+Here are a few of the features available to app makers: 
+
+- **Enable Power BI quick report visualizations on a table**. Lets app users view table data from a Power BI quick report. More information: [Visualize data in a view with Power BI service](../../user/visualize-in-power-bi.md)
+- **In app notifications**. When enabled, the app polls for new in-app notifications and displays them. More information: [Send in-app notifications within model-driven apps](../../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
+- **Offline setup from the app designer**. [Enable your app for offline use (preview)](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use-preview)
+- **Mobile commanding improvements**. Optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction.
 
 ## Known limitations
 
