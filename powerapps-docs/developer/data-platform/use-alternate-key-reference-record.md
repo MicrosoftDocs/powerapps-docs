@@ -38,12 +38,10 @@ The following table provides examples showing how to reference records using rel
 |With a primary key|`/accounts(00000000-0000-0000-0000-000000000001)` OR<br />`accounts(accountid=00000000-0000-0000-0000-000000000001)`<br/>See note below about <xref:Microsoft.Dynamics.CRM.systemuser> and <xref:Microsoft.Dynamics.CRM.team> enitity types|
 |With single alternate key|`/accounts(accountnumber='ABC123')`|
 |With multi-part alternate keys|`/contacts(firstname='Joe',emailaddress1='abc@example.com')`|
-|With an alternate key that uses a lookup column|`/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000002)`|
+|With an alternate key that uses a lookup column|`/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000002)`<br />When an alternate key is defined for a lookup column, you must use the name of the corresponding [Lookup Property](webapi/web-api-properties.md#lookup-properties). A lookup property follows the following naming convention: `_<name of single-valued navigation property>_value`.|
 
 > [!NOTE]
 > Because of how <xref:Microsoft.Dynamics.CRM.systemuser> and <xref:Microsoft.Dynamics.CRM.team> enitity types inherit from the <xref:Microsoft.Dynamics.CRM.principal> entity type, you cannot use a named primary key to reference these entities. The primary keys for both of these entities is `ownerid`, rather than `systemuserid` or `teamid`. The `principal` entity type doesn't support `GET` operations.  More information: [EntityType inheritance](webapi/web-api-entitytypes.md#entitytype-inheritance)
-
-When an alternate key is defined for a lookup column, you must use the name of the corresponding [Lookup Property](webapi/web-api-properties.md#lookup-properties). A lookup property follows the following naming convention: `_<name of single-valued navigation property>_value`.
 
 ## Exceptions when using alternate keys with the Web API
 
