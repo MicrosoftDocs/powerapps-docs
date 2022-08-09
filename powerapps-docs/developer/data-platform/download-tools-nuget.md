@@ -46,7 +46,7 @@ You can download all SDK tools using the PowerShell script provided below. Note 
     Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
     Set-Alias nuget $targetNugetExe -Scope Global -Verbose
 
-    if (-not (./nuget source | ? { $_ -like "*https://api.nuget.org/v3/index.json*"})) {
+    if (-not (./nuget source | Where-Object { $_ -like "*https://api.nuget.org/v3/index.json*"})) {
       .\nuget sources Add -Name nuget.org.v3 -Source  https://api.nuget.org/v3/index.json
     }
 
@@ -54,36 +54,36 @@ You can download all SDK tools using the PowerShell script provided below. Note 
     ##Download Plug-in Registration tool
     ##
     ./nuget install Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool -O .\Tools
-    md .\Tools\PluginRegistration
+    mkdir .\Tools\PluginRegistration
     $prtFolder = (Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}).Name
-    move .\Tools\$prtFolder\tools\*.* .\Tools\PluginRegistration
+    Move-Item .\Tools\$prtFolder\tools\*.* .\Tools\PluginRegistration
     Remove-Item .\Tools\$prtFolder -Force -Recurse
     
     ##
     ##Download CoreTools
     ##
     ./nuget install  Microsoft.CrmSdk.CoreTools -O .\Tools
-    md .\Tools\CoreTools
+    mkdir .\Tools\CoreTools
     $coreToolsFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
-    move .\Tools\$coreToolsFolder\content\bin\coretools\*.* .\Tools\CoreTools
+    Move-Item .\Tools\$coreToolsFolder\content\bin\coretools\*.* .\Tools\CoreTools
     Remove-Item .\Tools\$coreToolsFolder -Force -Recurse
 
     ##
     ##Download Configuration Migration
     ##
     ./nuget install  Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf -O .\Tools
-    md .\Tools\ConfigurationMigration
+    mkdir .\Tools\ConfigurationMigration
     $configMigFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf.'}
-    move .\Tools\$configMigFolder\tools\*.* .\Tools\ConfigurationMigration
+    Move-Item .\Tools\$configMigFolder\tools\*.* .\Tools\ConfigurationMigration
     Remove-Item .\Tools\$configMigFolder -Force -Recurse
     
     ##
     ##Download Package Deployer 
     ##
     ./nuget install  Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF -O .\Tools
-    md .\Tools\PackageDeployment
+    mkdir .\Tools\PackageDeployment
     $pdFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf.'}
-    move .\Tools\$pdFolder\tools\*.* .\Tools\PackageDeployment
+    Move-Item .\Tools\$pdFolder\tools\*.* .\Tools\PackageDeployment
     Remove-Item .\Tools\$pdFolder -Force -Recurse
 
     ##
