@@ -126,7 +126,11 @@ Extend the functionality of your apps by performing these tasks:
 - Configure business logic in [Power Automate](/flow/getting-started)
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md)
 
-## Sign in using Azure B2B collaboration
+## Sign in using Azure B2B collaboration (preview)
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)] 
 
 > [!NOTE]
 > - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
