@@ -214,7 +214,7 @@ Use the **$expand** system query option in the navigation properties to contro
 
 You will need to use the **Microsoft.Dynamics.CRM.associatednavigationproperty** as the lookup attribute when using the **$expand** query option. 
 
-To determine the **Microsoft.Dynamics.CRM.associatednavigationproperty** of an attribute, you can make the following request using the following naming convention: *_<name>_value*.
+To determine the **Microsoft.Dynamics.CRM.associatednavigationproperty** of an attribute, you can make the following request using the following naming convention: **_*name*_value**.
 
 In the following example, we can determine the associated navigation property of the **Primary Contact** column of the **Account** table by specifying the column name **primarycontactid** by formatting the name in the request: **_primarycontactid_value**.
 
@@ -239,8 +239,7 @@ In the following example, we can determine the associated navigation property of
 }
 ```
 
-We see from the response that the associated navigation property is **primarycontactid**. For most Dataverse system tables, the associated navigation property is the logicalname while for custom Dataverse tables the schemaname.
-
+We see from the response that the associated navigation property is **primarycontactid**. The associated navigation property can be either the [LogicalName or SchemaName](../../developer/data-platform/entity-metadata.md).
 
 For more information see [Retrieve data about lookup properties](../../developer/data-platform/webapi/query-data-web-api.md#retrieve-data-about-lookup-properties).
 
