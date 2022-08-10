@@ -130,7 +130,7 @@ Extend the functionality of your apps by performing these tasks:
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
 
 > [!NOTE]
 > - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
