@@ -1,5 +1,6 @@
 ---
 title: "Create and edit choices (picklists) overview for Microsoft Dataverse | MicrosoftDocs"
+description: Provides an overview about choice columns in Dataverse.
 ms.custom: ""
 ms.date: 08/05/2022
 ms.reviewer: ""
