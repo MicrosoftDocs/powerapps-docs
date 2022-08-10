@@ -37,13 +37,16 @@ Choices are either global or local. You can define a choice to use a set of opti
    - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
    - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
 
-1. Select **New choice** to enter create another option for the choice.
+1. Select **New choice** to create another option for the choice.
 1. Repeat the previous step to until you have the options you want for the choice.
 1. Expand **Advanced options** to display additional properties: 
    - **Name**. Unique name of the global choice including the solution publisher prefix.
    - **External name**. This value is used for virtual entities to map a value in an external data source with this option.
    - **Description**. Enter an optional description for the choice column.
 1. Select **Save**.
+
+> [!NOTE]
+> After you create a global choice column the options can be made available to local choice columns, which can then be used with forms and views.
 
 ## Create a local choice within a solution
 
@@ -64,7 +67,7 @@ Choices are either global or local. You can define a choice to use a set of opti
 - **Selecting multiple choices is allowed**. Select this option if you want to create a choice where the user can select more than one option (multi-select).
 - **Sync with global choice?**
    - **Yes**. Select this option if you want the local choice to have the ability to use options from a global choice. Then, you can also select an existing global choice to use the options from that global choice.
-   - **No**. Select this option if you do not want the choice to have the ability to use options from a global choice.
+   - **No**. Select this option if you don't want the choice to have the ability to use options from a global choice.
    - **Sync this choice with**. When **Sync with global choice** is **Yes**, you can select an existing choice column. Then, the options configured for that choice can be used for this choice.
    - If you chose **No** to enable a global choice, create the options for your choice by selecting **Choices** or, if you chose **Yes**, select **Edit choice** to edit the sync choice options or **New choice** to add new options:
    - In the **Label** field, enter the label you want displayed for the choice option.
