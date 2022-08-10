@@ -82,6 +82,6 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 
     More information: [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization)
 
-- If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
+- If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
