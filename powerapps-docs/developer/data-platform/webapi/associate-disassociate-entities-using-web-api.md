@@ -19,7 +19,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can associate Individual records in table rows with other records using relationships that exist between the table definitions. In OData, the relationships are expressed as navigation properties.
+You can associate individual records in table rows with other records using relationships that exist between the table definitions. In OData the relationships are expressed as navigation properties.
 
 You can discover which navigation properties exist in the $metadata service document. See [Web API Navigation Properties](web-api-navigation-properties.md). For existing Dataverse tables, see the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?text=Web API EntityType Reference>, for each entity type, see the listed single-valued and collection-valued navigation properties.
 
@@ -29,11 +29,11 @@ The following table describes the three types of relationships between tables in
 |---------|---------|---------|
 |One-to-Many|One record can have many records associated with it.|An <xref:Microsoft.Dynamics.CRM.account?text=account> record can have many <xref:Microsoft.Dynamics.CRM.contact?text=contact> records in the `contact_customer_accounts` *collection-valued navigation property*.|
 |Many-to-One|Many records can be associated with one record.<br/><br/>Many-to-One is the mirror image of a One-to-Many relationship. There is just one relationship.|Multiple <xref:Microsoft.Dynamics.CRM.contact?text=contact> records can be associated to a single <xref:Microsoft.Dynamics.CRM.account?text=account> record using the `parentcustomerid_account` *single-valued navigation property*.|
-|Many-to-Many|Many records can be associated with many records.|Each <xref:Microsoft.Dynamics.CRM.role?text=role?text=security role (role)> may include references to the definition of a <xref:Microsoft.Dynamics.CRM.privilege?text=privilege>.<br />Both of these tables has a `roleprivileges_association` *collection-valued navigation property*.|
+|Many-to-Many|Many records can be associated with many records.|Each <xref:Microsoft.Dynamics.CRM.role?text=security role (role)> may include references to the definition of a <xref:Microsoft.Dynamics.CRM.privilege?text=privilege>.<br />Both of these tables has a `roleprivileges_association` *collection-valued navigation property*.|
 
 ## Using single-valued navigation properties
 
-For existing records on the *many* side of a One-to-many or Many-to-one relationship, you can associate the record by setting a Uri reference to the other record. The easiest and most common way to do this is by appending the `@odata.bind` annotation to the name of the single-valued navigation property and then setting the value as the Uri to the other record in a `PATCH` request.
+For existing records on the *many* side of a one-to-many or many-to-one relationship, you can associate the record by setting a Uri reference to the other record. The easiest and most common way to do this is by appending the `@odata.bind` annotation to the name of the single-valued navigation property and then setting the value as the Uri to the other record in a `PATCH` request.
 
 ### Associate with a single-valued navigation property
 
@@ -169,11 +169,11 @@ OData-Version: 4.0
 
 ## Using collection-valued navigation properties
 
-With OData, both sides of a Many-to-Many relationship will have collection-valued navigation properties. For One-to-Many and Many-to-One relationships, the table one the 'One' side will have a collection-valued navigation property. There is no difference how you work with any of these types of relationships while using collection-valued navigation properties. This section will describe how to work with collection-valued navigation properties with any type of relationship.
+With OData, both sides of a many-to-many relationship will have collection-valued navigation properties. For one-to-many and many-to-one relationships, the table one the 'One' side will have a collection-valued navigation property. There is no difference how you work with any of these types of relationships while using collection-valued navigation properties. This section will describe how to work with collection-valued navigation properties with any type of relationship.
 
 ## Add a record to a collection
 
-The following example shows how to add a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection which is part of a One-to-Many relationship.
+The following example shows how to add a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection which is part of a one-to-many relationship.
 
 **Request**
 
@@ -196,7 +196,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-The following example shows how to add a <xref:Microsoft.Dynamics.CRM.privilege?text=privilege> record to the <xref:Microsoft.Dynamics.CRM.role?text=role> `roleprivileges_association` collection which part of a Many-to-Many relationship.
+The following example shows how to add a <xref:Microsoft.Dynamics.CRM.privilege?text=privilege> record to the <xref:Microsoft.Dynamics.CRM.role?text=role> `roleprivileges_association` collection which part of a many-to-many relationship.
 
 **Request**
 
