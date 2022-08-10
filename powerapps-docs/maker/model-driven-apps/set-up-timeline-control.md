@@ -271,25 +271,17 @@ App makers have the ability to enable activity types so they can be created dire
 |![Configure the ability to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11a.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11b.png "Display the option to create directly from timeline") |
 | To allow users to create activity types directly from the timeline, check the box next to **Create directly from timeline**.<br> | When enabled, the activity type will appear in a dropdown box on the  **Create a timeline record** ![Icon for create a timeline record.](media\timeline-create-a-record-icon.png "Icon for create a timeline record") icon in the top-right of the timeline.|
 
-#### Set create form type for an activity
+#### Set form types to create and open activities
 
+**Create activities using** and **Open activities using (Preview)** lets you choose which type of form users will work in based on your business needs. You can set this for a specific activity or for all of the activities at once. If you set the form types at both the instances, the activity specific setting is considered.
 
-Specify a form type in **Create activities using** to create the selected activity in either the Default, Quick create form, Main form or Main form dialog form types. When the user selects the activity from the create a timeline record, the activity opens in the selected form type. 
+ When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity opens in the selected form type. 
 
-This setting overrides the **Create activities using** setting used to set the form type across all activities.
-
-> [!NOTE]
-> The Main form dialog option is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
-
-#### Set open form type for an activity (Preview)
+![Icon for create a timeline record.](media\maker-create-open-activities.png "Icon for create a timeline record")
 
 > [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
-For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
-
-Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form, or Main form dialog form types. When the user selects the activity record, it opens in the selected form type. 
-
-This setting overrides the **Create activities using** setting used to set the form type across all activities.
+> - **The Open activities using** and Main form dialog option in Create activities using dropdown are early access features. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
+> - Set open form type for an activity
 
 #### Select and order commands (Preview)
 
