@@ -6,7 +6,7 @@ author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/08/2022
+ms.date: 08/10/2022
 ms.subservice: canvas-maker
 ms.author: hasharaf
 search.audienceType: 
@@ -61,9 +61,9 @@ The following table summarizes which methods benefit from canvas apps within sol
 
 This feature is disabled by default and must be enabled manually. To enable this feature, go to Power Platform admin center by going to **Environments** > select an environment > **Settings** > **Product** > **Features**, and enable the feature **Create new canvas apps as Dataverse solutions**. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
-## Check canvas apps in solution 
+## Check canvas apps in solution
 
-To view canvas apps inside a solution, use the [solution view](../data-platform/solutions-area.md). Only users that have access to the canvas app added inside a solution can view the app in a solution view. 
+To view canvas apps inside a solution, use the [solution view](../data-platform/solutions-area.md). Only users that have access to the canvas app added inside a solution can view the app in a solution view.
 
 ## Export and import standalone canvas app 
 
@@ -77,5 +77,11 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 - This feature also enables the automatic creation of environment variables when adding data sources for your apps. 
 - By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps. To learn about adding canvas apps to solutions, see [Add an existing canvas app to a solution](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 - When you toggle the feature switch in the Power Platform admin center, the Dataverse property `enablecanvasappsinsolutionsbydefault` in the organization table is updated.  The value can be reviewed using the following sample ODATA snippet.
+
+    `[org URI]/api/data/v9.0/organizations`
+
+    More information: [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization)
+
+- If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
