@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/09/2022
+ms.date: 08/10/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -36,15 +36,16 @@ The portal ID is in the **App ID URI** field in the Azure Active Directory appli
 
 Sites created earlier than mid-2022 use a special Dataverse user called **SYSTEM** to allow communication between the site Azure Active Directory application and Dataverse. For more information on the **SYSTEM** user, see [System and application users](/power-platform/admin/system-application-users).
 
-Going forward, sites will use an [Dataverse application user](/power-platform/admin/manage-application-users) that will be automatically created as part of the site creation process.
+Going forward, sites will use an [Dataverse application user](/power-platform/admin/manage-application-users) that will be automatically created as part of the site creation process. The app user is called **# Portals - *site name***.
 
 > [!WARNING]
 > The application user will appear in Dataverse and will have the following roles, **do not** remove these roles from the application user:
-> - Service Reader
+> - Portal Application User
 > - Service Writer
 > - Service Deleter
 
-Customizations built that interact specifically with the **SYSTEM** account should be refactored to interact with the new Dataverse application user.
+> [!NOTE]
+> Existing sites will be migrated from using the **SYSTEM** user to the application user. Customizations built that have dependencies or interactions specifically with the **SYSTEM** account should be refactored to work with the new Dataverse application user.
 
 ## Understanding authentication key in portals
 
