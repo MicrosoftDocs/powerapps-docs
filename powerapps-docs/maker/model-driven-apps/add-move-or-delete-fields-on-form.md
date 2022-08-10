@@ -71,7 +71,7 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 
 1. In the form designer on the command bar, select **Form field**.
 1. Select **New table column**.
-1. In the **New column** pane, enter or select the values for the following complete the properties for the choice column. More information: [Configure properities for a choice](../data-platform/custom-picklists.md#configure-properities-for-a-choice)
+1. In the **New column** pane, enter or select the values for the following complete the properties for the choice column. More information: [Configure properties for a local choice](../data-platform/custom-picklists.md#configure-properties-for-a-local-choice)
 
 ## Configure column properties on a form
 
