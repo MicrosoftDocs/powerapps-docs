@@ -139,6 +139,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
 - If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
 - This feature does not support renaming of custom components. 
+- If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. And then, refresh your app to remove the lock.
 
 ## Feedback to the community forum
 
