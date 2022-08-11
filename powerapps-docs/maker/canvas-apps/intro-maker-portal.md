@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 08/10/2022
+ms.date: 08/11/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -135,8 +135,7 @@ Extend the functionality of your apps by performing these tasks:
 > [!NOTE]
 > - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
 > - A **home tenant** is where the user's account resides and authenticates against.
->
-> To create and edit apps in a resource tenant, an admin must [follow these steps](https://docs.microsoft.com/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) to give Azure B2B users the prerequisite privileges to build apps. 
+> - To create and edit apps in a resource tenant, an admin must [follow these steps](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) to give Azure B2B users the prerequisite privileges to build apps. 
 
 When a user signs into [Power Apps](https://make.powerapps.com), they sign into their **home tenant**&mdash;the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can change the directory they intend to build apps in using the **Switch directory** link as shown below:
 
