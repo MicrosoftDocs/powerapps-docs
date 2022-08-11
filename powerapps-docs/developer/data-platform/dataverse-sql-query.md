@@ -43,7 +43,7 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 #### Security and authentication
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
+Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.  The connection to the TDS endpoint is always encrypted with at least TLS 2.0, whether the client requests encryption or not.
 
 ![Connec dialog.](media/ssms-connect-dialog.PNG)
 
