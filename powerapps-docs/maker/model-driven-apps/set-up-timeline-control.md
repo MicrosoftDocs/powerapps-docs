@@ -283,31 +283,38 @@ App makers have the ability to enable activity types so they can be created dire
 > - **The Open activities using** and Main form dialog option in Create activities using dropdown are early access features. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
 > - Set open form type for an activity
 
-#### Select and order commands (Preview)
+#### Enable command actions on activity record types (preview)
 
-To display the command actions that can be performed on an activity on the timeline, select the checkbox against the action. You can also move the position of the actions to change the order in which they are displayed on the timeline.
+Command actions that are displayed on the timeline enable users to perform actions such as Assign, Close, Delete, Open a record or add the record to a queue for an activity. The administrator can enable or disable the actions for any Activity type. The commands are enabled by default. 
+
+There are some activities for which you can enable additional commands. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-commands-2.png "Display the option to create directly from timeline") |
-| To allow users to enable command actions for an activity directly from the timeline, check the box next to action in  **Select and order commands**.<br> | When enabled, the command action will appear on the activity in the timeline.|
+| To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**.<br> 
+You can also move the position of the actions to change the order in which they are displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
 
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
-#### Regarding records (Preview)
+#### Display related records on the timeline (Preview)
 
-When you create an activity from the timeline, you can also link related records to it.
+The related records that are displayed on the timeline help you see if there are any records associated with the activity. Accounts, contacts, cases, and opportunities can be displayed as related records. The administrator can enable or disable the records in **Regarding records**.
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") |
-|To enable **Regarding records** for a record, check the box next to the record type.<br> | When enabled, users can link the record from an activity and is displayed on the timeline.|
+|1. Expand and view Activities under the Record settings section using the caret (^) <br> 2. A list of records are displayed on in **Regarding records**. <br> 3. To enable a records, check the box next to **Enable** and select **Done**. | When enabled, users can link the record from an activity and is displayed on the timeline.|
+
+> [!NOTE]
+> A check mark appears to the right, next to enabled record.
+
 
 #### Create and use card forms in timeline
 
-Records are displayed using the default setting for each activity type. However, if you want to display record information for an appointment or email, for example, you can either edit the existing card form, use a different card form from record settings, or customize your own.
+Records are displayed using the default setting for each activity type. However, if you want to display record information for an appointment or email, for example, you can either edit the existing card form, use a different card form from record settings, or customize your own. 
 
 |Form designer configure view |Form designer display view|
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -387,20 +394,6 @@ When using Sort date, keep in mind the following:
 1. **Create activities using** lets you choose which type of form users will work in based on your business needs.  
 2. Select **Quick create form**, **Main form** , or **Main form dialog**. There are some activities that don't support quick create forms, such as email, and will use a main form or a main form dialog. More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms) and [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
 
-
-#### Set open activities form type in the timeline (Preview)
-
-![How to set create activities form type in timeline.](media\timeline-how-to-set-open-activities-form-type-1a.png "How to set create activities form type in timeline")
-
-Specify a form type in **Open activities using** to open the selected activity in in either the Default, Main form or Main form dialog form types. When the user selects the activity record, it opens in the selected form type.
-
-#### Set the activity rollup type in timeline 
-
-The activity rollup type can be configured for timelines on forms for the account and contact tables. The available types of rollups are **Extended**, **Related**, and **None**. Activity rollup only affects accounts and contacts in Dynamics 365 apps, such as Dynamics 365 Customer Service applications. To only show activities that are directly related to the table in timeline, select **None**.
-
-More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
-
-![Activity rollup type.](media\activity-rollup-type.png "Activity rollup type")
 
 ### Timeline performance
 
