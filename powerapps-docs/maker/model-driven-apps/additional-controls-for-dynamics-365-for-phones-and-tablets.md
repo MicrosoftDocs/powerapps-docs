@@ -37,7 +37,7 @@ To use these controls in the form designer:
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
    
-1. Select the **Section** you would like to add the control to.  
+1. Select the column or section where you want to add the control.
  
 1. Select **+ Component** to display the available controls, and then select the control you want.  
   
