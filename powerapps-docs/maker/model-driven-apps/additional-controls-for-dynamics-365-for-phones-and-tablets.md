@@ -39,11 +39,10 @@ To use these controls in the form designer:
    
 1. Select the column or section where you want to add the control.
  
-1. Select **+ Component** to display the available controls, and then select the control you want.  
+1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
-    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
-    >  Some controls are only available in the classic forms editor interface.  To access these you must **switch to classic** from the menu at the top.
+    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.
   
 1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
