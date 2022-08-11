@@ -33,13 +33,13 @@ Controls exist to provide a more touch-friendly experience with model-driven app
 To use these controls in the form designer:  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Expand **Dataverse** in the left hand menu and select **tables**
+1. Expand **Dataverse** in the left hand menu, and then select **Tables**.
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
    
-1. Select the **section** you would like to add the control to.  
+1. Select the **Section** you would like to add the control to.  
  
-1. Select **+ Component** to display the available controls, and then select the control required.  
+1. Select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
     >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
