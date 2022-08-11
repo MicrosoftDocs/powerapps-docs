@@ -46,7 +46,7 @@ sections:
         | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | dateTime                           | 2021-06-25T16:21:12Z               |
         
         > [!NOTE]
-        > **CreatedOn** Data Type changed from string to dataTimeOffset since 07/29/2022. To change the data type format for an old entity, you should drop and re-add that entity.
+        > **CreatedOn** data type changed from string to dataTimeOffset on 07/29/2022. To change the data type format for an old table, drop and re-add the table.
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
