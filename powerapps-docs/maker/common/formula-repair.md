@@ -37,7 +37,7 @@ Once you have Power Apps Studio open, go to the top menu bar, and select **Setti
 
 ## Use formula repair
 
-Once you have the focus inside the formula bar, if the formula has any errors that the formula feature finds suggestions for, you'll see a red dot next to the **fx** icon.
+Once you have the focus inside the formula bar, if the formula has any errors that the formula repair feature finds suggestions for, you'll see a red dot next to the **fx** icon.
 
 When you select this red dot, you'll be able to see suggested fix for your formula. After confirming the suggested change, select **Apply** to apply the change to your formula and fix the formula error.
 
