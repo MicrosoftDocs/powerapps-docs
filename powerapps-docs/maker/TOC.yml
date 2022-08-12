@@ -2339,7 +2339,7 @@
     items:
     - name: Types of columns
       href: ./data-platform/types-of-fields.md
-    - name: Global choices overview
+    - name: Choice columns overview
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
@@ -2359,10 +2359,8 @@
         href: ./data-platform/create-edit-field-portal.md
       - name: How to create columns using Power Apps solution explorer
         href: ./data-platform/create-edit-field-solution-explorer.md
-      - name: How to create a choice using Power Apps portal
+      - name: How to create a choice
         href: ./data-platform/custom-picklists.md
-      - name: How to create global choices using solution explorer
-        href: ./data-platform/create-edit-global-option-sets-solution-explorer.md
       - name: How to define calculated columns
         href: ./data-platform/define-calculated-fields.md
       - name: How to define rollup columns
