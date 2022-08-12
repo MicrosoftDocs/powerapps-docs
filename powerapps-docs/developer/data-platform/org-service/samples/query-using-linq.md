@@ -40,7 +40,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-Creates any table instances required by the `Demonstrate` region of each `Main`() method.
+Creates any records required by the `Demonstrate` region of each `Main`() method.
 
 ### Demonstrate
 

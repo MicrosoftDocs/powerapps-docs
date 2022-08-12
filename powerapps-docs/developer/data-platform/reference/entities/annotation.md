@@ -1049,6 +1049,6 @@ See the [chat_Annotations](chat.md#BKMK_chat_Annotations) one-to-many relationsh
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.annotation?text=annotation EntityType" />

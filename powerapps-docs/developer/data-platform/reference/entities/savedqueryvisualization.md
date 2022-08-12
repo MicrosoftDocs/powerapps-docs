@@ -737,6 +737,6 @@ See the [webresource_savedqueryvisualizations](webresource.md#BKMK_webresource_s
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.savedqueryvisualization?text=savedqueryvisualization EntityType" />

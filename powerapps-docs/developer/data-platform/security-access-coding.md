@@ -19,29 +19,29 @@ search.app:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The only time you don’t need to be concerned about security concepts is when you
+The only time you don't need to be concerned about security concepts is when you
 are writing code that is expected to be run by a user with the System
 Administrator security role. Because this role is all powerful and cannot be
 edited, you can be assured that the user can do anything. In all other cases,
 you need to consider how security is applied.
 
-- If you are creating a **client application**, you should evaluate the user’s
+- If you are creating a **client application**, you should evaluate the user's
     privileges for a table or for a specific table record and control which
     commands you enable. If a user is not allowed to create a table, you can
-    disable the user interface in your app to allow creating a new table of that type. If they don’t have read access to a table, your client application can choose to not
+    disable the user interface in your app to allow creating a new table of that type. If they don't have read access to a table, your client application can choose to not
     display components related to viewing lists of that type of table.
 
-- If you are writing a **synchronous plug-in**, you can’t simply attempt some
+- If you are writing a **synchronous plug-in**, you can't simply attempt some
     data operation and throw away the exception. Any operation that fails within a
     synchronous plug-in will cause the entire data transaction to be rolled back. If
-    you have some part of the process that is optional depending on the user’s
-    privileges, you should check the user’s privileges first.
+    you have some part of the process that is optional depending on the user's
+    privileges, you should check the user's privileges first.
 
 There are two strategies you can apply to detect which operations a user can
 perform:
 
 - Test individual table records
-- Check the user’s security privileges
+- Check the user's security privileges
 
 These strategies are described below.
 
@@ -51,10 +51,10 @@ User interaction with specific table records usually begins with a query. If a
 user has no access to any records for that table, the query will simply return
 no records and there is nothing further the user can attempt except to create a
 new record. Testing whether the user can create a new record requires using the
-other strategy (mentioned above) to check the user’s security privileges.
+other strategy (mentioned above) to check the user's security privileges.
 
 However, if the user was successful in retrieving table records using a query, you
-can then test a table instance using the `RetrievePrincipalAccess` message.
+can then test a record using the `RetrievePrincipalAccess` message.
 
 The following method uses the SDK <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest> class to allow retrieving a set of access rights defined within the <xref:Microsoft.Crm.Sdk.Messages.AccessRights> enumeration.
 
@@ -107,9 +107,9 @@ var canAppendTo = accessRights.HasFlag(AccessRights.AppendToAccess);
 ```
 
 With access to a table record, you can use this method to test any
-operations that apply to that record. But this doesn’t include capabilities that
+operations that apply to that record. But this doesn't include capabilities that
 apply to other operations, such as creating a new record or any other privilege
-that isn’t bound to a specific table.
+that isn't bound to a specific table.
 
 ### Get Principals with access to a record
 
@@ -119,10 +119,10 @@ just one specific user or team, you can test the other user using the `RetrieveP
 Get a list of all users and teams who have access rights and details about
 those access rights on a record using the the `RetrieveSharedPrincipalsAndAccess` message (<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess> function, <xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest> class).
 
-## Check a user’s security privileges
+## Check a user's security privileges
 
-When you don’t have a specific table record to test, such as whether they can
-create a new table record, you must rely on checking the user’s security
+When you don't have a specific table record to test, such as whether they can
+create a new table record, you must rely on checking the user's security
 privileges. These privileges are stored in the [Privilege table](reference/entities/privilege.md).
 
 There are nearly one thousand individual privileges in the Dataverse database and the
