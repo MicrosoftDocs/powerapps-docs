@@ -97,7 +97,7 @@ The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>`
 		<PowerBIGroupId>00000000-0000-0000-0000-000000000000</PowerBIGroupId>
 		<PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
 		<TileUrl>https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>
-		<PowerBIFilter>{"Filter": "[{\"$schema\":\"basic\",\"target\":{\"table\":\"table_name_of_power_bi_dataset\",\"column\":\"power_bi_field\"},\"operator\":\"In\",\"values\":[$a],\"filterType\":1}]", "Alias": {"$a": "field_name_in_crm_to_filter"}}</PowerBIFilter>
+		<PowerBIFilter>{"Filter": "[{\"$schema\":\"basic\",\"target\":{\"table\":\"table_name_of_power_bi_dataset\",\"column\":\"power_bi_field\"},\"operator\":\"In\",\"values\":[$a],\"filterType\":1}]", "Alias": {"$a": "field_name_in_powerapps_to_filter"}}</PowerBIFilter>
 	</parameters>
 </control>
 ```
@@ -123,8 +123,8 @@ This table describes any additional properties used in the previous XML sample.
 	                \"filterType\":1
 	        }]",
 	        "Alias": {
-	                "$a": "field1_name_in_crm_to_filter",
-	                "$b":"field2_name_in_crm_to_filter"
+	                "$a": "field1_name_in_powerapps_to_filter",
+	                "$b":"field2_name_in_powerapps_to_filter"
 	        }
 	}
 ```
@@ -189,7 +189,7 @@ Before you import the solution into the target environment, make sure the unmodi
 	                \"filterType\":1
 	        }]",
 	        "Alias": {
-	                "$a": "field_name_in_crm_to_filter",
+	                "$a": "field_name_in_powerapps_to_filter",
 	        }
 	}
 ```
