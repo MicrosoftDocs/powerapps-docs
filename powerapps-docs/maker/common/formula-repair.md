@@ -65,6 +65,6 @@ Several types of errors are discovered and suggested as a fix.
 
 ## Limitations
 
-- Formula repair won't be able to determine the expected values, or the names of the controls. For example, if your control name is `MyLabel` and you try to enter `WrongLabel`. In this situation, formula repair feature won't be able to determine and suggest you to use the formula to reference `MyLabel` instead of `WrongLabel` since both are defined by you.
+- Formula repair won't be able to determine the expected values when you enter a complete incorrect control name. For example, if your control name is `MyLabel` and you try to enter `WrongLabel`. In this situation, formula repair feature won't be able to determine and suggest you to use the formula to reference `MyLabel` instead of `WrongLabel`.
 
 - Formula repair won't trigger if your formula has only warnings, or isn't showing any errors (even when the formula is incorrect).
