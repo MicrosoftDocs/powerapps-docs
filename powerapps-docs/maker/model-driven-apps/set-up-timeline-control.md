@@ -310,7 +310,7 @@ The related records that are displayed on the timeline help you see if there are
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\s.png "Display the option to create directly from timeline") |
+|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") |
 |1. Expand and view Activities under the Record settings section using the caret (^) <br> 2. A list of records are displayed on in **Regarding records**. <br> 3. To enable a records, check the box next to **Enable** and select **Done**. | When enabled, users can link the record from an activity and is displayed on the timeline.|
 
 > [!NOTE]
