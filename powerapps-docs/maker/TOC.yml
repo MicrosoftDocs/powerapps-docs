@@ -616,6 +616,8 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Use formula repair in canvas apps (experimental)
+          href: common/formula-repair.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane 
@@ -1306,6 +1308,8 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+          - name: Use formula repair in custom pages (experimental)
+            href: common/formula-repair.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
       - name: Work with views
