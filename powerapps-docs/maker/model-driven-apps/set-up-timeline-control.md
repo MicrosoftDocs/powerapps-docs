@@ -273,17 +273,21 @@ App makers have the ability to enable activity types so they can be created dire
 
 #### Set form types to create and open activities
 
-**Create activities using** and **Open activities using (Preview)** lets you choose which type of form users will work in based on your business needs. You can set this for a specific activity or for all of the activities at once. If you set the form types at both the instances, the activity specific setting is considered.
+**Create activities using** and **Open activities using** lets you choose which type of form users will work in based on your business needs. You can set this for a specific activity or for all of the activities in **Record Settings** .
+The following actions occur, if you set the form type for specific activity as:
+-  Default: The application considers the **Record Setting** > **Create activities using** or **Open activities using** setting.
+- Quick create form, Main form, or Main form dialog: the application considers only the activity specific setting irrespective of the **Record Setting** > **Create activities using** or **Open activities using** setting.
 
  When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity opens in the selected form type. 
 
 ![Icon for create a timeline record.](media\maker-create-open-activities.png "Icon for create a timeline record")
 
-> [!NOTE]
-> - **The Open activities using** and Main form dialog option in Create activities using dropdown are early access features. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
-> - Set open form type for an activity
 
 #### Enable command actions on activity record types (preview)
+
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
+For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
 Command actions that are displayed on the timeline enable users to perform actions such as Assign, Close, Delete, Open a record or add the record to a queue for an activity. The administrator can enable or disable the actions for any Activity type. The commands are enabled by default. 
 
@@ -295,17 +299,18 @@ There are some activities for which you can enable additional commands. For exam
 | To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**.<br> 
 You can also move the position of the actions to change the order in which they are displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
 
+
+#### Display related records on the timeline (Preview)
+
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
-
-#### Display related records on the timeline (Preview)
 
 The related records that are displayed on the timeline help you see if there are any records associated with the activity. Accounts, contacts, cases, and opportunities can be displayed as related records. The administrator can enable or disable the records in **Regarding records**.
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-records-2.png "Display the option to create directly from timeline") |
+|![Configure the ability to enable command actions from timeline](media\maker-enable-records-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\s.png "Display the option to create directly from timeline") |
 |1. Expand and view Activities under the Record settings section using the caret (^) <br> 2. A list of records are displayed on in **Regarding records**. <br> 3. To enable a records, check the box next to **Enable** and select **Done**. | When enabled, users can link the record from an activity and is displayed on the timeline.|
 
 > [!NOTE]
@@ -440,7 +445,9 @@ To enable rich text posts on the timeline, contact [Microsoft Support](/power-pl
 |Form designer configuration view | Form designer display view|
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 |![Posts on timeline](media\timeline-posts-1c-rich-text.png "Posts on timeline") |![Posts on timeline - Runtime](media\timeline-posts-1b.png "Posts on timeline - Runtime")|
-|The **Posts**  section expands when enabled and allows you to:<br> 1. Select **Enable user posts** enabling users to leave a message on the record<br> 2. Select **Enable simple auto posts** to display posts in the existing card form. <br> 3. **Sort posts by** date created or date modified. The **Created On** date is the default setting.<BR> 4. The **Select and order commands** section allows users to display the command actions that can be performed on posts displayed on the timeline. You can also move the position of the commands to change the order in which they are displayed on the timeline. | 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
+|The **Posts**  section expands when enabled and allows you to:<br> - Select **Enable user posts** enabling users to leave a message on the record<br> - **Sort posts by** date created or date modified. The **Created On** date is the default setting.<BR> - The **Select and order commands (Preview)** section allows users to display the command actions that can be performed on posts displayed on the timeline. You can also move the position of the commands to change the order in which they are displayed on the timeline. | 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
+|The **Enable simple auto posts (Preview)** allows auto posts to be displayed either in the existing card format or as a simple post. Unselect this checkbox to display the posts in the existing card format. This checkbox is selected by default. |![AutoPosts on timeline - Runtime](media\timeline-posts-2.png "AutoPosts on timeline - Runtime")<br>
+When the **Enable simple auto posts (Preview)** checkbox is enabled, the posts aren't displayed in card form. Command actions  can't be performed on auto posts from the timeline. |
 
 #### Configure the form for posts
 
