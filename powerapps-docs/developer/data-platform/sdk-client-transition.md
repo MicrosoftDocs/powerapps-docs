@@ -93,7 +93,7 @@ The following table lists some important dates to keep in mind.
 |At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
 
 > [!IMPORTANT]
-> The 'CrmServiceClient' class wil continue to function as documented even after ADAL authentication is turned off. Both service client classes will continue to function as documented after the 2011 SOAP endpoint has been turned off. If required, we may release an updated assembly containing revised service clients that your application will need to load at run-time.
+> The 'CrmServiceClient' class will continue to function as documented even after ADAL authentication is turned off. Both service client classes will continue to function as documented after the 2011 SOAP endpoint has been turned off. If required, we may release an updated assembly containing revised service clients that your application will need to load at run-time.
 
 ### See also
   
