@@ -59,6 +59,7 @@ Here are a few of the features available to app makers:
 - **In app notifications**. When enabled, the app polls for new in-app notifications and displays them. More information: [Send in-app notifications within model-driven apps](../../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
 - **Offline setup from the app designer**. [Enable your app for offline use (preview)](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use-preview)
 - **Mobile commanding improvements**. Optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction.
+- **Table optimization for command bar**. For tablets, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen.
 
 ## Known limitations
 
