@@ -21,7 +21,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-When writing Power Fx formulas, errors are often unavoidable. And it's time-consuming to troubleshoot and fix. Power Apps Formula repair will automatically generate and fix suggestions for you when there's a formula error.
+When writing [Power Fx](/power-platform/power-fx/overview) formulas, errors are often unavoidable. And it's time-consuming to troubleshoot and fix. Power Apps Formula repair will automatically generate and fix suggestions for you when there's a formula error.
 
 ## Enable formula repair
 
