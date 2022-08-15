@@ -196,7 +196,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-The following example shows how to add a <xref:Microsoft.Dynamics.CRM.role?text=role> record to the <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser> `systemuserroles_association` collection which part of a many-to-many relationship.
+The following example shows how to add a <xref:Microsoft.Dynamics.CRM.role?text=role> record to the <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser> `systemuserroles_association` collection which is a many-to-many relationship.
 
 **Request**
 
