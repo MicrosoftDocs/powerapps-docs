@@ -1,7 +1,7 @@
 ---
 title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table definitions using the Web API."
-ms.date: 08/08/2022
+ms.date: 08/15/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -173,7 +173,10 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
 When you update a table or column definition, you must use the  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action"> or 
 <xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action"> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
-Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the DisplayName changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+
+> [!NOTE]
+> Some of the examples below use the `MetadataId` primary key value. But you can also use the `LogicalName` alternate key to reference schema entities. More information: [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)
   
  **Request**
 
@@ -1056,6 +1059,9 @@ Then, change the properties you want to change.
 |`DisplayName`|Sample Boolean|Sample Boolean Updated|
 |`Description`|Boolean Attribute|Boolean Attribute Updated|
 |`RequiredLevel`|`None`|`ApplicationRequired`|
+
+> [!NOTE]
+> If you want to update the options, you must send a different request. See [Update Options](#update-options).
 
 Now you can send the `PUT` request with the modified properties:
 
