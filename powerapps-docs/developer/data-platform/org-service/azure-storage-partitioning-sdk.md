@@ -1,14 +1,12 @@
 ---
 title: "Improve performance using storage partitions when accessing entity data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to improve performance when accessing non-relational entity date." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 01/25/2021
-ms.reviewer: "pehecke"
+ms.reviewer: pehecke
 
 ms.topic: "article"
-author: "Bluebear73" # GitHub ID
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+author: Peakerbl # GitHub ID
+ms.author: peakerbl # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 

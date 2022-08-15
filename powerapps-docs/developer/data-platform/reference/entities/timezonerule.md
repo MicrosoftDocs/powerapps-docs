@@ -638,6 +638,6 @@ See the [lk_timezonerule_createdonbehalfby](systemuser.md#BKMK_lk_timezonerule_c
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.timezonerule?text=timezonerule EntityType" />

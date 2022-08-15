@@ -62,6 +62,10 @@ When you configure the Power Apps grid control for an entity, all views for that
 1.	In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **(Preview) Power Apps grid control**.
 1.	To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
 
+## Customization
+
+For information about how to customize the Power Apps grid control using extensibility APIs, go to [Customize the editable grid control](/power-apps/developer/component-framework/customize-editable-grid-control).
+
 ## Known issues and limitations
 
 ### Limitations with card form lists

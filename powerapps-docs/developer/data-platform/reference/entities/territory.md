@@ -908,6 +908,6 @@ See the [territory_parent_territory](territory.md#BKMK_territory_parent_territor
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.territory?text=territory EntityType" />

@@ -918,6 +918,6 @@ See the [msdyn_AIBFeedbackLoop_msdyn_AIModel](msdyn_aimodel.md#BKMK_msdyn_AIBFee
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibfeedbackloop?text=msdyn_aibfeedbackloop EntityType" />

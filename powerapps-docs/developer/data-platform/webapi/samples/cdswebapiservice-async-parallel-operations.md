@@ -184,7 +184,7 @@ namespace PowerApps.Samples
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
 [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)<br />
-[Create a table using the Web API](../create-entity-web-api.md)<br />
+[Create a table row using the Web API](../create-entity-web-api.md)<br />
 [Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
