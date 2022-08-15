@@ -25,9 +25,8 @@ searchScope:
   - Power Apps
 ---
 
-# Create and manage personal views on a grid page (preview)
+# Create and manage personal views on a grid page 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 In model-driven apps, views define the data that's displayed in tabular form on a grid page. System views are views that are created by your administrator and shared with you. You typically can't modify them. However, you can create and manage personal views. Personal views are available to you only unless you share them.
 

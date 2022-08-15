@@ -126,14 +126,14 @@
         - name: Convert an email to a template
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
-          href: ../user/email-signature.md
+          href: ../user/email-signature.md 
       - name: Enable the enhanced insert email template
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
-      - name: Explore data in a view on a grid page (preview)
+      - name: Explore data in a view on a grid page 
         href: ../user/grid-filters.md
-      - name: Create and manage personal views on a grid page (preview)
+      - name: Create and manage personal views on a grid page 
         href: ../user/grid-filters-advanced.md     
       - name: Faq for grids and views
         href: ../user/faq-for-grids-views.md
@@ -618,10 +618,10 @@
           href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Working with flows
           items:
-          - name: Add a flow
-            href: ./canvas-apps/using-logic-flows.md
-          - name: Use Power Automate pane (preview)
+          - name: Use Power Automate pane 
             href: ./canvas-apps/working-with-flows.md
+          - name: Add a flow (retired)
+            href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
@@ -1026,6 +1026,8 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
+      - name: Add canvas apps to solution by default (preview)
+        href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
           - name: Install the data
@@ -1321,7 +1323,11 @@
           href: ./model-driven-apps/create-edit-view-filters.md
         - name: Sorting records within views
           href: ./model-driven-apps/configure-sorting.md
-        - name: Converting views into editable grids
+        - name: Power Apps read-only grid control
+          href: ./model-driven-apps/power-apps-grid-control.md
+        - name: Convert views and subgrids into editable grids (preview)
+          href: ./model-driven-apps/the-power-apps-grid-control.md       
+        - name: Convert views and subgrids into editable grids (legacy)
           href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
         - name: Setting managed properties for views
           href: ./model-driven-apps/managed-properties-views.md
@@ -1378,7 +1384,7 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
           - name: Configure header properties
             href: ./model-driven-apps/form-designer-header-properties.md
-          - name: Add and configure sub-grid component
+          - name: Add and configure subgrid component
             href: ./model-driven-apps/form-designer-add-configure-subgrid.md
           - name: Add and configure quick view component
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
@@ -1500,7 +1506,7 @@
           items:
           - name: Form properties overview
             href: ./model-driven-apps/form-properties-legacy.md
-          - name: Sub-grid properties overview
+          - name: Subgrid properties overview
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
@@ -1610,6 +1616,8 @@
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+  - name: App ratings (preview)
+    href: ./common/app-ratings.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
@@ -1630,6 +1638,8 @@
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
+  - name: Use deep links with Power Apps mobile
+    href: ../mobile/mobile-deep-links.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
@@ -1642,6 +1652,8 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+    - name: Offline profile guidelines
+      href: ../mobile/mobile-offline-guidelines.md   
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
@@ -1821,9 +1833,11 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
+        - name: Configure file column (preview)
+          href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
-        - name: Configure image column (preview)
+        - name: Configure image column
           href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md
@@ -2279,6 +2293,8 @@
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
+      - name: Create virtual tables using virtual connectors (preview)
+        href: ./data-platform/create-virtual-tables-using-connectors.md
   - name: Work with table relationships
     href: ./data-platform/relationships-overview.md
     items:
@@ -2323,10 +2339,12 @@
     items:
     - name: Types of columns
       href: ./data-platform/types-of-fields.md
-    - name: Global choices overview
+    - name: Choice columns overview
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
+    - name: Fx formula columns
+      href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time column
@@ -2341,10 +2359,8 @@
         href: ./data-platform/create-edit-field-portal.md
       - name: How to create columns using Power Apps solution explorer
         href: ./data-platform/create-edit-field-solution-explorer.md
-      - name: How to create a choice using Power Apps portal
+      - name: How to create a choice
         href: ./data-platform/custom-picklists.md
-      - name: How to create global choices using solution explorer
-        href: ./data-platform/create-edit-global-option-sets-solution-explorer.md
       - name: How to define calculated columns
         href: ./data-platform/define-calculated-fields.md
       - name: How to define rollup columns
@@ -2424,6 +2440,56 @@
           items:
           - name: "Common issues and resolutions: solution checker"
             href: ./data-platform/common-issues-resolutions-solution-checker.md
+          - name: "Rule reference"
+            items:
+            - name: "Web"
+              items:
+              - name: "avoid-2011-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-2011-api.md"
+              - name: "avoid-browser-specific-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-browser-specific-api.md"
+              - name: "avoid-crm2011-service-odata"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-crm2011-service-odata.md"
+              - name: "avoid-crm2011-service-soap"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-crm2011-service-soap.md"
+              - name: "avoid-dom-form"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form.md"
+              - name: "avoid-dom-form-event"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form-event.md"
+              - name: "avoid-isactivitytype"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-isactivitytype.md"
+              - name: "avoid-modals"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-modals.md"
+              - name: "avoid-ui-refreshribbon"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-ui-refreshribbon.md"
+              - name: "avoid-unpub-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-unpub-api.md"
+              - name: "avoid-window-top"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-window-top.md"
+              - name: "do-not-make-parent-assumption"
+                href: "./data-platform/powerapps-checker/rules/web/do-not-make-parent-assumption.md"
+              - name: "use-async"
+                href: "./data-platform/powerapps-checker/rules/web/use-async.md"
+              - name: "use-cached-webresource"
+                href: "./data-platform/powerapps-checker/rules/web/use-cached-webresource.md"
+              - name: "use-client-context"
+                href: "./data-platform/powerapps-checker/rules/web/use-client-context.md"
+              - name: "use-getsecurityroleprivilegesinfo"
+                href: "./data-platform/powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md"
+              - name: "use-global-context"
+                href: "./data-platform/powerapps-checker/rules/web/use-global-context.md"
+              - name: "use-grid-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-grid-api.md"
+              - name: "use-navigation-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-navigation-api.md"
+              - name: "use-offline"
+                href: "./data-platform/powerapps-checker/rules/web/use-offline.md"
+              - name: "use-org-setting"
+                href: "./data-platform/powerapps-checker/rules/web/use-org-setting.md"
+              - name: "use-relative-uri"
+                href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
+              - name: "use-utility-dialogs"
+                href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:

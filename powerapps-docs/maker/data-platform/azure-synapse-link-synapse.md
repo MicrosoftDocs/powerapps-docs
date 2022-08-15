@@ -105,9 +105,9 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 
 1. Select the desired Azure Synapse Link to unlink.
 
-2. Select **Unlink data lake** from the command bar.
+2. Select **Unlink** from the command bar.
 
-3. To delete both the data lake file system as well as the Synapse Database, select **Delete data lake file system**.
+3. To delete both the data lake file system as well as the Synapse Database, type the link name to confirm.
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
 
@@ -144,7 +144,7 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 > [!NOTE]
 > This is a preview feature.
 >
-> For empty table data, only near real-time data is created.
+> For empty table data and metadata table, only near real-time data is created.
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.

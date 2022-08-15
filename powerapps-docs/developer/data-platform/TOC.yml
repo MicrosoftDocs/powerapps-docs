@@ -152,6 +152,8 @@
       href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
+    - name: Dependent Assemblies (Preview)
+      href: dependent-assembly-plugins.md
     - name: Quickstarts
       items:
       - name: Create a project using Power Platform Tools
@@ -204,12 +206,12 @@
   - name: Synchronize data
     href: data-synchronization.md
     items:
-    - name: Use an alternate key to create a record
-      href: use-alternate-key-create-record.md
+    - name: Use an alternate key to reference a record
+      href: use-alternate-key-reference-record.md
+    - name: Use Upsert to create or update a record
+      href: use-upsert-insert-update-record.md
     - name: Use change tracking to synchronize data with external systems
       href: use-change-tracking-synchronize-data-external-systems.md
-    - name: Use Upsert to insert or update a record
-      href: use-upsert-insert-update-record.md
   - name: Server-side synchronization
     href: server-side-synchronization-entities.md
     items:
@@ -251,6 +253,8 @@
   - name: Activity tables
     href: activity-entities.md
     items:
+    - name: Activities data model and storage
+      href: activities-data-model-storage.md
     - name: Custom activities
       href: custom-activities.md
     - name: Email activity tables
@@ -407,6 +411,8 @@
       href: isv-app-usage-analytics.md
     - name: Install failures analytics
       href: isv-install-failure-analytics.md
+    - name: Auto App Updates (Preview) 
+      href: isv-app-management-autoupdate.md
 - name: Create applications
   href: connect-dataverse.md
   items:
@@ -432,6 +438,12 @@
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+  - name: "Sample: Global Discovery Service"
+    href: sample-global-discovery-service-csharp.md
+  - name: "Sample: Blazor WebAssembly with Global Discovery"
+    href: sample-blazor-web-assembly-global-discovery.md
+  - name: "Sample: Global Discovery Service with CrmServiceClient"
+    href: sample-discovery-service-crmserviceclient.md
   - name: Tutorials 
     items:
     - name: "Tutorial: Register an app with Azure Active Directory"

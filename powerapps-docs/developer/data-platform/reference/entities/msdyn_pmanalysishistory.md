@@ -1090,6 +1090,6 @@ See the [msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask](msdyn_pm
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_pmanalysishistory?text=msdyn_pmanalysishistory EntityType" />

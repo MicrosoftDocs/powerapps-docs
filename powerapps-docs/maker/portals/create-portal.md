@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 01/27/2022
+ms.date: 07/21/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -33,7 +33,7 @@ If you choose to create your portal in an existing environment without portal pr
 Based on the selected environment in Power Apps, you can create a Dataverse starter portal or a portal in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service).
 
 > [!NOTE]
-> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
+> - There can be up to fifty portals of each type created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
 More information on working with environments: [Environments overview](/power-platform/admin/environments-overview)

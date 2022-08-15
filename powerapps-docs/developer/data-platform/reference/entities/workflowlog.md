@@ -924,6 +924,6 @@ See the [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_mo
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.workflowlog?text=workflowlog EntityType" />

@@ -10,8 +10,6 @@
       href: ../web-api-conditional-operations-sample.md
     - name: Functions and Actions
       href: ../web-api-functions-actions-sample.md
-    - name: AADUser table request examples
-      href: ../web-api-aaduser-samples.md
 - name: (C#) samples
   items:
     - name: About the samples
@@ -30,8 +28,6 @@
       href: cdswebapiservice-parallel-operations.md
     - name: Async Parallel Operations
       href: cdswebapiservice-async-parallel-operations.md
-    - name: Global Discovery Service
-      href: global-discovery-service-csharp.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
