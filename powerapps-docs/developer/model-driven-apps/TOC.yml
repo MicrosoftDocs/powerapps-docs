@@ -290,6 +290,8 @@
         href: clientapi/reference/controls/getObject.md
       - name: getOptions
         href: clientapi/reference/controls/getOptions.md
+      - name: getOutput
+        href: clientapi/reference/controls/getoutput.md
       - name: getParent
         href: clientapi/reference/controls/getParent.md
       - name: getSearchQuery
