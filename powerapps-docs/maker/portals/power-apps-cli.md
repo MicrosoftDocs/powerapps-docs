@@ -254,7 +254,7 @@ The following sections provide more details about different properties of the "*
 
 |Property Name|Description|Example|
 |-------------|-----------|-------|
-|[list]](/power-platform/developer/cli/reference/paportal#pac-paportal-list)|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
+|[list](/power-platform/developer/cli/reference/paportal#pac-paportal-list)|Lists all portal websites from the current Dataverse environment. |`pac paportal list`|
 |[download](/power-platform/developer/cli/reference/paportal#pac-paportal-download)|Download portal website content from the current Dataverse environment. It has the following parameters: <br/> - *path*: Path where the website content will be downloaded (alias: -p)<br/> - *webSiteId*: Portal website ID to download (alias: -id)<br/> - *overwrite*: (Optional) true - to overwrite existing content; false - to fail if the folder already has website content (alias: -o)|`pac paportal download --path "C:\portals" --webSiteId f88b70cc-580b-4f1a-87c3-41debefeb902`|
 |[upload](/power-platform/developer/cli/reference/paportal#pac-paportal-upload)|Upload portal website content to the current Dataverse environment. It has the following parameter: <br/> - *path*: Path where the website content is stored (alias: -p) <br/> -*deploymentProfile*: Upload portal data with environment details defined through [profile variables](#use-deployment-profile) in *deployment-profiles/[profile-name].deployment.yaml* file  |`pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile "profile-name"`|
 
