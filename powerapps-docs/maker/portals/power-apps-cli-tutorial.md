@@ -2,10 +2,9 @@
 title: Tutorial on how to use Power Platform CLI with portals
 description: This page provides a walk-through with examples for how to use Power Platform CLI with Power Apps portals for CI/CD (Continuous Integration/Continuous Deployment).
 author: neerajnandwana-msft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/13/2022
+ms.date: 08/16/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -17,7 +16,7 @@ contributors:
 
 # Tutorial: Use Microsoft Power Platform CLI with portals
 
-In this tutorial example, you’ll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
+In this tutorial example, you'll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
 > [!NOTE] 
 > - You can also use Power Platform CLI with Power Pages. More information: [What is Power Pages](/power-pages/introduction)
@@ -42,7 +41,7 @@ portal, you must authenticate to the Dataverse environment first. For more
 information about authentication using Microsoft Power Platform CLI, go to [Microsoft Power Platform CLI –
 Auth](../../developer/data-platform/cli/reference/auth-command.md).
 
-To authenticate, open Windows PowerShell and run the following command using
+To authenticate, open Windows PowerShell and run the [pac auth create](/power-platform/developer/cli/reference/auth) command using
 your Dataverse environment URL:
 
 `pac auth create -u [Dataverse URL]`
@@ -57,7 +56,7 @@ Follow the prompts of authentication to sign in to the environment.
 
 ## Step 2. List available portals
 
-Use the **list** command to list the available Power Apps portals in the
+Use the [pac paportal list](/power-platform/developer/cli/reference/paportal) command to list the available Power Apps portals in the
 Dataverse environment you connected to in the previous step.
 
 `pac paportal list`
@@ -66,7 +65,7 @@ Dataverse environment you connected to in the previous step.
 
 ## Step 3. Download portals content
 
-Download portal website content from the connected Dataverse environment.
+Download portal website content from the connected Dataverse environment using the [pac paportal download](/power-platform/developer/cli/reference/paportal) command.
 
 `pac paportal download --path [PATH] -id [WebSiteId-GUID]`
 
@@ -102,7 +101,7 @@ You can alter this text and save the changes:
 
 > [!TIP]
 > You can change the location of the folder path in PowerShell/integrated
-terminal to the downloaded location, and enter “*code .”* to open the folder
+terminal to the downloaded location, and enter "*code ."* to open the folder
 directly in Visual Studio Code.
 
 ## Step 5. Upload the changes
@@ -112,7 +111,7 @@ directly in Visual Studio Code.
 > - Ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment.
 > - The maximum size of files is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
-After making the required changes, upload them using the following command:
+After making the required changes, upload them using the [pac paportal upload](/power-platform/developer/cli/reference/paportal) command:
 
 `pac paportal upload --path [Folder-location]`
 
@@ -125,7 +124,7 @@ After making the required changes, upload them using the following command:
 > [!NOTE]
 > Ensure the path for the portals content you entered is correct. By
 default, a folder named by the portal (friendly name) is created with downloaded
-portals content. For example, if the portal’s friendly name is *custom-portal,*
+portals content. For example, if the portal's friendly name is *custom-portal,*
 the path for the above command (--path) should be
 *C:\\pac-portals\\downloads\\custom-portal*.
 
@@ -167,7 +166,7 @@ When working with multiple different environments, you may consider using deploy
 
 1. To upload the changes to a different environment using a deployment profile YAML file, [authenticate](#step-1-authenticate) to the target org first.
 
-1. After authenticated and connected to the correct environment, use the following command to upload the content:
+1. After authenticated and connected to the correct environment, use the [pac paportal upload](/power-platform/developer/cli/reference/paportal) command to upload the content:
 
     `pac paportal upload --path "C:\portals\starter-portal" --deploymentProfile dev`
 
