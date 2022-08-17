@@ -41,7 +41,7 @@ contributors:
 <td>Yes</td>
 <td>Logical name of the table you want to create. For example: "account".</td>
 </tr>
-<tr>
+<tr>   
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
@@ -151,14 +151,12 @@ Xrm.WebApi.createRecord("account", data).then(
 
 ### Associate tables on creating new records
 
-To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record.
+To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation.
 
 > [!NOTE]
 > The names of single-valued navigation properties are not always the same as the `LogicalName` for the lookup attribute. You should make sure you are using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. More information: [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md)
 
-Here are code examples for both the scenarios:
-
-**For online scenario (connected to server)**
+Here are code examples:
 
 The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
 
@@ -182,7 +180,10 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-**For mobile offline scenario**
+**[Depreciated] For old mobile offline scenario**
+
+> [!NOTE]
+> Instead of using `@odata.bind` annotation example above, existing customers can still pass a **lookup** object (`case-sensitive` **logicalname** and **id**) pointing to the target record for mobile offline scenario. However, it is recommend for customers to use `@odata.bind` annotation for both online and offline scenario.
 
 Here is the updated sample code to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 

@@ -114,9 +114,9 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 
 ### Update associations to the related tables
 
-To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios:
+To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
 
-**For online scenario (connected to server)**
+Here are code examples:
 
 The following example updates an account record to associate another contact record as the primary contact for the account:
 
@@ -139,7 +139,10 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 );
 ```
 
-**For mobile offline scenario**
+**[Depreciated] For old mobile offline scenario**
+
+> [!NOTE]
+> Instead of using `@odata.bind` annotation example above, existing customers can still pass a **lookup** object (`case-sensitive` **logicalname** and **id**) pointing to the target record for mobile offline scenario. However, it is recommend for customers to use `@odata.bind` annotation for both online and offline scenario.
 
 Here is the updated sample code to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
 
