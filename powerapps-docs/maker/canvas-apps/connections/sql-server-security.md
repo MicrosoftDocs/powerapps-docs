@@ -85,7 +85,7 @@ In a client security app pattern, [1] the user only authenticates to the applica
 
 In a server-side security pattern, [1] the user first authenticates to the service so the user is known to the service. Then, [2] when a call is made from the application, the service [3] uses the known identity of the current user to filter the data appropriately and [4] returns the data.
 
-The implicit departmental sharing scenarios described above is combination of these two patterns. The user must log in to the Power App service using Azure AD credentials. This behavior is the server security app pattern. The user is known using the Azure AD identity on the service. Hence, the app is restricted to the set of users to which Power Apps has formally shared the application.
+The implicit departmental sharing scenarios described above is combination of these two patterns. The user must log in to the Power Apps service using Azure AD credentials. This behavior is the server security app pattern. The user is known using the Azure AD identity on the service. Hence, the app is restricted to the set of users to which Power Apps has formally shared the application.
 
 However, the implicit shared connection to SQL Server is the client security app pattern. SQL Server only knows that a specific user name and password is used. Any client-side filtering, for instance, can be bypassed with a new application using the same user name and password.
 
