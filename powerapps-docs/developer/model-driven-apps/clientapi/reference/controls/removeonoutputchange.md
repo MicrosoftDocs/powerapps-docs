@@ -1,6 +1,6 @@
 ---
 title: "removeOnOutputChange (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the removeOnOutputChange method.
+description: Includes description and supported parameters for the control.removeOnOutputChange method.
 ms.author: noazarur
 author: noazarur-microsoft
 ms.date: 08/17/2022
