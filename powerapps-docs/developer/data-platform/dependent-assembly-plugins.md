@@ -85,10 +85,10 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 
 ### Create a Visual Studio project
 
-Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
+Use the PAC CLI [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
 1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
-1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
+1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init).
 
 These steps will ensure that the NuGet package generated will be correct. PAC CLI version 1.16 is expected in the first week of August. These steps are not required with that version.
 
@@ -318,7 +318,7 @@ This will open an dialog to allow you to select a nuget package to update the pl
 
 ## Design notes
 
-The Visual Studio project created using `pac plugin init` leverages Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format. Power Platform Tools for Visual Studio uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
+The Visual Studio project created using [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) leverages Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format. Power Platform Tools for Visual Studio uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
 
 You are not required to use these tools to generate a NuGet package with your plug-ins. You can use whatever capabilities you choose to generate a NuGet package, but you must use the tooling available to upload the package to Dataverse.
 
