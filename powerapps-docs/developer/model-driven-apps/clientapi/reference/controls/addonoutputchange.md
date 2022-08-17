@@ -4,9 +4,9 @@ description: Includes description and supported parameters for the addOnOutputCh
 ms.author: noazarur
 author: noazarur-microsoft
 manager: lwelicki
-ms.date: 08/10/2022
+ms.date: 08/17/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
