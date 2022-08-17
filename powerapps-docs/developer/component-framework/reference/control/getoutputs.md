@@ -1,14 +1,15 @@
 ---
 title: "StandardControl.getOutputs | MicrosoftDocs"
 description: It is called by the framework prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/26/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.topic: "reference"
-applies_to: ""
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 
 ---
 # StandardControl.getOutputs
@@ -17,7 +18,7 @@ applies_to: ""
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Syntax
 

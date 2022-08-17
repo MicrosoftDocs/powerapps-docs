@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Micr
 description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: evchaki
+manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
@@ -41,7 +41,7 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
    Disables the command bar on the form. It only disables the command bar on form pages and not supports list (grid), dashboard, etc.  
 
    ```http
-   https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableCommandbar=true
+   https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormCommandbar=true
   ```
 
 - **DisableFormHandlers**  

@@ -4,7 +4,7 @@ description: Includes description and supported parameters for the retrieveMulti
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/15/2022
+ms.date: 04/19/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 search.audienceType: 
@@ -48,6 +48,7 @@ contributors:
    <p>OData system query options or FetchXML query to retrieve your data. </p>
    <ul>
     <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
+    <li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
     <li>To specify a FetchXML query, use the `fetchXml` column to specify the query.</li>
    </ul>
    <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
@@ -174,7 +175,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
 ### Retrieve or filter by lookup properties
 For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options are not supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null is not supported in offline mode.
 
-More information: [Lookup properties](../../../../data-platform/webapi/web-api-types-operations.md#bkmk_lookupProperties)
+More information: [Lookup properties](../../../../data-platform/webapi/web-api-properties.md#lookup-properties)
 
 Here are code examples for both the scenarios:
 

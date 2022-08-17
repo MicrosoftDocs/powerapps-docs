@@ -1,7 +1,7 @@
 ---
 title: "msdyn_pminferredtask table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_pminferredtask table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [msdyn_analysisschedule](#BKMK_msdyn_analysisschedule)
 - [msdyn_automationdata](#BKMK_msdyn_automationdata)
 - [msdyn_automationstatus](#BKMK_msdyn_automationstatus)
 - [msdyn_description](#BKMK_msdyn_description)
@@ -125,6 +126,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+
+### <a name="BKMK_msdyn_analysisschedule"></a> msdyn_analysisschedule
+
+|Property|Value|
+|--------|-----|
+|Description|Information about the analysis schedule.|
+|DisplayName|Analysis Schedule|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_analysisschedule|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_automationdata"></a> msdyn_automationdata
@@ -1057,6 +1075,7 @@ Listed by **SchemaName**.
 - [msdyn_pminferredtask_BulkDeleteFailures](#BKMK_msdyn_pminferredtask_BulkDeleteFailures)
 - [msdyn_pminferredtask_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pminferredtask_PrincipalObjectAttributeAccesses)
 - [msdyn_msdyn_pminferredtask_msdyn_pmrecording_parenttask](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmrecording_parenttask)
+- [msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask)
 
 
 ### <a name="BKMK_msdyn_pminferredtask_SyncErrors"></a> msdyn_pminferredtask_SyncErrors
@@ -1209,6 +1228,21 @@ Same as the [msdyn_msdyn_pminferredtask_msdyn_pmrecording_parenttask](msdyn_pmre
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask"></a> msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask
+
+Same as the [msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask](msdyn_pmanalysishistory.md#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask) many-to-one relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmanalysishistory|
+|ReferencingAttribute|msdyn_parenttask|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1268,6 +1302,6 @@ See the [business_unit_msdyn_pminferredtask](businessunit.md#BKMK_business_unit_
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_pminferredtask?text=msdyn_pminferredtask EntityType" />

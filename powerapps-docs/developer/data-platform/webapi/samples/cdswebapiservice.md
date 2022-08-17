@@ -163,7 +163,8 @@ Patch is frequently used to Update or Upsert table rows.
 More information:
 
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
-- [Upsert a table](../update-delete-entities-using-web-api.md#upsert-a-table)
+- [Upsert a table](../update-delete-entities-using-web-api.md#bkmk_upsert)
+
 
 ## PatchAsync
 
@@ -213,7 +214,7 @@ Sends a `DELETE` request synchronously.
 More information:
 
 - [Basic delete](../update-delete-entities-using-web-api.md#basic-delete)
-- [Remove a reference to a table](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-a-table-row)
+- [Associate and disassociate table rows using the Web API](../associate-disassociate-entities-using-web-api.md)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ## DeleteAsync
@@ -241,7 +242,7 @@ Put is used to update specific table columns.
 More information: 
 
 - [Update a single property value](../update-delete-entities-using-web-api.md#update-a-single-property-value)
-- [Change the reference in a single-valued navigation property](../associate-disassociate-entities-using-web-api.md#change-the-reference-in-a-single-valued-navigation-property)
+- [Using single-valued navigation properties](../associate-disassociate-entities-using-web-api.md#using-single-valued-navigation-properties)
 
 
 ## PutAsync

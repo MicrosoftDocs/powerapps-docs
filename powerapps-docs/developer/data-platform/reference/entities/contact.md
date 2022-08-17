@@ -1,7 +1,7 @@
 ---
 title: "Contact table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Contact table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -4083,6 +4083,7 @@ Listed by **SchemaName**.
 - [Contact_DuplicateMatchingRecord](#BKMK_Contact_DuplicateMatchingRecord)
 - [Contact_Faxes](#BKMK_Contact_Faxes)
 - [Contact_Letters](#BKMK_Contact_Letters)
+- [contact_chats](#BKMK_contact_chats)
 
 
 ### <a name="BKMK_contact_principalobjectattributeaccess"></a> contact_principalobjectattributeaccess
@@ -4609,6 +4610,23 @@ Same as the [Contact_Letters](letter.md#BKMK_Contact_Letters) many-to-one relati
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_contact_chats"></a> contact_chats
+
+**Added by**: Activities Patch Solution
+
+Same as the [contact_chats](chat.md#BKMK_contact_chats) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|contact_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -4694,6 +4712,6 @@ See the [business_unit_contacts](businessunit.md#BKMK_business_unit_contacts) on
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />

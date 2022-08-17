@@ -1,13 +1,15 @@
 ---
 title: Resources Element | Microsoft Docs
 description: The resources node in the component manifest refers to the resource files that component requires to implement it's visualization.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/26/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # resources element
@@ -33,7 +35,6 @@ Model-driven and canvas apps
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|0 or more|
 |[platform-library](platform-library.md)|[!INCLUDE [platform-library-description](includes/platform-library-description.md)]|0 or more|
-<!--|[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|-->
 
 
 ## Example

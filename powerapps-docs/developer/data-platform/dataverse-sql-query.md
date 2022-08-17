@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 07/08/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -23,6 +23,10 @@ search.app:
 
 A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
 
+## Prerequisites
+
+The **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
+
 ## Applications support
 
 TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described below.
@@ -39,12 +43,14 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 #### Security and authentication
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
+Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL. 
 
 ![Connec dialog.](media/ssms-connect-dialog.PNG)
 
 > [!NOTE]
 > Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com,5558.
+
+Information on endpoint encryption: [In-transit data protection](/power-platform/admin/about-encryption#in-transit-data-protection)
 
 #### Example table data queries
 
@@ -94,6 +100,10 @@ Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a
 Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
+
+### Reported SQL version
+The Dataverse TDS endpoint emulates Microsoft SQL Server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure version 12.0.2000.8 for `select @@version`.
+
 
 ## Limitations
 

@@ -1,7 +1,7 @@
 ---
 title: "msdyn_knowledgemanagementsetting table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_knowledgemanagementsetting table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -22,7 +22,7 @@ search.app:
 
 Setup knowledge management for your organization.
 
-**Added by**: Knowledge Management Features Solution
+**Added by**: Knowledge Management Patch Solution
 
 
 ## Messages
@@ -74,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_isautosuggestionsenabled](#BKMK_msdyn_isautosuggestionsenabled)
 - [msdyn_knowledgemanagementsettingId](#BKMK_msdyn_knowledgemanagementsettingId)
 - [msdyn_showcontextualactions](#BKMK_msdyn_showcontextualactions)
+- [msdyn_status](#BKMK_msdyn_status)
 - [msdyn_UniqueName](#BKMK_msdyn_UniqueName)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -250,6 +251,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_msdyn_status"></a> msdyn_status
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|msdyn_status|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_status|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### msdyn_status Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Active||
+|1|Inactive||
+
+
+
 ### <a name="BKMK_msdyn_UniqueName"></a> msdyn_UniqueName
 
 |Property|Value|
@@ -284,8 +306,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -465,8 +485,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the user who created the record.|
@@ -480,8 +498,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -498,8 +514,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -532,8 +546,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the delegate user who created the record.|
@@ -547,8 +559,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -565,8 +575,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -609,8 +617,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the user who modified the record.|
@@ -624,8 +630,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -642,8 +646,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -676,8 +678,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the delegate user who modified the record.|
@@ -691,8 +691,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -709,8 +707,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -745,8 +741,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Name of the owner|
@@ -762,8 +756,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -781,8 +773,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
@@ -796,8 +786,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -815,8 +803,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for the team that owns the record.|
@@ -830,8 +816,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -876,8 +860,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -1101,6 +1083,6 @@ See the [business_unit_msdyn_knowledgemanagementsetting](businessunit.md#BKMK_bu
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_knowledgemanagementsetting?text=msdyn_knowledgemanagementsetting EntityType" />

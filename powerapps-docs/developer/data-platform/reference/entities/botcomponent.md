@@ -1,7 +1,7 @@
 ---
 title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -303,10 +303,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |-----|-----|--------|
 |1025|Arabic||
 |1028|Chinese (Traditional)||
+|1029|Czech||
 |1030|Danish||
 |1031|German||
+|1032|Greek||
 |1033|English||
 |1034|Spanish||
+|1035|Finnish||
 |1036|French||
 |1040|Italian||
 |1041|Japanese||
@@ -317,6 +320,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1046|Portuguese (Brazilian)||
 |1049|Russian||
 |1053|Swedish||
+|1054|Thai||
 |1055|Turkish||
 |1057|Indonesian||
 |1081|Hindi||
@@ -1313,6 +1317,6 @@ IntersectEntityName: botcomponent_workflow<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.botcomponent?text=botcomponent EntityType" />

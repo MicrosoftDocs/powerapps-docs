@@ -145,7 +145,7 @@ Returns a promise which resolves with an object whose keys are the security role
 
 `userSettings.getSecurityRolePrivilegesInfo().then(successCallback, errorCallback);`
 
-## Parameters
+### Parameters
 
 <table>
 <tr>
@@ -197,8 +197,8 @@ userSettings
 
     // Print information about the first role privilege in the dictionary
     var guid = privilegeGuids[0];
-    console.log("Privilege Id: " + privilege[guid].id);
-    console.log("Privilege Name: " + privilege[guid].privilegeName);
+    console.log("Privilege Id: " + rolePrivileges[guid].id);
+    console.log("Privilege Name: " + rolePrivileges[guid].privilegeName);
     console.log("Privilege Business Unit Id: " + rolePrivileges[guid].businessUnitId);
     console.log("Privilege depth: " + rolePrivileges[guid].depth);
   });

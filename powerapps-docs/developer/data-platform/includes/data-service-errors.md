@@ -1,5 +1,5 @@
 | Error values | Error name and message |
-| --- | --- |
+|--------------|------------------------|
 |0x80072559<br />-2147015335|Name: **AADError**<br />Message: Error from AAD|
 |0x80048350<br />-2147187888|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})|
 |0x80048405<br />-2147187707|Name: **AccessDenied**<br />Message: Access is denied.|
@@ -709,7 +709,7 @@
 |0x80048107<br />-2147188473|Name: **CascadeReparentOnNonUserOwned**<br />Message: Cannot perform Cascade Reparent on Non-UserOwned entities|
 |0x80090446<br />-2146892730|Name: **CascadeSPGenerationLockException**<br />Message: Cannot start the Cascade SP generation as there is already one running at this moment.|
 |0x800404cf<br />-2147220273|Name: **CaseAlreadyResolved**<br />Message: This case has already been resolved. Close and reopen the case record to see the updates.|
-|0x8006074<br />134242420|Name: **CaseStateChangeInvalid**<br />Message: Because of the status transition rules, you can't resolve a case in the current status. Change the case status, and then try resolving it, or contact your system administrator.|
+|0x8006074<br />134242420   |Name: **CaseStateChangeInvalid**<br />Message: Because of the status transition rules, you can't resolve a case in the current status. Change the case status, and then try resolving it, or contact your system administrator.|
 |0x8004E01A<br />-2147164134|Name: **CategoryDataTypeInvalid**<br />Message: The Data Description for the visualization is invalid. The attribute type for the group by of one of the categories is invalid. Correct the Data Description.|
 |0x80060404<br />-2147089404|Name: **CategoryNotSetToBusinessProcessFlow**<br />Message: Category should be set to BusinessProcessFlow while creating business process flow category|
 |0x80044510<br />-2147203824|Name: **CDSOrgNotSupported**<br />Message: Dynamics 365 for Outlook is not supported for this organization.|
@@ -1533,7 +1533,7 @@
 |0x80048027<br />-2147188697|Name: **ImportWorkflowNameConflictError**<br />Message: Workflow {0} cannot be imported because a workflow with same name and different unique identifier exists in the target system. Change the name of this workflow, and then try again.|
 |0x80048028<br />-2147188696|Name: **ImportWorkflowPublishedError**<br />Message: Workflow {0}({1}) cannot be imported because a workflow with same unique identifier is published on the target system. Unpublish the workflow on the target system before attempting to import this workflow again.|
 |0x8004801C<br />-2147188708|Name: **ImportWrongPublisherError**<br />Message: The following managed solution cannot be imported: {0}. The publisher name cannot be changed from {1} to {2}.|
-|0x8004801A<br />-2147188710|Name: **ImportXsdValidationError**<br />Message: The import file is invalid. XSD validation failed with the following error: '{0}'. The validation failed at: '...{1} <<<<<ERROR LOCATION>>>>> {2}...'."|
+|0x8004801A<br />-2147188710|Name: **ImportXsdValidationError**<br />Message: The import file is invalid. XSD validation failed with the following error: '{0}'. The validation failed at: '...{1} <<<<\<ERROR LOCATION\>>>>> {2}...'."|
 |0x8005E227<br />-2147098073|Name: **InaccessibleSmtpServer**<br />Message: Cannot reach to the smtp server. Please check that the smtp server is accessible.|
 |0x8005E228<br />-2147098072|Name: **InactiveEmailServerProfile**<br />Message: Email server profile is disabled. Cannot process email for disabled profile.|
 |0x8005E219<br />-2147098087|Name: **InactiveMailbox**<br />Message: The mailbox is in inactive state. Send/Receive mails are allowed only for active mailboxes.|
@@ -1925,7 +1925,7 @@
 |0x8004700f<br />-2147192817|Name: **InvalidRelationshipType**<br />Message: The specified relationship type is not valid for this operation|
 |0x8004F989<br />-2147157623|Name: **InvalidRelationshipTypeForAccessory**<br />Message: An accessory relationship is always unidirectional and can't be changed.|
 |0x8004F988<br />-2147157624|Name: **InvalidRelationshipTypeForUpSell**<br />Message: An upsell relationship is always unidirectional and can't be changed.|
-|0x80048054<br />-2147188652|Name: **InvalidRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot ends with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot, cannot contain consecutive dots and cannot contain any of the following characters: ~ " # % & * : < > ? / \ { | }.|
+|0x80048054<br />-2147188652|Name: **InvalidRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot ends with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot, cannot contain consecutive dots and cannot contain any of the following characters: ~ " # % & * : < > ? / \ { \| }.|
 |0x80072530<br />-2147015376|Name: **InvalidRequestBody**<br />Message: Passed entity object cannot be null or empty.|
 |0x80044271<br />-2147204495|Name: **InvalidRequestDataFormat**<br />Message: The updated configuration includes invalid data.|
 |0x80044828<br />-2147203032|Name: **InvalidRequestParameter**<br />Message: Both name and value should be specified for request parameter.|
@@ -1950,7 +1950,7 @@
 |0x80048052<br />-2147188654|Name: **InvalidSharePointSiteCollectionUrl**<br />Message: The URL must conform to the http or https schema.|
 |0x80044254<br />-2147204524|Name: **InvalidSimilarityRuleStateError**<br />Message: Invalid similarity rule state.|
 |0x8004024f<br />-2147220913|Name: **InvalidSingletonResults**<br />Message: Crm Internal Exception: Singleton Retrieve Query should not return more than 1 record.|
-|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { | }.|
+|0x80048053<br />-2147188653|Name: **InvalidSiteRelativeUrlFormat**<br />Message: The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { \| }.|
 |0x80072000<br />-2147016704|Name: **InvalidSolutionAwarenessDeclaration**<br />Message: The entity {0} cannot have its solution awareness setting updated.|
 |0x8007200E<br />-2147016690|Name: **InvalidSolutionComponentKey**<br />Message: The attribute {0} from key {1} and entity {2} should be exportable to be an export key.|
 |0x8004701B<br />-2147192805|Name: **InvalidSolutionConfigurationPage**<br />Message: The specified configuration page for this solution is invalid.|
@@ -2019,7 +2019,7 @@
 |0x80040204<br />-2147220988|Name: **InvalidUserAuth**<br />Message: User does not have the privilege to perform this action.|
 |0x8004F712<br />-2147158254|Name: **InvalidUserIdInProvisionLanguageForUser**<br />Message: UserId provided '{0}' is invalid.|
 |0x8004B027<br />-2147176409|Name: **InvalidUserLicenseCount**<br />Message: Cannot purchase {0} user licenses for the Offering {1}.|
-|0x80048095<br />-2147188587|Name: **InvalidUserName**<br />Message: You must enter the user name in the format <name>@<domain>. Correct the format and try again.|
+|0x80048095<br />-2147188587|Name: **InvalidUserName**<br />Message: You must enter the user name in the format \<name\>@\<domain\>. Correct the format and try again.|
 |0x8004B011<br />-2147176431|Name: **InvalidUserQuota**<br />Message: You have reached the maximum number of user quota|
 |0x80060807<br />-2147088377|Name: **InvalidUserToImportExcelOnlineFile**<br />Message: You don't have permission to import this file. Only the user who exported this data can import this file.|
 |0x80060806<br />-2147088378|Name: **InvalidUserToViewExcelOnlineFile**<br />Message: You don't have permission to view this file. Only the user who exported this data can view this file.|
@@ -2809,10 +2809,10 @@
 |0x8004F10B<br />-2147159797|Name: **RibbonImportDuplicateElementId**<br />Message: The ribbon element with the Id:{0} cannot be imported because an existing ribbon element with the same Id already exists.|
 |0x8004F103<br />-2147159805|Name: **RibbonImportEntityNotSupported**<br />Message: The solution cannot be imported because the {0} entity contains a Ribbon definition, which is not supported for that entity. Remove the RibbonDiffXml node from the entity definition and try to import again.|
 |0x8004F101<br />-2147159807|Name: **RibbonImportHidingBasicHomeTab**<br />Message: The definition of the ribbon being imported will remove the Microsoft Dynamics 365 home tab. Include a home tab definition, or a ribbon will not be displayed in areas of the application that display the home tab.|
-|0x8004F10A<br />-2147159798|Name: **RibbonImportHidingJewel**<br />Message: Ribbon customizations cannot hide the <Jewel> node. Any ribbon customization that hides this node is ignored during import and will not be exported.|
+|0x8004F10A<br />-2147159798|Name: **RibbonImportHidingJewel**<br />Message: Ribbon customizations cannot hide the \<Jewel\> node. Any ribbon customization that hides this node is ignored during import and will not be exported.|
 |0x8004F102<br />-2147159806|Name: **RibbonImportInvalidPrivilegeName**<br />Message: The RibbonDiffXml in this solution contains a reference to an invalid privilege: {0}. Update the RibbonDiffXml to reference a valid privilege and try importing again.|
 |0x8004F109<br />-2147159799|Name: **RibbonImportLocationAndIdDoNotMatch**<br />Message: CustomAction Id '{0}' cannot override '{1}' because '{2}' does not match the CustomAction Location value.|
-|0x8004F108<br />-2147159800|Name: **RibbonImportModifyingTopLevelNode**<br />Message: Ribbon customizations cannot be made to the following top-level ribbon nodes: <Ribbon>, <ContextualGroups>, and <Tabs>.|
+|0x8004F108<br />-2147159800|Name: **RibbonImportModifyingTopLevelNode**<br />Message: Ribbon customizations cannot be made to the following top-level ribbon nodes: \<Ribbon\>, \<ContextualGroups\>, and \<Tabs\>.|
 |0x8004F10C<br />-2147159796|Name: **RibbonImportRibbonDiffIdInvalidLength**<br />Message: We can’t import this ribbon element because the ID length exceeds the maximum length of 128 characters: {0}|
 |0x80044281<br />-2147204479|Name: **RINotProvisioned**<br />Message: Relationship Insights hasn’t been turned on for your organization {0}.|
 |0x80060471<br />-2147089295|Name: **RoboticProcessAutomationFlowProcessesNotEnabled**<br />Message: Creation of Reserved processes is not enabled.|

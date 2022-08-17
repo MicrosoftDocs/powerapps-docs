@@ -1,7 +1,7 @@
 ---
 title: Test whether an object will fit in a space using mixed reality
 description: Use mixed-reality controls in a canvas app to test whether objects of a given size will fit in a measured space.
-author: mduelae
+author: anuitz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -21,7 +21,7 @@ contributors:
 
 # Test whether an object will fit in a space using mixed reality
 
-You can use the [Measure in MR](mixed-reality-component-measure-distance.md) control to determine whether an object of a known size will fit in a particular space. In this article, we'll create a canvas app to do just that.
+You can use the [Measuring Camera](mixed-reality-component-measure-distance.md) control to determine whether an object of a known size will fit in a particular space. In this article, we'll create a canvas app to do just that.
 
 > [!TIP]
 > The mixed-reality (MR) controls work best in well-lit environments with flat-textured surfaces. Tracking is better on LIDAR-enabled devices.
@@ -48,13 +48,13 @@ First, we’ll create a blank canvas app. Then we'll add a way for the user to e
 
     :::image type="content" source="media/augmented-measure-fit-test/fit-test-default-text-input.png" alt-text="A screenshot of three text input controls under construction in Microsoft Power Apps Studio, shown alongside the properties of the selected group.":::
 
-## Add and bind the **Measure in MR** control
+## Add and bind the **Measuring camera** control
 
-Next, we’ll add the **Measure in MR** control to allow the user to measure a three-dimensional space. We'll bind the measurements to a data table for later use.
+Next, we’ll add the **Measuring camera** control to allow the user to measure a three-dimensional space. We'll bind the measurements to a data table for later use.
 
-1. Select the **Insert** tab, and expand **Mixed Reality**.
+1. Select the **Insert** tab, and expand **Media**.
 
-2. Select **Measure in 3D** to place the control in the app screen. Drag the control near the bottom of the screen.
+2. Select **Measuring camera** to place the control in the app screen. Drag the control near the bottom of the screen.
 
 3. Change the control's properties as follows:
 
@@ -67,7 +67,7 @@ Next, we’ll add the **Measure in MR** control to allow the user to measure a t
     | ItemsLabels | **"label"** | Enter on the **Advanced** tab |
     | OnMixedRealitySelect | **Set(testVolume, LookUp(MeasureInMR1.Measurements, Label = "Test Volume"));** | Enter on the **Advanced** tab |
 
-The **Items**, **ItemsLabels**, and **OnMixedRealitySelect** properties of the **Measure in MR** control should look like the following examples when you're done:
+The **Items**, **ItemsLabels**, and **OnMixedRealitySelect** properties of the **Measuring camera** control should look like the following examples when you're done:
 
 :::image type="content" source="media/augmented-measure-fit-test/fit-test-advanced-properties-items.png" alt-text="A screenshot of a Measure in 3D control under construction in Microsoft Power Apps Studio, shown alongside its Items and ItemsLabels properties.":::
 
@@ -127,7 +127,7 @@ The app screen should now look like this:
 
 ## Test the app
 
-Select the preview button to run the app in preview mode. Select **Measure in MR** to populate the labels with data. To verify that the label bindings are working, enter new values in the text input fields.
+Select the preview button to run the app in preview mode. Select **Measuring camera** to populate the labels with data. To verify that the label bindings are working, enter new values in the text input fields.
 
 :::image type="content" source="media/augmented-measure-fit-test/fit-test-succeeded.png" alt-text="A screenshot of the app screen in preview mode after new minimum dimensions have been entered.":::
 
@@ -152,7 +152,7 @@ For example, let's say that our app contains a reference to a Dataverse table na
 ### See also
 
 - [3D object control](mixed-reality-component-view-3d.md)
-- [Measure in MR control](mixed-reality-component-measure-distance.md)
+- [Measuring Camera control](mixed-reality-component-measure-distance.md)
 - [View shape in MR control](mixed-reality-component-view-shape.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

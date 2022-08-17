@@ -1,13 +1,14 @@
 ---
-title: "Send in-app notifications within model-driven apps (preview)" 
+title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-author: HemantGaur
-ms.author: hemantg
-manager: evchaki
-ms.date: 04/01/2022
+ms.date: 05/23/2022
 ms.reviewer: jdaly
+ms.service: powerapps
 ms.subservice: mda-developer
-ms.topic: "article"
+ms.topic: article
+author: adrianorth
+ms.author: aorth 
+manager: lwelicki
 search.audienceType: 
   - maker
   - developer
@@ -19,53 +20,35 @@ contributors:
   - caburk
 ---
 
-# Send in-app notifications within model-driven apps (preview) 
+# Send in-app notifications within model-driven apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-The notification table stores notifications for each user. Your model-driven app automatically checks the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
+The notification table stores notifications for each user. Your model-driven app automatically polls the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
 Each notification row is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
 
 This topic outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md).
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
-
 ## Enable the in-app notification feature
 
-To use the in-app notification feature, you need to enable the `AllowNotificationsEarlyAccess` app setting in a model-driven app.
-
-1. Sign in to your model-driven app.
-
-1. Select the app where you want to use this feature.
-1. Copy the following code:
-
-   ```javascript
-   fetch(window.origin + "/api/data/v9.1/SaveSettingValue()",{
-    method: "POST", 
-	  headers: {'Content-Type': 'application/json'},
-	  body: JSON.stringify({AppUniqueName: "Your app unique name", SettingName:"AllowNotificationsEarlyAccess", Value: "true"})
-	  });
-   ```
-
-1. Select **F12** on your keyboard to open the browser console.
-
-1. In the browser console, paste the code that you copied in step 3. Enter the name of your app in the `AppUniqueName` parameter, and then select **Enter**.
-
-   > [!TIP]
-   > You can find the logical name of your model-driven app in the solution explorer in the **Name** column. 
+To use the in-app notification feature, you need to enable the **In-app notifications** setting.  This setting is stored within the model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. On the left pane, select **Solutions** > **New solution**. Enter the details, and then select **Create**. 
+1. Open the solution that contains the model-driven app.  
 
-1. Open the solution that you created. Select **Add** > **App** > **Model-driven app**. From the list of apps, select the model-driven app where you want to see the notifications feature.
+1. Select the model-driven app and click **Edit** split menu to open using the modern app designer
 
-1. For development, select **Publish all customizations**, and then refresh the model-driven app. You'll see a bell icon in the upper-right corner.
+1. Open **Settings** and switch to **Upcoming**
 
-1. For production, package the app setting within a managed solution to be deployed in production with a publish.
+1. Enable "In-app notifications"
+
+    > [!div class="mx-imgBorder"]
+    > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
+
+1. Click **Save** to save the settings change
+
+1. Click **Publish** on the model-driven app
+
 
 ## Send basic in-app notifications
 
@@ -76,7 +59,7 @@ Because the notification system uses a table, you can use any table functionalit
 
 The following examples use the notification table and a notification record to create notifications.
 
-### Send basic in-app notification by using a client API
+# [Client API](#tab/clientapi)
 
 In-app notifications can be sent by using the [createRecord](reference/xrm-webapi/createrecord.md) API.
 
@@ -103,7 +86,7 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord).
   );
 ```
 
-### Send basic in-app notifications by using the Web API
+# [Web API](#tab/webapi)
 
 In-app notifications can be sent by using the Web API. More information: [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md).
 
@@ -124,19 +107,42 @@ Accept: application/json
 }
 ```
 
+# [Dataverse SDK](#tab/sdk)
+
+In-app notifications can be sent by using the Dataverse SDK with the organization service. More information: [Create table rows using the Organization Service](../../data-platform/org-service/entity-operations-create.md)
+
+```csharp
+appnotification appNotification = new appnotification() { 
+    Title = "Welcome to the world of app notifications!",
+    OwnerId = new EntityReference("systemuser", <Guid of the user>),
+    IconType = new OptionSetValue(100000000), //info
+    ToastType = new OptionSetValue(200000000) //timed
+};
+
+Guid appNotificationId = svc.Create(appNotification);
+```
+---
+
+## Notification polling
+
+In-app notifications uses polling to retrieve notifications periodically when the app is running.  New notification are retreived at start of the model-driven app and when a page navigation occurs as long as the last retreival is more than one minute ago.  If a user stays on a page for a long duration, new notifications will be retrieved.
+
 ## Notification table
 
-The following are the columns for the notification table.
+The following are the columns for the **Notification** (`appnotification`) table.
 
-|Column|Description|
+|Column display|Column name|Description|
 |---|---|
-|Title|The title of the notification.|
-|Owner|The user who receives the notification.|
-|Body|Details about the notification.|
-|Icon Type|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this topic.|
-|Toast Type|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this topic.|
-|Expiry (seconds)|The number of seconds from when the notification should be deleted if not already dismissed.|
-|Data|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
+|Title|`title`|The title of the notification.|
+|Owner|`ownerid`|The user who receives the notification.|
+|Body|`body`|Details about the notification.|
+|IconType|`icontype`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this topic.|
+|Toast Type|`toasttype`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this topic.|
+|Expiry (seconds)|`ttlinseconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
+|Data|`data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
+
+  > [!IMPORTANT]
+  > - The `appmoduleid` field is not used and should not be set on the appnotification entity.
 
 ### Changing the notification behavior
 
@@ -144,21 +150,39 @@ You can change in-app notification behavior by setting **Toast Type** to one of 
 
 |Toast Type|Behavior|Value|
 |---|---|---|
-|Timed|The notification appears for a brief duration (the default is four seconds) and then disappears.|200000000|
-|Hidden|The notification appears only in the notification center and not as a toast notification.|200000001|
+|Timed|The notification appears for a brief duration (the default is four seconds) and then disappears.|`200000000`|
+|Hidden|The notification appears only in the notification center and not as a toast notification.|`200000001`|
 
 ### Changing the notification icon
 
 You can change the in-app notification icon by setting **Icon Type** to one of the following values. When using a custom icon, specify the `iconUrl` parameter within the `data` parameter.
 
-|Icon Type|Value|
+|Icon Type|Value|Image|
+|---|---|---|
+|Info|`100000000`|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
+|Success|`100000001`|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
+|Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
+|Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
+|Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
+|Custom|`100000005`||
+
+
+
+### Using markdown in Title and Body
+
+The **data** field supports overriding the Title and Body simple strings with a limited subset of markdown based.
+
+Below is the supported markdown.
+
+|Text Style|Markdown|
 |---|---|
-|Info|100000000|
-|Success|100000001|
-|Failure|100000002|
-|Warning|100000003|
-|Mention|100000004|
-|Custom|100000005|
+|Bold|`**Bold**`|
+|Italic|`_Italic_`|
+|Bullet list|`- Item 1\r- Item 2\r- Item 3`|
+|Numbered list|`1. Green\r2. Orange\r3. Blue`|
+|Hyperlinks|`[Title](url)`|
+
+Newlines can be included with the body using `\n\n\n\n`.
 
 ### Changing the navigation target in a notification link
 
@@ -166,9 +190,9 @@ You can control where a navigation link opens by setting the `navigationTarget` 
 
 |Navigation target|Behavior|Example|
 |----------|-----------|-----------|
-|Dialog|Opens in the center dialog.|`"navigationTarget": "dialog"` |
-|Inline|Default. Opens in the current page.|`"navigationTarget": "inline"` |
-|newWindow|Opens in a new browser tab.|`"navigationTarget": "newWindow"` |
+|`dialog`|Opens in the center dialog.|`"navigationTarget": "dialog"` |
+|`inline`|Default. Opens in the current page.|`"navigationTarget": "inline"` |
+|`newWindow`|Opens in a new browser tab.|`"navigationTarget": "newWindow"` |
 
 ### Managing security for notifications
 
@@ -220,19 +244,19 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "Congratulations",
-	  "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
-	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+     "body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+     "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000001, // success
     "data": JSON.stringify({
-	 "actions": [
-	  {
+    "actions": [
+     {
         "title": "View cases",
         "data": {
-		"url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039"
-		}		
-	  }
-	 ]
-	})
+      "url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039"
+      }      
+     }
+    ]
+   })
 }
 Xrm.WebApi.createRecord("appnotification", notificationRecord).
   then(
@@ -260,27 +284,27 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "Upcoming Service Reminder",
-	  "body": "This is to inform you that you have an upcoming service request for your vehicle.",
-	  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+     "body": "This is to inform you that you have an upcoming service request for your vehicle.",
+     "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000000, // info
     "data": JSON.stringify({
-	   "actions": [
-	    {
+      "actions": [
+       {
         "title": "Coho Winery",
         "data": {
-		    "url": "?pagetype=entityrecord&etn=account&id=b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
-		    "navigationTarget": "dialog"
-		       }		
-	    },
-	    {
-	      "title": "Service Appointment",
+          "url": "?pagetype=entityrecord&etn=account&id=b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+          "navigationTarget": "dialog"
+             }      
+       },
+       {
+         "title": "Service Appointment",
         "data": {
-		    "url": "?pagetype=entityrecord&etn=appointment&id=96db3cf0-e605-ec11-94ef-000d3a36469a",
-		    "navigationTarget": "dialog"
-	        }
-	    }
-	 ]
-	})
+          "url": "?pagetype=entityrecord&etn=appointment&id=96db3cf0-e605-ec11-94ef-000d3a36469a",
+          "navigationTarget": "dialog"
+           }
+       }
+    ]
+   })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
@@ -308,12 +332,12 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "SLA critical",
-	"body": "Records assigned to you is critically past SLA.",
-	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+   "body": "Records assigned to you is critically past SLA.",
+   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000002, // failure
     "data": JSON.stringify({
-	 "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
-	 })
+    "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
+    })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
@@ -337,12 +361,12 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "SLA Missed",
-	"body": "Records assigned to you is critically past SLA.",
-	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+   "body": "Records assigned to you is critically past SLA.",
+   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000003, // warning
     "data": JSON.stringify({
-	 "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
-	 })
+    "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
+    })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
 then(
@@ -397,21 +421,21 @@ var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
     "title": "Complete overhaul required (sample)",
-	"body": "Maria Campbell mentioned you in a post.",
-	"ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+   "body": "Maria Campbell mentioned you in a post.",
+   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000004, // mention
     "data": JSON.stringify({
-	 "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
-	 "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_",
-	  "actions": [
-	   {
-	     "title": "View record",
-		 "data": {
-		 "url": "?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8"
-		 }
-	   }
-	  ]
-	 })
+    "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
+    "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_",
+     "actions": [
+      {
+        "title": "View record",
+       "data": {
+       "url": "?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8"
+       }
+      }
+     ]
+    })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
   then(
@@ -438,3 +462,6 @@ The Power Apps Notification connector is for push notifications, which are separ
 - [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)
 - [createRecord (Client API reference)](reference/xrm-webapi/createrecord.md)
 - [In-app notifications in model-driven apps](/powerapps/user/notifications)
+- [appnotification EntityType](/power-apps/developer/data-platform/webapi/reference/appnotification)
+- [Notification (appnotification) table/entity reference](../../data-platform/reference/entities/appnotification.md)
+

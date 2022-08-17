@@ -1,7 +1,7 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 03/29/2022
+ms.date: 06/30/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -415,7 +415,9 @@ Listed by **SchemaName**.
 - [sharedlinksetting_extensionofrecordid](#BKMK_sharedlinksetting_extensionofrecordid)
 - [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
 - [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
+- [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
+- [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 
 
 ### <a name="BKMK_entity_solutioncomponentconfiguration"></a> entity_solutioncomponentconfiguration
@@ -554,6 +556,23 @@ Same as the [virtualentitymetadata_extensionofrecordid](virtualentitymetadata.md
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
+### <a name="BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid"></a> msdyn_insightsstorevirtualentity_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as the [msdyn_insightsstorevirtualentity_extensionofrecordid](msdyn_insightsstorevirtualentity.md#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid) many-to-one relationship for the [msdyn_insightsstorevirtualentity](msdyn_insightsstorevirtualentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_insightsstorevirtualentity|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_insightsstorevirtualentity_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
 ### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
 
 **Added by**: Power Apps Actions Solution
@@ -565,14 +584,31 @@ Same as the [entity_appaction_ContextEntity](appaction.md#BKMK_entity_appaction_
 |ReferencingEntity|appaction|
 |ReferencingAttribute|contextentity|
 |IsHierarchical|False|
-|IsCustomizable|True|
+|IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|entity_appaction_ContextEntity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_entity_appactionrule_ContextEntity"></a> entity_appactionrule_ContextEntity
+
+**Added by**: Power Apps Actions Solution
+
+Same as the [entity_appactionrule_ContextEntity](appactionrule.md#BKMK_entity_appactionrule_ContextEntity) many-to-one relationship for the [appactionrule](appactionrule.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|appactionrule|
+|ReferencingAttribute|contextentity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|entity_appactionrule_ContextEntity|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.entity?text=entity EntityType" />

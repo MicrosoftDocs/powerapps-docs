@@ -83,14 +83,15 @@
   - name: Query Hierarchical data
     href: query-hierarchical-data.md
   - name: Audit data changes
-    href: auditing-overview.md
     items:
-    - name: Configure entities and attributes for auditing
-      href: configure-entities-attributes-auditing.md
-    - name: Retrieve and delete the history of audited data changes
-      href: retrieve-and-delete-the-history-of-audited-data-changes.md
-    - name: Audit user access
-      href: audit-user-access.md
+    - name: Overview
+      href: auditing/overview.md
+    - name: Configure auditing
+      href: auditing/configure.md
+    - name: Retrieve audit data
+      href: auditing/retrieve-audit-data.md
+    - name: Delete audit data
+      href: auditing/delete-audit-data.md
   - name: Detect duplicate data
     href: detect-duplicate-data-with-code.md
     items:
@@ -151,6 +152,8 @@
       href: troubleshoot-plug-in.md
     - name: Access external web resources
       href: access-web-services.md
+    - name: Dependent Assemblies (Preview)
+      href: dependent-assembly-plugins.md
     - name: Quickstarts
       items:
       - name: Create a project using Power Platform Tools
@@ -203,12 +206,12 @@
   - name: Synchronize data
     href: data-synchronization.md
     items:
-    - name: Use an alternate key to create a record
-      href: use-alternate-key-create-record.md
+    - name: Use an alternate key to reference a record
+      href: use-alternate-key-reference-record.md
+    - name: Use Upsert to create or update a record
+      href: use-upsert-insert-update-record.md
     - name: Use change tracking to synchronize data with external systems
       href: use-change-tracking-synchronize-data-external-systems.md
-    - name: Use Upsert to insert or update a record
-      href: use-upsert-insert-update-record.md
   - name: Server-side synchronization
     href: server-side-synchronization-entities.md
     items:
@@ -250,6 +253,8 @@
   - name: Activity tables
     href: activity-entities.md
     items:
+    - name: Activities data model and storage
+      href: activities-data-model-storage.md
     - name: Custom activities
       href: custom-activities.md
     - name: Email activity tables
@@ -304,6 +309,8 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Azure AD user tables
+      href: aaduser-entity.md
   - name: Template tables
     href: upload-manage-document-templates.md
 - name: Work with table definitions using code
@@ -337,6 +344,12 @@
       href: image-attributes.md
     - name: Define custom state model transitions
       href: define-custom-state-model-transitions.md
+    - name: Data type format conversions
+      href: data-type-format-conversions.md
+    - name: Format and FormatName columns
+      href: format-and-formatname-columns.md
+    - name: Format validations
+      href: format-validations.md
   - name: Table relationships definitions
     href: entity-relationship-metadata.md
     items:
@@ -357,14 +370,6 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
-- name: Work with columns
-  items:
-  - name: Data type format conversions
-    href: data-type-format-conversions.md
-  - name: Format and FormatName columns
-    href: format-and-formatname-columns.md
-  - name: Format validations
-    href: format-validations.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Publish and monitor your (ISV) app
@@ -406,7 +411,9 @@
       href: isv-app-usage-analytics.md
     - name: Install failures analytics
       href: isv-install-failure-analytics.md
-- name: Create client applications
+    - name: Auto App Updates (Preview) 
+      href: isv-app-management-autoupdate.md
+- name: Create applications
   href: connect-dataverse.md
   items:
   - name: Authenticate apps and services with Microsoft Dataverse
@@ -418,25 +425,35 @@
       href: authenticate-oauth.md
     - name: Use of Office365 (WS-Trust) authentication
       href: authenticate-office365-deprecation.md
-  - name: "Tutorial: Register an app with Azure Active Directory"
-    href: walkthrough-register-app-azure-active-directory.md
-  - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
-    href: walkthrough-blazor-webassembly-single-tenant.md
-  - name: Build web applications using Server-to-Server (S2S) authentication
-    href: build-web-applications-server-server-s2s-authentication.md
-    items:
-    - name: Use Multi-Tenant Server-to-server authentication
-      href: use-multi-tenant-server-server-authentication.md
-    - name: Use Single-Tenant Server-to-server authentication
-      href: use-single-tenant-server-server-authentication.md
-  - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
-    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
-  - name: "Tutorial: Register and configuring a SPA application with adal.js"
-    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+    - name: Build web applications using Server-to-Server (S2S) authentication
+      href: build-web-applications-server-server-s2s-authentication.md
+      items:
+      - name: Use Multi-Tenant Server-to-server authentication
+        href: use-multi-tenant-server-server-authentication.md
+      - name: Use Single-Tenant Server-to-server authentication
+        href: use-single-tenant-server-server-authentication.md
+    - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
+      href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+  - name: "Sample: Global Discovery Service"
+    href: sample-global-discovery-service-csharp.md
+  - name: "Sample: Blazor WebAssembly with Global Discovery"
+    href: sample-blazor-web-assembly-global-discovery.md
+  - name: "Sample: Global Discovery Service with CrmServiceClient"
+    href: sample-discovery-service-crmserviceclient.md
+  - name: Tutorials 
+    items:
+    - name: "Tutorial: Register an app with Azure Active Directory"
+      href: walkthrough-register-app-azure-active-directory.md
+    - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
+      href: walkthrough-blazor-webassembly-single-tenant.md
+    - name: "Tutorial: Register and configuring a SPA application with adal.js"
+      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+- name: Transition apps to Dataverse ServiceClient
+  href: sdk-client-transition.md
 - name: Best practices
   href: best-practices/index.md
 - name: Online Management API
@@ -456,34 +473,8 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Microsoft Power Platform CLI
-      items:
-      - name: Overview
-        href: powerapps-cli.md
-      - name: CLI reference
-        items:
-        - name: admin 
-          href: cli/reference/admin-command.md
-        - name: application 
-          href: cli/reference/application-command.md
-        - name: auth
-          href: cli/reference/auth-command.md
-        - name: canvas 
-          href: cli/reference/canvas-command.md
-        - name: org 
-          href: cli/reference/org-command.md
-        - name: package
-          href: cli/reference/package-command.md
-        - name: paportal 
-          href: cli/reference/paportal-command.md
-        - name: pcf
-          href: cli/reference/pcf-command.md
-        - name: plugin 
-          href: cli/reference/plugin-command.md
-        - name: solution 
-          href: cli/reference/solution-command.md
-        - name: telemetry
-          href: cli/reference/telemetry-command.md
+    - name: Power Platform CLI
+      href: /power-platform/developer/cli/introduction
     - name: Power Platform Tools for Visual Studio
       href: ./tools/devtools-install.md
   - name: Community Tools
@@ -497,15 +488,13 @@
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
   - name: Organization Service
-    href: /dotnet/api/?view=dynamics-general-ce-9
+    href: /dotnet/api/microsoft.crm.sdk
   - name: XRM Tooling
-    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Table
-    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
+    href: /dotnet/api/microsoft.xrm.tooling.connector  
   - name: Workflow
-    href: /dotnet/api/?view=dynamics-workflow-ce-9 
+    href: /dotnet/api/microsoft.xrm.sdk.workflow 
   - name: Package Deployer
-    href: /dotnet/api/?view=dynamics-deployer-ce-9
+    href: /dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
   - name: FetchXML schema

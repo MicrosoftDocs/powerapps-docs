@@ -4,7 +4,7 @@ description: "This sample showcases how to retrieve charts attached to a table "
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde
-manager: evchaki
+manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType: 
@@ -16,7 +16,7 @@ search.app:
 
 # Sample: Retrieve all charts attached to a table
 
-This sample shows how to retrieve all the organization-owned visualizations attached to a table by using the [IOrganizationService.RetrieveMultiple](//dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method.
+This sample shows how to retrieve all the organization-owned visualizations attached to a table by using the [IOrganizationService.RetrieveMultiple](//dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
 
