@@ -28,9 +28,9 @@ contributors:
 
 ## Return Value
 
-**Type**: Process. 
+**Type**: Process | null
 
-**Description**: The currently active process. See [Process methods](../../formContext-data-process.md#process-methods) for the methods to access the properties of the process returned.
+**Description**: The currently active process or null if there is no active process. See [Process methods](../../formContext-data-process.md#process-methods) for the methods to access the properties of the process returned.
 
 ### Related topics
 
