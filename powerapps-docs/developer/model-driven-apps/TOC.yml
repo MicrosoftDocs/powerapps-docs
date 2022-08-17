@@ -105,6 +105,8 @@
         href: clientapi/reference/events/grid-onsave.md
       - name: OnLookupTagClick event
         href: clientapi/reference/events/onlookuptagclick.md
+      - name: OnOutputChange event
+        href: clientapi/reference/events/onoutputchange.md
       - name: OnProcessStatusChange event
         href: clientapi/reference/events/onprocessstatuschange.md
       - name: OnPreProcessStatusChange event
@@ -248,6 +250,8 @@
         href: clientapi/reference/controls/addNotification.md
       - name: addOnLookupTagClick
         href: clientapi/reference/controls/addOnLookupTagClick.md
+      - name: addOnOutputChange
+        href: clientapi/reference/controls/addonoutputchange.md
       - name: addOnPostSave
         href: clientapi/reference/controls/addOnPostSave.md
       - name: addOnPostSearch
@@ -316,6 +320,8 @@
         href: clientapi/reference/controls/refresh.md
       - name: removeOnLookupTagClick
         href: clientapi/reference/controls/removeOnLookupTagClick.md
+      - name: removeOnOutputChange
+        href: clientapi/reference/controls/removeonoutputchange.md
       - name: removeOnPostSave
         href: clientapi/reference/controls/removeOnPostSave.md
       - name: removeOnPostSearch
