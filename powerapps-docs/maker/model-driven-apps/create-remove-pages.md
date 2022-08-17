@@ -1,8 +1,8 @@
 ---
-title: "Create and remove pages in model-driven apps | MicrosoftDocs"
-description: Learn how to Create and remove pages in model-driven apps.
+title: "Work with pages in model-driven apps | MicrosoftDocs"
+description: Learn how to create, edit, and remove pages in model-driven apps.
 ms.custom: ""
-ms.date: 03/30/2022
+ms.date: 08/17/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -21,11 +21,14 @@ search.app:
   - D365CE
 ---
 
-# Create and remove pages
+# Work with model-driven app pages (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
+
+> [!NOTE]
+> This is a preview feature. More information: [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 ## Create a page
 
@@ -39,6 +42,30 @@ To create a page follow these steps:
   :::image type="content" source="media/add-table-view-and-form-pages.png" alt-text="Add table view and form pages":::
 1. Select the components you want.
 1. Select **Add**.
+
+## Work with tables on a page
+
+Create and edit tables directly from the app designer.
+
+### Create a table for a page
+
+1. In the model-driven app designer, select Add page, select **Table based view and form** as the page type, and then select **Next**.
+1. Select **Create new table**. If your table is already created select it from the list.
+1. If you selected **Create a new table**: 
+   - Enter the table a name in the **Display name** field.
+   - Optionally, specify the table **Record ownership** from the **Advanced options** area.
+   :::image type="content" source="media/create-table-app-designer.png" alt-text="Create a table for a page in app designer":::
+1. Select **Create**.
+
+### Edit a table for a page
+
+From the **Pages** area in app designer, select **...** to the right of the table name, select **Edit**, and then select **Edit**.
+:::image type="content" source="media/edit-table-app-designer.png" alt-text="Edit a table for a page in app designer":::
+
+The table designer opens for you to make changes to the table.
+:::image type="content" source="media/table-designer-app-designer.png" alt-text="Table designer for edit a table in app designer":::
+
+To delete the table, select **...** to the right of the table name, and then select **Remove**.
 
 ## Remove a page
 
