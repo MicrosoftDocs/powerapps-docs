@@ -1,26 +1,26 @@
 ---
 title: "Define scaling for ribbon elements (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining scaling for ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/14/2021
-
-ms.custom:
-  - ""
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 05/24/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: c2cc39d2-e540-0800-f04f-3fa66df21191
-author: Nkrb # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Define scaling for ribbon elements
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 For application ribbons and updated form ribbons there is no scaling. Scaling only applies to forms for tables that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
   

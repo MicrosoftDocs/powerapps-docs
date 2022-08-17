@@ -1,19 +1,20 @@
 ---
 title: "Use LINQ to construct a query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to use the .NET Language-Integrated Query (LINQ) query provider to construct a Microsoft Dataverse query." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/08/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: kkanakas
+ms.author: kartikka
+manager: pemikkel
+ms.reviewer: pehecke
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Use LINQ to construct a query
@@ -22,13 +23,13 @@ search.app:
 
 The .NET Language-Integrated Query (LINQ) query provider in Microsoft Dataverse uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant table types and the relationships between them. You can then specify the data source and the other query parameters.  
 
- The `from` clause is used to return a single “root” table. The query provider can only return rows of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add rows with a relationship to the “root” table.  
+ The `from` clause is used to return a single "root" table. The query provider can only return rows of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add rows with a relationship to the "root" table.  
 
 <a name="bkmk_operators"></a>   
 
 ## LINQ operators
 
- All LINQ query expressions have a similar format. The following table shows the most common clauses in a LINQ query expression when using the Dataverse LINQ query provider.  
+ All LINQ query expressions have a similar format. The following sections show the most common clauses in a LINQ query expression when using the Dataverse LINQ query provider.  
 
 ### from
 

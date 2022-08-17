@@ -1,8 +1,8 @@
 ---
-title: "TeamTemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TeamTemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TeamTemplate table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -270,10 +270,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -396,7 +396,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_teamtemplate_Teams"></a> teamtemplate_Teams
 
-Same as team table [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) Many-To-One relationship.
+Same as the [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -411,7 +411,7 @@ Same as team table [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) Many-To
 
 ### <a name="BKMK_TeamTemplate_SyncErrors"></a> TeamTemplate_SyncErrors
 
-Same as syncerror table [TeamTemplate_SyncErrors](syncerror.md#BKMK_TeamTemplate_SyncErrors) Many-To-One relationship.
+Same as the [TeamTemplate_SyncErrors](syncerror.md#BKMK_TeamTemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -437,22 +437,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_teamtemplate_createdonbehalfby"></a> lk_teamtemplate_createdonbehalfby
 
-See systemuser Table [lk_teamtemplate_createdonbehalfby](systemuser.md#BKMK_lk_teamtemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_teamtemplate_createdonbehalfby](systemuser.md#BKMK_lk_teamtemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_modifiedby"></a> lk_teamtemplate_modifiedby
 
-See systemuser Table [lk_teamtemplate_modifiedby](systemuser.md#BKMK_lk_teamtemplate_modifiedby) One-To-Many relationship.
+See the [lk_teamtemplate_modifiedby](systemuser.md#BKMK_lk_teamtemplate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_createdby"></a> lk_teamtemplate_createdby
 
-See systemuser Table [lk_teamtemplate_createdby](systemuser.md#BKMK_lk_teamtemplate_createdby) One-To-Many relationship.
+See the [lk_teamtemplate_createdby](systemuser.md#BKMK_lk_teamtemplate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_modifiedonbehalfby"></a> lk_teamtemplate_modifiedonbehalfby
 
-See systemuser Table [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_teamtemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_teamtemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.teamtemplate?text=teamtemplate EntityType" />

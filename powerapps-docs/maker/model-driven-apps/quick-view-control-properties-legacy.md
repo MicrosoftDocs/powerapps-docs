@@ -34,7 +34,7 @@ A quick view control on a model-driven app form displays data from a row that is
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Select **Solution** from the left navigation pane, and then open the solution you want.
-3.  Open the table you want, and then select the **Forms** tab.  
+3.  Open the table you want, and then select the **Forms** area.  
 
 4.  Select a form, which **Type** is **Main**.
 
@@ -62,7 +62,7 @@ A quick view control on a model-driven app form displays data from a row that is
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** area.
 
 3.  In the list of forms, open the form of type **Main**.
 

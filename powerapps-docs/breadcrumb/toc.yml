@@ -7,46 +7,46 @@
     topichref: /power-platform/
     items:
     - name: Power Apps
-      tocHref: /powerapps/
-      topicHref: /powerapps/
+      tocHref: /power-apps/
+      topicHref: /power-apps/
       items:
       # Adding Create app for each type of app
       - name: Create apps
-        tocHref: /powerapps/maker/data-platform/
-        topicHref: /powerapps/maker/index
+        tocHref: /power-apps/maker/data-platform/
+        topicHref: /power-apps/maker/index
       - name: Create apps
-        tocHref: /powerapps/maker/model-driven-apps/
-        topicHref: /powerapps/maker/index     
+        tocHref: /power-apps/maker/model-driven-apps/
+        topicHref: /power-apps/maker/index     
       - name: Create apps
-        tocHref: /powerapps/maker/canvas-apps/
-        topicHref: /powerapps/maker/index       
+        tocHref: /power-apps/maker/canvas-apps/
+        topicHref: /power-apps/maker/index       
       #  Make sure Create apps appears for topics in developer folder 
       - name: Create apps
-        tocHref: /powerapps/developer/data-platform/
-        topicHref: /powerapps/maker/index
+        tocHref: /power-apps/developer/data-platform/
+        topicHref: /power-apps/maker/index
         items: 
-        - name: Microsoft Dataverse
-          tocHref: /powerapps/developer/data-platform/
-          topicHref: /powerapps/maker/data-platform/index          
+        - name: Dataverse
+          tocHref: /power-apps/developer/data-platform/
+          topicHref: /power-apps/maker/data-platform/index          
           items:
           - name: Developer
-            tocHref: /powerapps/developer/data-platform/
-            topicHref: /powerapps/developer/data-platform/index
+            tocHref: /power-apps/developer/data-platform/
+            topicHref: /power-apps/developer/data-platform/index
             items:
             - name: Organization Service
-              tocHref: /powerapps/developer/data-platform/org-service/
-              topicHref: /powerapps/developer/data-platform/org-service/index
+              tocHref: /power-apps/developer/data-platform/org-service/
+              topicHref: /power-apps/developer/data-platform/org-service/index
             - name: Web API
-              tocHref: /powerapps/developer/data-platform/webapi/
-              topicHref: /powerapps/developer/data-platform/webapi/index
+              tocHref: /power-apps/developer/data-platform/webapi/
+              topicHref: /power-apps/developer/data-platform/webapi/index
       - name: Create apps
-        tocHref: /powerapps/developer/model-driven-apps/
-        topicHref: /powerapps/maker/index
+        tocHref: /power-apps/developer/model-driven-apps/
+        topicHref: /power-apps/maker/index
         items:
         - name: Model-driven apps
-          tocHref: /powerapps/developer/model-driven-apps/
-          topicHref: /powerapps/maker/model-driven-apps/index      
+          tocHref: /power-apps/developer/model-driven-apps/
+          topicHref: /power-apps/maker/model-driven-apps/index      
           items:
           - name: Developer
-            tocHref: /powerapps/developer/model-driven-apps/
-            topicHref: /powerapps/developer/model-driven-apps/index    
+            tocHref: /power-apps/developer/model-driven-apps/
+            topicHref: /power-apps/developer/model-driven-apps/index    

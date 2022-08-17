@@ -1,8 +1,8 @@
 ---
-title: "SocialActivity table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SocialActivity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SocialActivity table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -245,10 +245,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Outgoing|
-|0|Incoming|
+|1|Outgoing||
+|0|Incoming||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -315,10 +315,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -338,10 +338,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -962,6 +962,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PostAuthorAccountName](#BKMK_PostAuthorAccountName)
@@ -1096,10 +1097,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -1232,12 +1233,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the activity.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1447,7 +1464,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_socialactivity_principalobjectattributeaccess"></a> socialactivity_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [socialactivity_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_socialactivity_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [socialactivity_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_socialactivity_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1462,7 +1479,7 @@ Same as principalobjectattributeaccess table [socialactivity_principalobjectattr
 
 ### <a name="BKMK_socialactivity_activity_parties"></a> socialactivity_activity_parties
 
-Same as activityparty table [socialactivity_activity_parties](activityparty.md#BKMK_socialactivity_activity_parties) Many-To-One relationship.
+Same as the [socialactivity_activity_parties](activityparty.md#BKMK_socialactivity_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1477,7 +1494,7 @@ Same as activityparty table [socialactivity_activity_parties](activityparty.md#B
 
 ### <a name="BKMK_SocialActivity_BulkDeleteFailures"></a> SocialActivity_BulkDeleteFailures
 
-Same as bulkdeletefailure table [SocialActivity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SocialActivity_BulkDeleteFailures) Many-To-One relationship.
+Same as the [SocialActivity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_SocialActivity_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1492,7 +1509,7 @@ Same as bulkdeletefailure table [SocialActivity_BulkDeleteFailures](bulkdeletefa
 
 ### <a name="BKMK_SocialActivity_QueueItem"></a> SocialActivity_QueueItem
 
-Same as queueitem table [SocialActivity_QueueItem](queueitem.md#BKMK_SocialActivity_QueueItem) Many-To-One relationship.
+Same as the [SocialActivity_QueueItem](queueitem.md#BKMK_SocialActivity_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1507,7 +1524,7 @@ Same as queueitem table [SocialActivity_QueueItem](queueitem.md#BKMK_SocialActiv
 
 ### <a name="BKMK_SocialActivity_SyncErrors"></a> SocialActivity_SyncErrors
 
-Same as syncerror table [SocialActivity_SyncErrors](syncerror.md#BKMK_SocialActivity_SyncErrors) Many-To-One relationship.
+Same as the [SocialActivity_SyncErrors](syncerror.md#BKMK_SocialActivity_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1522,7 +1539,7 @@ Same as syncerror table [SocialActivity_SyncErrors](syncerror.md#BKMK_SocialActi
 
 ### <a name="BKMK_slakpiinstance_socialactivity"></a> slakpiinstance_socialactivity
 
-Same as slakpiinstance table [slakpiinstance_socialactivity](slakpiinstance.md#BKMK_slakpiinstance_socialactivity) Many-To-One relationship.
+Same as the [slakpiinstance_socialactivity](slakpiinstance.md#BKMK_slakpiinstance_socialactivity) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1537,7 +1554,7 @@ Same as slakpiinstance table [slakpiinstance_socialactivity](slakpiinstance.md#B
 
 ### <a name="BKMK_SocialActivity_DuplicateBaseRecord"></a> SocialActivity_DuplicateBaseRecord
 
-Same as duplicaterecord table [SocialActivity_DuplicateBaseRecord](duplicaterecord.md#BKMK_SocialActivity_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [SocialActivity_DuplicateBaseRecord](duplicaterecord.md#BKMK_SocialActivity_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1552,7 +1569,7 @@ Same as duplicaterecord table [SocialActivity_DuplicateBaseRecord](duplicatereco
 
 ### <a name="BKMK_SocialActivity_AsyncOperations"></a> SocialActivity_AsyncOperations
 
-Same as asyncoperation table [SocialActivity_AsyncOperations](asyncoperation.md#BKMK_SocialActivity_AsyncOperations) Many-To-One relationship.
+Same as the [SocialActivity_AsyncOperations](asyncoperation.md#BKMK_SocialActivity_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1567,7 +1584,7 @@ Same as asyncoperation table [SocialActivity_AsyncOperations](asyncoperation.md#
 
 ### <a name="BKMK_SocialActivity_ProcessSessions"></a> SocialActivity_ProcessSessions
 
-Same as processsession table [SocialActivity_ProcessSessions](processsession.md#BKMK_SocialActivity_ProcessSessions) Many-To-One relationship.
+Same as the [SocialActivity_ProcessSessions](processsession.md#BKMK_SocialActivity_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1582,7 +1599,7 @@ Same as processsession table [SocialActivity_ProcessSessions](processsession.md#
 
 ### <a name="BKMK_SocialActivity_DuplicateMatchingRecord"></a> SocialActivity_DuplicateMatchingRecord
 
-Same as duplicaterecord table [SocialActivity_DuplicateMatchingRecord](duplicaterecord.md#BKMK_SocialActivity_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [SocialActivity_DuplicateMatchingRecord](duplicaterecord.md#BKMK_SocialActivity_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1597,7 +1614,7 @@ Same as duplicaterecord table [SocialActivity_DuplicateMatchingRecord](duplicate
 
 ### <a name="BKMK_socialactivity_connections1"></a> socialactivity_connections1
 
-Same as connection table [socialactivity_connections1](connection.md#BKMK_socialactivity_connections1) Many-To-One relationship.
+Same as the [socialactivity_connections1](connection.md#BKMK_socialactivity_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1612,7 +1629,7 @@ Same as connection table [socialactivity_connections1](connection.md#BKMK_social
 
 ### <a name="BKMK_SocialActivity_Annotation"></a> SocialActivity_Annotation
 
-Same as annotation table [SocialActivity_Annotation](annotation.md#BKMK_SocialActivity_Annotation) Many-To-One relationship.
+Same as the [SocialActivity_Annotation](annotation.md#BKMK_SocialActivity_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1627,7 +1644,7 @@ Same as annotation table [SocialActivity_Annotation](annotation.md#BKMK_SocialAc
 
 ### <a name="BKMK_socialactivity_connections2"></a> socialactivity_connections2
 
-Same as connection table [socialactivity_connections2](connection.md#BKMK_socialactivity_connections2) Many-To-One relationship.
+Same as the [socialactivity_connections2](connection.md#BKMK_socialactivity_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1670,90 +1687,90 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_KnowledgeBaseRecord_SocialActivities"></a> KnowledgeBaseRecord_SocialActivities
 
-See knowledgebaserecord Table [KnowledgeBaseRecord_SocialActivities](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_SocialActivities) One-To-Many relationship.
+See the [KnowledgeBaseRecord_SocialActivities](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_SocialActivities) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
 
 ### <a name="BKMK_socialactivity_postauthoraccount_contacts"></a> socialactivity_postauthoraccount_contacts
 
-See contact Table [socialactivity_postauthoraccount_contacts](contact.md#BKMK_socialactivity_postauthoraccount_contacts) One-To-Many relationship.
+See the [socialactivity_postauthoraccount_contacts](contact.md#BKMK_socialactivity_postauthoraccount_contacts) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_KnowledgeArticle_SocialActivities"></a> KnowledgeArticle_SocialActivities
 
-See knowledgearticle Table [KnowledgeArticle_SocialActivities](knowledgearticle.md#BKMK_KnowledgeArticle_SocialActivities) One-To-Many relationship.
+See the [KnowledgeArticle_SocialActivities](knowledgearticle.md#BKMK_KnowledgeArticle_SocialActivities) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_activity_pointer_socialactivity"></a> activity_pointer_socialactivity
 
-See activitypointer Table [activity_pointer_socialactivity](activitypointer.md#BKMK_activity_pointer_socialactivity) One-To-Many relationship.
+See the [activity_pointer_socialactivity](activitypointer.md#BKMK_activity_pointer_socialactivity) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### <a name="BKMK_SocialActivity_PostAuthorAccount_accounts"></a> SocialActivity_PostAuthorAccount_accounts
 
-See account Table [SocialActivity_PostAuthorAccount_accounts](account.md#BKMK_SocialActivity_PostAuthorAccount_accounts) One-To-Many relationship.
+See the [SocialActivity_PostAuthorAccount_accounts](account.md#BKMK_SocialActivity_PostAuthorAccount_accounts) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_lk_socialactivity_createdby"></a> lk_socialactivity_createdby
 
-See systemuser Table [lk_socialactivity_createdby](systemuser.md#BKMK_lk_socialactivity_createdby) One-To-Many relationship.
+See the [lk_socialactivity_createdby](systemuser.md#BKMK_lk_socialactivity_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Account_SocialActivities"></a> Account_SocialActivities
 
-See account Table [Account_SocialActivities](account.md#BKMK_Account_SocialActivities) One-To-Many relationship.
+See the [Account_SocialActivities](account.md#BKMK_Account_SocialActivities) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_socialactivity"></a> transactioncurrency_socialactivity
 
-See transactioncurrency Table [transactioncurrency_socialactivity](transactioncurrency.md#BKMK_transactioncurrency_socialactivity) One-To-Many relationship.
+See the [transactioncurrency_socialactivity](transactioncurrency.md#BKMK_transactioncurrency_socialactivity) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_sla_socialactivity"></a> sla_socialactivity
 
-See sla Table [sla_socialactivity](sla.md#BKMK_sla_socialactivity) One-To-Many relationship.
+See the [sla_socialactivity](sla.md#BKMK_sla_socialactivity) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_user_socialactivity"></a> user_socialactivity
 
-See systemuser Table [user_socialactivity](systemuser.md#BKMK_user_socialactivity) One-To-Many relationship.
+See the [user_socialactivity](systemuser.md#BKMK_user_socialactivity) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_socialactivity"></a> business_unit_socialactivity
 
-See businessunit Table [business_unit_socialactivity](businessunit.md#BKMK_business_unit_socialactivity) One-To-Many relationship.
+See the [business_unit_socialactivity](businessunit.md#BKMK_business_unit_socialactivity) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_socialactivity_postauthor_contacts"></a> socialactivity_postauthor_contacts
 
-See contact Table [socialactivity_postauthor_contacts](contact.md#BKMK_socialactivity_postauthor_contacts) One-To-Many relationship.
+See the [socialactivity_postauthor_contacts](contact.md#BKMK_socialactivity_postauthor_contacts) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### <a name="BKMK_team_socialactivity"></a> team_socialactivity
 
-See team Table [team_socialactivity](team.md#BKMK_team_socialactivity) One-To-Many relationship.
+See the [team_socialactivity](team.md#BKMK_team_socialactivity) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_manualsla_socialactivity"></a> manualsla_socialactivity
 
-See sla Table [manualsla_socialactivity](sla.md#BKMK_manualsla_socialactivity) One-To-Many relationship.
+See the [manualsla_socialactivity](sla.md#BKMK_manualsla_socialactivity) one-to-many relationship for the [sla](sla.md) table/entity.
 
 ### <a name="BKMK_SocialActivity_PostAuthor_accounts"></a> SocialActivity_PostAuthor_accounts
 
-See account Table [SocialActivity_PostAuthor_accounts](account.md#BKMK_SocialActivity_PostAuthor_accounts) One-To-Many relationship.
+See the [SocialActivity_PostAuthor_accounts](account.md#BKMK_SocialActivity_PostAuthor_accounts) one-to-many relationship for the [account](account.md) table/entity.
 
 ### <a name="BKMK_Socialprofile_SocialActivities"></a> Socialprofile_SocialActivities
 
-See socialprofile Table [Socialprofile_SocialActivities](socialprofile.md#BKMK_Socialprofile_SocialActivities) One-To-Many relationship.
+See the [Socialprofile_SocialActivities](socialprofile.md#BKMK_Socialprofile_SocialActivities) one-to-many relationship for the [socialprofile](socialprofile.md) table/entity.
 
 ### <a name="BKMK_AsyncOperation_SocialActivities"></a> AsyncOperation_SocialActivities
 
-See asyncoperation Table [AsyncOperation_SocialActivities](asyncoperation.md#BKMK_AsyncOperation_SocialActivities) One-To-Many relationship.
+See the [AsyncOperation_SocialActivities](asyncoperation.md#BKMK_AsyncOperation_SocialActivities) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 ### <a name="BKMK_lk_socialactivity_modifiedby"></a> lk_socialactivity_modifiedby
 
-See systemuser Table [lk_socialactivity_modifiedby](systemuser.md#BKMK_lk_socialactivity_modifiedby) One-To-Many relationship.
+See the [lk_socialactivity_modifiedby](systemuser.md#BKMK_lk_socialactivity_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_socialactivitybase_createdonbehalfby"></a> lk_socialactivitybase_createdonbehalfby
 
-See systemuser Table [lk_socialactivitybase_createdonbehalfby](systemuser.md#BKMK_lk_socialactivitybase_createdonbehalfby) One-To-Many relationship.
+See the [lk_socialactivitybase_createdonbehalfby](systemuser.md#BKMK_lk_socialactivitybase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_socialactivitybase_modifiedonbehalfby"></a> lk_socialactivitybase_modifiedonbehalfby
 
-See systemuser Table [lk_socialactivitybase_modifiedonbehalfby](systemuser.md#BKMK_lk_socialactivitybase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_socialactivitybase_modifiedonbehalfby](systemuser.md#BKMK_lk_socialactivitybase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Contact_SocialActivities"></a> Contact_SocialActivities
 
-See contact Table [Contact_SocialActivities](contact.md#BKMK_Contact_SocialActivities) One-To-Many relationship.
+See the [Contact_SocialActivities](contact.md#BKMK_Contact_SocialActivities) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.socialactivity?text=socialactivity EntityType" />

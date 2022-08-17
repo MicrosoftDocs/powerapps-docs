@@ -1,19 +1,19 @@
 ---
 title: EntityFormOptions in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for EntityFormOptions in Power Apps component framework.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # EntityFormOptions
 
-Provides access to all the information about the table forms.
+[!INCLUDE [entityformoptions-description](includes/entityformoptions-description.md)]
 
 ## Available for 
 

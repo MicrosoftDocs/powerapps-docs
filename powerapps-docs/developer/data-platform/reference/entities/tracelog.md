@@ -1,8 +1,8 @@
 ---
-title: "Trace (TraceLog) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Trace (TraceLog) table/entity."
-ms.date: 10/05/2021
-
+title: "Trace (TraceLog)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Trace (TraceLog)  table/entity."
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Trace (TraceLog) table/entity reference
+# Trace (TraceLog)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -92,10 +92,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -165,10 +165,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -386,10 +386,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Success|
-|0|Failure|
+|1|Success||
+|0|Failure||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -794,7 +794,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_tracelog_parent_tracelog"></a> tracelog_parent_tracelog
 
-Same as tracelog table [tracelog_parent_tracelog](tracelog.md#BKMK_tracelog_parent_tracelog) Many-To-One relationship.
+Same as the [tracelog_parent_tracelog](tracelog.md#BKMK_tracelog_parent_tracelog) many-to-one relationship for the [tracelog](tracelog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -824,38 +824,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_tracelog_EmailServerProfile"></a> tracelog_EmailServerProfile
 
-See emailserverprofile Table [tracelog_EmailServerProfile](emailserverprofile.md#BKMK_tracelog_EmailServerProfile) One-To-Many relationship.
+See the [tracelog_EmailServerProfile](emailserverprofile.md#BKMK_tracelog_EmailServerProfile) one-to-many relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 ### <a name="BKMK_tracelog_Mailbox"></a> tracelog_Mailbox
 
-See mailbox Table [tracelog_Mailbox](mailbox.md#BKMK_tracelog_Mailbox) One-To-Many relationship.
+See the [tracelog_Mailbox](mailbox.md#BKMK_tracelog_Mailbox) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_organization_tracelog"></a> organization_tracelog
 
-See organization Table [organization_tracelog](organization.md#BKMK_organization_tracelog) One-To-Many relationship.
+See the [organization_tracelog](organization.md#BKMK_organization_tracelog) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_tracelog_createdonbehalfby"></a> lk_tracelog_createdonbehalfby
 
-See systemuser Table [lk_tracelog_createdonbehalfby](systemuser.md#BKMK_lk_tracelog_createdonbehalfby) One-To-Many relationship.
+See the [lk_tracelog_createdonbehalfby](systemuser.md#BKMK_lk_tracelog_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_tracelog_modifiedby"></a> lk_tracelog_modifiedby
 
-See systemuser Table [lk_tracelog_modifiedby](systemuser.md#BKMK_lk_tracelog_modifiedby) One-To-Many relationship.
+See the [lk_tracelog_modifiedby](systemuser.md#BKMK_lk_tracelog_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_tracelog_createdby"></a> lk_tracelog_createdby
 
-See systemuser Table [lk_tracelog_createdby](systemuser.md#BKMK_lk_tracelog_createdby) One-To-Many relationship.
+See the [lk_tracelog_createdby](systemuser.md#BKMK_lk_tracelog_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_tracelog_parent_tracelog"></a> tracelog_parent_tracelog
 
-See tracelog Table [tracelog_parent_tracelog](tracelog.md#BKMK_tracelog_parent_tracelog) One-To-Many relationship.
+See the [tracelog_parent_tracelog](tracelog.md#BKMK_tracelog_parent_tracelog) one-to-many relationship for the [tracelog](tracelog.md) table/entity.
 
 ### <a name="BKMK_lk_tracelog_modifiedonbehalfby"></a> lk_tracelog_modifiedonbehalfby
 
-See systemuser Table [lk_tracelog_modifiedonbehalfby](systemuser.md#BKMK_lk_tracelog_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_tracelog_modifiedonbehalfby](systemuser.md#BKMK_lk_tracelog_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.tracelog?text=tracelog EntityType" />

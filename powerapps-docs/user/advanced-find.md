@@ -25,8 +25,6 @@ The topic covers the various different ways to use the advanced find experience.
 
 ## Search for rows and create personal views with modern advanced find
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 When your administrator enables the [modern advanced find experience](/power-platform/admin/settings-features), it lets you search for rows and create personal views in your app. Depending on how search is setup for your app, the search experience might look a little different. Your administrator can turn on Dataverse search or disable it.
 
 
@@ -59,6 +57,9 @@ When your administrator enables the [modern advanced find experience](/power-pla
 ## Create, edit, or save a view using legacy advanced find
 
 If your administrator has not enabled the modern advanced find experience, you can find the rows you want by using the legacy Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives. 
+
+> [!NOTE]
+>  To use the modern advanced find in model-driven apps, see [Create and manage personal views on a grid page ](grid-filters-advanced.md).
   
 1. On the command bar, select **Advanced Find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button").
   
@@ -95,7 +96,7 @@ If your administrator has not enabled the modern advanced find experience, you c
 To save the results, select **Save As** and name the personalized view. 
 
 
-## Share a personal view
+### Share a personal view
 
 Before you can share a personal view, it must be saved.
 
@@ -127,6 +128,17 @@ Before you can share a personal view, it must be saved.
    > [!div class="mx-imgBorder"] 
    > ![Share the view.](media/saved_views_5.png "Select share to share the view")
 
+### Delete a personal view
 
+1. On the command bar, select the **Advanced Find** button.
+2. On the Advanced Find tab, select **Saved Views**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Saved view button.](media/saved_views_1.png "Saved view button")
+   
+3. From the list of saved views, select the view that you want to delete and then select **Delete Saved View**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Delete a saved view.](media/delete-saved-view.png "Delete a saved view")
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

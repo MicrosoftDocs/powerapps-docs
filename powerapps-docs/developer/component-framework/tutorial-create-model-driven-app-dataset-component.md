@@ -1,16 +1,16 @@
 ---
 title: "Create a model-driven app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a dataset code component, deploy it, and configure it inside a model-driven app using Visual Studio Code."
-ms.custom: "intro-internal"
-ms.topic: "index-page"
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
+ms.topic: tutorial
+ms.subservice: pcf
 contributors:
-    - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 # Tutorial: Creating a model-driven app dataset component
@@ -45,7 +45,7 @@ Firstly, download the [sample code](https://github.com/microsoft/PowerApps-Sampl
 npm install
 ```
 
-Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using `pac auth`.
+Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using [pac auth](/power-platform/developer/cli/reference/auth).
 
 At the terminal, use:
 

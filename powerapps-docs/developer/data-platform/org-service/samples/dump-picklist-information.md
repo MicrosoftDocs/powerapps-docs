@@ -1,26 +1,27 @@
 ---
-title: " Dump choices/picklist information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Dump choices/picklist information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to dump choices information to a file." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/17/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
-# Dump choices/picklist information to a file
+# Sample: Dump choices/picklist information to a file
 
 
 
-This sample shows how to write out all the choices column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpPickListInfo).
+This sample shows how to write out all the choices column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpPickListInfo).
 
 The following sample creates a new file at `\DumpPickListInfo\bin\Debug\AttributePicklistValues.xml`. You can open this file in **Office Excel** to see a tabular report. 
 

@@ -1,8 +1,8 @@
 ---
-title: "Report Related Category (ReportCategory) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Report Related Category (ReportCategory) table/entity."
-ms.date: 10/05/2021
-
+title: "Report Related Category (ReportCategory)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Report Related Category (ReportCategory)  table/entity."
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Report Related Category (ReportCategory) table/entity reference
+# Report Related Category (ReportCategory)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -389,10 +389,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -668,7 +668,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_ReportCategory_SyncErrors"></a> ReportCategory_SyncErrors
 
-Same as syncerror table [ReportCategory_SyncErrors](syncerror.md#BKMK_ReportCategory_SyncErrors) Many-To-One relationship.
+Same as the [ReportCategory_SyncErrors](syncerror.md#BKMK_ReportCategory_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -683,7 +683,7 @@ Same as syncerror table [ReportCategory_SyncErrors](syncerror.md#BKMK_ReportCate
 
 ### <a name="BKMK_reportcategory_principalobjectattributeaccess"></a> reportcategory_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [reportcategory_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_reportcategory_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [reportcategory_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_reportcategory_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -711,30 +711,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_reportcategory_createdonbehalfby"></a> lk_reportcategory_createdonbehalfby
 
-See systemuser Table [lk_reportcategory_createdonbehalfby](systemuser.md#BKMK_lk_reportcategory_createdonbehalfby) One-To-Many relationship.
+See the [lk_reportcategory_createdonbehalfby](systemuser.md#BKMK_lk_reportcategory_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_reportcategory_modifiedonbehalfby"></a> lk_reportcategory_modifiedonbehalfby
 
-See systemuser Table [lk_reportcategory_modifiedonbehalfby](systemuser.md#BKMK_lk_reportcategory_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_reportcategory_modifiedonbehalfby](systemuser.md#BKMK_lk_reportcategory_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_reportcategorybase_createdby"></a> lk_reportcategorybase_createdby
 
-See systemuser Table [lk_reportcategorybase_createdby](systemuser.md#BKMK_lk_reportcategorybase_createdby) One-To-Many relationship.
+See the [lk_reportcategorybase_createdby](systemuser.md#BKMK_lk_reportcategorybase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_ReportCategory"></a> TransactionCurrency_ReportCategory
 
-See transactioncurrency Table [TransactionCurrency_ReportCategory](transactioncurrency.md#BKMK_TransactionCurrency_ReportCategory) One-To-Many relationship.
+See the [TransactionCurrency_ReportCategory](transactioncurrency.md#BKMK_TransactionCurrency_ReportCategory) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_reportcategorybase_modifiedby"></a> lk_reportcategorybase_modifiedby
 
-See systemuser Table [lk_reportcategorybase_modifiedby](systemuser.md#BKMK_lk_reportcategorybase_modifiedby) One-To-Many relationship.
+See the [lk_reportcategorybase_modifiedby](systemuser.md#BKMK_lk_reportcategorybase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_report_reportcategories"></a> report_reportcategories
 
-See report Table [report_reportcategories](report.md#BKMK_report_reportcategories) One-To-Many relationship.
+See the [report_reportcategories](report.md#BKMK_report_reportcategories) one-to-many relationship for the [report](report.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.reportcategory?text=reportcategory EntityType" />

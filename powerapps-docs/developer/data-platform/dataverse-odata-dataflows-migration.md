@@ -46,7 +46,8 @@ In this article, we walk you through how to migrate data between Dataverse envir
 
 1. When importing relationships, multiple dataflows are required.
 
-    Tables that are one (parent/independent) to many (children/dependent) require separate dataflows. Configure the parent dataflow to run before any child tables, since the data in the parent needs to be loaded first to correctly map to the columns in the corresponding child tables.
+    Tables that are one (parent/independent) to many (children/dependent) require separate dataflows. Configure the parent dataflow to run before any child tables, since the data in the parent needs to be loaded first to correctly map to the columns in the corresponding child tables. 
+    Additionally, you must create an [alternate key](/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) in the parent table before being given the option to set a lookup column on the child table. Without a key defined on a parent table, you will be unable to populate lookup columns on any child tables.   
 
 ## Step 2: Get the OData endpoint 
 
@@ -96,16 +97,14 @@ In the **target** environment, create a new dataflow with the OData connector.
     > [!div class="mx-imgBorder"]
     > ![Confirm the column values are correct.](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
-
-    | Column | Description |
-    |--|--|
-    | URL | Provide the Service Root URL in the URL column of the connection settings. |
-    | Connection | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before. |
-    | Connection name | Optionally, rename the connection name, but a value is automatically populated. |  |
-    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service. |
-    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
-
-    > [!IMPORTANT] 
+    | Column                   | Description                                                                                                                          |
+    |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+    | URL                      | Provide the Service Root URL in the URL column of the connection settings.                                                           |
+    | Connection               | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before.               |
+    | Connection name          | Optionally, rename the connection name, but a value is automatically populated.                                                      |
+    | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
+    | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
+   > [!IMPORTANT] 
     > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
@@ -149,13 +148,11 @@ For each table chosen, select the behavior for importing that table in these set
 - **Load to existing table (recommended)**
 
     - The dataflow syncs data from the source environment's table to the target environment, and the same table schema is already defined in the target environment.
-
-    - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined tables is more control over which solution the tables is defined in and the prefix.
-    
-    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups.
-    
+    - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined table is more control over which solution the table is defined in and the prefix.    
+    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) on the target/existing table so the dataflow can determine whether to update existing records or create new ones.
+      > [!NOTE]
+      > This option should only be used if the goal is to make data in source and target the same. If another process in the destination environment adds data to the same table (or if there is other existing data in the table) it will be deleted by this dataflow.
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.
-
     - Requires a key configuration in the target environment (as the unique identifier columns are not available to modify).
 
   > [!IMPORTANT]
@@ -164,7 +161,6 @@ For each table chosen, select the behavior for importing that table in these set
 - **Load to new table (not recommended)**
 
     - Ideally there should be a table predefined in the target environment from the same solution import as the source environment. However, there are cases where this might not be feasible, so this is an option if there is no existing table to load to. 
-
     - It creates a new custom table in the target environment's default solution.
 
 - There is an option to **Do not load**, but do not include tables in the dataflow that are not being loaded. You can select **Back** from this menu to return to the Power Query menu and remove the tables that are not needed.

@@ -6,7 +6,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.subservice: canvas-maker
-ms.date: 03/25/2022
+ms.date: 07/19/2022
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -93,7 +93,8 @@ An **HTML text** control not only shows plain text and numbers but also converts
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines
-**HTML text** isn't meant to be interactive. Use it only for text display.
+
+ARIA mapping for elements inside the **HTML text** control are not defined automatically by Power Apps.
 
 ### Color contrast
 There must be adequate color contrast between:

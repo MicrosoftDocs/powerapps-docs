@@ -1,8 +1,8 @@
 ---
-title: "msdyn_knowledgesearchfilter table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_knowledgesearchfilter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_knowledgesearchfilter table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -168,10 +168,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -207,10 +207,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -441,6 +441,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -625,10 +626,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -812,12 +813,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -918,7 +937,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_knowledgesearchfilter_SyncErrors](syncerror.md#BKMK_msdyn_knowledgesearchfilter_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_SyncErrors](syncerror.md#BKMK_msdyn_knowledgesearchfilter_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -935,7 +954,7 @@ Same as syncerror table [msdyn_knowledgesearchfilter_SyncErrors](syncerror.md#BK
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_knowledgesearchfilter_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchfilter_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchfilter_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -952,7 +971,7 @@ Same as duplicaterecord table [msdyn_knowledgesearchfilter_DuplicateMatchingReco
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_knowledgesearchfilter_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchfilter_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchfilter_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -969,7 +988,7 @@ Same as duplicaterecord table [msdyn_knowledgesearchfilter_DuplicateBaseRecord](
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_knowledgesearchfilter_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgesearchfilter_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgesearchfilter_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -986,7 +1005,7 @@ Same as asyncoperation table [msdyn_knowledgesearchfilter_AsyncOperations](async
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_knowledgesearchfilter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgesearchfilter_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgesearchfilter_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1003,7 +1022,7 @@ Same as mailboxtrackingfolder table [msdyn_knowledgesearchfilter_MailboxTracking
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_knowledgesearchfilter_ProcessSession](processsession.md#BKMK_msdyn_knowledgesearchfilter_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_ProcessSession](processsession.md#BKMK_msdyn_knowledgesearchfilter_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1020,7 +1039,7 @@ Same as processsession table [msdyn_knowledgesearchfilter_ProcessSession](proces
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_knowledgesearchfilter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgesearchfilter_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgesearchfilter_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1037,7 +1056,7 @@ Same as bulkdeletefailure table [msdyn_knowledgesearchfilter_BulkDeleteFailures]
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1068,46 +1087,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchfilter_createdby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_createdby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchfilter_createdby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgesearchfilter_createdonbehalfby"></a> lk_msdyn_knowledgesearchfilter_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchfilter_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchfilter_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgesearchfilter_modifiedby"></a> lk_msdyn_knowledgesearchfilter_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchfilter_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchfilter_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgesearchfilter_modifiedonbehalfby"></a> lk_msdyn_knowledgesearchfilter_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchfilter_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchfilter_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchfilter_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_knowledgesearchfilter"></a> user_msdyn_knowledgesearchfilter
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_knowledgesearchfilter](systemuser.md#BKMK_user_msdyn_knowledgesearchfilter) One-To-Many relationship.
+See the [user_msdyn_knowledgesearchfilter](systemuser.md#BKMK_user_msdyn_knowledgesearchfilter) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_knowledgesearchfilter"></a> team_msdyn_knowledgesearchfilter
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_knowledgesearchfilter](team.md#BKMK_team_msdyn_knowledgesearchfilter) One-To-Many relationship.
+See the [team_msdyn_knowledgesearchfilter](team.md#BKMK_team_msdyn_knowledgesearchfilter) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_knowledgesearchfilter"></a> business_unit_msdyn_knowledgesearchfilter
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_knowledgesearchfilter](businessunit.md#BKMK_business_unit_msdyn_knowledgesearchfilter) One-To-Many relationship.
+See the [business_unit_msdyn_knowledgesearchfilter](businessunit.md#BKMK_business_unit_msdyn_knowledgesearchfilter) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_knowledgesearchfilter?text=msdyn_knowledgesearchfilter EntityType" />

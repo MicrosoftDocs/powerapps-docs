@@ -1,8 +1,8 @@
 ---
-title: "connector table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "connector table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connector table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -65,6 +65,7 @@ Connector Entity to support Solutioning Integration
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [Capabilities](#BKMK_Capabilities)
 - [ConnectionParameters](#BKMK_ConnectionParameters)
 - [connectorId](#BKMK_connectorId)
 - [ConnectorInternalId](#BKMK_ConnectorInternalId)
@@ -82,10 +83,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PolicyTemplateInstances](#BKMK_PolicyTemplateInstances)
+- [ScriptOperations](#BKMK_ScriptOperations)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_Capabilities"></a> Capabilities
+
+|Property|Value|
+|--------|-----|
+|Description|Capability of a connector, i.e. "gateway" means the connector can connect to on-prem gateway|
+|DisplayName|capabilities|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|capabilities|
+|RequiredLevel|None|
+|Type|MultiSelectPicklist|
+
+#### Capabilities Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|118690000|composite||
+|118690001|tabular||
+|118690002|blob||
+|118690003|gateway||
+|118690004|cloud||
+|118690005|actions||
+
 
 
 ### <a name="BKMK_ConnectionParameters"></a> ConnectionParameters
@@ -128,7 +155,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
 |LogicalName|connectorinternalid|
 |MaxLength|400|
 |RequiredLevel|None|
@@ -367,6 +393,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_ScriptOperations"></a> ScriptOperations
+
+|Property|Value|
+|--------|-----|
+|Description|A list of operations to which the custom code will apply to.|
+|DisplayName|ScriptOperations|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|scriptoperations|
+|MaxLength|500000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -456,6 +498,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [CustomCodeBlob_Name](#BKMK_CustomCodeBlob_Name)
 - [IconBlob_Timestamp](#BKMK_IconBlob_Timestamp)
 - [IconBlob_URL](#BKMK_IconBlob_URL)
 - [IconBlobId](#BKMK_IconBlobId)
@@ -471,6 +514,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -633,6 +677,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_CustomCodeBlob_Name"></a> CustomCodeBlob_Name
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|customcodeblob_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_IconBlob_Timestamp"></a> IconBlob_Timestamp
 
 **Added by**: Active Solution Solution
@@ -699,10 +761,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -884,12 +946,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -987,7 +1067,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [connector_SyncErrors](syncerror.md#BKMK_connector_SyncErrors) Many-To-One relationship.
+Same as the [connector_SyncErrors](syncerror.md#BKMK_connector_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1004,7 +1084,7 @@ Same as syncerror table [connector_SyncErrors](syncerror.md#BKMK_connector_SyncE
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [connector_DuplicateMatchingRecord](duplicaterecord.md#BKMK_connector_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [connector_DuplicateMatchingRecord](duplicaterecord.md#BKMK_connector_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1021,7 +1101,7 @@ Same as duplicaterecord table [connector_DuplicateMatchingRecord](duplicaterecor
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [connector_DuplicateBaseRecord](duplicaterecord.md#BKMK_connector_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [connector_DuplicateBaseRecord](duplicaterecord.md#BKMK_connector_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1038,7 +1118,7 @@ Same as duplicaterecord table [connector_DuplicateBaseRecord](duplicaterecord.md
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [connector_AsyncOperations](asyncoperation.md#BKMK_connector_AsyncOperations) Many-To-One relationship.
+Same as the [connector_AsyncOperations](asyncoperation.md#BKMK_connector_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1055,7 +1135,7 @@ Same as asyncoperation table [connector_AsyncOperations](asyncoperation.md#BKMK_
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [connector_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_connector_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [connector_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_connector_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1072,7 +1152,7 @@ Same as mailboxtrackingfolder table [connector_MailboxTrackingFolders](mailboxtr
 
 **Added by**: System Solution Solution
 
-Same as processsession table [connector_ProcessSession](processsession.md#BKMK_connector_ProcessSession) Many-To-One relationship.
+Same as the [connector_ProcessSession](processsession.md#BKMK_connector_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1089,7 +1169,7 @@ Same as processsession table [connector_ProcessSession](processsession.md#BKMK_c
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [connector_BulkDeleteFailures](bulkdeletefailure.md#BKMK_connector_BulkDeleteFailures) Many-To-One relationship.
+Same as the [connector_BulkDeleteFailures](bulkdeletefailure.md#BKMK_connector_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1106,7 +1186,7 @@ Same as bulkdeletefailure table [connector_BulkDeleteFailures](bulkdeletefailure
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [connector_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_connector_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [connector_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_connector_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1123,7 +1203,7 @@ Same as principalobjectattributeaccess table [connector_PrincipalObjectAttribute
 
 **Added by**: Power Platform Connection References Solution
 
-Same as connectionreference table [connector_connectionreference](connectionreference.md#BKMK_connector_connectionreference) Many-To-One relationship.
+Same as the [connector_connectionreference](connectionreference.md#BKMK_connector_connectionreference) many-to-one relationship for the [connectionreference](connectionreference.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1154,46 +1234,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connector_createdby](systemuser.md#BKMK_lk_connector_createdby) One-To-Many relationship.
+See the [lk_connector_createdby](systemuser.md#BKMK_lk_connector_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connector_createdonbehalfby"></a> lk_connector_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connector_createdonbehalfby](systemuser.md#BKMK_lk_connector_createdonbehalfby) One-To-Many relationship.
+See the [lk_connector_createdonbehalfby](systemuser.md#BKMK_lk_connector_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connector_modifiedby"></a> lk_connector_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connector_modifiedby](systemuser.md#BKMK_lk_connector_modifiedby) One-To-Many relationship.
+See the [lk_connector_modifiedby](systemuser.md#BKMK_lk_connector_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connector_modifiedonbehalfby"></a> lk_connector_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connector_modifiedonbehalfby](systemuser.md#BKMK_lk_connector_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_connector_modifiedonbehalfby](systemuser.md#BKMK_lk_connector_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_connector"></a> user_connector
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_connector](systemuser.md#BKMK_user_connector) One-To-Many relationship.
+See the [user_connector](systemuser.md#BKMK_user_connector) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_connector"></a> team_connector
 
 **Added by**: System Solution Solution
 
-See team Table [team_connector](team.md#BKMK_team_connector) One-To-Many relationship.
+See the [team_connector](team.md#BKMK_team_connector) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_connector"></a> business_unit_connector
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_connector](businessunit.md#BKMK_business_unit_connector) One-To-Many relationship.
+See the [business_unit_connector](businessunit.md#BKMK_business_unit_connector) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.connector?text=connector EntityType" />

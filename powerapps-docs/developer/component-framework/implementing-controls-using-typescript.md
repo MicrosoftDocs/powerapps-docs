@@ -1,14 +1,15 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.custom: "intro-internal"
-ms.topic: "index-page"
+ms.topic: article
 ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Create your first component 
@@ -36,9 +37,12 @@ For this tutorial you need install the following components:
 1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the Add to PATH option is select)
 1. [node.js](https://nodejs.org/en/download/) (LTS version is recommended)
 1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either the Visual Studio Code extension or the MSI installer)
-1. One of the following:
-   - [Visual Studio 2019 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). Select at minimum the workload `.NET build tools`.
-   - [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Select at minimum the workload `.NET build tools`.
+1. .NET Build tools by installing one of the following: (At minimum select the workload `.NET build tools`.)
+   - Visual Studio 2022
+      - [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). 
+      - [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022).
+   - Visual Studio 2019
+      - [Visual Studio 2019 downloads](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2019-and-other-products).
 
 > [!NOTE]
 > You may prefer to use the [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild` you would use `dotnet build`.
@@ -59,7 +63,7 @@ To create a new project:
    
 1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
    
-1. At the terminal prompt, create a new component project by passing basic parameters using the command.
+1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
@@ -73,6 +77,12 @@ To create a new project:
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
+1. After npm install, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+   ```
+   npm run refreshTypes
+   ```
+ 
+   
 ## Implementing manifest
 
 The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. More information: [Manifest](manifest-schema-reference/manifest.md).
@@ -123,13 +133,13 @@ Make changes to the predefined manifest file, as shown here:
      <?xml version="1.0" encoding="utf-8" ?>
      <manifest>
        <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
-     		<type-group name="numbers">
-     			<type>Whole.None</type>
-     			<type>Currency</type>
-     			<type>FP</type>
-     			<type>Decimal</type>
-     		</type-group>
-     		<property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+           <type-group name="numbers">
+              <type>Whole.None</type>
+              <type>Currency</type>
+              <type>FP</type>
+              <type>Decimal</type>
+           </type-group>
+           <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
          <resources>
            <code path="index.ts" order="1" />
            <css path="css/LinearInputControl.css" order="1" />
@@ -151,70 +161,70 @@ The next step after implementing the manifest file is to implement the component
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
 export class LinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-	private _value: number;
-	private _notifyOutputChanged: () => void;
-	private labelElement: HTMLLabelElement;
-	private inputElement: HTMLInputElement;
-	private _container: HTMLDivElement;
-	private _context: ComponentFramework.Context<IInputs>;
-	private _refreshData: EventListenerOrEventListenerObject;
+   private _value: number;
+   private _notifyOutputChanged: () => void;
+   private labelElement: HTMLLabelElement;
+   private inputElement: HTMLInputElement;
+   private _container: HTMLDivElement;
+   private _context: ComponentFramework.Context<IInputs>;
+   private _refreshData: EventListenerOrEventListenerObject;
 
-	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement): void {
-		this._context = context;
-		this._container = document.createElement("div");
-		this._notifyOutputChanged = notifyOutputChanged;
-		this._refreshData = this.refreshData.bind(this);
+   public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement): void {
+      this._context = context;
+      this._container = document.createElement("div");
+      this._notifyOutputChanged = notifyOutputChanged;
+      this._refreshData = this.refreshData.bind(this);
 
-		// creating HTML elements for the input type range and binding it to the function which refreshes the control data
-		this.inputElement = document.createElement("input");
-		this.inputElement.setAttribute("type", "range");
-		this.inputElement.addEventListener("input", this._refreshData);
+      // creating HTML elements for the input type range and binding it to the function which refreshes the control data
+      this.inputElement = document.createElement("input");
+      this.inputElement.setAttribute("type", "range");
+      this.inputElement.addEventListener("input", this._refreshData);
 
-		//setting the max and min values for the control.
-		this.inputElement.setAttribute("min", "1");
-		this.inputElement.setAttribute("max", "1000");
-		this.inputElement.setAttribute("class", "linearslider");
-		this.inputElement.setAttribute("id", "linearrangeinput");
+      //setting the max and min values for the control.
+      this.inputElement.setAttribute("min", "1");
+      this.inputElement.setAttribute("max", "1000");
+      this.inputElement.setAttribute("class", "linearslider");
+      this.inputElement.setAttribute("id", "linearrangeinput");
 
-		// creating a HTML label element that shows the value that is set on the linear range control
-		this.labelElement = document.createElement("label");
-		this.labelElement.setAttribute("class", "LinearRangeLabel");
-		this.labelElement.setAttribute("id", "lrclabel");
+      // creating a HTML label element that shows the value that is set on the linear range control
+      this.labelElement = document.createElement("label");
+      this.labelElement.setAttribute("class", "LinearRangeLabel");
+      this.labelElement.setAttribute("id", "lrclabel");
 
-		// retrieving the latest value from the control and setting it to the HTMl elements.
-		this._value = context.parameters.controlValue.raw!;
-		this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
-		this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
+      // retrieving the latest value from the control and setting it to the HTMl elements.
+      this._value = context.parameters.controlValue.raw!;
+      this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
+      this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
 
-		// appending the HTML elements to the control's HTML container element.
-		this._container.appendChild(this.inputElement);
-		this._container.appendChild(this.labelElement);
-		container.appendChild(this._container);
-	}
+      // appending the HTML elements to the control's HTML container element.
+      this._container.appendChild(this.inputElement);
+      this._container.appendChild(this.labelElement);
+      container.appendChild(this._container);
+   }
 
-	public refreshData(evt: Event): void {
-		this._value = (this.inputElement.value as any) as number;
-		this.labelElement.innerHTML = this.inputElement.value;
-		this._notifyOutputChanged();
-	}
+   public refreshData(evt: Event): void {
+      this._value = (this.inputElement.value as any) as number;
+      this.labelElement.innerHTML = this.inputElement.value;
+      this._notifyOutputChanged();
+   }
 
-	public updateView(context: ComponentFramework.Context<IInputs>): void {
-		// storing the latest context from the control.
-		this._value = context.parameters.controlValue.raw!;
-		this._context = context;
-		this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
-		this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
-	}
+   public updateView(context: ComponentFramework.Context<IInputs>): void {
+      // storing the latest context from the control.
+      this._value = context.parameters.controlValue.raw!;
+      this._context = context;
+      this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
+      this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
+   }
 
-	public getOutputs(): IOutputs {
-		return {
-			controlValue: this._value
-		};
-	}
+   public getOutputs(): IOutputs {
+      return {
+         controlValue: this._value
+      };
+   }
 
-	public destroy(): void {
-		this.inputElement.removeEventListener("input", this._refreshData);
-	}
+   public destroy(): void {
+      this.inputElement.removeEventListener("input", this._refreshData);
+   }
 }
 ```
 
@@ -233,62 +243,62 @@ Developers and app makers can define their styling to represent their code compo
 
     ```CSS
     .SampleNamespace\.LinearInputControl input[type=range].linearslider {   
-    	margin: 1px 0;   
-    	background:transparent;
-    	-webkit-appearance:none;
-    	width:100%;padding:0;
-    	height:24px;
-    	-webkit-tap-highlight-color:transparent
+       margin: 1px 0;   
+       background:transparent;
+       -webkit-appearance:none;
+       width:100%;padding:0;
+       height:24px;
+       -webkit-tap-highlight-color:transparent
     }
     .SampleNamespace\.LinearInputControl input[type=range].linearslider:focus {
-    	outline: none;
+       outline: none;
     }
     .SampleNamespace\.LinearInputControl input[type=range].linearslider::-webkit-slider-runnable-track {   
-    	background: #666;
-    	height:2px;
-    	cursor:pointer
+       background: #666;
+       height:2px;
+       cursor:pointer
     }   
     .SampleNamespace\.LinearInputControl input[type=range].linearslider::-webkit-slider-thumb {   
-    	background: #666;   
-    	border:0 solid #f00;
-    	height:24px;
-    	width:10px;
-    	border-radius:48px;
-    	cursor:pointer;
-    	opacity:1;
-    	-webkit-appearance:none;
-    	margin-top:-12px
+       background: #666;   
+       border:0 solid #f00;
+       height:24px;
+       width:10px;
+       border-radius:48px;
+       cursor:pointer;
+       opacity:1;
+       -webkit-appearance:none;
+       margin-top:-12px
     }    
     .SampleNamespace\.LinearInputControl input[type=range].linearslider::-moz-range-track {   
-    	background: #666;   
-    	height:2px;
-    	cursor:pointer  
+       background: #666;   
+       height:2px;
+       cursor:pointer  
     }   
     .SampleNamespace\.LinearInputControl input[type=range].linearslider::-moz-range-thumb {   
-    	background: #666;   
-    	border:0 solid #f00;
-    	height:24px;
-    	width:10px;
-    	border-radius:48px;
-    	cursor:pointer;
-    	opacity:1;
-    	-webkit-appearance:none;
-    	margin-top:-12px
+       background: #666;   
+       border:0 solid #f00;
+       height:24px;
+       width:10px;
+       border-radius:48px;
+       cursor:pointer;
+       opacity:1;
+       -webkit-appearance:none;
+       margin-top:-12px
     }   
     .SampleNamespace\.LinearInputControl input[type=range].linearslider::-ms-track {   
-    	background: #666;   
-    	height:2px;
-    	cursor:pointer  
+       background: #666;   
+       height:2px;
+       cursor:pointer  
     }    
     .SampleNamespace\.LinearInputControl input[type=range].linearslider::-ms-thumb {   
-    	background: #666;   
-    	border:0 solid #f00;
-    	height:24px;
-    	width:10px;
-    	border-radius:48px;
-    	cursor:pointer;
-    	opacity:1;
-    	-webkit-appearance:none;
+       background: #666;   
+       border:0 solid #f00;
+       height:24px;
+       width:10px;
+       border-radius:48px;
+       cursor:pointer;
+       opacity:1;
+       -webkit-appearance:none;
     }
     ```
     
@@ -334,7 +344,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
 1. Create a new folder **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
 
-2. Create a new solution project in the **LinearInputControl** folder using the following command:
+2. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
 
    ```CLI
      pac solution init --publisher-name Samples --publisher-prefix samples 
@@ -352,7 +362,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
     > [!NOTE]
     >
-    > The path provided here is relate to the current **solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
+    > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
 
 4. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
 
@@ -372,8 +382,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    ```
 
    > [!NOTE]
-   If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`. Add `MSBuild.exe/dotnet.exe` in Path environment variable or use `Developer Command Prompt for Visual Studio Code`, you must install either [Visual Studio 2019 for Windows & Mac](https://visualstudio.microsoft.com/downloads/) or [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) (make sure to select the `.NET build tools` workload).
-
+   > If you receive the error `Missing required tool: MSBuild.exe/dotnet.exe`. Add `MSBuild.exe/dotnet.exe` in Path environment variable or use `Developer Command Prompt for Visual Studio Code`. As mentioned in [Prerequisites](#prerequisites), you must install .NET build tools.
    > [!TIP]
    > You will see the message *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Dataverse and run the solution checker.
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).

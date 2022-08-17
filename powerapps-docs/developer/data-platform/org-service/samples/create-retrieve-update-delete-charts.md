@@ -1,31 +1,30 @@
 ---
-title: " Sample: Create, retrieve, update, and delete charts(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Create, retrieve, update, and delete charts ( Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create, retrieve, update, and delete an user-owned visualizations." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/17/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: mspilde
+ms.author: mspilde
+manager: lwelicki
+ms.reviewer: jdaly
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
-# Create, retrieve, update, and delete a chart
-
-
+# Sample: Create, retrieve, update, and delete a chart
 
 This sample shows how to create, retrieve, update, and delete an user-owned visualization using the following methods:
 
-- [IOrganizationService.Create](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9)
-- [IOrganizationService.Retrieve](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve?view=dynamics-general-ce-9)
-- [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dynamics-general-ce-9)
-- [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete?view=dynamics-general-ce-9)
+- [IOrganizationService.Create](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create)
+- [IOrganizationService.Retrieve](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve)
+- [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
+- [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart).
 
@@ -52,7 +51,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. The `presentationXml` method sets the presentation XML string. 
 2. The `dataXml` method sets the data XML string.
-3. The `newUserOwnedVisualization` method creates the visualization table instance.
+3. The `newUserOwnedVisualization` method creates the visualization record.
 4. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
 5. The `newDataXml` method updates the name and the data description string.
 

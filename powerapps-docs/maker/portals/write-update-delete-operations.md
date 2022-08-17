@@ -30,6 +30,9 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 
 ## Create a record in a table
 
+> [!NOTE]
+> When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](./web-api-overview.md#using-entitysetname), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
+
 ### Basic create
 
 <table>

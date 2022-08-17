@@ -1,8 +1,8 @@
 ---
-title: "Queue table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Queue table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Queue table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -188,10 +188,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Only specific Emails|
-|0|All incoming Emails|
+|1|Only specific Emails||
+|0|All incoming Emails||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -482,6 +482,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PrimaryUserIdName](#BKMK_PrimaryUserIdName)
@@ -507,10 +508,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -775,10 +776,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -798,10 +799,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Fax Queue|
-|0|Non-fax Queue|
+|1|Fax Queue||
+|0|Non-fax Queue||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -1012,12 +1013,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the queue.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1155,7 +1172,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_queue_system_user"></a> queue_system_user
 
-Same as systemuser table [queue_system_user](systemuser.md#BKMK_queue_system_user) Many-To-One relationship.
+Same as the [queue_system_user](systemuser.md#BKMK_queue_system_user) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1170,7 +1187,7 @@ Same as systemuser table [queue_system_user](systemuser.md#BKMK_queue_system_use
 
 ### <a name="BKMK_Queue_AsyncOperations"></a> Queue_AsyncOperations
 
-Same as asyncoperation table [Queue_AsyncOperations](asyncoperation.md#BKMK_Queue_AsyncOperations) Many-To-One relationship.
+Same as the [Queue_AsyncOperations](asyncoperation.md#BKMK_Queue_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1185,7 +1202,7 @@ Same as asyncoperation table [Queue_AsyncOperations](asyncoperation.md#BKMK_Queu
 
 ### <a name="BKMK_queue_principalobjectattributeaccess"></a> queue_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [queue_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queue_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [queue_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_queue_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1200,7 +1217,7 @@ Same as principalobjectattributeaccess table [queue_principalobjectattributeacce
 
 ### <a name="BKMK_Queue_DuplicateMatchingRecord"></a> Queue_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Queue_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Queue_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Queue_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Queue_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1215,7 +1232,7 @@ Same as duplicaterecord table [Queue_DuplicateMatchingRecord](duplicaterecord.md
 
 ### <a name="BKMK_Queue_SyncErrors"></a> Queue_SyncErrors
 
-Same as syncerror table [Queue_SyncErrors](syncerror.md#BKMK_Queue_SyncErrors) Many-To-One relationship.
+Same as the [Queue_SyncErrors](syncerror.md#BKMK_Queue_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1230,7 +1247,7 @@ Same as syncerror table [Queue_SyncErrors](syncerror.md#BKMK_Queue_SyncErrors) M
 
 ### <a name="BKMK_Queue_Email_EmailSender"></a> Queue_Email_EmailSender
 
-Same as email table [Queue_Email_EmailSender](email.md#BKMK_Queue_Email_EmailSender) Many-To-One relationship.
+Same as the [Queue_Email_EmailSender](email.md#BKMK_Queue_Email_EmailSender) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1245,7 +1262,7 @@ Same as email table [Queue_Email_EmailSender](email.md#BKMK_Queue_Email_EmailSen
 
 ### <a name="BKMK_Queue_DuplicateBaseRecord"></a> Queue_DuplicateBaseRecord
 
-Same as duplicaterecord table [Queue_DuplicateBaseRecord](duplicaterecord.md#BKMK_Queue_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Queue_DuplicateBaseRecord](duplicaterecord.md#BKMK_Queue_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1260,7 +1277,7 @@ Same as duplicaterecord table [Queue_DuplicateBaseRecord](duplicaterecord.md#BKM
 
 ### <a name="BKMK_queue_activity_parties"></a> queue_activity_parties
 
-Same as activityparty table [queue_activity_parties](activityparty.md#BKMK_queue_activity_parties) Many-To-One relationship.
+Same as the [queue_activity_parties](activityparty.md#BKMK_queue_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1275,7 +1292,7 @@ Same as activityparty table [queue_activity_parties](activityparty.md#BKMK_queue
 
 ### <a name="BKMK_queue_team"></a> queue_team
 
-Same as team table [queue_team](team.md#BKMK_queue_team) Many-To-One relationship.
+Same as the [queue_team](team.md#BKMK_queue_team) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1290,7 +1307,7 @@ Same as team table [queue_team](team.md#BKMK_queue_team) Many-To-One relationshi
 
 ### <a name="BKMK_queue_entries"></a> queue_entries
 
-Same as queueitem table [queue_entries](queueitem.md#BKMK_queue_entries) Many-To-One relationship.
+Same as the [queue_entries](queueitem.md#BKMK_queue_entries) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1305,7 +1322,7 @@ Same as queueitem table [queue_entries](queueitem.md#BKMK_queue_entries) Many-To
 
 ### <a name="BKMK_Queue_ProcessSessions"></a> Queue_ProcessSessions
 
-Same as processsession table [Queue_ProcessSessions](processsession.md#BKMK_Queue_ProcessSessions) Many-To-One relationship.
+Same as the [Queue_ProcessSessions](processsession.md#BKMK_Queue_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1320,7 +1337,7 @@ Same as processsession table [Queue_ProcessSessions](processsession.md#BKMK_Queu
 
 ### <a name="BKMK_queue_PostFollows"></a> queue_PostFollows
 
-Same as postfollow table [queue_PostFollows](postfollow.md#BKMK_queue_PostFollows) Many-To-One relationship.
+Same as the [queue_PostFollows](postfollow.md#BKMK_queue_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1335,7 +1352,7 @@ Same as postfollow table [queue_PostFollows](postfollow.md#BKMK_queue_PostFollow
 
 ### <a name="BKMK_mailbox_regarding_queue"></a> mailbox_regarding_queue
 
-Same as mailbox table [mailbox_regarding_queue](mailbox.md#BKMK_mailbox_regarding_queue) Many-To-One relationship.
+Same as the [mailbox_regarding_queue](mailbox.md#BKMK_mailbox_regarding_queue) many-to-one relationship for the [mailbox](mailbox.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1350,7 +1367,7 @@ Same as mailbox table [mailbox_regarding_queue](mailbox.md#BKMK_mailbox_regardin
 
 ### <a name="BKMK_Queue_BulkDeleteFailures"></a> Queue_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Queue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Queue_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Queue_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Queue_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1367,7 +1384,7 @@ Same as bulkdeletefailure table [Queue_BulkDeleteFailures](bulkdeletefailure.md#
 
 **Added by**: msft_ActivitiesInfra_Extensions Solution
 
-Same as email table [email_acceptingentity_queue](email.md#BKMK_email_acceptingentity_queue) Many-To-One relationship.
+Same as the [email_acceptingentity_queue](email.md#BKMK_email_acceptingentity_queue) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1399,43 +1416,43 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_queue_defaultmailbox_mailbox"></a> queue_defaultmailbox_mailbox
 
-See mailbox Table [queue_defaultmailbox_mailbox](mailbox.md#BKMK_queue_defaultmailbox_mailbox) One-To-Many relationship.
+See the [queue_defaultmailbox_mailbox](mailbox.md#BKMK_queue_defaultmailbox_mailbox) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
 
 ### <a name="BKMK_business_unit_queues"></a> business_unit_queues
 
-See businessunit Table [business_unit_queues](businessunit.md#BKMK_business_unit_queues) One-To-Many relationship.
+See the [business_unit_queues](businessunit.md#BKMK_business_unit_queues) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_business_unit_queues2"></a> business_unit_queues2
 
-See businessunit Table [business_unit_queues2](businessunit.md#BKMK_business_unit_queues2) One-To-Many relationship.
+See the [business_unit_queues2](businessunit.md#BKMK_business_unit_queues2) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_lk_queue_modifiedonbehalfby"></a> lk_queue_modifiedonbehalfby
 
-See systemuser Table [lk_queue_modifiedonbehalfby](systemuser.md#BKMK_lk_queue_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_queue_modifiedonbehalfby](systemuser.md#BKMK_lk_queue_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_queues"></a> organization_queues
 
-See organization Table [organization_queues](organization.md#BKMK_organization_queues) One-To-Many relationship.
+See the [organization_queues](organization.md#BKMK_organization_queues) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_queuebase_createdby"></a> lk_queuebase_createdby
 
-See systemuser Table [lk_queuebase_createdby](systemuser.md#BKMK_lk_queuebase_createdby) One-To-Many relationship.
+See the [lk_queuebase_createdby](systemuser.md#BKMK_lk_queuebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_queuebase_modifiedby"></a> lk_queuebase_modifiedby
 
-See systemuser Table [lk_queuebase_modifiedby](systemuser.md#BKMK_lk_queuebase_modifiedby) One-To-Many relationship.
+See the [lk_queuebase_modifiedby](systemuser.md#BKMK_lk_queuebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Queue"></a> TransactionCurrency_Queue
 
-See transactioncurrency Table [TransactionCurrency_Queue](transactioncurrency.md#BKMK_TransactionCurrency_Queue) One-To-Many relationship.
+See the [TransactionCurrency_Queue](transactioncurrency.md#BKMK_TransactionCurrency_Queue) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_queue_primary_user"></a> queue_primary_user
 
-See systemuser Table [queue_primary_user](systemuser.md#BKMK_queue_primary_user) One-To-Many relationship.
+See the [queue_primary_user](systemuser.md#BKMK_queue_primary_user) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_queue_createdonbehalfby"></a> lk_queue_createdonbehalfby
 
-See systemuser Table [lk_queue_createdonbehalfby](systemuser.md#BKMK_lk_queue_createdonbehalfby) One-To-Many relationship.
+See the [lk_queue_createdonbehalfby](systemuser.md#BKMK_lk_queue_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -1468,6 +1485,6 @@ IntersectEntityName: queuemembership<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.queue?text=queue EntityType" />

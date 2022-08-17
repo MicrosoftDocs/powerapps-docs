@@ -1,20 +1,20 @@
 ---
 title: "Understand charts: Underlying data and chart representation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 07/15/2021
-ms.reviewer: ""
-
+author: mspilde
+ms.author: mspilde
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-author: "Nkrb" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Understand charts: Underlying data and chart representation
 

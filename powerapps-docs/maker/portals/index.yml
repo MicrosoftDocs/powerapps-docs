@@ -6,9 +6,8 @@ summary: Use Power Apps portals to create external-facing websites that allow us
 metadata:
   title: Power Apps portals documentation
   description: Provides access to highlighted areas within the Power Apps portals documentation
-  services: service
-  
-  ms.subservice: subservice
+  services: service  
+  ms.subservice: portals
   ms.topic: landing-page 
   ms.collection: collection
   author: kumarvivek
@@ -24,16 +23,16 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: Configure the rich text editor control on portals
-            url: component-rte-tutorial.md                 
-          - text: Configure column permissions for portals
-            url: configure/column-permissions.md             
-          - text: Configure Dataverse search in portals (preview)
-            url: configure/dataverse-search.md         
-          - text: Configure choices column for portals
-            url: configure/choices-column.md         
-          - text: Portals as Progressive Web Apps
-            url: progressive-web-apps.md                 
+          - text: Power Pages (preview)
+            url: /power-pages/introduction 
+          - text: Configure a file column on portals (preview)
+            url: configure/file-column.md
+          - text: Manage content security policy
+            url: configure/manage-content-security-policy.md                       
+          - text: Content Delivery Network (preview)
+            url: configure/configure-cdn.md
+          - text: Configure Dataverse search in portals
+            url: configure/search.md  
        - linkListType: reference
          links:
           - text: Latest released version of portals
