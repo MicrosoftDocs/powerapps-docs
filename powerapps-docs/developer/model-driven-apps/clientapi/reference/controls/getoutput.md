@@ -3,9 +3,9 @@ title: control.getOutput (Client API reference)
 description: Includes description and supported parameters for the control.getOutput method.
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 08/16/2022
+ms.date: 08/17/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer

@@ -1,12 +1,11 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
 description: A control represents an HTML element present on the form.
-ms.author: jdaly
+ms.author: aorth
 author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+ms.date: 08/17/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
@@ -153,7 +152,7 @@ These are the methods available for knowledge base search control.
 </table>
 
 >[!NOTE]
->When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can’t be changed. 
+>When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can't be changed. 
 
 ## lookup control type
 
