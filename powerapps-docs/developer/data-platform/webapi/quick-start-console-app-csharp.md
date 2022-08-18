@@ -88,7 +88,7 @@ namespace PowerApps.Samples
             // TODO Specify the Dataverse environment name to connect with.
             string resource = "https://<env-name>.api.<region>.dynamics.com";
 
-            // Azure Active Directory app registration shared by all Power App samples.
+            // Azure Active Directory app registration shared by all Power Apps samples.
             // For your custom apps, you will need to register them with Azure AD yourself.
             // See https://docs.microsoft.com/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory
             var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
@@ -174,7 +174,7 @@ namespace WebAPIQuickStart
             // TODO Specify the Dataverse environment URL to connect with.
             string resource = "https://<env-name>.<region>.dynamics.com";
 
-            // Azure Active Directory app registration shared by all Power App samples.
+            // Azure Active Directory app registration shared by all Power Apps samples.
             // For your custom apps, you will need to register them with Azure AD yourself.
             // See https://docs.microsoft.com/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory
             var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
