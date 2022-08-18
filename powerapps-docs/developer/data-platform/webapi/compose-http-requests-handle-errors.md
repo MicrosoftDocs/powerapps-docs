@@ -71,11 +71,11 @@ As new capabilities are introduced they may conflict with earlier versions. This
   
 |Method|Usage|  
 |------------|-----------|  
-|GET|Use when retrieving data, including calling functions. The expected Status Code for a successful retrieve is 200 OK.|  
-|POST|Use when creating entities or calling actions.|  
-|PATCH|Use when updating entities or performing upsert operations.|  
-|DELETE|Use when deleting entities or individual properties of entities.|  
-|PUT|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. You'll use this when updating table definitions. More information: [Use the Web API with table definitions](use-web-api-metadata.md)|  
+|`GET`|Use when retrieving data, including calling functions. The expected Status Code for a successful retrieve is 200 OK.|  
+|`POST`|Use when creating entities or calling actions.|  
+|`PATCH`|Use when updating entities or performing upsert operations.|  
+|`DELETE`|Use when deleting entities or individual properties of entities.|  
+|`PUT`|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. You'll use this when updating table definitions. More information: [Use the Web API with table definitions](use-web-api-metadata.md)|  
   
 <a name="bkmk_headers"></a>
 
@@ -111,19 +111,19 @@ You can use the [Prefer](https://tools.ietf.org/html/rfc7240) header with the va
 
 |Prefer value |Description |
 |---------|---------|
-|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When this preference is applied to a `POST` request, a successful response will have status `201 Created` . For a `PATCH` request, a successful response will have a status `200 OK.` Without this preference applied, both operations will return status `204 No Content` to reflect that no data is returned in the body of the response by default.|
-|`odata.include-annotations`|Use this preference with the value set to `OData.Community.Display.V1.FormattedValue` to return formatted values with a query. More information:[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)<br /> You can also use this to specify additional error details that can be returned by a plug-in as described in [Include additional details with errors](#include-additional-details-with-errors).<br /> You can filter which annotations you want by including a wildcard character `*`, or you can specify to return all annotations using `Prefer: odata.include-annotations="*"`|
+|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When this preference is applied to a `POST` request, a successful response will have status `201 Created` . For a `PATCH` request, a successful response will have a status `200 OK.` Without this preference applied, both operations will return status `204 No Content` to reflect that no data is returned in the body of the response by default. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
+|`odata.include-annotations`|Use this preference with the value set to `OData.Community.Display.V1.FormattedValue` to return formatted values with a query. More information: [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)<br /> You can also use this to specify additional error details that can be returned by a plug-in as described in [Include additional details with errors](#include-additional-details-with-errors) below.<br /> You can filter which annotations you want by including a wildcard character `*`, or you can specify to return all annotations using `Prefer: odata.include-annotations="*"`|
 |`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber) |
 
 ### Other headers
 
 |Header|Value|Description|
 |---------|---------|---------|
-|`CallerObjectId`|User Azure Active Directory Object Id|Use this header impersonate another user when the caller has the privileges to do so. Set the value to the Azure Active Directory Object Id of the user to impersonate. This data is in the [SystemUser table/entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md)|
-|`If-Match`|`Etag` value<br /> or `*`|Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record.More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) & [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1)<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)|
+|`CallerObjectId`|User Azure Active Directory Object Id|Use this header impersonate another user when the caller has the privileges to do so. Set the value to the Azure Active Directory Object Id of the user to impersonate. This data is in the [SystemUser table/entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md)|
+|`If-Match`|`Etag` value<br /> or `*`|Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) & [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1)<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)|
 |`If-None-Match`|`null`<br /> or `*`|This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) & [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2)|
-|`MSCRM.SolutionUniqueName`|solution unique name|Use this header when you want to create a solution component and have it associated with an unmanaged solution.|
-|`MSCRM.SuppressDuplicateDetection`|`false` |Use this header with the value false to enable duplicate detection when creating or updating a record.More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)|
+|`MSCRM.SolutionUniqueName`|solution unique name|Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)|
+|`MSCRM.SuppressDuplicateDetection`|`false` |Use this header with the value false to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)|
 |`MSCRM.BypassCustomPluginExecution`|`true`|Use this header when you want to by-pass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)|
 
 When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
@@ -165,31 +165,6 @@ Details about errors are included as JSON in the response. Errors will be in thi
  }  
 }  
 ```
-
-> [!IMPORTANT]
-> The structure of the error messages is changing. This change is expected to be deployed to different regions over a period starting in August through October 2020.
-> 
-> Before this change, the errors returned were in this format:
-> 
-> ```json  
-> {  
->  "error":{  
->   "code": "<This code is not related to the http status code and is frequently empty>",  
->   "message": "<A message describing the error>",  
->   "innererror": {  
->    "message": "<A message describing the error, this is frequently the same as the outer message>",  
->    "type": "Microsoft.Crm.CrmHttpException",  
->    "stacktrace": "<Details from the server about where the error occurred>"  
->   }  
->  }  
-> }  
-> ```
-> 
-> We are removing the `innererror` property of the error message. You should remove any code that expects to parse this property.
->
-> The OData [Error Response guidance](https://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793091) states "*The innererror name/value pair SHOULD only be used in development environments in order to guard against potential security concerns around information disclosure.*". To align with this guidance we are removing this property.
-> 
-> If you find that an application you use has a dependency on this property after this change is deployed, you can contact support and request that the change be temporarily removed for your environment. This will provide time for the application developer to make appropriate changes to remove this dependency.
 
 ### Include additional details with errors
 
