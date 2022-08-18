@@ -70,7 +70,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ![Another query using a JOIN.](media/ssms-join-query.PNG)
 
-### Power BI
+### Power BI (General Availability)
 
 You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
 
