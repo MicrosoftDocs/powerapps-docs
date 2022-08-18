@@ -59,7 +59,7 @@ Create and edit tables directly from the app designer.
 
 ### Edit a table for a page
 
-From the **Pages** area in app designer, select **...** to the right of the table name, select **Edit**, and then select **Edit**.
+From the **Pages** area in app designer, select **...** to the right of the table name, and then select **Edit**.
 :::image type="content" source="media/edit-table-app-designer.png" alt-text="Edit a table for a page in app designer":::
 
 The table designer opens for you to make changes to the table.
