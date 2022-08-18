@@ -65,7 +65,7 @@ From the **Pages** area in app designer, select **...** to the right of the tabl
 The table designer opens for you to make changes to the table.
 :::image type="content" source="media/table-designer-app-designer.png" alt-text="Table designer for edit a table in app designer":::
 
-To delete the table, select **...** to the right of the table name, and then select **Remove**.
+To delete the table, **Close** the table hub, select **...** to the right of the table name, and then select **Remove**.
 
 ## Remove a page
 
