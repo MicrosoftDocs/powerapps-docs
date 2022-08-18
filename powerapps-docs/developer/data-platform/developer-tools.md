@@ -1,9 +1,9 @@
 ---
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
-ms.date: 04/01/2022
+ms.date: 08/17/2022
 ms.reviewer: phecke
-ms.topic: "article"
+ms.topic: article
 author: shmcarth # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: shmcarth # MSFT alias of Microsoft employees only
@@ -108,16 +108,5 @@ More information: [Get started with virtual tables](/dynamics365/customer-engage
 |---------|---------|
 |Microsoft.Xrm.Sdk.Data.dll|[Microsoft.Xrm.Sdk.Data](/dotnet/api/microsoft.xrm.sdk.data)<br />[Microsoft.Xrm.Sdk.Data.CodeGen](/api/microsoft.xrm.sdk.data.codegen)<br />[Microsoft.Xrm.Sdk.Data.Converters](/dotnet/api/microsoft.xrm.sdk.data.converters)<br />[Microsoft.Xrm.Sdk.Data.Exceptions](/dotnet/api/microsoft.xrm.sdk.data.exceptions)<br />[Microsoft.Xrm.Sdk.Data.Expressions](/dotnet/api/microsoft.xrm.sdk.data.expressions)<br />[Microsoft.Xrm.Sdk.Data.Infra](/dotnet/api/microsoft.xrm.sdk.data.infra)<br />[Microsoft.Xrm.Sdk.Data.Mappings](/dotnet/api/microsoft.xrm.sdk.data.mappings)|
 
-### Extend Outlook Client
-
-Use this assembly to interact with Microsoft Dynamics 365 for Outlook and Microsoft Dataverse for Microsoft Office Outlook with Offline Access.
-
-More information: [Extend Dynamics 365 for Outlook](/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook)
-
-**NuGet Package**: [Microsoft.CrmSdk.Outlook](https://www.nuget.org/packages/Microsoft.CrmSdk.Outlook/)
-
-|Assembly|Namespace|
-|---------|---------|
-|Microsoft.Crm.Outlook.Sdk.dll|[Microsoft.Crm.Outlook.Sdk](/dotnet/api/microsoft.crm.outlook.sdk)|
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
