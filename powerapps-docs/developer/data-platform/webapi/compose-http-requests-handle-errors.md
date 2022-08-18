@@ -41,7 +41,7 @@ The following table describes the parts of the URL:
 |Protocol| `https://`|
 |Environment Name|The unique name that applies to your environment. If your company name is *Contoso*, then it may be `contoso`.|
 |Region|Your environment will usually be available in a data center that is close to you geographically. For North America, it is `crm`. For South America `crm2`, For Japan `crm7`. For the complete list, see [Datacenter regions](/power-platform/admin/new-datacenter-regions)|
-|Base URL|`dynamics.com.`|
+|Base URL|This is usually `dynamics.com.`, but some data centers use different values. See [Datacenter regions](/power-platform/admin/new-datacenter-regions)|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The current version is `v9.2`.|
 |Resource|The `EntitySetName` of the table, or the name of the function or action you want to use.|
@@ -83,7 +83,7 @@ As new capabilities are introduced they may conflict with earlier versions. This
 
 All HTTP requests should include at least the following headers.  
   
-```
+```http
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -92,13 +92,13 @@ If-None-Match: null
 
 Although the OData protocol allows for both JSON and ATOM format, the Web API only supports JSON. Every request should include the `Accept` header value of `application/json`, even when no response body is expected. Any error returned in the response will be returned as JSON. While your code should work even if this header isn't included, we recommend including it as a best practice  
   
-The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the Maximum version to apply in your code. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of `4.0`.  
+The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the maximum version to apply in your code. Use both `OData-Version` and `OData-MaxVersion` headers set to a value of `4.0`.  
  
-Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
+Queries which expand collection-valued navigation properties may return cached data for those properties that don't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
 
 Every request that includes JSON data in the request body must include a `Content-Type` header with a value of `application/json`.  
   
-```  
+```http
 Content-Type: application/json  
 ```  
   
@@ -123,7 +123,7 @@ You can use the [Prefer](https://tools.ietf.org/html/rfc7240) header with the va
 |`If-Match`|`Etag` value<br /> or `*`|Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) & [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1)<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)|
 |`If-None-Match`|`null`<br /> or `*`|This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) & [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2)|
 |`MSCRM.SolutionUniqueName`|solution unique name|Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)|
-|`MSCRM.SuppressDuplicateDetection`|`false` |Use this header with the value false to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)|
+|`MSCRM.SuppressDuplicateDetection`|`false` |Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)|
 |`MSCRM.BypassCustomPluginExecution`|`true`|Use this header when you want to by-pass custom plug-in code and the caller has the `prvBypassCustomPlugins` privilege. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)|
 
 When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
