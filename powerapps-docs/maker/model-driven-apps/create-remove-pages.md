@@ -49,7 +49,7 @@ Create and edit tables directly from the app designer.
 
 ### Create a table for a page
 
-1. In the model-driven app designer, select Add page, select **Table based view and form** as the page type, and then select **Next**.
+1. In the model-driven app designer, select **Add page**, select **Table based view and form** as the page type, and then select **Next**.
 1. Select **Create new table**. If your table is already created select it from the list.
 1. If you selected **Create a new table**: 
    - Enter the table a name in the **Display name** field.
