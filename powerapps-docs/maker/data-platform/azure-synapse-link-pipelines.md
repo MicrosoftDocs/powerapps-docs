@@ -40,28 +40,12 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 5. Create Azure SQL DB with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
 6. Create and configure Azure Integration Runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
 
+## How to use this solution template in Synapse Workspace
 
-<!--Start revising here-->
-## Create a data flow with and connect to your Dataverse data with the Workspace DB connector
+1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Data** > **Azure Synapse Link**, and then select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
+   :::image type="content" source="media/go-to-workspace.png" alt-text="Go to Azure Synapse Workspace":::
 
-> [!NOTE]
-> Azure Synapse Link for Dataverse does not support the use of dedicated SQL pools at this time.
-
-1. In Power Apps, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
-
-    ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
-
-2. Select **Develop** > **+** > **Data flow** to create a new data flow.
-
-    :::image type="content" source="media/develop-data-flow.png" alt-text="Develop data flow":::
-
-3. Select **Add Source** from the workspace area and set the **Source type** to **Workspace DB**. Select the Dataverse database and a table to use in the pipeline.
-
-    :::image type="content" source="media/workspace-db-connector.png" alt-text="Workspace DB Connector":::
-
-4. Optionally, add other transformation steps.
-
-5. Add a sink to your data flow.
+1. 
 
 ## Create and run an Azure Synapse pipeline
 
