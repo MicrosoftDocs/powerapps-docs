@@ -1,5 +1,5 @@
 ---
-title: Auto App Updates (Preview) | Microsoft Docs
+title: Auto app updates (rreview) | Microsoft Docs
 description: Learn about the latest auto update feature for apps.
 ms.date: 08/05/2022
 author: angela21k
@@ -16,11 +16,15 @@ contributors:
   - JimDaly
 ---
 
-# Auto App Updates (Preview)
+# Auto app updates (Preview)
 
-[!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-App Auto Update is a new feature in public preview that allows automatic updates of applications installed through AppSource. This feature helps both publishers and customers keep software up to date in a simple and controlled way with minimal administrative overhead.  
+Auto app update feature allows automatic updates of applications installed through AppSource. This feature helps both publishers and customers keep software up to date in a simple and controlled way with minimal administrative overhead. 
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Automatic updates in the preview will be limited to:  
 
@@ -30,7 +34,7 @@ Automatic updates in the preview will be limited to: 
 
 - **Dark hours only**: To further minimize impact, automatic updates will only happen during dark hours defined by either the customer or at geo level.  
 
-## Enabling Auto App Update  
+## Enabling auto app update  
 
 > [!NOTE]
 > Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers.
