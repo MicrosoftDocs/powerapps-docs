@@ -1,5 +1,5 @@
 ---
-title: Auto app updates (rreview) | Microsoft Docs
+title: Auto app updates (preview) | Microsoft Docs
 description: Learn about the latest auto update feature for apps.
 ms.date: 08/05/2022
 author: angela21k
@@ -16,7 +16,7 @@ contributors:
   - JimDaly
 ---
 
-# Auto app updates (Preview)
+# Auto app updates (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
