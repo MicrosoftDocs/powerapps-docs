@@ -73,7 +73,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
    :::image type="content" source="media/ADLSG2-create-trigger.png" alt-text="Create a trigger":::
 1. Select **Continue** to proceed to the next screen.
 1. On the next screen, the trigger validates the matching files. Select **OK** to create the trigger.
-1. Associate trigger with a pipeline. Go to the pipeline imported earlier, and then select **Add trigger** > **New/Edit**.
+1. Associate the trigger with a pipeline. Go to the pipeline imported earlier, and then select **Add trigger** > **New/Edit**.
    :::image type="content" source="media/ADLSG2-add-trigger-pipeline.png" alt-text="Create a trigger for the pipeline.":::
 1. Select the trigger in the earlier step, and then select **Continue** to proceed to the next screen where the trigger validates the matching files.
 1. Select **Continue** to proceed to the next screen.
