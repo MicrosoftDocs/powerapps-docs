@@ -20,20 +20,20 @@ search.app:
   - D365CE
 contributors: "sama-zaki"
 ---
-# Copy Dataverse data into Azure SQL using Synapse Link
+# Copy Dataverse data into Azure SQL using Azure Synapse Link
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to run Azure Synapse pipelines to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database utilizing the Workspace DB connector with incremental updates feature enabled in Synapse Link.
+Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to run Azure Synapse pipelines to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database utilizing the Workspace DB connector with incremental updates feature enabled in Azure Synapse Link.
 
 > [!NOTE]
 > Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
 
 ## Prerequisites
 
-1. Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link with a Synapse workspace. More information: [Prerequisites for an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#prerequisites)
+1. Azure Synapse Link for Dataverse. This guide assumes that you've already met the prerequisites to create an Azure Synapse Link with a Synapse workspace. More information: [Prerequisites for an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#prerequisites)
 2. Create an Azure Synapse Workspace or Azure Data Factory under the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
-3. Create a Synapse Link for Dataverse with the incremental folder update enabled. More information: [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
+3. Create a Azure Synapse Link for Dataverse with the incremental folder update enabled. More information: [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
 4. Microsoft.EventGrid provider needs to be registered for trigger. More information: [Azure portal](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal)
 5. Create Azure SQL DB with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
 6. Create and configure an Azure integration runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
@@ -48,23 +48,23 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 
 ## Use this solution template in Azure Data Factory
 
-1. Go to the Azure Portal and open Azure Data Factory Studio.
+1. Go to the Azure portal and open Azure Data Factory Studio.
 1. Select **Add new resource** > **Pipeline** > **Template gallery**.
 1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the template gallery.
 
 ## How to configure the solution template
 
-1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate Authentication Type. To do this, select **Test connection to validate the connectivity** and then select **Create**.
+1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate Authentication Type. To do this, select **Test connection to validate the connectivity,** and then select **Create**.
 1. Similar to the previous steps, create a linked service to Azure SQL Database where Dataverse data will be synced.
 1. Once **Inputs** are configured, select **Use this template**.
    :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template":::
 
-1. Now a trigger can be added to automate this pipeline, so that the pipeline can always process files when incremental updates are completed periodically. Go to to **Manage** > **Trigger**, and create a trigger using the following properties:
+1. Now a trigger can be added to automate this pipeline, so that the pipeline can always process files when incremental updates are completed periodically. Go to **Manage** > **Trigger**, and create a trigger using the following properties:
    - **Name**: Enter a name for the trigger, such as *triggerModelJson*.
    - **Type**: **Storage events**.
    - **Azure subscription**: Select the subscription that has Azure Data Lake Storage Gen2.
    - **Storage account name**: Select the storage that has Dataverse data.
-   - **Container name**: Select the container created by Synapse link.
+   - **Container name**: Select the container created by Azure Synapse Link.
    - **Blob path ends with**: */model.json*
    - **Event**: **Blob created**.
    - **Ignore empty blobs**: **Yes**.
@@ -100,10 +100,10 @@ To ensure that the trigger fires only when model.json creation is complete, adva
 
 1. Create the filter:
    - **Key**: **subject**
-   - **Operator**: **String does not ends with**
+   - **Operator**: **String does not end with**
    - **Value**: */bobs/model.json*
 
-1. Remove the **CopyBlob** parameter from the list of values.
+1. Remove the **CopyBlob** parameter from **data.api** **Value** array.
 
 1. Select **Save** to deploy the additional filter.
    :::image type="content" source="media/ADLSG2-save-filter.png" alt-text="Save added filter":::
