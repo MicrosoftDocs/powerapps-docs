@@ -10,7 +10,6 @@ ms.topic: "how-to"
 applies_to: 
   - "powerapps"
 author: "JasonHQX"
-ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
@@ -21,7 +20,6 @@ search.app:
   - D365CE
 contributors: "sama-zaki"
 ---
-
 # Copy Dataverse data into Azure SQL using Synapse Link
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -42,24 +40,12 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 
 ## How to use this solution template in Synapse Workspace
 
-1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Data** > **Azure Synapse Link**, and then select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
+1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Data** > **Azure Synapse Link**, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
    :::image type="content" source="media/go-to-workspace.png" alt-text="Go to Azure Synapse Workspace":::
 
-1. 
+1. Select on **Integrate** > **Browse gallery**. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the gallery.
 
-## Create and run an Azure Synapse pipeline
 
-1. Select **Integrate** > **+** > **Pipeline**.
-
-    :::image type="content" source="media/create-synapse-pipeline.png" alt-text="Create Synapse Pipeline":::
-
-2. Expand **Move & Transform**, then drag and drop a **Data flow** activity to the workspace.
-
-3. Under **Settings**, select the name of the data flow created in the previous section.
-
-    :::image type="content" source="media/run-synapse-pipeline.png" alt-text="Run Synapse pipeline":::
-
-4. Run the pipeline by selecting **Debug**. Optionally **Add trigger** to run the pipeline on a schedule.
 
 ### See also
 
