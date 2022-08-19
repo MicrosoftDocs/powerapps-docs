@@ -351,7 +351,7 @@ Link to another help page:
 ```
 
 #### Definition and usage
-The `<a>` tag defines a link, which allows the user to navigate from a help page to a website, or to another help page.
+The [`<a>` tag](https://www.scaler.com/topics/a-tag-in-html/) defines a link, which allows the user to navigate from a help page to a website, or to another help page.
 
 #### Attributes
 
