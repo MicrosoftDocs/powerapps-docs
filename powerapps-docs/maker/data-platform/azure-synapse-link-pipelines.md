@@ -36,16 +36,77 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 3. Create a Synapse Link for Dataverse with the incremental folder update enabled. More information: [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
 4. Microsoft.EventGrid provider needs to be registered for trigger. More information: [Azure portal](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal)
 5. Create Azure SQL DB with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
-6. Create and configure Azure Integration Runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
+6. Create and configure an Azure integration runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
 
-## How to use this solution template in Synapse Workspace
+## Use this solution template in Synapse Workspace
 
 1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Data** > **Azure Synapse Link**, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
    :::image type="content" source="media/go-to-workspace.png" alt-text="Go to Azure Synapse Workspace":::
 
-1. Select on **Integrate** > **Browse gallery**. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the gallery.
+1. Select on **Integrate** > **Browse gallery**.
+1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the integration gallery.
 
+## Use this solution template in Azure Data Factory
 
+1. Go to the Azure Portal and open Azure Data Factory Studio.
+1. Select **Add new resource** > **Pipeline** > **Template gallery**.
+1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the template gallery.
+
+## How to configure the solution template
+
+1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate Authentication Type. To do this, select **Test connection to validate the connectivity** and then select **Create**.
+1. Similar to the previous steps, create a linked service to Azure SQL Database where Dataverse data will be synced.
+1. Once **Inputs** are configured, select **Use this template**.
+   :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template":::
+
+1. Now a trigger can be added to automate this pipeline, so that the pipeline can always process files when incremental updates are completed periodically. Go to to **Manage** > **Trigger**, and create a trigger using the following properties:
+   - **Name**: Enter a name for the trigger, such as *triggerModelJson*.
+   - **Type**: **Storage events**.
+   - **Azure subscription**: Select the subscription that has Azure Data Lake Storage Gen2.
+   - **Storage account name**: Select the storage that has Dataverse data.
+   - **Container name**: Select the container created by Synapse link.
+   - **Blob path ends with**: */model.json*
+   - **Event**: **Blob created**.
+   - **Ignore empty blobs**: **Yes**.
+   - **Start trigger**: Enable **Start trigger on creation**.
+
+   :::image type="content" source="media/ADLSG2-create-trigger.png" alt-text="Create a trigger":::
+1. Select **Continue** to proceed to the next screen.
+1. On the next screen, the trigger validates the matching files. Select **OK** to create the trigger.
+1. Associate trigger with a pipeline. Go to the pipeline imported earlier, and then select **Add trigger** > **New/Edit**.
+   :::image type="content" source="media/ADLSG2-add-trigger-pipeline.png" alt-text="Create a trigger for the pipeline.":::
+1. Select the trigger in the earlier step, and then select **Continue** to proceed to the next screen where the trigger validates the matching files.
+1. Select **Continue** to proceed to the next screen.
+1. In the **Trigger Run Parameter** section, enter the below parameters, and then select **OK**.
+   - **Container**: `@split(triggerBody().folderPath,'/')[0]`
+   - **Folder**: `@split(triggerBody().folderPath,'/')[1]`  
+1. After associating the trigger with the pipeline, select **Validate all**. 
+1. Once validation succeeds, select **Publish All**.
+   :::image type="content" source="media/ADLSG2-publish-all.png" alt-text="Select Publish all":::
+
+1. Select **Publish** to publish all the changes.
+   :::image type="content" source="media/ADLSG2-publish2.png" alt-text="Select Publish to complete the publishing":::
+
+### Event subscription filter
+
+To ensure that the trigger fires only when model.json creation is complete, advanced filters need to be updated for the trigger’s event subscription. An event is registered against the storage account the first time the trigger runs.
+  
+1. Once a trigger run completes, go to storage account > **Events** > **Event Subscriptions**.
+1. Select the event that was registered for the model.json trigger.
+   :::image type="content" source="media/ADLSG2-event-subscription.png" alt-text="Event subscription":::
+
+1. Select the **Filters** tab, and then select **Add new filter**.
+   :::image type="content" source="media/ADLSG2-add-new-filter.png" alt-text="Add new filter":::
+
+1. Create the filter:
+   - **Key**: **subject**
+   - **Operator**: **String does not ends with**
+   - **Value**: */bobs/model.json*
+
+1. Remove the **CopyBlob** parameter from the list of values.
+
+1. Select **Save** to deploy the additional filter.
+   :::image type="content" source="media/ADLSG2-save-filter.png" alt-text="Save added filter":::
 
 ### See also
 
