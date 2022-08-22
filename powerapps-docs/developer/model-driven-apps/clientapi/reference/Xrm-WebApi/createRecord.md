@@ -1,12 +1,11 @@
 ---
 title: "createRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the createRecord method.
-ms.author: jdaly
+ms.author: aorth
 author: adrianorth
-manager: kvivek
-ms.date: 07/25/2022
+ms.date: 08/22/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -17,8 +16,6 @@ contributors:
   - JimDaly
 ---
 # createRecord (Client API reference)
-
-
 
 [!INCLUDE[./includes/createRecord-description.md](./includes/createRecord-description.md)] 
 
@@ -76,9 +73,9 @@ On success, returns a promise object containing the values specified earlier in 
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create a table using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) to define the data object for creating a table record.
+These examples use the same request objects as demonstrated in [Create a table row using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) to define the data object for creating a table record.
 
-### Basic create 
+### Basic create
 
 Creates a sample account record.
 
@@ -183,9 +180,9 @@ Xrm.WebApi.createRecord("account", data).then(
 **Deprecated method for mobile offline scenario**
 
 > [!NOTE]
-> Instead of using `@odata.bind` annotation example above, the decrecated **lookup** object with case-sensitive properties (**logicalname** and **id**) is still supported for exisiting customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+> Instead of using `@odata.bind` annotation example above, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
 
-Here is the updated sample code to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
+The following example uses the deprecated method to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 
 ```JavaScript
 var data =
@@ -209,12 +206,11 @@ Xrm.WebApi.offline.createRecord("account", data).then(
         // handle error conditions
     }
 );
-``` 
+```
  
 ### Related topics
 
-[Create a table using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) 
-
+[Create a table row using the Web API](../../../../data-platform/webapi/create-entity-web-api.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)
 
 
