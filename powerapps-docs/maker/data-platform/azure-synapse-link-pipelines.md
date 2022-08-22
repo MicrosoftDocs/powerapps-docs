@@ -33,28 +33,28 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 
 1. Azure Synapse Link for Dataverse. This guide assumes that you've already met the prerequisites to create an Azure Synapse Link with a Synapse workspace. More information: [Prerequisites for an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#prerequisites)
 2. Create an Azure Synapse Workspace or Azure Data Factory under the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
-3. Create a Azure Synapse Link for Dataverse with the incremental folder update enabled. More information: [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
+3. Create an Azure Synapse Link for Dataverse with the incremental folder update enabled. More information: [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
 4. Microsoft.EventGrid provider needs to be registered for trigger. More information: [Azure portal](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal)
-5. Create Azure SQL DB with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
+5. Create an Azure SQL database with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
 6. Create and configure an Azure integration runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
 
-## Use this solution template in Synapse Workspace
+## Use the solution template in Synapse Workspace
 
 1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Data** > **Azure Synapse Link**, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
    :::image type="content" source="media/go-to-workspace.png" alt-text="Go to Azure Synapse Workspace":::
 
-1. Select on **Integrate** > **Browse gallery**.
+1. Select **Integrate** > **Browse gallery**.
 1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the integration gallery.
 
-## Use this solution template in Azure Data Factory
+## Use the solution template in Azure Data Factory
 
 1. Go to the Azure portal and open Azure Data Factory Studio.
 1. Select **Add new resource** > **Pipeline** > **Template gallery**.
 1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the template gallery.
 
-## How to configure the solution template
+## Configure the solution template
 
-1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate Authentication Type. To do this, select **Test connection to validate the connectivity,** and then select **Create**.
+1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate authentication type. To do this, select **Test connection to validate the connectivity,** and then select **Create**.
 1. Similar to the previous steps, create a linked service to Azure SQL Database where Dataverse data will be synced.
 1. Once **Inputs** are configured, select **Use this template**.
    :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template":::
@@ -87,7 +87,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 1. Select **Publish** to publish all the changes.
    :::image type="content" source="media/ADLSG2-publish2.png" alt-text="Select Publish to complete the publishing":::
 
-### Event subscription filter
+### Add an event subscription filter
 
 To ensure that the trigger fires only when model.json creation is complete, advanced filters need to be updated for the trigger’s event subscription. An event is registered against the storage account the first time the trigger runs.
   
