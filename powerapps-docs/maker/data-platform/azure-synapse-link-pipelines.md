@@ -101,7 +101,7 @@ To ensure that the trigger fires only when model.json creation is complete, adva
 1. Create the filter:
    - **Key**: **subject**
    - **Operator**: **String does not end with**
-   - **Value**: */bobs/model.json*
+   - **Value**: */blobs/model.json*
 
 1. Remove the **CopyBlob** parameter from **data.api** **Value** array.
 
