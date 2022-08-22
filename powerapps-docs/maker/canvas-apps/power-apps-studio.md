@@ -481,4 +481,4 @@ authoring a canvas app has no impact on the aspect ratio configured for the app 
 
 ### See also
 
-[Understand Power Apps Studio in Dataverse in a Teams environment](/teams/understand-power-apps-studio)
+[Understand Power Apps Studio in Dataverse in a Teams environment](../teams/understand-power-apps-studio)
