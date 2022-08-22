@@ -18,7 +18,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas apps.
+Canvas apps.
 
 ## Properties
 
