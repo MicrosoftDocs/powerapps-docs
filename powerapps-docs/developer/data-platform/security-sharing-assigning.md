@@ -1,15 +1,12 @@
 ---
 title: "Sharing and assigning (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the security that applies to sharing and assigning records." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/11/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "paulliew" # GitHub ID
+ms.date: 08/22/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+ms.author: paulliew # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
