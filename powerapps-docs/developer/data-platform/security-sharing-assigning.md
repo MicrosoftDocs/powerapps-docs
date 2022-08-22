@@ -83,7 +83,7 @@ record, depending on his or her privileges. The Organization table's
 [ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-choicesoptions) column controls this setting.
 
 > [!NOTE]
-> The Appointment (meeting) object has special logic which is used when an appointment is assigned to another user. If the current owner is still a participant such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the Assign and Share access rights on the record.
+> The [Appointment table](reference/entities/appointment.md) has special logic which is used when an appointment is assigned to another user. If the current owner is still a participant such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the **Assign** and **Share** access rights on the record.
 
 ## Revoking access
 
