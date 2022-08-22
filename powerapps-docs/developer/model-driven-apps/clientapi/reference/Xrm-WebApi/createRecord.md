@@ -41,7 +41,7 @@ contributors:
 <td>Yes</td>
 <td>Logical name of the table you want to create. For example: "account".</td>
 </tr>
-<tr>   
+<tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
@@ -156,7 +156,7 @@ To associate new table records to existing table records, set the value of singl
 > [!NOTE]
 > The names of single-valued navigation properties are not always the same as the `LogicalName` for the lookup attribute. You should make sure you are using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. More information: [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md)
 
-Here are code examples:
+Here is code example:
 
 The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
 
@@ -180,10 +180,10 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-**[Depreciated] For old mobile offline scenario**
+**Deprecated method for mobile offline scenario**
 
 > [!NOTE]
-> Instead of using `@odata.bind` annotation example above, existing customers can still pass a **lookup** object (`case-sensitive` **logicalname** and **id**) pointing to the target record for mobile offline scenario. However, it is recommend for customers to use `@odata.bind` annotation for both online and offline scenario.
+> Instead of using `@odata.bind` annotation example above, the decrecated **lookup** object with case-sensitive properties (**logicalname** and **id**) is still supported for exisiting customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
 
 Here is the updated sample code to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 
