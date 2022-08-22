@@ -609,6 +609,6 @@ Same as the [entity_appactionrule_ContextEntity](appactionrule.md#BKMK_entity_ap
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.entity?text=entity EntityType" />

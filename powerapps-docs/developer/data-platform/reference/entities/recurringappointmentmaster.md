@@ -2142,6 +2142,6 @@ See the [KnowledgeArticle_RecurringAppointmentMasters](knowledgearticle.md#BKMK_
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.recurringappointmentmaster?text=recurringappointmentmaster EntityType" />

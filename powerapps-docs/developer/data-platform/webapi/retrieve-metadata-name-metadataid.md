@@ -1,7 +1,7 @@
 ---
 title: "Retrieve table definitions by name or MetadataId (Microsoft Dataverse) | Microsoft Docs"
 description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and additional system table columns."
-ms.date: 04/06/2022
+ms.date: 08/15/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -19,6 +19,9 @@ contributors:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Your applications can adapt to configuration changes by querying the table and column definitions (metadata). When you know one of the key properties of a definition item, you can retrieve definitions using the Web API.
+
+> [!NOTE]
+> This topic describes retrieving table definitions and other schema entities by name. But you can also use the names when performing other operations to create, update, and delete schema entities.
 
 <a name="bkmk_byName"></a>
 

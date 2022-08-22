@@ -2,7 +2,7 @@
 title: "List of controls available for model-driven apps | MicrosoftDocs"
 description: "A list of controls available for use with Power Apps model-driven apps for web, phones, and tablets"
 ms.custom: ""
-ms.date: 06/24/2022
+ms.date: 08/11/2022
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -33,17 +33,16 @@ Controls exist to provide a more touch-friendly experience with model-driven app
 To use these controls in the form designer:  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Expand **Dataverse** in the left hand menu and select **tables**
+1. Expand **Dataverse** in the left hand menu, and then select **Tables**.
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
    
-1. Select the **section** you would like to add the control to.  
+1. Select the column or section where you want to add the control.
  
-1. Select **+ Component** to display the available controls, and then select the control required.  
+1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
-    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
-    >  Some controls are only available in the classic forms editor interface.  To access these you must **switch to classic** from the menu at the top.
+    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.
   
 1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
@@ -227,6 +226,10 @@ With the input mask control, you set the formatting for a column like phone numb
 
 The form component control lets users edit information of a related table record directly from another table’s form. For example, here's the form component on a separate tab on the main account form, which lets the user edit a contact record without leaving the account form. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
 
+### Collaboration controls
+
+Collaboration controls give you the power to simplify your user’s workflow collaboration. Build model-driven apps that allow users to work with approvals, files, meetings, notes, and tasks from Microsoft 365 and Microsoft Teams without switching the context from app to app. More information: [Collaboration controls](/microsoftteams/platform/samples/collaboration-control)
+
 ## Legacy controls
 
 ### Auto-complete
@@ -318,6 +321,7 @@ Only available in classic.
 Gain valuable insights from the latest news about your customers, competitors, and contacts. The news control delivers relevant news from Bing News. More information: [Set up and use the news control](stay-current-with-news-control.md)
 
 ## Next steps
+
 [Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)
 
 

@@ -737,6 +737,6 @@ See the [organization_systemforms](organization.md#BKMK_organization_systemforms
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.systemform?text=systemform EntityType" />
