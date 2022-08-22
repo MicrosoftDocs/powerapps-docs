@@ -345,6 +345,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Set()
 - SubmitForm()
 - UpdateContext()
+- User()
 - ViewForm()
 
 ### Enums not supported
@@ -397,7 +398,6 @@ The following Power Fx functions are currently not supported with commanding in 
 - Layout
 - Location
 - ScreenSize
-- User
 
 ### See also
 
