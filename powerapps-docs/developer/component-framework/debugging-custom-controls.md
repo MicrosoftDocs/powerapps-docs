@@ -122,7 +122,7 @@ Modern browsers have a built-in set of developer tools that allow you to inspect
 
 ### Bundling using webpack
 
-When writing code components using TypeScript, your code will likely look different from the JavaScript that is emitted into the bundled code component output. When you run `npm start` or `npm start watch`, the `pcf-scripts` module (added to the `packages.json` by running `pac pcf init`) uses web pack to build multiple TypeScript files into a single `bundle.js` inside the `out` folder. This folder will also contain any other resources (for example, `html`/`css`) that are referenced by your `ControlManifest.Input.xml` including the manifest itself, but named instead as just `ControlManifest.xml`.
+When writing code components using TypeScript, your code will likely look different from the JavaScript that is emitted into the bundled code component output. When you run `npm start` or `npm start watch`, the `pcf-scripts` module (added to the `packages.json` by running [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init)) uses web pack to build multiple TypeScript files into a single `bundle.js` inside the `out` folder. This folder will also contain any other resources (for example, `html`/`css`) that are referenced by your `ControlManifest.Input.xml` including the manifest itself, but named instead as just `ControlManifest.xml`.
 
 When you use modern TypeScript language features such as import/export or async/await that are not supported by the targeted standard of JavaScript (e.g. ES5), the build process will transpile the TypeScript into JavaScript without using these language features. The source maps that are output as part of the development build, provide the information to the developer tools so that breakpoint locations in your TypeScript can be mapped to the corresponding line of JavaScript. Equally, when an exception occurs or you step through the code, you can see the original TypeScript line rather than the underlying transpiled JavaScript.
 
@@ -146,7 +146,7 @@ This section describes how to debug your code component inside the Microsoft Edg
 
 4. Use `Ctrl` + `P` to show the **Open File** command pallet. You can also select **Open File** from the **ellipsis** menu.
 
-5. Enter the name of your control (which will be the name of the control you used in `pac pcf init`).
+5. Enter the name of your control (which will be the name of the control you used in [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init)).
 
 6. Select the file in the matches listed that will be similar to:
    `webpack://pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad/./DataSetGrid/index.ts`
@@ -189,7 +189,7 @@ Currently, by default, code components are configured to transpile into ES5 Java
 
 To fully test the logic inside the context of a model-driven app, canvas app, or portal you can first deploy and configure your code component to Microsoft Dataverse and then use either [Fiddler](https://www.telerik.com/download/fiddler)'s AutoResponder feature or use [requestly](https://requestly.io/). In both cases you will load a development build of your code component (built locally) into the browser without having to continuously deploy changes as you debug your code. This also allows you to debug against a non-development downstream environment without having to first deploy a development build.
 
-First ensure your component is deployed and configured in Microsoft Dataverse. Ideally, you should only publish production builds of code components into Microsoft Dataverse. For larger code components, publishing a development build may result in the error [Web resource size is too large](issues-and-workarounds.md#web-resource-size-is-too-large). Since we are going to redirect the code component's `bundle.js` to a locally built version, you can update your `.pcfproj` file to always build in production mode when using `pac pcf push` by setting the property `PcfBuildMode` to production.
+First ensure your component is deployed and configured in Microsoft Dataverse. Ideally, you should only publish production builds of code components into Microsoft Dataverse. For larger code components, publishing a development build may result in the error [Web resource size is too large](issues-and-workarounds.md#web-resource-size-is-too-large). Since we are going to redirect the code component's `bundle.js` to a locally built version, you can update your `.pcfproj` file to always build in production mode when using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) by setting the property `PcfBuildMode` to production.
 
 ```XML
 <PropertyGroup>
@@ -232,8 +232,8 @@ To debug your code component using Fiddler:
 
    where:
 
-   - **YOUR_NAMESPACE** - the namespace you provided to `pac pcf init` as contained in the `control.namespace` attribute of the `ControlManifest.Input.xml`
-   - **YOUR_CONTROL_NAME** - the component name you provided to `pac pcf init` and set in the `control.constructor` attribute of the `ControlManifest.Input.xml`
+   - **YOUR_NAMESPACE** - the namespace you provided to [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) as contained in the `control.namespace` attribute of the `ControlManifest.Input.xml`
+   - **YOUR_CONTROL_NAME** - the component name you provided to [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) and set in the `control.constructor` attribute of the `ControlManifest.Input.xml`
 
    This rule aims to match requests for the code component's `bundle.js` and related resources (`css`/`html`) in such a way that it works for both model-driven, and canvas apps, both in Power Apps Studio and Player.
 
