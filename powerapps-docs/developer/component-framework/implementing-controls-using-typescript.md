@@ -63,7 +63,7 @@ To create a new project:
    
 1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
    
-1. At the terminal prompt, create a new component project by passing basic parameters using the command.
+1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
@@ -344,7 +344,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
 1. Create a new folder **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
 
-2. Create a new solution project in the **LinearInputControl** folder using the following command:
+2. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
 
    ```CLI
      pac solution init --publisher-name Samples --publisher-prefix samples 
