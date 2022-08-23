@@ -5,7 +5,7 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/10/2022
+ms.date: 08/23/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -23,7 +23,7 @@ A *content delivery network* is a distributed network of servers that can effici
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on.":::
 
-> [!NOTE]
+> [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
