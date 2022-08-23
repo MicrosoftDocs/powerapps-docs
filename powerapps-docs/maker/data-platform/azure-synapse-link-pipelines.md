@@ -1,5 +1,5 @@
 ---
-title: "Run Azure Synapse pipelines with your Azure Synapse Link for Dataverse data | MicrosoftDocs"
+title: "Copy Dataverse data into Azure SQL | MicrosoftDocs"
 description: "Learn how to run Azure Synapse pipelines with your exported Dataverse table data"
 ms.custom: ""
 ms.date: 08/18/2022
@@ -20,7 +20,7 @@ search.app:
   - D365CE
 contributors: "sama-zaki"
 ---
-# Copy Dataverse data into Azure SQL using Azure Synapse Link
+# Copy Dataverse data into Azure SQL
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
