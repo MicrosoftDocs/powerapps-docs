@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 09/23/2021
+ms.date: 08/23/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -95,7 +95,7 @@ There are three primary record types: Activities, notes, and posts. All record t
    - **Auto Posts** are system-generated posts that notify you of account activity that has occurred.
    - **User Posts** allow you to leave a message for another user on a record.
    > [!NOTE]
-   > Posts require a Dynamics 365 app, such as Dynamics 365 Customer Service.
+   > Posts require a Dynamics 365 app, such as an app for Dynamics 365 Customer Service.
 
 ##### Enable these record types to be displayed in the timeline
 
@@ -273,7 +273,7 @@ App makers have the ability to enable activity types so they can be created dire
 
 #### Set form types to create and open activities
 
-Set the **Create activities using** and **Open activities using** individually for an activity type or for all activity types  to choose which type of form users will work in based on your business needs. 
+Set the **Create activities using** and **Open activities using** individually for an activity type or for all activity types  to set the form type users will use based on your business needs. 
 You can set these fields as follows:
 - Select an activity type in **Activities**  and specify the values.
 - Specify the value for these fields in the  **Activities** pane.
@@ -281,8 +281,8 @@ You can set these fields as follows:
 ![Icon for create a timeline record.](media\maker-create-open-activities.png " Create a timeline record with this icon") 
 
 If you set the following form type for a specific activity, the application considers the following:
--  Default: The form type in the  **Create activities using** or **Open activities using** in **Activities**.
-- Quick create form, Main form, or Main form dialog: The activity specific setting irrespective of the form type set in  **Create activities using** or **Open activities using** in **Activities**.
+-  **Default**: The form type in the  **Create activities using** or **Open activities using** in **Activities**.
+- **Quick create form**, **Main form**, or **Main form dialog**: The activity specific setting irrespective of the form type set in  **Create activities using** or **Open activities using** in **Activities**.
 
  When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity is either created or opens in the selected form type. 
 
@@ -314,10 +314,10 @@ Accounts, contacts, cases, and opportunities linked to an activity are displayed
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure related records](media\maker-enable-records-1.png "Enable related records to display on timeline") | ![Display related records on the timeline](media\maker-enable-records-2.png "Display related records for activities from timeline") |
-|1. Expand and view Activities under the Record settings section using the caret (^) <br> 2. A list of records are displayed on in **Regarding records**. <br> 3. To enable a records, check the box next to **Enable** and select **Done**. | When enabled, users can link the record from an activity and is displayed on the timeline.|
+|1. Expand and view Activities under the Record settings section using the caret (^) <br> 2. A list of records are displayed on in **Regarding records**. <br> 3. To enable records, select the box next to **Enable** and select **Done**. | When the checkbox is enabled, users can link records to an activity. The record linked to the activity is then displayed on the timeline.|
 
 > [!NOTE]
-> A check mark appears to the right, next to enabled record.
+> A check mark appears to the right, next to the enabled record.
 
 
 #### Create and use card forms in timeline
@@ -434,13 +434,13 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
 To enable rich text posts on the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support). 
 
 > [!NOTE]
-> Posts are only available with certain Dynamics 365 apps, such as Dynamics 365 Customer Service.
+> Posts are only available with certain Dynamics 365 apps, such as apps for Dynamics 365 Customer Service.
 
 |Form designer configuration view | Form designer display view|
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 |![Posts on timeline](media\timeline-posts-1c-rich-text.png "Posts on timeline") |![Posts on timeline - Runtime](media\timeline-posts-1b.png "Posts on timeline - Runtime")|
 |The **Posts**  section expands when enabled and allows you to:<br> - Select **Enable user posts** enabling users to leave a message on the record<br> - **Sort posts by** date created or date modified. The **Created On** date is the default setting.<BR> - The **Select and order commands (Preview)** section allows users to display the command actions that can be performed on posts displayed on the timeline. You can also move the position of the commands to change the order in which they're displayed on the timeline. | 1. When enabled, posts can be accessed by selecting **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record").<BR>2. A dropdown menu displays, and you can access **Posts**.<BR>3. Use **Posts** to create a post to add to a record.<BR><BR> When date **Created On** is used to sort posts on the timeline, the location in the timeline remains constant even when there are responses to that post. <BR><BR> When date **Modified On** is used to sort posts on the timeline, the location in the timeline adjusts to the top when there are responses to that post. <BR><BR> **NOTE**: The timeline doesn't automatically refresh when post replies are added.|
-|The **Enable simple auto posts (Preview)** allows auto posts to be displayed either in the existing card format or as a simple post. Unselect this checkbox to display the posts in the existing card format. This checkbox is selected by default. |![AutoPosts on timeline - Runtime](media\timeline-posts-2.png "AutoPosts on timeline - Runtime")|
+|The **Enable simple auto posts (Preview)** allows auto posts to be displayed either in the existing card format or as a simple post. Clear the checkbox to display the posts in the existing card format. The checkbox is selected by default. |![AutoPosts on timeline - Runtime](media\timeline-posts-2.png "AutoPosts on timeline - Runtime")|
 | |When the **Enable simple auto posts (Preview)** checkbox is enabled, the posts aren't displayed in card form. Command actions  can't be performed on auto posts from the timeline. |
 
 #### Configure the form for posts
