@@ -202,7 +202,7 @@ After publishing the Manage Inspections app, select the **Back** button to go ba
 
 1. Save the flow.
 
-1. Go back to the Power App Studio in Teams.
+1. Go back to the Power Apps Studio in Teams.
 
 1. Select this flow created from the available flows list. Most likely, the existing formula on the button will get erased out.
 

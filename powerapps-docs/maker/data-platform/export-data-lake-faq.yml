@@ -39,11 +39,14 @@ sections:
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
           
-        | Column Name                              | Format                           | Example                            |
-        |------------------------------------------|----------------------------------|------------------------------------|
-        | **SinkCreatedOn** and **SinkModifiedOn** | M/d/yyyy H:mm:ss tt              | 6/28/2021 4:34:35 PM               |
-        | **CreatedOn**                            | yyyy-MM-dd'T'HH:mm:ss.sssssssXXX | 2018-05-25T16:21:09.0000000+00:00  |
-        | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | 2021-06-25T16:21:12Z               |
+        | Column Name                              | Format                           | Data Type                          | Example                            |
+        |------------------------------------------|----------------------------------|------------------------------------|------------------------------------|
+        | **SinkCreatedOn** and **SinkModifiedOn** | M/d/yyyy H:mm:ss tt              | dateTime                           | 6/28/2021 4:34:35 PM               |
+        | **CreatedOn**                            | yyyy-MM-dd'T'HH:mm:ss.sssssssXXX | dateTimeOffset                     | 2018-05-25T16:21:09.0000000+00:00  |
+        | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | dateTime                           | 2021-06-25T16:21:12Z               |
+        
+        > [!NOTE]
+        > **CreatedOn** data type changed from string to dataTimeOffset on 07/29/2022. To edit the data type format for a table created before the change, drop and re-add the table.
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.

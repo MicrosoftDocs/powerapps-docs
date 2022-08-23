@@ -257,7 +257,7 @@ To add categories:
 
 7. You can now customize the app.
 
-![Boards Power App in Power Apps studio in Teams.](media/boards/power-apps-studio.png "Power Apps studio")
+![Boards app in Power Apps Studio inside Teams.](media/boards/power-apps-studio.png "Power Apps studio")
 
 ### See also
 
