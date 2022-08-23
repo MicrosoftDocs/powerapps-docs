@@ -273,15 +273,18 @@ App makers have the ability to enable activity types so they can be created dire
 
 #### Set form types to create and open activities
 
-**Create activities using** and **Open activities using** lets you choose which type of form users will work in based on your business needs. You can set this for a specific activity or for all of the activities in **Record Settings** .
-The following actions occur, if you set the form type for specific activity as:
--  Default: The application considers the **Record Setting** > **Create activities using** or **Open activities using** setting.
-- Quick create form, Main form, or Main form dialog: the application considers only the activity specific setting irrespective of the **Record Setting** > **Create activities using** or **Open activities using** setting.
+Set the **Create activities using** and **Open activities using** individually for an activity type or for all activity types  to choose which type of form users will work in based on your business needs. 
+You can set these fields as follows:
+- Select an activity type in **Activities**  and specify the values.
+- Specify the value for these fields in the  **Activities** pane.
 
- When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity opens in the selected form type. 
+![Icon for create a timeline record.](media\maker-create-open-activities.png "Icon for create a timeline record") 
 
-![Icon for create a timeline record.](media\maker-create-open-activities.png "Icon for create a timeline record")
+If you set the following form type for a specific activity, the application considers the following:
+-  Default: The form type in the  **Create activities using** or **Open activities using** in **Activities**.
+- Quick create form, Main form, or Main form dialog: The activity specific setting irrespective of the form type set in  **Create activities using** or **Open activities using** in **Activities**.
 
+ When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity is either created or opens in the selected form type. 
 
 #### Enable command actions on activity record types (Preview)
 
