@@ -19,7 +19,7 @@ contributors:
 
 A file column is used for storing binary data. This column is primarily used to store a single file, note, or attachment; however, it's possible to store other forms of binary data. You can configure a file column on basic and advanced forms to provide the capability to upload, view, modify, or delete the file. The file column can store files up to the specified maximum size of a Microsoft Dataverse table column.
 
-:::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue."::: 
+:::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalog. To populate the Product Catalog field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalog."::: 
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -94,7 +94,7 @@ To retrieve file data, use the API request described in the following examples.
 GET /_api/<entity-type>(id)/<file-attribute-name>/$value
 ```
 
-File data transfers from the web service endpoints are limited to a maximum of 16 MB of data in a single service call. File data that exceeds 16 MB must be divided into 4-MB or smaller data blocks (chunks), where each block is received in a separate API call until all file data has been received. It's your responsibility to join the downloaded data blocks to form the complete data file, by combining the data blocks in the same sequence as the blocks were received.
+File data transfers from the web service endpoints are limited to a maximum of 16 MB of data in a single service call. File data exceeding 16 MB must be divided into 4 MB or smaller data blocks (chunks).  Each block is received in a separate API call until all file data has been received. It's your responsibility to join the downloaded data blocks to form the complete data file, by combining the data blocks in the same sequence as the blocks were received.
 
 #### Example: File download \< 16 MB
 
