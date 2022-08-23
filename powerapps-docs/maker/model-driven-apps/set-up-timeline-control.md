@@ -283,21 +283,21 @@ The following actions occur, if you set the form type for specific activity as:
 ![Icon for create a timeline record.](media\maker-create-open-activities.png "Icon for create a timeline record")
 
 
-#### Enable command actions on activity record types (preview)
+#### Enable command actions on activity record types (Preview)
 
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
-Command actions that are displayed on the timeline enable users to perform actions such as Assign, Close, Delete, Open a record or add the record to a queue for an activity. The administrator can enable or disable the actions for any Activity type. The commands are enabled by default. 
+Command actions allow users to assign, close, delete, open a record or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.  
 
-There are some activities for which you can enable additional commands. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
+Based on the activity type, you can also enable additional command actions. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Configure the ability to create directly from timeline") | ![Display the option to create directly from timeline](media\maker-enable-commands-2.png "Display the option to create directly from timeline") |
-| To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**.<br> 
-You can also move the position of the actions to change the order in which they are displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
+| To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**. You can only en five command actions for an activity.<br> 
+You can also move the position of the  command actions to change the order in which they are displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
 
 
 #### Display related records on the timeline (Preview)
@@ -306,7 +306,7 @@ You can also move the position of the actions to change the order in which they 
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
-The related records that are displayed on the timeline help you see if there are any records associated with the activity. Accounts, contacts, cases, and opportunities can be displayed as related records. The administrator can enable or disable the records in **Regarding records**.
+Accounts, contacts, cases, and opportunities linked to an activity are displayed on the timeline record. The administrator can enable or disable the records in **Regarding records**.
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -390,15 +390,6 @@ When using Sort date, keep in mind the following:
 - If you set a value in **Sort date**, you can use it for more customized sorting, but be aware that you have to populate it for every activity record or it won't work. The sort date has to be configured for each timeline instance, and must be set up for all three main forms in the account table.
 - If the **DateTime** column is on the same calendar day, the date won't be displayed if **DateTime** was earlier in the day compared to current time.
 - The sort date is not based on a 24-hour period, but rather, compares the **DateTime** column value with the current date and time (based on the user's preferred time zone). If the value entered occurred earlier in the day, the date isn't displayed.
-
-#### Set create activities form type in the timeline
-
-
-![How to set create activities form type in timeline.](media\timeline-how-to-set-create-activities-form-type-1a.png "How to set create activities form type in timeline")
-
-1. **Create activities using** lets you choose which type of form users will work in based on your business needs.  
-2. Select **Quick create form**, **Main form** , or **Main form dialog**. There are some activities that don't support quick create forms, such as email, and will use a main form or a main form dialog. More information: [Create or edit model-driven app quick create forms for a streamlined data entry experience](/powerapps/maker/model-driven-apps/create-edit-quick-create-forms) and [Create or edit a model-driven app main form for an table](/powerapps/maker/model-driven-apps/create-edit-main-forms).  
-
 
 ### Timeline performance
 
