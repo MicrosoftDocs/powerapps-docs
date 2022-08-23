@@ -280,6 +280,109 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
     > [!TIP]
     > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. For more information, read [Log queries](/azure/azure-monitor/log-query/log-query-overview).
 
+
+## Monitor Unhandled Errors (Experimental)
+
+[This section contains pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Errors occurring during app runtime cannot always be anticipated and planned for. Unhandled Power Fx Formula errors are reported to users as banner messages during runtime. These errors can also be reported to Application Insights to help understand frequency and severity without reliance on app users reporting issues. More proactive measures can also be put in place by [setting up real-time alerts](/azure/azure-monitor/app/availability-alerts) when runtime errors occur.
+
+### Enable Error Passing
+
+> [!WARNING]
+> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+
+To enable the Error Passing feature, go to **Settings > Upcoming features > Experimental > Pass errors to Azure Application Insights** while keeping your canvas app open for editing.
+
+![Enable Pass errors to Azure Application Insights setting.](https://user-images.githubusercontent.com/93623615/186241846-df260d56-9445-4a81-b737-797a077d4c41.png "Enable Pass errors to Azure Application Insights setting")
+
+Upon publishing the app, unhandled runtime errors are now reported to Application Insights.
+
+### Error Events in App Insights
+
+Unhandled Power Fx errors experienced by end users at app runtime will be reported to the **traces** table. Unhandled errors can be identified and distinguished from other error events by the event message "Unhandled error". The "severityLevel" dimension of these events will be 3 (TraceSeverity.Error).
+
+Detailed error messages are provided in the "errors" dimension of the *customDimension* property. In situations where  multiple errors occurred during the same operation, these errors will be consolidated in the "errors" dimension of a single trace event. These error messages are the same as reported in [Monitor](/power-apps/maker/monitor-canvasapps) during a live debug session.
+
+This example query identifies unhandled errors and expands all error messages included in the trace event:
+
+```kusto
+traces
+    | where message == "Unhandled error"
+    | extend customdims = parse_json(customDimensions)
+    | extend errors = parse_json(tostring(customdims.['errors']))
+    | mv-expand errors
+    | project timestamp
+        , itemId //unique identifier for the trace event
+        , AppName = customdims.['ms-appName']
+        , AppId = customdims.['ms-appId']
+        , errors = errors.['Message']
+    | order by timestamp desc
+```
+
+![Sample output for example query.](https://user-images.githubusercontent.com/93623615/186241989-3ede522a-45d3-47ff-a356-f517cc817600.png "Sample output for example query")
+
+## Correlation Tracing (Experimental)
+
+[This section contains pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Connections to external data and services are fundamental to most apps. Correlation tracing enables the generation and propagation of context information to enable the joining of telemetry across a canvas app and its connections (see limitations below). As an example, your app may call into a custom connector that in turn calls an Azure Function or other REST API. Correlation tracing allows you to correlate actions taken within the app with the underlying API calls across tiers. This can be useful in troubleshooting. 
+
+Canvas App correlation tracing is an implementation of context tracing follows [W3C specification](https://www.w3.org/TR/trace-context/).
+
+### Enable Correlation Tracing
+
+> [!WARNING]
+> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+
+To enable the Correlation Tracing feature, go to **Settings > Upcoming features > Experimental > Enable Azure Application Insights correlation tracing** while keeping your canvas app open for editing.
+
+![Enable Azure Application Insights correlation tracing.](https://user-images.githubusercontent.com/93623615/186242211-0df97f03-79c1-49cc-a76e-735153faa778.png "Enable Azure Application Insights correlation tracing")
+
+Upon publishing the app, correlation tracing will now be enabled in Application Insights.
+
+### Limitations
+
+- Correlation tracing is currently enabled for Custom Connectors, other connector types are not yet supported.
+- HTTP requests are only captured in App Insights if the connected service [is also instrumented with App Insights](/azure/azure-monitor/app/app-insights-overview).
+
+### Using Correlation Tracing
+
+When enabled, Correlation Tracing adds a new telemetry event in the **dependencies** table of the Canvas App's App Insights instance. This event is recorded at the time a response from a network call (for supported connectors) is received. Dependency events capture details of the network call, including the request and response headers, response status code, and duration of the call.
+
+![Sample event logged in the dependencies table.](https://user-images.githubusercontent.com/93623615/186242321-af85aff6-03d1-4125-b34b-6a86c346d6f7.png "Sample event logged in the dependencies table")
+
+If the connected service is also instrumented with App Insights, an additional telemetry event capturing the request is generated in the **requests** table of the service's App Insights instance. Some Azure Services, such as Azure Functions can be instrumented without any coding from the Azure Portal. Both the Canvas App (or multiple Apps) and connected services can be instrumented with the same App Insights instance.
+
+![Sample event logged in the requests table.](https://user-images.githubusercontent.com/93623615/186242413-3a21d300-9a19-475c-b0ab-c012761ccc61.png "Sample event logged in the requests table")
+
+Network calls for supported connectors can be joined with other telemetry on the "operation_Id" dimension. This example query shows a network call being made alongside trace events emitted during an app session.
+
+```kusto
+traces | union dependencies | union requests | union pageViews | union customEvents
+| project timestamp
+    , itemType
+    , name
+    , operation_Name
+    , message
+    , severityLevel
+    , customDimensions
+    , operation_Id
+    , operation_ParentId
+| where operation_Id == "0a7729e3e83c4e4d93cb4f51149f73b9" //placeholder operation_Id, replace
+| order by timestamp asc
+```
+
+![Sample output for example query](https://user-images.githubusercontent.com/93623615/186242569-a3169ada-6224-4590-ab46-b9d3d82e1aaa.png "Sample output for example query")
+  
 ## Export data to Power BI
 
 You can export your Application Insights data and query results to Power BI for analysis and data presentation.
