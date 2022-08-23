@@ -5,7 +5,7 @@ author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/05/2022
+ms.date: 08/23/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -281,7 +281,7 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
     > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. For more information, read [Log queries](/azure/azure-monitor/log-query/log-query-overview).
 
 
-## Monitor Unhandled Errors (Experimental)
+## Monitor unhandled errors (experimental)
 
 [This section contains pre-release documentation and is subject to change.]
 
@@ -289,14 +289,16 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
 > - This is an experimental feature.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Errors occurring during app runtime cannot always be anticipated and planned for. Unhandled Power Fx Formula errors are reported to users as banner messages during runtime. These errors can also be reported to Application Insights to help understand frequency and severity without reliance on app users reporting issues. More proactive measures can also be put in place by [setting up real-time alerts](/azure/azure-monitor/app/availability-alerts) when runtime errors occur.
+Errors occurring during app runtime cannot always be anticipated and planned for. Unhandled Power Fx formula errors are reported to users as banner messages during runtime. These errors can also be reported to Application Insights to help understand frequency and severity without reliance on app users reporting issues. More proactive measures can also be put in place by [setting up real-time alerts](/azure/azure-monitor/app/availability-alerts) when runtime errors occur.
 
-### Enable Error Passing
+### Enable error passing to Application Insights
+
+You'll need to enable the setting that allows Power Apps to pass the unhandled runtime errors to Azure Application Insights.
 
 > [!WARNING]
 > Enabling this setting may incur additional costs related to the storage of Application Insights logs.
 
-To enable the Error Passing feature, go to **Settings > Upcoming features > Experimental > Pass errors to Azure Application Insights** while keeping your canvas app open for editing.
+To enable error passing, go to **Settings > Upcoming features > Experimental > Pass errors to Azure Application Insights** while keeping your canvas app open for editing.
 
 ![Enable Pass errors to Azure Application Insights setting.](https://user-images.githubusercontent.com/93623615/186241846-df260d56-9445-4a81-b737-797a077d4c41.png "Enable Pass errors to Azure Application Insights setting")
 
