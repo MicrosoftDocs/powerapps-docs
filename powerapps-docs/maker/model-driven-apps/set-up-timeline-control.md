@@ -394,6 +394,16 @@ When using Sort date, keep in mind the following:
 - If the **DateTime** column is on the same calendar day, the date won't be displayed if **DateTime** was earlier in the day compared to current time.
 - The sort date isn't based on a 24-hour period, but rather, compares the **DateTime** column value with the current date and time (based on the user's preferred time zone). If the value entered occurred earlier in the day, the date isn't displayed.
 
+ #### Set the activity rollup type in timeline
+
+The activity rollup type can be configured for timelines on forms for the account and contact tables. The available types of rollups are **Extended**, **Related**, and **None**. Activity rollup only affects accounts and contacts in Dynamics 365 apps, such as Dynamics 365 Customer Service applications. To only show activities that are directly related to the table in timeline, select **None**.
+
+More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
+
+![Activity rollup type.](media\activity-rollup-type.png "Activity rollup type")
+
+
+  
 ### Timeline performance
 
 Only enable the activities that you need on the form. If you select more than 10 **Activity types**, a warning notice displays to let you know that the number of activity types you have selected impacts the performance of your timeline. To improve timeline performance, consider limiting activity types to 10 or less.
