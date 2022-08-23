@@ -292,7 +292,7 @@ If you set the following form type for a specific activity, the application cons
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
-Command actions allow users to assign, close, delete, open a record or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.  
+Command actions allow users to assign, close, delete, open a record or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.
 
 Based on the activity type, you can also enable additional command actions. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
 
@@ -327,7 +327,7 @@ Records are displayed using the default setting for each activity type. However,
 |Form designer configure view |Form designer display view|
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Create and use card forms in timeline](media\timeline-create-and-use-card-forms-display-options-advanced-101a.png "Create and use card forms in timeline")|![Display the option to create and use card forms in timeline](media\timeline-create-and-use-card-forms-display-options-advanced-1111b.png "Display the option to create and use card forms in timeline") |
-|You can change the default card settings to a different card form if one has been created.  |If you create a new card form, you must go to the parent table and add the new form of card type there before it will appear in the timeline list for configuration.  If **Default** is displayed, you aren't using the card form.  You cannot use the **Email card form** in a timeline unless you select and publish it first.|
+|You can change the default card settings to a different card form if one has been created.  |If you create a new card form, you must go to the parent table and add the new form of card type there before it will appear in the timeline list for configuration.  If **Default** is displayed, you aren't using the card form.  You can't use the **Email card form** in a timeline unless you select and publish it first.|
 
 > [!NOTE]
 > Not all activity types allow you to create card types, so the default selection will be your only option for those records.
