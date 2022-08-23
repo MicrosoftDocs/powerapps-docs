@@ -1066,14 +1066,14 @@ The following table describes the different formatting features and functionalit
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
 |![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
-|![Font.](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select your desired font. The application considers this selection as the default font, avoiding having to set it multiple times. If you haven't made a selection, the default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed.<br>  |
-|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The application considers this selection as the default font size, avoiding having to set it multiple times. If you haven't made a selection, the default size is 12.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
+|![Font.](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select a font. The application considers the font that you select as the default font. Segoe UI is the default font if you don't select any..<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed.<br>  |
+|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select as the default font size. 12 is the default font if you don't select any.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
 |![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
 |![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
 |![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
 |![Text Highlight Color.](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
 |![Font Color.](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
-|![Attachment.](media/rte-attachment.png "Attachment")| Attachment |  | Attach a file. Once you've uploaded a file, you can click on the link to view a preview of the file in the **Attachment Preview** popup. |
+|![Attachment.](media/rte-attachment.png "Attachment")| Attachment |  | Attach a file. After you've uploaded a file, you can select the link to preview the file in the **Attachment Preview** dialog. |
 |![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
 |![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
 |![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
