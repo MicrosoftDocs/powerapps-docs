@@ -4,7 +4,7 @@ description: Learn how to configure a file column to store binary data on portal
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2022
+ms.date: 08/23/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -21,7 +21,7 @@ A file column is used for storing binary data. This column is primarily used to 
 
 :::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue."::: 
 
-> [!NOTE]
+> [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 > - This feature is available with portals website version [9.4.7.xx](/power-platform/released-versions/portals/portalupdate947x).
