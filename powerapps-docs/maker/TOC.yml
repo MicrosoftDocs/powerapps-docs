@@ -358,6 +358,8 @@
           href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
+          - name: Understand Power Apps Studio
+            href: ./canvas-apps/power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -369,7 +371,7 @@
               - name: Configure Office 365 screens
                 items:
                   - name: Calendar-screen overview
-                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+                    href: /canvas-apps/screen-templates/calendar-screen-overview.md
                   - name: Calendar-screen reference
                     href: ./canvas-apps/screen-templates/calendar-screen-reference.md
                   - name: Email-screen overview
@@ -1278,7 +1280,7 @@
           href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Understanding app navigation
           href: ./model-driven-apps/app-navigation.md
-        - name: Create and remove pages
+        - name: Work with pages (preview)
           href: ./model-driven-apps/create-remove-pages.md
         - name: Manage app settings
           href: ./model-driven-apps/app-properties.md         
@@ -2609,7 +2611,7 @@
       items:
         - name: Overview of the Power Apps app
           href: ../teams/overview-of-the-power-apps-app.md
-        - name: Understand Power Apps Studio
+        - name: Understand Power Apps Studio in a Teams environment
           href: ../teams/understand-power-apps-studio.md
         - name: Use the Fluent UI controls
           href: ../teams/use-the-fluent-ui-controls.md
