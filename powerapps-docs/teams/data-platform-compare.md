@@ -1,13 +1,12 @@
 ---
 title: Dataverse for Teams vs. Dataverse | Microsoft Docs
 description: Explains the differences between Dataverse for Teams and Dataverse.
-author: mmercuri
-
+author: Mattp123
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 06/16/2022
 ms.subservice: teams
-ms.author: mmercuri
+ms.author: olegov
 ms.reviewer: matp
 contributors:
   - mattp123
@@ -16,8 +15,6 @@ contributors:
   - ProfessorKendrick
 ---
 # How are Dataverse for Teams and Dataverse different?
-
-
 
 Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires more capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be [upgraded](/power-platform/admin/about-teams-environment#upgrade-process) to Dataverse.
 
@@ -29,7 +26,6 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 |---------|---------|---------|
 |Basic data types     |  Yes       |  Yes       |
 |Advanced data types​ (customer, multiple transaction currencies)      |  No       |  Yes       |
-|Common Data Model    |  Coming Soon       |  Yes       |
 |Relational storage      | Yes       |  Yes       |
 |Non-relational storage (logs)   |  No       |  Yes       |
 |Managed data lake      |  No       | Yes        |

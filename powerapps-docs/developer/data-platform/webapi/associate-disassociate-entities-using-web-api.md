@@ -1,7 +1,7 @@
 ---
 title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "How to relate and unrelate records using the Web API"
-ms.date: 08/10/2022
+ms.date: 08/15/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -29,7 +29,7 @@ The following table describes the three types of relationships between tables in
 |---------|---------|---------|
 |One-to-Many|One record can have many records associated with it.|An <xref:Microsoft.Dynamics.CRM.account?text=account> record can have many <xref:Microsoft.Dynamics.CRM.contact?text=contact> records in the `contact_customer_accounts` *collection-valued navigation property*.|
 |Many-to-One|Many records can be associated with one record.<br/><br/>Many-to-One is the mirror image of a One-to-Many relationship. There is just one relationship.|Multiple <xref:Microsoft.Dynamics.CRM.contact?text=contact> records can be associated to a single <xref:Microsoft.Dynamics.CRM.account?text=account> record using the `parentcustomerid_account` *single-valued navigation property*.|
-|Many-to-Many|Many records can be associated with many records.|Each <xref:Microsoft.Dynamics.CRM.role?text=security role (role)> may include references to the definition of a <xref:Microsoft.Dynamics.CRM.privilege?text=privilege>.<br />Both of these tables has a `roleprivileges_association` *collection-valued navigation property*.|
+|Many-to-Many|Many records can be associated with many records.|Each <xref:Microsoft.Dynamics.CRM.role?text=security role (role)> may include references to the definition of a <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser>.<br />Both of these tables has a `systemuserroles_association` *collection-valued navigation property*.|
 
 ## Using single-valued navigation properties
 
@@ -196,19 +196,19 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-The following example shows how to add a <xref:Microsoft.Dynamics.CRM.privilege?text=privilege> record to the <xref:Microsoft.Dynamics.CRM.role?text=role> `roleprivileges_association` collection which part of a many-to-many relationship.
+The following example shows how to add a <xref:Microsoft.Dynamics.CRM.role?text=role> record to the <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser> `systemuserroles_association` collection which is a many-to-many relationship.
 
 **Request**
 
 ```http
-POST [Organization Uri]/api/data/v9.2/roles(34dcbaf5-f718-ed11-b83e-00224837179f)/roleprivileges_association/$ref HTTP/1.1
+POST [Organization Uri]/api/data/v9.2/systemusers(34dcbaf5-f718-ed11-b83e-00224837179f)/systemuserroles_association/$ref HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
 
 {
-  "@odata.id": "[Organization URI]/api/data/v9.2/privileges(886b280c-6396-4d56-a0a3-2c1b0a50ceb0)"
+  "@odata.id": "[Organization URI]/api/data/v9.2/roles(886b280c-6396-4d56-a0a3-2c1b0a50ceb0)"
 }
 ```
 

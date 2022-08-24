@@ -41,7 +41,7 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
    Disables the command bar on the form. It only disables the command bar on form pages and not supports list (grid), dashboard, etc.  
 
    ```http
-   https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableCommandbar=true
+   https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormCommandbar=true
   ```
 
 - **DisableFormHandlers**  
