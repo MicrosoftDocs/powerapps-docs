@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/15/2022
+ms.date: 08/24/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -54,18 +54,7 @@ For more information about federated authentication options, see [set authentica
 
 ## Change password for a contact from the Portal Management app
 
-In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). 
-
-Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
-
-| Schema name | Display name | Table | Privileges |
-| - | - | - | - |
-| adx_identity_logonenabled | Login Enabled | contact | Read, Update, Create |
-| adx_identity_passwordhash | Password Hash | contact | Read, Update, Create |
-| adx_identity_username | User Name | contact | Read, Update, Create |
-| sharepointemailaddress | SharePoint Email Address | user | Update, Create |
-
-Add the user or team that will need to perform these steps to the field security profile.
+In order to perform the following steps, you will need to be assigned the **System Administrator** [security role](/power-platform/admin/database-security). 
 
 1. Open the [Portal Management app](configure-portal.md).
 
