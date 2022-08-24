@@ -69,7 +69,7 @@ With editable grids, users can do rich in-line editing of records directly from 
 ### (Preview) Power Apps grid control
 
 The Power Apps grid control represents the next evolution of the Power Apps grid control, allowing users to view, open, and edit records from views and subgrids. By default, the Power Apps grid control is read-only but you can configure it to be editable.
-> [!NOTE]
+> [!IMPORTANT]
 >
 > - This is a preview feature.
 >
