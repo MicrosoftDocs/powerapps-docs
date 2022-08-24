@@ -303,7 +303,7 @@ To enable error passing, go to **Settings > Upcoming features > Experimental > P
 
 Upon publishing the app, unhandled runtime errors are now reported to Application Insights.
 
-### Error events in App Insights
+### Error events in Application Insights
 
 Unhandled Power Fx errors experienced by end users at app runtime will be reported to the **traces** table. Unhandled errors can be identified and distinguished from other error events by the event message "Unhandled error". The "severityLevel" dimension of these events will be 3 (TraceSeverity.Error).
 
@@ -339,12 +339,12 @@ Connections to external data and services are fundamental to most apps. Correlat
 
 Canvas app correlation tracing is an implementation of context tracing follows [W3C specification](https://www.w3.org/TR/trace-context/).
 
-### Enable Correlation Tracing
+### Enable correlation tracing
 
 > [!WARNING]
 > Enabling this setting may incur additional costs related to the storage of Application Insights logs.
 
-To enable the Correlation Tracing feature, go to **Settings > Upcoming features > Experimental > Enable Azure Application Insights correlation tracing** while keeping your canvas app open for editing.
+To enable the correlation tracing feature, go to **Settings > Upcoming features > Experimental > Enable Azure Application Insights correlation tracing** while keeping your canvas app open for editing.
 
 :::image type="content" source="media/application-insights/correlation-tracing.png" alt-text="Enable Azure Application Insights correlation tracing.":::
 
@@ -353,15 +353,15 @@ Upon publishing the app, correlation tracing will now be enabled in Application 
 ### Limitations
 
 - Correlation tracing is currently enabled for custom connectors. Other connector types are not yet supported.
-- HTTP requests are only captured in App Insights if the connected service [is also instrumented with App Insights](/azure/azure-monitor/app/app-insights-overview).
+- HTTP requests are only captured in Application Insights if the connected service [is also instrumented with Application Insights](/azure/azure-monitor/app/app-insights-overview).
 
 ### Using correlation tracing
 
-When enabled, correlation tracing adds a new telemetry event in the **dependencies** table of the canvas app's App Insights instance. This event is recorded at the time a response from a network call (for supported connectors) is received. Dependency events capture details of the network call, including the request and response headers, response status code, and duration of the call.
+When enabled, correlation tracing adds a new telemetry event in the **dependencies** table of the canvas app's Application Insights instance. This event is recorded at the time a response from a network call (for supported connectors) is received. Dependency events capture details of the network call, including the request and response headers, response status code, and duration of the call.
 
 :::image type="content" source="media/application-insights/correlation-dependencies.png" alt-text="Sample event logged in the dependencies table.":::
 
-If the connected service is also instrumented with App Insights, an additional telemetry event capturing the request is generated in the **requests** table of the service's App Insights instance. Some Azure Services, such as Azure Functions can be instrumented without any coding from the Azure portal. Both the canvas app (or multiple apps) and connected services can be instrumented with the same App Insights instance.
+If the connected service is also instrumented with Application Insights, an additional telemetry event capturing the request is generated in the **requests** table of the service's Application Insights instance. Some Azure Services, such as Azure Functions can be instrumented without any coding from the Azure portal. Both the canvas app (or multiple apps) and connected services can be instrumented with the same Application Insights instance.
 
 :::image type="content" source="media/application-insights/correlation-requests.png" alt-text="Sample event logged in the requests table.":::
 
@@ -422,11 +422,11 @@ A set of default dimensions is also added to the *customDimensions* property on 
 |-----------------|-------------------------------------------------------|
 | ms-appId | The Application ID of the app that sent the event. |
 | ms-appname | The Application name of the app that sent the event. |
-| ms-appSessionId | The application session ID. This value may not be populated is some scenarios. When available, this value overrides the standard App Insights sessionID dimension. |
+| ms-appSessionId | The application session ID. This value may not be populated is some scenarios. When available, this value overrides the standard Application Insights sessionID dimension. |
 | ms-tenantID | The unique identifier of the tenant where the application is published. |
 | ms-environmentId | The name of the environment where the application is published. |
 | userId | A unique identifier for the end-user associated with the session. |
-| ms-duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value overrides the standard App Insights PageView duration dimension. |
+| ms-duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value overrides the standard Application Insights PageView duration dimension. |
 | sessionId | A session ID that can be used to correlate all events associated with a single application session. This value will always be present and is recommended for understanding unique session count. This value is taken from the player's session ID and is shown when viewing the session details while playing the app. Session ID might sometimes get a default, random, and unique Application Insights generated value. This default value isn't reliable and doesn't correlate with any app-specific parameters. |
 | Duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value is the same as the duration reported by the ms-duration dimension. |
 | ms-isTest | Indicates if the session is associated with the Test Studio test runner. |
@@ -435,7 +435,7 @@ A set of default dimensions is also added to the *customDimensions* property on 
 
 ## Unsupported scenarios
 
-App Insights doesn't support the following scenarios.
+Application Insights doesn't support the following scenarios.
 
 - Offline and mobile apps/player events (both Android and iOS) aren't captured.
 - Network requests and errors aren't captured.  
