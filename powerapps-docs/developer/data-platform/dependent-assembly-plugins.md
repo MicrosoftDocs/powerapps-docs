@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/04/2022
+ms.date: 08/23/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -56,7 +56,12 @@ You are not required to sign plug-in assemblies used in plugin packages.
 
 When registering individual plug-in assemblies without the dependent assemblies feature, signing is required because it provides a unique name for the assembly. But with plug-in assemblies within plug-in package, the assemblies are loaded on the sandbox server using a different mechanism, so signing is not necessary.
 
-However, if you choose to sign your assemblies be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed. If any signed assemblies depend on unsigned assemblies, you will get an error like the following: `Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.`
+> [!NOTE]
+> If you sign your assemblies, be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed. If any signed assemblies depend on unsigned assemblies, you will get an error like the following: `Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.`
+>
+> When you use the Microsoft Power Platform CLI (pac cli), the default settings will sign the assembly for you. You must opt out of signing by using the `--skip-signing` parameter. More information: [Create a Visual Studio project](#create-a-visual-studio-project).
+>
+> Power Platform Tools will not sign your plug-in assembly for you.
 
 ## Tooling options
 
@@ -88,16 +93,21 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 Use the PAC CLI [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
 1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
-1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init).
+1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init). For plug-in packages we recommend that you use the `--skip-signing` parameter so that your plug-in assemblies are not signed.
 
-These steps will ensure that the NuGet package generated will be correct. PAC CLI version 1.16 is expected in the first week of August. These steps are not required with that version.
+   Example:
+   ```powershell
+   PS E:\projects\mypluginproject> pac plugin init --skip-signing
+   ```
+
+> [!NOTE]
+> It is no longer required to sign the assemblies when using dependent assemblies. If you sign your assembly, all dependent assemblies must also be signed. More information: [Signing Assemblies](#signing-assemblies)
+>
+> The [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) command has a number of optional parameters. You must use the [--skip-signing](/power-platform/developer/cli/reference/plugin#--skip-signing--ss) parameter if you do not want to sign your plug-in assembly.
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
 
 Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the project in the `bin\Debug` or `bin\Release` folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
-
-> [!NOTE]
-> It is no longer required to sign the assemblies when using dependent assemblies. More information: [Signing Assemblies](#signing-assemblies)
 
 ### Add a dependent assembly using NuGet
 
