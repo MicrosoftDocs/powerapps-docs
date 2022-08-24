@@ -141,7 +141,7 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 - Near real-time data: Provides a copy of data synchronized from Dataverse via Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
 - Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
 
-> [!NOTE]
+> [!IMPORTANT]
 > This is a preview feature.
 >
 > For empty table data and metadata table, only near real-time data is created.
