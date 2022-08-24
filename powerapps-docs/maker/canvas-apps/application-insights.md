@@ -382,7 +382,7 @@ traces | union dependencies | union requests | union pageViews | union customEve
 | order by timestamp asc
 ```
 
-:::image type="content" source="media/application-insights/correlation-output.png" alt-text="Sample output for example query.":::
+:::image type="content" source="media/application-insights/correlation-output.png" alt-text="Sample output for the earlier example query.":::
   
 ## Export data to Power BI
 
