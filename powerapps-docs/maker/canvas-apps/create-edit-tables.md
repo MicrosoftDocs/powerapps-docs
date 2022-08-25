@@ -47,8 +47,8 @@ Create and edit a Dataverse table in canvas apps using the table designer inside
 
    You can also expand the **Advanced settings** to update the plural name for the table. For example, a table name can be Ticket, and the plural table name can be Tickets.
 
-  > [!div class="mx-imgBorder"]
-  > ![Table name.](media/tables/table-name-3.png)
+   > [!div class="mx-imgBorder"]
+   > ![Table name.](media/tables/table-name-3.png)
 
 5. When you're done, select **Create** to create the table.
 
